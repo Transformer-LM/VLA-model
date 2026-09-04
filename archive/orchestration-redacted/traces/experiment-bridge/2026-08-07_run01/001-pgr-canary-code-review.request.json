@@ -1,0 +1,25 @@
+{
+  "call_number": 1,
+  "config": {
+    "model_reasoning_effort": "xhigh",
+    "mode": "fresh read-only secondary agent"
+  },
+  "files_referenced": [
+    "refine-logs/PGR_AUDIT_PROTOCOL.json",
+    "refine-logs/FINAL_PROPOSAL.md",
+    "refine-logs/EXPERIMENT_PLAN.md",
+    "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111946.json",
+    "refine-logs/PREREGISTRATION_LOCK.json",
+    ".aris/traces/method-plan/2026-08-07_run01/009-experiment-plan-v21-jury.response.md",
+    "refine-logs/PGR_PROTOCOL_AMBIGUITY_AUDIT_20260807_134338.md",
+    "refine-logs/PREFLIGHT_REPORT_20260807_134338.md",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/*.py",
+    "implementation-stage/pgr-audit-v21-overlay/tests/test_foundation.py",
+    "implementation-stage/pgr-audit-v21-overlay/FOUNDATION_TEST_20260807_134338.log"
+  ],
+  "model": "gpt-5.6-sol",
+  "prompt": "Fresh experiment-bridge Phase 2.5 review. Work strictly read-only: no edits, SSH, GPU, checkpoint/model load, scientific target/outcome, or robot access. Read the referenced raw artifacts directly. Judge exact source readiness for V2-007 engineering-only synthetic-input CUDA/model-load canary and the correctness of reused foundation. Do not authorize the 150-rollout screen, C0, cache construction, A/B/C training, Stage 1/2, or live robot. Check method fidelity, strict checkpoint/config and 8x2560 interface, leakage, two-snapshot physical-UUID/PID/PGID launch lifecycle, no preemption/sharing, signal scope, lock/heartbeat/post-exit proof, private paths, allowlist/accounting, failure paths, device/autocast/determinism/parity, tests, seeds/logs/evidence. Return VERDICT, CANARY AUTHORIZATION, numbered BLOCKING ISSUES with smallest fixes, NON-BLOCKING ISSUES, REQUIRED TESTS BEFORE CANARY, and SCIENTIFIC-SCOPE BOUNDARIES. PASS/GO only with no blocker; same-family provisional only.",
+  "purpose": "pgr-canary-code-review",
+  "timestamp": "2026-08-07T05:53:06Z",
+  "tool": "collaboration.spawn_agent"
+}

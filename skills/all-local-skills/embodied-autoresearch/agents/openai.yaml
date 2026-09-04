@@ -1,0 +1,4 @@
+interface:
+  display_name: "Embodied AutoResearch"
+  short_description: "Run resumable VLA/WAM research from ideas to evidence"
+  default_prompt: "Use $embodied-autoresearch to map broad VLA/WAM research directions first, pause for my direction choice, then continue from ideas to validated experiments."

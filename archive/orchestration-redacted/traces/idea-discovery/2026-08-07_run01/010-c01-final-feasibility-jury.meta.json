@@ -1,0 +1,14 @@
+{
+  "request_file": "010-c01-final-feasibility-jury.request.json",
+  "response_file": "010-c01-final-feasibility-jury.response.md",
+  "agent_id": "/root/c01_final_feasibility_jury",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T08:50:00+08:00",
+  "duration_ms": null,
+  "status": "ok",
+  "verdict": "NO-GO",
+  "score": "3/10"
+}

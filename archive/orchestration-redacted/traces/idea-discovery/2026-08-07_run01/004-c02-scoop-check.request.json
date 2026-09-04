@@ -1,0 +1,10 @@
+{
+  "call_number": 4,
+  "purpose": "c02-scoop-check",
+  "timestamp": "2026-08-07T08:19:14+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": ["idea-stage/IDEA_CANDIDATES.md", "idea-stage/H1_CANDIDATE_JURY.md"],
+  "prompt": "Perform a fresh, read-only prior-art/scoop check for candidate C02 in D:\\VLA-WAM Research\\idea-stage\\IDEA_CANDIDATES.md and the jury decision in D:\\VLA-WAM Research\\idea-stage\\H1_CANDIDATE_JURY.md. Do not edit files, use SSH, or start compute jobs. Search current primary sources only (arXiv full text, official proceedings/OpenReview, official repositories when needed). Exact proposed finding: before VLA policy training, quantify each equal-dimensional/equal-budget future target's action-conditional controllability as C(y)=L(y|o,l)-L(y|o,l,a), then test prospectively whether policy transfer gain across target types follows C(y) more strongly than reconstruction loss, target variance/SNR, or semantic identity. Targets may include static/current latent, full future latent, future-current residual, and motion latent, but the contribution is the prospective validity of C(y) as a target-selection predictor, not a new target or auxiliary head. Look for direct prior art in controllability-aware representation learning, conditional mutual information/information gain, action-conditional predictability, target selection for auxiliary tasks, world-model representation objectives, and robot/VLA comparisons such as Motion Image Diffusion, DreamWAM, EgoWAM, VLAFlow, FLARE, DynaMo. Distinguish exact collision, partial collision, and adjacent precedent. Return in Chinese: queries/sources, closest works, verdict NOVEL/PARTIAL/SCOOPED/UNCERTAIN, narrowest defensible claim, whether it is a diagnostic finding or ordinary ablation, minimum number of target strata and controls needed to support a monotonic/predictive relation, and budget/fatal risks. Do not rank other candidates."
+}

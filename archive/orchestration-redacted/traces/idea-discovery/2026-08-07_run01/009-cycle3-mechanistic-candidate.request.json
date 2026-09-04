@@ -1,0 +1,10 @@
+{
+  "call_number": 9,
+  "purpose": "cycle3-mechanistic-candidate",
+  "timestamp": "2026-08-07T08:37:00+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": ["idea-stage/H1_CANDIDATE_JURY.md", "idea-stage/H1_CYCLE2_ADJUDICATION.md"],
+  "prompt": "Independently seek at most two mechanistic/diagnostic H1 candidates for the deterministic frozen-Qwen StarVLA host. Prioritize a small predictive auxiliary plus causal representation intervention or strict falsification, but do not assume a candidate exists. Check current primary sources, enforce identifiability and a three-seed <=8 GPUh design, and return NO-CANDIDATE if necessary. Read-only only."
+}

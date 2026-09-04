@@ -1,0 +1,27 @@
+{
+  "call_number": 2,
+  "config": {
+    "model_reasoning_effort": "xhigh",
+    "mode": "bounded continuation of same fresh read-only reviewer"
+  },
+  "files_referenced": [
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/constants.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/canonical.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/filesystem.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/checkpoint.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/spec.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/host.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/gpu_guard.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/launcher.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/engineering_canary.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/adapter.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/gradient_router.py",
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/robot.py",
+    "implementation-stage/pgr-audit-v21-overlay/tests/test_foundation.py"
+  ],
+  "model": "gpt-5.6-sol",
+  "prompt": "Resume the same read-only review but finish a tightly bounded canary gate now. Inspect the exact implementation files in full. Use already-read jury/ambiguity documents only to enforce scope. Do not inspect additional files or remote resources. Return the requested verdict sections after this bounded pass. Focus blockers on whether V2-007 can safely run; later scientific gaps belong only under SCIENTIFIC-SCOPE BOUNDARIES.",
+  "purpose": "pgr-canary-bounded-review",
+  "timestamp": "2026-08-07T06:05:00Z",
+  "tool": "collaboration.followup_task"
+}

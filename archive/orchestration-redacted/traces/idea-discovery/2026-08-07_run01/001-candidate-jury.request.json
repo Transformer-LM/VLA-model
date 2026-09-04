@@ -1,0 +1,16 @@
+{
+  "call_number": 1,
+  "purpose": "h1-candidate-jury",
+  "timestamp": "2026-08-07T08:10:57+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": [
+    "idea-stage/IDEA_CANDIDATES.md",
+    "idea-stage/H1_DIRECTED_LITERATURE.md",
+    "idea-stage/H1_WAM_ROUTE_CARDS.md",
+    "research-stage/vla-wam-expanded/DIRECTION_LANDSCAPE.md",
+    "RESEARCH_BRIEF_HYBRID_EXPANDED.md"
+  ],
+  "prompt": "Act as an independent senior CoRL/RSS/ICRA reviewer and candidate-selection jury. You did not generate these candidates. Work read-only: do not edit files, use SSH, start jobs, or consume GPU. Review only these project artifacts in D:\\VLA-WAM Research: (1) idea-stage/IDEA_CANDIDATES.md, (2) idea-stage/H1_DIRECTED_LITERATURE.md, (3) idea-stage/H1_WAM_ROUTE_CARDS.md, (4) research-stage/vla-wam-expanded/DIRECTION_LANDSCAPE.md, (5) RESEARCH_BRIEF_HYBRID_EXPANDED.md. Treat all paper claims as provisional; do not invent evidence. Score every C01-C10 on a 100-point rubric: novelty 25, H1-specific mechanism 15, causal identifiability 20, feasibility under the stated 8 GPUh/2 GPUh pilot 15, benchmark credibility 10, negative-result value 10, and non-overlap with the user's existing CF-DynAlign 5. Also label each as NEW METHOD, DIAGNOSTIC/FINDING, ORDINARY ABLATION, or REJECT. Hard-disqualify any candidate that (a) is directly occupied by SelfWAM/LiLa-WAM/DreamWAM/AquaJEPA/FLARE/GAM or the local CF-DynAlign, (b) requires training with the strict-failed local predictor, (c) cannot fit the budget, (d) leaves H1 for inference-time planning, or (e) treats world loss alone as success. Rank all candidates, recommend at most three for deep novelty checking, and select one primary direction only if it is genuinely defensible; otherwise return REVISE/NO-RUN. You may recommend one auxiliary mechanism experiment only if it reuses the primary checkpoints. For the primary recommendation give: exact one-sentence claim, nearest-work collision boundary, minimum matched pilot, preregistered positive threshold, kill criteria, and the smallest revision needed before implementation. Be skeptical of generic PCGrad/ForkMerge or 'just add future prediction'. Write the complete review in Chinese, while keeping technical identifiers and paper titles unchanged."
+}

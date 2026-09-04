@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "run_id": "20260831-israc",
+  "direction": "ISRAC：自动编译历史反馈接口相同、未来候选动作物理效果不同的 residual-alias twins，并检验反馈 WAM 是否产生错误迁移、排序反转与 correction harm",
+  "config": "AUTORESEARCH_CONFIG.json",
+  "created_at": "2026-08-31T15:01:45Z",
+  "updated_at": "2026-09-01T14:13:40Z",
+  "overall_status": "active",
+  "overall_assurance": "none",
+  "current_phase": "implementation-experiments",
+  "phases": {
+    "contract": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "attempts": 1,
+      "started_at": "2026-08-31T15:02:31Z",
+      "completed_at": "2026-08-31T15:03:30Z",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/WAM_ROUTE_CARD.md"
+      ],
+      "note": "ISRAC classified as a WAM-blind diagnostic compiler for U3 candidate evaluation/correction; representation and control usage separated; matched-baseline and WAM-harm falsifiers frozen."
+    },
+    "evidence-map": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "attempts": 1,
+      "started_at": "2026-08-31T15:07:49Z",
+      "completed_at": "2026-08-31T15:19:59Z",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/LITERATURE_MAP.md"
+      ],
+      "note": "Primary/local full-text and multi-index evidence map completed. Generic feedback correction, WAM exploitation, metamorphic testing, and simulator counterexample generation are occupied. ISRAC remains conditionally novel only as an influence-separated physical witness compiler; novelty is explicitly gated on matched-call yield and held-out feedback-WAM harm."
+    },
+    "idea-discovery": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "provisional",
+      "attempts": 1,
+      "started_at": "2026-08-31T15:28:15Z",
+      "completed_at": "2026-08-31T15:33:19Z",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/IDEA_REPORT.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/WAM_ROUTE_CARDS.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/NOVELTY_REPORT.md",
+        ".aris/traces/novelty-check/2026-08-31_run03/001-israc-fresh-novelty-review.response.md"
+      ],
+      "note": "Fresh same-family novelty review found no exact complete collision but rated ISRAC only 6.6/10 before matched-call evidence and 7.4/10 conditionally after robust yield advantage. Idea admitted provisionally with explicit kill condition and model-free/post-hoc WAM evidence separation."
+    },
+    "method-plan": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "provisional",
+      "attempts": 1,
+      "started_at": "2026-08-31T15:33:25Z",
+      "completed_at": "2026-08-31T17:36:17Z",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/EXPERIMENT_PLAN_P025V5.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/P025V5_SANITY_RESULT.md"
+      ],
+      "note": "P025-v5 method and executable gate frozen: fresh benchmark initialization, full warmup/policy-prefix replay, immutable raw evidence, fixed-step accounting, matched selectors, and fail-closed provenance verification."
+    },
+    "implementation-experiments": {
+      "status": "running",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 1,
+      "started_at": "2026-08-31T17:36:18Z",
+      "completed_at": null,
+      "artifacts": [
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P025V5_GATE_FORMAL_VERIFICATION.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P025V5_TAMPER_AUDIT_02/AUDIT.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_POLICY_LOCK.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_CONFIRM_SOURCE_ADMISSION_SUMMARY.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_BOUNDARY_PLAN.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_COMPILER_LOCK_V2.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_TAMPER_AUDIT_V2_02/AUDIT.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_FORMAL_MATRIX_LOCK_V2.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_FORMAL_LAUNCH_RECORD_V2.json"
+      ],
+      "note": "P025 remains exploratory. P026 V2 locked the exact policy, 21 outcome-blind boundaries, compiler/verifier/analyzer code, and both protocol amendments. A fresh candidate-contact sanity retained 3 honest zero-witness blocks and passed full semantic verification; 20/20 tamper attacks were rejected. The immutable 189-cell formal V2 matrix is running with four CPU workers."
+    },
+    "evidence-audit": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    },
+    "review-improvement": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    },
+    "research-synthesis": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    }
+  },
+  "usage": {
+    "gpu_hours": 0.09,
+    "paid_cost_usd": 0.0,
+    "real_robot_trials": 0,
+    "jobs_completed": 12,
+    "budget_exceeded": false
+  },
+  "history": [
+    {
+      "time": "2026-08-31T15:01:45Z",
+      "event": "run-initialized",
+      "direction": "ISRAC：自动编译历史反馈接口相同、未来候选动作物理效果不同的 residual-alias twins，并检验反馈 WAM 是否产生错误迁移、排序反转与 correction harm"
+    },
+    {
+      "time": "2026-08-31T15:02:31Z",
+      "event": "phase-begun",
+      "phase": "contract",
+      "attempt": 1,
+      "note": "Human confirmed ISRAC as the latest idea and authorized persistent autoresearch; freeze the WAM route and falsification contract before continuing experiments."
+    },
+    {
+      "time": "2026-08-31T15:03:30Z",
+      "event": "phase-completed",
+      "phase": "contract",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/WAM_ROUTE_CARD.md"
+      ],
+      "note": "ISRAC classified as a WAM-blind diagnostic compiler for U3 candidate evaluation/correction; representation and control usage separated; matched-baseline and WAM-harm falsifiers frozen."
+    },
+    {
+      "time": "2026-08-31T15:07:49Z",
+      "event": "phase-begun",
+      "phase": "evidence-map",
+      "attempt": 1,
+      "note": "Run a primary-source novelty and closest-work map for feedback WAM correction, counterfactual evaluation, system-identification/identifiability, metamorphic testing, and physical witness generation before expanding implementation."
+    },
+    {
+      "time": "2026-08-31T15:19:59Z",
+      "event": "phase-completed",
+      "phase": "evidence-map",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/LITERATURE_MAP.md"
+      ],
+      "note": "Primary/local full-text and multi-index evidence map completed. Generic feedback correction, WAM exploitation, metamorphic testing, and simulator counterexample generation are occupied. ISRAC remains conditionally novel only as an influence-separated physical witness compiler; novelty is explicitly gated on matched-call yield and held-out feedback-WAM harm."
+    },
+    {
+      "time": "2026-08-31T15:28:15Z",
+      "event": "phase-begun",
+      "phase": "idea-discovery",
+      "attempt": 1,
+      "note": "Freeze ISRAC as the sole candidate, decompose the only defensible novelty delta, and run a fresh novelty review before accepting the experiment gate."
+    },
+    {
+      "time": "2026-08-31T15:33:19Z",
+      "event": "phase-completed",
+      "phase": "idea-discovery",
+      "gate": "pass",
+      "acceptance": "provisional",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/IDEA_REPORT.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/WAM_ROUTE_CARDS.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/idea-stage/NOVELTY_REPORT.md",
+        ".aris/traces/novelty-check/2026-08-31_run03/001-israc-fresh-novelty-review.response.md"
+      ],
+      "note": "Fresh same-family novelty review found no exact complete collision but rated ISRAC only 6.6/10 before matched-call evidence and 7.4/10 conditionally after robust yield advantage. Idea admitted provisionally with explicit kill condition and model-free/post-hoc WAM evidence separation."
+    },
+    {
+      "time": "2026-08-31T15:33:25Z",
+      "event": "phase-begun",
+      "phase": "method-plan",
+      "attempt": 1,
+      "note": "Refine the existing ISRAC experiment plan around the fresh reviewer objections: dynamic-state definition, model-free certificate versus post-hoc WAM audit, matched-call strongest baselines, and an executable resource preflight."
+    },
+    {
+      "time": "2026-08-31T17:36:17Z",
+      "event": "phase-completed",
+      "phase": "method-plan",
+      "gate": "pass",
+      "acceptance": "provisional",
+      "artifacts": [
+        "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/EXPERIMENT_PLAN_P025V5.md",
+        "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/P025V5_SANITY_RESULT.md"
+      ],
+      "note": "The P025-v5 continuous-replay, provenance, evidence, and fixed-budget contract passed the executable sanity gate."
+    },
+    {
+      "time": "2026-08-31T17:36:18Z",
+      "event": "phase-begun",
+      "phase": "implementation-experiments",
+      "attempt": 1,
+      "note": "Run the 8-boundary cross-task compiler gate, independently reverify every source/action/certificate, adversarially tamper the evidence, then run matched-budget selector baselines."
+    },
+    {
+      "time": "2026-08-31T18:00:07Z",
+      "event": "checkpoint",
+      "phase": "implementation-experiments",
+      "artifacts": [
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P025V5_GATE_FORMAL_VERIFICATION.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P025V5_TAMPER_AUDIT_02/AUDIT.json"
+      ],
+      "note": "8/8 boundaries passed with 18 unique blocks and 52 certificate pairs; all manifests formally reconstructed and 10/10 provenance/semantic tamper attacks rejected. Matched baselines launched."
+    },
+    {
+      "time": "2026-08-31T19:00:00Z",
+      "event": "checkpoint",
+      "phase": "implementation-experiments",
+      "artifacts": [
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_POLICY_LOCK.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_CONFIRM_SOURCE_ADMISSION_SUMMARY.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_BOUNDARY_PLAN.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_SANITY_t3_e1_c07_israc_seed0.json"
+      ],
+      "note": "All seven preregistered held-out sources passed exact saved-action replay and policy-lock admission. Twenty-one outcome-blind boundaries were frozen before compiler execution. P026 raw-unedited-evidence sanity passed and the full 189-cell matrix started."
+    },
+    {
+      "time": "2026-09-01T05:10:00Z",
+      "event": "checkpoint",
+      "phase": "implementation-experiments",
+      "artifacts": [
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_COMPILER_LOCK_V2.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_TAMPER_AUDIT_V2_02/AUDIT.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_FORMAL_MATRIX_LOCK_V2.json",
+        "<PERSONAL_RESEARCH_ROOT>/results/israc/P026_FORMAL_LAUNCH_RECORD_V2.json"
+      ],
+      "note": "Fresh V2 lock passed provisional pre-freeze review, 46/46 remote unit tests, an independently verified 3-block zero-witness sanity, and 20/20 adversarial tamper rejection. The fully locked 189-cell formal matrix started in a new empty directory under the disclosed three-cell pre-formal contamination label."
+    },
+    {
+      "time": "2026-09-01T14:13:40Z",
+      "event": "usage-recorded",
+      "increments": {
+        "gpu_hours": 0.09,
+        "paid_cost_usd": 0.0,
+        "real_robot_trials": 0,
+        "jobs_completed": 3
+      },
+      "exceeded": [],
+      "note": "P027-A CEM search and independent certification completed; one single-A100 action-conditioned FastWAM engineering forward sanity passed. GPU usage is a conservative full-process wall-clock upper bound."
+    }
+  ]
+}

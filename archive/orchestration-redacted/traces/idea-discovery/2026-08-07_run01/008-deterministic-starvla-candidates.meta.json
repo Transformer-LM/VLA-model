@@ -1,0 +1,13 @@
+{
+  "request_file": "008-deterministic-starvla-candidates.request.json",
+  "response_file": "008-deterministic-starvla-candidates.response.md",
+  "agent_id": "/root/cycle2_starvla_candidates",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T08:43:30+08:00",
+  "duration_ms": null,
+  "status": "ok",
+  "verdict": "NO-CANDIDATE / NO-RUN"
+}

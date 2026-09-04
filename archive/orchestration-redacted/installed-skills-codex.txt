@@ -1,0 +1,27 @@
+version	1
+repo_root	<LOCAL_PROJECT_ROOT>\.aris\vendor\aris-upstream
+project_root	<LOCAL_PROJECT_ROOT>
+platform	codex
+generated	2026-08-06T06:04:43Z
+kind	name	source_rel	target_rel	mode
+skill	ablation-planner	skills/skills-codex/ablation-planner	.agents/skills/ablation-planner	junction
+skill	analyze-results	skills/skills-codex/analyze-results	.agents/skills/analyze-results	junction
+skill	auto-review-loop	skills/skills-codex/auto-review-loop	.agents/skills/auto-review-loop	junction
+skill	experiment-audit	skills/skills-codex/experiment-audit	.agents/skills/experiment-audit	junction
+skill	experiment-bridge	skills/skills-codex/experiment-bridge	.agents/skills/experiment-bridge	junction
+skill	experiment-plan	skills/skills-codex/experiment-plan	.agents/skills/experiment-plan	junction
+skill	experiment-queue	skills/skills-codex/experiment-queue	.agents/skills/experiment-queue	junction
+skill	idea-creator	skills/skills-codex/idea-creator	.agents/skills/idea-creator	junction
+skill	idea-discovery-robot	skills/skills-codex/idea-discovery-robot	.agents/skills/idea-discovery-robot	junction
+skill	monitor-experiment	skills/skills-codex/monitor-experiment	.agents/skills/monitor-experiment	junction
+skill	novelty-check	skills/skills-codex/novelty-check	.agents/skills/novelty-check	junction
+skill	render-html	skills/skills-codex/render-html	.agents/skills/render-html	junction
+skill	research-lit	skills/skills-codex/research-lit	.agents/skills/research-lit	junction
+skill	research-refine	skills/skills-codex/research-refine	.agents/skills/research-refine	junction
+skill	research-refine-pipeline	skills/skills-codex/research-refine-pipeline	.agents/skills/research-refine-pipeline	junction
+skill	research-review	skills/skills-codex/research-review	.agents/skills/research-review	junction
+skill	research-wiki	skills/skills-codex/research-wiki	.agents/skills/research-wiki	junction
+skill	result-to-claim	skills/skills-codex/result-to-claim	.agents/skills/result-to-claim	junction
+skill	run-experiment	skills/skills-codex/run-experiment	.agents/skills/run-experiment	junction
+support	shared-references	skills/skills-codex/shared-references	.agents/skills/shared-references	junction
+skill	training-check	skills/skills-codex/training-check	.agents/skills/training-check	junction

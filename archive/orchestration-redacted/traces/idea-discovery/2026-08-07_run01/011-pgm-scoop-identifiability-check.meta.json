@@ -1,0 +1,14 @@
+{
+  "request_file": "011-pgm-scoop-identifiability-check.request.json",
+  "response_file": "011-pgm-scoop-identifiability-check.response.md",
+  "agent_id": "/root/pgm_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T08:56:29+08:00",
+  "duration_ms": null,
+  "status": "ok",
+  "verdict": "CONDITIONAL-GO",
+  "novelty": "PARTIAL-Level-2-High-Overlap"
+}

@@ -1,0 +1,27 @@
+{
+  "request_file": "009-experiment-plan-v21-jury.request.json",
+  "response_file": "009-experiment-plan-v21-jury.response.md",
+  "agent_id": "/root/pgr_experiment_plan_v21_jury",
+  "reviewer_model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "review_independence": "fresh-context same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "verdict": "CONDITIONAL-GO",
+  "authorized_scopes": [
+    "A isolated personal-root implementation",
+    "B engineering-only canary after CPU/static tests, fresh code review, runtime provenance verification, and launch guard",
+    "C all-ten treatment-blind screen after A and B",
+    "D Stage 1 and conditional Stage 2 after their exact frozen scientific gates",
+    "E offline robot-contract preparation with zero connectivity or motion"
+  ],
+  "blocked_scopes": [
+    "F live robot connectivity or motion pending a separate exact contract, implementation review, and jury"
+  ],
+  "blocking_defects_in_repaired_bundle": 0,
+  "response_sha256": "4c5778ca4fd2d2f5f76c121e4d2566474ac961c73f3da718bda55af870905431",
+  "calibration": "none",
+  "remote_mutation": false,
+  "scientific_gpu_jobs": 0,
+  "gpu_hours": 0.0
+}

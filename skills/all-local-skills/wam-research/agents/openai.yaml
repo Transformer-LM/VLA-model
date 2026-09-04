@@ -1,0 +1,4 @@
+interface:
+  display_name: "WAM Research"
+  short_description: "Design and validate embodied world-model research"
+  default_prompt: "Use $wam-research to classify this embodied world-model idea and produce a falsifiable experiment plan."

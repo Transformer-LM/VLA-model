@@ -1,0 +1,12 @@
+{
+  "request_file": "007-budget-reconstruction-candidates.request.json",
+  "response_file": "007-budget-reconstruction-candidates.response.md",
+  "agent_id": "/root/c09_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T08:39:30+08:00",
+  "duration_ms": null,
+  "status": "ok"
+}

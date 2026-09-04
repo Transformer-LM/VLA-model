@@ -1,0 +1,10 @@
+{
+  "call_number": 8,
+  "purpose": "cycle2-deterministic-starvla-candidates",
+  "timestamp": "2026-08-07T08:36:00+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": ["idea-stage/H1_CANDIDATE_JURY.md", "idea-stage/H1_CLOSEST_WORK_VERIFICATION.md"],
+  "prompt": "Generate at most three H1 candidates specific to the verified deterministic StarVLA-OFT host (Qwen3-VL action tokens plus deterministic MLP/L1 action head), avoiding flow/noise mechanisms, all previously reviewed candidates, the invalid CF-DynAlign route, and generic future heads. Check 2024-2026 primary sources. Each candidate must be novel, identifiable, implementable, and support three-seed evidence within 8 GPUh; otherwise return NO-CANDIDATE. Read-only only."
+}

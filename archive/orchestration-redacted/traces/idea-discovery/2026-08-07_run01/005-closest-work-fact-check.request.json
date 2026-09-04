@@ -1,0 +1,9 @@
+{
+  "purpose": "closest-work-primary-source-fact-check",
+  "task": "核验 CheckVLA 2607.26789、dWorldEval 2604.22152、Hallucination in World Models 2606.27326、CoCo 2608.04653、VLAFlow 2607.01586 的 action shuffle/derangement、训练或测试干预、persistence/action-agnostic baselines、downstream use 与 H1 predictive auxiliary shaping 差异；逐篇给出一手链接、章节/表号、安全复述和不可过度声称点。",
+  "constraints": ["primary sources only", "read-only", "no file edits", "no SSH", "no training"],
+  "agent_id": "/root/c01_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional"
+}

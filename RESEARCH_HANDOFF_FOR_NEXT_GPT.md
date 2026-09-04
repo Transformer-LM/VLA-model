@@ -6,7 +6,7 @@
 
 研究主题经历了 VLA、World Action Model（WAM）、PointMap/几何状态、长时任务记忆、imagined-state repair 和反馈接口可靠性等路线。当前项目配置中的活动研究名是 **Influence-Separated Residual-Alias Compiler（ISRAC）**，但仓库同时保留此前所有主要实验和被终止的路线，不能把“候选 idea”误读成已验证结论。
 
-这是公开 GitHub 仓库中的安全快照。模型权重、数据集、视频、checkpoint、运行缓存、W&B 内容、SSH 信息和真实机器人控制没有上传。对应个人资产仍需在用户自己的机器/服务器中恢复。
+这是公开 GitHub 仓库中的安全快照。模型权重、数据集、视频、checkpoint、运行缓存、W&B 内容、SSH 信息和真实机器人控制没有上传；本地运行时依赖和第三方 vendor 树也没有上传。对应个人资产仍需在用户自己的机器/服务器中恢复。
 
 ## 2. 先读哪些文件
 
@@ -92,15 +92,18 @@ E0/G0 v3 比较 addressed RGB、完整 Depth、固定尺寸 object-relative Poin
 | 目录 | 内容 |
 |---|---|
 | `skills/embodied-autoresearch/` | 当前自动科研 skill 的完整公开安全副本 |
+| `skills/all-local-skills/` | 其他本地 research skills 的源码和说明（不含运行时依赖） |
 | `experiments/policy-relevant-imagined-state-repair/` | 已整理、路径参数化的近期实验代码 |
 | `research/current-policy-repair/` | imagined-state repair 的状态、结果、审计和下一步 |
 | `research/active-israc/` | ISRAC 精选研究文档 |
 | `archive/all-experiments/` | 所有主要历史 run 的源码/文档/JSON 结果快照 |
 | `archive/project-context/` | 顶层 brief、配置、manifest 和旧账号交接材料 |
+| `archive/orchestration-redacted/` | autoresearch 状态、候选、claims、研究 trace、工具和历史备份（已脱敏） |
 
 ## 5. 复现实验时必须知道的事
 
 - 公开仓库没有数据和权重。代码若需要个人资产，应把环境变量 `VLA_WAM_PERSONAL_ROOT` 指向用户自己的研究根目录，再检查脚本中的数据/模型相对路径。
+- `skills/all-local-skills/` 是可公开的 skill 源文件；本机 Python 运行时、第三方依赖和二进制库没有复制进仓库。
 - 服务器没有外网，不能在服务器上临时下载依赖或模型；优先使用已有个人环境和资产。
 - 任何运行产物、缓存、checkpoint、日志和视频都应放在个人目录，不要写团队/共享目录。
 - 启动 GPU 前必须即时检查显存、利用率和 compute process；优先 2、3 号卡，只有四卡都立即空闲时才使用 0、1。不要抢占其他用户进程。

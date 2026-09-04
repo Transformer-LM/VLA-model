@@ -1,0 +1,15 @@
+{
+  "call_number": 1,
+  "purpose": "israc-fresh-novelty-review",
+  "timestamp": "2026-08-31T23:20:00+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": [
+    "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/LITERATURE_MAP.md",
+    "ideaspark_run/influence-separated-residual-alias-compiler/research-stage/WAM_ROUTE_CARD.md",
+    "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/EXPERIMENT_PLAN.md",
+    "ideaspark_run/influence-separated-residual-alias-compiler/refine-logs/PRELIMINARY_RESULTS.md"
+  ],
+  "prompt": "Read-only fresh novelty review. Project D:\\VLA-WAM Research. Read these files: ideaspark_run/influence-separated-residual-alias-compiler/research-stage/LITERATURE_MAP.md, research-stage/WAM_ROUTE_CARD.md, refine-logs/EXPERIMENT_PLAN.md, refine-logs/PRELIMINARY_RESULTS.md. Review the exact ISRAC claim only: automatic simulator-native compiler that starts from frozen VLA natural successful trajectories and finds two legal physics worlds whose full factual RGB/depth/proprio/state/residual transcript is equal but whose future candidate action activates a previously zero-influence physical parameter and yields divergent effects, with a machine-verifiable equality/activation/first-divergence certificate; compiler must not read target WAM scores. Assess novelty against feedback WAM correction, model exploitation, metamorphic testing, controller counterexample generation, and matched-pair VLA testing. Return Chinese: exact closest works, 4-axis overlap, novelty score /10 with range, whether >7 is defensible before and after a matched-call yield advantage, crisp one-sentence delta, fatal overlap/kill condition, and minimum experimental evidence. Do not edit files, use SSH, or run experiments. Be skeptical and do not treat unverified citations as evidence."
+}

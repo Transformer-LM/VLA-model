@@ -1,0 +1,13 @@
+{
+  "call_number": 1,
+  "purpose": "post-witnesswam-fresh-strict-jury",
+  "timestamp": "2026-08-31T06:20:00+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": [
+    "D:\\VLA-WAM Research\\.aris\\candidates\\post_witnesswam_pool.md",
+    "D:\\VLA-WAM Research\\ideaspark_run\\post_witnesswam_candidates_naturalness.md"
+  ],
+  "prompt": "Act as the one and only fresh strict novelty jury. Mechanically merge exact duplicates into 10–15 candidates, then adversarially verify exact observation/intervention/supervision/consumer mechanisms against primary sources through 2026-08-31. Hard exclusions: auxiliary labels, generic memory, confidence/visibility gates, ordinary reranking/MPC, data generation, simple 3D input, active FDI, generic conformal/selection, WAM reward/value, flow/DPO preference, set diffusion, surface frame, functional geometry transfer and backward reachability tubes. Retain at most five only if novelty lower bound is strictly above 7.0 and naturalness at least 7.0; 7.0 fails. Give strongest neighbor, fatal objection, oracle E0 kill test and 4-A100 feasibility. Do not write files or run experiments."
+}

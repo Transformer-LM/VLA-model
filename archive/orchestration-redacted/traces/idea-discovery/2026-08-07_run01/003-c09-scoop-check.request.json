@@ -1,0 +1,10 @@
+{
+  "call_number": 3,
+  "purpose": "c09-scoop-check",
+  "timestamp": "2026-08-07T08:13:10+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": ["idea-stage/IDEA_CANDIDATES.md", "idea-stage/H1_DIRECTED_LITERATURE.md"],
+  "prompt": "Perform a fresh, read-only prior-art/scoop check for candidate C09 in D:\\VLA-WAM Research\\idea-stage\\IDEA_CANDIDATES.md and D:\\VLA-WAM Research\\idea-stage\\H1_DIRECTED_LITERATURE.md. Do not edit files, use SSH, or start compute jobs. Search current primary sources only (arXiv full text, official proceedings/OpenReview, official repositories when needed), covering world models/WAM/VLA and generic auxiliary-task optimization. Exact proposed claim: a predictive world objective should be admitted to VLA policy training only after an action-conditioned predictor beats persistence and action-agnostic baselines on a strict episode/temporal holdout and shows action-shuffle sensitivity; controlled predictor-validity strata are then used to test whether strict world validity predicts downstream policy transfer. This is a scientific validity-transfer relationship and preregistered gate, not merely an engineering if-statement. Look for direct collisions in safe auxiliary learning, validation gating, model-based RL model selection, world-model trust/reliability, ForkMerge/PCGrad/CAGrad, uncertainty gating, and WAM/VLA training. Distinguish exact collision, partial collision, and adjacent precedent. Return in Chinese: search queries/sources, closest works and overlap, verdict NOVEL/PARTIAL/SCOOPED/UNCERTAIN, narrowest defensible claim, whether the idea is a new method or diagnostic finding, minimum evidence needed, and fatal risks (including genericity, validation overfit, needing a valid predictor, or budget). Do not rank other candidates."
+}

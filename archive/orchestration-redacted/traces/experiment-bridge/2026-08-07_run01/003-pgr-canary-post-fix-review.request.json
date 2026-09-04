@@ -1,0 +1,21 @@
+{
+  "call_number": 3,
+  "config": {
+    "model_reasoning_effort": "xhigh",
+    "mode": "one permitted post-fix same-family provisional re-review"
+  },
+  "files_referenced": [
+    "implementation-stage/pgr-audit-v21-overlay/pgr_audit/*.py",
+    "implementation-stage/pgr-audit-v21-overlay/tests/test_foundation.py",
+    "implementation-stage/pgr-audit-v21-overlay/environment/canary_environment_lock.json",
+    "implementation-stage/pgr-audit-v21-overlay/CANARY_APPROVAL_TEMPLATE.json",
+    "implementation-stage/pgr-audit-v21-overlay/README.md",
+    "implementation-stage/pgr-audit-v21-overlay/FOUNDATION_TEST_20260807_143000.log",
+    ".aris/traces/experiment-bridge/2026-08-07_run01/002-pgr-canary-bounded-review.response.md"
+  ],
+  "model": "gpt-5.6-sol",
+  "prompt": "One permitted post-fix re-review. Read current raw local files and verify each of the prior eight blockers. Claimed bindings: overlay 4d6910c64c947104c35af57f0865359aa39d9183d6f0609902060d9c216ad491; tests 83f9a404b9e710eacd1ab15f104e9ff23cfd7fced3554fa8268335981768ad10; environment ac853fe1cb6f2da210288bfde9a4fe2e1769694b69e1320ebae28efcc8690fcd; sanitized config 037fc7c059fa889eff2a8a26b417f85499df7718cf773fb5d066ad3cb75e875c; raw test log 68410b98ed4443d37379951f3dcb98dc2c9fa1b1470f5dff8d7a463d591687be, 34/34 PASS. Final approval receipt is created only after PASS/GO and binds these hashes plus the final response path/hash; provenance.py verifies it before GPU snapshot. Return verdict, canary authorization, blocker resolutions 1-8, new blockers, nonblockers, prelaunch checks, scope boundaries, and source binding. No scientific or robot authorization.",
+  "purpose": "pgr-canary-post-fix-review",
+  "timestamp": "2026-08-07T06:25:00Z",
+  "tool": "collaboration.followup_task"
+}

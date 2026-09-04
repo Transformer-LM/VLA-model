@@ -1,0 +1,13 @@
+{
+  "call_number": 7,
+  "purpose": "experiment-plan-jury",
+  "timestamp": "2026-08-07T09:58:49+08:00",
+  "tool": "spawn_agent",
+  "agent_id": "/root/pgr_experiment_plan_jury",
+  "files_referenced": [
+    "refine-logs/FINAL_PROPOSAL.md",
+    "refine-logs/EXPERIMENT_PLAN.md",
+    "refine-logs/EXPERIMENT_TRACKER.md"
+  ],
+  "prompt": "Fresh read-only senior jury: audit whether the frozen PGR-Audit method and experiment tracker authorize isolated implementation and a measured <=2 GPUh pilot. Check scientific identifiability, execution order, leakage, deterministic budget accounting, personal-only filesystem I/O, and the GPU 2/3-first launch policy. Return GO, CONDITIONAL-GO, or NO-GO with exact blocking fixes; do not modify files."
+}

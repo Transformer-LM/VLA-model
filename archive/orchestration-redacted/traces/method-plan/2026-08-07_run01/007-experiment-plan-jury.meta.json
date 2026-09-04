@@ -1,0 +1,12 @@
+{
+  "request_file": "007-experiment-plan-jury.request.json",
+  "response_file": "007-experiment-plan-jury.response.md",
+  "agent_id": "/root/pgr_experiment_plan_jury",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "verdict": "NO-GO",
+  "calibration": "none",
+  "remote_mutation": false,
+  "gpu_hours": 0.0
+}

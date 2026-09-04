@@ -1,0 +1,10 @@
+{
+  "call_number": 2,
+  "purpose": "c01-scoop-check",
+  "timestamp": "2026-08-07T08:13:10+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "files_referenced": ["idea-stage/IDEA_CANDIDATES.md"],
+  "prompt": "Perform a fresh, read-only prior-art/scoop check for candidate C01 in D:\\VLA-WAM Research\\idea-stage\\IDEA_CANDIDATES.md. Do not edit files, use SSH, or start compute jobs. Search current primary sources only (arXiv full text, official proceedings/OpenReview or official repositories when method details require them), covering at least 2018-2026. Exact proposed claim: under one fixed VLA/policy architecture and matched data/parameters/steps/target tokens/FLOPs, a 2x2 future-vs-equidistant-past target by correct-vs-distribution-preserving shuffled-action auxiliary matrix identifies whether action-causally aligned future prediction uniquely shapes policy representations and paired closed-loop control; the planned statistic is difference-in-differences. Look specifically for prior VLA, imitation-learning, robot representation, JEPA/world-model, or control work that already uses the full matrix, either factor separately, temporal reversal/past prediction placebo, action shuffling/counterfactual negatives, or matched auxiliary-objective causal tests. Distinguish exact collision, partial collision, and adjacent precedent. Verify SelfWAM, VLAFlow, FLARE, AquaJEPA, and older time-reversal/self-prediction work. Return in Chinese: search queries/sources, closest works with exact overlap, verdict NOVEL/PARTIAL/SCOOPED/UNCERTAIN, the narrowest defensible claim, required citations and controls, and any fatal methodological flaw (especially unequal difficulty or impossible past-action semantics). Do not rank other candidates."
+}

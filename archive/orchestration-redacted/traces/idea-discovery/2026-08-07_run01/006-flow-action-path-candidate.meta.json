@@ -1,0 +1,13 @@
+{
+  "request_file": "006-flow-action-path-candidate.request.json",
+  "response_file": "006-flow-action-path-candidate.response.md",
+  "agent_id": "/root/c02_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T08:36:30+08:00",
+  "duration_ms": null,
+  "status": "ok",
+  "local_executor_note": "The retained candidate assumes a flow/diffusion action trajectory and is therefore not directly compatible with the verified deterministic StarVLA host."
+}

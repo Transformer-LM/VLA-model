@@ -1,0 +1,37 @@
+{
+  "call_number": 8,
+  "purpose": "renewed-hash-bound-experiment-plan-v2-jury",
+  "timestamp": "2026-08-07T11:13:09+08:00",
+  "tool": "spawn_agent",
+  "agent_id": "/root/pgr_experiment_plan_v2_jury",
+  "reviewer_model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "review_mode": "fresh context, read-only, same-family provisional",
+  "bundle_manifest": {
+    "path": "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111127.json",
+    "sha256": "0bae1d7bb2e2be50ae60ef6d75f7f30c50db4e63221e399930dbf61e9d84eae1"
+  },
+  "protocol_sha256": "a5de33299f74db4118e075f8db05cc9196f0816a014121a3b8d807b959662752",
+  "config_sha256": "c70f5361352f449800ba4e5af9dc408eb1d706c0f26549b393cbfe4fe788008c",
+  "preregistration_lock_sha256": "ceaeac2f514eae9645301b016ad5973e1627ce6b9a61f427b14a9aa1c5073750",
+  "required_scope_verdicts": [
+    "A: isolated implementation strictly under the personal root",
+    "B: engineering-only CUDA/model-load/determinism/parity/sealing canary with no scientific outcome",
+    "C: all-LIBERO-10 treatment-blind checkpoint screen",
+    "D: full simulation Stage 1 and conditional Stage 2",
+    "E: real-robot contract preparation with zero connectivity or motion",
+    "F: live real-robot connectivity or motion"
+  ],
+  "required_checks": [
+    "all frozen input hashes",
+    "scientific identifiability and matched controls",
+    "leakage, quarantine, sealing, reveal, and retry discipline",
+    "deterministic splits, estimands, cohorts, and task gates",
+    "all-ten-task input provenance and execution feasibility",
+    "personal-only filesystem and no-egress rules",
+    "fresh atomic per-GPU reservation with GPUs 2/3 preferred and 0/1 individually conditional",
+    "no preset GPU-hour admission cap",
+    "live robot remains locked absent a separate exact contract and jury"
+  ],
+  "mutation_permissions": "none"
+}

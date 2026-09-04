@@ -1,0 +1,14 @@
+{
+  "request_file": "001-round-1-method-review.request.json",
+  "response_file": "001-round-1-method-review.response.md",
+  "agent_id": "/root/pgr_method_reviewer",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "completed_at": "2026-08-07T09:22:00+08:00",
+  "status": "ok",
+  "verdict": "REVISE",
+  "score": "7.1/10",
+  "calibration": "none"
+}
+

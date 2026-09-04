@@ -1,0 +1,12 @@
+{
+  "request_file": "004-c02-scoop-check.request.json",
+  "response_file": "004-c02-scoop-check.response.md",
+  "agent_id": "/root/c02_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": "2026-08-07T08:19:24+08:00",
+  "completed_at": "2026-08-07T08:26:47+08:00",
+  "duration_ms": 443000,
+  "status": "ok"
+}

@@ -1,0 +1,15 @@
+{
+  "call_number": 1,
+  "purpose": "p027c-residual-harm-result-to-claim",
+  "timestamp": "2026-09-02T01:15:00+08:00",
+  "tool": "spawn_agent",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "ultra",
+  "files_referenced": [
+    "ideaspark_run/influence-separated-residual-alias-compiler/artifacts/P027C_CALIBRATED_TRANSPORT_E0_V3.json",
+    "ideaspark_run/influence-separated-residual-alias-compiler/artifacts/P027C_CALIBRATED_TRANSPORT_E0_RUN_LOCK_V3.json",
+    "ideaspark_run/influence-separated-residual-alias-compiler/implementation/run_p027c_calibrated_transport.py",
+    ".aris/evidence_precheck.json"
+  ],
+  "prompt": "Judge whether the experiment supports this intended claim: candidate-only influence alias causes stronger erroneous factual-residual transport than ordinary-overlap controls and therefore authorizes an influence-separated router. Read the referenced files directly. Key evidence: training-side calibration improved 6.9354%, but heldout alias/control deltas were boundary1 +1.15173465/+1.15226033, boundary2 +0.05698657/+0.05815703, boundary9 +0.44139447/+0.44217677. Single-seed retrospective simulation E0; no ranking, router, or closed loop was run. Return claim_supported, supported/unsupported scope, gaps, revised claim, next experiments, route, confidence, and same-family/provisional metadata. Do not interpret training-side improvement as a heldout alias result."
+}

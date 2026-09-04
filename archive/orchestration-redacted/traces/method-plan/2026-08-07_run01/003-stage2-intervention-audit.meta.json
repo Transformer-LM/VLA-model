@@ -1,0 +1,10 @@
+{
+  "request_file": "003-stage2-intervention-audit.request.json",
+  "response_file": "003-stage2-intervention-audit.response.md",
+  "agent_id": "/root/pgr_intervention_audit",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "status": "ok",
+  "verdict": "NO-GO-as-written-repairable"
+}

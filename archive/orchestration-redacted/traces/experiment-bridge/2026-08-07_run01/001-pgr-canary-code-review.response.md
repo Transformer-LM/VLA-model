@@ -1,0 +1,1 @@
+ERROR: The initial unbounded review turn did not return a verdict within the bounded waiting window and was interrupted. No scientific or execution authorization was produced. The same fresh read-only reviewer was resumed with a narrower file set in call 002.

@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "run_id": "20260806-vla-wam-expanded-field-map",
+  "direction": "VLA × WAM 强交叉母领域扩展制图：系统拆分世界模型在 VLA 表征、推理、训练、评估、安全、数据、跨具身与持续适应中的作用；不预设具体任务、形态、表征、模型或基准",
+  "config": "AUTORESEARCH_CONFIG_HYBRID_EXPANDED.json",
+  "created_at": "2026-08-06T12:55:16Z",
+  "updated_at": "2026-08-29T14:10:36Z",
+  "overall_status": "blocked",
+  "overall_assurance": "same-family-provisional",
+  "current_phase": null,
+  "phases": {
+    "contract": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "attempts": 1,
+      "started_at": "2026-08-06T12:55:16Z",
+      "completed_at": "2026-08-06T12:55:17Z",
+      "artifacts": [
+        "research-stage/vla-wam-expanded/FIELD_DISCOVERY_CONTRACT.md"
+      ],
+      "note": "Intersection inclusion, dual-axis taxonomy, 4+6+3+3 coverage grid, evidence rules, resource limits, and no-idea checkpoint frozen."
+    },
+    "evidence-map": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "attempts": 1,
+      "started_at": "2026-08-06T12:55:17Z",
+      "completed_at": "2026-08-06T13:18:17Z",
+      "artifacts": [
+        "research-stage/vla-wam-expanded/LITERATURE_MAP.md",
+        "research-stage/vla-wam-expanded/DIRECTION_LANDSCAPE.md",
+        "research-stage/vla-wam-expanded/BOUNDARY_COVERAGE_AUDIT.md"
+      ],
+      "note": "69 deduplicated primary/core-adjacent records from 44 query families support a 4-group, 16-direction VLA-WAM landscape; old-to-new lineage, R1-R4 by U1-U6 coverage, evidence maturity, overlap rules, and resource fit audited; no idea, benchmark, implementation, or experiment selected."
+    },
+    "idea-discovery": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "same-family-provisional",
+      "attempts": 3,
+      "started_at": "2026-08-06T13:59:26Z",
+      "completed_at": "2026-08-07T01:06:33Z",
+      "artifacts": [
+        "idea-stage/H1_CYCLE3_SELECTION.md"
+      ],
+      "note": "After three evidence-gated cycles, PGR-Audit was selected as a high-overlap, diagnostic-only candidate. Independent novelty, statistics, implementation, and final-jury checks permit method planning and measured pilot only under strict world-validity, matched-placebo, seed-level inference, personal-storage, and 7.2 GPUh projection gates."
+    },
+    "method-plan": {
+      "status": "completed",
+      "gate": "pass",
+      "acceptance": "same-family-provisional",
+      "attempts": 1,
+      "started_at": "2026-08-07T01:06:33Z",
+      "completed_at": "2026-08-07T03:24:09Z",
+      "artifacts": [
+        "refine-logs/PGR_AUDIT_PROTOCOL.json",
+        "refine-logs/INPUT_MANIFEST.json",
+        "refine-logs/FINAL_PROPOSAL.md",
+        "refine-logs/EXPERIMENT_PLAN.md",
+        "refine-logs/EXPERIMENT_TRACKER.md",
+        "idea-stage/docs/research_contract.md",
+        "refine-logs/PREREGISTRATION_LOCK.json",
+        "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111127.json",
+        "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111946.json",
+        ".aris/traces/method-plan/2026-08-07_run01/009-experiment-plan-v21-jury.response.md"
+      ],
+      "note": "PGR-Audit v2.1 is frozen as an all-LIBERO-10, 20-fixed-seed, no-GPU-hour-cap protocol. After one three-defect repair cycle, a fresh hash-bound jury returned CONDITIONAL-GO: A-E are authorized under their stage-local prerequisites; live robot connectivity and motion remain NO-GO pending a separate exact contract, implementation review, and jury."
+    },
+    "implementation-experiments": {
+      "status": "blocked",
+      "gate": "blocked",
+      "acceptance": "none",
+      "attempts": 1,
+      "started_at": "2026-08-07T03:24:09Z",
+      "completed_at": null,
+      "artifacts": [],
+      "note": "Human-directed structural pivot on 2026-08-29 to OA-WAM object addressing plus EvoScene-style action-updated belief; PGR-Audit implementation preserved with zero recorded GPU jobs and is not being continued in this run."
+    },
+    "evidence-audit": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    },
+    "review-improvement": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    },
+    "research-synthesis": {
+      "status": "pending",
+      "gate": "pending",
+      "acceptance": "none",
+      "attempts": 0,
+      "started_at": null,
+      "completed_at": null,
+      "artifacts": [],
+      "note": ""
+    }
+  },
+  "usage": {
+    "gpu_hours": 0.0,
+    "paid_cost_usd": 0.0,
+    "real_robot_trials": 0,
+    "jobs_completed": 0,
+    "budget_exceeded": false
+  },
+  "history": [
+    {
+      "time": "2026-08-06T12:55:16Z",
+      "event": "run-initialized",
+      "direction": "VLA × WAM 强交叉母领域扩展制图：系统拆分世界模型在 VLA 表征、推理、训练、评估、安全、数据、跨具身与持续适应中的作用；不预设具体任务、形态、表征、模型或基准"
+    },
+    {
+      "time": "2026-08-06T12:55:16Z",
+      "event": "phase-begun",
+      "phase": "contract",
+      "attempt": 1,
+      "note": "Dedicated expansion of the VLA-WAM intersection from 6 coarse routes to 16 evidence-gated macro directions; prior tri-domain run preserved."
+    },
+    {
+      "time": "2026-08-06T12:55:17Z",
+      "event": "phase-completed",
+      "phase": "contract",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "artifacts": [
+        "research-stage/vla-wam-expanded/FIELD_DISCOVERY_CONTRACT.md"
+      ],
+      "note": "Intersection inclusion, dual-axis taxonomy, 4+6+3+3 coverage grid, evidence rules, resource limits, and no-idea checkpoint frozen."
+    },
+    {
+      "time": "2026-08-06T12:55:17Z",
+      "event": "phase-begun",
+      "phase": "evidence-map",
+      "attempt": 1,
+      "note": "Parallel primary-source search and boundary audit for 16 VLA-WAM macro directions; no hypothesis or benchmark selection."
+    },
+    {
+      "time": "2026-08-06T13:18:17Z",
+      "event": "phase-completed",
+      "phase": "evidence-map",
+      "gate": "pass",
+      "acceptance": "deterministic",
+      "artifacts": [
+        "research-stage/vla-wam-expanded/LITERATURE_MAP.md",
+        "research-stage/vla-wam-expanded/DIRECTION_LANDSCAPE.md",
+        "research-stage/vla-wam-expanded/BOUNDARY_COVERAGE_AUDIT.md"
+      ],
+      "note": "69 deduplicated primary/core-adjacent records from 44 query families support a 4-group, 16-direction VLA-WAM landscape; old-to-new lineage, R1-R4 by U1-U6 coverage, evidence maturity, overlap rules, and resource fit audited; no idea, benchmark, implementation, or experiment selected."
+    },
+    {
+      "time": "2026-08-06T13:18:17Z",
+      "event": "phase-blocked",
+      "phase": "idea-discovery",
+      "reason": "awaiting human macro-direction selection"
+    },
+    {
+      "time": "2026-08-06T13:59:26Z",
+      "event": "phase-resumed",
+      "phase": "idea-discovery",
+      "previous_status": "blocked",
+      "note": ""
+    },
+    {
+      "time": "2026-08-06T13:59:26Z",
+      "event": "phase-begun",
+      "phase": "idea-discovery",
+      "attempt": 1,
+      "note": "Human selected H1 predictive world objectives for VLA representations and authorized autonomous idea selection, planning, remote implementation, training, evaluation, and audit under the persisted personal-storage, offline, 8 GPUh, and GPU 2/3-first policy."
+    },
+    {
+      "time": "2026-08-07T01:06:33Z",
+      "event": "phase-completed",
+      "phase": "idea-discovery",
+      "gate": "pass",
+      "acceptance": "same-family-provisional",
+      "artifacts": [
+        "idea-stage/H1_CYCLE3_SELECTION.md"
+      ],
+      "note": "PGR-Audit conditionally passed novelty, identifiability, statistics, host-fit, and measured-budget entry gates after three cycles; no GPU consumed."
+    },
+    {
+      "time": "2026-08-07T01:06:33Z",
+      "event": "phase-begun",
+      "phase": "method-plan",
+      "attempt": 1,
+      "note": "Freeze the diagnostic claim ceiling and produce an execution-ready, independently reviewed method and experiment plan before any remote write or GPU launch."
+    },
+    {
+      "time": "2026-08-07T02:27:19Z",
+      "event": "constraint-override",
+      "phase": "method-plan",
+      "source": "human",
+      "removed": [
+        "simulation-first requirement",
+        "2 GPUh pilot cap",
+        "7.2 GPUh complete-path projection cap",
+        "8 GPUh total cap",
+        "zero-real-robot-trial restriction"
+      ],
+      "retained": [
+        "personal-only remote storage",
+        "physical GPU 2/3 first",
+        "GPU 0/1 only when one fresh snapshot shows all four idle",
+        "no process interference",
+        "offline server"
+      ],
+      "note": "Compute use remains auditable but is no longer an admission gate. Simulation, offline robot data, and real robot are parallel evidence domains. Live robot action remains blocked until a robot connection and safety contract is available. No GPU or remote mutation occurred."
+    },
+    {
+      "time": "2026-08-07T02:31:20Z",
+      "event": "gpu-policy-override",
+      "phase": "method-plan",
+      "source": "human",
+      "policy": "Physical GPUs 2/3 remain preferred. Physical 0/1 may also be used whenever a fresh per-launch snapshot shows that each candidate GPU is actually idle; all four GPUs need not be simultaneously idle. Never preempt or share with another experiment.",
+      "note": "The historical snapshot still showed GPU0 busy, so it granted no current launch authority. Every GPU will be rechecked immediately before use."
+    },
+    {
+      "time": "2026-08-07T03:11:27Z",
+      "event": "candidate-preregistration-frozen",
+      "phase": "method-plan",
+      "protocol": "PGR-Audit v2",
+      "bundle_manifest": "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111127.json",
+      "bundle_manifest_sha256": "0bae1d7bb2e2be50ae60ef6d75f7f30c50db4e63221e399930dbf61e9d84eae1",
+      "scope": "all LIBERO-10 tasks; fixed primary seeds 0-9 and replication seeds 10-19; 150-rollout treatment-blind screen; 6000 Stage-1 rollouts; conditional 4000 Stage-2 rollouts; compute telemetry without a preset GPU-hour cap",
+      "note": "All eight listed input-file hashes verified. The old v1 lock and NO-GO verdict are preserved as superseded history, not treated as authorization. Remote mutations and scientific jobs remain zero."
+    },
+    {
+      "time": "2026-08-07T03:13:09Z",
+      "event": "review-begun",
+      "phase": "method-plan",
+      "review": "renewed-hash-bound-experiment-plan-v2-jury",
+      "agent_id": "/root/pgr_experiment_plan_v2_jury",
+      "assurance": "fresh-context same-family provisional",
+      "note": "The jury must return separate authorization for isolated implementation, engineering canary, checkpoint screen, full simulation, contract-only robot preparation, and live robot action. Live robot connectivity and motion are expected to remain locked pending a separate exact contract and jury."
+    },
+    {
+      "time": "2026-08-07T03:24:09Z",
+      "event": "phase-completed",
+      "phase": "method-plan",
+      "gate": "pass",
+      "acceptance": "same-family-provisional",
+      "bundle_manifest": "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111946.json",
+      "bundle_manifest_sha256": "21267bf7a0b34d1f101398963011697ea451a6a4a5869dd97317319bd637ea6f",
+      "jury_response": ".aris/traces/method-plan/2026-08-07_run01/009-experiment-plan-v21-jury.response.md",
+      "jury_response_sha256": "4c5778ca4fd2d2f5f76c121e4d2566474ac961c73f3da718bda55af870905431",
+      "verdict": "CONDITIONAL-GO",
+      "note": "Scopes A-E are authorized under exact stage-local gates. Scope F live robot connectivity or motion remains NO-GO. No scientific GPU job or robot action occurred in method planning."
+    },
+    {
+      "time": "2026-08-07T03:24:09Z",
+      "event": "phase-begun",
+      "phase": "implementation-experiments",
+      "attempt": 1,
+      "note": "Start isolated implementation under <PERSONAL_RESEARCH_ROOT> from the pinned clean StarVLA bundle. CPU/static tests and fresh code review must pass before the engineering-only GPU canary; each later scientific stage retains its preregistered gate."
+    },
+    {
+      "time": "2026-08-29T14:10:36Z",
+      "event": "phase-blocked",
+      "phase": "implementation-experiments",
+      "reason": "Human-directed structural pivot on 2026-08-29 to OA-WAM object addressing plus EvoScene-style action-updated belief; PGR-Audit implementation preserved with zero recorded GPU jobs and is not being continued in this run."
+    }
+  ]
+}

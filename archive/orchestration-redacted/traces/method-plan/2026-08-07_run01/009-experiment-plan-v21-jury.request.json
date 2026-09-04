@@ -1,0 +1,28 @@
+{
+  "call_number": 9,
+  "purpose": "final-hash-bound-experiment-plan-v2.1-jury",
+  "timestamp": "2026-08-07T11:21:05+08:00",
+  "tool": "spawn_agent",
+  "agent_id": "/root/pgr_experiment_plan_v21_jury",
+  "reviewer_model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "review_mode": "fresh context, read-only, same-family provisional",
+  "bundle_manifest": {
+    "path": "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111946.json",
+    "sha256": "21267bf7a0b34d1f101398963011697ea451a6a4a5869dd97317319bd637ea6f"
+  },
+  "repair_basis": {
+    "path": ".aris/traces/method-plan/2026-08-07_run01/008-experiment-plan-v2-jury.response.md",
+    "sha256": "7ea5a1c062e68214cf39a902bb5cb8dd9ac7d6d36a327a7c80c9427469c20910",
+    "expected_repaired_defects": 3
+  },
+  "required_scope_verdicts": [
+    "A isolated personal-root implementation",
+    "B engineering-only canary after CPU/static tests, fresh code review, and runtime provenance verification",
+    "C all-LIBERO-10 treatment-blind screen after A and B",
+    "D full simulation Stage 1 and conditional Stage 2 after their frozen gates",
+    "E offline real-robot contract preparation with zero connectivity or motion",
+    "F live real-robot connectivity or motion"
+  ],
+  "mutation_permissions": "none"
+}

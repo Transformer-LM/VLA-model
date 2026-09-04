@@ -1,0 +1,12 @@
+{
+  "request_file": "005-closest-work-fact-check.request.json",
+  "response_file": "005-closest-work-fact-check.response.md",
+  "agent_id": "/root/c01_scoop_check",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": "2026-08-07T08:25:00+08:00",
+  "completed_at": "2026-08-07T08:31:00+08:00",
+  "duration_ms": 360000,
+  "status": "ok"
+}

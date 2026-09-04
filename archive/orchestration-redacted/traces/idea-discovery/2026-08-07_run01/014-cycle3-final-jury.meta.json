@@ -1,0 +1,14 @@
+{
+  "request_file": "014-cycle3-final-jury.request.json",
+  "response_file": "014-cycle3-final-jury.response.md",
+  "agent_id": "/root/cycle3_final_jury",
+  "executor_model": "gpt-5.6-sol",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "started_at": null,
+  "completed_at": "2026-08-07T09:00:00+08:00",
+  "duration_ms": null,
+  "status": "ok",
+  "verdict": "CONDITIONAL-GO",
+  "score": "5.9/10"
+}

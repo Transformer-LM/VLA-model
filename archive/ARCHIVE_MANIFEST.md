@@ -18,6 +18,9 @@ local research workspace.
 - `refine-logs`
 - `idea-stage`
 
+In addition, `../skills/all-local-skills/` contains the source of every local
+research skill that could be safely copied without its installed runtime.
+
 The directory layout inside `archive/all-experiments/` preserves the original
 relative paths so that old links in research notes remain meaningful.
 
@@ -32,7 +35,8 @@ research markers, manifests, and experiment metadata/results summaries.
 - array/data/video/image artifacts (`.npz`, `.npy`, `.mp4`, `.webm`, `.png`,
   `.jpg`, `.jpeg`, `.gif`);
 - Python bytecode and cache directories;
-- `.aris` private orchestration traces;
+- `.aris/vendor` and its third-party dependency tree;
+- unselected private orchestration/runtime traces;
 - raw paper/PDF collection and external datasets;
 - SSH keys, credentials, server addresses, and private absolute paths.
 
@@ -42,6 +46,13 @@ its contents are unchanged apart from public-path redaction.
 
 All path redactions use placeholders such as `<PERSONAL_RESEARCH_ROOT>` and
 `<PRIVATE_SERVER>`. They are intentionally not executable paths.
+
+`orchestration-redacted/` contains the research-related `.aris` state,
+candidate, claim, compute, trace, tool and historical-backup subsets that were
+safe to preserve after redaction. The local `.agents/runtime` dependency
+installation is not included;
+the reusable skill source is in `../skills/all-local-skills/` relative to
+the repository root.
 
 Some historical auto-research JSON files are raw orchestration/provenance
 outputs and were already malformed in the source workspace (for example,

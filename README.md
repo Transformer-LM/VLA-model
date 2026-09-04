@@ -9,6 +9,8 @@ different GPT account.
 
 - `skills/embodied-autoresearch/`: the reusable autonomous research workflow,
   including its references, templates, scripts, and agent metadata.
+- `skills/all-local-skills/`: sanitized source copies of all other locally
+  available research skills (without the installed runtime/dependency tree).
 - `research/current-policy-repair/`: the current E1 experiment status, audit,
   results summary, and execution milestone.
 - `research/active-israc/`: selected planning, novelty, literature, and result
@@ -21,6 +23,9 @@ different GPT account.
   functional geometry, novelty runs, ideaspark runs, and ISRAC.
 - `archive/project-context/`: top-level briefs, configurations, manifests, and
   previous account-handoff materials.
+- `archive/orchestration-redacted/`: research-related autoresearch state,
+  candidate records, claims, and traces with private paths redacted; vendor,
+  backup, and dependency trees are intentionally excluded.
 - `RESEARCH_HANDOFF_FOR_NEXT_GPT.md`: experiment-by-experiment status,
   supported/unsupported claims, navigation guide, and safe reproduction rules.
 
