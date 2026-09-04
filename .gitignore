@@ -1,0 +1,31 @@
+# Research data and model artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.mp4
+*.webm
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Runtime output and caches
+*.log
+__pycache__/
+.pytest_cache/
+.cache/
+wandb/
+results/
+checkpoints/
+models/
+datasets/
+
+# Local credentials and machine configuration
+.env
+*.pem
+*.key
+id_ed25519*
+id_rsa*

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "embodied-vla-wam",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "Broad-field discovery at the intersection of embodied VLA and learned world models / World Action Models",
+    "exploration_level": "field",
+    "selected_macro_direction": null,
+    "macro_direction_count": 6,
+    "embodiment": "open during field discovery",
+    "task_family": "open during field discovery",
+    "observation_modalities": [],
+    "action_representation": "open until macro direction selection",
+    "seed_topics": [
+      "video-generative World Action Models",
+      "latent dynamics world models",
+      "model-based reinforcement learning world models"
+    ],
+    "exploration_axes": [
+      "world-model representation",
+      "world-model role in the VLA lifecycle",
+      "policy-world-model coupling",
+      "learning and data regime",
+      "embodiment and task family",
+      "evaluation evidence and failure modes"
+    ],
+    "benchmark_priority": [],
+    "target_venues": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "ICLR",
+      "NeurIPS"
+    ],
+    "simulation_first": true,
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2023,
+    "literature_year_end": null
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": true,
+    "auto_select_idea": false,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "unconfigured",
+    "remote_host": "",
+    "max_pilot_gpu_hours": 2.0,
+    "max_total_gpu_hours": 8.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true
+  },
+  "framework_preferences": [
+    "openpi",
+    "openvla-oft",
+    "cosmos-policy"
+  ]
+}
