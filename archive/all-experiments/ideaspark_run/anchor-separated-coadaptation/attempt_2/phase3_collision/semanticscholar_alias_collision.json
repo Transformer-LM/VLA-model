@@ -1,0 +1,1488 @@
+[
+ {
+  "title": "A priori acceptance of voice-based HMIs in adaptive cruise control",
+  "title_norm": "a priori acceptance of voice based hmis in adaptive cruise control",
+  "abstract": "\n Adaptive cruise control (ACC) is becoming increasingly common; however, many users still struggle to understand system states and interventions, which may hinder trust and acceptance. Prior research has focused primarily on visual human–machine interfaces (HMIs), but driving is a visually demanding task. Therefore, voice-based HMIs are increasingly being considered as an alternative or complementary modality; however, empirical evidence regarding their acceptability for ACC remains limited, particularly in partially automated systems that require continuous driver monitoring. This study examines the subjective\n a priori\n acceptance of voice-based ACC notification designs through a video-based experiment. Participants (\n N\n = 240) view standardized highway driving scenarios and evaluate multiple HMI conditions that vary in informational and cautionary audio–visual content relative to a silent baseline providing purely visual content. The results reveal significant differences in acceptance across notification conditions. Overall, simple notification strategies exhibit consistently moderate acceptance, without eliciting strong rejection, whereas more detailed or strongly directive voice messages tend to be evaluated less favorably. Furthermore, the exploratory analysis yields preliminary, hypothesis-generating insights into age-related patterns in user evaluations. Overall, our findings suggest that the design of voice notifications may be an important factor in shaping the\n a priori\n acceptance of ACC and emphasize the need for further research targeting diverse user groups.\n",
+  "tldr": "The findings suggest that the design of voice notifications may be an important factor in shaping the  a priori acceptance of ACC and emphasize the need for further research targeting diverse user groups.",
+  "year": 2026,
+  "venue": "Frontiers of Computer Science",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tomoki Miyamoto",
+   "Ryoki Sato",
+   "Daisuke Katagami",
+   "Kazuhiro Fujikake",
+   "Takahiro Tanaka"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6da56d02d0c18cfebf439c9c579efdb644c48e14",
+  "paper_id": "doi:10.3389/fcomp.2026.1806452",
+  "doi": "10.3389/fcomp.2026.1806452",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1806452/pdf",
+  "published_iso": "2026-08-05",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "An adaptive hybrid neighbourhood search algorithm for order acceptance and batch scheduling problem in additive manufacturing",
+  "title_norm": "an adaptive hybrid neighbourhood search algorithm for order acceptance and batch",
+  "abstract": "This paper addresses the order acceptance and batch scheduling problem on a single machine in the additive manufacturing environment, in which the manufacturer must make both order acceptance and scheduling decisions to maximise total net profit. We first present the MILP model for the problem. Then, due to the inherent complexity of the problem, we develop an adaptive hybrid neighbourhood search (AHNS) algorithm to obtain high-quality solutions that satisfy all technical constraints. To assess the performance of the AHNS algorithm across various classes of instances, we analyze the sensitivity of the experimental parameters and conduct extensive computational experiments. The computational results show that the AHNS algorithm can obtain high-quality solutions in a shorter time compared with several other approaches.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Journal of Production Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhaofang Mao",
+   "Teng Cao",
+   "Enyuan Fu",
+   "Kan Fang",
+   "Dian Huang"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "9c13883bad26cdbb66a98b4dd6c0071f145b1b43",
+  "paper_id": "dblp:journals/ijpr/MaoCFFH26",
+  "doi": "10.1080/00207543.2025.2516189",
+  "arxiv_id": "",
+  "dblp_key": "journals/ijpr/MaoCFFH26",
+  "paper_url": "https://www.semanticscholar.org/paper/9c13883bad26cdbb66a98b4dd6c0071f145b1b43",
+  "published_iso": "2025-06-11",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "ASDT: Adaptive Speculative Decoding Tree Based on Token Acceptance Feedback",
+  "title_norm": "asdt adaptive speculative decoding tree based on token acceptance feedback",
+  "abstract": "Speculative decoding accelerates large language model (LLM) inference by drafting multiple tokens in parallel and verifying them using the base model. However, existing tree-structured approaches rely on fixed draft configurations, which are suboptimal for heterogeneous inputs: deep trees can lead to excessive computation on difficult inputs, while shallow trees underexploit potential speedups on simpler ones. We propose ASDT (Adaptive Speculative Decoding Tree), a lightweight runtime controller that dynamically adjusts the speculative token tree based on token-level acceptance feedback. By modifying tree depth and width in response to input difficulty, ASDT keeps the per-step speculative cost approximately constant without altering the base model or requiring retraining. Experiments on dialogue, mathematical reasoning, and code generation tasks show that ASDT achieves consistent speedup improvements of 2.0-4.3% over Static Tree baselines, with up to 4.3% relative gain on the 3B model. By committing more tokens per step and reducing token-level latency, ASDT accelerates decoding while preserving the exact output distribution of standard autoregressive sampling. Our method is plug-and-play, training-free, and compatible with production deployment, making it a practical and effective solution for efficient LLM inference.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 5th International Symposium on Artificial Intelligence and Big Data (AIBDF)",
+  "publication_types": [],
+  "authors": [
+   "Yizi Song",
+   "Han Xia",
+   "Fei Duan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "5f74b71d000e646daf965c736c0c7d8a7d63496d",
+  "paper_id": "doi:10.1109/AIBDF67964.2025.11440682",
+  "doi": "10.1109/AIBDF67964.2025.11440682",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5f74b71d000e646daf965c736c0c7d8a7d63496d",
+  "published_iso": "2025-12-26",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Density-Adaptive Gate Control Configuration Method in Time-Sensitive Networking",
+  "title_norm": "density adaptive gate control configuration method in time sensitive networking",
+  "abstract": "To address the limitations of existing Time-Aware Shaper (TAS) scheduling strategies in terms of configuration complexity and resource utilization, this paper proposes a Density-Adaptive Gate Control (DAGC) method, designed to meet the strict latency requirements of high-priority traffic while improving bandwidth utilization. We develop a system model for industrial network environments and design a corresponding scheduling model. By analyzing key performance indicators such as end-to-end latency, jitter, and packet loss rate, we demonstrate the effectiveness of the proposed method. Then, we further demonstrate through MATLAB simulations and real-network experiments that the DAGC method significantly outperforms two existing scheduling methods. In scenarios where traditional end devices cannot alter task offset times, DAGC reduces latency by 98.81% and the number of guard bands by 25.65%, while ensuring zero packet loss. Under network congestion, DAGC decreases the latency of bursty emergency traffic by 89.18%, while ensuring that high-priority traffic remains unaffected by low-priority traffic and maintaining zero packet loss even under heavy load.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Wireless Communications and Networking Conference",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Renhe Yan",
+   "Meihui Liu",
+   "Qingmin Yu",
+   "Xiuhong Yang",
+   "Shihui Duan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "adc07a4026ab2e367b4f5b0cd051cfca47fa8cc5",
+  "paper_id": "dblp:conf/wcnc/YanLYYD25",
+  "doi": "10.1109/WCNC61545.2025.10978436",
+  "arxiv_id": "",
+  "dblp_key": "conf/wcnc/YanLYYD25",
+  "paper_url": "https://www.semanticscholar.org/paper/adc07a4026ab2e367b4f5b0cd051cfca47fa8cc5",
+  "published_iso": "2025-03-24",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "CrossEarth-Gate: Fisher-Guided Adaptive Tuning Engine for Efficient Adaptation of Cross-Domain Remote Sensing Semantic Segmentation",
+  "title_norm": "crossearth gate fisher guided adaptive tuning engine for efficient adaptation of",
+  "abstract": "In Remote Sensing (RS), Parameter-Efficient Fine-Tuning (PEFT) has emerged as a key approach to activate the generalizable representation ability of foundation models for downstream tasks. However, existing specialized PEFT methods often fail when applied to large-scale Earth observation tasks, as they are unable to fully handle the multifaceted and unpredictable domain gaps (e.g., spatial, semantic, and frequency shifts) inherent in RS data. To overcome this, we propose CrossEarth-Gate, which introduces two primary contributions. First, we establish a comprehensive RS module toolbox to address multifaceted domain gaps, comprising spatial, semantic, and frequency modules. Second, we develop a Fisher-guided adaptive selection mechanism that operates on this toolbox. This selection is guided by Fisher Information to quantify each module's importance by measuring its contribution to the task-specific gradient flow. It dynamically activates only the most critical modules at the appropriate layers, guiding the gradient flow to maximize adaptation effectiveness and efficiency. Comprehensive experiments validate the efficacy and generalizability of our method, where CrossEarth-Gate achieves state-of-the-art performance on 16 out of 18 cross-domain benchmarks for RS semantic segmentation.",
+  "tldr": "This work proposes CrossEarth-Gate, a Fisher-guided adaptive selection mechanism that operates on a comprehensive RS module toolbox to address multifaceted domain gaps, comprising spatial, semantic, and frequency modules, and develops a Fisher-guided adaptive selection mechanism that operates on this toolbox.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shilei Cao",
+   "Ziyang Gong",
+   "Hehai Lin",
+   "Yang Liu",
+   "Jiashun Cheng",
+   "Xiaoxing Hu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ff5e3bad984edb64f6671b1ee4e8392b4487ad82",
+  "paper_id": "dblp:journals/corr/abs-2511-20302",
+  "doi": "10.48550/arXiv.2511.20302",
+  "arxiv_id": "2511.20302",
+  "dblp_key": "journals/corr/abs-2511-20302",
+  "paper_url": "https://www.semanticscholar.org/paper/ff5e3bad984edb64f6671b1ee4e8392b4487ad82",
+  "published_iso": "2025-11-25",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "A novel multi-feature fusion technology of FTIR spectroscopy based on attention and adaptive gate for disease diagnosis.",
+  "title_norm": "a novel multi feature fusion technology of ftir spectroscopy based on attention ",
+  "abstract": "Fourier transform infrared (FTIR) spectroscopy has been extensively applied in the auxiliary diagnosis of diseases. However, in complex clinical environments, the information reflected by a single spectral feature is limited. Chaos theory focuses on studying complex behaviors in nonlinear dynamical systems, while statistics is dedicated to collecting, analyzing, interpreting, displaying, and organizing data. This study extracts chaotic features and statistical domain features from the time-domain form of FTIR spectroscopy and integrates them with the original FTIR spectroscopy through feature fusion model Cross Features Attention Multi-feature Adaptation Gate (CFAMAG), aiming to achieve better performance in disease auxiliary diagnosis. The CFAMAG addresses the issues of information misalignment, heterogeneity, and complementarity among different features by computing cross-feature attention between chaotic features, statistical domain features, and FTIR spectral features. Additionally, the design of gating vectors and displacement vectors allows CFAMAG to adjust the influence of non-FTIR spectral features on the feature space, facilitating better integration of chaotic features and statistical domain features. Experimental results demonstrate the outstanding and stable predictive performance of the CFAMAG model across four binary classification experiments and one multi-class classification experiment. In the experiments, the CFAMAG model shows an average improvement of 6.48 % in Accuracy (Acc), 7.73 % in Precision (Pre), 4.87 % in Sensitivity (Sen), 11.10 % in Specificity (Spe), 8.37 % in F1 score (F1), and 7.08 % in Area Under Curve (AUC). The proposed method enhances the accuracy of disease auxiliary diagnosis and holds significant reference value for disease auxiliary diagnosis.",
+  "tldr": "The proposed method enhances the accuracy of disease auxiliary diagnosis and holds significant reference value for disease auxiliary diagnosis through feature fusion model Cross Features Attention Multi-feature Adaptation Gate (CFAMAG).",
+  "year": 2025,
+  "venue": "Spectrochimica Acta Part A - Molecular and Biomolecular Spectroscopy",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yang Du",
+   "Cheng Chen",
+   "Chen Chen",
+   "Wenyan Wang",
+   "Yue Liu",
+   "Lijun Wu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "3109febf09d5a9178d32c04fa040ee4dba2adb10",
+  "paper_id": "doi:10.1016/j.saa.2025.127120",
+  "doi": "10.1016/j.saa.2025.127120",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3109febf09d5a9178d32c04fa040ee4dba2adb10",
+  "published_iso": "2025-11-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Testing of Compute-in-Memory Based CNNs Using Probabilistic Test Acceptance Limits",
+  "title_norm": "adaptive testing of compute in memory based cnns using probabilistic test accept",
+  "abstract": "Compute-in-memory (CiM) based convolutional neural network (CNN) accelerators achieve low-power inference, utilizing memristive crossbar arrays for matrix multiplications. However, inherent conductance variations within the crossbar introduce computational errors. These errors propagate to the CNN output and cause image misclassification, leading to substantial accuracy degradation. This paper addresses the critical challenge of efficient and reliable post-manufacture testing for CiM-based CNN accelerators. We propose a novel test image sampling methodology, which iteratively applies sampled images from the CNN's testing dataset using progressive random sampling (PRS) to a device under test (DUT) and estimates a confidence interval for the DUT accuracy. Based on the confidence interval and the acceptable accuracy threshold, the test labels a DUT as “pass” or “fail”. Furthermore, if we have access to an initial set of DUTs, we apply the images from the CNN's testing dataset to these DUTs and leverage the DUT outputs to rank-order test images. We develop a sequential estimation test (SET) framework, where the images from the CNN's testing dataset are sequentially applied according to a predetermined rank and the test terminates when a DUT can be confidently labeled as “pass” or “fail” based on the applied images. In each case, the number of applied test images adapts to the quality of the DUT. Experiments show that PRS and SET achieve $2.2\\times$ and $4.6\\times$ speedup compared to state-of-the-art test methodologies.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE International Symposium on On-Line Testing and Robust System Design",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Anurup Saha",
+   "Kwondo Ma",
+   "C. Amarnath",
+   "Moinuddin K. Qureshi",
+   "Abhijit Chatterjee"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "5f189d67b3b52e22d6f700fcd38c8ecf2a8ffd1f",
+  "paper_id": "dblp:conf/iolts/SahaMAQC25",
+  "doi": "10.1109/IOLTS65288.2025.11117076",
+  "arxiv_id": "",
+  "dblp_key": "conf/iolts/SahaMAQC25",
+  "paper_url": "https://www.semanticscholar.org/paper/5f189d67b3b52e22d6f700fcd38c8ecf2a8ffd1f",
+  "published_iso": "2025-07-07",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Gate-Aware Mamba Networks for Magnetic Resonance Fingerprinting",
+  "title_norm": "adaptive gate aware mamba networks for magnetic resonance fingerprinting",
+  "abstract": "Magnetic Resonance Fingerprinting (MRF) enables multiparametric mapping but suffers from aliasing artifacts under high undersampling. To address this, we propose GASTMamba, an end-to-end framework for accelerated MRF reconstruction. Our model integrates a dual Mamba-based encoder to capture long-range temporal dependencies in signal evolutions and a Gate-Aware Spatial-Temporal (GAST) processor to adaptively enforce spatial coherence. This design enables robust T1 and T2 mapping under 5-fold acceleration. Simulation results showed GAST-Mamba outperformed state-of-the-art methods by up to 4.5%. In vivo experiments demonstrated effective artifact mitigation and preservation of fine anatomical structures, yielding T1 and T2 values consistent with literature. Our work establishes GAST-Mamba as a robust and scalable solution for substantially accelerating MRF acquisitions without compromising quantitative accuracy. Code available at: https://github.com/dty00/GAST-mamba.",
+  "tldr": "This work establishes GAST-Mamba as a robust and scalable solution for substantially accelerating MRF acquisitions without compromising quantitative accuracy.",
+  "year": 2025,
+  "venue": "IEEE International Symposium on Biomedical Imaging",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tianyi Ding",
+   "Hongli Chen",
+   "Yang Gao",
+   "Z. Xiong",
+   "Feng Liu",
+   "Martin Cloos"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c8e3eaec43dfed4d7bc25db15e0f2710d1c95dcc",
+  "paper_id": "dblp:journals/corr/abs-2507-03369",
+  "doi": "10.1109/ISBI61048.2026.11515932",
+  "arxiv_id": "2507.03369",
+  "dblp_key": "journals/corr/abs-2507-03369",
+  "paper_url": "https://arxiv.org/pdf/2507.03369",
+  "published_iso": "2025-07-04",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive multimodal feature fusion with frequency domain gate for remote sensing object detection",
+  "title_norm": "adaptive multimodal feature fusion with frequency domain gate for remote sensing",
+  "abstract": "",
+  "tldr": "An adaptive multimodal feature fusion method with a frequency domain gate based on DINO (detection transformer with improved denoising anchor boxes), called multimodal DINO, which achieves superior performance compared to basic detectors and existing multimodal detection methods.",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Xu Sun",
+   "Yinhui Yu",
+   "Qing Cheng"
+  ],
+  "citations": 15,
+  "source": "semanticscholar",
+  "source_id": "d4f58204f9feebe462f33f7bda2e6e8017bae708",
+  "paper_id": "doi:10.1080/2150704X.2024.2305177",
+  "doi": "10.1080/2150704X.2024.2305177",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d4f58204f9feebe462f33f7bda2e6e8017bae708",
+  "published_iso": "2024-02-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "A Versatile Approach for Adaptive Grid Mapping and Grid Flex-Graph Exploration with a Field-Programmable Gate Array-Based Robot Using Hardware Schemes",
+  "title_norm": "a versatile approach for adaptive grid mapping and grid flex graph exploration w",
+  "abstract": "Robotic exploration in dynamic and complex environments requires advanced adaptive mapping strategies to ensure accurate representation of the environments. This paper introduces an innovative grid flex-graph exploration (GFGE) algorithm designed for single-robot mapping. This hardware-scheme-based algorithm leverages a combination of quad-grid and graph structures to enhance the efficiency of both local and global mapping implemented on a field-programmable gate array (FPGA). This novel research work involved using sensor fusion to analyze a robot’s behavior and flexibility in the presence of static and dynamic objects. A behavior-based grid construction algorithm was proposed for the construction of a quad-grid that represents the occupancy of frontier cells. The selection of the next exploration target in a graph-like structure was proposed using partial reconfiguration-based frontier-graph exploration approaches. The complete exploration method handles the data when updating the local map to optimize the redundant exploration of previously explored nodes. Together, the exploration handles the quadtree-like structure efficiently under dynamic and uncertain conditions with a parallel processing architecture. Integrating several algorithms into indoor robotics was a complex process, and a Xilinx-based partial reconfiguration approach was used to prevent computing difficulties when running many algorithms simultaneously. These algorithms were developed, simulated, and synthesized using the Verilog hardware description language on Zynq SoC. Experiments were carried out utilizing a robot based on a field-programmable gate array (FPGA), and the resource utilization and power consumption of the device were analyzed.",
+  "tldr": "This paper introduces an innovative grid flex-graph exploration (GFGE) algorithm designed for single-robot mapping that leverages a combination of quad-grid and graph structures to enhance the efficiency of both local and global mapping implemented on a field-programmable gate array (FPGA).",
+  "year": 2024,
+  "venue": "Italian National Conference on Sensors",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mudasar Basha",
+   "M. Siva Kumar",
+   "M. C. Chinnaiah",
+   "S. Lam",
+   "T. Srikanthan",
+   "G. Divya Vani"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "58f25d676a6cf2364883e7bfb4f8bd9d5d09e2c2",
+  "paper_id": "dblp:journals/sensors/BashaKCLSVJKD24",
+  "doi": "10.3390/s24092775",
+  "arxiv_id": "",
+  "dblp_key": "journals/sensors/BashaKCLSVJKD24",
+  "paper_url": "https://www.mdpi.com/1424-8220/24/9/2775/pdf?version=1714135263",
+  "published_iso": "2024-04-26",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive wavelet transform defogging scheme for real-time video restoration with field programmable gate array implementation",
+  "title_norm": "adaptive wavelet transform defogging scheme for real time video restoration with",
+  "abstract": "Abstract. In the context of real-time video defogging, accurately estimating the transmittance of sky regions and deep fault regions remains a challenging task due to severe color distortion and halo effects. To address this issue, we propose an innovative adaptive wavelet transform defogging (AWTD) scheme aimed at precisely modifying the transmittance of the sky and deep fault regions. Additionally, we present a dedicated field programmable gate array defogging architecture capable of direct application for real-time synchronous defogging of Full HD (1920×1080) videos. Through extensive experiments and comparisons, we demonstrate the effectiveness and practicality of the proposed AWTD approach in mitigating color distortion, halo effects, and other fog-induced artifacts. The results show that the dehazing algorithm attains 60 frames per second for the image resolution of 1920×1080, which is suitable of real time applications.",
+  "tldr": "This work proposes an innovative adaptive wavelet transform defogging scheme aimed at precisely modifying the transmittance of the sky and deep fault regions and presents a dedicated field programmable gate array defogging architecture capable of direct application for real-time synchronous defogging of Full HD videos.",
+  "year": 2024,
+  "venue": "J. Electronic Imaging",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jun Dong",
+   "Tongfei A. Wang",
+   "Yueming Deng",
+   "Runmin Wang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "17d233878dbda2efdf74c6ed67cedc2e22ed7ed4",
+  "paper_id": "dblp:journals/jei/DongWDW24",
+  "doi": "10.1117/1.JEI.33.1.013042",
+  "arxiv_id": "",
+  "dblp_key": "journals/jei/DongWDW24",
+  "paper_url": "https://www.semanticscholar.org/paper/17d233878dbda2efdf74c6ed67cedc2e22ed7ed4",
+  "published_iso": "2024-01-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Repetitive Action Counting with Feature Interaction Enhancement and Adaptive Gate Fusion",
+  "title_norm": "repetitive action counting with feature interaction enhancement and adaptive gat",
+  "abstract": "Repetitive Action Counting (RAC) aims to count the number of repetitive actions occurring in videos. Accurately identifying these repetitive actions in complex real-world scenes presents several challenges, such as high-frequency periods, action interruption, and background occlusion. Existing methods typically rely on RGB features to calculate feature similarity for motion pattern modeling. However, they inevitably struggle with issues caused by occluded individuals or subtle visual changes. To address these challenges, we first propose a feature interaction enhancement module designed to improve the learning of action-relevant features from both RGB and skeleton data. This mechanism combines the strengths of both RGB and skeleton data, leveraging the complementary nature to enhance the modeling of motion patterns. Furthermore, we introduce an adaptive local-global attention gating fusion mechanism to integrate enhanced processed RGB and skeleton features. Our approach significantly enhances the accuracy and robustness of action counting by dynamically adjusting feature weights through adaptive gating. Compared with existing methods, our method exhibits competitive performance on existing datasets. Extensive experiments validate the effectiveness of the proposed method.",
+  "tldr": "This work proposes a feature interaction enhancement module designed to improve the learning of action-relevant features from both RGB and skeleton data, and introduces an adaptive local-global attention gating fusion mechanism to integrate enhanced processed RGB and skeleton features.",
+  "year": 2024,
+  "venue": "ACM Multimedia Asia",
+  "publication_types": [
+   "Book",
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jiazhen Zhang",
+   "Kun Li",
+   "Yanyan Wei",
+   "Fei Wang",
+   "Wei Qian",
+   "Jinxing Zhou"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "e96c900782c037aac2d75e11f710496faf50dce6",
+  "paper_id": "dblp:conf/mmasia/ZhangLWWQZG24",
+  "doi": "10.1145/3696409.3700271",
+  "arxiv_id": "",
+  "dblp_key": "conf/mmasia/ZhangLWWQZG24",
+  "paper_url": "https://www.semanticscholar.org/paper/e96c900782c037aac2d75e11f710496faf50dce6",
+  "published_iso": "2024-12-03",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Machine Learning-Driven Tri-Level Hyper-Heuristic Selection With Adaptive Move Acceptance for Composing Medical Crew Scheduling Problem",
+  "title_norm": "machine learning driven tri level hyper heuristic selection with adaptive move a",
+  "abstract": "Driven by the growing demand for adaptive and automated search control in combinatorial optimization, hyper-heuristic frameworks have become an important approach for handling heterogeneous problem instances. This work investigates the Composing Medical Crews with Equity and Efficiency (CMCEE) problem, which aims to maximize the minimum crew efficiency subject to a diversity constraint. In this study, a tri-level hyper-heuristic framework (TL-HH) is proposed to solve the CMCEE problem by coordinating decision-making across multiple search dimensions. First, a multi-stage selection structure is established to dynamically control the choice of the local search algorithm, neighborhood operator, and move acceptance rule within a unified optimization process. Second, a ranking-based regulation mechanism is introduced to evaluate the historical contribution of each low-level component and update the candidate pools accordingly. Third, a learning-driven acceptance strategy is designed to determine solution replacement decisions and improve the balance between diversification and intensification during a search. Fourth, an experimental protocol is developed to analyze the individual and combined effects of the three decision layers, providing insight into their coordinated interactions. Fifth, the convergence behavior and computational characteristics are examined to assess the stability and reliability of the proposed framework. Experiments are conducted on 80 benchmark instances of various sizes. The results demonstrate that TL-HH achieves consistent improvements in solution quality and robustness compared to the established hyper-heuristics and classical meta-heuristics for the CMCEE problem. These findings confirm the effectiveness of coordinated multi-level decision control for constrained optimization tasks and provide practical insights for adaptive search design in crew-composition problems.",
+  "tldr": "The results demonstrate that TL-HH achieves consistent improvements in solution quality and robustness compared to the established hyper-heuristics and classical meta-heuristics for the CMCEE problem.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. K. Abbas",
+   "Esam Taha Yassen"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "70671ecdb31bf0bc2c6fbb2375ffebe07055bf7b",
+  "paper_id": "dblp:journals/access/AbbasY26",
+  "doi": "10.1109/ACCESS.2026.3671676",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/AbbasY26",
+  "paper_url": "https://doi.org/10.1109/access.2026.3671676",
+  "published_iso": null,
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Acceptance Rate-Adaptive pCN MCMC for Moderate-Dimensional Bayesian Inverse Problems",
+  "title_norm": "acceptance rate adaptive pcn mcmc for moderate dimensional bayesian inverse prob",
+  "abstract": "The preconditioned Crank–Nicolson (pCN) Markov chain Monte Carlo method is a standard tool for high-dimensional Bayesian inverse problems because its proposals preserve the prior and its performance degrades gracefully under mesh refinement. Yet its efficiency depends heavily on the step-size parameter β, which practitioners must tune manually for each problem. To remove this burden, we propose an acceptance rate-adaptive pCN algorithm that calibrates β automatically during a finite burn-in phase via a Robbins–Monro stochastic approximation driven by cumulative acceptance rate feedback. We also studied a dual-signal extension that supplements acceptance rate adaptation with an auxiliary effective sample size (ESS) feedback term, activated gradually through a smooth logistic switch. To contextualize the proposed methods, we conducted a systematic comparison with the adaptive Metropolis (AM) and the Metropolis-adjusted Langevin algorithm (MALA). In both adaptive pCN variants, adaptation is confined to the burn-in and the step size is then frozen, so that the post-burn-in samples are produced by a time-homogeneous Metropolis–Hastings kernel targeting the correct posterior. Numerical experiments on five linear-Gaussian benchmarks with a controlled spectral structure (dimensions: 10 to 100, condition numbers: 2 to 200, SNR from −9 dB to +8 dB) and a nonlinear PDE-constrained inverse problem governed by the cubic–quintic nonlinear Schrödinger equation showed that the acceptance rate-adaptive pCN yields consistent improvements over vanilla pCN, reaching approximately an 1.8× higher ESS in ill-conditioned regimes with low inter-seed variance. The AM achieved a superior ESS on well-conditioned and low-dimensional problems, while the MALA excelled in low-SNR regimes, but degraded under sharp posteriors. A sensitivity analysis confirmed the robustness to hyperparameter choices, and multi-seed experiments validated the reproducibility of all findings. These results indicate that automatic step-size adaptation can substantially improve the practical efficiency of pCN for challenging moderate-dimensional Bayesian inverse problems without manual tuning.",
+  "tldr": "Results indicate that automatic step-size adaptation can substantially improve the practical efficiency of pCN for challenging moderate-dimensional Bayesian inverse problems without manual tuning.",
+  "year": 2026,
+  "venue": "Algorithms",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shucan Xia",
+   "Haoran Song"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "54187c57c36b76eb66ac32d0b0e3c0b5d3417fbf",
+  "paper_id": "doi:10.3390/a19070596",
+  "doi": "10.3390/a19070596",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/1999-4893/19/7/596/pdf?version=1784445754",
+  "published_iso": "2026-07-19",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "ACE-ProtoNet: Adaptive covariance eigen-gate and uncertainty-aware prototype learning for coronary artery segmentation",
+  "title_norm": "ace protonet adaptive covariance eigen gate and uncertainty aware prototype lear",
+  "abstract": "Accurate segmentation of coronary arteries from Coronary CT Angiography (CCTA) is essential for quantitative stenosis evaluation, plaque characterization, and surgical planning. However, low vessel-to-background contrast, high anatomical variability, and the complex, tree-like vascular morphology pose significant challenges to automated segmentation. To address these challenges, we propose ACE-ProtoNet, a unified framework that couples an Adaptive Covariance Eigen-Gate (ACE-Gate) with an Uncertainty-aware Prototype Learning Head (UPL-Head) to achieve robust and accurate coronary artery segmentation. The architecture is built upon a parallel dual-encoder backbone which synergizes a partially frozen Vision Foundation Model (VFM) for global structural encoding with a trainable CNN for fine-grained local feature extraction. To reconcile the heterogeneity between these feature streams, the ACE-Gate explicitly models inter-channel dependencies through covariance analysis and eigenvalue decomposition, yielding statistically grounded, channel-wise gating for principled feature integration. Meanwhile, the UPL-Head leverages voxel-wise predictive uncertainty to modulate prototype-guided attention and dynamically update prototypes during training, thereby enhancing representation robustness in hard-to-classify regions and improving overall segmentation accuracy. Extensive experiments on two in-house and four public datasets demonstrate that ACE-ProtoNet consistently outperforms twelve state-of-the-art methods across multiple metrics, exhibiting superior cross-domain generalization as well as strong cross-modality and cross-anatomy transferability. The code is available at .",
+  "tldr": "ACE-ProtoNet, a unified framework that couples an Adaptive Covariance Eigen-Gate (ACE-Gate) with an Uncertainty-aware Prototype Learning Head (UPL-Head) to achieve robust and accurate coronary artery segmentation, consistently outperforms state-of-the-art methods across multiple metrics.",
+  "year": 2026,
+  "venue": "Medical Image Anal.",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "C. Dong",
+   "Duwei Dai",
+   "Pengyu Ren",
+   "Guowei Dai",
+   "Yu Wang",
+   "Linyun Zhou"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "c65c59718a17d94b9565dc080dcb6dfb885d4ba7",
+  "paper_id": "dblp:journals/mia/DongDRDWZLZ26",
+  "doi": "10.1016/j.media.2026.104040",
+  "arxiv_id": "",
+  "dblp_key": "journals/mia/DongDRDWZLZ26",
+  "paper_url": "https://www.semanticscholar.org/paper/c65c59718a17d94b9565dc080dcb6dfb885d4ba7",
+  "published_iso": "2026-03-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Frequency-Aware Adaptive Fusion Gate for Single Image Super-Resolution",
+  "title_norm": "frequency aware adaptive fusion gate for single image super resolution",
+  "abstract": "The Dense-Residual-Connected Transformer (DRCT) has established a new state-of-the-art in single image super-resolution by mitigating the information bottleneck in deep networks. However, its feature aggregation mechanism relies on a suboptimal Static Addition strategy, where residual features are scaled by a fixed, learnable scalar, regardless of the image content. This content-agnostic approach treats high-frequency textures and low-frequency noise indiscriminately, limiting the model’s representational capability. To address this, we propose a Frequency-Aware Adaptive Fusion Gate (FAFG) to replace the static scaling. Unlike spatial-only gating mechanisms, FAFG integrates the Discrete Cosine Transform (DCT) to explicitly perceive the frequency distribution of feature maps. By decomposing features into frequency components, our gate acts as an intelligent valve, dynamically amplifying valid structural details while suppressing redundant background noise. Extensive experiments on standard benchmarks demonstrate that our proposed FAFG-integrated model consistently outperforms the static-scaling and other state-of-the-art methods. Specifically, our method achieves a significant PSNR improvement of 0.31 dB on the texture-rich Urban100 dataset at ×4 scale. Visual results further confirm that our frequency-aware gating mechanism effectively recovers sharper edges and fine textures, providing a superior trade-off between reconstruction accuracy and model complexity.",
+  "tldr": "A Frequency-Aware Adaptive Fusion Gate (FAFG) is proposed to replace the static scaling of the Dense-Residual-Connected Transformer, which achieves a significant PSNR improvement on the texture-rich Urban100 dataset at ×4 scale.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Qi-Xin Liu",
+   "Ka-Cheng Choi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c11df4ce43123a66e907a02340518eafec4d7afa",
+  "paper_id": "doi:10.3390/app16125954",
+  "doi": "10.3390/app16125954",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-3417/16/12/5954/pdf?version=1781261399",
+  "published_iso": "2026-06-12",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "GATE-3D: Geometry-Aware Test-time Adaptive Reranking for Open-Set 3D Shape Retrieval",
+  "title_norm": "gate 3d geometry aware test time adaptive reranking for open set 3d shape retrie",
+  "abstract": "Large pretrained vision models have substantially improved appearance-based 3D shape retrieval, but they still confuse shapes that look similar while differing in geometry. Although geometry-aware features can reduce these errors, naive fusion of geometry and appearance may hurt retrieval when the two modalities are already well aligned. We propose GATE-3D, a lightweight query-adaptive reranking method that incorporates geometry without retraining the retrieval backbone. For each query, GATE-3D predicts how much a geometry-aware score should adjust the appearance-based ranking using features that capture disagreement between the two modalities. This selective design lets geometry contribute where it helps and stay silent where it would hurt. Experiments on three open-set 3D retrieval benchmarks show that GATE-3D improves over appearance-only retrieval and is more robust than always-on fusion. On the primary benchmark, it improves mAP@10 by 2.00 points over appearance-only retrieval (p=0.041); it also improves leave-one-category-out generalization and reduces geometric false positives by 10.8%. GATE-3D achieves competitive zero-shot results against DAC-based baselines. We further find that simple linear routing is more effective than a small MLP in the low-data regime, suggesting that cross-modal disagreement features matter more than model capacity for adaptive routing.",
+  "tldr": "GATE-3D, a lightweight query-adaptive reranking method that incorporates geometry without retraining the retrieval backbone, is proposed and found that simple linear routing is more effective than a small MLP in the low-data regime, suggesting that cross-modal disagreement features matter more than model capacity for adaptive routing.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Hao Wu",
+   "Heyi Lin",
+   "Zili Wang",
+   "Huizai Yao",
+   "Hao Wang",
+   "Hui Xiong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "492f21739dd90d4694afff2761cb12d73ba152b5",
+  "paper_id": "arxiv:2607.19111",
+  "doi": "",
+  "arxiv_id": "2607.19111",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/492f21739dd90d4694afff2761cb12d73ba152b5",
+  "published_iso": "2026-07-21",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Directed and Resolution-Adaptive Louvain Community Method for Hardware Trojan Detection and Localization in Gate-Level Netlists",
+  "title_norm": "directed and resolution adaptive louvain community method for hardware trojan de",
+  "abstract": "The increasing complexity of modern gate-level circuits significantly degrades the efficiency of existing Hardware Trojan detection methods. Community partitioning is an efficient structural decomposition technique to address efficiency and scalability issues, yet current community-based detection schemes rely primarily on undirected graph modeling. To address these issues, we propose an improved structure-aware community detection method for gate-level netlists, aiming to enhance the detection and localization capabilities of small-scale Hardware Trojans. First, an expanded dataset with structural diversity of clean and Trojan-inserted circuits is constructed by extending Trust-Hub benchmark circuits. Then, a directed and resolution-adaptive Louvain community detection algorithm is proposed—by introducing directed modularity, resolution parameters, and logic-gate semantic weighting, fine-grained community partitioning is achieved. On this basis, topological, functional, and anomaly features are extracted from community subgraphs, and a detection framework is built by combining graph neural networks and traditional detection models. All experiments are conducted on a unified platform equipped with an Intel (R) Core (TM) i7-10750H processor and an NVIDIA GeForce RTX 2060 GPU. Experimental results show that compared with configurations using the original Louvain partitioning and traditional features, the proposed method achieves significant improvements in both detection accuracy and localization capability. After introducing the improved community partitioning and feature design, the optimal model (CommunityGAT) yields a 3.3% increase in TPR and a 10.8% increase in ALC, verifying the method’s effectiveness in detecting small-scale concealed Trojans.",
+  "tldr": "An improved structure-aware community detection method for gate-level netlists, aiming to enhance the detection and localization capabilities of small-scale Hardware Trojan detection methods.",
+  "year": 2026,
+  "venue": "Electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hongxu Gao",
+   "Dong Ding",
+   "Cai Zhen",
+   "Xin Liu",
+   "Yu Li",
+   "Jinping Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "392c5bda83428f54b5ad2c97ca920987fd34714b",
+  "paper_id": "doi:10.3390/electronics15051027",
+  "doi": "10.3390/electronics15051027",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2079-9292/15/5/1027/pdf?version=1772287889",
+  "published_iso": "2026-02-28",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "ACE-Net: 3D VFM-CNN Fusion with Adaptive Covariance Eigen-Gate for Coronary Artery Segmentation",
+  "title_norm": "ace net 3d vfm cnn fusion with adaptive covariance eigen gate for coronary arter",
+  "abstract": "Accurate segmentation of coronary arteries from CT angiography is crucial for quantitative stenosis evaluation and surgical planning. This task requires models to capture both global anatomical context and fine-grained local details. While 3D Vision Foundation Models (VFMs) and CNNs are naturally suited for these complementary roles, effectively fusing their heterogeneous feature streams remains a major challenge. To address this, we propose ACE-Net, a unified framework built upon a parallel dual-encoder architecture that couples a 3D foundation model-driven encoder (finetuned from SAM-Med3D) for global structural encoding with a 3D U-Net-based shape encoder for fine-grained local representation. To bridge the feature heterogeneity between the two streams, ACE-Net incorporates the Adaptive Covariance Eigen-Gate (ACE-Gate), which explicitly models interchannel dependencies via covariance analysis and eigenvalue decomposition, enabling adaptive and statistically grounded feature fusion. Extensive experiments on one in-house and two publicly available datasets consistently demonstrate that ACE-Net achieves superior performance and generalization ability, outperforming multiple state-of-the-art algorithms across various metrics. The Code is available at online.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE International Symposium on Biomedical Imaging",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "C. Dong",
+   "Duwei Dai",
+   "Yu Wang",
+   "Guowei Dai",
+   "Jiangbo Zhang",
+   "Wei Zeng"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9602ec3d3f2d671180e47751191ebeece936c2f8",
+  "paper_id": "dblp:conf/isbi/DongDWDZZ26",
+  "doi": "10.1109/ISBI61048.2026.11515482",
+  "arxiv_id": "",
+  "dblp_key": "conf/isbi/DongDWDZZ26",
+  "paper_url": "https://www.semanticscholar.org/paper/9602ec3d3f2d671180e47751191ebeece936c2f8",
+  "published_iso": "2026-04-08",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "A Systematic Study of Gate Functions in Soft Adaptive Policy Optimization",
+  "title_norm": "a systematic study of gate functions in soft adaptive policy optimization",
+  "abstract": "Group Relative Policy Optimization (GRPO) has significantly advanced the training of large language models and enhanced their reasoning capabilities, while it remains susceptible to instability due to the use of hard clipping. Soft Adaptive Policy Optimization (SAPO) addresses this limitation by replacing clipping with a smooth sigmoid-based gate function, which leads to more stable updates. We push this theory further and investigate the impact of different gate functions on both training stability and final model performance. We formalize the key properties that admissible gates should satisfy and propose several families of such functions for empirical evaluation. This paper presents an analysis of our findings based on experiments conducted with the Qwen2.5-7B-Instruct model on mathematical reasoning tasks. These results provide practical guidance for designing smoother and more robust policy optimization objectives for large language model training.",
+  "tldr": "An analysis of the findings based on experiments conducted with the Qwen2.5-7B-Instruct model on mathematical reasoning tasks provides practical guidance for designing smoother and more robust policy optimization objectives for large language model training.",
+  "year": 2026,
+  "venue": "Mathematics &amp; AI",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Egor Denisov",
+   "Svetlana Glazyrina",
+   "Maksim Kryzhanovskiy",
+   "R. Ischenko"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6cf7507c839640e4a8680589488298651c1b5c66",
+  "paper_id": "doi:10.66693/mathai.1015",
+  "doi": "10.66693/mathai.1015",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://enigma.ist/publications/019f5bbe-2809-720d-bf9a-3b5b6a6f49c2/pdf",
+  "published_iso": "2026-05-22",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Gate‐Align‐SED: Semi‐Supervised Sound Event Detection via Adaptive Feature Gating and Cross‐Task Alignment in Situation Awareness",
+  "title_norm": "gate align sed semi supervised sound event detection via adaptive feature gating",
+  "abstract": "In complex real‐world environments such as disaster monitoring, effective sound event detection (SED) is often hindered by the presence of noise and limited labeled data. This article presents Gate‐Align‐SED, a unified semi‐supervised framework designed to bridge the gap between clip‐level and frame‐level acoustic modeling for disaster‐related audio understanding. The proposed method integrates adaptive feature fusion, mutual attention mechanisms, and a novel label alignment strategy that introduces a learnable correlation matrix to align heterogeneous label granularities. Furthermore, we incorporate a consistency learning paradigm grounded in the Mean‐Teacher framework, promoting robust representation learning across both temporal scales and annotation levels. Experiments demonstrate that the proposed approach enhances both the flexibility and stability of SED systems, particularly under label‐sparse or noisy conditions. Our work offers a scalable and generalizable solution for leveraging both weakly labeled and unlabeled data in critical acoustic event recognition scenarios.",
+  "tldr": "Gate‐Align‐SED is presented, a unified semi‐supervised framework designed to bridge the gap between clip‐level and frame‐level acoustic modeling for disaster‐related audio understanding, and offers a scalable and generalizable solution for leveraging both weakly labeled and unlabeled data in critical acoustic event recognition scenarios.",
+  "year": 2026,
+  "venue": "Advanced Intelligent Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jieli Chen",
+   "L. Ang",
+   "Chee Shen Lim",
+   "K. Seng",
+   "Jeremy Smith"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "087362c7ad05e128e351ceb1981275a405bd930c",
+  "paper_id": "doi:10.1002/aisy.70355",
+  "doi": "10.1002/aisy.70355",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/aisy.70355",
+  "published_iso": "2026-04-16",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Multi-Scale Forecasting and Gate-Localized Conformal Prediction for Multivariate Nonstationary Time Series",
+  "title_norm": "adaptive multi scale forecasting and gate localized conformal prediction for mul",
+  "abstract": "We propose ABF-T-GLCP, a model-agnostic framework for forecasting and uncertainty quantification in nonstationary multivariate time series. The central idea is to learn an adaptive predictive state representation for point forecasting and reuse it for conformal calibration. The forecasting module combines horizon-specific temporal experts through a learned gate and refines predictions using sparse predictive transfer across related series. The uncertainty module, Gate-Localized Conformal Prediction (GLCP), uses the learned gate state, together with temporal recency, to select locally relevant calibration residuals, thereby coupling uncertainty calibration to the predictive regimes used by the forecasting model. This shared representation allows point forecasts and prediction intervals to adapt consistently under evolving temporal dynamics while retaining the model-agnostic nature of conformal prediction and yielding approximate local coverage under mild stability conditions. Experiments on a large-scale high-frequency commodity forecasting benchmark show consistent gains in point forecasting accuracy and substantially narrower prediction intervals with empirical coverage close to the nominal level. Additional results indicate that the framework extends beyond the motivating financial application.",
+  "tldr": "ABF-T-GLCP, a model-agnostic framework for forecasting and uncertainty quantification in nonstationary multivariate time series, shows consistent gains in point forecasting accuracy and substantially narrower prediction intervals with empirical coverage close to the nominal level.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Ziling Ma",
+   "Junshu Jiang",
+   "Ángel López-Oriona",
+   "Ying Sun",
+   "H. Ombao"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f152af2a84cf5f7be2118089a33504d35873a389",
+  "paper_id": "arxiv:2607.23165",
+  "doi": "",
+  "arxiv_id": "2607.23165",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f152af2a84cf5f7be2118089a33504d35873a389",
+  "published_iso": "2026-07-25",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Throat‐Sieving Gate in a Metal Azolate Framework Enabling Synergistic Equilibrium‐Kinetic Separation of Propylene and Propane",
+  "title_norm": "adaptive throat sieving gate in a metal azolate framework enabling synergistic e",
+  "abstract": "Developing porous adsorbents for propylene/propane (C3H6/C3H8) separation faces the challenge of integrating high adsorption capacity with fast adsorption kinetics. Herein, we address this challenge through precise pore control in a slightly flexible metal azolate framework NUM‐27a, enabling synergistic equilibrium‐kinetic separation of C3H6/C3H8. The periodically expanded throat gate enables effective impeding the diffusion of C3H8, while a large pocket‐shaped cavity decorated with exposed oxide groups facilitates exceptional C3H6 capture at low pressures. Specifically, NUM‐27a achieves exceptional low‐pressure C3H6 capture (89.61 cm3 cm−3 at 0.1 bar) and a record C3H6 packing density (310.0 g L−1 at 0.01 bar). Kinetic analysis further reveals effective diffusion coefficient for C3H6 is 1.57 × 10−4 s−1 at 298 K. Gas‐loaded single crystal X‐ray diffraction analysis coupled with computational simulations elucidate that the intrinsic pore geometry underpins the unique adsorption and separation performance. Breakthrough experiments validate the outstanding separation performance of NUM‐27a for C3H6/C3H8 mixtures. Moreover, the great stability, recyclability, and low‐cost precursors of NUM‐27a underline its potential as a reliable adsorbent for C3H6/C3H8 separation. The work unveils the adaptive throat‐sieving gate strategy with optimal separation performance for challenging gas separations.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Advances in Materials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lan Lan",
+   "Qiang Zhang",
+   "Yongheng Ren",
+   "Kuo Zhang",
+   "Ze-Ying Qian",
+   "Lu-Lu Wang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "3e998d3139462ab7bc7147aca0be793a23fa904b",
+  "paper_id": "doi:10.1002/adma.202523278",
+  "doi": "10.1002/adma.202523278",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13310098/pdf/ADMA-38-e23278.pdf",
+  "published_iso": "2026-05-20",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Concentration-Adaptive AND-Gate Probe Enables High-Fidelity Imaging of miRNA in Live Cells.",
+  "title_norm": "concentration adaptive and gate probe enables high fidelity imaging of mirna in ",
+  "abstract": "The tumor microenvironment is characterized by abnormal endogenous signals, including elevated ATP levels. Developing probes that specifically respond to such signals is essential for accurate tumor detection. While catalytic hairpin assembly (CHA) provides efficient, enzyme-free signal amplification, conventional systems suffer from single target design and background signal leakage. To address this, we designed a nucleic acid hybrid probe, termed ATMiR-LOCK (Adenosine Triphosphate and MiRNA Logic Controlled Circuit Key), which integrates a dual-ATP aptamer with two CHA hairpins. This system enables synchronous response to ATP and microRNA-21 (miR-21), an oncogenic miRNA overexpressed in various malignant tumors. In this target-dependent mechanism, ATP binding triggers initiator release to partially open H1, enabling subsequent miR-21 binding to fully activate the CHA circuit with H2 for strong fluorescence signal amplification. The ATMiR-LOCK system functions as an \"AND\" logic gate, and it requires the presence of both ATP and miR-21 inputs to generate an output. This dual-input design greatly improves detection specificity and effectively minimizes the background signal. We validated the probe through in vitro experiments, fluorescence imaging in HepG2 liver cancer cells, and tests across multiple cell lines. The results demonstrated high sensitivity, with a picomolar detection limit for miR-21, and an effective response to millimolar levels of cellular ATP in cancer cells, both with excellent specificity and reliability. The ATMiR-LOCK probe represents a promising strategy for developing highly specific diagnostic tools for early tumor detection.",
+  "tldr": "The ATMiR-LOCK probe represents a promising strategy for developing highly specific diagnostic tools for early tumor detection, and demonstrates high sensitivity, with a picomolar detection limit for miR-21, and an effective response to millimolar levels of cellular ATP in cancer cells, both with excellent specificity and reliability.",
+  "year": 2026,
+  "venue": "ACS Sensors",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "D. Tong",
+   "Lingjie Ma",
+   "Jie Chen",
+   "Wen Zhou",
+   "Liang Xu",
+   "Zhifa Shen"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "bd2b6be3eebe9ca64db43d6265fbc86b9c60ffa9",
+  "paper_id": "doi:10.1021/acssensors.5c04929",
+  "doi": "10.1021/acssensors.5c04929",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/bd2b6be3eebe9ca64db43d6265fbc86b9c60ffa9",
+  "published_iso": "2026-04-06",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "How Much Memory Do We Need? Adaptive Memory Gate for Neural Operators",
+  "title_norm": "how much memory do we need adaptive memory gate for neural operators",
+  "abstract": "Neural operators have emerged as a powerful data-driven approach for solving time-dependent PDEs. Among recent advances, memory-augmented neural operators explicitly incorporate past states and have achieved remarkable performance under low-resolution observation settings. However, existing approaches apply a fixed memory weight regardless of observation conditions, such as resolution or physical parameters, limiting their adaptability. Our preliminary experiments reveal that optimal memory weight varies with resolution and viscosity, implying that a fixed memory weight cannot simultaneously optimize performance across diverse settings. We propose AMGFNO, which dynamically modulates memory weight through a learnable gate. On the Kuramoto-Sivashinsky and Burgers'equations, AMGFNO achieves 55-79% nRMSE reduction over at low resolution, with the learned gate value automatically decreasing from $\\bar{g} \\approx 0.7$ to near-zero as resolution increases.",
+  "tldr": "AMGFNO is proposed, which dynamically modulates memory weight through a learnable gate, and achieves 55-79% nRMSE reduction over at low resolution, with the learned gate value automatically decreasing from 0.7 to near-zero as resolution increases.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jihyeon Hur",
+   "Yong-Seog Kwon",
+   "Min-Gi Jo",
+   "Jeongwhan Choi",
+   "Noseong Park"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "95f387ccf6744fefdf58515d7199a33530b4e7ad",
+  "paper_id": "dblp:journals/corr/abs-2606-13443",
+  "doi": "10.48550/arXiv.2606.13443",
+  "arxiv_id": "2606.13443",
+  "dblp_key": "journals/corr/abs-2606-13443",
+  "paper_url": "https://www.semanticscholar.org/paper/95f387ccf6744fefdf58515d7199a33530b4e7ad",
+  "published_iso": "2026-06-11",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Voltage Balancing of Series-Connected SiC mosfets With Adaptive-Impedance Self-Powered Gate Drivers",
+  "title_norm": "voltage balancing of series connected sic mosfets with adaptive impedance self p",
+  "abstract": "Passive clamping snubbers for voltage balancing (VB) series-connected power devices exhibit strong applicability and high robustness; moreover, they are particularly suitable for the emerging fast-switching silicon-carbide (SiC) metal-oxide-semiconductor field-effect transistors (mosfets). However, the compromise still exists as a better VB performance comes at a penalty of a larger loss of snubber. Consequently, in this article, novel adaptive-impedance “snubbers” are proposed for series-connected SiC mosfets on the basis of converter-based self-powered gate driver design, and a better tradeoff is achieved between loss and VB both in static and dynamic states. Further, the proposed passive VB strategy could be combined with an active delay control strategy by introducing an extra closed-loop controller. Benefiting from a more accurately established small-signal system model, the closed-loop numerical parameters are easier to design. As a result, well-balanced voltage distribution is realized during the continuously switching process of series-connected SiC mosfets. To verify the effectiveness, a comprehensive analysis is first provided as guidance, followed by the corresponding detailed hardware and software design. Finally, the experiments are conducted by using two SiC mosfets, which show excellent VB performance at a 110 kV/μs switching speed.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "IEEE transactions on industrial electronics (1982. Print)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Rui Wang",
+   "A. Jørgensen",
+   "Wentao Liu",
+   "Hongbo Zhao",
+   "Zhixing Yan",
+   "S. Munk‐Nielsen"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "f3b866bbe1a9b5c42f209c6289b1e37708fdb0bc",
+  "paper_id": "dblp:journals/tie/WangJLZYM23",
+  "doi": "10.1109/TIE.2022.3231281",
+  "arxiv_id": "",
+  "dblp_key": "journals/tie/WangJLZYM23",
+  "paper_url": "https://vbn.aau.dk/ws/files/508475822/Voltage_Balancing_of_Series_Connected_SiC_MOSFETs_with_Adaptive_impedance_Self_powered_Gate_Drivers.pdf",
+  "published_iso": "2023-11-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Feature Fusion Gate and Gated Channel-Spatial Attention in CNN-Transformer Models for Music Genre Classification",
+  "title_norm": "adaptive feature fusion gate and gated channel spatial attention in cnn transfor",
+  "abstract": "With the rapid growth of music data, automatic music genre classification has become a critical task in music information retrieval. Traditional methods based on handcrafted features are increasingly inadequate when handling large-scale analysis. This paper proposes the Convolutional Neural Network-Gated Transformer Network (CT-GateNet), a hybrid architecture that integrates a gated channel-spatial attention mechanism with an adaptive feature fusion gating mechanism to achieve discriminative feature learning and efficient feature integration. To mitigate data scarcity, a data augmentation strategy based on a denoising diffusion probabilistic model is introduced. Experiments are conducted on three public music genre datasets: GTZAN, FMA-SMALL and FMA-Medium. The method achieves classification accuracies of 98.72%, 89.42%, and 69.07% on GTZAN, FMA-SMALL and FMA-Medium, respectively, demonstrating outstanding performance and robust generalization capabilities. These results validate CT-GateNet’s effectiveness in music genre classification and provide valuable insights for audio classification research.",
+  "tldr": "The Convolutional Neural Network-Gated Transformer Network (CT-GateNet) is proposed, a hybrid architecture that integrates a gated channel-spatial attention mechanism with an adaptive feature fusion gating mechanism to achieve discriminative feature learning and efficient feature integration.",
+  "year": 2026,
+  "venue": "PLoS ONE",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yunyan Ma",
+   "Zhenwu Ding",
+   "Shuang Wan",
+   "Hui Li",
+   "Yuan Xu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2e9319eaf7c622c6ee06a3634090c714dc1580fb",
+  "paper_id": "doi:10.1371/journal.pone.0344606",
+  "doi": "10.1371/journal.pone.0344606",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://cs229.stanford.edu/proj2018/report/53.pdf",
+  "published_iso": "2026-04-09",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Efficient quantum gate decomposition via adaptive circuit compression",
+  "title_norm": "efficient quantum gate decomposition via adaptive circuit compression",
+  "abstract": "In this work, we report on a novel quantum gate approximation algorithm based on the application of parametric two-qubit gates in the synthesis process. The utilization of these parametric two-qubit gates in the circuit design allows us to transform the discrete combinatorial problem of circuit synthesis into an optimization problem over continuous variables. The circuit is then compressed by a sequential removal of two-qubit gates from the design, while the remaining building blocks are continuously adapted to the reduced gate structure by iterated learning cycles. We implemented the developed algorithm in the SQUANDER software package and benchmarked it against several state-of-the-art quantum gate synthesis tools. Our numerical experiments revealed outstanding circuit compression capabilities of our compilation algorithm providing the most optimal gate count in the majority of the addressed quantum circuits.",
+  "tldr": "A novel quantum gate approximation algorithm based on the application of parametric two-qubit gates in the synthesis process providing the most optimal gate count in the majority of the addressed quantum circuits is reported.",
+  "year": 2022,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "P. Rakyta",
+   "Z. Zimbor'as"
+  ],
+  "citations": 33,
+  "source": "semanticscholar",
+  "source_id": "1fd9ba7ae410b0cb11e8d85c952b905ed8a3555a",
+  "paper_id": "arxiv:2203.04426",
+  "doi": "",
+  "arxiv_id": "2203.04426",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1fd9ba7ae410b0cb11e8d85c952b905ed8a3555a",
+  "published_iso": "2022-03-08",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Gate Voltage Closed-Loop Regulation Technique for High-Voltage Supercascode Power Switches",
+  "title_norm": "gate voltage closed loop regulation technique for high voltage supercascode powe",
+  "abstract": "A normally-off device based high-voltage supercascode switch topology with the gate voltage adaptive closed-loop regulation is proposed for the high-voltage converter application. The gate voltages of each in series device are adaptively regulated to balance through the closed-loop circuits in the proposed supercascode switch. As a result, the turn-on uniformity and the number of devices in series are improved, and the gate voltage overshoots are suppressed. The closed-loop circuit is simple to implement, consisting only of a low-voltage N-channel depletion mosfet, two resistors, and a capacitor. A 16-kV/30-A supercascode power switch (SCPS) is built based on the proposed topology, and the turn-on gate voltages of all devices are consistent and stable at +15 V finally during the turn-on process. Compared with the conventional topological gate voltages, the waveform overshoots are suppressed. Furthermore, the SCPS is tested in a double pulse tester at 10 kV and a switching load experiment at 10 kV, 15.6 Hz, demonstrating outstanding switching characteristics.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE transactions on power electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu Xiao",
+   "Zongjian Li",
+   "Ren-Chu Guan",
+   "Biao Liu",
+   "Yang Liu",
+   "Zhixing He"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c3932fcc46d2721ae3a72c36570b69c5e348ba78",
+  "paper_id": "doi:10.1109/TPEL.2024.3476141",
+  "doi": "10.1109/TPEL.2024.3476141",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c3932fcc46d2721ae3a72c36570b69c5e348ba78",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "PACE: Anytime-Valid Acceptance Tests for Self-Evolving Agents",
+  "title_norm": "pace anytime valid acceptance tests for self evolving agents",
+  "abstract": "Self-evolving agents improve by repeatedly proposing changes to their own prompts, skills, or workflows and keeping those that score higher on a small held-out set. Almost all effort has gone into the proposer that generates candidates; we argue the weak point is the acceptor, the rule that decides whether to commit a change. Applied hundreds of times against the same noisy dev estimate, the ubiquitous\"keep it if the score went up\"rule is uncontrolled adaptive multiple testing: the agent effectively p-hacks itself, accumulating false commits that make it churn and drift rather than improve. We recast committing as a sequential hypothesis test and propose PACE (Paired Anytime-valid Commit Evaluation), a training-free, anytime-valid commit gate. Each candidate is compared to the incumbent on identical instances and committed only when a testing-by-betting e-process accumulates decisive evidence, stopping early to save evaluations and controlling each candidate's false-commit probability at a user-set level even under optional stopping (a per-decision guarantee). On Qwen2.5 agents (0.5B-3B) self-evolving at the prompt level on GSM8K, SVAMP, and ARC-Challenge, greedy acceptance commits 30-42% false and 10-33% harmful edits when a genuine improvement is hidden among noisy proposals, while PACE commits the real one and essentially nothing else, matching greedy's held-out accuracy at sharply lower variance and about 18% lower evaluation cost. With no real gain available, greedy commits 13-21 spurious self-modifications per run (72-100% false) and degrades the most fragile agent by 4.9 points, while PACE holds at baseline. Reliability of self-evolution depends on the acceptor, not only on the proposer.",
+  "tldr": "This work recast committing as a sequential hypothesis test and proposes PACE (Paired Anytime-valid Commit Evaluation), a training-free, anytime-valid commit gate, a training-free, anytime-valid commit gate that improves reliability of self-evolution.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zayx Shawn"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "8289d4818261220bbf0df1665c99324a52684189",
+  "paper_id": "dblp:journals/corr/abs-2606-08106",
+  "doi": "10.48550/arXiv.2606.08106",
+  "arxiv_id": "2606.08106",
+  "dblp_key": "journals/corr/abs-2606-08106",
+  "paper_url": "https://www.semanticscholar.org/paper/8289d4818261220bbf0df1665c99324a52684189",
+  "published_iso": "2026-06-06",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "FITMM: Adaptive Frequency-Aware Multimodal Recommendation via Information-Theoretic Representation Learning",
+  "title_norm": "fitmm adaptive frequency aware multimodal recommendation via information theoret",
+  "abstract": "Multimodal recommendation aims to enhance user preference modeling by leveraging rich item content such as images and text. Yet dominant systems fuse modalities in the spatial domain, obscuring the frequency structure of signals and amplifying misalignment and redundancy. We adopt a spectral information-theoretic view and show that, under an orthogonal transform that approximately block-diagonalizes bandwise covariances, the Gaussian Information Bottleneck objective decouples across frequency bands, providing a principled basis for separate-then-fuse paradigm. Building on this foundation, we propose FITMM, a Frequency-aware Information-Theoretic framework for multimodal recommendation. FITMM constructs graph-enhanced item representations, performs modality-wise spectral decomposition to obtain orthogonal bands, and forms lightweight within-band multimodal components. A residual, task-adaptive gate aggregates bands into the final representation. To control redundancy and improve generalization, we regularize training with a frequency-domain IB term that allocates capacity across bands (Wiener-like shrinkage with shut-off of weak bands). We further introduce a cross-modal spectral consistency loss that aligns modalities within each band. The model is jointly optimized with the standard recommendation loss. Extensive experiments on three real-world datasets demonstrate that FITMM consistently and significantly outperforms advanced baselines.",
+  "tldr": "A spectral information-theoretic view is adopted and it is shown that, under an orthogonal transform that approximately block-diagonalizes bandwise covariances, the Gaussian Information Bottleneck objective decouples across frequency bands, providing a principled basis for separate-then-fuse paradigm.",
+  "year": 2025,
+  "venue": "ACM Multimedia",
+  "publication_types": [
+   "Book",
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wei Yang",
+   "Rui Zhong",
+   "Yiqun Chen",
+   "Shixuan Li",
+   "Heng Ping",
+   "Chi Lu"
+  ],
+  "citations": 15,
+  "source": "semanticscholar",
+  "source_id": "d584bc53161078c5d459eddf0c3beb9b39ee70ee",
+  "paper_id": "dblp:conf/mm/003400LPL025",
+  "doi": "10.1145/3746027.3755540",
+  "arxiv_id": "2601.22498",
+  "dblp_key": "conf/mm/003400LPL025",
+  "paper_url": "https://www.semanticscholar.org/paper/d584bc53161078c5d459eddf0c3beb9b39ee70ee",
+  "published_iso": "2025-10-27",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "“Too Crowded for a Robot?”: Modeling Human Acceptance Criteria for Elevator-Riding Robots",
+  "title_norm": "too crowded for a robot modeling human acceptance criteria for elevator riding r",
+  "abstract": "Robots are increasingly expected to share elevators with people, yet little is known about the conditions shaping acceptance. We introduce the Robot Boarding Area (RBA)—a designated entry zone for robots—and examine how its availability and congestion affect user evaluations. In an online survey, acceptance sharply decreased once the RBA was occupied by any person or large object, even under moderate crowding. A VR experiment confirmed this pattern and further showed that participants preferred when robots refrained from boarding in crowded conditions compared to forcing entry. By formalizing the RBA as an acceptance criterion and demonstrating the value of adaptive skip strategies, this work identifies spatial availability and boarding behavior as central to socially acceptable robot deployment in elevators.",
+  "tldr": "This work identifies spatial availability and boarding behavior as central to socially acceptable robot deployment in elevators and identifies spatial availability and boarding behavior as central to socially acceptable robot deployment in elevators.",
+  "year": 2026,
+  "venue": "International Conference on Human Factors in Computing Systems",
+  "publication_types": [
+   "Book",
+   "JournalArticle",
+   "Conference",
+   "Review"
+  ],
+  "authors": [
+   "Seoktae Kim",
+   "S. Cho",
+   "K. Kim",
+   "Sure Bak"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "b33b768fa25907044812b570b8ce1ded7a0f32a0",
+  "paper_id": "dblp:conf/chi/KimCKB26",
+  "doi": "10.1145/3772318.3790593",
+  "arxiv_id": "",
+  "dblp_key": "conf/chi/KimCKB26",
+  "paper_url": "https://www.semanticscholar.org/paper/b33b768fa25907044812b570b8ce1ded7a0f32a0",
+  "published_iso": "2026-04-13",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Should AI be allowed to break the law? Public acceptance and tolerance of discretionary actions performed by autonomous vehicles in response to situations varying by degree of acuteness",
+  "title_norm": "should ai be allowed to break the law public acceptance and tolerance of discret",
+  "abstract": "perform (Experiment 3) legal or illegal discretionary actions (DAs) to avoid a danger or optimize traffic flow, with various consequences. The results reveal that AVs were blamed more and trusted less than human drivers for performing the same illegal DAs. But with legal DAs, this difference was contingent on the acuteness of traffic situations, hinting toward a shift of judgemental focus from the justifiability of an action to the quality of their execution. Additionally, witnessing AVs performing (or not performing) DAs could potentially improve or worsen their general acceptance depending on the outcomes of the DAs. Our findings paint a promising picture of allowing adaptive behaviours of AVs yet highlight the need to establish formal protocols for designing, regulating, and appraising DAs of AVs as well as the necessity of improving the transparency of their decision-making processes for users.",
+  "tldr": "The results reveal that AVs were blamed more and trusted less than human drivers for performing the same illegal DAs, and the need to establish formal protocols for designing, regulating, and appraising DAs of AVs as well as the necessity of improving the transparency of their decision-making processes for users is highlighted.",
+  "year": 2026,
+  "venue": "Transportation Research Part A: Policy and Practice",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Qiyuan Zhang",
+   "Victoria Marcinkiewicz",
+   "Louise Bowen",
+   "Theodor Kozlowski",
+   "Tatsuhiko Inatani",
+   "Yoshiyuki Ueda"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "7c2557248d17de7d9fce814f23e82b4729f7757a",
+  "paper_id": "doi:10.1016/j.tra.2026.104885",
+  "doi": "10.1016/j.tra.2026.104885",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.tra.2026.104885",
+  "published_iso": "2026-03-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "An Open-Circuit Fault Diagnosis Method Based on Horizon-Adaptive Period Correction for Voltage Source Inverter in Motor Drive",
+  "title_norm": "an open circuit fault diagnosis method based on horizon adaptive period correcti",
+  "abstract": "In this article, an insulated gate bipolar transistor (IGBT) open-circuit (OC) fault diagnosis method based on horizonadaptive period correction (HaPC) is proposed for voltage source inverter (VSI). It can achieve the diagnosis and location of any IGBT OC fault under frequency variation conditions. First, a horizon-adaptive period extraction (HaPE) method is proposed, which is used to accurately obtain the period of the current signal as the frequency changes. HaPE converts the signal from the time domain to the phase domain to indirectly obtain the period of the current signal, while making the number of sampling points in each period the same. Second, a multidimensional characteristic extraction based on virtual time domain period correction (VTDPC) method is proposed. It can achieve the identity of different period characteristics, thereby greatly reducing the amount of training data. Finally, support vector machine (SVM) algorithm is used for classification to locate faults. Compared with other fault diagnosis algorithms, the proposed method is not affected by the amplitude and period changes caused by frequency changes, and can accurately locate faults. Simulation and experiments verify the accuracy and effectiveness of the proposed fault diagnosis method in VSI OC fault diagnosis.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE transactions on industrial electronics (1982. Print)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Naizhe Diao",
+   "Xiaoqing Zhang",
+   "Ying-wei Zhang",
+   "Xiaoqiang Guo",
+   "Xianrui Sun"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "47399a4e2ce9e876cffb1bc8f01cbb06c640b17f",
+  "paper_id": "dblp:journals/tie/DiaoZZGS25",
+  "doi": "10.1109/TIE.2024.3440492",
+  "arxiv_id": "",
+  "dblp_key": "journals/tie/DiaoZZGS25",
+  "paper_url": "https://www.semanticscholar.org/paper/47399a4e2ce9e876cffb1bc8f01cbb06c640b17f",
+  "published_iso": "2025-03-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "DREAM: Drafting with Refined Target Features and Entropy-Adaptive Cross-Attention Fusion for Multimodal Speculative Decoding",
+  "title_norm": "dream drafting with refined target features and entropy adaptive cross attention",
+  "abstract": "Speculative decoding (SD) has emerged as a powerful method for accelerating autoregressive generation in large language models (LLMs), yet its integration into vision-language models (VLMs) remains underexplored. We introduce DREAM, a novel speculative decoding framework tailored for VLMs that combines three key innovations: (1) a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, (2) adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and (3) visual token compression to reduce draft model latency. DREAM enables efficient, accurate, and parallel multimodal decoding with significant throughput improvement. Experiments across a diverse set of recent popular VLMs, including LLaVA, Pixtral, SmolVLM and Gemma3, demonstrate up to 3.6x speedup over conventional decoding and significantly outperform prior SD baselines in both inference throughput and speculative draft acceptance length across a broad range of multimodal benchmarks. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM.git",
+  "tldr": "DREAM is introduced, a novel speculative decoding framework tailored for VLMs that combines three key innovations: a cross-attention-based mechanism to inject intermediate features from the target model into the draft model for improved alignment, adaptive intermediate feature selection based on attention entropy to guide efficient draft model training, and visual token compression to reduce draft model latency.",
+  "year": 2025,
+  "venue": "Neural Information Processing Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yunhai Hu",
+   "Tianhua Xia",
+   "Zining Liu",
+   "Rahul Raman",
+   "Xingyu Liu",
+   "Bo Bao"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+  "paper_id": "dblp:journals/corr/abs-2505-19201",
+  "doi": "10.48550/arXiv.2505.19201",
+  "arxiv_id": "2505.19201",
+  "dblp_key": "journals/corr/abs-2505-19201",
+  "paper_url": "https://www.semanticscholar.org/paper/88b7d68d84ba18d7c69c61f77d7e9aae6052e9a4",
+  "published_iso": "2025-05-25",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "How the communication style of AI collaborators influences gig workers’ acceptance: from the mind-role fit perspective",
+  "title_norm": "how the communication style of ai collaborators influences gig workers acceptanc",
+  "abstract": "PurposeThe adoption of artificial intelligence (AI) collaborators in the gig economy provides the opportunity to build gig workers’ work identity. However, gig workers may reject AI collaborators. This study aims to explore the adaptive conditions under which different communication styles of AI collaborators influence gig workers’ acceptance.Design/methodology/approachUsing a mind-role fit perspective, we develop a research model to investigate the interaction effect of communication style (social-oriented and task-oriented) and task type (high- and low-creative tasks) on gig workers’ acceptance. And the mediating role of the perceived fit, which includes perceived uniqueness and perceived task efficiency, is also studied. Two online experiments are performed to test the research model.FindingsWhen performing high-creative gig tasks, the social-oriented AI induces higher perceived uniqueness and perceived task efficiency, further increasing acceptance. In contrast, when performing low-creative gig tasks, the task-oriented AI induces higher perceived task efficiency, thus leading to higher acceptance. Our findings show the adaptability of gig task types to different communication styles.Originality/valueOur findings offer a valid explanation for resolving the contradiction between social- and task-oriented communication styles in previous studies. In addition, these findings provide insightful suggestions for gig platform designers regarding implementing effective AI strategies to enhance gig workers’ engagement.",
+  "tldr": "The findings offer a valid explanation for resolving the contradiction between social- and task-oriented communication styles in previous studies and provide insightful suggestions for gig platform designers regarding implementing effective AI strategies to enhance gig workers’ engagement.",
+  "year": 2025,
+  "venue": "Kybernetes",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ruiping Wu",
+   "Xinyuan Lu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "6864785b4c635b8814b070bc88f3adb20d1e6bac",
+  "paper_id": "doi:10.1108/k-11-2024-3098",
+  "doi": "10.1108/k-11-2024-3098",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6864785b4c635b8814b070bc88f3adb20d1e6bac",
+  "published_iso": "2025-07-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Rotational gate based quantum particle swarm optimization for benchmark suites and combined economic emission dispatch",
+  "title_norm": "rotational gate based quantum particle swarm optimization for benchmark suites a",
+  "abstract": "This paper introduces a rotational quantum particle swarm optimizer (RQPSO) that updates particles via quantum rotation–gate dynamics on a compact phase representation. Real-valued amplitudes decoded from phases are mapped feasibly by construction into the decision space, removing the need for bound repair. Lightweight π-flip perturbations and brief stagnation-triggered reseeding sustain diversity, and a short local polish consolidates the incumbent near termination. RQPSO is benchmarked against Particle Swarm Optimization (PSO), Quantum Particle Swarm Optimization (QPSO), Grey Wolf Optimizer (GWO), Mayfly Algorithm (MA), self-adaptive Differential Evolution (jDE), and Covariance Matrix Adaptation Evolution Strategy (CMA-ES) under a common protocol of 3000 function evaluations with 30 independent runs per problem. Reporting uses median [interquartile range (IQR)] as the primary statistic with Friedman/Nemenyi global tests and Holm-corrected Wilcoxon pairwise tests; effect sizes are summarized by Cliff’s δ. Experiments cover 23 classical functions and 10 CEC-2019 functions. On the classical suite, RQPSO attains the best or tied-best median on a majority of functions and achieves a leading global rank under the fixed budget. On CEC-2019, it records three best medians (including one tie) and a top mean rank; post-hoc tests show significant gains over MA and jDE and broadly comparable performance to PSO, QPSO, GWO, and CMA-ES. A combined economic–emission dispatch (CEED) study on a six-unit system with cubic cost and emission models further demonstrates budget-efficient performance. The RQPSO attains the lowest mean operating cost and the smallest dispersion at all loads versus PSO and QPSO. A percentage-recovery repair enforces generator limits and power balance without penalty functions by proportionally rescaling outputs. Together, the rotation-gate updates, feasibility-preserving decoding, and proportional repair provide a robust alternative to classical swarms for both benchmark and power-system optimization under tight evaluation budgets. The source code of RQPSO is publicly available at: (https://github.com/Naagdant/rotational-quantum-pso)",
+  "tldr": "Together, the rotation-gate updates, feasibility-preserving decoding, and proportional repair provide a robust alternative to classical swarms for both benchmark and power-system optimization under tight evaluation budgets.",
+  "year": 2025,
+  "venue": "Engineering Research Express",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "K. Bodha",
+   "Vanya Arun",
+   "Ankita Awasthi",
+   "B. Mahato",
+   "G. Fotis"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "78947b3f0cdd75c8846beec7ade924e38edf7d3b",
+  "paper_id": "doi:10.1088/2631-8695/ae1282",
+  "doi": "10.1088/2631-8695/ae1282",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1088/2631-8695/ae1282",
+  "published_iso": "2025-10-13",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "TrojanHound: Structure-aware subgraph analysis for hardware Trojan detection in gate-level designs",
+  "title_norm": "trojanhound structure aware subgraph analysis for hardware trojan detection in g",
+  "abstract": "The integration of third-party IP cores into IC designs significantly increases the risk of stealthy hardware Trojans (HTs). Existing detection approaches, based on functional testing, logic verification, or machine learning, often focus on individual gates and overlook the structural patterns across Trojan circuits. Moreover, they lack diagnostic capabilities and typically require manual inspection. This work presents Trojan-Hound, a hierarchical detection framework that unifies gate-level analysis and circuit-level diagnosis. It leverages a graph neural network with adaptive neighborhood aggregation to identify suspicious nodes, merges related components into candidate subcircuits using subgraph fusion, and verifies HT presence through topology-aware analysis based on betweenness centrality. Experiments on 14 TrustHub benchmarks show that TrojanHound achieves a 95.64% true positive rate and a 97.44% F1-score, without false positives. By integrating structural learning with topological reasoning, this method enables accurate and automated HT detection in complex ICs.",
+  "tldr": "Trojan-Hound is presented, a hierarchical detection framework that unifies gate-level analysis and circuit-level diagnosis that enables accurate and automated HT detection in complex ICs.",
+  "year": 2025,
+  "venue": "IEICE Electronics Express",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xing Hu",
+   "Yang Zhang",
+   "Huan Guo",
+   "Jiahe Shi",
+   "Haowen Wang",
+   "Zhenyu Zhao"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "b6489f56e2f54306f7111e9b28a5705ba0427f17",
+  "paper_id": "dblp:journals/ieiceee/HuZGSWZL25",
+  "doi": "10.1587/elex.22.20250364",
+  "arxiv_id": "",
+  "dblp_key": "journals/ieiceee/HuZGSWZL25",
+  "paper_url": "https://www.jstage.jst.go.jp/article/elex/advpub/0/advpub_22.20250364/_pdf",
+  "published_iso": null,
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "No Loss, No Gain: Gated Refinement and Adaptive Compression for Prompt Optimization",
+  "title_norm": "no loss no gain gated refinement and adaptive compression for prompt optimizatio",
+  "abstract": "Prompt engineering is crucial for leveraging the full potential of large language models (LLMs). While automatic prompt optimization offers a scalable alternative to costly manual design, generating effective prompts remains challenging. Existing methods often struggle to stably generate improved prompts, leading to low efficiency, and overlook that prompt optimization easily gets trapped in local optima. Addressing this, we propose GRACE, a framework that integrates two synergistic strategies: Gated Refinement and Adaptive Compression, achieving Efficient prompt optimization. The gated refinement strategy introduces a feedback regulation gate and an update rejection gate, which refine update signals to produce stable and effective prompt improvements. When optimization stagnates, the adaptive compression strategy distills the prompt's core concepts, restructuring the optimization trace and opening new paths. By strategically introducing information loss through refinement and compression, GRACE delivers substantial gains in performance and efficiency. In extensive experiments on 11 tasks across three practical domains, including BIG-Bench Hard (BBH), domain-specific, and general NLP tasks, GRACE achieves significant average relative performance improvements of 4.7%, 4.4% and 2.7% over state-of-the-art methods, respectively. Further analysis shows that GRACE achieves these gains using only 25% of the prompt generation budget required by prior methods, highlighting its high optimization efficiency and low computational overhead. Our code is available at https://github.com/Eric8932/GRACE.",
+  "tldr": "GRACE is a framework that integrates two synergistic strategies: Gated Refinement and Adaptive Compression, achieving Efficient prompt optimization and strategically introducing information loss through refinement and compression.",
+  "year": 2025,
+  "venue": "Neural Information Processing Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wenhang Shi",
+   "Yiren Chen",
+   "Shuqing Bian",
+   "Xinyi Zhang",
+   "Kai Tang",
+   "Pengfei Hu"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "afc48a355ef89efb4c986964a820e851c9eab8f4",
+  "paper_id": "dblp:conf/nips/ShiCBZTHZLD25",
+  "doi": "10.48550/arXiv.2509.23387",
+  "arxiv_id": "2509.23387",
+  "dblp_key": "conf/nips/ShiCBZTHZLD25",
+  "paper_url": "https://www.semanticscholar.org/paper/afc48a355ef89efb4c986964a820e851c9eab8f4",
+  "published_iso": "2025-09-27",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Evaluating Social Acceptance of eXtended Reality (XR) Agent Technology: A User Study",
+  "title_norm": "evaluating social acceptance of extended reality xr agent technology a user stud",
+  "abstract": "In this paper, we present the findings of a user study that evaluated the social acceptance of eXtended Reality (XR) agent technology, focusing on a remotely accessible, web-based XR training system developed for journalists. This system involves user interaction with a virtual avatar, enabled by a modular toolkit. The interactions are designed to provide tailored training for journalists in digital-remote settings, especially for sensitive or dangerous scenarios, without requiring specialized end-user equipment like headsets. Our research adapts and extends the Almere model, representing social acceptance through existing attributes such as perceived ease of use and perceived usefulness, along with added ones like dependability and security in the user-agent interaction. The XR agent was tested through a controlled experiment in a real-world setting, with data collected on users’ perceptions. Our findings, based on quantitative and qualitative measurements involving questionnaires, contribute to the understanding of user perceptions and acceptance of XR agent solutions within a specific social context, while also identifying areas for the improvement of XR systems.",
+  "tldr": "The research adapts and extends the Almere model, representing social acceptance through existing attributes such as perceived ease of use and perceived usefulness, along with added ones like dependability and security in the user-agent interaction, to contribute to the understanding of user perceptions and acceptance of XR agent solutions.",
+  "year": 2025,
+  "venue": "ACM SIGCHI Italian Chapter International Conference on Computer-Human Interaction",
+  "publication_types": [
+   "JournalArticle",
+   "Book"
+  ],
+  "authors": [
+   "Megha Quamara",
+   "Viktor Schmuck",
+   "C. Iani",
+   "Axel Primavesi",
+   "Alexander Plaum",
+   "Luca Viganò"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "1cecdf6360247d5602acd7ace43ff45a5dfc1150",
+  "paper_id": "dblp:conf/chitaly/QuamaraSIPP025",
+  "doi": "10.1145/3750069.3750317",
+  "arxiv_id": "2507.16562",
+  "dblp_key": "conf/chitaly/QuamaraSIPP025",
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3750069.3750317",
+  "published_iso": "2025-07-22",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "An Adaptive Entire-Space Multi-Scenario Multi-Task Transfer Learning Model for Recommendations",
+  "title_norm": "an adaptive entire space multi scenario multi task transfer learning model for r",
+  "abstract": "Multi-scenario and multi-task recommendation systems efficiently facilitate knowledge transfer across different scenarios and tasks. However, many existing approaches inadequately incorporate personalized information across users and scenarios. Moreover, the conversion rate (CVR) task in multi-task learning often encounters challenges like sample selection bias, resulting from systematic differences between the training and inference sample spaces, and data sparsity due to infrequent clicks. To address these issues, we propose Adaptive Entire-space Multi-scenario Multi-task Transfer Learning model (AEM<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"tang-ieq1-3536334.gif\"/></alternatives></inline-formula>TL) with four key modules: 1) Scenario-CGC (Scenario-Customized Gate Control), 2) Task-CGC (Task-Customized Gate Control), 3) Personalized Gating Network, and 4) Entire-space Supervised Multi-Task Module. AEM<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"tang-ieq2-3536334.gif\"/></alternatives></inline-formula>TL employs a multi-gate mechanism to effectively integrate shared and specific information across scenarios and tasks, enhancing prediction adaptability. To further improve task-specific personalization, it incorporates personalized prior features and applies a gating mechanism that dynamically scales the top-layer neural units. A novel post-impression behavior decomposition technique is designed to leverage all impression samples across the entire space, mitigating sample selection bias and data sparsity. Furthermore, an adaptive weighting mechanism dynamically allocates attention to tasks based on their relative importance, ensuring optimal task prioritization. Extensive experiments on one industrial and two real-world public datasets indicate the superiority of AEM<inline-formula><tex-math notation=\"LaTeX\">$^{2}$</tex-math><alternatives><mml:math><mml:msup><mml:mrow/><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href=\"tang-ieq3-3536334.gif\"/></alternatives></inline-formula>TL over state-of-the-art methods.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Qingqing Yi",
+   "Jingjing Tang",
+   "Xiangyu Zhao",
+   "Yujian Zeng",
+   "Zengchun Song",
+   "Jia Wu"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "b0e51f60db99dde38554f0973b039078be7172e0",
+  "paper_id": "dblp:journals/tkde/YiTZZSW25",
+  "doi": "10.1109/TKDE.2025.3536334",
+  "arxiv_id": "",
+  "dblp_key": "journals/tkde/YiTZZSW25",
+  "paper_url": "https://www.semanticscholar.org/paper/b0e51f60db99dde38554f0973b039078be7172e0",
+  "published_iso": "2025-04-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Pest detection in dynamic environments: an adaptive continual test-time domain adaptation strategy",
+  "title_norm": "pest detection in dynamic environments an adaptive continual test time domain ad",
+  "abstract": "Pest management is essential for agricultural production and food security, as pests can cause significant crop losses and economic impact. Early pest detection is key to timely intervention. While object detection models perform well on various datasets, they assume i.i.d. data, which is often not the case in diverse real-world environments, leading to decreased accuracy. To solve the problem, we propose the CrossDomain-PestDetect (CDPD) method, which is based on the YOLOv9 model and incorporates a test-time adaptation (TTA) framework. CDPD includes Dynamic Data Augmentation (DynamicDA), a Dynamic Adaptive Gate (DAG), and a Multi-Task Dynamic Adaptation Model (MT-DAM). Our DynamicDA enhances images for each batch by combining strong and weak augmentations. The MT-DAM integrates an object detection model with an image segmentation model, exchanging information through feature fusion at the feature extraction layer. During testing, test-time adaptation updates both models, continuing feature fusion during forward propagation. DAG adaptively controls the degree of feature fusion to improve detection capabilities. Self-supervised learning enables the model to adapt during testing to changing environments. Experiments show that without test-time adaptation, our method achieved a 7.6% increase in mAP50 over the baseline in the original environment and a 16.1% increase in the target environment. Finally, with test-time adaptation, the mAP50 score in the unseen target environment reaches 73.8%, which is a significant improvement over the baseline.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Plant Methods",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Rui Fu",
+   "Shiyu Wang",
+   "Mingqiu Dong",
+   "Hao Sun",
+   "Mohammed Abdulhakim Al-Absi",
+   "Kaijie Zhang"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "3d96b17c5640a4e6dd378b732a7ce4d15ed79571",
+  "paper_id": "doi:10.1186/s13007-025-01371-y",
+  "doi": "10.1186/s13007-025-01371-y",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://plantmethods.biomedcentral.com/counter/pdf/10.1186/s13007-025-01371-y",
+  "published_iso": "2025-04-23",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Privacy-Preserving Adaptive Resilient Consensus for Multiagent Systems Under Cyberattacks",
+  "title_norm": "privacy preserving adaptive resilient consensus for multiagent systems under cyb",
+  "abstract": "This article investigates the secure and privacy-preserving consensus problem of multiagent systems (MASs) with directed interaction topologies under multiple cyberattacks, which contain deception attacks and DoS attacks. First, a unified attack model is introduced to characterize such a multiple attack phenomenon. Besides, considering the existence of eavesdroppers who can intercept the data transmitted on the links, a fully distributed agent value reconstruction method based on the idea of state decomposition is designed to prevent the leakage of the agent's initial information. Then, a novel privacy-preserving adaptive resilient consensus algorithm (PPARCA) with certain graph robustness condition for MASs under the multiple cyberattacks is proposed. The algorithm adaptively takes different countermeasures in the face of different cyberattacks. PPARCA uses the reconstructed agents' states and combines with the modified secure acceptance and broadcast algorithm (SABA). Theoretical analysis shows that the proposed algorithm can effectively protect the privacy of the initial state of the agents, and reach resilient consensus in the face of cyberattacks. Finally, numerical simulations and Raspberry Pi MASs practical application experiments demonstrate the effectiveness of the proposed results.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE Transactions on Industrial Informatics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chen Ying",
+   "Ning Zheng",
+   "Yiming Wu",
+   "Ming Xu",
+   "Wen-an Zhang"
+  ],
+  "citations": 48,
+  "source": "semanticscholar",
+  "source_id": "69f48f672fff12489345749d8cbd1e01de14545c",
+  "paper_id": "dblp:journals/tii/YingZWXZ24",
+  "doi": "10.1109/TII.2023.3280318",
+  "arxiv_id": "",
+  "dblp_key": "journals/tii/YingZWXZ24",
+  "paper_url": "https://www.semanticscholar.org/paper/69f48f672fff12489345749d8cbd1e01de14545c",
+  "published_iso": "2024-02-01",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "EC2MoE: Adaptive End-Cloud Pipeline Collaboration Enabling Scalable Mixture-of-Experts Inference",
+  "title_norm": "ec2moe adaptive end cloud pipeline collaboration enabling scalable mixture of ex",
+  "abstract": "The Mixture-of-Experts (MoE) paradigm has emerged as a promising solution to scale up model capacity while maintaining inference efficiency. However, deploying MoE models across heterogeneous end-cloud environments poses new challenges in expert scheduling, communication overhead, and resource heterogeneity. In this paper, we propose EC2MoE, an adaptive framework for scalable MoE inference via end-cloud pipeline collaboration. First, we design a hardware-aware lightweight group gate network that enhances expert selection and computational efficiency. By incorporating a hardware-aware local expert selection mechanism, the system adaptively filters candidate experts based on real-time device profiles. A lightweight group gate module then integrates local and global gating outputs to achieve high-quality expert routing with minimal overhead. Second, we develop a pipeline optimization mechanism based on endcloud collaboration to accelerate MoE inference. This includes an encoder-decoder structure based on low-rank compression, which reduces transmission and computation costs. And a route-aware heuristic pipeline scheduling algorithm that dynamically allocates inference stages across devices according to workload and network topology. Extensive experiments show that EC2MoE can increase throughput by 2.2x to 5.1x and reduce end-to-end latency by 53% to 67% while maintaining high accuracy compared to state-of-the-art methods. It also maintains good scalability under dynamic load and network environments.",
+  "tldr": "EC2MoE, an adaptive framework for scalable MoE inference via end-cloud pipeline collaboration, is proposed, which designs a hardware-aware lightweight group gate network that enhances expert selection and computational efficiency and develops a pipeline optimization mechanism based on endcloud collaboration to accelerate MoE inference.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zheming Yang",
+   "Yunqing Hu",
+   "Shengyang Sun",
+   "Wen Ji"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "1d13b1f6a6c9314c6855a06b30664f8593aa4073",
+  "paper_id": "dblp:journals/corr/abs-2508-06024",
+  "doi": "10.48550/arXiv.2508.06024",
+  "arxiv_id": "2508.06024",
+  "dblp_key": "journals/corr/abs-2508-06024",
+  "paper_url": "https://www.semanticscholar.org/paper/1d13b1f6a6c9314c6855a06b30664f8593aa4073",
+  "published_iso": "2025-08-08",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Beyond Simple Fusion: Adaptive Gated Fusion for Robust Multimodal Sentiment Analysis",
+  "title_norm": "beyond simple fusion adaptive gated fusion for robust multimodal sentiment analy",
+  "abstract": "Multimodal sentiment analysis (MSA) leverages information fusion from diverse modalities (e.g., text, audio, visual) to enhance sentiment prediction. However, simple fusion techniques often fail to account for variations in modality quality, such as those that are noisy, missing, or semantically conflicting. This oversight leads to suboptimal performance, especially in discerning subtle emotional nuances. To mitigate this limitation, we introduce a simple yet efficient \\textbf{A}daptive \\textbf{G}ated \\textbf{F}usion \\textbf{N}etwork that adaptively adjusts feature weights via a dual gate fusion mechanism based on information entropy and modality importance. This mechanism mitigates the influence of noisy modalities and prioritizes informative cues following unimodal encoding and cross-modal interaction. Experiments on CMU-MOSI and CMU-MOSEI show that AGFN significantly outperforms strong baselines in accuracy, effectively discerning subtle emotions with robust performance. Visualization analysis of feature representations demonstrates that AGFN enhances generalization by learning from a broader feature distribution, achieved by reducing the correlation between feature location and prediction error, thereby decreasing reliance on specific locations and creating more robust multimodal feature representations.",
+  "tldr": "Visualization analysis of feature representations demonstrates that AGFN enhances generalization by learning from a broader feature distribution, achieved by reducing the correlation between feature location and prediction error, thereby decreasing reliance on specific locations and creating more robust multimodal feature representations.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Han Wu",
+   "Yanming Sun",
+   "Yunhe Yang",
+   "Derek F. Wong"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "c3de789e5e774678db19cd08aa5286476d057727",
+  "paper_id": "dblp:journals/corr/abs-2510-01677",
+  "doi": "10.48550/arXiv.2510.01677",
+  "arxiv_id": "2510.01677",
+  "dblp_key": "journals/corr/abs-2510-01677",
+  "paper_url": "https://www.semanticscholar.org/paper/c3de789e5e774678db19cd08aa5286476d057727",
+  "published_iso": "2025-10-02",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Reinforcement learning-guided adaptive large neighborhood search for vehicle routing problem with time windows",
+  "title_norm": "reinforcement learning guided adaptive large neighborhood search for vehicle rou",
+  "abstract": "",
+  "tldr": "A novel hybrid framework that integrates Proximal Policy Optimization with Adaptive Large Neighborhood Search (ALNS) with Adaptive Large Neighborhood Search (ALNS) for solving the Vehicle Routing Problem with Time Windows, highlighting the framework’s effectiveness for complex routing optimization.",
+  "year": 2025,
+  "venue": "Journal of combinatorial optimization",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhaohui Wang",
+   "Qiao Cui",
+   "Bin Tan",
+   "Xiao Yang",
+   "Weibang Zhou",
+   "Xiangsheng Huang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "5e4155ac8afd290921f59bd4f8b291facc80dc2b",
+  "paper_id": "dblp:journals/jco/WangCTYZH25",
+  "doi": "10.1007/s10878-025-01364-6",
+  "arxiv_id": "",
+  "dblp_key": "journals/jco/WangCTYZH25",
+  "paper_url": "https://www.semanticscholar.org/paper/5e4155ac8afd290921f59bd4f8b291facc80dc2b",
+  "published_iso": "2025-10-25",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Efficient Adaptive Rejection Sampling for Accelerating Speculative Decoding in Large Language Models",
+  "title_norm": "efficient adaptive rejection sampling for accelerating speculative decoding in l",
+  "abstract": "Speculative Decoding is a prominent technique for accelerating the autoregressive inference of large language models (LLMs) by employing a fast draft model to propose candidate token sequences and a large target model to verify them in parallel. However, its core component -- the rejection sampling mechanism -- relies on a fixed, context-independent random threshold. This leads to a significant\"random rejection\"problem in high-uncertainty generation scenarios, where plausible candidate tokens are frequently rejected due to random chance, undermining inference efficiency. This paper introduces Efficient Adaptive Rejection Sampling (EARS), a novel method that dynamically adjusts the acceptance threshold by incorporating the target model's own predictive uncertainty, measured as 1 - max(P_target). By introducing a tolerance term proportional to this uncertainty, EARS intelligently relaxes the acceptance criterion when the model is uncertain, effectively reducing random rejections while maintaining strict standards when the model is confident. Experiments on creative writing and open-domain QA tasks demonstrate that EARS significantly enhances the efficiency of speculative decoding, achieving up to an 18.12% increase in throughput with a negligible 0.84% accuracy drop on the GSM8K benchmark. The method requires no modifications to model architectures and can be seamlessly integrated into existing speculative decoding frameworks.",
+  "tldr": "Efficient Adaptive Rejection Sampling (EARS) is introduced, a novel method that dynamically adjusts the acceptance threshold by incorporating the target model's own predictive uncertainty, measured as 1 - max(P_target).",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chendong Sun",
+   "A. Mao",
+   "Lei Xu",
+   "Mingming Chen"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "675c5741680089e99a2b97128c92995640dcc37d",
+  "paper_id": "dblp:journals/corr/abs-2512-13194",
+  "doi": "10.48550/arXiv.2512.13194",
+  "arxiv_id": "2512.13194",
+  "dblp_key": "journals/corr/abs-2512-13194",
+  "paper_url": "https://www.semanticscholar.org/paper/675c5741680089e99a2b97128c92995640dcc37d",
+  "published_iso": "2025-12-15",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Adaptive Residual-Update Steering for Low-Overhead Hallucination Mitigation in Large Vision Language Models",
+  "title_norm": "adaptive residual update steering for low overhead hallucination mitigation in l",
+  "abstract": "Large Vision-Language Models (LVLMs) typically process visual inputs as a prefix to the language decoder. As the model autoregressively generates text, this initial visual information inevitably undergoes\"dilution\"leading the model to over-rely on language priors and hallucinate objects. Existing interventions attempt to correct this by contrasting logits or iteratively refining outputs, but they incur prohibitive latency costs. We propose Residual-Update Directed DEcoding Regulation (RUDDER), a framework that counters visual dilution by creating a persistent visual anchor. We extract a robust evidence direction (CARD) directly from the model's prefill residual updates, and inject it into the decoding process. This injection is modulated by an adaptive gate, the Beta Gate, which acts as a trust mechanism and ensures the visual reminder is applied only when necessary. Experiments on LLaVA-1.5 (7B/13B), Idefics2, InstructBLIP, and Qwen2.5-VL demonstrate that RUDDER consistently mitigates hallucination (with greedy decoding, RUDDER reduces CHAIR_S by an average of 24.4% and CHAIR_i by 23.6% relative) and scales effectively across architectures, all while maintaining>96.0% throughput.",
+  "tldr": "This work proposes Residual-Update Directed DEcoding Regulation (RUDDER), a framework that counters visual dilution by creating a persistent visual anchor in the decoding process and extracts a robust evidence direction (CARD) directly from the model's prefill residual updates, and injects it into the decoding process.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhengtao Zou",
+   "Ya Gao",
+   "Jiarui Guan",
+   "Bin Li",
+   "P. Marttinen"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "d039efd8ceb1cc811edd8cb140c197b6507f1453",
+  "paper_id": "dblp:journals/corr/abs-2511-10292",
+  "doi": "10.48550/arXiv.2511.10292",
+  "arxiv_id": "2511.10292",
+  "dblp_key": "journals/corr/abs-2511-10292",
+  "paper_url": "https://www.semanticscholar.org/paper/d039efd8ceb1cc811edd8cb140c197b6507f1453",
+  "published_iso": "2025-11-13",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Construction of adaptive gated recurrent hierarchical network with cross-modal dynamic interaction and its application in multimodal sentiment analysis",
+  "title_norm": "construction of adaptive gated recurrent hierarchical network with cross modal d",
+  "abstract": "Existing multimodal sentiment analysis relies on static fusion and fixed GRU (Gated Recurrent Unit) structure, which is difficult to deal with temporal misalignment, noise, and long-distance dependency, and the hierarchical configuration is time-consuming and has poor generalization. Therefore, this paper proposes a cross-modal interaction with temporal adaptive attention and adjustable gated hierarchical recurrent network, combined with Bayesian structural optimization and adversarial multi-task training, and uses visualization to improve interpretability. In this study, the text, speech, and visual features are first linearly projected, and the cross-modal cross attention is calculated. The three-way attention output is accumulated in time and input into the Adaptive GRU. A learnable gate sensitivity parameter is added to the GRU, and the forget gate and update gate bias are dynamically adjusted in combination with real-time noise estimation. Subsequently, based on the Bayesian optimization of TPE (Tree-structured Parzen Estimator) implemented by Optuna, the optimal hierarchical structure is automatically searched in the 2–5 layer and 128–512 dimensional hidden unit space, and the sentiment classification performance is evaluated to select the best configuration. Finally, an adversarial multi-task framework is constructed to train multimodal sentiment classification and noise recognition adversarial loss weightedly. Experiments show that the average accuracy of the proposed method in 5-fold cross-validation is 82.6% (static fusion 75.0%); the weighted F1-score is 0.86 (Attention-based 0.815); the ROC-AUC (Receiver Operating Characteristic - Area Under Curve) is 0.84 ± 0.02; the specificity reaches 0.854, which is significantly better than static fusion and single-modal methods, verifying the model’s efficiency and robustness in multimodal sentiment analysis tasks. The new design improves emotion detection accuracy by over 7% compared to basic methods. Automated tuning finds the best network layout faster, saving time and effort. Training with noise makes the system stay accurate even in noisy conditions. The new design improves emotion detection accuracy by over 7% compared to basic methods. Automated tuning finds the best network layout faster, saving time and effort. Training with noise makes the system stay accurate even in noisy conditions.",
+  "tldr": "A cross-modal interaction with temporal adaptive attention and adjustable gated hierarchical recurrent network, combined with Bayesian structural optimization and adversarial multi-task training, and uses visualization to improve interpretability is proposed.",
+  "year": 2025,
+  "venue": "Discover Applied Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wangyang Shi"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "88abab56a97c9612ec301abbbd179f7b0916b363",
+  "paper_id": "doi:10.1007/s42452-025-07901-6",
+  "doi": "10.1007/s42452-025-07901-6",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s42452-025-07901-6.pdf",
+  "published_iso": "2025-11-26",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ },
+ {
+  "title": "Multi-Modal Generative DeepFake Detection via Visual-Language Pretraining with Gate Fusion for Cognitive Computation",
+  "title_norm": "multi modal generative deepfake detection via visual language pretraining with g",
+  "abstract": "",
+  "tldr": "This study introduces a framework called Visual-Language Pretraining with Gate Fusion (VLP-GF), designed to identify multimodal deceptive content and enhance the accurate localization of manipulated regions within both images and textual annotations, and introduces an adaptive fusion module tailored to integrate local and global information simultaneously.",
+  "year": 2024,
+  "venue": "Cognitive Computation",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Guisheng Zhang",
+   "Mingliang Gao",
+   "Qilei Li",
+   "Wenzheng Zhai",
+   "Gwanggil Jeon"
+  ],
+  "citations": 15,
+  "source": "semanticscholar",
+  "source_id": "7f7b1d8a370ca4096b28ffdb9d7185e6c6e26eac",
+  "paper_id": "dblp:journals/cogcom/ZhangGLZJ24",
+  "doi": "10.1007/s12559-024-10316-x",
+  "arxiv_id": "",
+  "dblp_key": "journals/cogcom/ZhangGLZJ24",
+  "paper_url": "https://www.semanticscholar.org/paper/7f7b1d8a370ca4096b28ffdb9d7185e6c6e26eac",
+  "published_iso": "2024-06-25",
+  "from_query": [
+   "adaptive experiment acceptance gate"
+  ]
+ }
+]

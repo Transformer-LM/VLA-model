@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances \u9225?stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+      "chosen_pattern_id": "assumption_audit_and_pivot",
+      "anchor_alternates": [],
+      "companion_pattern": "controlled_diagnostic_design",
+      "companion_rationale": "Relocating feasibility evidence from the initial dense pair geometry to a closed-loop sequence of safe intervention responses yields a probe-response transcript O; the controlled_diagnostic_design move operates on O with matched passive observations and a policy-independent full-state oracle to produce a runnable feasibility/abstention decision rather than another geometry-conditioned action map.",
+      "selection_rationale": "This is the most load-bearing method gap because a calibrated decision to execute, defer, or abstain is required before a frozen pi0.5 policy can behave safely on pairings for which the requested relation has no executable realization. The pivot must acquire causal response evidence unavailable to a passive dense PointMap adapter, discard every probe's spatial coordinates after execution, and reobserve the target and reference before choosing the next probe, so it confronts both the fair-baseline equivalence and stale-anchor obstacles by construction."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method -- the anchor's assumption_audit_and_pivot relocates the feasibility signal to interventional behavior, and its controlled_diagnostic_design companion turns that signal into an independently scored runtime execute/defer/abstain gate.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "assumption_audit_and_pivot": {
+      "share": 0.0,
+      "saturation_band": "untested",
+      "selection_note": "untested lane -- differentiation_from_lit must substantively defend the choice"
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.06,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement \u9225?stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+      "reason": "fails removal test -- the feasibility gate can be falsified as a complete execute/defer/abstain method without also learning the full successful action program, which is a larger second paper"
+    },
+    {
+      "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required \u9225?stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+      "reason": "future work -- inducing an executable variable-phase scaffold requires machinery beyond the smaller interventional feasibility certificate"
+    },
+    {
+      "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings \u9225?stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+      "reason": "fails removal test -- the anchor's matched-passive-observation control already distinguishes static spatial evidence from interventional feasibility evidence, so a separate correspondence-invariance leg would duplicate the diagnostic"
+    }
+  ]
+}

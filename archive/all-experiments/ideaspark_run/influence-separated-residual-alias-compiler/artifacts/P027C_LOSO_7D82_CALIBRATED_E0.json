@@ -1,0 +1,207 @@
+{
+  "calibration": {
+    "base_objective": 0.5917377854046053,
+    "endpoint_count": 394,
+    "gate_passed": false,
+    "grid": [
+      {
+        "alpha": 0.0,
+        "decay": 0.0,
+        "objective": 0.5917377854046053
+      },
+      {
+        "alpha": 0.025,
+        "decay": 0.0,
+        "objective": 0.5917141478340725
+      },
+      {
+        "alpha": 0.025,
+        "decay": 0.5,
+        "objective": 0.5917514266300065
+      },
+      {
+        "alpha": 0.025,
+        "decay": 0.8,
+        "objective": 0.5918365967797866
+      },
+      {
+        "alpha": 0.025,
+        "decay": 0.95,
+        "objective": 0.5916291942954132
+      },
+      {
+        "alpha": 0.025,
+        "decay": 1.0,
+        "objective": 0.5918271705164325
+      },
+      {
+        "alpha": 0.05,
+        "decay": 0.0,
+        "objective": 0.591757802513664
+      },
+      {
+        "alpha": 0.05,
+        "decay": 0.5,
+        "objective": 0.5917813215606326
+      },
+      {
+        "alpha": 0.05,
+        "decay": 0.8,
+        "objective": 0.5914710811337516
+      },
+      {
+        "alpha": 0.05,
+        "decay": 0.95,
+        "objective": 0.5931150663833845
+      },
+      {
+        "alpha": 0.05,
+        "decay": 1.0,
+        "objective": 0.5945694942588039
+      },
+      {
+        "alpha": 0.1,
+        "decay": 0.0,
+        "objective": 0.5918113108670661
+      },
+      {
+        "alpha": 0.1,
+        "decay": 0.5,
+        "objective": 0.5918350935434715
+      },
+      {
+        "alpha": 0.1,
+        "decay": 0.8,
+        "objective": 0.5930543571197476
+      },
+      {
+        "alpha": 0.1,
+        "decay": 0.95,
+        "objective": 0.5951630490948544
+      },
+      {
+        "alpha": 0.1,
+        "decay": 1.0,
+        "objective": 0.5982038065998612
+      },
+      {
+        "alpha": 0.2,
+        "decay": 0.0,
+        "objective": 0.5919357498276175
+      },
+      {
+        "alpha": 0.2,
+        "decay": 0.5,
+        "objective": 0.5931367176819268
+      },
+      {
+        "alpha": 0.2,
+        "decay": 0.8,
+        "objective": 0.5941656346363187
+      },
+      {
+        "alpha": 0.2,
+        "decay": 0.95,
+        "objective": 0.5997668604499803
+      },
+      {
+        "alpha": 0.2,
+        "decay": 1.0,
+        "objective": 0.6089826930445533
+      },
+      {
+        "alpha": 0.4,
+        "decay": 0.0,
+        "objective": 0.5920136398357535
+      },
+      {
+        "alpha": 0.4,
+        "decay": 0.5,
+        "objective": 0.5928298340148022
+      },
+      {
+        "alpha": 0.4,
+        "decay": 0.8,
+        "objective": 0.5974806279440664
+      },
+      {
+        "alpha": 0.4,
+        "decay": 0.95,
+        "objective": 0.6144182103730483
+      },
+      {
+        "alpha": 0.4,
+        "decay": 1.0,
+        "objective": 0.6491668062069184
+      },
+      {
+        "alpha": 0.7,
+        "decay": 0.0,
+        "objective": 0.5932609912404473
+      },
+      {
+        "alpha": 0.7,
+        "decay": 0.5,
+        "objective": 0.5942264090172354
+      },
+      {
+        "alpha": 0.7,
+        "decay": 0.8,
+        "objective": 0.6044639879432568
+      },
+      {
+        "alpha": 0.7,
+        "decay": 0.95,
+        "objective": 0.6534870047503771
+      },
+      {
+        "alpha": 0.7,
+        "decay": 1.0,
+        "objective": 0.7440128897188555
+      },
+      {
+        "alpha": 1.0,
+        "decay": 0.0,
+        "objective": 0.5933706433336808
+      },
+      {
+        "alpha": 1.0,
+        "decay": 0.5,
+        "objective": 0.596131353880094
+      },
+      {
+        "alpha": 1.0,
+        "decay": 0.8,
+        "objective": 0.6153824146272829
+      },
+      {
+        "alpha": 1.0,
+        "decay": 0.95,
+        "objective": 0.7100205190549982
+      },
+      {
+        "alpha": 1.0,
+        "decay": 1.0,
+        "objective": 0.8631790637962856
+      }
+    ],
+    "minimum_relative_control_improvement": 0.01,
+    "relative_control_improvement": 0.0004507136056410082,
+    "selected_alpha": 0.05,
+    "selected_decay": 0.8,
+    "selected_objective": 0.5914710811337516,
+    "source_count": 6
+  },
+  "claim_limit": "Global residual transport did not improve source-stratified ordinary overlap calibration controls. Held-out alias evaluation was not run.",
+  "created_at_utc": "2026-09-01T17:38:16.033401+00:00",
+  "decision": {
+    "calibration_gate_passed": false,
+    "heldout_alias_evaluation_authorized": false,
+    "learned_router_authorized": false
+  },
+  "kind": "p027c_calibrated_transport_control_gate_failure_e0",
+  "run_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LOSO_7D82_CALIBRATED_E0_RUN_LOCK.json",
+    "sha256": "d843fd527c18cf46a2b8f4420f7811ab79810169fd0b04e7cdd80dc1220bb495"
+  }
+}

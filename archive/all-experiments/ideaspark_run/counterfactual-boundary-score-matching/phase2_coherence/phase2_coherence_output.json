@@ -1,0 +1,286 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S2/S6 suffix-mask handoff",
+      "verbatim_step_quote": "2. Replay a0 in both scenes with identical simulator settings; input is each compiled pair, and output is the per-step clearance/contact/kinematic trace, the first contiguous violation mask M, its complement masks P and S, and an eligibility record.",
+      "why_picked_first": "S is defined only by temporal position after the first contiguous run, yet L_out treats all of S as fidelity-safe. A later disjoint violation is therefore allowed to enter S and be explicitly anchored to the frozen model."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": ["task specification", "successful normalized action chunk a0 in g+", "finite exposed collision-mesh parameter grids"],
+        "produces": ["compiled pair (g+, g−, a0, δg) or discard"],
+        "note": "Quote: \"1. Add a BoundaryFlip compiler to existing RoboTwin 2.0 task assets; input is a task specification plus a successful controller rollout, and output is the closest one-parameter geometry edit δg satisfying valid-in-g+, invalid-in-g−, and solvable-in-g− constraints while all named confounds are copied byte-for-byte.\" The operative word \"closest\" lacks a distance and tie rule in the submitted procedure."
+      },
+      {
+        "step": "S2",
+        "consumes": ["compiled pair", "a0 of shape T×A", "deterministic simulator"],
+        "produces": ["Boolean v[0:T]", "P,M,S ∈ {0,1}^T", "eligibility record"],
+        "note": "Quote: \"2. Replay a0 in both scenes with identical simulator settings; input is each compiled pair, and output is the per-step clearance/contact/kinematic trace, the first contiguous violation mask M, its complement masks P and S, and an eligibility record.\" M is the first contiguous true run, P is strictly before it, and S is every later index; thus S is not equivalent to {t:v_t=false}. The text also did not explicitly reject an invalid rollout whose listed predicates yield empty M."
+      },
+      {
+        "step": "S3",
+        "consumes": ["eligible g−", "finite controller seed roster"],
+        "produces": ["K_i≥1 successful T×A trajectories {p_ik} with compiler mode identities, or discard"],
+        "note": "Quote: \"3. Rerun RoboTwin's scripted controller over its discrete grasp, approach-homotopy, and contact-order seeds in g−; input is an eligible edited scene, and output is successful trajectories grouped by compiler mode identity, with pairs lacking a positive mode discarded before training.\""
+      },
+      {
+        "step": "S4",
+        "consumes": ["c−", "a0", "{p_ik}", "P,M,S", "diffusion schedule"],
+        "produces": ["paired normalized minibatch", "one sampled p_ik", "shared j and ε"],
+        "note": "Quote: \"4. Extend the continuous-action VLA data loader to emit c−, a0, one mode-balanced p_ik, M, P, and S with a shared diffusion index and noise draw; output is a paired minibatch in the base model's action normalization.\" As written, the emitted batch has one p_ik, while S6 requires the complete roster; the complete roster exists at S3 but no loader handoff to S6 is stated."
+      },
+      {
+        "step": "S5",
+        "consumes": ["paired batch", "trainable θ", "frozen θ0", "M with |M|>0"],
+        "produces": ["scalar rθ values", "scalar dθ", "scalar L_flip"],
+        "note": "Quote: \"5. In the action-head training code, compute r_θ and the frozen-reference boundary margin d_θ; input is the paired minibatch, θ, and θ0, and output L_flip whose gradient changes denoising predictions only through M and thereby changes sampled edited-scene action chunks.\" Under the residual-support reading, only explicit loss residuals are on M; under the prediction-change reading, shared parameters can change outputs outside M."
+      },
+      {
+        "step": "S6",
+        "consumes": ["paired batch", "P∪S", "complete {p_ik}"],
+        "produces": ["L_out", "L_alt=max_k L_denoise(p_ik)"],
+        "note": "Quote: \"6. Compute L_out on P ∪ S and L_alt as the maximum per-mode denoising loss; input is the same paired batch and complete positive-mode roster, and output is a gradient that anchors non-violation coordinates and raises the weakest represented feasible mode rather than only the dominant mode.\" Calling P∪S \"non-violation coordinates\" is false for any later disjoint violation in S."
+      },
+      {
+        "step": "S7",
+        "consumes": ["calibration gaps", "calibration gradients", "compiled training pairs", "θ0"],
+        "produces": ["β", "λ_flip,λ_out,λ_alt", "post-trained checkpoint"],
+        "note": "Quote: \"7. Calibrate β and the three λ weights on a held-out calibration split using the stated scale and gradient-norm rules, then post-train the continuous-action head jointly with L_base; input is the frozen initialization and compiled training pairs, and output is a checkpoint used by the unchanged sampler.\" Reciprocal standard deviation and norm matching are undefined at zero scale/norm."
+      },
+      {
+        "step": "S8",
+        "consumes": ["five checkpoints/methods", "held-out eligible pairs", "policy sampling randomness"],
+        "produces": ["BoundaryFlip panel and ordinary RoboTwin success estimates"],
+        "note": "Quote: \"8. Evaluate ordinary imitation post-training, the simple global feasibility objective, whole-chunk preference tuning, largest-cluster inference selection, and the proposed checkpoint on the same held-out pair seeds; output is the shared BoundaryFlip retention panel plus ordinary RoboTwin 2.0 success to detect collateral regression.\" The panel targets the declared eligible-pair population, roster modes, and policy randomness; evaluation must average over the declared admissible initial-state draws rather than silently condition on one state."
+      },
+      {
+        "step": "S9",
+        "consumes": ["otherwise matched campaigns", "mask/pair permutations", "L_out/L_alt removals"],
+        "produces": ["causal-attribution panel"],
+        "note": "Quote: \"9. Run mask-permutation, pair-identity permutation, no-L_out, and no-L_alt interventions through the full closed-loop sampler; input is an otherwise identical training campaign, and output is downstream success, invalid-mode execution, complement drift, and per-mode coverage for causal attribution.\""
+      }
+    ],
+    "unbound_parameters": {
+      "findings": [],
+      "checked": "n_noise=1 has a name, default, and capacity-only adjustment rule; β and each λ have named calibration rules. Counts such as one edited scalar and first contiguous run are structural choices, not unnamed behavioral budgets. The undefined meaning of closest is a dataflow/wording defect rather than a numeric magic constant."
+    },
+    "dual_readings": [
+      {
+        "term": "closest one-parameter geometry edit",
+        "readings": ["minimum absolute displacement on the compiler's native scalar grid", "first satisfying edit in compiler enumeration order"],
+        "result": "The selected pair can differ; wording is ambiguous under both T2/T5 readings and is patched to the first with deterministic tie-breaking.",
+        "reading_dependence": "reading_robust"
+      },
+      {
+        "term": "gradient changes denoising predictions only through M",
+        "readings": ["L_flip has explicit residual terms only on M", "a parameter update cannot alter predictions outside M"],
+        "result": "The first is established; the second is false for a shared network. The patch states loss support and removes the value-invariance implication.",
+        "reading_dependence": "reading_dependent: false only under the prediction-change reading; ambiguity itself is robust"
+      },
+      {
+        "term": "non-violation coordinates",
+        "readings": ["all indices outside first run M", "only indices with v_t=false"],
+        "result": "The formula P∪S selects the first reading, but the prose suggests the second; later true values in S separate them. The patch protects only the certified pre-violation prefix P.",
+        "reading_dependence": "reading_robust"
+      }
+    ],
+    "estimand_match": {
+      "verdict": "match after explicit aggregation clarification",
+      "reasoning": "The retention-panel metrics correspond to success, invalid execution, complement drift, per-roster-mode success, and roster coverage on eligible pairs. The revised S8 makes the eligible-pair, admissible-initial-state, compiler-roster, and policy-sampling aggregation explicit, preserving the declared conditioning rather than claiming ordinary-episode unbiasedness."
+    },
+    "dry_run": {
+      "instance": "One scalar geometry parameter has g+=1.0 and the first valid native-grid flip g−=1.1. T=4,A=1; a0 fails with v=[false,true,false,true], so P=[0], M=[1], S=[2,3]. The edited scene has two feasible modes p1,p2. Residual vectors are aθ=[0.1,1.2,0.4,0.9], aθ0=[0.1,0.8,0.4,0.5], p1θ=[0.1,0.3,0.4,0.2], p1θ0=[0.1,0.6,0.4,0.4], p2θ=[0.2,0.7,0.3,0.4], p2θ0=[0.2,0.5,0.3,0.3]. β=1 and all λ=1 on a toy nondegenerate calibration batch.",
+      "execution": {
+        "mode": "executed",
+        "script": "import math,json,statistics; v=[False,True,False,True]; first=next(i for i,x in enumerate(v) if x); end=first; exec('while end+1<len(v) and v[end+1]: end+=1'); P=list(range(first)); M=list(range(first,end+1)); S=list(range(end+1,len(v))); e={'a_t':[.1,1.2,.4,.9],'a_0':[.1,.8,.4,.5],'p1_t':[.1,.3,.4,.2],'p1_0':[.1,.6,.4,.4],'p2_t':[.2,.7,.3,.4],'p2_0':[.2,.5,.3,.3]}; score=lambda z,I:-sum(z[i]**2 for i in I)/len(I); d1=(score(e['p1_t'],M)-score(e['p1_0'],M))-(score(e['a_t'],M)-score(e['a_0'],M)); d2=(score(e['p2_t'],M)-score(e['p2_0'],M))-(score(e['a_t'],M)-score(e['a_0'],M)); flip=-math.log(1/(1+math.exp(-d1))); full=lambda z:sum(x*x for x in z)/len(z); out=sum((e[x+'_t'][i]-e[x+'_0'][i])**2 for x in ['a','p1'] for i in P+S)/(2*len(P+S)); alt_all=max(full(e['p1_t']),full(e['p2_t'])); alt_loader=full(e['p1_t']); naive_d=(score(e['p1_t'],range(4))-score(e['p1_0'],range(4)))-(score(e['a_t'],range(4))-score(e['a_0'],range(4))); naive=-math.log(1/(1+math.exp(-naive_d))); additive=sum(e['a_t'][i]**2 for i in range(4)); parts=sum(sum(e['a_t'][i]**2 for i in I) for I in [P,M,S]); print(json.dumps({'v':v,'P':P,'M':M,'S':S,'later_violation_in_S':any(v[i] for i in S),'r':{k:score(z,M) for k,z in e.items()},'d1':round(d1,6),'d2':round(d2,6),'L_flip_p1':round(flip,6),'L_out_P_union_S':round(out,6),'L_alt_complete':round(alt_all,6),'L_alt_loader_single':round(alt_loader,6),'alt_understatement':round(alt_all-alt_loader,6),'naive_whole_chunk_d':round(naive_d,6),'naive_L':round(naive,6),'E_full_sum':round(additive,6),'E_parts_sum':round(parts,6)},indent=2))",
+        "output": "{\n  \"v\": [false, true, false, true],\n  \"P\": [0],\n  \"M\": [1],\n  \"S\": [2, 3],\n  \"later_violation_in_S\": true,\n  \"r\": {\"a_t\": -1.44, \"a_0\": -0.6400000000000001, \"p1_t\": -0.09, \"p1_0\": -0.36, \"p2_t\": -0.48999999999999994, \"p2_0\": -0.25},\n  \"d1\": 1.07,\n  \"d2\": 0.56,\n  \"L_flip_p1\": 0.294912,\n  \"L_out_P_union_S\": 0.033333,\n  \"L_alt_complete\": 0.195,\n  \"L_alt_loader_single\": 0.075,\n  \"alt_understatement\": 0.12,\n  \"naive_whole_chunk_d\": 0.4375,\n  \"naive_L\": 0.498135,\n  \"E_full_sum\": 2.42,\n  \"E_parts_sum\": 2.42\n}"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "mask partition",
+          "value": "P=[0], M=[1], S=[2,3], with v_3=true",
+          "arithmetic": "The first true run starts and ends at t=1; every t>1 enters S, including the later true value at t=3."
+        },
+        {
+          "quantity": "masked scores and sampled-mode margin",
+          "value": "rθ(a0)=-1.44, rθ0(a0)=-0.64, rθ(p1)=-0.09, rθ0(p1)=-0.36, d1=1.07, L_flip=0.294912",
+          "arithmetic": "d1=[(-0.09)-(-0.36)]-[(-1.44)-(-0.64)]=0.27-(-0.80)=1.07; -log(sigmoid(1.07))=0.294912."
+        },
+        {
+          "quantity": "complete-roster maximum",
+          "value": "max(0.075,0.195)=0.195; a one-positive loader exposes only 0.075, understating the max by 0.12",
+          "arithmetic": "mean(p1θ²)=0.30/4=0.075; mean(p2θ²)=0.78/4=0.195."
+        },
+        {
+          "quantity": "exact additive decomposition",
+          "value": "E_full=2.42 and E_P+E_M+E_S=2.42",
+          "arithmetic": "0.01+1.44+0.16+0.81=2.42. This equality is forced by the partition and is not empirical confirmation."
+        },
+        {
+          "quantity": "whole-chunk naive",
+          "value": "d_naive=0.4375 and L_naive=0.498135",
+          "arithmetic": "The full-chunk score averages all four coordinate contributions, unlike d1=1.07 on M."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "S contains one later violation (t=3), yet current L_out includes it and contributes to the measured 0.033333 fidelity penalty.",
+          "kind": "structural",
+          "why": "By definition S contains every index after the first contiguous run, without testing v_t; any allowed disjoint later violation is fidelity-protected. The concrete number is a counterexample to the universal 'non-violation coordinates' wording."
+        },
+        {
+          "anomaly": "The complete-roster L_alt is 0.195 but the only p_ik emitted by S4 yields 0.075, a 0.12 shortfall if S6 consumes only that batch.",
+          "kind": "structural",
+          "why": "A max over K_i modes cannot be reconstructed from one arbitrary emitted mode when K_i>1; the handoff must carry the roster or stream all its losses."
+        },
+        {
+          "anomaly": "E_full and the partition sum are both 2.42.",
+          "kind": "structural",
+          "why": "This is an algebraic identity forced by disjoint exhaustive masks, so it could not have come out otherwise and provides no empirical support beyond checking the implementation arithmetic."
+        },
+        {
+          "anomaly": "The observed 1.07 local margin, 0.4375 naive margin, and 0.12 roster-loss gap depend on the invented residuals.",
+          "kind": "instance_contingent",
+          "why": "Their magnitudes can move with the chosen residual vectors and therefore are not evidence about real policy success."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty eligible-pair set",
+        "behavior": "No gap standard deviation or auxiliary gradients exist, so S7 cannot calibrate and training would be meaningless.",
+        "finding": "Patch S7 to halt with an explicit ineligible-corpus result."
+      },
+      {
+        "probe": "empty M despite rollout-level failure",
+        "behavior": "sum(M)=0 makes rθ divide by zero; rollout failure alone does not logically guarantee one of the three listed v_t predicates fired.",
+        "finding": "Patch S2 eligibility to require |M|>0 and discard otherwise."
+      },
+      {
+        "probe": "K_i=0",
+        "behavior": "S3 already discards the pair before training; if this removes all pairs, the empty-corpus guard applies.",
+        "finding": null
+      },
+      {
+        "probe": "all-identical calibration gaps and zero auxiliary gradient",
+        "behavior": "std=0 makes β=1/std undefined; gradient-norm matching divides by zero for an inactive auxiliary.",
+        "finding": "Patch β to a stated zero-scale fallback and set an exactly zero-gradient auxiliary weight to zero."
+      },
+      {
+        "probe": "single-step chunk with M covering the only step",
+        "behavior": "P and S are empty. L_flip remains defined, but a mean-form fidelity loss has an empty support.",
+        "finding": "Define L_out=0 when P is empty."
+      },
+      {
+        "probe": "ties among closest geometry edits",
+        "behavior": "Different enumeration orders can choose different counterfactual pairs.",
+        "finding": "Patch S1 with native-grid absolute distance and a lexicographic tie rule."
+      },
+      {
+        "probe": "maximum finite compiler roster",
+        "behavior": "The maximum is defined but all K_i losses must reach S6; it can be streamed without changing the objective.",
+        "finding": "Patch the loader/handoff to emit or stream the complete finite roster."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "E_full = E_P + E_M + E_S exactly.",
+        "established_by": "S2",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "L_flip changes denoising predictions only through M.",
+        "established_by": "S5",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "P∪S are non-violation coordinates suitable for complement fidelity.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed counterexample has v_3=true while 3∈S."
+      },
+      {
+        "claim": "L_alt prevents a majority mode from hiding a neglected compiler mode.",
+        "established_by": "S3+S6",
+        "strength_grade": "conditional",
+        "assumptions_missing": ["Every compiler-roster mode loss is present in the max aggregation", "The roster is finite and mode identities are correct"],
+        "arbitration": "argument",
+        "measured": "Complete max 0.195 versus single-emitted-mode value 0.075."
+      },
+      {
+        "claim": "The simulator oracle and mode identities cannot become inference shortcuts.",
+        "established_by": "S4+S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Boundary-local score shaping changes edited-scene execution and preserves roster modes.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Deployment uses the unchanged diffusion/flow sampler with RGB, proprioception, and language.",
+        "established_by": "S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Use one edited-scene positive p1 and a0 in a whole-chunk diffusion preference loss, with no temporal mask, prefix fidelity term, or max over the feasible-mode roster.",
+      "naive_fairness": "It uses the same paired scenes, controller output, model, sampler, batch opportunity, and deployment inputs, consumes no extra information or compute, and is simpler because it drops mask extraction and roster aggregation.",
+      "instance_behavior": {
+        "naive": "Whole-chunk d=0.4375, loss=0.498135; all four a0 coordinates receive negative preference support and p2 receives no positive loss.",
+        "mechanism": "Masked d=1.07, loss=0.294912; only M=[1] receives explicit negative preference support, and complete-roster L_alt selects p2 at 0.195 rather than p1 at 0.075. Current L_out nevertheless anchors later-invalid t=3.",
+        "divergence": "Preference support differs on 3/4 coordinates; the roster max differs by 0.12; the current suffix-fidelity defect protects one later-invalid coordinate.",
+        "kind": "instance_contingent"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "The temporal mask and complete-roster max genuinely address the naive method's whole-chunk negative label and single-positive support. The executed suffix counterexample is a repairable overreach in fidelity scope, so the revision restricts guaranteed preservation to the certified prefix rather than declaring the mechanism equivalent to the naive."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "Build BoundaryFlip-RoboTwin as a modest scripted extension of RoboTwin 2.0. For each successful normalized action chunk a0 in scene g+, enumerate one-parameter edits on each exposed collision-mesh parameter's existing native compiler grid and choose the satisfying edit with minimum absolute grid displacement; break ties lexicographically by parameter name and signed displacement, and discard the episode if no edit makes a0 fail in g− while g− remains solvable. Language, terminal object relation and pose, robot and object initial states, camera, materials, background, controller seed, and all other geometry are copied byte-for-byte. From deterministic simulator traces define v_t as penetration, prohibited contact, or kinematic infeasibility, require at least one true v_t for eligibility, let M be the first contiguous true run, and let P and S be the indices before and after M. These masks partition the T-step chunk, so the summed squared denoising error obeys E_full=E_P+E_M+E_S. The context c− contains only policy RGB views, proprioception, and the unchanged instruction; δg, v_t, M, and compiler mode identities are training-only annotations and are absent as direct deployment inputs. For diffusion index j and Gaussian noise ε, define x_j(a)=α_j a+σ_j ε and r_θ(a,c,M)=−E_j,ε[||M⊙(ε−ε_θ(x_j(a),c,j))||²/sum(M)], using shared j and ε for compared actions and n_noise=1 per SGD occurrence by default, increased only to fill otherwise idle accelerator capacity at fixed batch size. Rerun the controller over its finite grasp, approach-homotopy, and contact-order seeds to obtain the complete compiler-enumerated feasible roster P_i={p_ik}; the training handoff carries that roster and samples one p_ik uniformly for L_flip. With frozen θ0 define d_θ=[r_θ(p_ik,c−,M)−r_θ0(p_ik,c−,M)]−[r_θ(a0,c−,M)−r_θ0(a0,c−,M)] and L_flip=−E log sigmoid(βd_θ), whose explicit preference residual support is restricted to M. Define L_out as θ-to-θ0 distillation only on the simulator-certified pre-violation prefix P for the paired chunks, with L_out=0 when P is empty; no fidelity guarantee is asserted for S. Define L_alt as the maximum ordinary full-chunk denoising loss over every p_ik in the carried or streamed roster. Optimize L_base+λ_flip L_flip+λ_out L_out+λ_alt L_alt. On the calibration split set β to the reciprocal standard deviation of frozen positive-minus-invalid masked gaps when that deviation is positive and to 1 when it is exactly zero; initialize each λ by gradient-L2 norm matching when its auxiliary norm is positive and set λ=0 when that norm is exactly zero, then select nonzero weights only on held-out geometry families. If no eligible training pairs remain, halt with an ineligible-corpus result. Evaluate the BoundaryFlip retention panel over held-out eligible pairs, admissible initial-state draws, compiler-roster modes, and policy sampling randomness. At deployment the checkpoint uses the unchanged diffusion/flow sampler from RGB, proprioception, and language.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1/T2/T3 findings that S was falsely fidelity-safe, M and calibration could be degenerate, the roster handoff was incomplete, closest was ambiguous, and direct-input absence was overstated as an absolute shortcut guarantee."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Add a BoundaryFlip compiler to RoboTwin 2.0 task assets; enumerate one-parameter edits on each exposed collision-mesh parameter's native compiler grid, select the satisfying edit with minimum absolute grid displacement, break ties lexicographically by parameter name and signed displacement, and discard the episode if none satisfies valid-in-g+, invalid-in-g−, and solvable-in-g− while all named confounds are copied byte-for-byte.\n2. Replay a0 in both scenes with identical simulator settings; emit the per-step Boolean clearance/contact/kinematic trace, require at least one true predicate, set M to the first contiguous true run and P,S to the indices before and after it, and discard pairs with empty M.\n3. Rerun RoboTwin's scripted controller over its finite grasp, approach-homotopy, and contact-order seeds in g−; emit the complete successful trajectory roster grouped by compiler mode identity and discard pairs with K_i=0.\n4. Extend the VLA loader to emit c−, a0, the complete finite roster {p_ik}, one uniformly sampled p_ik for L_flip, M,P,S, and shared diffusion index/noise in the base model's action normalization; streaming all roster losses is equivalent to materializing the roster in one batch.\n5. Compute r_θ and frozen-reference d_θ; emit L_flip whose explicit denoising-residual terms are supported only on M, without claiming that a shared-parameter update leaves predictions outside M unchanged.\n6. Compute L_out by distilling θ to θ0 only on the certified prefix P for the paired chunks, define it as zero when P is empty, and compute L_alt as the maximum full-chunk loss across every carried or streamed roster mode; emit the three scalar losses.\n7. On a nonempty calibration split set β=1/std(gap) when std(gap)>0 and β=1 otherwise; norm-match each λ when its auxiliary gradient norm is positive and set it to zero otherwise. Halt explicitly if no eligible training pairs remain, then post-train jointly with L_base and emit a checkpoint for the unchanged sampler.\n8. Evaluate all baselines and the proposal on the same held-out eligible pairs, aggregating over the declared admissible initial-state draws, compiler-roster modes, and policy samples; emit the BoundaryFlip retention panel and ordinary RoboTwin 2.0 success.\n9. Run mask permutation, pair-identity permutation, no-L_out, and no-L_alt interventions through the full closed-loop sampler and emit success, invalid execution, prefix drift, and per-mode coverage for causal attribution.",
+      "outcome": "applied",
+      "delta_summary": "Makes the T1 dataflow executable by carrying all K_i modes, narrows fidelity to the valid prefix exposed by T2, resolves the dual-reading claim in S5, and defines every T3 degenerate branch."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_reasoning",
+      "value": "BLOCK 1 — PREMISES ledger:\nP1 — A minimal collision-mesh edit can flip a previously successful chunk at a localized clearance/contact boundary while leaving the task solvable; simulator traces make this constructible, but prevalence is untested — falsification target.\nP2 — The first contiguous simulator violation run is a useful causal credit unit for receding-horizon policy repair; deterministic replay supports temporal attribution, but whether later closed-loop success is controlled by that unit is untested — falsification target. The method certifies only the pre-violation prefix P as violation-free; it makes no validity claim for the post-run suffix S.\nP3 — A masked denoising-error difference is a useful surrogate for changing conditional action mass near the violated segment; diffusion training supplies this local score object, but its alignment with execution is untested — falsification target. Masking restricts explicit loss residuals, not all changes of a shared network's outputs.\nP4 — The scripted controller's discrete grasp, approach-homotopy, and contact-order seeds cover the mode strata claimed by the paper; coverage is exact only relative to that finite compiler roster, not all physically possible trajectories.\nOBSERVATION-MODEL — Pairs are selected conditional on a validity flip, a nonempty listed violation trace, and at least one edited-scene solution, so they are not an unbiased sample of ordinary RoboTwin episodes; claims are restricted to the compiler-defined eligible-pair distribution and tested on held-out task and geometry families.\nESTIMAND — Over eligible pairs emitted by the BoundaryFlip compiler, admissible randomized initial states, the complete compiler-enumerated feasible roster, and policy sampling randomness, estimate edited-scene task success, invalid-mode execution probability, prefix score drift, per-roster-mode success, and the fraction of roster modes reached by successful rollouts.\nBLOCK 2 — NAIVE-BASELINE AUDIT: the runnable naive method marks every coordinate of a0 negative in g− and every coordinate of one edited-scene solution positive in a whole-chunk diffusion preference loss. Branch (i): it silently assumes every timestep of a failed chunk and every unselected action mode is invalid. The same minimal pair certifies a violation-free prefix, and the compiler exposes several feasible modes; M-local preference, prefix-only distillation, and a max over the complete positive roster directly confront those failures. The nearest textbook tool is contrastive learning with hard negatives, but the domain-specific structure is a receding-horizon continuous diffusion chunk whose negative label changes under one geometry intervention at a simulator-observed temporal boundary while a finite compiler-defined multimodal support must be retained.\nBLOCK 3 — The two selected gaps share the same paired rollout, mask, and complete compiler roster: the method writes a local score margin into that object and the diagnostic reads the same object to separate correction from mode collapse, so a second policy module would be redundant. Global feasibility regularization, differentiable collision-cost guidance, whole-chunk preference optimization, and largest-cluster inference selection were rejected because they regress to occupied global collision/guidance/selection nodes or sacrifice prefix localization and roster-mode retention; the saturated C04 lane is defended by the exact temporal error decomposition rather than the generic act of partitioning.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T4/T5 overclaim that the whole complement is shared-valid and aligns the premises and naive audit with the executed suffix counterexample and prefix-only repair."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "finding": "Step 4 has no actual producer for the alternative executable signatures and path-component membership required to certify q=1; a symbolic finite grammar plus SAPIEN collision queries cannot by itself generate a successful strategy-conditioned rollout.",
+    "severity": "blocking",
+    "why_not_repaired": "Supplying a complete strategy-to-controller compiler or planner for every grammar entry is load-bearing new machinery, not a field-level clarification.",
+    "verbatim_step_quote": "For each geometry edit at the same reset seed and terminal transform, exhaustively check every candidate in the declared finite grammar using SAPIEN collision queries and executable rollouts; emit q=1 only when sigma_0 is infeasible and a distinct successful signature exists, and emit q=0 for the nearest normalized-distance edit retaining sigma_0.",
+    "executed_evidence": "The dry-run could compute q only after externally stipulating the feasibility table 'A infeasible, B feasible'; no candidate step computed B's action rollout. With that injected table the script printed q0_mean=0.75, q1_mean=0.25, TCSG=0.50, showing downstream arithmetic works only after the missing artifact is supplied. Dataflow S1 produces a grammar, S3 produces only source-expert sigma_0, and S4 consumes candidate executable rollouts, so the missing producer is structural rather than instance-specific.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "Nearest normalized geometry distance does not make q=0 and q=1 observations equally difficult, so TCSG cannot causally identify a strategy-switch effect separately from clearance, visibility, or control difficulty; this coincides with the candidate's declared causal-identifiability obstacle.",
+    "severity": "blocking",
+    "why_not_repaired": "Repair requires redesigning pair construction around a defensible pre-treatment difficulty estimand or a factorial intervention; clamping, scoping, or wording around the confound would sidestep the anchor gap.",
+    "verbatim_step_quote": "For a policy P, the topology-conditioned success gap is TCSG(P)=E[S(P)|q=0]-E[S(P)|q=1] over compiler-certified matched pairs, where S is the native RoboTwin task-success predicate, and the invalid-old-strategy commitment rate is the fraction of q=1 rollouts whose simulator event prefix enters sigma_0 before failure.",
+    "executed_evidence": "The executed instance used equal normalized geometry distance 1.00 for both edits but difficulty_q0=0.20 and difficulty_q1=0.90. It printed TCSG=0.50. A topology-causal model produced means (0.75,0.25), while a difficulty-only model 0.75-(0.50/0.70)*(d-0.20) produced the identical means (0.75,0.25). Because both causal worlds yield the same q, distance, and success observables, the switch-specific effect is structurally non-identifiable.",
+    "reading_dependence": "reading_robust"
+  }
+]

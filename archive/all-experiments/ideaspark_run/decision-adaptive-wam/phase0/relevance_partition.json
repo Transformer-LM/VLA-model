@@ -1,0 +1,377 @@
+[
+  {
+    "paper_id": "semanticscholar:1c35e2d08c749bea8029a4802270c10c1acbddc0",
+    "relevance": "adjacent",
+    "reason": "Controllable long-horizon robot world-model backbone for policy evaluation and improvement, but its rollout budget is fixed rather than action-decision adaptive."
+  },
+  {
+    "paper_id": "semanticscholar:030f9cc8b8d6d46d6239ef6ae29d9e20867194de",
+    "relevance": "core",
+    "reason": "Adaptively invokes explicit VLA reasoning only at critical execution moments, making it a direct computation-gating collision even without a WAM."
+  },
+  {
+    "paper_id": "semanticscholar:f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+    "relevance": "core",
+    "reason": "Samples and ranks action candidates with a video-action world model and conditionally rectifies low-quality actions, a close test-time-compute collision."
+  },
+  {
+    "paper_id": "semanticscholar:3c71723b072e5924980d3602512919e8411139de",
+    "relevance": "adjacent",
+    "reason": "History-conditioned VLA intent modeling addresses action consistency under aliasing but does not allocate world-model computation."
+  },
+  {
+    "paper_id": "semanticscholar:c9f926f18886a1e4107f91125aac209a4565bfa0",
+    "relevance": "adjacent",
+    "reason": "Unified latent-action world-model and VLA backbone with flexible modeling modes, but no decision-conditioned runtime allocation among them."
+  },
+  {
+    "paper_id": "semanticscholar:181945c578310d11c4671eda350a46145663199f",
+    "relevance": "adjacent",
+    "reason": "Long-horizon diffusion imitation-learning policy is a robot action-modeling baseline, with no stated WAM or adaptive imagination mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:952e1888c5cafce5aac9d0be662c37cbfedca98b",
+    "relevance": "adjacent",
+    "reason": "Action world model for multi-agent path finding supplies a fixed short-horizon planning baseline outside VLA manipulation and adaptive compute."
+  },
+  {
+    "paper_id": "semanticscholar:dbf73508252359dad435141f2d156b2643c45a02",
+    "relevance": "adjacent",
+    "reason": "Long-horizon VLA with phase-aware masking and subtask segmentation, relevant as an adaptive-policy baseline but not WAM computation allocation."
+  },
+  {
+    "paper_id": "semanticscholar:10375c4e897d8b102113a47f616e5c9724cd50ce",
+    "relevance": "adjacent",
+    "reason": "Unified VLA and future-image world model is a direct architectural backbone, but it uses no decision-sensitive rollout or fidelity controller."
+  },
+  {
+    "paper_id": "semanticscholar:8eb7192f5c3ee6feed62153427afe6d000c56cdb",
+    "relevance": "core",
+    "reason": "Conditionally enables counterfactual reasoning in challenging driving scenes before final action generation, closely matching action-changing compute allocation."
+  },
+  {
+    "paper_id": "semanticscholar:d4c33afeb29d05c0c0e4e9e4c5daed53e9e1241a",
+    "relevance": "adjacent",
+    "reason": "Uses imagined pixel rollouts for offline VLA policy optimization, relevant WAM-VLA background but not adaptive deployment-time computation."
+  },
+  {
+    "paper_id": "semanticscholar:ce5efe2f240add8dc265732923732cce21f1b2c3",
+    "relevance": "core",
+    "reason": "Chooses sparse action sequences versus single-step actions from task complexity, a direct adaptive-chunking comparison that bounds the claimed distinction."
+  },
+  {
+    "paper_id": "semanticscholar:0ac6e9af7417a3a33f2c6cee90fcf26284eff654",
+    "relevance": "adjacent",
+    "reason": "World model evaluates and safety-ranks robot policies, providing a decision-facing WAM baseline without dynamically allocating imagination."
+  },
+  {
+    "paper_id": "semanticscholar:ef5c9be1161d01127366c2b9d20fe7378dadd413",
+    "relevance": "adjacent",
+    "reason": "Adaptively retrieves and aligns imitation skills from video, useful long-horizon robot context but unrelated to world-model compute allocation."
+  },
+  {
+    "paper_id": "semanticscholar:2d1c66a1cdcd58e91b272b934f5b50c1566bbec0",
+    "relevance": "adjacent",
+    "reason": "RGB-D flow world model is a representation-fidelity and visual-planning baseline, but its representation and rollout computation are fixed."
+  },
+  {
+    "paper_id": "semanticscholar:1e7eaef5ed82f2552251e13464de99286a937007",
+    "relevance": "off_topic",
+    "reason": "Humanoid residual-action motion tracking has no VLA, world model, imagination, or adaptive inference-computation component."
+  },
+  {
+    "paper_id": "semanticscholar:a77606bdf0d27e18331eea613b671dc7ef78d0cb",
+    "relevance": "adjacent",
+    "reason": "World-model-generated data and embodied reasoning improve a VLA at training time, but no runtime world-model computation is allocated by decision impact."
+  },
+  {
+    "paper_id": "semanticscholar:60ad2f6f6ce05b12d3c356715f4a79385b2bedff",
+    "relevance": "core",
+    "reason": "Action-chunk-conditioned latent future monitoring changes pause and recovery decisions, a close decision-relevant prediction mechanism despite fixed compute."
+  },
+  {
+    "paper_id": "semanticscholar:376f4c3176eb8ca594733fbead8387d05b8dcb9b",
+    "relevance": "adjacent",
+    "reason": "A 3D-flow world model guides fixed closed-loop robot planning, supplying a structured-representation backbone rather than adaptive imagination allocation."
+  },
+  {
+    "paper_id": "semanticscholar:6f4034c14c422c8e9c5bb4977c4408bd5b13decd",
+    "relevance": "off_topic",
+    "reason": "Velocity-conditioned inverse-reinforcement-learning control for humanoid walking is unrelated to VLA-WAM imagination or inference allocation."
+  },
+  {
+    "paper_id": "semanticscholar:a352e88e3e8775a61be0fab603c4990e715f6124",
+    "relevance": "adjacent",
+    "reason": "Residual-action visual world model is a model-based planning backbone, but uses a fixed representation and imagination procedure."
+  },
+  {
+    "paper_id": "semanticscholar:3136feb03c4c95b58c2336369024578d54681461",
+    "relevance": "core",
+    "reason": "Horizon-adaptive asynchronous WAM with observation-guided context routing is a direct horizon and compute-efficiency collision, though not decision-change gated."
+  },
+  {
+    "paper_id": "semanticscholar:7e7e59d2e247d99954081080ddd5aae93d10b9e0",
+    "relevance": "adjacent",
+    "reason": "Base pi0 VLA policy is a necessary backbone and baseline but contains no world-model or adaptive imagination mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:4adb4f29ba3378a539ce8a12374a984b6abd484a",
+    "relevance": "adjacent",
+    "reason": "Long-horizon task decomposition and visual correction are relevant robot-planning context but do not use a WAM or allocate imagined computation."
+  },
+  {
+    "paper_id": "semanticscholar:5976a31d1b0f3edb4032803168e33cb7fdacb5a4",
+    "relevance": "adjacent",
+    "reason": "Unified multimodal VLA and mixture-of-experts training provide a policy backbone, with no decision-adaptive world-model inference."
+  },
+  {
+    "paper_id": "semanticscholar:8a1edd9ea3b3204ecf0aaca675d85c0c06130ba7",
+    "relevance": "core",
+    "reason": "Conditions robot control on generated short future videos and tests wrong futures, directly probing when added imagination can change downstream action outcomes."
+  },
+  {
+    "paper_id": "semanticscholar:280f2ea5ac05cab2d5a85c74f0a23257c7947690",
+    "relevance": "core",
+    "reason": "Robot world-model testing-time scaling performs model-based candidate planning, making it a direct rollout and candidate-compute baseline."
+  },
+  {
+    "paper_id": "semanticscholar:593fe3f7bbdcbd6169f9903fcab28e8e65316c4e",
+    "relevance": "adjacent",
+    "reason": "Geo-semantic attention improves long-horizon VLA control but contains neither a world model nor adaptive imagination computation."
+  },
+  {
+    "paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+    "relevance": "adjacent",
+    "reason": "Iteratively co-improves VLA and video world model using real rollouts, relevant training-time context but not runtime compute allocation."
+  },
+  {
+    "paper_id": "semanticscholar:da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+    "relevance": "adjacent",
+    "reason": "Adaptive planning, reflection, and recovery form a useful long-horizon VLA baseline, but extra computation is not a WAM decision-impact allocation."
+  },
+  {
+    "paper_id": "openalex:W4411735734",
+    "relevance": "off_topic",
+    "reason": "Pure comprehensive survey of world models rather than a primary mechanism paper."
+  },
+  {
+    "paper_id": "openalex:W4402890475",
+    "relevance": "off_topic",
+    "reason": "Pure survey of foundation models in robotics with no specific decision-adaptive world-model mechanism."
+  },
+  {
+    "paper_id": "openalex:W4408185406",
+    "relevance": "off_topic",
+    "reason": "Neuroprosthetic BCI study of neural representational drift, unrelated to VLA-WAM robot decision computation."
+  },
+  {
+    "paper_id": "openalex:W4416764606",
+    "relevance": "off_topic",
+    "reason": "Learns inverse kinematics and dynamics for robot arms; WAM here is a manipulator name, not a world-action model."
+  },
+  {
+    "paper_id": "openalex:W4413765256",
+    "relevance": "off_topic",
+    "reason": "Broad perspective on robot manufacturing and intelligence, not a primary adaptive world-model computation method."
+  },
+  {
+    "paper_id": "openalex:W4402849693",
+    "relevance": "off_topic",
+    "reason": "Ethics review of social robots for dementia care is unrelated to VLA-WAM computation."
+  },
+  {
+    "paper_id": "openalex:W4409109811",
+    "relevance": "off_topic",
+    "reason": "E-learning student-performance prediction is a cross-domain retrieval false positive."
+  },
+  {
+    "paper_id": "openalex:W4403444573",
+    "relevance": "adjacent",
+    "reason": "VLM converts human demonstrations into robot plans, a relevant reasoning and planning baseline without a WAM or adaptive imagination budget."
+  },
+  {
+    "paper_id": "openalex:W4407170749",
+    "relevance": "off_topic",
+    "reason": "Multi-fidelity Bayesian optimization for drug discovery is a cross-domain computation-allocation analogy, not robotics or VLA-WAM."
+  },
+  {
+    "paper_id": "openalex:W848767175",
+    "relevance": "off_topic",
+    "reason": "Constitutional-law article is an unambiguous cross-domain false positive."
+  },
+  {
+    "paper_id": "openalex:W4403670026",
+    "relevance": "adjacent",
+    "reason": "Human intervention and trust-weighted robot learning provide a decision-gating baseline, but no world-model computation is allocated."
+  },
+  {
+    "paper_id": "openalex:W4406667547",
+    "relevance": "off_topic",
+    "reason": "Manufacturing equipment time-to-fault prediction is predictive maintenance, not VLA-WAM manipulation or imagination allocation."
+  },
+  {
+    "paper_id": "openalex:W4413139301",
+    "relevance": "off_topic",
+    "reason": "Computational neuroscience model of striatal decision spaces is outside robotics and world-model inference."
+  },
+  {
+    "paper_id": "openalex:W4404349900",
+    "relevance": "off_topic",
+    "reason": "Review of commercial robotic-surgery platforms is unrelated to adaptive model computation."
+  },
+  {
+    "paper_id": "openalex:W4405561673",
+    "relevance": "adjacent",
+    "reason": "Efficient controllable driving world-model rollout via amortized diffusion is a useful compute baseline, but its budget is not action-decision adaptive."
+  },
+  {
+    "paper_id": "openalex:W4417144284",
+    "relevance": "off_topic",
+    "reason": "Generic overview of random forests has no robotics, VLA, world-model, or adaptive imagination content."
+  },
+  {
+    "paper_id": "openalex:W4409975538",
+    "relevance": "adjacent",
+    "reason": "Object-centric robot world model is a strong representation-fidelity baseline, but object-centric computation is fixed rather than allocated per decision."
+  },
+  {
+    "paper_id": "openalex:W4404090762",
+    "relevance": "off_topic",
+    "reason": "Electronic-nose hardware for odor sensing is unrelated to VLA-WAM computation."
+  },
+  {
+    "paper_id": "openalex:W4402768293",
+    "relevance": "off_topic",
+    "reason": "Affective-neuroscience account of motivated behavior is outside robotics and world-model planning."
+  },
+  {
+    "paper_id": "openalex:W4412093083",
+    "relevance": "off_topic",
+    "reason": "Pure review of robot vision, SLAM, navigation, and sensors rather than a primary adaptive-computation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4408044364",
+    "relevance": "off_topic",
+    "reason": "Sociological study of WallStreetBets collective action is a cross-domain false positive."
+  },
+  {
+    "paper_id": "openalex:W4404485106",
+    "relevance": "core",
+    "reason": "Combines latent imagination with adaptive n-step prediction in robotic path planning, a near-neighbor adaptive-horizon mechanism."
+  },
+  {
+    "paper_id": "openalex:W4414079258",
+    "relevance": "adjacent",
+    "reason": "Robot generalist-policy distillation is a potential VLA backbone, but the available record contains no world-model or adaptive-compute mechanism."
+  },
+  {
+    "paper_id": "openalex:W4411253665",
+    "relevance": "adjacent",
+    "reason": "Digital-twin robot decision learning supplies a simulation-based background system, without per-decision allocation of imagined computation."
+  },
+  {
+    "paper_id": "openalex:W4413557542",
+    "relevance": "adjacent",
+    "reason": "ROS 2 latency modeling is relevant systems background for compute budgets but has no VLA, WAM, or adaptive inference policy."
+  },
+  {
+    "paper_id": "openalex:W4417282609",
+    "relevance": "adjacent",
+    "reason": "Measures end-to-end visual-navigation latency, useful deployment context but not a decision-adaptive world-model method."
+  },
+  {
+    "paper_id": "openalex:W4416958104",
+    "relevance": "core",
+    "reason": "Future-state-aware asynchronous VLA inference directly addresses the latency-computation boundary and is a key alternative to decision-adaptive WAM compute."
+  },
+  {
+    "paper_id": "openalex:W7124490182",
+    "relevance": "adjacent",
+    "reason": "Benchmarks LLM latency and accuracy for robot navigation, offering systems baselines but no world-model imagination allocation."
+  },
+  {
+    "paper_id": "openalex:W4405934524",
+    "relevance": "adjacent",
+    "reason": "Anticipates upcoming robot tasks to hide LLM latency, a useful acceleration alternative without WAM rollouts or decision-impact gating."
+  },
+  {
+    "paper_id": "openalex:W4414859109",
+    "relevance": "adjacent",
+    "reason": "Reduces LLM command-processing latency in robot navigation but does not allocate reasoning or world-model computation."
+  },
+  {
+    "paper_id": "openalex:W4405388058",
+    "relevance": "off_topic",
+    "reason": "Wheel-legged rough-terrain stability control has no VLA, WAM, or adaptive imagination mechanism."
+  },
+  {
+    "paper_id": "openalex:W4405779038",
+    "relevance": "adjacent",
+    "reason": "Diffusion-based safe robot planner is a candidate-planning baseline, but it has no world model or adaptive compute allocation."
+  },
+  {
+    "paper_id": "openalex:W4411408298",
+    "relevance": "off_topic",
+    "reason": "Adaptive-dynamic-programming containment control for mobile robots is unrelated to VLA-WAM imagination."
+  },
+  {
+    "paper_id": "openalex:W4402830181",
+    "relevance": "adjacent",
+    "reason": "Adaptive-conformal POMDP safety shielding is a relevant uncertainty-gating comparator, but it does not allocate world-model rollout computation."
+  },
+  {
+    "paper_id": "openalex:W4403094416",
+    "relevance": "off_topic",
+    "reason": "Adaptive MPC for quadrupedal payload transport is a classical control method outside VLA-WAM decision computation."
+  },
+  {
+    "paper_id": "openalex:W4412972170",
+    "relevance": "core",
+    "reason": "Dynamically adjusts model rollout length from predictive accuracy, an exact adaptive-rollout baseline whose gate is uncertainty rather than action change."
+  },
+  {
+    "paper_id": "openalex:W4405785864",
+    "relevance": "off_topic",
+    "reason": "Humanoid standing and walking reward-design benchmark is unrelated to VLA-WAM compute allocation."
+  },
+  {
+    "paper_id": "openalex:W4407175372",
+    "relevance": "off_topic",
+    "reason": "Human-perception study of continual-learning social robots contains no relevant world-model or adaptive-inference mechanism."
+  },
+  {
+    "paper_id": "openalex:W4413925997",
+    "relevance": "adjacent",
+    "reason": "VLM-generated iterative rewards and real-to-sim-to-real policy learning are useful manipulation context, but imagination compute is not decision-adaptive."
+  },
+  {
+    "paper_id": "openalex:W4414285669",
+    "relevance": "off_topic",
+    "reason": "Pure review of learned dynamics models for manipulation rather than a primary adaptive-computation method."
+  },
+  {
+    "paper_id": "openalex:W4393763811",
+    "relevance": "off_topic",
+    "reason": "Pure survey of LLM-enhanced reinforcement learning, not a primary VLA-WAM allocation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4409303224",
+    "relevance": "off_topic",
+    "reason": "Pure survey of causality and feature selection with no specific robot world-model mechanism."
+  },
+  {
+    "paper_id": "openalex:W4413788337",
+    "relevance": "off_topic",
+    "reason": "Pure survey of multimodal fusion and vision-language models for robot vision."
+  },
+  {
+    "paper_id": "openalex:W4413397855",
+    "relevance": "off_topic",
+    "reason": "Pure survey of mobile-robot navigation spanning classical and language-model methods."
+  },
+  {
+    "paper_id": "openalex:W4417229657",
+    "relevance": "off_topic",
+    "reason": "Review and benchmark of social robot navigation, not a primary VLA-WAM computation-allocation paper."
+  }
+]

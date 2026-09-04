@@ -1,0 +1,2160 @@
+[
+ {
+  "title": "Transforming Individuals with Borderline Intellectual Functioning into Cognitively Augmented Workers: AI-Integrated Co-Adaptive, Closed-Loop Brain–Computer Interface",
+  "title_norm": "transforming individuals with borderline intellectual functioning into cognitive",
+  "abstract": "Individuals with borderline intellectual functioning (BIF), defined by intelligence quotients (IQ) between 70 and 85, face persistent disadvantages in education, employment, and social participation. Brain–artificial intelligence interfaces (BAIs) are defined as AI–integrated, co-adaptive, closed-loop extensions of bidirectional brain–computer interfaces (BCIs) that decode neural signals and deliver context-aware feedback in real-time. Unlike open-loop BCIs, BAIs enable continuous two-way interaction between the human brain and AI, providing adaptive support for working memory, attentional control, and procedural guidance. This paper analyzes the structural barriers affecting individuals with BIF and evaluates the potential for ethically designed BAIs to enhance workforce participation through integration as cognitively augmented workers (CAWs). Economic modeling suggests substantial national benefits, including gains in gross domestic product (GDP), higher tax revenues, and reduced reliance on welfare systems. Safeguards are outlined for protecting mental autonomy, governing neural data, and ensuring equitable labor regulation. A phased implementation program is further proposed, linking engineering trials and workplace pilots to quasi-experimental evaluation and general equilibrium analysis. Taken together, these elements constitute the paper’s core contribution: a unified conceptual, economic, and governance framework for integrating individuals with BIF as CAWs through co-adaptive BAIs. Responsibly developed BAIs, grounded in co-adaptation, offer a pathway to individual empowerment and inclusive societal progress through scalable cognitive augmentation.",
+  "year": 2025,
+  "venue": "MechEcology",
+  "authors": [
+   "Hyunghun Kim"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417447498",
+  "doi": "10.23104/me.e8",
+  "arxiv_id": null,
+  "paper_url": "https://www.mechecology.org/download/download_pdf?pid=mech-4-2-8",
+  "published_iso": "2025-12-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4417447498",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Photodynamical analysis of the TOI-4504 system: Orbital precession brings planet d into transit to reveal its deeply resonant state and similarity to GJ 876",
+  "title_norm": "photodynamical analysis of the toi 4504 system orbital precession brings planet ",
+  "abstract": "The K-dwarf TOI-4504 hosts two giant planets in a 2:1 mean-motion resonance (MMR) with orbital periods of 41.3 days (planet d) and 82.8 days (planet c). They exhibit among the largest known absolute transit-timing variations, with respective peak-to-node amplitudes up to 5 and 3 days. Newer TESS data show that the previously nontransiting planet d has now precessed into transiting. We have derived updated system parameters and find significant discrepancies with the discovery paper. The revised parameters place planets d and c deep in the resonance and close to or in the fully-relaxed limit-cycle state, with the resonant and secular modes interfering nonlinearly to induce nonzero relaxed free eccentricities which precess at the same rate as the forced eccentricities and the longitude of conjunctions. In turn, this enabled the precise measurement of the full eccentricities and apsidal angles. We discuss the predictions of linear theory and how it can be used to understand the true state of the system revealed by N -body integrations, and more generally why the posteriors of systems more compact than 2:1 tend to suffer from significant eccentricity degeneracy. We show that the extraordinary dynamical states of the giant pairs orbiting TOI-4504 and the M-dwarf GJ 876 are remarkably similar, in spite of the significant difference in their host-star masses. Finally, we discuss the implications for damping timescales during the relatively gentle formation process of type II migration.",
+  "year": 2026,
+  "venue": "Astronomy and Astrophysics",
+  "authors": [
+   "J.M. Almenara",
+   "R. Mardling",
+   "A. Leleu",
+   "S. Udry",
+   "T. Forveille",
+   "X. Bonfils"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7163167878",
+  "doi": "10.1051/0004-6361/202658959",
+  "arxiv_id": null,
+  "paper_url": "https://www.aanda.org/articles/aa/pdf/forth/aa58959-26.pdf",
+  "published_iso": "2026-06-02",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7163167878",
+  "year_month": "2026-06"
+ },
+ {
+  "title": "MV-WAM: Manifold-Aware World Action Model with Value Augmentation",
+  "title_norm": "mv wam manifold aware world action model with value augmentation",
+  "abstract": "Achieving robust and generalizable manipulation across diverse environments remains a fundamental challenge in embodied robotics. Recent world action models achieve strong in-domain performance, yet their gains do not extend proportionally to out-of-distribution scenarios. We attribute this to a structural mismatch between visual and action modalities, whose intrinsically heterogeneous manifolds cause joint optimization to disproportionately degrade action robustness under distribution shift. To address this, we propose MV-WAM, a novel end-to-end framework that jointly models visual prediction, action generation, and value estimation designed to effectively leverage video priors during both training and inference for enhanced action generalization. Key to this unification is a cross-modality causal mask that hierarchically grounds actions in predicted video frames and value function tokens in both modalities. To further narrow the generalization gap, MV-WAM adopts a manifold-aware optimization scheme that explicitly accounts for the structural heterogeneity across modalities. Finally, MV-WAM introduces a progress-value regulation mechanism that estimates task completion and detects misalignment between predicted frames and generated actions, enabling the policy to autonomously identify execution deviations and recover through value-guided rollback. On the RoboTwin simulation, MV-WAM achieves a 55.7% mean success rate on random scenarios without any randomized action supervision, outperforming the strongest baseline by 29.3%. MV-WAM achieves a 77.5% mean success rate across four real-world tasks of varying difficulty on a dual-arm robot. Our results demonstrate that manifold-aware cross-modal alignment is essential for robust policy generalization, offering a path toward deployable robotic manipulation.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jintao Chen",
+   "P Pengxiang Jia",
+   "Qingpo Wuwu",
+   "Jiaming Liu",
+   "Mengfei Du",
+   "Chun-Kai Fan"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7165818004",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.21088",
+  "published_iso": "2026-06-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA WAM mode surgery"
+  ],
+  "paper_id": "openalex:W7165818004",
+  "year_month": "2026-06"
+ },
+ {
+  "title": "Weak signal detection method based on dual-channel interference cancellation and IGWO-VMD-SVD",
+  "title_norm": "weak signal detection method based on dual channel interference cancellation and",
+  "abstract": "Abstract In the complex electromagnetic environment, target signals are often extremely weak and difficult to detect, primarily due to severe interference from various sources and environmental noise. To address this challenge, this study proposes a weak signal detection method that integrates dual-channel interference cancellation with the IGWO-VMD-SVD (Improved Grey Wolf Optimizer-Variational Mode Decomposition-Singular Value Decomposition) framework. In order to resolve the phase difference issue in the received data of the two channels, the data from one channel was synchronized with that from the other. Subsequently, interference signals were canceled out by subtracting the synchronized data of the two channels. To enhance the search capability of the Grey Wolf Optimizer (GWO) algorithm, this study introduced three improvements: good point set initialization, nonlinear control parameters, and a dynamic weight update strategy. Specifically, the Improved Grey Wolf Optimizer (IGWO) was employed to optimize two key parameters of Variational Mode Decomposition (VMD), namely the number of decomposition modes (K) and the penalty factor ( α ). Simulation results indicate that the correlation coefficient between the signal obtained via dual-channel interference cancellation (following synchronization) and the target signal is 0.98. Under the condition of a −10 dB signal-to-noise ratio (SNR), the SNR of the output signal processed by the IGWO-VMD-SVD method reaches 7.48 dB, representing a 174.8% improvement relative to the original input SNR. Additionally, physical experimental measurements demonstrate that the proposed method can effectively extract weak signals, with the minimum cross-correlation coefficient still reaching 0.92. Overall, the proposed method exhibits good adaptability and effectiveness in denoising applications for actual complex electromagnetic signals.",
+  "year": 2025,
+  "venue": "Engineering Research Express",
+  "authors": [
+   "Jinjie Yao",
+   "Haitao Wang",
+   "Jiansheng Bai",
+   "Congmin Hou"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4417174760",
+  "doi": "10.1088/2631-8695/ae2aa9",
+  "arxiv_id": null,
+  "paper_url": "https://iopscience.iop.org/article/10.1088/2631-8695/ae2aa9/pdf",
+  "published_iso": "2025-12-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4417174760",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "A positive feedback loop between sensory and octopaminergic neurons underlies nociceptive plasticity in Drosophila larvae",
+  "title_norm": "a positive feedback loop between sensory and octopaminergic neurons underlies no",
+  "abstract": "Adaptive modulation of nociceptive behaviour based on prior experience is essential for responding effectively to environmental threats. In Drosophila larvae, nociceptive escape behaviours are robust and stereotyped, yet emerging evidence suggests this can be modulated by experience and internal state. Here, we demonstrate that repeated activation of nociceptive sensory neurons enhances both the likelihood and intensity of nocifensive rolling, reflecting a form of behavioural sensitization. This heightened responsiveness is accompanied by a sustained increase in activity within nociceptive sensory neurons, suggesting that plasticity arises, at least in part, within the sensory compartment. We identified the neuromodulator octopamine as a critical regulator of the sensitization: signalling through the octopamine receptor OAMB is required to sustain elevated nociceptive gain, and feedback from one of octopaminergic neurons class, the ventral unpaired median (VUM) neurons, amplifies sensory neuron output. Together, these findings reveal an experience-dependent positive feedback loop in the nociceptive system, where neuromodulatory circuits tune behavioural output.",
+  "year": 2026,
+  "venue": "PLoS Genetics",
+  "authors": [
+   "Jean-Christophe Boivin",
+   "Yi Q Zhao",
+   "Jiayi Zhu",
+   "Jared T. Dakin",
+   "Jing Ning",
+   "Tomoko Ohyama"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7157860542",
+  "doi": "10.1371/journal.pgen.1012122",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7157860542",
+  "published_iso": "2026-04-28",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7157860542",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "A linear collider vision for the future of particle physics",
+  "title_norm": "a linear collider vision for the future of particle physics",
+  "abstract": "Abstract In this paper we review the physics opportunities at linear $\\mathrm{e}^{+}\\mathrm{e}^{-} $ e + e − colliders with a special focus on high centre-of-mass energies and beam polarisation, take a fresh look at the various accelerator technologies available or under development and, for the first time, discuss how a facility first equipped with a technology that is mature today could be upgraded with technologies of tomorrow to reach much higher energies and/or luminosities. In addition, we discuss detectors, alternative collider modes, as well as opportunities for beyond-collider experiments and R&D facilities as part of a linear collider facility (LCF). The material of this paper supports all plans for $\\mathrm{e}^{+}\\mathrm{e}^{-} $ e + e − linear colliders and the additional opportunities they offer, independently of technology choice or proposed site, as well as R&D for advanced accelerator technologies. This joint perspective on the physics goals, early technologies and upgrade strategies has been developed by the LCVision team based on an initial discussion at LCWS2024 in Tokyo and a follow-up at the LCVision Community Event at CERN in January 2025. It heavily builds on decades of achievements of the global linear collider community, in particular in the context of CLIC and ILC.",
+  "year": 2026,
+  "venue": "The European Physical Journal Special Topics",
+  "authors": [
+   "H. Abramowicz",
+   "E. Adli",
+   "F. Alharthi",
+   "M. Almanza-Soto",
+   "M. M. Altakach",
+   "W. Altmannshofer"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W7133198537",
+  "doi": "10.1140/epjs/s11734-026-02153-w",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7133198537",
+  "published_iso": "2026-03-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7133198537",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+  "title_norm": "surgical wam a world action model for data efficient surgical robot learning",
+  "abstract": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-horizon reasoning, and bimanual coordination. Endoscopic video is comparatively inexpensive and abundant relative to synchronized video--kinematics trajectories, and a natural way to exploit it is to learn world models of surgical scenes. However, existing surgical world models use video primarily for simulation or policy evaluation, and rarely translate the learned dynamics into closed-loop control. This gap raises our central question: under a fixed budget of action-labeled demonstrations, does action-free video pretraining improve closed-loop surgical manipulation? To answer it, we introduce the Surgical World-Action Model (Surgical WAM), a unified generative model built on Cosmos Policy that jointly predicts future endoscopic observations and executable surgical robot action chunks. Surgical WAM first learns surgical visual dynamics from action-free video and is then fine-tuned on the fixed action-labeled budget; at deployment, it acts as a closed-loop, receding-horizon controller that executes a short prefix of each predicted action chunk and replans from the resulting observation. On a suite of four simulated surgical manipulation tasks, video pretraining improves the average success rate from 63.5% to 77.8%, including an absolute gain of 20 percentage points on PegTransfer, with the largest improvements on contact-rich and bimanual tasks. These results demonstrate that action-free video provides transferable visual dynamics priors for learning surgical robot control with limited action supervision, positioning data-efficient video pretraining as a practical path toward scaling up surgical robot learning.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Wenrui Bao",
+   "Tianyun Jiang",
+   "Zhiben Chen",
+   "Ser-Nam Lim",
+   "Peter D. Peng",
+   "Yuzhang Shang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202281905",
+  "doi": "10.48550/arxiv.2608.11204",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.11204",
+  "published_iso": "2026-08-11",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA WAM mode surgery"
+  ],
+  "paper_id": "openalex:W7202281905",
+  "year_month": "2026-08"
+ },
+ {
+  "title": "Inequality in provider and patient-initiated healthcare cancellations during Covid-19",
+  "title_norm": "inequality in provider and patient initiated healthcare cancellations during cov",
+  "abstract": "The Covid-19 pandemic adversely affected access to healthcare raising concerns about worsening health, unmet need and subsequent 'displaced' demand. Yet little is known about how this displaced demand was distributed or whether it reflected patient's decisions to cancel versus provider's decisions to ration care. Using survey data for England from the UK Household Longitudinal Study, we examine whether planned care continued (or alternative provided), was cancelled by the provider or cancelled by the patient and how these outcomes vary across socio-demographic, clinical, regional and treatment-type characteristics. We estimate weighted multinomial logit models for April-July 2020 (pooled and wave specific), including region and month effects and a region-month Covid-mortality proxy for local NHS strain. Cancellations were overwhelmingly provider-initiated (87% vs 13% patient-initiated). A clear age gradient emerges: provider-initiated cancellations rise with age while patient-initiated cancellations fall; the provider-to-patient cancellation ratio is much higher for those aged 65+ than for younger adults, consistent with providers 'moving first' for older adults under capacity constraints. Several groups experienced 'double jeopardy' with elevated risks of both provider and patient cancellation: ethnic minority respondents, people in smaller households, urban residents, and those in the North East and Yorkshire and the Humber regions. Because provider cancellations predominated, providers largely determined which treatments continued. Without safeguards, such rationing risks amplified existing inequalities, particularly for double-jeopardy groups. Backlog recovery should protect elective capacity, especially for procedures, and prioritise proactive outreach and flexible scheduling for these groups, whilst reducing patient-side barriers.",
+  "year": 2025,
+  "venue": "Economics & Human Biology",
+  "authors": [
+   "Nikita Jacob",
+   "Anastasia Arabadzhyan",
+   "Panagiotis Kasteridis",
+   "Anne Mason",
+   "Nigel Rice"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416439058",
+  "doi": "10.1016/j.ehb.2025.101550",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416439058",
+  "published_iso": "2025-11-19",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416439058",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Reciprocal Effects of Touchpoint Nature in Omnichannel Commerce on Customer Experience and Behavior",
+  "title_norm": "reciprocal effects of touchpoint nature in omnichannel commerce on customer expe",
+  "abstract": "Although we received knowledge that touchpoints affect each other and interdependently shape customer experience and behavior, our empirical knowledge of such relationships in omnichannel firms is limited. This paper fills this research gap by extending the applications of information integration theory to analyze whether interdependent relationships exist between the most useful physical, digital, and human touchpoints across consumers’ journeys and how they affect customer experience and repurchase intentions differently. Study 1 addresses such reciprocity and reciprocal effects of the nature of touchpoints across three consumer journeys through the application of longitudinal data from 542 individuals in cross-lagged panel models. Study 2 tests the same touchpoints independently and cross-sectionally to reveal the shortcomings of omitted reciprocity. Study 1 suggests that the most useful physical, digital, and human touchpoints are reciprocally linked and affect customer experience and indirect behavior differently. The results strongly differ in the boundary condition check of Study 2, in further stability checks, and in an exploratory comparison of utilitarian vs hedonistic consumers. This paper contributes to the literature by theoretically addressing a previously neglected research area. Most useful touchpoints are interdependently observed and differently interpreted and integrated into important mental reactions and observable responses of consumers who are shopping at omnichannel firms. The results provide theoretical and practical guidance for scholars and managers considering the role of the most useful touchpoints for customer experience from a consumer perspective.",
+  "year": 2026,
+  "venue": "International Journal of Electronic Commerce",
+  "authors": [
+   "Angelina Klink",
+   "Bernhard Swoboda"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7155061892",
+  "doi": "10.1080/10864415.2026.2641903",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/10864415.2026.2641903?needAccess=true",
+  "published_iso": "2026-04-03",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7155061892",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "Les Houches 2023 – physics at TeV colliders: Report on the Standard Model precision wishlist",
+  "title_norm": "les houches 2023 physics at tev colliders report on the standard model precision",
+  "abstract": "Les Houches returned to an in-person format in 2023 and the bi-yearly tradition of updating the standard model precision wishlist has continued. In this work we review recent progress (since Les Houches 2021) in fixed-order computations for LHC applications. In addition, necessary ingredients for such calculations such as parton distribution functions, amplitudes, and subtraction methods are discussed. Finally, we indicate processes and missing higher-order corrections that are required to reach the theoretical accuracy that matches the anticipated experimental precision.",
+  "year": 2026,
+  "venue": "SciPost Physics Community Reports",
+  "authors": [
+   "Alexander Huss",
+   "J. Huston",
+   "Stephen Jones",
+   "Mathieu Pellen",
+   "Raoul Röntsch"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4417245442",
+  "doi": "10.21468/scipostphyscommrep.21",
+  "arxiv_id": null,
+  "paper_url": "https://scipost.org/10.21468/SciPostPhysCommRep.21/pdf",
+  "published_iso": "2026-03-24",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4417245442",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "EndoWAM: A Grounded World-Action Model for Generalizable Endoscopic Navigation",
+  "title_norm": "endowam a grounded world action model for generalizable endoscopic navigation",
+  "abstract": "Autonomous endoscopic navigation can reduce clinicians' operational burden, yet robust control remains challenging due to tissue deformation, transient occlusions, and rapidly changing viewpoints. Existing learning-based policies typically predict actions from current observations without explicitly modeling future dynamics, limiting their robustness and reliability in safety-critical settings. World Action Models (WAMs) offer a promising alternative by coupling predictive visual dynamics with action generation, but extending them to robotic endoscopy remains challenging due to limited training data, restricted viewpoint diversity, deformable anatomy, and high inference latency. We present EndoWAM, which is, to our knowledge, the first WAM for generalizable robotic endoscopic navigation. EndoWAM introduces future grounding, which predicts task-relevant target regions in future observations from intermediate denoising features of a video world model. Specifically, EndoWAM couples a lightweight diffusion transformer for future target-region prediction with a discrete action expert through a shared predictive representation. This design injects target-aware supervision into predictive dynamics modeling, improving robustness to visual degradation and viewpoint changes while enabling real-time control in a single denoising pass. We further introduce EndoMotion, a robotic endoscopic motion dataset spanning three anatomically distinct procedures: ureteroscopy, esophagoscopy, and endoscopic retrograde cholangiopancreatography (ERCP). EndoWAM consistently outperforms all baselines and alternative grounding strategies, while demonstrating strong zero-shot generalization to unseen viewpoints, environments, and targets. These results establish EndoWAM as a predictive, target-grounded framework for accurate, generalizable, and long-horizon navigation in visually constrained endoscopic environments.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jinsong Lin",
+   "Zikang Pan",
+   "Wanhao Liu",
+   "Chi Kit Ng",
+   "Liangjing Shao",
+   "Zihang Yu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7172559258",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.01221",
+  "published_iso": "2026-08-02",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA WAM mode surgery"
+  ],
+  "paper_id": "openalex:W7172559258",
+  "year_month": "2026-08"
+ },
+ {
+  "title": "Decoding booking cancellations: Quantitative insights and theoretical advances in tourism behavior",
+  "title_norm": "decoding booking cancellations quantitative insights and theoretical advances in",
+  "abstract": "This study investigates the determinants and timing of hotel booking cancellations through an integrative theoretical and empirical approach. Drawing on the theory of planned behavior, transaction cost theory, prospect theory, and strategic decision-making, we offer a comprehensive framework that explains both why and when cancellations occur. Utilizing a unique dataset of over two million hotel bookings from Mallorca, Spain (2021–2024), we apply time-to-event modeling and a linear probability model to explore cancellation patterns. Our results show that cancellation behavior is determined by a complex interplay of refundability terms, booking window, consumer nationality, travel party composition, hotel characteristics, and pricing dynamics. Findings reveal a non-linear (inverted U-shaped) relationship between booking window and cancellation likelihood, and highlight strategic consumer behavior around penalty windows and rebooking opportunities. This study contributes to tourism literature by combining theoretical depth with large-scale observational data to explain temporal and behavioral nuances in booking cancellations.",
+  "year": 2025,
+  "venue": "Tourism Management",
+  "authors": [
+   "Vicente Ramos Mir",
+   "Bartolomé Deya Tortella",
+   "Veronica Leoni",
+   "Juan Luis Nicolau"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7117754028",
+  "doi": "10.1016/j.tourman.2025.105384",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7117754028",
+  "published_iso": "2025-12-31",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7117754028",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "How instrumental and emotional co-worker support coevolve through time with psychological safety",
+  "title_norm": "how instrumental and emotional co worker support coevolve through time with psyc",
+  "abstract": "The aim of this study is to investigate how two types of co-worker support and psychological safety evolve over time in relation to each other. Drawing on Conservation of Resources (COR) Theory we hypothesize reciprocal relationships between instrumental and emotional co-worker support and also between both types of co-worker support and psychological safety. We set up a three-wave longitudinal design within 727 employees of a large financial organization, and adopt a latent change score approach (LCS) to investigate within-person change-related reciprocal relations. Our results revealed that specifically emotional co-worker support is associated with an increase in psychological safety over the next month. Instrumental support surprisingly was associated with a subsequent decrease in psychological safety. Psychological safety was not associated with a subsequent change in experienced support. Contrary to our hypothesis, we found that high emotional support was associated with a subsequent decrease in experienced instrumental support. This longitudinal study revealed several unexpected significant findings, which indicates that the longitudinal relationships between social support and psychological safety are complex. While this study adds to the understanding of how supportive behaviour of co-workers can actually be helpful in fostering psychological safety, it also offers several intriguing avenues for future research.",
+  "year": 2025,
+  "venue": "European Journal of Work and Organizational Psychology",
+  "authors": [
+   "Karolien Hendrikx",
+   "Ilke Grosemans",
+   "Joris Van Ruysseveldt"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416419631",
+  "doi": "10.1080/1359432x.2025.2590720",
+  "arxiv_id": null,
+  "paper_url": "https://research.ou.nl/ws/files/93854368/Hendrikx-2025-How-instrumental-and-emotional-co-worker-support.pdf",
+  "published_iso": "2025-11-20",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4416419631",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Inverse Design in Nanophotonics via Representation Learning",
+  "title_norm": "inverse design in nanophotonics via representation learning",
+  "abstract": "Abstract Inverse design in nanophotonics, the computational discovery of structures achieving targeted electromagnetic (EM) responses, has become a key tool for recent optical advances. Traditional intuition‐driven or iterative optimization methods struggle with the inherently high‐dimensional, non‐convex design spaces and the substantial computational demands of EM simulations. Recently, machine learning (ML) has emerged to address these bottlenecks effectively. This review frames ML‐enhanced inverse design methodologies through the lens of representation learning , classifying them into two categories: output‐side and input‐side approaches. Output‐side methods use ML to learn a representation in the solution space to create a differentiable solver that accelerates optimization. Conversely, input‐side techniques employ ML to learn compact, latent‐space representations of feasible device geometries, enabling efficient global exploration through generative models. Each strategy presents unique trade‐offs in data requirements, generalization capacity, and novel design discovery potentials. Hybrid frameworks that combine physics‐based optimization with data‐driven representations help escape poor local optima, improve scalability, and facilitate knowledge transfer. Data efficiency, transferable representations, fabrication‐aware design, faster solvers, and hybrid multiphysics co‐design are emphasized.",
+  "year": 2025,
+  "venue": "Advanced Optical Materials",
+  "authors": [
+   "Reza Marzban",
+   "Ali Adibi",
+   "Raphaël Pestourie"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4416786118",
+  "doi": "10.1002/adom.202502062",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adom.202502062",
+  "published_iso": "2025-11-28",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416786118",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Artificial Foveated Perception for Mitigating Shortcut Learning in Robotic Foundation Models",
+  "title_norm": "artificial foveated perception for mitigating shortcut learning in robotic found",
+  "abstract": "Robotic foundation models have recently made substantial progress in multi-task capability, cross-embodiment transfer, and language-conditioned control. Yet robust deployment across diverse real-world settings remains difficult, in part because policies often fail to distinguish causally relevant visual structure from spurious scene-level correlations. We identify this failure mode as shortcut learning: the tendency to exploit predictive but non-causal correlations in the training distribution rather than the task-relevant visual evidence that determines successful action. Although shortcut learning has been extensively studied in computer vision and broader machine learning, its role in robotic foundation models remains comparatively underexplored. We propose Artificial Foveated Perception (AFP), a lightweight, policy-agnostic module that takes the same vision and language inputs as Vision-Language-Action and World Action Model pipelines and predicts task-conditioned masks over relevant objects, the robot, and other action-critical regions. We use these masks primarily as an auxiliary grounding signal during fine-tuning, aligning policy attention with task-relevant regions while leaving the core architecture unchanged. After fine-tuning, the policy executes on the original observation stream without requiring AFP in the control loop. We evaluate AFP across state-of-the-art robotic foundation models and show that foveated perception reduces fine-tuning time, suppresses overfitting, and improves generalization under environmental perturbations. Ablations over mask quality and grounding-loss design further show that these gains arise from directing policy learning toward task-relevant visual evidence. These results suggest that task-conditioned foveated perception is a practical mechanism for making robotic foundation models more robust, data-efficient, and scalable.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xiatao Sun",
+   "Yuan Zhuang",
+   "Mateo Sanchez Lopez Negrete",
+   "Matei-Victor Coldea",
+   "Chen Liang",
+   "Haoyang Zhang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7168433579",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.10655",
+  "published_iso": "2026-07-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA WAM mode surgery"
+  ],
+  "paper_id": "openalex:W7168433579",
+  "year_month": "2026-07"
+ },
+ {
+  "title": "The Virality of TikTok and New Media in Disrupting and Overturning the Election Cancellation Paradigm in Romania",
+  "title_norm": "the virality of tiktok and new media in disrupting and overturning the election ",
+  "abstract": "This study uses natural language processing (NLP) techniques to analyze the political discourse of the surprise presidential candidate, focusing on linguistic patterns, sentiment distribution, and recurring themes. This study addresses the problem of how TikTok virality and algorithmic amplification mechanisms can influence electoral outcomes in Romania, analyzing whether heuristic boosting strategies can distort traditional political paradigms. The text corpus included over 3915 words extracted from the candidate’s speeches, with the most frequent terms being “sovereignty” (271 occurrences), “democracy” (164 occurrences), and “freedom” (80 occurrences). The analysis revealed that 57.8% of the content was neutral, 10% conveyed positive sentiment, and negative sentiment was absent. A word frequency analysis highlighted the candidate’s strategic emphasis on concepts related to national identity and participatory democracy. Sentiment analysis revealed an intentional use of neutral language to maintain balance, with occasional positive terms maintaining confidence and optimism among voters.",
+  "year": 2025,
+  "venue": "Administrative Sciences",
+  "authors": [
+   "Andreea Nistor",
+   "Eduard Zadobrischi"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416334894",
+  "doi": "10.3390/admsci15110448",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3387/15/11/448/pdf?version=1763372847",
+  "published_iso": "2025-11-17",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416334894",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "LLMs in Cybersecurity: Friend or Foe in the Human Decision Loop?",
+  "title_norm": "llms in cybersecurity friend or foe in the human decision loop",
+  "abstract": "Large Language Models (LLMs) are transforming human decision-making by acting as cognitive collaborators. Yet, this promise comes with a paradox: while LLMs can improve accuracy, they may also erode independent reasoning, promote over-reliance and homogenize decisions. In this paper,we investigate how LLMs shape human judgment insecurity-critical contexts. Through two exploratory focus groups (unaided and LLM-supported), we assess decision accuracy, behavioral resilience and reliance dynamics. Our findings reveal that while LLMs enhance accuracy and consistency in routine decisions, they can inadvertently reduce cognitive diversity and improve automation bias, which is especially the case among users with lower resilience. In contrast, high-resilience individuals leverage LLMs more effectively, suggesting that cognitive traits mediate AI benefit",
+  "year": 2026,
+  "venue": "Proceedings of the ... Annual Hawaii International Conference on System Sciences/Proceedings of the Annual Hawaii International Conference on System Sciences",
+  "authors": [
+   "Irdin Pekaric",
+   "Tom Mattson",
+   "Philipp Zech"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415056101",
+  "doi": "10.24251/hicss.2026.832",
+  "arxiv_id": null,
+  "paper_url": "https://scholarspace.manoa.hawaii.edu/bitstreams/9916e54a-3ade-49ac-bd22-bba4a374cb40/download",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4415056101",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "The Sentient Principle",
+  "title_norm": "the sentient principle",
+  "abstract": "This book proposes and systematically elaborates the \"Sentient Principle,\" a novel paradigm for life sciences. The Sentient Principle traces back to Robert Whytt's (1751) insight into the essence of life, was deepened through Ivan Sechenov's theory of \"Systemic Feelings,\" and achieves theoretical integration on the foundation of Gerald Edelman's Neural Darwinism. The core thesis of the Sentient Principle is that the essence of life lies in the \"Sensation-Behavior Loop.\" Sensation drives behavior, behavior changes sensation, and new sensation drives new behavior in continuous cycles. This loop comprises three core elements: (1) Value System Sensation, providing evaluative standards; (2) Anticipatory Sensation, gradually clarifying in the \"Remembered Present\"; (3) Sensation Discrepancy, the mismatch between immediate sensation and anticipatory sensation, driving learning and adaptation. The book reveals the complete generative logic from innate to acquired, from biological to social and cognitive layers. Innate \"Sensation-Behavior Closed Loops\" gradually differentiate into refined acquired \"Sensation-Behavior Loops\" through Neural Darwinian selection mechanisms, guided by value system sensations. Social and cognitive \"sentience\" emerges from biological interactions through the unified mechanism of \"Resonance-Evaluation-Consolidation.\" The Sentient Principle systematically reconstructs core concepts in traditional psychology and physiology: needs are dominant value system sensations, emotions are combinations of sensation discrepancy and anticipatory sensation clarity, memory is the consolidation of sensation-behavior traces, and consciousness is the continuous comparison between high-clarity anticipatory sensation and immediate sensation. All these concepts are projections of the \"Sensation-Behavior Loop\" from different perspectives. This book not only provides a unified theoretical framework but also points toward a practical path: becoming a \"Sentient Person\"—a lucid self-observer, an active loop regulator, and a warm resonator of life. The Sentient Principle marks a fundamental shift in mind sciences from physics-imitating \"cognitive science\" toward life-embracing \"life science.\"",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Jingyu Wu"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7129223123",
+  "doi": "10.24108/preprints-3114502",
+  "arxiv_id": null,
+  "paper_url": "https://preprints.ru/files/3232",
+  "published_iso": "2026-02-17",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7129223123",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "NVIDIA Cosmos-H-Dreams: Real-Time Generative Physics Simulation for Surgical Robotics",
+  "title_norm": "nvidia cosmos h dreams real time generative physics simulation for surgical robo",
+  "abstract": "Generative simulation for surgical robotics still lacks real-time interaction. Physical-robot experiments, often involving animal or cadaver labs, are time-consuming, costly, and difficult to reproduce, while classical simulators struggle to capture photorealistic appearance and deformable-tissue dynamics. We address this gap with Cosmos-H-Dreams, an integrated real-time surgical world-model system combining an action-conditioned generative model, a teacher-to-student distillation recipe, and a deployment stack built on the NVIDIA FlashDreams streaming-inference library. Starting from Cosmos-H-Surgical-Simulator, a multi-embodiment action-conditioned surgical video world model fine-tuned on the large-scale Open-H-Embodiment corpus, we post-train this checkpoint on embodiment- and procedure-specific data. By distilling the resulting bidirectional teacher into a causal, few-step student with Self Forcing, we turn a passive video generator into a controllable surgical simulator that streams at $\\sim$160 inference FPS on a single NVIDIA RTX PRO 6000 Blackwell workstation GPU. Crucially, Cosmos-H-Dreams is controller-agnostic: any interface that emits a stream of robot kinematics can drive it. We demonstrate live control through a browser keyboard over WebRTC, a Meta Quest headset over WebXR, a commercial surgical robot console such as CMR Surgical's Versius, and learned policies operating in closed loop. To our knowledge, this is the first interactive surgical world model supporting live human and policy control. Human operators and policies alike can act inside the synthesized world and observe the consequences in real time. We release Cosmos-H-Dreams as an open surgical simulation system, providing a common foundation for surgical education, scalable synthetic data generation, and future intraoperative decision support.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Javier Gamazo Tejero",
+   "Lukas Zbinden",
+   "Keyur Sheth",
+   "Raghavendra K M",
+   "Nadim Daher",
+   "Diego Granero Marana"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204230679",
+  "doi": "10.48550/arxiv.2608.24199",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.24199",
+  "published_iso": "2026-08-25",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA WAM mode surgery"
+  ],
+  "paper_id": "openalex:W7204230679",
+  "year_month": "2026-08"
+ },
+ {
+  "title": "Co-speculating future design research opportunities in community sharing with local sharing communities",
+  "title_norm": "co speculating future design research opportunities in community sharing with lo",
+  "abstract": "Sharing communities challenge traditional models of ownership by allowing their members to temporarily access resources such as DIY tools, workshop spaces, and musical instruments. Although designers and design researchers have previously involved sharing communities in design, there are additional opportunities to engage sharing communities in speculating about their possible futures. This study invited 13 participants from various local sharing communities in Scotland to collaboratively speculate on how developments in technology, infrastructure, the economy, politics, and social and cultural aspects might influence their community sharing practices in the long term. By examining their future scenarios, we gain insight into the possible futures of community sharing and the opportunities for design and research. These include designing shared resources that support community values, amplifying community voices in public-sector design, creating infrastructure to connect communities, and fostering a sharing culture at the societal level",
+  "year": 2026,
+  "venue": "Proceedings of DRS",
+  "authors": [
+   "Haili Wu",
+   "Bettina Nissen",
+   "Susan Lechelt"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7163027864",
+  "doi": "10.21606/drs.2026.2229",
+  "arxiv_id": null,
+  "paper_url": "https://www.research.ed.ac.uk/files/677715454/Nissen2026DRS26Co_speculating.pdf",
+  "published_iso": "2026-06-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7163027864",
+  "year_month": "2026-06"
+ },
+ {
+  "title": "Toward Sustainable Hydrometallurgy: A Closed-Loop Acetic Acid Recycling Process for Transforming Mining Waste Rock into High-Grade Phosphate Ore and Brushite Mineral",
+  "title_norm": "toward sustainable hydrometallurgy a closed loop acetic acid recycling process f",
+  "abstract": "Given the rising demand for phosphate, a critical mineral for many countries due to its essential role in fertilizer production and global food security, reprocessing waste generated during phosphate mining has become increasingly important to mitigate demand pressures and reduce the environmental impact of the mining industry. This study aims to develop a sustainable hydrometallurgical process to recover residual phosphate from a lithology present in mining waste rock. To this end, a thermodynamic analysis was first performed to assess reaction feasibility during leaching and precipitation. A two-step process was then proposed: the first step involves leaching carbonates (mainly calcite) using acetic acid, optimized through response surface methodology based on a Box–Behnken design; the second step consists of precipitating calcium with phosphoric acid to produce a value-added by-product (brushite) while simultaneously regenerating the acetic acid. A preliminary economic assessment was conducted to evaluate process feasibility. The results show that acetic acid is highly selective for carbonates, yielding a phosphate concentrate containing 30% P2O5 with complete phosphate recovery under the following conditions: 3.4 molL−1 acid concentration, 28 °C reaction temperature, a liquid-to-solid ratio of 6 mLg−1 (14.2% solids), and a reaction time of 49 min. In the precipitation step, a calcium recovery of 97% was achieved under optimal conditions (20 °C, 15 min, 500 rpm stirring, and a P:Ca ratio of 1). Furthermore, the preliminary economic assessment indicates that the developed process, based on the use of an organic acid and its recycling, generates a net profit, confirming its economic viability and its contribution to environmentally sustainable phosphate processing.",
+  "year": 2026,
+  "venue": "Sustainability",
+  "authors": [
+   "Mohamed Haidouri",
+   "Zouhir Balagh",
+   "Yassine Ait-Khouia",
+   "Abdellatif Elghali",
+   "Mostafa Benzaazoua",
+   "Yassine Taha"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7138863750",
+  "doi": "10.3390/su18063031",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/18/6/3031/pdf?version=1773932410",
+  "published_iso": "2026-03-19",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7138863750",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Implementation of the Martini-Ericson-Chanfray-Marteau RPA-based neutrino and antineutrino cross-section model in the GENIE neutrino event generator",
+  "title_norm": "implementation of the martini ericson chanfray marteau rpa based neutrino and an",
+  "abstract": "We discuss the first implementation of the Martini-Ericson-Chanfray-Marteau random phase approximation-based (anti)neutrino cross-section model for quasielastic (1p1h) and multinucleon (2p2h and 3p3h) excitations in the widely used GENIE neutrino event generator. Validation steps are presented, in particular, through direct comparisons of GENIE cross-section output with original calculations performed by the authors of the model. Predictions for C 12 , O 16 , and Ar 40 are compared with some available T2K and MicroBooNE experimental measurements showing a reasonable agreement.",
+  "year": 2025,
+  "venue": "Physical review. D/Physical review. D.",
+  "authors": [
+   "L. Russo",
+   "M. Martini",
+   "S. Dolan",
+   "L. Munteanu",
+   "B. Popov",
+   "C. Giganti"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4417200475",
+  "doi": "10.1103/v8hq-kppp",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417200475",
+  "published_iso": "2025-12-09",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4417200475",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "A Six-Degree-of-Freedom (6-DOF) Simultaneous Measurement Method Using Dual-Wavelength Laser Sources for Compensation of Air-Turbulence-Induced Beam Deviation",
+  "title_norm": "a six degree of freedom 6 dof simultaneous measurement method using dual wavelen",
+  "abstract": "Linear guides are fundamental components of high-end precision equipment, and their geometric errors directly affect the measurement and machining accuracy. To achieve efficient and accurate measurement of geometric motion errors in linear guides, this paper proposes a 6-DOF simultaneous measurement method that integrates heterodyne interferometry, collimation/autocollimation, and polarization principles. To address the degradation of straightness measurement accuracy under long-distance conditions caused by air turbulence, a dual-wavelength laser-based compensation method is developed to suppress turbulence-induced beam deviation. A turbulence compensation model based on a dual-wavelength proportional cancellation principle is established, and its effectiveness is verified through COMSOL (v6.3) simulations and experimental studies. Experimental results show that the proposed approach significantly outperforms the traditional simple moving-average (SMA) filter. It improves straightness measurement stability by more than 56%. Under a 3200 mm measurement range and ordinary laboratory conditions, the repeatabilities (k = 2) of the 6-DOF motion-error measurements are 6.4 μm for positioning error, 6.4 μm and 5.5 μm for straightness errors, 1.7″ and 2.1″ for yaw and pitch errors, and 4.3″ for roll error. The proposed method exhibits high measurement accuracy and robustness, making it suitable for simultaneous 6-DOF motion-error measurement of long linear guides.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Fei Long",
+   "Xing Xia",
+   "Bin Zhang",
+   "Qibo Feng"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4416501269",
+  "doi": "10.3390/s25237122",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/23/7122/pdf?version=1763734297",
+  "published_iso": "2025-11-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416501269",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Using a non-recursive model with feedback loops to identify barriers to learning as a dynamic construct in workplace learning",
+  "title_norm": "using a non recursive model with feedback loops to identify barriers to learning",
+  "abstract": "Abstract Barriers to learning in the workplace form a holistic set of missing individual, team, and organizational aspects that hinder the initiation of successful learning, interrupt learning possibilities, delay proceedings, or end learning activities much earlier than intended. These barriers ultimately determine the way individuals seek learning opportunities in the workplace. Based on an explorative interview study and the development and validation of a measurement instrument for barriers to learning at the workplace, this cross-sectional questionnaire study ( N = 230) was conducted to investigate barriers to learning as a dynamic construct in workplace learning. Factor analysis, analysis of Cronbach’s alpha, descriptive analyses, and structural equation modeling (SEM) of a non-recursive model with feedback loops were conducted to identify the dynamic aspects and interplay of barriers to learning with the factors job satisfaction and turnover intention. The non-recursive model with feedback loops (CFI = .98 and RMSR = .073) indicated that the relationship between barriers to learning with sub-categories such as individual components and organizational limitations are negatively related to job satisfaction and have an indirect effect on turnover intention. With this interdisciplinary contribution, trainings and work-based learning scenarios can be initiated to unlock the potential of learners that has been blocked due to previously under-researched barriers to learning.",
+  "year": 2026,
+  "venue": "Vocations and Learning",
+  "authors": [
+   "Sebastian Anselmann",
+   "Veronika Anselmann"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7130513618",
+  "doi": "10.1007/s12186-026-09382-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s12186-026-09382-z.pdf",
+  "published_iso": "2026-02-19",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7130513618",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "Review of Optical Fiber Sensors: Principles, Classifications and Applications in Emerging Technologies",
+  "title_norm": "review of optical fiber sensors principles classifications and applications in e",
+  "abstract": "Optical fiber sensors (OFSs) have emerged as essential tools in the monitoring of physical, chemical, and bio-medical parameters in harsh situations due to their high sensitivity, electromagnetic interference (EMI) immunity, and long-term stability. However, the current literature contains scattered information in most reviews regarding individual sensing technologies or domains. This study provides a structured exploratory review in a novel inter-family analysis of both intrinsic and extrinsic configurations by analyzing more than 23,000 publications between 2019 and 2025 in five key domains: industry, medicine and biomedicine, environmental chemistry, civil/structural engineering, and aerospace. The analysis aims to critically discuss how functional principles/parameters and methods of interrogation affect the applicability of different OFS categories. The results reveal leading trends in the use of techniques like the use of fiber Bragg gratings (FBG) and distributed sensing in high-accuracy conditions or the rising role of extrinsic sensors in selective chemical situations and point out new approaches in areas like Artificial Intelligence (AI)- or Internet of Things (IoT)-integrated sensors. Further, this synthesis not only connects pieces of knowledge but also defines the technological barriers in terms of calibration cost and standardization: this provides strategic insight regarding future research and the scalability of industry deployment.",
+  "year": 2025,
+  "venue": "Photonics",
+  "authors": [
+   "Denzel A. Rodriguez-Ramirez",
+   "Jose R. Martinez-Angulo",
+   "J. D. Filoteo-Razo",
+   "Juan Carlos Elizondo-Leal",
+   "Alan Diaz-Manriquez",
+   "D. Jáuregui-Vazquez"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W7117764819",
+  "doi": "10.3390/photonics13010040",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2304-6732/13/1/40/pdf?version=1767192217",
+  "published_iso": "2025-12-31",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7117764819",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Distributed Quantum Error Mitigation: Global and Local ZNE encodings",
+  "title_norm": "distributed quantum error mitigation global and local zne encodings",
+  "abstract": "Errors are the primary bottleneck preventing practical quantum computing. This challenge is exacerbated in the distributed quantum computing regime, where quantum networks introduce additional communication-induced noise. While error mitigation techniques such as Zero Noise Extrapolation (ZNE) have proven effective for standalone quantum processors, their behavior in distributed architectures is not yet well understood. We investigate ZNE in this setting by comparing Global optimization (ZNE is applied prior to circuit partitioning), against Local optimization (ZNE is applied independently to each sub-circuit). Partitioning is performed on a monolithic circuit, which is then transformed into a distributed implementation by inserting noisy teleportation-based communication primitives between sub-circuits. We evaluate both approaches across varying numbers of quantum processing units (QPUs) and under heterogeneous local and network noise conditions. Our results demonstrate that Global ZNE exhibits superior scalability, achieving error reductions of up to $48\\%$ across six QPUs. Moreover, we observe counterintuitive noise behavior, where increasing the number of QPUs improves mitigation effectiveness despite higher communication overhead. These findings highlight fundamental trade-offs in distributed quantum error mitigation and raise new questions regarding the interplay between circuit structure, partitioning strategies, and network noise.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "María Gragera Garcés"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7166526394",
+  "doi": "10.1109/infocom59046.2026.11571618",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2602.04981",
+  "published_iso": "2026-05-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7166526394",
+  "year_month": "2026-05"
+ },
+ {
+  "title": "Bimetallic Fe–Ni exsolution from A site deficient SrTiO 3 : insight into the reciprocal role of metal active centers",
+  "title_norm": "bimetallic fe ni exsolution from a site deficient srtio 3 insight into the recip",
+  "abstract": "Ni–Fe redox exsolution in Sr 0.95 Ti 1− x + y Fe x Ni y O 3± δ were studied by TPR, XAS, STEM, and EPR. Ni interstitial sites enable mobility of Fe subotutional defect and Fe–Ni nanoparticle exsolution, enhancing RWGS via redox activity and H 2 dissociation.",
+  "year": 2026,
+  "venue": "Inorganic Chemistry Frontiers",
+  "authors": [
+   "Pietro Mariani",
+   "Jacopo Orsilli",
+   "Henk Stoffel",
+   "Simone Mascotto",
+   "Damiano Monticelli",
+   "Enrico Berretti"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7127300355",
+  "doi": "10.1039/d5qi02469b",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2026/qi/d5qi02469b",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7127300355",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Observation of Synchronization between Two Quantum van der Pol Oscillators in Trapped Ions",
+  "title_norm": "observation of synchronization between two quantum van der pol oscillators in tr",
+  "abstract": "Synchronization is a hallmark of collective behavior that emerges when nonlinear systems interact, spanning scales from mechanical oscillators to planetary orbits. As a universal phenomenon, it underpins the study of complex systems and has far-reaching technological implications. While classical synchronization has a long and rich history, it has not been observed experimentally between multiple quantum limit-cycle oscillators despite a decade of theoretical investigations. We realize synchronization between two quantum van der Pol oscillators by engineering dissipation in a mixed-isotope trapped-ion quantum simulator. The synchronized state is encoded in a fixed relative phase between the oscillators that is inaccessible to individual measurements and revealed only through joint readout of both oscillators, in stark contrast to the system in the (deterministic) classical limit where synchronization can be observed via individual phase measurements. We further show that the relative phase can be precisely controlled and that the chain of two oscillators can synchronize to an external field, suggesting applications in sensing. Our results provide a promising pathway for studying more complex synchronized quantum dynamics beyond two oscillators, where a theoretical treatment becomes increasingly challenging, and it remains to be understood whether genuinely quantum features persist in such cases.",
+  "year": 2026,
+  "venue": "Physical Review X",
+  "authors": [
+   "Jiarui Liu",
+   "Qiming Wu",
+   "Joel E. Moore",
+   "Hartmut Haeffner",
+   "Christopher W. Wächtler"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416528621",
+  "doi": "10.1103/w1bm-wjl4",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416528621",
+  "published_iso": "2026-04-27",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416528621",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "Dynamical simulations of many-body quantum chaos on a quantum computer",
+  "title_norm": "dynamical simulations of many body quantum chaos on a quantum computer",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Nature Physics",
+  "authors": [
+   "Laurin E. Fischer",
+   "Matea Leahy",
+   "Andrew Eddins",
+   "Nathan Keenan",
+   "Davide Ferracin",
+   "Matteo A. C. Rossi"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4404350201",
+  "doi": "10.1038/s41567-025-03144-9",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2411.00765",
+  "published_iso": "2026-01-20",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4404350201",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Human-AI co-design for clinical prediction models",
+  "title_norm": "human ai co design for clinical prediction models",
+  "abstract": "Developing safe, effective, and practically useful clinical prediction models (CPMs) traditionally requires extensive collaboration between clinical experts, data scientists, and informaticists to refine the many small but critical details of the model building process. When incorporating unstructured clinical notes, this challenge magnifies, as notes essentially contain an infinite number of concepts that can be used for modeling. We introduce HACHI, an iterative human-in-the-loop framework that uses AI agents to accelerate the development of fully interpretable CPMs from clinical notes, where CPMs are defined as linear models of yes-no questions. HACHI alternates between an AI agent that uses statistical tools and embedded knowledge to explore candidate concepts and domain experts who provide feedback to the AI agent. The framework optimizes for transparency, steerability, and reciprocal learning to ensure effective collaboration between the clinical AI team and the AI agent. In two real-world prediction tasks (acute kidney injury and traumatic brain injury), HACHI outperforms existing approaches, discovers clinically relevant concepts, and improves model generalizability across clinical sites and time periods. HACHI also highlights the critical role of human oversight, such as in directing the AI agent to explore new concept categories, adjusting concept granularity, and identifying data bias and leakage.",
+  "year": 2026,
+  "venue": "npj Digital Medicine",
+  "authors": [
+   "Jean Feng",
+   "Avni Kothari",
+   "Patrick Vossler",
+   "Andrew Bishara",
+   "Lucas Zier",
+   "Newton Addo"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7163775352",
+  "doi": "10.1038/s41746-026-02838-5",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41746-026-02838-5_reference.pdf",
+  "published_iso": "2026-06-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7163775352",
+  "year_month": "2026-06"
+ },
+ {
+  "title": "Photodynamical modeling of TOI-4504 reveals its deeply resonant state and similarity to GJ 876",
+  "title_norm": "photodynamical modeling of toi 4504 reveals its deeply resonant state and simila",
+  "abstract": "The K-dwarf TOI-4504 hosts two giant planets in 2:1 mean-motion resonance, with orbital periods of 41.3 days (planet d) and 82.8 days (planet c). They exhibit among the largest known absolute transit-timing variations, with respective peak-to-node amplitudes up to 5 and 3 days. Newer TESS data show that the previously non-transiting planet d has now precessed into transiting, and we derive updated system parameters with significant discrepancies with the discovery paper. The revised parameters place planets d and c deep in the resonance and close to or in the fully-relaxed limit-cycle state, with the resonant and secular modes interfering nonlinearly to induce non-zero relaxed free eccentricities which precess at the same rate as the forced eccentricities and the longitude of conjunctions, in turn enabling precise measurement of the full eccentricities and apsidal angles. We discuss the predictions of linear theory and how it can be used to understand the true state of the system revealed by N-body integrations, and more generally why it is that the posteriors of systems more compact than 2:1 tend to suffer from significant eccentricity degeneracy. We show that the extraordinary dynamical states of the giant pairs orbiting TOI-4504 and the M-dwarf GJ 876 are remarkably similar, in spite of the significant difference in their host-star masses, and discuss the implications for damping timescales during the relatively gentle formation process of Type II migration.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "J. M. Almenara",
+   "R. Mardling",
+   "A. Leleu",
+   "S. Udry",
+   "T. Forveille",
+   "X. Bonfils"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7134291604",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.05720",
+  "published_iso": "2026-03-05",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7134291604",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Research on Power Sharing Suppression Method of Multi-Inverter Parallel System Based on Adaptive Virtual Complex Impedance",
+  "title_norm": "research on power sharing suppression method of multi inverter parallel system b",
+  "abstract": "To address the power sharing dissymmetry in islanded microgrids with multiple parallel inverters caused by asymmetrical line impedance distribution and internal parameter mismatches, this paper proposes an adaptive virtual complex impedance control strategy based on line impedance identification for symmetry restoration. The strategy incorporates model predictive control (MPC) into the current inner loop and a two-degree-of-freedom (2-DOF) control into the voltage outer loop of inverters. By establishing a real-time impedance identification mechanism and generating adaptive virtual impedance, the system achieves symmetrical power sharing under asymmetrical grid conditions. Firstly, the voltage-current dual-loop design eliminates the impact of internal impedance dissymmetry and enhances disturbance rejection capabilities. Secondly, the adaptive virtual complex impedance actively compensates for line impedance mismatches among units, thereby resolving power unbalance and restoring operational symmetry. Simulation results validate the strategy’s effectiveness in enabling balanced power sharing and symmetrical operation of distributed inverters.",
+  "year": 2025,
+  "venue": "Symmetry",
+  "authors": [
+   "Changxu Zhang",
+   "Yi Peng",
+   "Donghai Qiu",
+   "Shaojuan Su",
+   "Hongwei Zhang",
+   "Wanling Liu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416296542",
+  "doi": "10.3390/sym17111967",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-8994/17/11/1967/pdf?version=1763127035",
+  "published_iso": "2025-11-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416296542",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Fiber-Optic Gyroscopes: Architectures, Signal Processing, Error Compensation, and Emerging Trends",
+  "title_norm": "fiber optic gyroscopes architectures signal processing error compensation and em",
+  "abstract": "Fiber-optic gyroscopes (FOGs) have become one of the most important elements of modern inertial navigation systems due to their high accuracy, reliability, and independence from external signals such as satellite navigation. This review analyzes and discusses the key FOG architectures: interferometric (IFOG), resonant (RFOG), digital (DFOG), and hybrid (HFOG). The concepts of their functioning, structural features, and the main advantages and limitations of each architecture are examined. Particular focus is placed on advanced signal-processing and error-compensation algorithms, including filtering techniques, noise suppression, mitigation of thermal and mechanical drifts, and emerging machine learning (ML) based approaches. The analysis of these architectures is carried out in terms of major parameters that determine accuracy, robustness, and miniaturization potential. Various applications of FOGs in space systems, ground platforms, marine and underwater navigation, aviation, and scientific research are also being considered. Finally, the latest development trends are summarized, with a particular focus on miniaturization, integration with additional sensors, and the introduction of digital and AI-driven solutions, aimed at achieving higher accuracy, long-term stability, and resilience to real-world disturbances.",
+  "year": 2025,
+  "venue": "Journal of Sensor and Actuator Networks",
+  "authors": [
+   "Yerlan Tashtay",
+   "Нуржигит Смайлов",
+   "Daulet Naubetov",
+   "Akezhan Sabibolda",
+   "Yerzhan Nussupov",
+   "Nurzhamal Kashkimbayeva"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7117303105",
+  "doi": "10.3390/jsan15010003",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2224-2708/15/1/3/pdf?version=1766665664",
+  "published_iso": "2025-12-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7117303105",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Resonant Forcing of Oceanic and Atmospheric Rossby Waves in (Sub)Harmonic Modes: Climate Impacts",
+  "title_norm": "resonant forcing of oceanic and atmospheric rossby waves in sub harmonic modes c",
+  "abstract": "Baroclinic wave resonance, particularly Rossby waves, has attracted great interest in ocean and atmospheric physics since the 1950s. Research on Rossby wave resonance covers a wide variety of phenomena that can be unified when focusing on quasi-stationary Rossby waves traveling at the interface of two stratified fluids. This assumes a clear differentiation of the pycnocline where the density varies strongly vertically. In the atmosphere, such stationary Rossby waves are observable at the tropopause, at the interface between the polar jet and the ascending air column at the meeting of the polar and Ferrel cell circulation or between the subtropical jet and the descending air column at the meeting of the Ferrel and Hadley cell circulation. The movement of these air columns varies according to the declination of the Sun. In the oceans, quasi-stationary Rossby waves are observable in the tropics, at mid-latitudes, and around the subtropical gyres (i.e. the gyral Rossby waves GRWs) due to the buoyant properties of warm waters originating from tropical oceans, transported to high latitudes by western boundary currents. The thermocline oscillation results from solar irradiance variations induced by the Sun's declination, as well as solar and orbital cycles. It is governed by the forced, linear, inviscid shallow water equations on the β-plane (or β-cone for GRWs), namely the momentum, continuity and potential vorticity equations. The coupling of multi-frequency wave systems occurs in exchange zones. The geostrophic forces reflecting the superposition of zonal/polar and meridional/radial currents of the waves perturb the geostrophic balance of the basin. Here, it is shown that the ubiquity of resonant forcing in (sub)harmonic modes of Rossby waves in stratified media results from two properties: 1) the natural period of Rossby wave systems tunes to the forcing period - 2) the restoring forces between the different multi-frequency Rossby waves assimilated to inertial Caldirola-Kanai (CK) oscillators are all the stronger as the perturbations of the geostrophic balance in the exchange zones are more significant. According to the CK equations, this resonance mode ensures the sustainability of the wave systems despite the variability of the forcing periods. The resonant forcing of quasi-stationary Rossby waves is at the origin of climate variations as well-known as El Niño, glacial-interglacial cycles or extreme events generated by cold drops or, conversely, heat waves. This approach attempts to provide some new avenues for addressing climate and weather issues.",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+   "Jean‐Louis Pinault"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416768643",
+  "doi": "10.20944/preprints202511.2053.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/781b8c07f1cce93962ea84527390fc76/download_pub",
+  "published_iso": "2025-11-26",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416768643",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Enhancing Quantum Computation Accuracy on Ibm Quantum Hardware Through Advanced Error Mitigation Strategies",
+  "title_norm": "enhancing quantum computation accuracy on ibm quantum hardware through advanced ",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Research Square",
+  "authors": [
+   "D Lakshanya",
+   "С. П. Никитенкова",
+   "V. Karthick"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416322881",
+  "doi": "10.21203/rs.3.rs-7846267/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-7846267/latest.pdf",
+  "published_iso": "2025-11-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416322881",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Co-Explainers: A Position on Interactive XAI for Human–AI Collaboration as a Harm-Mitigation Infrastructure",
+  "title_norm": "co explainers a position on interactive xai for human ai collaboration as a harm",
+  "abstract": "Human–AI collaboration (HAIC) increasingly mediates high-risk decisions in public and private sectors, yet many documented AI harms arise not only from model error but from breakdowns in joint human–AI work: miscalibrated reliance, impaired contestability, misallocated agency, and governance opacity. Conventional explainable AI (XAI) approaches, often delivered as static one-shot artifacts, are poorly matched to these sociotechnical dynamics. This paper is a position paper arguing that explainability should be reframed as a harm-mitigation infrastructure for HAIC: an interactive, iterative capability that supports ongoing sensemaking, safe handoffs of control, governance stakeholder roles and institutional accountability. We introduce co-explainers as a conceptual framework for interactive XAI, in which explanations are co-produced through structured dialogue, feedback, and governance-aware escalation (explain → feedback → update → govern). To ground this position, we synthesize prior harm taxonomies into six HAIC-oriented harm clusters and use them as heuristic design lenses to derive cluster-specific explainability requirements, including uncertainty communication, provenance and logging, contrastive “why/why-not” and counterfactual querying, role-sensitive justification, and recourse-oriented interaction protocols. We emphasize that co-explainers do not “mitigate” sociotechnical harms in isolation; rather, they provide an interface layer that makes harms more detectable, decisions more contestable, and accountability handoffs more operational under realistic constraints such as sealed models, dynamic updates, and value pluralism. We conclude with an agenda for evaluating co-explainers and aligning interactive XAI with governance frameworks in real-world HAIC deployments.",
+  "year": 2026,
+  "venue": "Machine Learning and Knowledge Extraction",
+  "authors": [
+   "Francisco Herrera",
+   "Salvador García",
+   "María José del Jesús",
+   "Luciano Sánchez",
+   "Marcos López de Prado"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7134809902",
+  "doi": "10.3390/make8030069",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-4990/8/3/69/pdf?version=1773192624",
+  "published_iso": "2026-03-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7134809902",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Single-photon advantage in quantum cryptography beyond QKD",
+  "title_norm": "single photon advantage in quantum cryptography beyond qkd",
+  "abstract": "Quantum key distribution (QKD) can be used to establish a secret key between trusted parties. Many practical use-cases in communication networks, however, involve parties who do not trust each other. A fundamental cryptographic building block for such distrustful scenarios is quantum coin flipping, which has been investigated only in few experimental studies to date, all of which used probabilistic quantum light sources imposing fundamental limitations. Here, we experimentally implement a quantum strong coin flipping protocol using single-photon states and demonstrate a quantum advantage compared to both classical realizations and implementations using faint laser pulses. We achieve this by employing a state-of-the-art deterministic quantum dot light source in combination with fast, random polarization-state encoding enabling sufficiently low quantum bit error ratio. By demonstrating a single-photon quantum advantage in a cryptographic primitive beyond QKD, our work represents a major advance towards the implementation of complex cryptographic tasks in a future quantum internet.",
+  "year": 2026,
+  "venue": "Nature Communications",
+  "authors": [
+   "Daniel A. Vajner",
+   "Koray Kaymazlar",
+   "Fenja Drauschke",
+   "Lucas Rickert",
+   "Martin von Helversen",
+   "Hanqing Liu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4405643930",
+  "doi": "10.1038/s41467-026-69995-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-026-69995-9_reference.pdf",
+  "published_iso": "2026-02-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4405643930",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "NOMA‐Based Satellite‐UAV‐Terrestrial Network With Partial Relay Selection and Imperfect CSI and SIC",
+  "title_norm": "noma based satellite uav terrestrial network with partial relay selection and im",
+  "abstract": "ABSTRACT An integrated terrestrial‐satellite network with UAV relay nodes can offer augmented connectivity, especially for users in shadowed areas like suburban and mountainous areas. With the advent of sixth‐generation (6G) wireless communication, non‐terrestrial networks (NTN) shall evolve as the Center of attention to achieve seamless global coverage with better data transmission rates and ultra‐reliable low‐latency communication. Non‐orthogonal multiple access (NOMA) also enhances spectral efficiency with large‐scale connectivity through power‐domain multiplexing. In this work, the performance of a satellite‐UAV‐terrestrial integrated network based on the amplify‐and‐forward (AF) relaying protocol at the UAV relay node is analyzed. Using Monte Carlo simulations, it is shown that the proposed system effectively alleviates outage probability compared to a no‐relay system. Moreover, deployment of a cluster of UAV relays with partial relay selection, which maximizes performance and computational complexity, enhances reliability through the selection of the best‐performing relay path based on channel conditions. Imperfect channel state information (CSI) and erroneous successive interference cancellation (SIC) are included in the analysis for practical implementation. Furthermore, integration of NTN with NOMA opens new routes to enhance spectral efficiency and coverage in 6G networks. The results confirm that the proposed system offers an efficient and effective communication system with superior performance under different parameter variations while addressing major challenges in next‐generation wireless networks.",
+  "year": 2025,
+  "venue": "International Journal of Communication Systems",
+  "authors": [
+   "Ridip Tukaria",
+   "Aradhana Misra",
+   "Manash Pratim Sarma",
+   "Kandarpa Kumar Sarma"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4415997591",
+  "doi": "10.1002/dac.70306",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/dac.70306",
+  "published_iso": "2025-11-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4415997591",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Navigating work-to-family boundaries: Day-level reciprocal effects between guilt and boundary management",
+  "title_norm": "navigating work to family boundaries day level reciprocal effects between guilt ",
+  "abstract": "Work-induced guilt toward one's family (i.e., work-to-family guilt) is a central challenge for working parents managing work-to-family boundaries. Whereas prior research has primarily focused on between-person differences, stable determinants, and static perspectives, our study investigates how daily work-to-family guilt both results from and shapes fluctuations in work-to-family boundaries. Drawing on boundary theory and cognitive dissonance theory, we examine how daily enacted work-to-family segmentation (i.e., the extent to which individuals keep work out of family) reduces daily work-to-family guilt, and whether this effect depends on daily preferences for work-to-family segmentation. We further test whether daily work-to-family guilt predicts next-day preferred and enacted work-to-family segmentation. In a 2-week experience sampling study (Level-1 N = 620, Level-2 N = 129), working parents completed morning surveys assessing preferred work-to-family segmentation and evening surveys assessing enacted work-to-family segmentation and work-to-family guilt. Multilevel path analyses revealed that enacted work-to-family segmentation was negatively related to same-day work-to-family guilt. This association was stronger on days when working parents preferred greater work-to-family segmentation. Moreover, work-to-family guilt was positively related to next-day preferred work-to-family segmentation, but not to next-day enacted work-to-family segmentation. By demonstrating that work-to-family guilt functions both as an emotional outcome of daily boundary management and as a trigger for next-day adjustments in boundary preferences, this study reveals a reciprocal regulatory process through which working parents experience and respond to work-induced guilt toward their family. • Keeping work out of the family domain reduces daily guilt among parents • This effect is stronger on days when parents desire greater separation • Daily guilt increases parents' desire for greater separation the following day • Daily guilt does not influence how much separation parents enact the following day • Our findings show that daily guilt both reflects and motivates boundary management",
+  "year": 2026,
+  "venue": "Journal of Vocational Behavior",
+  "authors": [
+   "Nicolas Mueller",
+   "N. Junker",
+   "Regina Kempen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7134133195",
+  "doi": "10.1016/j.jvb.2026.104229",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7134133195",
+  "published_iso": "2026-03-06",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7134133195",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Advancements in Two-Photon Polymerization (2PP) for Micro and Nanoscale Fabrication",
+  "title_norm": "advancements in two photon polymerization 2pp for micro and nanoscale fabricatio",
+  "abstract": "Two-photon polymerization (2PP) is revolutionizing micro- and nanoscale manufacturing by enabling true 3D fabrication with feature sizes far below the diffraction limit—capabilities that traditional lithography cannot match. By using ultrafast femtosecond laser pulses and nonlinear absorption, 2PP initiates polymerization only at the laser’s focal point, offering unmatched spatial precision. This paper highlights key advancements driving the field forward: the development of new materials engineered for 2PP with improved sensitivity, mechanical strength, and the introduction of high-speed, parallelized fabrication strategies that significantly enhance throughput. These innovations are shifting 2PP from a prototyping tool to a viable method for scalable production. Applications now range from custom biomedical scaffolds to complex photonic and metamaterial structures, demonstrating their growing real-world impact. We also address persistent challenges—including slow writing speeds and limited material options—and explore future directions to overcome these barriers. With continued progress in materials and hardware, 2PP is well positioned to become a cornerstone of next-generation additive manufacturing.",
+  "year": 2025,
+  "venue": "Nanomanufacturing",
+  "authors": [
+   "Prithvi Basu"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W7117113397",
+  "doi": "10.3390/nanomanufacturing6010001",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-687X/6/1/1/pdf?version=1766505658",
+  "published_iso": "2025-12-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7117113397",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Cascade Amplification in Administrative AI Pipelines: When Feedback Loops Turn Additive Errors into System Failures",
+  "title_norm": "cascade amplification in administrative ai pipelines when feedback loops turn ad",
+  "abstract": "Administrative artificial intelligence tools in primary care — scheduling, documentation, coding, billing, referral management — are routinely classified as lower-risk than clinical decision-support systems, on the basis of evaluating each tool in isolation. We simulate a five-node administrative AI pipeline on a Synthea primary care cohort (n = 1,000 patients, 100 Monte Carlo iterations, seed 42), calibrated with parameters from published empirical evidence including a conservative +2% wRVU inflation from independent longitudinal data, an 8 percentage point E/M upshift from national claims analysis, and a 28% triage error rate from external validation. We introduce the Cascade Amplification Factor (CAF), a metric that distinguishes additive (CAF = 1.0) from superlinear (CAF > 1.0) error accumulation. Two adjacent AI nodes (documentation + coding) yield CAF = 0.503 [0.458, 0.540], indicating partial error cancellation. Five AI nodes without feedback yield CAF = 1.009 [0.925, 1.099], indicating near-additive accumulation. Five AI nodes with a referral-to-scheduling feedback loop yield CAF = 2.245 [2.032, 2.486], exceeding the pre-specified clinical relevance threshold (CAF = 1.2) by a factor of 1.87. Care-related harm dominates the four-dimension harm taxonomy under full pipeline deployment (share ≈ 61%, driven by intervention deficits). We frame the transition through Perrow's Normal Accidents Theory: the feedback loop converts a linearly interactive system into a complexly interactive one. The regulatory implication is that governing individual tools is necessary but insufficient; the feedback architecture of the deployed pipeline is the decisive governance target. Govern the loop, not the tool.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Florian Odi Stummer"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7154297945",
+  "doi": "10.33774/coe-2026-bhg0s",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/69dd326f810b9dcc82184dc7/original/cascade-amplification-in-administrative-ai-pipelines-when-feedback-loops-turn-additive-errors-into-system-failures.pdf",
+  "published_iso": "2026-04-14",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7154297945",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "A CD138+ tumor-associated macrophage/Siglec-F+ neutrophil feed-forward loop promotes immune evasion in pancreatic cancer",
+  "title_norm": "a cd138 tumor associated macrophage siglec f neutrophil feed forward loop promot",
+  "abstract": "Immune evasion is a major obstacle in pancreatic cancer therapy. Recent data implicate proinflammatory macrophages in the progression of pancreatic ductal adenocarcinoma (PDAC) and its therapeutic response. However, whether or which of the proinflammatory macrophage subtypes play a crucial role in the immune escape of PDAC remains unclear. Here, we identify a population of CD138+ tumor-associated macrophages (TAMs), characterized by their proinflammatory and neutrophil-chemotactic activity, which undergo significant expansion in both patients with PDAC and mouse models. These cells are elicited by a local synergy between IL-34/syndecan-1 and PGE2/EP2 signaling and are associated with immune evasion and poor clinical outcomes in patients, while also promoting immune escape and disease progression in mouse models. Mechanistically, CD138+ TAMs establish a feed-forward loop with immunosuppressive Siglec-F+ neutrophils, which exhibit elevated PGE2 expression, via the secretion of SAA3 and CXCL1. Targeting CD138+ TAMs by disrupting IL-34/syndecan-1 signaling with anti-IL-34 neutralizing antibodies significantly suppressed PDAC progression, especially when combined with anti-PD-1 antibodies. Together, our study elucidates a CD138+ TAM/Siglec-F+ neutrophil axis that drives immune escape in PDAC and proposes a therapeutic strategy that integrates IL-34/syndecan-1 signaling blockade with anti-PD-1 immunotherapy for the treatment of PDAC.",
+  "year": 2026,
+  "venue": "Journal of Clinical Investigation",
+  "authors": [
+   "Chao Wang",
+   "Qi Zhang",
+   "Jinyan Huang",
+   "Fangyu Lin",
+   "Danyang Zhao",
+   "Youling Mu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7135081901",
+  "doi": "10.1172/jci199516",
+  "arxiv_id": null,
+  "paper_url": "http://www.jci.org/articles/view/199516/files/pdf",
+  "published_iso": "2026-03-12",
+  "oa_field": "Immunology and Microbiology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7135081901",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Damping–Positioning Mechanisms in Segmented Mirror Systems: Principle, Integrated Design and Control Methods",
+  "title_norm": "damping positioning mechanisms in segmented mirror systems principle integrated ",
+  "abstract": "Segmented telescopes face significant challenges in achieving high segment positioning accuracy under complex disturbances, which directly impact observational sensitivity and resolution. Conventional rigid actuators with limited bandwidth (e.g., Keck ~20 Hz) struggle to maintain control stability. Novel dual-stage actuators combining coarse and fine adjustment (e.g., voice coil motors) now achieve <8 nm precision over millimeter-level strokes. Moreover, their higher closed-loop bandwidth (e.g., TMT ~60 Hz) can ensure rapid settling without overshoot and robust suppression of high-frequency disturbances (e.g., pulsating wind and mechanical vibration). In parallel, system-level control strategies have been updated accordingly. Ground-based systems focus on real-time multimodal decoupling, while space-based systems emphasize non-contact vibration isolation and nested multi-loop control to achieve sub-arcsecond pointing stability. This review surveys the design and control strategies of damping–positioning mechanisms for segmented telescopes and discusses the key trade-offs among critical performance metrics, including resolution, stroke, and load capacity. Particular attention is given to the disturbance-sensitivity analysis and active damping techniques (up to ~50% vibration reduction) implemented in the ELT “hard” actuator approach. Future directions include cross-scale collaborative control, smart material applications, and AI-based adaptive parameter optimization, which together provide a technical pathway toward high-precision imaging in next-generation highly segmented telescopes.",
+  "year": 2026,
+  "venue": "Photonics",
+  "authors": [
+   "Wuyang Wang",
+   "Qi An",
+   "Xudong Wu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7138146039",
+  "doi": "10.3390/photonics13030288",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2304-6732/13/3/288/pdf",
+  "published_iso": "2026-03-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7138146039",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Evaluating the impact of dividend restrictions on euro area bank market values",
+  "title_norm": "evaluating the impact of dividend restrictions on euro area bank market values",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Journal of International Money and Finance",
+  "authors": [
+   "Desislava Andreeva",
+   "Paul Bochmann",
+   "Julius Schneider"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4321455001",
+  "doi": "10.1016/j.jimonfin.2026.103653",
+  "arxiv_id": null,
+  "paper_url": "https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=4365331",
+  "published_iso": "2026-08-14",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4321455001",
+  "year_month": "2026-08"
+ },
+ {
+  "title": "Design Phase-Locked Loop Using a Continuous-Time Bandpass Delta-Sigma Time-to-Digital Converter",
+  "title_norm": "design phase locked loop using a continuous time bandpass delta sigma time to di",
+  "abstract": "This paper presents an all-digital fractional-N phase-locked loop (ADPLL) operating in the 2.86–3.2 GHz range, optimized for IoT and high-frequency RF transceiver applications demanding stringent phase noise performance, fast settling time, and high integration capability. The key innovation lies in the introduction of a bandpass delta-sigma time-to-digital converter (BPDSTDC) that achieves high-resolution phase detection, an extended detection range of ±2π, and superior noise-shaping characteristics, completely eliminating the complex calibration procedures typically required in conventional TDC designs. The proposed architecture synergistically combines the BPDSTDC with digital down-conversion blocks to extract phase error at baseband, a divider chain integrated with phase interpolators achieving 1/4 fractional resolution to suppress in-band quantization noise, and a wide-bandwidth digital loop filter (>1 MHz) ensuring fast dynamic response and robust stability. The bandpass delta-sigma modulator is implemented with compact resonator structures and a flash quantizer, achieving an optimal balance among resolution, power consumption, and silicon area. The incorporation of highly linear phase interpolators extends fractional frequency synthesis capability without requiring complex digital-to-time converters (DTCs), significantly reducing design complexity and calibration overhead. Fabricated in a 180-nm CMOS technology, the proposed chip demonstrates robust measured performance. The band-pass delta-sigma TDC achieves a low integrated rms timing noise of 183 fs within a 1-MHz bandwidth. Leveraging this low TDC noise, the complete ADPLL exhibits a measured in-band phase noise of −120 dBc/Hz at a 1-MHz offset for a 3.2-GHz output frequency while operating with a loop bandwidth exceeding 1 MHz. This corresponds to a normalized phase noise of −216 dBc/Hz. The system operates from a 1.8-V supply and consumes 10 mW, achieving competitive performance compared with prior noise-shaping TDC-based all-digital PLLs.",
+  "year": 2026,
+  "venue": "Electronics",
+  "authors": [
+   "Thi Viet Ha Nguyen",
+   "Cong-Kha Pham"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127589846",
+  "doi": "10.3390/electronics15030675",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/15/3/675/pdf",
+  "published_iso": "2026-02-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7127589846",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "JADES and BlackTHUNDER: rest-frame Balmer-line absorption and the local environment in a Little Red Dot at z = 5",
+  "title_norm": "jades and blackthunder rest frame balmer line absorption and the local environme",
+  "abstract": "ABSTRACT We present a ‘Little Red Dot’ (LRD) broad-line active galactic nucleus (AGN) at $z=5.077 $, observed with NIRSpec/MSA (micro-shutter assembly) and NIRSpec/IFU (integral-field unit) by the JADES (JWST Advanced Deep Extragalactic Survey) and BlackTHUNDER (Black holes in THe early Universe aNd their DensE surRoundings) surveys. Combining spatially resolved and high-resolution spectroscopy, we characterize its central engine, host, and environment. H$\\alpha $ has multiple components, including two broad Gaussians, yielding a black-hole mass $\\log (M_{\\bullet }/{\\rm M}_\\odot) = 7.65 $, while [O iii]$\\lambda$5007 gives a galaxy dynamical mass $\\log (M_\\mathrm{dyn}/{\\rm M}_\\odot) = 9.1 $, suggesting an overmassive black hole relative to the host galaxy. The target is immersed in a 7-kpc wide pool of ionized gas and has three neighbours: a satellite galaxy, a possible satellite/gas cloud, and a tentatively detected spatially detached outflow. H$\\alpha $ shows strong, rest-frame absorption, deeper than the continuum, ruling out a stellar origin. The velocity and velocity dispersion are $v_\\mathrm{abs} = -13~\\mathrm{km\\, s^{-1}} $ and $\\sigma _\\mathrm{abs} = 120~\\mathrm{km\\, s^{-1}} $. There is tentative evidence (2.6σ) of temporal variability in the equivalent width of the H$\\alpha $ absorber over two rest-frame months, suggesting a highly dynamic nucleus. Notably, while the H$\\alpha $ absorber is clearly visible and even dominant in the high-resolution G395H observations, it is not detected in the medium-resolution G395M data of the same epoch. This implies that the current incidence rate of absorbers in LRDs – and especially of rest-frame absorbers – may be severely underestimated, because most LRDs rely on lower resolution spectroscopy. The high incidence rate of rest-frame absorbers in LRDs may indicate a configuration that is either intrinsically stationary, such as a rotating disc, or that exhibits time-averaged stability, such as an oscillatory ‘breathing mode’ accretion with cyclic expansion and contraction of the gas around the supermassive black hole.",
+  "year": 2025,
+  "venue": "Monthly Notices of the Royal Astronomical Society",
+  "authors": [
+   "Francesco D’Eugenio",
+   "Ignas Juodžbalis",
+   "Xihan Ji",
+   "Jan Scholtz",
+   "R. Maiolino",
+   "Stefano Carniani"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4416794362",
+  "doi": "10.1093/mnras/staf2117",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/mnras/advance-article-pdf/doi/10.1093/mnras/staf2117/65614102/staf2117.pdf",
+  "published_iso": "2025-11-27",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416794362",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "From Interference Mitigation to Toleration: Pathway to Practical Spatial Reuse in LPWANs",
+  "title_norm": "from interference mitigation to toleration pathway to practical spatial reuse in",
+  "abstract": "This paper addresses the interference challenges, aiming to improve spatial reuse and optimize spectrum efficiency in LPWANs. We reveal that existing strategies such as interference cancellation and MIMO are ill-suited to the low-cost low-rate characteristics of LPWANs. Our work introduces a novel framework, HydraNet, which leverages the capture effect of LPWAN radios to enable robust concurrent transmissions. HydraNet exempts from strict clock synchronization or accurate channel estimation as required by conventional spatial reuse strategies for interference nulling. We conduct in-depth studies with LoRa radios to uncover their underlying packet reception mechanisms and for the first time characterize their unique capture effect. Based on the new findings, we devise novel strategies to jointly control the timing and power of concurrent LPWAN transmissions. These strategies ensure sufficient power differences between packets and interference at their intended receivers. We prototype HydraNet and integrate with operational LoRaWANs and comprehensively evaluate its performance. Results show that HydraNet achieves higher spectrum utilization with up to 3.6 × throughput improvements over the state-of-the-art.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Ruonan Li",
+   "Ziyue Zhang",
+   "Xianjin Xia",
+   "Ningning Hou",
+   "W.P. Chai",
+   "Shiming Yu"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416476630",
+  "doi": "10.1145/3680207.3723483",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3680207.3723483",
+  "published_iso": "2025-11-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416476630",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+  "title_norm": "a systematic literature review of retrieval augmented generation techniques metr",
+  "abstract": "Background: Retrieval-augmented generation (RAG) aims to reduce hallucinations and outdated knowledge by grounding LLM outputs in retrieved evidence, but empirical results are scattered across tasks, systems, and metrics, limiting cumulative insight. Objective: We aimed to synthesise empirical evidence on RAG effectiveness versus parametric-only baselines, map datasets/architectures/evaluation practices, and surface limitations and research gaps. Methods: This systematic review was conducted and reported in accordance with PRISMA 2020. We searched the ACM Digital Library, IEEE Xplore, Scopus, ScienceDirect, and DBLP; all sources were last searched on 13 May 2025. This included studies from January 2020–May 2025 that addressed RAG or similar retrieval-supported systems producing text output, met citation thresholds (≥15 for 2025; ≥30 for 2024 or earlier), and offered original contributions; excluded non-English items, irrelevant works, duplicates, and records without accessible full text. Bias was appraised with a brief checklist; screening used one reviewer with an independent check and discussion. LLM suggestions were advisory only; 2025 citation thresholds were adjusted to limit citation-lag. We used a descriptive approach to synthesise the results, organising studies by themes aligned to RQ1–RQ4 and reporting summary counts/frequencies; no meta-analysis was undertaken due to heterogeneity of designs and metrics. Results: We included 128 studies spanning knowledge-intensive tasks (35/128; 27.3%), open-domain QA (20/128; 15.6%), software engineering (13/128; 10.2%), and medical domains (11/128; 8.6%). Methods have shifted from DPR + seq2seq baselines to modular, policy-driven RAG with hybrid/structure-aware retrieval, uncertainty-triggered loops, memory, and emerging multimodality. Evaluation remains overlap-heavy (EM/F1), with increasing use of retrieval diagnostics (e.g., Recall@k, MRR@k), human judgements, and LLM-as-judge protocols. Efficiency and security (poisoning, leakage, jailbreaks) are growing concerns. Discussion: Evidence supports a shift to modular, policy-driven RAG, combining hybrid/structure-aware retrieval, uncertainty-aware control, memory, and multimodality, to improve grounding and efficiency. To advance from prototypes to dependable systems, we recommend: (i) holistic benchmarks pairing quality with cost/latency and safety, (ii) budget-aware retrieval/tool-use policies, and (iii) provenance-aware pipelines that expose uncertainty and deliver traceable evidence. We note the evidence base may be affected by citation-lag from the inclusion thresholds and by English-only, five-library coverage. Funding: Advanced Research and Engineering Centre. Registration: Not registered.",
+  "year": 2025,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Andrew Brown",
+   "Muhammad Roman",
+   "Barry Devereux"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W7114889968",
+  "doi": "10.3390/bdcc9120320",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/9/12/320/pdf",
+  "published_iso": "2025-12-12",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7114889968",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Fundamental physics in 2025: status, decisive targets, and path forward",
+  "title_norm": "fundamental physics in 2025 status decisive targets and path forward",
+  "abstract": "",
+  "year": 2026,
+  "venue": "The European Physical Journal Plus",
+  "authors": [
+   "Slava G. Turyshev"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7160296413",
+  "doi": "10.1140/epjp/s13360-026-07733-2",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.21445",
+  "published_iso": "2026-05-05",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7160296413",
+  "year_month": "2026-05"
+ },
+ {
+  "title": "Noise-canceling quantum feedback: Non-Hermitian dynamics with applications to state preparation and magic state distillation",
+  "title_norm": "noise canceling quantum feedback non hermitian dynamics with applications to sta",
+  "abstract": "Time-continuous quantum measurement allows for the tracking of a quantum system in real time via sequences of short, and individually weak, measurement intervals. Such measurements are necessarily invasive, imparting backaction to the system, and allowing the observer to update their state estimate based on stochastic measurement outcomes. Feedback control then involves real-time interventions by an observer, conditioned on the time-continuous measurement signal that they receive. We here consider diffusive quantum trajectories, and focus on the \"noise-canceling\" subset of feedback protocols that aim to minimize the degree of stochasticity in the dynamics. We derive such a class of feedback operations, showing that under the idealized assumptions of pure states, unit measurement efficiency, and zero time-delay in implementing feedback operations, perfectly noise-canceling feedback always exists. We consider the resulting noise-canceled dynamics generated by an effective non-Hermitian Hamiltonian; while non-Hermitian Hamiltonians from continuous monitoring generally describe rare dynamics (accessible by costly post-selection), the use of noise-canceling feedback here leads to non-Hermitian dynamics that occur deterministically. We demonstrate this via examples of entangled state preparation and stabilization. We then illustrate the potential for the application of noise-cancellation to boost success rates in magic state distillation protocols. We show that adding feedback based on noise-cancellation into a time-continuous 5-to-1 distillation protocol leads to higher probabilities of successful distillation across a range of input errors, and extends the threshold on input errors for which the protocol is effective. Our results highlight the efficacy of noise-canceling feedback-aided protocols for quantum state preparation and stabilization tasks.",
+  "year": 2026,
+  "venue": "Physical Review A",
+  "authors": [
+   "Tathagata Karmakar",
+   "Philippe Lewalle",
+   "Yipei Zhang",
+   "K. Birgitta Whaley"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416060592",
+  "doi": "10.1103/cnxj-m1wn",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2507.05611",
+  "published_iso": "2026-01-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416060592",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "A Conceptual Co-Design Co-Create Framework for Citizen Engagement in Disaster Risk Reduction and Resilience",
+  "title_norm": "a conceptual co design co create framework for citizen engagement in disaster ri",
+  "abstract": "Disasters pose severe threats to life, livelihoods, and socioeconomic stability globally, with disproportionate impacts on vulnerable groups. Despite growing recognition of the importance of citizen engagement in disaster risk reduction and resilience (D3R), existing participatory frameworks remain fragmented, predominantly top-down, and unsustainable beyond project funding cycles. There is a recognised need for an integrated conceptual framework that aims to systematically embed co-design and co-create principles into D3R governance while aiming to ensure the inclusion of vulnerable populations. This paper addresses this gap by presenting the Co-Design Co-Create Framework (CCF), a conceptual institutional model for citizen engagement in D3R. The CCF comprises six iterative phases—KNOW, RAISE AWARENESS, CO-DESIGN CO-CREATE, OUTREACH, KEEP ENGAGED, and EVALUATION—organized as a Living Lab ecosystem. Distinctive conceptual innovations include a Disaster Assembly mechanism designed to promote long-term sustainability through polycentric governance, explicit inclusion of vulnerable groups via Social Vulnerability Index assessment, proposed dual production of co-created policies and co-designed tangible solutions, and participatory tools including Policy Delphi and Storytelling. Unlike conventional time-bound initiatives, the CCF is designed to address critical gaps in existing disaster risk reduction (DRR) practices through embedded sustainability mechanisms, citizen empowerment aimed at Arnstein’s highest participation level, systematic knowledge-to-product translation, and bottom-up planning principles. This conceptual framework conceptualises disaster resilience as a continuously evolving, socially legitimate, and just process anchored in durable governance structures. Empirical validation through field implementation constitutes a direction for future research.",
+  "year": 2026,
+  "venue": "Sustainability",
+  "authors": [
+   "Murat Şentürk",
+   "Ömer Özdinç",
+   "Mehmet Hanefi Topal",
+   "Adem Başpınar",
+   "Raif Cergibozan",
+   "Kenan Mengüç"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7160509012",
+  "doi": "10.3390/su18094596",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/18/9/4596/pdf?version=1778070836",
+  "published_iso": "2026-05-06",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7160509012",
+  "year_month": "2026-05"
+ },
+ {
+  "title": "Microwave-free vector magnetometry and crystal orientation determination with nitrogen-vacancy centers using Bayesian inference",
+  "title_norm": "microwave free vector magnetometry and crystal orientation determination with ni",
+  "abstract": "Abstract Nitrogen-vacancy (NV) centers in diamond provide a solid-state platform for quantum sensing. While optically detected magnetic resonance techniques offer high sensitivity, their reliance on microwaves introduces heating and stray electromagnetic fields that can perturb nearby samples. Optical approaches based on cross-relaxation between differently oriented NV centers remove this constraint but have so far required stringent alignment of the external field with crystallographic axes, restricting their practicality. Here we introduce a general framework for microwave-free vector magnetometry at near-zero field that leverages Bayesian inference to extract both the magnetic field vector and the NV orientation directly from photoluminescence maps. An analytical model of cross-relaxation resonances enables efficient inference under arbitrary field and orientation configurations, while naturally incorporating the discrete degeneracies of the NV symmetry. We experimentally demonstrate robust orientation determination and vector-field reconstruction, establishing a general route toward compact and alignment-free NV magnetometers for practical sensing applications.",
+  "year": 2026,
+  "venue": "Communications Physics",
+  "authors": [
+   "Hilario Espinós",
+   "Omkar Dhungel",
+   "Arne Wickenbrock",
+   "Dmitry Budker",
+   "Ricardo Puebla",
+   "E. Torrontegui"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417464901",
+  "doi": "10.1038/s42005-026-02736-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s42005-026-02736-y_reference.pdf",
+  "published_iso": "2026-07-06",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4417464901",
+  "year_month": "2026-07"
+ },
+ {
+  "title": "Ultra‐Sensitive Dual‐Resonator Graphene Pressure Sensor with Temperature Self‐Compensation",
+  "title_norm": "ultra sensitive dual resonator graphene pressure sensor with temperature self co",
+  "abstract": "Abstract Silicon resonator sensors have limitations in detecting small pressure changes due to their structural dimensions. Graphene nanomechanical resonators, with their ultra‐small thickness and excellent mechanical properties, offer the opportunity to break this limitation. Here, a highly sensitive graphene nanomechanical pressure sensor with integrated temperature self‐compensation is reported. It consists of two vacuum anode‐bonded graphene resonators: one is sensitive to pressure and temperature while the other to temperature only, allowing for the cancellation of thermal effects via detecting the difference in the resonant frequencies. A sensitivity of 24.1 kHz kPa −1 is achieved over the pressure range of 0.001 to 500 kPa, 68 times higher than the state‐of‐the‐art silicon pressure sensors. The full‐scale (FS) hysteresis error is 0.31% with a repeatability of 0.75% in three forward and reverse stroke pressure tests. Within the temperature range of −40 to 120 °C and the pressure range of 0.001 to 500 kPa, the maximum pressure error is 6.51 kPa, giving an accuracy of 1.302% FS. The high performance of the device makes it promising for applications in aerospace, automotive, and healthcare industries as well as other fields requiring high‐sensitivity pressure measurements.",
+  "year": 2025,
+  "venue": "Advanced Science",
+  "authors": [
+   "Zhen Wan",
+   "Cheng Li",
+   "Zhengwei Wu",
+   "Pengcheng Zhao",
+   "Yang Liu",
+   "Wanting Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4415946739",
+  "doi": "10.1002/advs.202517536",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/advs.202517536",
+  "published_iso": "2025-11-05",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4415946739",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Chemical Recycling of Polyesters and Polycarbonates: Why Is Zinc(II) Such an Effective Depolymerization Catalyst?",
+  "title_norm": "chemical recycling of polyesters and polycarbonates why is zinc ii such an effec",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide Effective polymer recycling is essential to reduce plastic pollution; catalytic polymer recycling to monomer is particularly attractive, as it could operate over multiple closed-loop cycles. Aliphatic polyesters and carbonates show properties that compete with current plastics and can be depolymerized to 6- and 7-membered cyclic ester or carbonate monomers. Nonetheless, the rules governing recycling catalyst selection are unclear. Here, Zn(II), Co(II), Mg(II), Sn(II), Ca(II), Ba(II), Y(III) and Bi(III) 2-ethyl hexanoate catalysts are compared for the chemical recycling of 6 different oxygenated polymers, in bulk, at low catalyst loadings (1:100 to 1:1000) and temperatures (90–170 °C). All metals are selective for recycling to monomer but show clear differences in rates; the Zn(II) catalyst is always the most active. Using linear free energy analysis, the depolymerization rate constant directly correlates with the metal’s Lewis acidity, as assessed by its hydrolysis constant. The best catalysts comprise metals with intermediate acidity, i.e., Zn(II), Co(II) and Mg(II). The structure–activity correlation applies to polymers that have primary or secondary chain-end group alcohols, 6- or 7-atom repeat units, and those featuring ester or carbonate linkages. Eyring analysis using Zn(II), Co(II), Mg(II) and Sn(II) catalysts shows that the Zn(II) catalysts balance competing transition-state enthalpy (Δ H ‡ d ) and entropy (Δ S ‡ d ) demands. Density functional theory calculations of key transition states suggest that Zn(II) is particularly effective because it both activates the polymer carbonyl group and labilizes the alkoxide nucleophile. These generally applicable linear free energy relationships are important tools to minimize energy input and maximize performances in future recycling processes.",
+  "year": 2025,
+  "venue": "Journal of the American Chemical Society",
+  "authors": [
+   "Thomas M. McGuire",
+   "Antoine Buchard",
+   "Charlotte K. Williams"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4416062962",
+  "doi": "10.1021/jacs.5c16346",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/jacs.5c16346?ref=article_openPDF",
+  "published_iso": "2025-11-09",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4416062962",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Metasurfaces for Structured Terahertz Waves: Generation, Control and Applications",
+  "title_norm": "metasurfaces for structured terahertz waves generation control and applications",
+  "abstract": "Terahertz (THz) structured fields, such as vortex beams carrying orbital angular momentum, Bessel beams, and vector beams, support mode multiplexing, extended depth of focus, and improved scattering tolerance in communication, sensing, and imaging. Metasurfaces, consisting of ultrathin subwavelength arrays, employ metallic or all-dielectric building blocks to enable wavefront manipulation through geometric-phase or resonance mechanisms. Building on these foundations, subsequent research has sought to further enhance functionality and efficiency by developing multilayer configurations that integrate multiple operations and support more complex modulation. In parallel, tunable materials – such as phase-change compounds, liquid crystals, and graphene, whose properties respond to external physical stimuli – have been incorporated to dynamically control optical responses. These approaches enable planar, programmable manipulation of phase, amplitude, and polarization in the THz regime while reducing losses and device footprint, thereby providing reconfigurability beyond that of conventional bulk optics. The chapter summarizes recent advances in THz metasurfaces for structured beams along four themes: high-efficiency beam-shaping mechanisms; control strategies using tunable materials and reconfigurable architectures; multifunctional integration incorporating frequency, polarization, and mode multiplexing; and applications in communication, imaging, and high-field emission. We discuss the future directions for scalable, tunable, and efficient platforms to facilitate chip-to-free-space interfaces, metrology, and manufacturable implementation. Two noteworthy areas of interest are ferroelectric nematic liquid-crystal platforms and spatiotemporally structured THz waves, which are also discussed.",
+  "year": 2026,
+  "venue": "IntechOpen eBooks",
+  "authors": [
+   "Wei Chen",
+   "Zhong-Ze Peng",
+   "Lingling Ma",
+   "Yan-Qing Lu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7126064003",
+  "doi": "10.5772/intechopen.1014102",
+  "arxiv_id": null,
+  "paper_url": "https://www.intechopen.com/citation-pdf-url/1237188",
+  "published_iso": "2026-01-28",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7126064003",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Near-Field Physical Layer Security: Robust Beamforming Under Location Uncertainty",
+  "title_norm": "near field physical layer security robust beamforming under location uncertainty",
+  "abstract": "In this paper, we studyrobustbeamforming design fornear-fieldphysical-layer-security (PLS) systems, where a base station (BS) equipped with an extremely large-scale array (XL-array) serves multiple near-field legitimate users (Bobs) in the presence of multiple near-field eavesdroppers (Eves). Unlike existing works that mostly assume perfect channel state information (CSI) or location information of Eves, we consider a more practical and challenging scenario in this paper, where the locations of Bobs are perfectly known, while onlyimperfect location informationof Eves is available at the BS. We first formulate a robust optimization problem to maximize the sum-rate of Bobs while guaranteeing a worst-case limit on the eavesdropping rate under location uncertainty. By transforming Cartesian position errors into the polar domain, we reveal an important near-fieldangular-error amplification effect, i.e., under the same location error, the closer the Eve, the larger the angle error, which severely degrades the performance of conventional robust beamforming methods based on imperfect channel state information. To address this issue, we first establish the conditions for which the first-order Taylor approximation of the near-field channel steering vector under location uncertainty is largely accurate. Then, we propose atwo-stagerobust beamforming method, which first partitions the uncertainty region into multiple fan-shaped sub-regions, followed by the second stage to formulate and solve a refined linear-matrix-inequality (LMI)-based robust beamforming optimization problem. In addition, the proposed method is further extended to scenarios with multiple Bobs and multiple Eves. Finally, numerical results validate that the proposed method achieves a superior trade-off between rate performance and secrecy robustness, hence significantly outperforming existing benchmarks under Eve location uncertainty.",
+  "year": 2026,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "authors": [
+   "Chao Zhou",
+   "Changsheng You",
+   "Cong Zhou",
+   "Chengwen Xing",
+   "Jianhua Zhang"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7161159728",
+  "doi": "10.1109/twc.2026.3690730",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2601.13549",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7161159728",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Algorithmic Habituation: A Neurocognitive and Systems-Based Framework for Human–AI Co-Adaptation",
+  "title_norm": "algorithmic habituation a neurocognitive and systems based framework for human a",
+  "abstract": "BACKGROUND/OBJECTIVES: As artificial intelligence systems become increasingly embedded in everyday cognitive tasks, human-AI interaction is no longer limited to tool use but evolves into a dynamic process of mutual adaptation. While extensive research has examined algorithmic learning, far less attention has been given to how users progressively adapt to AI systems. This paper introduces the concept of algorithmic habituation, defined as the gradual accommodation of users to the regularities and predictive patterns of AI systems. The objective is to provide a neurocognitive and systems-based framework that explains this phenomenon. METHODS: The study develops a conceptual and integrative framework grounded in classical theories of habituation, neuroplasticity, predictive processing, and systems theory. Building on these foundations, we propose a mechanistic model of human-AI co-adaptation, conceptualized as a recursive feedback loop involving repeated interaction, pattern recognition, expectation stabilization, and cognitive economy. In addition, a typology of algorithmic habituation is advanced, alongside proposed empirical pathways for future validation, including scale development, experimental paradigms, and longitudinal designs. RESULTS: The proposed framework suggests that repeated interaction with AI systems leads to stabilization of cognitive expectations, reduced cognitive effort, and increased behavioral standardization. This process extends beyond perceptual habituation into higher-order domains, including decision-making, creativity, and moral judgment. The typology identifies four primary forms of algorithmic habituation: cognitive, decisional, creative, and moral. The model predicts both adaptive outcomes (efficiency, reduced cognitive load) and maladaptive consequences (reduced reflexivity, automation bias, and potential erosion of critical thinking). CONCLUSIONS: Algorithmic habituation represents a novel construct at the intersection of neuroscience, cognitive psychology, and human-AI interaction. By framing user adaptation as a form of neurocognitively grounded habituation within recursive systems, this paper contributes a new perspective to understanding AI integration in human cognition. The framework has implications for digital wellbeing, education, and AI ethics, and opens multiple avenues for empirical research.",
+  "year": 2026,
+  "venue": "Brain Sciences",
+  "authors": [
+   "Narcisa Carmen Mladin",
+   "Dana Rad",
+   "Dumitru Ştefan Coman",
+   "Miron Gavril Popescu",
+   "Maria Iulia Felea",
+   "Radiana Marcu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7159098062",
+  "doi": "10.3390/brainsci16050473",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3425/16/5/473/pdf?version=1777382061",
+  "published_iso": "2026-04-28",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7159098062",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "Instrumentalizing the war in Gaza: US-China rivalry and power projection through selective action and strategic inaction",
+  "title_norm": "instrumentalizing the war in gaza us china rivalry and power projection through ",
+  "abstract": "This study examines the Gaza conflict from the October 7, 2023 escalation to 2025 as a symbolic and discursive arena of great-power rivalry between the United States (US) and the People's Republic of China (PRC, China).It investigates how both states instrumentalize the crisis to advance competing claims to normative authority and global legitimacy, rather than engaging primarily through material intervention.Drawing on Social Constructivism as the theoretical framework and employing a Small-N Most Different Systems Design (MDSD) alongside Critical Discourse Analysis (CDA), the study analyzes official diplomatic statements, United Nations (UN) interventions, and media discourse.The findings demonstrate that the US adopts a strategy of selective action, framing its engagement through counterterrorism, alliance maintenance, and institutional responsibility, while China pursues strategic inaction, emphasizing humanitarian suffering, justice, and sovereignty while avoiding counterterrorism framing.The study contributes to constructivist scholarship by illustrating how discourse, identity performance, and narrative framing function as key instruments of power in contemporary great-power competition and international crisis management.moral authority and political leadership within the international system?This study borrows from social constructivism, an International Relations (IR) theory that emphasizes how international behavior is shaped by shared ideas, norms, and interpretive practices (Wendt, 1999;Onuf, 2013).From this perspective, identity claims and discursive framing link broader visions of order to specific policy choices, making it particularly wellsuited for examining how great-power rivalry increasingly unfolds through contests over legitimacy and meaning.Methodologically, the thesis employs Critical Discourse Analysis (CDA) alongside a Small-N Most Different Systems Design (MDSD).CDA enables systematic examination of official statements, state media, and institutional discourse, while MDSD contrasts two politically distinct systems, the US and China, to assess how divergent structures produce comparable patterns of strategic competition.The comparative component is structured through an MDSD, contrasting two political systems that are consistently positioned far apart in leading global democracy assessments, most notably the Economist Intelligence Unit's Democracy Index (scored from 0 to 10).Within this framework, the US, with a score of 7.85, is classified as a flawed democracy, while China, scoring 2.11, is categorized as an authoritarian regime (Economist Intelligence Unit, 2025).Despite these pronounced systemic differences, both states converge on a similar outcome: the competitive instrumentalization of the Gaza crisis, making it a revealing lens through which to examine how great-power rivalry unfolds through ideas, rhetoric, and narrative framing in the contemporary international system.",
+  "year": 2026,
+  "venue": "DSpace repository (University of Tartu)",
+  "authors": [
+   "Iqra Afreen"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7166964691",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://dspace.ut.ee/bitstreams/b492e8f9-40a3-4e10-95b9-361851a67cea/download",
+  "published_iso": "2026-01-01",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7166964691",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Frequency multiplexing with dispersion-engineered elastic metasurfaces",
+  "title_norm": "frequency multiplexing with dispersion engineered elastic metasurfaces",
+  "abstract": "Distinguishing the frequency components of elastic waves is essential for ensuring the stability of mechanical systems. Herein, a frequency-multiplexed elastic metasurface is introduced, utilizing a dispersion engineering. The proposed dispersion-engineered elastic metasurface multiplexes frequency-dependent phase profiles, enabling frequency-selective wavefront tailoring. The phase profiles of the meta-atoms, derived from Kirchhoff–Love plate theory, are controlled solely by the plate thickness, eliminating the need for a typically required extensive meta-atom library or complex optimization. Integrating the metasurface with a piezoelectric element converts the focused elastic energy into an amplified electrical signal. Therefore, the magnitude of extracted energy alone reveals the underlying spectral information through spatial information. Our finding presents the first design methodology for a dispersion-engineered elastic metasurface, overcoming limitations of conventional elastic metasurfaces by encoding multiplex information in a passive framework. Accordingly, the proposed dispersion-engineered elastic metasurface can be incorporated into various plate-based mechanical systems for next-generation technologies. Spectral control of elastic waves is essential for stable mechanical systems. Here, authors introduce a dispersion-engineered elastic metasurface that multiplexes frequencydependent phase profiles, enabling selective wavefront shaping and energy readout via piezoelectric conversion.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Geon Lee",
+   "Dong-Su Lee",
+   "Wonjae Choi",
+   "Junsuk Rho"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4416759207",
+  "doi": "10.1038/s41467-025-65699-8",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-65699-8.pdf",
+  "published_iso": "2025-11-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416759207",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "The Impact of Transportation Technologies, Technological Exports, Trade Freedom and Trade Globalisation on Transport‐Based CO 2 Emissions in the Top 10 Emitter Countries",
+  "title_norm": "the impact of transportation technologies technological exports trade freedom an",
+  "abstract": "ABSTRACT High and medium technology exports play a crucial role in supporting economic growth, fostering international competition and potentially reducing carbon dioxide emissions through the adoption of advanced technologies. However, the environmental effects of such exports, particularly in the transportation sector, remain underexplored. This study addresses this gap by examining how transportation technologies, high and medium technology exports, trade freedom, and trade globalisation affect CO 2 emissions from transportation. The analysis covers the ten countries with the highest transportation‐related emissions over the period 1995–2020, employing augmented mean group (AMG) and common correlated effects (CCE) estimators. The results reveal heterogeneous effects across countries. Transportation technologies are found to increase emissions in Japan but reduce them in South Korea, the United States and Mexico. High and medium technology exports raise transportation emissions in China, France, Germany, the USA and the overall panel. Trade globalisation increases emissions in France, whereas it reduces them in Germany. These findings suggest that advancing transportation technologies, aligning trade openness with environmental goals and shifting exports toward higher technology products can support the reduction of transportation‐related carbon emissions. Such measures are vital for progress toward the Sustainable Development Goals.",
+  "year": 2026,
+  "venue": "IET Intelligent Transport Systems",
+  "authors": [
+   "Erick Okoth",
+   "Azad Erdem",
+   "Tunahan Değirmenci",
+   "Cahit Şanver"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7118165821",
+  "doi": "10.1049/itr2.70130",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1049/itr2.70130",
+  "published_iso": "2026-01-01",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7118165821",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Geometric Origin of Quantum Waves from Finite Action",
+  "title_norm": "geometric origin of quantum waves from finite action",
+  "abstract": "Quantum mechanics postulates wave–particle duality and assigns amplitudes of the form eiS/ℏ, yet no existing formulation explains why physical observables depend only on the phase of the action. Here we show that if the quantum of action ℏgeom is finite, the classical action manifold R becomes compact under the identification S≡S+2πℏgeom, yielding a U(1) action space on which only modular action is observable. Wave interference then follows as a geometric necessity: a finite action quantum forces physical amplitudes to live on a circle, while the classical limit arises when the modular spacing 2πℏgeom becomes negligible compared with macroscopic actions. We formulate this as a compact-action theorem. Chronon Field Theory (ChFT) provides the physical origin of ℏgeom: its causal field Φμ carries a quantized symplectic flux ∮ω=ℏgeom, making Planck’s constant a geometric topological invariant rather than an imposed parameter. Within this medium, the Real–Now–Front (RNF) supplies a local reconstruction rule that reproduces the structure of the Feynman path integral, the Schrödinger evolution, the Born rule, and macroscopic definiteness as consequences of geometric compatibility rather than supplemental postulates. Phenomenologically, identifying the electron as the minimal chronon soliton—carrying the fundamental unit of symplectic flux—links its spin, charge, and stability to topological properties of the chronon field, yielding concrete experimental signatures. Thus the compact-action/RNF framework provides a unified geometric origin for quantum interference, measurement, and matter, together with falsifiable predictions of ChFT.",
+  "year": 2025,
+  "venue": "Quantum Reports",
+  "authors": [
+   "Bin Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4417123552",
+  "doi": "10.3390/quantum7040061",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2624-960X/7/4/61/pdf?version=1765198197",
+  "published_iso": "2025-12-08",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4417123552",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "The Impact of the 2024 Mother's Day Storm on Aircraft Surveillance Across Europe",
+  "title_norm": "the impact of the 2024 mother s day storm on aircraft surveillance across europe",
+  "abstract": "Abstract The Mother's day storm from 10–13 May 2024 is one of the most extreme space weather events recorded in recent decades and triggered a strong ionospheric response with various impacts on communication and navigation systems. In this study the impact on the aviation sector, and more specifically air traffic management, is investigated with Automatic Dependent Surveillance‐Broadcast (ADS‐B) data from the OpenSky network. For that purpose, the event is presented with solar radiation and wind observations to describe the space weather conditions. Further, the spatial and temporal variations of the ionospheric response over Europe are analyzed with total electron content (TEC) maps and the performance of positioning via Global Navigation Satellite Systems (GNSS) is examined with 100 reference stations. These analyses show well‐known space weather impacts including TEC perturbations, sudden ionospheric disturbances, signal‐loss and degraded GNSS performance. Consequently, these effects are also expected for the GNSS positions transmitted via ADS‐B, and the analysis confirms that a higher frequency of such anomalies occurs along flight tracks during the event (increase of up to 2.55%). These anomalies may manifest as data gaps or as position errors of various types, which in turn could decrease the visibility and awareness of participants in shared air spaces. The correlation between space weather and anomalies in ADS‐B, as also shown in preceding studies, is thus further substantiated and motivates for follow‐up research that combines application‐specific data like ADS‐B with commonly used ionospheric observations.",
+  "year": 2025,
+  "venue": "Space Weather",
+  "authors": [
+   "Erik Schmölter",
+   "Jens Berdermann"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4416723157",
+  "doi": "10.1029/2025sw004718",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2025SW004718",
+  "published_iso": "2025-11-26",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416723157",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Prevention of excessive co-rumination in adolescent girls: Theoretical mini review with a critical integrative intervention perspective",
+  "title_norm": "prevention of excessive co rumination in adolescent girls theoretical mini revie",
+  "abstract": "Co-rumination, defined as repetitive and emotionally focused problem talk between peers, has been consistently associated with heightened risk for internalising symptoms during adolescence, particularly among girls. Despite growing evidence of its emotional and physiological costs, co-rumination remains common within close friendships, raising the question of why this interaction pattern persists. In this theoretical, integrative mini review, we described developmental, physiological, and interpersonal research to clarify mechanisms that sustain excessive co-rumination in adolescent girls. We argue that co-rumination becomes self-reinforcing through the interaction of heightened emotional distress, consciously experienced relational reassurance, and unresolved uncertainty. While early stress appraisal processes during co-rumination may operate largely outside awareness, the reassurance, validation, and relational closeness experienced during and after these interactions are accessible to awareness and shape learning and future expectations. Building on this framework, we outline the working mechanisms of the recently developed Happy Friends, Positive Minds intervention program that focus on interrupting the relief-without-resolution loop and the prevention of co-rumination and associated anxiety and depression symptoms, while preserving disclosure and relational closeness within friendships.",
+  "year": 2026,
+  "venue": "JOURNAL OF MENTAL HEALTH AND CLINICAL PSYCHOLOGY",
+  "authors": [
+   "Patricia Vuijk",
+   "Per Norrgren"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7164297282",
+  "doi": "10.29245/2578-2959/2026/2.1368",
+  "arxiv_id": null,
+  "paper_url": "https://www.mentalhealthjournal.org/articles/prevention-of-excessive-co-rumination-in-adolescent-girls-theoretical-mini-review-with-a-critical-integrative-intervention-perspective.pdf",
+  "published_iso": "2026-05-13",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7164297282",
+  "year_month": "2026-05"
+ },
+ {
+  "title": "Populism and territoriality",
+  "title_norm": "populism and territoriality",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Political Geography",
+  "authors": [
+   "Hakkı Taş"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7167849411",
+  "doi": "10.1016/j.polgeo.2026.103617",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S0962629826001332/pdf",
+  "published_iso": "2026-07-09",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7167849411",
+  "year_month": "2026-07"
+ },
+ {
+  "title": "Achieving high precision in analog in-memory computing systems",
+  "title_norm": "achieving high precision in analog in memory computing systems",
+  "abstract": "Modern workloads challenge von Neumann architectures due to memory-processor data transfer. In-memory computing (IMC) enables in situ processing, with analog IMC (AIMC) based on resistive memories offering high-throughput and energy-efficient multiply-accumulate operations. Precision is limited by noise, device/circuit variations, and non-idealities. This work reviews error sources in AIMC and surveys mitigation strategies: bit slicing, residue number system, error correction codes, and mixed-precision iterative refinement, analyzing hardware implementations, overheads, and tradeoffs.",
+  "year": 2026,
+  "venue": "npj Unconventional Computing",
+  "authors": [
+   "Piergiulio Mannocci",
+   "Giacomo Larelli",
+   "Marco Bonomi",
+   "Daniele Ielmini"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7118625014",
+  "doi": "10.1038/s44335-025-00044-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s44335-025-00044-2.pdf",
+  "published_iso": "2026-01-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7118625014",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "ChatGPT and Co-Constructed Learning: Postgraduate Perspectives on Using Artificial Intelligence in Higher Education at a Third-Culture University",
+  "title_norm": "chatgpt and co constructed learning postgraduate perspectives on using artificia",
+  "abstract": "Artificial intelligence (AI) is reshaping teaching and learning in higher education (HE), yet its educational meaning is context-dependent. This article reports part of a study of Chinese postgraduate perspectives on generative AI (GenAI), with a specific focus on ChatGPT as a learning technology in an English Medium Instruction (EMI) transnational setting. A mixed-methods study generated insight from 103 postgraduate students at a UK joint-venture university in China, indicating that students positioned ChatGPT as a learning assistant rather than a substitute for learning. Meanwhile, they expressed acute awareness of ChatGPT’s academic reliability and accuracy, emphasising the need for verification practices and boundaries between legitimate learning support and inappropriate substitution. Interpreted through the lens of Third Culture Universities (TCUs), an idea describing complex and evolving international campuses, the findings illustrate how GenAI becomes deeply embedded within a learning ecology shaped by imported academic norms, EMI demands, technology, and transnational quality assurance. Rather than advocating prohibition, the study highlights the need for curriculum-integrated guidance, staff development, and explicit AI literacy teaching. It concludes by proposing a curriculum-centred approach that foregrounds responsible use, transparency, and verification as core learning outcomes in the GenAI era.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Michael James Day"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7153127511",
+  "doi": "10.69739/jicte.v1i1.1626",
+  "arxiv_id": null,
+  "paper_url": "https://gala.gre.ac.uk/id/eprint/52818/7/52818%20DAY_ChatGPT_And_Co-Constructed_Learning_%28OA%29_2026.pdf",
+  "published_iso": "2026-04-10",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7153127511",
+  "year_month": "2026-04"
+ },
+ {
+  "title": "When Quantum Spacetime Condenses",
+  "title_norm": "when quantum spacetime condenses",
+  "abstract": "Constructing a self-consistent and testable theory of quantum gravity may be a key to unifying fundamental physics and understanding the dark components of the universe. In this work, we present a systematic deepening and extension of Gravitational Spinor (GS) theory, establishing a comprehensive framework that connects microscopic quantum geometry to macroscopic cosmic phenomena and opens potential pathways toward future technological applications. First, based on the principle of Generalized Gauge Equation (GGE), we construct a complete path integral (spin foam) model with Gravitational Spinor Networks (GSNs) as the state space. By intrinsically implementing the GGE constraint, we derive unique vertex amplitudes and demonstrate that the model exhibits asymptotic safety. Its core coupling constant, γ 0 , acts as a running parameter that flows toward an ultraviolet fixed point, ensuring the theory’s non-perturbative renormalizability. Second, we obtain classical solutions of the nonlinear GS equation, discovering stable Gravitational Condensate Stars (GCSs)—a novel class of macroscopic objects formed from nonlinear phases of spacetime geometry itself. Via a response mechanism, these solutions naturally yield Modified Newtonian Dynamics (MOND)-like behavior on galactic scales, offering a non-particle explanation for dark matter. On cosmological scales, the same mechanism induces a dynamical effective cosmological constant driven by the running of γ 0 , successfully accounting for the current accelerated cosmic expansion and predicting observable evolution in the dark energy equation of state. Furthermore, within the GS framework, we address several foundational puzzles: elucidating a potential mechanism for black hole information conservation through the entanglement structure of GSNs, and establishing a detailed quantitative mapping between the microscopic γ 0 ( E ) and the macroscopic phenomenological field γ 0 ( a ) . This mapping provides a concrete scheme for globally testing quantum gravity using multi-scale astronomical data. Finally, building on the profound connection—revealed by the theory—between light and spacetime curvature and their mutual convertibility via nonlinearity and GGE, we outline its potential to catalyze a technological revolution: the induction of local spacetime curvature through controlled electromagnetic fields, laying the physical foundation for disruptive propulsion concepts such as a “curvature engine”. This study not only advances GS theory into a self-consistent, testable candidate for quantum gravity but also opens new horizons for its connection to future energy and space technologies.",
+  "year": 2026,
+  "venue": "Journal of Modern Physics",
+  "authors": [
+   "Bi Qiao"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7147624172",
+  "doi": "10.4236/jmp.2026.174018",
+  "arxiv_id": null,
+  "paper_url": "https://www.scirp.org/pdf/jmp_7506005.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7147624172",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Zak-OTFS-based coded random access for uplink mMTC",
+  "title_norm": "zak otfs based coded random access for uplink mmtc",
+  "abstract": "This paper proposes a grant-free coded random access (CRA) scheme for uplink massive machine-type communications (mMTC), based on Zak-orthogonal time–frequency space (Zak-OTFS) modulation in the delay–Doppler domain. The scheme is tailored for doubly selective wireless channels, where conventional orthogonal frequency-division multiplexing (OFDM)-based CRA suffers from unreliable inter-slot channel prediction due to time–frequency variability. By exploiting the predictable nature of Zak-OTFS, the proposed approach enables accurate channel estimation across slots, facilitating reliable successive interference cancellation across user packet replicas. A fair comparison with an OFDM-based CRA baseline shows that the proposed scheme achieves significantly lower packet loss rates under high mobility and user density. Extensive simulations over the standardized Veh-A channel confirm the robustness and scalability of Zak-OTFS-based CRA, supporting its applicability to future mMTC deployments.",
+  "year": 2026,
+  "venue": "Journal on Advances in Signal Processing",
+  "authors": [
+   "Alessandro Mirri",
+   "Venkatesh Khammammetti",
+   "Beyza Dabak",
+   "Enrico Paolini",
+   "Krishna Narayanan",
+   "Robert Calderbank"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7119109862",
+  "doi": "10.1186/s13634-025-01286-9",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7119109862",
+  "published_iso": "2026-01-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7119109862",
+  "year_month": "2026-01"
+ },
+ {
+  "title": "Who Gives Feedback Matters: Student Biases Towards Human and AI ‐Generated Formative Feedback",
+  "title_norm": "who gives feedback matters student biases towards human and ai generated formati",
+  "abstract": "ABSTRACT Background Feedback is essential for learning, helping individuals understand and improve their performance. However, providing timely, personalised feedback in higher education is challenging. Generative AI offers a scalable solution, yet little is known about students' biases towards AI‐generated feedback. Objectives This study aims to investigate how the identity of the feedback provider (human vs. AI) affects students' perceptions of feedback quality and credibility. Methods The study involved 472 students across diverse academic programmes and levels in authentic educational environments and employed a within‐subject experimental design with a priming effect. A mixed‐methods approach combined quantitative analysis of feedback evaluations with qualitative insights into students' perceptions to deepen understanding of the observed biases. Results and Conclusions Students perceived AI as a significantly less credible feedback provider and tended to associate lower feedback quality with AI. Disclosing the feedback provider's identity led to decreased evaluations of AI‐generated feedback and an increased preference for human‐crafted feedback. These patterns were consistent across academic levels, genders, and fields of study. These insights highlight the need for targeted interventions, such as improving AI literacy and building human‐in‐the‐loop systems, to mitigate biases and enhance the effectiveness of AI in educational feedback systems.",
+  "year": 2025,
+  "venue": "Journal of Computer Assisted Learning",
+  "authors": [
+   "Tanya Nazaretsky",
+   "Paola Mejia‐Domenzain",
+   "Vinitra Swamy",
+   "Jibril Frej",
+   "Tanja Käser"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4416902917",
+  "doi": "10.1111/jcal.70153",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jcal.70153",
+  "published_iso": "2025-12-02",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4416902917",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Brain and Immune System Part II—An Integrative View upon Spatial Orientation, Learning, and Memory Function",
+  "title_norm": "brain and immune system part ii an integrative view upon spatial orientation lea",
+  "abstract": "The brain and the immune system communicate in many ways and interact directly at neuroimmune interfaces at brain borders, such as hippocampus, choroid plexus, and gateway reflexes. The first part of this review described intercellular communication (synapses, extracellular vesicles, and tunneling nanotubes) during homeostasis and neuroimmunomodulation upon dysfunction. This second part compares spatial orientation, learning, and memory function in both systems. The hippocampus, deep in the medial temporal lobes of the brain, is reported to play a central role in all three functions. Its medial entorhinal cortex contains neuronal spatial cells (place cells, head direction cells, boundary vector cells, and grid cells) that facilitate spatial navigation and allow the construction of cognitive maps. Sensory input (about 100 megabytes per second) via engram neurons and top down and bottom up information processing between the temporal lobes and other lobes of the brain are described to facilitate learning and memory function. Output impulses leave the brain via approximately 1.5 million fibers, which connect to effector organs such as muscles and glands. Spatial orientation in the immune system is described to involve gradients of chemokines, chemokine receptors, and cell adhesion molecules. These facilitate immune cell interactions with other cells and the extracellular matrix, recirculation via lymphatic organs (lymph nodes, thymus, spleen, and bone marrow), and via lymphatic fluid, blood, cerebrospinal fluid, and tissues. Learning in the immune system is summarized to include recognition of exogenous antigens from the outside world as well as endogenous blood-borne antigens, including tumor antigens. This learning process involves cognate interactions through immune synapses and the distinction between self and non-self antigens. Immune education via vaccination helps the process of development of protective immunity. Examples are presented concerning the therapeutic potential of memory T cells, in particular those derived from bone marrow. Like in the brain, memory function in the immune system is described to be facilitated by priming (imprinting), training, clonal cooperation, and an integrated perception of objects. The discussion part highlights evolutionary aspects.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Volker Schirrmacher"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416843325",
+  "doi": "10.3390/ijms262311567",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/23/11567/pdf?version=1764416054",
+  "published_iso": "2025-11-28",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416843325",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Finite-Interval Robust Coefficient Design for Six-Sample Sculling Compensation in UAV Strapdown INS Velocity Updating",
+  "title_norm": "finite interval robust coefficient design for six sample sculling compensation i",
+  "abstract": "Accurate onboard velocity updating is essential for UAV strapdown inertial navigation, especially under GNSS-degraded and high-dynamic conditions. Instead of relying only on local Taylor-series cancellation as λ → 0 or directly transferring coning compensation coefficients, the proposed method redesigns velocity-specific sculling coefficients over the finite dimensionless interval λ = ΩΔT ∈ [0, 1]. A two-stage strategy is developed. Stage I constructs a low-cost proxy error model from the analytical expansion and applies a minimax criterion to generate robust candidate coefficients. Stage II further refines them by minimizing a multi-condition time-domain RMS sculling error. Attitude-transfer coefficients are also tested to assess the transferability of optimized coning coefficients to velocity sculling compensation. Under a stringent single-frequency sculling protocol, the velocity-specific Stage-II coefficients reduce the global RMS and worst-case errors by 12.57% and 14.20%, respectively, compared with the classical six-sample coefficients. Under constant specific-force bias, constant angular-rate bias, and double-frequency sculling, the reductions remain 10.62–12.44% and 12.29–16.17%. Ablation and reproducibility checks show that the main gain comes from Stage-II time-domain RMS refinement and remains stable under grid, reference-integration, and base-index variations.",
+  "year": 2026,
+  "venue": "Actuators",
+  "authors": [
+   "Chen Chen",
+   "Weiquan Huang",
+   "Zixuan Li",
+   "Yiqian Cao",
+   "Yanjie Song",
+   "He Wang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7166717232",
+  "doi": "10.3390/act15070360",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-0825/15/7/360/pdf?version=1782824961",
+  "published_iso": "2026-06-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7166717232",
+  "year_month": "2026-06"
+ },
+ {
+  "title": "Transformer-based human-motion forecasting coupled with safe reinforcement learning for telepresence robot co-navigation",
+  "title_norm": "transformer based human motion forecasting coupled with safe reinforcement learn",
+  "abstract": "Introduction: Telepresence robots (TPRs) must co-navigate with humans in constrained hospital environments, where safety depends on anticipating rather than merely reacting to human motion. Existing approaches rarely integrate short-horizon human-motion forecasting with safety-constrained control, which reduces robustness in dense corridors and ward bays. This study addresses this gap by evaluating an anticipatory, safety-aware co-navigation framework for TPRs. Methods: We developed a modular framework that couples a lightweight transformer-based forecaster that predicts multi-agent trajectories under occlusion with a safe reinforcement learning (RL) controller. The forecaster produces short-term distributions over pedestrian states that are embedded into the RL policy state and cost as risk-aware occupancy features. Safety is enforced via constrained policy optimization augmented by a run-time control barrier function (CBF) shield that filters unsafe actions. We benchmarked the approach against a social-force or dynamic window approach (DWA), an attention-based crowd-RL policy, and model predictive control (MPC) with CBF. Experiments were conducted across two hospital-like benchmarks (a crowded corridor and a four-bed ward), totaling 2,400 episodes. Outcomes included task success, collision count, minimum human-robot clearance, near-miss events ( ≤ 0.3 m), time-to-goal, CBF violations, and ablations removing forecasting and the CBF shield. Results: Relative to the best-performing baseline, the proposed method improved task success by 21.6% and reduced collisions by 47.3%. Median minimum human-robot clearance increased by 0.19 m, and near-miss events decreased by 38.5%. Time-to-goal was maintained within +2.7% of MPC+CBF while incurring zero CBF violations under the shield. Ablation studies showed that removing forecasting degraded success by 14.2%, whereas removing the CBF shield increased constraint breaches from 0% to 6.1% of steps. Discussion: Anticipatory perception combined with Safe-RL yields substantially safer and more reliable telepresence co-navigation in human-dense clinical layouts without sacrificing efficiency. The framework is modular, enabling alternative forecasters and safety shields. Limitations include sensitivity to forecast drift during abrupt changes in crowd flow. Future work will explore on-device adaptation, shared-autonomy overlays to incorporate operator intent, and prospective evaluations in live hospital workflows.",
+  "year": 2026,
+  "venue": "Frontiers in Neurorobotics",
+  "authors": [
+   "Heba G. Mohamed",
+   "Muhammad Nasir Khan",
+   "Fawad Naseer",
+   "Muhammad Tahir",
+   "Mohsin Jamil"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127053875",
+  "doi": "10.3389/fnbot.2025.1697518",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1697518/pdf",
+  "published_iso": "2026-02-02",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W7127053875",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "A State-of-the-Art Review of Structural Health Monitoring Techniques for Wind Turbine Blades",
+  "title_norm": "a state of the art review of structural health monitoring techniques for wind tu",
+  "abstract": "Abstract Wind turbine blades (WTBs) have increased in size and complexity, resulting in higher operational demands and maintenance costs. Damage to these blades can significantly reduce turbine performance, lifespan, and power generation, while increasing safety risks. Effective structural health monitoring (SHM) is therefore essential for early damage detection and failure prevention. This paper presents a comprehensive review of various SHM techniques for WTBs, categorizing each technique into sensing methods (data acquisition) and analysis methods (data processing and interpretation). The review also addresses the causes and types of blade damage, severity ratings along with corresponding maintenance actions, and fatigue-induced damage progression. Advanced approaches, including machine learning, signal processing, hybrid methods, and emerging techniques such as piezo-based active sensing, electromechanical impedance, and Lamb wave tomography, are also explored for their potential to enhance SHM capabilities. Additionally, commercially available SHM systems and inspection platforms, such as unmanned aerial vehicles, are reviewed to highlight practical applicability. The review covers strain-based methods, acoustic emission, vibration analysis, thermography, ultrasonic testing, radiography, machine vision, and electromagnetic techniques, highlighting their advantages, limitations, and future research directions for improving SHM for WTBs.",
+  "year": 2025,
+  "venue": "Journal of Nondestructive Evaluation",
+  "authors": [
+   "Shah Abdul Haseeb",
+   "Marek Krawczuk"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416841375",
+  "doi": "10.1007/s10921-025-01296-5",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10921-025-01296-5.pdf",
+  "published_iso": "2025-12-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W4416841375",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "MoSAIC: Scalable Probabilistic Error Cancellation via Variational Blockwise Noise Aggregation",
+  "title_norm": "mosaic scalable probabilistic error cancellation via variational blockwise noise",
+  "abstract": "Quantum error mitigation is essential for extracting trustworthy results from noisy intermediate-scale quantum (NISQ) processors. Yet, current approaches face a core scalability bottleneck: unbiased methods such as probabilistic error cancellation (PEC) incur exponential sampling overhead, while approximate techniques like zero-noise extrapolation trade accuracy for efficiency. We introduce and experimentally demonstrate MoSAIC (Modular Spatio-temporal Aggregation for Inverted Channels), a scalable quantum error mitigation framework that preserves the unbiasedness of PEC while dramatically reducing sampling costs. MoSAIC partitions a circuit into noise-aligned blocks, learns an effective block noise model using classical variational optimization, and applies quasi-probabilistic inversion once per block instead of after every layer. This blockwise aggregation reduces both sampling overhead and circuit-depth overhead, enabling mitigation far beyond the operating regime of standard PEC. We also experimentally validate MoSAIC on IBM's 156-qubit Heron processors, performing the largest PEC-based mitigation demonstration on hardware to date. As a physically meaningful benchmark, we prepare the critical one-dimensional transverse-field Ising (TFIM) ground state for system sizes up to 50 qubits. We show that MoSAIC can achieve at least 1 to 2 orders of magnitude better accuracy than standard PEC under identical sampling budgets. This enables MoSAIC to recover accurate observables for larger system sizes, even when standard PEC fails due to its prohibitive sampling overhead. We also present CUDA-Q accelerated simulations to validate performance trends under a range of different noise models. These results demonstrate that MoSAIC is not only theoretically scalable but also practically deployable for high-accuracy, large-scale quantum experiments on today's quantum hardware.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Maya Ma",
+   "Rimika Jaiswal",
+   "Murphy Yuezhen Niu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7144391554",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.26063",
+  "published_iso": "2026-03-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W7144391554",
+  "year_month": "2026-03"
+ },
+ {
+  "title": "Cognitive Atrophy Paradox of AI–Human Interaction: From Cognitive Growth and Atrophy to Balance",
+  "title_norm": "cognitive atrophy paradox of ai human interaction from cognitive growth and atro",
+  "abstract": "The rapid integration of artificial intelligence (AI) into professional, educational, and everyday cognitive processes has created a dual dynamic of cognitive growth and cognitive atrophy. This study introduces a unified theoretical and quantitative framework to analyze these opposing tendencies and their equilibrium, conceptualized as the cognitive co-evolution model. The model interprets human–AI interaction as a nonlinear process in which reflective engagement enhances metacognitive skills, while over-delegation to automation reduces analytical autonomy. To quantify this balance, the paper proposes the cognitive sustainability index (CSI) as a composite measure integrating five behavioral parameters representing autonomy, reflection, creativity, delegation, and reliance. Simulation examples and domain-specific illustrations, including the case of software developers, demonstrate how CSI values can reveal distinct cognitive zones ranging from atrophy to synergy. Building upon these findings, the paper develops the framework of applied cognitive management, which links cognitive monitoring with adaptive interventions across individual, educational, professional, and institutional levels. The results highlight the need for organizations and policymakers to monitor cognitive sustainability as a strategic indicator of digital transformation. Maintaining CSI above the sustainability threshold ensures that automation enhances rather than replaces human reasoning, creativity, and ethical responsibility. The study concludes by outlining methodological challenges and future research directions toward a quantitative science of cognitive sustainability and co-evolutionary human–AI ecosystems.",
+  "year": 2025,
+  "venue": "Information",
+  "authors": [
+   "Igor Kabashkin"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4416359097",
+  "doi": "10.3390/info16111009",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2078-2489/16/11/1009/pdf?version=1763554326",
+  "published_iso": "2025-11-19",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4416359097",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Geodetic Investigations of the Europa Clipper Mission",
+  "title_norm": "geodetic investigations of the europa clipper mission",
+  "abstract": "The Europa Clipper mission will investigate the geophysical properties of Europa, one of Jupiter’s Galilean moons, to assess its habitability. Geodetic measurements will play a critical role in determining Europa’s internal structure, including the thickness of the ice shell, the presence and extent of a subsurface ocean, and the distribution of mass in the deeper interior. To build the necessary geodetic data set, the Geodesy Focus Group (GFG) coordinates cross-instrument efforts to measure Europa’s global shape, rotational parameters, gravity field, and degree-2 tidal Love numbers ( $k_{2}$ and $h_{2}$ ). Here we summarize how data from the Gravity/Radio Science (G/RS) investigation, Europa Imaging System (EIS), Radar for Europa Assessment and Sounding (REASON), and Europa Ultraviolet Spectrograph (Europa-UVS) will be used to infer geodetic constraints on the interior structure and to establish a precise cartographic reference system for geophysical and geological interpretation. Together, the resulting geodetic information will contribute to a deeper understanding of Europa’s internal dynamics and the potential habitability of its ocean.",
+  "year": 2026,
+  "venue": "Space Science Reviews",
+  "authors": [
+   "G. Steinbrügge",
+   "R. S. Park",
+   "J. H. Roberts",
+   "M. Bland",
+   "S. Brooks",
+   "J. Castillo-Rogez"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127267023",
+  "doi": "10.1007/s11214-025-01250-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11214-025-01250-x.pdf",
+  "published_iso": "2026-02-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7127267023",
+  "year_month": "2026-02"
+ },
+ {
+  "title": "Efficient Lindblad synthesis for noise model construction",
+  "title_norm": "efficient lindblad synthesis for noise model construction",
+  "abstract": "Effective noise models are essential for analyzing and understanding the dynamics of quantum systems, particularly in applications like quantum error mitigation and correction. However, even when noise processes are well-characterized in isolation, the effective noise channels impacting target quantum operations can differ significantly, as different gates experience noise in distinct ways. Here, we present a noise model construction method that builds an effective model from a Lindbladian description of the physical noise processes acting simultaneously to the desired gate operation. It employs the Magnus expansion and Dyson series, and can be utilized for both low-order symbolic and high-order numerical approximations of the noise channel of a multi-qubit quantum gate. We envision multiple use cases of our noise construction method, such as (i) computing the corresponding noise channel from a learned Lindbladian, and (ii) generating the noise channel starting with physically motivated Lindbladians for a given hardware architecture. In doing so, we close the gap between physical Lindbladians and operational-level noise model parameters. We demonstrate a strong agreement between our symbolic noise construction and full numerical Lindblad simulations for various two-qubit gates, in isolation and in three- and four-qubit scenarios, for a variety of physically motivated noise sources. Our symbolic construction provides a useful breakdown of how noise model parameters depend on the underlying physical noise parameters, which gives qualitative insight into the structure of errors. For instance, our theory provides insight into the interplay of Lindblad noise with the intended gate operations, and can predict how local Lindblad noise can effectively spread into multi-qubit error.",
+  "year": 2025,
+  "venue": "npj Quantum Information",
+  "authors": [
+   "Moein Malekakhlagh",
+   "Alireza Seif",
+   "Daniel Puzzuoli",
+   "Luke C. G. Govia",
+   "E. van den Berg"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416998358",
+  "doi": "10.1038/s41534-025-01139-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41534-025-01139-1.pdf",
+  "published_iso": "2025-12-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416998358",
+  "year_month": "2025-12"
+ },
+ {
+  "title": "Proximity proteomics reveals a co-evolved LRRK2-regulatory network linked to centrosomes",
+  "title_norm": "proximity proteomics reveals a co evolved lrrk2 regulatory network linked to cen",
+  "abstract": "Abstract Leucine-rich repeat kinase 2 (LRRK2) not only plays a vital role in familial forms of Parkinson’s disease (PD) but also represents a risk factor for idiopathic PD. Its multi-domain architecture enables fine-tuned regulation of its biological function by orchestrating intra- and intermolecular interactions. Here, we present BioID proximity proteomes of LRRK2 that reveal new interactors, which we further characterize using a novel evolutionary and structural bioinformatics pipeline. Co-evolutionary analysis of the protein-protein interaction network identifies a structural and functional module enriched in cytoskeletal components associated with the centrosome and microtubules. In addition, structural modelling of binary interactions using AlphaFold-Multimer reveals distinct groups of interactors that engage LRRK2 in a manner dependent on specific conformations and epitopes. Furthermore, we identify distinct changes in the LRRK2 proximity proteome that are induced by the type I kinase inhibitor MLi-2 or by co-expression of the LRRK2 upstream effector RAB29. Depending on its activity state and conformation, these protein-protein interactions link LRRK2 to defined cellular sub-compartments, including centriolar satellites and vesicular sub-compartments. Summary This study defines a comprehensive, LRRK2 interaction network by combining proximity proteomics with evolutionary and structural analyses, revealing how LRRK2 conformation and activity state dictate distinct protein-protein interactions. These findings link LRRK2 to conserved centrosomal, cytoskeletal, and vesicular pathways, providing mechanistic insight into its role in Parkinson’s disease. Key results Centrosome-linked LRRK2 network: BioID combined with co-evolutionary analysis identifies a highly conserved module enriched in centrosomal and microtubule-associated proteins, including CYLD as a top co-evolved interactor. Conformation-specific interactions: AlphaFold-Multimer modelling reveals distinct classes of LRRK2 interactors that bind different domains and conformations (“locked” vs. “unlocked”), corresponding to specific cellular functions. State-dependent rewiring of the interactome: The type I inhibitor MLi-2 selectively redirects LRRK2 to centriolar satellite proteins, whereas RAB29 co-expression shifts LRRK2 interactions toward vesicular and lysosomal pathways.",
+  "year": 2026,
+  "venue": "EMBO Reports",
+  "authors": [
+   "Marita Eckert",
+   "Pasquale Miglionico",
+   "Francesca Izzi",
+   "Natalia De Oliveira Rosa",
+   "Benjamin Riebenbauer",
+   "Marius Ueffing"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403036507",
+  "doi": "10.1038/s44319-026-00806-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1038/s44319-026-00806-4.pdf",
+  "published_iso": "2026-05-23",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "reciprocal co-error loop gain"
+  ],
+  "paper_id": "openalex:W4403036507",
+  "year_month": "2026-05"
+ },
+ {
+  "title": "Multi-Criteria Evaluation of MPPT Algorithms under Time-Varying Partial Shading Using a Physics-Based PV Model",
+  "title_norm": "multi criteria evaluation of mppt algorithms under time varying partial shading ",
+  "abstract": "This work investigates how widely used MPPT algorithms perform under realistic, timevarying partial shading and aims to provide an objective, reproducible basis for multicriteria decision-making.We implement a 60cell module model (three substrings with bypass diodes) driven by a 10s mixed shading profile at 1ms resolution; an internal oracle computes the instantaneous global MPP solely for scoring.Performance is quantified by oracle-normalized energy, a formally defined time-to-sustain 𝑡 95 , GMPP hit/dwell ratio, and a ripple/PRI; distributional behavior (histograms/CDF/boxplots), nonparametric inference (Kruskal-Wallis, Cliff's 𝛿), bootstrap confidence intervals, and a weight-transparent composite score (0.30 energy, 0.25 hit, 0.25 speed, 0.20 ripple) complement the analysis, with sensitivity/ablation on step sizes, swarm settings, attractiveness/Lé vy steps, and weights.Incremental Conductance achieves the highest energy (0.281 Wh), fast convergence (𝑡 95 = 3.0 ms), the best hit ratio (62.8%), and the lowest ripple (41.4 W).PSO yields intermediate energy (0.231 Wh) but long convergence (206.2 ms), FP responds fastest (𝑡 95 = 2.6 ms) yet records the lowest energy (0.094 Wh) and hit ratio (10.8%), and P&O is simple but ripple-prone (100.1 W) with lower energy (0.143 Wh).Despite universal large transient errors during regime changes (~220 W), distributional evidence and robustness checks consistently favor Incremental Conductance.The framework and metric suite offer reusable guidance for algorithm selection under partial shading and clarify when exploration latency or instability erodes net yield.",
+  "year": 2025,
+  "venue": "Journal Européen des Systèmes Automatisés",
+  "authors": [
+   "Minh-Cuong Nguyen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7117247099",
+  "doi": "10.18280/jesa.581113",
+  "arxiv_id": null,
+  "paper_url": "https://www.iieta.org/download/file/fid/190177",
+  "published_iso": "2025-11-30",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "anti-resonant joint update projection"
+  ],
+  "paper_id": "openalex:W7117247099",
+  "year_month": "2025-11"
+ },
+ {
+  "title": "Scalable low-overhead superconducting nonlocal coupler for circuit connectivity enhancement",
+  "title_norm": "scalable low overhead superconducting nonlocal coupler for circuit connectivity ",
+  "abstract": "Quantum error correction codes with non-local connections such as quantum low-density parity-check (qLDPC) incur lower overhead and outperform surface codes on large-scale devices. These codes are not applicable on current superconducting devices with nearest-neighbor connections. To rectify the deficiency in connectivity of superconducting circuit system, we experimentally demonstrate a convenient on-chip coupler of centimeters long and propose an extra coupler layer to map the qubit array to a binary-tree connecting graph. This mapping layout reduces the average qubit entangling distance from O(N) to O(logN), demonstrating an exponentially enhanced connectivity with eliminated crosstalk. The entangling gate with the coupler is performed between two fluxonium qubits, reaching a fidelity of 99.37 % while the system static ZZ rate remains as low as 144 Hz without active cancellation or circuit parameter targeting. With the scalable binary tree structure and high-fidelity non-local entanglement, novel quantum algorithms can be implemented on the superconducting qubit system, positioning it as a strong competitor to other physics systems regarding circuit connectivity.",
+  "year": 2026,
+  "venue": "Physical Review Applied",
+  "authors": [
+   "Haonan Xiong",
+   "J.-H. Wang",
+   "Juan Song",
+   "Jize Yang",
+   "Zenghui Bao",
+   "Yan Li"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416043506",
+  "doi": "10.1103/kfy3-bwgr",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2502.18902",
+  "published_iso": "2026-02-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "shared-error amplification cancellation"
+  ],
+  "paper_id": "openalex:W4416043506",
+  "year_month": "2026-02"
+ }
+]

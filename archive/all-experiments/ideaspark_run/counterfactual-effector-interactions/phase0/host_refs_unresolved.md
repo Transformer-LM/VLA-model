@@ -1,0 +1,18 @@
+# Host-nominated papers that did NOT resolve to a real record
+
+These titles could not be verified via any connector and were NOT admitted to the corpus (a likely hallucination or a title too garbled to match). Review manually if any is genuinely important.
+
+- **DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation** (id_hint: arXiv:2608.13489)
+  - why nominated: Direct bimanual action-conditioned world-model precedent: it encodes each arm's SE(3) commands separately and explicitly tests whether the generated future follows the commanded arm rather than moving the wrong arm. This is the closest architectural antecedent for arm-identity-preserving factorial interventions, although it does not decompose marginal and interaction effects.
+- **Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning** (id_hint: arXiv:2608.24885)
+  - why nominated: WorldEcho evaluates action following beyond expert actions, while WorldSync aligns predicted changes under action interventions with true changes and feeds the improved simulator into policy improvement. It is a direct precedent for intervention-effect diagnostics that alter downstream policy learning, but does not isolate arm-by-arm interaction terms.
+- **FACT: Failure-Aware Causal Training for World-Action Models** (id_hint: arXiv:2608.10232)
+  - why nominated: A causal WAM trained on successful and failed action consequences in bimanual tasks; the learned progress signal is used to improve inference-time action choice. It directly supports the claim that consequence structure can change action generation, while its mechanism is failure-aware rather than factorial per-arm decomposition.
+- **Learning Coordinated Bimanual Manipulation Policies using State Diffusion and Inverse Dynamics Models** (id_hint: arXiv:2503.23271)
+  - why nominated: A key bimanual baseline that separates predicted task-state evolution from embodiment-specific inverse dynamics and converts predicted futures into coordinated dual-arm actions. It is essential for positioning interaction-aware correction against future-state/inverse-dynamics coordination without explicit factorial effects.
+- **DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation** (id_hint: arXiv:2608.20114)
+  - why nominated: A close methodological analogue for structured action-channel factorization: it separates base and arm factors with dedicated interfaces and adversarially separated latents, then improves both future and action prediction. It is not multi-arm, but is relevant prior art against claiming factorized action channels alone as novelty.
+- **Making Foresight Actionable: Repurposing Representation Alignment in World Action Models** (id_hint: arXiv:2606.12217)
+  - why nominated: Uses causal interventions to diagnose which world-model regions improperly drive the action decoder, then introduces an alignment objective that improves action generation. This is an important adjacent precedent for turning intervention diagnostics into targeted policy correction, though its factors are spatial regions rather than effectors.
+- **OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation** (id_hint: arXiv:2605.06481)
+  - why nominated: Decomposes the predicted world into persistent robot/object slots, jointly predicts futures and continuous action chunks, and validates addressability with causal slot interventions. It is adjacent evidence that structured causal components can provide an actionable WAM interface, but its decomposition is object-centric rather than arm-interaction-centric.

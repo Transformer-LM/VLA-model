@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+      "chosen_pattern_id": "generative_process_redesign",
+      "anchor_alternates": [],
+      "companion_pattern": "targeted_self_supervised_objective",
+      "companion_rationale": "generative_process_redesign replaces the conventionally fixed, monolithic proposal-conditioned future with a common-carrier counterfactual transition bundle O whose four branches are re-anchored at the same nominal latent state at every horizon step; targeted_self_supervised_objective operates on O to learn a time-resolved interaction token that vanishes for additive effector transitions and directly conditions a paired action-refinement path.",
+      "selection_rationale": "这是瓶颈中最直接要求可运行 method 的缺口：纠错器必须把效应器交互变成动作生成的输入，同时避免把递归滚动产生的状态路径漂移误当成真实交互。generative_process_redesign 改写 ω-EVA 式整体未来反馈的固定条件粒度，以同一 carrier state 上的四个一步转移构造可比 bundle；targeted_self_supervised_objective 再把真正的非加性转移缺陷压成只进入跨效应器 refinement branch 的 token，因此交互不会被折叠为中心梯度，也不是用 WAM 充当标量 Q 的经典响应面优化。"
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method — anchor generative_process_redesign constructs the runnable common-carrier counterfactual refinement pathway, and companion targeted_self_supervised_objective makes its interaction token identifiable and action-changing",
+  "composition_note": "",
+  "pattern_saturation": {
+    "generative_process_redesign": {
+      "share": 0.21,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "targeted_self_supervised_objective": {
+      "share": 0.09,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+      "reason": "fails removal test — the anchor's common-carrier transition bundle already supplies an effector-resolved, time-indexed interaction quantity and its action-changing path; a separate model-level controllability score would make the paper larger but not make the correction claim runnable"
+    },
+    {
+      "gap": "在 openalex:W4416749037 的 frontier residue 上，双臂方法尚未说明 acting／stabilizing 或 leader／follower 这样的作用分工在任务阶段、接触模式和左右对称交换时是否仍成立；当相同任务在不同阶段改变协同方向时，当前结果不能区分有效的结构分工与模型预设带来的表面收益 — stakes: 固定角色会在对称协作或角色反转任务中造成系统性失败，并使跨任务增益无法转移，研究上也会把架构偏置误当成已识别的交互规律。",
+      "reason": "fails removal test — state-local interaction tokens do not assume fixed roles, so a separate role-reversal audit is useful evaluation but not required to define or execute the anchor mechanism"
+    },
+    {
+      "gap": "在 openalex:W4416716729、semanticscholar:b722f499dc89d662efe815e4ed2a99664daad8fa 与 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 这些 frontier leaves 共同继承的 action-conditioned visual-dynamics 节点上，没有检验“把联合动作作为一个整体条件并以整体未来／任务损失监督”是否足以支撑多效应器协调归因；这里质疑的是这一共享假设本身，而不是预先指定替代机制 — stakes: 若该假设不成立，更多联合轨迹和更大模型仍会保留不可识别性，既浪费训练算力，也会动摇现有 VLA／WAM 在双臂增益可解释为协调学习的结论。",
+      "reason": "fails removal test — the common-carrier construction confronts the specific recurrent branch-drift failure needed by the anchor, while a field-wide sufficiency audit across all joint objectives would require a broader identification claim and separate paper"
+    }
+  ]
+}

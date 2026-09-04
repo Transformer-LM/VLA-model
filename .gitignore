@@ -29,3 +29,11 @@ datasets/
 *.key
 id_ed25519*
 id_rsa*
+
+# The archive keeps sanitized textual logs and JSON result summaries for
+# research provenance, while binary/runtime artifacts remain excluded.
+!archive/
+!archive/**/
+!archive/**/*.log
+!archive/**/results/
+!archive/**/results/**

@@ -1,0 +1,1353 @@
+{
+  "schema_version": "2.0",
+  "protocol_id": "pgr-audit-v2-parallel-real",
+  "created_at": "2026-08-07T10:34:36+08:00",
+  "status": "frozen-candidate-pending-renewed-jury",
+  "paper_writing": false,
+  "renewed_jury_gate": {
+    "status": "pending",
+    "reviewer_requirement": "fresh gpt-5.6-sol xhigh read-only review; same-family verdict is provisional",
+    "review_input": "raw bytes of the fixed v2 protocol, AUTORESEARCH_CONFIG_HYBRID_EXPANDED.json, input manifest, proposal, experiment plan, tracker, research contract, preregistration lock, and their SHA256 values",
+    "required_artifact_fields": [
+      "reviewed_protocol_sha256",
+      "reviewed_bundle_manifest_sha256",
+      "reviewer_identity_and_assurance",
+      "verdict",
+      "authorized_scope",
+      "blocking_conditions",
+      "response_sha256"
+    ],
+    "allowed_before_pass": "local specification repair and remote read-only provenance/environment/device checks only; no remote mutation, scientific GPU/data-outcome launch, treatment training, simulator outcome, or live robot command",
+    "pass_semantics": "only GO or an explicit condition-by-condition CONDITIONAL-GO authorizes the named scope; silence, READY from an older protocol, or a hash mismatch authorizes nothing"
+  },
+  "claim_ceiling": {
+    "engineering_canary": "environment, strict model load, parity, sealed-output, and throughput evidence only",
+    "simulation_C0": "held-out action-conditioned future association on the treatment-blind eligible LIBERO-10 task set",
+    "simulation_C1": "two-cohort task-local controlled algorithmic effect relative to B and one fixed C placebo",
+    "simulation_C2": "two-cohort task-local placebo-relative reliance on one offline predictive projector",
+    "real_robot": "one-platform task-local real-robot evidence only after a separate robot/domain contract passes safety and scientific review",
+    "cross_domain": "simulation and real-robot results are reported separately; if both independently pass they provide convergent cross-domain evidence; call it replication only if the later frozen real contract preserves the simulation estimand, task semantics, intervention, and comparator",
+    "forbidden": [
+      "new world-objective novelty",
+      "natural causal mediation",
+      "physical causality",
+      "SOTA",
+      "cross-architecture generality",
+      "real-robot generality without at least two independent embodiments or platforms"
+    ]
+  },
+  "canonical_hashing": {
+    "file": "sha256(raw_bytes)",
+    "json": "sha256(json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode('utf-8')) using Python 3.11.15; no BOM and no trailing newline",
+    "directory": "reject every symlink and non-regular entry; sort regular files by POSIX relative path Unicode code-point order; for each file append the canonical JSON object with exactly keys bytes,path,sha256 followed by one LF byte; include a final LF after the last record; sha256 the concatenated bytes"
+  },
+  "filesystem_contract": {
+    "ssh_user": "liu_meng",
+    "logical_personal_root": "<PERSONAL_RESEARCH_ROOT>",
+    "canonical_personal_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+    "project_data_artifact_io": "every project, data, model, checkpoint, environment, cache, temporary, log, metric, video, W&B, and result path must be specified under the logical personal root and resolve under the canonical personal root",
+    "new_output_rule": "canonical parent must pass the personal-root check before creation; reject symlink escape; use umask 077; output UUID directories must not preexist",
+    "runtime_read_only_exceptions": [
+      "/proc entries needed for the current launch and GPU occupancy",
+      "/sys entries needed for device identity",
+      "/dev/nvidia* runtime devices",
+      "nvidia-smi and NVML",
+      "system executables and read-only runtime libraries"
+    ],
+    "runtime_exception_limits": "exceptions may not be used to read project data, model data, checkpoints, another user's home, or team/shared storage and may never be written",
+    "forbidden_actions": [
+      "root",
+      "sudo",
+      "su",
+      "source or modify .bashrc",
+      "modify global Conda",
+      "modify system CUDA or drivers",
+      "write outside the personal root",
+      "read or write team/shared project, dataset, model, or checkpoint trees",
+      "kill, attach to, overwrite, or reuse an unrelated process",
+      "touch the dirty CF-DynAlign source as an experiment runtime"
+    ],
+    "dirty_source": {
+      "path": "<PERSONAL_RESEARCH_ROOT>/workspace/cf-dynalign-starvla/source/starVLA",
+      "policy": "read-only provenance audit only; never modify and never use as the H1 runtime",
+      "clean_head": "3422b9f2387b6f682cf02802904a77b23ab13afd"
+    },
+    "isolated_workspace": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla",
+    "runtime_roots": {
+      "home": "<PERSONAL_RESEARCH_ROOT>/runtime-home/h1-pgr-audit",
+      "tmp": "<PERSONAL_RESEARCH_ROOT>/tmp/h1-pgr-audit",
+      "xdg_cache": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit",
+      "xdg_config": "<PERSONAL_RESEARCH_ROOT>/config/h1-pgr-audit",
+      "hf_home": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/huggingface",
+      "torch_home": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/torch",
+      "torch_extensions": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/torch_extensions",
+      "cuda_cache": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/nvidia/ComputeCache",
+      "wandb_mode": "offline",
+      "wandb_dir": "<PERSONAL_RESEARCH_ROOT>/logs/h1-pgr-audit/wandb"
+    }
+  },
+  "host_environment": {
+    "host": "zt-a100-01",
+    "internet_egress": false,
+    "allowed_control_networks_now": [
+      "existing SSH connection from the user's Windows OpenSSH client to <PRIVATE_SERVER>"
+    ],
+    "robot_endpoint_allowlist_now": [],
+    "robot_network_unlock": "only the separately frozen real contract may add exact host,port,transport,authentication,API-version, and command-namespace entries; an empty allowlist forbids robot connectivity",
+    "train_env": "<PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign",
+    "train_python": "3.11.15",
+    "train_packages": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "transformers": "4.57.0",
+      "accelerate": "1.5.2",
+      "peft": "0.19.1",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.5",
+      "pyarrow": "14.0.1",
+      "av": "12.3.0",
+      "omegaconf": "2.3.1",
+      "einops": "0.8.2",
+      "timm": "1.0.28",
+      "websockets": "16.1.1"
+    },
+    "forbidden_new_dependency": true,
+    "implementation_dependency_rule": "use only locked environment packages; PCA, ridge, bootstrap, and statistics use NumPy, SciPy, or PyTorch; scikit-learn is not present and must not be installed",
+    "eval_env": "<PERSONAL_RESEARCH_ROOT>/venvs/libero-eval-py310",
+    "eval_python": "3.10.12",
+    "driver_version": "595.71.05",
+    "gpu_model": "NVIDIA A100-PCIE-40GB",
+    "expected_gpu_uuid_by_physical_index": {
+      "0": "GPU-417b37b2-bb07-cc79-ca59-2e43af96d3ea",
+      "1": "GPU-708fad71-ac97-0c67-85fc-15e9534b2f59",
+      "2": "GPU-c034ca59-aa0c-4629-ce5d-a0b5d92e2747",
+      "3": "GPU-aa863a6c-8482-fd6c-e957-424e559e9df4"
+    },
+    "gpu_policy": {
+      "preferred_physical_indices": [
+        2,
+        3
+      ],
+      "conditional_physical_indices": [
+        0,
+        1
+      ],
+      "conditional_rule": "physical 0 or 1 may be used whenever the fresh snapshot for that launch shows that candidate GPU idle; all four GPUs need not be simultaneously idle",
+      "never_preempt_or_share": true,
+      "recheck_before_every_launch": true
+    }
+  },
+  "rng": {
+    "master_seed": 1701,
+    "screen_seed": 7,
+    "head_seed": 1701,
+    "batch_seed_formula": "10000 + train_seed",
+    "q_candidate_seed_formula": "900000 + 1000 * train_seed + candidate_index",
+    "projector_permutation_seed_formula": "38000 + train_seed",
+    "bootstrap_seeds": {
+      "head_control_joint": 2711,
+      "head_control_main": 2712,
+      "action_derangement_joint": 2721,
+      "action_derangement_main": 2722,
+      "representation_derangement_joint": 2731,
+      "representation_derangement_main": 2732,
+      "fold4_p_formula": "28000 + train_seed",
+      "fold4_q_formula": "28100 + train_seed",
+      "stage1_descriptive": 29001,
+      "stage2_descriptive": 29002
+    },
+    "role_derivation_fallback": "uint64 big-endian first 8 bytes of SHA256 of PGR-Audit-v2|role={role}|train_seed={train_seed}|master=1701",
+    "train_seed_order_20": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "primary_cohort": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "replication_cohort": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "determinism": {
+    "process_seed": "before interpreter start set PYTHONHASHSEED to the logical role seed; at process entry set Python random, NumPy legacy RNG when used, an explicit NumPy PCG64 Generator, torch CPU, and torch.cuda.manual_seed_all to that same logged role seed",
+    "role_seed": "screen and simulator use7, decoder/head uses1701, each adapter/PQ logical run uses its train_seed plus the domain-separated formulas in rng; never reuse an implicit global RNG across roles",
+    "torch": "set torch.use_deterministic_algorithms(True), torch.backends.cudnn.deterministic=True, torch.backends.cudnn.benchmark=False, torch.backends.cuda.matmul.allow_tf32=False, torch.backends.cudnn.allow_tf32=False, and torch.set_float32_matmul_precision('highest')",
+    "environment": "set CUBLAS_WORKSPACE_CONFIG=:4096:8 and TOKENIZERS_PARALLELISM=false before CUDA initialization",
+    "data_loading": "num_workers=0 for every scientific cache, decoder, adapter, projector, and evaluation loader; batch-index manifests rather than loader iteration are authoritative",
+    "failure": "an unsupported nondeterministic operation, unseeded RNG call, seed mismatch, or determinism-setting mismatch fails closed before the affected scientific artifact; tolerated nondeterminism is empty unless separately preregistered and re-juried before any outcome",
+    "audit": "persist resolved environment variables, library determinism flags, all role seeds, RNG states at start/end, batch hashes, hardware UUIDs, and repeatability-canary hashes"
+  },
+  "execution_graph": {
+    "freeze_node": "freeze and hash the v2 protocol, active autoresearch config, full LIBERO-10 input manifest, both fixed seed cohorts, all-ten-task screen rule, lane independence, quarantine rules, and source/environment locks",
+    "jury_node": "obtain renewed jury authorization bound to the frozen hashes; the earlier budget-constrained jury and lock are superseded",
+    "common_implementation_node": "after jury authorization, create isolated personal source, materialize locks, implement common PGR, simulation code, default-off RobotAdapter, launch guard, sealing, and telemetry; pass CPU tests and fresh-agent code review",
+    "parallel_branches": {
+      "S-LIBERO10": {
+        "depends_on": [
+          "common_implementation_node",
+          "non-outcome engineering CUDA/model-load canary"
+        ],
+        "ordered_nodes": [
+          "all-ten-task checkpoint screen and atomic checkpoint/primary-task freeze",
+          "all-task cache and one-time C0",
+          "fixed C and both fixed A/B/C plus folds0-3 P/Q cohorts",
+          "all artifacts and parity frozen then fold4 opened once",
+          "sealed Stage1",
+          "conditional sealed Stage2",
+          "simulation integrity audit and result-to-claim"
+        ]
+      },
+      "R-REAL-contract": {
+        "depends_on": [
+          "freeze_node"
+        ],
+        "has_no_dependency_on": [
+          "simulation checkpoint screen",
+          "simulation C0",
+          "simulation Stage1",
+          "simulation Stage2",
+          "simulation result"
+        ],
+        "ordered_nodes": [
+          "collect endpoint/interface/domain/task/data/safety/scientific contract without commands",
+          "freeze contract path and SHA256 plus exact experiment approval",
+          "separate safety/scientific jury",
+          "reviewed observe-only and bounded safety canaries",
+          "opaque real experiment",
+          "real integrity audit and result-to-claim"
+        ]
+      }
+    },
+    "live_robot_dependency": "requires common RobotAdapter implementation review and every R-REAL contract/safety/jury node; never depends on an S-LIBERO10 result",
+    "join_node": "after one or both lanes reach a terminal audited result, synthesize without pooling away a failed lane; convergent-evidence or replication wording follows claim_ceiling.cross_domain; do not write a paper",
+    "forbidden_edge": "no executor may infer an S-LIBERO10-to-R-REAL admission edge or an R-REAL-to-S-LIBERO10 admission edge"
+  },
+  "data": {
+    "dataset_root": "<PERSONAL_RESEARCH_ROOT>/datasets/libero",
+    "dataset_name": "libero_10_no_noops_1.0.0_lerobot",
+    "future_horizon": 8,
+    "tasks": [
+      {
+        "libero_suite_task_id": 0,
+        "dataset_task_index": 5,
+        "instruction": "put both the alphabet soup and the tomato sauce in the basket"
+      },
+      {
+        "libero_suite_task_id": 1,
+        "dataset_task_index": 7,
+        "instruction": "put both the cream cheese box and the butter in the basket"
+      },
+      {
+        "libero_suite_task_id": 2,
+        "dataset_task_index": 3,
+        "instruction": "turn on the stove and put the moka pot on it"
+      },
+      {
+        "libero_suite_task_id": 3,
+        "dataset_task_index": 8,
+        "instruction": "put the black bowl in the bottom drawer of the cabinet and close it"
+      },
+      {
+        "libero_suite_task_id": 4,
+        "dataset_task_index": 0,
+        "instruction": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+      },
+      {
+        "libero_suite_task_id": 5,
+        "dataset_task_index": 9,
+        "instruction": "pick up the book and place it in the back compartment of the caddy"
+      },
+      {
+        "libero_suite_task_id": 6,
+        "dataset_task_index": 1,
+        "instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+      },
+      {
+        "libero_suite_task_id": 7,
+        "dataset_task_index": 4,
+        "instruction": "put both the alphabet soup and the cream cheese box in the basket"
+      },
+      {
+        "libero_suite_task_id": 8,
+        "dataset_task_index": 6,
+        "instruction": "put both moka pots on the stove"
+      },
+      {
+        "libero_suite_task_id": 9,
+        "dataset_task_index": 2,
+        "instruction": "put the yellow and white mug in the microwave and close it"
+      }
+    ],
+    "split_algorithm": {
+      "sort_key": "full lowercase SHA256 hex of UTF-8 PGR-Audit-v2|task={dataset_task_index}|episode={episode_index}|stream={stream}|seed=1701; tie episode_index ascending",
+      "stream_literals": {
+        "outer": "outer",
+        "head": "head",
+        "post": "post",
+        "head_nuisance_cv": "head_nuisance_cv"
+      },
+      "stream_scope": "outer sorts the full per-task episode set; head and post each re-sort only their parent partition with the exact literal; head_nuisance_cv re-sorts only D_head-train",
+      "allocator": "constraint-first within each task: require n>=29; reserve the fixed minimum counts for every label; distribute only n-29 remaining episodes by floor r*p then descending fractional remainder with declared label-order tie break; assign the SHA-sorted episode list to contiguous label blocks; repeat the same minimum-then-remainder rule inside D_head and D_post",
+      "outer_labels": [
+        "head",
+        "adapter",
+        "post"
+      ],
+      "outer_minimum_counts": [
+        11,
+        3,
+        15
+      ],
+      "outer_remainder_proportions": [
+        0.45,
+        0.3,
+        0.25
+      ],
+      "head_labels": [
+        "train",
+        "val",
+        "strict_test"
+      ],
+      "head_minimum_counts": [
+        5,
+        3,
+        3
+      ],
+      "head_remainder_proportions": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "post_labels": [
+        "fold0",
+        "fold1",
+        "fold2",
+        "fold3",
+        "fold4"
+      ],
+      "post_minimum_counts": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "post_remainder_proportions": [
+        0.3,
+        0.3,
+        0.1,
+        0.1,
+        0.2
+      ],
+      "data_gates": [
+        "every task has at least 29 episodes before allocation",
+        "all ten tasks occur in every outer partition",
+        "all ten tasks occur in every D_head subset and D_post fold",
+        "D_head train has at least five distinct episodes per task; val and strict-test each have at least three",
+        "every one of the five D_head-train nuisance-CV folds has at least one distinct episode from every task",
+        "D_adapter has at least three distinct episodes per task",
+        "D_post folds0 through fold4 each have at least three distinct episodes per task",
+        "D_head strict-test has at least three episodes per task",
+        "D_post fold4 has at least three episodes per task",
+        "no episode may be moved after allocation",
+        "if any minimum fails, stop before cache or projector fit and refreeze a scientifically reviewed split; never repair by moving individual episodes"
+      ],
+      "freeze_before_screen": "persist and hash every episode-to-partition assignment, per-task count table, and allocation-code hash before the checkpoint screen"
+    },
+    "sample_id": [
+      "dataset_task_index",
+      "episode_index",
+      "t"
+    ],
+    "valid_window": "retain t only when t + 8 < episode_length; never pad or cross an episode",
+    "progress": "t / (episode_length - 1)",
+    "cameras": [
+      "observation.images.image",
+      "observation.images.wrist_image"
+    ],
+    "host_processor": "selected checkpoint's clean-HEAD QwenOFT processor in eval mode with no random augmentation; resolved config and source hashes must match INPUT_MANIFEST.json",
+    "total_episodes": 379,
+    "episode_counts_by_dataset_task_index": {
+      "0": 38,
+      "1": 36,
+      "2": 34,
+      "3": 41,
+      "4": 43,
+      "5": 33,
+      "6": 29,
+      "7": 49,
+      "8": 35,
+      "9": 41
+    },
+    "adapter_preflight": "before C construction, persist per-task episode and valid-window counts plus the chosen global merge level, bipartite degree diagnostics, and actual perfect-bijection verdict; task index6 has the binding three-episode D_adapter minimum and any infeasibility stops the simulation lane"
+  },
+  "action_normalization": {
+    "space": "frozen StarVLA host training space",
+    "source": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/dataset_statistics.json",
+    "dimensions_0_to_5": "2 * (x - min) / (max - min) - 1, no clipping",
+    "dimension_6_gripper": "identity, matching the clean Libero4in1DataConfig which does not normalize action.gripper",
+    "min": [
+      -0.9375,
+      -0.9375,
+      -0.9375,
+      -0.2582142949104309,
+      -0.375,
+      -0.3675000071525574,
+      0
+    ],
+    "max": [
+      0.9375,
+      0.9375,
+      0.9375,
+      0.3557142913341522,
+      0.375,
+      0.375,
+      1
+    ],
+    "chunk_shape": [
+      8,
+      7
+    ],
+    "flattened_dimension": 56,
+    "parity_and_support_space": "this exact normalized space"
+  },
+  "host_model": {
+    "backbone": "Qwen3-VL-4B-Instruct",
+    "backbone_frozen": true,
+    "action_head": "deterministic MLPResNet",
+    "action_head_frozen": true,
+    "checkpoint_state_contract": "each screened checkpoint must strict-load exactly730 state keys, every key beginning qwen_vl_interface. or action_model.; reject any missing, unexpected, predictor, lambda_cf, cf_, dynalign, future_head, or world_model key/string; historical config paths are never followed",
+    "action_head_loss": "mean absolute error over batch, 8 tokens, and 7 normalized action dimensions",
+    "action_token_shape": [
+      "batch",
+      8,
+      2560
+    ],
+    "adapter": {
+      "formula": "m = h + U @ V @ LN0(h) applied tokenwise",
+      "rank": 32,
+      "layer_norm": "population variance over 2560 features, eps 1e-5, no affine",
+      "V_shape": [
+        32,
+        2560
+      ],
+      "V_init": "PyTorch kaiming_uniform with train_seed",
+      "U_shape": [
+        2560,
+        32
+      ],
+      "U_init": "zeros"
+    },
+    "identity_direct_cache_hot_switch_max_abs_action_error": 0.000001
+  },
+  "future_target": {
+    "encoder": "DINOv2 ViT-S/14 local source and local weight, strict state-dict load, eval, FP32, x_norm_clstoken",
+    "preprocess": {
+      "input": "RGB uint8",
+      "scale": "divide by 255 to float32",
+      "resize": "shorter edge 256, bicubic, antialias true",
+      "crop": "center 224 by 224",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "per_camera_difference": "DINO_CLS(frame t+8) - DINO_CLS(frame t)",
+    "whitening": {
+      "fit_split": "D_head train only",
+      "mean": "population mean per camera",
+      "covariance": "population covariance per camera in FP64",
+      "eigendecomposition": "symmetric eigh, eigenvalues descending",
+      "eigen_floor": "1e-6 times largest eigenvalue",
+      "failure": "largest eigenvalue <= 0",
+      "transform": "V diag(max(lambda, floor)^-0.5) V^T (d - mean)"
+    },
+    "projection": {
+      "generator": "NumPy PCG64 seed 1701, draw main then wrist, each Gaussian matrix shape 384 by 32",
+      "orthonormalization": "reduced QR; fix each column sign so its maximum-absolute element is positive",
+      "persist_matrices": true
+    },
+    "target": "concatenate the 32-D main and 32-D wrist projected whitened differences",
+    "target_dimension": 64
+  },
+  "nuisance_residualization": {
+    "covariates": "z-scored current main CLS, z-scored current wrist CLS, ten-way dataset-task one-hot ordered 0..9, progress, intercept",
+    "continuous_stats": "D_head train only with population std floor 1e-6",
+    "model": "multi-output ridge with unpenalized intercept",
+    "alphas": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1,
+      10
+    ],
+    "cv": "constraint-first five episode-level task-stratified folds: reserve one SHA-ordered D_head-train episode from every task in each fold, then allocate remaining episodes equally by largest remainder with stream head_nuisance_cv and fold-order tie break; every fold must contain every task",
+    "selection": "minimum task-equal D_head-val nMSE rounded to 12 decimals; tie choose larger alpha",
+    "train_target": "out-of-fold residual on D_head train at selected alpha",
+    "other_target": "fit ridge on all D_head train and subtract prediction on val, strict-test, D_adapter, and D_post",
+    "linear_solver": "FP64 solve of Z^T Z + alpha*D; use Moore-Penrose pseudoinverse with rcond 1e-12 only if direct solve fails; record fallback and fail if nonfinite"
+  },
+  "predictive_decoder": {
+    "ln0": "population feature normalization eps 1e-5 no affine per token",
+    "state_branch": "mean across 8 LN0 tokens, Linear 2560 to 256 with bias, GELU",
+    "action_branch": "flatten exact 8 by 7 normalized action chunk, Linear 56 to 128 with bias, GELU",
+    "fusion": "concatenate to exactly 384 dimensions, Linear 384 to 256 with bias, GELU, Linear 256 to 64 with bias",
+    "dropout": 0,
+    "initialization": "PyTorch 2.6.0 default Linear initialization under seed 1701",
+    "training_loss": "mean squared error over batch and 64 target dimensions",
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "batch_size": 256,
+      "max_epochs": 100,
+      "patience_epochs": 10
+    },
+    "batching": {
+      "counter_base": "epoch and batch indices are zero-based",
+      "batch_composition": "25 samples per task plus one extra sample for six distinct tasks; extra-task IDs at global batch b are [(6*b+j) mod10 for j=0..5], giving exactly256 samples",
+      "task_queues": "at each epoch start, independently permute every task's D_head-train sample IDs with a torch.Generator seed equal to uint64 big-endian first8 SHA256 bytes of exact UTF-8 PGR-Audit-v2|decoder|task={dataset_task_index}|epoch={zero_based_epoch}|cycle={zero_based_cycle}|master=1701; start cycle=0, consume cyclic queues, and on exhaustion reshuffle that task's full list with cycle incremented; never drop or pad",
+      "batches_per_epoch": "ceil(max_task_sample_count/25); every batch is full and there is no tail batch",
+      "manifest": "before any decoder/control optimization, pre-generate and hash every epoch's ordered batch-index array for epochs0..99; these arrays are the final batching source of truth and every neural control uses the identical arrays while it remains active",
+      "early_stop": "validate only after a complete epoch; improvement is task-equal val joint64 nMSE rounded to12 decimals strictly below the prior best; tie keeps earliest epoch; stop after10 consecutive completed non-improving epochs or epoch99, then restore the earliest best epoch"
+    },
+    "selection": "lowest task-equal D_head-val joint64 nMSE rounded to 12 decimals; tie earliest completed epoch"
+  },
+  "controls": {
+    "common_training": "same optimizer, batches, epochs, early stopping, and seed as full unless control is closed form",
+    "state_only": "same full architecture with the 56-D action input identically zero in train and evaluation",
+    "action_only": "same full architecture with the 2560-D pooled representation input identically zero in train and evaluation",
+    "current_dino_action": "z-scored concatenated current main and wrist CLS, Linear 768 to 256 with bias and GELU, then the same action branch and 384 to 256 to 64 fusion",
+    "additive": "same state and action branches; Linear 256 to 64 with bias plus Linear 128 to 64 without bias",
+    "nuisance_ridge": "same nuisance covariates and alpha grid fit directly to residual target",
+    "task_progress_mean": "D_head-train dataset-task by progress-decile mean; empty bin falls back to task mean then global mean",
+    "zero": "64-D zero vector"
+  },
+  "metrics": {
+    "nmse": {
+      "reference_mean": "D_head-train residual target mean for the evaluated coordinate set",
+      "per_task": "sum squared prediction error divided by sum squared deviation from fixed train reference mean",
+      "aggregate": "equal mean over the treatment-blind primary eligible task set; also compute and report the equal mean over all ten tasks",
+      "joint_coordinates": [
+        0,
+        64
+      ],
+      "main_coordinates": [
+        0,
+        32
+      ],
+      "zero_denominator": "gate failure"
+    },
+    "control_improvement": "1 - nMSE(full) / min_control_nMSE",
+    "derangement_degradation": "nMSE(deranged full decoder) / nMSE(intact full decoder) - 1",
+    "bootstrap": {
+      "replicates": 10000,
+      "unit": "episode",
+      "sampling": "within every scored task sample the original number of episodes with replacement and retain every window of each sampled episode; task-equal aggregate",
+      "strongest_control": "reselected inside every replicate",
+      "one_sided_lcb": "0.05 quantile with NumPy method inverted_cdf",
+      "one_sided_ucb": "0.95 quantile with NumPy method inverted_cdf"
+    },
+    "projector_r2": "task-equal mean of 1 - SSE(model)/SSE(zero), where zero is the folds0-1 fit-target mean and each task is scored separately",
+    "permutation_p": "(1 + count(T_perm >= T_observed)) / 1001 using 1000 within-task episode-block target permutations"
+  },
+  "strict_predictive_gate": {
+    "evaluated_once_on": "D_head strict_test after selected checkpoint, primary eligible task set, decoder, nuisance, whitening, projections, splits, preprocessing, controls, and hashes freeze",
+    "holdout_open_semantics": "one sealed logical evaluation specification; an allowed unchanged-hash infrastructure retry may physically reread strict-test only if no metric, aggregate, rank decision, or comparative output from the failed attempt was revealed to any adaptive process; record every physical access in the ledger; any reveal, code/config/hash change, or non-allowlisted retry invalidates C0-S",
+    "coordinate_sets": [
+      "joint64",
+      "main32"
+    ],
+    "full_vs_strongest_control": {
+      "point_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0
+    },
+    "derangement_mapping_contract": {
+      "inputs": "D_head strict-test sample IDs, task IDs, episode IDs, t, progress, and demonstrated normalized56-D action norm only; future target, representation values, decoder predictions, losses, and treatment outcomes are forbidden",
+      "merge_levels": [
+        "task x progress-decile x action-norm-tercile",
+        "task x progress-decile x action groups {0,1} or {2}",
+        "task x progress-decile",
+        "task x progress-quintile",
+        "task x progress-half",
+        "task only"
+      ],
+      "algorithm": "for action and representation maps separately, choose the first whole-dataset merge level at which every task-stratum admits a perfect bijection; within each stratum solve float64 SciPy linear_sum_assignment with invalid infinity edges for same sample, same episode, or overlapping t..t+8 windows",
+      "cost": "squared progress difference divided by the stratum-wide finite-pair population variance floored1e-8 plus squared demonstrated normalized-action RMS-norm difference divided by its variance floored1e-8",
+      "tie_break": "add 1e-12 times uint64 big-endian first8 SHA256 bytes divided by2^64; exact no-space UTF-8 string is PGR-Audit-v2|C0-{map_role}|query_task={query_dataset_task_index}|query_episode={query_episode_index}|query_t={query_t}|donor_task={donor_dataset_task_index}|donor_episode={donor_episode_index}|donor_t={donor_t}|seed=1701, with map_role exactly action or representation and decimal integers without leading zeros",
+      "freeze": "construct and hash both complete maps plus merge level, code hash, feasibility diagnostics, and all IDs before any strict-test decoder metric is evaluated; bootstrap resamples episodes but never rebuilds or reselects a map",
+      "failure": "non-bijection, duplicate donor, fixed point, invalid edge, missing sample, or no globally feasible merge level is C0-S failure"
+    },
+    "action_derangement": {
+      "constraints": "different episode, same task, progress-decile and action-norm-tercile when feasible; use the fixed C merge hierarchy; no fixed point",
+      "point_degradation_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0
+    },
+    "representation_derangement": {
+      "constraints": "different episode, same task, progress-decile and action-norm-tercile when feasible; keep the demonstrated action fixed; use the fixed C merge hierarchy; no fixed point",
+      "point_degradation_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0
+    },
+    "conjunction": "full-vs-strongest-control, action-derangement, and representation-derangement must each pass both its point threshold and bootstrap-LCB threshold in both joint64 and main32; any one failure is C0-S failure",
+    "failure": "simulation C1-S/C2-S NO-RUN before adapter training; C0-S is recorded as failed; R-REAL remains unaffected",
+    "scored_tasks": "primary eligible task set from the treatment-blind baseline screen; all-ten-task values are mandatory secondary coverage"
+  },
+  "fixed_c_placebo": {
+    "split": "D_adapter only",
+    "progress_bin": "min(floor(10 * progress), 9)",
+    "action_norm": "L2 norm of flattened normalized 56-D action divided by sqrt(56)",
+    "action_terciles": "per dataset task on D_adapter using NumPy quantile method inverted_cdf; an exact boundary belongs to the lower bin",
+    "merge_levels": [
+      "progress decile by action terciles {0},{1},{2}",
+      "progress decile by action groups {0,1},{2}",
+      "progress decile with all action terciles",
+      "progress quintile floor(decile/2) with all action terciles",
+      "progress half floor(decile/5) with all action terciles",
+      "task only"
+    ],
+    "merge_selection": "choose the first whole-dataset level at which every stratum has a perfect bijective derangement under different-episode and nonoverlapping-window constraints; do not choose locally or by outcome",
+    "identity_prediction": "frozen predictive decoder q(h,a)",
+    "huber": "elementwise 0.5*e^2 if abs(e)<=1 else abs(e)-0.5, mean over 64 dimensions",
+    "target_scalar": "L2 target norm divided by sqrt(64)",
+    "cost": "squared standardized query-donor target-norm difference plus squared standardized difference between intact identity Huber loss and query-prediction-to-donor-target Huber loss",
+    "cost_scales": "population standard deviations over all eligible D_adapter pairs, each floored at 1e-8",
+    "solver": "SciPy linear_sum_assignment in float64; invalid edges are infinity",
+    "tie_break": "add 1e-12 times uint64 big-endian first8 SHA256 bytes divided by2^64 to every finite cost; exact no-space UTF-8 string is PGR-Audit-v2|C|query_task={query_dataset_task_index}|query_episode={query_episode_index}|query_t={query_t}|donor_task={donor_dataset_task_index}|donor_episode={donor_episode_index}|donor_t={donor_t}|seed=1701, with decimal integers without leading zeros",
+    "pretraining_gates": {
+      "scope": "compute donor/query mean target-norm ratio, matched-C/intact mean identity-Huber ratio, and absolute Huber-saturation-rate difference separately for every one of the ten dataset tasks and also report their task-equal aggregate; every task must pass every gate and any zero denominator fails",
+      "donor_to_query_mean_target_norm_ratio": [
+        0.9,
+        1.1
+      ],
+      "matched_c_to_intact_mean_identity_huber_ratio": [
+        0.9,
+        1.1
+      ],
+      "absolute_huber_saturation_rate_difference_max": 0.05,
+      "saturation": "absolute elementwise error greater than 1",
+      "failure_conditions": [
+        "denominator <= 1e-12",
+        "non-bijection",
+        "duplicate donor",
+        "fixed point",
+        "invalid edge",
+        "no feasible merge level"
+      ]
+    },
+    "resampling": false
+  },
+  "adapter_training": {
+    "arms": {
+      "A": "action gradient plus valid future-target gradient",
+      "B": "action-update-only control: on B's current adapter compute the same valid-target future forward and full backward gradient as A, log its norm/nonfinite/dose diagnostics, then discard it; update B parameters only with B's own action gradient",
+      "C": "action gradient plus fixed C-donor future-target gradient"
+    },
+    "shared": {
+      "identity_initialization": true,
+      "batch_order": true,
+      "steps": 500,
+      "batch_size": 256,
+      "batching": "for global zero-based batch b=0..499 use25 samples per task plus extra-task IDs [(6*b+j+train_seed) mod10 for j=0..5]; per-task cyclic queues are shuffled without replacement with torch.Generator seed equal to uint64 big-endian first8 SHA256 bytes of exact UTF-8 PGR-Audit-v2|adapter-batch|train_seed={train_seed}|task={dataset_task_index}|cycle={zero_based_cycle}|base={10000+train_seed}, reshuffling on exhaustion with cycle incremented; pre-generate and hash all500 full256-index arrays before any arm update; those arrays are final and A/B/C share exactly",
+      "optimizer": "manual plain SGD",
+      "learning_rate": 0.001,
+      "momentum": 0,
+      "weight_decay": 0,
+      "global_clip": 1,
+      "dtype": "FP32 gradients, norms, scales, and updates",
+      "create_graph": false
+    },
+    "future_loss": "mean elementwise Huber delta 1 over batch and 64 dimensions",
+    "gradient_norm": "L2 over the concatenation of every U and V gradient element before clipping",
+    "action_gradient": "compute each arm's own action-loss gradient at that arm's current adapter parameters on the common batch; B always applies its own action-only globally clipped update",
+    "dose": {
+      "rho": "0.30 * norm of B action gradient on the common batch",
+      "scale": "clip(rho / (future_gradient_norm + 1e-12), 1e-3, 1e3), detached",
+      "composition": "on a passing batch, A and C each combine that arm's own action gradient with its own scaled future gradient, then apply global norm clip 1.0; B applies its own action gradient with the same clip",
+      "relative_error": "abs(norm(scaled_future_gradient) - rho) / max(rho,1e-12)",
+      "fallback": "future norm <=1e-12, rho<=1e-12, scale hits either cap, or relative error >0.01",
+      "fallback_update": "if either A or C triggers fallback, both A and C omit the future component for that batch and each applies only its own action gradient after global clip1; B applies its normal own action-only update; log both arms' trigger booleans and reasons so A and C always receive the same number of auxiliary-dose batches",
+      "maximum_fallback_batches": 5,
+      "minimum_pass_fraction": 0.99,
+      "failure": "more than five joint fallback batches or a pass fraction below0.99 invalidates the seed with no replacement"
+    },
+    "nonfinite": "immediate seed invalid and stop that launch",
+    "no_seed_drop_or_replacement": true
+  },
+  "predictive_projector": {
+    "delta": "mean across 8 tokens of m_A - m_B in 2560-D",
+    "fold_roles": {
+      "fold0_fold1": "cross-fit nuisance, PCA/whitening, ridge-SVD fit",
+      "fold2": "alpha and rank selection plus permutation gate",
+      "fold3": "Q calibration only",
+      "fold4": "locked one-time final eligibility"
+    },
+    "nuisance": {
+      "covariates": "z-scored current DINO main and wrist CLS, demonstrated normalized action chunk, ten-way task one-hot, progress, intercept",
+      "ridge_alphas": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1
+      ],
+      "crossfit": "fit fold0 predict fold1 and fit fold1 predict fold0 for delta and target independently",
+      "selection": "lowest average task-equal OOF nMSE rounded to 12 decimals; tie larger alpha",
+      "refit": "union folds0-1 at the selected alpha for folds2-4"
+    },
+    "W": {
+      "fit_values": "fold0-1 OOF delta residuals after nuisance subtraction",
+      "raw_center": "mean raw delta on folds0-1, stored as mu_delta",
+      "covariance": "population covariance in FP64",
+      "dimension": "smallest d explaining at least 95 percent residual variance, capped at 128",
+      "eigen_floor": "1e-6 times largest retained eigenvalue",
+      "matrix": "diag(retained_eigenvalues^-0.5) times retained eigenvectors transpose, shape d by 2560",
+      "rank_tolerance": "numerical rank uses singular values strictly greater than max(shape)*machine_epsilon*largest_singular_value in FP64",
+      "failure": "largest residual eigenvalue <=0, d<=0, insufficient finite samples in any task, or any nonfinite value makes Stage2 ineligible; Stage1 is unaffected"
+    },
+    "B_N": {
+      "values": "W times centered union-refit nuisance-predicted delta on folds0-1",
+      "basis": "left singular vectors in W space explaining at least 95 percent nuisance-prediction energy",
+      "zero_energy": "empty basis when total squared singular value <=1e-12"
+    },
+    "p_fit": {
+      "method": "multivariate ridge coefficient from W-space OOF residual delta to OOF residual target, then truncate coefficient SVD",
+      "alphas": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        1
+      ],
+      "ranks": [
+        4,
+        8,
+        16,
+        32
+      ],
+      "basis": "take coefficient left singular vectors, project into complement of B_N, reduced QR with canonical positive signs",
+      "selection": "lowest task-equal fold2 nMSE rounded to 12 decimals; tie lower rank then larger alpha",
+      "invalid_candidate": "if W dimension or numerical rank after projection into complement(B_N) is below the nominal requested rank, exclude that alpha/rank candidate without silently reducing rank; if no candidate remains, Stage2 is ineligible and Stage1 is unaffected",
+      "fold2_incremental_r2_min": 0.02,
+      "fold2_permutation_p_strictly_less_than": 0.05,
+      "permutation_selection_correction": "T_observed is incremental R2 of the alpha/rank selected by the frozen fold2 rule; for each of 1000 within-task episode-block target permutations rerun the complete valid-candidate alpha/rank selection and use that permutation's selected incremental R2 as T_perm; p=(1+count(T_perm>=T_observed))/1001; a permutation with no valid candidate has T_perm=-infinity"
+    },
+    "q_fit": {
+      "candidate_count": 100,
+      "candidate_indices": "zero-based integers 0 through 99 inclusive",
+      "generation": "Gaussian d by selected-rank matrix from the fixed candidate seed; project into complement of B_N and B_pred; reduced QR with canonical signs",
+      "invalid": "numerical rank less than selected rank",
+      "fold3_energy_ratio": [
+        0.9,
+        1.1
+      ],
+      "fold3_energy_ratio_definition": "task-equal mean over fold3 samples of squared L2 norm of v_pred divided by the corresponding task-equal mean squared L2 norm of v_q",
+      "fold3_action_perturbation_ratios": "for each of all 10 tasks and each of 8 action tokens, RMS over fold3 samples and 7 normalized action dimensions of action(intact A)-action(A with v_pred removed), divided by the analogous RMS for v_q removal; all 80 ratios must be in [0.9,1.1]",
+      "equivalence_zero_denominator": "if the v_q energy denominator or any Q-removal action-change RMS denominator is <=1e-12, that Q candidate is invalid; if no candidate remains, Stage2 is ineligible",
+      "fold3_point_r2_max": 0.005,
+      "nuisance_overlap_max": 0.001,
+      "score": "squared log energy ratio plus mean squared log of the 80 task-token action perturbation ratios",
+      "selection": "lowest score rounded to 12 decimals; tie lower candidate index",
+      "no_candidate": "Stage 2 ineligible; Stage 1 unaffected"
+    },
+    "projectors": {
+      "Pi_pred": "B_pred @ B_pred.T",
+      "Pi_Q": "B_Q @ B_Q.T",
+      "nuisance_overlap": "compute separately for R in {B_pred,B_Q} as Frobenius norm of R.T @ B_N divided by sqrt(rank(R)); persist both values and require both <=0.001"
+    },
+    "deployment": {
+      "x": "W @ (raw mean-token A-B delta - mu_delta)",
+      "pseudoinverse": "NumPy pinv(W,rcond=1e-8), linear only and never restore a mean",
+      "v_pred": "pinv(W) @ Pi_pred @ x",
+      "v_q": "pinv(W) @ Pi_Q @ x",
+      "application": "subtract the same 2560-D vector from each of the 8 A tokens",
+      "online_forbidden": [
+        "DINO",
+        "progress",
+        "demonstrated action",
+        "teacher target"
+      ]
+    },
+    "parity_contract": {
+      "reserved_trace_selection": "before A/B/C training, among candidates whose t..t+15 are sixteen consecutive valid sample windows, select one D_adapter trace per dataset task by minimum lowercase SHA256 of exact no-space UTF-8 PGR-Audit-v2|parity-trace|task={dataset_task_index}|episode={episode_index}|start_t={start_t}|seed=1701; tie lower episode then start_t; selection uses identifiers only and no treatment outcome",
+      "manifest": "persist and hash all ten task, episode, start_t, window sample IDs, source image/action hashes, selected-checkpoint hash, cache schema, and selection-code hash",
+      "cached_A_to_B": "for every seed and reserved window, subtract the full cached per-token m_A-m_B vector from m_A and require the frozen action-head output to match direct cached B normalized actions",
+      "direct_trace": "for every seed and each of ten traces, replay identical cached observations through direct and cached wrappers with the same full A-to-B intervention; compare all 16x8x7 normalized action values",
+      "threshold": "maximum absolute normalized-action error over every seed, task, trace, window, token, and action coordinate must be <1e-6",
+      "failure": "any missing trace, hash mismatch, or threshold failure makes Stage2 ineligible; no trace replacement"
+    },
+    "empirical_support": {
+      "coordinate": "x=W@(raw mean-token A-B delta-mu_delta); distance is L2(x)/sqrt(d), with d the locked W row count",
+      "reference": "within each task, compute the folds0-3 distance 0.99 quantile using NumPy method inverted_cdf and the intact-A normalized policy-action coordinatewise min/max for every token and action dimension",
+      "fold4_distance_gate": "for every task, the equal-episode mean of the fraction of fold4 windows with distance above that task's reference threshold must be <=0.05",
+      "fold4_action_gate": "for each of intact A, A_pred_removed, and A_Q_removed and every task, at least0.99 of all fold4 token-by-action-coordinate values must lie within the corresponding intact-A folds0-3 coordinatewise min/max",
+      "zero_or_nonfinite": "d<=0, an empty task, any nonfinite value, or a zero denominator makes Stage2 ineligible",
+      "report": "persist taskwise thresholds, episode counts, exceedance fractions, action in-range fractions, and hashes; no task pooling may hide a failure"
+    },
+    "fold4_r2": "fit a readout from projected coordinates to residual target on folds0-1 with selected alpha; score task-equal R2 on fold4; Q uses the same alpha without retuning",
+    "fold4_equivalence_recheck": "using locked P and Q, recompute on fold4 the identical task-equal P/Q removed-energy ratio and all 80 task-token RMS normalized-action-change ratios; every denominator must exceed 1e-12 and every ratio must remain in [0.9,1.1]"
+  },
+  "eligibility": {
+    "stage1_measurement_contract": {
+      "split": "D_post folds0-3 only; fold4 remains unopened",
+      "future_metrics": "for each seed and each of joint64/main32, compute task-equal nMSE on all folds0-3 episodes for A, identity, B, and C; episode-block bootstrap is task-stratified with 10000 replicates and the fixed role-derived seed",
+      "future_improvement": "for each reference R in {identity,B,C} and coordinate set, define 1-nMSE(A)/nMSE(R) from task-equal aggregate nMSE; denominator<=1e-12 or nonfinite fails; compute each reference separately in every bootstrap replicate and require point>=0.05 plus one-sided0.05-quantile LCB>0 for all six comparisons",
+      "residual_ratio": "for each task compute sqrt(mean over all folds0-3 samples,tokens,features of (m_A-h)^2) divided by sqrt(mean h^2); require the equal mean over ten tasks <=0.10; zero denominator or nonfinite fails",
+      "interface_parity": "on the frozen ten-task D_adapter parity manifest, for every seed compare identity-adapter direct vs base, direct vs cached, and direct vs hot-switch normalized actions; maximum over all tasks,traces,windows,tokens,coordinates must be <1e-6",
+      "fold4_prohibition": "no Stage1 eligibility statistic may read a fold4 feature, target, policy output, or outcome"
+    },
+    "stage1_every_seed": [
+      "under stage1_measurement_contract, A valid-target joint64 and main32 nMSE each beat identity, B, and C by at least 5 percent with one-sided episode-bootstrap LCB >0",
+      "the task-equal adapter residual RMS / h RMS ratio on D_post folds0-3 is <=0.10",
+      "the frozen ten-task identity/direct-cache/hot-switch interface parity maximum is <1e-6",
+      "C matching, dose, optimizer, and nonfinite gates pass"
+    ],
+    "stage1_failure": "any of the twenty fixed seeds failing Stage1 eligibility forbids simulation Stage1; no seed drop, replacement, timing-based cohort reduction, or result-adaptive extra seed",
+    "stage2_every_seed": [
+      "P fold4 point R2 >= 0.02 and episode-bootstrap LCB > 0",
+      "Q fold4 episode-bootstrap UCB <= 0.005",
+      "on locked fold4, the task-equal P/Q removed-energy ratio and every one of the 80 task-token RMS normalized-action-change ratios use the frozen q_fit definitions, have denominators >1e-12, and lie in [0.9,1.1]",
+      "both persisted nuisance-overlap values for B_pred and B_Q are <=0.001",
+      "the frozen ten-task parity_contract passes for every seed with maximum normalized-action error <1e-6",
+      "every task passes the exact fold4 distance and normalized policy-action gates in empirical_support"
+    ],
+    "stage2_failure": "any of the twenty fixed seeds failing Stage2 eligibility globally forbids simulation Stage2 but does not invalidate a passed simulation Stage1",
+    "fold4_bootstrap": "same 10000-replicate task-stratified episode-block procedure; the allocation gate requires at least three fold4 episodes for every task",
+    "fold4_open_count": 1,
+    "fold4_open_semantics": "one sealed logical fold4 evaluation specification; an allowed unchanged-hash infrastructure retry may physically reread fold4 only if the failed attempt revealed no metric or eligibility value; ledger every physical access; any reveal, code/config/hash change, or non-allowlisted retry makes Stage2 ineligible",
+    "fixed_seed_cohorts": {
+      "primary": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "replication": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  },
+    "checkpoint_screen": {
+    "must_be_first_simulation_lane_scientific_model_data_outcome_gpu_launch_class": true,
+    "checkpoints": [
+      {
+        "step": 1000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_1000_pytorch_model.pt",
+        "bytes": 9785060316,
+        "sha256": "6e2f52758054f0da6d76640dfcfc3dd324b0a14f2cf24d4626262781fd1d4735"
+      },
+      {
+        "step": 5000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_5000_pytorch_model.pt",
+        "bytes": 9785060316,
+        "sha256": "4b0067d806a321065d1521f4940d34920de234902ae4fe83a2a642ab984b277a"
+      },
+      {
+        "step": 10000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_10000_pytorch_model.pt",
+        "bytes": 9785061050,
+        "sha256": "1687afbdcab4f4593c6261d64ac478fd151a0ebd7b641236b60ce1a01fbdee7b"
+      }
+    ],
+    "order": [
+      1000,
+      5000,
+      10000
+    ],
+    "tasks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "initial_state_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "rollouts": 150,
+    "evaluation_contract_ref": "closed_loop_evaluation simulator_reset_seed, settle_contract, policy horizon, chunk execution, action postprocess, success, terminal-record, and retry rules apply identically; only checkpoint, task, and initial-state manifests differ",
+    "qualification": "pooled all-ten-task success rate in [0.2,0.8] and at least four tasks independently have success rate in [0.2,0.8]",
+    "selection": "among qualified checkpoints maximize eligible-task count; tie minimize absolute pooled all-task success rate minus 0.5; tie lower step",
+    "none_qualify": "simulation-lane NO-RUN",
+    "selector_output": "selected checkpoint identity, all ten frozen task rates, treatment-blind primary eligible task IDs, selector-rule hash, and sealed-screen artifact hash",
+    "detail_reveal": "screen details may be revealed only after selected_checkpoint.json and primary_task_set.json are atomically written and hashed",
+    "engineering_canary_may_precede": true,
+    "scientific_order": "must complete before any selected-checkpoint cache, target/head fit, A/B/C training, P/Q fit, treatment rollout, or treatment outcome",
+    "task_eligibility": "on the selected checkpoint, task success rate in [0.2,0.8] on states0..4",
+    "screen_scope": "qualification is the sole checkpoint qualification source of truth; task_eligibility defines only the later frozen primary task set"
+  },
+  "closed_loop_evaluation": {
+    "suite": "libero_10",
+    "simulator_reset_seed": 7,
+    "dummy_settle_actions": 10,
+    "settle_contract": "after env.reset and set_init_state, before the first policy observation, execute exactly ten native LIBERO actions [0,0,0,0,0,0,-1] as float32 lists; these actions do not count toward the 520 policy-action horizon; done, exception, nonfinite observation, or reset divergence during settling is a technical reset failure and never a success",
+    "policy_action_horizon": 520,
+    "chunk_size": 8,
+    "chunk_execution": "open loop execute returned tokens in order, stopping immediately when done becomes true; unused tokens in that chunk are never executed; query again only after all8 tokens execute without done; horizon counts executed policy actions only",
+    "action_postprocess": {
+      "model_space": "8x7 frozen StarVLA normalized action chunk",
+      "dimensions0_to5": "inverse minmax exactly x=(z+1)*(max-min)/2+min using action_normalization min/max, no clipping, float32",
+      "dimension6": "identity model output open_gripper; environment gripper command is float32 [1-2*(open_gripper>0.5)], so >0.5 maps to -1 and otherwise +1; no clipping",
+      "environment_action": "concatenate three world-vector deltas, three rotation deltas, and the binarized gripper into an exact length7 float32 list",
+      "invalid": "wrong shape or any nonfinite commanded/denormalized value terminates the logical record as a scientific policy failure and permanently fails that seed/stage gate; never substitute a dummy action",
+      "logging": "for every policy query and executed token persist hashes of commanded normalized chunk, denormalized six-axis values plus raw open_gripper, final environment action, and simulator-returned observation/reward/done/info; in simulation the submitted environment action is the executed action"
+    },
+    "success": "environment done true only",
+    "horizon": "done false at horizon is a failure",
+    "exception_or_missing": "stage invalid; never convert to a failure success label and never impute",
+    "rollout_pairing": "for every train_seed x task x state cell, every compared condition uses simulator_reset_seed7, the same frozen environment/source hash, a fresh environment/reset, the same initial-state bytes, and a paired-manifest hash; condition order may be scheduled differently but no environment state is reused",
+    "evaluation_initial_state_indices": {
+      "all_train_seed_cohorts": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "stage1": {
+      "conditions": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evaluated_tasks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "initial_state_indices": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "fixed_seeds": 20,
+      "total_rollouts": 6000,
+      "primary_tasks": "treatment-blind primary eligible set selected before any treatment",
+      "primary_contrasts": [
+        "A-B",
+        "A-C"
+      ],
+      "estimand_contract": {
+        "paired_record": "for each train seed, suite task, and initial state, subtract binary success indicators for the named conditions using the same seed-task-state cell",
+        "seed_primary_value": "equal mean of paired differences over the frozen primary tasks and states5..14",
+        "cohort_pooled_primary_pp": "100 times the equal mean of paired differences over the cohort's 10 seeds, frozen primary tasks, and states5..14",
+        "combined_primary_task_pp": "for each frozen primary task and contrast, 100 times the equal mean over all 20 seeds and states5..14",
+        "cohort_task_pp": "for each cohort, frozen primary task, and contrast, 100 times the equal mean over that cohort's 10 seeds and states5..14",
+      "gate_scope": "apply the sign and per-cohort >=10pp gates separately in both cohorts and separately to A-B and A-C; apply the combined20 per-primary-task nonnegative gate separately to both contrasts; apply the cohort-task reversal floor separately by cohort, task, and contrast",
+        "c_vs_b_scope": "in each cohort, 100 times the equal primary-task/state/seed mean of C-B must be >=-5pp"
+      },
+      "per_cohort_sign_gate": "at least 9 of 10 seed-level primary-task-average paired differences positive; ties nonpositive; exact one-sided p=11/1024",
+      "both_cohorts_must_pass": true,
+      "per_cohort_pooled_primary_gain_min_pp": 10,
+      "derived_combined_consistency": "report the combined positive-seed count and exact sign probability descriptively; because both preregistered cohort gates already imply at least18/20, it is not a third gate or independent evidence",
+      "each_primary_task_combined_mean_min_pp": 0,
+      "any_cohort_task_reversal_floor_pp": -5,
+      "c_not_below_b_by_more_than_pp": 5,
+      "all_ten_task_coverage": "mandatory secondary report; never hide an ineligible baseline task"
+    },
+    "stage2": {
+      "conditions": [
+        "A_pred_removed",
+        "A_Q_removed"
+      ],
+      "evaluated_tasks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "initial_state_indices": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "fixed_seeds": 20,
+      "total_rollouts": 4000,
+      "primary_tasks": "same frozen primary eligible set as Stage1",
+      "primary": "success_rate(A_Q_removed) - success_rate(A_pred_removed)",
+      "estimand_contract": {
+        "paired_record": "for each train seed, suite task, and initial state, subtract binary success indicators using the same seed-task-state cell",
+        "seed_primary_value": "equal mean of A_Q_removed-A_pred_removed over the frozen primary tasks and states5..14",
+        "cohort_pooled_primary_pp": "100 times the equal mean over the cohort's 10 seeds, frozen primary tasks, and states5..14",
+        "combined_primary_task_pp": "for each frozen primary task, 100 times the equal mean over all 20 seeds and states5..14",
+        "intact_comparisons": "within each cohort use the same seeds/tasks/states and Stage1 records: require abs(100*mean(A_Q_removed-A))<=5pp; require denominator mean(A-B)>0 and mean(A-A_pred_removed)/mean(A-B)>=0.5; require 100*mean(A_pred_removed-B)>=-10pp",
+        "gate_scope": "the sign, >=10pp, intact-A, erasure, and B-floor gates must pass separately in both cohorts; the each-primary-task nonnegative gate applies to the combined20-seed estimand only"
+      },
+      "per_cohort_sign_gate": "at least9 of10 seed-level primary values positive; ties are nonpositive; exact one-sided p=11/1024",
+      "both_cohorts_must_pass": true,
+      "per_cohort_pooled_primary_gain_min_pp": 10,
+      "each_primary_task_combined_mean_min_pp": 0,
+      "A_Q_within_intact_A_pp": 5,
+      "A_pred_erases_fraction_of_A_minus_B_min": 0.5,
+      "A_pred_not_below_B_by_more_than_pp": 10,
+      "all_ten_task_coverage": "mandatory secondary report"
+    },
+    "stage2_online_inference": {
+      "shared_input": "at each policy query, preprocess one current observation and instruction once and run the frozen Qwen backbone once to obtain the same base h for A and B",
+      "dual_adapter": "apply the frozen A and B adapters to that same h, compute raw per-token m_A-m_B and its mean, then compute x,v_pred,v_q with locked linear artifacts; no prior-query representation cache may survive an observation change",
+      "condition_path": "A_pred_removed and A_Q_removed use the identical code path, dtype, backbone output, adapters, action head, chunk scheduler, and logging; the only branch selects the locked projector vector subtracted from every A token",
+      "forbidden_online_inputs": "DINO, progress, demonstrated action, future frame/target, teacher output, and rollout outcome",
+      "telemetry": "record per-query end-to-end latency, backbone/dual-adapter/projector/action-head component latency, peak memory, and timeout/staleness; synchronous simulation inference time does not consume one of the520 action steps",
+      "real_transfer": "C2-R requires a separately reviewed latency/control-frequency contract; C2-S feasibility never authorizes this dual-adapter path on hardware"
+    },
+    "cohorts": {
+      "primary": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "replication": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "reveal": "comparative training and rollout outcomes remain sealed until both fixed cohorts reach a hashed terminal manifest containing every seed as passed or failed; an incomplete cohort may be opened only to the integrity auditor after a terminal-invalid manifest, never for a claim"
+    },
+    "confidence_intervals": {
+      "replicates": 10000,
+      "sampling": "inside primary and replication cohorts separately, resample the10 train-seed IDs with replacement and retain each sampled seed's complete paired condition-by-task-by-state block; tasks and states are fixed benchmark estimands and are not resampled",
+      "combined": "for a combined descriptive summary, independently resample each cohort as above and concatenate the two sampled 10-seed blocks",
+      "interval": "two-sided [0.025,0.975] percentile using NumPy quantile method inverted_cdf",
+      "rng": "PCG64 rooted at stage1 seed29001 or stage2 seed29002 with domain-separated contrast and cohort labels",
+      "reports": "Stage1 reports A-B and A-C separately for each cohort and combined; Stage2 reports its primary, Q-vs-intact-A, erasure numerator/denominator/ratio, and pred-vs-B separately for each cohort and combined",
+      "erasure_ratio_bootstrap": "never drop, replace, or clip a replicate with mean(A-B)<=0; always report numerator and denominator intervals and the fraction of nonpositive bootstrap denominators; if any replicate denominator is <=0, label the ratio interval undefined/unbounded rather than manufacturing a finite percentile interval; the point decision gate still requires each cohort's full-sample mean(A-B)>0",
+      "gate_role": "mandatory descriptive reporting only; the preregistered sign and effect floors remain the decision gates"
+    }
+  },
+  "outcome_isolation": {
+    "root": "<PERSONAL_RESEARCH_ROOT>/artifacts/h1-pgr-audit/quarantine",
+    "classes": {
+      "screen": "seal raw metrics, stdout, stderr, videos, and trajectories until selected_checkpoint.json and primary_task_set.json are hashed",
+      "stage1": "normal reveal requires all 6000 expected records and a passing batch-manifest hash; if a required record remains missing after its allowed technical retry, freeze a terminal-invalid manifest and permit audit-only reveal, with the Stage1 claim gate permanently failed",
+      "stage2": "normal reveal requires all 4000 expected records and a passing batch-manifest hash; if a required record remains missing after its allowed technical retry, freeze a terminal-invalid manifest and permit audit-only reveal, with the Stage2 claim gate permanently failed",
+      "cohort_training": "seal A/B/C comparative losses, nMSE, R2, P/Q score, and arm comparisons until all twenty fixed seeds and their terminal artifact manifest complete; before reveal expose only the exact stdout_whitelist_before_reveal fields"
+    },
+    "stdout_whitelist_before_reveal": [
+      "launch_uuid",
+      "exit_code",
+      "gpu_seconds",
+      "wall_seconds",
+      "peak_memory_bytes",
+      "nonfinite",
+      "filesystem_guard_pass",
+      "gpu_guard_pass",
+      "process_ownership_pass",
+      "nonfinite_any",
+      "hard_operator_safety_abort",
+      "artifact_sha256"
+    ],
+    "wandb": "offline only and sealed with its phase",
+    "videos": "sealed with their phase",
+    "failed_attempts": "preserve and charge; never delete or overwrite",
+    "cohort_rule": "there is no timing-based seed count decision and no result-adaptive extra seed; primary and replication cohorts are both mandatory"
+    ,
+    "pre_reveal_forbidden_fields": "never disclose arm or condition identity, success, reward, task outcome, loss, nMSE, R2, C0/P/Q/eligibility/Stage gate, threshold comparison, per-arm nonfinite, or any boolean derived from a scientific metric; a real hard-safety event causes immediate stop and required operator disclosure but may never alter task/trial design"
+  },
+  "launch_guard": {
+    "freshness_seconds_max": 5,
+    "snapshot": "one fresh nvidia-smi/NVML snapshot of physical indices 0-3, hardware UUIDs, compute PIDs, process owners when readable, memory used, and utilization",
+    "reservation": {
+      "root": "<PERSONAL_RESEARCH_ROOT>/locks/h1-pgr-audit/gpu",
+      "acquire": "after the first passing snapshot and before process launch, acquire each selected hardware UUID in sorted UUID order with atomic os.open(path,O_CREAT|O_EXCL|O_WRONLY,0o600); write canonical JSON containing host, boot_id, hardware_uuid, launch_uuid, uid, pid, pgid, proc_start_ticks, acquired UTC/monotonic, and lease_deadline; fsync file and parent; if any acquisition fails, archive only this launch's already-acquired reservations and launch nothing",
+      "after_acquire": "take a second <=5-second snapshot while holding every reservation; the GPU must still satisfy idle_definition and UUID mapping or this launch fails closed before CUDA context",
+      "heartbeat": "the owning wrapper refreshes lease_deadline atomically at least every30 seconds while any child or CUDA context exists",
+      "stale_lock": "never clear merely from age; a separate guard may atomically rename a lock into a personal audit archive only after same uid/host/boot_id validation, lease expiry, owning PID absence or proc_start_ticks mismatch, no NVML compute PID for that UUID, and a second confirming snapshot; then restart acquisition from a new snapshot",
+      "release": "after every owned child exits and post-exit NVML shows no launch PID on the UUID, atomically rename the owned reservation into the personal audit archive with release timestamps; never unlink, overwrite, or alter another launch's lock",
+      "concurrency": "actual simultaneous jobs are at most min(4, count of physical UUIDs that are freshly idle and atomically reserved by this run)"
+    },
+    "idle_definition": "no compute process, memory.used <= 500 MiB, and utilization.gpu <= 5 percent",
+    "preferred_physical_order": [
+      2,
+      3,
+      0,
+      1
+    ],
+    "normal_rule": "choose currently idle physical 2 then 3 first; after those, physical 0 and 1 may be used individually when each candidate is idle in that launch's fresh snapshot",
+    "gpu_0_1_rule": "all-four-idle is not required; physical 0 or 1 is allowed only if its own fresh snapshot satisfies the idle definition and it has no unrelated compute PID",
+    "binding": "CUDA_VISIBLE_DEVICES uses verified hardware UUIDs",
+    "post_bind": "after CUDA context creation, take a second snapshot and verify assigned UUIDs and that every new PID belongs to this launch PID/PGID; an occupancy race stops only this launch",
+    "failure": "fail closed, charge any elapsed GPU time, preserve artifacts, and never kill or attach to an external PID",
+    "required_ledger_fields": [
+      "launch_uuid",
+      "logical_run_id",
+      "attempt_no",
+      "retry_of",
+      "host",
+      "uid",
+      "pid",
+      "pgid",
+      "command_hash",
+      "config_hash",
+      "cwd",
+      "start_end_utc",
+      "start_end_monotonic",
+      "snapshot_time",
+      "snapshot_age",
+      "physical_gpu_indices",
+      "physical_gpu_uuids",
+      "occupancy_before",
+      "reservation_path",
+      "reservation_sha256",
+      "reservation_acquired_utc_monotonic",
+      "reservation_released_utc_monotonic",
+      "reservation_lease_deadline",
+      "assignment_order",
+      "occupancy_post_bind",
+      "expected_wall_seconds",
+      "hung_timeout_seconds",
+      "actual_intervals",
+      "actual_gpu_hours",
+      "checkpoint_hash",
+      "seed",
+      "fold",
+      "task_state_manifest_hash",
+      "input_output_hashes",
+      "quarantine_path_hash",
+      "visibility_class",
+      "exit_code",
+      "stop_reason",
+      "filesystem_guard_pass"
+    ]
+  },
+  "failure_and_retry": {
+    "scientific_gate_failure": "stop or narrow that lane exactly as specified; never tune a threshold, drop or replace a seed, or add result-adaptive seeds",
+    "infrastructure_retry": "only an allowlisted class may receive at most one unchanged-code, unchanged-config, unchanged-input, same-seed and same-condition retry per logical job; use a new launch UUID, preserve the old attempt, and keep all outcomes sealed",
+    "infrastructure_retry_classes": {
+      "launcher_transport_before_exec_ack": "SSH or wrapper transport fails before the remote child acknowledges exec and before any scientific input is read",
+      "cuda_context_before_scientific_read": "structured CUDA context/driver initialization error occurs before model/data scientific evaluation; OOM, nonfinite, and user-code exceptions are excluded",
+      "personal_storage_transient_before_update": "structured EIO or ETIMEDOUT on a checksum-verified personal input before any optimizer update, holdout score, or policy action; checksum mismatch and ENOSPC are excluded",
+      "simulation_reset_before_policy_action": "structured simulator creation/reset/camera exception occurs before the first policy action and after no task outcome was emitted",
+      "real_transport_before_task_action": "a frozen real-contract transport/heartbeat class occurs before the first task-relevant action and triggers verified safe hold"
+    },
+    "unlisted_or_changed": "no retry; a code, config, threshold, task, seed, input, hardware-interface, or command change requires a new logical run, new hashes, and the applicable fresh review rather than a technical retry",
+    "simulation_rollout_policy": "only simulation_reset_before_policy_action may retry a rollout; ordinary task failure, policy-caused simulator failure, or any exception after the first policy action is never retried; a second technical failure makes that required record terminal-missing and permanently fails the stage claim gate",
+    "real_robot_policy": "a treatment-blind hardware fault before the first task-relevant action may receive the separately frozen technical retry; policy-caused safety abort is a failure and safety event and is never retried; ordinary task failure is never retried",
+    "nonfinite": "seed invalid with no replacement",
+    "logical_record_terminal": "a required record is terminal only as valid success, valid ordinary/horizon/policy-safety failure, or terminal technical missing after its one allowed retry; complete never means all records succeeded",
+    "incomplete_sealed_batch": "in simulation, any required record terminal-missing after the one allowed technical retry permanently fails that stage's claim gate; an integrity audit may explain the missingness and inspect an audit-only terminal reveal but may not waive, impute, or convert it into a claim",
+    "paper": "out of scope"
+  },
+  "validation_lanes": {
+    "order_policy": "parallel or evidence-driven; there is no simulation-first requirement",
+    "common": {
+      "includes": [
+        "personal isolated source and environment locks",
+        "PGR adapter/decoder/C/P/Q implementations",
+        "path and GPU guards",
+        "sealed outcome state machine",
+        "hash lineage",
+        "fresh-agent code review"
+      ]
+    },
+    "simulation_libero10": {
+      "lane_id": "S-LIBERO10",
+      "status": "fully specified pending renewed jury",
+      "independent_claims": [
+        "C0-S",
+        "C1-S",
+        "C2-S"
+      ],
+      "never_gates_real_lane": true
+    },
+      "real_robot": {
+        "lane_id": "R-REAL",
+        "status": "awaiting endpoint, interface, embodiment, domain, task, data, safety, scientific-design, and exact-experiment-approval contract",
+      "independent_claims": [
+        "C0-R",
+        "C1-R",
+        "C2-R"
+      ],
+      "never_gated_by_simulation_result": true,
+        "required_before_live_action": [
+          "one personal-root contract JSON path and SHA256 binding every item below; supplied prose alone grants no authority",
+          "robot, arm, gripper, camera, and a calibrated force/torque sensor or controller joint-torque/force-estimate source with identity, sample rate, thresholds, and logs; if neither force source exists, live motion is forbidden and missing telemetry cannot count as zero violations",
+          "controller SDK, endpoint host and port, transport, authentication boundary, API version, and exact command-namespace allowlist",
+          "action dimension, units, coordinate frame, control frequency and chunk semantics",
+          "camera calibration and timestamp synchronization",
+          "commanded and actually-executed action logging",
+        "workspace, joint, velocity, acceleration, force, torque and gripper limits",
+          "collision detection, heartbeat/network-loss safe stop and per-episode timeout",
+          "E-stop owner and on-site operator",
+          "a compatible executable frozen VLA checkpoint and all licensed personal training/demonstration data required by PGR; neither may substitute for the other",
+          "evidence that the hidden/action interface is compatible with the common StarVLA PGR contract, otherwise a separately reviewed real-method contract",
+          "exact tasks, reset bins, sessions, trials per condition, block count, stopping rule, terminal missingness rule, statistical unit, estimands, gates, and confidence intervals",
+          "carryover and washout control plus reset-state verification",
+          "frozen task, reset-state and success-detection protocol",
+          "for every motion canary, exact command vector or trajectory, speed/acceleration/force/torque caps, duration and action count, object-absence/reset condition, operator position, abort predicates, expected observations, and a hashed per-level GO artifact",
+          "collision, hard-limit, and operator-E-stop acceptance count exactly zero plus exact noninferiority bounds for every other safety metric",
+          "human approval of the exact hashed experiment, not general robot availability"
+        ],
+      "safety_sequence": [
+        "observe-only connectivity",
+        "zero-action or hold-position check",
+        "bounded low-speed no-object single-step canary",
+        "baseline closed-loop canary",
+        "opaque randomized experiment"
+      ],
+      "note": "This sequence is hardware safety, not a simulation-first scientific requirement; zero/hold is a live command and therefore occurs only after the complete contract and separate jury, while observe-only sends no command; baseline-canary tasks and trial counts freeze before the canary and its outcome cannot change the later task/trial design."
+      },
+      "reporting": "S and R are analyzed separately. Two passed lanes provide independent convergent cross-domain evidence; replication wording additionally requires the frozen real contract to preserve the simulation estimand, task semantics, intervention, and comparator."
+  },
+  "compute_telemetry": {
+    "gpu_hour_cap": null,
+    "admission_gate": "none based on GPU hours",
+    "purpose": "provenance, scheduling, throughput comparison, and hung-job detection only",
+    "actual_gpu_hours": "for each physical GPU UUID, measure the union of this run's launch intervals; sum union lengths across UUIDs and divide by 3600",
+    "dedup_key": [
+      "host",
+      "physical_gpu_uuid",
+      "launch_uuid",
+      "interval_id"
+    ],
+    "child_process_rule": "children included in a charged launch envelope are attributed but not counted twice",
+    "required_atoms": [
+      "engineering canaries",
+      "all-ten-task screens",
+      "cache/head/controls/C",
+      "triplet per seed",
+      "P/Q and fold4 per seed",
+      "parity bundles",
+      "Stage1",
+      "conditional Stage2",
+      "model loads",
+      "failed and retried attempts"
+    ],
+    "timeout_rule": "each logical job has a preregistered expected wall time and a hung timeout no shorter than twice the measured or conservative expected time; timeout stops only its own PGID and is not a scientific budget stop",
+    "fixed_compute_plan": "twenty seeds and all-ten-task coverage are fixed before treatment outcomes; no timing-based 5/10 decision"
+  },
+  "real_robot_safety": {
+    "live_action_authorized_now": false,
+    "blocker": "the exact hashed endpoint, interface, embodiment, domain, task, data, safety, scientific-design, and human experiment-approval contract is absent and has not passed a separate jury",
+    "unlock": "never automatic on receipt; requires contract validation, compatible reviewed RobotAdapter implementation, observe-only evidence, and separate safety/scientific GO bound to hashes",
+    "action_source_rule": "if a safety filter modifies an action, predictive targets use the actually executed action; log both pre-filter and post-filter actions",
+    "safety_metrics": [
+      "collision",
+      "joint/workspace/velocity/acceleration/force/torque limit event",
+      "safety-filter intervention",
+      "action clipping",
+      "latency",
+      "stale command",
+      "heartbeat loss",
+      "operator E-stop"
+    ],
+    "primary_task_metric": "success rate; safety metrics remain separate and cannot be hidden in a composite score",
+    "required_randomization": "use randomized complete blocks only: each frozen task x reset-bin x session block contains every compared condition exactly once; generate opaque condition order with PCG64 seed47001 after exact labels/counts freeze, persist the full sequence hash before canaries, and never reorder from outcomes",
+    "safety_acceptance": "collision count=0, hard joint/workspace/velocity/acceleration/force/torque limit violations=0, and operator E-stop count=0; exact latency, stale-command, safety-filter, clipping, heartbeat, and soft-limit noninferiority bounds must be numeric in the future contract before any motion",
+    "technical_retry": "only a preregistered allowlisted treatment-blind technical class before the first task-relevant action may receive one unchanged-condition retry; every attempt is preserved",
+    "success_and_safety": "success is primary task efficacy; every safety metric is a separate co-reported endpoint and no composite may hide a violation"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+      "chosen_pattern_id": "reframe_as_solvable_object",
+      "anchor_alternates": [],
+      "companion_pattern": "structural_prior_encoding",
+      "companion_rationale": "Reframing the non-identified cross-action transport problem yields the named intermediate object O: a convex identified set of residual-response completions consistent with the observed factual residual. structural_prior_encoding consumes O by forcing factual-residual atoms and current-candidate future-response atoms to share the same mixture coefficient, yielding a runnable coupling-robust controller whose correction path cannot bypass e_t.",
+      "selection_rationale": "This remains the load-bearing method gap because a point correction from one executed transition is neither identified for a different action nor safe under contact-mechanism changes, while every deployed action must be a newly sampled current suffix. The reframe turns that missing identification into a set-valued completion-and-robust-optimization problem and binds two positive obligations: the estimand is an identified set rather than a centered candidate score or pairwise ranker, and e_t appears as a hard feasibility constraint on every admissible current-candidate correction rather than as an optional feature."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method — anchor reframe_as_solvable_object defines and solves the partial-identification ambiguity program, while companion structural_prior_encoding supplies the shared factual/branch coefficient structure that makes e_t load-bearing in the runnable current-suffix controller.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "reframe_as_solvable_object": {
+      "share": 0.19,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "structural_prior_encoding": {
+      "share": 0.25,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf evaluates whether corrected futures improve the true ordering of multiple VLA action candidates under rollback-simulator outcomes, rather than merely reducing visual or latent prediction discrepancy; this remains open after the prediction-space corrections of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and the training-time fidelity constraints of arxiv:2608.13489. — stakes: practitioners can spend WAM compute selecting a worse action despite prettier predictions, and intellectually the link from world-model accuracy to decision quality remains unvalidated.",
+      "reason": "fails removal test — the anchor method is falsifiable with rollback regret and task success inside its own evaluation, so elevating ranking diagnosis to a second gap would add no mechanism and would repeat the prior sibling composition."
+    },
+    {
+      "gap": "The retrieved visual/WAM frontier inherits the assumption that prediction-observation disagreement is the control-relevant error signal, but no frontier leaf tests whether agreement in its chosen pixel, feature, or latent space is necessary for preserving action-outcome ordering. — stakes: a negative result would invalidate a shared justification behind correction, verification, and action-guidance claims, while a positive result is needed for principled deployment metrics instead of proxy chasing.",
+      "reason": "fails removal test — representation-necessity is a separable diagnostic, whereas the anchor remains complete by defining its empirical factual-residual units and testing only whether their identified completion set improves current executable choices."
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+[
+  {
+    "title": "ω-EVA: Envision, Verify, and Act with Latent Interactive World Models",
+    "title_norm": "ω eva envision verify and act with latent interactive world models",
+    "abstract": "Embodied policies typically map current observations directly to actions, leaving candidate-action consequences implicit. World models provide predictive supervision, representations, or external simulation, but rarely let a policy inspect the imagined consequence of its own proposal before acting. We introduce $\\omega$-EVA, a latent interactive world model that realizes an Envision--Verify--Act loop for embodied action generation. Its three-stage framework learns action-conditioned latent dynamics, trains a language-conditioned flow policy on dynamics-aware visual representations, and feeds the policy's proposal back through the world model. A tri-branch refiner jointly reasons over the current state, proposal-conditioned future, and proposed action to produce the final action chunk. Because consequence reasoning remains in latent feature space, $\\omega$-EVA avoids generating future videos at inference. Evaluations across diverse single-arm, bimanual, long-horizon, and perturbed simulation settings show that the complete interaction pipeline consistently improves the proposal policy, while latent diagnostics indicate meaningful action-conditioned future structure. With approximately 1.2B parameters and no additional robot-data pretraining, $\\omega$-EVA demonstrates a compact and competitive performance--scale--data trade-off, making the world model an active action-feedback module rather than a passive predictor.",
+    "tldr": "Evaluations across diverse single-arm, bimanual, long-horizon, and perturbed simulation settings show that the complete interaction pipeline consistently improves the proposal policy, while latent diagnostics indicate meaningful action-conditioned future structure.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Zhenguo Sun",
+      "Yu Sun",
+      "Hande Huang",
+      "Alois Knoll"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "doi": "10.48550/arXiv.2606.09457",
+    "arxiv_id": "2606.09457",
+    "dblp_key": "journals/corr/abs-2606-09457",
+    "paper_url": "https://www.semanticscholar.org/paper/5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "published_iso": "2026-06-08",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Policy-Aware Design of Large-Scale Factorial Experiments",
+    "title_norm": "policy aware design of large scale factorial experiments",
+    "abstract": "Digital firms routinely run many online experiments on shared user populations. When product decisions are compositional, such as combinations of interface elements, flows, messages, or incentives, the number of feasible interventions grows combinatorially, while available traffic remains limited. Overlapping experiments can therefore generate interaction effects that are poorly handled by decentralized A/B testing. We study how to design large-scale factorial experiments when the objective is not to estimate every treatment effect, but to identify a high-performing policy under a fixed experimentation budget. We propose a two-stage design that centralizes overlapping experiments into a single factorial problem and models expected outcomes as a low-rank tensor. In the first stage, the platform samples a subset of intervention combinations, uses tensor completion to infer performance on untested combinations, and eliminates weak factor levels using estimated marginal contributions. In the second stage, it applies sequential halving to the surviving combinations to select a final policy. We establish gap-independent simple-regret bounds and gap-dependent identification guarantees showing that the relevant complexity scales with the degrees of freedom of the low-rank tensor and the separation structure across factor levels, rather than the full factorial size. In an offline evaluation based on a product-bundling problem constructed from 100 million Taobao interactions, the proposed method substantially outperforms one-shot tensor completion and unstructured best-arm benchmarks, especially in low-budget and high-noise settings. These results show how centralized, policy-aware experimentation can make combinatorial product design operationally feasible at platform scale.",
+    "tldr": "This work proposes a two-stage design that centralizes overlapping experiments into a single factorial problem and models expected outcomes as a low-rank tensor, and substantially outperforms one-shot tensor completion and unstructured best-arm benchmarks, especially in low-budget and high-noise settings.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xin Wen",
+      "Xi Chen",
+      "W. Sun",
+      "Yichen Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "paper_id": "semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "doi": "10.48550/arXiv.2604.08804",
+    "arxiv_id": "2604.08804",
+    "dblp_key": "journals/corr/abs-2604-08804",
+    "paper_url": "https://www.semanticscholar.org/paper/84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "published_iso": "2026-04-09",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Causal Optimizer Interaction Calculus: Hidden Geometric Relaxation and Identifiable Interventions",
+    "title_norm": "causal optimizer interaction calculus hidden geometric relaxation and identifiab",
+    "abstract": "Optimizer experiments observe responses to algorithmic configurations without uniquely revealing hidden mechanisms. We develop a causal optimizer interaction calculus that separates pathwise realization, Mobius decomposition, and experimental identification. Under a fixed innovation coupling, every finite-horizon innovation-driven optimizer admits a behaviorally minimal pathwise realization. For any finite effect support and intervention design, an incidence operator gives the complete observational gauge, exact identifiability, sharp quotient stability, held-out predictions, and exact noiseless configuration complexity. Smooth hidden relaxation generates interactions through inverse hidden-state stiffness. Building on this structural law, we prove an observable-readout transfer theorem: arbitrary smooth update or trace readouts inherit an explicit five-term interaction through first and second hidden responses. Unlike the reduced optimal value, a general readout has no universal interaction sign. Its Boolean effects remain exact integrals of continuous interaction curvature and can therefore be identified by factorial interventions. We also derive Gaussian quotient minimax risk, exact confidence sets and tests, misspecification decomposition, certified downstream decisions, and optimal replication. A controlled real-data experiment on a 65-dimensional strongly convex logistic model validates the complete reduced-value chain. Boolean effects and independently integrated curvature agree within 4.21e-11, while nine held-out continuous intensities agree within 8.88e-13. Gaussian campaigns attain the predicted coverage and power, and 4,500 real-minibatch observations reject an order-two interaction model. Neural trace audits provide complementary evidence that the declared response classes remain informative in nonconvex training.",
+    "tldr": "A causal optimizer interaction calculus that separates pathwise realization, Mobius decomposition, and experimental identification is developed and an observable-readout transfer theorem is proved: arbitrary smooth update or trace readouts inherit an explicit five-term interaction through first and second hidden responses.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Zavier Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "99df6a53598c86fa7466995a093133fc8c5145d7",
+    "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+    "doi": "",
+    "arxiv_id": "2607.07206",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/99df6a53598c86fa7466995a093133fc8c5145d7",
+    "published_iso": "2026-07-08",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Structure-Aware Diffusion Policy for Bimanual Cooperative Manipulation",
+    "title_norm": "structure aware diffusion policy for bimanual cooperative manipulation",
+    "abstract": "Bimanual cooperative manipulation involves critical closed-chain contact phases in which task success depends on maintaining inter-arm geometric consistency while mitigating antagonistic interaction. We present a structure-aware diffusion policy that conditions action generation on an explicit cooperative representation, rather than inferring coordination implicitly from raw multimodal inputs. The representation combines (i) Cooperative Dual Task-Space (CDTS) descriptors computed from forward kinematics, which decompose bimanual geometry into absolute motion and relative configuration, and (ii) a gravity-compensated force-difference cue computed from left–right end-effector forces to capture interaction inconsistency. To integrate perception with these structured priors, we design a hierarchical fusion module in which bidirectional vision–force cross-attention first aligns cross-modal evidence, followed by CDTS-guided cross-attention that uses structural tokens as queries to extract coordination-relevant features. Real-robot experiments on dual-arm cooperative carrying across objects of varying sizes and appearances demonstrate improved closed-chain stability and more robust performance across the evaluated object variations, increasing the overall success rate from 58% to 89% compared with a vision-dominant diffusion baseline.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "IEEE Robotics and Automation Letters",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xiao Li",
+      "Jie Zhang",
+      "Lequn Fu",
+      "Le Gu",
+      "Youjun Xiong",
+      "Shiqi Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "paper_id": "semanticscholar:20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "doi": "10.1109/LRA.2026.3701562",
+    "arxiv_id": "",
+    "dblp_key": "journals/ral/LiZFGXL26",
+    "paper_url": "https://www.semanticscholar.org/paper/20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "published_iso": "2026-07-01",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ManiGaussian++: General Robotic Bimanual Manipulation with Hierarchical Gaussian World Model",
+    "title_norm": "manigaussian general robotic bimanual manipulation with hierarchical gaussian wo",
+    "abstract": "Multi-task robotic bimanual manipulation is becoming increasingly popular as it enables sophisticated tasks that require diverse dual-arm collaboration patterns. Compared to unimanual manipulation, bimanual tasks pose challenges to understanding the multi-body spatiotemporal dynamics. An existing method ManiGaussian [30] pioneers encoding the spatiotemporal dynamics into the visual representation via Gaussian world model for single-arm settings, which ignores the interaction of multiple embodiments for dual-arm systems with significant performance drop. In this paper, we propose ManiGaussian++, an extension of ManiGaussian framework that improves multi-task bimanual manipulation by digesting multi-body scene dynamics through a hierarchical Gaussian world model. To be specific, we first generate task-oriented Gaussian Splatting from intermediate visual features, which aims to differentiate acting and stabilizing arms for multi-body spatiotemporal dynamics modeling. We then build a hierarchical Gaussian world model with the leader-follower architecture, where the multi-body spatiotemporal dynamics is mined for intermediate visual representation via future scene prediction. The leader predicts Gaussian Splatting deformation caused by motions of the stabilizing arm, through which the follower generates the physical consequences resulted from the movement of the acting arm. As a result, our method significantly outperforms the current state-of-the-art bimanual manipulation techniques by an improvement of 20.2% in 10 simulated tasks, and achieves 60% success rate on average in 9 challenging real-world tasks. Our code is available at https://github.com/April-Yz/ManiGaussian_Bimanual.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Tengbo Yu",
+      "Guanxing Lu",
+      "Zaijia Yang",
+      "Haoyuan Deng",
+      "Season S. Chen",
+      "Jiwen Lu"
+    ],
+    "citations": 5,
+    "source": "openalex",
+    "source_id": "W4416749037",
+    "doi": "10.1109/iros60139.2025.11246564",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4416749037",
+    "published_iso": "2025-10-19",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4416749037",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Overcoming Statistical Bias in Action-Controllable World Models",
+    "title_norm": "overcoming statistical bias in action controllable world models",
+    "abstract": "Action-conditioned world models aim to predict how visual environments evolve under an agent's actions. Yet future frames are often highly predictable from visual inertia and recurring motion patterns alone. This creates a shortcut: models can fit the data by exploiting statistical biases without making their visible dynamics meaningfully depend on the action. As a result, different actions may produce similar futures, while motion may persist even under zero action. The key question is how to reduce reliance on statistical shortcuts from dominating action-conditioned prediction. We argue that action control requires more than injecting action features; it requires enforcing consistency under counterfactual changes to actions and observations. Based on this insight, we introduce CoCo, a Counterfactual Consistency framework to enhance action controllability through two complementary constraints. Multi-step counterfactual consistency constrains reference, inverse-action, and zero-action rollouts, while action-spatial counterfactual consistency enforces consistent predictions under mirrored scenes and transformed actions. Together, they reduce reliance on statistical shortcuts from substituting for action-dependent dynamics. We further introduce Action Response Consistency (ARC) and Drift Energy (DE) to assess action controllability, together with Mini-SSMB for same-state, multi-action counterfactual evaluation. On Mini-SSMB, our full model achieved ARC_inv of 0.412 and ARC_ref of 0.483, while reducing DE by 17.07% relative to the baseline. On VP2 visual planning, it achieves the highest average success rate among SOTA models, at 73.1%. Experiments on BAIR and RoboNet further show that these gains preserve video prediction quality and transfer across model settings.",
+    "tldr": "Co is introduced, a Counterfactual Consistency framework to enhance action controllability through two complementary constraints: Multi-step counterfactual consistency constrains reference, inverse-action, and zero-action rollouts, while action-spatial counterfactual consistency enforces consistent predictions under mirrored scenes and transformed actions.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Yuhong Shi",
+      "Zhenhao Chu",
+      "Jie Wei",
+      "Jun Hao",
+      "Jianyi Liu",
+      "Jingwen Fu"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "308a282554add023325325b592a4e89c9df70c35",
+    "paper_id": "arxiv:2608.04653",
+    "doi": "",
+    "arxiv_id": "2608.04653",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/308a282554add023325325b592a4e89c9df70c35",
+    "published_iso": "2026-08-05",
+    "retrieved_via": "host_web",
+    "host_why": "Introduces counterfactual consistency and same-state multi-action evaluation to detect action-insensitive world models. Its inverse-, zero-, and transformed-action contrasts are load-bearing for a rollback E0 that estimates intervention responses, even though the paper does not factor interventions by effector.",
+    "relevance": "core"
+  }
+]

@@ -1,0 +1,905 @@
+[
+ {
+  "title": "HandDiff: 3D Hand Pose Estimation with Diffusion on Image-Point Cloud",
+  "title_norm": "handdiff 3d hand pose estimation with diffusion on image point cloud",
+  "abstract": "Extracting keypoint locations from input hand frames, known as 3D hand pose estimation, is a critical task in various human-computer interaction applications. Essentially, the 3D hand pose estimation can be regarded as a 3D point subset generative problem conditioned on input frames. Thanks to the recent significant progress on diffusion-based generative models, hand pose estimation can also benefit from the diffusion model to estimate keypoint locations with high quality. However, directly deploying the existing diffusion models to solve hand pose estimation is non-trivial, since they cannot achieve the complex permutation mapping and precise localization. Based on this motivation, this paper proposes HandDiff, a diffusion-based hand pose estimation model that iteratively denoises accurate hand pose conditioned on hand-shaped image-point clouds. In order to recover keypoint permutation and accurate location, we further introduce Joint-wise condition and local detail condition. Experimental results demonstrate that the proposed HandDiff significantly outperforms the existing approaches on four challenging hand pose benchmark datasets. Codes and pre-trained models are publicly available at https://github.com/cwc1260/HandDiff.",
+  "tldr": "The proposed HandDiff is a diffusion-based hand pose estimation model that iteratively denoises accurate hand pose conditioned on hand-shaped image-point clouds and introduces Joint-wise condition and local detail condition in order to recover keypoint permutation and accurate location.",
+  "year": 2024,
+  "venue": "Computer Vision and Pattern Recognition",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Wencan Cheng",
+   "Hao Tang",
+   "L. V. Gool",
+   "Jong Hwan Ko"
+  ],
+  "citations": 33,
+  "source": "semanticscholar",
+  "source_id": "e2021ca292b14ff91eca52d4c4bab227233bf949",
+  "paper_id": "dblp:journals/corr/abs-2404-03159",
+  "doi": "10.1109/CVPR52733.2024.00221",
+  "arxiv_id": "2404.03159",
+  "dblp_key": "journals/corr/abs-2404-03159",
+  "paper_url": "http://arxiv.org/pdf/2404.03159",
+  "published_iso": "2024-04-04",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Camera Pose Estimation in Multi-Object Scenes Using Ray Diffusion and Point Cloud Alignment",
+  "title_norm": "camera pose estimation in multi object scenes using ray diffusion and point clou",
+  "abstract": "Accurate camera pose estimation from image sets is a fundamental problem in various applications, including 3D reconstruction, view synthesis, and robotic vision. Recently, Ray Diffusion has demonstrated its effectiveness in estimating relative camera poses for sparsely sampled, single-object-centric image sets. However, its performance decreases if a scene contains multiple objects. In this study, we propose a novel method that extends the Ray Diffusion framework by integrating monocular depth estimation and Iterative Closest Point (ICP) alignment, enabling robust pose estimation for densely sampled, multi-object image sets. The proposed approach first detects object bounding boxes and extracts object masks. According to the number of objects in the scene, the image sets are divided into several sub-scenes. For a single-object sub-scene, we directly apply Ray Diffusion. For a multi-object sub-scene, we reconstruct 3D point clouds of the objects by employing a monocular depth network and perform ICP alignment between two consecutive frames to recover relative camera poses. To solve the similarity transformation up to scale between the sub-scenes, the projection error of the 3D points in the multi-object sub-scene to the neighboring single-object sub-scenes is minimized. Experimental results show that the proposed method consistently outperforms Ray Diffusion in various multi-object scenarios.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Image and Vision Computing New Zealand",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Y. Jeong",
+   "Soon-Yong Park"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c27e6a65c63fd2ab7a67e20130f9b1aafb4693f7",
+  "paper_id": "doi:10.1109/IVCNZ67716.2025.11281815",
+  "doi": "10.1109/IVCNZ67716.2025.11281815",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c27e6a65c63fd2ab7a67e20130f9b1aafb4693f7",
+  "published_iso": "2025-11-19",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "mmDiffusion: mmWave Diffusion for Sequential 3D Human Dense Point Cloud Generation",
+  "title_norm": "mmdiffusion mmwave diffusion for sequential 3d human dense point cloud generatio",
+  "abstract": "Millimeter-wave (mmWave) point-cloud radar shows great promise in enabling responsive human-machine interfaces (e.g., through pose and gesture tracking and for emerging augmented reality approaches). However, generating dense and temporally consistent 3D human point clouds from sequential mmWave signals is challenging due to point-cloud sparsity, jitter, and noise. Existing approaches have made progress in single-frame densification, but are inaccurate over multiple frames. This work redefines the problem as a 3D point cloud denoising task, leveraging reverse diffusion processes to transform sparse mmWave data into detailed and accurate whole-body representations. Our proposed method, mmDiffusion, effectively exploits diffusion models and temporal context within mmWave sequences to learn the denoising process, resulting in denser and temporally coherent human point clouds. For the first time, we also introduce an evaluation metric tailored to measure temporal consistency for sequential 3D human point clouds. Experimental results demonstrate that mmDiffusion significantly outperforms existing methods.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Conference on 3D Vision",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Qian Xie",
+   "Xinyu Hou",
+   "Qianyi Deng",
+   "Amir Patel",
+   "Niki Trigoni",
+   "Andrew Markham"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "4a5cd65ddca85c587c2efb66dc3afc5c82df490f",
+  "paper_id": "dblp:conf/3dim/XieHDPTM25",
+  "doi": "10.1109/3DV66043.2025.00077",
+  "arxiv_id": "",
+  "dblp_key": "conf/3dim/XieHDPTM25",
+  "paper_url": "https://www.semanticscholar.org/paper/4a5cd65ddca85c587c2efb66dc3afc5c82df490f",
+  "published_iso": "2025-03-25",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Integrated Real-Time Automated fiber placement Inspection System with High-Speed Point Cloud Alignment and Fusion",
+  "title_norm": "integrated real time automated fiber placement inspection system with high speed",
+  "abstract": "Automated fiber placement (AFP) demands realtime dimensional verification and defect detection. We present an integrated inspection system that fuses $\\mathbf{1 0 0 ~ H z}$ line-laser profiles with CNC pose data via a linear resampling algorithm using a center-symmetric sparse matrix, ensuring uniform-density point clouds despite sampling-rate mismatches. Fusion is accelerated through sparse tensor multiplication, reducing CPU time from 39.8 ms to 6.8 ms per batch. Experimental validation demonstrates point cloud stitching accuracy within 0.9 mm across large-scale component scanning.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 International Conference on Mechatronic Engineering and Artificial Intelligence (MEAI)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Yipeng Tang",
+   "Haoge Jiang",
+   "Baoping Cheng",
+   "Ting Huang",
+   "Fengyi Zhang",
+   "Qiancheng Ye"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a583f6dcdc85c8039d487e6b60c68aac896bba90",
+  "paper_id": "doi:10.1109/MEAI68126.2025.11406364",
+  "doi": "10.1109/MEAI68126.2025.11406364",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a583f6dcdc85c8039d487e6b60c68aac896bba90",
+  "published_iso": "2025-12-05",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Diffusion-Driven Point Cloud Adaption for Depth-Only 6D Pose Estimation in Cluttered Robotics Bin-Picking",
+  "title_norm": "diffusion driven point cloud adaption for depth only 6d pose estimation in clutt",
+  "abstract": "D pose estimation in densely-packed, industrial environments remains a challenging perception problem due to severe occlusions, sensor noise, and the fragmentary nature of reconstructed 3D observations. To this end, we present a generative module for holistic, depth-only 6D pose estimation in cluttered bin-picking that integrates a conditioned Denoising Diffusion Probabilistic Model (DDPM) as a learned data-centric inference adaptor for point cloud segments. Building on a holistic staged-heatmap fusion backbone that produces focused, memoryefficient point cloud fragments around candidate objects, we show that sharpening and completing these fragments with a diffusion-based point cloud autoencoder substantially improves downstream per-point voting pose estimation. Our method integrates a velocity-targeted DDPM, implemented via a Point Transformer V3 (PTv3) backbone, to reconstruct sharper and more complete object-level geometry from imperfect scene fragments. The denoiser is trained to explicitly align geometric completion with the 6D pose objective. At inference we apply a lightweight sampling schedule to produce a single sharpened segment per object candidate, preserving time-efficiency for robotics bin-picking. With pilot experiments on the IPD dataset, we demonstrate that diffusion-based completion reduces pose error and increases robustness to occlusion, sensor noise, and severe fragmentation, while retaining the holistic advantages of scene-level reasoning. We argue that diffusion models are a promising direction for scene denoising and completion in 6D pose estimation and provide a practical integration strategy for robotic perception systems.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "2026 6th International Conference on Electrical, Computer and Energy Technologies (ICECET)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Samed Dogan",
+   "Nico Leuze",
+   "Nicolas Rodriguez-Pena",
+   "Nikolas Ivakko",
+   "Alfred Schöttl"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+  "paper_id": "doi:10.1109/ICECET65726.2026.11632335",
+  "doi": "10.1109/ICECET65726.2026.11632335",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+  "published_iso": "2026-07-01",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Multiway Point Cloud Mosaicking with Diffusion and Global Optimization",
+  "title_norm": "multiway point cloud mosaicking with diffusion and global optimization",
+  "abstract": "We introduce a novel framework for multiway point cloud mosaicking (named Wednesday), designed to co-align sets of partially overlapping point clouds - typically obtained from 3D scanners or moving RGB-D cameras - into a unified coordinate system. At the core of our approach is ODIN, a learned pairwise registration algorithm that iteratively identifies overlaps and refines attention scores, employing a diffusion-based process for denoising pairwise correlation matrices to enhance matching accuracy. Further steps include constructing a pose graph from all point clouds, performing rotation averaging, a novel robust algorithm for re-estimating translations optimally in terms of consensus maximization and translation optimization. Finally, the point cloud rotations and positions are optimized jointly by a diffusion-based approach. Tested on four diverse, large-scale datasets, our method achieves state-of-the-art pairwise and multiway registration results by a large margin on all benchmarks. Our code and models are available at https://github.com/jinsz/Multiway-Point-Cloud-Mosaicking-with-Diffusion-and-Global-Optimization.",
+  "tldr": "This work introduces a novel framework for multiway point cloud mosaicking, designed to co-align sets of partially overlapping point clouds into a unified coordinate system using ODIN, a learned pairwise registration algorithm that iteratively identifies overlaps and refines attention scores, employing a diffusion-based process for denoising pairwise correlation matrices.",
+  "year": 2024,
+  "venue": "Computer Vision and Pattern Recognition",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Shengze Jin",
+   "Iro Armeni",
+   "M. Pollefeys",
+   "Dániel Baráth"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "15f9d096790b0eeacb8cd6227e85394613136473",
+  "paper_id": "dblp:conf/cvpr/JinAPB24",
+  "doi": "10.1109/CVPR52733.2024.01969",
+  "arxiv_id": "2404.00429",
+  "dblp_key": "conf/cvpr/JinAPB24",
+  "paper_url": "https://arxiv.org/pdf/2404.00429",
+  "published_iso": "2024-03-30",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "EADReg: Probabilistic Correspondence Generation with Efficient Autoregressive Diffusion Model for Outdoor Point Cloud Registration",
+  "title_norm": "eadreg probabilistic correspondence generation with efficient autoregressive dif",
+  "abstract": "Diffusion models have shown the great potential in the point cloud registration (PCR) task, especially for enhancing the robustness to challenging cases. However, existing diffusion-based PCR methods primarily focus on instance-level scenarios and struggle with outdoor LiDAR points, where the sparsity, irregularity, and huge point scale inherent in LiDAR points pose challenges to establishing dense global point-to-point correspondences. To address this issue, we propose a novel framework named EADReg for efficient and robust registration of LiDAR point clouds based on autoregressive diffusion models. EADReg follows a coarse-to-fine registration paradigm. In the coarse stage, we employ a Bi-directional Gaussian Mixture Model (BGMM) to reject outlier points and obtain purified point cloud pairs. BGMM establishes correspondences between the Gaussian Mixture Models (GMMs) from the source and target frames, enabling reliable coarse registration based on filtered features and geometric information. In the fine stage, we treat diffusion-based PCR as an autoregressive process to generate robust point correspondences, which are then iteratively refined on upper layers. Despite common criticisms of diffusion-based methods regarding inference speed, EADReg achieves runtime comparable to convolutional-based methods. Extensive experiments on the KITTI and NuScenes benchmark datasets highlight the state-of-the-art performance of our proposed method. Codes will be released upon publication.",
+  "tldr": "A novel framework named EADReg is proposed for efficient and robust registration of LiDAR point clouds based on autoregressive diffusion models that achieves runtime comparable to convolutional-based methods.",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Linrui Gong",
+   "Jiuming Liu",
+   "Junyi Ma",
+   "Lihao Liu",
+   "Yaonan Wang",
+   "Hesheng Wang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "8a618109b3b8e4c7fa03781853288ad99bdcf896",
+  "paper_id": "dblp:journals/corr/abs-2411-15271",
+  "doi": "10.48550/arXiv.2411.15271",
+  "arxiv_id": "2411.15271",
+  "dblp_key": "journals/corr/abs-2411-15271",
+  "paper_url": "https://www.semanticscholar.org/paper/8a618109b3b8e4c7fa03781853288ad99bdcf896",
+  "published_iso": "2024-11-22",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "PocoLoco: A Point Cloud Diffusion Model of Human Shape in Loose Clothing",
+  "title_norm": "pocoloco a point cloud diffusion model of human shape in loose clothing",
+  "abstract": "Modeling a human avatar that can plausibly deform to articulations is an active area of research. We present PocoLoco - the first template-free, point-based, pose-conditioned generative model for 3D humans in loose clothing. We motivate our work by noting that most methods require a parametric model of the human body to ground pose-dependent deformations. Consequently, they are restricted to modeling clothing that is topologically similar to the naked body and do not extend well to loose clothing. The few methods that attempt to model loose clothing typically require either canonicalization or a UV-parameterization and need to address the challenging problem of explicitly estimating correspondences for the deforming clothes. In this work, we formulate avatar clothing deformation as a conditional point-cloud generation task within the denoising diffusion framework. Crucially, our framework operates directly on unordered point clouds, eliminating the need for a parametric model or a clothing template. This also enables a variety of practical applications, such as point-cloud completion and pose-based editing - important features for virtual human animation. As current datasets for human avatars in loose clothing are far too small for training diffusion models, we release a dataset of two subjects performing various poses in loose clothing with a total of 75K point clouds. By contributing towards tackling the challenging task of effectively modeling loose clothing and expanding the available data for training these models, we aim to set the stage for further innovation in digital humans. The source code is available at https://github.com/sidsunny/pocoloco.",
+  "tldr": "PocoLoco is presented - the first template-free, point-based, pose-conditioned generative model for 3D humans in loose clothing, which operates directly on unordered point clouds, eliminating the need for a parametric model or a clothing template.",
+  "year": 2024,
+  "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Siddharth Seth",
+   "Rishabh Dabral",
+   "D. Luvizon",
+   "Marc Habermann",
+   "Ming-Hsuan Yang",
+   "C. Theobalt"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "6cdac52fbe0fe6ef43686be0c2d6793db51e0766",
+  "paper_id": "dblp:journals/corr/abs-2411-04249",
+  "doi": "10.1109/WACV61041.2025.00508",
+  "arxiv_id": "2411.04249",
+  "dblp_key": "journals/corr/abs-2411-04249",
+  "paper_url": "https://www.semanticscholar.org/paper/6cdac52fbe0fe6ef43686be0c2d6793db51e0766",
+  "published_iso": "2024-11-06",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "6D Assembly Pose Estimation by Point Cloud Registration for Robotic Manipulation",
+  "title_norm": "6d assembly pose estimation by point cloud registration for robotic manipulation",
+  "abstract": "The demands on robotic manipulation skills to perform challenging tasks have drastically increased in recent times. To perform these tasks with dexterity, robots require perception tools to understand the scene and extract useful information that transforms to robot control inputs. To this end, recent research has introduced various object pose estimation and grasp pose detection methods that yield precise results. Assembly pose estimation is a secondary yet highly desirable skill in robotic assembling as it requires more detailed information on object placement as compared to bin picking and pick-and-place tasks. However, it has been often overlooked in research due to the complexity of integration in an agile framework. To address this issue, we propose an assembly pose estimation method with RGB-D input and 3D CAD models of the associated objects. The framework consists of semantic segmentation of the scene and registering point clouds of local surfaces against target point clouds derived from CAD models to estimate 6D poses. We show that our method can deliver sufficient accuracy for assembling object assemblies using evaluation metrics and demonstrations. The source code and dataset for the work can be found at: https://github.com/KulunuOS/6DAPose",
+  "tldr": "",
+  "year": 2024,
+  "venue": "2024 IEEE 20th International Conference on Automation Science and Engineering (CASE)",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Kulunu Samarawickrama",
+   "Gaurang Sharma",
+   "Alexandre Angleraud",
+   "Roel Pieters"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+  "paper_id": "dblp:conf/case/SamarawickramaS24",
+  "doi": "10.1109/CASE59546.2024.10711374",
+  "arxiv_id": "",
+  "dblp_key": "conf/case/SamarawickramaS24",
+  "paper_url": "https://www.semanticscholar.org/paper/2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+  "published_iso": "2024-08-28",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Disentangled Point Diffusion for Precise Object Placement",
+  "title_norm": "disentangled point diffusion for precise object placement",
+  "abstract": "Recent advances in robotic manipulation have highlighted the effectiveness of learning from demonstration. However, while end-to-end policies excel in expressivity and flexibility, they struggle both in generalizing to novel object geometries and in attaining a high degree of precision. An alternative, object-centric approach frames the task as predicting the placement pose of the target object, providing a modular decomposition of the problem. Building on this goal-prediction paradigm, we propose TAX-DPD, a hierarchical, disentangled point diffusion framework that achieves state-of-the-art performance in placement precision, multi-modal coverage, and generalization to variations in object geometries and scene configurations. We model global scene-level placements through a novel feed-forward Dense Gaussian Mixture Model (GMM) that yields a spatially dense prior over global placements; we then model the local object-level configuration through a novel disentangled point cloud diffusion module that separately diffuses the object geometry and the placement frame, enabling precise local geometric reasoning. Interestingly, we demonstrate that our point cloud diffusion achieves substantially higher accuracy than a prior approach based on SE(3)-diffusion, even in the context of rigid object placement. We validate our approach across a suite of challenging tasks in simulation and in the real-world on high-precision industrial insertion tasks. Furthermore, we present results on a cloth-hanging task in simulation, indicating that our framework can further relax assumptions on object rigidity.",
+  "tldr": "TAX-DPD is proposed, a hierarchical, disentangled point diffusion framework that achieves state-of-the-art performance in placement precision, multi-modal coverage, and generalization to variations in object geometries and scene configurations and is validated across a suite of challenging tasks in simulation and in the real-world.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lyuxing He",
+   "Eric Cai",
+   "Shobhit Aggarwal",
+   "Jianjun Wang",
+   "David Held"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "706c4142607ae62bfcef94593ff02eee65b1814a",
+  "paper_id": "dblp:journals/corr/abs-2604-11793",
+  "doi": "10.48550/arXiv.2604.11793",
+  "arxiv_id": "2604.11793",
+  "dblp_key": "journals/corr/abs-2604-11793",
+  "paper_url": "https://www.semanticscholar.org/paper/706c4142607ae62bfcef94593ff02eee65b1814a",
+  "published_iso": "2026-04-13",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "AIM2PC: Aerial Image to 3D Building Point Cloud Reconstruction",
+  "title_norm": "aim2pc aerial image to 3d building point cloud reconstruction",
+  "abstract": "Abstract. Three-dimensional urban reconstruction of buildings from single-view images has attracted significant attention over the past two decades. However, recent methods primarily focus on rooftops from aerial images, often overlooking essential geometrical details. Additionally, there is a notable lack of datasets containing complete 3D point clouds for entire buildings, along with challenges in obtaining reliable camera pose information for aerial images. This paper addresses these challenges by presenting a novel methodology, AIM2PC , which utilizes our generated dataset that includes complete 3D point clouds and determined camera poses. Our approach takes features from a single aerial image as input and concatenates them with essential additional conditions, such as binary masks and Sobel edge maps, to enable more edge-aware reconstruction. By incorporating a point cloud diffusion model based on Centered denoising Diffusion Probabilistic Models (CDPM), we project these concatenated features onto the partially denoised point cloud using our camera poses at each diffusion step. The proposed method is able to reconstruct the complete 3D building point cloud, including wall information and demonstrates superior performance compared to existing baseline techniques. To allow further comparisons with our methodology the dataset has been made available at https://github.com/Soulaimene/AIM2PCDataset.\n",
+  "tldr": "A novel methodology, AIM2PC, is presented, which utilizes a point cloud diffusion model based on Centered denoising Diffusion Probabilistic Models (CDPM), and is able to reconstruct the complete 3D building point cloud, including wall information and demonstrates superior performance compared to existing baseline techniques.",
+  "year": 2025,
+  "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Soulaimene Turki",
+   "Daniel Panangian",
+   "Houda Chaabouni",
+   "Ksenia Bittner"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "2387572e8e18f3024b1299f28b8ac0db402db6f6",
+  "paper_id": "dblp:journals/corr/abs-2503-18527",
+  "doi": "10.48550/arXiv.2503.18527",
+  "arxiv_id": "2503.18527",
+  "dblp_key": "journals/corr/abs-2503-18527",
+  "paper_url": "https://www.semanticscholar.org/paper/2387572e8e18f3024b1299f28b8ac0db402db6f6",
+  "published_iso": "2025-03-24",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Particle-based 6D Object Pose Estimation from Point Clouds using Diffusion Models",
+  "title_norm": "particle based 6d object pose estimation from point clouds using diffusion model",
+  "abstract": "Object pose estimation from a single view remains a challenging problem. In particular, partial observability, occlusions, and object symmetries eventually result in pose ambiguity. To account for this multimodality, this work proposes training a diffusion-based generative model for 6D object pose estimation. During inference, the trained generative model allows for sampling multiple particles, i.e., pose hypotheses. To distill this information into a single pose estimate, we propose two novel and effective pose selection strategies that do not require any additional training or computationally intensive operations. Moreover, while many existing methods for pose estimation primarily focus on the image domain and only incorporate depth information for final pose refinement, our model solely operates on point cloud data. The model thereby leverages recent advancements in point cloud processing and operates upon an SE(3)-equivariant latent space that forms the basis for the particle selection strategies and allows for improved inference times. Our thorough experimental results demonstrate the competitive performance of our approach on the Linemod dataset and showcase the effectiveness of our design choices. Code is available at https://github.com/zitronian/6DPoseDiffusion .",
+  "tldr": "This work proposes training a diffusion-based generative model that leverages recent advancements in point cloud processing and operates upon an SE(3)-equivariant latent space that forms the basis for the particle selection strategies and allows for improved inference times.",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Christian Möller",
+   "Niklas Funk",
+   "Jan Peters"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "b862d054a39920b85b763157c9c3f41d9c3ea53f",
+  "paper_id": "dblp:journals/corr/abs-2412-00835",
+  "doi": "10.48550/arXiv.2412.00835",
+  "arxiv_id": "2412.00835",
+  "dblp_key": "journals/corr/abs-2412-00835",
+  "paper_url": "https://www.semanticscholar.org/paper/b862d054a39920b85b763157c9c3f41d9c3ea53f",
+  "published_iso": "2024-12-01",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "MonoDiff9D: Monocular Category-Level 9D Object Pose Estimation via Diffusion Model",
+  "title_norm": "monodiff9d monocular category level 9d object pose estimation via diffusion mode",
+  "abstract": "Object pose estimation is a core means for robots to understand and interact with their environment. For this task, monocular category-level methods are attractive as they require only a single RGB camera. However, current methods rely on shape priors or CAD models of the intra-class known objects. We propose a diffusion-based monocular category-level 9D object pose generation method, MonoDiff9D. Our motivation is to leverage the probabilistic nature of diffusion models to alleviate the need for shape priors, CAD models, or depth sensors for intra-class unknown object pose estimation. We first estimate coarse depth via DINOv2 from the monocular image in a zero-shot manner and convert it into a point cloud. We then fuse the global features of the point cloud with the input image and use the fused features along with the encoded time step to condition MonoDiff9D. Finally, we design a transformer-based denoiser to recover the object pose from Gaussian noise. Extensive experiments on two popular benchmark datasets show that MonoDiff9D achieves state-of-the-art monocular category-level 9D object pose estimation accuracy without the need for shape priors or CAD models at any stage. Our code will be made public at https://github.com/CNJianLiu/MonoDiff9D.",
+  "tldr": "A diffusion-based monocular category-level 9D object pose generation method that achieves state-of-the-art monocular category-level 9D object pose estimation accuracy without the need for shape priors or CAD models at any stage.",
+  "year": 2025,
+  "venue": "IEEE International Conference on Robotics and Automation",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Jian Liu",
+   "Wei Sun",
+   "Hui Yang",
+   "Jin Zheng",
+   "Zichen Geng",
+   "Hossein Rahmani"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "9b4bb4a466c03bceb09701ae7397b438b338eba2",
+  "paper_id": "dblp:journals/corr/abs-2504-10433",
+  "doi": "10.1109/ICRA55743.2025.11127837",
+  "arxiv_id": "2504.10433",
+  "dblp_key": "journals/corr/abs-2504-10433",
+  "paper_url": "https://eprints.lancs.ac.uk/id/eprint/235611/1/2504.10433v1.pdf",
+  "published_iso": "2025-04-14",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Diff-Art: Category-level Articulation Pose Estimation via Conditional Diffusion",
+  "title_norm": "diff art category level articulation pose estimation via conditional diffusion",
+  "abstract": "Articulated objects are prevalent in people’s daily lives, yet their diverse motion structures pose significant challenges for category-level pose estimation. To address this, in this work, we introduce Diff-Art, a method tailored for category-level articulation pose estimation using conditional diffusion. Given a partial point cloud as input, Diff-Art predicts the per-part 6D pose of the articulated object. Our approach incorporates a novel modeling strategy that exploits the unique kinematic constraints of articulated objects, effectively handling self-occlusion scenarios. Furthermore, we propose a re-scoring strategy to enhance the accuracy of 6D pose estimation within the conditional diffusion framework. Extensive experiments validate the effectiveness of Diff-Art, demonstrating its strong performance on both synthetic datasets and its ability to generalize to real-world scenarios. We believe this work holds significant potential for applications in embodied AI and robotics.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE International Conference on Multimedia and Expo",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Yukang Huo",
+   "Xianhui Meng",
+   "Li Zhang",
+   "Haonan Jiang",
+   "Yan Zhong",
+   "Mingyuan Yao"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+  "paper_id": "dblp:conf/icmcs/HuoMZJZYW25",
+  "doi": "10.1109/ICME59968.2025.11209596",
+  "arxiv_id": "",
+  "dblp_key": "conf/icmcs/HuoMZJZYW25",
+  "paper_url": "https://www.semanticscholar.org/paper/b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+  "published_iso": "2025-06-30",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "DiffS-NOCS: 3D Point Cloud Reconstruction through Coloring Sketches to NOCS Maps Using Diffusion Models",
+  "title_norm": "diffs nocs 3d point cloud reconstruction through coloring sketches to nocs maps ",
+  "abstract": "Reconstructing a 3D point cloud from a given conditional sketch is challenging. Existing methods often work directly in 3D space, but domain variability and difficulty in reconstructing accurate 3D structures from 2D sketches remain significant obstacles. Moreover, ideal models should also accept prompts for control, in addition with the sparse sketch, posing challenges in multi-modal fusion. We propose DiffS-NOCS (Diffusion-based Sketch-to-NOCS Map), which leverages ControlNet with a modified multi-view decoder to generate NOCS maps with embedded 3D structure and position information in 2D space from sketches. The 3D point cloud is reconstructed by combining multiple NOCS maps from different views. To enhance sketch understanding, we integrate a viewpoint encoder for extracting viewpoint features. Additionally, we design a feature-level multi-view aggregation network as the denoising module, facilitating cross-view information exchange and improving 3D consistency in NOCS map generation. Experiments on ShapeNet demonstrate that DiffS-NOCS achieves controllable and fine-grained point cloud reconstruction aligned with sketches.",
+  "tldr": "The proposed DiffS-NOCS (Diffusion-based Sketch-to-NOCS Map), which leverages ControlNet with a modified multi-view decoder to generate NOCS maps with embedded 3D structure and position information in 2D space from sketches, is proposed.",
+  "year": 2025,
+  "venue": "Asian Conference on Pattern Recognition",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Di Kong",
+   "Qianhui Wan"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c938f6c70b14726241d7cfde52dc1e708c692a32",
+  "paper_id": "dblp:journals/corr/abs-2506-12835",
+  "doi": "10.48550/arXiv.2506.12835",
+  "arxiv_id": "2506.12835",
+  "dblp_key": "journals/corr/abs-2506-12835",
+  "paper_url": "https://www.semanticscholar.org/paper/c938f6c70b14726241d7cfde52dc1e708c692a32",
+  "published_iso": "2025-06-15",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "3D Hand Pose Estimation Based on Hand Denoising Diffusion Probabilistic Robustness Model",
+  "title_norm": "3d hand pose estimation based on hand denoising diffusion probabilistic robustne",
+  "abstract": "In real-world scenarios, gesture point cloud data often suffer from distortions which severely affect recognition accuracy. To address this issue, this paper proposes a 3D hand gesture pose estimation algorithm based on a denoising diffusion probabilistic model (HDDPM) to enhance the robustness under distorted conditions.This study first categorizes common types of distortions in gesture point cloud data and simulates real-world distortion scenarios including local occlusion, global point loss, and noise interference to generate an augmented dataset. In the forward diffusion process, artificial noise is added to the point cloud data, progressively degrading it into noisy observations. The reverse denoising process enables the model to learn how to restore the original, clean data from the corrupted input. Moreover, spatial attention (SA) and channel attention (CA) mechanisms are integrated to enhance feature extraction capability. Experiments are conducted on three public datasets: MSRA, ICVL, and NYU. The method achieves Mean Per Joint Position Error (MPJPE) scores of 7.66mm, 6.71mm, and 10.05mm on the MSRA, ICVL, and NYU datasets, respectively outperforming existing methods such as Hand PointNet and other mainstream approaches. Overall, the method holds great potential for practical applications in human-computer interaction, augmented reality (AR), and robotic control.Some parts of the core code have been made publicly available at https://github.com/ynslyyx/HDDPM",
+  "tldr": "This paper proposes a 3D hand gesture pose estimation algorithm based on a denoising diffusion probabilistic model (HDDPM) to enhance the robustness under distorted conditions and holds great potential for practical applications in human-computer interaction, augmented reality (AR), and robotic control.",
+  "year": 2025,
+  "venue": "International journal of pattern recognition and artificial intelligence",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lihuang She",
+   "Hanze Liang",
+   "Haonan Sun",
+   "Yehan Chen"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ea868e9a8896eb9909e58e11d077e3a03dc16c37",
+  "paper_id": "dblp:journals/ijprai/SheLSC26",
+  "doi": "10.1142/s0218001425570265",
+  "arxiv_id": "",
+  "dblp_key": "journals/ijprai/SheLSC26",
+  "paper_url": "https://www.semanticscholar.org/paper/ea868e9a8896eb9909e58e11d077e3a03dc16c37",
+  "published_iso": "2025-10-23",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "4D-RaDiff: Latent Diffusion for 4D Radar Point Cloud Generation",
+  "title_norm": "4d radiff latent diffusion for 4d radar point cloud generation",
+  "abstract": "Automotive radar has shown promising developments in environment perception due to its cost-effectiveness and robustness in adverse weather conditions. However, the limited availability of annotated radar data poses a significant challenge for advancing radar-based perception systems. To address this limitation, we propose a novel framework to generate 4D radar point clouds for training and evaluating object detectors. Unlike image-based diffusion, our method is designed to consider the sparsity and unique characteristics of radar point clouds by applying diffusion to a latent point cloud representation. Within this latent space, generation is controlled via conditioning at either the object or scene level. The proposed 4D-RaDiff converts unlabeled bounding boxes into high-quality radar annotations and transforms existing LiDAR point cloud data into realistic radar scenes. Experiments demonstrate that incorporating synthetic radar data of 4D-RaDiff as data augmentation method during training consistently improves object detection performance compared to training on real data only. In addition, pre-training on our synthetic data reduces the amount of required annotated radar data by up to 90% while achieving comparable object detection performance.",
+  "tldr": "Experiments demonstrate that incorporating synthetic radar data of 4D-RaDiff as data augmentation method during training consistently improves object detection performance compared to training on real data only.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jimmie Kwok",
+   "Holger Caesar",
+   "Andras Palffy"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a3ed46adc22b9a7eea9cb98e7f2d28b08736b42b",
+  "paper_id": "dblp:journals/corr/abs-2512-14235",
+  "doi": "10.48550/arXiv.2512.14235",
+  "arxiv_id": "2512.14235",
+  "dblp_key": "journals/corr/abs-2512-14235",
+  "paper_url": "https://www.semanticscholar.org/paper/a3ed46adc22b9a7eea9cb98e7f2d28b08736b42b",
+  "published_iso": "2025-12-16",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Object-Centric Seamless Pose Estimation in Multi-Object Scenes by Scale Alignment of Ray Diffusion and Iterative Closest Point",
+  "title_norm": "object centric seamless pose estimation in multi object scenes by scale alignmen",
+  "abstract": "Robust estimation of camera trajectories from unconstrained image sequences remains a fundamental problem in computer vision and robotics. Recently, a diffusion-based camera tracking network has shown strong performance in sparse-view and single-object-centric settings, where a consistent object is observed across frames. However, when multiple objects appear sequentially in a video, the initially observed object may disappear as the sequence progresses, which prevents maintaining the “single-object-centric” paradigm across all frames and degrades pose estimation when the conventional method is applied to the multi-object sequence. In this work, we propose an object-centric camera pose estimation framework that handles such sequences by partitioning a video into object-level sub-scenes. As a baseline network, Ray Diffusion is applied to single-object sub-scenes, while frame-to-frame camera motion in multi-object sub-scenes is estimated using monocular video depth, object masks, and point cloud alignment using Iterative Closest Point (ICP). Since the domain of pose estimation from different sub-scenes is inconsistent in terms of pose scale, it requires seamless concatenation of pose estimation results through all sub-scenes. In this regard, we introduce a scale alignment strategy based on reprojection error minimization. This enables the pose estimates from individual sub-scenes to be integrated into a single and seamless camera trajectory. We evaluate the proposed method on a newly collected indoor dataset consisting of 40 multi-object video sequences. Experimental results compare our camera trajectory estimation with both the diffusion-based method and the state-of-the-art visual SLAM methods.",
+  "tldr": "This work proposes an object-centric camera pose estimation framework that handles such sequences by partitioning a video into object-level sub-scenes and introduces a scale alignment strategy based on reprojection error minimization that enables the pose estimates from individual sub-scenes to be integrated into a single and seamless camera trajectory.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Y. Jeong",
+   "D. Seo",
+   "Kwanwoo Park",
+   "Soon-Yong Park"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6dc5f0ea531532793f54f7512a138952ee4c3082",
+  "paper_id": "doi:10.3390/app16136624",
+  "doi": "10.3390/app16136624",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-3417/16/13/6624/pdf?version=1782980156",
+  "published_iso": "2026-07-02",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Diffusion Transformer for point cloud registration: digital modeling of cultural heritage",
+  "title_norm": "diffusion transformer for point cloud registration digital modeling of cultural ",
+  "abstract": "Digital modeling is an essential means for preserving and passing down historical culture within cultural heritage. Point cloud registration technology, by aligning point cloud data captured from multiple perspectives, enhances the accuracy of reconstructing the complex structures of artifacts and buildings and provides a reliable digital foundation for their protection, exhibition, and research. Due to the challenges posed by complex morphology, noise, and missing data when processing cultural heritage data, this paper proposes a point cloud registration method based on the Diffusion Transformer (PointDT). Compared to traditional methods, the Diffusion Transformer can better capture both the global features and local structures of point cloud data, more accurately capturing the geometric and semantic information of the target point cloud, thereby achieving precise digital reconstruction. In this study, we trained our method using indoor datasets such as 3DMatch and large-scale outdoor datasets like KITTI, and validated it on various cultural heritage datasets, including those of the Terracotta Warriors and heritage buildings. The results demonstrate that this method not only significantly improves accuracy but also shows advantages in computational efficiency.",
+  "tldr": "This paper proposes a point cloud registration method based on the Diffusion Transformer, which can better capture both the global features and local structures of point cloud data, more accurately capturing the geometric and semantic information of the target point cloud, thereby achieving precise digital reconstruction.",
+  "year": 2024,
+  "venue": "Heritage Science",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Li An",
+   "Pengbo Zhou",
+   "Mingquan Zhou",
+   "Yong Wang",
+   "Guohua Geng"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "27569d9543230b6ce764a6c8b1eb6f31c4036033",
+  "paper_id": "doi:10.1186/s40494-024-01314-1",
+  "doi": "10.1186/s40494-024-01314-1",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1186/s40494-024-01314-1",
+  "published_iso": "2024-06-14",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Reverse2Complete: Unpaired Multimodal Point Cloud Completion via Guided Diffusion",
+  "title_norm": "reverse2complete unpaired multimodal point cloud completion via guided diffusion",
+  "abstract": "Unpaired point cloud completion involves filling in missing parts of a point cloud without requiring partial-complete correspondence. Meanwhile, since point cloud completion is an ill-posed problem, there are multiple ways to generate the missing parts. Existing unpaired completion methods usually leverage generative adversarial training by transforming partial shape encoding into a complete one in the low-dimensional latent feature space. However, \"mode collapse\" often occurs, where only a subset of the shapes is represented in the low-dimensional space, reducing the diversity of the generated shapes. In this paper, we propose a novel unpaired multimodal shape completion approach that directly operates on point coordinate space. We achieve unpaired completion via a single diffusion model trained on complete data by \"hijacking\" the generative process. We further augment the diffusion model by introducing two guidance mechanisms to facilitate mapping the partial point cloud to the complete one while preserving its original structure. We conduct extensive evaluations of our approach, which show that our method generates shapes that are more diverse and better preserve the original structures compared to alternative methods.",
+  "tldr": "This paper achieves unpaired completion via a single diffusion model trained on complete data by \"hijacking\" the generative process by introducing two guidance mechanisms to facilitate mapping the partial point cloud to the complete one while preserving its original structure.",
+  "year": 2024,
+  "venue": "ACM Multimedia",
+  "publication_types": [
+   "JournalArticle",
+   "Book"
+  ],
+  "authors": [
+   "Wenxiao Zhang",
+   "Hossein Rahmani",
+   "Xun Yang",
+   "Jun Liu"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "953c91cbbfc226454d4ddb2991aac41b42645304",
+  "paper_id": "dblp:conf/mm/Zhang0Y024",
+  "doi": "10.1145/3664647.3680590",
+  "arxiv_id": "",
+  "dblp_key": "conf/mm/Zhang0Y024",
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3664647.3680590?download=true",
+  "published_iso": "2024-10-28",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "PCCDiff: Point Cloud Completion with Conditional Denoising Diffusion Probabilistic Models",
+  "title_norm": "pccdiff point cloud completion with conditional denoising diffusion probabilisti",
+  "abstract": "Point clouds obtained from laser scanners or other devices often exhibit incompleteness, which poses a challenge for subsequent point cloud processing. Therefore, accurately predicting the complete shape from partial observations has paramount significance. In this paper, we introduce PCCDiff, a probabilistic model inspired by Denoising Diffusion Probabilistic Models (DDPMs), designed for point cloud completion tasks. Our model aims to predict missing parts in incomplete 3D shapes by learning the reverse diffusion process, transforming a 3D Gaussian noise distribution into the desired shape distribution without any structural assumption (e.g., geometric symmetry). Firstly, we design a conditional point cloud completion network that integrates Missing-Transformer and TreeGCN, facilitating the prediction of complete point cloud features. Subsequently, at each step of the diffusion process, the obtained point cloud features serve as condition inputs for the symmetric Diffusion ResUNet. By incorporating these condition features and incomplete point clouds into the diffusion process, PCCDiff demonstrates superior generation performance compared to other methods. Finally, extensive experiments are conducted to demonstrate the effectiveness of our proposed generative model for completing point clouds.",
+  "tldr": "PCCDiff, a probabilistic model inspired by Denoising Diffusion Probabilistic Models (DDPMs), designed for point cloud completion tasks, aims to predict missing parts in incomplete 3D shapes by learning the reverse diffusion process, transforming a 3D Gaussian noise distribution into the desired shape distribution without any structural assumption.",
+  "year": 2024,
+  "venue": "Symmetry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yang Li",
+   "Fanchen Peng",
+   "Feng Dou",
+   "Yao Xiao",
+   "Yi Li"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "60c11dae96dff3dda704508029d326a218603a1b",
+  "paper_id": "dblp:journals/symmetry/LiPDXL24",
+  "doi": "10.3390/sym16121680",
+  "arxiv_id": "",
+  "dblp_key": "journals/symmetry/LiPDXL24",
+  "paper_url": "https://doi.org/10.3390/sym16121680",
+  "published_iso": "2024-12-19",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Quartet of Diffusions: Structure-Aware Point Cloud Generation through Part and Symmetry Guidance",
+  "title_norm": "quartet of diffusions structure aware point cloud generation through part and sy",
+  "abstract": "We introduce the Quartet of Diffusions, a structure-aware point cloud generation framework that explicitly models part composition and symmetry. Unlike prior methods that treat shape generation as a holistic process or only support part composition, our approach leverages four coordinated diffusion models to learn distributions of global shape latents, symmetries, semantic parts, and their spatial assembly. This structured pipeline ensures guaranteed symmetry, coherent part placement, and diverse, high-quality outputs. By disentangling the generative process into interpretable components, our method supports fine-grained control over shape attributes, enabling targeted manipulation of individual parts while preserving global consistency. A central global latent further reinforces structural coherence across assembled parts. Our experiments show that the Quartet achieves state-of-the-art performance. To our best knowledge, this is the first 3D point cloud generation framework that fully integrates and enforces both symmetry and part priors throughout the generative process.",
+  "tldr": "To the best knowledge, this is the first 3D point cloud generation framework that fully integrates and enforces both symmetry and part priors throughout the generative process.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chenliang Zhou",
+   "Fangcheng Zhong",
+   "Weihao Xia",
+   "Albert Miao",
+   "Canberk Baykal",
+   "Cengiz Öztireli"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0312f2f64d46cea722d15a51bf64cc4a21cc5733",
+  "paper_id": "dblp:journals/corr/abs-2601-20425",
+  "doi": "10.48550/arXiv.2601.20425",
+  "arxiv_id": "2601.20425",
+  "dblp_key": "journals/corr/abs-2601-20425",
+  "paper_url": "https://www.semanticscholar.org/paper/0312f2f64d46cea722d15a51bf64cc4a21cc5733",
+  "published_iso": "2026-01-28",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "3D hand pose estimation based on relational graph attention mechanism",
+  "title_norm": "3d hand pose estimation based on relational graph attention mechanism",
+  "abstract": "",
+  "tldr": "A novel and efficient approach to 3D hand pose estimation based on a relational graph attention mechanism, designed to model the complex dependencies of hand gestures, which vary significantly in shape, orientation, and trajectory is proposed.",
+  "year": 2026,
+  "venue": "International Journal of Machine Learning and Cybernetics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lihuang She",
+   "Haonan Sun",
+   "Hui Zou",
+   "Yuan Ma",
+   "Xiangli Guo",
+   "Yehan Chen"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3f8df332fcd51aea0954834095c24c6e892c7a3f",
+  "paper_id": "dblp:journals/mlc/SheSZMGC26",
+  "doi": "10.1007/s13042-025-02826-3",
+  "arxiv_id": "",
+  "dblp_key": "journals/mlc/SheSZMGC26",
+  "paper_url": "https://www.semanticscholar.org/paper/3f8df332fcd51aea0954834095c24c6e892c7a3f",
+  "published_iso": "2026-01-01",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Category Level 6D Object Pose Estimation from a Single RGB Image using Diffusion",
+  "title_norm": "category level 6d object pose estimation from a single rgb image using diffusion",
+  "abstract": "Estimating the 6D pose and 3D size of an object from an image is a fundamental task in computer vision. Most current approaches are restricted to specific instances with known models or require ground truth depth information or point cloud captures from LIDAR. We tackle the harder problem of pose estimation for category-level objects from a single RGB image. We propose a novel solution that eliminates the need for specific object models or depth information. Our method utilises score-based diffusion models to generate object pose hypotheses to model the distribution of possible poses for the object. Unlike previous methods that rely on costly trained likelihood estimators to remove outliers before pose aggregation using mean pooling, we introduce a simpler approach using Mean Shift to estimate the mode of the distribution as the final pose estimate. Our approach outperforms the current state-of-the-art on the REAL275 dataset by a significant margin.",
+  "tldr": "This work proposes a novel solution that eliminates the need for specific object models or depth information and introduces a simpler approach using Mean Shift to estimate the mode of the distribution as the final pose estimate.",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Adam Bethell",
+   "Ravi Garg",
+   "Ian Reid"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "d4ac435924eb494803a9335e39f2438b9621de4c",
+  "paper_id": "dblp:journals/corr/abs-2412-11420",
+  "doi": "10.48550/arXiv.2412.11420",
+  "arxiv_id": "2412.11420",
+  "dblp_key": "journals/corr/abs-2412-11420",
+  "paper_url": "https://www.semanticscholar.org/paper/d4ac435924eb494803a9335e39f2438b9621de4c",
+  "published_iso": "2024-12-16",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "On the Effect of Domain-Adversarial Supervision Placement for Cross-Sensor 6-D Pose Estimation",
+  "title_norm": "on the effect of domain adversarial supervision placement for cross sensor 6 d p",
+  "abstract": "Domain-adversarial training is a common approach to mitigate domain shift in deep learning, yet architectural design choices such as the placement of adversarial supervision are often treated heuristically. We present a systematic empirical assessment of gradient reversal-based domain-adversarial training applied to cross-sensor 6D pose estimation, focusing on the placement of domain classification heads within a multi-modal red, green, and blue(RGB)–point cloud fusion network. Using a simplified bidirectional RGB–point cloud fusion network, we evaluate domain head placement at multiple depths, including modality-specific encoders and intermediate fusion stages, under a strict multi-source training protocol with no access to target-domain data. Experiments are conducted on controlled synthetic datasets with multiple runs per configuration and complemented by real-world cross-sensor RGB-D evaluations. Across all settings, performance differences between domain head placements are dominated by run-to-run variability, with no statistically significant advantage for any particular placement. Real-world experiments exhibit similarly small differences and qualitatively align with synthetic results. These findings indicate that, for the studied architecture, gradient reversal-based domain-adversarial training is largely insensitive to the precise placement of the domain head, suggesting that both early and late integration constitute viable design choices. This robustness provides practical flexibility in network design, supports reproducible evaluation across placements, and motivates future work on complementary adaptation mechanisms that can be combined with adversarial supervision.",
+  "tldr": "A systematic empirical assessment of gradient reversal-based domain-adversarial training applied to cross-sensor 6D pose estimation indicates that robustness provides practical flexibility in network design, supports reproducible evaluation across placements, and motivates future work on complementary adaptation mechanisms that can be combined with adversarial supervision.",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tobias Niedermaier",
+   "Sarah Weiß",
+   "Mahmoud Salem",
+   "Christopher M. A. Bonenberger",
+   "Maik Knof",
+   "Stefan Elser"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8a7f25e962c14eb7f2fcb7ace472a1f24c1851d0",
+  "paper_id": "dblp:journals/access/NiedermaierWSBKER26",
+  "doi": "10.1109/ACCESS.2026.3681126",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/NiedermaierWSBKER26",
+  "paper_url": "https://doi.org/10.1109/access.2026.3681126",
+  "published_iso": null,
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Pose-Aware Diffusion for 3D Generation",
+  "title_norm": "pose aware diffusion for 3d generation",
+  "abstract": "Generating pose-aligned 3D objects is challenging due to the spatial mismatches and transformation ambiguities inherent in decoupled canonical-then-rotate paradigms. To this end, we introduce Pose-Aware Diffusion (PAD), a novel end-to-end diffusion framework that synthesizes 3D geometry directly within the observation space. By unprojecting monocular depth into a partial point cloud and explicitly injecting it as a 3D geometric anchor, PAD abandons canonical assumptions to enforce rigorous spatial supervision. This native generation intrinsically resolves pose ambiguity, producing high-fidelity pose-aligned assets. Extensive experiments demonstrate that PAD achieves superior geometric alignment and image-to-3D correspondence compared to state-of-the-art methods. Additionally, PAD naturally extends to compositional 3D scene reconstruction via a simple union of independently generated objects, highlighting its robust ability to preserve precise spatial layouts.",
+  "tldr": "P Pose-Aware Diffusion is introduced, a novel end-to-end diffusion framework that synthesizes 3D geometry directly within the observation space that achieves superior geometric alignment and image-to-3D correspondence compared to state-of-the-art methods.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zihan Zhou",
+   "Luxi Chen",
+   "Jingzhi Zhou",
+   "Yuhao Wan",
+   "Min Zhao",
+   "Baoyu Fan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7fe82922dbdc8a3a2c6c4afc574bc0476d770968",
+  "paper_id": "dblp:journals/corr/abs-2605-00345",
+  "doi": "10.48550/arXiv.2605.00345",
+  "arxiv_id": "2605.00345",
+  "dblp_key": "journals/corr/abs-2605-00345",
+  "paper_url": "https://www.semanticscholar.org/paper/7fe82922dbdc8a3a2c6c4afc574bc0476d770968",
+  "published_iso": "2026-05-01",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Transferable Adversarial Attacks on 3-D Point Cloud Semantic Segmentation via Diffusion Models in Autonomous Driving",
+  "title_norm": "transferable adversarial attacks on 3 d point cloud semantic segmentation via di",
+  "abstract": "With the rapid advancement of LiDAR-based 3D semantic segmentation, it has provided effective support for comprehensive perception in autonomous driving. However, the vulnerabilities of existing segmentation models have not been fully explored, posing potential risks to the security of autonomous systems. Existing adversarial attacks on point cloud segmentation primarily focus on applying global perturbations to point coordinates, inevitably introducing noticeable outliers and resulting in suboptimal attack performance. Inspired by the remarkable performance of diffusion models in LiDAR scene completion tasks, we propose a novel adversarial attack framework using diffusion models targeting 3D semantic segmentation. First, we model forward and reverse diffusion processes for input point cloud scenes, then introduce targeted perturbations during the reverse diffusion sampling stage. Specifically, we initialize Gaussian noise and add it to partial input point clouds, followed by stepwise denoising for point cloud reconstruction. During each denoising step, we identify the most discrimination-sensitive critical points and apply adversarial gradients exclusively to these selected points for guiding updates. Furthermore, we design a triple-loss function to supervise adversarial point cloud generation, achieving a balance between attack performance and perturbation magnitude. Finally, we conduct comprehensive experiments on two autonomous driving datasets, SemanticKITTI and nuScenes. The experimental results indicate that our method delivers significant attack performance against six mainstream semantic segmentation models, with average relative mIoU drops reaching 61.14% and 51.55% respectively. Moreover, the proposed method successfully transfers to point cloud classification and part segmentation tasks, demonstrating superior attack performance and transferability.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE transactions on consumer electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yizhou Wang",
+   "Libing Wu",
+   "Zhuangzhuang Zhang",
+   "Lijuan Huo",
+   "Jiaqi Feng",
+   "Jing Wang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "276f2307543e412400023a69172fc1ecd9ebabbc",
+  "paper_id": "dblp:journals/tce/WangWZHFWJ26",
+  "doi": "10.1109/TCE.2026.3673943",
+  "arxiv_id": "",
+  "dblp_key": "journals/tce/WangWZHFWJ26",
+  "paper_url": "https://www.semanticscholar.org/paper/276f2307543e412400023a69172fc1ecd9ebabbc",
+  "published_iso": "2026-05-01",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Post-Refining LiDAR Point Cloud Registration via Diffusion-Based Correspondence Refinement",
+  "title_norm": "post refining lidar point cloud registration via diffusion based correspondence ",
+  "abstract": "LiDAR point cloud registration is a fundamental problem in 3D computer vision. Recent learning-based methods have significantly improved the robustness and accuracy of LiDAR point cloud registration, while most of these methods are designed for global registration. In this paper, we focus on the post-refinement problem of LiDAR point cloud registration, which has been largely overlooked in previous learning-based approaches. To address the correspondence error between LiDAR point clouds, we formulate the transformation refinement problem as a correspondence optimization problem and propose DCR, a diffusion-based correspondence refinement model. DCR is built upon denoising diffusion models and recovers accurate correspondences from noisy initial correspondences estimated by arbitrary global registration methods. To achieve precise correspondence refinement, we employ a residual-based modeling scheme to constrain the output distribution and design a conditional generation paradigm to control the randomness of diffusion models. We combine DCR with both learning-based and traditional global registration methods and perform experiments on three large-scale outdoor LiDAR point cloud datasets to verify the performance. Extensive experimental results demonstrate DCR’s versatility and effectiveness in improving the accuracy of LiDAR point cloud registration. Note to Practitioners—The primary motivation for this study lies in addressing the limitations of LiDAR point cloud registration accuracy caused by the inherent sparsity of sampled LiDAR point clouds, a common challenge in real-world robotics and autonomous driving applications. Existing learning-based point cloud registration methods predominantly focus on enhancing the robustness and accuracy of global registration, often overlooking the optimization potential of post-refinement processes. This work seeks to introduce a novel perspective by improving registration accuracy through a diffusion-based post-refinement method, termed DCR. Experimental results demonstrate that DCR can significantly enhance the accuracy of both learning-based and traditional LiDAR point cloud registration methods. Furthermore, DCR’s lightweight network design ensures that it does not impose a significant computational burden, making it a practical post-optimization solution. Consequently, DCR has the potential to serve as a versatile post-optimizer for applications requiring precise relative pose estimation, such as enhancing the precision of vehicle self-localization for safer and more reliable navigation, improving the accuracy of map building, and facilitating high-precision 3D reconstruction.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fan Lu",
+   "Tianhang Wang",
+   "Guo Yu",
+   "Bin Li",
+   "Qiao Lin",
+   "Alois C. Knoll"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "586c3fc72259ec4f4397b67adcc376a5646844ca",
+  "paper_id": "dblp:journals/tase/LuWYLLKLC26",
+  "doi": "10.1109/TASE.2025.3641366",
+  "arxiv_id": "",
+  "dblp_key": "journals/tase/LuWYLLKLC26",
+  "paper_url": "https://www.semanticscholar.org/paper/586c3fc72259ec4f4397b67adcc376a5646844ca",
+  "published_iso": null,
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Cross-Modal Driven Object Restoration for 3D Point Cloud Backdoor Defense",
+  "title_norm": "cross modal driven object restoration for 3d point cloud backdoor defense",
+  "abstract": "3D point cloud recognition plays a critical role in autonomous driving, robotics, and medical diagnostics. However, its vulnerability to backdoor attacks remains underexplored, posing significant security risks in real-world applications. Current defense mechanisms against 3D point cloud backdoor attacks are still in their infancy and lacking effective solutions. To address this, we propose a cross-modal driven object restoration framework that leverages 3D reconstruction to mitigate backdoor attacks. Specifically, we introduce a cross-modal semantic encoding module that projects 3D point clouds into multi-view depth maps and utilizes CLIP to extract aligned text-image features, providing semantic guidance for 3D reconstruction. Furthermore, we leverage cross-modal information as conditional guidance to drive dynamic diffusion-based 3D reconstruction and adaptively fuse semantic and geometric features through a gated self-conditioned modulator. This module dynamically selects features for fusion, effectively mitigating noise interference and distribution shifts during latent diffusion, significantly enhancing robustness to noise, and thereby achieving precise restoration of clean point clouds. Extensive experiments on ModelNet40, and ShapeNetPart datasets demonstrate that our method robustly defends against adaptive attacks under varying noise levels and significantly restores classification performance degraded by backdoor triggers.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Information Forensics and Security",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jiawei Lian",
+   "Xia Du",
+   "Jianghua Liu",
+   "Le Hui",
+   "Jian Yang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "4f2dfed56e1b92052bf09727abd3079a71389ebb",
+  "paper_id": "dblp:journals/tifs/LianDLHY25",
+  "doi": "10.1109/TIFS.2025.3615416",
+  "arxiv_id": "",
+  "dblp_key": "journals/tifs/LianDLHY25",
+  "paper_url": "https://www.semanticscholar.org/paper/4f2dfed56e1b92052bf09727abd3079a71389ebb",
+  "published_iso": null,
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ },
+ {
+  "title": "Digging into Intrinsic Contextual Information for High-fidelity 3D Point Cloud Completion",
+  "title_norm": "digging into intrinsic contextual information for high fidelity 3d point cloud c",
+  "abstract": "The common occurrence of occlusion-induced incompleteness in point clouds has made point cloud completion (PCC) a highly-concerned task in the field of geometric processing. \nExisting PCC methods typically produce complete point clouds from partial point clouds in a coarse-to-fine paradigm, with the coarse stage generating entire shapes and the fine stage improving texture details. Though diffusion models have demonstrated effectiveness in the coarse stage, the fine stage still faces challenges in producing high-fidelity results due to the ill-posed nature of PCC. The intrinsic contextual information for texture details in partial point clouds is the key to solving the challenge.\nIn this paper, we propose a high-fidelity PCC method that digs into both short and long-range contextual information from the partial point cloud in the fine stage.\nSpecifically, after generating the coarse point cloud via a diffusion-based coarse generator, a mixed sampling module introduces short-range contextual information from partial point clouds into the fine stage. A surface freezing module safeguards points from noise-free partial point clouds against disruption.\nAs for the long-range contextual information, we design a similarity modeling module to derive similarity with rigid transformation invariance between points, conducting effective matching of geometric manifold features globally.\nIn this way, the high-quality components present in the partial point cloud serve as valuable references to refine the coarse point cloud with high fidelity.\nExtensive experiments have demonstrated the superiority of the proposed method over SOTA competitors.",
+  "tldr": "This paper proposes a high-fidelity PCC method that digs into both short and long-range contextual information from the partial point cloud in the fine stage, and designs a similarity modeling module to derive similarity with rigid transformation invariance between points, conducting effective matching of geometric manifold features globally.",
+  "year": 2025,
+  "venue": "AAAI Conference on Artificial Intelligence",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Jisheng Chu",
+   "Wenrui Li",
+   "Xingtao Wang",
+   "Kanglin Ning",
+   "Yidan Lu",
+   "Xiaopeng Fan"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "6c3c852ebccef3ef8cca9ec760d6a4a27d9e8abd",
+  "paper_id": "dblp:conf/aaai/ChuLWNLF25",
+  "doi": "10.1609/aaai.v39i3.32260",
+  "arxiv_id": "",
+  "dblp_key": "conf/aaai/ChuLWNLF25",
+  "paper_url": "https://doi.org/10.1609/aaai.v39i3.32260",
+  "published_iso": "2025-04-11",
+  "from_query": [
+   "relational pose diffusion point cloud placement"
+  ]
+ }
+]

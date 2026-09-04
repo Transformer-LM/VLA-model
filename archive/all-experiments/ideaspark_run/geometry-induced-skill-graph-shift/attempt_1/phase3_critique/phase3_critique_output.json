@@ -1,0 +1,100 @@
+{
+  "fulltext_degraded": true,
+  "evidence_warning": "All load-bearing literature differentiation remains abstract-level because the Phase 0 full-text fetches failed; collision-hit comparisons below are therefore threat screening, not method-level novelty proof.",
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes causal identifiability for geometry-sensitive strategy generalization: under matched instruction, start distribution, and terminal goal, it remains unresolved whether policy behavior changes specifically because the original relation-event sequence or path class becomes infeasible 鈥?stakes: practitioners cannot tell whether a model will select a valid grasp, reorientation, approach, or insertion strategy on a geometry-altered deployment, and the field may attribute endpoint robustness to functional-geometric reasoning that was never isolated.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions — the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate, so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "no",
+            "reasoning": "The proposed switch-versus-nonswitch performance split is not already reported by the supplied corpus, so the intended finding is not merely a restatement of a retrieved result."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "borderline",
+            "reasoning": "Step 9 tests only held-out RoboTwin instances under realistic rendering; explicit scope to compiled simulator families prevents a direct rejection, but any deployment-level interpretation remains unsupported."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "borderline",
+            "reasoning": "The finite grammar makes the certificate evaluand-independent and explicitly bounded, but the missing executable producer and absent coverage certificate leave the grammar-defined strategy signature insufficiently validated as the target property."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "Simulator predicates and compiler labels, rather than the evaluated policies or their consensus, are intended to provide the oracle."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "borderline",
+            "reasoning": "The claim is scoped by compiler-certified family coverage, but the executed evidence shows that the current assembly does not actually isolate topology from difficulty and lacks the machinery needed to compile alternative strategies."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The sole controlled_diagnostic_design entry avoids a broad unqualified capability claim, but the C02 lessons on contested target definitions and engineering without actual isolation remain load-bearing borderlines. The synthetic-only transfer lesson is also unresolved beyond realistic simulator rendering."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes causal identifiability for geometry-sensitive strategy generalization: under matched instruction, start distribution, and terminal goal, it remains unresolved whether policy behavior changes specifically because the original relation-event sequence or path class becomes infeasible 鈥?stakes: practitioners cannot tell whether a model will select a valid grasp, reorientation, approach, or insertion strategy on a geometry-altered deployment, and the field may attribute endpoint robustness to functional-geometric reasoning that was never isolated.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "The candidate attempts the C02 move through Steps 2-4 and TCSG, but it does not complete it: Step 4 consumes alternative executable rollouts that no prior step produces, and matching normalized geometry distance leaves clearance, visibility, and control difficulty free to co-vary with q. Therefore the runnable mechanism cannot yet construct the controlled instance set whose divergence is attributable to strategy switching.",
+        "verdict": "bypassed"
+      }
+    ],
+    "verdict": "bypassed",
+    "reasoning": "The only entry attempts formal generation and an independent simulator oracle, but the executed blockers show that the defining C02 operation—holding non-target difficulty axes fixed while producing verifiable alternative strategies—is absent from the executable mechanism."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "controlled_diagnostic_design",
+      "assumption_audit_and_pivot"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains none of the three reject-favored pairs, all of which require heterogeneous_decomposition."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7203654135",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "SSP is the closest retrieved competitor because its abstract describes an event-matched VLA evaluation whose validated specification preserves topology, roles, relative motion, passing order, constraints, and event phases across synthetic, simulated, and physical realizations. It does not, on the available abstract, subsume GISS's same-goal geometry intervention or certify that a nominal manipulation strategy becomes infeasible, but it weakens any broad claim that event-matched controlled VLA evaluation itself is new; all differentiation is abstract-level because full text is unavailable.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": "Metamorphic testing and metamorphic relations for simulator-based systems; scoop-check vocabulary: 'metamorphic robot policy testing' and 'counterfactual simulation test generation'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the compiler-certified switch bit q",
+    "negative_control_target": "tautological",
+    "numeric_bar_provenance": "none",
+    "verdict": "deficient",
+    "reasoning": "Permuting q and expecting TCSG to collapse is tautological because TCSG is defined as a success contrast conditioned on q; the control destroys the grouping variable from which the metric is analytically computed. A non-tautological downstream control would have to intervene on strategy information, such as the already-mentioned label-permuted sigma input, and predict native q=1 success returns to the ordinary-input baseline."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "Step 4 has no actual producer for the alternative executable signatures and path-component membership",
+      "status": "upheld",
+      "basis": "The quoted steps produce only the source expert signature sigma_0 and a symbolic grammar; the executed dry-run had to stipulate an external feasibility table, so adding executable controllers or planner synthesis plus a coverage certificate would change the compiler's load-bearing machinery rather than clarify a field."
+    },
+    {
+      "finding_ref": "Nearest normalized geometry distance does not make q=0 and q=1 observations equally difficult",
+      "status": "upheld",
+      "basis": "The two executed causal worlds have identical observed q, geometry distance, and success means but different causes, proving TCSG is not a topology-causal estimand; relabeling it descriptive would relinquish the anchor causal-identifiability claim, while identification would require redesigned interventions or a defensible difficulty model."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "The recipe_application_check entry is bypassed because the candidate cannot execute C02's defining controlled-instance construction: the alternative strategy producer is missing and switch status remains confounded with difficulty. Both blocking_findings_disposition entries are upheld and each requires redesign of what the mechanism or claim is, while falsification_structure_check is independently deficient because q-permutation makes its TCSG control tautological; the C02 contested-definition and engineering-without-isolation reject lessons remain borderline rather than independently triggering the hard floor.",
+  "revision_targets": []
+}

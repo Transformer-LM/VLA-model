@@ -1,0 +1,384 @@
+{
+  "fulltext_degraded": true,
+  "intake": {
+    "domain": "Robot manipulation with VLA x action-conditioned visual world-action models at deployment time; RGB/proprioception only and no tactile sensing",
+    "venue": "CoRL/RSS/NeurIPS-style robotics or machine-learning venue",
+    "time": "2026-2027 submission cycle",
+    "data": [
+      "LIBERO or LIBERO-LONG",
+      "RoboTwin or RoboTwin2",
+      "existing RGB and proprioceptive robot rollouts; no tactile or force data"
+    ],
+    "compute": "80GB-class GPUs (A100/H100), up to 8 concurrent (one node), \u226450 GPU-days over 5 months, plus ~$10k inference/API budget for the full falsification campaign",
+    "expertise": "VLA/WAM inference, model-based planning, robot-learning evaluation, and simulation-first experimentation",
+    "preference": "both",
+    "baseline": "A pi0.5-class VLA paired with an action-conditioned visual WAM, compared with fixed-budget inference and recent adaptive reasoning, verification, and candidate-ranking systems",
+    "limitation": "The contribution must allocate rollout horizon, representation fidelity, candidates, or tokens according to whether extra imagination changes the executed action, while remaining distinct from ordinary early exit, adaptive action chunking, uncertainty gating, reranking, generic value-of-computation, and tactile/force methods.",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "data",
+      "compute",
+      "expertise",
+      "preference",
+      "baseline",
+      "contribution_type"
+    ]
+  },
+  "bottleneck_statement": "The structural failure in deployment-time VLA x WAM control is that a computation allocator observes endogenous prefixes, candidates, and scores produced by the same learned model whose computation it controls, so it cannot identify the counterfactual marginal quantity 'would one more unit of imagination change the executed action and improve its real outcome?' without conflating genuine decision relevance with model error or sampling instability. The available abstracts show that AHA-WAM [semanticscholar:3136feb03c4c95b58c2336369024578d54681461] amortizes long-horizon context through asynchronous routing, tau0-WM [semanticscholar:f872bf4801cf0de5576885ce2a23ebaff5107a5a] samples and proxy-ranks candidates before thresholded rectification, and OneTwoVLA [semanticscholar:030f9cc8b8d6d46d6239ef6ae29d9e20867194de] switches reasoning at critical moments, but none of those abstracts establishes real action-outcome-calibrated marginal value. Crucially, however, the requested broad cure is not open: the collision supplement verifies that RISE already learns sequential Roll/Stop decisions from expected planning gain versus compute cost, VLA-ATTC already gates additional VLA candidate compute and applies a relative action critic, and AVIC already decides whether and how much to invoke a world model; therefore only a different estimand or failure axis, not the stated decision-adaptive-compute mechanism, remains defensible.",
+  "closest_adjacent": [
+    {
+      "paper_id": "semanticscholar:3136feb03c4c95b58c2336369024578d54681461",
+      "is_anchor": true,
+      "summary_and_residue": "AHA-WAM separates a low-frequency video planner from a high-frequency action expert and reuses routed world context to avoid rerunning the video DiT. Its available abstract does not show an estimator of whether additional world-model computation would change and improve the executed action. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "semanticscholar:f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+      "is_anchor": false,
+      "summary_and_residue": "tau0-WM jointly predicts video and actions, rolls out candidate chunks with an action-conditioned simulator, ranks them by re-denoising consistency, and rectifies candidates deemed low quality. Its available abstract leaves candidate count, rollout effort, and rectification effort controlled by a fixed procedure and proxy threshold rather than a counterfactual real-action benefit. [residue is abstract-level: fulltext unfetchable]"
+    },
+    {
+      "paper_id": "semanticscholar:030f9cc8b8d6d46d6239ef6ae29d9e20867194de",
+      "is_anchor": false,
+      "summary_and_residue": "OneTwoVLA unifies acting and reasoning and invokes explicit reasoning at critical execution moments. Its available abstract does not specify a marginal action-change target or allocate WAM horizon, fidelity, or candidate computation. [residue is abstract-level: fulltext unfetchable]"
+    },
+    {
+      "paper_id": "semanticscholar:280f2ea5ac05cab2d5a85c74f0a23257c7947690",
+      "is_anchor": false,
+      "summary_and_residue": "IRASim improves action-frame alignment in a visual world model and reports that more test-time model-based planning improves Push-T performance. Its available abstract demonstrates a scaling benefit but does not provide an instance-dependent rule for when deeper or broader planning ceases to alter the selected action. [residue is abstract-level: fulltext unfetchable]"
+    },
+    {
+      "paper_id": "openalex:W4412972170",
+      "is_anchor": false,
+      "summary_and_residue": "AR-MBPO adapts learned-model rollout length according to ensemble predictive accuracy to limit compounding error in car-following optimization. Its available abstract does not tie horizon to action-ranking stability or to realized improvement of the executed decision. [residue is abstract-level: fulltext unfetchable]"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "No retrieved manipulation frontier establishes whether a compute-allocation signal estimated from WAM-generated prefixes remains calibrated to real action regret when the WAM is systematically wrong on contact, occlusion, or out-of-distribution transitions; this is a residual of the proxy-ranked tau0-WM and routed-context AHA-WAM leaves rather than an absence of another gate \u2014 stakes: a robot can spend more compute to become more confidently wrong, while reported efficiency-success trade-offs cease to transfer outside the model's calibration regime.",
+    "No retrieved frontier isolates whether an action change after extra imagination is a useful correction or merely a consequence of stochastic candidate-set turnover and correlated hallucinations from the same generator; the abstracts report changed plans or improved aggregate outcomes but do not identify the causal decision effect \u2014 stakes: practitioners may execute unstable alternatives and researchers may attribute gains to adaptive reasoning when they arise from sampling variance.",
+    "No retrieved frontier tests the shared inherited assumption that the decision to continue imagination may be based solely on signals emitted by the same VLA/WAM stack whose computation is being extended; the necessity of that endogenous decision interface remains unasked \u2014 stakes: if the interface is self-selecting, a field-wide class of adaptive-compute conclusions can be biased and principled stopping rules remain blocked even when average benchmark success rises."
+  ],
+  "method_lineage": {
+    "line": "Decision-time allocation of learned-model imagination and candidate-search computation for robot action selection",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Fixed-budget action selection with optional model lookahead",
+        "move": "Base formulation: choose an action after a predetermined amount of policy or planning computation.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Uniform computation ignores that some observations are decision-obvious while others require consequential lookahead.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "Dyna-style learned dynamics with receding-horizon rollout planning",
+        "move": "Replace repeated real interaction with action-conditioned learned-model rollouts before execution.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Rollout horizon and search width remain externally fixed, and model bias compounds with depth.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Dreamer-style latent imagination actor-critic",
+        "move": "Move planning and policy learning into compact recurrent latent rollouts so many imagined transitions become affordable.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "A fixed imagination horizon and homogeneous latent fidelity do not express per-decision computation value.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "IRASim action-conditioned visual world-model planning",
+        "move": "Introduce frame-aligned action conditioning in a diffusion video model and use test-time planning to improve robot actions.",
+        "parent": "n2",
+        "provenance": "retrieved:semanticscholar:280f2ea5ac05cab2d5a85c74f0a23257c7947690",
+        "age_band": "2-4y",
+        "confidence": "high",
+        "residual_problem": "Scaling is beneficial in aggregate, but the amount of planning is not selected per decision.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "tau0-WM unified video-action model with candidate simulation and rectification",
+        "move": "Unify action generation, future-video simulation, task-progress scoring, candidate ranking, and low-quality rectification.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The candidate pool and expensive rectification path are controlled by a fixed procedure and endogenous proxy scores.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "AHA-WAM asynchronous horizon-adaptive world-action modeling",
+        "move": "Decouple low-frequency world planning from high-frequency action execution and reuse observation-routed long-horizon context.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:3136feb03c4c95b58c2336369024578d54681461",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Temporal reuse and routing reduce latency without estimating the marginal real action consequence of further imagination.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "RISE sequential Roll/Stop adaptive imagination",
+        "move": "At each WAM rollout prefix, compare expected planning gain against additional computation cost to continue or stop.",
+        "parent": "n3",
+        "provenance": "retrieved:arXiv:2608.20430",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The broad expected-gain adaptive-horizon mechanism is occupied; transfer to manipulation alone does not close calibration under WAM misspecification.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "pi0-style foundation VLA action policy",
+        "move": "Amortize robot action generation in a pretrained vision-language flow model without explicit decision-time world simulation.",
+        "parent": "n0",
+        "provenance": "retrieved:semanticscholar:7e7e59d2e247d99954081080ddd5aae93d10b9e0",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "A single reflexive inference path has no explicit mechanism for allocating deliberative computation.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "OneTwoVLA adaptive System-One/System-Two reasoning",
+        "move": "Unify acting and explicit reasoning, invoking the reasoning mode only at predicted critical moments.",
+        "parent": "n7",
+        "provenance": "retrieved:semanticscholar:030f9cc8b8d6d46d6239ef6ae29d9e20867194de",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Critical-moment switching does not identify the marginal action effect of a specific unit of WAM computation.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n9",
+        "method": "VLA-ATTC uncertainty clutch with Relative Action Critic",
+        "move": "Use uncertainty to trigger additional VLA candidates and pairwise action criticism at deployment time.",
+        "parent": "n7",
+        "provenance": "retrieved:arXiv:2605.01194",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The broad adaptive candidate-compute mechanism is occupied, while uncertainty and critic preferences can remain endogenous and miscalibrated.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n10",
+        "method": "AVIC selective world-model invocation and scaling",
+        "move": "Decide from visual-evidence sufficiency whether and how much world-model imagination to use, including a reward-minus-cost policy.",
+        "parent": "n2",
+        "provenance": "retrieved:arXiv:2602.08236",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Selective invocation and amount are occupied outside manipulation; the remaining question is outcome calibration for executed robot actions.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n11",
+        "method": "AR-MBPO predictive-accuracy adaptive rollout",
+        "move": "Adjust learned-model rollout length according to ensemble prediction accuracy to limit model-error accumulation.",
+        "parent": "n2",
+        "provenance": "retrieved:openalex:W4412972170",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Predictive accuracy does not imply that another rollout step changes the action ranking or improves the executed decision.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c1",
+        "method": "Rational metareasoning with expected value of computation",
+        "move": "Treat another computation as a costly action and continue only when its expected decision benefit exceeds its cost.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Generic value-of-computation requires a trustworthy improvement model and does not solve learned-WAM self-evaluation.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "UCT Monte Carlo Tree Search",
+        "move": "Allocate simulations non-uniformly across action branches using optimism under uncertainty.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Adaptive branch allocation still assumes rollout values are meaningful and commonly stops at a global budget.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "Adaptive Computation Time",
+        "move": "Learn a differentiable halting probability that varies recurrent computation across inputs.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Learned halting optimizes predictive task loss rather than counterfactual robot action value.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c4",
+        "method": "Successive Halving best-arm resource allocation",
+        "move": "Spend increasing evaluation budget on surviving candidates while pruning weak alternatives.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Candidate pruning presumes comparable, progressively informative scores and does not resolve biased WAM rollouts.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c5",
+        "method": "Event-triggered model-predictive replanning",
+        "move": "Recompute a control plan only when state deviation or a trigger condition invalidates the current plan.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Execution-state triggers govern replanning cadence, not the fidelity, width, or depth of learned imagination before an action.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Retrieved nodes from the structured table and the web-verified exact-collision supplement are grounded recent-frontier evidence; parametric nodes are awareness-only ancestry or collateral families and are not used as hard prior-art citations. The 2-4y IRASim node is retrieval-grounded despite that age band's usual recall risk. Collateral nodes are not gap sites and are not used to infer a shared ancestor. Full-text retrieval failed for every cached paper and the AHA-WAM anchor top-up also failed, so method residues for structured-pool papers remain abstract-level; the lineage is intentionally shallow where a concrete ancestor could not be named."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 45,
+    "n_on_topic": 43,
+    "patterns": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 2,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 9,
+        "share": 0.21,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 7,
+        "share": 0.16,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 4,
+        "share": 0.09,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 11,
+        "share": 0.26,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 3,
+        "share": 0.07,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 10,
+        "share": 0.23,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 13,
+        "share": 0.30,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 0,
+        "share": 0.00,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 13,
+        "share": 0.30,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 14,
+        "share": 0.33,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.00,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 8,
+        "share": 0.19,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 0,
+        "share": 0.00,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 0,
+        "share": 0.00,
+        "saturation_band": "untested"
+      }
+    ],
+    "saturation_threshold_saturated": 0.50,
+    "saturation_threshold_untested_count": 1,
+    "notes": "decompose_and_delegate is the most-used pattern (14 of 43 on-topic papers, share 0.33); the closest adaptive-compute papers tend to route between fixed components using temporal, uncertainty, or proxy-quality signals without validating real action-outcome marginal value."
+  },
+  "state": "do_not_generate",
+  "ood_reasons": [
+    {
+      "trigger_id": 3,
+      "trigger_name": "Exact-mechanism occupied (task-specific collision gate)",
+      "match_evidence": "The query is neither broad nor anchorless and the corpus is not sparse, but the host-required collision supplement verifies direct occupation: RISE covers expected planning-gain-versus-cost Roll/Stop horizons, VLA-ATTC covers uncertainty-triggered candidate compute plus relative action criticism on pi0.5, and AVIC covers selective world-model invocation and amount. Domain transfer to manipulation or combining these axes is not a distinct mechanism."
+    }
+  ],
+  "remedial_steps": [
+    "Re-invoke with a different load-bearing estimand or failure axis, such as calibration of WAM-induced action changes to real outcome regret under model misspecification; do not describe another expected-gain, uncertainty, evidence-sufficiency, early-exit, chunking, or ranking gate.",
+    "State the exact frozen VLA/WAM access level, RGB/proprioceptive supervision available without tactile sensing, target benchmark, and the observable that can falsify the new estimand independently of the WAM's own scores.",
+    "Alternatively change contribution_type to empirical_reveal or controlled diagnostic and test when additional imagination changes actions versus when those changes improve real outcomes, without claiming a novel adaptive-compute controller."
+  ]
+}

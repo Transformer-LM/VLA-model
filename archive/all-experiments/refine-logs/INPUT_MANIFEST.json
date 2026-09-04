@@ -1,0 +1,371 @@
+{
+  "schema_version": "2.0",
+  "manifest_id": "pgr-audit-inputs-v2-all-libero10",
+  "created_at": "2026-08-07T10:40:00+08:00",
+  "status": "frozen-pending-runtime-reverification",
+  "personal_only": true,
+  "logical_personal_root": "<PERSONAL_RESEARCH_ROOT>",
+  "canonical_personal_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+  "scope": {
+    "simulation_suite": "libero_10",
+    "dataset_task_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "episode_counts_by_dataset_task_index": {
+      "0": 38,
+      "1": 36,
+      "2": 34,
+      "3": 41,
+      "4": 43,
+      "5": 33,
+      "6": 29,
+      "7": 49,
+      "8": 35,
+      "9": 41
+    },
+    "all_ten_tasks_required": true,
+    "simulation_real_relation": "independent validation lanes; neither lane gates the other; report separately unless both independently pass"
+  },
+  "compute_policy": {
+    "gpu_hour_cap": null,
+    "budget_admission_gate": "none",
+    "telemetry_only": true
+  },
+  "cf_dynalign_reuse_policy": {
+    "forbidden": ["predictor", "cache", "metric", "result", "checkpoint sidecar", "lambda_cf"],
+    "permitted_only_as_independently_verified_raw_host_inputs": ["frozen base VLA checkpoints", "base VLA architecture configuration", "raw-data-derived action normalization statistics"]
+  },
+  "checkpoint_payload_provenance_audit": {
+    "method": "read each PyTorch zip data.pkl with Python zipfile plus pickletools without tensor loading; collect string opcodes and state-key prefixes",
+    "checkpoints": [1000, 5000, 10000],
+    "result": "each contains exactly730 qwen_vl_interface.* or action_model.* state keys and zero string matches for predictor, lambda_cf, cf_, dynalign, future_head, or world_model",
+    "base_config_result": "hashed config.full.yaml declares freeze_modules=qwen_vl_interface and lambda_cf=0.0; its historical config_yaml/output paths are provenance text and must never be followed by the isolated runtime",
+    "scope_limit": "this attests named payload structure and frozen-host role, not semantic equivalence of arbitrary tensor contents; runtime strict key allowlist and the pinned whole-file hashes remain mandatory"
+  },
+  "directory_hash_algorithm": "reject symlinks and non-regular entries; sort included regular files by POSIX relative path Unicode code-point order; for each file append Python3.11 json.dumps({bytes,path,sha256},sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode('utf-8') plus exactly one LF, including after the last record; SHA256 the concatenated bytes",
+  "runtime_reverification": "before the engineering CUDA/model-load canary or any scientific launch, recompute every used file and directory digest, verify every logical path resolves under the canonical personal root, enforce the strict checkpoint state-key allowlist, materialize environment lock files under the isolated personal workspace, and refuse on any mismatch",
+  "entries": [
+    {
+      "logical_name": "starvla_clean_bundle",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/workspace/cf-dynalign-starvla/transfer/starvla.bundle",
+      "bytes": 65721466,
+      "sha256": "747b10dd8c06fc50fee34459dd6bc4020c85db1c43b3ba6f5884ab0b00f1e597",
+      "read_only": true
+    },
+    {
+      "logical_name": "starvla_clean_commit",
+      "kind": "git_commit",
+      "bundle_path": "<PERSONAL_RESEARCH_ROOT>/workspace/cf-dynalign-starvla/transfer/starvla.bundle",
+      "object_id": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "runtime_destination": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla",
+      "read_only_source": true
+    },
+    {
+      "logical_name": "qwen3_vl_4b_complete_tree",
+      "kind": "directory_tree",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct",
+      "file_count": 43,
+      "bytes": 8887294190,
+      "sha256": "b82ce8565eacf381a4e272ca84ecd6ec1719d161cd2df28afb2cb0a20bd2e91c",
+      "included": "all regular files",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_config",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/config.json",
+      "bytes": 1505,
+      "sha256": "edac7703329133edfc53e46ac0081835144c99d7eebf28b71c732694d435224d",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_weight_index",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/model.safetensors.index.json",
+      "bytes": 64742,
+      "sha256": "58a7841d7bff2548dd91577d216274a83cf1b500bc6a534b809d6c1b1707cf2b",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_weight_shard_1",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/model-00001-of-00002.safetensors",
+      "bytes": 4967229296,
+      "sha256": "30a01a0556622645a3cce87b655bbbbbc1f170c196099f1b666c93202c3339a9",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_weight_shard_2",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/model-00002-of-00002.safetensors",
+      "bytes": 3908490048,
+      "sha256": "046296a2a387efb43b0c997d5833c789604d168834f6e0d3064bf7bb13d002a6",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_tokenizer",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/tokenizer.json",
+      "bytes": 7032403,
+      "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+      "read_only": true
+    },
+    {
+      "logical_name": "qwen_preprocessor",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct/preprocessor_config.json",
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "read_only": true
+    },
+    {
+      "logical_name": "dinov2_vits14_weight",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/dinov2/dinov2_vits14_pretrain/dinov2_vits14_pretrain.pth",
+      "bytes": 88283115,
+      "sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+      "read_only": true
+    },
+    {
+      "logical_name": "dinov2_local_source",
+      "kind": "directory_tree",
+      "path": "<PERSONAL_RESEARCH_ROOT>/workspace/third_party/dinov2-main/dinov2-main",
+      "file_count": 203,
+      "bytes": 3956490,
+      "sha256": "7a8f602bfabaee456b3145234c648bd41aee709b96c22c58eb44e535c883a537",
+      "included": "all regular files except .git and __pycache__ path components",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero10_full_personal_dataset_tree",
+      "kind": "directory_tree",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot",
+      "file_count": 3430,
+      "bytes": 636965952,
+      "sha256": "a919e10e7e2cff046dde10b2ba0fbe091a91d62a80c2446d073216f5a280ae80",
+      "included": "all regular files under the dataset root; no task, episode, modality, or metadata subset exclusion",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_info",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot/meta/info.json",
+      "bytes": 3350,
+      "sha256": "e5643c4e72e65f133ce0b1a5b9d9aaa5b2f065ed7f0f00ebbc231bde61af96d5",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_tasks",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot/meta/tasks.jsonl",
+      "bytes": 923,
+      "sha256": "45f9eb4d4b6b04999f64640c0aae380555372b7b273a904f5f459ad05d4a0a6a",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_episodes",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot/meta/episodes.jsonl",
+      "bytes": 43755,
+      "sha256": "5589f8f87cfddb34812782462160bf55b0d3082e404240682d1d0a89faba8265",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_episode_stats",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot/meta/episodes_stats.jsonl",
+      "bytes": 938760,
+      "sha256": "884f963e29d3078a0c32099d055a7d46e4701935b2a00f70c68801baae9619ea",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_steps_index",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/datasets/libero/libero_10_no_noops_1.0.0_lerobot/meta/steps_data_index.pkl",
+      "bytes": 927235,
+      "sha256": "e54c0f3d704ed216480ed27f1b5433bc3ae08c34de46647266d614dbc64f3bee",
+      "read_only": true
+    },
+    {
+      "logical_name": "baseline_full_config",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/config.full.yaml",
+      "bytes": 2043,
+      "sha256": "c157bee4385771d8c45d142f603f45ca25448144e8e239ea7815f6b4442089ef",
+      "read_only": true,
+      "role": "independently verified frozen base VLA architecture configuration only; no predictor, cache, metric, result, checkpoint sidecar, or lambda_cf artifact may be loaded"
+    },
+    {
+      "logical_name": "baseline_action_statistics",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/dataset_statistics.json",
+      "bytes": 2904,
+      "sha256": "49c8defa22ff2452571f79d653b62ae834b74052d72d7fdd3fa15a5cec3607fa",
+      "read_only": true,
+      "role": "independently verified raw-data-derived action normalization statistics only"
+    },
+    {
+      "logical_name": "screen_checkpoint_1000",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_1000_pytorch_model.pt",
+      "bytes": 9785060316,
+      "sha256": "6e2f52758054f0da6d76640dfcfc3dd324b0a14f2cf24d4626262781fd1d4735",
+      "read_only": true,
+      "role": "independently verified frozen base VLA checkpoint candidate only"
+    },
+    {
+      "logical_name": "screen_checkpoint_5000",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_5000_pytorch_model.pt",
+      "bytes": 9785060316,
+      "sha256": "4b0067d806a321065d1521f4940d34920de234902ae4fe83a2a642ab984b277a",
+      "read_only": true,
+      "role": "independently verified frozen base VLA checkpoint candidate only"
+    },
+    {
+      "logical_name": "screen_checkpoint_10000",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_10000_pytorch_model.pt",
+      "bytes": 9785061050,
+      "sha256": "1687afbdcab4f4593c6261d64ac478fd151a0ebd7b641236b60ce1a01fbdee7b",
+      "read_only": true,
+      "role": "independently verified frozen base VLA checkpoint candidate only"
+    },
+    {
+      "logical_name": "starvla_oft_base_checkpoint",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/starvla/Qwen3-VL-OFT-LIBERO-4in1/checkpoints/steps_50000_pytorch_model.pt",
+      "bytes": 9785061050,
+      "sha256": "80d7a2ab0b033ce49d84070eb1124a2f9718e5b1f0ef8e2db6e4c44478b05df9",
+      "read_only": true
+    },
+    {
+      "logical_name": "starvla_oft_base_config",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/starvla/Qwen3-VL-OFT-LIBERO-4in1/config.yaml",
+      "bytes": 1290,
+      "sha256": "495392b9059ebd90bed235c9eb327d66665d425f13166001e6ee5bb82ffd1097",
+      "read_only": true
+    },
+    {
+      "logical_name": "starvla_oft_base_statistics",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/starvla/Qwen3-VL-OFT-LIBERO-4in1/dataset_statistics.json",
+      "bytes": 2905,
+      "sha256": "64bb15c9525653c8efc476496d2a0e43d678401bc4ccc65b61fa6e314c836687",
+      "read_only": true
+    },
+    {
+      "logical_name": "clean_eval_libero_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "examples/LIBERO/eval_files/eval_libero.py",
+      "bytes": 11638,
+      "sha256": "4a938d7eec4b8e59380dc0dab47474c4d13bd8292c8bed519b4dafd43628a11d"
+    },
+    {
+      "logical_name": "clean_model2libero_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "examples/LIBERO/eval_files/model2libero_interface.py",
+      "bytes": 7314,
+      "sha256": "96da6532e07f8d41abc4a17d23849721728774df27d8eb7d08a4b12218269c37"
+    },
+    {
+      "logical_name": "clean_qwenoft_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "starVLA/model/framework/VLM4A/QwenOFT.py",
+      "bytes": 16985,
+      "sha256": "039117281f3598cc08056a9f7dfc57e2f1b156ce396623f06d55b98d4b55913b"
+    },
+    {
+      "logical_name": "clean_lerobot_loader_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "starVLA/dataloader/lerobot_datasets.py",
+      "bytes": 6076,
+      "sha256": "cf2dfe9930d29efb57949b8f1164715e9e4ed8bb47a1ceb0e67fbc557ec2bec4"
+    },
+    {
+      "logical_name": "clean_libero_data_config_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "examples/LIBERO/train_files/data_registry/data_config.py",
+      "bytes": 3700,
+      "sha256": "772c967bc6376d7db9440c785b71d65018af831a288840af5605e76ea598fe93"
+    },
+    {
+      "logical_name": "clean_action_transform_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "starVLA/dataloader/gr00t_lerobot/transform/state_action.py",
+      "bytes": 27181,
+      "sha256": "aa2088ff19813ab90bc8dc890b7f4edcda3e47495cf82ea4d8a4e3eb4983867c"
+    },
+    {
+      "logical_name": "clean_policy_norm_blob",
+      "kind": "git_blob",
+      "commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+      "repo_relative_path": "deployment/model_server/policy_norm_processor.py",
+      "bytes": 16045,
+      "sha256": "0dde7d7d513a27010588fc23392e6f0ff2f368ad99ae20aec7ecfcf975565156"
+    },
+    {
+      "logical_name": "libero_runtime_tree",
+      "kind": "directory_tree",
+      "path": "<PERSONAL_RESEARCH_ROOT>/workspace/third_party/LIBERO/libero/libero",
+      "file_count": 1026,
+      "bytes": 435623262,
+      "sha256": "41988449f12a3ddd0ca75cdd069f84979a0ba0702c2b14b014d83cdf0d669309",
+      "included": "all regular files except .git and __pycache__ path components",
+      "read_only": true
+    },
+    {
+      "logical_name": "libero_personal_config",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/config/libero/config.yaml",
+      "bytes": 391,
+      "sha256": "13d4eed25ee2d7f4a3c74bab8aebba8d37dd7a9070c6bec5a4a99d38172ec069",
+      "read_only": true,
+      "role": "all-ten-task LIBERO suite configuration"
+    },
+    {
+      "logical_name": "train_conda_history",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign/conda-meta/history",
+      "bytes": 1793,
+      "sha256": "57a54e0f4473182477148f4e2b261d9fe3150d85db99e5979fac0d9cfbd8ac9a",
+      "read_only": true
+    },
+    {
+      "logical_name": "train_conda_explicit_lock_digest",
+      "kind": "command_output_digest",
+      "command": "<PERSONAL_RESEARCH_ROOT>/miniforge3/bin/conda list -p <PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign --explicit",
+      "sha256": "770676856521b3f284eef10034b928c20ed28d9a21d235baed11bae70db131e9",
+      "materialize_before_screen": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla/locks/train-conda-explicit.txt"
+    },
+    {
+      "logical_name": "eval_venv_config",
+      "kind": "file",
+      "path": "<PERSONAL_RESEARCH_ROOT>/venvs/libero-eval-py310/pyvenv.cfg",
+      "bytes": 71,
+      "sha256": "db6c8a96f25493eda9f74f23f0b5f248a8b50a5b469b15c5ee7313875b416364",
+      "read_only": true
+    },
+    {
+      "logical_name": "eval_pip_freeze_lock_digest",
+      "kind": "command_output_digest",
+      "command": "<PERSONAL_RESEARCH_ROOT>/venvs/libero-eval-py310/bin/python -m pip freeze --all",
+      "sha256": "2107849427acaabc4466bb20d617bac0a32f50e661397a8ff3cd69409157e2ee",
+      "materialize_before_screen": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla/locks/eval-pip-freeze.txt"
+    }
+  ],
+  "forbidden_runtime_inputs": [
+    "<PERSONAL_RESEARCH_ROOT>/workspace/cf-dynalign-starvla/source/starVLA as executable source",
+    "any CF-DynAlign predictor, cache, metric, result, checkpoint sidecar, lambda_cf artifact, or artifact derived from any of those",
+    "task- or episode-subset dataset inputs in place of libero10_full_personal_dataset_tree",
+    "team or shared datasets, models, checkpoints, projects, caches, or results",
+    "any project, data, model, checkpoint, environment, cache, temporary, log, metric, video, W&B, or result path outside the logical personal root",
+    "network downloads"
+  ]
+}

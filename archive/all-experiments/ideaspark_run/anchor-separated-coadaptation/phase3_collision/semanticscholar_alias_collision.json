@@ -1,0 +1,1412 @@
+[
+ {
+  "title": "Handling outcome-dependent missingness with binary responses: A Heckman-like model",
+  "title_norm": "handling outcome dependent missingness with binary responses a heckman like mode",
+  "abstract": "In regression models with missing outcomes, selection bias can arise when the missingness mechanism depends on the outcome itself. This proposal focuses on an extension of the Heckman model to a setting where the outcome is binary and both the selection process and the outcome are modeled through logistic regression. A correction term analogous to the inverse Mills'ratio is derived based on relative risks. Under given assumptions, such a strategy provides an effective tool for bias correction in the presence of informative missingness.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "M. Doretti",
+   "E. Stanghellini",
+   "Alessandro Taraborrelli"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "60c37f74255de8b7539b2c72dc7a128f5a22d0d7",
+  "paper_id": "arxiv:2511.11776",
+  "doi": "",
+  "arxiv_id": "2511.11776",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/60c37f74255de8b7539b2c72dc7a128f5a22d0d7",
+  "published_iso": "2025-11-14",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Imputation-Powered Inference",
+  "title_norm": "imputation powered inference",
+  "abstract": "Modern multi-modal and multi-site data frequently suffer from blockwise missingness, where subsets of features are missing for groups of individuals, creating complex patterns that challenge standard inference methods. Existing approaches have critical limitations: complete-case analysis discards informative data and is potentially biased; doubly robust estimators for non-monotone missingness-where the missingness patterns are not nested subsets of one another-can be theoretically efficient but lack closed-form solutions and often fail to scale; and blackbox imputation can leverage partially observed data to improve efficiency but provides no inferential guarantees when misspecified. To address the limitations of these existing methods, we propose imputation-powered inference (IPI), a model-lean framework that combines the flexibility of blackbox imputation with bias correction using fully observed data, drawing on ideas from prediction-powered inference and semiparametric inference. IPI enables valid and efficient M-estimation under missing completely at random (MCAR) blockwise missingness and improves subpopulation inference under a weaker assumption we formalize as first-moment MCAR, for which we also provide practical diagnostics. Simulation studies and a clinical application demonstrate that IPI may substantially improve subpopulation efficiency relative to complete-case analysis, while maintaining statistical validity in settings where both doubly robust estimators and naive imputation fail to achieve nominal coverage.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Sarah A. Zhao",
+   "Emmanuel J. Candès"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "7bd1eb13c97154af90b32d2c2cc951c7f6124b0e",
+  "paper_id": "arxiv:2509.13778",
+  "doi": "",
+  "arxiv_id": "2509.13778",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7bd1eb13c97154af90b32d2c2cc951c7f6124b0e",
+  "published_iso": "2025-09-17",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "A Context-Aware Single-Cell Proteomics Analysis pipeline",
+  "title_norm": "a context aware single cell proteomics analysis pipeline",
+  "abstract": "Single-cell proteomics (SCP) by mass spectrometry can now quantify hundreds to thousands of proteins per cell, but the field still lacks standardised analytical pipelines that accommodate the diversity of instruments, sample preparation workflows and biological contexts encountered in practice. Existing workflows, largely adapted from single-cell transcriptomics, do not account for the informative missingness, pervasive ambient protein contamination and limited feature space that distinguish proteomic from transcriptomic data. In addition, cell type annotation remains a manual bottleneck that is subjective, difficult to reproduce and hard to scale. Here we present an end-to-end pipeline that integrates adaptive quality control, entropy-guided iterative batch correction, multi-modal marker discovery that exploits detection patterns unique to proteomics, and context-aware annotation by large language models (LLMs) coupled to structured contradiction reasoning and orthogonal data-driven validation. Benchmarking on published single-cell proteomic datasets from developing human brain and glioblastoma-associated neutrophils revealed systematic LLM failure modes, including context-insensitive marker vocabulary and misinterpretation of phagocytic or lytic cell states. We addressed these errors using a three-round prompt architecture that combines general biological principles with auto-generated dataset-specific constraints. In held-out validation on a skin tumour dataset acquired, the pipeline showed high concordance with FACS-sorted ground truth. In the caerulein-injured pancreas, orthogonal immunohistochemistry further supported annotations of macrophage, stellate and immune populations. The pipeline is fully automated under fixed settings, and available as Context-Aware Single-Cell Proteomics Analysis (CASPA), providing SCP laboratories and facilities with a reproducible workflow that delivers interpretable, confidence-quantified annotations suitable for downstream expert review.",
+  "tldr": "An end-to-end pipeline that integrates adaptive quality control, entropy-guided iterative batch correction, multi-modal marker discovery that exploits detection patterns unique to proteomics, and context-aware annotation by large language models coupled to structured contradiction reasoning and orthogonal data-driven validation is presented.",
+  "year": 2026,
+  "venue": "bioRxiv",
+  "publication_types": [
+   "Review"
+  ],
+  "authors": [
+   "Carla Salomó Coll",
+   "Agata N. Makar",
+   "A. Brenes",
+   "Joseph Inns",
+   "M. Trost",
+   "N. Rajan"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "a64d62628b6fba0dc78ec3b485a728a45a75d0c3",
+  "paper_id": "doi:10.64898/2026.04.03.716382",
+  "doi": "10.64898/2026.04.03.716382",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.biorxiv.org/content/biorxiv/early/2026/04/07/2026.04.03.716382.full.pdf",
+  "published_iso": "2026-04-07",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Informative missingness and its implications in semi-supervised learning",
+  "title_norm": "informative missingness and its implications in semi supervised learning",
+  "abstract": "Semi-supervised learning (SSL) constructs classifiers using both labelled and unlabelled data. It leverages information from labelled samples, whose acquisition is often costly or labour-intensive, together with unlabelled data to enhance prediction performance. This defines an incomplete-data problem, which statistically can be formulated within the likelihood framework for finite mixture models that can be fitted using the expectation-maximisation (EM) algorithm. Ideally, one would prefer a completely labelled sample, as one would anticipate that a labelled observation provides more information than an unlabelled one. However, when the mechanism governing label absence depends on the observed features or the class labels or both, the missingness indicators themselves contain useful information. In certain situations, the information gained from modelling the missing-label mechanism can even outweigh the loss due to missing labels, yielding a classifier with a smaller expected error than one based on a completely labelled sample analysed.1 This improvement arises particularly when class overlap is moderate, labelled data are sparse, and the missingness is informative. Modelling such informative missingness thus offers a coherent statistical framework that compares likelihood-based inference with the behaviour of empirical SSL methods.",
+  "tldr": "Modelling informative missingness thus offers a coherent statistical framework that compares likelihood-based inference with the behaviour of empirical SSL methods, and can even outweigh the loss due to missing labels.",
+  "year": 2025,
+  "venue": "The Innovation Informatics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jinran Wu",
+   "You‐Gan Wang",
+   "Geoffrey J. McLachlan"
+  ],
+  "citations": 21,
+  "source": "semanticscholar",
+  "source_id": "716f28754dae071ddff3622297abd2bf1642970c",
+  "paper_id": "dblp:journals/corr/abs-2512-04392",
+  "doi": "10.59717/j.xinn-inform.2026.100033",
+  "arxiv_id": "2512.04392",
+  "dblp_key": "journals/corr/abs-2512-04392",
+  "paper_url": "https://www.the-innovation.org/data/article/export-pdf?id=6944d4f1318fac13ed046b54",
+  "published_iso": "2025-12-04",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Stochastic Volatility under Informative Missingness",
+  "title_norm": "stochastic volatility under informative missingness",
+  "abstract": "Stochastic volatility models that treat the variance of a time series as a stochastic process have proven to be important tools for analyzing dynamic variability. Current methods for fitting and conducting inference on stochastic volatility models are limited by the assumption that any missing data are missing at random. With a recent explosion in technology to facilitate the collection of dynamic self-response data for which mechanisms underlying missing data are inherently scientifically informative, this limitation in statistical methodology also limits scientific advancement. The goal of this article is to develop the first statistical methodology for modeling, fitting, and conducting inference on stochastic volatility with data that are missing not at random. The approach is based upon a novel imputation method derived using Tukey's representation, which utilizes the Markovian nature of stochastic volatility models to overcome unidentifiable components often faced when modeling informative missingness in other settings. This imputation method is combined with a new conditional particle filtering with ancestor sampling procedure that accounts for variability in imputation to formulate a complete particle Gibbs sampling scheme. The use of the method is illustrated through the analysis of mobile phone self-reported mood from individuals being monitored after unsuccessful suicide attempts.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Gehui Zhang",
+   "Gong Tang",
+   "Lori N Scott",
+   "Robert T. Krafty"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c6385a67c0bfd066e15e88718acfe4c058b08cfa",
+  "paper_id": "arxiv:2501.15297",
+  "doi": "",
+  "arxiv_id": "2501.15297",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c6385a67c0bfd066e15e88718acfe4c058b08cfa",
+  "published_iso": "2025-01-25",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Aligning Probabilistic Beliefs under Informative Missingness: LLM Steerability in Clinical Reasoning",
+  "title_norm": "aligning probabilistic beliefs under informative missingness llm steerability in",
+  "abstract": "Large Language Models (LLMs) are increasingly deployed for clinical reasoning tasks, which inherently require eliciting calibrated probabilistic beliefs based on available evidence. However, real-world clinical data are frequently incomplete, with missingness patterns often informative of patient prognosis; for example, ordering a rare laboratory test reflects a clinician's latent suspicion. In this work, we investigate whether LLMs can be steered to leverage this informative missingness for prognostic inference. To evaluate how well LLMs align their verbalized probabilistic beliefs with an underlying target distribution, we analyze three common prompt-based interventions: explicit serialization, instruction steering, and in-context learning. We introduce a bias-variance decomposition of the log-loss to clarify the mechanisms driving gains in predictive performance. Using a real-world intensive care testbed, we find that while explicit structural steering and in-context learning can improve probabilistic alignment, the models do not natively leverage informative missingness without careful interventions.",
+  "tldr": "Using a real-world intensive care testbed, it is found that while explicit structural steering and in-context learning can improve probabilistic alignment, the models do not natively leverage informative missingness without careful interventions.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Y. Kobayashi",
+   "V. Jeanselme",
+   "Shalmali Joshi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "dc63d35972cdd03e4682b14d3773d49434c207f2",
+  "paper_id": "arxiv:2512.00479",
+  "doi": "",
+  "arxiv_id": "2512.00479",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/dc63d35972cdd03e4682b14d3773d49434c207f2",
+  "published_iso": "2025-11-29",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Embracing the informative missingness and silent gene in analyzing biologically diverse samples",
+  "title_norm": "embracing the informative missingness and silent gene in analyzing biologically ",
+  "abstract": "Bioinformatics software tools are essential to identify informative molecular features that define different phenotypic sample groups. Among the most fundamental and interrelated tasks are missing value imputation, signature gene detection, and differential pattern visualization. However, many commonly used analytics tools can be problematic when handling biologically diverse samples if either informative missingness possess high missing rates with mixed missing mechanisms, or multiple sample groups are compared and visualized in parallel. We developed the ABDS tool suite specifically for analyzing biologically diverse samples. Collectively, a mechanism-integrated group-wise pre-imputation scheme is proposed to retain informative missingness associated with signature genes, a cosine-based one-sample test is extended to detect group-silenced signature genes, and a unified heatmap is designed to display multiple sample groups. We describe the methodological principles and demonstrate the effectiveness of three analytics tools under targeted scenarios, supported by comparative evaluations and biomedical showcases. As an open-source R package, ABDS tool suite complements rather than replaces existing tools and will allow biologists to more accurately detect interpretable molecular signals among phenotypically diverse sample groups.",
+  "tldr": "A mechanism-integrated group-wise pre-imputation scheme is proposed to retain informative missingness associated with signature genes, a cosine-based one-sample test is extended to detect group-silenced signature genes, and a unified heatmap is designed to display multiple sample groups.",
+  "year": 2024,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dongping Du",
+   "Saurabh Bhardwaj",
+   "Yingzhou Lu",
+   "Yizhi Wang",
+   "Sarah J. Parker",
+   "Zhen Zhang"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "6bd82126c5917b1b2b52f127f8b3654501fb4b43",
+  "paper_id": "doi:10.1038/s41598-024-78076-0",
+  "doi": "10.1038/s41598-024-78076-0",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1038/s41598-024-78076-0",
+  "published_iso": "2024-11-16",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "A Pairwise Pseudo-likelihood Approach for Matrix Completion with Informative Missingness",
+  "title_norm": "a pairwise pseudo likelihood approach for matrix completion with informative mis",
+  "abstract": "While several recent matrix completion methods are developed to deal with non-uniform observation probabilities across matrix entries, very few allow the missing-ness to depend on the mostly unobserved matrix measurements, which is generally ill-posed. We aim to tackle a subclass of these ill-posed settings, characterized by a flexible separable observation probability assumption that can depend on the matrix measurements. We propose a regularized pairwise pseudo-likelihood approach for matrix completion and prove that the proposed estimator can asymptotically recover the low-rank parameter matrix up to an identifiable equivalence class of a constant shift and scaling, at a near-optimal asymptotic convergence rate of the standard well-posed (non-informative missing) setting, while effectively mitigating the impact of informative missingness. The efficacy of our method is validated via numerical experiments, positioning it as a robust tool for matrix completion to mitigate data bias.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Neural Information Processing Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jiangyuan Li",
+   "Jiayi Wang",
+   "Raymond K. W. Wong",
+   "Kwun Chuen Gary Chan"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "e47f254d3523d3cc1431bc12cabc5b6a6d048fc4",
+  "paper_id": "dblp:conf/nips/LiWWC24",
+  "doi": "10.52202/079017-0343",
+  "arxiv_id": "",
+  "dblp_key": "conf/nips/LiWWC24",
+  "paper_url": "https://www.semanticscholar.org/paper/e47f254d3523d3cc1431bc12cabc5b6a6d048fc4",
+  "published_iso": null,
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Bounding causal effects with an unknown mixture of informative and non-informative missingness",
+  "title_norm": "bounding causal effects with an unknown mixture of informative and non informati",
+  "abstract": "Abstract In experimental and observational data settings, researchers often have limited knowledge of the reasons for missing outcomes. To address this uncertainty, we propose bounds on causal effects for missing outcomes, accommodating the scenario where missingness is an unobserved mixture of informative and non-informative components. Within this mixed missingness framework, we explore several assumptions to derive bounds on causal effects, including bounds expressed as a function of user-specified sensitivity parameters. We develop influence-function based estimators of these bounds to enable flexible, non-parametric, and machine learning based estimation, achieving root-n convergence rates and asymptotic normality under relatively mild conditions. We further consider the identification and estimation of bounds for other causal quantities that remain meaningful when informative missingness reflects a competing outcome, such as death. We conduct simulation studies and illustrate our methodology with a study on the causal effect of antipsychotic drugs on diabetes risk using a health insurance dataset.",
+  "tldr": "This work proposes bounds on causal effects for missing outcomes, accommodating the scenario where missingness is an unobserved mixture of informative and non-informative components, and develops influence-function based estimators of these bounds to enable flexible, non-parametric, and machine learning based estimation.",
+  "year": 2024,
+  "venue": "Journal of Causal Inference",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Max Rubinstein",
+   "D. Agniel",
+   "Larry Han",
+   "Marcela Horvitz-Lennon",
+   "Sharon-Lise T. Normand"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "102d357f319c427fde56d78739133d78633b170a",
+  "paper_id": "arxiv:2411.16902",
+  "doi": "10.1515/jci-2025-0028",
+  "arxiv_id": "2411.16902",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1515/jci-2025-0028",
+  "published_iso": "2024-11-25",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Extremely missing numerical data in Electronic Health Records for machine learning can be managed through simple imputation methods considering informative missingness: A comparative of solutions in a COVID-19 mortality case study",
+  "title_norm": "extremely missing numerical data in electronic health records for machine learni",
+  "abstract": "BACKGROUND AND OBJECTIVE\nReusing Electronic Health Records (EHRs) for Machine Learning (ML) leads on many occasions to extremely incomplete and sparse tabular datasets, which can hinder the model development processes and limit their performance and generalization. In this study, we aimed to characterize the most effective data imputation techniques and ML models for dealing with highly missing numerical data in EHRs, in the case where only a very limited number of data are complete, as opposed to the usual case of having a reduced number of missing values.\n\n\nMETHODS\nWe used a case study including full blood count laboratory data, demographic and survival data in the context of COVID-19 hospital admissions and evaluated 30 processing pipelines combining imputation methods with ML classifiers. The imputation methods included missing mask, translation and encoding, mean imputation, k-nearest neighbors' imputation, Bayesian ridge regression imputation and generative adversarial imputation networks. The classifiers included k-nearest neighbors, logistic regression, random forest, gradient boosting and deep multilayer perceptron.\n\n\nRESULTS\nOur results suggest that in the presence of highly missing data, combining translation and encoding imputation-which considers informative missingness-with tree ensemble classifiers-random forest and gradient boosting-is a sensible choice when aiming to maximize performance, in terms of area under curve.\n\n\nCONCLUSIONS\nBased on our findings, we recommend the consideration of this imputer-classifier configuration when constructing models in the presence of extremely incomplete numerical data in EHR.",
+  "tldr": "The results suggest that in the presence of highly missing data, combining translation and encoding imputation-which considers informative missingness-with tree ensemble classifiers-random forest and gradient boosting-is a sensible choice when aiming to maximize performance, in terms of area under curve.",
+  "year": 2023,
+  "venue": "Comput. Methods Programs Biomed.",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Pablo Ferri Borreda",
+   "Nekane Romero-García",
+   "R. Badenes",
+   "David Lora-Pablos",
+   "Teresa García Morales",
+   "A. G. D. L. Camara"
+  ],
+  "citations": 24,
+  "source": "semanticscholar",
+  "source_id": "81c8f5035fcb73bf82925f3fe08f340fca2840ff",
+  "paper_id": "dblp:journals/cmpb/BorredaRBLMCGS23",
+  "doi": "10.1016/j.cmpb.2023.107803",
+  "arxiv_id": "",
+  "dblp_key": "journals/cmpb/BorredaRBLMCGS23",
+  "paper_url": "https://doi.org/10.1016/j.cmpb.2023.107803",
+  "published_iso": "2023-09-01",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Quantum Metrology Enhanced by Leveraging Informative Noise with Error Correction.",
+  "title_norm": "quantum metrology enhanced by leveraging informative noise with error correction",
+  "abstract": "The primary challenge in advancing practical quantum technology is the presence of noise, which can lead to decoherence and undermine the advantages of quantum systems. However, it is worth noting that noise can also contain information that can be harnessed to improve performance in certain quantum information tasks. This has been explored for specific types of noise, but the full potential of informative noise within general dynamics remains largely unknown. Here we demonstrate that informative noise can be transformed into a valuable resource for enhancing precision limits in quantum metrology. We provide necessary and sufficient conditions under which the precision achieved in the presence of informative noise can attain Heisenberg scaling. Our research offers a fresh perspective on the role of noise in quantum metrology and opens up avenues for achieving higher precision beyond the previously anticipated ultimate limit.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Physical Review Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hongzhen Chen",
+   "Yu Chen",
+   "Jing Liu",
+   "Zibo Miao",
+   "Haidong Yuan"
+  ],
+  "citations": 23,
+  "source": "semanticscholar",
+  "source_id": "bfdb798f6bd97856a96665631feb47c47a3615a1",
+  "paper_id": "doi:10.1103/physrevlett.133.190801",
+  "doi": "10.1103/physrevlett.133.190801",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/bfdb798f6bd97856a96665631feb47c47a3615a1",
+  "published_iso": "2024-11-07",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Semiparametric logistic regression for inference on relative vaccine efficacy in case-only studies with informative missingness",
+  "title_norm": "semiparametric logistic regression for inference on relative vaccine efficacy in",
+  "abstract": "We develop semiparametric methods for estimating subgroup-specific relative vaccine efficacy against multiple viral strains in a partially vaccinated population. Focusing on observational case-only studies, we address informative missingness in strain type due to vaccination status, pre-vaccination characteristics, and post-infection factors such as viral load. We establish general conditions for the nonparametric identification of relative conditional vaccine efficacy between strains using covariate-adjusted conditional odds ratio parameters. Assuming a log-linear parametric form for strain-specific conditional vaccine efficacy, we propose targeted maximum likelihood estimators based on partially linear logistic regression, leveraging machine learning for flexible confounding adjustment. Finally, we apply our methods to estimate relative strain-specific conditional vaccine efficacy in the ENSEMBLE COVID-19 vaccine trial.",
+  "tldr": "Semiparametric methods for estimating subgroup-specific relative vaccine efficacy against multiple viral strains in a partially vaccinated population are developed and targeted maximum likelihood estimators based on partially linear logistic regression are proposed.",
+  "year": 2023,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "L. Laan",
+   "P. Gilbert"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2194813f2de9eb0280d62df4961f098a22aa04f9",
+  "paper_id": "arxiv:2303.11462",
+  "doi": "",
+  "arxiv_id": "2303.11462",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2194813f2de9eb0280d62df4961f098a22aa04f9",
+  "published_iso": "2023-03-20",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Expert-Guided Class-Conditional Goodness-of-Fit Scores for Interpretable Classification with Informative Missingness: An Application to Seismic Monitoring",
+  "title_norm": "expert guided class conditional goodness of fit scores for interpretable classif",
+  "abstract": "We study a classification problem with three key challenges: pervasive informative missingness, the integration of partial prior expert knowledge into the learning process, and the need for interpretable decision rules. We propose a framework that encodes prior knowledge through an expert-guided class-conditional model for one or more classes, and use this model to construct a small set of interpretable goodness-of-fit features. The features quantify how well the observed data agree with the expert model, isolating the contributions of different aspects of the data, including both observed and missing components. These features are combined with a few transparent auxiliary summaries in a simple discriminative classifier, resulting in a decision rule that is easy to inspect and justify. We develop and apply the framework in the context of seismic monitoring used to assess compliance with the Comprehensive Nuclear-Test-Ban Treaty. We show that the method has strong potential as a transparent screening tool, reducing workload for expert analysts. A simulation designed to isolate the contribution of the proposed framework shows that this interpretable expert-guided method can even outperform strong standard machine-learning classifiers, particularly when training samples are small.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shahar Cohen",
+   "D. Steinberg",
+   "Y. Radzyner",
+   "Y. Ben-Horin"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7a2fe24081f220a370ea3bbc79da4dd8f49786ef",
+  "paper_id": "dblp:journals/corr/abs-2604-14809",
+  "doi": "10.48550/arXiv.2604.14809",
+  "arxiv_id": "2604.14809",
+  "dblp_key": "journals/corr/abs-2604-14809",
+  "paper_url": "https://www.semanticscholar.org/paper/7a2fe24081f220a370ea3bbc79da4dd8f49786ef",
+  "published_iso": "2026-04-16",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Learning Dynamic Representations and Policies from Multimodal Clinical Time-Series with Informative Missingness",
+  "title_norm": "learning dynamic representations and policies from multimodal clinical time seri",
+  "abstract": "Multimodal clinical records contain structured measurements and clinical notes recorded over time, offering rich temporal information about the evolution of patient health. Yet these observations are sparse, and whether they are recorded depends on the patient's latent condition. Observation patterns also differ across modalities, as structured measurements and clinical notes arise under distinct recording processes. While prior work has developed methods that accommodate missingness in clinical time series, how to extract and use the information carried by the observation process itself remains underexplored. We therefore propose a patient representation learning framework for multimodal clinical time series that explicitly leverages informative missingness. The framework combines (1) a multimodal encoder that captures signals from structured and textual data together with their observation patterns, (2) a Bayesian filtering module that updates a latent patient state over time from observed multimodal signals, and (3) downstream modules for offline treatment policy learning and patient outcome prediction based on the learned patient state. We evaluate the framework on ICU sepsis cohorts from MIMIC-III, MIMIC-IV, and eICU. It improves both offline treatment policy learning and adverse outcome prediction, achieving FQE 0.679 versus 0.528 for clinician behavior and AUROC 0.886 for post-72-hour mortality prediction on MIMIC-III.",
+  "tldr": "A patient representation learning framework for multimodal clinical time series that explicitly leverages informative missingness is proposed and evaluated on ICU sepsis cohorts from MIMIC-III, MIMIC-IV, and eICU.",
+  "year": 2026,
+  "venue": "Annual Meeting of the Association for Computational Linguistics",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Zihan Liang",
+   "Ziwen Pan",
+   "Ruoxuan Xiong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "46d3d3ec3b42a246ea33c41a0aa05532f90c0de0",
+  "paper_id": "dblp:journals/corr/abs-2604-21235",
+  "doi": "10.48550/arXiv.2604.21235",
+  "arxiv_id": "2604.21235",
+  "dblp_key": "journals/corr/abs-2604-21235",
+  "paper_url": "https://www.semanticscholar.org/paper/46d3d3ec3b42a246ea33c41a0aa05532f90c0de0",
+  "published_iso": "2026-04-23",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Explainable 6-Hour Sepsis Prediction using Transformers and Informative Missingness",
+  "title_norm": "explainable 6 hour sepsis prediction using transformers and informative missingn",
+  "abstract": "Sepsis is one of the leading causes of deaths in the Intensive Care Unit (ICU). In recent years, Machine learning has been proposed to develop Early Warning Systems (EWS) for sepsis. However, existing methods are plagued by a variety of challenges including target data leakage, informative missingness and a lack of clinical interpretability. In this work, we propose an end-to-end deep learning method to predict sepsis 6 hours before it is clinically diagnosed and validate our approach on a large dataset, MIMIC-IV, which contains information for N = 76, 307 patients. To address the mentioned challenges, we propose a \"Zero-Collision\" masking strategy which clearly distinguishes between the mathematical padding and the median-imputed physiological values, as well as engineered delta features to address the issue of informative missingness. Our Multi-Head Attention Transformer achieves an ROC-AUC of 0.7841 and a PR-AUC of 0.0606 (95% CI: 0.0557–0.0663) which is more than three times as discriminative as the baseline sepsis prevalence of around 1.75%. Our model is able to provide a \"Visual Audit Trail\" via self-attention heatmaps indicating that the model is learning the clinical trajectory of the patients’ deteriorating physiological state as opposed to being sensitive to individual data points.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "International Conference Intelligent Data Communication Technologies and Internet Things",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "A. Nellyet",
+   "Manpreet Kaur",
+   "Navdeep Kaur"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1555d87c473b19c1133d0f61fe8c4a689da0d3d6",
+  "paper_id": "doi:10.1109/ICICI68773.2026.11580688",
+  "doi": "10.1109/ICICI68773.2026.11580688",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1555d87c473b19c1133d0f61fe8c4a689da0d3d6",
+  "published_iso": "2026-06-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Informative Missingness in Nominal Data: A Graph-Theoretic Approach to Revealing Hidden Structure",
+  "title_norm": "informative missingness in nominal data a graph theoretic approach to revealing ",
+  "abstract": "Missing data is often treated as a nuisance, routinely imputed or excluded from statistical analyses, especially in nominal datasets where its structure cannot be easily modeled. However, the form of missingness itself can reveal hidden relationships, substructures, and biological or operational constraints within a dataset. In this study, we present a graph-theoretic approach that reinterprets missing values not as gaps to be filled, but as informative signals. By representing nominal variables as nodes and encoding observed or missing associations as edges, we construct both weighted and unweighted bipartite graphs to analyze modularity, nestedness, and projection-based similarities. This framework enables downstream clustering and structural characterization of nominal data based on the topology of observed and missing associations; edge prediction via multiple imputation strategies is included as an optional downstream analysis to evaluate how well inferred values preserve the structure identified in the non-missing data. Across a series of biological, ecological, and social case studies, including proteomics data, the BeatAML drug screening dataset, ecological pollination networks, and HR analytics, we demonstrate that the structure of missing values can be highly informative. These configurations often reflect meaningful constraints and latent substructures, providing signals that help distinguish between data missing at random and not at random. When analyzed with appropriate graph-based tools, these patterns can be leveraged to improve the structural understanding of data and provide complementary signals for downstream tasks such as clustering and similarity analysis. Our findings support a conceptual shift: missing values are not merely analytical obstacles but valuable sources of insight that, when properly modeled, can enrich our understanding of complex nominal systems across domains. Shiny app address https://ehsan-zangene.shinyapps.io/nimaa_app/",
+  "tldr": "This study presents a graph-theoretic approach that reinterprets missing values not as gaps to be filled, but as informative signals, and demonstrates that the structure of missing values can be highly informative.",
+  "year": 2026,
+  "venue": "bioRxiv",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ehsan Zangene",
+   "V. Schwämmle",
+   "Mohieddin Jafari"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "a9fddb4a6eed34f200ddcad9e57a040a6e5720d5",
+  "paper_id": "doi:10.34133/csbj.0099",
+  "doi": "10.34133/csbj.0099",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.34133/csbj.0099",
+  "published_iso": "2026-02-03",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Informative Missingness to Generate Irregular Clinical Time Series",
+  "title_norm": "informative missingness to generate irregular clinical time series",
+  "abstract": "Laboratory tests in electronic health records are collected irregularly, and the absence of a test order can be as informative as the measurement itself. Such missingness reflects clinicians'decisions and patient physiology, making it important to model it directly rather than treat it as a preprocessing artifact. Here we present a diffusion-based approach for generating clinical time series that jointly models laboratory values and their observation patterns using the public Data Analytics Challenge on Missing Data Imputation (DACMI) benchmark derived from MIMIC-III. To preserve realistic sampling, we align chart times into 4-hour intervals and segment admissions into 7-day windows, producing trajectories that pair each lab value with a corresponding observation indicator. Standard transformations and normalization are applied to stabilize training. Our method extends the TimeDiff framework to learn continuous lab values and discrete missingness patterns through complementary diffusion objectives. Experiments show that the generated data closely match real patient trajectories across individual lab distributions and joint value-missingness embeddings, demonstrating that diffusion models can capture clinically meaningful dependencies between patient physiology and clinicians'testing behavior under MNAR-like (missing-not-at-random) missingness. These preliminary results indicate that our model can serve as an initial component toward developing clinical foundation models. By producing synthetic priors that preserve key physiology-missingness relationships, this work motivates the subsequent training of Prior-Data Fitted Networks capable of leveraging informative missingness, which we will investigate in the extended work.",
+  "tldr": "A diffusion-based approach for generating clinical time series that jointly models laboratory values and their observation patterns using the public Data Analytics Challenge on Missing Data Imputation (DACMI) benchmark derived from MIMIC-III, demonstrating that diffusion models can capture clinically meaningful dependencies between patient physiology and clinicians' behavior under MNAR-like (missing-not-at-random) missingness.",
+  "year": 2026,
+  "venue": "Conference on Artificial Intelligence in Medicine in Europe",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hadi Mehdizavareh",
+   "Gabriele Santangelo",
+   "G. Nicora",
+   "S. Cichosz",
+   "A. Dagliati",
+   "Arijit Khan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "d41be6c6ad7204f1c5699b0e9bdf850e3f8bcfae",
+  "paper_id": "dblp:journals/corr/abs-2606-17106",
+  "doi": "10.1007/978-3-032-30813-9_37",
+  "arxiv_id": "2606.17106",
+  "dblp_key": "journals/corr/abs-2606-17106",
+  "paper_url": "https://www.semanticscholar.org/paper/d41be6c6ad7204f1c5699b0e9bdf850e3f8bcfae",
+  "published_iso": "2026-06-14",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Six-Class BPT Galaxy Classification for Survey-Scale AGN Candidate Prioritization: Deep Tabular Model and Informative Missingness Signals",
+  "title_norm": "six class bpt galaxy classification for survey scale agn candidate prioritizatio",
+  "abstract": "The Baldwin--Phillips--Terlevich (BPT) diagram is widely used to classify galaxies into star-forming systems, composite galaxies, and active galactic nuclei (AGNs), but its survey-scale application is limited by the requirement for high signal-to-noise emission-line measurements. We test whether machine-learning models can reproduce six-class BPT labels while using measured quantities, derived line ratios, and potentially informative missing-data patterns as inputs. We analyze 1.47 million galaxies with a 27-dimensional feature set that combines raw survey measurements, derived quantities, and missingness indicators. Five deep tabular architectures are benchmarked against gradient-boosted trees and classical machine-learning baselines, and the resulting probabilities are evaluated through hard-classification metrics, precision--recall curves, top-$k$ retrieval, ablation tests, and feature-interpretation diagnostics. {CNN--Transformer gives the strongest overall classification performance (accuracy = 0.8266), while boosted trees remain highly competitive for this low-dimensional tabular problem. In the binary star-forming-versus-AGN comparison, CNN--Transformer achieves a Class~1 versus Class~4 ROC AUC of 0.9998. Missingness indicators provide substantial predictive information, especially the OH\\_P50N\\_missing feature. Feature interpretation further shows that $\\log([\\mathrm{Ne\\,III}]/[\\mathrm{O\\,II}])$, combined with stellar mass or specific star-formation rate, separates star-forming galaxies from AGN hosts. The models are most useful as AGN candidate-ranking tools that complement, rather than replace, traditional BPT diagnostics. High-ranked samples can reach high purity, while broader candidate lists recover most AGNs, but transferability to other surveys requires further validation.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [
+   "Review"
+  ],
+  "authors": [
+   "Shanquan Gui"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3b9593a1f28a4347623ac201dbe09849cb88f2aa",
+  "paper_id": "arxiv:2607.09865",
+  "doi": "",
+  "arxiv_id": "2607.09865",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3b9593a1f28a4347623ac201dbe09849cb88f2aa",
+  "published_iso": "2026-07-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Informative Missingness: What can we learn from patterns in missing laboratory data in the electronic health record?",
+  "title_norm": "informative missingness what can we learn from patterns in missing laboratory da",
+  "abstract": "Background. In electronic health records, patterns of missing laboratory test results could capture patients' course of disease as well as reflect clinicians' concerns or worries for possible conditions. These patterns are often understudied and overlooked. This study aims to characterize the patterns of missingness among laboratory data collected across 15 healthcare system sites in three countries for COVID-19 inpatients. Methods. We collected and analyzed demographic, diagnosis, and laboratory data for 69,939 patients with positive COVID-19 PCR tests across three countries from 1 January 2020 through 30 September 2021. We analyze overall missing laboratory measurements across sites, missingness stratification by demographic variables, temporal trends of missingness, correlations between labs based on missingness indicators over time, and clustering of groups of labs based on their missingness/ordering pattern. Results. With these analyses, we identified mapping issues faced in seven out of 15 sites. We also identified nuances in data collection and variable definition for the various sites. Temporal trend analyses may support the use of laboratory test result missingness patterns in identifying severe COVID-19 patients. Lastly, using missingness patterns, we determined relationships between various labs that reflect clinical behaviors. Conclusion. This work elucidates how missing data patterns in EHRs can be leveraged to identify quality control issues and relationships between laboratory measurements. Missing data patterns will allow sites to attain better quality data for subsequent analyses and help researchers identify which sites are better poised to study particular questions. Our results could also provide insight into some of the biological relationships between labs in EHR data for COVID-19 patients.",
+  "tldr": "This work elucidates how missing data patterns in EHRs can be leveraged to identify quality control issues and relationships between laboratory measurements and relationships within labs that reflect clinical behaviors.",
+  "year": 2022,
+  "venue": "medRxiv",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Amelia L. M. Tan",
+   "E. Getzen",
+   "M. Hutch",
+   "Z. Strasser",
+   "A. Gutiérrez-Sacristán",
+   "Trang T. Le"
+  ],
+  "citations": 37,
+  "source": "semanticscholar",
+  "source_id": "59d65eec182936b2c52564b702eba7a96aa1395f",
+  "paper_id": "dblp:journals/jbi/TanGHSGLDMHMBYCDZAABCHCLLMHOPSSATVW23",
+  "doi": "10.1101/2022.05.08.22274724",
+  "arxiv_id": "",
+  "dblp_key": "journals/jbi/TanGHSGLDMHMBYCDZAABCHCLLMHOPSSATVW23",
+  "paper_url": "https://www.medrxiv.org/content/medrxiv/early/2022/05/10/2022.05.08.22274724.full.pdf",
+  "published_iso": "2022-05-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Matrix Completion with Covariate Information and Informative Missingness",
+  "title_norm": "matrix completion with covariate information and informative missingness",
+  "abstract": "",
+  "tldr": "A novel procedure to simultaneously complete the partially observed matrix and assess the covariate effect is devised, allowing the matrix dimensions as well as the number of covariates to grow ultra-high, under the classic low-rank matrix and sparse covariateEffect assumptions.",
+  "year": 2022,
+  "venue": "Journal of machine learning research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Huaqing Jin",
+   "Yanyuan Ma",
+   "Fei Jiang"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "8442e069cf6e4de35a0921d3f1e5592ebb16cdba",
+  "paper_id": "dblp:journals/jmlr/JinMJ22",
+  "doi": "",
+  "arxiv_id": "",
+  "dblp_key": "journals/jmlr/JinMJ22",
+  "paper_url": "https://www.semanticscholar.org/paper/8442e069cf6e4de35a0921d3f1e5592ebb16cdba",
+  "published_iso": null,
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Correction to: Bayesian estimation of the number of species from Poisson–Lindley stochastic abundance model using non-informative priors",
+  "title_norm": "correction to bayesian estimation of the number of species from poisson lindley ",
+  "abstract": "",
+  "tldr": "The main issue was the wrong formulas used for the elements of the information matrix of Poisson Lindley stochastic abundance model which affected both the frequentist estimation and Bayesian estimation.",
+  "year": 2024,
+  "venue": "Computational statistics (Zeitschrift)",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. Dyab",
+   "H. Muhammed"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ad1716be91380bba7ceb290988eb6d3c861ab1b3",
+  "paper_id": "dblp:journals/cstat/DyabM25",
+  "doi": "10.1007/s00180-024-01550-w",
+  "arxiv_id": "",
+  "dblp_key": "journals/cstat/DyabM25",
+  "paper_url": "https://www.semanticscholar.org/paper/ad1716be91380bba7ceb290988eb6d3c861ab1b3",
+  "published_iso": "2024-10-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Nonparametric Copula Models for Mixed Data with Informative Missingness",
+  "title_norm": "nonparametric copula models for mixed data with informative missingness",
+  "abstract": "",
+  "tldr": "A novel Bayesian mixture copula is developed for joint and nonparametric modelling of count, continuous, ordinal, and unordered categorical variables and a new and efficient strategy for marginal distribution estimation is introduced, which eliminates the need to specify any marginal models yet delivers strong posterior consistency for both the marginal distributions and the copula parameters even in the presence of informative missingness.",
+  "year": 2022,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "J. Feldman",
+   "Daniel R. Kowal"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "25836784416dd6a82781636c2f79ce565076678f",
+  "paper_id": "semanticscholar:25836784416dd6a82781636c2f79ce565076678f",
+  "doi": "",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/25836784416dd6a82781636c2f79ce565076678f",
+  "published_iso": null,
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Correction to: Testing Environmental Effects on Age at Menarche and Sexual Debut within a Genetically Informative Twin Design",
+  "title_norm": "correction to testing environmental effects on age at menarche and sexual debut ",
+  "abstract": "",
+  "tldr": null,
+  "year": 2023,
+  "venue": "Human Nature",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "G. Richardson",
+   "N. Barbaro",
+   "Joseph L. Nedelec",
+   "Hexuan Liu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ffb46bb4cba56645b965b411cf3ca442d60b5be9",
+  "paper_id": "doi:10.1007/s12110-023-09453-3",
+  "doi": "10.1007/s12110-023-09453-3",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s12110-023-09453-3.pdf",
+  "published_iso": "2023-06-01",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Correction to: Multimorbid Patterns and Cognitive Performance in the Presence of Informative Dropout Among Community-Dwelling Taiwanese Older Adults",
+  "title_norm": "correction to multimorbid patterns and cognitive performance in the presence of ",
+  "abstract": "[This corrects the article DOI: 10.1093/geroni/igad012.].",
+  "tldr": null,
+  "year": 2023,
+  "venue": "Innovation in aging",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "16b52591598d8c5c795e9dc9d3a1b9043e52bd12",
+  "paper_id": "doi:10.1093/geroni/igad054",
+  "doi": "10.1093/geroni/igad054",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://academic.oup.com/innovateage/article-pdf/7/6/igad054/51537625/igad054.pdf",
+  "published_iso": "2023-07-25",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Author Correction: Informative neural representations of unseen contents during higher-order processing in human brains and deep artificial networks",
+  "title_norm": "author correction informative neural representations of unseen contents during h",
+  "abstract": "",
+  "tldr": "There were 12 bilateral ROIs for each hemisphere (Supplementary Fig. 18) and the word “bilateral” was omitted in the second sentence of the final paragraph of the Methods.",
+  "year": 2022,
+  "venue": "Nature Human Behaviour",
+  "publication_types": [],
+  "authors": [
+   "Ning Mei",
+   "Roberto Santana",
+   "David Soto"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "bed5c30dc5fca57b152245f5e2e932c69eb46d52",
+  "paper_id": "doi:10.1038/s41562-022-01362-2",
+  "doi": "10.1038/s41562-022-01362-2",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41562-022-01362-2.pdf",
+  "published_iso": "2022-04-28",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Causal Representation Learning from Multimodal Clinical Records under Non-Random Modality Missingness",
+  "title_norm": "causal representation learning from multimodal clinical records under non random",
+  "abstract": "Clinical notes contain rich patient information, such as diagnoses or medications, making them valuable for patient representation learning. Recent advances in large language models have further improved the ability to extract meaningful representations from clinical texts. However, clinical notes are often missing. For example, in our analysis of the MIMIC-IV dataset, 24.5% of patients have no available discharge summaries. In such cases, representations can be learned from other modalities such as structured data, chest X-rays, or radiology reports. Yet the availability of these modalities is influenced by clinical decision-making and varies across patients, resulting in modality missing-not-at-random (MMNAR) patterns. We propose a causal representation learning framework that leverages observed data and informative missingness in multimodal clinical records. It consists of: (1) an MMNAR-aware modality fusion component that integrates structured data, imaging, and text while conditioning on missingness patterns to capture patient health and clinician-driven assignment; (2) a modality reconstruction component with contrastive learning to ensure semantic sufficiency in representation learning; and (3) a multitask outcome prediction model with a rectifier that corrects for residual bias from specific modality observation patterns. Comprehensive evaluations across MIMIC-IV and eICU show consistent gains over the strongest baselines, achieving up to 13.8% AUC improvement for hospital readmission and 13.1% for ICU admission.",
+  "tldr": "A causal representation learning framework that leverages observed data and informative missingness in multimodal clinical records and corrects for residual bias from specific modality observation patterns is proposed.",
+  "year": 2025,
+  "venue": "Conference on Empirical Methods in Natural Language Processing",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Zihan Liang",
+   "Ziwen Pan",
+   "Ruoxuan Xiong"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "194828ad6317272dda3d7966e86f7549e33f5eef",
+  "paper_id": "dblp:conf/emnlp/LiangPX25",
+  "doi": "10.48550/arXiv.2509.17228",
+  "arxiv_id": "2509.17228",
+  "dblp_key": "conf/emnlp/LiangPX25",
+  "paper_url": "https://www.semanticscholar.org/paper/194828ad6317272dda3d7966e86f7549e33f5eef",
+  "published_iso": "2025-09-21",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "TANDEM: Temporal Attention-guided Neural Differential Equations for Missingness in Time Series Classification",
+  "title_norm": "tandem temporal attention guided neural differential equations for missingness i",
+  "abstract": "Handling missing data in time series classification remains a significant challenge in various domains. Traditional methods often rely on imputation, which may introduce bias or fail to capture the underlying temporal dynamics. In this paper, we propose TANDEM (Temporal Attention-guided Neural Differential Equations for Missingness), an attention-guided neural differential equation framework that effectively classifies time series data with missing values. Our approach integrates raw observation, interpolated control path, and continuous latent dynamics through a novel attention mechanism, allowing the model to focus on the most informative aspects of the data. We evaluate TANDEM on 30 benchmark datasets and a real-world medical dataset, demonstrating its superiority over existing state-of-the-art methods. Our framework not only improves classification accuracy but also provides insights into the handling of missing data, making it a valuable tool in practice.",
+  "tldr": "This paper proposes TANDEM (Temporal Attention-guided Neural Differential Equations for Missingness), an attention-guided neural differential equation framework that effectively classifies time series data with missing values and provides insights into the handling of missing data.",
+  "year": 2025,
+  "venue": "International Conference on Information and Knowledge Management",
+  "publication_types": [
+   "Book",
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "YongKyung Oh",
+   "Dongyoung Lim",
+   "Sungil Kim",
+   "Alex Bui"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "277bcc2447ffbd891c7f8b784ca754bf176f2833",
+  "paper_id": "dblp:journals/corr/abs-2508-17519",
+  "doi": "10.1145/3746252.3760996",
+  "arxiv_id": "2508.17519",
+  "dblp_key": "journals/corr/abs-2508-17519",
+  "paper_url": "https://doi.org/10.1145/3746252.3760996",
+  "published_iso": "2025-08-24",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "On the notion of missingness for path attribution explainability methods in medical settings: Guiding the selection of medically meaningful baselines",
+  "title_norm": "on the notion of missingness for path attribution explainability methods in medi",
+  "abstract": "The explainability of deep learning models remains a significant challenge, particularly in the medical domain where interpretable outputs are essential for clinical trust and transparency. Path attribution methods such as Integrated Gradients rely on a baseline that represents the absence of informative features, a notion commonly referred to as missingness. Standard baselines, such as all-zero inputs, are often semantically meaningless in medical contexts, where intensity values carry clinical significance. In this work, we revisit the notion of missingness for medical imaging, expose the limitations of standard baselines in this setting, and formalize a stricter missingness we term semantic missingness: a baseline must not merely lack signal, but must represent a clinically plausible state in which the disease-related features are absent. This formulation motivates a counterfactual-guided approach to baseline selection, in which a synthetically generated counterfactual (i.e. a clinically normal variant of the pathological input) serves as a principled and semantically meaningful reference. We derive theoretical guarantees showing that counterfactual baselines yield more faithful attributions than standard alternatives, and empirically validate this with two complementary counterfactual generative models, a VAE and a diffusion model, though the concept is model-agnostic and compatible with any suitable counterfactual method. Across three diverse medical datasets, counterfactual baselines produce more faithful and medically relevant attributions, outperforming standard baseline choices as well as related methods. Notably, we also compare against using the counterfactual directly as an explanation (an established paradigm in its own) and show that employing it as a baseline for Integrated Gradients yields superior results, thereby bridging two complementary explainability paradigms.",
+  "tldr": "This work revisits the notion of missingness for medical imaging, exposes the limitations of standard baselines in this setting, and formalizes a stricter missingness the authors term semantic missingness: a baseline must not merely lack signal, but must represent a clinically plausible state in which the disease-related features are absent.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Alexander Geiger",
+   "Lars Wagner",
+   "Daniel Rueckert",
+   "Dirk Wilhelm",
+   "Alissa Jell"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9ee31ba97b02688ae16baf2526e9846f0494f269",
+  "paper_id": "dblp:journals/corr/abs-2508-14482",
+  "doi": "10.48550/arXiv.2508.14482",
+  "arxiv_id": "2508.14482",
+  "dblp_key": "journals/corr/abs-2508-14482",
+  "paper_url": "https://www.semanticscholar.org/paper/9ee31ba97b02688ae16baf2526e9846f0494f269",
+  "published_iso": "2025-08-20",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Zero-inflated Poisson mixed model for longitudinal count data with informative dropouts",
+  "title_norm": "zero inflated poisson mixed model for longitudinal count data with informative d",
+  "abstract": "Zero-inflated Poisson (ZIP) models are typically used for analyzing count data with excess zeros. If the data are collected longitudinally, then repeated observations from a given subject are correlated by nature. The ZIP mixed model may be used to deal with excess zeros and correlations among the repeated observations. Also, it is often the case that some follow-up measurements in a longitudinal study are missing. If the missing data are informative or nonignorable, it is necessary to incorporate a missingness mechanism into the observed likelihood function for a valid inference. In this paper, we propose and explore an efficient method for analyzing count data by addressing the complex issues of excess zeros, correlations among repeated observations, and missing responses due to dropouts. The empirical properties of the proposed estimators are studied based on Monte Carlo simulations. An application is provided using some real data obtained from a health study.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Applied Statistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sanjoy K. Sinha"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "5045e375b8ddac0ca6eace8e8a715bff09c8d515",
+  "paper_id": "doi:10.1080/02664763.2025.2481458",
+  "doi": "10.1080/02664763.2025.2481458",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5045e375b8ddac0ca6eace8e8a715bff09c8d515",
+  "published_iso": "2025-03-20",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Robust prediction under missingness shifts",
+  "title_norm": "robust prediction under missingness shifts",
+  "abstract": "Prediction becomes more challenging with missing covariates. What method is chosen to handle missingness can greatly affect how models perform. In many real-world problems, the best prediction performance is achieved by models that can leverage the informative nature of a value being missing. Yet, the reasons why a covariate goes missing can change once a model is deployed in practice. If such a missingness shift occurs, the conditional probability of a value being missing differs in the target data. Prediction performance in the source data may no longer be a good selection criterion, and approaches that do not rely on informative missingness may be preferable. However, we show that the Bayes predictor remains unchanged by ignorable shifts for which the probability of missingness only depends on observed data. Any consistent estimator of the Bayes predictor may therefore result in robust prediction under those conditions, although we show empirically that different methods appear robust to different types of shifts. If the missingness shift is non-ignorable, the Bayes predictor may change due to the shift. While neither approach recovers the Bayes predictor in this case, we found empirically that disregarding missingness was most beneficial when it was highly informative.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "P. Rockenschaub",
+   "Zhicong Xian",
+   "Alireza Zamanian",
+   "Marta Piperno",
+   "Octavia-Andreea Ciora",
+   "Elisabeth Pachl"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "9aa159631edeb9afb127e397ec63517b01e0a6cf",
+  "paper_id": "dblp:journals/corr/abs-2406-16484",
+  "doi": "10.48550/arXiv.2406.16484",
+  "arxiv_id": "2406.16484",
+  "dblp_key": "journals/corr/abs-2406-16484",
+  "paper_url": "https://www.semanticscholar.org/paper/9aa159631edeb9afb127e397ec63517b01e0a6cf",
+  "published_iso": "2024-06-24",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Implicit bias in Critical Care Data: Factors affecting sampling frequencies and missingness patterns of clinical and biological variables in ICU Patients",
+  "title_norm": "implicit bias in critical care data factors affecting sampling frequencies and m",
+  "abstract": "The presence of missing values in Electronic Health Records (EHRs) is a widespread and inescapable issue. Publicly available data sets mirror the incompleteness found in EHRs. Although the existing literature largely approaches missing data as a random phenomenon, the mechanisms behind these missing values are often not random with respect to important characteristics of the patients. Similarly, the sampling frequency of clinical or biological parameters is likely informative. The possible informative nature of patterns in missing data is often overlooked. For both missingness and sampling frequency, we hypothesize that the underlying mechanism may be at least consistent with implicit bias. To investigate this important issue, we introduce a novel analytical framework designed to rigorously examine missing data and sampling frequency in EHRs. We utilize the MIMIC-III dataset as a case study, given its frequent use in training machine learning models for healthcare applications. Our approach incorporates Targeted Machine Learning (TML) to study the impact of a series of demographic variables, including protected attributes such as age, sex, race, and ethnicity on the rate of missing data and sampling frequency for key clinical and biological variables in critical care settings. Our results expose underlying differences in the sampling frequency and missing data patterns of vital sign measurements and laboratory tests between different demographic groups. In addition, we find that these measurement patterns can provide significant predictive insights into patient outcomes. Consequently, we urge a reevaluation of the conventional understanding of missing data and sampling frequencies in EHRs. Acknowledging and addressing these biases is essential for advancing equitable and accurate healthcare through machine learning applications.",
+  "tldr": "A novel analytical framework is introduced designed to rigorously examine missing data and sampling frequency in EHRs and finds that underlying differences in the sampling frequency and missing data patterns of vital sign measurements and laboratory tests between different demographic groups can provide significant predictive insights into patient outcomes.",
+  "year": 2024,
+  "venue": "medRxiv",
+  "publication_types": [],
+  "authors": [
+   "Seraphina Shi",
+   "Alan E. Hubbard",
+   "Nicholas Fong",
+   "Romain Pirracchio"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "1a3c71b4099ff3045d6191bb9223b6770382eec8",
+  "paper_id": "doi:10.1101/2024.06.09.24308661",
+  "doi": "10.1101/2024.06.09.24308661",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1101/2024.06.09.24308661",
+  "published_iso": "2024-06-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Bayesian Nonhomogeneous hidden Markov models to leverage routine in physical activity monitoring with informative wear time",
+  "title_norm": "bayesian nonhomogeneous hidden markov models to leverage routine in physical act",
+  "abstract": "Missing data is among the most prominent challenges in the analysis of physical activity (PA) data collected from wearable devices, with the threat of nonignorabile missingness arising when patterns of device wear relate to underlying activity patterns. We offer a rigorous consideration of assumptions about missing data mechanisms in the context of the common modeling paradigm of state space models with a finite, meaningful, set of underlying PA states. Focusing in particular on hidden Markov models, we identify inherent limitations in the presence of missing data when covariates are required to satisfy common missing data assumptions. In response to this limitation, we propose a Bayesian non-homogeneous state space model that can accommodate covariate dependence in the transitions between latent activity states, which in this case relates to whether patients'routine behavior can inform how they transition between PA states and thus support imputation of missing PA data. We show the benefits of the proposed model for missing data imputation and inference for relevant PA summaries. Our development advances analytic capacity to confront the ubiquitous challenge of missing data when analyzing PA studies using wearables. We illustrate with the analysis of a cohort of adolescent and young adult (AYA) cancer patients who wore commercial Fitbit devices for varying durations during the course of treatment.",
+  "tldr": "A Bayesian non-homogeneous state space model is proposed that can accommodate covariate dependence in the transitions between latent activity states, which in this case relates to whether patients' routine behavior can inform how they transition between PA states and thus support imputation of missing PA data.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "B. Cantoni",
+   "Savannah V. Rauschendorfer",
+   "Michael E. Roth",
+   "J. Livingston",
+   "E. Kleinerman",
+   "Corwin M. Zigler"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "eba6cc70a003b0e6a78badc4337b9f1e1dbf0024",
+  "paper_id": "arxiv:2509.17806",
+  "doi": "",
+  "arxiv_id": "2509.17806",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/eba6cc70a003b0e6a78badc4337b9f1e1dbf0024",
+  "published_iso": "2025-09-22",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "o-CLEAN: a novel multi-stage algorithm for the ocular artifacts’ correction from EEG data in out-of-the-lab applications",
+  "title_norm": "o clean a novel multi stage algorithm for the ocular artifacts correction from e",
+  "abstract": "In the context of electroencephalographic (EEG) signal processing, artifacts generated by ocular movements, such as blinks, are significant confounding factors. These artifacts overwhelm informative EEG features and may occur too frequently to simply remove affected epochs without losing valuable data. Correcting these artifacts remains a challenge, particularly in out-of-lab and online applications using wearable EEG systems (i.e. with low number of EEG channels, without any additional channels to track EOG). Objective. The main objective of the present work consisted in validating a novel ocular blinks artefacts correction method, named multi-stage OCuLar artEfActs deNoising algorithm (o-CLEAN), suitable for online processing with minimal EEG channels. Approach. The research was conducted considering one EEG dataset collected in highly controlled environment, and a second one collected in real environment. The analysis was performed by comparing the o-CLEAN method with previously validated state-of-art techniques, and by evaluating its performance along two dimensions: (a) the ocular artefacts correction performance (IN-Blink), and (b) the EEG signal preservation when the method was applied without any ocular artefacts occurrence (OUT-Blink). Main results. Results highlighted that (i) o-CLEAN algorithm resulted to be, at least, significantly reliable as the most validated approaches identified in scientific literature in terms of ocular blink artifacts correction, (ii) o-CLEAN showed the best performances in terms of EEG signal preservation especially with a low number of EEG channels. Significance. The testing and validation of the o-CLEAN addresses a relevant open issue in bioengineering EEG processing, especially within out-of-the-lab application. In fact, the method offers an effective solution for correcting ocular artifacts in EEG signals with a low number of available channels, for online processing, and without any specific template of the EOG. It was demonstrated to be particularly effective for EEG data gathered in real environments using wearable systems, a rapidly expanding area within applied neuroscience.",
+  "tldr": "The testing and validation of the o-CLEAN addresses a relevant open issue in bioengineering EEG processing, especially within out-of-the-lab application, and offers an effective solution for correcting ocular artifacts in EEG signals with a low number of available channels for online processing, and without any specific template of the EOG.",
+  "year": 2024,
+  "venue": "Journal of Neural Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "V. Ronca",
+   "G. D. Flumeri",
+   "Andrea Giorgi",
+   "A. Vozzi",
+   "R. Capotorto",
+   "D. Germano"
+  ],
+  "citations": 41,
+  "source": "semanticscholar",
+  "source_id": "80b2353959b8fde06c4e693206cc872f9398f7cd",
+  "paper_id": "doi:10.1088/1741-2552/ad7b78",
+  "doi": "10.1088/1741-2552/ad7b78",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1088/1741-2552/ad7b78",
+  "published_iso": "2024-09-16",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Missingness as Signal: Channel-Independent Spectrogram Learning for Clinical Time Series Prediction",
+  "title_norm": "missingness as signal channel independent spectrogram learning for clinical time",
+  "abstract": "Clinical time series prediction in intensive care units remains challenging due to heterogeneous physiological variables and informative missingness. The presence or absence of a measurement can reflect clinical decisions and patient severity, and thus missingness can serve as a predictive signal rather than a simple data artifact. This work presents CISM, a Channel-Independent Spectrogram framework with a Missingness stream for clinical multivariate time series prediction. CISM converts each clinical variable into a variable-wise time-frequency spectrogram, preserves variable identity through variable-aligned encoding, and aligns an explicit missingness stream with the spectrogram representation. Experiments on an in-hospital mortality task derived from MIMIC-IV show that CISM achieves the highest mean AUROC (0.7225), AUPRC (0.3308), and F1 (0.3808) among the compared time series, missingness-aware, vision, and time-frequency baselines. Ablation studies further show that observation patterns provide a meaningful informative signal. Pixel-level mask injection improves performance over plain spectrogram inputs and recovers much of this predictive value. The aligned missingness stream contributes a further, complementary gain in both AUROC and AUPRC. These results highlight the importance of modeling observation patterns as structured signals in clinical time series prediction.",
+  "tldr": "CISM converts each clinical variable into a variable-wise time-frequency spectrogram, preserves variable identity through variable-aligned encoding, and aligns an explicit missingness stream with the spectrogram representation for clinical multivariate time series prediction.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Soyeon Park",
+   "Charmgil Hong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "62df3d155638ecb7fec02191a37eb25f2081e286",
+  "paper_id": "arxiv:2607.02938",
+  "doi": "",
+  "arxiv_id": "2607.02938",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/62df3d155638ecb7fec02191a37eb25f2081e286",
+  "published_iso": "2026-07-03",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "omicsGMF: a multi-tool for dimensionality reduction, batch correction and imputation applied to bulk- and single cell proteomics data",
+  "title_norm": "omicsgmf a multi tool for dimensionality reduction batch correction and imputati",
+  "abstract": "The unprecedented speed and sensitivity of mass spectrometry (MS) unlocked large-scale applications of proteomics and even enabled proteome profiling of single cells. However, this fast-evolving field is hindered by a lack of scalable dimensionality reduction tools that can compensate for substantial batch effects and missingness across MS runs. Therefore, we present omicsGMF, a fast, scalable, and interpretable matrix factorization method, tailored for bulk and single-cell proteomics data. Unlike current workflows that sequentially apply imputation, batch correction, and principal component analysis, omicsGMF integrates these steps into a unified framework, dramatically enhancing data processing and dimensionality reduction. Additionally, omicsGMF provides robust imputation of missing values, outperforming bespoke state-of-the-art imputation tools. We further demonstrate how this integrated approach increases statistical power to detect differentially abundant proteins in the downstream data analysis. Hence, omicsGMF is a highly scalable approach to dimensionality reduction in proteomics, that dramatically improves many important steps in proteomics data analysis.",
+  "tldr": "OmicsGMF is a highly scalable approach to dimensionality reduction in proteomics, that dramatically improves many important steps in proteomics data analysis and provides robust imputation of missing values, outperforming bespoke state-of-the-art imputation tools.",
+  "year": 2025,
+  "venue": "bioRxiv",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Alexandre Segers",
+   "Cristian Castiglione",
+   "C. Vanderaa",
+   "Lennart Martens",
+   "Davide Risso",
+   "Lieven Clement"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "0250d29a8d86c6cd380459be0925b66290c2a336",
+  "paper_id": "doi:10.1101/2025.03.24.644996",
+  "doi": "10.1101/2025.03.24.644996",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1101/2025.03.24.644996",
+  "published_iso": "2025-03-28",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Missingness-Aware TabNet: Handling Structural Missing Data for the Interpretable Prediction of Global Maternal Mortality",
+  "title_norm": "missingness aware tabnet handling structural missing data for the interpretable ",
+  "abstract": "Reliable, explainable prediction of the maternal mortality ratio (MMR) is challenging in global health because country-level indicators are heterogeneous and missingness is often informative rather than random. This study aims to develop and validate a missingness-aware TabNet (MA-TabNet), an attention-based framework that treats absence patterns as learnable signals while maintaining a stable feature space for country-level MMR forecasting and interpretation. We build a country–year panel from a publicly available global nutrition and health dataset and predict MMR using socioeconomic and health indicators to test whether missingness patterns add predictive signal beyond observed covariates. The model applies a distribution-aware selective masking strategy, adding missingness indicators only for variables with high missing rates; remaining gaps are handled by median imputation, with indicators retained to explicitly encode reporting uncertainty. Country codes and regional groupings are encoded as learnable embeddings, and entmax-based sequential attention is used to improve feature selection via sparse, competition-style masks under correlated determinants. Hyperparameters are tuned using Bayesian optimization, and evaluation follows a temporally realistic protocol (train on earlier years; test on a future held-out year). MA-TabNet achieves a mean absolute error (MAE) of 21.05, root mean squared error (RMSE) of 36.24, and R2 of 0.9739, outperforming strong tree-based baselines and improving on the original TabNet while avoiding the training instability observed in some transformer-style tabular models. For transparency, we report attention-derived global and local importance, compare original versus missing-mask features in model importances, and complement these with permutation-based Shapley additive explanation summaries, permutation importance (MAE drop), partial dependence plots for top drivers, and continent-stratified residual analyses to clarify how structural reporting gaps shape predictions and to support trustworthy maternal health monitoring. Overall, these findings suggest that modeling missingness as a measurable reporting signal can yield accurate, auditable forecasts that are better aligned with temporally realistic SDG 3.1 monitoring than “fill-and-forget” preprocessing.",
+  "tldr": "It is suggested that modeling missingness as a measurable reporting signal can yield accurate, auditable forecasts that are better aligned with temporally realistic SDG 3.1 monitoring than “fill-and-forget” preprocessing.",
+  "year": 2026,
+  "venue": "Mathematics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Siyeon Yu",
+   "Yeong-shil Mun",
+   "Gaeun Lee",
+   "Yurim Lee",
+   "Hyeonwoo Kim",
+   "Jihoon Moon"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7a9e88ddc71defe6817fb0546e1b54617e7dff19",
+  "paper_id": "doi:10.3390/math14081325",
+  "doi": "10.3390/math14081325",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2227-7390/14/8/1325/pdf?version=1776259453",
+  "published_iso": "2026-04-15",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Concept-Based Missingness-Aware Recurrent Encoding for Prolonged ICU Stay Prediction",
+  "title_norm": "concept based missingness aware recurrent encoding for prolonged icu stay predic",
+  "abstract": "Intensive care unit (ICU) vital signs and laboratory tests form irregularly sampled multivariate time series with severe missingness, where the observation process itself can be informative. We propose TRACE-D, a concept-wise representation learning framework that partitions temporal variables into physiologically motivated concepts and encodes each concept sequence using missingness-aware LSTM-D that explicitly leverages missingness masks and time-gap information. Using the first 48 hours of data from the PhysioNet/Computing in Cardiology Challenge 2012 dataset to predict prolonged ICU stay (length of stay > 3 days), TRACE-D achieves 82.55% AUROC with extreme gradient boosting and 98.20% AUPRC with random forest, outperforming TRACE and competitive baselines. Ablation studies show that injecting missingness masks into gate computations is a major contributor to the performance gains. Concept drop and Shapley Additive Explanations analyses identify clinically plausible concept-level associations (e.g., kidney function and electrolytes) and show that the relative contributions of observed values and missingness indicators vary over time. Sample-efficiency experiments further show that TRACE-D retains its advantage in low-data regimes. Overall, these results suggest that combining physiologically grounded concept decomposition with explicit modeling of missingness and observation intervals yields robust and interpretable prediction from highly sparse ICU time series.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE International Conference on Healthcare Informatics",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Y. Nozaki",
+   "Takashi Ohnishi",
+   "Shuhei Noyori",
+   "Israa Alqassem",
+   "Konosuke Temmei"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a0a4b2a43213a9a1229079379b5dbd9c6c25128b",
+  "paper_id": "doi:10.1109/ICHI69079.2026.00058",
+  "doi": "10.1109/ICHI69079.2026.00058",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a0a4b2a43213a9a1229079379b5dbd9c6c25128b",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Represent, Then Generate: Multimodal-Conditioned Time-Series Generation under Irregular Missingness",
+  "title_norm": "represent then generate multimodal conditioned time series generation under irre",
+  "abstract": "Continuous physiological time series underpin modern clinical monitoring, yet many of the most informative signals are invasive, expensive, or simply unavailable for a given patient. Conditional generation offers a remedy: an absent signal can be synthesized from co-recorded signals and routine clinical variables. Existing generators, however, are built around a single conditioning modality and degrade when forced to handle the heterogeneous, irregularly missing mix of time-variant signals and static covariates seen in practice. We propose ReCoGen (Represent Conditions, then Generate), a two-stage framework that decouples multimodal condition representation from target generation. Stage I trains one masked autoencoder per modality, distilling each time-variant condition into a compact and missingness-tolerant token sequence. Stage II trains a flow-matching generator that fuses these tokens with static conditions to synthesize the target signal. Across three physiological benchmarks, including continuous glucose monitoring on AI-READI and arterial blood pressure generation on MIMIC-III and MIMIC-IV, ReCoGen attains the best downstream utility on all sixteen (dataset, task, metric) settings, surpassing six representative conditional generators; on thirteen of them its utility also reaches or exceeds the utility measured on the real signal, a reference we read as an approximate anchor rather than a ceiling. Ablations trace the gains to the conditioning path: learnable cross-attention over the frozen per-modality encoders, and a dual token-plus-AdaLN route for the static conditions. ReCoGen thus turns routinely collected signals into informative surrogates for invasive or unavailable ones, a step toward less invasive, lower-cost continuous clinical monitoring.",
+  "tldr": "This work proposes ReCoGen (Represent Conditions, then Generate), a two-stage framework that decouples multimodal condition representation from target generation, which attains the best downstream utility on all sixteen settings, surpassing six representative conditional generators.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "H. Zhang",
+   "Jiaheng Guo",
+   "Yu-Chao Huang",
+   "Nicholas Knoz",
+   "Tianlong Chen"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "4c1baf773a125ced7eaad3e1af21f370b95a073b",
+  "paper_id": "arxiv:2608.12592",
+  "doi": "",
+  "arxiv_id": "2608.12592",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4c1baf773a125ced7eaad3e1af21f370b95a073b",
+  "published_iso": "2026-08-12",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "The link between steady-state EEG and rs-fMRI metrics in healthy young adults: The effect of macrovascular correction",
+  "title_norm": "the link between steady state eeg and rs fmri metrics in healthy young adults th",
+  "abstract": "To improve the clinical utility of resting-state fMRI (rs-fMRI), enhancing its interpretability is paramount. Establishing links with electrophysiological activities remains the benchmark for understanding the neuronal basis of rs-fMRI signals. Existing research, while informative, suffers from inconsistencies and a limited scope of rs-fMRI metrics (e.g., seed-based functional connectivity). Phenotypic variables like sex and age are suspected to obscure reliable fMRI-EEG associations. A major contributing factor to these inconsistencies may be the neglect of macrovascular correction in rs-fMRI metrics. Given that macrovascular contributions can inflate rs-fMRI connectivity and power, they may lead to misleading fMRI-EEG associations that do not reflect genuine neuronal underpinnings. In this study, we addressed this by applying macrovascular correction and performing a systematic, inter-participant analysis of multiple rs-fMRI and EEG metrics. Our key findings demonstrate that: 1) Macrovascular correction enhances the relationship between EEG and rs-fMRI metrics and improves model fit in many instances; 2) sex significantly modulates EEG-fMRI associations; 3) EEG complexity is significantly associated with resting-state functional activity (RSFA). This research provides crucial insights into the interplay between rs-fMRI and EEG, ultimately improving the interpretability of rs-fMRI measurements and building upon our prior work linking fMRI and metabolism.",
+  "tldr": "This research provides crucial insights into the interplay between rs-fMRI and EEG, ultimately improving the interpretability of rs-fMRI measurements and building upon the prior work linking fMRI and metabolism.",
+  "year": 2025,
+  "venue": "bioRxiv",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaole Z. Zhong",
+   "Hannah Van Lankveld",
+   "Alicia A. Mathew",
+   "J. J. Chen"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "e5abf07817b4c0e0bb7537d2c3cd1be4db3aa6ee",
+  "paper_id": "doi:10.1162/IMAG.a.1092",
+  "doi": "10.1162/IMAG.a.1092",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://direct.mit.edu/imag/article-pdf/doi/10.1162/IMAG.a.1092/2571315/imag.a.1092.pdf",
+  "published_iso": "2025-06-10",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Unmeasured but Not Unbiased: The Missingness Demographic Leakage Audit (MDLA) for Calibration-Aware Fairness Evaluation in Critical Care Mortality Prediction",
+  "title_norm": "unmeasured but not unbiased the missingness demographic leakage audit mdla for c",
+  "abstract": "Objective Clinical prediction models trained on electronic health records are routinely evaluated for fairness on observed feature values, but the informativeness of which measurements are absent remains unaudited. We developed the Missingness Demographic Leakage Audit (MDLA), a reproducible four-step informatics framework that tests whether patterns of clinical measurement absence function as latent demographic proxies - constituting a bias pathway invisible to standard fairness audits. Materials and Methods We applied MDLA across development (MIMIC-IV v2.2; n=50,827; mortality 10.2%) and external validation (eICU-CRD v2.0; n=137,773; mortality 9.5%) cohorts following TRIPOD+AI standards. XGBoost, random forest, and logistic regression were trained on 43 clinical features and 44 binary missingness indicators. MDLA quantified demographic predictability from missingness alone, tested feature-level associations with Bonferroni correction, and verified model reliance via ablation. A calibration-aware fairness audit evaluated five criteria across four demographic axes; six post-hoc recalibration strategies were compared on a fairness-utility Pareto frontier. Results Missingness indicators alone predicted racial group membership above chance (AUROC=0.543; 95% CI, 0.540-0.546), with 18 of 43 features showing Bonferroni-significant race-missingness associations (all Cramer's V<0.10). Ablation confirmed model reliance: adding missingness indicators increased racial AUROC disparity by 10.7% (0.063 to 0.069) without improving global performance. XGBoost achieved AUROC=0.910 internally (AUROC=0.799 on external validation). Global Platt recalibration reduced overall calibration error by 94% and maximum racial calibration error by 51%, with zero AUROC loss and successful parameter transfer to external validation without retraining. Conclusion MDLA provides a structured, reproducible protocol for detecting missingness-encoded demographic signals prior to model deployment. Applied across 188,600 ICU patient-stays from two institutionally diverse databases, it identified a statistically confirmed but subtle bias pathway undetectable by standard fairness audits. Missingness-aware auditing and calibration-aware evaluation should be integrated into clinical AI validation pipelines.",
+  "tldr": "The Missingness Demographic Leakage Audit (MDLA) is developed, a reproducible four-step informatics framework that tests whether patterns of clinical measurement absence function as latent demographic proxies - constituting a bias pathway invisible to standard fairness audits - constituting a bias pathway invisible to standard fairness audits.",
+  "year": 2026,
+  "venue": "medRxiv",
+  "publication_types": [],
+  "authors": [
+   "K. Patel",
+   "P. Beedala"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ba78c7f1fd04a40360cd1d3816533605b8347cc7",
+  "paper_id": "doi:10.64898/2026.05.01.26352193",
+  "doi": "10.64898/2026.05.01.26352193",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.64898/2026.05.01.26352193",
+  "published_iso": "2026-05-03",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Qualifying Missingness in Real-World Clinical Data for Secondary Use.",
+  "title_norm": "qualifying missingness in real world clinical data for secondary use",
+  "abstract": "Clinical data warehouses (CDWs) often contain missing data due to non-systematic collection. Characterizing this missingness through descriptors of rate, pattern, and mechanism helps assess dataset quality and understand real-world data. We first identified relevant qualification methods for clinical data through a scoping review. We then analyzed the behavior of the descriptors they provide, by implementing them in an automated descriptor extraction pipeline. To evaluate our approach, four missing data scenarios were simulated from the same complete dataset, reflecting clinically plausible situations. Descriptor variability across scenarios was tested using paired non-parametric tests (Friedman for numeric, Cochran's Q for binary descriptors). In total, 230 descriptors were extracted for each of 40 incomplete datasets, and 37.4% showed significant adjusted p-values after Benjamini-Hochberg correction. The most discriminant descriptors accurately reflected the scenario structures, demonstrating that descriptor-based qualification can provide interpretable insights into data quality in clinical warehouses.",
+  "tldr": "This work identified relevant qualification methods for clinical data through a scoping review, then analyzed the behavior of the descriptors they provide, by implementing them in an automated descriptor extraction pipeline, and found the most discriminant descriptors accurately reflected the scenario structures.",
+  "year": 2026,
+  "venue": "Studies in Health Technology and Informatics",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Pauline Fracasso",
+   "M. Pierre-Jean",
+   "G. Coatrieux",
+   "M. Cuggia",
+   "S. Cabon"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7edcf744671e591f78926cc0540882a7d29086cd",
+  "paper_id": "doi:10.3233/SHTI260248",
+  "doi": "10.3233/SHTI260248",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3233/shti260248",
+  "published_iso": "2026-05-21",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Missingness Bias Calibration in Feature Attribution Explanations",
+  "title_norm": "missingness bias calibration in feature attribution explanations",
+  "abstract": "Popular explanation methods often produce unreliable feature importance scores due to missingness bias, a systematic distortion that arises when models are probed with ablated, out-of-distribution inputs. Existing solutions treat this as a deep representational flaw that requires expensive retraining or architectural modifications. In this work, we challenge this assumption and show that missingness bias can be effectively treated as a superficial artifact of the model's output space. We introduce MCal, a lightweight post-hoc method that corrects this bias by fine-tuning a simple linear head on the outputs of a frozen base model. Surprisingly, we find this simple correction consistently reduces missingness bias and is competitive with, or even outperforms, prior heavyweight approaches across diverse medical benchmarks spanning vision, language, and tabular domains.",
+  "tldr": "MCal is introduced, a lightweight post-hoc method that corrects missingness bias by fine-tuning a simple linear head on the outputs of a frozen base model and is competitive with, or even outperforms, prior heavyweight approaches across diverse medical benchmarks spanning vision, language, and tabular domains.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shailesh Sridhar",
+   "Anton Xue",
+   "Eric Wong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "07b4fdd8c8896920aa87ff6ce4fe83263484659e",
+  "paper_id": "dblp:journals/corr/abs-2603-04831",
+  "doi": "10.48550/arXiv.2603.04831",
+  "arxiv_id": "2603.04831",
+  "dblp_key": "journals/corr/abs-2603-04831",
+  "paper_url": "https://www.semanticscholar.org/paper/07b4fdd8c8896920aa87ff6ce4fe83263484659e",
+  "published_iso": "2026-03-05",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "REFLECT: Summarizing Robot Experiences for Failure Explanation and Correction",
+  "title_norm": "reflect summarizing robot experiences for failure explanation and correction",
+  "abstract": "The ability to detect and analyze failed executions automatically is crucial for an explainable and robust robotic system. Recently, Large Language Models (LLMs) have demonstrated strong reasoning abilities on textual inputs. To leverage the power of LLMs for robot failure explanation, we introduce REFLECT, a framework which queries LLM for failure reasoning based on a hierarchical summary of robot past experiences generated from multisensory observations. The failure explanation can further guide a language-based planner to correct the failure and complete the task. To systematically evaluate the framework, we create the RoboFail dataset with a variety of tasks and failure scenarios. We demonstrate that the LLM-based framework is able to generate informative failure explanations that assist successful correction planning.",
+  "tldr": "REFLECT, a framework which queries LLM for failure reasoning based on a hierarchical summary of robot past experiences generated from multisensory observations, is introduced, demonstrating that the LLM-based framework is able to generate informative failure explanations that assist successful correction planning.",
+  "year": 2023,
+  "venue": "Conference on Robot Learning",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zeyi Liu",
+   "Arpit Bahety",
+   "Shuran Song"
+  ],
+  "citations": 257,
+  "source": "semanticscholar",
+  "source_id": "d9823ffa34f865fb1d0adef95d64a0c352ae125f",
+  "paper_id": "dblp:journals/corr/abs-2306-15724",
+  "doi": "10.48550/arXiv.2306.15724",
+  "arxiv_id": "2306.15724",
+  "dblp_key": "journals/corr/abs-2306-15724",
+  "paper_url": "https://arxiv.org/pdf/2306.15724",
+  "published_iso": "2023-06-27",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Building Resilient IoT Systems through Resource-Efficient Sensor Fault Correction",
+  "title_norm": "building resilient iot systems through resource efficient sensor fault correctio",
+  "abstract": "Resilience is a critical requirement for dependable IoT systems, enabling them to maintain reliable operation despite faults. One common source of such faults is inaccurate sensor data, which may result from hardware malfunctions or noise. While advances in fault detection have improved anomaly identification in sensor readings, detection alone is insufficient. Truly resilient systems must also incorporate recovery mechanisms to mitigate the impact of faults. Simply flagging or discarding abnormal values can disrupt data continuity and degrade the performance of downstream applications. To address this challenge, we propose a resource-efficient fault correction framework for real-time operation in multi-sensor IoT systems. Our approach leverages temporal and spatial data patterns by extracting informative features from recent readings of the affected sensor and its correlated peers. This joint representation captures short-term dynamics and contextual cues, enabling the model to bridge external information from correlated sensors into the temporal dynamics of the target sensor. These enriched features are then processed by a lightweight LSTM-based model to reconstruct readings with minimal computational overhead. We validate the effectiveness of our approach through experiments on real-world sensor datasets, demonstrating low reconstruction error and support for edge deployment via a TinyML implementation. Furthermore, experimental results show that the framework can successfully correct faulty sensor readings even when tested on previously unseen data characterized by patterns and distributions distinct from the training data, highlighting its robustness and generalization capability. This sustained correction capability complements existing fault detection methods, forming a unified and resilient solution for dependable IoT operation.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 IEEE Annual Congress on Artificial Intelligence of Things (AIoT)",
+  "publication_types": [],
+  "authors": [
+   "Shadi Attarha",
+   "Anna Förster"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "771ff76ef8b72f1b01d859e2e3c82445f530ced3",
+  "paper_id": "doi:10.1109/AIoT66900.2025.00078",
+  "doi": "10.1109/AIoT66900.2025.00078",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/771ff76ef8b72f1b01d859e2e3c82445f530ced3",
+  "published_iso": "2025-12-03",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Bayesian Inference for Repeated Measures Under Informative Sampling",
+  "title_norm": "bayesian inference for repeated measures under informative sampling",
+  "abstract": "Survey data are often randomly drawn from an underlying population of inferential interest under a multistage, complex sampling design. A sampling weight proportional to the number of individuals in the population that each sampled individual represents is released. The sampling design is informative with respect to a response variable of interest if the variable correlates with the sampling weights. The distribution for the variables of interest differs in the sample and in the population, requiring correction to the sample distribution to approximate the population. We focus on model-based Bayesian inference for repeated (continuous) measures associated with each sampled individual. We devise a model for the joint estimation of response variable(s) of interest and sampling weights to account for the informative sampling design in a formulation that captures the association of the measures taken on the same individual incorporating individual-specific random-effects. We show that our approach yields correct population inference on the observed sample of units and compare its performance with competing method via simulation. Methods are compared using bias, mean square error, coverage, and length of credible intervals. We demonstrate our approach using a National Health and Nutrition Examination Survey dietary dataset modeling daily protein consumption.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Journal of Official Statistics",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "T. Savitsky",
+   "Luis G. León-Novelo",
+   "Helen Engle"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "4fc944986c4416c523dc8821866d251ae91f23c1",
+  "paper_id": "doi:10.1177/0282423X241235252",
+  "doi": "10.1177/0282423X241235252",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1177/0282423x241235252",
+  "published_iso": "2024-03-01",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Impact of Non-Informative Censoring on Propensity Score Based Estimation of Marginal Hazard Ratios",
+  "title_norm": "impact of non informative censoring on propensity score based estimation of marg",
+  "abstract": "In medical and epidemiological studies, one of the most common settings is studying the effect of a treatment on a time-to-event outcome, where the time-to-event might be censored before end of study. A common parameter of interest in such a setting is the marginal hazard ratio (MHR). When a study is based on observational data, propensity score (PS) based methods are often used, in an attempt to make the treatment groups comparable despite having a non-randomized treatment. Previous studies have shown censoring to be a factor that induces bias when using PS based estimators. In this paper we study the magnitude of the bias under different rates of non-informative censoring when estimating MHR using PS weighting or PS matching. A bias correction involving the probability of event is suggested and compared to conventional PS based methods.",
+  "tldr": "The magnitude of the bias under different rates of non-informative censoring when estimating MHR using PS weighting or PS matching is studied and a bias correction involving the probability of event is suggested and compared to conventional PS based methods.",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Guilherme W F Barros",
+   "Jenny Haggstrom"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "36568be55550d2a137a6a0f32c6e9e5788ee5afd",
+  "paper_id": "arxiv:2402.09086",
+  "doi": "",
+  "arxiv_id": "2402.09086",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/36568be55550d2a137a6a0f32c6e9e5788ee5afd",
+  "published_iso": "2024-02-14",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Joint Modeling of Longitudinal EHR Data with Shared Random Effects for Informative Visiting and Observation Processes",
+  "title_norm": "joint modeling of longitudinal ehr data with shared random effects for informati",
+  "abstract": "Longitudinal electronic health record (EHR) data offer opportunities to study biomarker trajectories; however, association estimates-the primary inferential target-from standard models designed for regular observation times may be biased by a two-stage hierarchical missingness mechanism. The first stage is the visiting process (informative presence), where encounters occur at irregular times driven by patient health status; the second is the observation process (informative observation), where biomarkers are selectively measured during visits. To address these mechanisms, we propose a unified semiparametric joint modeling framework that simultaneously characterizes the visiting, biomarker observation, and longitudinal outcome processes. Central to this framework is a shared subject-specific Gaussian latent variable that captures unmeasured frailty and induces dependence across all components. We develop a three-stage estimation procedure and establish the consistency and asymptotic normality of our estimators. We also introduce a sequential procedure that imputes missing biomarkers prior to adjusting for irregular visiting and examine its performance. Simulation results demonstrate that our method yields unbiased estimates under this mechanism, whereas existing approaches can be substantially biased; notably, methods adjusting only for irregular visiting may exhibit even greater bias than those ignoring both mechanisms. We apply our framework to data from the All of Us Research Program to investigate associations between neighborhood-level socioeconomic status indicators and six blood-based biomarker trajectories, providing a robust tool for outpatient settings where irregular monitoring and selective measurement are prevalent.",
+  "tldr": "A unified semiparametric joint modeling framework is proposed that simultaneously characterizes the visiting, biomarker observation, and longitudinal outcome processes, and central to this framework is a shared subject-specific Gaussian latent variable that captures unmeasured frailty and induces dependence across all components.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Chengxin Yang",
+   "Xu Shi",
+   "B. Mukherjee"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "ee4df091cf3229fdc7c7eea43acab965f29d7d78",
+  "paper_id": "arxiv:2602.15374",
+  "doi": "",
+  "arxiv_id": "2602.15374",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ee4df091cf3229fdc7c7eea43acab965f29d7d78",
+  "published_iso": "2026-02-17",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Optimal weighted envelope spectrum with informative multi-band selection for bearing fault diagnosis.",
+  "title_norm": "optimal weighted envelope spectrum with informative multi band selection for bea",
+  "abstract": "Spectral coherence theory is of practical importance for bearing fault diagnosis. However, when fault-related information is distributed across multiple spectral bands, existing methods often cannot effectively identify and integrate these informative components, which limits diagnostic performance. To address this issue, an optimal weighted envelope spectrum (OWES) is proposed. First, the expected signal to expected noise (ESEN) is constructed. By introducing local background correction and adaptive harmonic position identification, ESEN enhances the robustness of fault feature extraction to frequency deviation, amplitude variation, and spectral background fluctuation. Then, informative spectral regions are identified by thresholding the ESEN distribution along the spectral frequency axis and are merged into candidate frequency bands. A combinatorial optimization strategy is further introduced to select the candidate band subset that yields the most prominent integrated fault feature, thereby improving fault feature extraction when informative components are distributed across multiple spectral bands. Finally, the selected bands are weighted according to their information contributions and integrated to construct the OWES. The proposed method is validated using one simulated signal and three bearing experimental datasets. Compared with several advanced methods, OWES achieves clearer identification of fault characteristic frequencies and harmonics. Quantitative comparisons based on ESEN and kurtosis further demonstrate the superior performance of the proposed OWES method.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "ISA transactions",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yunlong He",
+   "Xinyuan Zhao",
+   "Dongdong Liu",
+   "Lingli Cui"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "9f764528f6e532791822f2a450d984a2b00b2c6a",
+  "paper_id": "doi:10.1016/j.isatra.2026.06.006",
+  "doi": "10.1016/j.isatra.2026.06.006",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9f764528f6e532791822f2a450d984a2b00b2c6a",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Prediction-based Inference in Electronic Health Record (EHR)-linked Biobanks with Clinically Informative Outcomes",
+  "title_norm": "prediction based inference in electronic health record ehr linked biobanks with ",
+  "abstract": "Electronic health record (EHR)-linked biobank data hold tremendous promise for large-scale discoveries via genome-wide association study (GWAS) on diverse phenotypic traits and biomarkers routinely captured in the EHR. However, heterogeneous missingness in biomarkers compromises the validity and efficiency of statistical analyses. Prediction-based (PB) inference methods meet this challenge by using external machine learning (ML) predictions to impute missing biomarker outcomes, thereby improving statistical power and estimation accuracy in association analyses. Yet, their suitability remains unclear when outcomes are subject to clinically informative observation processes, that is, when laboratory tests are ordered based on both measured and unmeasured patient- and health system-level characteristics. In this paper, we review the statistical underpinnings of popular PB methods and then evaluate nine methods, including four PB methods and five traditional missing-data approaches, under an encompassing set of outcome observation processes for continuous and binary outcomes. PB methods can substantially improve statistical power and estimation efficiency when the missing-data mechanism is correctly specified. Under misspecification, however, these gains require both conditional independence between the covariates of interest and the missingness mechanism and independence between imputation error and the missingness mechanism. Using All of Us (AoU) data, we perform GWAS of six laboratory biomarkers and demonstrate that PB methods can replicate known genetic associations while improving efficiency relative to (weighted) complete-case analysis (CCA). Their performance in replicating existing GWAS results in AoU also depends on imputation quality and the underlying missingness mechanism.",
+  "tldr": "Using All of Us (AoU) data, PB methods are performed GWAS of six laboratory biomarkers and it is demonstrated that PB methods can replicate known genetic associations while improving efficiency relative to (weighted) complete-case analysis (CCA).",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [
+   "Review"
+  ],
+  "authors": [
+   "Xingran Chen",
+   "Cheng Yang",
+   "Zhenke Wu",
+   "B. Mukherjee"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "bec349448b28b40869b5366ab490e1b762791ed4",
+  "paper_id": "arxiv:2603.14356",
+  "doi": "",
+  "arxiv_id": "2603.14356",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/bec349448b28b40869b5366ab490e1b762791ed4",
+  "published_iso": "2026-03-15",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ },
+ {
+  "title": "Improving the efficiency of visual navigation of an unmanned aerial vehicle by choosing the most informative route",
+  "title_norm": "improving the efficiency of visual navigation of an unmanned aerial vehicle by c",
+  "abstract": "Abstract. The problem of estimating the coordinates of unmanned aerial vehicles (UAVs) using visual navigation in the absence of satellite navigation signals is considered. The UAV has a camera pointing towards the underlying surface to adjust its position using correlation algorithms. It is assumed that the UAV can choose one of several alternative route options as part of the implementation of the target task. The aim of the study is to increase the effectiveness of visual navigation by choosing a route with maximum information content. When assessing the information content, it is proposed to take into account the size and shape of the correction areas that can be observed during flight along the appropriate routes, based on the predicted density of the distribution of errors in measuring the coordinates of the UAV. During the flight, this estimate can be updated at any time when new information is received. An adaptation of the algorithm for calculating information content for the task under consideration is proposed. As an example, the flight of a UAV with a known model accumulation of an error in determining its coordinates, loaded with a table of landmarks and a correction system is considered. Model calculations show that the proposed approach can significantly increase the probability of correctly estimating the coordinates of the UAV compared to a random choice of route. It should be noted that the estimated informative value of the routes is the average predicted value. Specific implementations can produce results that differ significantly from the calculated averages, however, the proposed algorithm allows to adapt the assessment of informativeness using new information.\n",
+  "tldr": "Model calculations show that the proposed approach can significantly increase the probability of correctly estimating the coordinates of the UAV compared to a random choice of route and the estimated informative value of the routes is the average predicted value.",
+  "year": 2024,
+  "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Nikolay V. Kim",
+   "D. S. Girenko"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3cfafc9b3065a380ab0e2ef6111c5709f5f099fd",
+  "paper_id": "doi:10.5194/isprs-archives-xlviii-2-w5-2024-67-2024",
+  "doi": "10.5194/isprs-archives-xlviii-2-w5-2024-67-2024",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://isprs-archives.copernicus.org/articles/XLVIII-2-W5-2024/67/2024/isprs-archives-XLVIII-2-W5-2024-67-2024.pdf",
+  "published_iso": "2024-12-16",
+  "from_query": [
+   "informative missingness correction"
+  ]
+ }
+]

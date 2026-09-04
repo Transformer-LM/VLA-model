@@ -1,0 +1,22 @@
+PGR-Audit v2.1 foundation CPU/static test
+UTC: 2026-08-07T05:43:38Z
+Remote repository: <PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla
+Remote HEAD: 3422b9f2387b6f682cf02802904a77b23ab13afd
+Python: <PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign/bin/python3.11
+Command: python3.11 -m unittest discover -s tests -p test_foundation.py -v
+Environment: personal HOME/TMPDIR/XDG_CACHE_HOME/HF_HOME; PYTHONNOUSERSITE=1; TRANSFORMERS_OFFLINE=1; HF_HUB_OFFLINE=1
+
+AdapterTests: 2 passed
+CanonicalTests: 3 passed
+CheckpointAndGradientTests: 3 passed
+GPUGuardTests: 5 passed
+LauncherPureTests: 2 passed
+SealingAndRetryTests: 4 passed
+SplitAndRobotTests: 4 passed
+
+Ran 23 tests in 0.462s
+OK
+
+GPU model loads: 0
+Scientific examples/targets/outcomes read: 0
+Real robot connectivity/actions/trials: 0

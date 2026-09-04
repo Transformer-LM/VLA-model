@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "object-addressed-pointmap-progress-vla-wam",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "Object-addressed PointMap and object-relative geometry for action-conditioned long-horizon VLA progress verification, belief invalidation, and recovery",
+    "exploration_level": "idea",
+    "selected_macro_direction": "Structured 3D/object geometry for correctable long-horizon VLA belief",
+    "macro_direction_count": 1,
+    "embodiment": "general tabletop manipulation; policy-agnostic mechanism with LIBERO pilot",
+    "task_family": "multi-stage manipulation with relation establishment, later invalidation, occlusion, false completion, and recovery",
+    "observation_modalities": [
+      "RGB observations",
+      "task-language instruction",
+      "executed action chunks",
+      "training-time or simulator PointMap/object-relative geometry"
+    ],
+    "action_representation": "action chunks from a frozen VLA or replayed policy; geometry verifier consumes the executed/proposed chunk",
+    "seed_topics": [
+      "OA-WAM object addresses",
+      "EvoScene-VLA action-updated scene belief",
+      "PointAction dynamic 3D point maps",
+      "action-conditioned geometric relation verification",
+      "long-horizon progress invalidation and recovery"
+    ],
+    "exploration_axes": [
+      "dense depth video versus sparse object-relative PointMap",
+      "passive 3D auxiliary loss versus inference-time progress verification",
+      "object address necessity",
+      "action conditioning necessity",
+      "relation invalidation and false-completion control",
+      "oracle geometry headroom before learned geometry",
+      "model, decision, and closed-loop endpoints"
+    ],
+    "benchmark_priority": [
+      "installed personal LIBERO simulator and trajectories",
+      "installed personal StarVLA LIBERO checkpoint for policy-conditioned pilot",
+      "installed personal OpenPI/pi0.5 assets for later transfer if the gate passes"
+    ],
+    "target_venues": ["CoRL", "RSS", "ICRA", "ICLR", "NeurIPS"],
+    "simulation_first": true,
+    "literature_year_start": 2023,
+    "literature_recent_emphasis_year_start": 2025,
+    "literature_year_end": 2026
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": false,
+    "auto_select_idea": true,
+    "max_idea_cycles": 2,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "remote_ssh_executable": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+    "remote_identity_file": "C:\\Users\\admin\\.ssh\\<SSH_KEY_NAME>",
+    "remote_workdir": "<PERSONAL_RESEARCH_ROOT>",
+    "remote_network_mode": "offline",
+    "gpu_policy": {
+      "preferred_physical_gpu_ids": [2, 3],
+      "conditionally_available_gpu_ids": [0, 1],
+      "allow_each_gpu_only_when_idle_at_launch": true,
+      "idle_definition": "no compute process, memory.used<=500MiB, utilization.gpu<=5%",
+      "never_preempt_or_share_with_other_experiments": true,
+      "recheck_before_every_job": true
+    },
+    "max_pilot_gpu_hours": 32.0,
+    "max_total_gpu_hours": 400.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true,
+    "remote_filesystem": {
+      "authorized_user": "liu_meng",
+      "authorized_root": "<PERSONAL_RESEARCH_ROOT>",
+      "canonical_authorized_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+      "read_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "write_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "allow_shared_storage_read": false,
+      "allow_shared_storage_write": false,
+      "allow_team_artifact_publish": false,
+      "require_personal_paths_for_code_data_models_cache_logs_tmp_checkpoints_and_artifacts": true,
+      "forbid_shell_profile_changes": true,
+      "forbid_privilege_escalation": true,
+      "forbid_global_conda_system_cuda_and_system_package_changes": true
+    }
+  },
+  "framework_preferences": [
+    "existing personal LIBERO/StarVLA/OpenPI assets",
+    "small standalone geometry-progress verifier before policy finetuning",
+    "reuse installed personal environments without remote downloads"
+  ]
+}

@@ -1,0 +1,1485 @@
+[
+  {
+    "title": "Unified Video-Action Joint Denoising for Dexterous Action and Data Generation",
+    "title_norm": "unified video action joint denoising for dexterous action and data generation",
+    "abstract": "Recent world action models leverage video foundation models by aligning broad visual-dynamics priors with executable robot actions. We revisit this alignment from a distributional perspective. Existing formulations typically narrow the aligned prior into an observation-conditioned policy distribution over future actions. In contrast, we keep the distribution broader by modeling the joint space of interaction videos and executable hand trajectories under multiple conditioning regimes. We propose Donk, a unified video-action denoising model for dexterous hands. With language, an initial image, and the initial hand state, Donk samples future videos and bimanual MANO trajectories as an action policy. Without the image condition, the same denoising architecture samples paired video-action rollouts from a text-conditioned distribution, turning the aligned video prior into a data engine. Across action, video, and text-only generation evaluations, Donk improves dexterous trajectory accuracy, preserves strong video fidelity, and produces smooth text-conditioned action rollouts under the same unified training recipe.",
+    "tldr": "This work proposes Donk, a unified video-action denoising model for dexterous hands, which improves dexterous trajectory accuracy, preserves strong video fidelity, and produces smooth text-conditioned action rollouts under the same unified training recipe.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Di Wang",
+      "Yuanli Wang",
+      "Jinkun Liu",
+      "Yue Zhang",
+      "Mattia Piccinini",
+      "Yu Sun"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "b722f499dc89d662efe815e4ed2a99664daad8fa",
+    "paper_id": "semanticscholar:b722f499dc89d662efe815e4ed2a99664daad8fa",
+    "doi": "10.48550/arXiv.2606.03868",
+    "arxiv_id": "2606.03868",
+    "dblp_key": "journals/corr/abs-2606-03868",
+    "paper_url": "https://www.semanticscholar.org/paper/b722f499dc89d662efe815e4ed2a99664daad8fa",
+    "published_iso": "2026-06-02",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Gravity as a contextual control parameter in coordination dynamics: Phase-specific stability during parabolic flight.",
+    "title_norm": "gravity as a contextual control parameter in coordination dynamics phase specifi",
+    "abstract": "Coordination dynamics provides a theoretical framework for understanding how stable patterns of coordinated action emerge, stabilize, and change under varying conditions as a result of the interaction between neuromuscular, environmental, and task constraints. The Haken-Kelso-Bunz (HKB) model predicts that when coordinating actions between two limbs, in-phase (0°) is the most stable coordination mode, anti-phase (180°) is less stable, and 90° is unstable, reflecting the attractor-repeller architecture of the coordination landscape. Although sensory factors such as visual and tactile feedback have been well studied, the role of gravity in shaping these dynamics remains largely unexplored. Here, we tested whether gravity functions as a contextual control parameter in coordination dynamics, reshaping the stability of canonical coordination patterns. During parabolic flight, participants performed bimanual isometric force tasks with Lissajous feedback at 0°, 90°, and 180° relative phase in microgravity (0 g), partial gravity (0.25 g, 0.5 g, 0.75 g), and Earth's gravity (1 g). Behavioral outcomes included indices of bimanual coordination accuracy, bias, and stability, along with unimanual measures of timing and force control. At 1 g, performance followed expected predictions: 0° was most stable, 180° less stable, and 90° least stable. In microgravity, the coordination landscape was destabilized, with increased variability and systematic drifts in constant error during 90° and 180° toward the more stable 0° pattern. Partial gravity (0.25-0.75 g) supported partial recovery of stability for the 90° and 180° task, with higher g-levels generally associated with greater accuracy, reduced variability, and diminished bias. These findings indicate that gravity reshapes the attractor-repeller landscape in a graded and task-dependent manner, supporting its role as a contextual control parameter in coordination dynamics, with implications for motor performance and training in altered-gravity environments.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "Human Movement Science",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Madison M Weinrich",
+      "Osmar P. Neto",
+      "Rashika Rao",
+      "Renee F. Abbott",
+      "Nathan Keller",
+      "Traver J Wright"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "acb261dbb62f337be863650ec4244730bdef930d",
+    "paper_id": "semanticscholar:acb261dbb62f337be863650ec4244730bdef930d",
+    "doi": "10.1016/j.humov.2026.103468",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://doi.org/10.1016/j.humov.2026.103468",
+    "published_iso": "2026-02-25",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-02",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ω-EVA: Envision, Verify, and Act with Latent Interactive World Models",
+    "title_norm": "ω eva envision verify and act with latent interactive world models",
+    "abstract": "Embodied policies typically map current observations directly to actions, leaving candidate-action consequences implicit. World models provide predictive supervision, representations, or external simulation, but rarely let a policy inspect the imagined consequence of its own proposal before acting. We introduce $\\omega$-EVA, a latent interactive world model that realizes an Envision--Verify--Act loop for embodied action generation. Its three-stage framework learns action-conditioned latent dynamics, trains a language-conditioned flow policy on dynamics-aware visual representations, and feeds the policy's proposal back through the world model. A tri-branch refiner jointly reasons over the current state, proposal-conditioned future, and proposed action to produce the final action chunk. Because consequence reasoning remains in latent feature space, $\\omega$-EVA avoids generating future videos at inference. Evaluations across diverse single-arm, bimanual, long-horizon, and perturbed simulation settings show that the complete interaction pipeline consistently improves the proposal policy, while latent diagnostics indicate meaningful action-conditioned future structure. With approximately 1.2B parameters and no additional robot-data pretraining, $\\omega$-EVA demonstrates a compact and competitive performance--scale--data trade-off, making the world model an active action-feedback module rather than a passive predictor.",
+    "tldr": "Evaluations across diverse single-arm, bimanual, long-horizon, and perturbed simulation settings show that the complete interaction pipeline consistently improves the proposal policy, while latent diagnostics indicate meaningful action-conditioned future structure.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Zhenguo Sun",
+      "Yu Sun",
+      "Hande Huang",
+      "Alois Knoll"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "doi": "10.48550/arXiv.2606.09457",
+    "arxiv_id": "2606.09457",
+    "dblp_key": "journals/corr/abs-2606-09457",
+    "paper_url": "https://www.semanticscholar.org/paper/5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "published_iso": "2026-06-08",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Policy-Aware Design of Large-Scale Factorial Experiments",
+    "title_norm": "policy aware design of large scale factorial experiments",
+    "abstract": "Digital firms routinely run many online experiments on shared user populations. When product decisions are compositional, such as combinations of interface elements, flows, messages, or incentives, the number of feasible interventions grows combinatorially, while available traffic remains limited. Overlapping experiments can therefore generate interaction effects that are poorly handled by decentralized A/B testing. We study how to design large-scale factorial experiments when the objective is not to estimate every treatment effect, but to identify a high-performing policy under a fixed experimentation budget. We propose a two-stage design that centralizes overlapping experiments into a single factorial problem and models expected outcomes as a low-rank tensor. In the first stage, the platform samples a subset of intervention combinations, uses tensor completion to infer performance on untested combinations, and eliminates weak factor levels using estimated marginal contributions. In the second stage, it applies sequential halving to the surviving combinations to select a final policy. We establish gap-independent simple-regret bounds and gap-dependent identification guarantees showing that the relevant complexity scales with the degrees of freedom of the low-rank tensor and the separation structure across factor levels, rather than the full factorial size. In an offline evaluation based on a product-bundling problem constructed from 100 million Taobao interactions, the proposed method substantially outperforms one-shot tensor completion and unstructured best-arm benchmarks, especially in low-budget and high-noise settings. These results show how centralized, policy-aware experimentation can make combinatorial product design operationally feasible at platform scale.",
+    "tldr": "This work proposes a two-stage design that centralizes overlapping experiments into a single factorial problem and models expected outcomes as a low-rank tensor, and substantially outperforms one-shot tensor completion and unstructured best-arm benchmarks, especially in low-budget and high-noise settings.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xin Wen",
+      "Xi Chen",
+      "W. Sun",
+      "Yichen Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "paper_id": "semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "doi": "10.48550/arXiv.2604.08804",
+    "arxiv_id": "2604.08804",
+    "dblp_key": "journals/corr/abs-2604-08804",
+    "paper_url": "https://www.semanticscholar.org/paper/84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+    "published_iso": "2026-04-09",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Towards reliable subsea object recovery: a simulation study of an auv with a suction-actuated end effector",
+    "title_norm": "towards reliable subsea object recovery a simulation study of an auv with a suct",
+    "abstract": "Autonomous object recovery in the hadal zone is challenging due to extreme hydrostatic pressure, limited visibility and currents, and the need for precise manipulation at full ocean depth. Field experimentation in such environments is costly, high-risk, and constrained by limited vehicle availability, making early validation of autonomous behaviors difficult. This paper presents a simulation-based study of a complete autonomous subsea object recovery mission using a Hadal Small Vehicle (HSV) equipped with a three-degree-of-freedom robotic arm and a suction-actuated end effector. The Stonefish simulator is used to model realistic vehicle dynamics, hydrodynamic disturbances, sensing, and interaction with a target object under hadal-like conditions. The control framework combines a world-frame PID controller for vehicle navigation and stabilization with an inverse-kinematics-based manipulator controller augmented by acceleration feed-forward, enabling coordinated vehicle - manipulator operation. In simulation, the HSV autonomously descends from the sea surface to 6,000 m, performs structured seafloor coverage, detects a target object, and executes a suction-based recovery. The results demonstrate that high-fidelity simulation provides an effective and low-risk means of evaluating autonomous deep-sea intervention behaviors prior to field deployment.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Michele Grimaldi",
+      "Yosaku Maeda",
+      "H. Kakami",
+      "Ignacio Carlucho",
+      "Yvan R. Pétillot",
+      "Tomoya Inoue"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "fbaf5588a66e6534fe63647ede80e55d03692c77",
+    "paper_id": "semanticscholar:fbaf5588a66e6534fe63647ede80e55d03692c77",
+    "doi": "10.48550/arXiv.2601.01106",
+    "arxiv_id": "2601.01106",
+    "dblp_key": "journals/corr/abs-2601-01106",
+    "paper_url": "https://www.semanticscholar.org/paper/fbaf5588a66e6534fe63647ede80e55d03692c77",
+    "published_iso": "2026-01-03",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-01",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
+    "title_norm": "dexjoco a benchmark and toolkit for task oriented dexterous manipulation on mujo",
+    "abstract": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation. However, existing dexterous benchmarks lack tasks that reflect the unique manipulation capabilities of dexterous hands over parallel grippers, as well as comprehensive evaluation pipelines. In this paper, we present DexJoCo, a benchmark and toolkit for task-oriented dexterous manipulation, comprising 11 functionally grounded tasks that evaluate tool-use, bimanual coordination, long-horizon execution, and reasoning. We develop a low-cost data collection system and collect 1.1K trajectories across these tasks, with support for domain randomization to assess robustness. We benchmark modern models under diverse settings, including visual and dynamics randomization, multi-task training, and action-head adaptation. Through extensive empirical analysis, we identify several important insights and common limitations of current policies in dexterous manipulation, highlighting key challenges for future research in dexterous hand robot learning. Project page available at: https://dexjoco.github.io",
+    "tldr": null,
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Hanwen Wang",
+      "Weizhi Zhao",
+      "Xiangyu Wang",
+      "Siyuan Huang",
+      "Henry C. Lin",
+      "Boyuan Zheng"
+    ],
+    "citations": 6,
+    "source": "semanticscholar",
+    "source_id": "ebd04a9f482ddf084f578850f73ef4f7a9abc77a",
+    "paper_id": "semanticscholar:ebd04a9f482ddf084f578850f73ef4f7a9abc77a",
+    "doi": "10.48550/arXiv.2605.16257",
+    "arxiv_id": "2605.16257",
+    "dblp_key": "journals/corr/abs-2605-16257",
+    "paper_url": "https://www.semanticscholar.org/paper/ebd04a9f482ddf084f578850f73ef4f7a9abc77a",
+    "published_iso": "2026-05-15",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Factorized Spectral Representations for Reinforcement Learning",
+    "title_norm": "factorized spectral representations for reinforcement learning",
+    "abstract": "Learning a compact model of the world from interaction data is central to sample-efficient deep reinforcement learning. Spectral representation methods have become the leading paradigm for representation learning in continuous control by taking a matrix view of the transition kernel, with state-action pairs on one side and next states on the other, and learning a low-rank factorization through self-supervised contrastive objectives. We take this view one step further. The transition kernel is naturally a three-mode tensor over states, actions, and next states, and a CP decomposition gives one feature map per mode. We propose FaStR, which fits this decomposition with a noise contrastive objective, producing separate state, action, and next-state encoders that together form a single spectral representation. The factored form yields a smaller hypothesis class, and the sample size needed for representation learning shrinks by a factor that scales with the smaller of the state and action dimensions. Empirically, FaStR delivers its largest gains on high-dimensional locomotion tasks whose dynamics align with the factored structure, and the learned state encoder transfers intact across actuator shift while only the action encoder is retrained.",
+    "tldr": "FaStR is proposed, which fits this decomposition with a noise contrastive objective, producing separate state, action, and next-state encoders that together form a single spectral representation.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Junyi Wu",
+      "Dan Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "6bbf3a2aa3020f04acb8508ef9fa72da95f58f7e",
+    "paper_id": "semanticscholar:6bbf3a2aa3020f04acb8508ef9fa72da95f58f7e",
+    "doi": "",
+    "arxiv_id": "2607.13498",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/6bbf3a2aa3020f04acb8508ef9fa72da95f58f7e",
+    "published_iso": "2026-07-15",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "GaussianDream++: Efficient 3D Gaussian World Modeling for Robotic Manipulation",
+    "title_norm": "gaussiandream efficient 3d gaussian world modeling for robotic manipulation",
+    "abstract": "Vision-Language-Action (VLA) policies have advanced language-conditioned robotic manipulation, yet action-imitation objectives provide only weak supervision for metric 3D structure and short-horizon physical evolution. Geometry-enhanced policies mainly improve current-scene grounding, whereas predictive policies often model future dynamics in RGB or latent spaces and may incur substantial deployment cost. GaussianDream demonstrates that training-time current Gaussian reconstruction and future Gaussian prediction provide effective 3D supervision, but its dense VGGT/TGE-based prefix jointly carries state, dynamics, and action-conditioning information. We present \\textbf{\\methodname}, a compact, policy-native extension that inserts \\textbf{World State Tokens} and \\textbf{World Prediction Tokens} directly into the VLA backbone. A training-only \\textbf{World Representation Head} decodes these tokens into a Current World and coupled Future Prediction over shared Gaussian primitives, while static--dynamic factorization preserves persistent structure and focuses residual motion on interaction-relevant regions. At inference, the head, renderer, auxiliary objectives, and VGGT/TGE pathway are removed, leaving only 20 world tokens without online Gaussian decoding or rollout. \\method achieves \\textbf{98.6\\%} on LIBERO and \\textbf{87.8\\%} on LIBERO-Plus, with clear gains under Camera and Layout shifts. Real-robot experiments further improve average success from 29.2\\% to 52.5\\% over reproduced $\\pi_{0.5}$ while maintaining efficient closed-loop control.",
+    "tldr": "GaussianDream demonstrates that training-time current Gaussian reconstruction and future Gaussian prediction provide effective 3D supervision, but its dense VGGT/TGE-based prefix jointly carries state, dynamics, and action-conditioning information.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Yuqing Jiang",
+      "Zijian Zhang",
+      "Weitao Zhou",
+      "Jiawei Wang",
+      "Junjie He",
+      "Lei Yang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "116020d4d5d31f60453d30782c25cb6be7337520",
+    "paper_id": "semanticscholar:116020d4d5d31f60453d30782c25cb6be7337520",
+    "doi": "",
+    "arxiv_id": "2608.25659",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/116020d4d5d31f60453d30782c25cb6be7337520",
+    "published_iso": "2026-08-26",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-08",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Causal Optimizer Interaction Calculus: Hidden Geometric Relaxation and Identifiable Interventions",
+    "title_norm": "causal optimizer interaction calculus hidden geometric relaxation and identifiab",
+    "abstract": "Optimizer experiments observe responses to algorithmic configurations without uniquely revealing hidden mechanisms. We develop a causal optimizer interaction calculus that separates pathwise realization, Mobius decomposition, and experimental identification. Under a fixed innovation coupling, every finite-horizon innovation-driven optimizer admits a behaviorally minimal pathwise realization. For any finite effect support and intervention design, an incidence operator gives the complete observational gauge, exact identifiability, sharp quotient stability, held-out predictions, and exact noiseless configuration complexity. Smooth hidden relaxation generates interactions through inverse hidden-state stiffness. Building on this structural law, we prove an observable-readout transfer theorem: arbitrary smooth update or trace readouts inherit an explicit five-term interaction through first and second hidden responses. Unlike the reduced optimal value, a general readout has no universal interaction sign. Its Boolean effects remain exact integrals of continuous interaction curvature and can therefore be identified by factorial interventions. We also derive Gaussian quotient minimax risk, exact confidence sets and tests, misspecification decomposition, certified downstream decisions, and optimal replication. A controlled real-data experiment on a 65-dimensional strongly convex logistic model validates the complete reduced-value chain. Boolean effects and independently integrated curvature agree within 4.21e-11, while nine held-out continuous intensities agree within 8.88e-13. Gaussian campaigns attain the predicted coverage and power, and 4,500 real-minibatch observations reject an order-two interaction model. Neural trace audits provide complementary evidence that the declared response classes remain informative in nonconvex training.",
+    "tldr": "A causal optimizer interaction calculus that separates pathwise realization, Mobius decomposition, and experimental identification is developed and an observable-readout transfer theorem is proved: arbitrary smooth update or trace readouts inherit an explicit five-term interaction through first and second hidden responses.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Zavier Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "99df6a53598c86fa7466995a093133fc8c5145d7",
+    "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+    "doi": "",
+    "arxiv_id": "2607.07206",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/99df6a53598c86fa7466995a093133fc8c5145d7",
+    "published_iso": "2026-07-08",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+    "title_norm": "rynnworld 4d 4d embodied world models for robotic manipulation",
+    "abstract": "Robotic manipulation in the open world requires not only recognizing what a scene looks like, but also anticipating how its 3D structure moves under interaction. We argue that synchronized RGB, depth, and optical flow, namely RGB-DF, provide a physically grounded representation that captures the underlying 4D dynamics of a scene. Compared to 2D pixel videos, this multi-modal synergy aligns visual appearance with geometric structure and temporal motion, creating a representation space significantly closer to the low-level end-effector actions demanded by robotic systems, thereby narrowing the gap between world prediction and policy learning. Building on this insight, we introduce RynnWorld-4D, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process. This 4D world model features a tri-branch architecture that integrates cross-modal attention with frame-wise 3D RoPE, ensuring that appearance, geometry, and motion evolve consistently. To supply training data at scale, we curate Rynn4DDataset 1.0, a massive dataset of over 254.4 million frames across egocentric human and robotic manipulation videos with high-quality pseudo-labels for depth and optical flow. We further propose RynnWorld-4D-Policy, an inverse dynamics head that consumes the internal 4D representations of RynnWorld-4D in a single forward pass, bypassing expensive multi-step denoising, to output robot actions in a closed-loop manner. Experiments show that RynnWorld-4D produces temporally and spatially coherent 4D predictions, and that RynnWorld-4D-Policy achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+    "tldr": "RynnWorld-4D is introduced, a generative model that co-produces future RGB frames, depth maps, and optical flow from a single RGB-D image and a language instruction within one unified diffusion process, and achieves state-of-the-art performance on real-world dexterous bimanual manipulation tasks, particularly excelling in tasks demanding spatial precision and temporal coordination.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Haoyu Zhao",
+      "Xingyue Zhao",
+      "Siteng Huang",
+      "Xin Li",
+      "Deli Zhao",
+      "Zhongyu Li"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "4a5f9e110101e29f686ad12b90945ff03930331d",
+    "paper_id": "semanticscholar:4a5f9e110101e29f686ad12b90945ff03930331d",
+    "doi": "",
+    "arxiv_id": "2607.06559",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/4a5f9e110101e29f686ad12b90945ff03930331d",
+    "published_iso": "2026-07-07",
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "PROMPT: A Pre-registered Randomized Protocol for Component-Level Evaluation of Clinical AI Prompts",
+    "title_norm": "prompt a pre registered randomized protocol for component level evaluation of cl",
+    "abstract": "BACKGROUND:Prompt engineering shapes medical AI outcomes, but prompt components are rarely tested as clinical interventions. We developed PROMPT (Pre-registered Randomized Outcome Measurement for Prompt Testing), a protocol using pre-specification, randomization, matched controls, dismantling, and decision rules.METHODS:Two pre-registered demonstrations used Claude Sonnet 4.6. Exp 1 used a synthetic tumbling-E orientation task: 630-trial main study, 480-trial dismantling study, and 1,050-trial 2x2 factorial extension. Exp 2 used the same arms on 16 label-masked CBIS-DDSM mammographic crops in four orientations: 256 confirmatory trials and a 64-trial Arm E extension. Matched controls removed the active component while preserving framing, structure, and output format.RESULTS:PROMPT identified beneficial, inactive, harmful, and task-dependent effects. In Exp 1, the full prompt achieved 98.6% orientation accuracy; removing the decoding rule reduced accuracy to 50.1% (difference, +48.5 pp; 95% CI, +43.2 to +53.7; P<0.001). A rule-only arm matched the full prompt (maximum difference, 2.3 pp), identifying the decoding rule as the sole measurable active component. A prohibited-reasoning block assumed to improve safety was inactive, an effect missed by whole-prompt comparison. Scaffolding without the task-specific rule underperformed the vehicle prompt, showing prompt structure alone was harmful. Exp 1 revealed a canonical-RIGHT error phenotype in no-rule arms, consistent with a RIGHT-orientation prior. In Exp 2, the phenotype recurred on mammographic images, but the rule's benefit was attenuated and did not meet the threshold (+14.1 pp; bootstrap 95% CI, -3.1 to +29.7; post-hoc mixed-model 95% CI, +3.5 to +24.6).CONCLUSION:PROMPT revealed component effects missed by whole-prompt evaluations, identifying safety vulnerabilities and performance failures before clinical AI deployment.",
+    "tldr": "PROMPT revealed component effects missed by whole-prompt evaluations, identifying safety vulnerabilities and performance failures before clinical AI deployment.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Bin Hu",
+      "A. Sandhu",
+      "Shahryar Wasif"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "a87e1b1640f3956513931ac31150a5e96c2b81e1",
+    "paper_id": "semanticscholar:a87e1b1640f3956513931ac31150a5e96c2b81e1",
+    "doi": "",
+    "arxiv_id": "2606.22318",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/a87e1b1640f3956513931ac31150a5e96c2b81e1",
+    "published_iso": "2026-06-21",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Efficient Parallel PPO-Based Reinforcement Learning for Generalized Pick and Place with Dense Reward Shaping",
+    "title_norm": "efficient parallel ppo based reinforcement learning for generalized pick and pla",
+    "abstract": "This paper presents a deep reinforcement learning (DRL) framework for training a SO-101 robotic arm. The robotic arm will perform single-object pick-and-place tasks under randomized object and goal poses, reflecting industrial-style variability without task-specific programming. Proximal Policy Optimization (PPO) is employed here with a view to ensuring stable learning in continuous control. The training pipeline is implemented in NVIDIA Isaac Sim using Isaac Lab. The policy is trained entirely in simulation by using privileged state information including joint positions and velocities, object and target poses and the previous action which enables rapid policy iteration without reliance on cameras or physical sensors. To guide learning, a structured reward function decomposes the task into intuitive sub-goals like end-effector reaching, object lifting, progressive goal tracking, and motion regularization through action-rate and joint-velocity penalties. A key practical advantage of the proposed framework is the use of massively parallel simulation. Up to 4096 environments are executed together on a single GeForce RTX 5060 Ti (16 GB VRAM). This leads to improved data throughput and reduced training time. The PhysX 5 physics engine ensures stable rigid-body dynamics and contact modeling essential for grasping and placement. Isaac Sim's photorealistic rendering enables qualitative validation of learned behaviors. It also supports future extensions toward vision-based control and sim-to-real transfer. The main novelty of this work lies in the integration of structured, staged dense reward shaping with large scale 4096 way parallel PPO training, enabling efficient and generalized pick and place learning under randomized object and goal poses.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "2026 IEEE 2nd International Conference on Quantum Photonics, Artificial Intelligence & Networking (QPAIN)",
+    "publication_types": [
+      "Conference"
+    ],
+    "authors": [
+      "Md Eashir Arafat",
+      "Piyash Ahmed Kheyal",
+      "Arijit Das",
+      "Md. Firoj Ali"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "2e0e58a5dbfb3df097ac554c4336dda33fe812d9",
+    "paper_id": "semanticscholar:2e0e58a5dbfb3df097ac554c4336dda33fe812d9",
+    "doi": "10.1109/QPAIN69676.2026.11545619",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/2e0e58a5dbfb3df097ac554c4336dda33fe812d9",
+    "published_iso": "2026-04-16",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "What Can Latent World Models Know? Physical Parameter Identifiability in Multimodal Predictive Representations",
+    "title_norm": "what can latent world models know physical parameter identifiability in multimod",
+    "abstract": "A central premise of latent world models is that predicting the future forces a representation to internalize the physics of its environment. Which physical quantities does a trained latent actually contain, and what decides this? We answer with controlled interventions in POKEWORLD, an interactive environment whose visually identical objects hide mass, drag, and contact stiffness. A certificate-gated protocol first certifies each parameter as recoverable from raw observations, then measures whether it enters the latent, so a null result can be attributed to the objective rather than to the environment. The resulting identifiability map has two organizing mechanisms and one frontier. Inputs limit what can be known, while prediction targets decide what is retained. Stiffness enters the latent only when touch is forecast ($R^2=0.50$, compared with $-0.02$ when the same signal is merely fused into the input), and under single-step prediction a vision-only latent discards even perfectly visible object state. Drag marks the frontier. It carries a recoverability certificate of 0.89 yet plateaus near 0.13 under every deterministic prediction objective we test, while a supervised head on the same trunk reaches 0.45. Parameters whose readout is slow and ratio-type under the sensed coordinates fall outside what these objectives acquire. On RH20T, an input-target factorial across scaling curves reproduces both mechanisms across two robots and 4,258 episodes. Every arm missing information or prediction pressure stays flat over a fivefold data range, and only the full multimodal objective forecasts force beyond a persistence baseline, with held-out gains that grow with scale. Objective structure determines which physical parameters a latent acquires, and additional data improves only the parameters it already acquires.",
+    "tldr": null,
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Kaizhen Tan",
+      "Xin Xu",
+      "Siru Tao",
+      "Yixiao Li",
+      "Han Hong",
+      "Yang Feng"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "adcbef7c524f5f0d17f4b0b94b5f223063c20567",
+    "paper_id": "semanticscholar:adcbef7c524f5f0d17f4b0b94b5f223063c20567",
+    "doi": "",
+    "arxiv_id": "2607.27017",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/adcbef7c524f5f0d17f4b0b94b5f223063c20567",
+    "published_iso": "2026-07-29",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Structure-Aware Diffusion Policy for Bimanual Cooperative Manipulation",
+    "title_norm": "structure aware diffusion policy for bimanual cooperative manipulation",
+    "abstract": "Bimanual cooperative manipulation involves critical closed-chain contact phases in which task success depends on maintaining inter-arm geometric consistency while mitigating antagonistic interaction. We present a structure-aware diffusion policy that conditions action generation on an explicit cooperative representation, rather than inferring coordination implicitly from raw multimodal inputs. The representation combines (i) Cooperative Dual Task-Space (CDTS) descriptors computed from forward kinematics, which decompose bimanual geometry into absolute motion and relative configuration, and (ii) a gravity-compensated force-difference cue computed from left–right end-effector forces to capture interaction inconsistency. To integrate perception with these structured priors, we design a hierarchical fusion module in which bidirectional vision–force cross-attention first aligns cross-modal evidence, followed by CDTS-guided cross-attention that uses structural tokens as queries to extract coordination-relevant features. Real-robot experiments on dual-arm cooperative carrying across objects of varying sizes and appearances demonstrate improved closed-chain stability and more robust performance across the evaluated object variations, increasing the overall success rate from 58% to 89% compared with a vision-dominant diffusion baseline.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "IEEE Robotics and Automation Letters",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xiao Li",
+      "Jie Zhang",
+      "Lequn Fu",
+      "Le Gu",
+      "Youjun Xiong",
+      "Shiqi Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "paper_id": "semanticscholar:20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "doi": "10.1109/LRA.2026.3701562",
+    "arxiv_id": "",
+    "dblp_key": "journals/ral/LiZFGXL26",
+    "paper_url": "https://www.semanticscholar.org/paper/20b75e3b0e78755b23dedafc3c9003af33915c9c",
+    "published_iso": "2026-07-01",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Loop-Constrained Connectivity Calculation for Planar Multi-Loop Mechanisms: Base–End-Effector Localization and Functional-Constraint Screening",
+    "title_norm": "loop constrained connectivity calculation for planar multi loop mechanisms base ",
+    "abstract": "Planar multi-loop mechanisms often generate a large number of non-isomorphic candidate topological graphs during automatic synthesis, making it difficult to efficiently identify configurations that satisfy engineering-oriented functional requirements. To address this issue, a loop-constrained connectivity calculation method and a connectivity-based localization and screening procedure are proposed. The proposed connectivity calculation is directly formulated for general planar non-fractionated kinematic chains (NFKCs), including those with multiple joints. For planar fractionated kinematic chains (FKCs), however, the present method is not applied directly at the full-system level, but only to decomposed non-fractionated subchains after system-level decomposition. Starting from a structurally admissible set of candidate topological graphs, a connectivity matrix is established for automatic localization of the base and the end-effector (EE). Functional screening is then performed by combining the connectivity criterion with object-oriented rules on hydraulic driving-pair arrangement and driving-redundancy patterns. The method was validated using the 10-link, 3-DOF single-joint equivalent of the KC1 subchain of a mine scaler manipulator arm. Under the prescribed structural and functional constraints, 249 admissible configurations were obtained. The results indicate that the proposed method provides an effective basis for application-oriented topological screening and subsequent dimensional synthesis.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "Machines",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xiaoxiong Li",
+      "Huafeng Ding"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "2ab459ecb1a8933ebeff13e44c1550a5ef2b38f6",
+    "paper_id": "semanticscholar:2ab459ecb1a8933ebeff13e44c1550a5ef2b38f6",
+    "doi": "10.3390/machines14040455",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://doi.org/10.3390/machines14040455",
+    "published_iso": "2026-04-20",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Automatic, Debiased, and Invariant Counterfactual Generation under General Interventions",
+    "title_norm": "automatic debiased and invariant counterfactual generation under general interve",
+    "abstract": "Generative models for counterfactual outcomes have great potential to support decision-making under complex interventions, but existing approaches are limited by unstable estimation, poor generalization across environments, and bias from nuisance model misspecification. We introduce ADIGen, a framework for automatic, debiased, and invariant counterfactual generation under general interventions, including high-dimensional interventions and outcomes. ADIGen combines Riesz regression to avoid unstable density-ratio estimation, causal invariance to improve generalization under distribution shift, and orthogonal statistical learning to obtain doubly robust guarantees against nuisance model misspecification. We provide excess-risk bounds showing that ADIGen controls counterfactual risk under general interventions, with a product-bias nuisance remainder and an invariant risk bound across environments. We then extend this framework to multiple, interacting objects with a joint intervention, and apply ADIGen to counterfactual world modeling. In contrast to standard statistical settings, the joint outcome is modeled natively without the need for exposure mappings or direct/indirect effect decompositions.",
+    "tldr": "ADIGen, a framework for automatic, debiased, and invariant counterfactual generation under general interventions, including high-dimensional interventions and outcomes, is introduced and extended to multiple, interacting objects with a joint intervention, and applied to counterfactual world modeling.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Raphael C. Kim",
+      "Jing Zhu",
+      "R. Zabih",
+      "Michele Santacatterina"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "13bc04d35f36a2975b983cba15ae3c7ed9a0271a",
+    "paper_id": "semanticscholar:13bc04d35f36a2975b983cba15ae3c7ed9a0271a",
+    "doi": "10.48550/arXiv.2606.07399",
+    "arxiv_id": "2606.07399",
+    "dblp_key": "journals/corr/abs-2606-07399",
+    "paper_url": "https://www.semanticscholar.org/paper/13bc04d35f36a2975b983cba15ae3c7ed9a0271a",
+    "published_iso": "2026-06-05",
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation",
+    "title_norm": "hierarchical diffusion policy for kinematics aware multi task robotic manipulati",
+    "abstract": "This paper introduces Hierarchical Diffusion Policy (HDP), a hierarchical agent for multi-task robotic manipulation. HDP factorises a manipulation policy into a hierarchical structure: a high-level task-planning agent which predicts a distant next-best end-effector pose (NBP), and a low-level goal-conditioned diffusion policy which generates optimal motion trajectories. The factorised policy representation allows HDP to tackle both long-horizon task planning while generating fine-grained low-level actions. To generate context-aware motion trajectories while satisfying robot kinematics constraints, we present a novel kinematics-aware goal-conditioned control agent, Robot Kinematics Diffuser (RK-Diffuser). Specifically, RK-Diffuser learns to generate both the end-effector pose and joint position trajectories, and distill the accurate but kinematics-unaware end-effector pose diffuser to the kinematics-aware but less accurate joint position diffuser via differentiable kinematics. Empirically, we show that HDP achieves a significantly higher success rate than the state-of-the-art methods in both simulation and real-world.11Code and videos are available in our project page.",
+    "tldr": "A novel kinematics-aware goal-conditioned control agent, Robot Kinematics Diffuser (RK-Diffuser), which learns to generate both the end-effector pose and joint position trajectories, and distill the accurate but kinematics-unaware end-effector pose diffuser to the kinematics-aware but less accurate joint position diffuser via differentiable kinematics.",
+    "year": 2024,
+    "venue": "Computer Vision and Pattern Recognition",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Xiao Ma",
+      "Sumit Patidar",
+      "Iain Haughton",
+      "Stephen James"
+    ],
+    "citations": 161,
+    "source": "semanticscholar",
+    "source_id": "7359b10949dc8dd271388976b133aad214d59281",
+    "paper_id": "semanticscholar:7359b10949dc8dd271388976b133aad214d59281",
+    "doi": "10.1109/CVPR52733.2024.01712",
+    "arxiv_id": "2403.03890",
+    "dblp_key": "conf/cvpr/0006PHJ24",
+    "paper_url": "https://arxiv.org/pdf/2403.03890",
+    "published_iso": "2024-03-06",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2024-03",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "A Multi-Agent Policy Optimization Algorithm Integrating Causal Inference",
+    "title_norm": "a multi agent policy optimization algorithm integrating causal inference",
+    "abstract": "Multi-Agent Reinforcement Learning (MARL) has demonstrated significant potential in the field of collaborative decision-making. However, its performance is often limited by environmental non-stationarity and complex interdependencies among agents. Traditional methods typically learn policies based on correlations, which can lead to the acquisition of spurious associations, resulting in poor policy generalization and insufficient robustness. To address these issues, this paper proposes a novel Multi-Agent Policy Optimization algorithm integrating Causal Inference (Causal-MAPO). The core of this algorithm lies in constructing a differentiable causal graph model to explicitly model the causal structure between agent actions and joint rewards. By introducing an attention-based mechanism to infer the causal graph from observational data and utilizing this graph to guide credit assignment and information sharing among agents during training, the algorithm filters out non-causal interference signals. Experimental results on the StarCraft II Multi-Agent Challenge (SMAC) and a simulated traffic network environment demonstrate that compared to baseline algorithms, Causal-MAPO achieves higher win rates and sample efficiency in complex tasks. Furthermore, it exhibits significantly enhanced decision-making robustness and generalization capability when facing dynamic disturbances and previously unseen opponent strategies.",
+    "tldr": "",
+    "year": 2025,
+    "venue": "2025 International Conference on Computer, Internet of Things and Smart City (CIoTSC)",
+    "publication_types": [
+      "Conference"
+    ],
+    "authors": [
+      "Minghao Chen",
+      "Xiaohui Zhang",
+      "Delei Zhang",
+      "Jie Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "0f9cc7016ed54fdc9be67532d419388349f30370",
+    "paper_id": "semanticscholar:0f9cc7016ed54fdc9be67532d419388349f30370",
+    "doi": "10.1109/CIoTSC67482.2025.11413108",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/0f9cc7016ed54fdc9be67532d419388349f30370",
+    "published_iso": "2025-11-07",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-11",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "M4Diffuser: Multi-View Diffusion Policy with Manipulability-Aware Control for Robust Mobile Manipulation",
+    "title_norm": "m4diffuser multi view diffusion policy with manipulability aware control for rob",
+    "abstract": "Mobile manipulation requires the coordinated control of a mobile base and a robotic arm while simultaneously perceiving both global scene context and fine-grained object details. Existing single-view approaches often fail in unstructured environments due to limited fields of view, exploration, and generalization abilities. Moreover, classical controllers, although stable, struggle with efficiency and manipulability near singularities. To address these challenges, we propose M4Diffuser, a hybrid framework that integrates a Multi-View Diffusion Policy with a novel Reduced and Manipulability-aware QP (ReM-QP) controller for mobile manipulation. The diffusion policy leverages proprioceptive states and complementary camera perspectives with both close-range object details and global scene context to generate task-relevant end-effector goals in the world frame. These high-level goals are then executed by the ReM-QP controller, which eliminates slack variables for computational efficiency and incorporates manipulability-aware preferences for robustness near singularities. Comprehensive experiments in simulation and real-world environments show that M4Diffuser achieves 7 to 56 percent higher success rates and reduces collisions by 3 to 31 percent over baselines. Our approach demonstrates robust performance for smooth whole-body coordination, and strong generalization to unseen tasks, paving the way for reliable mobile manipulation in unstructured environments. Details of the demo and supplemental material are available on our project website https://sites.google.com/view/m4diffuser.",
+    "tldr": "The proposed M4Diffuser is a hybrid framework that integrates a Multi-View Diffusion Policy with a novel Reduced and Manipulability-aware QP (ReM-QP) controller for mobile manipulation, demonstrating robust performance for smooth whole-body coordination, and strong generalization to unseen tasks, paving the way for reliable mobile manipulation in unstructured environments.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Ju Dong",
+      "Lei Zhang",
+      "Liding Zhang",
+      "Yao Ling",
+      "Yuqian Fu",
+      "Kaixin Bai"
+    ],
+    "citations": 4,
+    "source": "semanticscholar",
+    "source_id": "2b0f5fc3c9bc3e5bd710d6e7a487ba634918dc0a",
+    "paper_id": "semanticscholar:2b0f5fc3c9bc3e5bd710d6e7a487ba634918dc0a",
+    "doi": "10.48550/arXiv.2509.14980",
+    "arxiv_id": "2509.14980",
+    "dblp_key": "journals/corr/abs-2509-14980",
+    "paper_url": "https://www.semanticscholar.org/paper/2b0f5fc3c9bc3e5bd710d6e7a487ba634918dc0a",
+    "published_iso": "2025-09-18",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-09",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Multi-Fingered End-Effector Grasp Reflex Modeling for One-Shot Tactile Servoing in Tool Manipulation Tasks",
+    "title_norm": "multi fingered end effector grasp reflex modeling for one shot tactile servoing ",
+    "abstract": "Autonomous tool manipulation tasks are challenging for robots because they must reason over the tool’s object affordances, how to grasp the tool so it may be used, how the tool will interact with other objects in the environment, and how to perform the complex tool affordances to complete the manipulation task. Focusing on tool grasping presents further challenges, specifically generalization to novel tools and modeling the problem in an explainable way suitable for safety-critical task domains, such as robots operating autonomously to perform repair tasks in NASA lunar habitats. In this work, we focus on grasping tools in an explainable way that can be generalized to novel tools. We present a logistic regression based grasp reflex model, which maps continuous end-effector sensor data to a set of discrete symbolic states. An adjustment policy uses these symbolic states to compute the appropriate gradient to change the end-effector pose and increase the probability of a secure tool grasp. Once the tool grasp is sufficiently secure, the robot proceeds with the rest of the manipulation task. We test our grasp reflex model on 6 novel tools, and find that the model achieves one-shot generalization by successfully using tactile servoing to secure grasps from one example of a secure grasp state. The robot’s ability to learn to grasp tools in an explainable way that achieves one-shot generalization to novel tools demonstrates the power of our grasp reflex model in allowing robots to achieve autonomous tool manipulation tasks.",
+    "tldr": "",
+    "year": 2024,
+    "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "E. Sheetz",
+      "Misha Savchenko",
+      "Emma Zemler",
+      "Abbas Presswala",
+      "Andrew Crouch",
+      "S. Azimi"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "c124f2e641f7e4c5f3804e9a476ccaacf771898c",
+    "paper_id": "semanticscholar:c124f2e641f7e4c5f3804e9a476ccaacf771898c",
+    "doi": "10.1109/IROS58592.2024.10801477",
+    "arxiv_id": "",
+    "dblp_key": "conf/iros/SheetzSZPCAK24",
+    "paper_url": "https://www.semanticscholar.org/paper/c124f2e641f7e4c5f3804e9a476ccaacf771898c",
+    "published_iso": "2024-10-14",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2024-10",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Multi-critic Learning for Whole-body End-effector Twist Tracking",
+    "title_norm": "multi critic learning for whole body end effector twist tracking",
+    "abstract": "Learning whole-body control for locomotion and arm motions in a single policy has challenges, as the two tasks have conflicting goals. For instance, efficient locomotion typically favors a horizontal base orientation, while end-effector tracking may benefit from base tilting to extend reachability. Additionally, current Reinforcement Learning (RL) approaches using a pose-based task specification lack the ability to directly control the end-effector velocity, making smoothly executing trajectories very challenging. To address these limitations, we propose an RL-based framework that allows for dynamic, velocity-aware whole-body end-effector control. Our method introduces a multi-critic actor architecture that decouples the reward signals for locomotion and manipulation, simplifying reward tuning and allowing the policy to resolve task conflicts more effectively. Furthermore, we design a twist-based end-effector task formulation that can track both discrete poses and motion trajectories. We validate our approach through a set of simulation and hardware experiments using a quadruped robot equipped with a robotic arm. The resulting controller can simultaneously walk and move its end-effector and shows emergent whole-body behaviors, where the base assists the arm in extending the workspace, despite a lack of explicit formulations. Videos and supplementary material can be found at multi-critic-locomanipulation.github.io.",
+    "tldr": "This work introduces a multi-critic actor architecture that decouples the reward signals for locomotion and manipulation, simplifying reward tuning and allowing the policy to resolve task conflicts more effectively, and designs a twist-based end-effector task formulation that can track both discrete poses and motion trajectories.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "A. E. Vijayan",
+      "Andrei Cramariuc",
+      "Mattia Risiglione",
+      "Christian Gehring",
+      "Marco Hutter"
+    ],
+    "citations": 4,
+    "source": "semanticscholar",
+    "source_id": "8932dccd02104715dcfcd622a1659eeb3cc5caa0",
+    "paper_id": "semanticscholar:8932dccd02104715dcfcd622a1659eeb3cc5caa0",
+    "doi": "10.48550/arXiv.2507.08656",
+    "arxiv_id": "2507.08656",
+    "dblp_key": "journals/corr/abs-2507-08656",
+    "paper_url": "https://www.semanticscholar.org/paper/8932dccd02104715dcfcd622a1659eeb3cc5caa0",
+    "published_iso": "2025-07-11",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "CMIX: Causal Value Decomposition for Cooperative Multi-Agent Reinforcement Learning",
+    "title_norm": "cmix causal value decomposition for cooperative multi agent reinforcement learni",
+    "abstract": "Value decomposition plays a pivotal role in ensuring effective credit assignment within Multi-Agent Reinforcement Learning (MARL), particularly in cooperative multi-agent tasks where agents are limited to accessing team rewards only. However, existing methods treat the mixing network as a black box, implicitly assuming that neural networks can autonomously extract important information and achieve rational credit assignment during policy learning. This approach not only lacks interpretability but may also prove inefficient in complex scenarios. To enhance the interpretability and rationality of value decomposition, we propose an innovative approach called “Causal Value Decomposition”(CMIX). CMIX employs causal inference-based models, introducing a set of metrics beyond environmental rewards to enhance robustness and model interpretability. Specifically, CMIX establishes intricate relational structures among agents in complex environments and leverages causal relationships between agents and their surroundings to address the credit assignment challenge in MARL. By employing do-calculus, CMIX accurately measures the impact of each agent's actions on environmental states, precisely determining their contribution to the collective reward. This approach not only enhances the interpretability of existing black-box models but also improves the accuracy of credit assignment in multi-agent systems. Moreover, CMIX exhibits high scalability and complements existing value decomposition techniques. Its effectiveness and scalability have been rigorously tested across various settings, including MPE, LBF, and SMAC environments.",
+    "tldr": "",
+    "year": 2024,
+    "venue": "IEEE International Conference on Systems, Man and Cybernetics",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Dunqi Yao",
+      "Chuxiong Sun",
+      "Kai Li",
+      "Kaijie Zhou",
+      "Hanyu Li",
+      "Rui Wang"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "5626bcb2355b8eaad10c7c751c2f39d065c85e01",
+    "paper_id": "semanticscholar:5626bcb2355b8eaad10c7c751c2f39d065c85e01",
+    "doi": "10.1109/SMC54092.2024.10831507",
+    "arxiv_id": "",
+    "dblp_key": "conf/smc/YaoSLZL0L24",
+    "paper_url": "https://www.semanticscholar.org/paper/5626bcb2355b8eaad10c7c751c2f39d065c85e01",
+    "published_iso": "2024-10-06",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2024-10",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Contextual Counterfactual Credit Assignment for Multi-Agent Reinforcement Learning in LLM Collaboration",
+    "title_norm": "contextual counterfactual credit assignment for multi agent reinforcement learni",
+    "abstract": "",
+    "tldr": "Contex-tual Counterfactual Counterfactual Credit Assignment (C3) isolates the causal impact of individual messages by freezing the exact transcript-derived context, evaluating context-matched alternatives via fixed-continuation replay, and applying a leave-one-out (LOO) baseline.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yanjun Chen",
+      "Yirong Sun",
+      "Hanlin Wang",
+      "Xinming Zhang",
+      "Xiaoyu Shen",
+      "Wenjie Li"
+    ],
+    "citations": 6,
+    "source": "semanticscholar",
+    "source_id": "f59c13163a159e627f9f6d08acc0a3276ad01ef6",
+    "paper_id": "semanticscholar:f59c13163a159e627f9f6d08acc0a3276ad01ef6",
+    "doi": "10.48550/arXiv.2603.06859",
+    "arxiv_id": "",
+    "dblp_key": "journals/corr/abs-2603-06859",
+    "paper_url": "https://www.semanticscholar.org/paper/f59c13163a159e627f9f6d08acc0a3276ad01ef6",
+    "published_iso": null,
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2026",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "AnchorDP3: 3D Affordance Guided Sparse Diffusion Policy for Robotic Manipulation",
+    "title_norm": "anchordp3 3d affordance guided sparse diffusion policy for robotic manipulation",
+    "abstract": "We present AnchorDP3, a diffusion policy framework for dual-arm robotic manipulation that achieves state-of-the-art performance in highly randomized environments. AnchorDP3 integrates three key innovations: (1) Simulator-Supervised Semantic Segmentation, using rendered ground truth to explicitly segment task-critical objects within the point cloud, which provides strong affordance priors; (2) Task-Conditioned Feature Encoders, lightweight modules processing augmented point clouds per task, enabling efficient multi-task learning through a shared diffusion-based action expert; (3) Affordance-Anchored Keypose Diffusion with Full State Supervision, replacing dense trajectory prediction with sparse, geometrically meaningful action anchors, i.e., keyposes such as pre-grasp pose, grasp pose directly anchored to affordances, drastically simplifying the prediction space; the action expert is forced to predict both robot joint angles and end-effector poses simultaneously, which exploits geometric consistency to accelerate convergence and boost accuracy. Trained on large-scale, procedurally generated simulation data, AnchorDP3 achieves a 98.7% average success rate in the RoboTwin benchmark across diverse tasks under extreme randomization of objects, clutter, table height, lighting, and backgrounds. This framework, when integrated with the RoboTwin real-to-sim pipeline, has the potential to enable fully autonomous generation of deployable visuomotor policies from only scene and instruction, totally eliminating human demonstrations from learning manipulation skills.",
+    "tldr": "This framework, when integrated with the RoboTwin real-to-sim pipeline, has the potential to enable fully autonomous generation of deployable visuomotor policies from only scene and instruction, totally eliminating human demonstrations from learning manipulation skills.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Ziyan Zhao",
+      "Ke Fan",
+      "He-Yang Xu",
+      "Ning Qiao",
+      "Bo Peng",
+      "Wenlong Gao"
+    ],
+    "citations": 6,
+    "source": "semanticscholar",
+    "source_id": "88bb52ab80b2f1866c62f67d4b5f87b258352ca3",
+    "paper_id": "semanticscholar:88bb52ab80b2f1866c62f67d4b5f87b258352ca3",
+    "doi": "10.48550/arXiv.2506.19269",
+    "arxiv_id": "2506.19269",
+    "dblp_key": "journals/corr/abs-2506-19269",
+    "paper_url": "https://www.semanticscholar.org/paper/88bb52ab80b2f1866c62f67d4b5f87b258352ca3",
+    "published_iso": "2025-06-23",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Embodying Multi-Hand Manipulation Policies by Searching the Assignment and Null Spaces",
+    "title_norm": "embodying multi hand manipulation policies by searching the assignment and null ",
+    "abstract": "Learned manipulation policies increasingly predict motions for abstract “hands” and are attractive in practice because they rely on easily collected demonstrations and transfer across robot platforms. Executing these trajectories on multi-arm robots, however, is not trivial. Multi-hand policy outputs must be assigned to physical arms, each arm must realize a configuration-space motion that tracks its prescribed end-effector trajectory, and all arms must respect kinematic limits and avoid collisions. In the absence of algorithms that directly address this problem, practitioners typically extend single-arm inverse-kinematics (IK) pipelines in an ad hoc way, with no guarantees of feasibility or safety. In this work, we close this execution gap with a search-based framework that is theoretically complete for grounding policy-generated multi-hand trajectories onto physical multi-arm systems. Building on Conflict-Based Search, our method explicitly searches over both the discrete assignment of trajectories to arms and the continuous Jacobian null spaces of redundant manipulators, using redundancy to avoid inter-arm collisions while tracking the prescribed motions. This unified treatment of assignment and null-space motion yields a practically efficient planner that safely realizes coordinated manipulation-policy outputs on multi-arm robots. See omcbsa.github.io for more.",
+    "tldr": "This work proposes a search-based framework that is theoretically complete for grounding policy-generated multi-hand trajectories onto physical multi-arm systems, and explicitly searches over both the discrete assignment of trajectories to arms and the continuous Jacobian null spaces of redundant manipulators.",
+    "year": 2026,
+    "venue": "Proceedings of the International Symposium on Combinatorial Search",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yorai Shaoul",
+      "Jiaoyang Li",
+      "Maxim Likhachev"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "2304f510a492c50ccf9cbe6b5d9e5a8777792a30",
+    "paper_id": "semanticscholar:2304f510a492c50ccf9cbe6b5d9e5a8777792a30",
+    "doi": "10.1609/socs.v19i1.43096",
+    "arxiv_id": "2607.22020",
+    "dblp_key": "",
+    "paper_url": "https://ojs.aaai.org/index.php/SOCS/article/download/43096/50656",
+    "published_iso": "2026-07-24",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ADPro: a Test-time Adaptive Diffusion Policy for Robot Manipulation via Manifold and Initial Noise Constraints",
+    "title_norm": "adpro a test time adaptive diffusion policy for robot manipulation via manifold ",
+    "abstract": "",
+    "tldr": "The Adaptive Diffusion Policy (ADP) is proposed, a test-time adaptation method that introduces two key inductive biases into the diffusion, enabling test-time adaptation that tailors the policy to specific tasks, thereby enhancing generalization across novel tasks and environments.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Zezeng Li",
+      "Rui Yang",
+      "Ruochen Chen",
+      "ZhongXuan Luo",
+      "Liming Chen"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "63a4cae51c8f35ef9f9b365fb7728d300920feb8",
+    "paper_id": "semanticscholar:63a4cae51c8f35ef9f9b365fb7728d300920feb8",
+    "doi": "10.48550/arXiv.2508.06266",
+    "arxiv_id": "",
+    "dblp_key": "journals/corr/abs-2508-06266",
+    "paper_url": "https://www.semanticscholar.org/paper/63a4cae51c8f35ef9f9b365fb7728d300920feb8",
+    "published_iso": null,
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Digital Twin-Assisted Causal Multi-Agent Reinforcement Learning for Large-Scale Network Service Migration",
+    "title_norm": "digital twin assisted causal multi agent reinforcement learning for large scale ",
+    "abstract": "Dynamic service migration is essential for guaranteeing quality of service (QoS) for mobile users in multi-access edge computing (MEC). However, conventional reinforcement learning and other strategies frequently result in suboptimal policies. These methods are unable to differentiate between actual cause-and-effect relationships and fake patterns due to their reliance on correlational data, resulting in inefficient and expensive migrations. This paper introduces a novel digital twinassisted causal multi-agent reinforcement learning (DT-CausalMARL) framework to address this fundamental limitation. We change the optimization objective from minimizing direct system cost to maximizing the causal gain of migration actions. This is accomplished by employing a digital twin as a counterfactual analysis engine to assess the actual consequences of decisions in comparison to a baseline policy. This causal gain is subsequently employed as a robust reward signal by a causal multi-agent deep deterministic policy gradient (Causal-MADDPG) algorithm to train cooperative agents. Our framework outperforms standard MARL baselines by reducing harmful ‘regretful migrations' and improving system stability under dynamic traffic loads.",
+    "tldr": "",
+    "year": 2025,
+    "venue": "International Conference on Speech Technology and Human-Computer Dialogue",
+    "publication_types": [
+      "Conference"
+    ],
+    "authors": [
+      "Chang Che",
+      "Luping Xiang",
+      "Jie Hu",
+      "Kun Yang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "787ead55968d4fd7503bb7d27c7c2e526c3e6dae",
+    "paper_id": "semanticscholar:787ead55968d4fd7503bb7d27c7c2e526c3e6dae",
+    "doi": "10.1109/ICCT67417.2025.11374267",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/787ead55968d4fd7503bb7d27c7c2e526c3e6dae",
+    "published_iso": "2025-10-16",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-10",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Spatially Conditioned Diffusion Policy: Learning Precise and Robust Manipulation with a Single RGB Camera",
+    "title_norm": "spatially conditioned diffusion policy learning precise and robust manipulation ",
+    "abstract": "Recent visual imitation learning systems have widely adopted multi-camera setups with wrist-mounted cameras as the de facto standard. However, manipulation from a single global view remains challenging, as the policy should capture fine-grained interaction details and identify task-relevant regions without local wrist views. To address this challenge, we present Spatially Conditioned Diffusion Policy (SCDP), a diffusion-based visuomotor policy that achieves precise and robust manipulation in a single-camera setting. Our key idea is that end-effector trajectories can serve as visual attention anchors that reflect task-relevant regions. Building on this idea, SCDP consists of two key components: (i) a visual encoder that produces multi-scale feature maps to capture both broader context and fine-grained visual features, and (ii) a spatial conditioning module that samples point-wise features along intermediate end-effector trajectories in the diffusion loop. Extensive simulation experiments show that SCDP consistently outperforms strong single-view baselines and achieves performance comparable to multi-camera baselines. Real-world experiments further demonstrate precise manipulation and robustness to visual distractors, highlighting the potential of single-camera imitation learning.",
+    "tldr": "Spatially Conditioned Diffusion Policy is presented, a diffusion-based visuomotor policy that achieves precise and robust manipulation in a single-camera setting and consistently outperforms strong single-view baselines and achieves performance comparable to multi-camera baselines.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Seoyoon Kim",
+      "Kanghyun Kim",
+      "Dongwoo Ko",
+      "Y. Heo",
+      "Min Jun Kim"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "41593529a8cf461b1ca41ffc93ed1ee7de0fd0c2",
+    "paper_id": "semanticscholar:41593529a8cf461b1ca41ffc93ed1ee7de0fd0c2",
+    "doi": "10.48550/arXiv.2606.14535",
+    "arxiv_id": "2606.14535",
+    "dblp_key": "journals/corr/abs-2606-14535",
+    "paper_url": "https://www.semanticscholar.org/paper/41593529a8cf461b1ca41ffc93ed1ee7de0fd0c2",
+    "published_iso": "2026-06-12",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Causal Knowledge Transfer for Multi-Agent Reinforcement Learning in Dynamic Environments",
+    "title_norm": "causal knowledge transfer for multi agent reinforcement learning in dynamic envi",
+    "abstract": "[Context] Multi-agent reinforcement learning (MARL) has shown strong performance in environments requiring coordinated behavior. However, transferring knowledge remains a significant challenge in dynamic settings with changing goals. [Problem] Traditional knowledge transfer methods in MARL struggle to generalize, and agents often require costly retraining to adapt. [Approach] This paper introduces a causal knowledge transfer framework that enables agents to learn and share compact causal representations of paths within a non-stationary environment. As the environment changes (with new obstacles), agents' collisions necessitate adaptive recovery strategies. We model each collision as a causal intervention instantiated as a sequence of recovery action macros whose effect corresponds to causal knowledge of how to circumvent the obstacle while increasing the chances of achieving the agent's goal (maximizing cumulative reward). The recovery action macro is transferred online from a teacher agent in a zero-shot fashion, i.e., without retraining, just by querying a lookup model with local context information (collisions). [Results] Our findings reveal two key insights: (1) agents with heterogeneous goals were able to bridge about half of the gap between random exploration and a fully retrained policy when adapting to new environments, and (2) the effectiveness of knowledge transfer depends on the interplay between environment complexity and heterogeneity of agents' goals.",
+    "tldr": "A causal knowledge transfer framework that enables agents to learn and share compact causal representations of paths within a non-stationary environment and reveals the effectiveness of knowledge transfer depends on the interplay between environment complexity and heterogeneity of agents' goals.",
+    "year": 2025,
+    "venue": "2025 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Kathrin Korte",
+      "C. Adriano",
+      "Sona Ghahremani",
+      "Holger Giese"
+    ],
+    "citations": 5,
+    "source": "semanticscholar",
+    "source_id": "727974a27c489fc565b9bc393373c142b257abd2",
+    "paper_id": "semanticscholar:727974a27c489fc565b9bc393373c142b257abd2",
+    "doi": "10.1109/ACSOS-C66519.2025.00046",
+    "arxiv_id": "2507.13846",
+    "dblp_key": "journals/corr/abs-2507-13846",
+    "paper_url": "https://www.semanticscholar.org/paper/727974a27c489fc565b9bc393373c142b257abd2",
+    "published_iso": "2025-07-18",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ImaginationPolicy: Towards Generalizable, Precise and Reliable End-to-End Policy for Robotic Manipulation",
+    "title_norm": "imaginationpolicy towards generalizable precise and reliable end to end policy f",
+    "abstract": "End-to-end robot manipulation policies offer significant potential for enabling embodied agents to understand and interact with the world. Unlike traditional modular pipelines, end-to-end learning mitigates key limitations such as information loss between modules and feature misalignment caused by isolated optimization targets. Despite these advantages, existing end-to-end neural networks for robotic manipulation--including those based on large VLM/VLA models--remain insufficiently performant for large-scale practical deployment. In this paper, we take a step towards an end-to-end manipulation policy that is generalizable, accurate and reliable. To achieve this goal, we propose a novel Chain of Moving Oriented Keypoints (CoMOK) formulation for robotic manipulation. Our formulation is used as the action representation of a neural policy, which can be trained in an end-to-end fashion. Such an action representation is general, as it extends the standard end-effector pose action representation and supports a diverse set of manipulation tasks in a unified manner. The oriented keypoint in our method enables natural generalization to objects with different shapes and sizes, while achieving sub-centimeter accuracy. Moreover, our formulation can easily handle multi-stage tasks, multi-modal robot behaviors, and deformable objects. Extensive simulated and hardware experiments demonstrate the effectiveness of our method.",
+    "tldr": "This paper proposes a novel Chain of Moving Oriented Keypoints (CoMOK) formulation for robotic manipulation, which uses the oriented keypoint as the action representation of a neural policy, which can be trained in an end-to-end fashion.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Dekun Lu",
+      "Wei Gao",
+      "Kui Jia"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "cbb4e32304b29a0c9b482c29e0b92229dcf71081",
+    "paper_id": "semanticscholar:cbb4e32304b29a0c9b482c29e0b92229dcf71081",
+    "doi": "10.48550/arXiv.2509.20841",
+    "arxiv_id": "2509.20841",
+    "dblp_key": "journals/corr/abs-2509-20841",
+    "paper_url": "https://www.semanticscholar.org/paper/cbb4e32304b29a0c9b482c29e0b92229dcf71081",
+    "published_iso": "2025-09-25",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-09",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Latent Action Diffusion for Cross-Embodiment Manipulation",
+    "title_norm": "latent action diffusion for cross embodiment manipulation",
+    "abstract": "End-to-end learning is emerging as a powerful paradigm for robotic manipulation, but its effectiveness is limited by data scarcity and the heterogeneity of action spaces across robot embodiments. In particular, diverse action spaces across different end-effectors create barriers for cross-embodiment learning and skill transfer. We address this challenge through diffusion policies learned in a latent action space that unifies diverse end-effector actions. We first show that we can learn a semantically aligned latent action space for anthropomorphic robotic hands, a human hand, and a parallel jaw gripper using encoders trained with a contrastive loss. Second, we show that by using our proposed latent action space for co-training on manipulation data from different end-effectors, we can utilize a single policy for multi-robot control and obtain up to 25.3% improved manipulation success rates, indicating successful skill transfer despite a significant embodiment gap. Our approach using latent cross-embodiment policies presents a new method to unify different action spaces across embodiments, enabling efficient multi-robot control and data sharing across robot setups. This unified representation significantly reduces the need for extensive data collection for each new robot morphology, accelerates generalization across embodiments, and ultimately facilitates more scalable and efficient robotic learning.",
+    "tldr": "This work shows that by using its proposed latent action space for co-training on manipulation data from different end-effectors, it can utilize a single policy for multi-robot control and obtain up to 25.3% improved manipulation success rates, indicating successful skill transfer despite a significant embodiment gap.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Erik Bauer",
+      "Elvis Nava",
+      "Robert K. Katzschmann"
+    ],
+    "citations": 26,
+    "source": "semanticscholar",
+    "source_id": "79ff88a2aac50d0762e18bd9d111de66889b25c2",
+    "paper_id": "semanticscholar:79ff88a2aac50d0762e18bd9d111de66889b25c2",
+    "doi": "10.48550/arXiv.2506.14608",
+    "arxiv_id": "2506.14608",
+    "dblp_key": "journals/corr/abs-2506-14608",
+    "paper_url": "https://www.semanticscholar.org/paper/79ff88a2aac50d0762e18bd9d111de66889b25c2",
+    "published_iso": "2025-06-17",
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "year_month": "2025-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "VM-BHINet:Vision Mamba Bimanual Hand Interaction Network for 3D Interacting Hand Mesh Recovery From a Single RGB Image",
+    "title_norm": "vm bhinet vision mamba bimanual hand interaction network for 3d interacting hand",
+    "abstract": "Understanding bimanual hand interactions is essential for realistic 3D pose and shape reconstruction. However, existing methods struggle with occlusions, ambiguous appearances, and computational inefficiencies. To address these challenges, we propose Vision Mamba Bimanual Hand Interaction Network (VM-BHINet), introducing state space models (SSMs) into hand reconstruction to enhance interaction modeling while improving computational efficiency. The core component, Vision Mamba Interaction Feature Extraction Block (VM-IFEBlock), combines SSMs with local and global feature operations, enabling deep understanding of hand interactions. Experiments on the InterHand2.6M dataset show that VM-BHINet reduces Mean per-joint position error (MPJPE) and Mean per-vertex position error (MPVPE) by 2-3 \\(\\%\\) , significantly surpassing state-of-the-art methods.",
+    "year": 2025,
+    "venue": "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+    "authors": [
+      "Han Bi",
+      "Ge Yu",
+      "Yu He",
+      "Wenzhuo Liu",
+      "Zijie Zheng"
+    ],
+    "citations": 4,
+    "source": "openalex",
+    "source_id": "W4410617744",
+    "doi": "10.1145/3728308",
+    "arxiv_id": null,
+    "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3728308",
+    "published_iso": "2025-05-22",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W4410617744",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Flexible Multitask Learning With Factorized Diffusion Policy",
+    "title_norm": "flexible multitask learning with factorized diffusion policy",
+    "abstract": "Multitask learning poses significant challenges due to the highly multimodal and diverse nature of robot action distributions. However, effectively fitting policies to these complex task distributions is often difficult, and existing monolithic models often underfit the action distribution and lack the flexibility required for efficient adaptation. We introduce a novel modular diffusion policy framework that factorizes complex action distributions into a composition of specialized diffusion models, each capturing a distinct sub-mode of the behavior space for a more effective overall policy. In addition, this modular structure enables flexible policy adaptation to new tasks by adding or fine-tuning components, which inherently mitigates catastrophic forgetting. Empirically, across both simulation and real-world robotic manipulation settings, we illustrate how our method consistently outperforms strong modular and monolithic baselines. Website: factorized-diffusion-policy.github.io.",
+    "year": 2026,
+    "venue": "IEEE Robotics and Automation Letters",
+    "authors": [
+      "Chaoqi Liu",
+      "Huichao Chen",
+      "Sigmund H. Høeg",
+      "Shaoxiong Yao",
+      "Yunzhu Li",
+      "Kris Hauser"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W7128796393",
+    "doi": "10.1109/lra.2026.3664611",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W7128796393",
+    "published_iso": "2026-02-13",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W7128796393",
+    "year_month": "2026-02",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Unified Video Action Model",
+    "title_norm": "unified video action model",
+    "abstract": "",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Shuang Li",
+      "Yihuai Gao",
+      "Dorsa Sadigh",
+      "Shuran Song"
+    ],
+    "citations": 5,
+    "source": "openalex",
+    "source_id": "W4414050712",
+    "doi": "10.15607/rss.2025.xxi.074",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.074",
+    "published_iso": "2025-06-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W4414050712",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Quantifying the diverse contributions of hierarchical muscle interactions to motor function",
+    "title_norm": "quantifying the diverse contributions of hierarchical muscle interactions to mot",
+    "abstract": "\" toward common task goals. This study offers a nuanced computational perspective to muscle synergies, where muscles interacting across multiple scales have functionally similar, complementary, and independent roles. Making this viewpoint implicit to a methodological approach applying Partial Information Decomposition to large-scale muscle activations, we unveiled nested networks of functionally diverse inter- and intramuscular interactions with distinct functional consequences on task performance. The effectiveness of this approach is demonstrated using simulations and by extracting generalizable muscle networks from benchmark datasets of muscle activity. Specific network components are shown to correlate with (1) balance performance and (2) differences in motor variability between young and older adults. By aligning muscle synergy analysis with leading theoretical insights on movement modularity, the mechanistic insights presented here suggest the proposed methodology offers enhanced research opportunities toward health and engineering applications.",
+    "year": 2024,
+    "venue": "iScience",
+    "authors": [
+      "David Ó’Reilly",
+      "William J. Shaw",
+      "Pauline M. Hilt",
+      "Rafael Castro Aguiar",
+      "Sarah Astill",
+      "Ioannis Delis"
+    ],
+    "citations": 7,
+    "source": "openalex",
+    "source_id": "W4405433706",
+    "doi": "10.1016/j.isci.2024.111613",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405433706",
+    "published_iso": "2024-12-16",
+    "oa_field": "Neuroscience",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W4405433706",
+    "year_month": "2024-12",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Selecting the Most Effective Nudge: Evidence From a Large‐Scale Experiment on Immunization",
+    "title_norm": "selecting the most effective nudge evidence from a large scale experiment on imm",
+    "abstract": "Policymakers often choose a policy bundle that is a combination of different interventions in different dosages. We develop a new technique— treatment variant aggregation (TVA)—to select a policy from a large factorial design. TVA pools together policy variants that are not meaningfully different and prunes those deemed ineffective. This allows us to restrict attention to aggregated policy variants, consistently estimate their effects on the outcome, and estimate the best policy effect adjusting for the winner's curse. We apply TVA to a large randomized controlled trial that tests interventions to stimulate demand for immunization in Haryana, India. The policies under consideration include reminders, incentives, and local ambassadors for community mobilization. Cross‐randomizing these interventions, with different dosages or types of each intervention, yields 75 combinations. The policy with the largest impact (which combines incentives, ambassadors who are information hubs, and reminders) increases the number of immunizations by 44% relative to the status quo. The most cost‐effective policy (information hubs, ambassadors, and SMS reminders, but no incentives) increases the number of immunizations per dollar by 9.1% relative to the status quo.",
+    "year": 2025,
+    "venue": "Econometrica",
+    "authors": [
+      "Abhijit Banerjee",
+      "Arun G. Chandrasekhar",
+      "Suresh Dalpath",
+      "Esther Duflo",
+      "John Floretta",
+      "Matthew O. Jackson"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W3170338703",
+    "doi": "10.3982/ecta19739",
+    "arxiv_id": null,
+    "paper_url": "http://arxiv.org/pdf/2104.09645",
+    "published_iso": "2025-01-01",
+    "oa_field": "Social Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "paper_id": "openalex:W3170338703",
+    "year_month": "2025-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "AnyPos: Automated Task-Agnostic Actions for Bimanual Manipulation",
+    "title_norm": "anypos automated task agnostic actions for bimanual manipulation",
+    "abstract": "Learning generalizable manipulation policies hinges on data, yet robot manipulation data is scarce and often entangled with specific embodiments, making both cross-task and cross-platform transfer difficult. We tackle this challenge with task-agnostic embodiment modeling, which learns embodiment dynamics directly from task-agnostic action data and decouples them from high-level policy learning. By focusing on exploring all feasible actions of the embodiment to capture what is physically feasible and consistent, task-agnostic data takes the form of independent image-action pairs with the potential to cover the entire embodiment workspace, unlike task-specific data, which is sequential and tied to concrete tasks. This data-driven perspective bypasses the limitations of traditional dynamics-based modeling and enables scalable reuse of action data across different tasks. Building on this principle, we introduce AnyPos, a unified pipeline that integrates large-scale automated task-agnostic exploration with robust embodiment modeling through inverse dynamics learning. AnyPos generates diverse yet safe trajectories at scale, then learns embodiment representations by decoupling arm and end-effector motions and employing a direction-aware decoder to stabilize predictions under distribution shift, which can be seamlessly coupled with diverse high-level policy models. In comparison to the standard baseline, AnyPos achieves a 51% improvement in test accuracy. On manipulation tasks such as operating a microwave, toasting bread, folding clothes, watering plants, and scrubbing plates, AnyPos raises success rates by 30-40% over strong baselines. These results highlight data-driven embodiment modeling as a practical route to overcoming data scarcity and achieving generalization across tasks and platforms in visuomotor control. Project page: https://embodiedfoundation.github.io/vidar_anypos.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Hengkai Tan",
+      "Feng Yao",
+      "Xinyi Mao",
+      "Huang, Shuhe",
+      "Guodong Liu",
+      "Zhongkai Hao"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4415309754",
+    "doi": "10.48550/arxiv.2507.12768",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2507.12768",
+    "published_iso": "2025-07-17",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W4415309754",
+    "year_month": "2025-07",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Robot Data Curation with Mutual Information Estimators",
+    "title_norm": "robot data curation with mutual information estimators",
+    "abstract": "The performance of imitation learning policies often hinges on the datasets with which they are trained.Consequently, investment in data collection for robotics has grown across both industrial and academic labs.However, despite the marked increase in the quantity of demonstrations collected, little work has sought to assess the quality of said data despite mounting evidence of its importance in other areas such as vision and language.In this work, we take a critical step towards addressing the data quality in robotics.Given a dataset of demonstrations, we aim to estimate the relative quality of individual demonstrations in terms of both action diversity and predictability.To do so, we estimate the average contribution of a trajectory towards the mutual information between states and actions in the entire dataset, which captures both the entropy of the marginal action distribution and the state-conditioned action entropy.Though commonly used mutual information estimators require vast amounts of data often beyond the scale available in robotics, we introduce a novel technique based on k-nearest neighbor estimates of mutual information on top of simple VAE embeddings of states and actions.Empirically, we demonstrate that our approach is able to partition demonstration datasets by quality according to human expert scores across a diverse set of benchmarks spanning simulation and real world environments.Moreover, training policies based on data filtered by our method leads to a 5-10% improvement in RoboMimic and better performance on real ALOHA and Franka setups.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Joey Hejna",
+      "Suvir Mirchandani",
+      "Ashwin Balakrishna",
+      "Annie Xie",
+      "Ayzaan Wahid",
+      "Jonathan Tompson"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W4414050476",
+    "doi": "10.15607/rss.2025.xxi.023",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.023",
+    "published_iso": "2025-06-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "bimanual action interaction dynamics factorization"
+    ],
+    "paper_id": "openalex:W4414050476",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Large Language Models for Orchestrating Bimanual Robots",
+    "title_norm": "large language models for orchestrating bimanual robots",
+    "abstract": "Although there has been rapid progress in endowing robots with the ability to solve complex manipulation tasks, generating control policies for bimanual robots to solve tasks involving two hands is still challenging because of the difficulties in effective temporal and spatial coordination. With emergent abilities in terms of step-by-step reasoning and in-context learning, Large Language Models (LLMs) have demonstrated promising potential in a variety of robotic tasks. However, the nature of language communication via a single sequence of discrete symbols makes LLM-based coordination in continuous space a particular challenge for bimanual tasks. To tackle this challenge, we present LAnguage-model-based Bimanual ORchestration (LABOR), an agent utilizing an LLM to analyze task configurations and devise coordination control policies for addressing long-horizon bimanual tasks. We evaluate our method through simulated experiments involving two classes of long-horizon tasks using the NICOL humanoid robot. Our results demonstrate that our method outperforms the baseline in terms of success rate. Additionally, we thoroughly analyze failure cases, offering insights into LLM-based approaches in bimanual robotic control and revealing future research trends. The project website can be found at http://labor-agent. github.io.",
+    "year": 2024,
+    "venue": "",
+    "authors": [
+      "Kun Chu",
+      "Xufeng Zhao",
+      "Cornelius Weber",
+      "Mengdi Li",
+      "Wenhao Lu",
+      "Stefan Wermter"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4404953341",
+    "doi": "10.1109/humanoids58906.2024.10769891",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4404953341",
+    "published_iso": "2024-11-22",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4404953341",
+    "year_month": "2024-11",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ManiGaussian++: General Robotic Bimanual Manipulation with Hierarchical Gaussian World Model",
+    "title_norm": "manigaussian general robotic bimanual manipulation with hierarchical gaussian wo",
+    "abstract": "Multi-task robotic bimanual manipulation is becoming increasingly popular as it enables sophisticated tasks that require diverse dual-arm collaboration patterns. Compared to unimanual manipulation, bimanual tasks pose challenges to understanding the multi-body spatiotemporal dynamics. An existing method ManiGaussian [30] pioneers encoding the spatiotemporal dynamics into the visual representation via Gaussian world model for single-arm settings, which ignores the interaction of multiple embodiments for dual-arm systems with significant performance drop. In this paper, we propose ManiGaussian++, an extension of ManiGaussian framework that improves multi-task bimanual manipulation by digesting multi-body scene dynamics through a hierarchical Gaussian world model. To be specific, we first generate task-oriented Gaussian Splatting from intermediate visual features, which aims to differentiate acting and stabilizing arms for multi-body spatiotemporal dynamics modeling. We then build a hierarchical Gaussian world model with the leader-follower architecture, where the multi-body spatiotemporal dynamics is mined for intermediate visual representation via future scene prediction. The leader predicts Gaussian Splatting deformation caused by motions of the stabilizing arm, through which the follower generates the physical consequences resulted from the movement of the acting arm. As a result, our method significantly outperforms the current state-of-the-art bimanual manipulation techniques by an improvement of 20.2% in 10 simulated tasks, and achieves 60% success rate on average in 9 challenging real-world tasks. Our code is available at https://github.com/April-Yz/ManiGaussian_Bimanual.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Tengbo Yu",
+      "Guanxing Lu",
+      "Zaijia Yang",
+      "Haoyuan Deng",
+      "Season S. Chen",
+      "Jiwen Lu"
+    ],
+    "citations": 5,
+    "source": "openalex",
+    "source_id": "W4416749037",
+    "doi": "10.1109/iros60139.2025.11246564",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4416749037",
+    "published_iso": "2025-10-19",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4416749037",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Active Vision Might Be All You Need: Exploring Active Vision in Bimanual Robotic Manipulation",
+    "title_norm": "active vision might be all you need exploring active vision in bimanual robotic ",
+    "abstract": "Imitation learning has demonstrated significant potential in performing high-precision manipulation tasks using visual feedback. However, it is common practice in imitation learning for cameras to be fixed in place, resulting in issues like occlusion and limited field of view. Furthermore, cameras are often placed in broad, general locations, without an effective viewpoint specific to the robot's task. In this work, we investigate the utility of active vision (AV) for imitation learning and manipulation, in which, in addition to the manipulation policy, the robot learns an AV policy from human demonstrations to dynamically change the robot's camera viewpoint to obtain better information about its environment and the given task. We introduce AV-ALOHA, a new bimanual teleoperation robot system with AV, an extension of the ALOHA 2 robot system, incorporating an additional 7-DoF robot arm that only carries a stereo camera and is solely tasked with finding the best viewpoint. This camera streams stereo video to an operator wearing a virtual reality (VR) headset, allowing the operator to control the camera pose using head and body movements. The system provides an immersive teleoperation experience, with bimanual first-person control, enabling the operator to dynamically explore and search the scene and simultaneously interact with the environment. We conduct imitation learning experiments of our system both in real-world and in simulation, across a variety of tasks that emphasize viewpoint planning. Our results demonstrate the effectiveness of human-guided AV for imitation learning, showing significant improvements over fixed cameras in tasks with limited visibility. Project website: https://soltanilara.github.io/av-alohal",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Ian Chuang",
+      "Andrew Lee",
+      "Dechen Gao",
+      "M-Mahdi Naddaf-Sh",
+      "Iman Soltani"
+    ],
+    "citations": 7,
+    "source": "openalex",
+    "source_id": "W4413925993",
+    "doi": "10.1109/icra55743.2025.11128253",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4413925993",
+    "published_iso": "2025-05-19",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4413925993",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ARMOR: Egocentric Perception for Bimanual Robot Collision Avoidance and Motion Planning",
+    "title_norm": "armor egocentric perception for bimanual robot collision avoidance and motion pl",
+    "abstract": "Robotic arms have significant gaps in their sensing and perception, making it hard to perform motion planning in dense environments. To address this, we introduce ARMOR, a novel egocentric perception system that integrates both hardware and software, specifically incorporating wearable-like depth sensors for bimanual robotic platforms with arms. Our distributed perception approach enhances the robot’s spatial awareness, and facilitates more agile motion planning. We also train a transformer-based imitation learning (IL) policy in simulation to perform dynamic collision avoidance, by leveraging around 86 hours worth of human realistic motions from the AMASS dataset. We show that our ARMOR perception is superior against a setup with multiple dense head-mounted, and externally mounted depth cameras, with a 63.7% reduction in collisions, and 78.7% improvement on success rate. We also compare our IL policy against a sampling-based motion planning expert cuRobo, showing 31.6% less collisions, 16.9% higher success rate, and 26× reduction in computational latency. Lastly, we deploy our ARMOR perception on our real- world GR1 humanoid robot from Fourier Intelligence. The simulation environment, HW description, and 3D CAD files are available at https://daehwakim.com/armor.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Daehwa Kim",
+      "Mario Srouji",
+      "Chen Chen",
+      "Jian Zhang"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W7084130772",
+    "doi": "10.1109/case58245.2025.11164065",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W7084130772",
+    "published_iso": "2025-08-17",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W7084130772",
+    "year_month": "2025-08",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Spatial-Temporal Graph Diffusion Policy with Kinematic Modeling for Bimanual Robotic Manipulation",
+    "title_norm": "spatial temporal graph diffusion policy with kinematic modeling for bimanual rob",
+    "abstract": "Despite the significant success of imitation learning in robotic manipulation, its application to bimanual tasks remains highly challenging. Existing approaches mainly learn a policy to predict a distant next-best end-effector pose (NBP) and then compute the corresponding joint rotation angles for motion using inverse kinematics. However, they suffer from two important issues: (1) rarely considering the physical robotic structure, which may cause self-collisions or interferences, and (2) overlooking the kinematics constraint, which may result in the predicted poses not conforming to the actual limitations of the robot joints. In this paper, we propose Kinematics enhanced Spatial-TemporAl gRaph Diffuser (KStar Diffuser). Specifically, (1) to incorporate the physical robot structure information into action prediction, KStar Diffuser maintains a dynamic spatial-temporal graph according to the physical bimanual joint motions at continuous timesteps. This dynamic graph serves as the robot-structure condition for denoising the actions; (2) to make the NBP learning objective consistent with kinematics, we introduce the differentiable kinematics to provide the reference for optimizing KStar Diffuser. This module regularizes the policy to predict more reliable and kinematics-aware next end-effector poses. Experimental results show that our method effectively leverages the physical structural information and generates kinematics-aware actions in both simulation and real-world.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Qi Lv",
+      "Hao Li",
+      "Xiang Deng",
+      "Rui Shao",
+      "Yinchuan Li",
+      "Jianye Hao"
+    ],
+    "citations": 5,
+    "source": "openalex",
+    "source_id": "W4413146181",
+    "doi": "10.1109/cvpr52734.2025.01621",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4413146181",
+    "published_iso": "2025-06-10",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4413146181",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "RynnVLA-002: A Unified Vision-Language-Action and World Model",
+    "title_norm": "rynnvla 002 a unified vision language action and world model",
+    "abstract": "We introduce RynnVLA-002, a unified Vision-Language-Action (VLA) and world model. The world model leverages action and visual inputs to predict future image states, learning the underlying physics of the environment to refine action generation. Conversely, the VLA model produces subsequent actions from image observations, enhancing visual understanding and supporting the world model's image generation. The unified framework of RynnVLA-002 enables joint learning of environmental dynamics and action planning. Our experiments show that RynnVLA-002 surpasses individual VLA and world models, demonstrating their mutual enhancement. We evaluate RynnVLA-002 in both simulation and real-world robot tasks. RynnVLA-002 achieves 97.4% success rate on the LIBERO simulation benchmark without pretraining, while in real-world LeRobot experiments, its integrated world model boosts the overall success rate by 50%.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Jun Cen",
+      "Siteng Huang",
+      "Yuqian Yuan",
+      "Kehan Li",
+      "Yuan, Hangjie",
+      "Chaohui Yu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416716729",
+    "doi": "10.48550/arxiv.2511.17502",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2511.17502",
+    "published_iso": "2025-11-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "bimanual robot action conditioned world models"
+    ],
+    "paper_id": "openalex:W4416716729",
+    "year_month": "2025-11",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Characterization and Learning of Causal Graphs from Hard Interventions",
+    "title_norm": "characterization and learning of causal graphs from hard interventions",
+    "abstract": "A fundamental challenge in the empirical sciences involves uncovering causal structure through observation and experimentation. Causal discovery entails linking the conditional independence (CI) invariances in observational data to their corresponding graphical constraints via d-separation. In this paper, we consider a general setting where we have access to data from multiple experimental distributions resulting from hard interventions, as well as potentially from an observational distribution. By comparing different interventional distributions, we propose a set of graphical constraints that are fundamentally linked to Pearl's do-calculus within the framework of hard interventions. These graphical constraints associate each graphical structure with a set of interventional distributions that are consistent with the rules of do-calculus. We characterize the interventional equivalence class of causal graphs with latent variables and introduce a graphical representation that can be used to determine whether two causal graphs are interventionally equivalent, i.e., whether they are associated with the same family of hard interventional distributions, where the elements of the family are indistinguishable using the invariances from do-calculus. We also propose a learning algorithm to integrate multiple datasets from hard interventions, introducing new orientation rules. The learning objective is a tuple of augmented graphs which entails a set of causal graphs. We also prove the soundness of the proposed algorithm.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Zihan Zhou",
+      "Muhammad Qasim Elahi",
+      "Murat Kocaoglu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4414769916",
+    "doi": "10.52202/085713-2603",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2505.01037",
+    "published_iso": "2025-01-01",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "factorial arm intervention object effect decomposition"
+    ],
+    "paper_id": "openalex:W4414769916",
+    "year_month": "2025-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Multi-Agent Causal Dynamics Learning for Temporally Extended Tasks with Reward Machine Inference",
+    "title_norm": "multi agent causal dynamics learning for temporally extended tasks with reward m",
+    "abstract": "We introduce an approach called Multi-Agent State Abstraction with Causal dynamics and Reward Machine Learning (Multi-SACReM), designed to enhance the efficiency of reinforcement learning (RL) in multi-agent environments. By integrating causal information through state abstraction, MultiSACReM enables agents to learn more effectively in complex, dynamic settings. In our framework, each agent employs a reward machine, to optimize its behavior. Multi-SACReM identifies and eliminates redundant causal relationships, allowing agents to focus on essential interactions and optimize policies accordingly. Our approach works in both decentralized settings, where agents learn independently using local observations, and centralized RL environments. In centralized RL, a controller coordinates agents using global information to optimize collective behavior. We evaluate Multi-SACReM through case studies comparing decentralized versus centralized approaches. Results show Multi-SACReM effectively learns causal models with reward machines, comparing decentralized versus centralized approaches in multi-agent settings.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Hadi Partovi Aria",
+      "Zhe Xu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4413392964",
+    "doi": "10.23919/acc63710.2025.11107696",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4413392964",
+    "published_iso": "2025-07-08",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "multi effector causal credit manipulation policy"
+    ],
+    "paper_id": "openalex:W4413392964",
+    "year_month": "2025-07",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Overcoming Statistical Bias in Action-Controllable World Models",
+    "title_norm": "overcoming statistical bias in action controllable world models",
+    "abstract": "Action-conditioned world models aim to predict how visual environments evolve under an agent's actions. Yet future frames are often highly predictable from visual inertia and recurring motion patterns alone. This creates a shortcut: models can fit the data by exploiting statistical biases without making their visible dynamics meaningfully depend on the action. As a result, different actions may produce similar futures, while motion may persist even under zero action. The key question is how to reduce reliance on statistical shortcuts from dominating action-conditioned prediction. We argue that action control requires more than injecting action features; it requires enforcing consistency under counterfactual changes to actions and observations. Based on this insight, we introduce CoCo, a Counterfactual Consistency framework to enhance action controllability through two complementary constraints. Multi-step counterfactual consistency constrains reference, inverse-action, and zero-action rollouts, while action-spatial counterfactual consistency enforces consistent predictions under mirrored scenes and transformed actions. Together, they reduce reliance on statistical shortcuts from substituting for action-dependent dynamics. We further introduce Action Response Consistency (ARC) and Drift Energy (DE) to assess action controllability, together with Mini-SSMB for same-state, multi-action counterfactual evaluation. On Mini-SSMB, our full model achieved ARC_inv of 0.412 and ARC_ref of 0.483, while reducing DE by 17.07% relative to the baseline. On VP2 visual planning, it achieves the highest average success rate among SOTA models, at 73.1%. Experiments on BAIR and RoboNet further show that these gains preserve video prediction quality and transfer across model settings.",
+    "tldr": "Co is introduced, a Counterfactual Consistency framework to enhance action controllability through two complementary constraints: Multi-step counterfactual consistency constrains reference, inverse-action, and zero-action rollouts, while action-spatial counterfactual consistency enforces consistent predictions under mirrored scenes and transformed actions.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Yuhong Shi",
+      "Zhenhao Chu",
+      "Jie Wei",
+      "Jun Hao",
+      "Jianyi Liu",
+      "Jingwen Fu"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "308a282554add023325325b592a4e89c9df70c35",
+    "paper_id": "arxiv:2608.04653",
+    "doi": "",
+    "arxiv_id": "2608.04653",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/308a282554add023325325b592a4e89c9df70c35",
+    "published_iso": "2026-08-05",
+    "retrieved_via": "host_web",
+    "host_why": "Introduces counterfactual consistency and same-state multi-action evaluation to detect action-insensitive world models. Its inverse-, zero-, and transformed-action contrasts are load-bearing for a rollback E0 that estimates intervention responses, even though the paper does not factor interventions by effector.",
+    "relevance": "core"
+  }
+]

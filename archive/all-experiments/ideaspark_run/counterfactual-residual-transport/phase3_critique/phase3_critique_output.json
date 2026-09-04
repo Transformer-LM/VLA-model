@@ -1,0 +1,98 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C23 (Liberate a Fixed Generative Component)",
+        "tactical_failure_mode_quoted": "The recurring failure is treating \"I re-specified component X\" as self-evident novelty: a single local swap is made (a context-derived starting distribution, one x0-approximation traded for another, a seed reparameterization) that is locally reasonable but neither re-derives the chain nor demonstrates a regime the dominant accelerated alternative cannot already reach. These attempts consistently fail to beat — or even compare against — the strongest existing fast-sampling method (consistency models, distillation, fast solvers), so the contribution reads as dominated rather than enabling.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Re-specifying the chain's starting distribution is sound but worthless if a dominant accelerator already reaches one or two steps — failing to beat the strongest fast-sampling alternative dooms the move regardless of its elegance.",
+            "candidate_match": "no",
+            "reasoning": "OddFlow does not replace the starting distribution or make a few-step/acceleration claim; it modifies execution-time conditioning and evaluates decision quality."
+          },
+          {
+            "lesson_quoted": "Substituting one in-support approximation for another without theoretical depth or a failure-regime analysis reads as a narrow heuristic swap rather than a contribution.",
+            "candidate_match": "yes",
+            "reasoning": "core_mechanism substitutes a support-gated residual-linear field for residual concatenation, but its stated gate does not identify response compatibility, its legal rank-one operator still stores candidate corrections, and its written flow-velocity-to-DINO-residual loss has no defined map, so the purported re-derivation lacks the load-bearing theory required by this lesson."
+          },
+          {
+            "lesson_quoted": "A redesign that silently depends on an extra artifact — access to a simulator/dynamics model, or a separately trained auxiliary network — has its claimed efficiency cancelled by the hidden cost once a reviewer surfaces it.",
+            "candidate_match": "no",
+            "reasoning": "The rollback simulator, contact classifier, DINOv2 encoder, and learned B_psi are explicitly disclosed and included in compute_budget, and no efficiency advantage is claimed."
+          },
+          {
+            "lesson_quoted": "Collapsing a staged procedure into a single differentiable mapping is technically clean but gets rejected when the novelty is thin against recent methods and the gains are demonstrated only on weak or dated benchmarks.",
+            "candidate_match": "no",
+            "reasoning": "OddFlow retains a staged support/calibration/refinement pipeline and proposes current LIBERO and RoboTwin2.0 rollback evaluation rather than collapsing the procedure into one mapping."
+          }
+        ],
+        "verdict": "triggered"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The sole gap_closure entry, the cross-action residual-transport gap under generative_process_redesign, triggers the lesson that an in-support approximation without a valid theoretical re-derivation is only a narrow heuristic swap. The decisive lesson is \"Substituting one in-support approximation for another without theoretical depth or a failure-regime analysis reads as a narrow heuristic swap rather than a contribution,\" because the executed evidence defeats both the non-bypass and support-compatibility rationales and exposes an undefined training map."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "sub_pattern": "C23 (Liberate a Fixed Generative Component)",
+        "tactical_pattern_quoted": "Reach inside an iterative refinement (diffusion/flow) chain and re-specify one of its conventionally-frozen internal components, then re-derive the chain around the new choice. The objects swapped are concrete: the terminal prior/endpoint, the per-step distribution family, the noise/solver discretization, the initial seed, the forward noising process, or the point along the schedule where the conditioning signal is injected.",
+        "instantiation_in_core_mechanism": "core_mechanism specifically replaces ordinary residual concatenation at the conditioning point with Delta v_psi^k(tau)=S_t^k B_psi(...)e_t, inserts that field into every DreamZero velocity evaluation, and integrates the resulting corrected ODE before candidate ranking; this performs C23's internal conditioning-point redesign even though the separate validity checks show the re-derived estimator is unsound.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The sole entry applies C23's distinctive move by changing an internal conditioning point of the iterative flow chain and re-specifying the trajectory ODE, rather than merely invoking generic generative-process redesign language."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "generative_process_redesign",
+      "structural_prior_encoding"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains generative_process_redesign plus structural_prior_encoding and no heterogeneous_decomposition, so none of the three documented reject-favored pairs matches."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7172473316",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "FBFM already pushes observation feedback inside flow matching and uses the preceding executed chunk and realized image to correct the conditional velocity field for the next chunk. OddFlow therefore stands only if its support predicate and residual-linear operator add a valid, identifiable cross-action transport rule; because the supplied executed evidence shows that the gate does not test transport compatibility and the legal B(x)=u(x)w^T family can reproduce candidate-only corrections, the current candidate has not established the claimed delta over FBFM even though FBFM does not literally implement OddFlow's learned gated operator.",
+    "addressable_via": "core_mechanism would need to replace coarse action/contact typicality and donor-shuffled fixed targets with paired same-candidate response supervision that identifies the response operator and calibrates support on transport compatibility.",
+    "parametric_family_concern": "Gain-scheduled or linear-parameter-varying system identification under persistent excitation; scoop-check with 'local Jacobian system identification' and 'gain-scheduled response operator'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the executed residual vector e_t",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph specifies a concrete pi0.5-plus-DreamZero rollback comparison on LIBERO and RoboTwin2.0, predicts lower top-1 rollback regret and higher task success, and intervenes on e_t while predicting those downstream metrics return toward the uncorrected baseline. It contains no numeric outcome or cost bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "The no-bias residual-linear form and donor shuffling do not identify cross-action residual transport or prevent a direct candidate",
+      "status": "upheld",
+      "basis": "The quoted candidate-conditioned bias-free map permits the executed legal factorization B(x)=u(x)w^T, whose u(x) stores the candidate correction while deletion and sign-flip tests still pass, and the candidate writes no paired varying-residual target that invalidates this construction."
+    },
+    {
+      "finding_ref": "The support gate's estimand does not match the transport claim: conformal action typicality and equality of a",
+      "status": "upheld",
+      "basis": "Action typicality and same coarse contact class do not constrain the response-Jacobian sign, so the admitted +1/-1 counterexample is legal for the written gate and directly shows that its calibration cannot bound transport false admission."
+    },
+    {
+      "finding_ref": "On the literal training reading, B_psi e_t is a flow-velocity vector but r* is a sequence of",
+      "status": "upheld",
+      "basis": "The candidate explicitly defines B_psi e_t in DreamZero flow-velocity units and r* as H-step DINO feature differences but produces no decoder/integration/feature map between them, so the shown unit/shape mismatch is not an arithmetic or modeling error."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0].reject_lessons_evaluated[1].lesson_quoted is triggered: the in-support residual-linear substitution has neither an identified transport estimand nor a defined velocity-to-feature training map, making it the documented narrow heuristic swap. All three blocking_findings_disposition entries are upheld, including the exact legal B(x)=u(x)w^T bypass and the support-Jacobian sign counterexample, and each requires changing the supervision or estimand rather than a field-level repair. recipe_application_check.entries[0].verdict is applied and falsification_structure_check is sound, but neither overrides the triggered Reject lesson's hard floor.",
+  "revision_targets": []
+}

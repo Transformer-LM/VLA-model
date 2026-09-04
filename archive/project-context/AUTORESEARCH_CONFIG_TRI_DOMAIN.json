@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "embodied-vla-wam-tri-domain",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "具身智能三域母领域制图：分别探索 VLA 自身、学习式 WAM 自身及 VLA × WAM 交叉方向，再统一比较；不预设具体任务、形态、模型路线或基准",
+    "exploration_level": "field",
+    "selected_macro_direction": null,
+    "macro_direction_count": 20,
+    "direction_partition": {
+      "vla": 7,
+      "wam": 7,
+      "vla_wam_intersection": 6
+    },
+    "embodiment": "open during field discovery",
+    "task_family": "open during field discovery",
+    "observation_modalities": [],
+    "action_representation": "open until macro direction selection",
+    "seed_topics": [
+      "generalist Vision-Language-Action policies",
+      "VLA data scaling, action modeling, adaptation, generalization, evaluation, and safety",
+      "video-generative World Action Models",
+      "task-centric latent and structured dynamics world models",
+      "model-based planning and reinforcement learning",
+      "VLA and WAM coupling, post-training, evaluation, and co-adaptation"
+    ],
+    "exploration_axes": [
+      "VLA architecture and action representation",
+      "VLA data, learning, adaptation, and generalization",
+      "VLA memory, reasoning, embodiment transfer, evaluation, and safety",
+      "world-model representation and observability",
+      "world-model control use, learning regime, calibration, and failure modes",
+      "policy-world-model coupling and update regime",
+      "embodiment and task family",
+      "model, policy, and environment evidence",
+      "data, compute, latency, interaction, and real-robot requirements"
+    ],
+    "benchmark_priority": [],
+    "target_venues": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "ICLR",
+      "NeurIPS",
+      "ICML",
+      "CVPR"
+    ],
+    "simulation_first": true,
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2023,
+    "literature_year_end": null
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": true,
+    "auto_select_idea": false,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "unconfigured",
+    "remote_host": "",
+    "max_pilot_gpu_hours": 2.0,
+    "max_total_gpu_hours": 8.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true
+  },
+  "framework_preferences": [
+    "openpi",
+    "openvla-oft",
+    "cosmos-policy"
+  ]
+}

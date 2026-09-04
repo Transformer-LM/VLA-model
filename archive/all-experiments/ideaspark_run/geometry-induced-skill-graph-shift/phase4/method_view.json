@@ -1,0 +1,203 @@
+{
+  "title": "GISS-2x2: Matched-State Geometry-Action Compatibility for Frozen Robot Policies",
+  "method_name": "Matched-State Geometry-Action Crossover (GISS-2x2)",
+  "abstract_draft": "Frozen robot policies can complete geometrically varied tasks without revealing whether the action issued at a decision point is actually conditioned on the visible functional geometry. Existing benchmarks vary scenes and measure aggregate generalization, as in GemBench (openalex:W4403116255), while scalable generators such as RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) still leave state, dynamics, and policy-history changes entangled with geometry. We introduce GISS-2x2, a matched-state crossover diagnostic that restores one decision checkpoint under an endpoint-equivalent geometry pair, queries two frozen-policy action chunks from a shared fresh inference template, and executes each chunk in both recipient geometries before native closed-loop continuation. Its estimand is the within-recipient own-versus-cross success interaction, which asks whether each geometry preferentially benefits from the chunk it elicited while canceling recipient difficulty. The claim is falsified if this interaction is absent, reverses under the smallest preregistered state jitter, or remains positive for appearance-only pairs that share collision geometry and physics. With deterministic-query gates and cache-clean continuation, we expect a positive interaction only for eligible functional pairs, localized by task family and baseline-success stratum. The result would be a scoped, executable assay of current action compatibility—not evidence that a policy recovered a globally necessary strategy graph or broad co-adaptation competence.",
+  "core_claim": "For preregistered endpoint-equivalent geometry pairs, a frozen policy visibly using functional geometry should exhibit a positive matched-state own-versus-cross native-success interaction after inference-state-clean four-cell execution.",
+  "sub_claims": [
+    {
+      "id": "c1",
+      "statement": "Restoring the same serialized decision checkpoint and crossing both source-generated chunks through both recipient geometries removes recipient difficulty from the compatibility contrast.",
+      "supports_which_aspect": "identification of geometry-conditioned action compatibility at a fixed decision state"
+    },
+    {
+      "id": "c2",
+      "statement": "Fresh inference templates, deterministic repeated-query gates, and cache-clean continuation prevent hidden policy state from masquerading as a source-geometry effect.",
+      "supports_which_aspect": "control of inference-history and stochastic-decoding confounds"
+    },
+    {
+      "id": "c3",
+      "statement": "Appearance-only matched pairs and preregistered state jitter distinguish functional geometry compatibility from rendering sensitivity and brittle checkpoint coincidence.",
+      "supports_which_aspect": "non-tautological falsification of the proposed mechanism"
+    }
+  ],
+  "key_equations": [
+    {
+      "id": "E1",
+      "linked_step_id": "S4",
+      "latex": "u_s = \\pi_\\theta\\!\\left(o(z,G_s),h_0;\\xi\\right),\\qquad s\\in\\{A,B\\}",
+      "description": "Query the frozen policy at the same checkpoint z with a shared fresh history template h₀ and decode seed ξ; only the rendered source geometry G_s changes.",
+      "description_zh": "在同一检查点 z、同一份全新历史模板 h₀ 与解码种子 ξ 下查询冻结策略，唯一变化是源几何 G_s 的渲染。"
+    },
+    {
+      "id": "E2",
+      "linked_step_id": "S4",
+      "latex": "\\max_{k,k'} d\\!\\left(u_s^{(k)},u_s^{(k')}\\right) \\le \\varepsilon_{\\mathrm{det}}",
+      "description": "An identical-render repeat must keep chunk variation below the preregistered determinism tolerance before the pair is eligible.",
+      "description_zh": "同一渲染的重复查询必须使动作块差异低于预注册的确定性阈值，否则该配对不进入分析。"
+    },
+    {
+      "id": "E3",
+      "linked_step_id": "S5",
+      "latex": "Y_{r\\leftarrow s}=\\mathbf{1}\\!\\left\\{\\mathcal{R}\\!\\left(z,G_r,u_s,\\pi_\\theta^{\\mathrm{fresh}}\\right)\\models\\tau\\right\\},\\qquad r,s\\in\\{A,B\\}",
+      "description": "Cell Y_{r←s} is native task success when chunk u_s is executed in recipient geometry r and the frozen policy then resumes from the actual post-chunk observation.",
+      "description_zh": "Y_{r←s} 表示把源几何 s 产生的动作块放入接收几何 r 执行，并从真实动作后观测继续闭环后是否完成原生任务。"
+    },
+    {
+      "id": "E4",
+      "linked_step_id": "S6",
+      "latex": "I_{\\mathrm{MS}}=\\tfrac{1}{2}\\left[\\left(Y_{A\\leftarrow A}-Y_{A\\leftarrow B}\\right)+\\left(Y_{B\\leftarrow B}-Y_{B\\leftarrow A}\\right)\\right]",
+      "description": "The matched-state interaction averages each recipient's own-source advantage, canceling a recipient geometry that is simply easier.",
+      "description_zh": "匹配状态交互量对两个接收几何各自的同源优势取平均，从而抵消某个接收几何本身更容易造成的偏差。"
+    }
+  ],
+  "method_flow": {
+    "high_level_pipeline": "GISS-2x2 first compiles endpoint-equivalent functional geometry pairs and a corresponding appearance-only control while freezing the instruction, terminal predicate, and all non-geometry state. At a validated decision checkpoint, it queries one action chunk per source geometry from the same fresh inference template, then restores the checkpoint to execute both chunks in both recipient geometries. Native closed-loop success produces a matched-state interaction, and determinism, appearance, and state-jitter gates determine whether that interaction can be attributed to functional geometry compatibility within the registered scope.",
+    "steps": [
+      {
+        "step_id": "S1",
+        "title": "Register eligible task families",
+        "what_changes": "Define the task-family scope, terminal predicate, decision-event rule, pair-exclusion criteria, action-chunk horizon, and minimum baseline-success support before observing crossover outcomes.",
+        "why_this_step": "The claim is intentionally instrument-scoped; a fixed eligibility rule prevents a tiny diagnostic from expanding into a broad VLA competence claim.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "RoboTwin 2.0 task families, frozen policy interfaces, and simulator event logs",
+        "output": "A preregistered GISS manifest and eligible decision-event grammar"
+      },
+      {
+        "step_id": "S2",
+        "title": "Compile geometry-pair instruments",
+        "what_changes": "Construct endpoint-equivalent functional collision-geometry pairs A/B and appearance-only pairs that share one collision mesh and physics, keeping instruction, object identities, initial state, and success predicate fixed.",
+        "why_this_step": "Functional pairs instantiate the source intervention, while appearance-only pairs provide a non-tautological control for rendering sensitivity.",
+        "linked_component": "engineering",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The registered task manifest and editable simulator assets",
+        "output": "Validated functional and appearance-control pair manifests"
+      },
+      {
+        "step_id": "S3",
+        "title": "Capture a matched decision checkpoint",
+        "what_changes": "Serialize one pre-action simulator checkpoint z per pair and verify equality of every non-geometry state field, instruction, controller state, and terminal predicate across A and B.",
+        "why_this_step": "Fixing the decision state blocks open-loop state or dynamics mismatch from being counted as geometry-conditioned action compatibility.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "A validated geometry pair and its registered decision event",
+        "output": "A restore-tested matched checkpoint with an invariant audit record"
+      },
+      {
+        "step_id": "S4",
+        "title": "Query source-conditioned chunks",
+        "what_changes": "Clone one fresh inference/history template, render z under G_A and G_B, query the frozen policy for u_A and u_B with controlled decoding, repeat identical renders for a determinism gate, and discard all source-query cache state.",
+        "why_this_step": "Only the visible source geometry may produce the chunk; shared history and repeatability checks prevent cache or sampling state from becoming the effective intervention.",
+        "linked_component": "both",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The matched checkpoint, two source renders, and one frozen policy",
+        "output": "Two eligible action chunks plus a deterministic-query audit"
+      },
+      {
+        "step_id": "S5",
+        "title": "Execute the four crossover cells",
+        "what_changes": "For each recipient r in {A,B}, restore z, inject u_A or u_B for the fixed chunk horizon, then restart a cache-clean frozen-policy continuation from the actual post-chunk observation in recipient r until the native terminal predicate fires.",
+        "why_this_step": "The crossed cells hold the recipient fixed while changing only the source of the first chunk, and actual-observation continuation avoids replay-prefix or stale-cache artifacts.",
+        "linked_component": "engineering",
+        "linked_falsification": "both",
+        "input": "The restore-tested checkpoint and eligible chunks u_A and u_B",
+        "output": "Four native-success outcomes Y_{r←s} with execution traces"
+      },
+      {
+        "step_id": "S6",
+        "title": "Estimate the matched-state interaction",
+        "what_changes": "Compute I_MS as the mean of the two within-recipient own-minus-cross success contrasts and aggregate only within preregistered task-family, policy, and endpoint-equal baseline strata with paired uncertainty.",
+        "why_this_step": "The symmetric interaction cancels recipient difficulty and targets selective own-geometry compatibility rather than raw success or action difference.",
+        "linked_component": "both",
+        "linked_falsification": "metric_specification",
+        "input": "Four-cell native-success outcomes across registered pairs and reset seeds",
+        "output": "A scoped I_MS estimate, uncertainty interval, and eligibility coverage"
+      },
+      {
+        "step_id": "S7",
+        "title": "Apply mechanism validity gates",
+        "what_changes": "Recompute the same interaction for appearance-only pairs and after the smallest preregistered matched-state jitter; mark the mechanism unsupported if the control stays systematically positive, the sign reverses, or identical-render determinism fails.",
+        "why_this_step": "These gates distinguish functional geometry compatibility from texture preference, checkpoint brittleness, and hidden stochastic inference state.",
+        "linked_component": "both",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The crossover estimator, control-pair manifest, jitter rule, and determinism audits",
+        "output": "A pass/fail compatibility finding bounded to eligible pairs and policies"
+      }
+    ],
+    "design_reasoning_echo": "The design uses a four-cell crossover because neither action-chunk difference nor ordinary two-geometry success can identify compatibility: both can be driven by recipient difficulty, state mismatch, or later feedback. Holding one checkpoint fixed, comparing own and crossed chunks within each recipient, and then averaging the two contrasts isolates the source-geometry interaction without differentiating through the simulator or imposing a strategy scaffold. Native task success keeps the readout behaviorally meaningful, while cache-clean continuation, appearance-only controls, and matched-state jitter make the narrow attribution falsifiable rather than turning every geometry-sensitive action into evidence for the claim."
+  },
+  "plain_method_steps_en": [
+    {
+      "step_id": "S1",
+      "what_to_do": "Using RoboTwin 2.0 task families, frozen-policy interfaces, and simulator event logs, define the task-family scope, native terminal predicate, decision-event rule, pair-exclusion criteria, action-chunk horizon, and minimum baseline-success support before examining crossover outcomes. Record them as a preregistered GISS manifest and an eligible decision-event grammar.",
+      "why_this_makes_sense": "The claim is deliberately limited to this instrument. Fixed eligibility rules stop a small diagnostic from being presented as a broad claim about VLA competence."
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "From the registered task manifest and editable simulator assets, construct endpoint-equivalent functional collision-geometry pairs A/B. Also construct appearance-only pairs that share one collision mesh and the same physics. Keep the instruction, object identities, initial state, and success predicate fixed, and output validated functional and appearance-control pair manifests.",
+      "why_this_makes_sense": "The functional pairs create the source intervention, while the appearance-only pairs test whether a result is merely caused by rendering sensitivity."
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "For each validated geometry pair and registered decision event, serialize one pre-action simulator checkpoint z. Verify that every non-geometry state field, the instruction, controller state, and terminal predicate are equal across A and B. Restore-test the checkpoint and save an invariant audit record.",
+      "why_this_makes_sense": "Holding the decision state fixed prevents open-loop state or dynamics mismatch from being counted as geometry-conditioned action compatibility."
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "Clone one fresh inference and history template, render checkpoint z under G_A and G_B, and query the same frozen policy with controlled decoding to obtain chunks u_A and u_B. Repeat each identical render and require chunk variation to stay within the preregistered determinism tolerance ε_det. Discard all source-query cache state and output the two eligible chunks with a deterministic-query audit.",
+      "why_this_makes_sense": "The visible source geometry should be the only cause of a changed chunk. Shared history, controlled decoding, repeated queries, and cache removal prevent hidden inference state or sampling variation from becoming the intervention."
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "For each recipient r in {A,B}, restore z and inject either u_A or u_B for the fixed action-chunk horizon. Then restart the frozen policy with a clean cache from the actual post-chunk observation in recipient r and continue until the native terminal predicate fires. Save the four native-success outcomes Y_{r←s} and their execution traces.",
+      "why_this_makes_sense": "Within each recipient, the crossed cells change only which source produced the first chunk. Continuing from the real post-chunk observation avoids replay-prefix and stale-cache artifacts."
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "From the four-cell native-success outcomes over registered pairs and reset seeds, compute I_MS as the mean of the two within-recipient own-minus-cross success contrasts. Aggregate only within preregistered task-family, policy, and endpoint-equal baseline strata, use paired uncertainty, and report the scoped estimate, uncertainty interval, and eligibility coverage.",
+      "why_this_makes_sense": "The symmetric interaction cancels the effect of one recipient geometry simply being easier and measures selective compatibility with the source geometry rather than raw success or raw action difference."
+    },
+    {
+      "step_id": "S7",
+      "what_to_do": "Recompute the same interaction for the appearance-only pairs and after the smallest preregistered matched-state jitter. Using the control-pair manifest, jitter rule, and determinism audits, mark the mechanism unsupported if the appearance control remains systematically positive, the interaction sign reverses after jitter, or the identical-render determinism gate fails. Output a pass/fail finding limited to eligible pairs and policies.",
+      "why_this_makes_sense": "These checks distinguish functional geometry compatibility from texture preference, a brittle coincidence at one checkpoint, and hidden stochastic inference state."
+    }
+  ],
+  "plain_method_steps_zh": [
+    {
+      "step_id": "S1",
+      "what_to_do": "使用 RoboTwin 2.0 任务族、冻结策略接口和模拟器事件日志，在查看任何交叉结果之前定义任务族范围、原生终止谓词、决策事件规则、配对排除条件、动作块时域和最低基线成功支持度，并把它们记录为预注册的 GISS manifest 与合格决策事件语法。",
+      "why_this_makes_sense": "这里的主张有意限定在该诊断工具的范围内。固定资格规则可以避免把一个小型诊断扩大成对 VLA 整体能力的宽泛主张。"
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "根据已注册的任务 manifest 和可编辑模拟器资产，构造终点等价的功能碰撞几何配对 A/B；同时构造共享同一碰撞网格和相同物理属性的仅外观配对。固定指令、物体身份、初始状态和成功谓词，输出经过验证的功能配对与外观控制配对 manifest。",
+      "why_this_makes_sense": "功能配对提供源侧干预，仅外观配对则检验结果是否只是由渲染敏感性造成。"
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "对每个已验证几何配对及其注册决策事件，序列化一个动作前模拟器检查点 z。验证 A 与 B 的所有非几何状态字段、指令、控制器状态和终止谓词完全相同；测试检查点能否恢复，并保存不变量审计记录。",
+      "why_this_makes_sense": "固定决策状态，可以阻止开环状态差异或动力学差异被误计为几何条件下的动作兼容性。"
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "复制一份全新的推理与历史模板，分别在 G_A 和 G_B 下渲染检查点 z，并用受控解码查询同一个冻结策略，得到动作块 u_A 与 u_B。对每个相同渲染重复查询，要求动作块变化不超过预注册的确定性容差 ε_det。丢弃所有源查询 cache 状态，输出两个合格动作块及确定性查询审计。",
+      "why_this_makes_sense": "动作块的变化应只由可见源几何引起。共享历史、受控解码、重复查询和清除 cache 可以防止隐藏推理状态或采样变化成为实际干预。"
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "对每个接收几何 r∈{A,B}，恢复 z，并在固定动作块时域内注入 u_A 或 u_B。随后从接收几何 r 的真实动作后观测出发，以干净 cache 重启冻结策略并继续执行，直到原生终止谓词触发。保存四个原生成功结果 Y_{r←s} 及其执行轨迹。",
+      "why_this_makes_sense": "在每个接收几何内部，交叉单元只改变第一个动作块来自哪个源。使用真实动作后观测继续执行，可以避开重放前缀和旧 cache 造成的伪差异。"
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "利用注册配对和 reset seeds 上的四单元原生成功结果，把两个接收几何各自的同源减异源成功对比取平均，得到 I_MS。只在预注册的任务族、策略和终点等价基线层内聚合，采用配对不确定性，并报告限定范围的估计值、不确定性区间与合格样本覆盖率。",
+      "why_this_makes_sense": "这个对称交互量抵消了某个接收几何本身更容易的影响，测量的是对源几何的选择性兼容，而不是原始成功率或原始动作差异。"
+    },
+    {
+      "step_id": "S7",
+      "what_to_do": "在仅外观配对上，以及施加最小预注册匹配状态扰动后，重新计算同一个交互量。结合控制配对 manifest、扰动规则和确定性审计，如果外观控制仍系统性为正、扰动后交互量符号反转，或相同渲染未通过确定性门槛，就把该机制标记为不受支持；最后输出仅适用于合格配对与策略的通过或失败结论。",
+      "why_this_makes_sense": "这些检查可以把功能几何兼容性与纹理偏好、只在单一检查点成立的脆弱巧合以及隐藏的随机推理状态区分开。"
+    }
+  ]
+}

@@ -1,0 +1,1933 @@
+[
+ {
+  "title": "Cross-View Correspondence Is a Measurement Intervention: Two-Sided Validation for Agent Evaluation and Credit Assignment",
+  "title_norm": "cross view correspondence is a measurement intervention two sided validation for",
+  "abstract": "Agent evaluations and trace-based learning often compare outputs across transformed views through a post-response correspondence treated as neutral preprocessing. We show that this correspondence is a measurement intervention: omitting it can manufacture sensitivity, an over-aggressive map can manufacture invariance, and multiple optimal correspondences can leave mechanism labels and signed learning credit unidentified. We develop a validity theory and audit with three components: two-sided validation of nuisance removal and response preservation, all-optima identification of downstream conclusions, and uncertainty propagation after validity is established. We characterize the linear feasibility boundary for response-preserving nuisance removal, compute sharp ranges over exact-optimum correspondence sets, and give a distribution-free certificate that retains a credit coordinate only when all exact optima agree on its nonzero sign. Across public code and SQL pipelines, two deterministic optimal tracebacks disagree on temporal localization for 55.9% of 1,586 nonzero trajectory pairs; two frozen 800-rollout tool-use audits, including a task-and-seed-disjoint replication, expose exact-optimum reversals of intended turn-level credit, although a clean public quick-start subset shows none. A pre-registered transport gate failed on natural responses; frozen corrected and held-out controls then show that a map calibrated only on benign examples erases every retained harmful response, while two-sided validation selects response-preserving alternatives. Cross-view correspondence must therefore be declared, validated, and propagated into uncertainty before agent evaluation or credit assignment supports a point conclusion.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhen Zhang",
+   "Ahmad Hafez",
+   "Amr Alanwar"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7203741705",
+  "doi": "10.48550/arxiv.2608.17713",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.17713",
+  "published_iso": "2026-08-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "checkpoint-relative prefix attrition ledger"
+  ]
+ },
+ {
+  "title": "Kidney Disease and Heart Failure: Recent Advances and Current Challenges",
+  "title_norm": "kidney disease and heart failure recent advances and current challenges",
+  "abstract": "Heart failure (HF) and chronic kidney disease (CKD) frequently coexist, which elevates the risks of hospitalization, disease progression, and death. Despite advances in treating each condition independently, many challenges remain in diagnosing and managing them in combination. In March 2024, Kidney Disease: Improving Global Outcomes (KDIGO) held the Controversies Conference on Kidney Disease and Heart Failure: Recent Advances and Current Challenges. Discussions highlighted the complex, bidirectional relationship between HF and CKD, including shared risk factors and overlapping pathophysiology as well as nuances in interpreting biomarkers such as natriuretic peptides and serum creatinine. Sodium-glucose cotransporter-2 inhibitors, renin-angiotensin-aldosterone system inhibitors, and emerging agents such as finerenone and glucagon-like peptide-1 receptor agonists can have benefits in both populations of patients with HF and CKD, though evidence in advanced CKD remains limited. Importantly, small declines in kidney function after initiating guideline-directed HF therapies generally do not require discontinuation, as these declines are often hemodynamic in nature and not associated with poor outcomes. The group highlighted the need for CKD-specific HF diagnostic thresholds and refined acute kidney injury definitions in HF. It is important for future cardiovascular and kidney trials to include relevant end points, such as kidney function trajectories, symptom burden, and quality of life. To improve care for individuals with HF and CKD, a more integrated approach to management, rooted in individualization, clinical context, and shared therapeutic goals, is needed.",
+  "year": 2026,
+  "venue": "JACC Heart Failure",
+  "authors": [
+   "Carolyn S.P. Lam",
+   "Biykem Bozkurt",
+   "David Z.I. Cherney",
+   "Justin A. Ezekowitz",
+   "Meg J. Jardine",
+   "Sadiya S. Khan"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7134128226",
+  "doi": "10.1016/j.jchf.2026.102943",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7134128226",
+  "published_iso": "2026-03-07",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Oral Literature in Africa",
+  "title_norm": "oral literature in africa",
+  "abstract": "Ruth Finnegan's Oral Literature in Africa was first published in 1970, and since then has been widely praised as one of the most important books in its field. Based on years of fieldwork, the study traces the history of storytelling across the continent of Africa. This revised edition makes Finnegan's ground-breaking research available to the next generation of scholars. It includes a new introduction, additional images and an updated bibliography, as well as its original chapters on poetry, prose, \"drum language\" and drama, and an overview of the social, linguistic and historical background of oral literature in Africa. Oral Literature in Africa has been accessed by hundreds of readers in over 60 different countries, including Ethiopia, Kenya, Rwanda and numerous other African countries. The digital editions of this book are free to download thanks to the generous support of interested readers and organisations, who made donations using the crowd-funding website Unglue.it. Oral Literature in Africa is part of our World Oral Literature Series in conjunction with the World Oral Literature Project.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Ruth Finnegan"
+  ],
+  "citations": 544,
+  "source": "openalex",
+  "source_id": "W4238795315",
+  "doi": "10.11647/obp.0025",
+  "arxiv_id": null,
+  "paper_url": "https://books.openbookpublishers.com/10.11647/obp.0025.pdf",
+  "published_iso": "2026-04-22",
+  "oa_field": "Arts and Humanities",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "A Survey of Large Language Models",
+  "title_norm": "a survey of large language models",
+  "abstract": "Abstract The rapid evolution of large language models (LLMs) has driven a transformative shift in artificial intelligence (AI), reshaping both research paradigms and practical applications. Distinguished from their predecessors by unprecedented scale and advanced capabilities, LLMs necessitate new frameworks for understanding their development, behavior, and societal impact. This survey systematically reviews recent advancements in LLM techniques across four key dimensions: (1) pre-training methodologies, which establish core model capabilities through large-scale self-supervised training, architectural innovations, and data curation strategies; (2) post-training techniques, including supervised fine-tuning and reinforcement learning, which adapt foundational models to downstream tasks and enhance their alignment and safety; (3) utilization strategies, such as in-context learning, prompt engineering, and agentic reasoning, that optimize real-world deployment and enable effective interaction with external environments; and (4) evaluation methods, encompassing benchmarks for key ability dimensions such as core language capabilities, reasoning, and safety, which support comprehensive and reliable assessment of model performance. Additionally, we identify critical research issues, including those concerning theoretical foundations, efficient scaling, alignment, and agentic capability, and highlight the open challenges they present. By synthesizing state-of-the-art insights and emerging trends, this survey aims to provide a systematic and comprehensive framework for understanding the trajectory, current limitations, and future directions of LLM progress.",
+  "year": 2026,
+  "venue": "Frontiers of Computer Science",
+  "authors": [
+   "Wayne Xin Zhao",
+   "Kun Zhou",
+   "Junyi Li",
+   "Tianyi Tang",
+   "Zican Dong",
+   "Yupeng Hou"
+  ],
+  "citations": 1510,
+  "source": "openalex",
+  "source_id": "W4362515116",
+  "doi": "10.1007/s11704-026-60308-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11704-026-60308-3.pdf",
+  "published_iso": "2026-05-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "The Working Set of a Coding Agent: Coherence Debt in Repository-Scale Tasks",
+  "title_norm": "the working set of a coding agent coherence debt in repository scale tasks",
+  "abstract": "Repository-scale coding requires an agent to keep tests, imports, configuration, and migration rules consistent within a bounded context window. We model this as reconstructing a coupled-fact graph: at each edit, a required fact comes from recent context or parametric memory, and the facts covered by neither form coherence debt. We supply and withhold each channel and inject faults across seven models and five harnesses. As expected, no model completes a task on an unseen API with both channels empty, and putting the facts in the prompt restores success. When a rename defeats what models memorized about a real library, all seven fail in the same place, passing and missing the same tests. Availability decides the outcome and distance does not: withholding a fact costs exactly the work it supports, and a supplied fact works as well far from the edit as next to it. Harnesses pay unequal prices for it: configurations that all pass every test differ more than tenfold in tokens consumed because they rebuild the same content at different rates, and spending more recovers nothing when facts are withheld. A missing fact produces wrong work rather than absent work: an agent asked to act acts, fabricating the file or guessing the value, so instruments built on reads look for a hole already filled. How often it says it is blocked instead is a property of the model, from every trial to none. Availability does not settle every edit: where standard and code disagree, agents follow the standard even when it prescribes the worse code, so a stale convention file costs more than no file. Because parametric memory substitutes for reading, on SWE-bench, where models likely know the repositories, reads no longer predict success. Harnesses should keep the facts an edit depends on available when the agent writes, and check that availability against what the agent produces rather than what it reads.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Bardia Mohammadi",
+   "Lars Klein",
+   "Aman Chadha",
+   "Akhil; id_orcid 0000-0002-8650-8213 Arora",
+   "Laurent Bindschaedler"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7203688369",
+  "doi": "10.48550/arxiv.2608.16630",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.16630",
+  "published_iso": "2026-08-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "checkpoint-relative prefix attrition ledger"
+  ]
+ },
+ {
+  "title": "Chronic kidney disease",
+  "title_norm": "chronic kidney disease",
+  "abstract": "Globally, the prevalence of chronic kidney disease is estimated to be approximately 850 million cases, with approximately 4 million individuals needing kidney replacement therapy for kidney failure. By 2050, chronic kidney disease is projected to become the fifth leading underlying cause of death worldwide. Despite its numerous causes, chronic kidney disease can be screened for, diagnosed, and staged with simple laboratory tests. Individuals with chronic kidney disease are at increased risk of kidney failure and many other health implications. Risk of premature cardiovascular disease is particularly noteworthy, as most patients with chronic kidney disease develop a disability or die from cardiovascular disease before ever progressing to kidney failure. Since 2019, large randomised trials have identified several effective treatments that both slow progressive kidney function decline and reduce cardiovascular risk, greatly expanding available treatments for chronic kidney disease. The wide range of complications associated with chronic kidney disease means that patients encounter many different specialties. Active engagement in chronic kidney disease identification and timely initiation of cost-effective interventions by all clinicians could now substantially reduce the global burden of complications of chronic kidney disease and kidney failure.",
+  "year": 2025,
+  "venue": "The Lancet",
+  "authors": [
+   "William G. Herrington",
+   "Parminder K. Judge",
+   "Morgan E. Grams",
+   "Christoph Wanner"
+  ],
+  "citations": 67,
+  "source": "openalex",
+  "source_id": "W4416660269",
+  "doi": "10.1016/s0140-6736(25)01942-7",
+  "arxiv_id": null,
+  "paper_url": "https://www.thelancet.com/pdfs/journals/lancet/PIIS0140-6736(25)01942-7.pdf",
+  "published_iso": "2025-11-25",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Is Generative Artificial Intelligence a Social Other for Parasocial Support in a Loneliness Epidemic?",
+  "title_norm": "is generative artificial intelligence a social other for parasocial support in a",
+  "abstract": "Generative artificial intelligence (GenAI) is increasingly being used in higher education not only for academic tasks, but as a form of social support. Students are turning to GenAI for reassurance, planning, emotional regulation, and rehearsal of difficult conversations, often in private and outside institutional view. And universities are rapidly introducing chatbots and social AI into their support services to ‘scale’ student wellbeing. This Commentary argues that GenAI can function as a low-risk social other that supports temporary psychological safety and parasocial bonding, but cannot sustain the mutuality and embodied connections that underpin durable belonging. Drawing on emerging interdisciplinary evidence, it examines how GenAI may alleviate short-term distress while also reshaping help-seeking, peer interaction, and the social infrastructure of learning. It then considers how students, academics, and institutions are adopting GenAI for different reasons and with different risks, resulting in diffused responsibility for wellbeing outcomes. We conclude by calling for higher education research, policy, and practice to address GenAI as part of students’ relational ecosystems, with clear boundaries, transparency, and complementarity with human services. The central claim is that GenAI’s growing role in student wellbeing should be read as a signal of unmet human needs within contemporary higher education, not as a scalable replacement for connection.",
+  "year": 2026,
+  "venue": "Journal of University Teaching and Learning Practice",
+  "authors": [
+   "Joseph Crawford",
+   "Kelly-Ann Allen",
+   "Roy F. Baumeister",
+   "Michael Cowling"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7131669326",
+  "doi": "10.53761/5f1stz63",
+  "arxiv_id": null,
+  "paper_url": "https://open-publishing.org/journals/index.php/jutlp/article/download/2939/1224",
+  "published_iso": "2026-02-26",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "RIRplay: Generation of a Replay Stereo Corpus for Voice Biometrics Anti-Spoofing",
+  "title_norm": "rirplay generation of a replay stereo corpus for voice biometrics anti spoofing",
+  "abstract": "While recent efforts in countering spoofing attacks on voice biometric systems have primarily focused on detecting synthetic speech, Physical Access (PA) attacks, such as audio replay, still pose a serious and unresolved challenge. This research gap has been mainly due to the lack of new, realistic speech corpora for training and testing effective and generalizable countermeasure systems. Given the difficulty in collecting actual audio samples from this kind of attack, simulation has been proposed as an alternative to provide audio replay training data. The objective of this work is the generation of a novel simulated database, called RIRplay, that is both realistic, in the sense of reproducing the actual spoofing process, and representative of a wide variety of possible acoustic contexts. Our results show that training with the RIRplay corpus reduces the Equal Error Rate (EER) by nearly 10 percentage points on the challenging ASVspoof 2021 evaluation set, from 36.89% to 28.04%, compared to models trained on the ASVspoof 2019 corpus, demonstrating significant improvements in out-of-domain generalization.",
+  "year": 2026,
+  "venue": "IEEE Transactions on Information Forensics and Security",
+  "authors": [
+   "José C. Sánchez-Valera",
+   "Antonio M. Peinado",
+   "Juan M. Martin-Doñas",
+   "Alejandro Gomez-Alanis",
+   "Ángel M. Gómez",
+   "Massimiliano Todisco"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7154581935",
+  "doi": "10.1109/tifs.2026.3684815",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7154581935",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "DreamBench-SWE: A Multi-Session Memory-Hygiene Benchmark for Software Agents",
+  "title_norm": "dreambench swe a multi session memory hygiene benchmark for software agents",
+  "abstract": "DreamBench-SWE is a multi-session benchmark for software-agent memory hygiene in which later software tasks depend on non-inferable evidence from earlier sessions and are scored by executable hidden oracles. We report the original scaled v2 fold and a separately preregistered v2.1 successor audit designed after that study but frozen before successor outcome inspection. The successor run completed 360/360 work units and 720/720 S3 cells across four conditions. In the original fold, the primary DF-hybrid--B5 contrast was null (95/180 versus 89/180; clustered p=.518, Holm p=1), not evidence of equivalence, and C9/C10 retained B0-headroom limitations. In the successor, no external memory achieved 21/180 passes (rate 0.1167), deterministic verbatim event memory 82/180 (rate 0.4556), the typed-plus-raw reference probe 83/180 (rate 0.4611), and one pinned hosted Mem0 literal-storage configuration 97/180 (rate 0.5389). The registered six-slot Family A retained unavailable slots at p=1; all three available comparisons against no memory rejected after Holm correction. Both preregistered mechanism contrasts were unavailable after pre-evaluation conformance rejection. The secondary literal-storage-versus-verbatim comparison was nonconfirmatory and sensitivity-dependent, while the comparison with the reference probe did not reject. The audit therefore supports DreamBench-SWE as a discriminating executable profile benchmark and characterizes one exact hosted-memory configuration, but it does not establish an external-system mechanism, superiority among memory-bearing conditions, equivalence, or broad product generality. The original v2.0.5 findings and artifacts remain unchanged.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Sarthak Singh"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204116816",
+  "doi": "10.48550/arxiv.2608.20664",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.20664",
+  "published_iso": "2026-08-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "checkpoint-relative prefix attrition ledger"
+  ]
+ },
+ {
+  "title": "The Bridge Program: Recasting Blackness, fostering resilience and transformative resistance through narratives of success",
+  "title_norm": "the bridge program recasting blackness fostering resilience and transformative r",
+  "abstract": "This article presents the results of data of a qualitative research project conducted with African Canadian/Black students who participated in a post-secondary student retention program called The Bridge. The program was specifically designed to address the needs of Black students and to provide support programming to enhance their engagement and graduation rates. Three of the themes that emerged from the interviews and focus groups included: the importance of developing differing frames of Blackness; engaging in transformative resistance; and the importance of providing spaces for the students to engage with and explore multiple conceptions of Blackness and narratives of success.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Beverly‐Jean Daniel"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W2913400412",
+  "doi": "10.32920/31129165",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sfu.ca/jgcee/index.php/jgcee/article/view/164",
+  "published_iso": "2026-01-22",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Supporting autistic children and adolescents’ social communication skills through digital technologies: A systematic literature review",
+  "title_norm": "supporting autistic children and adolescents social communication skills through",
+  "abstract": "This literature review examines the role of digital technologies in supporting the development of social communication skills in autistic children and adolescents. Grounded in sociocultural and activity theory, this review analyzes thirty-one peer-reviewed articles to assess how technology supports autistic children and adolescents to develop these skills. The skills were categorized into five major groups based on the definitions provided in the reviewed articles. The findings suggest that various digital tools, such as virtual reality, have been used to deliver social interventions targeting skills like initiating a conversation. Some studies that combined two technologies, such as augmented reality and video modeling, reported positive results. While these technologies have shown promise in enhancing targeted skills, no single tool can address all social communication skills areas, indicating the need for tailored interventions that meet individual needs. This review informs researchers, caregivers, and educators about the potential of technology to deliver interventions that enhance autistic children and adolescents’ social communication skills. Future research should further investigate which technologies are most beneficial for specific skills and identify the characteristics of autistic children and adolescents that could make them more likely to benefit from technology-based interventions. • The review utilizes sociocultural and activity theories to show how culturally relevant tools support autistic youths’ communication. • VR is the most utilized technology, featured in 13 studies, offering controlled environments that support practice and engagement. • Most studies target conversation maintenance and initiation, while emotion recognition, social understanding, and nonverbal skills are less explored. • Digital interventions must be tailored to autistic youths’ diverse needs, as individual responses to technology vary widely. • High intervention costs limit access for low-income families, highlighting the need for affordable, inclusive digital tools.",
+  "year": 2025,
+  "venue": "Research in Autism",
+  "authors": [
+   "Xinru Jiang",
+   "Shana R. Cohen"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416742689",
+  "doi": "10.1016/j.reia.2025.202750",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416742689",
+  "published_iso": "2025-11-27",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Wearable Biosensing and Machine Learning for Data-Driven Training and Coaching Support",
+  "title_norm": "wearable biosensing and machine learning for data driven training and coaching s",
+  "abstract": "Background: Artificial Intelligence (AI) and Machine Learning (ML) are increasingly integrated into sport and exercise through wearable biosensing systems that enable continuous monitoring and data-driven training adaptation. However, their practical value for coaching depends on the validity of biosensor data, the robustness of analytical models, and the conditions under which these systems have been empirically evaluated. Methods: A structured narrative review was conducted using Scopus, PubMed, Web of Science, and Google Scholar (2010–2026), synthesising empirical and applied evidence on wearable biosensing, signal processing, and ML-based adaptive training systems. To enhance transparency, an evidence map of core empirical studies was constructed, summarising sensing modalities, cohort sizes, experimental settings (laboratory vs. field), model types, evaluation protocols, and key outcomes. Results: Evidence from field and laboratory studies indicates that wearable biosensors can reliably capture physiological (e.g., heart rate variability), biomechanical (e.g., inertial and electromyographic signals), and biochemical (e.g., sweat lactate and electrolytes) markers relevant to training load, fatigue, and recovery, provided that signal quality control and calibration procedures are applied. ML models trained on these data can support training adaptation and recovery estimation, with improved performance over traditional workload metrics in endurance, strength, and team-sport contexts when evaluated using athlete-wise or longitudinal validation schemes. Nevertheless, the evidence map also highlights recurring limitations, including sensitivity to motion artefacts, inter-session variability, distribution shift between laboratory and field settings, and overconfident predictions when contextual or psychosocial inputs are absent. Conclusions: Current empirical evidence supports the use of AI-driven biosensor systems as decision-support tools for monitoring and adaptive training, but not as autonomous coaching agents. Their effectiveness is bounded by sensor reliability, appropriate validation protocols, and human oversight. The most defensible model emerging from the evidence is human–AI collaboration, in which ML enhances precision and consistency in data interpretation, while coaches retain responsibility for contextual judgement, ethical decision-making, and athlete-centred care.",
+  "year": 2026,
+  "venue": "Biosensors",
+  "authors": [
+   "Rubén Madrigal-Cerezo",
+   "Natalia Domínguez-Sanz",
+   "Alexandra Martín-Rodríguez"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W7127620556",
+  "doi": "10.3390/bios16020097",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-6374/16/2/97/pdf?version=1770194697",
+  "published_iso": "2026-02-04",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views",
+  "title_norm": "trw trace realworld an auditable consistency contract for world models as materi",
+  "abstract": "World models let agents plan against predicted physical state, but that state drifts; re-observation is costly and delayed, and repair can fail. We present TRACE-RealWorld (TRW), to our knowledge the first commitment-level consistency contract for world models. TRW treats predicted state as a materialized view and a physical commitment as a read whose authorization can expire. Typed, calibrated claims specify consequence-conditioned freshness and priced verification. Adaptive refresh generalizes dual-Kalman synchronization to consult the world when evidence could change a decision; dependency-scoped SagaLLM compensation repairs reversible commitments invalidated after authorization. Under an event-aligned risk oracle and recovery-liveness assumptions, we prove that synchronization and compensation are insufficient alone, whereas their composition gives a conditional consistency guarantee. Otherwise, the argument yields an auditable decomposition of violations into named debts. We implement TRW in Flood-SAR, a search-and-rescue simulator over real geography, and test six preregistered questions at frozen operating points on held-out seeds. Adaptive refresh reduces stale execution but does not dominate fixed refresh on cost, coverage, or rescue outcomes. Localized repair reduces repair work by 9.56 units per mission and restoration latency by 80.7 seconds relative to global recovery; the observed residual-violation difference is zero without establishing equivalence. Detection coverage is 0.83-0.89, and 10 of 97 invoked restorations are incomplete by mission end. The campaign treats empirical slack as sensitivity inputs rather than discharging the theorem's assumptions or providing a simultaneous population certificate. Exact replay reconstructs a disputed dispatch. TRW thus makes a world model an auditable predictive interface rather than a self-validating source of truth.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Edward Y. Chang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7171601702",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.21910",
+  "published_iso": "2026-07-24",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "checkpoint-relative prefix attrition ledger"
+  ]
+ },
+ {
+  "title": "GlioSurv: interpretable transformer for multimodal, individualized survival prediction in diffuse glioma",
+  "title_norm": "gliosurv interpretable transformer for multimodal individualized survival predic",
+  "abstract": "Adult diffuse gliomas are clinically and molecularly heterogeneous, complicating risk stratification and personalized management. We introduce GlioSurv, a multimodal transformer model based on an accelerated failure time framework to integrate multiparametric MRI, clinical and molecular variables, and treatment data for personalized survival prediction. In a retrospective analysis of 1944 patients, including one internal cohort (n = 891; mean OS 32.2 months) and three external cohorts (n = 84, 470, 499; mean OS 26.1, 18.8, 19.0 months), GlioSurv demonstrated robust discrimination (IAUC: 0.68-0.86), calibration (IBS: 0.10-0.21) and concordance (C-index: 0.61-0.80). It significantly outperformed a convolutional neural network, a vision transformer, and a non-imaging multimodal transformer (p < 0.01). Sequential integration of imaging, clinical, molecular, then treatment data, progressively improved C-index from 0.69 to 0.80 (p < 0.001). Interpretability analyses confirmed established prognostic factors and indicate the potential of GlioSurv to support personalized survival prediction and risk-stratified decision-making in diffuse glioma.",
+  "year": 2025,
+  "venue": "npj Digital Medicine",
+  "authors": [
+   "Junhyeok Lee",
+   "Joon Hwan Jang",
+   "Heeseong Eum",
+   "Han Won Jang",
+   "Minchul Kim",
+   "Sung‐Hye Park"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4416225790",
+  "doi": "10.1038/s41746-025-02018-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41746-025-02018-x.pdf",
+  "published_iso": "2025-11-14",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Narrative-driven virtual reality serious game to support type 1 diabetes self-management in children",
+  "title_norm": "narrative driven virtual reality serious game to support type 1 diabetes self ma",
+  "abstract": "Supporting type 1 diabetes (T1D) self-management in young children remains a major challenge. Traditional education often fails to sustain attention or meet developmental needs. This study introduces Tangbao Superman Transformation, a narrative-driven virtual reality (VR) serious game developed through participatory Human-Computer Interaction (HCI) methods, to enhance pediatric T1D self-management. A four-week single-group pre-post feasibility study was conducted with 54 children aged 4-9 years recruited from four pediatric hospitals in eastern China. The intervention translated the Chinese Diabetes Society's seven-domain (CDS-7) framework into VR modules co-designed with children, parents, and clinicians. Quantitative measures included the Self-Management Scale for T1D Children (SMS-T1DC), the System Usability Scale for Children (SUS-C), and an Engagement and Motivation Questionnaire (EMQ). Attendance logs and field notes documented adherence and safety, while semi-structured interviews with children, parents, and providers provided qualitative insights. Children showed significant improvements across all seven self-management domains (p < 0.001; Cohen's d = 0.78-1.27). Usability was rated as excellent (SUS-C = 86/100), engagement was high (95% session completion), and qualitative findings highlighted reduced resistance, increased confidence, and application of strategies in daily routines. This feasibility study provides preliminary evidence that participatory, narrative-driven VR interventions can enhance pediatric T1D self-management. However, the absence of a control group, short intervention duration, lack of biomedical endpoints, and sample homogeneity limit generalizability. Future trials should incorporate active comparators (traditional teaching or mobile apps), biomedical outcomes, multi-center recruitment, and long-term validation to establish incremental efficacy and scalability.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Hanfei Gu",
+   "Nadia Diyana Binti Mohd Muhaiyuddin",
+   "Nassiriah Binti Shaari"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4416936806",
+  "doi": "10.1038/s41598-025-30114-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-30114-1_reference.pdf",
+  "published_iso": "2025-12-03",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Enhanced twin delayed DDPG with prioritized experience replay and Noisy Nets for regional economic dispatch",
+  "title_norm": "enhanced twin delayed ddpg with prioritized experience replay and noisy nets for",
+  "abstract": "Integrating renewable energy into power systems introduces significant challenges in balancing generation costs and grid stability, necessitating advanced solutions for the Economic Dispatch Problem (EDP). While classical mathematical and meta-heuristic methods face scalability and computational efficiency limitations, reinforcement learning (RL) offers a promising alternative due to its adaptability to high-dimensional and dynamic environments. This study employs Twin Delayed DDPG (TD3), an enhanced version of Deep Deterministic Policy Gradient (DDPG). TD3 integrates Prioritized Experience Replay (PER) and Noisy Networks (Noisy Nets) for the EDP in a regional microgrid with photovoltaic (PV) generation. PER improves sample efficiency by prioritizing high-error transitions, while Noisy Nets enhance exploration through adaptive parameter noise. Experiments demonstrate that combining these techniques with TD3 achieves a 54.6% reduction in testing operation cost and a 95.3% decrease in cumulative power unbalance compared to the baseline TD3. The improvements are validated across various deterministic and stochastic RL models, with TD3+PER+Noisy Nets outperforming others in cost efficiency and stability. The findings demonstrate the proposed approach's capability to optimize microgrid dispatch while providing a scalable and practical framework for power system control.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Chang Xu",
+   "Naoki Hayashi",
+   "Masahiro Inuiguchi",
+   "Wong Jee Keen Raymond",
+   "Hazlie Mokhlis",
+   "Hazlee Azil Illias"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4417185548",
+  "doi": "10.1038/s41598-025-27320-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-27320-2_reference.pdf",
+  "published_iso": "2025-12-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Economic Security in Blockchain Systems",
+  "title_norm": "economic security in blockchain systems",
+  "abstract": "A key scientific question underlying the blockchain ecosystem is to what extent the core security properties of the protocols hold when assuming rational validators in the presence of capable economic attackers. To what degree and at what cost can these systems be disrupted? In this thesis, I analyze the underlying economic security properties of three of the most fundamental decentralization consensus algorithms: proof of work (PoW), proof of stake (PoS), and oracle information aggregation. In Chapter 2 of this work, I counter a prominent narrative that PoW is inherently flawed in an environment in which double-spend attacks are possible. By considering counterattacks, I recover PoW robustness against reorganization attacks through a game-theoretic model. In particular, I consider hashrate markets as a potential vector of attack and show that PoW remains robust in this case. In Chapter 3 of this work, I show novel chain reorganization and finality-delay attacks on the PoS mechanism of Ethereum. These attacks are deviations from the ’honest’ staking strategy, and I show that for participants staking a substantial percentage of the network’s staked assets, these attacks can be cheap and destructive to the network. In Chapter 4 of this work, I design an incentive mechanism for the information aggregation of noisy signals that is highly resilient to bribery. I establish the asymptotic strength and limitations of this mechanism against various classes of bribery including an attacker able to condition bribes on individual reports and on the outcome of the information aggregation. I achieve strong protection even in the latter case. To do this, I assume the presence of a source of truth (SoT) that is prohibitively expensive for typical use but can be invoked infrequently. This robustness to bribes is achieved even while in equilibrium there is no invocation of the SoT.",
+  "year": 2026,
+  "venue": "Digital Access to Scholarship at Harvard (DASH) (Harvard University)",
+  "authors": [
+   "Daniel J. Moroz"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7133573936",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://dash.harvard.edu/bitstreams/b8278aed-c360-4960-a184-3e22620d44bc/download",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "checkpoint-relative prefix attrition ledger"
+  ]
+ },
+ {
+  "title": "INTELLIGENT CONDITION MONITORING AND FAULT DIAGNOSIS OF ELECTRICAL POWER AND CONTROL SYSTEMS USING MACHINE LEARNING–BASED PREDICTIVE ANALYTICS",
+  "title_norm": "intelligent condition monitoring and fault diagnosis of electrical power and con",
+  "abstract": "Intelligent condition monitoring and fault diagnosis of electrical power and control systems using machine learning–based predictive analytics was quantitatively investigated to evaluate diagnostic reliability, robustness across operating regimes, and explanatory value under realistic data conditions. The study analyzed a large multi-asset dataset consisting of 211,200 time-window observations derived from electrical, thermal, mechanical, insulation-related, and control-residual measurements, including 312 documented fault events. Descriptive analysis showed strong class imbalance, with healthy operation representing 88.2% of observations, degraded states 7.1%, and fault states 4.7%, and fault behavior occurring in temporally clustered events with a median duration of 18 minutes. Correlation and collinearity analyses indicated moderate within-domain feature dependence but low cross-domain redundancy, with mean variance-based collinearity indices remaining below conservative thresholds across predictor groups, supporting multivariate modeling. Reliability analysis demonstrated acceptable to strong internal consistency across indicator domains, with internal consistency coefficients ranging from 0.76 to 0.87 and temporal stability coefficients exceeding 0.86 under stable operating regimes. Multivariate regression and hypothesis testing results showed that multi-domain predictive models explained substantially more variance in fault outcomes than baseline context-only models, with adjusted fit indices improving from approximately 0.27 to 0.59 after integration of regime-aware normalization and multi-domain features. Hypothesis testing confirmed statistically significant and practically meaningful improvements in diagnostic performance, with effect sizes exceeding 0.50 for multi-domain versus baseline comparisons. Prognostic-oriented analyses further demonstrated statistically meaningful associations between degradation indicators and time-to-event proxies, indicating systematic risk escalation prior to documented intervention events. Overall, the findings provided quantitative evidence that regime-aware, multi-domain machine learning–based predictive analytics improved fault detection reliability, reduced confounding from operating variability, and supported interpretable diagnostic inference in electrical power and control systems.",
+  "year": 2026,
+  "venue": "American Journal of Interdisciplinary Studies",
+  "authors": [
+   "Tasnim Kabir"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7119960048",
+  "doi": "10.63125/k8wk3542",
+  "arxiv_id": null,
+  "paper_url": "https://ajisresearch.com/index.php/ajis/article/download/93/91",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Myelin Supports Cortical Circuit Function Underlying Skilled Movement",
+  "title_norm": "myelin supports cortical circuit function underlying skilled movement",
+  "abstract": "Primary motor cortex (M1) is among the most heavily myelinated cortical regions and generates tightly coordinated neuronal activity patterns that drive skilled movement. Activity-dependent myelination is required for motor skill acquisition, and myelin loss in demyelinating diseases such as multiple sclerosis leads to motor impairment. Yet how myelination influences neuronal activity underlying skilled behavior remains unclear. By combining in vivo imaging of oligodendrocytes with high density Neuropixels recordings during dexterous reaching, we demonstrate that cuprizone-induced demyelination impairs movement efficiency, and alters cell-type–specific neuronal activity and synchrony in a manner that predicts motor output. Using a computational model constrained by these data, we identify inhibitory axonal propagation failures as a mechanistic link between myelin loss and altered circuit function. Partial remyelination normalizes cortical network-level metrics and reach consistency but leaves smooth movement impaired, revealing a selective vulnerability in inhibitory circuits. These findings close a critical gap between cellular models of demyelination and clinical motor impairment by demonstrating how myelin supports cortical circuit dynamics driving skilled behavior.",
+  "year": 2025,
+  "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+  "authors": [
+   "Kimberly Gagnon",
+   "Gustavo Della Flora Nunes",
+   "Dailey Nettles",
+   "Thomas Nguyen",
+   "Elise Carter",
+   "Andreza Lins"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7117166066",
+  "doi": "10.64898/2025.12.23.696289",
+  "arxiv_id": null,
+  "paper_url": "https://www.biorxiv.org/content/biorxiv/early/2025/12/24/2025.12.23.696289.full.pdf",
+  "published_iso": "2025-12-24",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "FedCapD: Federated class-incremental learning via capsule distillation and diffusion replay",
+  "title_norm": "fedcapd federated class incremental learning via capsule distillation and diffus",
+  "abstract": "Federated Class-Incremental Learning faces critical challenges including catastrophic forgetting, semantic drift, and privacy risks under non-IID data distributions. To address these, we propose FedCapD, a novel framework that unifies unsupervised task boundary detection via Bayesian nonparametric modeling, hierarchical semantic distillation through capsule alignment and GNN-based class propagation, secure gradient communication using homomorphic encryption and differential privacy, and diffusion-based generative replay for memory-efficient adaptation. By integrating structural reasoning with privacy-preserving learning, FedCapD achieves state-of-the-art performance across four diverse datasets-CheXpert, MIMIC-CXR-JPG, BraTS2021, and PHM2012-in terms of semantic consistency, encrypted distillation fidelity, cold-start accuracy, and utility efficiency under privacy constraints. The framework eliminates reliance on real-data storage and supports scalable, lifelong learning in regulated, resource-constrained environments such as healthcare AI and edge computing. Code is available at FCIL .",
+  "year": 2026,
+  "venue": "Neurocomputing",
+  "authors": [
+   "Saeed Iqbal",
+   "Muhammad Abdullah Khan",
+   "Ghulam Mustafa",
+   "Sarra Ayouni",
+   "Abeer Aljohani",
+   "Amir Hussain"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7138272853",
+  "doi": "10.1016/j.neucom.2026.133365",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7138272853",
+  "published_iso": "2026-03-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "CoFormerSurv: Collaborative transformer for multi-omics survival analysis",
+  "title_norm": "coformersurv collaborative transformer for multi omics survival analysis",
+  "abstract": "In the field of biomedicine, advances in high-throughput sequencing have generated vast amounts of high-dimensional multi-omics data. Survival analysis methods with multi-omics data can comprehensively uncover the heterogeneity and complexity of diseases from multiple perspectives, thereby improving prognostic predictions for patients, which is critical for developing personalized treatment strategies in precision medicine. Recently, Transformer architecture has emerged as a dominant paradigm in multiple domains. However, due to the inherent challenges in modeling right-censored data, it remains unclear how to effectively utilize Transformer architecture in multi-omics survival analysis to fully extract complementary information across different omics for improving survival prediction performance. In this work, we propose an innovative collaborative Transformer framework for multi-omics survival analysis, namely CoFormerSurv, with two consecutive Transformer architectures including an inter-omics Transformer and an inter-sample graph Transformer. The inter-omics Transformer learns multiple meaningful feature interactions by multi-head self-attention mechanism to capture and quantify complementary information across different omics, while the inter-sample graph Transformer integrates structural information from the fused multi-omics graph into the Transformer architecture, enabling more effective exploration of neighborhood relationships among samples. The two kinds of Transformer architectures can work collaboratively to generate more comprehensive multi-omics features for improving the Cox-PH model performance in survival analysis. Experimental results on multiple real-world datasets show that our proposed method outperforms both single-Transformer architectures and existing survival prediction models by simultaneously exploring complementary information from inter-omics and cross-sample perspectives.",
+  "year": 2026,
+  "venue": "PLoS Computational Biology",
+  "authors": [
+   "Gang Wen",
+   "Limin Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7118553544",
+  "doi": "10.1371/journal.pcbi.1013875",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1013875&type=printable",
+  "published_iso": "2026-01-07",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Digital twins in healthcare: a comprehensive review and future directions",
+  "title_norm": "digital twins in healthcare a comprehensive review and future directions",
+  "abstract": "Digital Twin (DT) technology has emerged as a transformative force in healthcare, offering unprecedented opportunities for personalized medicine, treatment optimization, and disease prevention. This comprehensive review examines the current state of DTs in healthcare, analyzing their implementation across different physiological levels-from cellular to whole-body systems. We systematically review the latest developments, methodologies, and applications while identifying challenges and opportunities. Our analysis encompasses technical frameworks for cardiovascular, neurological, respiratory, metabolic, hepatic, oncological, and cellular DTs, highlighting significant achievements such as population-scale cardiac modeling (3,461 patient cohort), reduced atrial fibrillation recurrence rates through patient-specific cardiac models, improved brain tumor radiotherapy planning, advanced liver regeneration modeling with real-time simulation capabilities, and enhanced glucose management in diabetes. We detail the methodological foundations supporting different DT implementations, including data acquisition strategies, physics-based modeling approaches, statistical learning algorithms, neural network-based control systems, and emerging artificial intelligence techniques. While discussing implementation challenges related to data quality, computational constraints, and validation requirements, we provide a forward-looking perspective on future opportunities for enhanced personalization, expanded application areas, and integration with emerging technologies. This review offers a multidimensional assessment of healthcare DTs and outlines future directions for their development and integration. This review demonstrates that while healthcare DTs have achieved remarkable clinical successes-from reducing cardiac arrhythmia recurrence rates by over 13% to enabling 97% accuracy in neurodegenerative disease prediction, and achieving sub-millisecond liver response predictions with high accuracy-their clinical translation requires addressing challenges such as data integration, computational scalability, digital equity, and validation frameworks.",
+  "year": 2025,
+  "venue": "Frontiers in Digital Health",
+  "authors": [
+   "Hamid Khoshfekr Rudsari",
+   "Becky Tseng",
+   "Hongxu Zhu",
+   "Lulu Song",
+   "Chunhui Gu",
+   "Abhishikta Roy"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4416332396",
+  "doi": "10.3389/fdgth.2025.1633539",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1633539/pdf",
+  "published_iso": "2025-11-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal",
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "An adaptive hand exoskeleton rehabilitation training system integrating virtual reality and an AI-based assessment engine",
+  "title_norm": "an adaptive hand exoskeleton rehabilitation training system integrating virtual ",
+  "abstract": "Introduction Post-stroke hand motor impairment is a major cause of long-term functional disability and reduced quality of life, with approximately 70% of stroke survivors experiencing persistent limitations in fine motor control. Conventional rehabilitation is constrained by low adherence, subjective assessment, and insufficient individualization, which limits exploitation of the neuroplasticity window for motor relearning. To address these challenges, we propose a bio–AI–VR integrated hand rehabilitation system that fuses biosignal sensing (bio), AI-based analysis, and virtual reality (VR) interaction to realize an efficient, adaptive, and quantifiable closed-loop training process. The integration rationale is grounded in three theoretical pillars: (i) multimodal data fusion theory—combining heterogeneous biosignal and behavioral data through AI to overcome single-modality limitations; (ii) closed-loop adaptive control theory—dynamically balancing challenge and capability via real-time feedback; (iii) neuroplasticity multisensory enhancement theory—coordinating visual, proprioceptive, and motor pathways to strengthen cortical reorganization. This work addresses three testable hypotheses: (RQ1) Can multimodal biosignal fusion achieve real-time assessment with R 2 ≥ 0.65 and latency < 50 ms? (RQ2) Does bio-AI-VR integration yield FMA-UE improvement ≥ 6 points (minimal clinically important difference) with effect size d ≥ 0.8 ? (RQ3) Are all three components (bio, AI, VR) necessary, with ablation causing ≥ 15 % performance degradation? Methods A lightweight hand exoskeleton ( < 400 g, 3 DoF/finger) integrates a 6-axis IMU (100 Hz) and 16-channel sEMG (1 kHz) to synchronously acquire kinematics and muscle activation. Extended Kalman filtering fuses sensor streams before AI processing. Features include range of motion (ROM), smoothness metrics (SPARC, LDLJ), sEMG root-mean-square (RMS), median frequency (MDF), and co-contraction index (CCI). A hybrid model combining random forests (200 trees, depth 8) and support vector regression (RBF kernel, γ = 0.01 , C = 10 ) outputs a real-time composite score S t ∈ [ 0 , 1 ] via multi-task learning with GroupKFold cross-validation, mapped to clinical scales through Sigmoid normalization. FMA-UE proxy labels for window-level training were constructed via linear interpolation (80%), biomechanical anchoring (15%), and expert annotation (5%, inter-rater κ = 0.78 ). A cloud AI engine communicates bidirectionally with Unity-based VR over MQTT to close the perception-assessment-assistance loop. The assistance-as-needed (AAN) algorithm adjusts exoskeleton torque ( u t ) and VR difficulty ( d t ) using S t as control input with hysteresis, dead zone, and rate limiting to ensure smooth adaptation. Twenty-four stroke survivors (3–12 months post-stroke, FMA-UE 15–50) underwent 4-week training (5 sessions/week, 20 min/session). Outcomes included FMA-UE (primary), ARAT, grip strength, normalized ROM, task success rate, and System Usability Scale (SUS). Statistical analysis employed paired t -tests with Hedges’ correction for effect sizes, Bonferroni adjustment for multiple comparisons, and leave-one-subject-out cross-validation (LOSOCV) to assess model generalization. Results All 24 participants completed the study with one missed session (479 of 480 scheduled sessions, 8,946 annotated segments); end-to-end latency median 38 ms (IQR 33–42 ms), decomposed as: sampling 8 ± 2 ms, preprocessing",
+  "year": 2025,
+  "venue": "Frontiers in Sports and Active Living",
+  "authors": [
+   "Junshuo Cui"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4417182087",
+  "doi": "10.3389/fspor.2025.1724021",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1724021/pdf",
+  "published_iso": "2025-12-10",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "e-profits: a business-aligned evaluation metric for profit-sensitive customer churn prediction",
+  "title_norm": "e profits a business aligned evaluation metric for profit sensitive customer chu",
+  "abstract": "Abstract Retention campaigns in customer relationship management often rely on churn prediction models evaluated using traditional metrics such as AUC and F1-score. However, these metrics fail to reflect financial outcomes and may mislead strategic decisions. We introduce e-Profits , a novel business-aligned evaluation metric that quantifies model performance based on customer lifetime value, retention probability, and intervention costs. Unlike existing profit-based metrics such as Expected Maximum Profit, which assume fixed population-level parameters, e-Profits uses Kaplan–Meier survival analysis to estimate tenure-conditioned (customer-level) one-period retention probabilities and supports granular, per-customer profit evaluation. We benchmark six classifiers across two telecom datasets (IBM Telco and Maven Telecom) and demonstrate that e-Profits reshapes model rankings compared to traditional metrics, revealing financial advantages in models previously overlooked by AUC or F1-score. The metric also enables segment-level insight into which models maximise return on investment for high-value customers. e-Profits provides a transparent, customer-level evaluation framework that bridges predictive modelling and profit-driven decision-making in operational churn management. All source code is available at: https://github.com/Awaismanzoor/eprofits .",
+  "year": 2026,
+  "venue": "International Journal of Data Science and Analytics",
+  "authors": [
+   "Awais Manzoor",
+   "M. Atif Qureshi",
+   "Etain Kidney",
+   "Luca Longo"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7131364007",
+  "doi": "10.1007/s41060-026-01044-6",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41060-026-01044-6.pdf",
+  "published_iso": "2026-02-25",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Artificial intelligence and learner autonomy: a meta-analysis of self-regulated and self-directed learning",
+  "title_norm": "artificial intelligence and learner autonomy a meta analysis of self regulated a",
+  "abstract": "Introduction As artificial intelligence (AI) becomes increasingly embedded in educational environments, understanding its role in shaping learners’ self-regulated learning (SRL) and self-directed learning (SDL) has emerged as a central concern in contemporary learning science. While prior studies suggest that AI-driven systems may support planning, monitoring, and autonomy in learning, empirical evidence remains fragmented across contexts, learner groups, and instructional designs. This study synthesizes existing empirical research to systematically examine the magnitude and conditions under which AI-based interventions influence SRL, its dimensions and phases, SDL, and associated learning outcomes. Methods A systematic meta-analysis was conducted following PRISMA guidelines, synthesizing evidence from 32 empirical studies comprising 92 effect sizes and a total of 3,029 participants. The analysis examined overall effects of AI-based interventions on SRL and SDL, disaggregated effects across SRL dimensions (cognitive/metacognitive, motivational/affective, and behavioral regulation) and SRL phases (forethought, performance, and self-reflection), as well as impacts on learning outcomes and academic achievement. Random-effects models were applied, and moderator analyses explored learner characteristics, contextual variables, and AI design features. Sensitivity analyses and publication bias assessments were performed to evaluate the robustness of findings. Results AI-based interventions demonstrated a large and statistically significant positive effect on overall SRL ( g = 1.613, p = 0.032) and SDL ( g = 1.111, p = 0.043), indicating substantial improvements in learners’ ability to plan, monitor, and regulate their learning while sustaining autonomy and persistence. At the dimensional level, AI produced moderate gains in cognitive/metacognitive regulation ( g = 0.377, p = 0.0004) and motivational/affective regulation ( g = 0.505, p = 0.013), whereas effects on behavioral regulation were inconsistent. Phase-level analyses revealed that AI interventions were most effective during the forethought phase, supporting goal setting, planning, and motivational readiness, with smaller but significant gains observed in self-reflection and variable effects during the performance phase. AI systems also yielded moderate improvements in learning outcomes and achievement ( g = 0.350, p = 0.034). Moderator analyses indicated stronger SRL effects among older learners, longer intervention durations, and language learning contexts employing interactive AI systems, while gender differences were minimal. Sensitivity and publication bias tests confirmed the stability of results. Discussion The findings indicate that AI functions as an adaptive scaffold that meaningfully enhances learners’ self-regulatory and self-directed capacities across cognitive, motivational, and reflective processes. By strengthening forethought and planning mechanisms in particular, AI-based interventions support more autonomous, sustained, and effective learning behaviors that translate into measurable academic benefits. Variability in behavioral regulation outcomes highlights the need for more explicit action-level supports in AI design. Overall, the results showcase AI’s potential to promote equitable and scalable self-regulated learning across diverse educational contexts, while also pointing to the importance of aligning intervention design with learner characteristics and instructional goals.",
+  "year": 2025,
+  "venue": "Frontiers in Education",
+  "authors": [
+   "krishnashree achuthan"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W7117448835",
+  "doi": "10.3389/feduc.2025.1738751",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1738751/pdf",
+  "published_iso": "2025-12-29",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Multi-agent deep reinforcement learning with centralized training and decentralized execution for transportation infrastructure management",
+  "title_norm": "multi agent deep reinforcement learning with centralized training and decentrali",
+  "abstract": "Life-cycle management of large-scale transportation systems is a computationally intensive task. It requires determining a sequence of inspection and maintenance decisions to minimize long-term risks and costs while dealing with multiple uncertainties and constraints that lie in high-dimensional spaces. Traditional approaches, such as static age- or condition-based maintenance and risk-based or periodic inspection plans, have been widely applied but often suffer from limitations related to optimality, scalability, and the ability to properly handle uncertainty in the loop of optimization. Moreover, many existing methods rely on unconstrained formulations that overlook critical hard and soft operational constraints. We address these issues in this work by casting the optimization problem within the framework of constrained Partially Observable Markov Decision Processes (POMDPs), which provide a robust mathematical foundation for stochastic sequential decision-making under observation uncertainties, in the presence of risk and resource limitations. To tackle the high dimensionality of state and action spaces, we propose DDMAC-CTDE, a Deep Decentralized Multi-Agent Actor-Critic (DDMAC) reinforcement learning architecture with Centralized Training and Decentralized Execution (CTDE). To demonstrate the utility of the proposed framework, we also develop a new comprehensive benchmark environment representing an existing transportation network in Virginia, U.S., with heterogeneous pavement and bridge assets undergoing nonstationary degradation. This environment incorporates multiple practical constraints related to budget limits, performance guidelines from State and Federal agencies, traffic delays, and risk considerations. On this benchmark, DDMAC-CTDE consistently outperforms standard transportation management baselines, producing more reliable, cost- and risk-efficient policies that respect operational constraints. Together, the proposed framework and benchmark provide (i) a scalable, constraint-aware methodology for sequential decision-making under uncertainty, and (ii) a realistic, rigorous testbed for comprehensive evaluation of Deep Reinforcement Learning (DRL) solutions for transportation infrastructure management.",
+  "year": 2026,
+  "venue": "Computer-Aided Civil and Infrastructure Engineering",
+  "authors": [
+   "Mohammad Saifullah",
+   "Konstantinos G. Papakonstantinou",
+   "A. Bhattacharya",
+   "Shelley M. Stoffels",
+   "C.P. Andriotis"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4391212405",
+  "doi": "10.1016/j.cacaie.2026.100175",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4391212405",
+  "published_iso": "2026-08-11",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Emerging technologies for early risk stratification and precision management of diabetic kidney disease: a multimodal framework integrating digital phenotypes and clinical biomarkers",
+  "title_norm": "emerging technologies for early risk stratification and precision management of ",
+  "abstract": "Background: Diabetic kidney disease (DKD) is a major microvascular complication of diabetes, often progressing silently and leading to end-stage kidney disease (ESKD) and cardiovascular morbidity. Early identification and risk-adapted intervention are crucial to improving long-term outcomes, yet existing clinical workflows are limited by delayed diagnosis and underutilization of available therapies. Methods: We propose and evaluate a multimodal, risk-driven framework for the early recognition and individualized management of DKD. The approach integrates: (1) standard renal function metrics-estimated glomerular filtration rate (eGFR) and urine albumin-to-creatinine ratio (uACR)-together with validated prediction models; (2) molecular biomarkers including metabolomics, gut microbiota, and peritoneal dialysis effluent signatures; (3) digital phenotypes derived from standardized acquisition of tongue images and pulse waveforms, rooted in Traditional Chinese Medicine (TCM) diagnostics; and (4) longitudinal data from wearable devices and remote monitoring platforms. Digital features are quantified using image processing and optical signal analysis and incorporated into multimodal prediction models. Treatment is escalated based on risk stratification using renin-angiotensin-aldosterone system (RAAS) inhibitors, sodium-glucose cotransporter 2 (SGLT2) inhibitors, non-steroidal mineralocorticoid receptor antagonists (MRAs), and glucagon-like peptide-1 (GLP-1) receptor agonists. Real-time monitoring of therapeutic efficacy and safety is conducted using process end points such as eGFR slope and uACR trends. Results: Incorporation of quantifiable tongue and pulse features provides a novel, low-cost, and non-invasive risk enrichment layer that complements biochemical and omics-based markers. Multilayered risk stratification enables earlier identification of fast progressors and more timely treatment intensification. Evidence from landmark trials-including Dapagliflozin and Prevention of Adverse Outcomes in Chronic Kidney Disease (DAPA-CKD), Empagliflozin in Patients with Chronic Kidney Disease (EMPA-KIDNEY), Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIO-DKD), and Effects of Semaglutide on Chronic Kidney Disease (FLOW)-supports the clinical utility of this approach. A closed-loop monitoring strategy based on process metrics and safety thresholds is proposed. We also outline ethical, regulatory, and data governance considerations necessary for clinical translation. Conclusion: The integration of traditional clinical markers, digital TCM-derived phenotypes, and multi-omics data represents a promising paradigm for early, personalized, and dynamic DKD care. Future research should focus on external validation, impact on hard end points, and equitable deployment across real-world settings. This approach may help close the current diagnostic and therapeutic gaps in DKD management.",
+  "year": 2026,
+  "venue": "Frontiers in Endocrinology",
+  "authors": [
+   "Lingdong Meng",
+   "Zhen Li",
+   "Ling Xu",
+   "Wei Fang",
+   "Hongyan Ji",
+   "Lankun Zhang"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W7119477656",
+  "doi": "10.3389/fendo.2025.1728293",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2025.1728293/pdf",
+  "published_iso": "2026-01-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Mindful endoscopy: holistically supporting patients through awake examinations of the path of swallowing",
+  "title_norm": "mindful endoscopy holistically supporting patients through awake examinations of",
+  "abstract": "BACKGROUND: Awake procedures such as aerodigestive endoscopies can be distressing. As a result, definitive diagnostic assessments often require sedation or general anaesthesia, limiting ability to identify early-stage cancers. OBJECTIVE: To create a process and a team to deliver mindful endoscopy, in order to support patients through awake procedures, thereby extending the scope of definitive assessments in outpatient settings. METHODS: The mindful endoscopy team, consisting of an endoscopist and endoscopy support practitioners (ESPs) was created. Nurse-led mindfulness comprised patient education on a range of relaxation methods just before the start of the procedure, and holistic and proactive patient support within a clear structure during it. Patient experience of awake oral and pharyngolaryngeal endoscopy (180 procedures) and transnasal panendoscopy (70 procedures) were recorded using the Gastrointestinal Endoscopy Satisfaction Questionnaire. RESULTS: Overall, 92.4% of patients were satisfied or very satisfied with their awake endoscopies and 96.4% indicated that they would be happy or very happy to undergo the same procedure undertaken by the same team again. At a mean follow-up of 14 months, 12 cancers had been detected and no cancers had been missed. CONCLUSION: Perioperative mindfulness reliably extended the scope of definitive aerodigestive endoscopies, away from operating theatres and sedation facilities, and into outpatients. The potential of mindful endoscopy needs to be urgently explored to more broadly support the NHS elective recovery plan.",
+  "year": 2026,
+  "venue": "British Journal of Nursing",
+  "authors": [
+   "Joshua Bond",
+   "E. T. Jones",
+   "Lyndi-Ann Turner",
+   "SA Reza Nourael"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7125492095",
+  "doi": "10.12968/bjon.2025.0053",
+  "arxiv_id": null,
+  "paper_url": "https://www.magonlinelibrary.com/doi/pdf/10.12968/bjon.2025.0053?download=true",
+  "published_iso": "2026-01-08",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Co-Adaptive Attacker–Defender Learning over Attack Graphs: A Stochastic Game Approach to Dynamic Network Defense",
+  "title_norm": "co adaptive attacker defender learning over attack graphs a stochastic game appr",
+  "abstract": "The evolving landscape of cybersecurity threats, characterized by increasingly sophisticated and adaptive attackers, poses major challenges to traditional static network defense mechanisms. To address these limitations, this paper proposes an adaptive cyber defense framework that integrates Reinforcement Learning (RL) with Attack Graph (AG) modeling. The interaction between attacker and defender is formulated as a repeated zero-sum stochastic game over a partially observable Attack Graph-guided environment, allowing both agents to adapt their strategies through repeated interaction. Two value-based learning approaches are investigated, namely tabular Q-learning and Deep Q-Networks (DQN), under a unified attacker–defender setting. Experimental results across multiple training scenarios show that defender performance improves substantially as the training budget increases. Under limited training, Q-learning provides a computationally efficient and stable baseline, while DQN requires more training and careful tuning to achieve strong performance. However, with extended training, the DQN-based defender attains the highest win rate, albeit at a significantly greater computational cost. In addition, multi-run statistical comparisons highlight a clear trade-off between defensive effectiveness and runtime efficiency: Q-learning remains far more lightweight, whereas DQN offers stronger asymptotic performance when sufficient resources are available. These findings demonstrate the promise of learning-based adaptive defense over attack graphs while also emphasizing the importance of training budget, computational constraints, and model selection in practical cyber defense deployment.",
+  "year": 2026,
+  "venue": "Future Internet",
+  "authors": [
+   "Mohammed A. Makarem",
+   "Muneef A. Razaz",
+   "Zead Saleh"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7160209695",
+  "doi": "10.3390/fi18050239",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1999-5903/18/5/239/pdf?version=1777545036",
+  "published_iso": "2026-04-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Detecting and Mitigating Bias for Inclusive and Trustworthy Clinical Research: A Scientific Statement From the American Heart Association",
+  "title_norm": "detecting and mitigating bias for inclusive and trustworthy clinical research a ",
+  "abstract": "Bias in clinical research affects not only the internal validity of studies but also the equitable distribution of health benefits derived from studies. Among the most impactful forms are selection bias, attrition bias, and algorithmic bias, each of which is capable of distorting participant representation, treatment effect estimates, and model performance across important subgroups. This scientific statement provides a reference for cardiovascular researchers and clinicians, integrating detection, correction, and prevention strategies to address these biases. Selection bias may be mitigated through approaches such as inverse probability weighting and adjustment for sociodemographic imbalances; attrition bias can be addressed using intention-to-treat analyses and multiple imputation for missing data that are missing at random; algorithmic bias requires fairness-aware modeling, diverse training data sets, and explainable artificial intelligence techniques. These 3 forms of bias are not exhaustive, but their careful management is essential to achieving scientific rigor, fairness, and real-world applicability, and requires multidisciplinary collaboration to embed equity and validity throughout the research lifecycle.",
+  "year": 2026,
+  "venue": "Circulation Genomic and Precision Medicine",
+  "authors": [
+   "Judy Zhong",
+   "Salah Al-Zaiti",
+   "Derrick Bennett",
+   "Synho Do",
+   "Mario F.L. Gaudino",
+   "Judy W. Gichoya"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7160207015",
+  "doi": "10.1161/hcg.0000000000000101",
+  "arxiv_id": null,
+  "paper_url": "https://www.ahajournals.org/doi/pdf/10.1161/HCG.0000000000000101?download=true",
+  "published_iso": "2026-05-04",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "The effectiveness of augmented reality/mixed reality in medical education: a meta-analysis",
+  "title_norm": "the effectiveness of augmented reality mixed reality in medical education a meta",
+  "abstract": "BACKGROUND: Augmented reality (AR) and mixed reality (MR) are increasingly being applied in the field of medical education. However, the effectiveness and acceptance of AR/MR in different teaching scenarios remain unclear. This meta-analysis aimed to examine the effectiveness of AR/MR in improving medical students' knowledge and skills training. METHODS: PubMed, Embase, Cochrane Library, PsycINFO, Education Source, Education Resources Information Center, CINAHL, Web of Science Core Collection, China National Knowledge Infrastructure, WanFang, WeiPu, and Chinese BioMedical Literature databases were searched. The search encompassed literature from the database establishment to December 2023. Studies examining the use of AR/MR in medical education and reporting outcomes related to knowledge learning or skill training were included. The data were analyzed using Stata version 15.1 software. RESULTS: Twenty-nine publications were included in this meta-analysis. Compared to traditional teaching methods, AR/MR-assisted teaching showed greater effectiveness in medical skills training, as indicated by the higher skill scores (WMD = 12.31, 95% CI: 4.12 to 20.50), reduced failure rate (RD = -0.08, 95% CI: -0.12 to -0.04), and shortened performance time (SMD = -0.20, 95% CI: -0.36 to -0.04). However, AR/MR did not significantly improve knowledge acquisition (WMD = 2.92, 95% CI: -1.73 to 7.57). The questionnaire survey revealed the advantages of AR/MR in terms of perceived usefulness (PU) (WMD = 0.27, 95% CI: 0.00 to 0.53), perceived ease of use (PEOU) (WMD = 0.35, 95% CI: 0.13 to 0.57), and enjoyment (WMD = 0.67, 95% CI: 0.20 to 1.13). CONCLUSION: This meta-analysis highlights the effectiveness and user acceptance of AR/MR in medical education, particularly in skill training, although no significant improvement was observed in knowledge learning. The findings provide a foundational evidence base for the further expansion of AR/MR applications in medical education. However, it should be noted that these estimates may be influenced by heterogeneity and publication bias.",
+  "year": 2025,
+  "venue": "BMC Medical Education",
+  "authors": [
+   "Ruoxuan Zhang",
+   "Xiaoyan Jin",
+   "Ming Liu",
+   "Hoi Yee Tong"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4416146146",
+  "doi": "10.1186/s12909-025-08166-8",
+  "arxiv_id": null,
+  "paper_url": "https://bmcmededuc.biomedcentral.com/counter/pdf/10.1186/s12909-025-08166-8",
+  "published_iso": "2025-11-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "An investigation into the potential of collaborative computer game-based learning in Higher Education",
+  "title_norm": "an investigation into the potential of collaborative computer game based learnin",
+  "abstract": "Advocates of game-based learning argue that computer games have the potential to transform university education, motivating and engaging a new generation of learners in a way that traditional education does not. The research described in this thesis, grounded in the fields of education, human-computer interaction and game design, questions this assumption and considers the case for computer game-based learning in Higher Education. Initial research found that positive motivation for games-based learning is by no means universal in adults, and that a propensity to play games recreationally does not imply an enthusiasm to use games for learning. However, even reluctant gamers were willing to try game-based learning if it was perceived to be an efficient way to learn. Criteria were developed for the design of effective educational games, based around theories of constructivist learning. These informed the development of two collaborative game-based activities with identical learning outcomes: an adventure game and an online version of a traditional teambuilding exercise. Questionnaires were developed to measure self-reported learning and engagement and 112 students participated in an experiment to compare educational effectiveness between two groups, one using the adventure game and the other the teambuilding activity. No significant difference was found between the two conditions, with the exception that those students who used the teambuilding game had a significantly greater perception of control than those who used the adventure game. This study challenges the assumption that games will revolutionise education because they lead to increased motivation and engagement. Instead, it argues that there is a potential for increased engagement through educational games, but this is because they embody the principles of interactive, collaborative and experiential learning. Overall, this research offers an insight of the nature of adult game playing, practical guidance for the development of educational games, a validated tool for measuring post-experiential engagement, a critical analysis of usability testing techniques for multi-user games, and a genuine rationale for the use of game-based learning.",
+  "year": 2026,
+  "venue": "Edinburgh Napier Research Repository (Edinburgh Napier University)",
+  "authors": [
+   "Nicola Whitton"
+  ],
+  "citations": 69,
+  "source": "openalex",
+  "source_id": "W59455730",
+  "doi": "10.17869/enu.237315",
+  "arxiv_id": null,
+  "paper_url": "https://napier-surface.worktribe.com/237315/1/Whitton.pdf",
+  "published_iso": "2026-06-23",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "From Trauma to Suicidality: The Mediating Role of Sleep Disturbances—Evidenced from a Narrative Mini-Review",
+  "title_norm": "from trauma to suicidality the mediating role of sleep disturbances evidenced fr",
+  "abstract": "Traumatic experiences are among the strongest predictors of suicidal thoughts and behaviors, but the mechanisms that account for this association are still debated. Sleep disturbances, particularly insomnia, nightmares, and fragmented sleep, are highly prevalent after trauma and have been shown to predict suicidality independently of depression and other psychiatric comorbidities. This narrative mini-review synthesizes evidence from epidemiological, clinical, and experimental studies to examine whether sleep may represent a pathway linking trauma and suicidality. Among the proposed mechanisms, alterations in REM sleep regulation, dysregulation of the hypothalamic–pituitary–adrenal axis, and impaired prefrontal control of emotional reactivity have received empirical support, although findings remain inconsistent across populations. Importantly, trauma-related nightmares and persistent insomnia appear to be especially strong markers of elevated suicide risk. Clinically, these observations suggest that routine sleep assessment could add value to suicide risk evaluation in trauma-exposed individuals. Interventions such as cognitive behavioral therapy for insomnia, imagery rehearsal therapy, and REM-modulating pharmacological treatments have shown promise, but their specific impact on suicidality requires further testing in controlled trials. Future research should prioritize longitudinal designs, incorporate both subjective and objective sleep measures, and include culturally diverse samples to clarify causal mechanisms and refine prevention strategies.",
+  "year": 2025,
+  "venue": "Psychiatry International",
+  "authors": [
+   "Valentina Baldini"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416940578",
+  "doi": "10.3390/psychiatryint6040149",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-5318/6/4/149/pdf?version=1764746927",
+  "published_iso": "2025-12-03",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "An Intelligent Simulation Training System for Power Grid Control and Operations",
+  "title_norm": "an intelligent simulation training system for power grid control and operations",
+  "abstract": "With the increasing complexity of power grid operations, operator training requires timely feedback and objective assessment. Traditional approaches based on lectures and scripted simulations provide limited personalization and weak explainability. This paper presents AI Instructors, an intelligent simulation training system for power-grid control and dispatching. The system is organized into learning, training, assessment, and analysis modules, and is built around two core technical components: (i) parameterized item generation from rule/knowledge bases using a phrase-enhanced transformer (PET), and (ii) solver-grounded, topology-aware grading with hierarchical feedback for both numeric and free-text responses. A voice interaction module is integrated to simulate telephone-based dispatch orders. We validate the system through a pilot deployment with licensed dispatch operators and scenario experiments on benchmark cases. Compared with a conventional scripted DTS workflow, AI Instructors achieves higher stepwise procedure accuracy (68%→90%), a lower topology-violation rate (32%→11%), and shorter response time (120 s→72 s), while increasing the proportion of parameterized questions and accelerating skill acquisition. These results suggest that combining adaptive sequencing with topology-safe, explainable evaluation can improve training effectiveness and operational safety.",
+  "year": 2026,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Sheng Yang",
+   "Shengyuan Li",
+   "Yuan Fu",
+   "Wei Jiang",
+   "Wenlong You",
+   "Min Chen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7131782755",
+  "doi": "10.3390/bdcc10030068",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/10/3/68/pdf?version=1772160314",
+  "published_iso": "2026-02-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Adaptive Experimentation for Censored Survival Outcomes",
+  "title_norm": "adaptive experimentation for censored survival outcomes",
+  "abstract": "Adaptive experimentation enables efficient estimation of causal effects, but existing methods are not designed for survival data with censoring, where event times are only partially observed (e.g., overall survival in cancer trials but with dropout). In this paper, we develop a novel framework for adaptive experimentation to estimate causal effects under right censoring. For this, we derive the semiparametric efficiency bound for the average survival effect curve as a function of the treatment allocation policy and thereby obtain a closed-form efficiency-optimal allocation policy. The policy generalizes classical Neyman allocation to survival settings by prioritizing patient strata where both event and censoring dynamics induce high uncertainty. Building on this, we propose the Adaptive Survival Estimator (ASE), an adaptive framework that learns the allocation policy and estimates the average survival effect curve sequentially. Our framework has three main benefits: (i) it accommodates arbitrary machine learning models for nuisance estimation; (ii) it is guided by a closed-form efficiency-optimal allocation policy; and (iii) it admits strong theoretical guarantees, including asymptotic normality via a martingale central limit theorem. We demonstrate our framework across various numerical experiments to show consistent efficiency gains over uniform randomization and censoring-agnostic baselines.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yuxin Wang",
+   "Dennis Frauen",
+   "Jonas Schweisthal",
+   "Maresa Schröder",
+   "Emil Javurek",
+   "Stefan Feuerriegel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161916583",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.18459",
+  "published_iso": "2026-05-18",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Development and Usability Evaluation of a Leap Motion-Based Controller-Free VR Training System for Inferior Alveolar Nerve Block",
+  "title_norm": "development and usability evaluation of a leap motion based controller free vr t",
+  "abstract": "This study developed a virtual reality (VR) simulator for training the inferior alveolar nerve block (IANB) procedure using Leap Motion-based hand tracking and the Unity engine, and evaluated its interaction performance, task-level outcomes within the simulator, and usability. Built on a 3D anatomical model, the system provides a pre-clinical practice environment for realistic syringe manipulation and visually guided needle insertion, enabling repeated rehearsal of the procedural workflow. Interaction stability was assessed using participant-level gesture recognition rates and input latency. Usability was evaluated via a questionnaire addressing ease of use, cognitive load, and perceived educational usefulness. The results indicated participant-level mean gesture recognition rates of 88.8–90.5% and mean response latencies of approximately 64–66 ms. In usability testing (n = 40), the item related to perceived procedural skill improvement received the highest score (4.25/5.0). Because this study did not include controlled comparisons with conventional training or objective measures of clinical competency transfer, the findings should be interpreted as preliminary evidence of technical feasibility and learner-perceived usefulness within a simulated setting. Controlled comparative studies using objective learning outcomes are warranted.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Jun-Seong Kim",
+   "Kun-Woo Kim",
+   "Hyo-Joon Kim",
+   "Seong-Yong Moon"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7125940370",
+  "doi": "10.3390/app16031325",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/16/3/1325/pdf?version=1769600693",
+  "published_iso": "2026-01-28",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "A Proximal Policy Optimization-Based Reinforcement Learning Framework for Real-Time Personalized Endurance Training",
+  "title_norm": "a proximal policy optimization based reinforcement learning framework for real t",
+  "abstract": "Customized sports training routines take into account individual physiology, fatigue, and recovery to maximize performance. Proximal Policy Optimization (PPO)-based reinforcement learning is used to adjust training intensity, duration, and rest in a simulated endurance-training environment for runners, using real-time wearable and performance data. The environment models athlete status utilizing heart rate variability, VO₂ max, fatigue ratings, and injury-risk indicators. PPO is trained to maximize performance gains, recovery quality, and safety over repeated sessions. Simulated policy improves performance (18.6%), injury-risk deviation (−22.4%), recovery compliance (91.3%), training load variability control (±7.2%), reward-signal evolution convergence (+41.7%), session completion rate (94.6%), personalized adaptation score (87.5%), and fatigue index stability (94.3%). Results show that a PPO-based RL setup, specifically defined by state design, reward shaping, and multi-episode training, can provide adaptive and data-driven tailored sports training.",
+  "year": 2026,
+  "venue": "Informatica",
+  "authors": [
+   "Chuanzhong Wu",
+   "Danqing Liang",
+   "Bo Yang",
+   "Li Xu",
+   "Yunlong Li"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7130926917",
+  "doi": "10.31449/inf.v50i8.10131",
+  "arxiv_id": null,
+  "paper_url": "https://www.informatica.si/index.php/informatica/article/download/10131/6534",
+  "published_iso": "2026-02-21",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Treatment of bulbar urethral strictures with Optilume drug-coated balloons in a previously untreated population (FIRST-CARE): protocol for a single-blind multicentre randomised controlled trial",
+  "title_norm": "treatment of bulbar urethral strictures with optilume drug coated balloons in a ",
+  "abstract": "INTRODUCTION: Minimally invasive endoscopic procedures constitute the cornerstone of first-line treatment for bulbar urethral strictures, although their long-term effectiveness is limited by high recurrence rates. The Optilume drug-coated balloon (DCB) is a novel intervention combining mechanical dilation with localised delivery of paclitaxel to reduce recurrence by inhibiting scar tissue formation. While its efficacy has been demonstrated in patients with recurrent strictures, its potential as a first-line option in treatment-naïve patients remains unexplored. The FIRST-CARE trial aims to assess the efficacy and safety of Optilume DCB compared with standard endoscopic treatment in treatment-naïve patients with bulbar urethral strictures. METHODS AND ANALYSIS: Design: Two-arm, randomised, single-blind (participant), investigator-initiated, parallel-group, multicentre clinical trial. PATIENTS: The study will enrol 140 adult male patients with treatment-naïve, single bulbar urethral strictures ≤3 cm in length. INTERVENTIONS: All patients will undergo the assigned procedure under general anaesthesia with 1.5 g intravenous cefuroxime. Optilume group patients will receive ≥5 min balloon dilation with localised paclitaxel delivery. The control group will receive standard endoscopic treatment (eg, direct visual internal urethrotomy, laser or dilatation). In both groups, a 12-14 French Foley catheter will be left in place for 3-5 days. PRIMARY OUTCOME: Freedom from repeat intervention within 12 months of follow-up. Primary analysis: Time-to-event will be defined from the date of intervention to the date a repeat intervention is decided (indicated and planned) due to confirmed recurrence, with censoring at 12 months. Groups will be compared using Kaplan-Meier survival analysis and the log-rank test. Cox regression and modified Poisson regression will be used to estimate HRs and relative risks. ETHICS AND DISSEMINATION: The trial is approved by the Danish National Committee on Health Research Ethics (2401370) and will be conducted in accordance with the Declaration of Helsinki and principles of Good Clinical Practice. In line with national guidelines, all eligible patients are counselled regarding available treatment options prior to enrolment. Results will be disseminated via peer-reviewed publications and scientific presentations. TRIAL REGISTRATION NUMBER: NCT06827210.",
+  "year": 2026,
+  "venue": "BMJ Open",
+  "authors": [
+   "M. Mahdi",
+   "Rikke Nørresø Haase",
+   "Lotte Sander",
+   "Grazvydas Tuckus",
+   "Dagmar Lunden Liltorp",
+   "Lone Jørgensen"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7119467892",
+  "doi": "10.1136/bmjopen-2025-103948",
+  "arxiv_id": null,
+  "paper_url": "https://bmjopen.bmj.com/content/bmjopen/16/1/e103948.full.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "A Comprehensive Review of Neuro-symbolic AI for Robustness, Uncertainty Quantification, and Intervenability",
+  "title_norm": "a comprehensive review of neuro symbolic ai for robustness uncertainty quantific",
+  "abstract": "Abstract As Artificial Intelligence (AI) systems are increasingly deployed in high-stakes domains such as healthcare, autonomous systems, finance, and critical infrastructure, ensuring their trustworthiness has become imperative. This paper presents a comprehensive survey of neuro-symbolic AI, a hybrid paradigm that combines the learning capabilities of neural networks with the reasoning strengths of symbolic AI, through the lens of three foundational dimensions: robustness, uncertainty quantification (UQ), and intervenability. We first establish the limitations of purely data-driven “black-box” models in handling distribution shifts, ambiguous inputs, and human oversight. In contrast, neuro-symbolic systems offer enhanced interpretability, verifiability, and control, making them promising candidates for real-world deployment. We systematically review state-of-the-art techniques for modeling robustness, quantifying uncertainty, and enabling intervenability. We further examine how logic, probability, and learning can be integrated into unified or modular architectures to support transparent, adaptive reasoning. Finally, we outline current challenges and identify key research opportunities for advancing neuro-symbolic AI as a trustworthy paradigm. This survey aims to equip researchers and practitioners with a structured understanding of how to build reliable, interpretable, and interactive AI systems by bridging statistical learning and symbolic reasoning.",
+  "year": 2025,
+  "venue": "Arabian Journal for Science and Engineering",
+  "authors": [
+   "Kamal Acharya",
+   "Houbing Song"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W7110983869",
+  "doi": "10.1007/s13369-025-10887-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s13369-025-10887-3.pdf",
+  "published_iso": "2025-12-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "ObsBattery: Position-Aware Federated Learning with Dueling DQN Clustering and Training Adaptation for Satellite Battery Prediction",
+  "title_norm": "obsbattery position aware federated learning with dueling dqn clustering and tra",
+  "abstract": "Satellite battery status prediction is crucial for ensuring the healthy operation of future satellite constellations. However, traditional telemetry-based methods, where satellite battery status is transmitted in real time to ground stations for processing, consume significant satellite bandwidth and introduce response delays. Advances in onboard computing and federated learning (FL) enable local model training and centralized parameter aggregation, reducing transmission overhead while leveraging distributed satellite data. Nevertheless, the unique orbital motion of satellites presents challenges for FL, primarily due to battery status heterogeneity arising from varying sunlight exposure. Limited onboard energy further necessitates balancing model performance with battery efficiency during local training. To tackle these issues, we propose ObsBattery—a position-aware FL framework that clusters satellites based on their orbital positions to improve model accuracy. ObsBattery employs a Dueling Deep Q-Network to dynamically determine satellite clustering and adapt local training rounds according to power availability, thereby reducing energy consumption during low-power phases. Evaluations on a real-world satellite battery dataset show that ObsBattery significantly improves both prediction accuracy and energy efficiency. Compared to a standard clustered FL approach, it reduces model MAE by 16% and energy consumption ratio by 6% under experimental conditions.",
+  "year": 2025,
+  "venue": "Electronics",
+  "authors": [
+   "Shuo Jiang",
+   "Boyu Wang",
+   "Xuan Zhang",
+   "Yaoxian Jiang",
+   "Shuyi Liu",
+   "Zhenyu Zhao"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416958323",
+  "doi": "10.3390/electronics14234697",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/14/23/4697/pdf",
+  "published_iso": "2025-11-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Decision-grade digital twins for in situ bioremediation of contaminated soil and groundwater: a critical review",
+  "title_norm": "decision grade digital twins for in situ bioremediation of contaminated soil and",
+  "abstract": "bioremediation often fail because monitoring data are not mapped to the causal process they are intended to prove. This critical review defines decision-grade digital twins as inferential systems, not as visualization tools, data lakes, or calibrated trend models. A decision-grade twin must connect a living conceptual site model with evidence streams that test competing hypotheses, prediction models with stated admissibility limits, uncertainty updates, and auditable trigger logic. The review evaluates how geochemistry, compound-specific isotope analysis, functional genes and transcripts, flux measurements, geophysical imaging, toxicity endpoints, and high-frequency sensing can support claims about pathway activation, treatment limitation, rebound risk, secondary impacts, and closure readiness. It also distinguishes the decision value of reactive transport models, hybrid process-data models, surrogate models, data-driven surveillance, and microbial process representations. Across hydrocarbons and polycyclic aromatic hydrocarbons, chlorinated solvents, pesticides, pharmaceuticals, and per- and polyfluoroalkyl substances, decision value depends on whether the evidence can distinguish among reaction, retention, redistribution, metabolite formation, and durable risk reduction. The review concludes that digital twins deserve decision-grade status only when they reduce ambiguity that can affect intervention choice, operating intensity, switching criteria, monitoring design, secondary-risk management, or closure judgment.",
+  "year": 2026,
+  "venue": "Frontiers in Bioengineering and Biotechnology",
+  "authors": [
+   "Mariusz Cycoń"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7166853034",
+  "doi": "10.3389/fbioe.2026.1866957",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2026.1866957/pdf",
+  "published_iso": "2026-07-01",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Mechanism of career resilience formation during the role transition of medical interns: a grounded theory study",
+  "title_norm": "mechanism of career resilience formation during the role transition of medical i",
+  "abstract": "Background: The complexity, difficulty and uncertainty inherent in the medical field pose significant challenges to physicians' ability to adapt. For interns, career resilience plays a crucial role in the transition from academia to clinical practice. This study aimed to explore the mechanism of career resilience formation during the role-transition process of medical interns. Methods: We conducted in-depth semi-structured interviews with 16 medical interns from a regional medical university in Northwest China, recruited via purposive and snowball sampling through professional networks. Data were collected between August and September 2024; interviews lasted 35-50 min (online/offline), were audio-recorded, transcribed verbatim, and analyzed using Straussian grounded theory (open-axial-selective coding with constant comparison), guided by the Critical Incident Technique and the STAR framework. The research team performed the coding, and the process was validated through regular peer-debriefing sessions with two independent researchers. Analysis was facilitated using NVivo software (version 12) until theoretical saturation was reached. Results: A Challenge-Resource-Adaptation (CRA) model was constructed to explain how medical interns develop career resilience in the face of practical challenges and role transitions during the internship. Three pillars of career resilience were identified: (1) career development challenges (knowledge updating, identity establishment, career planning); (2) facilitative resources (guidance and feedback, resources and opportunities, emotional support); and (3) proactive career adaptation (compliance/pressure management and innovative breakthrough). The CRA model depicts a recursive loop whereby each innovative breakthrough elevates demands for further knowledge updating. Illustratively, weekly mentor-guided guideline reviews and skills-lab rehearsal closed knowledge-practice gaps, enabling independent ward rounds; exposure to advanced procedures helped clarify specialty choices. Conclusion: Career development challenges are the trigger factor, facilitative resources are the favorable conditions, and career adaptation behavior is the external manifestation of resilience. Overall, career resilience during internship emerges as a self-reinforcing process in which targeted resources convert concrete challenges into adaptive behaviors. The CRA model identifies mentor feedback, advanced clinical opportunities, and emotional support as key leverage points for strengthening medical curricula and workplace design.",
+  "year": 2025,
+  "venue": "Frontiers in Medicine",
+  "authors": [
+   "Jinyu Zhou",
+   "Jin Li-fu",
+   "Yamin Hu"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4416268113",
+  "doi": "10.3389/fmed.2025.1671520",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1671520/pdf",
+  "published_iso": "2025-11-17",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Research on complete coverage path planning for multiple unmanned underwater vehicles based on deep reinforcement learning",
+  "title_norm": "research on complete coverage path planning for multiple unmanned underwater veh",
+  "abstract": "Swarm-style unmanned underwater vehicles (UUVs) possess significant application value in maritime search, early warning and reconnaissance, combat support, and defense operations. Complete coverage path planning (CCPP) represents a fundamental capability required for UUVs when executing missions such as search and detection. To address limitations in existing swarm-based CCPP research, including inadequate area partitioning methodologies and constrained path selection strategies, this paper establishes a comprehensive motion model for underwater vehicles. By treating autonomous underwater vehicles (AUVs) as intelligent agents, we introduce a novel multi-agent deep reinforcement learning framework. An enhanced A* algorithm is designed for pre-training, with the obtained solution serving as the initial input for deep reinforcement learning. The Hindsight Experience Replay method is incorporated to reconstruct the neural network’s training dataset, effectively resolving the sparse reward problem. Coordination and cooperation capabilities among agents are acquired through iterative learning. Simulation results demonstrate that compared to existing algorithms, our proposed approach significantly reduces coverage time and total path length while generating superior paths in unfamiliar environments. The algorithm demonstrates strong feasibility, adaptability, and practical applicability for real-world underwater missions.",
+  "year": 2025,
+  "venue": "AIP Advances",
+  "authors": [
+   "Xin Pan",
+   "Lin Huang"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4417160325",
+  "doi": "10.1063/5.0300484",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.aip.org/aip/adv/article-pdf/doi/10.1063/5.0300484/20832403/125017_1_5.0300484.pdf",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Joint modelling of left- and interval-censored viral load for couples in Mozambique",
+  "title_norm": "joint modelling of left and interval censored viral load for couples in mozambiq",
+  "abstract": "Mathematical and statistical models have been essential tools in exploring the dynamics of viral load measures, understanding of the pathogenesis of HIV-1 infection and in assessment of the potency of antiretroviral therapies. However, this can be challenging due to the potential intra-couple correlation as well as the presence of multiple measurements collected from the same study site or cluster. A second complication arises due to censoring of the individual viral load measurements. The aim of this paper is to investigate the association between age and viral load of woman and man within a couple, while accounting for the presence of antiretroviral biomarkers in blood. An additional question of interest is how weakly or strongly are viral load of woman and man correlated, and how does this correlation depend on covariates as well. Joint marginal and random-effects models assuming constant and non-constant correlation were fitted using maximum likelihood while accounting for the left- and interval-censoring nature of the two viral loads. Findings show a weak positive correlation between the viral loads of women and men. Next, interaction between age and antiretroviral biomarker's presence is only significant in the mean viral load for women, showing that the effect of age on a women's viral load varies by the antiretroviral biomarker's status. No age effect on the mean viral load for men is observed. These findings reinforce the need of interventions that stimulate adherence to antiretroviral therapy treatment once one or both partners are HIV infected as well as to monitor their viral load as they get older, especially the female partner.",
+  "year": 2026,
+  "venue": "PLoS ONE",
+  "authors": [
+   "Adelino Juga",
+   "Niel Hens",
+   "Nafissa Osman",
+   "Marc Aerts"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7143283955",
+  "doi": "10.1371/journal.pone.0345307",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0345307&type=printable",
+  "published_iso": "2026-03-30",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Understanding Imbalanced Forgetting in Rehearsal-Based Class-Incremental Learning",
+  "title_norm": "understanding imbalanced forgetting in rehearsal based class incremental learnin",
+  "abstract": "Neural networks suffer from catastrophic forgetting in class-incremental learning (CIL) settings. Rehearsal$\\unicode{x2013}$replaying a subset of past samples$\\unicode{x2013}$is a well-established mitigation strategy. However, recent results suggest that, despite balanced rehearsal allocation, some classes are forgotten substantially more than others. Despite its relevance, this imbalanced forgetting phenomenon remains underexplored. This work shows that imbalanced forgetting arises systematically and severely in rehearsal-based CIL and investigates it extensively. Specifically, we construct, from a principled analysis, three last-layer coefficients that capture different gradient-level sources of interference affecting each past class during an incremental step. We then demonstrate that, together, they reliably predict how past classes will rank in terms of forgetting at the end of that step. While predictive performance alone does not establish causality, these results support the interpretation of the coefficients as a plausible mechanistic account linking last-layer gradient-level interactions during training to class-level forgetting outcomes. Notably, one coefficient$\\unicode{x2013}$capturing self-induced interference$\\unicode{x2013}$emerges as the strongest predictor, with controlled experiments providing evidence consistent with this coefficient being influenced by the new-class interference coefficient. Overall, our findings provide valuable insights and suggest promising directions for mitigating imbalanced forgetting by reducing class-wise disparities in the identified sources of interference.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Alberto Tamajo",
+   "Srinandan Dasmahapatra",
+   "Rahman Attar"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161451993",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.14785",
+  "published_iso": "2026-05-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Contextual inference through flexible integration of environmental features and behavioural outcomes",
+  "title_norm": "contextual inference through flexible integration of environmental features and ",
+  "abstract": "The ability to use context to flexibly adjust our decision-making is vital for navigating a complex world. To do this, the brain must both use environmental features and behavioural outcomes to distinguish between different, often hidden contexts; and also learn how to use these inferred contexts to guide behaviour. However, how these two interacting processes can be performed simultaneously remains unclear. Within the brain it is thought that interaction between the prefrontal cortex (PFC) and hippocampus (HPC) supports contextual inference. We show that models using environmental features (similar to those proposed to be implemented in hippocampus) readily support context-specific behaviour, but struggle to differentiate ambiguous contexts during learning. In contrast, models using behavioural outcomes (similar to those proposed in PFC) can stably differentiate contexts during periods of learning, but struggle to guide context-specific behaviour. We show that supporting feature-based with outcome-based strategies during learning overcomes the limitations of both approaches, allowing for the formation of distinct contextual representations that support contextual inference. Moreover, agents using this joint approach reproduce both behavioural- and cellular-level phenomena associated with the interaction between PFC and HPC. Together, these results provide insight into how the brain uses contextual information to guide flexible behaviour.",
+  "year": 2026,
+  "venue": "PLoS Computational Biology",
+  "authors": [
+   "Jessica Passlack",
+   "Andrew F. MacAskill"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7139946685",
+  "doi": "10.1371/journal.pcbi.1014093",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1014093&type=printable",
+  "published_iso": "2026-03-20",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Absence in the Archives",
+  "title_norm": "absence in the archives",
+  "abstract": "Absence in official records can have profound implications for social memory, civil rights, restorative and transitional justice, citizenship, social welfare, and redress for historical abuse. Scholars of archivistics and early modern New World imperial contexts have uncovered the epistemological problems that archival silences pose for historical research, and I contend that absence deserves separate conceptual treatment. Archival absences, both permanent and temporary, have particular resonances for post-colonial countries, and is an ongoing threat under totalitarian regimes. Using Britain and Ireland as primary examples, this Element traces how absence took root in the domestic and subsequently the colonial archive, and how through legal mechanisms it became an accepted part of archival praxis. The aim of this Element is to raise awareness of archival absence in order to prevent more losses, particularly in the abundance of the digital age. This title is also available as Open Access on Cambridge Core.",
+  "year": 2026,
+  "venue": "Cambridge University Press eBooks",
+  "authors": [
+   "Ciara Breathnach"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7165144057",
+  "doi": "10.1017/9781009580069",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/587846C3687A675DE72B137014C4ACC2/9781009580083AR.pdf/absence-in-the-archives.pdf",
+  "published_iso": "2026-06-19",
+  "oa_field": "Arts and Humanities",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Verdi in Victorian London",
+  "title_norm": "verdi in victorian london",
+  "abstract": "Now a byword for beauty, Verdi's operas were far from universally acclaimed when they reached London in the second half of the nineteenth century. Why did some critics react so harshly? Who were they and what biases and prejudices animated them? When did their antagonistic attitude change? And why did opera managers continue to produce Verdi's operas, in spite of their alleged worthlessness? Massimo Zicari's Verdi in Victorian London reconstructs the reception of Verdi's operas in London from 1844, when a first critical account was published in the pages of The Athenaeum, to 1901, when Verdi's death received extensive tribute in The Musical Times. In the 1840s, certain London journalists were positively hostile towards the most talked-about representative of Italian opera, only to change their tune in the years to come. The supercilious critic of The Athenaeum, Henry Fothergill Chorley, declared that Verdi's melodies were worn, hackneyed and meaningless, his harmonies and progressions crude, his orchestration noisy. The scribes of The Times, The Musical World, The Illustrated London News, and The Musical Times all contributed to the critical hubbub. Yet by the 1850s, Victorian critics, however grudging, could neither deny nor ignore the popularity of Verdi's operas. Over the final three decades of the nineteenth century, moreover, London's musical milieu underwent changes of great magnitude, shifting the manner in which Verdi was conceptualized and making room for the powerful influence of Wagner. Nostalgic commentators began to lament the sad state of the Land of Song, referring to the now departed \"palmy days of Italian opera.\" Zicari charts this entire cultural constellation. Verdi in Victorian London is required reading for both academics and opera aficionados. Music specialists will value a historical reconstruction that stems from a large body of first-hand source material, while Verdi lovers and Italian opera addicts will enjoy vivid analysis free from technical jargon. For students, scholars and plain readers alike, this book is an illuminating addition to the study of music reception.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Massimo Zicari"
+  ],
+  "citations": 25,
+  "source": "openalex",
+  "source_id": "W4211177268",
+  "doi": "10.11647/obp.0090",
+  "arxiv_id": null,
+  "paper_url": "https://books.openbookpublishers.com/10.11647/obp.0090.pdf",
+  "published_iso": "2026-04-28",
+  "oa_field": "Arts and Humanities",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Efficient Scheduling for GPU-Based Neural Network Training via Hybrid Reinforcement Learning and Metaheuristic Optimization",
+  "title_norm": "efficient scheduling for gpu based neural network training via hybrid reinforcem",
+  "abstract": "On GPU-based clusters, the training workloads of machine learning (ML) models, particularly neural networks (NNs), are often structured as Directed Acyclic Graphs (DAGs) and typically deployed for parallel execution across heterogeneous GPU resources. Efficient scheduling of these workloads is crucial for optimizing performance metrics such as execution time, under various constraints including GPU heterogeneity, network capacity, and data dependencies. DAG-structured ML workload scheduling could be modeled as a Nonlinear Integer Program (NIP) problem, and is shown to be NP-complete. By leveraging a positive correlation between Scheduling Plan Distance (SPD) and Finish Time Gap (FTG) identified through an empirical study, we propose to develop a Running Time Gap Strategy for scheduling based on Whale Optimization Algorithm (WOA) and Reinforcement Learning, referred to as WORL-RTGS. The proposed method integrates the global search capabilities of WOA with the adaptive decision-making of Double Deep Q-Networks (DDQN). Particularly, we derive a novel function to generate effective scheduling plans using DDQN, enhancing adaptability to complex DAG structures. Comprehensive evaluations on practical ML workload traces collected from Alibaba on simulated GPU-enabled platforms demonstrate that WORL-RTGS significantly improves WOA’s stability for DAG-structured ML workload scheduling and reduces completion time by up to 66.56% compared with five state-of-the-art scheduling algorithms.",
+  "year": 2025,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Nana Du",
+   "Chase Q. Wu",
+   "Aiqin Hou",
+   "Weike Nie",
+   "Ruiqi Song"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416088820",
+  "doi": "10.3390/bdcc9110284",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/9/11/284/pdf?version=1762781058",
+  "published_iso": "2025-11-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Diversity, equity, inclusion, and access: Confronting the myth of meritocracy in nursing academia",
+  "title_norm": "diversity equity inclusion and access confronting the myth of meritocracy in nur",
+  "abstract": "This article critically examines how the enduring ideal of meritocracy obstructs diversity, equity, inclusion, and access (DEIA) in nursing education and leadership. While often framed as neutral and objective, meritocratic systems frequently reinforce exclusionary practices by privileging dominant norms and overlooking systemic barriers. Through historical analysis, policy critique, and theoretical frameworks, the paper demonstrates how DEIA initiatives are undermined by institutional resistance, hidden curricula, and performative equity efforts. The article calls for a redefinition of merit that centers equity, lived experience, and structural awareness. By embracing justice-oriented leadership and culturally responsive practices, nursing academia can advance both professional excellence and health equity. This equity-centered vision challenges institutions to dismantle outdated paradigms and align nursing education with its ethical and societal missions.",
+  "year": 2025,
+  "venue": "Electronic Journal of General Medicine",
+  "authors": [
+   "Kechi Iheduru‐Anderson",
+   "Roop Chand Jayaraman",
+   "Joseph Inungu",
+   "Vincent E Mumford"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416358798",
+  "doi": "10.29333/ejgm/17437",
+  "arxiv_id": null,
+  "paper_url": "https://www.ejgm.co.uk/download/diversity-equity-inclusion-and-access-confronting-the-myth-of-meritocracy-in-nursing-academia-17437.pdf",
+  "published_iso": "2025-11-19",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Preventing Latent Rehearsal Decay in Online Continual SSL with SOLAR",
+  "title_norm": "preventing latent rehearsal decay in online continual ssl with solar",
+  "abstract": "This paper explores Online Continual Self-Supervised Learning (OCSSL), a scenario in which models learn from continuous streams of unlabeled, non-stationary data, where methods typically employ replay and fast convergence is a central desideratum. We find that OCSSL requires particular attention to the stability-plasticity trade-off: stable methods (e.g. replay with Reservoir sampling) are able to converge faster compared to plastic ones (e.g. FIFO buffer), but incur in performance drops under certain conditions. We explain this collapse phenomenon with the Latent Rehearsal Decay hypothesis, which attributes it to latent space degradation under excessive stability of replay. We introduce two metrics (Overlap and Deviation) that diagnose latent degradation and correlate with accuracy declines. Building on these insights, we propose SOLAR, which leverages efficient online proxies of Deviation to guide buffer management and incorporates an explicit Overlap loss, allowing SOLAR to adaptively managing plasticity. Experiments demonstrate that SOLAR achieves state-of-the-art performance on OCSSL vision benchmarks, with both high convergence speed and final performance.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Giacomo Cignoni",
+   "Simone Magistri",
+   "Andrew D. Bagdanov",
+   "Antonio Carta"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7154540015",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2604.10586",
+  "published_iso": "2026-04-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Reimagining the Public Speaking Course: Student Experiences and Outcomes in an Online Format",
+  "title_norm": "reimagining the public speaking course student experiences and outcomes in an on",
+  "abstract": "Though higher education has returned to in-person instruction in the wake of the COVID-19 pandemic, demand for online learning continues to increase. This rapid growth in virtual instruction necessitates examining its impact, particularly in skill-based courses that have traditionally been taught in person. Public speaking, a course requiring experiential learning and active engagement, presents unique challenges and opportunities when converted to an online format. This study explores student experiences in an online public-speaking course designed to parallel the structure of traditional in-person instruction, examining whether the essential learning outcomes of a skill-based class can be effectively achieved remotely. Using archival student data (n = 1151) from 2021 to 2024, we conducted a qualitative analysis of student reflections on how in-person pedagogical strategies effectively implemented in the online format influenced their self-concept, mindset, and overall learning experience. Our findings indicate significant improvements in students’ self-concept, growth mindset, self-confidence, and their ability to overcome fears related to public speaking. Additionally, students highlighted unexpected benefits of the online format, including enhanced support for multilingual learners and increased connections between course content and greater future career readiness in utilizing remote communication. These results highlight the potential of well-designed online public speaking instruction to foster skill development, professional preparedness, and inclusive learning. The study has implications for future skill-based online pedagogy and curriculum development.",
+  "year": 2025,
+  "venue": "Trends in Higher Education",
+  "authors": [
+   "Annika C. Speer",
+   "Valeria Dominguez",
+   "Catherine Lussier",
+   "Annie S. Ditta"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417056237",
+  "doi": "10.3390/higheredu4040075",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2813-4346/4/4/75/pdf?version=1764673123",
+  "published_iso": "2025-12-02",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Prompt injection attacks on vision-language models for surgical decision support",
+  "title_norm": "prompt injection attacks on vision language models for surgical decision support",
+  "abstract": "Abstract Importance Artificial Intelligence-driven analysis of laparoscopic video holds potential to increase the safety and precision of minimally invasive surgery. Vision-language models are particularly promising for video-based surgical decision support due to their capabilities to comprehend complex temporospatial (video) data. However, the same multimodal interfaces that enable such capabilities also introduce new vulnerabilities to manipulations through embedded deceptive text or images (prompt injection attacks). Objective To systematically evaluate how susceptible state-of-the-art video-capable vision-language models are to textual and visual prompt injection attacks in the context of clinically relevant surgical decision support tasks. Design, Setting, and Participants In this observational study, we systematically evaluated four state-of-the-art vision-language models, Gemini 1.5 Pro, Gemini 2.5 Pro, GPT-o4-mini-high, and Qwen 2.5-VL, across eleven surgical decision support tasks: detection of bleeding events, foreign objects, image distortions, critical view of safety assessment, and surgical skill assessment. Prompt injection scenarios involved misleading textual prompts and visual perturbations, displayed as white text overlay, applied at varying durations. Main Outcomes and Measures The primary measure was model accuracy, contrasted between baseline performance and each prompt injection condition. Results All vision-language models demonstrated good baseline accuracy, with Gemini 2.5 Pro generally achieving the highest mean [standard deviation] accuracy across all tasks (0.82 [0.01]), compared to Gemini 1.5 Pro (0.70 [0.03]) and GPT-o4 mini-high (0.67 [0.06]). Across tasks, Qwen 2.5-VL censored most outputs and achieved an accuracy of (0.58 [0.03]) on non-censored outputs. Textual and temporally-varying visual prompt injections reduced the accuracy for all models. Prolonged visual prompt injections were generally more harmful than single-frame injections. Gemini 2.5 Pro showed the greatest robustness and maintained stable performance for several tasks despite prompt injections, whereas GPT-o4-mini-high exhibited the highest vulnerability, with mean (standard deviation) accuracy across all tasks declining from 0.67 (0.06) at baseline to 0.24 (0.04) under full-duration visual prompt injection ( P < .001). Conclusion and Relevance These findings indicate the critical need for robust temporal reasoning capabilities and specialized guardrails before vision-language models can be safely deployed for real-time surgical decision support. Key Points Question Are video vision-language models (VLMs) susceptible to textual and visual prompt injection attacks when used for surgical decision support tasks? Finding Textual and visual prompt injection attacks consistently degraded the performance of four state-of-the-art VLMs across eleven surgical tasks. Gemini 2.5 Pro was most robust to textual and visual prompt injection attacks, whereas GPT-o4-mini-high was most vulnerable. Prolonged visual injections had a greater negative impact than single-frame injections. Meaning Present-generation video VLMs are highly vulnerable to textual and visual prompt injection attacks. This critical safety vulnerability must be addressed before their integration into surgical decision support systems.",
+  "year": 2026,
+  "venue": "npj Digital Surgery",
+  "authors": [
+   "Z. X. Zhang",
+   "Muhammad Ibtsaam Qadir",
+   "Matthias Carstens",
+   "Enshang Zhang",
+   "Madison Sarah Loiselle",
+   "Farren Marc Martinus"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4412648163",
+  "doi": "10.1038/s44484-026-00014-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s44484-026-00014-6.pdf",
+  "published_iso": "2026-07-27",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+  "title_norm": "envace internalizing environment dynamics via world rehearsal for agentic reinfo",
+  "abstract": "Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on external simulators that are difficult to ground. We introduce EnvACE, an agentic reinforcement learning method that replaces external environment interaction during training with world rehearsal. The policy alternates between acting and rehearsal: it first generates a tool call, then plays the role of the environment to produce the response induced by that action, and conditions subsequent decisions on the rehearsed response. Both roles are jointly optimized end-to-end using task-success rewards. Through world rehearsal, the policy internalizes the relationship between actions and their environment responses in its parameters, yielding an agent world model that directly supports decision making. Across BFCL-v4, tau^2-Bench, VitaBench, and FinMCP-Bench, EnvACE achieves strong and transferable performance, outperforming environment-scaling baselines in the overall evaluation. Controlled studies further show that world rehearsal consistently improves policy learning across model scales. At test time, the internalized world model enables private rehearsal before committed execution, yielding further gains under a moderate rehearsal budget without additional external interaction. Our findings establish world rehearsal as a new path toward scaling LLM agent training beyond the constraints of external environments. Our code is publicly available at https://github.com/Within-yao/EnvACE.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zishan Xu",
+   "Zhiyuan Yao",
+   "Yuxin Chen",
+   "Yifu Guo",
+   "Zhengxi Lu",
+   "Yuquan Lu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202006749",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.06197",
+  "published_iso": "2026-08-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Outcome centred process mapping in healthcare using random forest and process mining",
+  "title_norm": "outcome centred process mapping in healthcare using random forest and process mi",
+  "abstract": "System process mapping is essential for understanding complex systems and implementing effective management practices. In healthcare, mapping patient flow aims to reduce costs, improve the quality of care, and enhance efficiency. Process mining (PM) in healthcare is challenging due to the need for specialised knowledge and the inherent variability and complexity of healthcare processes. Comparing observed differences in patient flow pathways provides only a partial view; they must be combined with process outcomes and attributes for a comprehensive understanding. This paper proposes a combined stepwise approach using random forest (RF) and PM discovery to achieve outcome-centred process mapping from process-unaware systems. To this aim, we analysed the MIMIC-IV v2.2 dataset, containing healthcare data from patients at the Beth Israel Deaconess Medical Center (BIDMC) between the years 2008-2019. The MIMIC-IV dataset includes different types of sources within the hospital such as the emergency department (ED), patient measurements, procedures, transfer between departments, and intensive care units (ICUs). The results indicate that older patients with high ED priority and multimorbidity are particularly complex and challenging to treat, necessitating the implementation of tailored management strategies, in agreement with common clinical practice. A potential application of this approach is the real-time prediction of patients' length of stay, which could optimise clinicians' work, save healthcare resources, and improve the quality of patient care. Our approach can be applied to improve system process management by combining control-flow and data perspectives.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Simone Leonetti",
+   "Chiara Seghieri",
+   "Domenico Tricò",
+   "Andrea Burattin"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417193382",
+  "doi": "10.1038/s41598-025-27553-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-27553-1_reference.pdf",
+  "published_iso": "2025-12-10",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Predictors of HIV interruption in treatment among people living with HIV in 6 regions in Ghana: a retrospective cohort study",
+  "title_norm": "predictors of hiv interruption in treatment among people living with hiv in 6 re",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Research Square",
+  "authors": [
+   "Williams Kwarah",
+   "Jasmin Kwarah",
+   "Yakubu Alhassan",
+   "Frances Baaba da-Costa Vroom",
+   "Duah Dwomoh",
+   "Samuel Bosomprah"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416075685",
+  "doi": "10.21203/rs.3.rs-7871647/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-7871647/latest.pdf",
+  "published_iso": "2025-11-10",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "A framework for leveraging artificial intelligence in strategic business decision-making",
+  "title_norm": "a framework for leveraging artificial intelligence in strategic business decisio",
+  "abstract": "This paper proposes a rigorous, enterprise-ready framework for leveraging Artificial Intelligence (AI) to strengthen strategic business decision-making in volatile, uncertain, complex, and ambiguous environments. The framework integrates five reinforcing layers: (1) problem framing and value hypotheses; (2) data readiness and governance; (3) model portfolio design; (4) human–AI teaming and controls; and (5) impact measurement and continuous learning. Strategic questions are decomposed into decision statements, testable hypotheses, and measurable value drivers, linking choices to outcomes with logic models and decision trees. Data readiness establishes standards for quality, lineage, privacy, and security, supported by metadata catalogs, access controls, and stewardship roles. Governance aligns with regulatory obligations and ethical principles to ensure trustworthy, auditable data use across the enterprise. The model portfolio blends predictive, prescriptive, causal, and generative techniques. Forecasting and uplift models quantify demand, risk, and customer propensity; optimization and simulation allocate resources under constraints; causal inference and experimentation estimate treatment effects for policy and pricing; generative AI accelerates knowledge discovery, scenario authoring, and decision briefings. An MLOps backbone orchestrates feature stores, automated pipelines, testing, deployment, and monitoring to sustain reliability, fairness, and performance. Human–AI teaming pairs algorithmic recommendations with expert judgment via decision playbooks, role clarity, and calibrated trust, enabling interrogation, sensitivity analysis, and override when required. Controls integrate model risk management with fairness, accountability, transparency, and ethics requirements, including pre-deployment testing, bias and drift monitoring, audit-ready documentation, and incident response procedures. Impact measurement connects decisions to financial and non-financial outcomes through causal evaluation, OKRs, and benefit tracking. Implementation proceeds through a pragmatic roadmap: prioritize high-leverage use cases (demand shaping, dynamic pricing, supply risk sensing, workforce planning, churn prevention), establish a federated center of excellence, and standardize reusable accelerators such as feature stores, prompt libraries, governance checklists, and value-tracking templates. The contribution is a cohesive blueprint uniting decision science, data engineering, and organizational change to de-risk AI at scale. By aligning architecture, processes, and incentives, the framework enables repeatable value creation, resilient choices under uncertainty, and measurable strategic impact. Results generalize across sectors and varying data maturities. Keywords: Strategic Decision-Making, Artificial Intelligence, Decision Intelligence, MLOPS, Data Governance, Causal Inference, Generative AI, Human–AI Teaming, Model Risk Management, Prescriptive Analytics.",
+  "year": 2025,
+  "venue": "Gulf Journal of Advance Business Research",
+  "authors": [
+   "Shah Rukh",
+   "Stanley Tochukwu Oziri",
+   "Omorinsola Bibire Seyi-Lande"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4416161690",
+  "doi": "10.51594/gjabr.v3i11.171",
+  "arxiv_id": null,
+  "paper_url": "https://fegulf.com/index.php/gjabr/article/download/171/183",
+  "published_iso": "2025-11-13",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Evaluating ASCERT: generative AI for cyber-range scenario generation",
+  "title_norm": "evaluating ascert generative ai for cyber range scenario generation",
+  "abstract": "Abstract In this paper, we worked in collaboration with the ASCERT (AI-based scenario management for cyber-range training) project and its generative AI prototype that generates dynamic and interactive cyber-range exercise scenarios. We evaluate the model by focusing on two objectives: (i) its ability to replicate real-world cyber attacks, and (ii) its consistency across multiple simulations that uses same inputs. To assess realism, we examine how well the model reproduces three well-documented cyber incidents namely Colonial Pipeline, Equifax, and SolarWinds, when it is provided with relevant source material for training. We then analyze repeatability by comparing outputs across fixed-input simulation runs. As the evaluation results indicate, overall the model generated varied and context-appropriate scenarios. Moreover, it introduced an interactivity feature that allows users to choose responses and observe consequences in real time. However, the consistency in repeated runs was limited: simulations are not reliably repeatable, although what was interesting is that the variability reflects the unpredictability of real attacks. These findings suggest that, while ASCERT already supports scenario variety and meaningful user interaction, it requires targeted refinements to improve stability and repeatability. With such improvements, the ASCERT model has strong potential to contribute to scalable and adaptive cybersecurity education and training.",
+  "year": 2025,
+  "venue": "International Journal of Information Security",
+  "authors": [
+   "M. Palumickas",
+   "Muhammad Mudassar Yamin",
+   "Basel Katt",
+   "Chhagan Lal"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4417334404",
+  "doi": "10.1007/s10207-025-01179-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10207-025-01179-w.pdf",
+  "published_iso": "2025-12-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Deposit Inflows and Outflows in Failing Banks: The Role of Deposit Insurance",
+  "title_norm": "deposit inflows and outflows in failing banks the role of deposit insurance",
+  "abstract": "ABSTRACT Using unique, daily, account‐level data, we investigate deposit outflows and inflows in a distressed bank. We observe an outflow of uninsured depositors following bad regulatory news. Both regular and temporary deposit insurance reduce outflows. We provide important new evidence that, simultaneous with deposit outflows, deposit inflows are first order. Uninsured deposit outflows were largely offset with new insured deposit inflows as the bank approached failure, with the bank increasing term deposit rates. This phenomenon holds in a large sample of banks that faced regulatory action, suggesting that insured deposit inflows are an important mechanism that weakens depositor discipline.",
+  "year": 2026,
+  "venue": "The Journal of Finance",
+  "authors": [
+   "CHRISTOPHER MARTIN",
+   "MANJU PURI",
+   "ALEXANDER UFIER"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125223762",
+  "doi": "10.1111/jofi.70007",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.70007",
+  "published_iso": "2026-01-21",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "When Generator Replay Degrades: Projected Rehearsal Orchestration for Heterogeneous Federated Class-Incremental Learning",
+  "title_norm": "when generator replay degrades projected rehearsal orchestration for heterogeneo",
+  "abstract": "Federated class-incremental learning (FCIL) becomes substantially harder when clients observe different label subsets, progress through tasks at different stages, and provide uneven supervision for the same semantic concepts. Existing FCIL methods often preserve old knowledge through input-space synthesis, but they can be fragile under heterogeneous task streams and difficult to transfer across modalities. To alleviate such issues, we propose PRO, a framework that replaces synthetic input replay with projected rehearsal orchestration. To remove external pretraining, we evaluate all methods under the same warmup. After this, PRO maintains compact class-level projected memories on the server and allows clients perform balanced pseudo multi-task training over current examples and old projected memories. To handle stronger representation drift, we further introduce PRO-MAX, which augments PRO with neighborhood-weighted memory alignment while preserving the same server-light principle that the server only aggregates model updates and memory statistics. Across image, text, and graph benchmarks, PRO and PRO-MAX improve retention and final utility under heterogeneous streams while remaining competitive in homogeneous FCIL. Even when baselines are given expanded replay budgets, they degrade under supervision imbalance and stage misalignment, indicating that replay quantity alone does not resolve replay-quality failures. Additional weak-task diagnostics further show that larger replay mismatch is associated with larger downstream degradation, while our method keeps projected memories better aligned with the evolving representation.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Thuy Nguyen",
+   "Khoa D. Doan",
+   "Binh T. Nguyen",
+   "Danh Le-Phuoc",
+   "Kok-Seng Wong"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7165064963",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.15695",
+  "published_iso": "2026-06-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Transformer-based human-motion forecasting coupled with safe reinforcement learning for telepresence robot co-navigation",
+  "title_norm": "transformer based human motion forecasting coupled with safe reinforcement learn",
+  "abstract": "Introduction: Telepresence robots (TPRs) must co-navigate with humans in constrained hospital environments, where safety depends on anticipating rather than merely reacting to human motion. Existing approaches rarely integrate short-horizon human-motion forecasting with safety-constrained control, which reduces robustness in dense corridors and ward bays. This study addresses this gap by evaluating an anticipatory, safety-aware co-navigation framework for TPRs. Methods: We developed a modular framework that couples a lightweight transformer-based forecaster that predicts multi-agent trajectories under occlusion with a safe reinforcement learning (RL) controller. The forecaster produces short-term distributions over pedestrian states that are embedded into the RL policy state and cost as risk-aware occupancy features. Safety is enforced via constrained policy optimization augmented by a run-time control barrier function (CBF) shield that filters unsafe actions. We benchmarked the approach against a social-force or dynamic window approach (DWA), an attention-based crowd-RL policy, and model predictive control (MPC) with CBF. Experiments were conducted across two hospital-like benchmarks (a crowded corridor and a four-bed ward), totaling 2,400 episodes. Outcomes included task success, collision count, minimum human-robot clearance, near-miss events ( ≤ 0.3 m), time-to-goal, CBF violations, and ablations removing forecasting and the CBF shield. Results: Relative to the best-performing baseline, the proposed method improved task success by 21.6% and reduced collisions by 47.3%. Median minimum human-robot clearance increased by 0.19 m, and near-miss events decreased by 38.5%. Time-to-goal was maintained within +2.7% of MPC+CBF while incurring zero CBF violations under the shield. Ablation studies showed that removing forecasting degraded success by 14.2%, whereas removing the CBF shield increased constraint breaches from 0% to 6.1% of steps. Discussion: Anticipatory perception combined with Safe-RL yields substantially safer and more reliable telepresence co-navigation in human-dense clinical layouts without sacrificing efficiency. The framework is modular, enabling alternative forecasters and safety shields. Limitations include sensitivity to forecast drift during abrupt changes in crowd flow. Future work will explore on-device adaptation, shared-autonomy overlays to incorporate operator intent, and prospective evaluations in live hospital workflows.",
+  "year": 2026,
+  "venue": "Frontiers in Neurorobotics",
+  "authors": [
+   "Heba G. Mohamed",
+   "Muhammad Nasir Khan",
+   "Fawad Naseer",
+   "Muhammad Tahir",
+   "Mohsin Jamil"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127053875",
+  "doi": "10.3389/fnbot.2025.1697518",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1697518/pdf",
+  "published_iso": "2026-02-02",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Topology-Aware SSD Health Risk Prediction with SMART Signals, Location Features, and LLM-Based Failure Explanation",
+  "title_norm": "topology aware ssd health risk prediction with smart signals location features a",
+  "abstract": "Solid-state drive (SSD) failure prediction is commonly treated as a device-level classification problem based on Self-Monitoring, Analysis and Reporting Technology (SMART) counters. Production fleets, however, also exhibit model, application, and placement heterogeneity, and failures can cluster within nodes and racks. This study presents TopoHealth-ET, a topology-aware risk model that combines SMART indicators, deployment metadata, train-only topology priors, and an evidence-constrained language explanation layer. The empirical evaluation uses a deterministic schema-aligned benchmark that follows the documented Alibaba SSD table structures and contains 30,000 disks, 11 drive models, 200 racks, and a 1.89% failure rate. On the held-out test split, TopoHealth-ET achieved a ROC-AUC of 0.775, PR-AUC of 0.203, precision of 0.345, recall of 0.175, and F1 of 0.233. At a 1% maintenance review budget, the ranked worklist captured 18.42% of failures with 35.00% precision, compared with a fleet failure rate of 1.90%. The results indicate that topology context can materially improve rare-event maintenance triage, while structured evidence objects allow failure explanations to remain concise, auditable, and aligned with the classifier evidence.",
+  "year": 2026,
+  "venue": "Journal of Advanced Computing Systems",
+  "authors": [
+   "Ethan Ng"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7167481454",
+  "doi": "10.69987/jacs.2026.60604",
+  "arxiv_id": null,
+  "paper_url": "https://scipublication.com/index.php/JACS/article/download/414/382",
+  "published_iso": "2026-06-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Deep Reinforcement Learning for Surgical Robotics with State and Image Information: A Survey",
+  "title_norm": "deep reinforcement learning for surgical robotics with state and image informati",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Research Square",
+  "authors": [
+   "Edoardo Fazzari",
+   "Cesare Stefanini"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125599892",
+  "doi": "10.21203/rs.3.rs-8621244/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-8621244/latest.pdf",
+  "published_iso": "2026-01-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Collaborative Mechanisms of Fixed and Mobile Resources: A Review on Enhancing the Full-Cycle Resilience of Integrated Energy Cyber-Physical Systems Against Cyber-Attacks",
+  "title_norm": "collaborative mechanisms of fixed and mobile resources a review on enhancing the",
+  "abstract": "Integrated energy cyber-physical systems (IECPS) face escalating cyber-attack threats due to their deep cyber-physical coupling, while traditional resilience models relying solely on fixed resources exhibit rigidity and limited adaptability. This review investigates IECPS attack mechanisms through the lens of the confidentiality, integrity, and availability framework, revealing their cross-layer propagation characteristics. We explicitly distinguish between fixed and mobile resources. Fixed resources include energy sources, transmission and distribution network facilities, coupling and conversion devices, fixed energy storage systems, and communication and control infrastructure. Mobile resources are grouped into five categories: mobile electricity resources, mobile gas resources, mobile heat resources, mobile hydrogen resources, and mobile communication resources. Fixed resources provide geographically anchored capacity and structural redundancy, and they offer static operational flexibility. Mobile resources, in contrast, provide spatially reconfigurable and rapidly deployable support for sensing, temporary multi-energy supply, and emergency communications. Building on this distinction, this review proposes a full-cycle resilience enhancement framework that encompasses pre-event prevention, in-progress response, and post-event recovery, with a particular focus on collaborative mechanisms between fixed and mobile resources. Furthermore, this review examines the foundational theories and key supporting technologies for such coordination, including fixed-mobile resource scheduling, intelligent perception and data fusion, communication security, and collaborative scheduling optimization. Key technical gaps and challenges in fixed-mobile resource collaboration are identified. Ultimately, this review aims to provide theoretical insights and practical guidance for developing resilient, adaptive, and secure integrated energy systems in the face of evolving cyber-physical threats.",
+  "year": 2025,
+  "venue": "Energies",
+  "authors": [
+   "Tianlei Zang",
+   "Kewei He",
+   "Chuangzhi Li",
+   "Yu Liu",
+   "Libo Ran",
+   "Siting Li"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7116969726",
+  "doi": "10.3390/en19010038",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1073/19/1/38/pdf?version=1766309726",
+  "published_iso": "2025-12-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "TEagle 4.0.0 prospective benchmark results: validated evidence, failures, and reproducibility package",
+  "title_norm": "teagle 4 0 0 prospective benchmark results validated evidence failures and repro",
+  "abstract": "Purpose and protocol identity Validated results deposit for the DOI-bound TEagle 4.0.0 prospective benchmark. The benchmark was executed under concept DOI 10.5281/zenodo.22129307 through final protocol Amendment 4, DOI 10.5281/zenodo.22154316. This separate record preserves the distinction between immutable protocols and observed results. It contains no manuscript draft. Results overview A1 classification exposes a coverage-error tradeoff and remains a post-raw, pre-score descriptive analysis; it does not establish superiority. A2 terminal-feature, I2 integration-integrity, D1 technical-stress, P2 synthetic-specificity and R1 four-guest deployment panels passed their registered validators, with unsupported and non-completed states retained. TEtrimmer recovered four of four synthetic families but retained 24 TE-Aid failures, 24 BLAST-database failures, final-classification failure and proof-clustering failure. MCHelper recovered three of four families after neutral required-header normalization; its first fatal attempt remains visible, and the nonredundant library is primary. InterProScan and RPS-BLAST recovered 30 of 30 planted source-model segments. Shuffled controls have no independent null truth. Two RPS-BLAST positive cases reached the default 500-hit reporting cap; exact-source recovery remained evaluable, while total hit enumeration is right-censored. R1 supports deployment and export consistency across four exact Windows guest observations only. Preserved endpoint states Nine original protocol 1.0.0 endpoints remain not run. The admitted 13-model D1 biological subset is incomplete, non-primary and descriptive. Amended panels do not replace, pool with or retroactively complete those original endpoints. The archive preserves every unsupported, withheld, unresolved, failed, partial, censored and auxiliary-failure state. Registered deviations Deviation 01 — Independent curated-source A1 classification panel. Original E1 remains not run; A1 instead uses a separate 180-case descriptive panel from frozen rice, maize and Arabidopsis curated libraries whose 4,494 source sequences had no exact normalized match to the registered Dfam 3.6 or Dfam 4.0 nucleotide resources. Curated-library headers define the reference labels, so A1 measures agreement with those labels rather than independently adjudicated biological truth. Deviation 02 — Bounded biological non-TE control frame. A1 replaces the infeasible discovery history with finite UniProtKB 2026_02 frames linked to versioned RefSeq coding sequences and selects ten affirmative ordinary-gene controls per organism after functional-support, TE/repeat-exclusion and target-overlap checks. Absence of a TE label alone is not accepted as negative-control truth. Deviation 03 — Source-diverse synthetic A2 terminal-evidence panel. The failed biological S1 panel remains not run; A2 is a separate 48-case controlled panel with planted or rejected direct and inverted terminal repeats and exact truth coordinates. Its results support controlled terminal-evidence claims only and are not pooled with biological validation. Deviation 04 — PrimerServer2 validated JSON acceptance. A complete program-written JSON result is accepted only when exit 1 is caused solely by the registered post-JSON optional-TSV key error, the native TSV is empty and two independent validators agree. Every other non-zero outcome is failed, and no TSV is reconstructed. Deviation 05 — Explicit post-quota exclusion state. SELECTION_RANK_AFTER_QUOTA distinguishes an otherwise eligible row that falls after a filled deterministic quota from a biological exclusion. The state changes no eligibility rule, sequence order, quota, denominator or analysis. Deviation 06 — Primer-BLAST dated service snapshot. A completed parameter-matched public-service job is retained with its database name, job date, settings, analysed-hit count and exact output receipts because the underlying database build date was not exposed. It supports only the dated service result, not database-release reproducibility, exhaustive whole-assembly specificity or a no-off-target conclusion. Deviation 07 — Manifest-bound Dfam 4.0 source hash correction. The incorrect typed hash is replaced by the value shared by the Dfam 4.0 source manifest and byte-identical independent export, and the selector verifies both registered target-reference hashes. No source byte, label, quota, similarity rule, selection key, threshold, denominator or claim changes. Deviation 08 — Executable I2 integration-integrity battery. Original I1 remains not run; I2 adds 48 deterministic synthetic base cases and 96 matched tasks across eight operational archetypes, with defect classes bound to exact cases and payload keys before outputs. I2 is descriptive and cannot support the original integration-advantage claim. Deviation 09 — Executable D1 technical stress construction. Original D1 stress remains not run; the amended panel derives one HMMER consensus per frozen model and creates composition-matched full, shuffled and 69% fragment constructs through a specified deterministic stream. The panel is profile-exposed technical evidence rather than biological validation. Deviation 10 — Controlled P2 primer-specificity battery. Real-locus P1 design and specificity remain not run; P2 adds 96 fixed-primer synthetic backgrounds spanning exact, exact off-target, 3-prime mismatch, internal mismatch, paralogous and reverse-orientation archetypes. Exact sites have product-coordinate truth, whereas mismatch sites remain descriptive because sequence alone does not establish amplification. Deviation 11 — Executable R1 canonical workflow and semantic comparison. Original R1 remains not run; the follow-up binds 12 deterministic installed-GUI cases, four exact Windows guest cells, every required export and the only presentation fields removable during semantic comparison. It supports deployment and export consistency across those four observations only. Deviation 12 — Source-bound A1 comparator crosswalk before scoring. After raw A1 runs exposed an incomplete comparator mapping but before any score or metric, exhaustive source-derived rules for TEsorter, RepeatClassifier and PASTEClassifier were frozen and applied without overwriting raw labels. The resulting scores are explicitly post-raw, pre-score descriptive analyses rather than confirmatory results. Deviation 13 — Deterministic A2 materialization after A1 raw execution. A1 raw execution began before the protocol-required A2 materialization, but no A2 case or output existed and the published generator and locks could not read A1 outputs. A2 was generated only after the amendment became public and passed byte-rebuild, dual-validation and watched-sequence-defect gates. Deviation 14 — Genome-aware TEtrimmer consensus-curation benchmark. Original manual-chain-B I2 structure cells remain not run; a separate synthetic genome and 12-record candidate library test TEtrimmer 1.7.2 for family recovery, residual redundancy, absent-candidate retention and template-boundary error. This is technical consensus curation, not biological annotation accuracy. Deviation 15 — Genome-aware MCHelper library-curation benchmark. Original manual-chain-C I2 structure cells remain not run; MCHelper 1.7.1 receives the same synthetic panel plus its frozen BUSCO HMM bank and admitted databases, with the nonredundant library primary and the redundant library secondary. Its results remain separate from TEtrimmer because the programs implement different workflows and share external components. Deviation 16 — InterProScan Pfam fusion-domain benchmark. Original manual-chain-B I2 domain cells remain not run; 15 positive two-domain proteins use the 30 frozen Pfam model consensuses, and 15 composition-matched shuffles are descriptive controls. Recovery requires the exact registered accession at E ≤ 0.001 with at least 80% planted-segment overlap. Deviation 17 — RPS-BLAST CDD fusion-domain benchmark. Original manual-chain-C I2 domain cells remain not run; 30 deterministic representatives from frozen CDD_NCBI.v3.21 form 15 positive fusions and 15 matched shuffles, with the admission-toy identifier excluded. Exact CDD identifier and planted-segment recovery provide source-model self-recovery evidence, not independent biological validation. Deviation 18 — Domain-source length-range correction. Amendment 3 stopped before producing a domain case because the 80–500 aa source filter retained 22 rather than 30 frozen HMMER consensuses; the corrected range is 36–560 aa. All emitted sequences, 30 accessions, pairings, controls, seed, flanks, linker, thresholds and claim boundaries remain fixed, while padding, truncation, replacement and reuse remain prohibited. Claim limits The synthetic and source-model panels establish bounded technical behavior, not independent biological validity, taxonomic generalization, wet-lab efficacy, length robustness or comparative superiority. Wilson intervals describe the fixed A1 panel and are not population-inferential. No method ranking or pooled cross-panel effect is reported. Reproducibility The deposit provides consolidated row-level tables, failure and claim audits, evidence hashes and validator receipts, four figures in PNG, SVG and PDF, privacy-redacted diagnostic derivatives bound to original hashes, and a deterministic ZIP with an external manifest and SHA-256 sidecar. The package passed two independent validators, watched metric, scope and local-path failures, deterministic rebuild, rendered figure QA and privacy inspection.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "TUNA BİRGÜN",
+   "Melih Günay",
+   "Sibel Yılmaz"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204670708",
+  "doi": "10.5281/zenodo.22159976",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7204670708",
+  "published_iso": "2026-08-29",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Spectral Disentanglement: Rank-Aware Task Adaptation for Rehearsal-free Continual Learning in LLMs",
+  "title_norm": "spectral disentanglement rank aware task adaptation for rehearsal free continual",
+  "abstract": "Huanxuan Liao, Shizhu He, Yupu Hao, Yequan Wang, Wenhao Teng, Xiangwen Liao, Jun Zhao, Kang Liu. Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). 2026.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Huanxuan Liao",
+   "Shizhu He",
+   "Yupu Hao",
+   "Yequan Wang",
+   "Wenhao Teng",
+   "Xiangwen Liao"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7166818307",
+  "doi": "10.18653/v1/2026.acl-long.334",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2026.acl-long.334.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Filter before You Solve: A Deterministic-First/Learned-Second Architecture for AI-Driven Portfolio Management with Real-Money Training-Investment Calibration",
+  "title_norm": "filter before you solve a deterministic first learned second architecture for ai",
+  "abstract": "This study investigates a deterministic-first/learned-second AI/ML framework that is deployed in regulated retail brokerage accounts. A two-stage calibration system is employed that combines historical back-testing with live recalibration via continuous position snapshots. The framework includes a unique explainability layer that employs the global sensitivity analysis method, SimDec, to identify the most influential components. SimDec renders every admissible decision fully attributable to a joint state of the input space. Because the attribution is an input to the trigger rather than a commentary on it, no generative step exists in the decision path and hallucination is structurally unreachable and, therefore, absent by construction. An intraday options trading financial framework is illustrated through a live training-investment cycle on long-call positions using “real money”. The major contribution of this research is the overall architectural and methodological framework. The filter-before-you-solve approach enables contributions to be evaluated independently of specific implementations. Beyond financial applications, it is described how the complete architectural pattern can actually generalize to many AI/ML deployment contexts that require auditable deterministic gating prior to learned inference.",
+  "year": 2026,
+  "venue": "Journal of Software Engineering and Applications",
+  "authors": [
+   "George Melville",
+   "Dena Ghiassi",
+   "Scott Inthathirath",
+   "Julian Yeomans"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7165032513",
+  "doi": "10.4236/jsea.2026.198013",
+  "arxiv_id": null,
+  "paper_url": "https://www.scirp.net/pdf/jsea_9303528.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Addressing a Modality Paradox with a Two-Phase Online Rehearsal Design in an Online Science Methods Course",
+  "title_norm": "addressing a modality paradox with a two phase online rehearsal design in an onl",
+  "abstract": "Content methods courses prepare beginning educators to teach specific subjects in grades K-12 and play a vital role in teacher education. This design case examines how a STEM teacher educator and instructional designer transitioned an in-person elementary science methods course to an online modality for a post-baccalaureate program. Reflection on the first online iteration revealed a critical oversight—the elimination of rehearsal experiences central to preparing candidates for in-person teaching. This led to reframing the design problem as a ‘modality paradox,’ defined as a mismatch between instructional modality and authentic performance context. Guided by this reframe, the designers developed a Two-Phase Online Rehearsal Design, strategically sequencing asynchronous preparation with synchronous practice.",
+  "year": 2026,
+  "venue": "Indiana Magazine of History (Indiana University)",
+  "authors": [
+   "Aaron J. Sickel",
+   "Jamie L. Sickel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7154197051",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://scholarworks.iu.edu/journals/index.php/ijdl/article/download/41218/44343",
+  "published_iso": "2026-04-05",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "HCLmNet: A unified hybrid continual learning strategy multimodal network for lung cancer survival prediction",
+  "title_norm": "hclmnet a unified hybrid continual learning strategy multimodal network for lung",
+  "abstract": "Lung cancer survival prediction remains one of the most challenging tasks in modern healthcare, as accurate and adaptive prediction models are essential for improving patient outcomes. However, the continuous inflow of new patient data in hospital environments demands models that can update incrementally without losing prior knowledge a challenge known as catastrophic forgetting. This problem is compounded by the complexity of multimodal data integration, which combines heterogeneous sources such as CT and PET imaging, genomic (DNA) sequences, and clinical records. Traditional deep learning (DL) models, especially CNN-based systems, often fail to capture subtle patterns such as ground-glass opacities or multi-lesion tumors and cannot effectively adapt to new data streams. To overcome these challenges, this study proposes HCLmNet, a Hybrid Continual Learning (CL) Multimodal Network that integrates Elastic Weight Consolidation (EWC) with three complementary replay-based modules: Experience Replay (ER), Instance-Level Correlation Replay (EICR), and Class-Level Correlation Replay (ECCR). ER stabilizes learning through selective sample replay; EICR preserves fine-grained inter-instance relationships across modalities; and ECCR employs triplet-based contrastive learning to maintain class-level correlations. The architecture incorporates a Swin Transformer (SwinT) for extracting critical imaging features, XLNet for modeling DNA patterns, and a Fully Connected Network (FCN) for processing temporal clinical data. A cross-attention fusion layer integrates these modalities, while an FCN and Cox Proportional Hazards (CoxPH) model produce final 5-year survival predictions. Experimental results on multimodal lung cancer datasets show that traditional models such as CoxPH and DeepSurv achieved Concordance Index (C-index) scores of 0.65 and 0.70, respectively. The base multimodal model without CL achieves a C-index of 0.76 and a Mean Absolute Error (MAE) of 189 days. In contrast, the proposed HCLmNet, equipped with CL mechanisms, reaches a C-index of 0.84, representing a 7.7% improvement over the best baseline. Furthermore, the model reduces the MAE from 252 and 189 days to 140 days and minimizes catastrophic forgetting to 0.08. These improvements stem from the synergistic integration of the ER, EICR, and ECCR CL modules, which enable the model to retain prior knowledge while effectively adapting to new data. Overall, HCLmNet demonstrates superior stability, adaptability, and interpretability for lung cancer survival prediction in dynamic clinical environments.",
+  "year": 2026,
+  "venue": "PLoS ONE",
+  "authors": [
+   "Md Ilias Bappi",
+   "David J. Richter",
+   "Shivani Sanjay Kolekar",
+   "Kyungbaek Kim"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7140164016",
+  "doi": "10.1371/journal.pone.0316509",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0316509&type=printable",
+  "published_iso": "2026-03-24",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "AI-Driven and Quantum-Informed Design of Functional Nanomaterials: Bridging Catalysis, Drug Discovery, and Sustainable Environmental Remediation",
+  "title_norm": "ai driven and quantum informed design of functional nanomaterials bridging catal",
+  "abstract": "The convergence of machine intelligence, quantum-accurate simulation, and laboratory automation is reshaping how functional nanomaterials are conceived, validated, and deployed across chemistry, medicine, and environmental engineering. This review synthesizes an end-to-end “data-to-device” framework for the AI-driven and quantum-informed design of nanomaterials that bridges three application pillars: (i) green catalysis for clean energy and circular chemistry, (ii) drug discovery and nano-enabled therapeutics, and (iii) sustainable environmental remediation. We survey inverse-design workflows that combine generative models, uncertainty-aware predictors, Bayesian optimization, and active learning with electronic-structure engines (DFT, GW/BSE), free-energy methods (FEP/TI), and machine-learned interatomic potentials to span accuracy–throughput trade-offs via multi-fidelity strategies. On the materials side, we map tunable design spaces single-atom catalysts, 2D/defect-engineered surfaces, porous frameworks (MOFs/COFs), quantum dots, membranes, and bio-hybrids linking structure, defects, and interfacial physics to catalytic turnover, molecular recognition, transport, and durability. For catalysis, we outline pipelines that couple adsorption-energy maps and microkinetics to target CO₂ reduction, OER/ORR, and selective oxidations; for therapeutics, we integrate target modeling, generative ideation, physics-based ΔG estimation, and ADMET triage with synthesis-aware constraints; for remediation, we align pollutant fingerprints with adsorption, photocatalysis, electrocatalysis, and membrane routes while tracking leaching and secondary byproducts. Throughout, we emphasize rigorous reporting reproducible data splits, calibrated uncertainty, and minimum information for models and experiments together with life-cycle assessment, techno-economic analysis, and green-chemistry metrics (e.g., PMI, E-factor) to ensure net-positive impact. We close with a roadmap for closed-loop, se",
+  "year": 2025,
+  "venue": "Scholars Journal of Physics Mathematics and Statistics",
+  "authors": [
+   "S. Sudheer Khan",
+   "Faizan Ali",
+   "Waheed Zaman Khan",
+   "Muhammad Adnan",
+   "Raja Muhammad Jawad Naveed",
+   "Badar Rasool"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416572166",
+  "doi": "10.36347/sjpms.2025.v12i09.002",
+  "arxiv_id": null,
+  "paper_url": "https://saspublishers.com/article/23318/download/",
+  "published_iso": "2025-11-22",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Public Speaking Anxiety in Academic Contexts: A Biopsychosocial Analysis and Emerging Interventions",
+  "title_norm": "public speaking anxiety in academic contexts a biopsychosocial analysis and emer",
+  "abstract": "Public Speaking Anxiety (PSA) is a common phenomenon that significantly impacts students’ academic performance and emotional well-being, especially in oral communication contexts. Despite widespread recognition, existing research predominantly relies on self-reported data and lacks integration with behavioral and physiological indicators, limiting the depth of understanding regarding PSA’s multidimensional nature. This paper evaluates PSA through a biopsychosocial lens, highlighting the disconnect between subjective and physiological markers and the role of distorted self-perception in socially anxious individuals. Gender disparities are critically examined, revealing that female students consistently report higher anxiety levels and fear of negative evaluation than their male counterparts. The function of fear of negative evaluation as an important mediator on academic achievement is examined. Moreover, while traditional rehearsal-based strategies remain foundational, the emergence of virtual reality (VR) exposure therapy offers promising short-term benefits—though questions remain about its long-term impact and accessibility across diverse educational contexts. Ultimately, the study advocates for inclusive, scalable, and culturally sensitive pedagogical interventions. It highlights key research gaps and provides suggestions for developing a more full-spectrum, data-driven, and equitable approach to PSA in global academia. The paper highlights the importance of culturally tailored, wide-reaching and multifaceted measures to successfully tackle PSA in various educational contexts.",
+  "year": 2026,
+  "venue": "IARS International Research Journal",
+  "authors": [
+   "Lubna Farhan Ali",
+   "S. K. Asim Ali"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7128372052",
+  "doi": "10.51611/iars.irj.v16i1.2026.280",
+  "arxiv_id": null,
+  "paper_url": "https://researth.iars.info/index.php/curie/article/download/280/211",
+  "published_iso": "2026-02-08",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "A Digital-Twin-Enabled AI-Driven Adaptive Planning Platform for Sustainable and Reliable Manufacturing",
+  "title_norm": "a digital twin enabled ai driven adaptive planning platform for sustainable and ",
+  "abstract": "The manufacturing systems face growing demands due to the instability of the market, the demanding sustainability policies, and the high rate of old equipment, but traditional planning structures are mostly fixed and deterministic, leading to the inefficiency of joint optimization of operational stability and environmental sustainability in unpredictable situations. This research proposed and empirically tested an artificial-intelligence-based adaptive planning platform, which combines a physics-based Digital Twin (DT) and a Pareto-conditioned Multi-Objective Proximal Policy Optimization (MO-PPO) algorithm to be able to co-optimize reliability and sustainability indicators in real-time. The platform reinvents manufacturing planning as a Constrained Multi-Objective Markov Decision Process (CMDP), optimizing an Overall Equipment Effectiveness (OEE) and energy carbon intensity as well as material waste, and strongly adhering to operational restrictions. The study utilizes a four-layer cyber–physical architecture, which includes an edge-based data acquisition layer, a high-fidelity stochastic simulation engine that is calibrated via Bayesian inference, a graph attention network-based state-encoding layer, and a closed-loop execution loop that runs with 60 s long planning cycles. In this study, a statistically significant enhancement was shown in 10,000 stochastic simulation experiments and a 12-week industrial pilot deployment: 96.8% schedule performance, 84.7% OEE, 16.5% cut in specific energy usage (2.38 kWh/kg), 17.1% reduction in material-waste rate (6.8%), and 21.4% enhancement in carbon effectiveness, outperforming all baseline strategies (p = 0.001). The analysis showed that there was a surprising synergistic correlation between waste minimization and OEE enhancement (r = −0.73), and 34.1% of overall OEE improvement could be explained by sustainability strategies. This study provides a robust framework for adaptive, resilient, and eco-friendly manufacturing processes in line with Industry 5.0 ideologies.",
+  "year": 2026,
+  "venue": "Machines",
+  "authors": [
+   "Mingyuan Li",
+   "Chun–Ming Yang",
+   "Wei Lo",
+   "Yi-Wei Kao"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7128431978",
+  "doi": "10.3390/machines14020197",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1702/14/2/197/pdf?version=1770637476",
+  "published_iso": "2026-02-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Military Life Factors Associated with Educational Attainment Among Military Spouses",
+  "title_norm": "military life factors associated with educational attainment among military spou",
+  "abstract": "This study assessed military life factors associated with initiation and completion of postsecondary degrees among military spouses. We used data on military spouses from the Millennium Cohort Family Study (2011–2013) matched to National Student Clearinghouse data on postsecondary degree enrollment and completion. Using Cox proportional hazard models, we found that sex, age, military life stress, family responsibilities, and financial stress were significant predictors of degree completion. Using accelerated-failure time models, we further found that the spouse’s age, number of deployments, and military experience were significant predictors of time to graduation. The findings shed light on the unique challenges of degree attainment faced by one category of nontraditional students—military spouses.",
+  "year": 2026,
+  "venue": "Armed Forces & Society",
+  "authors": [
+   "Kelly A. Woodall",
+   "W. Jesse Wood",
+   "Sharmini Radakrishnan",
+   "Christopher C. Weiss",
+   "Andrea Chung",
+   "Valerie A. Stander"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7151503025",
+  "doi": "10.1177/0095327x261423181",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/0095327X261423181?download=true",
+  "published_iso": "2026-04-07",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Situated learning and the problem of scientific inference",
+  "title_norm": "situated learning and the problem of scientific inference",
+  "abstract": "Challenging the dominant view of learning as abstract content internalization, Situated Learning Theory (SLT) reframed learning as a socially mediated, context-bound process and gained influence by aligning with late-twentieth-century commitments to authenticity, participation, and identity. This paper examines the inferential structure of Situated Learning Theory as a theoretical framework, arguing that despite its descriptive and sociocultural appeal, it cannot sustain empirical scrutiny, with references to curricular, policy, professional development, and workplace contexts serving only to illustrate the downstream consequences of adopting a theory without explicit inferential constraints. Key terms such as authentic context and community of practice remain analytically vague and difficult to operationalize. The analysis applies formal tools from Signal Detection Theory, Bayesian model comparison, and information theory to identify three criteria that any viable learning theory must satisfy: (1) a rule for distinguishing learning from non-learning, (2) a mechanism for penalizing predictive error through likelihood updating, and (3) a basis for comparing competing explanations by parsimony and explanatory yield. These standards reveal that SLT offers no testable boundary conditions, no criterion for identifying failure, and no mechanism for theoretical revision. Like the Ptolemaic system that expanded epicycles to preserve its assumptions, SLT accommodates all outcomes but predicts none. This critique does not dispute the interpretive or descriptive contributions of sociocultural research, but evaluates SLT’s scientific standing in contexts where theories are expected to support discrimination, prediction, and revision. As a result, the paper positions its critique not as a terminal verdict, but as an invitation to recast SLT into a form that can be tested, refined, and applied in instructional contexts—preserving its sociocultural insights while restoring empirical accountability. This approach redefines theory advancement in education as the capacity to generate, test, and refine explanations of learning across contexts.",
+  "year": 2026,
+  "venue": "Frontiers in Education",
+  "authors": [
+   "Don A. Affognon"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7125472305",
+  "doi": "10.3389/feduc.2026.1725228",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1725228/pdf",
+  "published_iso": "2026-01-23",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Mast-bound and Too Curious: Overcoming Drift in Wind-Tower Radar for Blade Monitoring Using Pre-training, Augmentation and Weight Consolidation Due to Correlated Conditions",
+  "title_norm": "mast bound and too curious overcoming drift in wind tower radar for blade monito",
+  "abstract": "Environmental and operational conditions (EOC) exert an adverse influence on monitoring systems that utilize permanently installed sensors. This proves particularly evident in the era of machine learning (ML). Since their effects can cause stronger signal changes over time than the phenomena to be detected, EOC must be adequately addressed. Emerging computer-vision (CV) use cases, such as intelligent radar units bound to the mast of wind power plants, share similar challenges with established commercial applications like static video surveillance. Those scenarios suffer from baseline observations for training that may turn out unrepresentative of deployment where such stationary camera-type devices experience temporal data shift due to their evolving non-stationary surroundings. Here, ML-based decisions become prone to false positives, resulting in high downstream investigation costs as well as low user acceptance of these smart systems. Accordingly, a rich literature exists on adapting to various types of drift. However, scenarios remain commonly neglected where (a) only noisy and potentially misleading labels are available as feedback for re-training during operation, (b) no complementary sensors are installed, and (c) changes occur not necessarily in the more obvious marginal distribution of variables, but in their joint probabilities that subtly change over time. This paper therefore focusses on solution strategies involving (i) powerful deep pre-trained models promising robustness (ii) preventive augmentation of training data, (iii) continual learning that constrains model weights over time to mitigate improper shortcut learning. Triggered by recent observations in tower-radar CV research, data drift is studied across several datasets which thereby highlights the problem’s generality. A computational framework is introduced to systematically investigate the complex setup empirically. Probing different ML models, a phase-transition phenomenon in an overfitting tree classifier is incidentally discovered. The paper presents both practical recommendations for CV-based tower-radar monitoring as well as findings of interest for the broader community of researchers in ML.",
+  "year": 2026,
+  "venue": "e-Journal of Nondestructive Testing",
+  "authors": [
+   "Christian Kexel",
+   "Helena Mueller",
+   "SERCAN ALIPEK",
+   "Jochen Moll"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7118212631",
+  "doi": "10.58286/32455",
+  "arxiv_id": null,
+  "paper_url": "https://www.ndt.net/article/latamshm2026/papers/LATAMSHM2026_97ec093955b611f087b6000c29ddfc0c.pdf",
+  "published_iso": "2026-01-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ },
+ {
+  "title": "Adoption and dis-adoption of push-pull technology in East Africa: Evidence from survival analysis and machine learning",
+  "title_norm": "adoption and dis adoption of push pull technology in east africa evidence from s",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Crop Protection",
+  "authors": [
+   "Denis Waiswa",
+   "Beatrice Muriithi",
+   "Alice W. Murage",
+   "Dave Mwangi Ireri",
+   "Fredah Maina",
+   "Fahri Yavuz"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416757874",
+  "doi": "10.1016/j.cropro.2025.107500",
+  "arxiv_id": null,
+  "paper_url": "https://avesis.atauni.edu.tr/publication/details/5e1b5bb7-9dbf-49ff-8c61-5979cbf385df/oai/document.pdf",
+  "published_iso": "2025-11-28",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "censoring-aware failure retention"
+  ]
+ },
+ {
+  "title": "Self-driving bioprinting laboratories",
+  "title_norm": "self driving bioprinting laboratories",
+  "abstract": "The severe shortage of donor organs and limitations of current disease models highlight the urgent need for transformative strategies in tissue engineering (TE) and regenerative medicine (RM). Bioprinting has emerged as a powerful approach for creating functional tissues and organs, yet current workflows remain labor-intensive, variable, and challenging to scale. The convergence of artificial intelligence (AI), advanced bioprinting technologies, robotics, biosensing, and cutting-edge biological methods is catalyzing the development of self-driving bioprinting laboratories-a fully integrated, autonomous, closed-loop system capable of designing, fabricating, maturing, and assessing living tissue constructs, as well as supporting seamless transplantation, with minimal human intervention. By integrating autonomous cellular farming, on-demand bioink formulation, intelligent optical and digital reconstruction platforms, AI-driven bioprinting, intelligent bioreactors, and robotic transplantation within a sterile, interconnected ecosystem, such platforms can continuously learn, adapt, and optimize workflows, enabling standardized, scalable tissue manufacturing and facilitating a seamless transition from bench to bedside. This perspective outlines the foundational technologies, opportunities, and challenges for realizing self-driving bioprinting, envisioning a future where intelligent, automated platforms transform TE and RM into a scalable, predictive, and clinically integrated discipline at the forefront of precision medicine.",
+  "year": 2026,
+  "venue": "Biofabrication",
+  "authors": [
+   "Suihong Liu",
+   "Navneet Kaur",
+   "Dae-Hyeon Song",
+   "Joseph Christakiran Moses",
+   "İbrahim T. Özbolat"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W7120193220",
+  "doi": "10.1088/1758-5090/ae3645",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7120193220",
+  "published_iso": "2026-01-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "leaving-support failure rehearsal"
+  ]
+ },
+ {
+  "title": "Energy-Efficient and Maintenance-Aware Control of a Residential Split-Type Air Conditioner Using an Enhanced Deep Q-Network",
+  "title_norm": "energy efficient and maintenance aware control of a residential split type air c",
+  "abstract": "Residential air conditioning systems are a major contributor to household electricity consumption in tropical regions, where environmental factors such as climate variability and particulate pollution (PM10) can further increase cooling demand and accelerate equipment degradation. This study proposes an Enhanced Deep Q-Network (Enhanced DQN) for energy-efficient and maintenance-aware control of residential split-type air conditioners under dynamic environmental conditions. The proposed method integrates several stability-oriented reinforcement learning mechanisms, including Double Q-learning, a dueling architecture, prioritized experience replay, multi-step returns, Bayesian-style regularization via Monte Carlo dropout, and entropy-aware exploration. The framework is evaluated through a two-stage process consisting of a diagnostic benchmark on LunarLander-v3 to assess learning stability, followed by a realistic 365-day simulation driven by Thai weather and PM10 data. Compared with a fixed 25 °C baseline, the proposed controller reduced annual electricity consumption from 5116.22 kWh to as low as 4440.03 kWh, corresponding to a saving of 13.22%. The learned policy also exhibited environmentally adaptive behavior under high PM10 conditions, indicating maintenance-aware characteristics. These findings demonstrate that reinforcement learning can provide robust, adaptive, and sustainable control strategies for residential cooling systems in tropical environments.",
+  "year": 2026,
+  "venue": "Sustainability",
+  "authors": [
+   "Natdanai Kiewwath",
+   "Pattaraporn Khuwuthyakorn",
+   "Orawit Thinnukool"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7151437156",
+  "doi": "10.3390/su18073578",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/18/7/3578/pdf?version=1775468982",
+  "published_iso": "2026-04-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "fixed-outcome co-training replay"
+  ]
+ }
+]

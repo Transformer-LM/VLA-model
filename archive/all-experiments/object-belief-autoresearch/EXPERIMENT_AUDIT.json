@@ -1,0 +1,41 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "reason_code": "remediated_provenance_with_scope_and_replay_limits",
+  "summary": "The audit-time tracker/provenance hard failures were remediated; the v5 M1a KILL is supported, while per-example replay and scientific scope remain limited.",
+  "audited_input_hashes": {
+    "implementation/ifb_pilot.py": "sha256:3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+    "results/20260829_ifb_v5/ifb_main_v5_12000.npz": "sha256:5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+    "results/20260829_ifb_v5/M1a_headroom_summary.json": "sha256:8c8932786cd84808567e94b03fdb76a4c8ad08c2877745bfb2cc1b9e6a21965f",
+    "results/20260829_ifb_v5/FINAL_STATUS.txt": "sha256:a772d9afb51b2328ab38ab9be4ad640143b731399b8369b6b8188044efc24c26"
+  },
+  "trace_path": ".aris/traces/experiment-audit/2026-08-30_run02/",
+  "historical_fail_trace_path": ".aris/traces/experiment-audit/2026-08-30_run01/",
+  "agent_id": "/root/audit_delta_gate",
+  "verdict_id": "/root/audit_delta_gate",
+  "executor_model": "codex-gpt-5.6-sol",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-08-30T00:34:34+08:00",
+  "date": "2026-08-30",
+  "auditor": "gpt-5.6-sol-ultra",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "checks": {
+    "gt_provenance": {"status": "pass", "details": "MuJoCo persistent identity/state; no model-derived ground truth."},
+    "score_normalization": {"status": "pass", "details": "Train-only normalizers and validation-only calibration; no self-normalization."},
+    "result_existence": {"status": "warn", "details": "Tracker and key provenance were remediated; core files/numbers match, but per-example predictions are absent and the manifest omits several existing logs."},
+    "dead_code": {"status": "warn", "details": "Core metrics are live; summarizer whitelist and human-readable criterion are incomplete."},
+    "scope": {"status": "warn", "details": "Single simulation family; pose-only reaches 96.39% on hard_id."},
+    "eval_type": "simulation_only"
+  },
+  "claims": [
+    {"id": "C1-privileged-headroom", "impact": "unsupported"},
+    {"id": "C1-m1a-kill", "impact": "supported"},
+    {"id": "C2-system-id-vs-history", "impact": "untested"}
+  ]
+}

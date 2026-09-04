@@ -1,0 +1,71 @@
+# @package _global_
+defaults:
+  - override /data: libero_p027c_personal_v21_split
+  - override /model: fastwam_p027c_libero_ac7
+  - _self_
+
+batch_size: 1
+# The start-of-run swap evaluation decodes PyAV video in the main process
+# before the training iterator is created.  Forking workers afterwards can
+# inherit live decoder/CUDA threads and stall one rank at the first step.
+num_workers: 0
+
+model:
+  mot_checkpoint_mixed_attn: false
+  compile_training_denoise: false
+
+lr_scheduler_type: constant
+learning_rate: 1.0e-4
+num_epochs: 1
+max_steps: 50
+log_every: 5
+save_every: 0
+save_final: false
+save_trainable_final: true
+eval_every: 0
+eval_num_inference_steps: 2
+
+# Cheap, held-out causal gate: compare future-video denoising loss with the
+# factual action against an action swapped from another rank, using identical
+# video, language, proprioception, timestep, and diffusion noise.
+action_swap_eval_num_batches: 4
+action_swap_eval_at_start: true
+action_swap_eval_at_end: true
+
+require_finite_train_step: true
+require_optimizer_step: true
+require_positive_grad_norm: true
+expected_world_size: 4
+expected_distributed_type: DEEPSPEED
+expected_zero_stage: 1
+
+trainable_parameter_prefixes:
+  - video_expert.action_embedding.
+  - action_expert.action_encoder.
+  - action_expert.head.
+  - proprio_encoder.
+expected_trainable_numel: 76807
+expected_trainable_parameter_names:
+  - video_expert.action_embedding.weight
+  - video_expert.action_embedding.bias
+  - action_expert.action_encoder.weight
+  - action_expert.action_encoder.bias
+  - action_expert.head.weight
+  - action_expert.head.bias
+  - proprio_encoder.weight
+  - proprio_encoder.bias
+
+gradient_accumulation_steps: 1
+mixed_precision: bf16
+max_grad_norm: 1.0
+weight_decay: 1.0e-2
+seed: 2701
+resume: null
+
+wandb:
+  enabled: false
+  workspace: null
+  project: fast-wam
+  name: p027c-libero-ac7-learn50
+  group: null
+  mode: offline

@@ -1,0 +1,26 @@
+[
+  {
+    "finding": "Step 7 accumulates evidence for one feasible/infeasible hypothesis across probe-induced object motion, but Step 8 releases pi0.5 in the post-probe state and no invariant says feasibility is unchanged. Earlier evidence can therefore certify the wrong current state.",
+    "severity": "blocking",
+    "why_not_repaired": "An honest fix must either restrict and certify every probe as feasibility-state preserving, add a restoration operation, or replace the fixed-hypothesis score with a dynamic latent-state filter. Each changes what the mechanism is and directly confronts the declared object-motion obstacle; an abstain/clamp patch would only avoid it.",
+    "verbatim_step_quote": "7. Recompute the PointMaps and safe set after every object motion, append the coordinate-free response to O_K, update I_K, and repeat only while neither threshold is crossed and the B_probe budget remains. 8. If IFG returns feasible, release the unchanged current observation and relation to frozen pi0.5 for normal action-chunk execution.",
+    "executed_evidence": "score=log((0.1+1e-4)/(0.9+1e-4))=-2.196336 <= tau_F=-2. Script state-flip excerpt: H_before='F'; y=0; H_after='I'; decision(score)='release'. Output: STATE_FLIP {'H_before': 'F', 'y': 0, 'H_after': 'I', 'score': -2.196336, 'decision': 'release'}. The procedure admits object motion but supplies no H_before=H_after invariant.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "The training/calibration label does not identify the declared selective-risk estimand: S1 labels geometric/library feasibility from exhaustive probe-library rollouts or manufactured clearance, while the estimand is frozen-pi0.5 relation failure or collision/force violation conditional on release.",
+    "severity": "blocking",
+    "why_not_repaired": "Repair requires redefining and recollecting labels as executor-specific counterfactual safe-release outcomes (or weakening the entire claim to geometric infeasibility), then recalibrating the full stopping policy. That is a target/ontology redesign, not narrative alignment.",
+    "verbatim_step_quote": "1. Build the modest ProbePair-Oracle resource in RoboCasa/MuJoCo by rendering target-reference variants with matched initial visible PointMaps and different occluded clearances, label each episode with full-state exhaustive rollout over the preregistered guarded primitive library, and manufacture a small Franka Panda fixture set whose hidden clearances determine the real labels independently of IFG. Thresholds tau_I and tau_F are chosen on a held-out oracle-labeled calibration set to minimize deferrals subject to alpha_risk = 0.10, a user-set maximum empirical selective-risk bound.",
+    "executed_evidence": "Script used four oracle-F episodes with executor unsafe outcomes [1,1,0,0]. Output: CALIBRATION {'oracle_error': 0.0, 'executor_unsafe': 0.5}. Thus a threshold can satisfy zero oracle-infeasibility among releases while violating the declared downstream selective-risk estimand at 0.5.",
+    "reading_dependence": "reading_robust: under the geometric reading labels miss executor failures; under the executor-specific reading S1 has no producer for the required label"
+  },
+  {
+    "finding": "The independently constructed fair naive uses the same guarded probe and transcript and is decision-equivalent to IFG in the candidate's allowed singleton-U, B_probe=1 regime, so the candidate's branch-(i) passive baseline is a self-served information-disadvantaged baseline.",
+    "severity": "blocking",
+    "why_not_repaired": "This is T5 equivalent_to_naive and coincides with the declared obstacle. Establishing depth requires redesigning the adaptive/sequential component so it beats a fixed-probe same-transcript rule under the same constraints, or reframing the contribution as the simpler probe-and-threshold method; wording cannot supply that distinction.",
+    "verbatim_step_quote": "6. Select the probe with maximum predicted response-model disagreement, execute it under c_safe and F_max, and record y_k from the before/after observations and robot sensors. BLOCK 2 - NAIVE-BASELINE AUDIT: the runnable naive version trains a parameter-matched MLP or LoRA adapter from the initial dense target/reference PointMaps and relation directly to a feasibility logit.",
+    "executed_evidence": "With singleton admissible axial probe and B_probe=1, IFG scores y=0 as -2.196336 (release) and y=1 as +2.196336 (block). The same-information fixed-probe rule releases iff y=0, hence agrees for every possible binary y. Output: STABLE F -2.196336 release naive release; STABLE I 2.196336 block naive block; divergence 0. Argmax over one action is algebraically vacuous.",
+    "reading_dependence": "reading_robust"
+  }
+]

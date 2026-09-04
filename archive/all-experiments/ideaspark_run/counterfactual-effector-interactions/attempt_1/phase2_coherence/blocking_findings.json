@@ -1,0 +1,10 @@
+[
+  {
+    "finding": "OBSTACLE HOLE: Step 6 discards the interaction structure as an interaction. It reduces (m,I) to the center gradient d and optimizes a linearized QP, which is exactly reproduced by an interaction-free central-difference baseline under the same budget. The mechanism therefore does not confront its declared false-additivity obstacle as written.",
+    "severity": "blocking",
+    "why_not_repaired": "An honest repair must make I affect optimization beyond the center gradient, for example by optimizing the fitted pairwise response in Delta or by constructing a genuinely interaction-dependent discrete update. That changes what the solver consumes and what FactorLedger is, so it is a redesign forbidden by the coherence gate's patch-only contract.",
+    "verbatim_step_quote": "6. At α = 1, compute d_g = m_g + Σ_{h≠g}I_gh and call OSQP on max_Δ d^TΔ - (λ_c/2)||Δ||_2^2 subject to the native action box and -r ≤ Δ_g ≤ r, where λ_c and r are selected on held-out simulator states. Inputs: L_t and action bounds; outputs: Δ* and α* = 1+Δ*, with solver status and residuals written back to L_t.",
+    "executed_evidence": "Executed stdlib model: q(alpha)=0.5+0.08(alpha1-1)-0.04(alpha2-1)+0.6(alpha1-1)(alpha2-1), epsilon=0.2, B=4, lambda_c=1, r=0.2. Fitting the candidate's raw degree-two model on [(0.8,0.8),(0.8,1.2),(1.2,0.8),(1.2,1.2)] with scores [0.516,0.452,0.500,0.532] gives (beta0,m1,m2,I12)=(1.06,-0.52,-0.64,0.60), hence d=(m1+I12,m2+I12)=(0.08,-0.04). A same-budget interaction-free baseline evaluates q(0.8,1)=0.484, q(1.2,1)=0.516, q(1,0.8)=0.508, q(1,1.2)=0.492, so its central differences are ((0.516-0.484)/0.4,(0.492-0.508)/0.4)=(0.08,-0.04). Both QPs return Delta=(0.08,-0.04), action=(0.54,0.48), score 0.50608 versus baseline 0.50000, and accept; maximum update difference is 1.11e-16 despite I12=0.60. Algebraically, for every declared degree-two response, the central difference at alpha=1 equals m_g+sum_h I_gh, so this equality is structural rather than a synthetic performance claim.",
+    "reading_dependence": "reading_robust"
+  }
+]

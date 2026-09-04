@@ -1,0 +1,156 @@
+{
+  "user_ref:title:Feedback World Model Enables Precise Guidance of Diffusion Policy": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:Overcoming Statistical Bias in Action-Controllable World Models": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:τ0-WM: A Unified Video-Action World Model for Robotic Manipulation": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:Adapting World Models with Latent-State Dynamics Residuals": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:CG-World: A Large-Scale World-State Dataset and Protocol for World Models": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:Joint MDPs and Reinforcement Learning in Coupled-Dynamics Environments": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:Woulda, Coulda, Shoulda: Counterfactually-Guided Policy Search": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:CheckVLA: Execution-Time Verification with Action-Conditioned World Model for Long-Horizon Mobile Manipulation": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:Twin Rollouts: Noise-Coupled Counterfactual Branching in Interactive Video World Models": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:title:WorldSample: Closed-loop Real-robot RL with World Modelling": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2504.02252": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2605.15705": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2608.08982": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2607.26452": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:1811.06272": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2603.06946": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2607.26789": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2607.02431": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2606.01027": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "user_ref:arxiv_id:2608.04653": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "arxiv:2608.13489": {
+    "tier": "U",
+    "intro": "We present \\textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\\mathrm{SE}(3)$ transformations into attention via \\textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \\textbf{depth branch} for scene-level geometry and use \\textbf{SAM3 masks} with a frozen \\textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \\model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "dblp:journals/corr/abs-2605-06222": {
+    "tier": "U",
+    "intro": "World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  }
+}

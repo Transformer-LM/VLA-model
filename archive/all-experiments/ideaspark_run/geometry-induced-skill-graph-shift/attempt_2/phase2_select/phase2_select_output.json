@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf localizes the first strategy-level divergence induced by geometry, so an aggregate success or trajectory score cannot distinguish correct early selection of a new homotopy or relation transition from late low-level recovery after committing to the old strategy 鈥?stakes: debugging and adaptation can target the wrong component, wasting simulation and GPU budget while leaving the actual planning failure untouched.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": "heterogeneous_decomposition",
+      "companion_rationale": "controlled_diagnostic_design yields the named intermediate object O: a four-cell scene-by-action replay tensor from own-scene and cross-scene executions on an exactly paired geometry intervention; heterogeneous_decomposition operates on O at each native policy action-chunk index to locate the first chunk whose reassignment changes terminal task success.",
+      "selection_rationale": "This gap is the most load-bearing empirical-reveal target that survives the retry constraints: it asks where behavior changes, not for an unproducible proof that every alternative strategy is infeasible. controlled_diagnostic_design uses each scene and each actually produced action trace as mutual controls, while the chained heterogeneous_decomposition makes the revealed interaction actionable by localizing it without event grammars, natural-language phases, TAMP, or a learned oracle."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "empirical_reveal 鈥?the anchor's controlled_diagnostic_design produces the runnable scene-by-action crossover diagnostic, and companion heterogeneous_decomposition produces the first-sensitive-chunk localization.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "controlled_diagnostic_design": {
+      "share": 0.12,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "heterogeneous_decomposition": {
+      "share": 0.41,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes causal identifiability for geometry-sensitive strategy generalization: under matched instruction, start distribution, and terminal goal, it remains unresolved whether policy behavior changes specifically because the original relation-event sequence or path class becomes infeasible 鈥?stakes: practitioners cannot tell whether a model will select a valid grasp, reorientation, approach, or insertion strategy on a geometry-altered deployment, and the field may attribute endpoint robustness to functional-geometric reasoning that was never isolated.",
+      "reason": "out of scope 鈥?the retry deliberately measures geometry-action compatibility among actually produced traces and makes no global strategy-infeasibility or path-class-completeness claim"
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption 鈥?stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+      "reason": "fails removal test 鈥?the first-divergence diagnostic is independently runnable without turning the paper into a broad audit of every endpoint-generalization lineage"
+    },
+    {
+      "gap": "No retrieved frontier leaf determines whether world-model prediction quality remains informative when geometry preserves the desired terminal frame but changes the intervention-dependent sequence of contacts and relations needed to reach it 鈥?stakes: a WAM can score well on terminal appearance while recommending an infeasible interaction sequence, blocking principled decisions about whether prediction or policy adaptation is needed.",
+      "reason": "fails removal test 鈥?a WAM prediction-quality estimand needs separate prediction and calibration machinery, while the anchor evaluates action behavior directly"
+    }
+  ]
+}

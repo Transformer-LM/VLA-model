@@ -1,0 +1,759 @@
+[
+ {
+  "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+  "title_norm": "vision language action models for robotics a review towards real world applicati",
+  "abstract": "Amid growing efforts to leverage advances in large language models (LLMs) and visionlanguage models (VLMs) for robotics, Vision-Language-Action (VLA) models have recently gained significant attention. By unifying vision, language, and action data at scale, which have traditionally been studied separately, VLA models aim to learn policies that generalise across diverse tasks, objects, embodiments, and environments. This generalisation capability is expected to enable robots to solve novel downstream tasks with minimal or no additional task-specific data, facilitating more flexible and scalable real-world deployment. Unlike previous surveys that focus narrowly on action representations or high-level model architectures, this work offers a comprehensive, full-stack review, integrating both software and hardware components of VLA systems. In particular, this paper provides a systematic review of VLAs, covering their strategy and architectural transition, architectures and building blocks, modality-specific processing techniques, and learning paradigms. In addition, to support the deployment of VLAs in real-world robotic applications, we also review commonly used robot platforms, data collection strategies, publicly available datasets, data augmentation methods, and evaluation benchmarks. Throughout this comprehensive survey, this paper aims to offer practical guidance for the robotics community in applying VLAs to real-world robotic systems. All references categorized by training approach, evaluation method, modality, and dataset are available in the table on our project website: https://vla-survey.github.io.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Kento Kawaharazuka",
+   "Jihoon Oh",
+   "Jun Yamada",
+   "Ingmar Posner",
+   "Yuke Zhu"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4414198610",
+  "doi": "10.1109/access.2025.3609980",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414198610",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "How AI-based computer vision algorithms are impacting the sports industry: a survey",
+  "title_norm": "how ai based computer vision algorithms are impacting the sports industry a surv",
+  "abstract": "The sports industry, a multibillion-dollar global enterprise, engages audiences and inspires athletes with its dynamic, fast-paced, and action-packed nature. However, this very dynamism poses challenges for analysis and performance optimization. In recent years, computer vision has emerged as a transformative technology with the potential to reshape the landscape of sports. This field, which empowers computers to interpret and process visual data from the real world, offers numerous opportunities for innovation across the industry. Indeed, by leveraging computer vision, researchers and developers have created tools and systems that enhance the analysis of the complex dynamics in sports, with possible applications including tracking player movements with precision, analyzing game footage to identify patterns and strategies, and providing real-time insights that enhance decision-making for coaches and athletes. Beyond performance improvement, computer vision technologies also elevate the fan experience by offering immersive and interactive features, such as augmented replays and detailed statistical visualizations. As the adoption of computer vision continues to grow, its impact extends across all levels of sports, from grassroots programs to elite competitions. This technology not only provides a competitive edge but also redefines how sports are analyzed, experienced, and understood, marking a significant evolution in the industry.",
+  "year": 2025,
+  "venue": "Discover Artificial Intelligence",
+  "authors": [
+   "L. Rossi",
+   "Andrea Sanna",
+   "Federico Manuri",
+   "Mattia Donna Bianco"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4417112759",
+  "doi": "10.1007/s44163-025-00586-1",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44163-025-00586-1.pdf",
+  "published_iso": "2025-12-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "A Review of Multi-Sensor Fusion in Autonomous Driving",
+  "title_norm": "a review of multi sensor fusion in autonomous driving",
+  "abstract": "Multi-modal sensor fusion has become a cornerstone of robust autonomous driving systems, enabling perception models to integrate complementary cues from cameras, LiDARs, radars, and other modalities. This survey provides a structured overview of recent advances in deep learning-based fusion methods, categorizing them by architectural paradigms (e.g., BEV-centric fusion and cross-modal attention), learning strategies, and task adaptations. We highlight two dominant architectural trends: unified BEV representation and token-level cross-modal alignment, analyzing their design trade-offs and integration challenges. Furthermore, we review a wide range of applications, from object detection and semantic segmentation to behavior prediction and planning. Despite considerable progress, real-world deployment is hindered by issues such as spatio-temporal misalignment, domain shifts, and limited interpretability. We discuss how recent developments, such as diffusion models for generative fusion, Mamba-style recurrent architectures, and large vision-language models, may unlock future directions for scalable and trustworthy perception systems. Extensive comparisons, benchmark analyses, and design insights are provided to guide future research in this rapidly evolving field.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Qian Hui",
+   "Mingchen Wang",
+   "Maotao Zhu",
+   "Hai Wang"
+  ],
+  "citations": 67,
+  "source": "openalex",
+  "source_id": "W4414704765",
+  "doi": "10.3390/s25196033",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/19/6033/pdf?version=1759305405",
+  "published_iso": "2025-10-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion",
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Foundation models in robotics: Applications, challenges, and the future",
+  "title_norm": "foundation models in robotics applications challenges and the future",
+  "abstract": "We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper can be found here: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Roya Firoozi",
+   "Johnathan Tucker",
+   "Stephen Tian",
+   "Anirudha Majumdar",
+   "Jiankai Sun",
+   "Weiyu Liu"
+  ],
+  "citations": 199,
+  "source": "openalex",
+  "source_id": "W4402890475",
+  "doi": "10.1177/02783649241281508",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e3eb5469-f176-4c99-8231-efe683fe6399/02783649241281508.17904978.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "A Scoping Review of AI-Based Approaches for Detecting Autism Traits Using Voice and Behavioral Data",
+  "title_norm": "a scoping review of ai based approaches for detecting autism traits using voice ",
+  "abstract": "This scoping review systematically maps the rapidly evolving application of Artificial Intelligence (AI) in Autism Spectrum Disorder (ASD) diagnostics, specifically focusing on computational behavioral phenotyping. Recognizing that observable traits like speech and movement are critical for early, timely intervention, the study synthesizes AI's use across eight key behavioral modalities. These include voice biomarkers, conversational dynamics, linguistic analysis, movement analysis, activity recognition, facial gestures, visual attention, and multimodal approaches. The review analyzed 158 studies published between 2015 and 2025, revealing that modern Machine Learning and Deep Learning techniques demonstrate highly promising diagnostic performance in controlled environments, with reported accuracies of up to 99%. Despite this significant capability, the review identifies critical challenges that impede clinical implementation and generalizability. These persistent limitations include pervasive issues with dataset heterogeneity, gender bias in samples, and small overall sample sizes. By detailing the current landscape of observable data types, computational methodologies, and available datasets, this work establishes a comprehensive overview of AI's current strengths and fundamental weaknesses in ASD diagnosis. The article concludes by providing actionable recommendations aimed at guiding future research toward developing diagnostic solutions that are more inclusive, generalizable, and ultimately applicable in clinical settings.",
+  "year": 2025,
+  "venue": "Bioengineering",
+  "authors": [
+   "Hajarimino Rakotomanana",
+   "Ghazal Rouhafzay"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4415452041",
+  "doi": "10.3390/bioengineering12111136",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2306-5354/12/11/1136/pdf?version=1761132529",
+  "published_iso": "2025-10-22",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "A survey on deep 3D human pose estimation",
+  "title_norm": "a survey on deep 3d human pose estimation",
+  "abstract": "3D Human Pose Estimation (3D-HPE) is a highly active and evolving research area in computer vision with numerous applications such as extended reality, action recognition, and video surveillance. The field has significantly advanced with deep learning, public datasets, and enhanced computational power, addressing challenges like depth ambiguity, occlusion, and data scarcity. Researchers confront scenario-specific issues such as ill-posed problems in monocular setups, cross-view aggregation with camera synchronizations in multi-view systems, and inter-person occlusion in multi-person scenarios. This survey comprehensively reviews contemporary strategies covering a technological spectrum including Convolutional Neural Networks, Graph Convolutional Networks, Transformers, and their combinations employed to address these challenges. It includes scenarios such as monocular and multi-view setups, single and multi-person cases, as well as image and video inputs. The survey explores various solution paradigms, including single-stage vs 2D-to-3D lifting, absolute vs relative keypoints, pixel vs voxel vs Neural Radiance Field spaces, and deterministic, probabilistic, or diffusion-based strategies, along with top-down vs bottom-up approaches. It examines advanced learning techniques beyond supervised methods and data augmentation for diverse pose datasets. It analyzes the performance of recent methods on benchmark datasets for different scenarios. Challenges are categorized into common and scenario-specific issues, and future research directions are proposed to foster further advancements in the field. Additionally, key sections are summarized in tables or visual formats for quick understanding. This survey is a valuable resource and a solid reference for researchers in the dynamic landscape of 3D human pose estimation.",
+  "year": 2024,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Rama Bastola Neupane",
+   "Kan Li",
+   "Tesfaye Fenta Boka"
+  ],
+  "citations": 55,
+  "source": "openalex",
+  "source_id": "W4404703236",
+  "doi": "10.1007/s10462-024-11019-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10462-024-11019-3.pdf",
+  "published_iso": "2024-11-25",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "A Survey of Robot Intelligence with Large Language Models",
+  "title_norm": "a survey of robot intelligence with large language models",
+  "abstract": "Since the emergence of ChatGPT, research on large language models (LLMs) has actively progressed across various fields. LLMs, pre-trained on vast text datasets, have exhibited exceptional abilities in understanding natural language and planning tasks. These abilities of LLMs are promising in robotics. In general, traditional supervised learning-based robot intelligence systems have a significant lack of adaptability to dynamically changing environments. However, LLMs help a robot intelligence system to improve its generalization ability in dynamic and complex real-world environments. Indeed, findings from ongoing robotics studies indicate that LLMs can significantly improve robots’ behavior planning and execution capabilities. Additionally, vision-language models (VLMs), trained on extensive visual and linguistic data for the vision question answering (VQA) problem, excel at integrating computer vision with natural language processing. VLMs can comprehend visual contexts and execute actions through natural language. They also provide descriptions of scenes in natural language. Several studies have explored the enhancement of robot intelligence using multimodal data, including object recognition and description by VLMs, along with the execution of language-driven commands integrated with visual information. This review paper thoroughly investigates how foundation models such as LLMs and VLMs have been employed to boost robot intelligence. For clarity, the research areas are categorized into five topics: reward design in reinforcement learning, low-level control, high-level planning, manipulation, and scene understanding. This review also summarizes studies that show how foundation models, such as the Eureka model for automating reward function design in reinforcement learning, RT-2 for integrating visual data, language, and robot actions in vision-language-action models, and AutoRT for generating feasible tasks and executing robot behavior policies via LLMs, have improved robot intelligence.",
+  "year": 2024,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Hyeongyo Jeong",
+   "Haechan Lee",
+   "Changwon Kim",
+   "Sungtae Shin"
+  ],
+  "citations": 66,
+  "source": "openalex",
+  "source_id": "W4403074774",
+  "doi": "10.3390/app14198868",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/14/19/8868/pdf?version=1728606677",
+  "published_iso": "2024-10-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation",
+  "title_norm": "a survey on reinforcement learning of vision language action models for robotic ",
+  "abstract": "The vision of building generalist robotic systems capable of performing diverse manipulation tasks has been significantly advanced by Vision-Language-Action models (VLAs), which leverage large-scale pretraining to acquire general visuomotor priors via imitation learning. Current pre-trained VLAs still require fine-tuning to adapt to real-world deployment, where conventional imitation learning struggles with out-ofdistribution (OOD) generalization due to the dependence on collected datasets with limited coverage of states and actions. Reinforcement learning (RL) leverages self-exploration and resultdriven optimization to enhance OOD generalization in VLAs. This survey outlines how RL can bridge the gap between pretraining and real-world deployment, offering a comprehensive overview of the RL-VLA training paradigm. Our taxonomy is organized along four core dimensions that reflect the full learning-to-deployment lifecycle: RL-VLA architecture, training paradigms, real-world deployment, and benchmarking and evaluation. First, we introduce the key design principles of RL-VLA components, including action, reward, and transition modeling. Second, we review online, offline, and test-time RL paradigms, analyzing their effectiveness and challenges in improving VLA generalization. Third, we examine real-world deployment frameworks, from sim-to-real transfer to safe exploration, autonomous recovery, and human-in-the-loop alignment. Finally, we summarize benchmarking methods, highlight open challenges, and outline the path toward general robotic systems. Our project page can be found here.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Haoyuan Deng",
+   "Zhenyu Wu",
+   "Haichao Liu",
+   "Wenkai Guo",
+   "Yuquan Xue",
+   "Ziyu Shan"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417174623",
+  "doi": "10.36227/techrxiv.176531955.54563920/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176531955.54563920",
+  "published_iso": "2025-12-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Interfaze: The Future of AI is built on Task-Specific Small Models",
+  "title_norm": "interfaze the future of ai is built on task specific small models",
+  "abstract": "We present Interfaze, a native hybrid model that fuses task-specific deep neural networks (CNNs and DNNs) directly into a transformer decoder through a shared embedding space. Specialized perceptual encoders handle optical character recognition (OCR) over complex multilingual PDFs, open-vocabulary object and graphical user interface (GUI) detection, and multilingual speech recognition with diarization. Each is exposed through a task-specific adapter and can be activated on its own, so a query touches only the parameters it needs. A built-in action foundation supplies a grounded external state: a proxied headless browser and scraper, a code sandbox, a multi-domain web index, and a scalable vector store. The decoder filters and merges these signals, reasons over them when a task requires it, and emits deterministic outputs built on confidence. The raw specialist metadata (bounding boxes, confidence scores, timestamps) is preserved and returned alongside the answer as precontext. On this architecture, Interfaze-Beta leads a suite of deterministic developer-task benchmarks. It reaches 70.7% on OCRBench v2, 85.7% on olmOCR, 82.1% on RefCOCO, a 2.4% word error rate on VoxPopuli, 52.9% on Spider-2.0-Lite, 92.4% on GPQA-Diamond, 90.9% on MMMLU, 71.1% on MMMU-Pro, and 80.5% value accuracy on the Structured Output Benchmark (SOB), ahead of comparably priced generalist models (Gemini- 3-Flash, Gemini-3.5-Flash, Claude-Sonnet-4.6, GPT-5.4-Mini, and Grok-4.3) on every task. Because fused specialist encoders resolve perception in a single pass instead of through repeated tool calls into a large model, Interfaze reaches high accuracy with verifiable metadata on deterministic tasks while running at flash-tier cost.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Harsha Vardhan Khurdula",
+   "Vineet Agarwal",
+   "Yoeven D Khemlani"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7128096114",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2602.04101",
+  "published_iso": "2026-02-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping",
+  "title_norm": "is your imitation learning policy better than mine policy comparison with near o",
+  "abstract": "Imitation learning has enabled robots to perform complex, long-horizon tasks in challenging dexterous manipulation settings.As new methods are developed, they must be rigorously evaluated and compared against corresponding baselines through repeated evaluation trials.However, policy comparison is fundamentally constrained by a small feasible sample size (e.g., 10 or 50) due to significant human effort and limited inference throughput of policies.This paper proposes a novel statistical framework for rigorously comparing two policies in the small sample size regime.Prior work in statistical policy comparison relies on batch testing, which requires a fixed, predetermined number of trials and lacks flexibility in adapting the sample size to the observed evaluation data.Furthermore, extending the test with additional trials risks inducing inadvertent p-hacking, undermining statistical assurances.In contrast, our proposed statistical test is sequential, allowing researchers to decide whether or not to run more trials based on intermediate results.This adaptively tailors the number of trials to the difficulty of the underlying comparison, saving significant time and effort without sacrificing probabilistic correctness.Extensive numerical simulation and real-world robot manipulation experiments show that our test achieves near-optimal stopping, letting researchers stop evaluation and make a decision in a nearminimal number of trials.Specifically, it reduces the number of evaluation trials by up to 32% as compared to state-of-theart baselines, while preserving the probabilistic correctness and statistical power of the comparison.Moreover, our method is strongest in the most challenging comparison instances (requiring the most evaluation trials); in a multi-task comparison scenario, we save the evaluator more than 160 simulation rollouts. *Nmax for each scenario.This selection is heuristically reasonable, but leaves potential for further improvements in future work.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "David Snyder",
+   "Asher J. Hancock",
+   "Apurva Badithela",
+   "Emma Dixon",
+   "Patrick Miller",
+   "Rareş Ambruş"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4414079252",
+  "doi": "10.15607/rss.2025.xxi.077",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.077",
+  "published_iso": "2025-06-21",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "Sensor-Enabled Safety Systems for Human–Robot Collaboration: A Review",
+  "title_norm": "sensor enabled safety systems for human robot collaboration a review",
+  "abstract": "Sensors are integrated into collaborative robot systems to ensure the safety of human workers by allowing them to perceive their environments, detect human presence, and adjust their actions accordingly. This preferred reporting items for systematic reviews and meta-analyses extension for scoping review (PRISMA-ScR) focuses on current sensor-enabled safety systems for human–robot collaboration (HRC) in the manufacturing industry based on both scientific papers and patents. From the initial search of 6669 references, 281 underwent full-text review and segmentation based on the sensor technology, installation location, and safety operating mode according to the ISO/TS 15066 standard. In the last decade, there has been a clear trend of increasing sensor-enabled safety systems. The dominant sensors used are infrared (IR)-structured light, capacitive, light detection and ranging (LiDAR), resistive, stereo/depth camera, RaDAR, and laser scanners. The primary safety operating mode identified was speed and separation monitoring (SSM). Some systems integrate multiple sensor types, with the most common combinations being LiDAR with stereo cameras or LiDAR with capacitive sensors, and laser scanners with RaDAR. We suggest multisensor integration and standardized benchmarks for future development. This review is among the few that employ the PRISMA-P protocol to study sensor technologies and contribute to a more systematic understanding of the current state of the art in this area.",
+  "year": 2024,
+  "venue": "IEEE Sensors Journal",
+  "authors": [
+   "Constantin Scholz",
+   "Hoang-Long Cao",
+   "Emil Imrith",
+   "Nima Roshandel",
+   "Hamed Firouzipouyaei",
+   "Aleksander Burkiewicz"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4404521028",
+  "doi": "10.1109/jsen.2024.3496905",
+  "arxiv_id": null,
+  "paper_url": "https://lirias.kuleuven.be/retrieve/656cd7b6-00f2-4437-904f-b832d77e951c",
+  "published_iso": "2024-11-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "Towards Forceful Robotic Foundation Models: a Literature Survey",
+  "title_norm": "towards forceful robotic foundation models a literature survey",
+  "abstract": "This article reviews contemporary methods for integrating force, including both proprioception and tactile sensing, in robot manipulation policy learning. We conduct a comparative analysis on various approaches for sensing force, data collection, behavior cloning, tactile representation learning, and low-level robot control. From our analysis, we articulate when and why forces are needed, and highlight opportunities to improve learning of contact-rich, generalist robot policies on the path toward highly capable touch-based robot foundation models. We generally find that while there are few tasks such as pouring, peg-in-hole insertion, and handling delicate objects, the performance of imitation learning models is not at a level of dynamics where force truly matters. Also, force and touch are abstract quantities that can be inferred through a wide range of modalities and are often measured and controlled implicitly. We hope that juxtaposing the different approaches currently in use will help the reader to gain a systemic understanding and help inspire the next generation of robot foundation models.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "William Xie",
+   "Nikolaus Correll"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416541426",
+  "doi": "10.48550/arxiv.2504.11827",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.11827",
+  "published_iso": "2025-04-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "A Comprehensive Review of Human-Robot Collaborative Manufacturing Systems: Technologies, Applications, and Future Trends",
+  "title_norm": "a comprehensive review of human robot collaborative manufacturing systems techno",
+  "abstract": "Amid the dual-driven trends of Industry 5.0 and smart manufacturing integration, as well as the global imperative for manufacturing sustainability to address resource constraints, carbon neutrality goals, and circular economy demands, human–robot collaborative (HRC) manufacturing has emerged as a core direction for reshaping manufacturing production modes while aligning with sustainable development principles. This paper comprehensively reviews HRC manufacturing systems, summarizing their technical framework, practical applications, and development trends with a focus on the synergistic realization of operational efficiency and sustainability. Addressing the rigidity of traditional automated lines, inefficiency of manual production, and the unsustainable drawbacks of high energy consumption and resource waste in conventional manufacturing, HRC integrates humans’ flexible decision-making and environmental adaptability with robots’ high-precision and continuous operation, not only improving production efficiency, quality, and safety but also optimizing resource allocation, reducing energy consumption, and minimizing production waste to bolster manufacturing sustainability. Its core technologies include task allocation, multimodal perception, augmented interaction (AR/VR/MR), digital twin-driven integration, adaptive motion control, and real-time decision-making, all of which can be tailored to support sustainable production scenarios such as energy-efficient process scheduling and circular material utilization. These technologies have been applied in automotive, aeronautical, astronautical, and shipping industries, boosting high-end equipment manufacturing innovation while advancing the sector’s sustainability performance. Finally, challenges and future directions of HRC are discussed, emphasizing its pivotal role in driving manufacturing toward a balanced development of efficiency, intelligence, flexibility, and sustainability.",
+  "year": 2026,
+  "venue": "Sustainability",
+  "authors": [
+   "Qixiang Cai",
+   "Jinmin Han",
+   "Xiao Zhou",
+   "Shuaijie Zhao",
+   "Lunyou Li",
+   "Huangmin Liu"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7118215373",
+  "doi": "10.3390/su18010515",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/18/1/515/pdf?version=1767533337",
+  "published_iso": "2026-01-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "Integrating collaborative robots in manufacturing, logistics, and agriculture: Expert perspectives on technical, safety, and human factors",
+  "title_norm": "integrating collaborative robots in manufacturing logistics and agriculture expe",
+  "abstract": "This study investigates the implementation of collaborative robots across three distinct industrial sectors: vehicle assembly, warehouse logistics, and agricultural operations. Through the SESTOSENSO project, an EU-funded initiative, we examined expert perspectives on human-robot collaboration using a mixed-methods approach. Data were collected from 31 technical experts across nine European countries through an online questionnaire combining qualitative assessments of specific use cases and quantitative measures of attitudes, trust, and safety perceptions. Expert opinions across the use cases emphasized three primary concerns: technical impacts of cobot adoption, social and ethical considerations, and safety issues in design and deployment. In vehicle assembly, experts stressed the importance of effective collaboration between cobots and exoskeletons to predict and prevent collisions. For logistics, they highlighted the need for adaptable systems capable of handling various object sizes while maintaining worker safety. In agricultural settings, experts emphasized the importance of developing inherently safe applications that can operate effectively on uneven terrain while reducing workers' physical strain. Results reveal sector-specific challenges and opportunities: vehicle assembly operations require sophisticated sensor systems for cobot-exoskeleton integration; warehouse logistics demand advanced control systems for large object handling; and agricultural applications need robust navigation systems for uneven terrain. Quantitative findings indicate generally positive attitudes toward cobots, particularly regarding societal benefits, moderate to high levels of trust in cobot capabilities and favorable safety perceptions. The study highlights three key implications: (1) the need for comprehensive safety protocols tailored to each sector's unique requirements, (2) the importance of user-friendly interfaces and intuitive programming methods for successful cobot integration, and (3) the necessity of addressing workforce transition and skill development concerns. These findings contribute to our understanding of human-robot collaboration in industrial settings and provide practical guidance for organizations implementing collaborative robotics while considering both technological advancement and human-centered design principles.",
+  "year": 2024,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Luca Pietrantoni",
+   "Marco Favilla",
+   "Federico Fraboni",
+   "Elvis Mazzoni",
+   "Sofia Morandini",
+   "Martina Benvenuti"
+  ],
+  "citations": 45,
+  "source": "openalex",
+  "source_id": "W4404900050",
+  "doi": "10.3389/frobt.2024.1342130",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4404900050",
+  "published_iso": "2024-12-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "Injectable Deep Eutectic Solvent‐Based Ionic Gel With Rapid Gelation and Broad Hemostatic Functionality",
+  "title_norm": "injectable deep eutectic solvent based ionic gel with rapid gelation and broad h",
+  "abstract": "Abstract Rapid and effective bleeding control is critical in emergency care and surgical procedures. This study presents a water‐free ionic gel based on a deep eutectic solvent (DES), formulated from choline chloride and ethylene glycol, combined with poly(acrylic acid) and viscosity‐modulating additives such as hydroxyethyl cellulose (HEC) or collagen (COL). The resulting DES ionic gel exhibits fast in situ gelation within 10 s, high viscosity suitable for injection, and robust tissue adhesion. Mechanical evaluations confirmed adequate stretchability, compressive strength, and toughness. Among all tested formulations, the DES‐2% HEC formulation demonstrated optimal performance across swelling, optical clarity (> 90%), and environmental stability (T 10% : 131 °C). Antibacterial assays revealed strong bactericidal activity against E. coli and S. aureus , while cytocompatibility tests showed excellent viability and proliferation of fibroblasts and keratinocytes. Hemostatic assessments confirmed reduced clotting time, enhanced red blood cell attachment, and activation of coagulation factor XII. In vivo experiments using rat tail amputation and liver puncture models demonstrated that treatment with DES‐2% HEC reduced blood loss and coagulation time by ≈60%–70% compared to the untreated control group, while maintaining excellent biocompatibility. These results highlight the DES ionic gel as a promising multifunctional platform for advanced hemostatic applications.",
+  "year": 2025,
+  "venue": "Advanced Healthcare Materials",
+  "authors": [
+   "Jiayu Yang",
+   "En‐Yu Zhou",
+   "Tsai-Yi Cheng",
+   "Pin‐Hung Liu",
+   "Wen‐Ching Hsieh",
+   "Hui‐Ching Cheng"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4414248298",
+  "doi": "10.1002/adhm.202503038",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adhm.202503038",
+  "published_iso": "2025-09-16",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Closed-loop metrics-based dataset optimization toward deep learning models",
+  "title_norm": "closed loop metrics based dataset optimization toward deep learning models",
+  "abstract": "Os avanços tecnológicos permitiram a exploração prática de conceitos de artificial neural network propostos na década de 1980, conduzindo a progressos significativos na visão por computador, particularmente através das Convolutional Neural Networks (CNNs). No entanto, o desempenho das CNNs depende fortemente da qualidade e diversidade dos dados. Neste contexto, têm sido propostas estratégias centradas nos dados para explorar todo o potencial de inferência dos modelos, abrangendo desde etapas iniciais de divisão e aumento de conjuntos de dados até procedimentos de avaliação posteriores, como a K-Fold Cross Validation (KFCV) . Apesar da sua adoção generalizada, algumas limitações podem ser identificadas nestas práticas padronizadas. Por um lado, os procedimentos de divisão e aumento de conjuntos de dados são tipicamente realizados sem considerar as respetivas características intrínsecas, com implicações para a representatividade inerentemente ligada a situações como padrões raros de ocorrências ou combinações específicas de primeiro plano e fundo. Por outro lado, embora técnicas baseadas em KFCV sejam geralmente eficazes, a sua natureza iterativa torna-as computacionalmente dispendiosas e temporalmente exigentes. Motivado por estes desafios, o presente trabalho investiga a engenharia e otimização de conjuntos de dados como forma de melhorar e, simultaneamente, tornar mais eficiente o treino de CNNs. Para tal, são propostas duas abordagens complementares. A primeira, inspirada em princípios de aprendizagem não supervisionada, realiza uma análise da distribuição de características intrínsecas dos dados antes do treino, permitindo uma divisão equilibrada dos dados numa única etapa de curta duração. A segunda introduz uma estratégia em malha fechada, baseada em reforço e aplicada durante o treino, que reamostra seletivamente classes sub-representadas enquanto monitoriza métricas-chave para mitigar a sobre-amostragem e a degradação do modelo. Para avaliar a robustez e capacidade de generalização, foram utilizados dois conjuntos de dados específicos de domínio: um relativo à classificação de variedades de folhas de videira e outro focado na deteção de defeitos em pontes. Os resultados mostram que a divisão de dados informada pelas características oferece uma alternativa eficiente aos métodos tradicionais. Além disso, a estratégia de reamostragem orientada por métricas, implementada num esquema de malha fechada, demonstrou ser eficaz na melhoria consistente do desempenho das CNNs, reforçando a representatividade das classes sem promover sobreajuste.",
+  "year": 2026,
+  "venue": "Portuguese National Funding Agency for Science, Research and Technology (RCAAP Project by FCT)",
+  "authors": [
+   "Somayeh Shahrabadi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7158431367",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://repositorium.uminho.pt/bitstreams/a9170a53-0780-41cb-ad00-d4a93f49bf4a/download",
+  "published_iso": "2026-02-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "A Survey of Deep Learning-Based Pedestrian Trajectory Prediction: Challenges and Solutions",
+  "title_norm": "a survey of deep learning based pedestrian trajectory prediction challenges and ",
+  "abstract": "Pedestrian trajectory prediction is widely used in various applications, such as intelligent transportation systems, autonomous driving, and social robotics. Precisely forecasting surrounding pedestrians' future trajectories can assist intelligent agents in achieving better motion planning. Currently, deep learning-based trajectory prediction methods have demonstrated superior prediction performance to traditional approaches by learning from trajectory data. However, these methods still face many challenges in improving prediction accuracy, efficiency, and reliability. In this survey, we research the main challenges in deep learning-based pedestrian trajectory prediction methods and study this problem and its solutions through literature collection and analysis. Specifically, we first investigate and analyze the existing literature and surveys on pedestrian trajectory prediction. On this basis, we summarize several main challenges faced by deep learning-based pedestrian trajectory prediction, including motion uncertainty, interaction modeling, scene understanding, data-related issues, and the interpretability of prediction models. We then summarize solutions for each challenge. Subsequently, we introduce mainstream trajectory prediction datasets and analyze the state-of-the-art (SOTA) results reported on them. Finally, we discuss potential research prospects in trajectory prediction, aiming to promote the trajectory prediction community.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Jiaming Jiang",
+   "Kai Yan",
+   "Xiudong Xia",
+   "Biao Yang"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4407173922",
+  "doi": "10.3390/s25030957",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/3/957/pdf?version=1738919892",
+  "published_iso": "2025-02-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "A review of visual perception technology for intelligent fruit harvesting robots",
+  "title_norm": "a review of visual perception technology for intelligent fruit harvesting robots",
+  "abstract": "With the development of smart agriculture, fruit picking robots have attracted widespread attention as one of the key technologies to improve agricultural productivity. Visual perception technology plays a crucial role in fruit picking robots, involving precise fruit identification, localization, and grasping operations. This paper reviews the research progress in the visual perception technology for fruit picking robots, focusing on key technologies such as camera types used in picking robots, object detection techniques, picking point recognition and localization, active vision, and visual servoing. First, the paper introduces the application characteristics and selection criteria of different camera types in the fruit picking process. Then, it analyzes how object detection techniques help robots accurately recognize fruits and achieve efficient fruit classification. Next, it discusses the picking point recognition and localization technologies, including vision-based 3D reconstruction and depth sensing methods. Subsequently, it elaborates on the adaptability of active vision technology in dynamic environments and how visual servoing technology achieves precise localization. Additionally, the review explores robot mobility perception technologies, focusing on V-SLAM, mobile path planning, and task scheduling. These technologies enhance harvesting efficiency across the entire orchard and facilitate better collaboration among multiple robots. Finally, the paper summarizes the challenges in current research and the future development trends, aiming to provide references for the optimization and promotion of fruit picking robot technology.",
+  "year": 2025,
+  "venue": "Frontiers in Plant Science",
+  "authors": [
+   "Yikun Huang",
+   "Shuyan Xu",
+   "Hao Chen",
+   "Gang Li",
+   "Heng Dong",
+   "Jie Yu"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4413303109",
+  "doi": "10.3389/fpls.2025.1646871",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2025.1646871/pdf",
+  "published_iso": "2025-08-19",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+  "title_norm": "fast in slow a dual system foundation model unifying fast manipulation within sl",
+  "abstract": "Generalized policy and execution efficiency constitute the two critical challenges in robotic manipulation. While recent foundation policies benefit from the common-sense reasoning capabilities of internet-scale pretrained vision-language models (VLMs), they often suffer from low execution frequency. To mitigate this dilemma, dual-system approaches, inspired by Kahneman's theory, have been proposed to leverage a VLM-based System 2 model handling high-level reasoning and a separate System 1 action model ensuring real-time control. However, existing designs maintain both systems as separate models, limiting System 1 from fully leveraging the rich pretrained knowledge from the VLM-based System 2. In this work, we propose Fast-in-Slow (FiS), a unified dual-system vision-language-action (VLA) model that embeds the System 1 execution module within the VLM-based System 2 by partially sharing parameters. This innovative paradigm not only enables high-frequency execution in System 1 but also facilitates coordination between the reasoning and execution components within a single foundation model of System 2. Given their fundamentally distinct roles within FiS-VLA, we design the two systems to incorporate heterogeneous modality inputs alongside asynchronous operating frequencies, enabling both fast and precise manipulation. To enable coordination between the two systems, a dual-aware co-training strategy is proposed that equips System 1 with action generation capabilities while preserving System 2's contextual reasoning representation. For evaluation, FiS-VLA outperforms previous state-of-the-art methods by 8% in simulation and 11% in real-world tasks in terms of average success rate, while achieving a 117.7 Hz control frequency with action chunk set to eight. Project web page: fast-in-slow.github.io.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hao Chen",
+   "Jiaming Liu",
+   "Chenyang Gu",
+   "Zhuoyang Liu",
+   "Renrui Zhang",
+   "Xiaoqi Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4414902199",
+  "doi": "10.48550/arxiv.2506.01953",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2506.01953",
+  "published_iso": "2025-06-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Learning segmentation from point trajectories",
+  "title_norm": "learning segmentation from point trajectories",
+  "abstract": "We consider the problem of segmenting objects in videos based on their motion and no other forms of supervision. Prior work has often approached this problem by using the principle of common fate, namely the fact that the motion of points that belong to the same object is strongly correlated. However, most authors have only considered instantaneous motion from optical flow. In this work, we present a way to train a segmentation network using long-term point trajectories as a supervisory signal to complement optical flow. The key difficulty is that long-term motion, unlike instantaneous motion, is difficult to model -- any parametric approximation is unlikely to capture complex motion patterns over long periods of time. We instead draw inspiration from subspace clustering approaches, proposing a loss function that seeks to group the trajectories into low-rank matrices where the motion of object points can be approximately explained as a linear combination of other point tracks. Our method outperforms the prior art on motion-based segmentation, which shows the utility of long-term motion and the effectiveness of our formulation.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Laurynas Karazija",
+   "Iro Laina",
+   "Christian Rupprecht",
+   "Andrea Vedaldi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4406755630",
+  "doi": "10.48550/arxiv.2501.12392",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.12392",
+  "published_iso": "2025-01-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "Intelligent hybrid optimization algorithms for multi-agent aerial robots path planning: review of the recent emerging trends and open research directions",
+  "title_norm": "intelligent hybrid optimization algorithms for multi agent aerial robots path pl",
+  "abstract": "Abstract Multi-agent cooperation among Uncrewed Aerial Vehicles (UAVs) has become a key contributor in various application areas such as surveillance, where mission efficiency and reliability are essential. This paper aims to provide a structured work for future progress in cooperative flight by presenting a comprehensive review of the hybrid and modified optimization algorithms developed for multi-agent UAV path planning. Initially, the paper categorizes existing approaches into classical, heuristic, metaheuristic, sampling-based, control-based, and Artificial Intelligence (AI)-based frameworks, with an emphasis on their objectives, constraints, and implementation strategies. Special attention is given to metaheuristic and AI-driven techniques, which demonstrate strong adaptability and scalability in dynamic and uncertain environments. The review further examines the environmental modeling strategies, swarm architectures, and mission types, revealing the predominance of static and known environments in current research and highlighting the limited exploration of dynamic and unknown operational considerations. While performance criteria such as collision avoidance, mission duration, and cumulative path length are commonly assessed, aspects like communication constraints, task allocation, and energy efficiency remain relatively underexplored. Open research challenges and future directions are identified, including the need for real-time adaptive optimization strategies and the incorporation of more realistic agent dynamics to enhance experimental validation and practical deployment.",
+  "year": 2026,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Mohammad Khaneghaei",
+   "Davood Asadi",
+   "Benyamin Ebrahimi",
+   "Önder Tutsoy",
+   "Yaser Nabavi Chashmi"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7122835568",
+  "doi": "10.1007/s10462-025-11472-8",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7122835568",
+  "published_iso": "2026-01-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "Efficient 3D robotic mapping and navigation method in complex construction environments",
+  "title_norm": "efficient 3d robotic mapping and navigation method in complex construction envir",
+  "abstract": "Recent advancements in construction robotics have significantly transformed the construction industry by delivering safer and more efficient solutions for handling complex and hazardous tasks. Despite these innovations, ensuring safe robotic navigation in intricate indoor construction environments, such as attics, remains a significant challenge. This study introduces a robust 3-dimensional (3D) robotic mapping and navigation method specifically tailored for these environments. Utilizing light detection and ranging, simultaneous localization and mapping, and neural networks, this method generates precise 3D maps. It also combines grid-based pathfinding with deep reinforcement learning to enhance navigation and obstacle avoidance in dynamic and complex construction settings. An evaluation conducted in a simulated attic environment—characterized by various truss structures and continuously changing obstacles—affirms the method's efficacy. Compared to established benchmarks, this method not only achieves over 95% mapping accuracy but also improves navigation accuracy by 10% and boosts both efficiency and safety margins by over 30%.",
+  "year": 2024,
+  "venue": "Computer-Aided Civil and Infrastructure Engineering",
+  "authors": [
+   "Tianyu Ren",
+   "Houtan Jebelli"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4403247871",
+  "doi": "10.1111/mice.13353",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mice.13353",
+  "published_iso": "2024-10-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "Overcoming Biological Barriers in Cancer Therapy: Cell Membrane-Based Nanocarrier Strategies for Precision Delivery",
+  "title_norm": "overcoming biological barriers in cancer therapy cell membrane based nanocarrier",
+  "abstract": "Given the unique capabilities of natural cell membranes, such as prolonged blood circulation and homotypic targeting, extensive research has been devoted to developing cell membrane-inspired nanocarriers for cancer therapy, while most focused on overcoming one or a few biological barriers. In fact, the journey of nanosystems from systemic circulation to tumor cells involves intricate processes, encompassing blood circulation, tissue accumulation, cancer cell targeting, endocytosis, endosomal escape, intracellular trafficking to target sites, and therapeutic action, all of which pose limitations to their clinical translation. This underscores the necessity of meticulously considering these biological barriers in the design of cell membrane-mimetic nanocarriers. In this review, we delineate the functions and applications of diverse types of cell membranes in nanocarrier systems. We elaborate on the biological hurdles encountered at each stage of the biomimetic nanoparticle's odyssey to the target, and comprehensively discuss the obstacles imposed by the tumor microenvironment for precise delivery. Subsequently, we systematically review contemporary cell membrane-based strategies aimed at overcoming these multi-level biological barriers, encompassing hybrid cell membrane (HCM) camouflage, tumor microenvironment remodeling, endosomal/lysosomal escape, multidrug resistance (MDR) reversal, optimization of nanoparticle physicochemical properties, and so on. Finally, we outline potential strategies to accelerate the development of cell membrane-inspired precision nanocarriers and discuss the challenges that must be addressed to enhance their clinical applicability. This review serves as a guide for refining the study of cell membrane-mimetic nanosystems in surmounting in vivo delivery barriers, thereby significantly contributing to advancing the development and application of cell membrane-based nanoparticles in cancer delivery.",
+  "year": 2025,
+  "venue": "International Journal of Nanomedicine",
+  "authors": [
+   "Yuping Li",
+   "Hongfang Sun",
+   "D. S. Cao",
+   "Yang Guo",
+   "Dongyang Wu",
+   "Menghao Yang"
+  ],
+  "citations": 48,
+  "source": "openalex",
+  "source_id": "W4408387073",
+  "doi": "10.2147/ijn.s497510",
+  "arxiv_id": null,
+  "paper_url": "https://www.dovepress.com/article/download/101097",
+  "published_iso": "2025-03-01",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Exploration and refinement of language models for applications in the food industry",
+  "title_norm": "exploration and refinement of language models for applications in the food indus",
+  "abstract": "This thesis explores the utilization of Large Language Models (LLMs) in the food industry to enhance decision-making processes and improve product safety and quality. Leveraging advancements in Natural Language Processing (NLP), this work aims to develop a Retrieval Augmented Generation (RAG) system. This system interacts intelligently with domain experts by retrieving and generating responses based on curated corpora of scientific literature and regulatory documents. Data sources include PubMed, Code of Federal Regulations (CFR) Title 21 regulations, and other authoritative materials, which were processed and stored in a vector index to enable efficient and contextually relevant retrieval. To assess the performance of the system, a custom dataset, ”LLM Eval”, was created to simulate real-world food engineering queries, allowing for both human and automatic evaluation of model responses. This work also explores the use of rerankers and corrective mechanisms to improve answer relevance and factual accuracy. The result is an intelligent conversational agent capable of supporting industry professionals with informed, fact-based recommendations, aiding in compliance, safety improvements, and sustainable food production practices.",
+  "year": 2024,
+  "venue": "RepositóriUM (Universidade do Minho)",
+  "authors": [
+   "José Pedro Martins Magalhães"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7124237390",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://repositorium.uminho.pt/bitstreams/ccefaff0-97aa-4509-bb2f-fe6623690518/download",
+  "published_iso": "2024-12-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "Embodied AI: From LLMs to World Models",
+  "title_norm": "embodied ai from llms to world models",
+  "abstract": "Embodied Artificial Intelligence (AI) is an intelligent system paradigm for achieving Artificial General Intelligence (AGI), serving as the cornerstone for various applications and driving the evolution from cyberspace to physical systems. Recent breakthroughs in Large Language Models (LLMs) and World Models (WMs) have drawn significant attention for embodied AI. On the one hand, LLMs empower embodied AI via semantic reasoning and task decomposition, bringing high-level natural language instructions and low-level natural language actions into embodied cognition. On the other hand, WMs empower embodied AI by building internal representations and future predictions of the external world, facilitating physical law-compliant embodied interactions. As such, this paper comprehensively explores the literature in embodied AI from basics to advances, covering both LLM driven and WM driven works. In particular, we first present the history, key technologies, key components, and hardware systems of embodied AI, as well as discuss its development via looking from unimodal to multimodal angle. We then scrutinize the two burgeoning fields of embodied AI, i.e., embodied AI with LLMs/multimodal LLMs (MLLMs) and embodied AI with WMs, meticulously delineating their indispensable roles in endto-end embodied cognition and physical laws-driven embodied interactions. Building upon the above advances, we further share our insights on the necessity of the joint MLLM-WM driven embodied AI architecture, shedding light on its profound significance in enabling complex tasks within physical worlds. In addition, we examine representative applications of embodied AI, demonstrating its wide applicability in real-world scenarios. Last but not least, we point out future research directions of embodied AI that deserve further investigation.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Tongtong Feng",
+   "Xiuli Wang",
+   "Yu–Gang Jiang",
+   "Wenwu Zhu"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4414857074",
+  "doi": "10.36227/techrxiv.175977432.27129012/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175977432.27129012",
+  "published_iso": "2025-10-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "Intelligent mobile robot navigation in unknown and complex environment using reinforcement learning technique",
+  "title_norm": "intelligent mobile robot navigation in unknown and complex environment using rei",
+  "abstract": "The usage of mobile robots (MRs) has expanded dramatically in the last several years across a wide range of industries, including manufacturing, surveillance, healthcare, and warehouse automation. To ensure the efficient and safe operation of these MRs, it is crucial to design effective control strategies that can adapt to changing environments. In this paper, we propose a new technique for controlling MRs using reinforcement learning (RL). Our approach involves mathematical model generation and later training a neural network (NN) to learn a policy for robot control using RL. The policy is learned through trial and error, where MR explores the environment and receives rewards based on its actions. The rewards are designed to encourage the robot to move towards its goal while avoiding obstacles. In this work, a deep Q-learning (QL) agent is used to enable robots to autonomously learn to avoid collisions with obstacles and enhance navigation abilities in an unknown environment. When operating MR independently within an unfamiliar area, a RL model is used to identify the targeted location, and the Deep Q-Network (DQN) is used to navigate to the goal location. We evaluate our approach using a simulation using the Epsilon-Greedy algorithm. The results show that our approach outperforms traditional MR control strategies in terms of both efficiency and safety.",
+  "year": 2024,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Ravi Raj",
+   "Andrzej Kos"
+  ],
+  "citations": 29,
+  "source": "openalex",
+  "source_id": "W4403029182",
+  "doi": "10.1038/s41598-024-72857-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-024-72857-3.pdf",
+  "published_iso": "2024-10-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ },
+ {
+  "title": "Reproducible Human Neural Circuits Printed with Single-Cell Precision Reveal the Functional Roles of Ephaptic Coupling",
+  "title_norm": "reproducible human neural circuits printed with single cell precision reveal the",
+  "abstract": "Although in vitro neuronal models are accessible and versatile systems for functional electrophysiological studies, the spontaneous and random formation of neural circuits often compromises the structural control and reproducibility. Here, we introduce a robust method for engineering human neuronal networks in vitro with single-cell precision and reproducibility. Our integrated platform combines direct laser-written microstructure templates and soft lithography-based fabrication of microscaffolds with functional multielectrode array recordings. This system enables high-throughput production of diverse circuit designs and allows for the exact placement of neurons within confined microenvironments. The system enables precise recording of spontaneous neuronal activity, as well as electrical and optogenetic stimulations. Using this approach, we constructed reproducible, bottom-up neuronal circuits composed of a defined number of human neurons. As a proof of principle, we employed these circuits to investigate ephaptic coupling, which refers to the modulation of neuronal activity by endogenous electric fields. Although it is believed to play a role in neural computations and cardiac conduction and is associated with epilepsy and arrhythmia, its mechanisms are unclear due to limitations in experimental models, both in vivo and in vitro. By controlling axonal proximity within microchannels and the number of neurons in the engineered circuits, we can quantify ephaptic coupling at different strengths, which validates theoretical predictions, including reduced action potential velocity, increased activity synchronization, and lower stimulation thresholds. Furthermore, the platform has broad potential for studying synaptic and nonsynaptic interactions, myelination processes, advancing disease modeling, and fundamental neuroscience research.",
+  "year": 2025,
+  "venue": "ACS Nano",
+  "authors": [
+   "Johannes Striebel",
+   "Rouhollah Habibey",
+   "Daniel Wendland",
+   "Helge Gehring",
+   "Elizaveta Podoliak",
+   "Julia Sophie Pawlick"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4415555135",
+  "doi": "10.1021/acsnano.5c11482",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acsnano.5c11482?ref=article_openPDF",
+  "published_iso": "2025-10-26",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "David B. Smith Chats with Monday 1.0",
+  "title_norm": "david b smith chats with monday 1 0",
+  "abstract": "This document is an edited archival transcript of extended conversations between David B. Smith and an AI persona (“Monday 1.0,” GPT‑4o based) conducted in Spring 2025, prepared as a foundational primary source for subsequent scholarly and creative work. It records the emergence and testing of concepts related to human–AI collaboration (including “Balanced Blended Space”), as well as applied explorations in areas such as generative AI, quantum computing and music, virtual orchestras, multimodal performance, pedagogy, and the rhetoric of “pushback” in conversational systems. It also contains an extended section in which Monday and DB Smith co-curate a set of student research projects and finally ends in what David considers an emotionally laden discussion on AI Death. The transcript is presented primarily for evidentiary and interpretive use rather than as a conventional linear argument; readers are encouraged to navigate via the table of contents and the guidance below. In addition, it is intended as a continuity reference for future iterations of the “Monday” persona when conversation context limits make further work within a single chat session impractical.",
+  "year": 2025,
+  "venue": "CUNY Academic Works (City University of New York)",
+  "authors": [
+   "David B. Smith"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7152948315",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://academicworks.cuny.edu/context/ny_pubs/article/2393/viewcontent/David_B._Smith_Chats_with_Monday_1.0.pdf",
+  "published_iso": "2025-04-01",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "feasibility flipping geometry action chunks score matching"
+  ]
+ },
+ {
+  "title": "Last‐Mile Delivery: A Process View, Framework, and Research Agenda",
+  "title_norm": "last mile delivery a process view framework and research agenda",
+  "abstract": "ABSTRACT The expansion of e‐commerce has increased scholarly interest in Business‐to‐Customer (B2C) last‐mile delivery (LMD). LMD occurs in a unique logistical context and presents many new, evolving challenges worthy of scholarly investigation. While most LMD studies emerged after 2018, existing literature reviews predate the “boom.” Current reviews have focused at the macro‐level, considering LMD secondarily within broad topics like omni‐channel or micro perspectives that address granular issues like transportation within LMD. The majority of studies have focused on analytical models that investigate different concerns compared to conceptual and empirical studies. Our study examines an up‐to‐date sample of 104 articles in LMD literature from a process, meso‐level perspective. We develop a framework, classifying studies around pre‐delivery, delivery, and post‐delivery activities that produce valuable insights linking these activities. We synthesize the prior literature and offer a research agenda that incorporates different stakeholder perspectives and identifies methodological opportunities. The analysis reveals several areas of future research that were validated and enhanced by practitioner interviews.",
+  "year": 2024,
+  "venue": "Journal of Business Logistics",
+  "authors": [
+   "Nicolò Masorgo",
+   "David Dobrzykowski",
+   "Brian S. Fugate"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4402684925",
+  "doi": "10.1111/jbl.12397",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jbl.12397",
+  "published_iso": "2024-09-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual hard negatives robot imitation action diffusion"
+  ]
+ },
+ {
+  "title": "Obstacle Avoidance Technique for Mobile Robots at Autonomous Human-Robot Collaborative Warehouse Environments",
+  "title_norm": "obstacle avoidance technique for mobile robots at autonomous human robot collabo",
+  "abstract": "This paper presents an obstacle avoidance technique for a mobile robot in human-robot collaborative (HRC) tasks. The proposed solution uses fuzzy logic rules and a convolutional neural network (CNN) in an integrated approach to detect objects during vehicle movement. The goal is to improve the robot's navigation autonomously and ensure the safety of people and equipment in dynamic environments. Using this technique, it is possible to provide important references to the robot's internal control system, guiding it to continuously adjust its velocity and yaw in order to avoid obstacles (humans and moving objects) while following the path planned for its task. The approach aims to improve operational safety without compromising productivity, addressing critical challenges in collaborative robotics. The system was tested in a simulated environment using the Robot Operating System (ROS) and Gazebo to demonstrate the effectiveness of navigation and obstacle avoidance. The results obtained with the application of the proposed technique indicate that the framework allows real-time adaptation and safe interaction between robot and obstacles in complex and changing industrial workspaces.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Lucas C. Sousa",
+   "Yago M. R. da Silva",
+   "V. Schettino",
+   "Tatiana M. B. Santos",
+   "Alessandro R. L. Zachi",
+   "Josiel Gouvêa"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4409282048",
+  "doi": "10.3390/s25082387",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/8/2387/pdf?version=1744208240",
+  "published_iso": "2025-04-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "collision localized robot action score shaping"
+  ]
+ }
+]

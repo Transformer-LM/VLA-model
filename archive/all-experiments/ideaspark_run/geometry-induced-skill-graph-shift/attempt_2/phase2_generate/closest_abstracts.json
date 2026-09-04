@@ -1,0 +1,154 @@
+[
+  {
+    "title": "Towards Generalizable Vision-Language Robotic Manipulation: A Benchmark and LLM-Guided 3D Policy",
+    "title_norm": "towards generalizable vision language robotic manipulation a benchmark and llm g",
+    "abstract": "Generalizing language-conditioned robotic policies to new tasks remains a significant challenge, hampered by the lack of suitable simulation benchmarks. In this paper, we address this gap by introducing GemBench, a novel benchmark to assess generalization capabilities of vision-language robotic manipulation policies. GemBench incorporates seven general action primitives and four levels of generalization, spanning novel placements, rigid and articulated objects, and complex long-horizon tasks. We evaluate state-of-the-art approaches on GemBench and also introduce a new method. Our approach 3D- LOTUS leverages rich 3D information for action prediction conditioned on language. While 3D-LOTUS excels in both efficiency and performance on seen tasks, it struggles with novel tasks. To address this, we present 3D-LOTUS++, a framework that integrates 3D-LOTUS's motion planning capabilities with the task planning capabilities of LLMs and the object grounding accuracy of VLMs. 3D-LOTUS++ achieves state-of-the-art per-formance on novel tasks of GemBench, setting a new standard for generalization in robotic manipulation. Code, dataset, real robot videos and trained models are available at https://www.di.ens.fr/willow/research/gembench/.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Ricardo Garcı́a",
+      "Shizhe Chen",
+      "Cordelia Schmid"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4403116255",
+    "doi": "10.1109/icra55743.2025.11127315",
+    "arxiv_id": null,
+    "paper_url": "https://hal.science/hal-04721101v1/file/ICRA25_Ricardo_GemBench_arxiv.pdf",
+    "published_iso": "2025-05-19",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "geometry-aware VLA unseen object instances grasp align insert"
+    ],
+    "paper_id": "openalex:W4403116255",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance",
+    "title_norm": "coa vla improving vision language action models via visual textual chain of affo",
+    "abstract": "Robot foundation models, particularly Vision-Language-Action (VLA) models, have garnered significant attention for their ability to enhance robot policy learning, greatly improving robot's generalization and robustness. OpenAI's recent model, O1, showcased impressive capabilities in solving complex problems by utilizing extensive reasoning chains. This prompts an important question: can robot models achieve better performance in multi-task , complex environments by reviewing prior observations and then providing task-specific reasoning to guide action prediction? In this paper, we introduce Chain-of-Affordance (CoA-VLA) , a novel approach to scaling robot models by incorporating reasoning in the format of sequential robot affordances to facilitate task completion. Specifically, we prompt the model to consider the following four types of affordances before taking action: (1) object affordance - what object to manipulate and where it is ; (2) grasp affordance - the specific object part to grasp ; (3) spatial affordance - the optimal space to place the object ; and (4) movement affordance-the collision - free path for movement. We further transform each affordance into two prompting formats: visual affordance and textual affordance. We introduce a novel vision-language co-injection module that integrates this knowledge into the policy network. This allows the robot to leverage essential contextual information during action inference, resulting in improved precision and robustness. Our experiments demonstrate that CoA-VLA outperforms state-of-the-art robot foundation models, including OpenVLA and Octo, on a variety of tasks. Furthermore, CoA-VLA exhibits strong generalization capabilities, including recognizing unseen object poses, identifying free space, and avoiding obstacles in novel environments.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Jinming Li",
+      "Yichen Zhu",
+      "Zhibin Tang",
+      "Junjie Wen",
+      "Minjie Zhu",
+      "Xiaoyu Liu"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4405956290",
+    "doi": "10.48550/arxiv.2412.20451",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2412.20451",
+    "published_iso": "2024-12-29",
+    "oa_field": "Decision Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "VLA 3D geometry unseen object shapes skill adaptation action plan"
+    ],
+    "paper_id": "openalex:W4405956290",
+    "year_month": "2024-12",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+    "title_norm": "closed loop visuomotor control with generative expectation for robotic manipulat",
+    "abstract": "Despite significant progress in robotics and embodied AI in recent years, deploying robots for long-horizon tasks remains a great challenge. Majority of prior arts adhere to an open-loop philosophy and lack real-time feedback, leading to error accumulation and undesirable robustness. A handful of approaches have endeavored to establish feedback mechanisms leveraging pixel-level differences or pre-trained visual representations, yet their efficacy and adaptability have been found to be constrained. Inspired by classic closed-loop control systems, we propose CLOVER, a closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control. CLOVER consists of a text-conditioned video diffusion model for generating visual plans as reference inputs, a measurable embedding space for accurate error quantification, and a feedback-driven controller that refines actions from feedback and initiates replans as needed. Our framework exhibits notable advancement in real-world robotic tasks and achieves state-of-the-art on CALVIN benchmark, improving by 8% over previous open-loop counterparts. Code and checkpoints are maintained at https://github.com/OpenDriveLab/CLOVER.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Qingwen Bu",
+      "Jia Zeng",
+      "Li Chen",
+      "Yanchao Yang",
+      "Guyue Zhou",
+      "Junchi Yan"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4403808753",
+    "doi": "10.48550/arxiv.2409.09016",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2409.09016",
+    "published_iso": "2024-09-13",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "robot manipulation benchmark functional geometry object pair compositional generalization"
+    ],
+    "paper_id": "openalex:W4403808753",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds",
+    "title_norm": "any3d vla enhancing vla robustness via diverse point clouds",
+    "abstract": "Existing Vision-Language-Action (VLA) models typically take 2D images as visual input, which limits their spatial understanding in complex scenes. How can we incorporate 3D information to enhance VLA capabilities? We conduct a pilot study across different observation spaces and visual representations. The results show that explicitly lifting visual input into point clouds yields representations that better complement their corresponding 2D representations. To address the challenges of (1) scarce 3D data and (2) the domain gap induced by cross-environment differences and depth-scale biases, we propose Any3D-VLA. It unifies the simulator, sensor, and model-estimated point clouds within a training pipeline, constructs diverse inputs, and learns domain-agnostic 3D representations that are fused with the corresponding 2D representations. Simulation and real-world experiments demonstrate Any3D-VLA's advantages in improving performance and mitigating the domain gap. Our project homepage is available at https://xianzhefan.github.io/Any3D-VLA.github.io.",
+    "year": 2026,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Xianzhe Fan",
+      "Shengliang Deng",
+      "Xiaoyang Wu",
+      "Yuxiang Lu",
+      "Zhuoling Li",
+      "Mi Yan"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W7127541930",
+    "doi": "",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2602.00807",
+    "published_iso": "2026-01-31",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "VLA 3D geometry unseen object shapes skill adaptation action plan"
+    ],
+    "paper_id": "openalex:W7127541930",
+    "year_month": "2026-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+    "title_norm": "robotwin 2 0 a scalable data generator and benchmark with strong domain randomiz",
+    "abstract": "Simulation-based data synthesis has emerged as a powerful paradigm for advancing real-world robotic manipulation. Yet existing datasets remain insufficient for robust bimanual manipulation due to (1) the lack of scalable task generation methods and (2) oversimplified simulation environments. We present RoboTwin 2.0, a scalable framework for automated, large-scale generation of diverse and realistic data, together with unified evaluation protocols for dual-arm manipulation. At its core is RoboTwin-OD, an object library of 731 instances across 147 categories with semantic and manipulation-relevant annotations. Building on this, we design an expert data synthesis pipeline that leverages multimodal language models (MLLMs) and simulation-in-the-loop refinement to automatically generate task-level execution code. To improve sim-to-real transfer, RoboTwin 2.0 applies structured domain randomization along five axes: clutter, lighting, background, tabletop height, and language, enhancing data diversity and policy robustness. The framework is instantiated across 50 dual-arm tasks and five robot embodiments. Empirically, it yields a 10.9% gain in code generation success rate. For downstream policy learning, a VLA model trained with synthetic data plus only 10 real demonstrations achieves a 367% relative improvement over the 10-demo baseline, while zero-shot models trained solely on synthetic data obtain a 228% gain. These results highlight the effectiveness of RoboTwin 2.0 in strengthening sim-to-real transfer and robustness to environmental variations. We release the data generator, benchmark, dataset, and code to support scalable research in robust bimanual manipulation. Project Page: https://robotwin-platform.github.io/, Code: https://github.com/robotwin-Platform/robotwin/.",
+    "tldr": "An expert data synthesis pipeline that leverages multimodal language models (MLLMs) and simulation-in-the-loop refinement to automatically generate task-level execution code and highlights the effectiveness of RoboTwin 2.0 in strengthening sim-to-real transfer and robustness to environmental variations.",
+    "year": 2025,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Tianxing Chen",
+      "Zanxin Chen",
+      "Baijun Chen",
+      "Zijian Cai",
+      "Yibin Liu",
+      "Qiwei Liang"
+    ],
+    "citations": 411,
+    "source": "semanticscholar",
+    "source_id": "1002f84d1b487e49d3bc2d353dfb77e1495d3c58",
+    "paper_id": "dblp:journals/corr/abs-2506-18088",
+    "doi": "10.48550/arXiv.2506.18088",
+    "arxiv_id": "2506.18088",
+    "dblp_key": "journals/corr/abs-2506-18088",
+    "paper_url": "https://www.semanticscholar.org/paper/1002f84d1b487e49d3bc2d353dfb77e1495d3c58",
+    "published_iso": "2025-06-22",
+    "retrieved_via": "host_web",
+    "host_why": "It supplies current executable simulation infrastructure, manipulation-relevant object annotations, automated task code, and many bimanual tasks. It is the most useful missing benchmark backbone for constructing controlled geometry substitutions, although its published randomization is broader than the requested fixed-language/fixed-terminal-relation intervention.",
+    "relevance": "adjacent"
+  }
+]

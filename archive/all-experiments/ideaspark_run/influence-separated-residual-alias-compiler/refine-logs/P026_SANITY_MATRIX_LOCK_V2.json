@@ -1,0 +1,34 @@
+{
+  "boundary_plan": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_BOUNDARY_PLAN.json",
+    "sha256": "11ae175df05e7b8c1bec50f518732def512352ec9cd4de1efdabb79acff33f03"
+  },
+  "compiler_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_COMPILER_LOCK_V2.json",
+    "sha256": "1e9516d777e78b86ccbeb16c82eeeaa6c77c855c1895808c4ce2415d483f6aa0"
+  },
+  "confirmatory_label": "code_lock_sanity_only",
+  "created_at_utc": "2026-08-31T20:40:58.448186+00:00",
+  "failure_retry_policy": "No replacement path or alternate artifact. A completed artifact may only be reused after full semantic verification under this exact lock. A cell interrupted before manifest commit makes the matrix incomplete; partial evidence is preserved.",
+  "frozen": true,
+  "job_count": 1,
+  "jobs": [
+    {
+      "candidate_index": 7,
+      "log": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.log",
+      "output": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.json",
+      "selector": "candidate-contact",
+      "selector_seed": 0,
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json",
+      "source_admission_sha256": "72e8e5071ccc8ffd5f8d45804a3f9a37e0b7990c87376496b6550a639c07455d",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.json",
+      "source_rollout_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34"
+    }
+  ],
+  "kind": "p026_matrix_run_lock",
+  "output_directory": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CODELOCK_SANITY_V2",
+  "output_directory_empty_at_freeze": true,
+  "prefix": "P026_CODELOCK_SANITY_V2",
+  "purpose": "sanity",
+  "run_id": "p026-sanity-v1"
+}

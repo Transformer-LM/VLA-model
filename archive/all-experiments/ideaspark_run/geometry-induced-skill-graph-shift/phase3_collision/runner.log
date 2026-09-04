@@ -1,0 +1,68 @@
+python-utf8.cmd :   [skip] openreview: missing env vars: OPENREVIEW_USER, OPENREVIEW_PASS
+所在位置 行:1 字符: 1
++ & '<LOCAL_PROJECT_ROOT>\.agents\runtime\research-skills\python-utf8.cm ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  [skip] openre...OPENREVIEW_PASS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  鈿狅笍  Phase 3.1 collision: CONNECTORS DEGRADED 鈥?ran 3/4.
+       used:    arxiv, openalex, semanticscholar
+       SKIPPED: openreview
+       Retrieval/collision coverage is WEAKER than a full run.
+       Common cause: the connector package is not importable in THIS
+       process (e.g. a background/non-login shell that dropped the
+       pip --user site-packages). Re-run `check_connectors` in the SAME
+       shell you launch phases from, or install into the active env.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  arxiv 'matched-state geometry action crossover' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurr
+ed in violation of protocol (_ssl.c:1010)>
+    arxiv 'paired collision geometry checkpoints' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurr
+ed in violation of protocol (_ssl.c:1010)>
+    arxiv 'current-chunk compatibility interaction' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occu
+rred in violation of protocol (_ssl.c:1010)>
+    arxiv 'geometry-neutral common prefix' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in v
+iolation of protocol (_ssl.c:1010)>
+    arxiv 'closed-loop recipient-scene continuation' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occ
+urred in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 5 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_collision.json with
+ 0 unique papers
+  openalex: 125 BM25 hits across 5 queries -> 122 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_collision.json w
+ith 122 unique papers
+  semanticscholar 'matched-state geometry action crossover' failed: HTTP Error 429: 
+    semanticscholar 'paired collision geometry checkpoints' failed: HTTP Error 429: 
+    semanticscholar 'current-chunk compatibility interaction' failed: HTTP Error 429: 
+    semanticscholar 'geometry-neutral common prefix' failed: HTTP Error 429: 
+    semanticscholar 'closed-loop recipient-scene continuation' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 5 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_collision
+.json with 0 unique papers
+  arxiv 'paired potential-outcome action assay' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred
+ in violation of protocol (_ssl.c:1010)>
+    arxiv 'counterfactual policy input intervention' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occ
+urred in violation of protocol (_ssl.c:1010)>
+    arxiv 'metamorphic closed-loop policy testing' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occur
+red in violation of protocol (_ssl.c:1010)>
+    arxiv 'crossed treatment response design' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred i
+n violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_alias_collision.jso
+n with 0 unique papers
+  openalex: 100 BM25 hits across 4 queries -> 100 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_alias_collision.
+json with 100 unique papers
+  semanticscholar 'paired potential-outcome action assay' failed: HTTP Error 429: 
+    semanticscholar 'counterfactual policy input intervention' failed: HTTP Error 429: 
+    semanticscholar 'metamorphic closed-loop policy testing' failed: HTTP Error 429: 
+    semanticscholar 'crossed treatment response design' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_alias_col
+lision.json with 0 unique papers
+  channels: signature=122 hits (10mo), alias=+100 unique hits (48mo)
+  truncation[signature]: kept 105/122 (dropped 17 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept sc
+ore 1)
+  truncation[alias]: kept 91/100 (dropped 9 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept score 1)
+鉁?Phase 3.1 collision retrieval complete. collision_hits.json has 196 hits. retrieved at: 2026-08-30T18:00:38.523613+00:00

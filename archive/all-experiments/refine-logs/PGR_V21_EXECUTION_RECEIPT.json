@@ -1,0 +1,18 @@
+{
+  "acceptance": "same-family-provisional",
+  "created_at": "2026-08-07T05:43:38Z",
+  "freeze_manifest_path": "refine-logs/PGR_V2_FREEZE_MANIFEST_20260807_111946.json",
+  "freeze_manifest_sha256": "21267bf7a0b34d1f101398963011697ea451a6a4a5869dd97317319bd637ea6f",
+  "jury_response_path": ".aris/traces/method-plan/2026-08-07_run01/009-experiment-plan-v21-jury.response.md",
+  "jury_response_sha256": "4c5778ca4fd2d2f5f76c121e4d2566474ac961c73f3da718bda55af870905431",
+  "receipt_kind": "external-jury-overlay",
+  "scope_authorization": {
+    "A_isolated_personal_implementation": "GO",
+    "B_engineering_only_canary": "CONDITIONAL-GO",
+    "C_blind_checkpoint_screen": "CONDITIONAL-GO",
+    "D_simulation_experiments": "CONDITIONAL-GO",
+    "E_offline_robot_contract_preparation": "GO",
+    "F_live_robot_connectivity_or_motion": "NO-GO"
+  },
+  "verdict": "CONDITIONAL-GO"
+}

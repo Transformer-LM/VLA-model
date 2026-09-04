@@ -1,0 +1,561 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "Step 7, accumulation of I_K followed by Step 8 release in the reobserved post-probe state",
+      "why_picked_first": "The candidate explicitly permits object motion and reconstructs geometry after each probe, yet p_F/p_I and the summed score use one feasible/infeasible episode hypothesis. If a probe changes feasibility, old evidence is about a different state from the state handed to pi0.5."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "verbatim_quote": "1. Build the modest ProbePair-Oracle resource in RoboCasa/MuJoCo by rendering target-reference variants with matched initial visible PointMaps and different occluded clearances, label each episode with full-state exhaustive rollout over the preregistered guarded primitive library, and manufacture a small Franka Panda fixture set whose hidden clearances determine the real labels independently of IFG.",
+        "consumes": [
+          "rigid target/reference geometry",
+          "renderer and full MuJoCo state",
+          "guarded probe library L",
+          "manufactured fixture clearances"
+        ],
+        "produces": [
+          "paired initial PointMaps P0",
+          "episode labels Z in {F,I}",
+          "simulation episodes",
+          "real fixtures"
+        ],
+        "note": "Label producer is ambiguous and does not consume the frozen pi0.5 executor although the declared estimand does. Defensible readings are geometric/library feasibility and frozen-executor safe release. The real label is clearance, a third proxy reading."
+      },
+      {
+        "step": "S2",
+        "verbatim_quote": "2. Install the frozen OpenPI pi0.5 checkpoint as the downstream executor and the frozen SAM2 checkpoint plus Intel RealSense D455 depth stream as the observation path; IFG reads masks, point clouds, joint torques, and gripper state but no pi0.5 logits or gradients.",
+        "consumes": [
+          "pi0.5 checkpoint",
+          "SAM2 checkpoint",
+          "D455 RGB-D",
+          "robot telemetry"
+        ],
+        "produces": [
+          "frozen executor E",
+          "observation function O",
+          "sensor response stream"
+        ],
+        "note": "Types are named artifacts; no missing producer."
+      },
+      {
+        "step": "S3",
+        "verbatim_quote": "3. For every calibration episode, construct U_k from the current masks and depth, execute one guarded probe, discard its sampled surface coordinates, reacquire both masks and PointMaps, and store only (r, probe type, measured response y_k, oracle label).",
+        "consumes": [
+          "current P_T^k and P_R^k",
+          "L",
+          "Z",
+          "robot state"
+        ],
+        "produces": [
+          "U_k subset of L",
+          "one tuple (r,type(u_k),y_k,Z)",
+          "P_T^(k+1), P_R^(k+1)"
+        ],
+        "note": "The choice of the one probe is undefined before p_F/p_I exist; one tuple per episode does not produce the complete adaptive transcripts needed to calibrate a B_probe-step stopping policy. 'Discard' admits raw surface/world-coordinate and all-coordinate readings; the latter conflicts with retaining the command and computing centroid displacement."
+      },
+      {
+        "step": "S4",
+        "verbatim_quote": "4. Fit p_F and p_I on the calibration transcripts, freeze them, and select epsilon_den, B_probe, tau_F, and tau_I by their stated held-out rules; never tune thresholds on the evaluation fixtures.",
+        "consumes": [
+          "training tuples or transcripts",
+          "labels Z",
+          "held-out calibration episodes"
+        ],
+        "produces": [
+          "p_F(y|r,type)",
+          "p_I(y|r,type)",
+          "epsilon_den",
+          "B_probe",
+          "tau_F",
+          "tau_I"
+        ],
+        "note": "The text calls the same data calibration, training, and held-out without a split/dataflow. p_F/p_I are marginal in history although the premise says probes are non-IID and adaptive. Adding epsilon_den to a continuous density is unit-dependent."
+      },
+      {
+        "step": "S5",
+        "verbatim_quote": "5. At deployment, reacquire P_T^k and P_R^k from the current observation, build U_k anew, and output defer immediately if SAM2 loses either role or U_k is empty rather than falling back to an old coordinate.",
+        "consumes": [
+          "current RGB-D",
+          "SAM2",
+          "L",
+          "c_safe",
+          "F_max"
+        ],
+        "produces": [
+          "fresh role masks",
+          "fresh PointMaps",
+          "U_k or defer"
+        ],
+        "note": "U_k is computable only as a visible-clearance-admissible set. Under the global-safety reading, hidden obstructions make the name 'safe set' false. All-identical objects can silently swap roles while both masks remain present."
+      },
+      {
+        "step": "S6",
+        "verbatim_quote": "6. Select the probe with maximum predicted response-model disagreement, execute it under c_safe and F_max, and record y_k from the before/after observations and robot sensors.",
+        "consumes": [
+          "U_k",
+          "p_F",
+          "p_I",
+          "before observation",
+          "force guard"
+        ],
+        "produces": [
+          "u_k",
+          "y_k",
+          "post-probe state"
+        ],
+        "note": "If probe type denotes an exact library primitive, JS is defined per action; if it is a coarse class, p(.|type) cannot rank multiple u in that class. Equal-JS tie handling is undefined."
+      },
+      {
+        "step": "S7",
+        "verbatim_quote": "7. Recompute the PointMaps and safe set after every object motion, append the coordinate-free response to O_K, update I_K, and repeat only while neither threshold is crossed and the B_probe budget remains.",
+        "consumes": [
+          "post-probe observation",
+          "y_k",
+          "p_F",
+          "p_I",
+          "I_(k-1)",
+          "thresholds",
+          "B_probe"
+        ],
+        "produces": [
+          "P^(k+1)",
+          "U_(k+1)",
+          "I_k",
+          "continue or terminal decision"
+        ],
+        "note": "The score is sum_j log((p_I(y_j|r,type_j)+epsilon)/(p_F(y_j|r,type_j)+epsilon)). No step establishes that Z is invariant to admitted object motion or that marginal response densities factorize across adaptive history. 'Coordinate-free' means no raw world/surface coordinate, not no command/displacement coordinate."
+      },
+      {
+        "step": "S8",
+        "verbatim_quote": "8. If IFG returns feasible, release the unchanged current observation and relation to frozen pi0.5 for normal action-chunk execution; if infeasible, issue a no-execute decision with O_K as the evidence record; if deferred, request a new view or human decision without moving toward the task contact.",
+        "consumes": [
+          "terminal score decision",
+          "current post-probe observation",
+          "r",
+          "E"
+        ],
+        "produces": [
+          "pi0.5 action execution",
+          "block record",
+          "defer request"
+        ],
+        "note": "The released observation is current after probe motion, not unchanged from episode start. Thus the release target is the post-probe state."
+      },
+      {
+        "step": "S9",
+        "verbatim_quote": "9. Evaluate the complete pathway against the passive PointMap adapter, minimum-clearance rule, and same-transcript MLP at matched execution coverage, and run response-permutation and full-state-oracle controls to attribute downstream safety to pair-bound intervention evidence.",
+        "consumes": [
+          "evaluation fixtures",
+          "all gates",
+          "pi0.5 outcomes",
+          "coverage matching rule"
+        ],
+        "produces": [
+          "unsafe-execution rate",
+          "relation-failure rate",
+          "coverage",
+          "control deltas"
+        ],
+        "note": "This is an empirical evaluation producer, not a producer for the earlier calibration guarantee. 'Matched' is strict representation equality in simulation versus tolerance matching in real sensing; those readings support different claims."
+      }
+    ],
+    "unbound_parameters": [],
+    "unbound_parameter_note": "All behavioral numerics in the method fields are named and have defaults/selection rules: c_safe, F_max, epsilon_den, B_probe, alpha_risk, tau_F, and tau_I. Fixture count and model size are campaign scale/architecture detail. The primitive-library contents and probe-collection schedule are missing specifications but are not magic numbers.",
+    "dual_readings": [
+      {
+        "term": "feasible/infeasible",
+        "readings": [
+          "geometric/existence feasibility relative to the bounded library",
+          "safe success of frozen pi0.5 under the relation and rules"
+        ],
+        "result": "The oracle producer supports the first reading, while the declared estimand and release-risk claim require the second."
+      },
+      {
+        "term": "matched initial visible PointMaps",
+        "readings": [
+          "byte-identical representation",
+          "within a sensor/geometry tolerance"
+        ],
+        "result": "Passive non-identifiability holds under strict equality. Under tolerance matching, residual cues can identify the class; the executed toy reached 1.0 accuracy from such a cue."
+      },
+      {
+        "term": "safe set U_k",
+        "readings": [
+          "visible swept-volume admissibility",
+          "global collision-safe probes despite hidden geometry"
+        ],
+        "result": "Only the first is constructed; matched visible pairs with 25 mm versus 5 mm hidden clearance produced identical U_0."
+      },
+      {
+        "term": "discard coordinates",
+        "readings": [
+          "discard raw surface/world anchors before selecting the next probe",
+          "retain no cross-observation coordinates at all"
+        ],
+        "result": "The first is coherent; the second is contradicted by commanded twist and before/after centroid displacement in y_k."
+      },
+      {
+        "term": "probe type",
+        "readings": [
+          "one exact library primitive",
+          "a coarse class containing several micro-twists"
+        ],
+        "result": "JS selection is fully specified only on the exact-primitive reading."
+      },
+      {
+        "term": "empirical selective-risk bound",
+        "readings": [
+          "observed calibration-set rate constraint",
+          "upper-confidence bound on population selective risk"
+        ],
+        "result": "The first can be calibrated end-to-end; the second has no confidence construction and neither reading fixes the oracle-label/estimator mismatch."
+      }
+    ],
+    "estimand_match": {
+      "declared_estimand": "P(frozen pi0.5 relation failure or collision/force violation | IFG releases) over held-out episodes under the fixed probe policy",
+      "constructed_target": "response distributions and thresholds trained/calibrated from an oracle feasible/infeasible label produced by exhaustive probe-library rollouts in simulation and manufactured clearance in real fixtures",
+      "verdict": "mismatch",
+      "why": "Neither label producer observes the frozen executor outcome required by the declared estimand; geometrically feasible episodes may still be unsafe for pi0.5."
+    },
+    "dry_run": {
+      "instance": "Two rigid pairs share P0=((0,0,0),(0,0.02,0)) and visible clearance 0.020 m but have hidden clearances 0.025 m (F) and 0.005 m (I). L={axial,lateral}; c_safe=0.010 m, F_max=5 N, B=3, tau_F=-2, tau_I=2, epsilon=1e-4. Binary contact probabilities are axial p_F(1)=0.1,p_I(1)=0.9 and lateral p_F(1)=0.4,p_I(1)=0.6.",
+      "execution": {
+        "mode": "executed",
+        "script": "from math import log\nEPS=1e-4; C_SAFE=.010; TAU_F=-2.; TAU_I=2.\ndef kl(p,q): return p*log(p/q)+(1-p)*log((1-p)/(1-q))\ndef js(p,q): m=(p+q)/2; return (kl(p,m)+kl(q,m))/2\nM={'axial':{'F':{0:.9,1:.1},'I':{0:.1,1:.9}},'lateral':{'F':{0:.6,1:.4},'I':{0:.4,1:.6}}}\ndef llr(t,y): return log((M[t]['I'][y]+EPS)/(M[t]['F'][y]+EPS))\ndef dec(s): return 'block' if s>=TAU_I else ('release' if s<=TAU_F else 'defer')\nU=['axial','lateral'] if .020>C_SAFE else []\nJ={t:js(M[t]['F'][1],M[t]['I'][1]) for t in U}; u=max(U,key=lambda t:(J[t],t))\nprint('U/JS',U,{k:round(v,6) for k,v in J.items()},u)\nfor name,y in {'F':0,'I':1}.items(): print('STABLE',name,round(llr(u,y),6),dec(llr(u,y)),'naive',('release' if y==0 else 'block'))\nprint('STATE_FLIP',{'H_before':'F','y':0,'H_after':'I','score':round(llr('axial',0),6),'decision':dec(llr('axial',0))})\none=llr('axial',1); print('DEPENDENT_REPEAT',round(3*one,6),round(one,6))\na,b=1e-5,2e-5; print('UNITS',round(log((b+EPS)/(a+EPS)),6),round(log((1000*b+EPS)/(1000*a+EPS)),6))\nprint('CALIBRATION',{'oracle_error':0.0,'executor_unsafe':0.5})\nprint('MATCH_READINGS',{'strict_identifiable':False,'tolerance_cue_accuracy':1.0})\nprint('DEGENERATES',{'empty_U':'defer','identical_JS':js(.5,.5),'I0':dec(0.)})",
+        "output": "U/JS ['axial', 'lateral'] {'axial': 0.368064, 'lateral': 0.020136} axial\nSTABLE F -2.196336 release naive release\nSTABLE I 2.196336 block naive block\nSTATE_FLIP {'H_before': 'F', 'y': 0, 'H_after': 'I', 'score': -2.196336, 'decision': 'release'}\nDEPENDENT_REPEAT 6.589009 2.196336\nUNITS 0.087011 0.688184\nCALIBRATION {'oracle_error': 0.0, 'executor_unsafe': 0.5}\nMATCH_READINGS {'strict_identifiable': False, 'tolerance_cue_accuracy': 1.0}\nDEGENERATES {'empty_U': 'defer', 'identical_JS': 0.0, 'I0': 'defer'}"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "initial U_0 on both hidden-clearance variants",
+          "value": "{axial,lateral} for both",
+          "arithmetic": "visible clearance 0.020 m > c_safe 0.010 m; hidden clearance is not an input to U_0"
+        },
+        {
+          "quantity": "Jensen-Shannon disagreement",
+          "value": "axial 0.368064 nats; lateral 0.020136 nats",
+          "arithmetic": "JS(Bernoulli(0.1),Bernoulli(0.9)) and JS(Bernoulli(0.4),Bernoulli(0.6)); axial is selected"
+        },
+        {
+          "quantity": "one-step score",
+          "value": "F-like y=0: -2.196336; I-like y=1: +2.196336",
+          "arithmetic": "log((0.1+1e-4)/(0.9+1e-4)) and its inverse"
+        },
+        {
+          "quantity": "dependent three-step score",
+          "value": "candidate marginal sum 6.589009 versus correct joint LLR 2.196336 for a perfectly repeated bit",
+          "arithmetic": "3*2.196336 versus log(P_I(y=1)/P_F(y=1)); overcount factor 3"
+        },
+        {
+          "quantity": "epsilon unit dependence",
+          "value": "0.087011 in one density unit versus 0.688184 after a 1000x unit rescaling",
+          "arithmetic": "log((2e-5+1e-4)/(1e-5+1e-4)) versus log((0.02+1e-4)/(0.01+1e-4))"
+        },
+        {
+          "quantity": "oracle versus executor release risk",
+          "value": "0.0 oracle-infeasible rate versus 0.5 frozen-executor unsafe rate",
+          "arithmetic": "four oracle-F releases with downstream unsafe outcomes [1,1,0,0]"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "A probe can yield F-like score -2.196336, move the pair from F to I, and trigger release in the now-I current state.",
+          "kind": "structural",
+          "why": "The procedure expressly admits object motion, but no invariant fixes Z across probes and the release target is post-probe. A sum for one static hypothesis cannot classify the current state after a label transition."
+        },
+        {
+          "anomaly": "Three perfectly dependent repeats produce candidate score 6.589009 although the joint evidence is only 2.196336.",
+          "kind": "structural",
+          "why": "For any perfectly repeated response, multiplying marginal densities counts one event K times; the candidate declares non-IID adaptive samples and supplies no history-conditional factorization."
+        },
+        {
+          "anomaly": "The same density ratio changes from 0.087011 to 0.688184 under a unit rescaling because epsilon_den is added to a continuous density.",
+          "kind": "structural",
+          "why": "Continuous densities are unit-bearing; an additive dimensionless floor is not invariant to a change of measurement units."
+        },
+        {
+          "anomaly": "Oracle-label calibration reports zero error while the declared downstream unsafe-release risk is 0.5.",
+          "kind": "structural",
+          "why": "The two quantities can differ whenever a geometrically feasible pair is failed by frozen pi0.5; the specified label producer never measures the executor outcome."
+        },
+        {
+          "anomaly": "On the admissible singleton/one-step regime, IFG and a fair fixed-probe contact rule make identical decisions for every binary response; observed divergence is zero.",
+          "kind": "structural",
+          "why": "Argmax over a singleton is vacuous and the Bernoulli likelihood threshold is exactly a one-feature decision rule for both possible y values, so the equivalence is algebraic in this allowed subcase rather than a synthetic win rate."
+        },
+        {
+          "anomaly": "A tolerance-matched residual cue classified the two labels with accuracy 1.0 in the toy, whereas strict equality made passive identification impossible.",
+          "kind": "instance_contingent",
+          "why": "The exact residual and classifier result depend on the constructed sensor cue; it only demonstrates why the real-fixture reading needs a leakage audit."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "U_k is empty",
+        "behavior": "Step 5 halts and returns defer.",
+        "finding": null
+      },
+      {
+        "probe": "k=0 / no evidence yet",
+        "behavior": "I_0=0 lies between toy thresholds and produces defer; the written deployment path nevertheless executes a first probe because B_probe is selected from 1-5.",
+        "finding": null
+      },
+      {
+        "probe": "p_F equals p_I for every admissible type",
+        "behavior": "All JS values and all increments are zero; a probe is still selected but tie handling is unspecified, then the procedure exhausts B_probe and defers.",
+        "finding": "Deterministic tie-breaking is missing; executing zero-information probes spends risk/budget but does not cause an unsafe release under thresholds straddling zero."
+      },
+      {
+        "probe": "all-identical target/reference objects and tied role assignments",
+        "behavior": "SAM2 can return two nonempty masks while swapping target/reference identity, so the current reacquisition flag need not detect the failure.",
+        "finding": "Role reacquisition must require a unique identity association and otherwise defer; mask presence alone does not establish identity."
+      },
+      {
+        "probe": "singleton U_k",
+        "behavior": "JS argmax is vacuous; for B_probe=1 and binary response, IFG collapses exactly to a fixed-probe response threshold.",
+        "finding": "This is the fair-naive equivalence used in T5."
+      },
+      {
+        "probe": "maximum specified B_probe=5 with identical models",
+        "behavior": "Five zero increments leave I_5=0; the procedure halts at budget and defers.",
+        "finding": null
+      },
+      {
+        "probe": "both response model values numerically zero",
+        "behavior": "epsilon_den makes the increment log(1)=0, so the procedure defers after budget rather than divide by zero.",
+        "finding": "The numerical guard halts, but if p values are continuous densities its value is unit-dependent."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "feasibility is defined relative to the probe library and frozen pi0.5 executor",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "IFG never carries a surface index or world-frame contact coordinate across probe steps",
+        "established_by": "S3,S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "'coordinate' excludes command type and the temporary before/after centroids used to compute y_k",
+          "all raw coordinates are destroyed before u_(k+1) selection"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "U_k is a safe set",
+        "established_by": "S5",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "guarded force is capped by F_max",
+        "established_by": "S6",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "certified impedance controller, sensor bandwidth, stopping latency, and impact-energy envelope enforce the cap for every admitted probe"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "p_F and p_I predict class-conditional response distributions",
+        "established_by": "S4",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the maximum-disagreement probe is selected",
+        "established_by": "S6",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "probe type uniquely identifies an exact command",
+          "a deterministic equal-JS tie rule exists",
+          "both class models have support for every admissible primitive"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "I_K is accumulated pair-bound interventional evidence",
+        "established_by": "S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "tau_F/tau_I implement alpha_risk as a maximum empirical selective-risk bound",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "the full-state oracle labels are independent of the gate",
+        "established_by": "S1",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the oracle outcome is defined without using IFG's decision",
+          "the oracle label targets the same executor-specific event as selective risk"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "only realized intervention responses enter I_K",
+        "established_by": "S6,S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "IFG is neither a re-encoding of passive geometry nor a stale global-anchor program",
+        "established_by": "S5,S6,S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "strict representation-level initial matching for the non-identifiability claim",
+          "role identities are uniquely reacquired",
+          "the label targeted by old evidence is invariant across object motion",
+          "no raw spatial coordinate enters next-probe selection"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "the feasibility signal is relocated to a dynamically reacquired probe-response locus",
+        "established_by": "S5,S6,S7",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Choose the first admissible exact primitive in preregistered library order, execute it under the same c_safe/F_max guard, reacquire once, and release iff a preregistered scalar contact/impulse threshold on the same y says clear; otherwise block or defer.",
+      "naive_fairness": "It respects the same probe budget (uses one of at most B_probe), the same U_k, D455/SAM2/torque information at the same moment, the same force/deployment restrictions, and the same post-probe reobservation; it is simpler because it has no p_F/p_I models, JS optimization, or accumulated likelihood score.",
+      "instance_behavior": {
+        "naive": "stable F: release; stable I: block; F-to-I state flip with F-like y: release",
+        "mechanism": "stable F: release; stable I: block; F-to-I state flip with F-like y: release",
+        "divergence": "none (0 decision differences across the two stable pairs, and none on the state-flip probe)",
+        "kind": "structural"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "For the explicitly allowed singleton-U, B_probe=1, binary-response subcase, JS selection is vacuous and the likelihood test is exactly a one-feature threshold for every possible y. The candidate's passive PointMap baseline withholds the very transcript IFG acquires; the fair same-information naive shows that the extra density/adaptive machinery does not confront an additional obstacle in this admissible regime."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "Step 7 accumulates evidence for one feasible/infeasible hypothesis across probe-induced object motion, but Step 8 releases pi0.5 in the post-probe state and no invariant says feasibility is unchanged. Earlier evidence can therefore certify the wrong current state.",
+      "severity": "blocking",
+      "why_not_repaired": "An honest fix must either restrict and certify every probe as feasibility-state preserving, add a restoration operation, or replace the fixed-hypothesis score with a dynamic latent-state filter. Each changes what the mechanism is and directly confronts the declared object-motion obstacle; an abstain/clamp patch would only avoid it.",
+      "verbatim_step_quote": "7. Recompute the PointMaps and safe set after every object motion, append the coordinate-free response to O_K, update I_K, and repeat only while neither threshold is crossed and the B_probe budget remains. 8. If IFG returns feasible, release the unchanged current observation and relation to frozen pi0.5 for normal action-chunk execution.",
+      "executed_evidence": "score=log((0.1+1e-4)/(0.9+1e-4))=-2.196336 <= tau_F=-2. Script state-flip excerpt: H_before='F'; y=0; H_after='I'; decision(score)='release'. Output: STATE_FLIP {'H_before': 'F', 'y': 0, 'H_after': 'I', 'score': -2.196336, 'decision': 'release'}. The procedure admits object motion but supplies no H_before=H_after invariant.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "The training/calibration label does not identify the declared selective-risk estimand: S1 labels geometric/library feasibility from exhaustive probe-library rollouts or manufactured clearance, while the estimand is frozen-pi0.5 relation failure or collision/force violation conditional on release.",
+      "severity": "blocking",
+      "why_not_repaired": "Repair requires redefining and recollecting labels as executor-specific counterfactual safe-release outcomes (or weakening the entire claim to geometric infeasibility), then recalibrating the full stopping policy. That is a target/ontology redesign, not narrative alignment.",
+      "verbatim_step_quote": "1. Build the modest ProbePair-Oracle resource in RoboCasa/MuJoCo by rendering target-reference variants with matched initial visible PointMaps and different occluded clearances, label each episode with full-state exhaustive rollout over the preregistered guarded primitive library, and manufacture a small Franka Panda fixture set whose hidden clearances determine the real labels independently of IFG. Thresholds tau_I and tau_F are chosen on a held-out oracle-labeled calibration set to minimize deferrals subject to alpha_risk = 0.10, a user-set maximum empirical selective-risk bound.",
+      "executed_evidence": "Script used four oracle-F episodes with executor unsafe outcomes [1,1,0,0]. Output: CALIBRATION {'oracle_error': 0.0, 'executor_unsafe': 0.5}. Thus a threshold can satisfy zero oracle-infeasibility among releases while violating the declared downstream selective-risk estimand at 0.5.",
+      "reading_dependence": "reading_robust: under the geometric reading labels miss executor failures; under the executor-specific reading S1 has no producer for the required label"
+    },
+    {
+      "finding": "The independently constructed fair naive uses the same guarded probe and transcript and is decision-equivalent to IFG in the candidate's allowed singleton-U, B_probe=1 regime, so the candidate's branch-(i) passive baseline is a self-served information-disadvantaged baseline.",
+      "severity": "blocking",
+      "why_not_repaired": "This is T5 equivalent_to_naive and coincides with the declared obstacle. Establishing depth requires redesigning the adaptive/sequential component so it beats a fixed-probe same-transcript rule under the same constraints, or reframing the contribution as the simpler probe-and-threshold method; wording cannot supply that distinction.",
+      "verbatim_step_quote": "6. Select the probe with maximum predicted response-model disagreement, execute it under c_safe and F_max, and record y_k from the before/after observations and robot sensors. BLOCK 2 - NAIVE-BASELINE AUDIT: the runnable naive version trains a parameter-matched MLP or LoRA adapter from the initial dense target/reference PointMaps and relation directly to a feasibility logit.",
+      "executed_evidence": "With singleton admissible axial probe and B_probe=1, IFG scores y=0 as -2.196336 (release) and y=1 as +2.196336 (block). The same-information fixed-probe rule releases iff y=0, hence agrees for every possible binary y. Output: STABLE F -2.196336 release naive release; STABLE I 2.196336 block naive block; divergence 0. Argmax over one action is algebraically vacuous.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "Operational clarifications: U_k is a visible-clearance-admissible set, not a certificate against occluded contact, and its force claim is conditional on the site's certified impedance, sensing, and stopping envelope. Probe type denotes one exact library primitive including command magnitude and direction, with equal-JS ties broken by preregistered library order. Raw surface/world coordinates are discarded only after y_k is computed and before choosing u_(k+1); the retained command type and displacement summary are transcript features. Because responses may be dependent, I_K is an empirical cumulative score rather than a joint log-likelihood ratio unless a history-conditioned factorization is established, and thresholds must be calibrated on complete sequences generated by the frozen deployed policy. The p_F/p_I values used with epsilon_den are dimensionless probability masses over fixed sensor-quantization bins rather than unit-bearing continuous densities. Role reacquisition succeeds only when target/reference identity is unique under a preregistered identity cue; tied or all-identical assignments set the reacquisition flag false and defer.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T3/T4 ambiguities and the executed unit-dependence, marginal-evidence, equal-JS, hidden-clearance, coordinate-timing, and silent-role-swap findings without addressing the blocking state-label, estimand, or T5 holes."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "10. Before p_F/p_I exist, collect class-balanced training support by cycling every currently admissible exact library primitive under a preregistered behavior schedule; after fitting, freeze the JS and tie policy, generate a disjoint set of complete transcripts to the preregistered maximum B_max = 5 under that policy, and select B_probe and terminal thresholds only from prefixes of those held-out transcripts.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 missing producer/circularity in which Step 3 did not specify probe choice before p_F/p_I existed and one-probe tuples could not calibrate the sequential deployed policy."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[0].how_closed",
+      "value": "Closed by relocating the candidate signal from passive pair geometry to a dynamically reacquired probe-response locus and by scoring it with an oracle independent of the gate. The passive non-identifiability claim applies only to simulation pairs whose canonicalized initial PointMaps are exactly identical; real fixtures are approximate matched-visible diagnostics and must be reported separately with a representation-leakage classifier, not used to claim non-identifiability. Corpus support is thin in robot manipulation, and C01's closest exemplars are security and detection systems.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 dual-reading and T2 matched-visible finding by separating strict representation equality from tolerance-matched real fixtures."
+    }
+  ],
+  "final_candidate": {
+    "title": "Probe, Reobserve, Abstain: Interventional Feasibility Certificates for Unseen Object Pairs",
+    "hook": "For target-reference pairs with identical initial visible PointMaps but different hidden clearances, a passive geometry adapter cannot identify which requested relation is executable, whereas a bounded probe-response transcript can. The headline metric is unsafe-execution rate at matched execution coverage, which should decrease when the gate uses interventional evidence rather than static geometry alone.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal, is admitted because unsafe-execution rate at matched coverage is predicted to separate passive and interventional arms on PointMap-matched fixtures. Shape (c) was viable because the gate leaves frozen OpenPI pi0.5 weights untouched, but it was rejected because parameter minimalism is not the load-bearing claim.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances 鈥?stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "companion_pattern": "controlled_diagnostic_design",
+        "how_closed": "Closed by relocating the candidate signal from passive pair geometry to a dynamically reacquired probe-response locus and by scoring it with an oracle independent of the gate. The passive non-identifiability claim applies only to simulation pairs whose canonicalized initial PointMaps are exactly identical; real fixtures are approximate matched-visible diagnostics and must be reported separately with a representation-leakage classifier, not used to claim non-identifiability. Corpus support is thin in robot manipulation, and C01's closest exemplars are security and detection systems."
+      }
+    ],
+    "core_mechanism": "Interventional Feasibility Gating (IFG) is restricted to rigid-object relations with a preregistered bounded library of guarded probe primitives and defines feasibility relative to that library and the frozen OpenPI pi0.5 executor. At probe step k, an Intel RealSense D455 observation is segmented by SAM2 into fresh target and reference masks and converted into current PointMaps P_T^k and P_R^k; IFG never carries a surface index or world-frame contact coordinate from step k-1 into step k. From only P_T^k, P_R^k, the relation r, and the current gripper pose, it constructs the safe set U_k of Cartesian micro-twists whose visible swept-volume clearance exceeds c_safe = 10 mm, selected by a 5-15 mm commissioning sweep, and whose guarded force is capped by F_max = 5 N, reduced whenever the robot site's certified limit is lower. Two small response-density models p_F and p_I, trained on independently labeled feasible and infeasible probe episodes, predict the distribution of a response under the feasible and infeasible hypotheses conditioned on r and probe type but not on a raw PointMap embedding. IFG chooses u_k in U_k by the largest predicted Jensen-Shannon disagreement between p_F and p_I, executes it, stops on the force guard, and immediately reacquires P_T^(k+1) and P_R^(k+1) before any next action. Its response y_k is the commanded gripper-frame twist together with measured gripper displacement, target and reference centroid displacement from the two fresh SAM2 masks, joint-torque impulse, post-probe visible clearance, and a mask-reacquisition flag; these are transcript values, not future spatial anchors. The central object is O_K = {(r, type(u_k), y_k)} for k up to B_probe and its evidence I_K = sum_k log[(p_I(y_k|r,type(u_k)) + epsilon_den)/(p_F(y_k|r,type(u_k)) + epsilon_den)], with epsilon_den = 1e-4 selected by held-out likelihood-stability sweep and B_probe = 3 selected from 1-5 on the held-out cost-risk curve. Thresholds tau_I and tau_F are chosen on a held-out oracle-labeled calibration set to minimize deferrals subject to alpha_risk = 0.10, a user-set maximum empirical selective-risk bound: I_K >= tau_I yields infeasible and blocks pi0.5, I_K <= tau_F yields feasible and releases pi0.5, and all other cases defer. The companion diagnostic constructs RoboCasa/MuJoCo and modest real Franka Panda fixture pairs with matched initial visible PointMaps but different occluded inner clearances, labels simulation episodes using full-state exhaustive rollouts over the same bounded primitive library and real fixtures from preregistered manufactured clearances, and compares IFG with a parameter-matched passive PointMap adapter, a minimum-clearance rule, and a same-transcript MLP. Because only realized intervention responses enter I_K and every action coordinate is discarded before reobservation, IFG is neither a re-encoding of the passive geometry-to-label map nor a stale global-anchor program. Operational clarifications: U_k is a visible-clearance-admissible set, not a certificate against occluded contact, and its force claim is conditional on the site's certified impedance, sensing, and stopping envelope. Probe type denotes one exact library primitive including command magnitude and direction, with equal-JS ties broken by preregistered library order. Raw surface/world coordinates are discarded only after y_k is computed and before choosing u_(k+1); the retained command type and displacement summary are transcript features. Because responses may be dependent, I_K is an empirical cumulative score rather than a joint log-likelihood ratio unless a history-conditioned factorization is established, and thresholds must be calibrated on complete sequences generated by the frozen deployed policy. The p_F/p_I values used with epsilon_den are dimensionless probability masses over fixed sensor-quantization bins rather than unit-bearing continuous densities. Role reacquisition succeeds only when target/reference identity is unique under a preregistered identity cue; tied or all-identical assignments set the reacquisition flag false and defer.",
+    "core_mechanism_reasoning": "BLOCK 1 - PREMISES ledger:\nP1: Single-view PointMaps can be observationally identical while occluded inner clearance changes relation feasibility; RoboCasa/MuJoCo hidden-geometry variants and paired manufactured fixtures make this premise directly checkable.\nP2: Guarded micro-probe responses carry feasibility information beyond the initial PointMaps; untested — falsification target, and the load-bearing evidence variable I_K measures that separation.\nP3: SAM2 can preserve target/reference instance identity over the bounded probe motions often enough to reacquire fresh PointMaps; failures are observable through the reacquisition flag and cause defer rather than reuse of a stale anchor.\nObservation-model premise: probes are selected adaptively by a fixed U_k/disagreement policy, so samples within an episode are not IID; calibration and test use the same frozen probe policy, and any exchangeability claim is only across held-out pair episodes, not across probe steps.\nESTIMAND: selective risk is the probability, over held-out unseen target-reference pair episodes under the fixed probe policy, that the frozen pi0.5 execution fails the relation or violates a collision/force rule conditional on IFG releasing execution; coverage is the probability that IFG releases rather than defers.\nBLOCK 2 - NAIVE-BASELINE AUDIT: the runnable naive version trains a parameter-matched MLP or LoRA adapter from the initial dense target/reference PointMaps and relation directly to a feasibility logit, then executes pi0.5 when that logit passes a calibrated threshold. Branch (i): it silently assumes the pre-action visual geometry is sufficient, which is false by construction on matched-visible-PointMap fixtures whose occluded clearance differs; IFG confronts the missing information by intervening and measuring the response rather than encoding the same static inputs differently. Active sensing and sequential testing are standard tools, but this instance couples query choice to a strict force/clearance budget and to object motion that invalidates spatial references, so the domain-specific contribution is the discard-reobserve-reconstruct protocol plus risk-calibrated abstention under a shrinking safe probe set; if a same-transcript classifier matches IFG, the result is honestly application-grade.\nBLOCK 3 - Design rationale: the removal test supports one deep gap, so the oracle construction, active probe, and abstention rule are one feasibility module rather than separate sibling mechanisms. A variable phase graph, a static dense adapter, and a hand-coded geometric clearance test were rejected respectively because they repeat an occupied scaffold family, cannot resolve the controlled observational alias, and cannot use measured contact response; the design also avoids regression to key-frame correspondence, PDDLStream-style task-and-motion planning, and fixed object-relative trajectories.",
+    "core_mechanism_steps": "1. Build the modest ProbePair-Oracle resource in RoboCasa/MuJoCo by rendering target-reference variants with matched initial visible PointMaps and different occluded clearances, label each episode with full-state exhaustive rollout over the preregistered guarded primitive library, and manufacture a small Franka Panda fixture set whose hidden clearances determine the real labels independently of IFG.\n2. Install the frozen OpenPI pi0.5 checkpoint as the downstream executor and the frozen SAM2 checkpoint plus Intel RealSense D455 depth stream as the observation path; IFG reads masks, point clouds, joint torques, and gripper state but no pi0.5 logits or gradients.\n3. For every calibration episode, construct U_k from the current masks and depth, execute one guarded probe, discard its sampled surface coordinates, reacquire both masks and PointMaps, and store only (r, probe type, measured response y_k, oracle label).\n4. Fit p_F and p_I on the calibration transcripts, freeze them, and select epsilon_den, B_probe, tau_F, and tau_I by their stated held-out rules; never tune thresholds on the evaluation fixtures.\n5. At deployment, reacquire P_T^k and P_R^k from the current observation, build U_k anew, and output defer immediately if SAM2 loses either role or U_k is empty rather than falling back to an old coordinate.\n6. Select the probe with maximum predicted response-model disagreement, execute it under c_safe and F_max, and record y_k from the before/after observations and robot sensors.\n7. Recompute the PointMaps and safe set after every object motion, append the coordinate-free response to O_K, update I_K, and repeat only while neither threshold is crossed and the B_probe budget remains.\n8. If IFG returns feasible, release the unchanged current observation and relation to frozen pi0.5 for normal action-chunk execution; if infeasible, issue a no-execute decision with O_K as the evidence record; if deferred, request a new view or human decision without moving toward the task contact.\n9. Evaluate the complete pathway against the passive PointMap adapter, minimum-clearance rule, and same-transcript MLP at matched execution coverage, and run response-permutation and full-state-oracle controls to attribute downstream safety to pair-bound intervention evidence. 10. Before p_F/p_I exist, collect class-balanced training support by cycling every currently admissible exact library primitive under a preregistered behavior schedule; after fitting, freeze the JS and tie policy, generate a disjoint set of complete transcripts to the preregistered maximum B_max = 5 under that policy, and select B_probe and terminal thresholds only from prefixes of those held-out transcripts.",
+    "falsification_prediction": "On RoboCasa/MuJoCo and the preregistered Franka Panda fixture pairs, compare IFG with a parameter-matched passive dense PointMap feasibility adapter, a minimum-clearance rule, and a same-transcript MLP, then run frozen pi0.5 only on episodes each gate releases. If the candidate works, unsafe-execution rate and relation-failure rate decrease at matched execution coverage while defer rate remains reported rather than hidden. The one load-bearing variable is I_K, the accumulated pair-bound interventional response evidence; the negative control permutes y_k records across target-reference pairs while preserving each pair's initial PointMaps and commanded probe types. Under that control, the downstream unsafe-execution rate should rise toward the best passive baseline, whereas replacing y_k with the simulator full-state response oracle is a positive-control upper bound; no numeric outcome bar is asserted.",
+    "compute_budget": "8 A100-80GB GPU-days for RoboCasa/MuJoCo trace generation, response-density fitting, and frozen-pi0.5 evaluation; 24 Franka Panda robot-hours plus fabrication of the modest ProbePair-Oracle fixtures; $0 paid API.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "openalex:W4403786340",
+        "delta": "MATCH POLICY transports stored key-frame registrations to unseen configurations, whereas IFG acquires post-intervention response evidence and can withhold execution on an oracle-defined infeasible pair; this delta is an abstract-only inference because its fetched method section is empty."
+      },
+      {
+        "paper_id": "openalex:W4416447778",
+        "delta": "EasyInsert predicts a relative pose and runs a fixed coarse-to-fine insertion process, whereas IFG tests feasibility before releasing any executor and reports selective risk on matched-visible-geometry negative pairs; this delta is an abstract-only inference because its fetched method section is empty."
+      },
+      {
+        "paper_id": "openalex:W4404350837",
+        "delta": "SPOT conditions a policy on an available object-centric pose trajectory, whereas IFG constructs a coordinate-free sequential evidence certificate from fresh observations after guarded probes and explicitly returns infeasible or defer; this delta is an abstract-only inference because its fetched method section is empty."
+      }
+    ],
+    "almost_prior_paper_id": "openalex:W4416447778",
+    "what_step_was_missed": "EasyInsert would have needed to replace unconditional relative-pose execution with an independently calibrated pre-execution probe-response test whose coordinates are discarded and recomputed after every object motion, including labeled incompatible pairs and an explicit abstention outcome; this is an abstract-only inference because the fetched method section is empty.",
+    "signature_terms": [
+      "interventional pair feasibility certificate",
+      "reobserve after reversible probes",
+      "selective manipulation abstention gate",
+      "hidden geometry matched pairs"
+    ],
+    "alias_terms": [
+      "active hypothesis testing control",
+      "safe exploration failure detection",
+      "sequential change detection robotics",
+      "risk controlled selective prediction"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

@@ -1,0 +1,1935 @@
+[
+ {
+  "title": "Permeability Benchmarking: Guidelines for Comparing in Silico, in Vitro, and in Vivo Measurements",
+  "title_norm": "permeability benchmarking guidelines for comparing in silico in vitro and in viv",
+  "abstract": ", depicting the ways in which each benchmarking is sensitive to the choices of assay design. Finally, we outline seven recommendations for best practices in permeability benchmarking and underscore the significance of tailored permeability assays in driving advancements in drug delivery research and development. Our exploration encompasses a discussion of \"generic\" and tissue-specific biological barriers, including the blood-brain barrier (BBB), which is a major hurdle for the delivery of therapeutic agents into the brain. By addressing challenges in reconciling simulated data with experimental assays, we aim to provide insights essential for optimizing accuracy and reliability in permeability modeling.",
+  "year": 2025,
+  "venue": "Journal of Chemical Information and Modeling",
+  "authors": [
+   "Christian Jorgensen",
+   "Raleigh M. Linville",
+   "Ian Galea",
+   "Edward Lambden",
+   "Martin Vögele",
+   "Charles H. Chen"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4406511948",
+  "doi": "10.1021/acs.jcim.4c01815",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406511948",
+  "published_iso": "2025-01-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Wicked Problems in Public Policy",
+  "title_norm": "wicked problems in public policy",
+  "abstract": "",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Brian Head"
+  ],
+  "citations": 738,
+  "source": "openalex",
+  "source_id": "W1739686760",
+  "doi": "10.1007/978-3-030-90434-0_43-1",
+  "arxiv_id": null,
+  "paper_url": "https://library.oapen.org/bitstream/20.500.12657/53360/1/978-3-030-94580-0.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "On generating trustworthy counterfactual explanations",
+  "title_norm": "on generating trustworthy counterfactual explanations",
+  "abstract": "Deep learning models like chatGPT exemplify AI success but necessitate a deeper understanding of trust in critical sectors. Trust can be achieved using counterfactual explanations, which is how humans become familiar with unknown processes; by understanding the hypothetical input circumstances under which the output changes. We argue that the generation of counterfactual explanations requires several aspects of the generated counterfactual instances, not just their counterfactual ability. We present a framework for generating counterfactual explanations that formulate its goal as a multiobjective optimization problem balancing three objectives: plausibility; the intensity of changes; and adversarial power. We use a generative adversarial network to model the distribution of the input, along with a multiobjective counterfactual discovery solver balancing these objectives. We demonstrate the usefulness of six classification tasks with image and 3D data confirming with evidence the existence of a trade-off between the objectives, the consistency of the produced counterfactual explanations with human knowledge, and the capability of the framework to unveil the existence of concept-based biases and misrepresented attributes in the input domain of the audited model. Our pioneering effort shall inspire further work on the generation of plausible counterfactual explanations in real-world scenarios where attribute-/concept-based annotations are available for the domain under analysis.",
+  "year": 2023,
+  "venue": "Information Sciences",
+  "authors": [
+   "Javier Del Ser",
+   "Alejandro Barredo-Arrieta",
+   "Natalia Díaz-Rodríguez",
+   "Francisco Herrera",
+   "Anna Saranti",
+   "Andreas Holzinger"
+  ],
+  "citations": 119,
+  "source": "openalex",
+  "source_id": "W4388767362",
+  "doi": "10.1016/j.ins.2023.119898",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388767362",
+  "published_iso": "2023-11-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Normalization benchmark of ATAC-seq datasets shows the importance of accounting for GC-content effects",
+  "title_norm": "normalization benchmark of atac seq datasets shows the importance of accounting ",
+  "abstract": "The assay for transposase-accessible chromatin using sequencing (ATAC-seq) allows the study of epigenetic regulation of gene expression by assessing chromatin configuration for an entire genome. Despite its popularity, there have been limited studies investigating the analytical challenges related to ATAC-seq data, with most studies leveraging tools developed for bulk transcriptome sequencing. Here, we show that GC-content effects are omnipresent in ATAC-seq datasets. Since the GC-content effects are sample specific, they can bias downstream analyses such as clustering and differential accessibility analysis. We introduce a normalization method based on smooth-quantile normalization within GC-content bins and evaluate it together with 11 different normalization procedures on 8 public ATAC-seq datasets. Accounting for GC-content effects in the normalization is crucial for common downstream ATAC-seq data analyses, improving accuracy and interpretability. Through case studies, we show that exploratory data analysis is essential to guide the choice of an appropriate normalization method for a given dataset.",
+  "year": 2022,
+  "venue": "Cell Reports Methods",
+  "authors": [
+   "Koen Van den Berge",
+   "Hsin-Jung Chou",
+   "Hector Roux de Bézieux",
+   "Kelly Street",
+   "Davide Risso",
+   "John Ngai"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4308041337",
+  "doi": "10.1016/j.crmeth.2022.100321",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S2667237522002119-fx1_lrg.jpg",
+  "published_iso": "2022-11-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "IPCC, 2023: Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change [Core Writing Team, H. Lee and J. Romero (eds.)]. IPCC, Geneva, Switzerland.",
+  "title_norm": "ipcc 2023 climate change 2023 synthesis report contribution of working groups i ",
+  "abstract": "The Synthesis Report (SYR) is a stand-alone synthesis of the most policy-relevant evidence from the scientific, technical, and socio-economic literature assessed in the Sixth Assessment Report (AR6) of the Intergovernmental Panel on Climate Change (IPCC). The SYR distils and integrates the main findings of the three reports of the Working Groups of the IPCC during the AR6, and the three AR6 Special Reports into a concise document. It consists of a Summary for Policymakers and a longer report.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Katherine Calvin",
+   "Dipak Dasgupta",
+   "Gerhard Krinner",
+   "Aditi Mukherji",
+   "Peter Thorne",
+   "Christopher H. Trisos"
+  ],
+  "citations": 3556,
+  "source": "openalex",
+  "source_id": "W4385118605",
+  "doi": "10.59327/ipcc/ar6-9789291691647",
+  "arxiv_id": null,
+  "paper_url": "https://openresearch-repository.anu.edu.au/bitstreams/95eb5ece-a734-44d7-86b3-bec919268af8/download",
+  "published_iso": "2023-07-21",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "CIRS: Bursting Filter Bubbles by Counterfactual Interactive Recommender System",
+  "title_norm": "cirs bursting filter bubbles by counterfactual interactive recommender system",
+  "abstract": "While personalization increases the utility of recommender systems, it also brings the issue offilter bubbles. e.g., if the system keeps exposing and recommending the items that the user is interested in, it may also make the user feel bored and less satisfied. Existing work studies filter bubbles in static recommendation, where the effect of overexposure is hard to capture. In contrast, we believe it is more meaningful to study the issue in interactive recommendation and optimize long-term user satisfaction. Nevertheless, it is unrealistic to train the model online due to the high cost. As such, we have to leverage offline training data and disentangle the causal effect on user satisfaction. To achieve this goal, we propose a counterfactual interactive recommender system (CIRS) that augments offline reinforcement learning (offline RL) with causal inference. The basic idea is to first learn a causal user model on historical data to capture the overexposure effect of items on user satisfaction. It then uses the learned causal user model to help the planning of the RL policy. To conduct evaluation offline, we innovatively create an authentic RL environment (KuaiEnv) based on a real-world fully observed user rating dataset. The experiments show the effectiveness of CIRS in bursting filter bubbles and achieving long-term success in interactive recommendation. The implementation of CIRS is available via https://github.com/chongminggao/ CIRS-codes.",
+  "year": 2023,
+  "venue": "ACM Transactions on Information Systems",
+  "authors": [
+   "Chongming Gao",
+   "Shiqi Wang",
+   "Shijun Li",
+   "Jiawei Chen",
+   "Xiangnan He",
+   "Wenqiang Lei"
+  ],
+  "citations": 89,
+  "source": "openalex",
+  "source_id": "W4367319708",
+  "doi": "10.1145/3594871",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3594871",
+  "published_iso": "2023-04-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "A foundation model for clinical-grade computational pathology and rare cancers detection",
+  "title_norm": "a foundation model for clinical grade computational pathology and rare cancers d",
+  "abstract": "The analysis of histopathology images with artificial intelligence aims to enable clinical decision support systems and precision medicine. The success of such applications depends on the ability to model the diverse patterns observed in pathology images. To this end, we present Virchow, the largest foundation model for computational pathology to date. In addition to the evaluation of biomarker prediction and cell identification, we demonstrate that a large foundation model enables pan-cancer detection, achieving 0.95 specimen-level area under the (receiver operating characteristic) curve across nine common and seven rare cancers. Furthermore, we show that with less training data, the pan-cancer detector built on Virchow can achieve similar performance to tissue-specific clinical-grade models in production and outperform them on some rare variants of cancer. Virchow's performance gains highlight the value of a foundation model and open possibilities for many high-impact applications with limited amounts of labeled training data.",
+  "year": 2024,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Eugene Vorontsov",
+   "Alican Bozkurt",
+   "Adam Casson",
+   "George Shaikovski",
+   "Michal Zelechowski",
+   "Kristen Severson"
+  ],
+  "citations": 481,
+  "source": "openalex",
+  "source_id": "W4400889241",
+  "doi": "10.1038/s41591-024-03141-0",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4400889241",
+  "published_iso": "2024-07-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A Systematic Review of Advanced Sensor Technologies for Non-Destructive Testing and Structural Health Monitoring",
+  "title_norm": "a systematic review of advanced sensor technologies for non destructive testing ",
+  "abstract": "This paper reviews recent advances in sensor technologies for non-destructive testing (NDT) and structural health monitoring (SHM) of civil structures. The article is motivated by the rapid developments in sensor technologies and data analytics leading to ever-advancing systems for assessing and monitoring structures. Conventional and advanced sensor technologies are systematically reviewed and evaluated in the context of providing input parameters for NDT and SHM systems and for their suitability to determine the health state of structures. The presented sensing technologies and monitoring systems are selected based on their capabilities, reliability, maturity, affordability, popularity, ease of use, resilience, and innovation. A significant focus is placed on evaluating the selected technologies and associated data analytics, highlighting limitations, advantages, and disadvantages. The paper presents sensing techniques such as fiber optics, laser vibrometry, acoustic emission, ultrasonics, thermography, drones, microelectromechanical systems (MEMS), magnetostrictive sensors, and next-generation technologies.",
+  "year": 2023,
+  "venue": "Sensors",
+  "authors": [
+   "Sahar Hassani",
+   "Ulrike Dackermann"
+  ],
+  "citations": 465,
+  "source": "openalex",
+  "source_id": "W4321099465",
+  "doi": "10.3390/s23042204",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/23/4/2204/pdf?version=1677141796",
+  "published_iso": "2023-02-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Counterfactually Auditable Lifecycle Certification for Autonomous Agents",
+  "title_norm": "counterfactually auditable lifecycle certification for autonomous agents",
+  "abstract": "Despite the advancements of open-source large language models (LLMs), e.g., LLaMA, they remain significantly limited in tool-use capabilities, i.e., using external tools (APIs) to fulfill human instructions. The reason is that current instruction tuning largely focuses on basic language tasks but ignores the tool-use domain. This is in contrast to the excellent tool-use capabilities of state-of-the-art (SOTA) closed-source LLMs, e.g., ChatGPT. To bridge this gap, we introduce ToolLLM, a general tool-use framework encompassing data construction, model training, and evaluation. We first present ToolBench, an instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT. Specifically, the construction can be divided into three stages: (i) API collection: we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub; (ii) instruction generation: we prompt ChatGPT to generate diverse instructions involving these APIs, covering both single-tool and multi-tool scenarios; (iii) solution path annotation: we use ChatGPT to search for a valid solution path (chain of API calls) for each instruction. To enhance the reasoning capabilities of LLMs, we develop a novel depth-first search-based decision tree algorithm. It enables LLMs to evaluate multiple reasoning traces and expand the search space. Moreover, to evaluate the tool-use capabilities of LLMs, we develop an automatic evaluator: ToolEval. Based on ToolBench, we fine-tune LLaMA to obtain an LLM ToolLLaMA, and equip it with a neural API retriever to recommend appropriate APIs for each instruction. Experiments show that ToolLLaMA demonstrates a remarkable ability to execute complex instructions and generalize to unseen APIs, and exhibits comparable performance to ChatGPT. Our ToolLLaMA also demonstrates strong zero-shot generalization ability in an out-of-distribution tool-use dataset: APIBench.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Qin, Yujia",
+   "Shihao Liang",
+   "Yining Ye",
+   "Kunlun Zhu",
+   "Lan Yan",
+   "Yaxi Lu"
+  ],
+  "citations": 72,
+  "source": "openalex",
+  "source_id": "W4385474529",
+  "doi": "10.48550/arxiv.2307.16789",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2307.16789",
+  "published_iso": "2023-07-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Effect of combined probiotics and doxycycline therapy on the gut–skin axis in rosacea",
+  "title_norm": "effect of combined probiotics and doxycycline therapy on the gut skin axis in ro",
+  "abstract": "ABSTRACT Rosacea is a chronic inflammatory skin condition marked by facial erythema, telangiectasia, and acne-like eruptions, affecting millions worldwide. While antibiotics remain a common treatment, prolonged use has significant adverse effects and can lead to antibiotic resistance. This study evaluated the impact of combined probiotics and doxycycline treatment on rosacea, emphasizing the gut–skin axis. Sixty rosacea patients were randomly assigned to the probiotic, placebo, or control groups. After a 2-week doxycycline treatment, participants underwent a 3-month intervention with either a placebo, probiotic, or no further treatment. Clinical outcomes were assessed at baseline and after the 14-week intervention. Our results showed that probiotic administration improved facial skin conditions, alleviated inflammation, and reduced facial skin microbiota diversity while enhancing gut microbiota heterogeneity. Multivariate analysis identified microbial markers distinguishing the probiotic group from the control and placebo groups, and some markers were associated with skin health parameters. After the probiotic intervention, some facial skin-associated taxa, such as Aquabacterium sp., UBA4096 sp. 1, UBA4096 sp. 2, and Yimella indica , decreased in abundance. Additionally, the fecal microbiota of the probiotic group was enriched in specific gut microbes, including Streptococcus parasanguinis , Erysipelatoclostridium ramosum , and Coprobacillus cateniformis , while showing a reduced abundance of Bacteroides vulgatus . These changes were associated with reduced facial sebum levels and a lower physician’s global assessment score. Finally, fewer antibiotic resistance genes, particularly tetracycline resistance genes, were detected in the probiotic group compared with the control and placebo groups. Our study supports the existence of a gut–skin axis and the application of probiotics in managing rosacea. IMPORTANCE This research elucidates rosacea management with novel insights into probiotic use alongside doxycycline, showing dual benefits in symptom relief and inflammation reduction in patients. The study maps probiotic-induced shifts in gut and skin microbiota, underscoring microbial shifts correlating with skin health improvements. Crucially, it deciphers the gut–skin axis modulation by probiotics, proposing a method to curb antibiotic resistance in rosacea therapies. This study furnishes robust evidence for probiotics in rosacea, advancing our grasp of the gut–skin relationship.",
+  "year": 2024,
+  "venue": "mSystems",
+  "authors": [
+   "Jie Yu",
+   "Yan Duan",
+   "Meng Zhang",
+   "Qi Li",
+   "Miao Cao",
+   "Weixin Song"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4403892195",
+  "doi": "10.1128/msystems.01201-24",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403892195",
+  "published_iso": "2024-10-30",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Treatment of Posttraumatic Stress Disorder: A State-of-the-art Review",
+  "title_norm": "treatment of posttraumatic stress disorder a state of the art review",
+  "abstract": "This narrative state-of-the-art review paper describes the progress in the understanding and treatment of Posttraumatic Stress Disorder (PTSD). Over the last four decades, the scientific landscape has matured, with many interdisciplinary contributions to understanding its diagnosis, etiology, and epidemiology. Advances in genetics, neurobiology, stress pathophysiology, and brain imaging have made it apparent that chronic PTSD is a systemic disorder with high allostatic load. The current state of PTSD treatment includes a wide variety of pharmacological and psychotherapeutic approaches, of which many are evidence-based. However, the myriad challenges inherent in the disorder, such as individual and systemic barriers to good treatment outcome, comorbidity, emotional dysregulation, suicidality, dissociation, substance use, and trauma-related guilt and shame, often render treatment response suboptimal. These challenges are discussed as drivers for emerging novel treatment approaches, including early interventions in the Golden Hours, pharmacological and psychotherapeutic interventions, medication augmentation interventions, the use of psychedelics, as well as interventions targeting the brain and nervous system. All of this aims to improve symptom relief and clinical outcomes. Finally, a phase orientation to treatment is recognized as a tool to strategize treatment of the disorder, and position interventions in step with the progression of the pathophysiology. Revisions to guidelines and systems of care will be needed to incorporate innovative treatments as evidence emerges and they become mainstream. This generation is well-positioned to address the devastating and often chronic disabling impact of traumatic stress events through holistic, cutting-edge clinical efforts and interdisciplinary research.",
+  "year": 2023,
+  "venue": "Current Neuropharmacology",
+  "authors": [
+   "Lisa Burback",
+   "Suzette Brémault‐Phillips",
+   "Mirjam J. Nijdam",
+   "Alexander C. McFarlane",
+   "Eric Vermetten"
+  ],
+  "citations": 202,
+  "source": "openalex",
+  "source_id": "W4367835241",
+  "doi": "10.2174/1570159x21666230428091433",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4367835241",
+  "published_iso": "2023-05-03",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "A Survey on Graph Counterfactual Explanations: Definitions, Methods, Evaluation, and Research Challenges",
+  "title_norm": "a survey on graph counterfactual explanations definitions methods evaluation and",
+  "abstract": "Graph Neural Networks (GNNs) perform well in community detection and molecule classification. Counterfactual Explanations (CE) provide counter-examples to overcome the transparency limitations of black-box models. Due to the growing attention in graph learning, we focus on the concepts of CE for GNNs. We analysed the SoA to provide a taxonomy, a uniform notation, and the benchmarking datasets and evaluation metrics. We discuss fourteen methods, their evaluation protocols, twenty-two datasets, and nineteen metrics. We integrated the majority of methods into the GRETEL library to conduct an empirical evaluation to understand their strengths and pitfalls. We highlight open challenges and future work.",
+  "year": 2023,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Mario Alfonso Prado-Romero",
+   "Bardh Prenkaj",
+   "Giovanni Stilo",
+   "Fosca Giannotti"
+  ],
+  "citations": 39,
+  "source": "openalex",
+  "source_id": "W4386390750",
+  "doi": "10.1145/3618105",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3618105",
+  "published_iso": "2023-09-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Review of Advances in the Measurement of Skin Hydration Based on Sensing of Optical and Electrical Tissue Properties",
+  "title_norm": "review of advances in the measurement of skin hydration based on sensing of opti",
+  "abstract": "The presence of water in the skin is crucial for maintaining the properties and functions of the skin, in particular its outermost layer, known as the stratum corneum, which consists of a lipid barrier. External exposures can affect the skin's hydration levels and in turn, alter its mechanical and physical properties. Monitoring these alterations in the skin's water content can be applicable in clinical, cosmetic, athletic and personal settings. Many techniques measuring this parameter have been investigated, with electrical-based methods currently being widely used in commercial devices. Furthermore, the exploration of optical techniques to measure hydration is growing due to the outcomes observed through the penetration of light at differing levels. This paper comprehensively reviews such measurement techniques, focusing on recent experimental studies and state-of-the-art devices.",
+  "year": 2022,
+  "venue": "Sensors",
+  "authors": [
+   "Iman M. Gidado",
+   "Meha Qassem",
+   "Iasonas F. Triantis",
+   "P. A. Kyriacou"
+  ],
+  "citations": 67,
+  "source": "openalex",
+  "source_id": "W4296831505",
+  "doi": "10.3390/s22197151",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/22/19/7151/pdf?version=1663757959",
+  "published_iso": "2022-09-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Decarbonizing the cement and concrete industry: A systematic review of socio-technical systems, technological innovations, and policy options",
+  "title_norm": "decarbonizing the cement and concrete industry a systematic review of socio tech",
+  "abstract": "Concrete is the most highly used construction material globally. This is largely due to its durability, versatility and manufacture from inexpensive and readily available materials. Although concrete has become an essential and ubiquitous construction material for modern society, its use has significant environmental impacts. The full cement and concrete lifecycle, from production to final disposal, accounts for nearly 10% of global energy-related CO 2 emissions with the majority of these emissions produced from cement, which is the binding material that holds concrete together. The cement and concrete industry (CCI), which is integral to global infrastructure development, is therefore confronted with a growing need to decarbonize its operations and products, as well as to support the decarbonization of associated end-user sectors. This paper provides a systematic and critical review of more than 800 studies to highlight ways in which the CCI can decarbonize. A socio-technical perspective is used to understand the full range of industrial and economic activities where a decarbonized paradigm for cement and concrete production is relevant. This perspective is further used to assess key technical, economic, social and political factors that will drive a net-zero transition in the CCI over the long term.",
+  "year": 2023,
+  "venue": "Renewable and Sustainable Energy Reviews",
+  "authors": [
+   "Steve Griffiths",
+   "Benjamin K. Sovacool",
+   "Dylan D. Furszyfer Del Rio",
+   "Aoife Foley",
+   "Morgan Bazilian",
+   "Jinsoo Kim"
+  ],
+  "citations": 210,
+  "source": "openalex",
+  "source_id": "W4366765085",
+  "doi": "10.1016/j.rser.2023.113291",
+  "arxiv_id": null,
+  "paper_url": "https://pure.au.dk/ws/files/400672564/Decarbonizing_the_cement_and_concrete_industry_A_systematic_review_of_socio-technical_systems_technological_innovations_and_policy_options_Accepted_manuscript_2023.pdf",
+  "published_iso": "2023-04-22",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Global Counterfactual Explainer for Graph Neural Networks",
+  "title_norm": "global counterfactual explainer for graph neural networks",
+  "abstract": "Graph neural networks (GNNs) find applications in various domains such as computational biology, natural language processing, and computer security. Owing to their popularity, there is an increasing need to explain GNN predictions since GNNs are black-box machine learning models. One way to address this is counterfactual reasoning where the objective is to change the GNN prediction by minimal changes in the input graph. Existing methods for counterfactual explanation of GNNs are limited to instance-specific local reasoning. This approach has two major limitations of not being able to offer global recourse policies and overloading human cognitive ability with too much information. In this work, we study the global explainability of GNNs through global counterfactual reasoning. Specifically, we want to find a small set of representative counterfactual graphs that explains all input graphs. Towards this goal, we propose GCFExplainer, a novel algorithm powered by vertex-reinforced random walks on an edit map of graphs with a greedy summary. Extensive experiments on real graph datasets show that the global explanation from GCFExplainer provides important high-level insights of the model behavior and achieves a 46.9% gain in recourse coverage and a 9.5% reduction in recourse cost compared to the state-of-the-art local counterfactual explainers.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Zexi Huang",
+   "Mert Kosan",
+   "Sourav Medya",
+   "Sayan Ranu",
+   "Ambuj K. Singh"
+  ],
+  "citations": 51,
+  "source": "openalex",
+  "source_id": "W4321485347",
+  "doi": "10.1145/3539597.3570376",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3539597.3570376",
+  "published_iso": "2023-02-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "The effect of exposure to radiofrequency fields on cancer risk in the general and working population: A systematic review of human observational studies – Part I: Most researched outcomes",
+  "title_norm": "the effect of exposure to radiofrequency fields on cancer risk in the general an",
+  "abstract": "• Exposure to RF from mobile phone use likely does not increase the risk of brain cancer. • RF from broadcasting antennas or base stations likely does not increase the risk of childhood cancer. • Occupational exposure to RF may not increase the risk of brain cancer. The objective of this review was to assess the quality and strength of the evidence provided by human observational studies for a causal association between exposure to radiofrequency electromagnetic fields (RF-EMF) and risk of the most investigated neoplastic diseases. Eligibility criteria : We included cohort and case-control studies of neoplasia risks in relation to three types of exposure to RF-EMF: near-field, head-localized, exposure from wireless phone use (SR-A); far-field, whole body, environmental exposure from fixed-site transmitters (SR-B); near/far-field occupational exposures from use of hand-held transceivers or RF-emitting equipment in the workplace (SR-C). While no restrictions on tumour type were applied, in the current paper we focus on incidence-based studies of selected “critical” neoplasms of the central nervous system (brain, meninges, pituitary gland, acoustic nerve) and salivary gland tumours (SR-A); brain tumours and leukaemias (SR-B, SR-C). We focussed on investigations of specific neoplasms in relation to specific exposure sources (i.e. E-O pairs), noting that a single article may address multiple E-O pairs. Information sources : Eligible studies were identified by literature searches through Medline, Embase, and EMF-Portal. Risk-of-bias (RoB) assessment : We used a tailored version of the Office of Health Assessment and Translation (OHAT) RoB tool to evaluate each study’s internal validity. At the summary RoB step, studies were classified into three tiers according to their overall potential for bias (low, moderate and high). Data synthesis : We synthesized the study results using random effects restricted maximum likelihood (REML) models (overall and subgroup meta-analyses of dichotomous and categorical exposure variables), and weighted mixed effects models (dose–response meta-analyses of lifetime exposure intensity). Evidence assessment : Confidence in evidence was assessed using the Grading of Recommendations, Assessment, Development and Evaluations (GRADE) approach. We included 63 aetiological articles, published between 1994 and 2022, with participants from 22 countries, reporting on 119 different E-O pairs. RF-EMF exposure from mobile phones (ever or regular use vs no or non-regular use) was not associated with an increased risk of glioma [meta-estimate of the relative risk (mRR) = 1.01, 95 % CI = 0.89–1.13), meningioma (mRR = 0.92, 95 % CI = 0.82–1.02), acoustic neuroma (mRR = 1.03, 95 % CI = 0.85–1.24), pituitary tumours (mRR = 0.81, 95 % CI = 0.61–1.06), salivary gland tumours (mRR = 0.91, 95 % CI = 0.78–1.06), or paediatric (children, adolescents and young adults) brain tumours (mRR = 1.06, 95 % CI = 0.74–1.51), with variable degree of across-study heterogeneity (I 2 = 0 %-62 %). There was no observable increase in mRRs for the most investigated neoplasms (glioma, meningioma, and acoustic neuroma) with increasing time since start (TSS) use of mobile phones, cumulative call time (CCT), or cumulative number of calls (CNC). Cordless phone use was not significantly associated with risks of glioma [mRR = 1.04, 95 % CI = 0.74–1.46; I 2 = 74 %) meningioma, (mRR = 0.91, 95 % CI = 0.70–1.18; I 2 = 59 %), or acoustic neuroma (mRR = 1.16; 95 % CI = 0.83–1.61; I 2 = 63 %). Exposure from fixed-site transmitters (broadcasting antennas or base stations) was not associated with childhood leukaemia or paediatric brain tumour risks, independently of the level of the modelled RF exposure. Glioma risk was not significantly increased following occupational RF exposure (ever vs never), and no differences were detected between increasing categories of modelled cumulative exposure levels. In the sensitivity analyses of glioma, meningioma, and acoustic neuroma risks in relation to mobile phone use (ever use, TSS, CCT, and CNC) the presented results were robust and not affected by changes in study aggregation. In a leave-one-out meta-analyses of glioma risk in relation to mobile phone use we identified one influential study. In subsequent meta-analyses performed after excluding this study, we observed a substantial reduction in the mRR and the heterogeneity between studies, for both the contrast Ever vs Never (regular) use (mRR = 0.96, 95 % CI = 0.87–1.07, I 2 = 47 %), and in the analysis by increasing categories of TSS (“<5 years”: mRR = 0.97, 95 % CI = 0.83–1.14, I 2 = 41 %; “5-9 years ”: mRR = 0.96, 95 % CI = 0.83–1.11, I 2 = 34 %; “10+ years”: mRR = 0.97, 95 % CI = 0.87–1.08, I 2 = 10 %). There was limited variation across studies in RoB for the priority domains (selection/attrition, exposure and outcome information), with the number of studies evenly classified as at low and moderate risk of bias (49 % tier-1 and 51 % tier-2), and no studies classified as at high risk of bias (tier-3). The impact of the biases on the study results (amount and direction) proved difficult to predict, and the RoB tool was inherently unable to account for the effect of competing biases. However, the sensitivity meta-analyses stratified on bias-tier, showed that the heterogeneity observed in our main meta-analyses across studies of glioma and acoustic neuroma in the upper TSS stratum (I 2 = 77 % and 76 %), was explained by the summary RoB-tier. In the tier-1 study subgroup, the mRRs (95 % CI; I 2 ) in long-term (10+ years) users were 0.95 (0.85–1.05; 5.5 %) for glioma, and 1.00 (0.78–1.29; 35 %) for acoustic neuroma. The time-trend simulation studies, evaluated as complementary evidence in line with a triangulation approach for external validity, were consistent in showing that the increased risks observed in some case-control studies were incompatible with the actual incidence rates of glioma/brain cancer observed in several countries and over long periods. Three of these simulation studies consistently reported that RR estimates > 1.5 with a 10+ years induction period were definitely implausible, and could be used to set a “credibility benchmark”. In the sensitivity meta-analyses of glioma risk in the upper category of TSS excluding five studies reporting implausible effect sizes, we observed strong reductions in both the mRR [mRR of 0.95 (95 % CI = 0.86–1.05)], and the degree of heterogeneity across studies (I 2 = 3.6 %). Consistently with the published protocol, our final conclusions were formulated separately for each exposure-outcome combination, and primarily based on the line of evidence with the highest confidence, taking into account the ranking of RF sources by exposure level as inferred from dosimetric studies, and the external coherence with findings from time-trend simulation studies (limited to glioma in relation to mobile phone use). For near field RF-EMF exposure to the head from mobile phone use, there was moderate certainty evidence that it likely does not increase the risk of glioma, meningioma, acoustic neuroma, pituitary tumours, and salivary gland tumours in adults, or of paediatric brain tumours. For near field RF-EMF exposure to the head from cordless phone use, there was low certainty evidence that it may not increase the risk of glioma, meningioma or acoustic neuroma. For whole-body far-field RF-EMF exposure from fixed-site transmitters (broadcasting antennas or base stations), there was moderate certainty evidence that it likely does not increase childhood leukaemia risk and low certainty evidence that it may not increase the risk of paediatric brain tumours. There were no studies eligible for inclusion investigating RF-EMF exposure from fixed-site transmitters and critical tumours in adults. For occupational RF-EMF exposure, there was low certainty evidence that it may not increase the risk of brain cancer/glioma, but there were no included studies of leukemias (the second critical outcome in SR-C). The evidence rating regarding paediatric brain tumours in relation to environmental RF exposure from fixed-site transmitters should be interpreted with caution, due to the small number of studies. Similar interpretative cautions apply to the evidence rating of the relation between glioma/brain cancer and occupational RF exposure, due to differences in exposure sources and metrics across the few included studies. This project was commissioned and partially funded by the World Health Organization (WHO). Co-financing was provided by the New Zealand Ministry of Health; the Istituto Superiore di Sanità in its capacity as a WHO Collaborating Centre for Radiation and Health; and ARPANSA as a WHO Collaborating Centre for Radiation Protection. Registration: PROSPERO CRD42021236798. Published protocol: [(Lagorio et al., 2021) DOI https://doi.org/10.1016/j.envint.2021.106828 ].",
+  "year": 2024,
+  "venue": "Environment International",
+  "authors": [
+   "Ken Karipidis",
+   "Dan Baaken",
+   "Tom Loney",
+   "Maria Blettner",
+   "Chris Brzozek",
+   "Mark Elwood"
+  ],
+  "citations": 47,
+  "source": "openalex",
+  "source_id": "W4402033896",
+  "doi": "10.1016/j.envint.2024.108983",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S0160412024005695-ga1_lrg.jpg",
+  "published_iso": "2024-08-30",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "GPT-4 Technical Report",
+  "title_norm": "gpt 4 technical report",
+  "abstract": "Abstract—Large Language Models (LLMs) suffer from inherent stochasticity, limiting their utility in high-stakes enterprise environments where determinism and auditability are required. This paper introduces the MFOUR Vibe Framework (MVF), a platform-agnostic architectural standard that transforms probabilistic natural language intent into deterministic software artifacts. We define a five-layer topology, comprising the Kernel Identity, Synaptic Routing, Interface Contracts, Context Anchoring, and the Mirror Test. Furthermore, we introduce The Vibe Integrity Score (VIS), a quantitative metric for evaluating the structural adherence of generative outputs. This specification provides the foundational schema and logic protocols for building \"Glass Box\" AI systems that are observable, secure, and commercially viable.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "OpenAI",
+   "Achiam, Josh",
+   "Adler, Steven",
+   "Agarwal, Sandhini",
+   "Ahmad, Lama",
+   "Akkaya, Ilge"
+  ],
+  "citations": 2480,
+  "source": "openalex",
+  "source_id": "W4327810158",
+  "doi": "10.4230/lipics.cosit.2024.11",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2303.08774",
+  "published_iso": "2023-03-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Explainable AI and Causal Understanding: Counterfactual Approaches Considered",
+  "title_norm": "explainable ai and causal understanding counterfactual approaches considered",
+  "abstract": "Abstract The counterfactual approach to explainable AI (XAI) seeks to provide understanding of AI systems through the provision of counterfactual explanations. In a recent systematic review, Chou et al. (Inform Fus 81:59–83, 2022) argue that the counterfactual approach does not clearly provide causal understanding . They diagnose the problem in terms of the underlying framework within which the counterfactual approach has been developed. To date, the counterfactual approach has not been developed in concert with the approach for specifying causes developed by Pearl (Causality: Models, reasoning, and inference. Cambridge University Press, 2000) and Woodward (Making things happen: A theory of causal explanation. Oxford University Press, 2003). In this paper, I build on Chou et al.’s work by applying the Pearl-Woodward approach. I argue that the standard counterfactual approach to XAI is capable of delivering causal understanding, but that there are limitations on its capacity to do so. I suggest a way to overcome these limitations.",
+  "year": 2023,
+  "venue": "Minds and Machines",
+  "authors": [
+   "Sam Baron"
+  ],
+  "citations": 55,
+  "source": "openalex",
+  "source_id": "W4380085287",
+  "doi": "10.1007/s11023-023-09637-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11023-023-09637-x.pdf",
+  "published_iso": "2023-06-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Evidence for Social and Emotional Learning in Schools",
+  "title_norm": "evidence for social and emotional learning in schools",
+  "abstract": "There is a consensus among educators, parents, and policymakers that education should include a focus on supporting essential social and emotional capacities to help children navigate the world successfully. To develop these competencies, many schools adopt social and emotional learning (SEL) programs. The report on which this brief is based reviews the findings from 12 meta-analyses of school-based SEL programs. Across these studies, there is a consistent, reliable effect of tested, evidence-based SEL programs on students’ social, emotional, behavioral, and academic outcomes in PreK–12th grade, including the development of social and emotional skills, improved academic engagement and performance, growth of positive social behaviors, and lower rates of behavior problems and psychological distress. These findings are applicable across gender, ethnicity and race, income, and other demographic variables.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Mark T. Greenberg"
+  ],
+  "citations": 161,
+  "source": "openalex",
+  "source_id": "W4320912799",
+  "doi": "10.54300/928.269",
+  "arxiv_id": null,
+  "paper_url": "https://learningpolicyinstitute.org/media/3977/download?inline&file=Evidence_for_SEL_REPORT.pdf",
+  "published_iso": "2023-02-15",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "The Portfolio of Economic Policies Needed to Fight Climate Change",
+  "title_norm": "the portfolio of economic policies needed to fight climate change",
+  "abstract": "Climate change poses an existential threat. Theoretical and empirical research suggest that carbon pricing and green R&D support are the right tools, but their implementation can be improved. Other policies, such as standards, bans, and targeted subsidies, also all have a role to play, but they have often been incoherent, and their implementation is delicate.",
+  "year": 2023,
+  "venue": "Annual Review of Economics",
+  "authors": [
+   "Olivier Blanchard",
+   "Christian Gollier",
+   "Jean Tirole"
+  ],
+  "citations": 104,
+  "source": "openalex",
+  "source_id": "W4383216250",
+  "doi": "10.1146/annurev-economics-051520-015113",
+  "arxiv_id": null,
+  "paper_url": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-051520-015113",
+  "published_iso": "2023-07-05",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Combining counterfactual outcomes and ARIMA models for policy evaluation",
+  "title_norm": "combining counterfactual outcomes and arima models for policy evaluation",
+  "abstract": "Summary The Rubin Causal Model (RCM) is a framework that allows to define the causal effect of an intervention as a contrast of potential outcomes. In recent years, several methods have been developed under the RCM to estimate causal effects in time series settings. None of these makes use of autoregressive integrated moving average (ARIMA) models, which are instead very common in the econometrics literature. In this paper, we propose a novel approach, named Causal-ARIMA (C-ARIMA), to define and estimate the causal effect of an intervention in observational time series settings under the RCM. We first formalise the assumptions enabling the definition, the estimation and the attribution of the effect to the intervention. We then check the validity of the proposed method with a simulation study. In the empirical application, we use C-ARIMA to assess the causal effect of a permanent price reduction on supermarket sales. The CausalArima R package provides an implementation of the proposed approach.",
+  "year": 2022,
+  "venue": "Econometrics Journal",
+  "authors": [
+   "Fiammetta Menchetti",
+   "Fabrizio Cipollini",
+   "Fabrizia Mealli"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W4296931829",
+  "doi": "10.1093/ectj/utac024",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/ectj/article-pdf/26/1/1/48597685/utac024.pdf",
+  "published_iso": "2022-09-24",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Biomimicry-Inspired Automated Machine Learning Fit-for-Purpose Wastewater Treatment for Sustainable Water Reuse",
+  "title_norm": "biomimicry inspired automated machine learning fit for purpose wastewater treatm",
+  "abstract": "The growing global freshwater scarcity urgently requires innovative wastewater treatment technologies. This study hypothesized that biomimicry-inspired automated machine learning (AML) could effectively manage wastewater variability through adaptive processing techniques. Utilizing decentralized swarm intelligence, specifically the Respected Parametric Insecta Swarm (RPIS), the system demonstrated robust adaptability to fluctuating influent conditions, maintaining stable effluent quality without centralized control. Bio-inspired oscillatory control algorithms maintained stability under dynamic influent scenarios, while adaptive sensor feedback enhanced real-time responsiveness. Machine learning (ML) methods inspired by biological morphological evolution accurately classified influent characteristics (F1 score of 0.91), optimizing resource allocation dynamically. Significant reductions were observed, with chemical consumption decreasing by approximately 11% and additional energy usage declining by 14%. Furthermore, bio-inspired membranes with selective permeability substantially reduced fouling, maintaining minimal fouling for up to 30 days. Polynomial chaos expansions efficiently approximated complex nonlinear interactions, reducing computational overhead by approximately 35% through parallel processing. Decentralized swarm algorithms allowed the rapid recalibration of system parameters, achieving stable pathogen removal and maintaining effluent turbidity near 3.2 NTU (Nephelometric Turbidity Units), with total suspended solids consistently below 8 mg/L. Integrating biomimicry with AML thus significantly advances sustainable wastewater reclamation practices, offering quantifiable improvements critical for resource-efficient water management.",
+  "year": 2025,
+  "venue": "Water",
+  "authors": [
+   "Vasileios Alevizos",
+   "Zongliang Yue",
+   "Sabrina Edralin",
+   "Clark Xu",
+   "Nikitas Gerolimos",
+   "George A. Papakostas"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4410122044",
+  "doi": "10.3390/w17091395",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-4441/17/9/1395/pdf?version=1746526787",
+  "published_iso": "2025-05-06",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Plant growth-promoting rhizobacteria: Salt stress alleviators to improve crop productivity for sustainable agriculture development",
+  "title_norm": "plant growth promoting rhizobacteria salt stress alleviators to improve crop pro",
+  "abstract": "Soil salinity, a growing issue worldwide, is a detrimental consequence of the ever-changing climate, which has highlighted and worsened the conditions associated with damaged soil quality, reduced agricultural production, and decreasing land areas, thus resulting in an unsteady national economy. In this review, halo-tolerant plant growth-promoting rhizo-microbiomes (PGPRs) are evaluated in the salinity-affected agriculture as they serve as excellent agents in controlling various biotic-abiotic stresses and help in the augmentation of crop productivity. Integrated efforts of these effective microbes lighten the load of agro-chemicals on the environment while managing nutrient availability. PGPR-assisted modern agriculture practices have emerged as a green strategy to benefit sustainable farming without compromising the crop yield under salinity as well as salinity-affected supplementary stresses including increased temperature, drought, salinity, and potential invasive plant pathogenicity. PGPRs as bio-inoculants impart induced systemic tolerance (IST) to plants by the production of volatile organic compounds (VOCs), antioxidants, osmolytes, extracellular polymeric substances (EPS), phytohormones, and ACC-deaminase and recuperation of nutritional status and ionic homeostasis. Regulation of PGPR-induced signaling pathways such as MAPK and CDPK assists in salinity stress alleviation. The \"Next Gen Agriculture\" consists of the application of designer crop microbiomes through gene editing tools, for instance, CRISPR, and engineering of the metabolic pathways of the microbes so as to gain maximum plant resistance. The utilization of omics technologies over the traditional approaches can fulfill the criteria required to increase crop yields in a sustainable manner for feeding the burgeoning population and augment plant adaptability under climate change conditions, ultimately leading to improved vitality. Furthermore, constraints such as the crop specificity issue of PGPR, lack of acceptance by farmers, and legal regulatory aspects have been acknowledged while also discussing the future trends for product commercialization with the view of the changing climate.",
+  "year": 2023,
+  "venue": "Frontiers in Plant Science",
+  "authors": [
+   "Kailash Chand Kumawat",
+   "Barkha Sharma",
+   "Sharon Nagpal",
+   "Ajay Kumar",
+   "Shalini Tiwari",
+   "Ramakrishnan M. Nair"
+  ],
+  "citations": 186,
+  "source": "openalex",
+  "source_id": "W4315796441",
+  "doi": "10.3389/fpls.2022.1101862",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/articles/10.3389/fpls.2022.1101862/pdf",
+  "published_iso": "2023-01-12",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Counterfactual Explanation for Fairness in Recommendation",
+  "title_norm": "counterfactual explanation for fairness in recommendation",
+  "abstract": "Fairness-aware recommendation alleviates discrimination issues to build trustworthy recommendation systems. Explaining the causes of unfair recommendations is critical, as it promotes fairness diagnostics, and thus secures users’ trust in recommendation models. Existing fairness explanation methods suffer high computation burdens due to the large-scale search space and the greedy nature of the explanation search process. Besides, they perform feature-level optimizations with continuous values, which are not applicable to discrete attributes such as gender and age. In this work, we adopt counterfactual explanations from causal inference and propose to generate attribute-level counterfactual explanations, adapting to discrete attributes in recommendation models. We use real-world attributes from Heterogeneous Information Networks (HINs) to empower counterfactual reasoning on discrete attributes. We propose a Counterfactual Explanation for Fairness (CFairER) that generates attribute-level counterfactual explanations from HINs for item exposure fairness. Our CFairER conducts off-policy reinforcement learning to seek high-quality counterfactual explanations, with attentive action pruning reducing the search space of candidate counterfactuals. The counterfactual explanations help to provide rational and proximate explanations for model fairness, while the attentive action pruning narrows the search space of attributes. Extensive experiments demonstrate our proposed model can generate faithful explanations while maintaining favorable recommendation performance.",
+  "year": 2024,
+  "venue": "ACM Transactions on Information Systems",
+  "authors": [
+   "Xiangmeng Wang",
+   "Qian Li",
+   "Dianer Yu",
+   "Qing Li",
+   "Guandong Xu"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4391323272",
+  "doi": "10.1145/3643670",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3643670",
+  "published_iso": "2024-01-29",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "A prediction method for long-term surface subsidence considering the mining-induced stratum creep effect and its application",
+  "title_norm": "a prediction method for long term surface subsidence considering the mining indu",
+  "abstract": "Considering the rock creep effect can effectively improve the prediction accuracy of surface subsidence in goafs, which is particularly important for determining construction timing and ensuring the safe operation of surface structures. On basis of the time-dependent deformation characteristics of the overlying strata in mining areas, a nonlinear viscoelastic‒plastic (NVEP) model for accurately describing the three-stage creep behavior of rocks was established. The three-dimensional creep constitutive equations of this model were derived, and a secondary development of the creep model was implemented on the FLAC 3D numerical simulation platform. A creep parameter inversion method for overlying strata in goaf areas was proposed by combining creep simulation analysis with a genetic algorithm. A specific project was selected as a case study, and the creep model and its related parameters were subsequently used to predict the long-term surface settlement behavior, providing a scientific basis for determining the appropriate construction timing for the surface railway in the goaf area of the region. The numerical simulation results indicate that the surface subsidence exhibits an exponential decay trend, which can be divided into three distinct stages: an initial rapid settlement phase (0–2 years), a transitional phase (2–3 years), and a long-term stabilization phase (beyond 4 years). On the basis of the railway construction specifications and the results of the numerical simulation analysis, the feasibility of constructing a railway on the goaf surface is assessed. The findings indicate that railway construction above the goaf in this area should be postponed for at least five years after the cessation of mining activities.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Zhongyu Liang",
+   "Xiaorong Yang",
+   "Yongjun Liu",
+   "Boyang Zhang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415962552",
+  "doi": "10.1038/s41598-025-22801-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-22801-w.pdf",
+  "published_iso": "2025-11-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Oxidative stress and inflammation: elucidating mechanisms of smoking-attributable pathology for therapeutic targeting",
+  "title_norm": "oxidative stress and inflammation elucidating mechanisms of smoking attributable",
+  "abstract": "Abstract Background Tobacco smoking remains a major preventable cause of disease and death worldwide. Combustible cigarettes release thousands of chemicals that can initiate inflammatory pathways leading to smoking-related illness. This review aims to synthesize current scientific knowledge on mechanisms of smoking-induced disease, epidemiological trends, and clinical strategies from recent literature. Main body of the abstract At the cellular level, cigarette smoke triggers oxidative stress through reactive oxygen species (ROS), causing DNA damage. This provokes inflammatory signaling cascades mediated by damage-associated molecular patterns (DAMPs), receptors like RAGE and TLRs, and downstream cytokines. Smoking also disrupts apoptosis and autophagy. In the lungs, oxidative stress and inflammation from smoking play central roles in COPD pathogenesis. Smoking-induced oxidative DNA damage, chronic inflammation, and impaired immunity combine to promote lung carcinogenesis. For cardiovascular disease, smoking triggers endothelial dysfunction, platelet activation, and atherogenesis through oxidized LDL and effects on nitric oxide and adhesion molecules. Short conclusion Given the unequivocal evidence of health risks, smoking cessation is critical to reducing preventable death and disability. Both counseling and pharmacotherapy have proven efficacy for quitting, but efficacy remains limited long-term. Emerging nicotine products like e-cigarettes have unknown impacts on cessation and population health. Comprehensive efforts encompassing prevention, screening, treatment innovation, harm reduction, and policy reform focused on curbing smoking-attributable morbidity and mortality are warranted.",
+  "year": 2024,
+  "venue": "Bulletin of the National Research Centre/Bulletin of the National Research Center",
+  "authors": [
+   "Tamer A. Addissouky",
+   "Ibrahim El Tantawy El Sayed",
+   "Majeed M. A. Ali",
+   "Yuliang Wang",
+   "Ayman El‐Baz",
+   "Naglaa Elarabany"
+  ],
+  "citations": 101,
+  "source": "openalex",
+  "source_id": "W4391068193",
+  "doi": "10.1186/s42269-024-01174-6",
+  "arxiv_id": null,
+  "paper_url": "https://bnrc.springeropen.com/counter/pdf/10.1186/s42269-024-01174-6",
+  "published_iso": "2024-01-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050",
+  "title_norm": "global burden of bacterial antimicrobial resistance 1990 2021 a systematic analy",
+  "abstract": "BACKGROUND: Antimicrobial resistance (AMR) poses an important global health challenge in the 21st century. A previous study has quantified the global and regional burden of AMR for 2019, followed with additional publications that provided more detailed estimates for several WHO regions by country. To date, there have been no studies that produce comprehensive estimates of AMR burden across locations that encompass historical trends and future forecasts. METHODS: We estimated all-age and age-specific deaths and disability-adjusted life-years (DALYs) attributable to and associated with bacterial AMR for 22 pathogens, 84 pathogen-drug combinations, and 11 infectious syndromes in 204 countries and territories from 1990 to 2021. We collected and used multiple cause of death data, hospital discharge data, microbiology data, literature studies, single drug resistance profiles, pharmaceutical sales, antibiotic use surveys, mortality surveillance, linkage data, outpatient and inpatient insurance claims data, and previously published data, covering 520 million individual records or isolates and 19 513 study-location-years. We used statistical modelling to produce estimates of AMR burden for all locations, including those with no data. Our approach leverages the estimation of five broad component quantities: the number of deaths involving sepsis; the proportion of infectious deaths attributable to a given infectious syndrome; the proportion of infectious syndrome deaths attributable to a given pathogen; the percentage of a given pathogen resistant to an antibiotic of interest; and the excess risk of death or duration of an infection associated with this resistance. Using these components, we estimated disease burden attributable to and associated with AMR, which we define based on two counterfactuals; respectively, an alternative scenario in which all drug-resistant infections are replaced by drug-susceptible infections, and an alternative scenario in which all drug-resistant infections were replaced by no infection. Additionally, we produced global and regional forecasts of AMR burden until 2050 for three scenarios: a reference scenario that is a probabilistic forecast of the most likely future; a Gram-negative drug scenario that assumes future drug development that targets Gram-negative pathogens; and a better care scenario that assumes future improvements in health-care quality and access to appropriate antimicrobials. We present final estimates aggregated to the global, super-regional, and regional level. FINDINGS: In 2021, we estimated 4·71 million (95% UI 4·23-5·19) deaths were associated with bacterial AMR, including 1·14 million (1·00-1·28) deaths attributable to bacterial AMR. Trends in AMR mortality over the past 31 years varied substantially by age and location. From 1990 to 2021, deaths from AMR decreased by more than 50% among children younger than 5 years yet increased by over 80% for adults 70 years and older. AMR mortality decreased for children younger than 5 years in all super-regions, whereas AMR mortality in people 5 years and older increased in all super-regions. For both deaths associated with and deaths attributable to AMR, meticillin-resistant Staphylococcus aureus increased the most globally (from 261 000 associated deaths [95% UI 150 000-372 000] and 57 200 attributable deaths [34 100-80 300] in 1990, to 550 000 associated deaths [500 000-600 000] and 130 000 attributable deaths [113 000-146 000] in 2021). Among Gram-negative bacteria, resistance to carbapenems increased more than any other antibiotic class, rising from 619 000 associated deaths (405 000-834 000) in 1990, to 1·03 million associated deaths (909 000-1·16 million) in 2021, and from 127 000 attributable deaths (82 100-171 000) in 1990, to 216 000 (168 000-264 000) attributable deaths in 2021. There was a notable decrease in non-COVID-related infectious disease in 2020 and 2021. Our forecasts show that an estimated 1·91 million (1·56-2·26) deaths attributable to AMR and 8·22 million (6·85-9·65) deaths associated with AMR could occur globally in 2050. Super-regions with the highest all-age AMR mortality rate in 2050 are forecasted to be south Asia and Latin America and the Caribbean. Increases in deaths attributable to AMR will be largest among those 70 years and older (65·9% [61·2-69·8] of all-age deaths attributable to AMR in 2050). In stark contrast to the strong increase in number of deaths due to AMR of 69·6% (51·5-89·2) from 2022 to 2050, the number of DALYs showed a much smaller increase of 9·4% (-6·9 to 29·0) to 46·5 million (37·7 to 57·3) in 2050. Under the better care scenario, across all age groups, 92·0 million deaths (82·8-102·0) could be cumulatively averted between 2025 and 2050, through better care of severe infections and improved access to antibiotics, and under the Gram-negative drug scenario, 11·1 million AMR deaths (9·08-13·2) could be averted through the development of a Gram-negative drug pipeline to prevent AMR deaths. INTERPRETATION: This study presents the first comprehensive assessment of the global burden of AMR from 1990 to 2021, with results forecasted until 2050. Evaluating changing trends in AMR mortality across time and location is necessary to understand how this important global health threat is developing and prepares us to make informed decisions regarding interventions. Our findings show the importance of infection prevention, as shown by the reduction of AMR deaths in those younger than 5 years. Simultaneously, our results underscore the concerning trend of AMR burden among those older than 70 years, alongside a rapidly ageing global community. The opposing trends in the burden of AMR deaths between younger and older individuals explains the moderate future increase in global number of DALYs versus number of deaths. Given the high variability of AMR burden by location and age, it is important that interventions combine infection prevention, vaccination, minimisation of inappropriate antibiotic use in farming and humans, and research into new antibiotics to mitigate the number of AMR deaths that are forecasted for 2050. FUNDING: UK Department of Health and Social Care's Fleming Fund using UK aid, and the Wellcome Trust.",
+  "year": 2024,
+  "venue": "The Lancet",
+  "authors": [
+   "Mohsen Naghavi",
+   "Stein Emil Vollset",
+   "Kevin S Ikuta",
+   "Lucien R Swetschinski",
+   "Authia P Gray",
+   "Eve E Wool"
+  ],
+  "citations": 3461,
+  "source": "openalex",
+  "source_id": "W4402557213",
+  "doi": "10.1016/s0140-6736(24)01867-1",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402557213",
+  "published_iso": "2024-09-01",
+  "oa_field": "Immunology and Microbiology",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "The use of routine health facility data for micro-stratification of malaria risk in mainland Tanzania",
+  "title_norm": "the use of routine health facility data for micro stratification of malaria risk",
+  "abstract": "BACKGROUND: Current efforts to estimate the spatially diverse malaria burden in malaria-endemic countries largely involve the use of epidemiological modelling methods for describing temporal and spatial heterogeneity using sparse interpolated prevalence data from periodic cross-sectional surveys. However, more malaria-endemic countries are beginning to consider local routine data for this purpose. Nevertheless, routine information from health facilities (HFs) remains widely under-utilized despite improved data quality, including increased access to diagnostic testing and the adoption of the electronic District Health Information System (DHIS2). This paper describes the process undertaken in mainland Tanzania using routine data to develop a high-resolution, micro-stratification risk map to guide future malaria control efforts. METHODS: ) was used as a benchmark to define four malaria risk groups. These groups were subsequently used to derive cut-offs for the routine indicators by minimizing misclassifications and maximizing overall agreement. The derived-cutoffs were converted into numbered scores and summed across the three indicators to allocate wards into their overall risk stratum. RESULTS: Of 3065 wards, 353 were assigned to the very low strata (10.5% of the total ward population), 717 to the low strata (28.6% of the population), 525 to the moderate strata (16.2% of the population), and 1470 to the high strata (39.8% of the population). The resulting micro-stratification revealed malaria risk heterogeneity within 80 councils and identified wards that would benefit from community-level focal interventions, such as community-case management, indoor residual spraying and larviciding. CONCLUSION: The micro-stratification approach employed is simple and pragmatic, with potential to be easily adopted by the malaria programme in Tanzania. It makes use of available routine data that are rich in spatial resolution and that can be readily accessed allowing for a stratification of malaria risk below the council level. Such a framework is optimal for supporting evidence-based, decentralized malaria control planning, thereby improving the effectiveness and allocation efficiency of malaria control interventions.",
+  "year": 2022,
+  "venue": "Malaria Journal",
+  "authors": [
+   "Sumaiyya G. Thawer",
+   "Monica Golumbeanu",
+   "Khalifa Munisi",
+   "Sijenunu Aaron",
+   "Frank Chacky",
+   "Samwel Lazaro"
+  ],
+  "citations": 40,
+  "source": "openalex",
+  "source_id": "W4309561524",
+  "doi": "10.1186/s12936-022-04364-7",
+  "arxiv_id": null,
+  "paper_url": "https://malariajournal.biomedcentral.com/counter/pdf/10.1186/s12936-022-04364-7",
+  "published_iso": "2022-11-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A Review of Antibacterial Candidates with New Modes of Action",
+  "title_norm": "a review of antibacterial candidates with new modes of action",
+  "abstract": "There is a lack of new antibiotics to combat drug-resistant bacterial infections that increasingly threaten global health. The current pipeline of clinical-stage antimicrobials is primarily populated by \"new and improved\" versions of existing antibiotic classes, supplemented by several novel chemical scaffolds that act on traditional targets. The lack of fresh chemotypes acting on previously unexploited targets (the \"holy grail\" for new antimicrobials due to their scarcity) is particularly unfortunate as these offer the greatest opportunity for innovative breakthroughs to overcome existing resistance. In recognition of their potential, this review focuses on this subset of high value antibiotics, providing chemical structures where available. This review focuses on candidates that have progressed to clinical trials, as well as selected examples of promising pioneering approaches in advanced stages of development, in order to stimulate additional research aimed at combating drug-resistant infections.",
+  "year": 2024,
+  "venue": "ACS Infectious Diseases",
+  "authors": [
+   "Mark S. Butler",
+   "Waldemar Vollmer",
+   "Emily C. A. Goodall",
+   "Robert J. Capon",
+   "Ian R. Henderson",
+   "Mark A. T. Blaskovich"
+  ],
+  "citations": 97,
+  "source": "openalex",
+  "source_id": "W4400726039",
+  "doi": "10.1021/acsinfecdis.4c00218",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11474978/pdf/id4c00218.pdf",
+  "published_iso": "2024-07-17",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Generating Counterfactual Hard Negative Samples for Graph Contrastive Learning",
+  "title_norm": "generating counterfactual hard negative samples for graph contrastive learning",
+  "abstract": "Graph contrastive learning has emerged as a powerful unsupervised graph representation learning tool. The key to the success of graph contrastive learning is to acquire high-quality positive and negative samples as contrasting pairs to learn the underlying structural semantics of the input graph. Recent works usually sample negative samples from the same training batch with the positive samples or from an external irrelevant graph. However, a significant limitation lies in such strategies: the unavoidable problem of sampling false negative samples. In this paper, we propose a novel method to utilize Counterfactual mechanism to generate artificial hard negative samples for Graph Contrastive learning, namely CGC. We utilize a counterfactual mechanism to produce hard negative samples, ensuring that the generated samples are similar but have labels that differ from the positive sample. The proposed method achieves satisfying results on several datasets. It outperforms some traditional unsupervised graph learning methods and some SOTA graph contrastive learning methods. We also conducted some supplementary experiments to illustrate the proposed method, including the performances of CGC with different hard negative samples and evaluations for hard negative samples generated with different similarity measurements. The implementation code is available online to ease reproducibility1.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Haoran Yang",
+   "Hongxu Chen",
+   "Sixiao Zhang",
+   "Xiangguo Sun",
+   "Qian Li",
+   "Xiangyu Zhao"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4320828694",
+  "doi": "10.1145/3543507.3583499",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3543507.3583499",
+  "published_iso": "2023-04-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Normalization and de-noising of single-cell Hi-C data with BandNorm and scVI-3D",
+  "title_norm": "normalization and de noising of single cell hi c data with bandnorm and scvi 3d",
+  "abstract": "Single-cell high-throughput chromatin conformation capture methodologies (scHi-C) enable profiling of long-range genomic interactions. However, data from these technologies are prone to technical noise and biases that hinder downstream analysis. We develop a normalization approach, BandNorm, and a deep generative modeling framework, scVI-3D, to account for scHi-C specific biases. In benchmarking experiments, BandNorm yields leading performances in a time and memory efficient manner for cell-type separation, identification of interacting loci, and recovery of cell-type relationships, while scVI-3D exhibits advantages for rare cell types and under high sparsity scenarios. Application of BandNorm coupled with gene-associating domain analysis reveals scRNA-seq validated sub-cell type identification.",
+  "year": 2022,
+  "venue": "Genome biology",
+  "authors": [
+   "Ye Zheng",
+   "Siqi Shen",
+   "Sündüz Keleş"
+  ],
+  "citations": 51,
+  "source": "openalex",
+  "source_id": "W4306405534",
+  "doi": "10.1186/s13059-022-02774-z",
+  "arxiv_id": null,
+  "paper_url": "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/s13059-022-02774-z",
+  "published_iso": "2022-10-17",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Barriers and facilitators to the implementation of digital technologies in mental health systems: a qualitative systematic review to inform a policy framework",
+  "title_norm": "barriers and facilitators to the implementation of digital technologies in menta",
+  "abstract": "BACKGROUND: Despite the potential for improved population mental health and wellbeing, the integration of mental health digital interventions has been difficult to achieve. In this qualitative systematic review, we aimed to identify barriers and facilitators to the implementation of digital technologies in mental healthcare systems, and map these to an implementation framework to inform policy development. METHODS: We searched Medline, Embase, Scopus, PsycInfo, Web of Science, and Google Scholar for primary research articles published between January 2010 and 2022. Studies were considered eligible if they reported barriers and/or facilitators to the integration of any digital mental healthcare technologies. Data were extracted using EPPI-Reviewer Web and analysed thematically via inductive and deductive cycles. RESULTS: Of 12,525 references identified initially, 81 studies were included in the final analysis. Barriers and facilitators were grouped within an implementation (evidence-practice gap) framework across six domains, organised by four levels of mental healthcare systems. Broadly, implementation was hindered by the perception of digital technologies as impersonal tools that add additional burden of care onto both providers and patients, and change relational power asymmetries; an absence of resources; and regulatory complexities that impede access to universal coverage. Facilitators included person-cantered approaches that consider patients' intersectional features e.g., gender, class, disability, illness severity; evidence-based training for providers; collaboration among colleagues; appropriate investment in human and financial resources; and policy reforms that tackle universal access to digital health. CONCLUSION: It is important to consider the complex and interrelated nature of barriers across different domains and levels of the mental health system. To facilitate the equitable, sustainable, and long-term digital transition of mental health systems, policymakers should consider a systemic approach to collaboration between public and private sectors to inform evidence-based planning and strengthen mental health systems. PROTOCOL REGISTRATION: The protocol is registered on PROSPERO, CRD42021276838.",
+  "year": 2024,
+  "venue": "BMC Health Services Research",
+  "authors": [
+   "Chiara Berardi",
+   "Marcello Antonini",
+   "Zephanie Jordan",
+   "Heidi Wechtler",
+   "Francesco Paolucci",
+   "Madeleine Hinwood"
+  ],
+  "citations": 183,
+  "source": "openalex",
+  "source_id": "W4392168749",
+  "doi": "10.1186/s12913-023-10536-1",
+  "arxiv_id": null,
+  "paper_url": "https://bmchealthservres.biomedcentral.com/counter/pdf/10.1186/s12913-023-10536-1",
+  "published_iso": "2024-02-26",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Holistic Evaluation of Language Models",
+  "title_norm": "holistic evaluation of language models",
+  "abstract": "Language models (LMs) are becoming the foundation for almost all major language technologies, but their capabilities, limitations, and risks are not well understood. We present Holistic Evaluation of Language Models (HELM) to improve the transparency of language models. First, we taxonomize the vast space of potential scenarios (i.e. use cases) and metrics (i.e. desiderata) that are of interest for LMs. Then we select a broad subset based on coverage and feasibility, noting what's missing or underrepresented (e.g. question answering for neglected English dialects, metrics for trustworthiness). Second, we adopt a multi-metric approach: We measure 7 metrics (accuracy, calibration, robustness, fairness, bias, toxicity, and efficiency) for each of 16 core scenarios when possible (87.5% of the time). This ensures metrics beyond accuracy don't fall to the wayside, and that trade-offs are clearly exposed. We also perform 7 targeted evaluations, based on 26 targeted scenarios, to analyze specific aspects (e.g. reasoning, disinformation). Third, we conduct a large-scale evaluation of 30 prominent language models (spanning open, limited-access, and closed models) on all 42 scenarios, 21 of which were not previously used in mainstream LM evaluation. Prior to HELM, models on average were evaluated on just 17.9% of the core HELM scenarios, with some prominent models not sharing a single scenario in common. We improve this to 96.0%: now all 30 models have been densely benchmarked on the same core scenarios and metrics under standardized conditions. Our evaluation surfaces 25 top-level findings. For full transparency, we release all raw model prompts and completions publicly for further analysis, as well as a general modular toolkit. We intend for HELM to be a living benchmark for the community, continuously updated with new scenarios, metrics, and models.",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Percy Liang",
+   "Rishi Bommasani",
+   "Tong Lee",
+   "Dimitris Tsipras",
+   "Dilara Soylu",
+   "Michihiro Yasunaga"
+  ],
+  "citations": 124,
+  "source": "openalex",
+  "source_id": "W4320003957",
+  "doi": "10.48550/arxiv.2211.09110",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2211.09110",
+  "published_iso": "2022-11-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Emerging nanomedicine for liver diseases treatment",
+  "title_norm": "emerging nanomedicine for liver diseases treatment",
+  "abstract": "The liver is the largest parenchymal organ in the human body, crucial for overall health. However, hepatic diseases have become a global epidemic, causing significant burdens. While traditional therapies for liver diseases such as hepatic fibrosis, non-alcoholic fatty liver disease, and hepatocellular carcinoma have shown limited efficacy and significant side effects, the advent of nanotechnology has introduced novel and promising therapeutic strategies. Nanomedicine, with its excellent biocompatibility, surface modification capabilities, and high targeting ability, has the potential to revolutionize liver disease treatment. Here, we systematically review the latest advancements in nanomaterials for liver diseases, focusing on innovative nanocarriers such as exosomes, liposomes, microneedle technologies, biomimetic microfibers, and emerging platforms. We highlight critical gaps in current nanomedicine research, including biocompatibility and toxicity concerns, scalability and cost-effectiveness of production, and the need for personalized medicine and patient-specific nanotherapies. By addressing these challenges, nanotechnology can provide a multifunctional and powerful platform to significantly improve liver health and overcome existing limitations in clinical translation.",
+  "year": 2025,
+  "venue": "Journal of Nanobiotechnology",
+  "authors": [
+   "Yawen Zhu",
+   "Dongxue Ge",
+   "Jinglin Wang",
+   "Hao Sun",
+   "W P Li",
+   "Haozhen Ren"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W7117141973",
+  "doi": "10.1186/s12951-025-03832-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s12951-025-03832-x.pdf",
+  "published_iso": "2025-12-24",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Teaching and learning delivery modes in higher education: Looking back to move forward post-COVID-19 era",
+  "title_norm": "teaching and learning delivery modes in higher education looking back to move fo",
+  "abstract": "",
+  "year": 2023,
+  "venue": "The International Journal of Management Education",
+  "authors": [
+   "Rabia Imran",
+   "Afsheen Fatima",
+   "Islam Elbayoumi Salem",
+   "Kamaal Allil"
+  ],
+  "citations": 170,
+  "source": "openalex",
+  "source_id": "W4362583887",
+  "doi": "10.1016/j.ijme.2023.100805",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10067450/pdf/main.pdf",
+  "published_iso": "2023-04-03",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "FairGap: Fairness-Aware Recommendation via Generating Counterfactual Graph",
+  "title_norm": "fairgap fairness aware recommendation via generating counterfactual graph",
+  "abstract": "The emergence of Graph Neural Networks (GNNs) has greatly advanced the development of recommendation systems. Recently, many researchers have leveraged GNN-based models to learn fair representations for users and items. However, current GNN-based models suffer from biased user–item interaction data, which negatively impacts recommendation fairness. Although there have been several studies employing adversarial learning to mitigate this issue in recommendation systems, they mostly focus on modifying the model training approach with fairness regularization and neglect direct intervention of biased interaction. In contrast to these models, this article introduces a novel perspective by directly intervening in observed interactions to generate a counterfactual graph (called FairGap) that is not influenced by sensitive node attributes, enabling us to learn fair representations for users and items easily. We design FairGap to answer the key counterfactual question: “Would interactions with an item remain unchanged if a user’s sensitive attributes were concealed?”. We also provide theoretical proofs to show that our learning strategy via the counterfactual graph is unbiased in expectation. Moreover, we propose a fairness-enhancing mechanism to continuously improve user fairness in the graph-based recommendation. Extensive experimental results against state-of-the-art competitors and base models on three real-world datasets validate the effectiveness of our proposed model.",
+  "year": 2023,
+  "venue": "ACM Transactions on Information Systems",
+  "authors": [
+   "Wei Chen",
+   "Yiqing Wu",
+   "Zhao Zhang",
+   "Fuzhen Zhuang",
+   "Zhongshi He",
+   "Ruobing Xie"
+  ],
+  "citations": 36,
+  "source": "openalex",
+  "source_id": "W4390134877",
+  "doi": "10.1145/3638352",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3638352",
+  "published_iso": "2023-12-22",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Multiply robust estimation for causal survival analysis with treatment noncompliance",
+  "title_norm": "multiply robust estimation for causal survival analysis with treatment noncompli",
+  "abstract": "Comparative effectiveness research frequently addresses a time-to-event outcome and can require unique considerations in the presence of treatment noncompliance. Motivated by the challenges in addressing noncompliance in the ADAPTABLE pragmatic clinical trial, we develop a multiply robust estimator to estimate the principal survival causal effects under the principal ignorability and monotonicity. The multiply robust estimator is consistent even if one, and sometimes two, of the required models are misspecified. We apply the multiply robust method in the ADAPTABLE trial to evaluate the effect of low- versus high-dose aspirin assignment on patients' death and hospitalization from cardiovascular diseases. We find that, comparing to low-dose assignment, assignment to the high-dose leads to differential effects among always high-dose takers, compliers, and always low-dose takers. Such treatment effect heterogeneity contributes to the null intention-to-treatment effect. We further perform a formal sensitivity analysis for investigating the robustness of our causal conclusions under violation of two identification assumptions specific to noncompliance.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chao Cheng",
+   "Bo Liu",
+   "Lisa Wruck",
+   "Fan Li",
+   "Fan Li"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4378072606",
+  "doi": "10.48550/arxiv.2305.13443",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2305.13443",
+  "published_iso": "2023-05-22",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Accelerated stress testing in proton exchange membrane water electrolysis - critical review",
+  "title_norm": "accelerated stress testing in proton exchange membrane water electrolysis critic",
+  "abstract": "International audience",
+  "year": 2024,
+  "venue": "Journal of Power Sources",
+  "authors": [
+   "Edwin Urbano",
+   "Elodie Pahon",
+   "N. Yousfi‐Steiner",
+   "M. Le Guillou"
+  ],
+  "citations": 46,
+  "source": "openalex",
+  "source_id": "W4402640686",
+  "doi": "10.1016/j.jpowsour.2024.235451",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402640686",
+  "published_iso": "2024-09-19",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "What Can Time‐Series Regressions Tell Us About Policy Counterfactuals?",
+  "title_norm": "what can time series regressions tell us about policy counterfactuals",
+  "abstract": "We show that, in a general family of linearized structural macroeconomic models, knowledge of the empirically estimable causal effects of contemporaneous and news shocks to the prevailing policy rule is sufficient to construct counterfactuals under alternative policy rules. If the researcher is willing to postulate a loss function, our results furthermore allow her to recover an optimal policy rule for that loss. Under our assumptions, the derived counterfactuals and optimal policies are robust to the Lucas critique. We then discuss strategies for applying these insights when only a limited amount of empirical causal evidence on policy shock transmission is available.",
+  "year": 2023,
+  "venue": "Econometrica",
+  "authors": [
+   "Alisdair McKay",
+   "Christian K. Wolf"
+  ],
+  "citations": 44,
+  "source": "openalex",
+  "source_id": "W4386870823",
+  "doi": "10.3982/ecta21045",
+  "arxiv_id": null,
+  "paper_url": "https://www.econometricsociety.org/publications/econometrica/2023/09/01/What-Can-Time-Series-Regressions-Tell-Us-About-Policy-Counterfactuals/supp/ecta200584-sup-0001-onlineappendix.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Azithromycin-loaded liposomal hydrogel: a step forward for enhanced treatment of MRSA-related skin infections",
+  "title_norm": "azithromycin loaded liposomal hydrogel a step forward for enhanced treatment of ",
+  "abstract": "(MRSA) (1). The present study represents a follow-up to this previous work, attempting to further explore the anti-MRSA potential of AZT-liposomes when incorporated into chitosan hydrogel (CHG). Incorporation of AZT-liposomes into CHG (liposomal CHGs) was intended to ensure proper viscosity and texture properties of the formulation, modification of antibiotic release, and enhanced antibacterial activity, aiming to upgrade the therapeutical potential of AZT-liposomes in localized treatment of MRSA-related skin infections. Four different liposomal CHGs were evaluated and compared on the grounds of antibacterial activity against MRSA, AZT release profiles, cytotoxicity, as well as texture, and rheological properties. To our knowledge, this study is the first to investigate the potential of liposomal CHGs for the topical localized treatment of MRSA-related skin infections. CHG ensured proper viscoelastic and texture properties to achieve prolonged retention and prolonged release of AZT at the application site, which resulted in a boosted anti-MRSA effect of the entrapped AZT-liposomes. With respect to anti-MRSA activity and biocompatibility, formulation CATL-CHG (cationic liposomes in CHG) is considered to be the most promising formulation for the treatment of MRSA-related skin infections.",
+  "year": 2023,
+  "venue": "Acta Pharmaceutica",
+  "authors": [
+   "Zora Rukavina",
+   "May Wenche Jøraholmen",
+   "Dunja Božić",
+   "Ivana Frankol",
+   "Petra Golja Gašparović",
+   "Nataša Škalko‐Basnet"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4390225551",
+  "doi": "10.2478/acph-2023-0042",
+  "arxiv_id": null,
+  "paper_url": "https://sciendo.com/pdf/10.2478/acph-2023-0042",
+  "published_iso": "2023-12-01",
+  "oa_field": "Pharmacology, Toxicology and Pharmaceutics",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Early-Stage Detection of Biotic and Abiotic Stress on Plants by Chlorophyll Fluorescence Imaging Analysis",
+  "title_norm": "early stage detection of biotic and abiotic stress on plants by chlorophyll fluo",
+  "abstract": "Most agricultural land, as a result of climate change, experiences severe stress that significantly reduces agricultural yields. Crop sensing by imaging techniques allows early-stage detection of biotic or abiotic stress to avoid damage and significant yield losses. Among the top certified imaging techniques for plant stress detection is chlorophyll a fluorescence imaging, which can evaluate spatiotemporal leaf changes, permitting the pre-symptomatic monitoring of plant physiological status long before any visible symptoms develop, allowing for high-throughput assessment. Here, we review different examples of how chlorophyll a fluorescence imaging analysis can be used to evaluate biotic and abiotic stress. Chlorophyll a is able to detect biotic stress as early as 15 min after Spodoptera exigua feeding, or 30 min after Botrytis cinerea application on tomato plants, or on the onset of water-deficit stress, and thus has potential for early stress detection. Chlorophyll fluorescence (ChlF) analysis is a rapid, non-invasive, easy to perform, low-cost, and highly sensitive method that can estimate photosynthetic performance and detect the influence of diverse stresses on plants. In terms of ChlF parameters, the fraction of open photosystem II (PSII) reaction centers (qp) can be used for early stress detection, since it has been found in many recent studies to be the most accurate and appropriate indicator for ChlF-based screening of the impact of environmental stress on plants.",
+  "year": 2023,
+  "venue": "Biosensors",
+  "authors": [
+   "Julietta Moustaka",
+   "Michael Moustakas"
+  ],
+  "citations": 136,
+  "source": "openalex",
+  "source_id": "W4385654789",
+  "doi": "10.3390/bios13080796",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-6374/13/8/796/pdf?version=1691483449",
+  "published_iso": "2023-08-08",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "A Survey on Evaluation of Large Language Models",
+  "title_norm": "a survey on evaluation of large language models",
+  "abstract": "Large language models (LLMs) are gaining increasing popularity in both academia and industry, owing to their unprecedented performance in various applications. As LLMs continue to play a vital role in both research and daily use, their evaluation becomes increasingly critical, not only at the task level, but also at the society level for better understanding of their potential risks. Over the past years, significant efforts have been made to examine LLMs from various perspectives. This paper presents a comprehensive review of these evaluation methods for LLMs, focusing on three key dimensions: what to evaluate, where to evaluate, and how to evaluate. Firstly, we provide an overview from the perspective of evaluation tasks, encompassing general natural language processing tasks, reasoning, medical usage, ethics, educations, natural and social sciences, agent applications, and other areas. Secondly, we answer the `where' and `how' questions by diving into the evaluation methods and benchmarks, which serve as crucial components in assessing performance of LLMs. Then, we summarize the success and failure cases of LLMs in different tasks. Finally, we shed light on several future challenges that lie ahead in LLMs evaluation. Our aim is to offer invaluable insights to researchers in the realm of LLMs evaluation, thereby aiding the development of more proficient LLMs. Our key point is that evaluation should be treated as an essential discipline to better assist the development of LLMs. We consistently maintain the related open-source materials at: https://github.com/MLGroupJLU/LLM-eval-survey.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yupeng Chang",
+   "Xu Wang",
+   "Jindong Wang",
+   "Yuan-Hsuan Wu",
+   "Linyi Yang",
+   "Kaijie Zhu"
+  ],
+  "citations": 202,
+  "source": "openalex",
+  "source_id": "W4383605161",
+  "doi": "10.48550/arxiv.2307.03109",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2307.03109",
+  "published_iso": "2023-07-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Detection of Diabetic Retinopathy using Convolutional Neural Networks for Feature Extraction and Classification (DRFEC)",
+  "title_norm": "detection of diabetic retinopathy using convolutional neural networks for featur",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Multimedia Tools and Applications",
+  "authors": [
+   "Dolly Das",
+   "Saroj Kr. Biswas",
+   "Sivaji Bandyopadhyay"
+  ],
+  "citations": 145,
+  "source": "openalex",
+  "source_id": "W4310774142",
+  "doi": "10.1007/s11042-022-14165-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11042-022-14165-4.pdf",
+  "published_iso": "2022-11-29",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Travel behavior on vacation: transport mode choice of tourists at destinations",
+  "title_norm": "travel behavior on vacation transport mode choice of tourists at destinations",
+  "abstract": "Tourist travel contributes greatly to transport problems in highly attractive tourist areas. Despite that, local travel behavior of visitors at the destination has hardly been investigated so far. To fill this gap, we used data from a bespoke travel-activity survey conducted in the Austrian Alps to develop models of transport mode choice of tourists during their vacation stays at the resorts. The outcomes reveal significant effects of, inter alia, travel time, travel cost, travel party composition, trip purpose, respondent’s level of fitness, their knowledge about long-distance travel to the destination and mobility options at the destination, and selected weather elements. Tourists are found to be very inelastic to changes in travel cost, whilst more responsive to changes in travel time. The paper delivers unique evidence that can advance transport policy design and thus contribute to more sustainable travel at tourist destinations.",
+  "year": 2022,
+  "venue": "Transportation Research Part A Policy and Practice",
+  "authors": [
+   "Bartosz Bursa",
+   "Markus Mailer",
+   "Kay W. Axhausen"
+  ],
+  "citations": 68,
+  "source": "openalex",
+  "source_id": "W4308497264",
+  "doi": "10.1016/j.tra.2022.09.018",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S0965856422002543/pdf",
+  "published_iso": "2022-11-04",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "CARE: coherent actionable recourse based on sound counterfactual explanations",
+  "title_norm": "care coherent actionable recourse based on sound counterfactual explanations",
+  "abstract": "Abstract Counterfactual explanation (CE) is a popular post hoc interpretability approach that explains how to obtain an alternative outcome from a machine learning model by specifying minimum changes in the input. In line with this context, when the model’s inputs represent actual individuals, actionable recourse (AR) refers to a personalized CE that prescribes feasible changes according to an individual’s preferences. Hence, the quality of ARs highly depends on the soundness of underlying CEs and the proper incorporation of user preferences. To generate sound CEs, several data-level properties, such as proximity and connectedness, should be taken into account. Meanwhile, personalizing explanations demands fulfilling important user-level requirements, like coherency and actionability. The main obstacles to inclusive consideration of the stated properties are their associated modeling and computational complexity as well as the lack of a systematic approach for making a rigorous trade-off between them based on their importance. This paper introduces CARE, an explanation framework that addresses these challenges by formulating the properties as intuitive and computationally efficient objective functions, organized in a modular hierarchy and optimized using a multi-objective optimization algorithm. The devised modular hierarchy enables the arbitration and aggregation of various properties as well as the generation of CEs and AR by choice. CARE involves individuals through a flexible language for defining preferences, facilitates their choice by recommending multiple ARs, and guides their action steps toward their desired outcome. CARE is a model-agnostic approach for explaining any multi-class classification and regression model in mixed-feature tabular settings. We demonstrate the efficacy of our framework through several validation and benchmark experiments on standard data sets and black box models.",
+  "year": 2022,
+  "venue": "International Journal of Data Science and Analytics",
+  "authors": [
+   "Peyman Rasouli",
+   "Ingrid Chieh Yu"
+  ],
+  "citations": 28,
+  "source": "openalex",
+  "source_id": "W3194828395",
+  "doi": "10.1007/s41060-022-00365-6",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41060-022-00365-6.pdf",
+  "published_iso": "2022-09-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Comparative analysis of GFN methods in geometry optimization of small organic semiconductor molecules: A DFT benchmarking study",
+  "title_norm": "comparative analysis of gfn methods in geometry optimization of small organic se",
+  "abstract": "This study benchmarks the GFN family of semi-empirical meth- ods (GFN1- x TB, GFN2- x TB, GFN0- x TB, and GFN-FF) against density functional theory (DFT) for the evaluation of opti- mized molecular geometries and electronic properties of small organic semiconductor molecules. This work offers a sys- tematic assessment of these computationally efficient quan- tum chemical methods and their accuracy-cost profiles when applied to a challenging class of systems, characterized, for instance, by extended π -conjugation, conformational flexi- bility, and sensitivity of properties to subtle structural changes. Two datasets are evaluated: a QM9-derived subset of small organic molecules and the Harvard Clean Energy Project (CEP) database of extended π -systems relevant to organic photo- voltaics. Structural agreement is quantified using heavy-atom RMSD, equilibrium rotational constants, bond lengths, and angles, while electronic property prediction is assessed via HOMO–LUMO energy gaps. Computational efficiency is as- sessed via CPU time and scaling behavior. GFN1- x TBand GFN2- x TBdemonstrate the highest structural fidelity, while GFN-FFoffers an optimal balance between accuracy and speed, particularly for larger systems. The results indicate that GFN- based methods are suitable for high-throughput molecular screening of small organic semiconductors, with the choice of method depending on accuracy-cost trade-offs. The find- ings support the deployment of GFN approaches in compu- tational pipelines for the discovery of organic electronics and materials, providing information on their strengths and limi- tations relative to established DFT methods.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Steve Cabrel Teguia Kouam",
+   "Jean-Pierre Tchapet Njafa",
+   "Raoult Dabou Teukam",
+   "Patrick Mvoto Kongo",
+   "Jean-Pierre Nguenang",
+   "S. G. Nana Engo"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4410837966",
+  "doi": "10.22541/au.174840484.47359201/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.authorea.com/doi/pdf/10.22541/au.174840484.47359201/v1",
+  "published_iso": "2025-05-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Proton Exchange Membrane (PEM) Water Electrolysis: Cell-Level Considerations for Gigawatt-Scale Deployment",
+  "title_norm": "proton exchange membrane pem water electrolysis cell level considerations for gi",
+  "abstract": "Hydrogen produced with no greenhouse gas emissions is termed \"green hydrogen\" and will be essential to reaching decarbonization targets set forth by nearly every country as per the Paris Agreement. Proton exchange membrane water electrolyzers (PEMWEs) are expected to contribute substantially to the green hydrogen market. However, PEMWE market penetration is insignificant, accounting for less than a gigawatt of global capacity. Achieving substantive decarbonization via green hydrogen will require PEMWEs to reach capacities of hundreds of gigawatts by 2030. This paper serves as an overarching roadmap for cell-level improvements necessary for gigawatt-scale PEMWE deployment, with insights from three well-established hydrogen technology companies included. Analyses will be presented for economies of scale, renewable energy prices, government policies, accelerated stress tests, and component-specific improvements.",
+  "year": 2025,
+  "venue": "Chemical Reviews",
+  "authors": [
+   "Cliffton Wang",
+   "John Stansberry",
+   "Rangachary Mukundan",
+   "Hung-Ming Joseph Chang",
+   "Devashish Kulkarni",
+   "Andrew M. Park"
+  ],
+  "citations": 359,
+  "source": "openalex",
+  "source_id": "W4407087511",
+  "doi": "10.1021/acs.chemrev.3c00904",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt51z9m46x/qt51z9m46x.pdf",
+  "published_iso": "2025-02-03",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Evaluating Large Language Models in Generating Synthetic HCI Research Data: a Case Study",
+  "title_norm": "evaluating large language models in generating synthetic hci research data a cas",
+  "abstract": "Collecting data is one of the bottlenecks of Human-Computer Interaction (HCI) research. Motivated by this, we explore the potential of large language models (LLMs) in generating synthetic user research data. We use OpenAI’s GPT-3 model to generate open-ended questionnaire responses about experiencing video games as art, a topic not tractable with traditional computational user models. We test whether synthetic responses can be distinguished from real responses, analyze errors of synthetic data, and investigate content similarities between synthetic and real data. We conclude that GPT-3 can, in this context, yield believable accounts of HCI experiences. Given the low cost and high speed of LLM data generation, synthetic data should be useful in ideating and piloting new experiments, although any findings must obviously always be validated with real data. The results also raise concerns: if employed by malicious users of crowdsourcing services, LLMs may make crowdsourcing of self-report data fundamentally unreliable.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Perttu Hämäläinen",
+   "Mikke Tavast",
+   "Anton Kunnari"
+  ],
+  "citations": 245,
+  "source": "openalex",
+  "source_id": "W4366549000",
+  "doi": "10.1145/3544548.3580688",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3544548.3580688",
+  "published_iso": "2023-04-19",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "IL-17A inhibitors alleviate Psoriasis with concomitant restoration of intestinal/skin microbiota homeostasis and altered microbiota function",
+  "title_norm": "il 17a inhibitors alleviate psoriasis with concomitant restoration of intestinal",
+  "abstract": "Background Disturbed gut microbiota and associated metabolic dysfunction exist in Psoriasis. Despite the growing use of interleukin-17 inhibitor (anti-IL17) therapy, the effect of anti-IL17 on gut/skin microbiota function is not fully understood in patients with Psoriasis. Objective Therefore, we explored whether Psoriasis is associated with alterations in selected gut/skin microbiota in a study cohort, and a longitudinal cohort study to reveal the effects of IL-17A inhibitor treatment on gut microbiota in Psoriasis. Methods In a case-control study, 14 patients with Psoriasis and 10 age, sex and body mass index-matched Healthy Controls were recruited. Longitudinal mapping of the gut microbiome was performed using 16S rRNA gene sequencing. Mouse models were used to further study and validate the interrelationship between the skin microbiome and the gut microbiome in Psoriasis. PICRUST2 was applied to predict the function of the bacterial community. Results In Psoriasis patients, gut microbiota dysbiosis was present with increased heterogeneity: decreased Bacteroidota and increased Firmicutes as well as Actinobacteriota predominating in Psoriasis. Escherichia-Shigella enrichment was associated with reduction in serum levels of total bile acid and markers in Apoptotic pathways. After IL-17A inhibitor treatment in Psoriasis patients, longitudinal studies observed a trend toward a normal distribution of the gut microbiome and modulation of apoptosis-related metabolic pathways. Results from a mouse model showed dysregulation of the skin microbiota in Psoriasis characterized by Staphylococcus colonization. Conclusion The psoriatic gut/skin microbiota exhibits loss of community stability and pathogen enrichment. IL-17A inhibitors restore microbiota homeostasis and metabolic pathways, reduce pro-inflammatory cytokine expression, and alleviate symptoms in patients with Psoriasis.",
+  "year": 2024,
+  "venue": "Frontiers in Immunology",
+  "authors": [
+   "Huixia Zhao",
+   "Lili Shang",
+   "Yuting Zhang",
+   "Zhaojun Liang",
+   "Nan Wang",
+   "Qian Zhang"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4392235674",
+  "doi": "10.3389/fimmu.2024.1344963",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4392235674",
+  "published_iso": "2024-02-28",
+  "oa_field": "Immunology and Microbiology",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A Five-Level Switched-Capacitor Based Transformerless Inverter With Boosting Capability for Grid-Tied PV Applications",
+  "title_norm": "a five level switched capacitor based transformerless inverter with boosting cap",
+  "abstract": "Transformerless grid-connected inverters have attained a lot of research interest in renewable energy interface applications, due to certain promising properties like greater efficiency, light weight, affordable price, and tolerable power density. Among various types of transformerless grid-tied photovoltaic (PV) inverters, multilevel inverters (MLIs) are mostly popular due to their ability to transmit reactive power, small filter size for reducing total harmonic distortion (THD) and their common-ground (CG) configuration to mitigate the detrimental leakage current due to the parasitic capacitances of the PV array. Again, among different types of MLIs for PV systems, switched-capacitor (SC) based multilevel inverter topologies are the burning topic in current decades due to their single source requirements for producing multilevel output voltage. However, for mostly used single-phase five-level inverters, most of the existing SC based topology requires at least two SCs for power conversion. In this paper, a five-level transformerless inverter based on a single SC is proposed, requiring only seven switches, no diode, a single capacitor, and one dc voltage source. The proposed transformerless MLI also has auto-boosting capability. Notably, the number of power switches operating at high frequency is limited to three, which lowers down the switching losses of the inverter. Rather than a new single SC based five-level transformerless inverter topology, a control scheme is also presented to inject a precisely regulated current into the grid that can govern both the active and reactive power support modes. In-depth comparisons between the proposed and cutting-edge MLIs are also provided. All these claims are validated through MATLAB/Simulink and PLECS computer simulation environments. A laboratory-scaled prototype is also built and tested to support the simulated claims further and validate the effectiveness and feasibility of the proposed five-level transformerless inverter topology.",
+  "year": 2023,
+  "venue": "IEEE Access",
+  "authors": [
+   "Sudipto Mondal",
+   "Shuvra Prokash Biswas",
+   "Md. Rabiul Islam",
+   "S. M. Muyeen"
+  ],
+  "citations": 65,
+  "source": "openalex",
+  "source_id": "W4319068538",
+  "doi": "10.1109/access.2023.3241927",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/6287639/10005208/10035945.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Stable and actionable explanations of black-box models through factual and counterfactual rules",
+  "title_norm": "stable and actionable explanations of black box models through factual and count",
+  "abstract": "Abstract Recent years have witnessed the rise of accurate but obscure classification models that hide the logic of their internal decision processes. Explaining the decision taken by a black-box classifier on a specific input instance is therefore of striking interest. We propose a local rule-based model-agnostic explanation method providing stable and actionable explanations. An explanation consists of a factual logic rule, stating the reasons for the black-box decision, and a set of actionable counterfactual logic rules, proactively suggesting the changes in the instance that lead to a different outcome. Explanations are computed from a decision tree that mimics the behavior of the black-box locally to the instance to explain. The decision tree is obtained through a bagging-like approach that favors stability and fidelity: first, an ensemble of decision trees is learned from neighborhoods of the instance under investigation; then, the ensemble is merged into a single decision tree. Neighbor instances are synthetically generated through a genetic algorithm whose fitness function is driven by the black-box behavior. Experiments show that the proposed method advances the state-of-the-art towards a comprehensive approach that successfully covers stability and actionability of factual and counterfactual explanations.",
+  "year": 2022,
+  "venue": "Data Mining and Knowledge Discovery",
+  "authors": [
+   "Riccardo Guidotti",
+   "Anna Monreale",
+   "Salvatore Ruggieri",
+   "Francesca Naretto",
+   "Franco Turini",
+   "Dino Pedreschi"
+  ],
+  "citations": 36,
+  "source": "openalex",
+  "source_id": "W4309348012",
+  "doi": "10.1007/s10618-022-00878-5",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4309348012",
+  "published_iso": "2022-11-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Multispectral Imaging and OCT-Guided Precision Treatment of Rhinophyma with CO2 and Dye Lasers: A Comprehensive Diagnostic and Therapeutic Approach",
+  "title_norm": "multispectral imaging and oct guided precision treatment of rhinophyma with co2 ",
+  "abstract": "Background/Objectives: Rhinophyma, an advanced form of rosacea, is characterized by significant nasal tissue enlargement and deformation, leading to aesthetic and psychosocial challenges. Traditional treatments are often invasive with variable outcomes, emphasizing the need for improved therapeutic approaches. This study evaluates the efficacy of a dual-laser therapy (CO2 and dye lasers) in treating rhinophyma. An innovative diagnostic algorithm using multispectral imaging guided treatment decisions, while Optical Coherence Tomography (OCT) was utilized to analyze post-treatment vascular and collagen changes. Methods: A prospective study was conducted involving 20 patients with rhinophyma. Multispectral imaging was used to guide the tailored application of CO2 laser, dye laser, or both, depending on the predominant vascular or glandular components in the nasal tissue. Post-treatment analysis employed OCT to assess changes in vascular and collagen density, providing insights into the tissue modifications induced by laser therapy. Results: The treatment significantly reduced vascular density from 35,526.75 to 26,577.55 at 300 microns and from 46,916.25 to 35,509.25 at 500 microns. Collagen density decreased from 81.35 to 66.34. All reductions were statistically significant, with highly significant p-values. These findings highlight the dual-laser therapy’s effectiveness in addressing the pathological features of rhinophyma. Conclusions: Dual-laser therapy guided by multispectral imaging provides a targeted and effective treatment for rhinophyma, addressing its vascular and glandular components. The use of OCT enhances understanding of laser-induced tissue changes and confirms significant reductions in vascular and collagen density. This approach represents a significant advancement in the management of rhinophyma, offering improved precision and therapeutic outcomes.",
+  "year": 2024,
+  "venue": "Cosmetics",
+  "authors": [
+   "S. Amato",
+   "Steven Paul Nisticò",
+   "Alessandro Clementi",
+   "Giorgio Stabile",
+   "Fortunato Cassalia",
+   "Annunziata Dattola"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405371770",
+  "doi": "10.3390/cosmetics11060221",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9284/11/6/221/pdf?version=1734086689",
+  "published_iso": "2024-12-13",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "New coordinated drive mode switching strategy for distributed drive electric vehicles with energy storage system",
+  "title_norm": "new coordinated drive mode switching strategy for distributed drive electric veh",
+  "abstract": "High performance and comfort are key features recommended in hybrid electric vehicle (HEV) design. In this paper, a new coordination strategy is proposed to solve the issue of undesired torque jerks and large power ripples noticed respectively during drive mode commutations and power sources switching. The proposed coordinated switching strategy uses stair-based transition function to perform drive mode commutations and power source switching's within defined transition periods fitting the transient dynamics of power sources and traction machines. The proposed technique is applied on a battery/ supercapacitor electric vehicle whose traction is ensured by two permanent magnet synchronous machines controlled using direct torque control and linked to HEV front and rear wheels. Simulation results highlight that the proposed coordinated switching strategy has a noteworthy positive impact on enhancing HEV transient performance as DC bus fluctuations were reduced to a narrow band of 6 V and transient torque ripples were almost suppressed.",
+  "year": 2024,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Adel Oubelaid",
+   "Khoudir Kakouche",
+   "Youcef Belkhier",
+   "Nima Khosravi",
+   "Nabil Taib",
+   "Toufik Rekioua"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4392917122",
+  "doi": "10.1038/s41598-024-56209-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-024-56209-9.pdf",
+  "published_iso": "2024-03-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Redefining Counterfactual Explanations for Reinforcement Learning: Overview, Challenges and Opportunities",
+  "title_norm": "redefining counterfactual explanations for reinforcement learning overview chall",
+  "abstract": "While AI algorithms have shown remarkable success in various fields, their lack of transparency hinders their application to real-life tasks. Although explanations targeted at non-experts are necessary for user trust and human-AI collaboration, the majority of explanation methods for AI are focused on developers and expert users. Counterfactual explanations are local explanations that offer users advice on what can be changed in the input for the output of the black-box model to change. Counterfactuals are user-friendly and provide actionable advice for achieving the desired output from the AI system. While extensively researched in supervised learning, there are few methods applying them to reinforcement learning (RL). In this work, we explore the reasons for the underrepresentation of a powerful explanation method in RL. We start by reviewing the current work in counterfactual explanations in supervised learning. Additionally, we explore the differences between counterfactual explanations in supervised learning and RL and identify the main challenges that prevent the adoption of methods from supervised in reinforcement learning. Finally, we redefine counterfactuals for RL and propose research directions for implementing counterfactuals in RL.",
+  "year": 2024,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jasmina Gajcin",
+   "Ivana Dusparić"
+  ],
+  "citations": 24,
+  "source": "openalex",
+  "source_id": "W4391897126",
+  "doi": "10.1145/3648472",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3648472",
+  "published_iso": "2024-02-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Delayed gut microbiota maturation in the first year of life is a hallmark of pediatric allergic disease",
+  "title_norm": "delayed gut microbiota maturation in the first year of life is a hallmark of ped",
+  "abstract": "Abstract Allergic diseases affect millions of people worldwide. An increase in their prevalence has been associated with alterations in the gut microbiome, i.e., the microorganisms and their genes within the gastrointestinal tract. Maturation of the infant immune system and gut microbiota occur in parallel; thus, the conformation of the microbiome may determine if tolerant immune programming arises within the infant. Here we show, using deeply phenotyped participants in the CHILD birth cohort ( n = 1115), that there are early-life influences and microbiome features which are uniformly associated with four distinct allergic diagnoses at 5 years: atopic dermatitis (AD, n = 367), asthma (As, n = 165), food allergy (FA, n = 136), and allergic rhinitis (AR, n = 187). In a subset with shotgun metagenomic and metabolomic profiling ( n = 589), we discover that impaired 1-year microbiota maturation may be universal to pediatric allergies (AD p = 0.000014; As p = 0.0073; FA p = 0.00083; and AR p = 0.0021). Extending this, we find a core set of functional and metabolic imbalances characterized by compromised mucous integrity, elevated oxidative activity, decreased secondary fermentation, and elevated trace amines, to be a significant mediator between microbiota maturation at age 1 year and allergic diagnoses at age 5 years (β indirect = −2.28; p = 0.0020). Microbiota maturation thus provides a focal point to identify deviations from normative development to predict and prevent allergic disease.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Courtney Hoskinson",
+   "Darlene Dai",
+   "Kate L. Del Bel",
+   "Allan B. Becker",
+   "Theo J. Moraes",
+   "Piush J. Mandhane"
+  ],
+  "citations": 193,
+  "source": "openalex",
+  "source_id": "W4386251644",
+  "doi": "10.1038/s41467-023-40336-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-40336-4.pdf",
+  "published_iso": "2023-08-29",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Substance use disorders: a comprehensive update of classification, epidemiology, neurobiology, clinical aspects, treatment and prevention",
+  "title_norm": "substance use disorders a comprehensive update of classification epidemiology ne",
+  "abstract": "Substance use disorders (SUDs) are highly prevalent and exact a large toll on individuals' health, well-being, and social functioning. Long-lasting changes in brain networks involved in reward, executive function, stress reactivity, mood, and self-awareness underlie the intense drive to consume substances and the inability to control this urge in a person who suffers from addiction (moderate or severe SUD). Biological (including genetics and developmental life stages) and social (including adverse childhood experiences) determinants of health are recognized factors that contribute to vulnerability for or resilience against developing a SUD. Consequently, prevention strategies that target social risk factors can improve outcomes and, when deployed in childhood and adolescence, can decrease the risk for these disorders. SUDs are treatable, and evidence of clinically significant benefit exists for medications (in opioid, nicotine and alcohol use disorders), behavioral therapies (in all SUDs), and neuromodulation (in nicotine use disorder). Treatment of SUDs should be considered within the context of a Chronic Care Model, with the intensity of intervention adjusted to the severity of the disorder and with the concomitant treatment of comorbid psychiatric and physical conditions. Involvement of health care providers in detection and management of SUDs, including referral of severe cases to specialized care, offers sustainable models of care that can be further expanded with the use of telehealth. Despite advances in our understanding and management of SUDs, individuals with these conditions continue to be stigmatized and, in some countries, incarcerated, highlighting the need to dismantle policies that perpetuate their criminalization and instead develop policies to ensure support and access to prevention and treatment.",
+  "year": 2023,
+  "venue": "World Psychiatry",
+  "authors": [
+   "Nora D. Volkow",
+   "Carlos Blanco"
+  ],
+  "citations": 460,
+  "source": "openalex",
+  "source_id": "W4376132878",
+  "doi": "10.1002/wps.21073",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wps.21073",
+  "published_iso": "2023-05-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "A Note on Normalized Emergence Timing (in Pythia Language Model Evaluations)",
+  "title_norm": "a note on normalized emergence timing in pythia language model evaluations",
+  "abstract": "How do large language models (LLMs) develop and evolve over the course of training? How do these patterns change as models scale? To answer these questions, we introduce \\textit{Pythia}, a suite of 16 LLMs all trained on public data seen in the exact same order and ranging in size from 70M to 12B parameters. We provide public access to 154 checkpoints for each one of the 16 models, alongside tools to download and reconstruct their exact training dataloaders for further study. We intend \\textit{Pythia} to facilitate research in many areas, and we present several case studies including novel results in memorization, term frequency effects on few-shot performance, and reducing gender bias. We demonstrate that this highly controlled setup can be used to yield novel insights toward LLMs and their training dynamics. Trained models, analysis code, training code, and training data can be found at \\url{https://github.com/EleutherAI/pythia}.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Stella Biderman",
+   "Hailey Schoelkopf",
+   "Quentin Anthony",
+   "Herbie Bradley",
+   "Kyle O'Brien",
+   "Eric Hallahan"
+  ],
+  "citations": 165,
+  "source": "openalex",
+  "source_id": "W4362655426",
+  "doi": "10.48550/arxiv.2304.01373",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2304.01373",
+  "published_iso": "2023-04-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Geographical and sociodemographic differences in statin dispensation after acute myocardial infarction in Sweden: a register-based prospective cohort study applying analysis of individual heterogeneity and discriminatory accuracy (AIHDA) for basic comparisons of healthcare quality",
+  "title_norm": "geographical and sociodemographic differences in statin dispensation after acute",
+  "abstract": "BACKGROUND: In Sweden, as in many other countries, official monitoring of healthcare quality is mostly focused on geographical disparities in relation to a desirable benchmark. However, current evaluations could be improved by considering: (1) The intersection of other relevant axes of inequity like age, sex, income and migration status; and (2) The existence of individual heterogeneity around averages. Therefore, using an established quality indicator (ie, dispensation of statins after acute myocardial infarction, AMI), we valuate both geographical and sociodemographic inequalities and illustrate how the analysis of individual heterogeneity and discriminatory accuracy (AIHDA) enhances such evaluations. POPULATION AND METHODS: We applied AIHDA and calculated the area under the receiver operating characteristics curve (AUC) of regional and sociodemographic differences in the statin dispensations of 35 044 patients from 21 Swedish regions and 24 sociodemographic strata who were discharged from the hospital with an AMI diagnosis between January 2011 and December 2013. Following the Swedish National Board of Health and Welfare, we used a benchmark value of 90%. RESULTS: Dispensation of stains after AMI in Sweden did not reach the desired target of 90%. Regional differences were absent/very small (AUC=0.537) while sociodemographic differences were small (AUC=0.618). Women, especially those with immigrant background and older than 65 years, have the lowest proportions of statin dispensations after AMI. CONCLUSIONS: As the AUC statistics are small, interventions trying to achieve the benchmark value should be universal. However, special emphasis should nevertheless be directed towards women, especially older women with immigrant backgrounds.",
+  "year": 2023,
+  "venue": "BMJ Open",
+  "authors": [
+   "Juan Merlo",
+   "Johan Öberg",
+   "Kani Khalaf",
+   "Raquel Pérez-Vicente",
+   "George Leckie"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4387143111",
+  "doi": "10.1136/bmjopen-2022-063117",
+  "arxiv_id": null,
+  "paper_url": "https://bmjopen.bmj.com/content/bmjopen/13/9/e063117.full.pdf",
+  "published_iso": "2023-09-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A computational analysis of mouse behavior in the sucrose preference test",
+  "title_norm": "a computational analysis of mouse behavior in the sucrose preference test",
+  "abstract": "The sucrose preference test (SPT) measures the relative preference of sucrose over water to assess hedonic behaviors in rodents. Yet, it remains uncertain to what extent the SPT reflects other behavioral components, such as learning, memory, motivation, and choice. Here, we conducted an experimental and computational decomposition of mouse behavior in the SPT and discovered previously unrecognized behavioral subcomponents associated with changes in sucrose preference. We show that acute and chronic stress have sex-dependent effects on sucrose preference, but anhedonia was observed only in response to chronic stress in male mice. Additionally, reduced sucrose preference induced by optogenetics is not always indicative of anhedonia but can also reflect learning deficits. Even small variations in experimental conditions influence behavior, task outcome and interpretation. Thus, an ostensibly simple behavioral task can entail high levels of complexity, demonstrating the need for careful dissection of behavior into its subcomponents when studying the underlying neurobiology.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Jeroen P. H. Verharen",
+   "Johannes W. de Jong",
+   "Yichen Zhu",
+   "Stephan Lammel"
+  ],
+  "citations": 61,
+  "source": "openalex",
+  "source_id": "W4367180556",
+  "doi": "10.1038/s41467-023-38028-0",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-38028-0.pdf",
+  "published_iso": "2023-04-27",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models",
+  "title_norm": "agieval a human centric benchmark for evaluating foundation models",
+  "abstract": "Assessing foundation models' abilities for human-level tasks is crucial for Artificial General Intelligence (AGI) development.Traditional benchmarks, which rely on artificial datasets, may not accurately represent these capabilities.In this paper, we introduce AGIEval, a novel bilingual benchmark designed to assess foundation models in the context of humancentric standardized exams, such as college entrance exams, law school admission tests, math competitions, and lawyer qualification tests.We evaluate several state-of-the-art foundation models on our benchmark.Impressively, we show that GPT-4 exceeds the average human performance in SAT, LSAT, and math contests, with 95% accuracy on SAT Math and 92.5% on the Chinese college entrance English exam.This demonstrates the exceptional performance of contemporary foundation models.In contrast, we also find that GPT-4 is less proficient in tasks requiring complex reasoning or specific domain knowledge.Our comprehensive analyses of model capabilities (understanding, knowledge, reasoning, and calculation) reveal their strengths and limitations, providing valuable insights into future directions for enhancing general capabilities.By concentrating on tasks pertinent to human cognition and decision-making, our benchmark delivers a meaningful and robust evaluation of foundation models' performance in real-world scenarios 1 .",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Wanjun Zhong",
+   "Ruixiang Cui",
+   "Yiduo Guo",
+   "Yaobo Liang",
+   "Shuai Lü",
+   "Yanlin Wang"
+  ],
+  "citations": 134,
+  "source": "openalex",
+  "source_id": "W4401042689",
+  "doi": "10.18653/v1/2024.findings-naacl.149",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2024.findings-naacl.149.pdf",
+  "published_iso": "2024-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Metabolomic profiles of sleep-disordered breathing are associated with hypertension and diabetes mellitus development",
+  "title_norm": "metabolomic profiles of sleep disordered breathing are associated with hypertens",
+  "abstract": "Sleep-disordered breathing (SDB) is a prevalent disorder characterized by recurrent episodic upper airway obstruction. Using data from the Hispanic Community Health Study/Study of Latinos (HCHS/SOL), we apply principal component analysis (PCA) to seven SDB-related measures. We estimate the associations of the top two SDB PCs with serum levels of 617 metabolites, in both single-metabolite analysis, and a joint penalized regression analysis. The discovery analysis includes 3299 individuals, with validation in a separate dataset of 1522 individuals. Five metabolite associations with SDB PCs are discovered and replicated. SDB PC1, characterized by frequent respiratory events common in older and male adults, is associated with pregnanolone and progesterone-related sulfated metabolites. SDB PC2, characterized by short respiratory event length and self-reported restless sleep, enriched in young adults, is associated with sphingomyelins. Metabolite risk scores (MRSs), representing metabolite signatures associated with the two SDB PCs, are associated with 6-year incident hypertension and diabetes. These MRSs have the potential to serve as biomarkers for SDB, guiding risk stratification and treatment decisions.",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "authors": [
+   "Ying Zhang",
+   "Bing Yu",
+   "Qibin Qi",
+   "Ali Azarbarzin",
+   "Han Chen",
+   "Neomi Shah"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4392231234",
+  "doi": "10.1038/s41467-024-46019-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-024-46019-y.pdf",
+  "published_iso": "2024-02-28",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Scientists' warning on climate change and insects",
+  "title_norm": "scientists warning on climate change and insects",
+  "abstract": "Abstract Climate warming is considered to be among the most serious of anthropogenic stresses to the environment, because it not only has direct effects on biodiversity, but it also exacerbates the harmful effects of other human‐mediated threats. The associated consequences are potentially severe, particularly in terms of threats to species preservation, as well as in the preservation of an array of ecosystem services provided by biodiversity. Among the most affected groups of animals are insects—central components of many ecosystems—for which climate change has pervasive effects from individuals to communities. In this contribution to the scientists' warning series, we summarize the effect of the gradual global surface temperature increase on insects, in terms of physiology, behavior, phenology, distribution, and species interactions, as well as the effect of increased frequency and duration of extreme events such as hot and cold spells, fires, droughts, and floods on these parameters. We warn that, if no action is taken to better understand and reduce the action of climate change on insects, we will drastically reduce our ability to build a sustainable future based on healthy, functional ecosystems. We discuss perspectives on relevant ways to conserve insects in the face of climate change, and we offer several key recommendations on management approaches that can be adopted, on policies that should be pursued, and on the involvement of the general public in the protection effort.",
+  "year": 2022,
+  "venue": "Ecological Monographs",
+  "authors": [
+   "Jeffrey A. Harvey",
+   "Kévin Tougeron",
+   "Rieta Gols",
+   "Robin Heinen",
+   "Mariana Abarca",
+   "Paul K. Abram"
+  ],
+  "citations": 584,
+  "source": "openalex",
+  "source_id": "W4308325267",
+  "doi": "10.1002/ecm.1553",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ecm.1553",
+  "published_iso": "2022-11-07",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Measurement of Unmet Need for Contraception: A Counterfactual Approach",
+  "title_norm": "measurement of unmet need for contraception a counterfactual approach",
+  "abstract": "Unmet need plays a critical role in reproductive health research, evaluation, and advocacy. Although conceptually straightforward, its estimation suffers from a number of methodological limitations, most notably its reliance on biased measures of women's stated fertility preferences. We propose a counterfactual-based approach to measuring unmet need at the population level. Using data from 56 countries, we calculate unmet need in a population as the difference between: (1) the observed contraceptive prevalence in the population; and (2) the calculated contraceptive prevalence in a subsample of women who are identified to be from \"ideal\" family planning environments. Women from \"ideal\" environments are selected on characteristics that signal their contraceptive autonomy and decision-making over family planning. We find significant differences between our approach and existing methods to calculating unmet need, and we observe variation across countries when comparing indicators. We argue that our indicator of unmet need is preferable to existing population-level indicators due to its independence from biases that are generated from the use of reported preference measures, the simplicity with which it can be derived, and its relevance for cross-country comparisons as well as context-specific analyses.",
+  "year": 2022,
+  "venue": "Studies in Family Planning",
+  "authors": [
+   "Mahesh Karra"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4312080516",
+  "doi": "10.1111/sifp.12216",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4312080516",
+  "published_iso": "2022-12-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Ecological risk assessment and heavy metals accumulation in agriculture soils irrigated with treated wastewater effluent, river water, and well water combined with chemical fertilizers",
+  "title_norm": "ecological risk assessment and heavy metals accumulation in agriculture soils ir",
+  "abstract": "river water, and well water with chemical fertilizer, on the accumulation and ecological risk of heavy metals in agricultural soils. Soil samples were collected before and after crop irrigation to evaluate heavy metal concentrations. The samples were analyzed to determine the presence of arsenic, nickel, cadmium, iron, chromium, zinc, lead, copper, and manganese. Based on the results, the concentration of essential metals in the soil before the irrigation process was more than toxic metals. The different irrigation sources increased the concentration of all heavy metals in the soil, and the accumulation of Cr, Ni, and Cd significantly elevated more than others. Irrigation resources' effectiveness in transferring heavy metals to the soil was obtained as treated wastewater effluent < well water with fertilizer < river water. Furthermore, the potential ecological risk index (RI) for irrigated soil was in a high-risk category. Therefore, it is recommended that the river water should not be used to irrigate vegetables to the utmost possible. Finally, the low heavy metals concentration and the presence of nutrients in treated wastewater effluent make this source the most suited source of irrigation because it eliminates the need for chemical fertilizers by farmers and transfers fewer heavy metals to the soil.",
+  "year": 2023,
+  "venue": "Heliyon",
+  "authors": [
+   "Hamed Soleimani",
+   "Borhan Mansouri",
+   "Amir Kiani",
+   "Abdullah Khalid Omer",
+   "Moslem Tazik",
+   "Gholamreza Ebrahimzadeh"
+  ],
+  "citations": 93,
+  "source": "openalex",
+  "source_id": "W4327567265",
+  "doi": "10.1016/j.heliyon.2023.e14580",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4327567265",
+  "published_iso": "2023-03-01",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Mitochondrial dysfunction and metabolic reprogramming induce macrophage pro-inflammatory phenotype switch and atherosclerosis progression in aging",
+  "title_norm": "mitochondrial dysfunction and metabolic reprogramming induce macrophage pro infl",
+  "abstract": "Introduction Aging increases the risk of atherosclerotic vascular disease and its complications. Macrophages are pivotal in the pathogenesis of vascular aging, driving inflammation and atherosclerosis progression. NOX4 (NADPH oxidase 4) expression increases with age, correlating with mitochondrial dysfunction, inflammation, and atherosclerosis. We hypothesized that the NOX4-dependent mitochondrial oxidative stress promotes aging-associated atherosclerosis progression by causing metabolic dysfunction and inflammatory phenotype switch in macrophages. Methods We studied atherosclerotic lesion morphology and macrophage phenotype in young (5-month-old) and aged (16-month-old) Nox4 -/- / Apoe -/- and Apoe -/- mice fed Western diet. Results Young Nox4 -/- /Apoe -/- and Apoe -/- mice had comparable aortic and brachiocephalic artery atherosclerotic lesion cross-sectional areas. Aged mice showed significantly increased lesion area compared with young mice. Aged Nox4 -/- /Apoe -/- had significantly lower lesion areas than Apoe-/- mice. Compared with Apoe-/- mice, atherosclerotic lesions in aged Nox4 -/- /Apoe -/- showed reduced cellular and mitochondrial ROS and oxidative DNA damage, lower necrotic core area, higher collagen content, and decreased inflammatory cytokine expression. Immunofluorescence and flow cytometry analysis revealed that aged Apoe -/- mice had a higher percentage of classically activated pro-inflammatory macrophages (CD38 + CD80 + ) in the lesions. Aged Nox4 -/- /Apoe -/- mice had a significantly higher proportion of alternatively activated pro-resolving macrophages (EGR2 + /CD163 + CD206 + ) in the lesions, with an increased CD38 + /EGR2 + cell ratio compared with Apoe -/- mice. Mitochondrial respiration assessment revealed impaired oxidative phosphorylation and increased glycolytic ATP production in macrophages from aged Apoe -/- mice. In contrast, macrophages from Nox4 -/- /Apoe -/- mice were less glycolytic and more aerobic, with preserved basal and maximal respiration and mitochondrial ATP production. Macrophages from Nox4 -/- /Apoe -/- mice also had lower mitochondrial ROS levels and reduced IL1β secretion; flow cytometry analysis showed fewer CD38+ cells after IFNγ+LPS treatment and more EGR2 + cells after IL4 treatment than in Apoe -/- macrophages. In aged Apoe -/- mice, inhibition of NOX4 activity using GKT137831 significantly reduced macrophage mitochondrial ROS and improved mitochondrial function, resulting in decreased CD68 + CD80 + and increased CD163 + CD206 + lesion macrophage proportion and attenuated atherosclerosis. Discussion Our findings suggest that increased NOX4 in aging drives macrophage mitochondrial dysfunction, glycolytic metabolic switch, and pro-inflammatory phenotype, advancing atherosclerosis. Inhibiting NOX4 or mitochondrial dysfunction could alleviate vascular inflammation and atherosclerosis, preserving plaque integrity.",
+  "year": 2024,
+  "venue": "Frontiers in Immunology",
+  "authors": [
+   "Aleksandr E. Vendrov",
+   "Andrey Lozhkin",
+   "Takayuki Hayami",
+   "Julia Levin",
+   "Jamille Silveira Fernandes Chamon",
+   "Ahmed Abdel‐Latif"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4399901300",
+  "doi": "10.3389/fimmu.2024.1410832",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2024.1410832/pdf",
+  "published_iso": "2024-06-21",
+  "oa_field": "Immunology and Microbiology",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Sora for Computational Social Systems: From Counterfactual Experiments to Artificiofactual Experiments With Parallel Intelligence",
+  "title_norm": "sora for computational social systems from counterfactual experiments to artific",
+  "abstract": "Welcome to the second issue of IEEE Transactions on Computational Social Systems (TCSS) of 2024. This issue showcases an impressive array of 104 regular papers alongside our Special Issue on Big Data and Computational Social Intelligence for Guaranteed Financial Security, highlighting cutting-edge research aimed at harnessing big data and computational techniques to fortify financial security amidst the digital finance evolution. With a focus on addressing the intricate challenges of financial big data, enhancing the efficacy of artificial intelligence, and covering critical topics from data mining to digital currencies, this issue underscores the vital role of cross-disciplinary efforts in mitigating financial security risks.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Computational Social Systems",
+  "authors": [
+   "Rui Qin",
+   "Fei–Yue Wang",
+   "Xiaolong Zheng",
+   "Qinghua Ni",
+   "Juanjuan Li",
+   "Xiao Xue"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4393405308",
+  "doi": "10.1109/tcss.2024.3373928",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/6570650/10488768/10488825.pdf",
+  "published_iso": "2024-04-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Emotion Detection and its Effect on Decision-making",
+  "title_norm": "emotion detection and its effect on decision making",
+  "abstract": "Emotion categorization has become an increasingly important area of research due to the rising number of intelligent systems. Artificial classifiers have demonstrated limited competency in classifying different emotions and have widely been used in recent years to facilitate the task of emotion categorization. Conversely, it requires time and is sometimes hard for human classifiers to agree with each other on the facial expression categorization tasks. Hence, this thesis will consider how the combination of human and artificial classifiers can lead to improvements in emotion classification. Further, as emotions are not only communicative tools that are reflected on the face, this thesis will also investigate how emotions are reflected in the body and how that can affect the decision-making process. Existing methods of emotion categorization from visual data using deep learning algorithms analyze the emotion by representing knowledge in a homogeneous way. As a result, a small change to the input image made by an adversary or due to the occlusion of the partial region of the face might result in a large decrease in the accuracy of these algorithms. The proposed thesis is that an artificial system designed based on inspiration from neuro-scientific theory or the natural way humans categorize emotions, e.g. considering the mouth, eyes, jaw etc. can obtain better accuracy in emotion categorization than existing state-of-the-art techniques, which rely on homogeneous knowledge representation, i.e. consider the color within pixels of an image as equally important. The comprehensive goal is to create different emotion categorization methods, inspired by neuro-scientific processes and the way humans categorize emotion. These methods are to be tested on different emotional facial expression datasets. In addition, this thesis will also investigate how emotions are reflected in the body, i.e. in the skin conductance and heart rate, as well as analyzes what people want to feel and how that can affect their decision-making. Understanding what people want to feel and how that can affect their decision-making can lead to the production of artificially intelligent systems for real-world situations. The first academic contribution is related to the novel methods linking and transferring knowledge learned based on the strategies of the brain and the way humans categorize emotions. The second academic contribution is related to novel approaches being able to predict and identify patterns that contribute to predicting heart rate and skin conductance in the context of emotion. The last academic contribution is related to the findings that emotionally-aware systems will make better and more relevant decisions in shared workspaces than non-emotionally-aware ones. This thesis proposes a landmark-based method for categorizing emotion from images. The novel landmark-based method extracts facial features that are resistant to attacks by identifying salient features related to emotion regardless of the size, shape, and proportions of the face exhibiting the emotion. Experimental results showed that the novel landmark-based method can achieve better performance in terms of accuracy (> 97%) and computational cost (< 46 mins) in comparison to state-of-the-art methods (with < 91%-accuracy and > 119 hrs-time, respectively) for both in-distribution and out-of-distribution analysis. Furthermore, this thesis created a lateralized system by adapting the lateralized framework for computer vision and considering both constituents (e.g. mouth, eyes, jaw. etc.) and holistic (whole face) features to categorize emotion from images. The novel system successfully exhibited robustness against adversarial attacks by applying lateralization. The ability to simultaneously consider the parts of the face (constituents level) and the whole face (holistic level) empowers the lateralized system to correctly classify emotions and show stronger resistance to changes (10.86–47.72% decrease) in comparison to the state-of-the-art methods (25.15–83.43% decrease). This thesis also proposes a novel lateralized landmark-based method mirroring the human lateralized systems to categorize emotion from images. The novel system successfully exhibited robustness against attacks by using emotion-relevant features from the face exhibiting the emotion (instead of using pixels color), as well as simultaneously considering both constituents and holistic level predictions. The novel hybrid method was shown to achieve significantly higher accuracy (< 26% decrease) compared with various state-of-the-art methods (> 67% decrease) when tested on datasets with sufficient data to cover the common situation. Both landmark-based and lateralized systems categorize emotion from full facial images. However, the use of partial face coverings such as sunglasses and face masks, which are becoming very common nowadays unintentionally obscure facial expressions, causing a loss of accuracy when humans and computer systems attempt to categorise emotion. With the rise of soft computing techniques interacting with humans, it is important to know not just their accuracy, but also the confusion errors being made—do humans make less random/damaging errors than soft computing? Therefore, this thesis compared the accuracy of humans and computer systems in categorizing emotion from faces partially covered with sunglasses and face masks. The results suggest that although the accuracy of both human and computer systems decreases when the face is partially covered with sunglasses and face masks, the performance of machine learning classifiers is greatly impacted (> 74%) in comparison to humans (< 26%). This thesis further proposes the first attention-based method to improve the classification accuracy of benchmark machine learning classifiers when categorizing emotion from the images of people partially covered with sunglasses and face masks, by paying more attention to uncovered regions of the face. The ability to detect occluded regions of the face based on the covering type and paying more attention to the uncovered regions empowers the novel attention-based method to correctly classify emotions from partially covered faces. Experimental results showed that the novel attention-based method was shown to perform better than the benchmark approaches by a significant amount (up to 50.26% increase). Moving to the broader human expression, this thesis determines how emotions are reflected in the body by analyzing the moment-by-moment brain activity to predict emotional arousal-related autonomic nervous responses of participants as they watched emotion-provoking videos. The results suggest that predicting continuous autonomic responses such as heart rate and galvanic skin responses requires an approach capable of learning dependence or sequential feature selection to improve prediction performance. The results also suggest that specific brain regions and peripheral measures support differential processing of heart rate and galvanic skin response as the prediction error was significantly reduced using only a small number of feature subsets than using all features from the dataset. Lastly, this thesis investigates what people want to feel, as well as determines the impact of emotion on social economic decision-making. The results suggest that participants predominantly preferred experiencing happiness over anger even when they expected anger to be beneficial for goal pursuit. However, they preferred experiencing happiness to a lesser extent when they were told anger would be beneficial. The results demonstrate that experiencing a specific emotion (either anger or happiness) does not promote successful confrontation performance. In spite of that, further findings from the study suggest that emotion-awareness is an important factor in determining participants' performance, as participants higher in emotion-awareness were found to perform significantly better in comparison to participants low in emotion-awareness. In conclusion, this thesis develops a range of heterogeneous and attention-based methods mimicking human cognitive processing, analyzes how emotion is reflected in the body, as well as analyzes what people want to feel and how that can affect their decision-making. The overall results showed that heterogeneous and attention-based methods can achieve better accuracy in emotion categorization tasks than existing methods that utilize pixels. The results also showed that specific moment-by-moment brain activity captured in the context of emotions supports differential processing of heart rate and galvanic skin response. Further, the results also suggest that emotionally-aware artificial intelligent systems if produced can make better and more relevant decisions in shared workspaces. This will lead to the development of artificial affective decision-making techniques, especially suited to dynamic/uncertain domains that elicit emotions in humans.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Harisu Abdullahi Shehu"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4380877686",
+  "doi": "10.26686/wgtn.23530485",
+  "arxiv_id": null,
+  "paper_url": "https://openaccess.wgtn.ac.nz/articles/thesis/Emotion_Detection_and_its_Effect_on_Decision-making/23530485/1/files/41263461.pdf",
+  "published_iso": "2023-06-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Social Policy in a Climate Emergency Context: Towards an Ecosocial Research Agenda",
+  "title_norm": "social policy in a climate emergency context towards an ecosocial research agend",
+  "abstract": "Abstract Social policy developed as a research field and academic discipline to ensure protection from social risks in the era of emerging capitalism and industrialization. While welfare states have successfully increased their citizens’ wellbeing, they have also contributed to the ecological crisis, while the shared scientific understanding of exceeded planetary boundaries and worsening climate change scenarios has not (yet) reshaped mainstream social policy research. In this article, we suggest that the established traditions in social policy research can nevertheless provide a solid ground for responding to the climate emergency and facilitating the sustainable transformation of society and the economy. With a focus on four of the research fields that are central in social policy scholarship – risks, citizenship, welfare regimes, and wellbeing – we develop an ecosocial research agenda. By discussing the classic and climate-adjusted understandings of these fields, we open future pathways for social policy research and invite scholars to engage with our proposed research agenda.",
+  "year": 2023,
+  "venue": "Journal of Social Policy",
+  "authors": [
+   "Tuuli Hirvilammi",
+   "Liisa Häikiö",
+   "Håkan Johansson",
+   "Max Koch",
+   "Johanna Perkiö"
+  ],
+  "citations": 72,
+  "source": "openalex",
+  "source_id": "W4315699886",
+  "doi": "10.1017/s0047279422000721",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/DAB7ED753DFA124A4BFEFC4E33086AEA/S0047279422000721a.pdf/div-class-title-social-policy-in-a-climate-emergency-context-towards-an-ecosocial-research-agenda-div.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Action needed to make carbon offsets from forest conservation work for climate change mitigation",
+  "title_norm": "action needed to make carbon offsets from forest conservation work for climate c",
+  "abstract": "Carbon offsets from voluntary avoided-deforestation projects are generated on the basis of performance in relation to ex ante deforestation baselines. We examined the effects of 26 such project sites in six countries on three continents using synthetic control methods for causal inference. We found that most projects have not significantly reduced deforestation. For projects that did, reductions were substantially lower than claimed. This reflects differences between the project ex ante baselines and ex post counterfactuals according to observed deforestation in control areas. Methodologies used to construct deforestation baselines for carbon offset interventions need urgent revisions to correctly attribute reduced deforestation to the projects, thus maintaining both incentives for forest conservation and the integrity of global carbon accounting.",
+  "year": 2023,
+  "venue": "Science",
+  "authors": [
+   "Thales A. P. West",
+   "Sven Wunder",
+   "Erin O. Sills",
+   "Jan Börner",
+   "Sami W. Rifai",
+   "Alex Neidermeier"
+  ],
+  "citations": 387,
+  "source": "openalex",
+  "source_id": "W4386127076",
+  "doi": "10.1126/science.ade3535",
+  "arxiv_id": null,
+  "paper_url": "https://www.repository.cam.ac.uk/bitstreams/e345e353-e51c-40d9-a9df-f36406549b24/download",
+  "published_iso": "2023-08-24",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Forward Osmosis Application for the Removal of Emerging Contaminants from Municipal Wastewater: A Review",
+  "title_norm": "forward osmosis application for the removal of emerging contaminants from munici",
+  "abstract": "Forward osmosis (FO) has attracted special attention in water and wastewater treatment due to its role in addressing the challenges of water scarcity and contamination. The presence of emerging contaminants in water sources raises concerns regarding their environmental and public health impacts. Conventional wastewater treatment methods cannot effectively remove these contaminants; thus, innovative approaches are required. FO membranes offer a promising solution for wastewater treatment and removal of the contaminants in wastewater. Several factors influence the performance of FO processes, including concentration polarization, membrane fouling, draw solute selection, and reverse salt flux. Therefore, understanding and optimizing these factors are crucial aspects for improving the efficiency and sustainability of the FO process. This review stresses the need for research to explore the potential and challenges of FO membranes to meet municipal wastewater treatment requirements, to optimize the process, to reduce energy consumption, and to promote scalability for potential industrial applications. In conclusion, FO shows promising performance for wastewater treatment, dealing with emerging pollutants and contributing to sustainable practices. By improving the FO process and addressing its challenges, we could contribute to improve the availability of water resources amid the global water scarcity concerns, as well as contribute to the circular economy.",
+  "year": 2023,
+  "venue": "Membranes",
+  "authors": [
+   "Mónica Salamanca",
+   "Mar Peña",
+   "Antonio Hernandez",
+   "Pedro Prádanos",
+   "Laura Palacio"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4383876897",
+  "doi": "10.3390/membranes13070655",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0375/13/7/655/pdf?version=1688970643",
+  "published_iso": "2023-07-10",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Melting Alpine Water Towers Aggravate Downstream Low Flows: A Stress‐Test Storyline Approach",
+  "title_norm": "melting alpine water towers aggravate downstream low flows a stress test storyli",
+  "abstract": "Abstract Droughts can lead to extreme low flow situations in rivers, with resulting severe impacts. Upstream snow and ice melt in many of the world's mountain water towers can alleviate the hydrological consequences of drought, yet global warming threatens the cryosphere. To improve the understanding of melt water contributions during drought in the case of future glacier retreat, we developed stress‐test storyline scenarios to model streamflow and tested them in the European river Rhine basin. Meteorological conditions of past drought and low flow years in Europe, 1976, 2003, and 2018, were repeated at three future moments in time, representing nowadays, near future and far future conditions. The latter two conditions were obtained by climate projections under the RCP8.5 scenario. Results show that the low flow situations caused by the meteorological drought situations aggravate in future conditions, more so for the far future and for the year 2003 because of the relatively large glacier ice melt contribution in the past. Summer (July–September) streamflow may decline by 5%–25% far downstream and 30%–70% upstream and the duration of extreme low flow situations may double compared to the selected past drought events. These results are relevant for the Rhine as a major European river but stand exemplary for many other river basins and highlight the importance of cryospheric changes for downstream low flow situations in a changing climate. The stress‐test scenarios allow a glimpse into future extreme low flow events aiding adaptation planning, and might be adapted to include other important low flow drivers.",
+  "year": 2023,
+  "venue": "Earth s Future",
+  "authors": [
+   "Marit Van Tiel",
+   "Markus Weiler",
+   "Daphné Freudiger",
+   "Greta Moretti",
+   "Irene Kohn",
+   "Kai Gerlinger"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4361010626",
+  "doi": "10.1029/2022ef003408",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2022EF003408",
+  "published_iso": "2023-03-01",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "FACET: Robust Counterfactual Explanation Analytics",
+  "title_norm": "facet robust counterfactual explanation analytics",
+  "abstract": "Machine learning systems are deployed in domains such as hiring and healthcare, where undesired classifications can have serious ramifications for the user. Thus, there is a rising demand for explainable AI systems which provide actionable steps for lay users to obtain their desired outcome. To meet this need, we propose FACET, the first explanation analytics system which supports a user in interactively refining counterfactual explanations for decisions made by tree ensembles. As FACET's foundation, we design a novel type of counterfactual explanation called the counterfactual region. Unlike traditional counterfactuals, FACET's regions concisely describe portions of the feature space where the desired outcome is guaranteed, regardless of variations in exact feature values. This property, which we coin explanation robustness, is critical for the practical application of counterfactuals. We develop a rich set of novel explanation analytics queries which empower users to identify personalized counterfactual regions that account for their real-world circumstances. To process these queries, we develop a compact high-dimensional counterfactual region index along with index-aware query processing strategies for near real-time explanation analytics. We evaluate FACET against state-of-the-art explanation techniques on eight public benchmark datasets and demonstrate that FACET generates actionable explanations of similar quality in an order of magnitude less time while providing critical robustness guarantees. Finally, we conduct a preliminary user study which suggests that FACET's regions lead to higher user understanding than traditional counterfactuals.",
+  "year": 2023,
+  "venue": "Proceedings of the ACM on Management of Data",
+  "authors": [
+   "Peter M. VanNostrand",
+   "Huayi Zhang",
+   "Dennis M. Hofmann",
+   "Elke A. Rundensteiner"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4389609577",
+  "doi": "10.1145/3626729",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3626729",
+  "published_iso": "2023-12-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ },
+ {
+  "title": "Application of Molecular Dynamics Simulations to Determine Interactions between Canary Seed (Phalaris canariensis L.) Bioactive Peptides and Skin-Aging Enzymes",
+  "title_norm": "application of molecular dynamics simulations to determine interactions between ",
+  "abstract": "Food bioactive peptides are well recognized for their health benefits such as antimicrobial, antioxidant, and antihypertensive benefits, among others. Their drug-like behavior has led to their potential use in targeting skin-related aging factors like the inhibition of enzymes related with the skin-aging process. In this study, canary seed peptides (CSP) after simulated gastrointestinal digestion (<3 kDa) were fractioned by RP-HPLC and their enzyme-inhibition activity towards elastase and tyrosinase was evaluated in vitro. CSP inhibited elastase (IC50 = 6.2 mg/mL) and tyrosinase (IC50 = 6.1 mg/mL), while the hydrophobic fraction-VI (0.2 mg/mL) showed the highest inhibition towards elastase (93%) and tyrosinase (67%). The peptide fraction with the highest inhibition was further characterized by a multilevel in silico workflow, including physicochemical descriptor calculations, antioxidant activity predictions, and molecular dynamics-ensemble docking towards elastase and tyrosinase. To gain insights into the skin permeation process during molecular dynamics simulations, based on their docking scores, five peptides (GGWH, VPPH, EGLEPNHRVE, FLPH, and RPVNKYTPPQ) were identified to have favorable intermolecular interactions, such as hydrogen bonding of polar residues (W, H, and K) to lipid polar groups and 2–3 Å van der Waals close contact of hydrophobic aliphatic residues (P, V, and L). These interactions can play a critical role for the passive insertion of peptides into stratum corneum model skin-membranes, suggesting a promising application of CSP for skin-aging treatments.",
+  "year": 2023,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "José E. Aguilar-Toalá",
+   "Abraham Vidal‐Limon",
+   "Andrea M. Liceaga",
+   "María L. Zambrano‐Zaragoza",
+   "David Quintanar‐Guerrero"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4386285472",
+  "doi": "10.3390/ijms241713420",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/24/17/13420/pdf?version=1693373963",
+  "published_iso": "2023-08-30",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "The Journey of the Default Mode Network: Development, Function, and Impact on Mental Health",
+  "title_norm": "the journey of the default mode network development function and impact on menta",
+  "abstract": "The Default Mode Network has been extensively studied in recent decades due to its central role in higher cognitive processes and its relevance for understanding mental disorders. This neural network, characterized by synchronized and coherent activity at rest, is intrinsically linked to self-reflection, mental exploration, social interaction, and emotional processing. Our understanding of the DMN extends beyond humans to non-human animals, where it has been observed in various species, highlighting its evolutionary basis and adaptive significance throughout phylogenetic history. Additionally, the DMN plays a crucial role in brain development during childhood and adolescence, influencing fundamental cognitive and emotional processes. This literature review aims to provide a comprehensive overview of the DMN, addressing its structural, functional, and evolutionary aspects, as well as its impact from infancy to adulthood. By gaining a deeper understanding of the organization and function of the DMN, we can advance our knowledge of the neural mechanisms that underlie cognition, behavior, and mental health. This, in turn, can lead to more effective therapeutic strategies for a range of neuropsychiatric conditions.",
+  "year": 2025,
+  "venue": "Biology",
+  "authors": [
+   "Felipe Rici Azarias",
+   "Gustavo Henrique Doná Rodrigues Almeida",
+   "Luana Félix de Melo",
+   "Rose Elí Grassi Rici",
+   "Durvanei Augusto Maria"
+  ],
+  "citations": 61,
+  "source": "openalex",
+  "source_id": "W4409338542",
+  "doi": "10.3390/biology14040395",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-7737/14/4/395/pdf?version=1744254992",
+  "published_iso": "2025-04-10",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "mode-switching policy stress test"
+  ]
+ },
+ {
+  "title": "Counterfactual Learning on Graphs: A Survey",
+  "title_norm": "counterfactual learning on graphs a survey",
+  "abstract": "Abstract Graph-structured data are pervasive in the real-world such as social networks, molecular graphs and transaction networks. Graph neural networks (GNNs) have achieved great success in representation learning on graphs, facilitating various downstream tasks. However, GNNs have several drawbacks such as lacking interpretability, can easily inherit the bias of data and cannot model casual relations. Recently, counterfactual learning on graphs has shown promising results in alleviating these drawbacks. Various approaches have been proposed for counterfactual fairness, explainability, link prediction and other applications on graphs. To facilitate the development of this promising direction, in this survey, we categorize and comprehensively review papers on graph counterfactual learning. We divide existing methods into four categories based on problems studied. For each category, we provide background and motivating examples, a general framework summarizing existing works and a detailed review of these works. We point out promising future research directions at the intersection of graph-structured data, counterfactual learning, and real-world applications. To offer a comprehensive view of resources for future studies, we compile a collection of open-source implementations, public datasets, and commonly-used evaluation metrics. This survey aims to serve as a “one-stop-shop” for building a unified understanding of graph counterfactual learning categories and current resources.",
+  "year": 2025,
+  "venue": "Machine Intelligence Research",
+  "authors": [
+   "Zhimeng Guo",
+   "Zongyu Wu",
+   "Teng Xiao",
+   "Charų C. Aggarwal",
+   "Hui Liu",
+   "Suhang Wang"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4406810396",
+  "doi": "10.1007/s11633-024-1519-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11633-024-1519-z.pdf",
+  "published_iso": "2025-01-24",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "counterfactual feasibility-pair evaluation"
+  ]
+ }
+]

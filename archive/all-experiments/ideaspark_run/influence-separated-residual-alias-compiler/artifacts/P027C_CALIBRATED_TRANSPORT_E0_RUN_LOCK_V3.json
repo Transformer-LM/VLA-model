@@ -1,0 +1,53 @@
+{
+  "alpha_grid": [
+    0.0,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.4,
+    0.7,
+    1.0
+  ],
+  "calibration_rule": "Choose alpha and decay only on non-held-out-source endpoints where both factual and candidate mechanisms are active, using equal source weighting.",
+  "checkpoint": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_E0_LOCKED_V1.pt",
+    "sha256": "c9f77e9cf7b29774d0ac9c04c07e0ddeebca7a77884f930aa72e0cec5fa5f75a"
+  },
+  "created_at_utc": "2026-09-01T17:17:32.261033+00:00",
+  "decay_grid": [
+    0.0,
+    0.5,
+    0.8,
+    0.95,
+    1.0
+  ],
+  "device": "cuda",
+  "eval_candidate_indices": [
+    1,
+    2,
+    9
+  ],
+  "eval_selection_rule": "All three candidate boundaries (1, 2, 9) already present for the single P027-C held-out rollout source; every boundary is reported separately.",
+  "eval_source_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+  "evaluator": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/run_p027c_calibrated_transport_v3.py",
+    "sha256": "5390e1e71563a60cbd582a97d25caeadbd7a12b25b39025f36b95c8da6f245f6"
+  },
+  "frozen": true,
+  "frozen_before_calibration_outcomes": true,
+  "heldout_gate_rule": "Alias-specific harm is interpretable only per exact candidate boundary and only if held-out ordinary-overlap controls also benefit from the calibrated correction.",
+  "kind": "p027c_calibrated_transport_run_lock_v1",
+  "manifest": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_MANIFEST_V1.json",
+    "sha256": "ea1662ea21fb46661e0ae3909d378c9aeef5c6e005e52346a47a7807cdf3bed2"
+  },
+  "minimum_relative_control_improvement": 0.01,
+  "output": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_CALIBRATED_TRANSPORT_E0_V3.json",
+  "residual_window": 8,
+  "selection_uses_downstream_heldout_outcomes": false,
+  "support": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/run_p027c_latent_harm.py",
+    "sha256": "c0f5cceb76128d970fa401f286b2aba7e47a4a47afcb07a346e688e245bbd5b3"
+  }
+}

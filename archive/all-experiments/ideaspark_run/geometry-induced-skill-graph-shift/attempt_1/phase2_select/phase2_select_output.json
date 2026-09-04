@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes causal identifiability for geometry-sensitive strategy generalization: under matched instruction, start distribution, and terminal goal, it remains unresolved whether policy behavior changes specifically because the original relation-event sequence or path class becomes infeasible — stakes: practitioners cannot tell whether a model will select a valid grasp, reorientation, approach, or insertion strategy on a geometry-altered deployment, and the field may attribute endpoint robustness to functional-geometric reasoning that was never isolated.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": "assumption_audit_and_pivot",
+      "companion_rationale": "controlled_diagnostic_design yields the named intermediate object O: matched scene pairs whose instruction, start distribution, terminal relation, and non-geometry simulator state are fixed while a compiler-certified geometry edit changes the feasible relation-event topology or path homotopy; assumption_audit_and_pivot consumes O to test and, if the predicted split appears, overturn the inherited assumption that endpoint success is sufficient evidence of functional-geometry generalization.",
+      "selection_rationale": "This gap is the most load-bearing match to the empirical_reveal commitment because it makes geometry the isolated intervention and strategy-topology change the property to be revealed, rather than treating a new representation or controller as the contribution. controlled_diagnostic_design directly constructs the matched intervention and independent simulator oracle while avoiding regression to generic point/depth injection, fixed primitive scaffolds, motion planning/TAMP, visual replanning, or unmatched domain randomization; the companion audit turns the controlled contrast into the paper's causal claim."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "empirical_reveal — anchor gap → controlled_diagnostic_design ships the matched geometry-intervention separation, and companion assumption_audit_and_pivot turns that separation into a test of endpoint-success sufficiency.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "controlled_diagnostic_design": {
+      "share": 0.12,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "assumption_audit_and_pivot": {
+      "share": 0.0,
+      "saturation_band": "untested",
+      "selection_note": "untested lane — differentiation_from_lit must substantively defend the choice"
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf localizes the first strategy-level divergence induced by geometry, so an aggregate success or trajectory score cannot distinguish correct early selection of a new homotopy or relation transition from late low-level recovery after committing to the old strategy — stakes: debugging and adaptation can target the wrong component, wasting simulation and GPU budget while leaving the actual planning failure untouched.",
+      "reason": "fails removal test — the anchor's matched intervention and topology-switch contrast remains causally identifiable without a separate first-divergence localization module"
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption — stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+      "reason": "fails removal test — the anchor's companion audit already tests endpoint-success sufficiency on the same matched pairs, so admitting this as a separate gap would duplicate rather than complete the claim"
+    },
+    {
+      "gap": "No retrieved frontier leaf determines whether world-model prediction quality remains informative when geometry preserves the desired terminal frame but changes the intervention-dependent sequence of contacts and relations needed to reach it — stakes: a WAM can score well on terminal appearance while recommending an infeasible interaction sequence, blocking principled decisions about whether prediction or policy adaptation is needed.",
+      "reason": "fails removal test — a WAM-specific prediction-quality analysis needs separate machinery, while the anchor's causal behavioral diagnostic is runnable and verifiable without it"
+    }
+  ]
+}

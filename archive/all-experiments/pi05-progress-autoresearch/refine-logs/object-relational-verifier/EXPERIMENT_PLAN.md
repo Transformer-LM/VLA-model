@@ -1,0 +1,4 @@
+# Latest Experiment Plan
+
+Current version: [EXPERIMENT_PLAN_20260825_164804.md](./EXPERIMENT_PLAN_20260825_164804.md)
+

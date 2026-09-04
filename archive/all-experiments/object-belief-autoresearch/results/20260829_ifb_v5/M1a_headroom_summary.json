@@ -1,0 +1,165 @@
+{
+  "split": "hard_id",
+  "rows": [
+    {
+      "file": "R101_shared_seed11.json",
+      "variant": "shared",
+      "seed": 11,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 135684,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.9568765163421631,
+      "wrong_target_rate": 0.04545454680919647,
+      "posterior_nll": 0.30343180894851685
+    },
+    {
+      "file": "R102_shared_seed22.json",
+      "variant": "shared",
+      "seed": 22,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 135684,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.960373044013977,
+      "wrong_target_rate": 0.04545454680919647,
+      "posterior_nll": 0.26879894733428955
+    },
+    {
+      "file": "R103_shared_seed33.json",
+      "variant": "shared",
+      "seed": 33,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 135684,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.9487178921699524,
+      "wrong_target_rate": 0.0559440553188324,
+      "posterior_nll": 0.4022989273071289
+    },
+    {
+      "file": "R111_oracle_seed11.json",
+      "variant": "oracle",
+      "seed": 11,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 136196,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.9487180113792419,
+      "wrong_target_rate": 0.0559440553188324,
+      "posterior_nll": 0.35312581062316895
+    },
+    {
+      "file": "R112_oracle_seed22.json",
+      "variant": "oracle",
+      "seed": 22,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 136196,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.9720279574394226,
+      "wrong_target_rate": 0.03146853297948837,
+      "posterior_nll": 0.2661186158657074
+    },
+    {
+      "file": "R113_oracle_seed33.json",
+      "variant": "oracle",
+      "seed": 33,
+      "dataset_sha256": "5484a9923229b306beafbf72f4e2123ed79f66ba46b797d314a3182bed1fbfb7",
+      "code_sha256": "3b00141f5467aa3810149e51e6afd4db33b4f5b6597a17ef5a49e98837dcda17",
+      "optimizer_steps": 2000,
+      "fixed_epochs": true,
+      "parameter_count": 136196,
+      "config_signature": {
+        "epochs": 80,
+        "batch_size": 1024,
+        "hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 1e-05,
+        "property_weight": 0.25,
+        "fixed_epochs": true
+      },
+      "assignment_accuracy": 0.9627040028572083,
+      "wrong_target_rate": 0.03496503457427025,
+      "posterior_nll": 0.30804184079170227
+    }
+  ],
+  "variants": {
+    "oracle": {
+      "n_seeds": 3,
+      "assignment_accuracy_mean": 0.9611499905586243,
+      "assignment_accuracy_std": 0.009579478482681812,
+      "wrong_target_rate_mean": 0.04079254095753034,
+      "posterior_nll_mean": 0.30909542242685956
+    },
+    "shared": {
+      "n_seeds": 3,
+      "assignment_accuracy_mean": 0.9553224841753641,
+      "assignment_accuracy_std": 0.004883434795878964,
+      "wrong_target_rate_mean": 0.04895104964574178,
+      "posterior_nll_mean": 0.32484322786331177
+    }
+  },
+  "gate": {
+    "status": "kill",
+    "stage": "privileged-headroom",
+    "assignment_gain": 0.005827506383260128,
+    "wrong_target_absolute_reduction": 0.008158508688211441,
+    "paired_seed_assignment_gains": {
+      "11": -0.008158504962921143,
+      "22": 0.011654913425445557,
+      "33": 0.01398611068725586
+    },
+    "criterion": "privileged gain>=0.05; passing does not support IFB"
+  }
+}

@@ -1,0 +1,52 @@
+PGR-Audit V2-007 exact reviewed CPU/static suite
+Remote UTC date: 2026-08-07
+Remote workspace: <PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla
+Upstream HEAD: 3422b9f2387b6f682cf02802904a77b23ab13afd
+Overlay source SHA256: 4d6910c64c947104c35af57f0865359aa39d9183d6f0609902060d9c216ad491
+Test source SHA256: 83f9a404b9e710eacd1ab15f104e9ff23cfd7fced3554fa8268335981768ad10
+Environment lock SHA256: ac853fe1cb6f2da210288bfde9a4fe2e1769694b69e1320ebae28efcc8690fcd
+Sanitized config SHA256: 037fc7c059fa889eff2a8a26b417f85499df7718cf773fb5d066ad3cb75e875c
+Raw remote log: <PERSONAL_RESEARCH_ROOT>/artifacts/h1-pgr-audit/code-review/v2-007/final-cpu-static.log
+Raw remote log SHA256: 68410b98ed4443d37379951f3dcb98dc2c9fa1b1470f5dff8d7a463d591687be
+
+test_bfloat16_input_is_exact_fp32_identity_at_zero_u ... ok
+test_initial_mapping_is_exact_identity_and_shapes_are_frozen ... ok
+test_ln0_uses_population_variance ... ok
+test_canonical_json_has_no_newline_and_sorted_keys ... ok
+test_directory_hash_is_stable ... ok
+test_directory_hash_rejects_symlink ... ok
+test_checkpoint_key_contract ... ok
+test_joint_fallback_when_rho_is_zero ... ok
+test_matched_step_computes_and_discards_b_future_gradient ... ok
+test_nonfinite_loss_fails_before_update ... ok
+test_compute_pid_makes_preferred_gpu_busy ... ok
+test_malformed_compute_row_fails_closed ... ok
+test_owned_binding_rejects_cross_gpu_context ... ok
+test_owned_binding_rejects_foreign_pid ... ok
+test_preferred_idle_order_and_independent_gpu01_rule ... ok
+test_recorded_pid_must_be_absent_before_release ... ok
+test_reservation_release_is_archived_with_release_proof ... ok
+test_uuid_mismatch_fails_closed ... ok
+test_canary_metrics_require_zero_science_and_finite_parity ... ok
+test_handshake_requires_exact_physical_binding ... ok
+test_launcher_exposes_only_exact_canary_command ... ok
+test_mocked_end_to_end_canary_seals_exact_success_set ... ok
+test_output_whitelist_rejects_unexpected_file ... ok
+test_private_environment_uses_uuid_and_frozen_roots ... ok
+test_move_tensor_inputs_to_verified_device ... ok
+test_source_tree_hash_ignores_non_source_cache_but_detects_source_change ... ok
+test_only_one_unchanged_technical_retry ... ok
+test_pre_reveal_fields_fail_closed ... ok
+test_role_seed_is_domain_separated_and_repeatable ... ok
+test_sealed_batch_is_immutable_and_requires_completeness ... ok
+test_golden_task_counts ... ok
+test_robot_adapter_has_no_live_surface ... ok
+test_split_is_input_order_invariant ... ok
+test_task_below_29_fails_closed ... ok
+
+Ran 34 tests in 0.464s
+OK
+
+Actual GPU contexts created: 0
+Scientific examples/targets/outcomes read: 0
+Real robot connectivity/actions/trials: 0

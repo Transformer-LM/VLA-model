@@ -1,0 +1,4 @@
+# Latest: Relational WAM Scoop Check
+
+Current version: [RELATIONAL_WAM_SCOOP_CHECK_20260825_173312.md](./RELATIONAL_WAM_SCOOP_CHECK_20260825_173312.md)
+

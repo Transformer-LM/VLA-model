@@ -1,0 +1,80 @@
+{
+  "audit_skill": "experiment-audit",
+  "verdict": "WARN",
+  "reason_code": "incomplete_replay_provenance_and_threshold_trace",
+  "summary": "No fabricated or phantom evidence was found, but E0/G0 scientifically fails because the learned Oracle collapses under held-family feature shift.",
+  "audited_input_hashes": {
+    "implementation/geometry.py": "sha256:2e67bd77f4a40491420b60f2d4eeb6770eac88c49f460c81e7fd0c1aa1688f58",
+    "implementation/collect_relation_events.py": "sha256:152e1aacb09dc709c5a1f8ea50f6cfd24ed530c3c0f69bf583189ffcb922f7d0",
+    "implementation/audit_e0_dataset.py": "sha256:562aac3111ff5f08156fb10a807dcdcfd2fc5d8ff512ff686ab581876fc369cc",
+    "implementation/train_representation_pilot.py": "sha256:c2992f68f9485a168254a42def40bf5847388b772dadb777d54b4bf687c6cfe8",
+    "implementation/aggregate_e0_results.py": "sha256:bd940ad38898ce566884bb76a23d49ef16be90ab76d04b8157658a5d891032ef",
+    "results/20260830_e0_pointmap_g0_v2/e0_full_unique_families_v1.npz": "sha256:ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+    "results/20260830_e0_pointmap_g0_v2/R020_rgb_addressed_v2.json": "sha256:898f4b2d87a232d74326535197e55a57a4ea6d0c3eff46f5a8a282bfd49d5c92",
+    "results/20260830_e0_pointmap_g0_v2/R021_depth_addressed_v2.json": "sha256:6b0ae3c165c5580b3a247906ff2b943514fadb0afb4dcd6c4349abbcc6bda638",
+    "results/20260830_e0_pointmap_g0_v2/R022_pointmap_v2.json": "sha256:3c8d5b3ff424cc4b31decbf863a6aac216abb4e0f5404ee4d594891ff079b397",
+    "results/20260830_e0_pointmap_g0_v2/R023_oracle_pose_v2.json": "sha256:20d54853d616bce912024dcaa4ddb3bad8f5dcdc6f70bfe778c132798d00f444",
+    "results/20260830_e0_pointmap_g0_v2/R024_e0_g0_aggregate_v2.json": "sha256:fa9e0c9637e5f8ec6b4fd30d32690fa59b02e5a0c99940f4500f20eeec84d147"
+  },
+  "trace_path": ".aris/traces/experiment-audit/2026-08-30_run01/",
+  "agent_id": "/root/e0_integrity_audit",
+  "verdict_id": "/root/e0_integrity_audit",
+  "executor_model": "gpt-5.6-sol",
+  "executor_family": "openai",
+  "reviewer_model": "gpt-5.6-sol",
+  "reviewer_family": "openai",
+  "reviewer_reasoning": "ultra",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "generated_at": "2026-08-30T14:12:32+08:00",
+  "date": "2026-08-30",
+  "auditor": "gpt-5.6-sol-ultra",
+  "overall_verdict": "warn",
+  "integrity_status": "warn",
+  "scientific_gate": "fail",
+  "advance_to_e1_b2": false,
+  "checks": {
+    "gt_provenance": {
+      "status": "warn",
+      "details": "Simulator-controlled GT is internally verified, but exact BDDL contents, complete instance mappings and replayable simulator states are not archived."
+    },
+    "score_normalization": {
+      "status": "warn",
+      "details": "Metrics are correct and not self-normalized; validation predictions and threshold candidate tables are missing."
+    },
+    "result_existence": {
+      "status": "pass",
+      "details": "All 60 v2 runs, 4,320 predictions, hashes, aggregate values and gate booleans exist and match."
+    },
+    "dead_code": {
+      "status": "pass",
+      "details": "All claim-bearing metric and gate functions are executed."
+    },
+    "scope": {
+      "status": "pass",
+      "details": "Scope is accurately limited to a five-task simulation-only representation diagnostic."
+    },
+    "eval_type": "simulation_only"
+  },
+  "oracle_diagnosis": {
+    "verified_rule_macro_f1": 0.99655,
+    "verified_rule_correct": "359/360",
+    "learned_oracle_macro_f1_mean": 0.3214788984112146,
+    "learned_oracle_test_frr_mean": 0.2733333333333333,
+    "dominant_failure": "held-family shift from non-invariant absolute poses, quaternions and raw visibility counts"
+  },
+  "claims": [
+    {
+      "id": "E0_REPRESENTATION_HEADROOM",
+      "impact": "unsupported"
+    },
+    {
+      "id": "POINTMAP_INPUT_SIZE",
+      "impact": "supported_as_tensor_size_fact_only"
+    },
+    {
+      "id": "ACTION_CONDITIONED_WAM_VALUE",
+      "impact": "untested"
+    }
+  ]
+}

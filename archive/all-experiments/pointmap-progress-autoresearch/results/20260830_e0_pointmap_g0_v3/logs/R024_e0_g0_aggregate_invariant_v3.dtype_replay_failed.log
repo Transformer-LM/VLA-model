@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/aggregate_e0_results.py", line 565, in <module>
+    main()
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/aggregate_e0_results.py", line 420, in main
+    raise RuntimeError(f"threshold candidate trace mismatch for {modality}/{fold}/{seed}")
+RuntimeError: threshold candidate trace mismatch for rgb_addressed/0/17
+Command exited with non-zero status 1
+        Command being timed: "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/bin/python <PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/aggregate_e0_results.py --inputs <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R020_rgb_addressed_invariant_v3.json <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R021_depth_addressed_invariant_v3.json <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R022_pointmap_invariant_v3.json <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R023_oracle_pose_invariant_v3.json --dataset <PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz --manifest <PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.manifest.json --audit <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R011_e0_full_unique_families_v1_audit.json --probe <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R025_e0_invariant_probe_v3.json --output <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R024_e0_g0_aggregate_invariant_v3.json"
+        User time (seconds): 1.32
+        System time (seconds): 5.41
+        Percent of CPU this job got: 3192%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.21
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 43696
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 7973
+        Voluntary context switches: 79
+        Involuntary context switches: 22
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 1

@@ -1,0 +1,23 @@
+{
+  "claim_supported": "no",
+  "what_results_support": [
+    "GT mass/friction oracle improves hard_id assignment by 0.5828pp in the audited pilot.",
+    "Random-address assignment error improves by 0.8159pp, but one paired seed degrades.",
+    "The preregistered M1a KILL and cancellation of M1b were correct."
+  ],
+  "what_results_dont_support": [
+    "At least 5pp privileged property headroom.",
+    "IFB/system-ID effectiveness or superiority to full-history baselines.",
+    "Broad VLA, perception, long-horizon, recovery, OA-WAM x EvoScene, or real-robot claims."
+  ],
+  "suggested_claim_revision": "In one oracle-state MuJoCo pilot, privileged mass/friction yields only +0.5828pp mean assignment gain and degrades one seed; the preregistered headroom gate fails. This rejects the current operationalization only.",
+  "confidence": "high",
+  "confidence_scope": "High only for the positive C1 rejection and stopping M1b.",
+  "integrity_status": "warn",
+  "routing_action": "kill",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "evidence_precheck": ".aris/evidence_precheck.json",
+  "experiment_audit": "EXPERIMENT_AUDIT.json",
+  "trace_path": ".aris/traces/result-to-claim/2026-08-30_run01/"
+}

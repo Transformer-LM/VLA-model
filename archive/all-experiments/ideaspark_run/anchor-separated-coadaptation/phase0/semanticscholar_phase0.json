@@ -1,0 +1,900 @@
+[
+ {
+  "title": "ImagineBench: Evaluating Reinforcement Learning with Large Language Model Rollouts",
+  "title_norm": "imaginebench evaluating reinforcement learning with large language model rollout",
+  "abstract": "A central challenge in reinforcement learning (RL) is its dependence on extensive real-world interaction data to learn task-specific policies. While recent work demonstrates that large language models (LLMs) can mitigate this limitation by generating synthetic experience (noted as imaginary rollouts) for mastering novel tasks, progress in this emerging field is hindered due to the lack of a standard benchmark. To bridge this gap, we introduce ImagineBench, the first comprehensive benchmark for evaluating offline RL algorithms that leverage both real rollouts and LLM-imaginary rollouts. The key features of ImagineBench include: (1) datasets comprising environment-collected and LLM-imaginary rollouts; (2) diverse domains of environments covering locomotion, robotic manipulation, and navigation tasks; and (3) natural language task instructions with varying complexity levels to facilitate language-conditioned policy learning. Through systematic evaluation of state-of-the-art offline RL algorithms, we observe that simply applying existing offline RL algorithms leads to suboptimal performance on unseen tasks, achieving 35.44% success rate in hard tasks in contrast to 64.37% of method training on real rollouts for hard tasks. This result highlights the need for algorithm advancements to better leverage LLM-imaginary rollouts. Additionally, we identify key opportunities for future research: including better utilization of imaginary rollouts, fast online adaptation and continual learning, and extension to multi-modal tasks. Our code is publicly available at https://github.com/LAMDA-RL/ImagineBench.",
+  "tldr": "ImagineBench is introduced, the first comprehensive benchmark for evaluating offline RL algorithms that leverage both real rollouts and LLM-imaginary rollouts, and identifies key opportunities for future research: including better utilization of imaginary rollouts, fast online adaptation and continual learning, and extension to multi-modal tasks.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jing-Cheng Pang",
+   "Kaiyuan Li",
+   "Yidi Wang",
+   "Si-Hang Yang",
+   "Shengyi Jiang",
+   "Yang Yu"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "791c57631617aaffaf368ac0ab5e6ebbdfaa43e8",
+  "paper_id": "dblp:journals/corr/abs-2505-10010",
+  "doi": "10.48550/arXiv.2505.10010",
+  "arxiv_id": "2505.10010",
+  "dblp_key": "journals/corr/abs-2505-10010",
+  "paper_url": "https://www.semanticscholar.org/paper/791c57631617aaffaf368ac0ab5e6ebbdfaa43e8",
+  "published_iso": "2025-05-15",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+  "title_norm": "vlaw iterative co improvement of vision language action policy and world model",
+  "abstract": "The goal of this paper is to improve the performance and reliability of vision-language-action (VLA) models through iterative online interaction. Since collecting policy rollouts in the real world is expensive, we investigate whether a learned simulator-specifically, an action-conditioned video generation model-can be used to generate additional rollout data. Unfortunately, existing world models lack the physical fidelity necessary for policy improvement: they are predominantly trained on demonstration datasets that lack coverage of many different physical interactions (particularly failure cases) and struggle to accurately model small yet critical physical details in contact-rich object manipulation. We propose a simple iterative improvement algorithm that uses real-world roll-out data to improve the fidelity of the world model, which can then, in turn, be used to generate supplemental synthetic data for improving the VLA model. In our experiments on a real robot, we use this approach to improve the performance of a state-of-the-art VLA model on multiple downstream tasks. We achieve a 39.2% absolute success rate improvement over the base policy and 11.6% improvement from training with the generated synthetic rollouts. Videos can be found at this anonymous website: https://sites.google.com/view/vla-w",
+  "tldr": "A simple iterative improvement algorithm is proposed that uses real-world roll-out data to improve the fidelity of the world model, which can then be used to generate supplemental synthetic data for improving the VLA model.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjiang Guo",
+   "Tony Lee",
+   "L. Shi",
+   "Jianyu Chen",
+   "Percy Liang",
+   "Chelsea Finn"
+  ],
+  "citations": 32,
+  "source": "semanticscholar",
+  "source_id": "affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "paper_id": "dblp:journals/corr/abs-2602-12063",
+  "doi": "10.48550/arXiv.2602.12063",
+  "arxiv_id": "2602.12063",
+  "dblp_key": "journals/corr/abs-2602-12063",
+  "paper_url": "https://www.semanticscholar.org/paper/affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "published_iso": "2026-02-12",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "World Model-Based Safe Reinforcement Learning for Station-Keeping Control of a Stratospheric Airship",
+  "title_norm": "world model based safe reinforcement learning for station keeping control of a s",
+  "abstract": "This paper presents a hybrid autonomy framework for a stratospheric airship that couples energy-aware guidance with safety-critical obstacle avoidance. A weather-optimal control (WOC) layer exploits local wind estimates to generate yaw and velocity references for point-staying maneuvers, while decoupled Soft Actor-Critic (SAC) inner-loop controllers track the commanded velocity, pitch, and yaw channels. When a risk monitor predicts insufficient obstacle clearance, control authority switches to a world-model predictive avoidance policy. The policy learns a recurrent state-space model (RSSM) of the wind-disturbed airship dynamics and performs latent-space imagination to optimize avoidance actions. High-order control barrier functions (HOCBFs) are incorporated via reward shaping to bias imagined rollouts toward safe sets. Simulations on a nonlinear 6-DOF airship model under a persistent crosswind demonstrate accurate nominal station-keeping and smooth, collision-free detours across multiple start-goal configurations, followed by compact loitering near the target. The results suggest that combining WOC guidance with world-model prediction improves both endurance and proactive safety in dynamic stratospheric environments.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Chinese Control and Decision Conference",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Yuxuan Zou",
+   "Zewei Zheng",
+   "Wenyuan Pei",
+   "Yuchong Ye"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9d08702ee19ba106680edb40f2e4c0e6047cfe56",
+  "paper_id": "doi:10.1109/CCDC69976.2026.11560807",
+  "doi": "10.1109/CCDC69976.2026.11560807",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9d08702ee19ba106680edb40f2e4c0e6047cfe56",
+  "published_iso": "2026-05-15",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "World Model-Based Reinforcement Learning for Sample-Efficient Wideband Pixelated Passive RF Circuit Synthesis",
+  "title_norm": "world model based reinforcement learning for sample efficient wideband pixelated",
+  "abstract": "This paper presents a model-based reinforcement learning (MBRL) framework, inspired by DreamerV3, for the sample-efficient synthesis of wideband pixelated passive RF circuits driven entirely by full-wave electromagnetic (EM) simulation feedback. Candidate layouts are represented as binary metallization grids and scored by a multi-objective function derived from S-parameters, without relying on predefined topologies or continuous parameterizations. A recurrent state space world model learns a compact latent representation of the discrete layout dynamics and reward structure from online EM data, enabling the policy to improve through purely imagined rollouts between real simulation rounds at zero additional EM cost. An annealed, exploration-oriented policy combines simulated annealing acceptance with actor-guided action selection, providing broad combinatorial coverage early in optimization before progressively concentrating on high-reward regions. We evaluate the proposed framework against a discrete Bayesian optimization baseline and an evolutionary optimizer. On a 140 GHz singlelayer directional coupler optimized over a $12 \\times 12$ binary grid, the proposed method achieves near-ideal 90° phase difference and 10 dB coupling with only 1.5 dB excess insertion loss at 2051 EM simulations, outperforming both baselines in solution quality and simulation efficiency.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "International Conference on Synthesis, Modeling, Analysis and Simulation Methods and Applications to Circuit Design",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Islam Guven",
+   "Mehmet Parlak",
+   "Dimitri Lederer"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "f091395e5e218258bcc56c5d6375d062c7a1557a",
+  "paper_id": "doi:10.1109/SMACD70206.2026.11647844",
+  "doi": "10.1109/SMACD70206.2026.11647844",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f091395e5e218258bcc56c5d6375d062c7a1557a",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Biased by Design? Evaluating Bias and Behavioral Diversity in LLM Annotation of Real-World and Synthetic Hotel Reviews",
+  "title_norm": "biased by design evaluating bias and behavioral diversity in llm annotation of r",
+  "abstract": "As large language models (LLMs) gain traction among researchers and practitioners, particularly in digital marketing for tasks such as customer feedback analysis and automated communication, concerns remain about the reliability and consistency of their outputs. This study investigates annotation bias in LLMs by comparing human and AI-generated annotation labels across sentiment, topic, and aspect dimensions in hotel booking reviews. Using the HRAST dataset, which includes 23,114 real user-generated review sentences and a synthetically generated corpus of 2000 LLM-authored sentences, we evaluate inter-annotator agreement between a human expert and three LLMs (ChatGPT-3.5, ChatGPT-4, and ChatGPT-4-mini) as a proxy for assessing annotation bias. Our findings show high agreement among LLMs, especially on synthetic data, but only moderate to fair alignment with human annotations, particularly in sentiment and aspect-based sentiment analysis. LLMs display a pronounced neutrality bias, often defaulting to neutral sentiment in ambiguous cases. Moreover, annotation behavior varies notably with task design, as manual, one-to-one prompting produces higher agreement with human labels than automated batch processing. The study identifies three distinct AI biases—repetition bias, behavioral bias, and neutrality bias—that shape annotation outcomes. These findings highlight how dataset complexity and annotation mode influence LLM behavior, offering important theoretical, methodological, and practical implications for AI-assisted annotation and synthetic content generation.",
+  "tldr": "This study investigates annotation bias in LLMs by comparing human and AI-generated annotation labels across sentiment, topic, and aspect dimensions in hotel booking reviews, and identifies three distinct AI biases—repetition bias, behavioral bias, and neutrality bias—that shape annotation outcomes.",
+  "year": 2025,
+  "venue": "Applied Informatics",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Maria C. Voutsa",
+   "Nicolas Tsapatsoulis",
+   "Constantinos Djouvas"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "9a9a04d8d7fd1f0ff2d8ea8b0d10d51c3551bf20",
+  "paper_id": "doi:10.3390/ai6080178",
+  "doi": "10.3390/ai6080178",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2673-2688/6/8/178/pdf?version=1754308545",
+  "published_iso": "2025-08-04",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "WebSynthesis: World-Model-Guided MCTS for Efficient WebUI-Trajectory Synthesis",
+  "title_norm": "websynthesis world model guided mcts for efficient webui trajectory synthesis",
+  "abstract": "Recent advancements in large language models (LLMs) have significantly improved the capabilities of web agents. However, effectively navigating complex and dynamic web environments still requires more advanced trajectory-level planning and execution. Prior studies have addressed self-improving agents by collecting extensive GUI trajectories from real-environment interactions. Despite their effectiveness, these approaches encounter two critical challenges: (1) Uncontrollable environment states, where real or sandboxed web environments often yield unstable and non-deterministic feedback, complicating the reproduction and debugging of agent behaviors; and (2) High API costs, as generating even a single interaction trajectory can involve hundreds of queries, leading to considerable API usage and computational expenses. To address these limitations and enable scalable self-improvement for agents, we propose WebSynthesis, a novel framework for trajectory synthesis and training. WebSynthesis leverages a learned world model to simulate virtual web environments, allowing a policy agent to perform efficient and reversible tree-based planning. This approach supports the large-scale generation of diverse and high-quality trajectories, which are subsequently utilized to refine the agent's policy. Experimental results demonstrate that an agent trained using WebSynthesis on a small-scale synthetic dataset achieves performance comparable to or even surpassing that of models trained on large-scale real-world data.",
+  "tldr": "Experimental results demonstrate that an agent trained using WebSynthesis on a small-scale synthetic dataset achieves performance comparable to or even surpassing that of models trained on large-scale real-world data.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yifei Gao",
+   "Junhong Ye",
+   "Jiaqi Wang",
+   "Jitao Sang"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "6741581905dbedb481e06ed9bfc1e5ab4ad1f80c",
+  "paper_id": "dblp:journals/corr/abs-2507-04370",
+  "doi": "10.48550/arXiv.2507.04370",
+  "arxiv_id": "2507.04370",
+  "dblp_key": "journals/corr/abs-2507-04370",
+  "paper_url": "https://www.semanticscholar.org/paper/6741581905dbedb481e06ed9bfc1e5ab4ad1f80c",
+  "published_iso": "2025-07-06",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Hi-WM: Human-in-the-World-Model for Scalable Robot Post-Training",
+  "title_norm": "hi wm human in the world model for scalable robot post training",
+  "abstract": "Post-training is essential for turning pretrained generalist robot policies into reliable task-specific controllers, but existing human-in-the-loop pipelines remain tied to physical execution: each correction requires robot time, scene setup, resets, and operator supervision in the real world. Meanwhile, action-conditioned world models have been studied mainly for imagination, synthetic data generation, and policy evaluation. We propose \\textbf{Human-in-the-World-Model (Hi-WM)}, a post-training framework that uses a learned world model as a reusable corrective substrate for failure-targeted policy improvement. A policy is first rolled out in closed loop inside the world model; when the rollout becomes incorrect or failure-prone, a human intervenes directly in the model to provide short corrective actions. Hi-WM caches intermediate states and supports rollback and branching, allowing a single failure state to be reused for multiple corrective continuations and yielding dense supervision around behaviors that the base policy handles poorly. The resulting corrective trajectories are then added back to the training set for post-training. We evaluate Hi-WM on three real-world manipulation tasks spanning both rigid and deformable object interaction, and on two policy backbones. Hi-WM improves real-world success by 37.9 points on average over the base policy and by 19.0 points over a world-model closed-loop baseline, while world-model evaluation correlates strongly with real-world performance (r = 0.953). These results suggest that world models can serve not only as generators or evaluators, but also as effective corrective substrates for scalable robot post-training.",
+  "tldr": "Human-in-the-World-Model is proposed, a post-training framework that uses a learned world model as a reusable corrective substrate for failure-targeted policy improvement and suggests that world models can serve not only as generators or evaluators, but also as effective corrective substrates for scalable robot post-training.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yaxuan Li",
+   "Zhongyi Zhou",
+   "Ye Chen",
+   "Yanjiang Guo",
+   "Jiaming Liu",
+   "Shanghang Zhang"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "3a6c881a21674a9428ad140584321339147ed79c",
+  "paper_id": "dblp:journals/corr/abs-2604-21741",
+  "doi": "10.48550/arXiv.2604.21741",
+  "arxiv_id": "2604.21741",
+  "dblp_key": "journals/corr/abs-2604-21741",
+  "paper_url": "https://www.semanticscholar.org/paper/3a6c881a21674a9428ad140584321339147ed79c",
+  "published_iso": "2026-04-23",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "From Static Risk to Dynamic Trajectories: Toward World-Model-Inspired Clinical Prediction",
+  "title_norm": "from static risk to dynamic trajectories toward world model inspired clinical pr",
+  "abstract": "Clinical decision-making is a feedback system where risk estimates influence treatment, which in turn changes disease trajectories, and both shape clinicians'measurement practices. Static prediction often fails clinically: models trained on observational care logs conflate disease biology with clinician behavior, particularly under treatment confounder feedback and irregular or informative observation. This Review focuses on intervention-aware disease trajectory modeling in clinical AI--methods estimating patient-specific longitudinal disease evolution and assessing trajectory changes under alternative treatments. We organize the field around six linked components: three decision tasks (factual forecasting, counterfactual estimation, policy evaluation) and three data-generating mechanisms (disease evolution, treatment assignment, observation process) that determine identifiability. We present the first unified framework bridging forecasting, counterfactual trajectories, and policy evaluation across discrete/continuous time, explicitly addressing treatment assignment, time-varying confounding, and observation bias. We synthesize key method families (multistate/joint models, temporal point-process, deep sequence architectures, longitudinal causal inference), map them to relevant components, and align evaluation with claim strength via overlap diagnostics, uncertainty quantification, off-policy robustness, and target-trial validation. This synthesis advances benchmark prediction to decision-grade clinical evidence, enabling treatment-sensitive individualized futures, pre-deployment policy stress-testing, and safer closed-loop learning health systems that adapt/abstain when evidence is insufficient.",
+  "tldr": "This synthesis advances benchmark prediction to decision-grade clinical evidence, enabling treatment-sensitive individualized futures, pre-deployment policy stress-testing, and safer closed-loop learning health systems that adapt/abstain when evidence is insufficient.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Pujun Feng",
+   "Xiaoyu Guo",
+   "Seyed Ehsan Saffari",
+   "Minwoo Lee",
+   "Siew-Kei Lam",
+   "Erik Cambria"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3c2f414fdaf20420cc411aafd8d9c251781831a8",
+  "paper_id": "dblp:journals/corr/abs-2605-16927",
+  "doi": "10.48550/arXiv.2605.16927",
+  "arxiv_id": "2605.16927",
+  "dblp_key": "journals/corr/abs-2605-16927",
+  "paper_url": "https://www.semanticscholar.org/paper/3c2f414fdaf20420cc411aafd8d9c251781831a8",
+  "published_iso": "2026-05-16",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Reflective Prompted Policy Optimization: Trajectory-Grounded Revision and Salience Bias",
+  "title_norm": "reflective prompted policy optimization trajectory grounded revision and salienc",
+  "abstract": "Existing LLM-based policy optimizers see only scalar rewards: that a policy scored 0.45, but not whether the agent got stuck in a loop, fell into a hole on the third step, or performed well on 19 out of 20 rollouts and failed catastrophically on one. We propose Reflective Prompted Policy Optimization (R2PO), a two-stage LLM framework for policy search over compact policy classes that augments scalar reward feedback with trajectory-level behavioral evidence. A Search-LLM proposes candidate policy parameters; the environment executes them; a Critic-LLM inspects the resulting rollouts and proposes targeted revisions grounded in observed states, actions, and rewards. Across ten environments, ablations show R2PO's gains require separating global search from behavior-grounded revision and using selection to filter high-variance edits. We further identify a dominant failure mode, salience bias: when presented with multiple rollouts, the Critic-LLM fixates on improving a single failure even when most trajectories succeed. In a three-trajectory variant where the Critic-LLM sees the best, worst, and median rollout, this behavior explains 76.6% of regressions on CartPole. R2PO mitigates this by reasoning over aggregate rollout statistics, median-trajectory selection, and a revision rule. Using a 20B open-weight model, R2PO achieves the highest mean best reward across all ten environments, reaches near-optimal performance substantially earlier (e.g., near-maximum CartPole reward within ~500 episodes), and trains far more stably than both deep RL and prior LLM-based methods. These results show that treating trajectories as first-class in-context evidence, rather than artifacts reduced to scalar returns, changes how even comparatively small LLMs search over policy spaces, enabling them to learn faster, diagnose more precisely, and reliably improve external controllers.",
+  "tldr": "Results show that treating trajectories as first-class in-context evidence, rather than artifacts reduced to scalar returns, changes how even comparatively small LLMs search over policy spaces, enabling them to learn faster, diagnose more precisely, and reliably improve external controllers.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Rahaf Abu Hara",
+   "Vaibbhav Murarri",
+   "Claudio Zito"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "afaf9a790d47fc0549dd517c1500c8bac32a2602",
+  "paper_id": "dblp:journals/corr/abs-2605-08315",
+  "doi": "10.48550/arXiv.2605.08315",
+  "arxiv_id": "2605.08315",
+  "dblp_key": "journals/corr/abs-2605-08315",
+  "paper_url": "https://www.semanticscholar.org/paper/afaf9a790d47fc0549dd517c1500c8bac32a2602",
+  "published_iso": "2026-05-08",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Double Horizon Model-Based Policy Optimization",
+  "title_norm": "double horizon model based policy optimization",
+  "abstract": "Model-based reinforcement learning (MBRL) reduces the cost of real-environment sampling by generating synthetic trajectories (called rollouts) from a learned dynamics model. However, choosing the length of the rollouts poses two dilemmas: (1) Longer rollouts better preserve on-policy training but amplify model bias, indicating the need for an intermediate horizon to mitigate distribution shift (i.e., the gap between on-policy and past off-policy samples). (2) Moreover, a longer model rollout may reduce value estimation bias but raise the variance of policy gradients due to backpropagation through multiple steps, implying another intermediate horizon for stable gradient estimates. However, these two optimal horizons may differ. To resolve this conflict, we propose Double Horizon Model-Based Policy Optimization (DHMBPO), which divides the rollout procedure into a long\"distribution rollout\"(DR) and a short\"training rollout\"(TR). The DR generates on-policy state samples for mitigating distribution shift. In contrast, the short TR leverages differentiable transitions to offer accurate value gradient estimation with stable gradient updates, thereby requiring fewer updates and reducing overall runtime. We demonstrate that the double-horizon approach effectively balances distribution shift, model bias, and gradient instability, and surpasses existing MBRL methods on continuous-control benchmarks in terms of both sample efficiency and runtime.",
+  "tldr": "The double-horizon approach effectively balances distribution shift, model bias, and gradient instability, and surpasses existing MBRL methods on continuous-control benchmarks in terms of both sample efficiency and runtime.",
+  "year": 2025,
+  "venue": "Trans. Mach. Learn. Res.",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Akihiro Kubo",
+   "Paavo Parmas",
+   "Shin Ishii"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "e93307c72940db3ca2f2926f1d36a3daa078c702",
+  "paper_id": "dblp:journals/tmlr/KuboPI25",
+  "doi": "10.48550/arXiv.2512.15439",
+  "arxiv_id": "2512.15439",
+  "dblp_key": "journals/tmlr/KuboPI25",
+  "paper_url": "https://www.semanticscholar.org/paper/e93307c72940db3ca2f2926f1d36a3daa078c702",
+  "published_iso": "2025-12-17",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Observations and Remedies for Large Language Model Bias in Self-Consuming Performative Loop",
+  "title_norm": "observations and remedies for large language model bias in self consuming perfor",
+  "abstract": "The rapid advancement of large language models (LLMs) has led to growing interest in using synthetic data to train future models. However, this creates a self-consuming retraining loop, where models are trained on their own outputs and may cause performance drops and induce emerging biases. In real-world applications, previously deployed LLMs may influence the data they generate, leading to a dynamic system driven by user feedback. For example, if a model continues to underserve users from a group, less query data will be collected from this particular demographic of users. In this study, we introduce the concept of \\textbf{S}elf-\\textbf{C}onsuming \\textbf{P}erformative \\textbf{L}oop (\\textbf{SCPL}) and investigate the role of synthetic data in shaping bias during these dynamic iterative training processes under controlled performative feedback. This controlled setting is motivated by the inaccessibility of real-world user preference data from dynamic production systems, and enables us to isolate and analyze feedback-driven bias evolution in a principled manner. We focus on two types of loops, including the typical retraining setting and the incremental fine-tuning setting, which is largely underexplored. Through experiments on three real-world tasks, we find that the performative loop increases preference bias and decreases disparate bias. We design a reward-based rejection sampling strategy to mitigate the bias, moving towards more trustworthy self-improving systems.",
+  "tldr": "It is found that the performative loop increases preference bias and decreases disparate bias, and a reward-based rejection sampling strategy is designed to mitigate the bias, moving towards more trustworthy self-improving systems.",
+  "year": 2026,
+  "venue": "Annual Meeting of the Association for Computational Linguistics",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Yaxuan Wang",
+   "Zhongteng Cai",
+   "Yujia Bao",
+   "Xueru Zhang",
+   "Yang Liu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "76b478ea6a993e5286a1ec02497dfc175fe2ab39",
+  "paper_id": "dblp:journals/corr/abs-2601-05184",
+  "doi": "10.48550/arXiv.2601.05184",
+  "arxiv_id": "2601.05184",
+  "dblp_key": "journals/corr/abs-2601-05184",
+  "paper_url": "https://www.semanticscholar.org/paper/76b478ea6a993e5286a1ec02497dfc175fe2ab39",
+  "published_iso": "2026-01-08",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization",
+  "title_norm": "openwebvoyager building multimodal web agents via iterative real world explorati",
+  "abstract": "The rapid development of large language and multimodal models has sparked significant interest in using proprietary models, such as GPT-4o, to develop autonomous agents capable of handling real-world scenarios like web navigation. Although recent open-source efforts have tried to equip agents with the ability to explore environments and continuously improve over time, they are building text-only agents in synthetic environments where the reward signals are clearly defined. Such agents struggle to generalize to realistic settings that require multimodal perception abilities and lack ground-truth signals. In this paper, we introduce an open-source framework designed to facilitate the development of multimodal web agent that can autonomously conduct real-world exploration and improve itself. We first train the base model with imitation learning to gain the basic abilities. We then let the agent explore the open web and collect feedback on its trajectories. After that, it further improves its policy by learning from well-performing trajectories judged by another general-purpose model. This exploration-feedback-optimization cycle can continue for several iterations. Experimental results show that our web agent successfully improves itself after each iteration, demonstrating strong performance across multiple test sets.",
+  "tldr": "This paper introduces an open-source framework designed to facilitate the development of multimodal web agent that can autonomously conduct real-world exploration and improve itself, demonstrating strong performance across multiple test sets.",
+  "year": 2024,
+  "venue": "Annual Meeting of the Association for Computational Linguistics",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Hongliang He",
+   "Wenlin Yao",
+   "Kaixin Ma",
+   "Wenhao Yu",
+   "Hongming Zhang",
+   "Tianqing Fang"
+  ],
+  "citations": 44,
+  "source": "semanticscholar",
+  "source_id": "c099f982a63a92d4891703f94fb5fd0ec6b64b1f",
+  "paper_id": "dblp:journals/corr/abs-2410-19609",
+  "doi": "10.48550/arXiv.2410.19609",
+  "arxiv_id": "2410.19609",
+  "dblp_key": "journals/corr/abs-2410-19609",
+  "paper_url": "https://www.semanticscholar.org/paper/c099f982a63a92d4891703f94fb5fd0ec6b64b1f",
+  "published_iso": "2024-10-25",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success",
+  "title_norm": "enhancing vision language model training with reinforcement learning in syntheti",
+  "abstract": "Interactive multimodal agents must turn raw visual observations into reliable sequences of structured, language-conditioned actions, yet training such competence under long horizons and sparse feedback remains brittle. We present VL-DAC, a lightweight reinforcement learning recipe for vision-language agents that is hyperparameter-robust and easy to deploy. VL-DAC performs PPO updates at the token level for actions while learning a step-level value function. This decoupling removes unstable weighting terms and yields faster, more reliable convergence without introducing extra tuning knobs. Training a single VLM in one cheap synthetic environment at a time (MiniWorld, Gym-Cards, ALFWorld, or WebShop) produces policies that transfer beyond their training simulators: +50% relative on BALROG (agentic control), +5% relative on the hardest split of VSI-Bench (spatial planning), and +2% on VisualWebBench (web navigation), with no loss in general image understanding. Together, these results show that a simple, stable RL procedure can train vision–language agents entirely in simulation while delivering measurable gains on agentic, spatial-reasoning, and web-navigation benchmarks.",
+  "tldr": "VL-DAC is presented, a lightweight reinforcement learning recipe for vision-language agents that is hyperparameter-robust and easy to deploy, and shows that a simple, stable RL procedure can train vision–language agents entirely in simulation while delivering measurable gains on agentic, spatial-reasoning, and web-navigation benchmarks.",
+  "year": 2025,
+  "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
+  "publication_types": [
+   "JournalArticle",
+   "Book",
+   "Conference"
+  ],
+  "authors": [
+   "George Bredis",
+   "Stanislav Dereka",
+   "Viacheslav Sinii",
+   "Ruslan Rakhimov",
+   "Daniil Gavrilov"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "fc82a18c8c6855c883d2f4253ad1bfcb4e624c7f",
+  "paper_id": "dblp:journals/corr/abs-2508-04280",
+  "doi": "10.65109/RGPS3808",
+  "arxiv_id": "2508.04280",
+  "dblp_key": "journals/corr/abs-2508-04280",
+  "paper_url": "https://www.semanticscholar.org/paper/fc82a18c8c6855c883d2f4253ad1bfcb4e624c7f",
+  "published_iso": "2025-08-06",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Ideology and Policy Preferences in Synthetic Data: The Potential of LLMs for Public Opinion Analysis",
+  "title_norm": "ideology and policy preferences in synthetic data the potential of llms for publ",
+  "abstract": "This study investigates whether large language models (LLMs) can meaningfully extend or generate synthetic public opinion survey data on labor policy issues in South Korea. Unlike prior work conducted on people’s general sociocultural values or specific political topics such as voting intentions, our research examines policy preferences on tangible social and economic topics, offering deeper insights for news media and data analysts. In two key applications, we first explore whether LLMs can predict public sentiment on emerging or rapidly evolving issues using existing survey data. We then assess how LLMs generate synthetic datasets resembling real-world survey distributions. Our findings reveal that while LLMs capture demographic and ideological traits with reasonable accuracy, they tend to overemphasize ideological orientation for politically charged topics—a bias that is more pronounced in fully synthetic data, raising concerns about perpetuating societal stereotypes. Despite these challenges, LLMs hold promise for enhancing data-driven journalism and policy research, particularly in polarized societies. We call for further study into how LLM-based predictions align with human responses in diverse sociopolitical settings, alongside improved tools and guidelines to mitigate embedded biases.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Media and Communication",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Keyeun Lee",
+   "Jaehyuk Park",
+   "Suh‐hee Choi",
+   "Changkeun Lee"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "cb2fb0784f0019bf51a7d41036713c6d9167611f",
+  "paper_id": "doi:10.17645/mac.9677",
+  "doi": "10.17645/mac.9677",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.17645/mac.9677",
+  "published_iso": "2025-05-22",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Information Governance Framework for AI-Generated Synthetic Patient Data in Healthcare Research: Balancing Utility, Privacy and Algorithmic Bias Mitigation",
+  "title_norm": "information governance framework for ai generated synthetic patient data in heal",
+  "abstract": "This study develops and validates an information governance framework for AI-generated synthetic patient data in healthcare research, balancing data utility, privacy, and algorithmic bias mitigation. The introduction positions the framework as a response to stringent privacy regulations and data scarcity, integrating dynamic consent, differential privacy, and fairness-aware synthetic data generation. The literature review synthesizes theoretical foundations and identifies gaps in standardized validation and integrated governance. The methodology employs a design science approach, utilizing public datasets such as MIMIC-III, advanced generative models (GANs, VAEs, diffusion models), and blockchain-based consent systems. Validation metrics assess fidelity, utility, and bias reduction. Findings demonstrate substantial improvements in consent efficiency, data utility, and demographic fairness, though challenges persist regarding interface complexity and scalability. The conclusion affirms enhanced patient control, privacy, and equity, recommending adaptive interfaces, federated learning, and real-world pilots. The framework offers a scalable, policy-aligned solution for secure and equitable healthcare AI, supporting evidence-based innovation while safeguarding patient rights.",
+  "tldr": "This study develops and validates an information governance framework for AI-generated synthetic patient data in healthcare research, balancing data utility, privacy, and algorithmic bias mitigation, and affirms enhanced patient control, privacy, and equity.",
+  "year": 2025,
+  "venue": "Asian Journal of Advanced Research and Reports",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Lisa Mmesoma Udechukwu",
+   "Gbenro Charles Opeke",
+   "Emonena Patrick Obrik-Uloho",
+   "Olufunke Cynthia Metibemu",
+   "R. Olasege"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "0666d830c3506e464c73ae5b435ad2d14de60594",
+  "paper_id": "doi:10.9734/ajarr/2025/v19i111193",
+  "doi": "10.9734/ajarr/2025/v19i111193",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.9734/ajarr/2025/v19i111193",
+  "published_iso": "2025-10-24",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Hindsight-Anchored Policy Optimization: Turning Failure into Feedback in Sparse Reward Settings",
+  "title_norm": "hindsight anchored policy optimization turning failure into feedback in sparse r",
+  "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has emerged as a promising paradigm for post-training reasoning models. However, group-based methods such as Group Relative Policy Optimization (GRPO) face a critical dilemma in sparse-reward settings: pure Reinforcement Learning (RL) suffers from advantage collapse and high-variance gradient estimation, while mixed-policy optimization introduces persistent distributional bias. To resolve this dilemma, we introduce Hindsight-Anchored Policy Optimization (HAPO). HAPO employs the Synthetic Success Injection (SSI) operator, a hindsight mechanism that selectively anchors optimization to teacher demonstrations during failure. This injection is governed by a Thompson sampling-inspired gating mechanism, creating an autonomous, self-paced curriculum. Theoretically, we demonstrate that HAPO achieves \\textit{asymptotic consistency}: by naturally annealing the teacher signal as the policy improves, HAPO recovers the unbiased on-policy gradient. This ensures off-policy guidance acts as a temporary scaffold rather than a persistent ceiling, enabling the model to surpass the limitations of static teacher forcing.",
+  "tldr": "HAPO employs the Synthetic Success Injection (SSI) operator, a hindsight mechanism that selectively anchors optimization to teacher demonstrations during failure, enabling the model to surpass the limitations of static teacher forcing.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuning Wu",
+   "Ke Wang",
+   "Devin Chen",
+   "Kaichen Wei"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1952d4f011fcf5f7ed2540f0b0296255d8f665eb",
+  "paper_id": "dblp:journals/corr/abs-2603-11321",
+  "doi": "10.48550/arXiv.2603.11321",
+  "arxiv_id": "2603.11321",
+  "dblp_key": "journals/corr/abs-2603-11321",
+  "paper_url": "https://www.semanticscholar.org/paper/1952d4f011fcf5f7ed2540f0b0296255d8f665eb",
+  "published_iso": "2026-03-11",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "RLHF Fine-Tuning of LLMs for Alignment with Implicit User Feedback in Conversational Recommenders",
+  "title_norm": "rlhf fine tuning of llms for alignment with implicit user feedback in conversati",
+  "abstract": "Conversational recommender systems (CRS) based on Large Language Models (LLMs) need to constantly be aligned to the user preferences to provide satisfying and context-relevant item recommendations. The traditional supervised fine-tuning cannot capture the implicit feedback signal, e.g., dwell time, sentiment polarity, or engagement patterns. In this paper, we share a fine-tuning solution using human feedback reinforcement learning (RLHF) to maximize implied user feedback (IUF) in a multi-turn recommendation context. We specify a reward model $R_{-} \\varphi$ learnt on weakly-labelled engagement information and maximize user-centric utility by optimizing the foundational LLM $M_{-} \\theta$ through a proximal policy optimization (PPO) approach. The architecture models conversational state transitions $s_{-} t \\rightarrow a_{-} t \\rightarrow s_{-}\\{t+1\\}$, where the action a_t is associated with LLM-generated item suggestions only on condition of conversation history in the past. The evaluation across synthetic and real-world datasets (e.g.REDIAL, OpenDialKG) demonstrates that our RLHF-fine-tuned models can perform better in terms of top-k recommendation accuracy, coherence, and user satisfaction compared to (arrow-zero-cmwrquca-teja- falset ensuite 2Round group-deca States penalty give up This paper shows that implicit signal alignment can be efficient in achieving scalable and user-adaptive design of CRS.",
+  "tldr": "This paper shares a fine-tuning solution using human feedback reinforcement learning (RLHF) to maximize implied user feedback (IUF) in a multi-turn recommendation context and shows that implicit signal alignment can be efficient in achieving scalable and user-adaptive design of CRS.",
+  "year": 2025,
+  "venue": "2025 4th International Conference on Artificial Intelligence, Internet of Things and Cloud Computing Technology (AIoTC)",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Zhongheng Yang",
+   "Aijia Sun",
+   "Yushang Zhao",
+   "Yinuo Yang",
+   "Dannier Li",
+   "Chengrui Zhou"
+  ],
+  "citations": 21,
+  "source": "semanticscholar",
+  "source_id": "afc552135b929838db086b56fb564aee1bcb0e10",
+  "paper_id": "dblp:journals/corr/abs-2508-05289",
+  "doi": "10.1109/AIoTC66747.2025.11198794",
+  "arxiv_id": "2508.05289",
+  "dblp_key": "journals/corr/abs-2508-05289",
+  "paper_url": "https://www.semanticscholar.org/paper/afc552135b929838db086b56fb564aee1bcb0e10",
+  "published_iso": "2025-08-07",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Counterfactual Reward Model Training for Bias Mitigation in Multimodal Reinforcement Learning",
+  "title_norm": "counterfactual reward model training for bias mitigation in multimodal reinforce",
+  "abstract": "In reinforcement learning with human feedback (RLHF), reward models can efficiently learn and amplify latent biases within multimodal datasets, which can lead to imperfect policy optimization through flawed reward signals and decreased fairness. Bias mitigation studies have often applied passive constraints, which can fail under causal confounding. Here, we present a counterfactual reward model that introduces causal inference with multimodal representation learning to provide an unsupervised, bias-resilient reward signal. The heart of our contribution is the Counterfactual Trust Score, an aggregated score consisting of four components: (1) counterfactual shifts that decompose political framing bias from topical bias; (2) reconstruction uncertainty during counterfactual perturbations; (3) demonstrable violations of fairness rules for each protected attribute; and (4) temporal reward shifts aligned with dynamic trust measures. We evaluated the framework on a multimodal fake versus true news dataset, which exhibits framing bias, class imbalance, and distributional drift. Following methodologies similar to unsupervised drift detection from representation-based distances [1] and temporal robustness benchmarking in language models [2], we also inject synthetic bias across sequential batches to test robustness. The resulting system achieved an accuracy of 89.12% in fake news detection, outperforming the baseline reward models. More importantly, it reduced spurious correlations and unfair reinforcement signals. This pipeline outlines a robust and interpretable approach to fairness-aware RLHF, offering tunable bias reduction thresholds and increasing reliability in dynamic real-time policy making.",
+  "tldr": "A counterfactual reward model that introduces causal inference with multimodal representation learning to provide an unsupervised, bias-resilient reward signal and outlines a robust and interpretable approach to fairness-aware RLHF, offering tunable bias reduction thresholds and increasing reliability in dynamic real-time policy making.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sheryl Mathew",
+   "N. Harshit"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "fb0cbd0b48027f85b6da4b67aa75ed189bbb7bc5",
+  "paper_id": "dblp:journals/corr/abs-2508-19567",
+  "doi": "10.48550/arXiv.2508.19567",
+  "arxiv_id": "2508.19567",
+  "dblp_key": "journals/corr/abs-2508-19567",
+  "paper_url": "https://www.semanticscholar.org/paper/fb0cbd0b48027f85b6da4b67aa75ed189bbb7bc5",
+  "published_iso": "2025-08-27",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Multi-agent simulation and optimization of complex network diffusion models for policy implementation feedback in public administration",
+  "title_norm": "multi agent simulation and optimization of complex network diffusion models for ",
+  "abstract": "In computational and information systems, the ability to process and integrate feedback efficiently has become a cornerstone for adaptive decision-making. Extending this paradigm to public administration, policy implementation increasingly depends on timely and accurate feedback from diverse stakeholders. Yet, conventional top-down communication architectures continue to suffer from limited inclusivity, delayed responsiveness, and fragile information pathways. To address these challenges, we propose a multi-agent simulation framework coupled with an adaptive complex network diffusion model that dynamically optimizes feedback channels based on agent influence and structural metrics. The framework models heterogeneous agents including policymakers, execution units, and public respondents, simulating feedback interactions over a small-world communication topology. A rewiring algorithm enhances diffusion efficiency by targeting high-centrality nodes. Experimental results on synthetically generated agent behaviors, calibrated with empirical survey data, demonstrate that the proposed model outperforms baseline methods in feedback coverage, response latency, and semantic coherence. The system maintains robustness under policy shifts and communication failures, offering a scalable approach for participatory governance. This work provides an intelligent and adaptive simulation tool for policy evaluation, refinement, and real-time public administration analysis.",
+  "tldr": "A multi-agent simulation framework coupled with an adaptive complex network diffusion model that dynamically optimizes feedback channels based on agent influence and structural metrics is proposed, providing an intelligent and adaptive simulation tool for policy evaluation, refinement, and real-time public administration analysis.",
+  "year": 2026,
+  "venue": "International Conference on Telecommunications, Optics and Computer Science",
+  "publication_types": [
+   "Conference",
+   "Review"
+  ],
+  "authors": [
+   "Bowen Liu",
+   "Zhuang Yuan",
+   "Zhenwei Xiao"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a40f6326ad72eddd9afb841b79fcd652e781d1fa",
+  "paper_id": "doi:10.1117/12.3108045",
+  "doi": "10.1117/12.3108045",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a40f6326ad72eddd9afb841b79fcd652e781d1fa",
+  "published_iso": "2026-05-13",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Synthetic Interventions: Extending Synthetic Controls to Multiple Treatments",
+  "title_norm": "synthetic interventions extending synthetic controls to multiple treatments",
+  "abstract": "Beyond One Policy: A New Framework for Comparing Multiple Interventions\n Traditional methods for policy evaluation typically focus on a single intervention. Yet many real-world settings feature multiple, often concurrent, interventions—making it crucial to understand their comparative effects. In “Synthetic Interventions: Extending Synthetic Controls to Multiple Treatments,” Agarwal, Shah, and Shen introduce the synthetic interventions framework, a generalization of the synthetic controls method that accommodates multiple treatments within a unified model. By representing outcomes as a low-rank tensor capturing relationships across time, units, and interventions, their approach enables researchers to estimate counterfactual outcomes under all interventions for each unit. The authors establish consistency of their estimator and show that a bias-corrected version achieves asymptotic normality, permitting valid statistical inference. This work offers a new perspective for evaluating complex, multipolicy environments where traditional causal inference tools fall short.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Operational Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Anish Agarwal",
+   "Devavrat Shah",
+   "Dennis Shen"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "c1a98506a02492cd0e4b3edc6428c160b813407d",
+  "paper_id": "dblp:journals/ior/AgarwalSS26",
+  "doi": "10.1287/opre.2025.1590",
+  "arxiv_id": "",
+  "dblp_key": "journals/ior/AgarwalSS26",
+  "paper_url": "https://www.semanticscholar.org/paper/c1a98506a02492cd0e4b3edc6428c160b813407d",
+  "published_iso": "2025-12-08",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Policy-Guided Diffusion",
+  "title_norm": "policy guided diffusion",
+  "abstract": "In many real-world settings, agents must learn from an offline dataset gathered by some prior behavior policy. Such a setting naturally leads to distribution shift between the behavior policy and the target policy being trained - requiring policy conservatism to avoid instability and overestimation bias. Autoregressive world models offer a different solution to this by generating synthetic, on-policy experience. However, in practice, model rollouts must be severely truncated to avoid compounding error. As an alternative, we propose policy-guided diffusion. Our method uses diffusion models to generate entire trajectories under the behavior distribution, applying guidance from the target policy to move synthetic experience further on-policy. We show that policy-guided diffusion models a regularized form of the target distribution that balances action likelihood under both the target and behavior policies, leading to plausible trajectories with high target policy probability, while retaining a lower dynamics error than an offline world model baseline. Using synthetic experience from policy-guided diffusion as a drop-in substitute for real data, we demonstrate significant improvements in performance across a range of standard offline reinforcement learning algorithms and environments. Our approach provides an effective alternative to autoregressive offline world models, opening the door to the controllable generation of synthetic training data.",
+  "tldr": "This work shows that policy-guided diffusion models a regularized form of the target distribution that balances action likelihood under both the target and behavior policies, leading to plausible trajectories with high target policy probability, while retaining a lower dynamics error than an offline world model baseline.",
+  "year": 2024,
+  "venue": "RLJ",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Matthew Jackson",
+   "M. Matthews",
+   "Cong Lu",
+   "Benjamin Ellis",
+   "Shimon Whiteson",
+   "Jakob N. Foerster"
+  ],
+  "citations": 43,
+  "source": "semanticscholar",
+  "source_id": "91fb21898301e80633d47d39b425d1feaa98f6ed",
+  "paper_id": "dblp:journals/corr/abs-2404-06356",
+  "doi": "10.48550/arXiv.2404.06356",
+  "arxiv_id": "2404.06356",
+  "dblp_key": "journals/corr/abs-2404-06356",
+  "paper_url": "https://www.semanticscholar.org/paper/91fb21898301e80633d47d39b425d1feaa98f6ed",
+  "published_iso": "2024-04-09",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Reward-Guided Fine-Tuning of Language Models with Social Feedback",
+  "title_norm": "reward guided fine tuning of language models with social feedback",
+  "abstract": "Large language models (LLMs) are increasingly used in assistive conversational systems but often struggle to adapt to human tone and context. While prior work emphasizes factual accuracy and safety, less attention has been given to context sensitive conversational behavior. In this work, we explore whether real world interaction signals can improve context driven reward adaptability. We use Reddit conversations, as a proxy to group conversations, to train a reward model that predicts the effectiveness of replies in context, then fine-tune a language model with Proximal Policy Optimization (PPO) to encourage responses aligned with conversational tone and user expectations. Across benchmarks, the resulting models show improved humor and engagement while maintaining comparable reasoning ability, alongside shifts in toxicity and bias consistent with the training signal. These results suggest that alignment requires not only correctness, but also sensitivity to tone, intent, and conversational context.",
+  "tldr": "This work uses Reddit conversations to train a reward model that predicts the effectiveness of replies in context, then fine-tune a language model with Proximal Policy Optimization to encourage responses aligned with conversational tone and user expectations, which suggest that alignment requires not only correctness, but also sensitivity to tone, intent, and conversational context.",
+  "year": 2026,
+  "venue": "The International FLAIRS Conference Proceedings",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Jared Scott",
+   "Jesse Roberts"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "72e500a504f204afdf581ce33d488a9bc58e7b29",
+  "paper_id": "doi:10.32473/flairs.39.1.141777",
+  "doi": "10.32473/flairs.39.1.141777",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://journals.flvc.org/FLAIRS/article/download/141777/147128",
+  "published_iso": "2026-05-06",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Conformal Prediction Beyond the Horizon: Distribution-Free Inference for Policy Evaluation",
+  "title_norm": "conformal prediction beyond the horizon distribution free inference for policy e",
+  "abstract": "Reliable uncertainty quantification is crucial for reinforcement learning (RL) in high-stakes settings. We propose a unified conformal prediction framework for infinite-horizon policy evaluation that constructs distribution-free prediction intervals {for returns} in both on-policy and off-policy settings. Our method integrates distributional RL with conformal calibration, addressing challenges such as unobserved returns, temporal dependencies, and distributional shifts. We propose a modular pseudo-return construction based on truncated rollouts and a time-aware calibration strategy using experience replay and weighted subsampling. These innovations mitigate model bias and restore approximate exchangeability, enabling uncertainty quantification even under policy shifts. Our theoretical analysis provides coverage guarantees that account for model misspecification and importance weight estimation. Empirical results, including experiments in synthetic and benchmark environments like Mountain Car, show that our method significantly improves coverage and reliability over standard distributional RL baselines.",
+  "tldr": "This work proposes a modular pseudo-return construction based on truncated rollouts and a time-aware calibration strategy using experience replay and weighted subsampling to mitigate model bias and restore approximate exchangeability, enabling uncertainty quantification even under policy shifts.",
+  "year": 2025,
+  "venue": "Neural Information Processing Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Feichen Gan",
+   "Youcun Lu",
+   "Yingying Zhang",
+   "Yukun Liu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "60d573f277d4e77326a0628f7d6abb176be66e17",
+  "paper_id": "dblp:journals/corr/abs-2510-26026",
+  "doi": "10.48550/arXiv.2510.26026",
+  "arxiv_id": "2510.26026",
+  "dblp_key": "journals/corr/abs-2510-26026",
+  "paper_url": "https://www.semanticscholar.org/paper/60d573f277d4e77326a0628f7d6abb176be66e17",
+  "published_iso": "2025-10-29",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Don't Let Bandit Feedback Pull Continual LLM-Recommender Updates Off Target",
+  "title_norm": "don t let bandit feedback pull continual llm recommender updates off target",
+  "abstract": "Generative LLM-based recommenders (LLM-Rec) require continual post-deployment updates, yet deployment logs provide only policy-shaped contextual bandit feedback: outcomes are observed solely for items exposed by a prior serving policy, inducing exposure bias and yielding partial, asymmetric signals consisting of relatively reliable positive responses and ambiguous no-responses. We propose an Anchored Bandit Policy Optimization (ABPO) framework for continual LLM-Rec updates that combines group-relative policy optimization (GRPO) with explicit treatment of exposure bias and feedback ambiguity. Specifically, we insert the exposed recommendation as a logged anchor into each GRPO rollout group, so that group-relative normalization is calibrated against the action actually exposed by the prior policy rather than against newly sampled rollouts alone. Because both positive- and no-responses are observed only through prior-policy exposure, we apply self-normalized inverse propensity scoring to the fixed anchor for both feedback types to correct for policy mismatch. At the same time, we treat the two feedback types asymmetrically in reliability: positive responses provide relatively direct endorsement signals, whereas no-responses remain ambiguous because they may reflect either true disinterest or unobserved external factors. To avoid overly aggressive updates from ambiguous no-responses, we temper their penalties with self-certainty, using the model's output-token confidence as a verifier-free reliability signal. Across five domains from Amazon Reviews and MovieLens, our method yields consistent post-update gains in recommendation accuracy while mitigating prior-policy-induced exposure bias more effectively than prior baselines.",
+  "tldr": "This work proposes an Anchored Bandit Policy Optimization (ABPO) framework for continual LLM-Rec updates that combines group-relative policy optimization (GRPO) with explicit treatment of exposure bias and feedback ambiguity, and yields consistent post-update gains in recommendation accuracy while mitigating prior-policy-induced exposure bias more effectively than prior baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Taesan Kim",
+   "Hyeongjun Yun",
+   "Jaegul Choo",
+   "Chung Park"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9d42ff6febb72d0d28733c3bb2b49e76eeb17a08",
+  "paper_id": "dblp:journals/corr/abs-2605-18899",
+  "doi": "10.48550/arXiv.2605.18899",
+  "arxiv_id": "2605.18899",
+  "dblp_key": "journals/corr/abs-2605-18899",
+  "paper_url": "https://www.semanticscholar.org/paper/9d42ff6febb72d0d28733c3bb2b49e76eeb17a08",
+  "published_iso": "2026-05-17",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "ReTool: Reinforcement Learning for Strategic Tool Use in LLMs",
+  "title_norm": "retool reinforcement learning for strategic tool use in llms",
+  "abstract": "While reasoning models (e.g., DeepSeek R1) trained with reinforcement learning (RL), excel in textual reasoning, they struggle in scenarios requiring structured problem-solving, such as geometric reasoning, concise computation, or complex equation solving-areas where computational tools like code interpreters (CI) demonstrate distinct advantages. To bridge this gap, we propose ReTool, which enhances long-form reasoning with tool-integrated learning, including two key features: (1) dynamic interleaving of real-time code execution within natural language reasoning processes, and (2) an automated RL paradigm that allows policy rollouts with multi-turn real-time code execution and teaches the model in learning when and how to invoke tools based on outcome feedback. ReTool employs a systematic training framework, beginning with synthetic cold-start data generation to produce code-augmented long-form reasoning traces for fine-tuning base models. Subsequent RL training leverages task outcomes as rewards to iteratively refine the model's tool use strategy, enabling autonomous discovery of optimal tool invocation patterns without human priors. Experiments on the challenging MATH Olympiad benchmark AIME demonstrate ReTool's superiority: Our 32B model achieves 67% accuracy with 400 training steps, outperforming text-based RL baseline (40% accuracy, 1080 steps) in efficiency and performance. Remarkably, ReTool-32B attains 72.5% accuracy in extended settings, surpassing OpenAI's o1-preview by 27.9%. Further analysis reveals emergent behaviors such as code self-correction, signaling an ''aha moment'' in which the model autonomously masters adaptive tool use. These findings highlight the promise of outcome-driven tool integration for advancing complex mathematical reasoning and offer new insights into hybrid neuro-symbolic systems.",
+  "tldr": "ReTool is proposed, which enhances long-form reasoning with tool-integrated learning, including dynamic interleaving of real-time code execution within natural language reasoning processes, and an automated RL paradigm that allows policy rollouts with multi-turn real-time code execution and teaches the model in learning when and how to invoke tools based on outcome feedback.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Jiazhan Feng",
+   "Shijue Huang",
+   "Xingwei Qu",
+   "Ge Zhang",
+   "Yujia Qin",
+   "B. Zhong"
+  ],
+  "citations": 362,
+  "source": "semanticscholar",
+  "source_id": "8402e446158252992b6ddf1ff1b0658c39d7604e",
+  "paper_id": "dblp:journals/corr/abs-2504-11536",
+  "doi": "10.48550/arXiv.2504.11536",
+  "arxiv_id": "2504.11536",
+  "dblp_key": "journals/corr/abs-2504-11536",
+  "paper_url": "https://www.semanticscholar.org/paper/8402e446158252992b6ddf1ff1b0658c39d7604e",
+  "published_iso": "2025-04-15",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "DP-OPD: Differentially Private On-Policy Distillation for Language Models",
+  "title_norm": "dp opd differentially private on policy distillation for language models",
+  "abstract": "Large language models (LLMs) are increasingly adapted to proprietary and domain-specific corpora that contain sensitive information, creating a tension between formal privacy guarantees and efficient deployment through model compression. Differential privacy (DP), typically enforced via DP-SGD, provides record-level protection but often incurs substantial utility loss in autoregressive generation, where optimization noise can amplify exposure bias and compounding errors along long rollouts. Existing approaches to private distillation either apply DP-SGD to both teacher and student, worsening computation and the privacy--utility tradeoff, or rely on DP synthetic text generation from a DP-trained teacher, avoiding DP on the student at the cost of DP-optimizing a large teacher and introducing an offline generation pipeline. We propose \\textbf{Differentially Private On-Policy Distillation (DP-OPD)}, a synthesis-free framework that enforces privacy solely through DP-SGD on the student while leveraging a frozen teacher to provide dense token-level targets on \\emph{student-generated} trajectories. DP-OPD instantiates this idea via \\emph{private generalized knowledge distillation} on continuation tokens. Under a strict privacy budget ($\\varepsilon=2.0$), DP-OPD improves perplexity over DP fine-tuning and off-policy DP distillation, and outperforms synthesis-based DP distillation (Yelp: 44.15$\\rightarrow$41.68; BigPatent: 32.43$\\rightarrow$30.63), while substantially simplifying the training pipeline. In particular, \\textbf{DP-OPD collapses private compression into a single DP student-training loop} by eliminating DP teacher training and offline synthetic text generation. Code will be released upon publication at https://github.com/khademfatemeh/dp_opd.",
+  "tldr": "DP-OPD improves perplexity over DP fine-tuning and off-policy DP distillation, and outperforms synthesis-based DP distillation, and outperforms synthesis-based DP distillation while substantially simplifying the training pipeline.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fatemeh Khadem",
+   "Sajad Mousavi",
+   "Yi Fang",
+   "Yuhong Liu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "97e53fd052572391d2cf6c630caa1e04f849fe4d",
+  "paper_id": "dblp:journals/corr/abs-2604-04461",
+  "doi": "10.48550/arXiv.2604.04461",
+  "arxiv_id": "2604.04461",
+  "dblp_key": "journals/corr/abs-2604-04461",
+  "paper_url": "https://www.semanticscholar.org/paper/97e53fd052572391d2cf6c630caa1e04f849fe4d",
+  "published_iso": "2026-04-06",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "DynaWeb: Model-Based Reinforcement Learning of Web Agents",
+  "title_norm": "dynaweb model based reinforcement learning of web agents",
+  "abstract": "The development of autonomous web agents, powered by Large Language Models (LLMs) and reinforcement learning (RL), represents a significant step towards general-purpose AI assistants. However, training these agents is severely hampered by the challenges of interacting with the live internet, which is inefficient, costly, and fraught with risks. Model-based reinforcement learning (MBRL) offers a promising solution by learning a world model of the environment to enable simulated interaction. This paper introduces DynaWeb, a novel MBRL framework that trains web agents through interacting with a web world model trained to predict naturalistic web page representations given agent actions. This model serves as a synthetic web environment where an agent policy can dream by generating vast quantities of rollout action trajectories for efficient online reinforcement learning. Beyond free policy rollouts, DynaWeb incorporates real expert trajectories from training data, which are randomly interleaved with on-policy rollouts during training to improve stability and sample efficiency. Experiments conducted on the challenging WebArena and WebVoyager benchmarks demonstrate that DynaWeb consistently and significantly improves the performance of state-of-the-art open-source web agent models. Our findings establish the viability of training web agents through imagination, offering a scalable and efficient way to scale up online agentic RL.",
+  "tldr": "DynaWeb is introduced, a novel MBRL framework that trains web agents through interacting with a web world model trained to predict naturalistic web page representations given agent actions that establishes the viability of training web agents through imagination, offering a scalable and efficient way to scale up online agentic RL.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Han Ding",
+   "Peidong Liu",
+   "Junqiao Wang",
+   "Z. Ji",
+   "Meng Cao",
+   "Rongzhao Zhang"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "f4fb4529b482c531d74f846e46cd2db27aa8bc6a",
+  "paper_id": "dblp:journals/corr/abs-2601-22149",
+  "doi": "10.48550/arXiv.2601.22149",
+  "arxiv_id": "2601.22149",
+  "dblp_key": "journals/corr/abs-2601-22149",
+  "paper_url": "https://www.semanticscholar.org/paper/f4fb4529b482c531d74f846e46cd2db27aa8bc6a",
+  "published_iso": "2026-01-29",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Beyond Reward Hacking: Causal Rewards for Large Language Model Alignment",
+  "title_norm": "beyond reward hacking causal rewards for large language model alignment",
+  "abstract": "Recent advances in large language models (LLMs) have demonstrated significant progress in performing complex tasks. While Reinforcement Learning from Human Feedback (RLHF) has been effective in aligning LLMs with human preferences, it is susceptible to spurious correlations in reward modeling. Consequently, it often introduces biases-such as length bias, sycophancy, conceptual bias, and discrimination-that hinder the model's ability to capture true causal relationships. To address this, we propose a novel causal reward modeling approach that integrates causality to mitigate these spurious correlations. Our method enforces counterfactual invariance, ensuring reward predictions remain consistent when irrelevant variables are altered. Through experiments on both synthetic and real-world datasets, we show that our approach mitigates various types of spurious correlations effectively, resulting in more reliable and fair alignment of LLMs with human preferences. As a drop-in enhancement to the existing RLHF workflow, our causal reward modeling provides a practical way to improve the trustworthiness and fairness of LLM finetuning.",
+  "tldr": "This work proposes a novel causal reward modeling approach that integrates causality to mitigate these spurious correlations in reward modeling and shows that this approach mitigates various types of spurious correlations effectively, resulting in more reliable and fair alignment of LLMs with human preferences.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chaoqi Wang",
+   "Zhuokai Zhao",
+   "Yibo Jiang",
+   "Zhaorun Chen",
+   "Chen Zhu",
+   "Yuxin Chen"
+  ],
+  "citations": 41,
+  "source": "semanticscholar",
+  "source_id": "44dcaa20f5eb5c5fd5b773ef9a41629cbebe452f",
+  "paper_id": "dblp:journals/corr/abs-2501-09620",
+  "doi": "10.48550/arXiv.2501.09620",
+  "arxiv_id": "2501.09620",
+  "dblp_key": "journals/corr/abs-2501-09620",
+  "paper_url": "https://www.semanticscholar.org/paper/44dcaa20f5eb5c5fd5b773ef9a41629cbebe452f",
+  "published_iso": "2025-01-16",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "WIMLE: Uncertainty-Aware World Models with IMLE for Sample-Efficient Continuous Control",
+  "title_norm": "wimle uncertainty aware world models with imle for sample efficient continuous c",
+  "abstract": "Model-based reinforcement learning promises strong sample efficiency but often underperforms in practice due to compounding model error, unimodal world models that average over multi-modal dynamics, and overconfident predictions that bias learning. We introduce WIMLE, a model-based method that extends Implicit Maximum Likelihood Estimation (IMLE) to the model-based RL framework to learn stochastic, multi-modal world models without iterative sampling and to estimate predictive uncertainty via ensembles and latent sampling. During training, WIMLE weights each synthetic transition by its predicted confidence, preserving useful model rollouts while attenuating bias from uncertain predictions and enabling stable learning. Across $40$ continuous-control tasks spanning DeepMind Control, MyoSuite, and HumanoidBench, WIMLE achieves superior sample efficiency and competitive or better asymptotic performance than strong model-free and model-based baselines. Notably, on the challenging Humanoid-run task, WIMLE improves sample efficiency by over $50$\\% relative to the strongest competitor, and on HumanoidBench it solves $8$ of $14$ tasks (versus $4$ for BRO and $5$ for SimbaV2). These results highlight the value of IMLE-based multi-modality and uncertainty-aware weighting for stable model-based RL.",
+  "tldr": "WIMLE, a model-based method that extends Implicit Maximum Likelihood Estimation to the model-based RL framework to learn stochastic, multi-modal world models without iterative sampling and to estimate predictive uncertainty via ensembles and latent sampling, achieves superior sample efficiency and competitive or better asymptotic performance than strong model-free and model-based baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mehran Aghabozorgi",
+   "Alireza Moazeni",
+   "Yanshun Zhang",
+   "Ke Li"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "1b8e680f2600bd44295578cf1f9a0fa8a30d2370",
+  "paper_id": "dblp:journals/corr/abs-2602-14351",
+  "doi": "10.48550/arXiv.2602.14351",
+  "arxiv_id": "2602.14351",
+  "dblp_key": "journals/corr/abs-2602-14351",
+  "paper_url": "https://www.semanticscholar.org/paper/1b8e680f2600bd44295578cf1f9a0fa8a30d2370",
+  "published_iso": "2026-02-15",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "TacCoRL: Integrating Tactile Feedback into VLA via Simulation",
+  "title_norm": "taccorl integrating tactile feedback into vla via simulation",
+  "abstract": "Vision-language-action (VLA) models provide strong visual, language, and action priors for robot manipulation, but visual observations alone often miss the local contact state required for contact-rich tasks. We present TacCoRL, a scalable framework that injects Tactile feedback into VLA policies and improves them through sim-real Co-training and simulation-based reinforcement learning (RL), without requiring large-scale tactile pretraining or extensive real-world contact exploration. The key idea is not only adding touch as an input, but learning how contact readings should modulate action responses in near-failure states that are rare in demonstrations and risky to collect on hardware. We use a real-aligned simulator as a closed-loop training environment for contact interaction. Mixed simulated and real trajectories first warm-start tactile-conditioned actions in the pretrained policy. Reinforcement learning with verifiable task rewards then optimizes the policy using simulated contact rollouts. It reinforces tactile-conditioned actions that lead to task completion, while a supervised objective on real trajectories keeps the refined policy anchored to deployment visual, tactile, and action distributions. The resulting policy transfers directly to the real robot without privileged simulation state or online real-world RL. Across four bimanual contact-rich tasks, the final visuo-tactile policy achieves an average success rate of 72.5%, compared to baseline of 50.0%. Result videos and more details are available at https://tac-corl.github.io/",
+  "tldr": "TacCoRL is presented, a scalable framework that injects Tactile feedback into VLA policies and improves them through sim-real Co-training and simulation-based reinforcement learning (RL), without requiring large-scale tactile pretraining or extensive real-world contact exploration.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Siyu Ma",
+   "Yu Liang",
+   "Chang Yu",
+   "Yunuo Chen",
+   "Hao Su",
+   "Yixin Zhu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c9fcace09fb64a167a2d50f5997ac46014767efc",
+  "paper_id": "dblp:journals/corr/abs-2606-11743",
+  "doi": "10.48550/arXiv.2606.11743",
+  "arxiv_id": "2606.11743",
+  "dblp_key": "journals/corr/abs-2606-11743",
+  "paper_url": "https://www.semanticscholar.org/paper/c9fcace09fb64a167a2d50f5997ac46014767efc",
+  "published_iso": "2026-06-10",
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ }
+]

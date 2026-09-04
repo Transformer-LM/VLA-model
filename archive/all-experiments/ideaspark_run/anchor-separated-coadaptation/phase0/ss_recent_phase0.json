@@ -1,0 +1,1782 @@
+[
+ {
+  "title": "$\\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
+  "title_norm": "tau_0 vla a hierarchical robot foundation model with world model guided test tim",
+  "abstract": "Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $\\tau_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.",
+  "tldr": "Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Xiaowei Cai",
+   "Yunuo Cai",
+   "Bin Chen",
+   "Jingxiao Chen",
+   "Zhi Chen",
+   "Siyuan Feng"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ed8708bf8473d8889ce271a37a15e4aa883e4712",
+  "paper_id": "arxiv:2608.16885",
+  "doi": "",
+  "arxiv_id": "2608.16885",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ed8708bf8473d8889ce271a37a15e4aa883e4712",
+  "published_iso": "2026-08-17",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "RISE: Self-Improving Robot Policy with Compositional World Model",
+  "title_norm": "rise self improving robot policy with compositional world model",
+  "abstract": "Despite the sustained scaling on model capacity and data acquisition, Vision-Language-Action (VLA) models remain brittle in contact-rich and dynamic manipulation tasks, where minor execution deviations can compound into failures. While reinforcement learning (RL) offers a principled path to robustness, on-policy RL in the physical world is constrained by safety risk, hardware cost, and environment reset. To bridge this gap, we present RISE, a scalable framework of robotic reinforcement learning via imagination. At its core is a Compositional World Model that (i) predicts multi-view future via a controllable dynamics model, and (ii) evaluates imagined outcomes with a progress value model, producing informative advantages for the policy improvement. Such compositional design allows state and value to be tailored by best-suited yet distinct architectures and objectives. These components are integrated into a closed-loop self-improving pipeline that continuously generates imaginary rollouts, estimates advantages, and updates the policy in imaginary space without costly physical interaction. Across three challenging real-world tasks, RISE yields significant improvement over prior art, with more than +35% absolute performance increase in dynamic brick sorting, +45% for backpack packing, and +35% for box closing, respectively.",
+  "tldr": "RISE is a scalable framework of robotic reinforcement learning via imagination that predicts multi-view future via a controllable dynamics model, and evaluates imagined outcomes with a progress value model, producing informative advantages for the policy improvement.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jiazhi Yang",
+   "Kun-Li Channing Lin",
+   "Jinwei Li",
+   "Wencong Zhang",
+   "Tianwei Lin",
+   "Longyan Wu"
+  ],
+  "citations": 32,
+  "source": "semanticscholar",
+  "source_id": "64604f8fe171472d66bb7c7fb29ad42414c5925a",
+  "paper_id": "dblp:journals/corr/abs-2602-11075",
+  "doi": "10.48550/arXiv.2602.11075",
+  "arxiv_id": "2602.11075",
+  "dblp_key": "journals/corr/abs-2602-11075",
+  "paper_url": "https://www.semanticscholar.org/paper/64604f8fe171472d66bb7c7fb29ad42414c5925a",
+  "published_iso": "2026-02-11",
+  "from_query": [
+   "reality-anchored imagined robot policy updates",
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Light-WAM: Efficient World Action Models with State-Fusion Action Decoding",
+  "title_norm": "light wam efficient world action models with state fusion action decoding",
+  "abstract": "World Action Models (WAMs) extend robot policy learning by incorporating future prediction as an additional training objective, encouraging the policy to encode task-relevant temporal structure in its representations. Current WAMs often rely on large-scale generative architectures that incur high training costs and inference latency, making them difficult to deploy as efficient closed-loop policies. We propose Light-WAM, a lightweight World Action Model for efficient robot manipulation. Specifically, it is built with a compact video backbone and performs future-video supervision in a downsampled latent space, reducing the cost of video co-training while retaining its benefits for representation learning. For action prediction, Light-WAM introduces the StateFusionActionExpert, which reads adapted states from multiple backbone layers, fuses them through learned-query pooling, and directly predicts action chunks in a single forward pass. This design provides an efficient interface between video backbone representations and robot actions, avoiding the need for heavy generative action experts. Experiments demonstrate that Light-WAM maintains strong performance on LIBERO and achieves usable multi-task performance on RoboTwin 2.0, while using only 0.44B trainable parameters. It also achieves 72.03ms inference latency with 4.1GiB peak GPU memory and improved training throughput.",
+  "tldr": "Light-WAM is proposed, a lightweight World Action Model for efficient robot manipulation built with a compact video backbone and performs future-video supervision in a downsampled latent space, reducing the cost of video co-training while retaining its benefits for representation learning.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ziang Li",
+   "Dongzhou Cheng",
+   "Yibin Wang",
+   "Shiyu Wang",
+   "Xiaoyang Xu",
+   "Lingxuan Weng"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "f2d6863717cdae5ef1105f920e4d4cf81df4bf4d",
+  "paper_id": "dblp:journals/corr/abs-2606-08242",
+  "doi": "10.48550/arXiv.2606.08242",
+  "arxiv_id": "2606.08242",
+  "dblp_key": "journals/corr/abs-2606-08242",
+  "paper_url": "https://www.semanticscholar.org/paper/f2d6863717cdae5ef1105f920e4d4cf81df4bf4d",
+  "published_iso": "2026-06-06",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "DROID-ANCHOR: Odometry-Anchored Recurrent Metric Depth Estimation",
+  "title_norm": "droid anchor odometry anchored recurrent metric depth estimation",
+  "abstract": "Precise metric depth estimation is fundamental for autonomous robot navigation, yet monocular systems inherently suffer from scale ambiguity and scale drift. While recent recurrent flow-based SLAM systems have demonstrated state-of-the-art robustness, they remain scale-ambiguous. In this paper, we propose Metric-DROID, an end-to-end recurrent architecture that anchors visual SLAM to physical reality by integrating proprioceptive odometry. Our framework introduces the following innovations: (1) A LSTM Update Operator that encodes high-frequency odometry sequences into spatial feature maps, providing a persistent metric bias for iterative refinement. (2) An Uncertainty-Aware Metric Backend ($BA_{odom}$) that treats odometry as a geometric anchor with learned heteroscedastic covariance. By regressing a time-varying metric uncertainty $\\Sigma_{o}$, our system intelligently balances visual re-projection and metric translation residuals, effectively mitigating the impact of wheel-slip and sensor noise. (3) We further propose a selective residual fine-tuning strategy to preserve pre-trained geometric priors while enabling zero-shot metric alignment.",
+  "tldr": "Metric-DROID is proposed, an end-to-end recurrent architecture that anchors visual SLAM to physical reality by integrating proprioceptive odometry and proposes a selective residual fine-tuning strategy to preserve pre-trained geometric priors while enabling zero-shot metric alignment.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yuxuan Chen",
+   "Brook Du"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "d4a6b33c8fe9ebf0f31c2db4111a46f9beb2cdf3",
+  "paper_id": "arxiv:2607.17058",
+  "doi": "",
+  "arxiv_id": "2607.17058",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d4a6b33c8fe9ebf0f31c2db4111a46f9beb2cdf3",
+  "published_iso": "2026-07-19",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Simulation Distillation: Pretraining World Models in Simulation for Rapid Real-World Adaptation",
+  "title_norm": "simulation distillation pretraining world models in simulation for rapid real wo",
+  "abstract": "Robot learning requires adaptation methods that improve reliably from limited, mixed-quality interaction data. This is especially challenging in long-horizon, contact-rich tasks, where end-to-end policy finetuning remains inefficient and brittle. World models offer a compelling alternative: by predicting the outcomes of candidate action sequences, they enable online planning through counterfactual reasoning. However, training action-conditioned robotic world models directly in the real world requires diverse data at impractical scale. We introduce Simulation Distillation (SimDist), a framework that uses physics simulators as a scalable source of action-conditioned robot experience. During pretraining, SimDist distills structural priors from the simulator into a world model that enables planning from raw real-world observations. During real-world adaptation, SimDist transfers the encoder, reward model, and value function learned in simulation, and updates only the latent dynamics model using real-world prediction losses. This reduces adaptation to supervised system identification while preserving dense, long-horizon planning signals for online improvement. Across contact-rich manipulation and quadruped locomotion tasks, SimDist rapidly improves with experience, while prior adaptation methods struggle to make progress or degrade during online finetuning. Project website and code: https://sim-dist.github.io",
+  "tldr": "SimDist is introduced, a framework that uses physics simulators as a scalable source of action-conditioned robot experience and rapidly improves with experience, while prior adaptation methods struggle to make progress or degrade during online finetuning.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jacob Levy",
+   "Tyler Westenbroek",
+   "Kevin Huang",
+   "Fernando Palafox",
+   "Patrick Yin",
+   "Shayegan Omidshafiei"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "86ac34a981377baf2d3cdfebdf1e49322359b20d",
+  "paper_id": "dblp:journals/corr/abs-2603-15759",
+  "doi": "10.48550/arXiv.2603.15759",
+  "arxiv_id": "2603.15759",
+  "dblp_key": "journals/corr/abs-2603-15759",
+  "paper_url": "https://www.semanticscholar.org/paper/86ac34a981377baf2d3cdfebdf1e49322359b20d",
+  "published_iso": "2026-03-16",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Human-Guided Online Reward Adaptation for Real-Robot Arm Manipulation",
+  "title_norm": "human guided online reward adaptation for real robot arm manipulation",
+  "abstract": "Real-world reinforcement learning enables robots to adapt directly to complex physical dynamics, avoiding the reality gap inherent in simulation and rendering previously infeasible manipulation skills a reality. However, the high cost of real-world exploration strictly limits sample availability. Such tight interaction budgets make sparse rewards insufficient for sample-efficient learning in real-robot arm manipulation, creating the need for dense reward supervision. Although pretrained reward models provide useful semantic priors, their generic predictions are often misaligned with embodiment-specific and online dynamics during physical deployment. To address this issue, we propose adaptive reward via human interaction (ARHI), a parameter-efficient framework for online adaptation of VLM-based rewards in real-robot reinforcement learning. Rather than treating the pretrained reward as a fixed module, ARHI continuously recalibrates it using lightweight online updates, while preserving the semantic priors of the frozen backbone. To support this online reward adaptation under sparse human feedback, we further integrate the method into an asynchronous dual-loop system that converts sparse interventions into dense supervisory signals for reward and policy learning. Extensive real-world experiments across six manipulation tasks demonstrate that ARHI outperforms strong baselines, reducing human effort by 28.0%, while achieving a 47.6% reduction in performance drop under challenging deployment shifts.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tianxing Zhou",
+   "Haojia Ao",
+   "Haoyang Lu",
+   "Guangyan Chen",
+   "Zichen Zhou",
+   "Te Cui"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "110242c142e1b95cb3e0a6053326ef49c5b3e5e5",
+  "paper_id": "dblp:journals/ral/ZhouALCZCYY26",
+  "doi": "10.1109/LRA.2026.3699150",
+  "arxiv_id": "",
+  "dblp_key": "journals/ral/ZhouALCZCYY26",
+  "paper_url": "https://www.semanticscholar.org/paper/110242c142e1b95cb3e0a6053326ef49c5b3e5e5",
+  "published_iso": "2026-08-01",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Mask World Model: Predicting What Matters for Robust Robot Policy Learning",
+  "title_norm": "mask world model predicting what matters for robust robot policy learning",
+  "abstract": "World models derived from large-scale video generative pre-training have emerged as a promising paradigm for generalist robot policy learning. However, standard approaches often focus on high-fidelity RGB video prediction, this can result in overfitting to irrelevant factors, such as dynamic backgrounds and illumination changes. These distractions reduce the model's ability to generalize, ultimately leading to unreliable and fragile control policies. To address this, we introduce the Mask World Model (MWM), which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels. This shift imposes a geometric information bottleneck, forcing the model to capture essential physical dynamics and contact relations while filtering out visual noise. We seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control. Extensive evaluations demonstrate the superiority of MWM on the LIBERO and RLBench simulation benchmarks, significantly outperforming the state-of-the-art RGB-based world models. Furthermore, real-world experiments and robustness evaluation (via random token pruning) reveal that MWM exhibits superior generalization capabilities and robust resilience to texture information loss.",
+  "tldr": "The Mask World Model is introduced, which leverages video diffusion architectures to predict the evolution of semantic masks instead of pixels and seamlessly integrate this mask dynamics backbone with a diffusion-based policy head to enable robust end-to-end control.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Y. Lou",
+   "Xiaowei Chi",
+   "Xiaojie Zhang",
+   "Zezhong Qian",
+   "Chengxuan Li",
+   "Rongyu Zhang"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "d1e486e778d1e8bb44cc35ad5f6752ef5c893e55",
+  "paper_id": "dblp:journals/corr/abs-2604-19683",
+  "doi": "10.48550/arXiv.2604.19683",
+  "arxiv_id": "2604.19683",
+  "dblp_key": "journals/corr/abs-2604-19683",
+  "paper_url": "https://www.semanticscholar.org/paper/d1e486e778d1e8bb44cc35ad5f6752ef5c893e55",
+  "published_iso": "2026-04-21",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "RoboTALES: Learning Reasoning-Guided Robot Policies via Task-Aligned Simulated Futures",
+  "title_norm": "robotales learning reasoning guided robot policies via task aligned simulated fu",
+  "abstract": "Pretrained video generative models are promising backbones for visuomotor control, but their imagined futures often drift from task intent and are not reliably action-conditional. As a result, these models can be difficult to use for planning or policy extraction. To address these limitations, we propose RoboTALES, a single-stage framework that learns task-aligned simulated futures and uses them to train robot policies. Our approach introduces two key innovations: (1) a hierarchical LLM-based planner that breaks complex tasks into a sequence of subgoals to guide the model's imagination; and (2) a VLM-based critic that evaluates these ``imagined''futures and uses reward-based feedback to keep the model's internal representations focused on the goal. By anchoring the video generator in abstract reasoning, we produce temporally consistent rollouts and more coherent actions. We evaluate RoboTALES on diverse manipulation tasks from RoboCasa and LIBERO10, and show that our method consistently outperforms existing methods, especially in long-horizon tasks. Our code and models are publicly available at https://github.com/hananshafi/RoboTALES.",
+  "tldr": "This work proposes RoboTALES, a single-stage framework that learns task-aligned simulated futures and uses them to train robot policies and introduces two key innovations: a hierarchical LLM-based planner that breaks complex tasks into a sequence of subgoals to guide the model's imagination and a VLM-based critic that evaluates these ``imagined'' futures.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Hanan Gani",
+   "Tejal Kulkarni",
+   "Madhoolika Chodavarapu",
+   "Nicklas Hansen",
+   "M. Chandraker"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f87f6ca879b9034977983aaed345a000419612fa",
+  "paper_id": "arxiv:2607.06018",
+  "doi": "",
+  "arxiv_id": "2607.06018",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f87f6ca879b9034977983aaed345a000419612fa",
+  "published_iso": "2026-07-07",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+  "title_norm": "robopocket improve robot policies instantly with your phone",
+  "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+  "tldr": "RoboPocket is a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones with a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight, and implements an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Junjie Fang",
+   "Wendi Chen",
+   "Han Xue",
+   "Fangyuan Zhou",
+   "Tian Le",
+   "Yi Wang"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "cf68e4e281f878f4a7433599bd80eab811cedc75",
+  "paper_id": "dblp:journals/corr/abs-2603-05504",
+  "doi": "10.48550/arXiv.2603.05504",
+  "arxiv_id": "2603.05504",
+  "dblp_key": "journals/corr/abs-2603-05504",
+  "paper_url": "https://www.semanticscholar.org/paper/cf68e4e281f878f4a7433599bd80eab811cedc75",
+  "published_iso": "2026-03-05",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Policy and World Modeling Co-Training for Language Agents",
+  "title_norm": "policy and world modeling co training for language agents",
+  "abstract": "Reinforcement learning (RL) improves large language model (LLM) agents by teaching them which actions lead to high rewards, but provides little supervision on what those actions do to the environment. World modeling (WM) can fill this gap, yet existing approaches often require separate simulators, extra training stages, or additional inference-time computation. We observe that on-policy RL rollouts already contain the needed signal: each transition pairs an action with its resulting next observation. Based on this observation, we propose PaW, a Policy and World modeling co-training framework that adds auxiliary WM supervision to the same policy during RL, without changing the inference paradigm. To make auxiliary WM supervision informative and stable, PaW introduces three components: action-entropy-based WM data selection, noise-tolerant WM loss, and reward-adaptive loss balancing. Experiments on three agentic task benchmarks show consistent improvements over strong RL baselines across models and RL algorithms. These results suggest that standard RL rollouts are a practical source of WM supervision for language-agent training.",
+  "tldr": "PaW is a Policy and World modeling co-training framework that adds auxiliary WM supervision to the same policy during RL, without changing the inference paradigm, and shows consistent improvements over strong RL baselines across models and RL algorithms.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ning Lu",
+   "Baijiong Lin",
+   "Shengcai Liu",
+   "Jiahao Wu",
+   "Haoze Lv",
+   "Yanbin Wei"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "b4723e3b265f39fb6a8806591e403a399fc5307c",
+  "paper_id": "dblp:journals/corr/abs-2606-02388",
+  "doi": "10.48550/arXiv.2606.02388",
+  "arxiv_id": "2606.02388",
+  "dblp_key": "journals/corr/abs-2606-02388",
+  "paper_url": "https://www.semanticscholar.org/paper/b4723e3b265f39fb6a8806591e403a399fc5307c",
+  "published_iso": "2026-06-01",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation",
+  "title_norm": "graft grounded and efficient online reinforcement adaptation for fine grained ro",
+  "abstract": "Pretrained vision-language-action (VLA) policies provide strong priors for robot manipulation, yet adapting them online to fine-grained biomedical tasks remains challenging. Task success often hinges on subtle, view-dependent visual cues, while task-level rewards provide little guidance about which regions matter, making it difficult to learn task-relevant visual grounding from limited real-robot interaction. Online adaptation is further constrained by the computational cost of VLA inference and replay-based updates. We introduce GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception. GRAFT uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment. It further combines single-step action generation with cached visual-language prefix reuse to accelerate online learning. Across four biomedical manipulation tasks, GRAFT improves success rates by 25 percentage points under matched adaptation budgets, while reducing the computational overhead of online policy updates.",
+  "tldr": "GRAFT (Grounded Reinforcement Adaptation for Fast Task Learning), a framework for efficient online VLA adaptation through grounded perception, uses region-level supervision to learn view-specific visual anchors that focus perception on task-relevant local cues without requiring region proposals at deployment.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yibo Qiu",
+   "Hao Ye",
+   "Shuang Sun",
+   "Zan Huang",
+   "Ronald X. Xu",
+   "Mingzhai Sun"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "fd501ac675af05836fcdb0a524c8013d45b106ab",
+  "paper_id": "arxiv:2608.27079",
+  "doi": "",
+  "arxiv_id": "2608.27079",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/fd501ac675af05836fcdb0a524c8013d45b106ab",
+  "published_iso": "2026-08-27",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Hi-WM: Human-in-the-World-Model for Scalable Robot Post-Training",
+  "title_norm": "hi wm human in the world model for scalable robot post training",
+  "abstract": "Post-training is essential for turning pretrained generalist robot policies into reliable task-specific controllers, but existing human-in-the-loop pipelines remain tied to physical execution: each correction requires robot time, scene setup, resets, and operator supervision in the real world. Meanwhile, action-conditioned world models have been studied mainly for imagination, synthetic data generation, and policy evaluation. We propose \\textbf{Human-in-the-World-Model (Hi-WM)}, a post-training framework that uses a learned world model as a reusable corrective substrate for failure-targeted policy improvement. A policy is first rolled out in closed loop inside the world model; when the rollout becomes incorrect or failure-prone, a human intervenes directly in the model to provide short corrective actions. Hi-WM caches intermediate states and supports rollback and branching, allowing a single failure state to be reused for multiple corrective continuations and yielding dense supervision around behaviors that the base policy handles poorly. The resulting corrective trajectories are then added back to the training set for post-training. We evaluate Hi-WM on three real-world manipulation tasks spanning both rigid and deformable object interaction, and on two policy backbones. Hi-WM improves real-world success by 37.9 points on average over the base policy and by 19.0 points over a world-model closed-loop baseline, while world-model evaluation correlates strongly with real-world performance (r = 0.953). These results suggest that world models can serve not only as generators or evaluators, but also as effective corrective substrates for scalable robot post-training.",
+  "tldr": "Human-in-the-World-Model is proposed, a post-training framework that uses a learned world model as a reusable corrective substrate for failure-targeted policy improvement and suggests that world models can serve not only as generators or evaluators, but also as effective corrective substrates for scalable robot post-training.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yaxuan Li",
+   "Zhongyi Zhou",
+   "Ye Chen",
+   "Yanjiang Guo",
+   "Jiaming Liu",
+   "Shanghang Zhang"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "3a6c881a21674a9428ad140584321339147ed79c",
+  "paper_id": "dblp:journals/corr/abs-2604-21741",
+  "doi": "10.48550/arXiv.2604.21741",
+  "arxiv_id": "2604.21741",
+  "dblp_key": "journals/corr/abs-2604-21741",
+  "paper_url": "https://www.semanticscholar.org/paper/3a6c881a21674a9428ad140584321339147ed79c",
+  "published_iso": "2026-04-23",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "The Open Ant: A Robot Platform for Reinforcement Learning Research",
+  "title_norm": "the open ant a robot platform for reinforcement learning research",
+  "abstract": "Reinforcement learning (RL) research has demonstrated success in both physical and simulated domains; however, the predominant methodology remains rooted in simulations. The predominance of simulations makes translating research to physical reality uncertain for both algorithms and researchers. We propose a physical platform that is designed to simplify the transition. In this paper, we present the Open Ant: a physical variant of the commonly used Gymnasium Ant environment, along with a simulation. We demonstrate that competent walking policies can be learned from scratch in approximately one hour directly from the physical robot's experience for two substantially different RL algorithms: SARSA($\\lambda$) and Soft Actor-Critic (SAC). Separately, we show policies that were learned in simulation transfer to reality. We also examine how well the platform supports a nimble experimental ecosystem. Specifically, we observe the speed with which new users from diverse backgrounds achieve their first success with the platform, and how easily the platform can be repaired and updated when hardware issues arise. Both the hardware design and software are available as open-source on GitHub for ease of customization. In summary, we advocate for the use of the Open Ant for RL researchers who frequently use simulated environments, so they can more easily include robot experiments in their evaluations.",
+  "tldr": "The Open Ant is presented: a physical variant of the commonly used Gymnasium Ant environment, along with a simulation, that demonstrates that competent walking policies can be learned from scratch in approximately one hour directly from the physical robot's experience for two substantially different RL algorithms: SARSA($\\lambda$) and Soft Actor-Critic (SAC).",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "E. Lupu",
+   "Patrick Spieler",
+   "Khurram Javed",
+   "Kristopher De Asis",
+   "John D. Martin",
+   "Martha Steenstrup"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6eb687aa873e864c52408d3244afbce1c1847594",
+  "paper_id": "arxiv:2607.18488",
+  "doi": "",
+  "arxiv_id": "2607.18488",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6eb687aa873e864c52408d3244afbce1c1847594",
+  "published_iso": "2026-07-20",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Interactive World Simulator for Robot Policy Training and Evaluation",
+  "title_norm": "interactive world simulator for robot policy training and evaluation",
+  "abstract": "Action-conditioned video prediction models (often referred to as world models) have shown strong potential for robotics applications, but existing approaches are often slow and struggle to capture physically consistent interactions over long horizons, limiting their usefulness for scalable robot policy training and evaluation. We present Interactive World Simulator, a framework for building interactive world models from a moderate-sized robot interaction dataset. Our approach leverages consistency models for both image decoding and latent-space dynamics prediction, enabling fast and stable simulation of physical interactions. In our experiments, the learned world models produce interaction-consistent pixel-level predictions and support stable long-horizon interactions for more than 10 minutes at 15 FPS on a single RTX 4090 GPU. Our framework enables scalable demonstration collection solely within the world models to train state-of-the-art imitation policies. Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, we find that policies trained on world-model-generated data perform comparably to those trained on the same amount of real-world data. Additionally, we evaluate policies both within the world models and in the real world across diverse tasks, and observe a strong correlation between simulated and real-world performance. Together, these results establish the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.",
+  "tldr": "Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, this work establishes the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yixuan Wang",
+   "Rhythm Syed",
+   "Fangyu Wu",
+   "Mengchao Zhang",
+   "A. Onol",
+   "Jose A. Barreiros"
+  ],
+  "citations": 26,
+  "source": "semanticscholar",
+  "source_id": "bd6e2ea7e39d44736ed7000de8033d08e243f8ee",
+  "paper_id": "dblp:journals/corr/abs-2603-08546",
+  "doi": "10.48550/arXiv.2603.08546",
+  "arxiv_id": "2603.08546",
+  "dblp_key": "journals/corr/abs-2603-08546",
+  "paper_url": "https://www.semanticscholar.org/paper/bd6e2ea7e39d44736ed7000de8033d08e243f8ee",
+  "published_iso": "2026-03-09",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Non-alignment revisited: Nigeria’s foreign policy between global power blocs",
+  "title_norm": "non alignment revisited nigeria s foreign policy between global power blocs",
+  "abstract": "Abstract \nThe paper investigates Nigeria’s foreign policy between global power blocs by revisiting non-alignment. It employed in this research is qualitative, descriptive, and analytical, with the focus being on investigating the foreign policies of Nigeria within the context of contemporary global political realities, involving multipolarity. The theoretical framework was anchored on the Neo-Non-Alignment Strategic Hedging Theory, which is a contemporary concept that seeks an updated form of traditional non-alignment notions, taking into consideration the realities of our contemporary world environment of multiple centres of power and multiple alliances and strategic blocs and rising powers. The study found that during the period when Nigeria remained non-aligned in the context of the Cold War, in reality, elements of Nigeria’s foreign policy decisions were strategically driven. The key insights suggest that Nigeria's non-aligned foreign policy reflected ideals of stronger nation-state leadership in Africa and of seeking alliances in economic and military relations. The study recommended that in order for Nigeria to rebuild its posture of non-alignment for the 21st century, there is a need to develop a strategic balancing that will weigh engagement with diverse global powers without compromising national sovereignty and freedom of decision-making. Also, comprehensive and impactful institutional changes would greatly enhance the capabilities and efficiency of the country's foreign institutions and foreign policy.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "British Journal of Interdisciplinary Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Patience Ikyaa-Ola Abidoye"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "72a4ae9454419457678500e08c0903b1b9f42407",
+  "paper_id": "doi:10.31039/bjir.v3i10.109",
+  "doi": "10.31039/bjir.v3i10.109",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/72a4ae9454419457678500e08c0903b1b9f42407",
+  "published_iso": "2026-01-01",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+  "title_norm": "vlaw iterative co improvement of vision language action policy and world model",
+  "abstract": "The goal of this paper is to improve the performance and reliability of vision-language-action (VLA) models through iterative online interaction. Since collecting policy rollouts in the real world is expensive, we investigate whether a learned simulator-specifically, an action-conditioned video generation model-can be used to generate additional rollout data. Unfortunately, existing world models lack the physical fidelity necessary for policy improvement: they are predominantly trained on demonstration datasets that lack coverage of many different physical interactions (particularly failure cases) and struggle to accurately model small yet critical physical details in contact-rich object manipulation. We propose a simple iterative improvement algorithm that uses real-world roll-out data to improve the fidelity of the world model, which can then, in turn, be used to generate supplemental synthetic data for improving the VLA model. In our experiments on a real robot, we use this approach to improve the performance of a state-of-the-art VLA model on multiple downstream tasks. We achieve a 39.2% absolute success rate improvement over the base policy and 11.6% improvement from training with the generated synthetic rollouts. Videos can be found at this anonymous website: https://sites.google.com/view/vla-w",
+  "tldr": "A simple iterative improvement algorithm is proposed that uses real-world roll-out data to improve the fidelity of the world model, which can then be used to generate supplemental synthetic data for improving the VLA model.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjiang Guo",
+   "Tony Lee",
+   "L. Shi",
+   "Jianyu Chen",
+   "Percy Liang",
+   "Chelsea Finn"
+  ],
+  "citations": 32,
+  "source": "semanticscholar",
+  "source_id": "affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "paper_id": "dblp:journals/corr/abs-2602-12063",
+  "doi": "10.48550/arXiv.2602.12063",
+  "arxiv_id": "2602.12063",
+  "dblp_key": "journals/corr/abs-2602-12063",
+  "paper_url": "https://www.semanticscholar.org/paper/affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "published_iso": "2026-02-12",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "EvoHIL: Self-Evolving Reward and Flow-Matched Policy Optimization for Robust Human-in-the-Loop Reinforcement Learning",
+  "title_norm": "evohil self evolving reward and flow matched policy optimization for robust huma",
+  "abstract": "Human-in-the-loop reinforcement learning (HIL-RL) enables robots to learn contact-rich manipulation from limited real-world interaction, but deployment exposes three coupled limitations: static visual reward models fail under scene changes; independently sampled actions cause temporally inconsistent motion; and vision-based policies remain sensitive to appearance shifts. We present EvoHIL, a unified framework that adapts the reward model, action generator, and visual do main within a staged human-in-the-loop learning process. First, self-evolving reward (SER) adapts the success classifier from human-confirmed positives and provisional weak negatives. Second, Action Flow Stabilization (AFS) generates temporally coherent action chunks through flow matching, grounding policy updates in executed action prefixes and demonstrated behavior. Third, retention-aware offline fine-tuning replays relit interaction data while anchoring the AFS actor-critic to prior behavior, adapting the visual domain without additional robot interaction. Across six manipulation tasks on Franka FR3 and SO-101 arms under a controlled lighting shift, EvoHIL improves task success, agreement with human-confirmation labels, motion smoothness, and completion time relative to human-in-the-loop and imitation baselines.Project page: https://anonymous4366.github.io/EvoHIL/",
+  "tldr": "EvoHIL is presented, a unified framework that adapts the reward model, action generator, and visual do main within a staged human-in-the-loop learning process to improve task success, agreement with human-confirmation labels, motion smoothness, and completion time relative to human-in-the-loop and imitation baselines.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Shuoqing Zhang",
+   "Tongtong Cheng",
+   "Xiru Gao",
+   "Jinzhuo Peng",
+   "Binjie Zheng",
+   "Jiahao Tu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "e66959dafec249adf5b2b802b931f884151a877a",
+  "paper_id": "arxiv:2608.03872",
+  "doi": "",
+  "arxiv_id": "2608.03872",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/e66959dafec249adf5b2b802b931f884151a877a",
+  "published_iso": "2026-08-04",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "A Mechanistic Analysis of Sim-and-Real Co-Training in Generative Robot Policies",
+  "title_norm": "a mechanistic analysis of sim and real co training in generative robot policies",
+  "abstract": "Co-training, which combines limited in-domain real-world data with abundant surrogate data such as simulation or cross-embodiment robot data, is widely used for training generative robot policies. Despite its empirical success, the mechanisms that determine when and why co-training is effective remain poorly understood. We investigate the mechanism of sim-and-real co-training through theoretical analysis and empirical study, and identify two intrinsic effects governing performance. The first, \\textbf{``structured representation alignment\"}, reflects a balance between cross-domain representation alignment and domain discernibility, and plays a primary role in downstream performance. The second, the \\textbf{``importance reweighting effect\"}, arises from domain-dependent modulation of action weighting and operates at a secondary level. We validate these effects with controlled experiments on a toy model and extensive sim-and-sim and sim-and-real robot manipulation experiments. Our analysis offers a unified interpretation of recent co-training techniques and motivates a simple method that consistently improves upon prior approaches. More broadly, our aim is to examine the inner workings of co-training and to facilitate research in this direction.",
+  "tldr": "The mechanism of sim-and-real co-training is investigated through theoretical analysis and empirical study, and two intrinsic effects governing performance are identified, which reflect a balance between cross-domain representation alignment and domain discernibility and operate at a secondary level.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu Lei",
+   "Minghuan Liu",
+   "Abhiram Maddukuri",
+   "Zhenyu Jiang",
+   "Yuke Zhu"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "c2ca49b08fe8afe4a2902e0b74ec780c11f5b081",
+  "paper_id": "dblp:journals/corr/abs-2604-13645",
+  "doi": "10.48550/arXiv.2604.13645",
+  "arxiv_id": "2604.13645",
+  "dblp_key": "journals/corr/abs-2604-13645",
+  "paper_url": "https://www.semanticscholar.org/paper/c2ca49b08fe8afe4a2902e0b74ec780c11f5b081",
+  "published_iso": "2026-04-15",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "EvoScene-VLA: Evolving Scene Beliefs Inside the Action Decoder for Chunked Robot Control",
+  "title_norm": "evoscene vla evolving scene beliefs inside the action decoder for chunked robot ",
+  "abstract": "Chunked vision-language-action (VLA) policies predict multi-step robot controls, conditioning each update on the current visual observation alone. Yet robot actions cause contact, occlusion, and object motion, and the geometry that later decisions depend on can change before the next visual update arrives. Spatial VLAs improve current-frame geometry. Temporal VLAs aggregate past frames. Neither maintains an action-updated scene prior across chunks. We argue for a persistent action-updated scene state across control calls, and introduce EvoScene-VLA. Its recurrent scene prefix carries a geometry-aware scene state across chunks. At each vision-language model (VLM) call, the VLM combines scene information from the current observation with the action-updated prior from the previous chunk; the action decoder outputs both the next action chunk and a compact scene update. This update becomes the next prior, which the VLM corrects against the new observation when the next call arrives. Each control call therefore starts from a scene prior that reflects both recent actions and fresh visual evidence. During training, \\textbf{Scene Predictor} supplies future scene-token targets, and Geometric Anchor aligns scene slots with frozen depth and 3D teachers. We discard both modules at deployment. On 31 RoboTwin tasks, EvoScene-VLA raises average success from 87.2% to 89.1% in fixed evaluation and from 86.1% to 88.5% in randomized evaluation. On the Galaxea R1-Lite real robot, EvoScene-VLA outperforms all baselines.",
+  "tldr": "This work argues for a persistent action-updated scene state across control calls, and introduces EvoScene-VLA, a vision-language-action policy that combines scene information from the current observation with the action-updated prior from the previous chunk.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chushan Zhang",
+   "Rui Lu",
+   "Jinguang Tong",
+   "Xuesong Li",
+   "Yikai Wang",
+   "Hongdong Li"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "1a8776d12f233047d9ba67e41d09bce90420926f",
+  "paper_id": "dblp:journals/corr/abs-2605-21862",
+  "doi": "10.48550/arXiv.2605.21862",
+  "arxiv_id": "2605.21862",
+  "dblp_key": "journals/corr/abs-2605-21862",
+  "paper_url": "https://www.semanticscholar.org/paper/1a8776d12f233047d9ba67e41d09bce90420926f",
+  "published_iso": "2026-05-21",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+  "title_norm": "a systematic study of data modalities and strategies for co training large behav",
+  "abstract": "Large behavior models have shown strong dexterous manipulation capabilities by extending imitation learning to large-scale training on multi-task robot data, yet their generalization remains limited by the insufficient robot data coverage. To expand this coverage without costly additional data collection, recent work relies on co-training: jointly learning from target robot data and heterogeneous data modalities. However, how different co-training data modalities and strategies affect policy performance remains poorly understood. We present a large-scale empirical study examining five co-training data modalities: standard vision-language data, dense language annotations for robot trajectories, cross-embodiment robot data, human videos, and discrete robot action tokens across single- and multi-phase training strategies. Our study leverages 4,000 hours of robot and human manipulation data and 50M vision-language samples to train vision-language-action policies. We evaluate 89 policies over 58,000 simulation rollouts and 2,835 real-world rollouts. Our results show that co-training with forms of vision-language and cross-embodiment robot data substantially improves generalization to distribution shifts, unseen tasks, and language following, while discrete action token variants yield no significant benefits. Combining effective modalities produces cumulative gains and enables rapid adaptation to unseen long-horizon dexterous tasks via fine-tuning. Training exclusively on robot data degrades the visiolinguistic understanding of the vision-language model backbone, while co-training with effective modalities restores these capabilities. Explicitly conditioning action generation on chain-of-thought traces learned from co-training data does not improve performance in our simulation benchmark. Together, these results provide practical guidance for building scalable generalist robot policies.",
+  "tldr": "A large-scale empirical study examining five co-training data modalities and showing that co-training with forms of vision-language and cross-embodiment robot data substantially improves generalization to distribution shifts, unseen tasks, and language following, while discrete action token variants yield no significant benefits.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fanqi Lin",
+   "K. Arora",
+   "Jean-Pierre Mercat",
+   "Haruki Nishimura",
+   "Paarth Shah",
+   "Cheng Xu"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "088211a917be33e10ffe9f9060fede92d83066e8",
+  "paper_id": "dblp:journals/corr/abs-2602-01067",
+  "doi": "10.48550/arXiv.2602.01067",
+  "arxiv_id": "2602.01067",
+  "dblp_key": "journals/corr/abs-2602-01067",
+  "paper_url": "https://www.semanticscholar.org/paper/088211a917be33e10ffe9f9060fede92d83066e8",
+  "published_iso": "2026-02-01",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "R2S-EGO: Dual-Proxy Refinement for Sparse-Capture Real-to-Sim",
+  "title_norm": "r2s ego dual proxy refinement for sparse capture real to sim",
+  "abstract": "Real-to-sim (R2S) depends on scene representations that render observations along robot ego trajectories, yet dense multi-view capture limits per-environment real-image capture-count efficiency, and sparse human capture can leave behavior-scoped robot views under-supported. Camera-controlled synthesis can fill missing views, but its use in R2S requires behavior-admissible queries and capture-anchored structural conditioning. We present R2S-EGO, which couples a simulator-derived robot proxy that represents the behavior-scoped executable query domain with a capture-anchored geometry proxy that supplies scene-specific structural conditions. Within this domain, fixed- budget selection targets current support deficits for which geometry support is available. The generated observations are assimilated as pseudo-observations to refine the visual asset, while real captures remain anchors. The fused geometry proxy also supplies the scene collision surface, which is refreshed between rounds. Together, these updates refine the existing simulation scene while its robot dynamics and control stack stay fixed. Across 48 frozen Unitree G1 ego views in three Replica scenes, six-view R2S-EGO reaches 19.062 dB PSNR, compared with 14.226 dB for the strongest reported R2S baseline. Across five paired policy-training seeds, R2S-EGO achieves 82.5% +/- 6.8% real-G1 sitting success, compared with 10.0% +/- 10.5% for GaussGym.",
+  "tldr": "This work presents R2S-EGO, which couples a simulator-derived robot proxy that represents the behavior-scoped executable query domain with a capture-anchored geometry proxy that supplies scene-specific structural conditions.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Shuai Fang",
+   "Xin Deng",
+   "Yuchen Kang",
+   "Zhenjiang Li",
+   "Jie Chen"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "53a6167456717e51cb76c342894d6a9e369dada7",
+  "paper_id": "arxiv:2608.06827",
+  "doi": "",
+  "arxiv_id": "2608.06827",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/53a6167456717e51cb76c342894d6a9e369dada7",
+  "published_iso": "2026-08-07",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "BEACON: Cross-Domain Co-Training of Generative Robot Policies via Best-Effort Adaptation",
+  "title_norm": "beacon cross domain co training of generative robot policies via best effort ada",
+  "abstract": "We introduce BEACON--Best-Effort Adaptation for Cross-Domain Co-Training--a theory-driven framework for training generative robot policies with abundant source demonstrations and limited target demonstrations. BEACON casts cross-domain co-training as a discrepancy-aware importance-reweighting problem, jointly learning a diffusion-based visuomotor policy and per-sample source weights that minimize an objective informed by target-domain generalization guarantees. To make best-effort adaptation practical for high-dimensional sequence policies, we develop scalable instance-level discrepancy estimators, stochastic alternating updates for policy and weights, and a multi-source extension that balances heterogeneous source domains. Across sim-to-sim, sim-to-real, and multi-source manipulation settings, BEACON improves robustness and data efficiency over target-only, fixed-ratio co-training, and feature-alignment baselines. Importantly, even without an explicit alignment objective, BEACON achieves feature alignment as an implicit result of discrepancy-aware cross-domain co-training.",
+  "tldr": "BEACON is introduced, a theory-driven framework for training generative robot policies with abundant source demonstrations and limited target demonstrations that improves robustness and data efficiency over target-only, fixed-ratio co-training, and feature-alignment baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "An Zhang",
+   "Han Qi",
+   "Heng Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "41ccdbee7928baedb0fd6f0c051d1a4fca3065f1",
+  "paper_id": "dblp:journals/corr/abs-2605-08571",
+  "doi": "10.48550/arXiv.2605.08571",
+  "arxiv_id": "2605.08571",
+  "dblp_key": "journals/corr/abs-2605-08571",
+  "paper_url": "https://www.semanticscholar.org/paper/41ccdbee7928baedb0fd6f0c051d1a4fca3065f1",
+  "published_iso": "2026-05-09",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Escaping the Diversity Trap in Robotic Manipulation via Anchor-Centric Adaptation",
+  "title_norm": "escaping the diversity trap in robotic manipulation via anchor centric adaptatio",
+  "abstract": "While Vision-Language-Action (VLA) models offer broad general capabilities, deploying them on specific hardware requires real-world adaptation to bridge the embodiment gap. Since robot demonstrations are costly, this adaptation must often occur under a strict data budget. In this work, we identify a critical diversity trap: the standard heuristic of\"maximizing coverage\"by collecting diverse, single-shot demonstrations can be self-defeating due to non-vanishing estimation noise. We formalize this phenomenon as a Coverage--Density Trade-off. By decomposing the policy error into estimation (density) and extrapolation (coverage) terms, we characterize an interior optimal allocation of unique conditions for a fixed budget. Guided by this analysis, we propose Anchor-Centric Adaptation (ACA), a two-stage framework that first stabilizes a policy skeleton through repeated demonstrations at core anchors, then selectively expands coverage to high-risk boundaries via teacher-forced error mining and constrained residual updates. Real-robot experiments validate our trade-off framework and demonstrate that ACA significantly improves task reliability and success rates over standard diverse sampling strategies under the same budget.",
+  "tldr": "This work identifies a critical diversity trap and proposes Anchor-Centric Adaptation (ACA), a two-stage framework that first stabilizes a policy skeleton through repeated demonstrations at core anchors, then selectively expands coverage to high-risk boundaries via teacher-forced error mining and constrained residual updates.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanzhe Chen",
+   "K. Ma",
+   "Qi Lv",
+   "Yiqi Lin",
+   "Zechen Bai",
+   "Chen Gao"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "0d850465fa89b679e286f53311a24d7ea0fd9b84",
+  "paper_id": "dblp:journals/corr/abs-2605-07381",
+  "doi": "10.48550/arXiv.2605.07381",
+  "arxiv_id": "2605.07381",
+  "dblp_key": "journals/corr/abs-2605-07381",
+  "paper_url": "https://www.semanticscholar.org/paper/0d850465fa89b679e286f53311a24d7ea0fd9b84",
+  "published_iso": "2026-05-08",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Foundation Models as Decision Priors in Robotics: World-Model vs Policy Prior",
+  "title_norm": "foundation models as decision priors in robotics world model vs policy prior",
+  "abstract": "We survey how foundation models (FMs) act as decision priors in robot autonomy, contrasting world-model priors with policy priors across verifiability, constraint handling, latency, planning horizon, and out-of-distribution robustness. We formalize non-interchangeability boundaries, propose integration patterns (hierarchical, dynamic switching, blended control, human-in-the-loop, iterative co-evolution), and outline a benchmarking protocol together with deployment governance checklists. The resulting framework provides actionable guidance for engineering safe, efficient foundation-model-driven robot decision systems.",
+  "tldr": "This work surveys how foundation models act as decision priors in robot autonomy, contrasting world-model priors with policy priors across verifiability, constraint handling, latency, planning horizon, and out-of-distribution robustness, and formalizes non-interchangeability boundaries.",
+  "year": 2026,
+  "venue": "Journal of Intelligence and Knowledge Engineering",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Chang Wu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0ea3456fd82597a54220fbf880f2b210e32f42da",
+  "paper_id": "doi:10.62517/jike.202604126",
+  "doi": "10.62517/jike.202604126",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0ea3456fd82597a54220fbf880f2b210e32f42da",
+  "published_iso": "2026-03-01",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "\"Robots should not be used for household chores because that would make us lazy\": How Scaffolding Shapes Children’s Capacity to Imagine Educational Futures",
+  "title_norm": "robots should not be used for household chores because that would make us lazy h",
+  "abstract": "This paper examines how children’s capacity to imagine educational futures is shaped by the conditions under which participatory speculative design is introduced. Drawing on workshops with 47 eighth-grade students in India, we explore how scaffolding influences engagement with emerging technologies and future-oriented thinking. Across two sessions, students encountered generative Artificial Intelligence (AI), virtual reality, and a social robot, engaging in design fiction and scenario drawing. Our findings show that rather than generating distant fantasies, speculative design enabled a critical examination of students’ existing educational contexts. With careful scaffolding, children articulated transformative visions that challenged exam-centric schooling and prioritized emotional well-being; without it, imaginaries remained anchored to present constraints. We contribute to Child-Computer Interaction research by framing scaffolding as a decolonial intervention essential for future-making in high-pressure pedagogical environments. Specifically, we propose affective scaffolding and agency-preserving design as frameworks to bridge emotional gaps and ensure human-centric innovation in the Global South.",
+  "tldr": "This paper proposes affective scaffolding and agency-preserving design as frameworks to bridge emotional gaps and ensure human-centric innovation in the Global South by framing scaffolding as a decolonial intervention essential for future-making in high-pressure pedagogical environments.",
+  "year": 2026,
+  "venue": "International Conference on Interaction Design and Children",
+  "publication_types": [
+   "Book",
+   "JournalArticle"
+  ],
+  "authors": [
+   "Priyanka Sebastian",
+   "Sumita Sharma",
+   "N. Iivari",
+   "Marianne Kinnula",
+   "Aakash Gautam",
+   "Charu Monga"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c2718cef70f74ba031a0e63e108c653666440b47",
+  "paper_id": "dblp:conf/acmidc/SebastianSIKGMV26",
+  "doi": "10.1145/3773077.3806133",
+  "arxiv_id": "",
+  "dblp_key": "conf/acmidc/SebastianSIKGMV26",
+  "paper_url": "https://doi.org/10.1145/3773077.3806133",
+  "published_iso": "2026-06-21",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "World-Gymnast: Training Robots with Reinforcement Learning in a World Model",
+  "title_norm": "world gymnast training robots with reinforcement learning in a world model",
+  "abstract": "Robot learning from interacting with the physical world is fundamentally bottlenecked by the cost of physical interaction. The two alternatives, supervised finetuning (SFT) from expert demonstrations and reinforcement learning (RL) in a software-based simulator, are limited by the amount of expert data available and the sim-to-real gap for manipulation. With the recent emergence of world models learned from real-world video-action data, we ask the question of whether training a policy in a world model can be more effective than supervised learning or software simulation in achieving better real-robot performance. We propose World-Gymnast, which performs RL finetuning of a vision-language-action (VLA) policy by rolling out the policy in an action-conditioned video world model and rewarding the rollouts with a vision-language model (VLM). On the Bridge robot setup, World-Gymnast outperforms SFT by as much as 18x and outperforms software simulator by as much as 2x. More importantly, World-Gymnast demonstrates intriguing capabilities of RL with a world model, including training on diverse language instructions and novel scenes from the world model, test-time training in a novel scene, and online iterative world model and policy improvement. Our results suggest learning a world model and training robot policies in the cloud could be the key to bridging the gap between robots that work in demonstrations and robots that can work in anyone's household.",
+  "tldr": "World-Gymnast is proposed, which performs RL finetuning of a vision-language-action policy by rolling out the policy in an action-conditioned video world model and rewarding the rollouts with a vision-language model (VLM).",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ansh Kumar Sharma",
+   "Yixiang Sun",
+   "Ning Lu",
+   "Yunzhe Zhang",
+   "Jiarao Liu",
+   "Sherry Yang"
+  ],
+  "citations": 22,
+  "source": "semanticscholar",
+  "source_id": "3859de96b3c95d8c814a6c850df29f1b97d0644d",
+  "paper_id": "dblp:journals/corr/abs-2602-02454",
+  "doi": "10.48550/arXiv.2602.02454",
+  "arxiv_id": "2602.02454",
+  "dblp_key": "journals/corr/abs-2602-02454",
+  "paper_url": "https://www.semanticscholar.org/paper/3859de96b3c95d8c814a6c850df29f1b97d0644d",
+  "published_iso": "2026-02-02",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Innovative Risk Control Measures for Future Health Threats Among Tourism Destinations in the Province of Rizal",
+  "title_norm": "innovative risk control measures for future health threats among tourism destina",
+  "abstract": "This study examined the use of innovative risk control measures for future health threats among tourism destinations in the Province of Rizal. Anchored on Innovation Diffusion Theory, the study used a descriptive quantitative research design through a survey technique and a researcher-made questionnaire-checklist. The respondents were 384 domestic tourists who stayed overnight in Rizal tourism destinations from January 2023 to December 2024, selected through purposive sampling. Findings showed that most respondents were female, aged 26 to 35, single, college graduates, residents of Rizal, and visitors of Antipolo City. The respondents perceived innovative risk control measures as effective, particularly the use of social media for health-risk awareness, air purifiers, electrostatic sprayers, and ultraviolet light. They were generally knowledgeable about virtual reality experiences, QR codes, and mobile applications, but had lower knowledge of robots, digital key systems, and cleaning robot systems. Tourism destinations in Rizal were perceived to often implement risk control measures, mainly cleanliness practices, health-risk information, air purifiers, and sanitation technologies, while advanced systems such as face recognition and service robots were least implemented. Significant differences in perceived effectiveness and perceived knowledge were found according to age, civil status, and educational attainment, while sex showed no significant difference. Perceived implementation did not significantly differ by destination location. The study concluded that Rizal tourism destinations should invest in technology-based risk control measures, strengthen staff training, and promote accessible digital tools for tourists, especially older visitors. The study supports SDG 3, SDG 8, SDG 9, SDG 11, SDG 12, and SDG 16 by promoting health protection, resilient tourism, technological innovation, safer communities, responsible practices, and policy-based tourism management. Its sustainability impact lies in strengthening public health, institutional preparedness, socio-economic resilience, and community safety in tourism destinations.",
+  "tldr": "Rizal tourism destinations should invest in technology-based risk control measures, strengthen staff training, and promote accessible digital tools for tourists, especially older visitors, the study concluded.",
+  "year": 2026,
+  "venue": "International Journal of Sustainability and Advanced Integrated Research",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Mary Jane De Andres"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ddcf4f449fbeac442899d4da86de6bf9d0bdbd62",
+  "paper_id": "doi:10.65339/ijsair.v2.i2.513",
+  "doi": "10.65339/ijsair.v2.i2.513",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.ijsair.com/index.php/ijsair/article/download/613/587",
+  "published_iso": "2026-05-29",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Feedback World Model Enables Precise Guidance of Diffusion Policy",
+  "title_norm": "feedback world model enables precise guidance of diffusion policy",
+  "abstract": "World models aim to improve robotic decision making by predicting the consequences of actions. However, in practice, their predictions often become unreliable once the robot encounters states outside the training distribution, limiting their effectiveness at deployment. We observe that execution itself provides a natural but underutilized signal: after each action, the robot directly observes the true next state, revealing the mismatch between predicted and actual outcomes. Building on this insight, we propose feedback world model, a new paradigm that closes the loop between prediction and observation at inference time. Instead of treating the world model as a static open-loop predictor, our method maintains a lightweight feedback state that is updated online to iteratively correct future predictions, compensating for model errors using real-time observations without additional training data or parameter updates. We show that this process can be interpreted as a latent-space observer and admits convergence guarantees under mild conditions. We further introduce action-aware guidance to better translate corrected predictions into control by emphasizing action-controllable components while suppressing irrelevant variations. Experiments on LIBERO-Plus, Robomimic, and real-world manipulation tasks demonstrate that our method substantially improves both prediction accuracy and policy performance under distribution shift. In particular, it reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%. These results show that incorporating real-time feedback at inference time provides a simple yet powerful alternative to static world modeling.",
+  "tldr": "Feedback world model is proposed, a new paradigm that closes the loop between prediction and observation at inference time and reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tuo An",
+   "Jindou Jia",
+   "Gen Li",
+   "Jingliang Li",
+   "Chuhao Zhou",
+   "Pengfei Liu"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "317ebd73c3f3b3e7e41035527272339536ad6a1d",
+  "paper_id": "dblp:journals/corr/abs-2605-15705",
+  "doi": "10.48550/arXiv.2605.15705",
+  "arxiv_id": "2605.15705",
+  "dblp_key": "journals/corr/abs-2605-15705",
+  "paper_url": "https://www.semanticscholar.org/paper/317ebd73c3f3b3e7e41035527272339536ad6a1d",
+  "published_iso": "2026-05-15",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Embodied Learning under Policy and Dynamics Shifts",
+  "title_norm": "embodied learning under policy and dynamics shifts",
+  "abstract": "\n Embodied agents must continuously adapt to the physical world using interaction data collected across varying timescales, controllers, and environmental conditions. However, standard reinforcement learning assumes stationary dynamics and on-policy data, a premise often violated in reality where physical parameters drift and historical data becomes heterogeneous. The central challenge lies in the compound distribution shift: replayed transitions follow an occupancy distribution that diverges fundamentally from the current physical reality, leading to biased value estimation and catastrophic learning collapse. In this work, we propose Transition Occupancy Matching as a unifying principle to resolve policy and dynamics shifts within a single mathematical framework. We introduce Occupancy-Matching Policy Optimization (OMPO), a novel algorithm that optimizes a surrogate objective explicitly correcting for transition discrepancies. By leveraging a dual reformulation with a sign-free logarithmic link, OMPO transforms the intractable matching problem into a stable min-max optimization, amenable to arbitrary reward structures. Crucially, OMPO integrates a distributional critic and a multimodal encoder with a small-scale local buffer, allowing the agent to anchor massive historical data to the immediate physical context for rapid adaptation. Extensive evaluations across diverse benchmarks—including MuJoCo locomotion, DM-Control, Meta-World, and high-fidelity Panda robot manipulation—demonstrate that OMPO consistently outperforms specialized baselines in stationary, domain-shifting, and non-stationary settings. By unifying distribution correction across policy and dynamics shifts, OMPO addresses a fundamental bottleneck in transfer learning, providing a robust algorithmic framework for continual adaptation in changing physical conditions.",
+  "tldr": "This work proposes Transition Occupancy Matching as a unifying principle to resolve policy and dynamics shifts within a single mathematical framework and introduces Occupancy-Matching Policy Optimization (OMPO), a novel algorithm that optimizes a surrogate objective explicitly correcting for transition discrepancies.",
+  "year": 2026,
+  "venue": "National Science Review",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu Luo",
+   "Lei Lv",
+   "Fuchun Sun",
+   "Huaping Liu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2f8c44d9dbc81542292abbc4c7b35bc29d37305f",
+  "paper_id": "doi:10.1093/nsr/nwag506",
+  "doi": "10.1093/nsr/nwag506",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://academic.oup.com/nsr/advance-article-pdf/doi/10.1093/nsr/nwag506/70708928/nwag506.pdf",
+  "published_iso": "2026-08-19",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "TACO: TActile World Model as a Self-COrrector forScalable VLA Post-Training",
+  "title_norm": "taco tactile world model as a self corrector forscalable vla post training",
+  "abstract": "Vision-Language-Action (VLA) models have shown promising generalization in robotic manipulation, but they still struggle with contact-rich tasks, where minor contact perturbations can cause unrecoverable failures that are hard to detect from vision alone. Since these failures are localized rather than task-level semantic errors, tactile-aware corrective post-training offers an efficient way to improve recovery. However, scaling such supervision through human intervention is costly. Recent works have explored world models to synthesize imagined rollouts for policy improvement, but vision-only world models may produce visually plausible yet contact-inconsistent trajectories. We therefore introduce TACO, a tactile-aware world-model-driven framework for scalable VLA post-training in contact-rich manipulation. Given real robot rollouts, TACO follows a Recognize-Imagine-Label loop with a tactile-aware world model: a unified progress-action model recognizes failure-adjacent states using progress estimates, a visuo-tactile generation model imagines local correction segments, and the progress-action model labels them with executable corrective actions. To incorporate tactile corrective supervision into VLA post-training, TACO combines knowledge-insulated tactile adaptation with advantage-conditioned training, enabling the policy to learn from imagined corrections without degrading pretrained visual-language priors. These components enable TACO to convert real-world failures into imagined visuo-tactile corrections for iterative VLA post-training. Experiments on real-world contact-rich manipulation tasks show that TACO achieves 44% absolute success rate improvement over the base policy and 32% over the policy without knowledge-insulated tactile adaptation.",
+  "tldr": "TACO combines knowledge-insulated tactile adaptation with advantage-conditioned training, enabling the policy to learn from imagined corrections without degrading pretrained visual-language priors, and to convert real-world failures into imagined visuo-tactile corrections for iterative VLA post-training.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Shengbang Liu",
+   "Yueru Jia",
+   "Yuyang Yan",
+   "Jiaming Liu",
+   "Xinran Y. Zhang",
+   "Qiuxuan Feng"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+  "paper_id": "arxiv:2607.02840",
+  "doi": "",
+  "arxiv_id": "2607.02840",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+  "published_iso": "2026-07-03",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Aligning Few-Step Generative Models by Amortizing Sample-based Variational Inference",
+  "title_norm": "aligning few step generative models by amortizing sample based variational infer",
+  "abstract": "Aligning a few-step generative model is challenging, since existing alignment frameworks typically rely on restrictive assumptions: a tractable likelihood, a specific ODE/SDE solver, or a particular model family. We introduce FAV, Few-step Generative Models Alignment via Sample-based Variational Inference, a general alignment framework that requires only sample access to the generator and the reference distribution. We cast alignment as sampling from a reward-tilted distribution anchored to a reference distribution. We leverage Stein Variational Gradient Descent as a sample-based variational inference scheme and amortize its particle updates into the generator parameters via fixed-point regression. We evaluate FAV on two domains: robotics manipulation and image generator alignment. On generative policy alignment for robotic manipulation, FAV outperforms prevailing policy extraction baselines across 56 offline and 30 offline-to-online RL tasks. For image generator alignment, FAV fine-tunes diverse few-step backbones, including GAN, drifting model, consistency models, and flow maps, scaling from ImageNet-$256$ to 1024$^2$ text-to-image synthesis. Code is available at https://github.com/Jaewoopudding/FAV.",
+  "tldr": "FAV, Few-step Generative Models Alignment via Sample-based Variational Inference, a general alignment framework that requires only sample access to the generator and the reference distribution is introduced.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jaewoo Lee",
+   "Hyeongyu Kang",
+   "Dohyun Kim",
+   "Kyuil Sim",
+   "Woocheol Shin",
+   "Minsu Kim"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "b5230cd0444a896f40da4bb9e5b7832e71c5b7c2",
+  "paper_id": "dblp:journals/corr/abs-2605-26552",
+  "doi": "10.48550/arXiv.2605.26552",
+  "arxiv_id": "2605.26552",
+  "dblp_key": "journals/corr/abs-2605-26552",
+  "paper_url": "https://www.semanticscholar.org/paper/b5230cd0444a896f40da4bb9e5b7832e71c5b7c2",
+  "published_iso": "2026-05-26",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "World2Act: Latent Action Post-Training from World Model Dynamics",
+  "title_norm": "world2act latent action post training from world model dynamics",
+  "abstract": "World Models (WMs) offer a promising mechanism for post-training Vision-Language-Action (VLA) policies by providing dynamics priors that improve generalization under task and scene variation. However, most WM-based post-training methods rely on pixel-space supervision, making policies sensitive to visual artifacts introduced by imperfect WM rollouts. We present World2Act, a latent-space post-training framework that transfers WM dynamics to the VLA policy without pixel-space supervision. World2Act operates in two stages: 1) it induces a shared video-action latent space by contrastively aligning WM-dynamics latents with action embeddings, and 2) it post-trains the VLA by guiding policy action representations toward WM-imagined dynamics rather than decoded pixels. Built on GR00T-N1.6, World2Act delivers absolute success-rate gains of up to +2.5% on simulation benchmarks (RoboCasa, LIBERO, Bridge-SIMPLER) and +6.7% on a real robot over finetuned VLA baselines. Notably, it outperforms pixel-space WM supervision by up to +6.0%, including on LIBERO where pixel supervision degrades the baseline, suggesting that latent WM dynamics offer a more stable WM-based post-training alternative to pixel-space transfer.",
+  "tldr": "World2Act is presented, a latent-space post-training framework that transfers WM dynamics to the VLA policy without pixel-space supervision and outperforms pixel-space WM supervision, suggesting that latent WM dynamics offer a more stable WM-based post-training alternative to pixel-space transfer.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "An Vuong",
+   "T. Vo",
+   "Abdullah Sohail",
+   "Haoran Ding",
+   "Liang Ma",
+   "Xiaodan Liang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "d56701934ce6e796e8646d0178ddc2534508c365",
+  "paper_id": "arxiv:2603.10422",
+  "doi": "",
+  "arxiv_id": "2603.10422",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/d56701934ce6e796e8646d0178ddc2534508c365",
+  "published_iso": "2026-03-11",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "GUIDE: Goal-Initialized Directional Understanding for End-to-End Visual Navigation",
+  "title_norm": "guide goal initialized directional understanding for end to end visual navigatio",
+  "abstract": "Learning-based visual navigation for legged robots typically relies on continuous goal updates from hierarchical state estimation to provide a persistent directional reference. This reliance incurs additional sensory and computational overhead and deviates from fully end-to-end mobile autonomy. Furthermore, under partial observability, policies are prone to learn myopic behaviors, easily becoming trapped in dead ends and complex structural layouts. To address these limitations, we investigate a goal-initialized navigation setting, where the target is provided only once at the beginning of an episode, requiring the robot to operate based on intrinsic spatial memory without subsequent goal updates from external modules. In this work, we propose GUIDE, a fully end-to-end reinforcement learning framework designed to cultivate internal directional awareness. Specifically, GUIDE incorporates a spatial anchor predictor that leverages multi-frequency proprioceptive history to extract egomotion representations, thereby maintaining a persistent long-horizon spatial context for navigation. Concurrently, it utilizes raw depth streams to perceive local environmental geometry. We evaluate the proposed framework across both simulation and real-world scenarios on a quadruped robot. Experiments show that GUIDE learns reliable egomotion and directional awareness, enabling a fully end-to-end deployed policy to safely navigate through dense clutter and structured mazes without subsequent goal guidance or prior maps.",
+  "tldr": "GUIDE is proposed, a fully end-to-end reinforcement learning framework designed to cultivate internal directional awareness that incorporates a spatial anchor predictor that leverages multi-frequency proprioceptive history to extract egomotion representations, thereby maintaining a persistent long-horizon spatial context for navigation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Liang Wang",
+   "Jin Jin",
+   "Kanzhong Yao",
+   "Yibin Wu",
+   "Fangqiang Ding",
+   "Jin Wang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "14663b2595a425dcd137979aaa585760112f9105",
+  "paper_id": "dblp:journals/corr/abs-2606-10832",
+  "doi": "10.48550/arXiv.2606.10832",
+  "arxiv_id": "2606.10832",
+  "dblp_key": "journals/corr/abs-2606-10832",
+  "paper_url": "https://www.semanticscholar.org/paper/14663b2595a425dcd137979aaa585760112f9105",
+  "published_iso": "2026-06-09",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "World Model for Robot Learning: A Comprehensive Survey",
+  "title_norm": "world model for robot learning a comprehensive survey",
+  "abstract": "World models, which are predictive representations of how environments evolve under actions, have become a central component of robot learning. They support policy learning, planning, simulation, evaluation, data generation, and have advanced rapidly with the rise of foundation models and large-scale video generation. However, the literature remains fragmented across architectures, functional roles, and embodied application domains. To address this gap, we present a comprehensive review of world models from a robot-learning perspective. We examine how world models are coupled with robot policies, how they serve as learned simulators for reinforcement learning and evaluation, and how robotic video world models have progressed from imagination-based generation to controllable, structured, and foundation-scale formulations. We further connect these ideas to navigation and autonomous driving, and summarize representative datasets, benchmarks, and evaluation protocols. Overall, this survey systematically reviews the rapidly growing literature on world models for robot learning, clarifies key paradigms and applications, and highlights major challenges and future directions for predictive modeling in embodied agents. To facilitate continued access to newly emerging works, benchmarks, and resources, we will maintain and regularly update the accompanying GitHub repository alongside this survey.",
+  "tldr": "This survey systematically reviews the rapidly growing literature on world models for robot learning, clarifies key paradigms and applications, and highlights major challenges and future directions for predictive modeling in embodied agents.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Bohan Hou",
+   "Gen Li",
+   "Jindou Jia",
+   "Tuo An",
+   "Xinying Guo",
+   "Sicong Leng"
+  ],
+  "citations": 32,
+  "source": "semanticscholar",
+  "source_id": "ddfe191f758ed8d74ceaf769392af5c5c9546e52",
+  "paper_id": "dblp:journals/corr/abs-2605-00080",
+  "doi": "10.48550/arXiv.2605.00080",
+  "arxiv_id": "2605.00080",
+  "dblp_key": "journals/corr/abs-2605-00080",
+  "paper_url": "https://www.semanticscholar.org/paper/ddfe191f758ed8d74ceaf769392af5c5c9546e52",
+  "published_iso": "2026-04-30",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "RankQ: Offline-to-Online Reinforcement Learning via Self-Supervised Action Ranking",
+  "title_norm": "rankq offline to online reinforcement learning via self supervised action rankin",
+  "abstract": "Offline-to-online reinforcement learning (RL) improves sample efficiency by leveraging pre-collected datasets prior to online interaction. A key challenge, however, is learning an accurate critic in large state--action spaces with limited dataset coverage. To mitigate harmful updates from value overestimation, prior methods impose pessimism by down-weighting out-of-distribution (OOD) actions relative to dataset actions. While effective, this essentially acts as a behavior cloning anchor and can hinder downstream online policy improvement when dataset actions are suboptimal. We propose RankQ, an offline-to-online Q-learning objective that augments temporal-difference learning with a self-supervised multi-term ranking loss to enforce structured action ordering. By learning relative action preferences rather than uniformly penalizing unseen actions, RankQ shapes the Q-function such that action gradients are directed toward higher-quality behaviors. Across sparse reward D4RL benchmarks, RankQ achieves performance competitive with or superior to seven prior methods. In vision-based robot learning, RankQ enables effective offline-to-online fine-tuning of a pretrained vision-language-action (VLA) model in a low-data regime, achieving on average a 42.7% higher simulation success rate than the next best method. In a high-data setting, RankQ improves simulation performance by 13.7% over the next best method and achieves strong sim-to-real transfer, increasing real-world cube stacking success from 43.1% to 88.9% relative to the VLA's initial performance.",
+  "tldr": "RankQ, an offline-to-online Q-learning objective that augments temporal-difference learning with a self-supervised multi-term ranking loss to enforce structured action ordering is proposed, which shapes the Q-function such that action gradients are directed toward higher-quality behaviors.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Andrew Choi",
+   "Wei Xu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "d94517592a5005977d80fc07cb6d21bfab2584fc",
+  "paper_id": "dblp:journals/corr/abs-2605-11151",
+  "doi": "10.48550/arXiv.2605.11151",
+  "arxiv_id": "2605.11151",
+  "dblp_key": "journals/corr/abs-2605-11151",
+  "paper_url": "https://www.semanticscholar.org/paper/d94517592a5005977d80fc07cb6d21bfab2584fc",
+  "published_iso": "2026-05-11",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Dreaming the Unseen: World Model-regularized Diffusion Policy for Out-of-Distribution Robustness",
+  "title_norm": "dreaming the unseen world model regularized diffusion policy for out of distribu",
+  "abstract": "Diffusion policies excel at visuomotor control but often fail catastrophically under severe out-of-distribution (OOD) disturbances, such as unexpected object displacements or visual corruptions. To address this vulnerability, we introduce the Dream Diffusion Policy (DDP), a framework that deeply integrates a diffusion world model into the policy's training objective via a shared 3D visual encoder. This co-optimization endows the policy with robust state-prediction capabilities. When encountering sudden OOD anomalies during inference, DDP detects the real-imagination discrepancy and actively abandons the corrupted visual stream. Instead, it relies on its internal\"imagination\"(autoregressively forecasted latent dynamics) to safely bypass the disruption, generating imagined trajectories before smoothly realigning with physical reality. Extensive evaluations demonstrate DDP's exceptional resilience. Notably, DDP achieves a 73.8% OOD success rate on MetaWorld (vs. 23.9% without predictive imagination) and an 83.3% success rate under severe real-world spatial shifts (vs. 3.3% without predictive imagination). Furthermore, as a stress test, DDP maintains a 76.7% real-world success rate even when relying entirely on open-loop imagination post-initialization.",
+  "tldr": "The Dream Diffusion Policy is introduced, a framework that deeply integrates a diffusion world model into the policy's training objective via a shared 3D visual encoder, which co-optimization endows the policy with robust state-prediction capabilities.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ziou Hu",
+   "Xiangtong Yao",
+   "Yuan Meng",
+   "Zhenshan Bing",
+   "Alois Knoll"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a40d292321afa7b948e24bc2f9e381f8176e9e10",
+  "paper_id": "dblp:journals/corr/abs-2603-21017",
+  "doi": "10.48550/arXiv.2603.21017",
+  "arxiv_id": "2603.21017",
+  "dblp_key": "journals/corr/abs-2603-21017",
+  "paper_url": "https://www.semanticscholar.org/paper/a40d292321afa7b948e24bc2f9e381f8176e9e10",
+  "published_iso": "2026-03-22",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Reward-Free Continual Adaptation for Resilient Space Robots",
+  "title_norm": "reward free continual adaptation for resilient space robots",
+  "abstract": "Space robots operate in extreme environments where hardware degradation can critically compromise traditional control strategies. While continual reinforcement learning offers a promising mechanism for online adaptation, it inherently requires access to a reward signal during deployment. However, precise reward computation in space is often infeasible due to the lack of external tracking systems and the overall complexity of the environment. To address the challenge of unobservable rewards, we introduce a reward-free continual learning framework that leverages latent-state world models. By pre-training a model-based agent across diverse simulations, the world model learns a robust predictor of the reward structure within its latent space. Upon deployment to an environment with severe hardware degradation, we freeze the observation encoder and reward predictor to update only the transition dynamics of the world model through unsupervised rollouts. By training the policy entirely on imagined trajectories generated by this updated world model, the agent adapts to altered dynamics without receiving new rewards. We demonstrate our approach across simulated planetary traversal, orbital navigation, and precision assembly tasks subjected to severe morphological failures.",
+  "tldr": "This work introduces a reward-free continual learning framework that leverages latent-state world models that adapts to altered dynamics without receiving new rewards across simulated planetary traversal, orbital navigation, and precision assembly tasks subjected to severe morphological failures.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Andrej Orsula",
+   "M. Olivares-Mendez",
+   "Carol Martínez"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "37d09b6ae92622c1cfbbec9bbecb7966f77e2cc2",
+  "paper_id": "arxiv:2608.23452",
+  "doi": "",
+  "arxiv_id": "2608.23452",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/37d09b6ae92622c1cfbbec9bbecb7966f77e2cc2",
+  "published_iso": "2026-08-24",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Geometric Action Model for Robot Policy Learning",
+  "title_norm": "geometric action model for robot policy learning",
+  "abstract": "Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models (WAMs) inherit strong semantic or temporal priors from large-scale foundation models, but they still operate primarily on 2D image frames or 2D-derived latent spaces, leaving implicit the 3D geometry required for contact-rich manipulation. We propose the Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding. GAM splits the GFM at an intermediate layer: the shallow layers serve as an observation encoder, and a causal future predictor inserted at the split layer forecasts future latent tokens conditioned on language, proprioception, and action history. The predicted future tokens are then routed through the remaining GFM blocks for feature propagation and decoding, allowing a single backbone to produce both future geometry and actions. This design equips the GFM with language-conditioned temporal world modeling through minimal architectural modification while preserving its rich geometric priors. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale baselines.",
+  "tldr": "The Geometric Action Model (GAM), a language-conditioned manipulation policy that directly repurposes a pretrained geometric foundation model (GFM) as a shared substrate for perception, temporal prediction, and action decoding, is proposed.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jisang Han",
+   "Seonghu Jeon",
+   "Jaewoo Jung",
+   "René Zurbrügg",
+   "Honggyu An",
+   "Tifanny Portela"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "197e2a4a8140683a7a4765bc31a77ce953b5396b",
+  "paper_id": "dblp:journals/corr/abs-2606-17046",
+  "doi": "10.48550/arXiv.2606.17046",
+  "arxiv_id": "2606.17046",
+  "dblp_key": "journals/corr/abs-2606-17046",
+  "paper_url": "https://www.semanticscholar.org/paper/197e2a4a8140683a7a4765bc31a77ce953b5396b",
+  "published_iso": "2026-06-15",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Re-imagining knowledge canons in South African education: An inquest into mother tongue-based bilingual education",
+  "title_norm": "re imagining knowledge canons in south african education an inquest into mother ",
+  "abstract": "This paper examines Mother Tongue-based Bilingual Education (MTbBE) in South Africa as a site for epistemic transformation rather than mere linguistic reform. While policy efforts have widened access by including African languages, classroom and institutional practices often remain anchored in Eurocentric epistemologies. Drawing on decolonial theory and existing empirical studies, the paper argues that MTbBE can only fulfil its transformative promise when language reform is coupled with pedagogical shifts, curriculum design, and institutional reward systems. It shows that translanguaging and bilingual pedagogy enhance comprehension and participation, yet genuine transformation requires teachers to use African languages as reasoning and knowledge creation resources. Re-authoring curricula and restructuring institutional incentives emerge as essential for sustaining such change. The paper contributes to debates on decolonisation by reframing MTbBE as a strategy for epistemic justice that links linguistic inclusion with cognitive renewal. It concludes that when African languages are recognised as instruments of inquiry, education can move from translation to transformation, fostering an intellectual order that reflects South Africa’s multilingual and plural realities.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Intercultural Communication Education",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. Mutongoza",
+   "Sive Makeleni"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0f0dd5317a60c397114e8911f93f4cd27b39718c",
+  "paper_id": "doi:10.29140/ice.v9n1.103482",
+  "doi": "10.29140/ice.v9n1.103482",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.castledown.com/journals/ice/article/download/ice.v9n1.103482/1094",
+  "published_iso": "2026-02-03",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Beyond Imitation: Reinforcement Learning-Based Sim-Real Co-Training for VLA Models",
+  "title_norm": "beyond imitation reinforcement learning based sim real co training for vla model",
+  "abstract": "Simulation offers a scalable and low-cost way to enrich vision-language-action (VLA) training, reducing reliance on expensive real-robot demonstrations. However, most sim-real co-training methods rely on supervised fine-tuning (SFT), which treats simulation as a static source of demonstrations and does not exploit large-scale closed-loop interaction. Consequently, real-world gains and generalization are often limited. In this paper, we propose an RL-based sim-real Co-training (RL-Co) framework that leverages interactive simulation while preserving real-world capabilities. Our method follows a generic two-stage design: we first warm-start the policy with SFT on a mixture of real and simulated demonstrations, then fine-tune it with reinforcement learning in simulation while adding an auxiliary supervised loss on real-world data to anchor the policy and mitigate catastrophic forgetting. We evaluate our framework on four real-world tabletop manipulation tasks using two representative VLA architectures, OpenVLA and $\\pi_{0.5}$, and observe consistent improvements over real-only fine-tuning and SFT-based co-training, including +24% real-world success on OpenVLA and +20% on $\\pi_{0.5}$. Beyond higher success rates, RL co-training yields stronger generalization to unseen task variations and substantially improved real-world data efficiency, providing a practical and scalable pathway for leveraging simulation to enhance real-robot deployment.",
+  "tldr": "An RL-based sim-real Co-training (RL-Co) framework that leverages interactive simulation while preserving real-world capabilities is proposed, providing a practical and scalable pathway for leveraging simulation to enhance real-robot deployment.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Liangzhi Shi",
+   "Shuaihang Chen",
+   "Feng Gao",
+   "Yinuo Chen",
+   "Kang Chen",
+   "Tonghe Zhang"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "af3d5e7a387f5b445b0d33edc3e11cf876733f68",
+  "paper_id": "dblp:journals/corr/abs-2602-12628",
+  "doi": "10.48550/arXiv.2602.12628",
+  "arxiv_id": "2602.12628",
+  "dblp_key": "journals/corr/abs-2602-12628",
+  "paper_url": "https://www.semanticscholar.org/paper/af3d5e7a387f5b445b0d33edc3e11cf876733f68",
+  "published_iso": "2026-02-13",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction",
+  "title_norm": "beyond placement and articulation usage driven code scenes for embodied interact",
+  "abstract": "Indoor scene synthesis provides essential environments for embodied AI, robotic manipulation, and simulation-based policy learning. Recent code-based scene generation methods produce editable and extensible environments, yet they remain focused on visual construction and object-level articulation, leaving the functional usage of scenes largely unmodeled. To address this problem, we present RoomWright, an agentic usage-driven framework for generating 3D scenes represented entirely as code for embodied interaction. RoomWright performs usage-driven object reasoning, which treats each anchor as a task centre and admits task-required objects and their affordances. A code agent further enables multi-part interaction by compiling each interaction into a trigger, condition, effect rule that updates structured object states, capturing causal dependencies across objects. Moreover, since manipuland orientation is ambiguous and hard to recover from pixels, RoomWright alleviates this via annotation-informed usage-guided orientation. Extensive experiments demonstrate the effectiveness of our method. The resulting scenes are executable, editable, and simulation-ready, providing interactive environments for embodied AI and policy learning.",
+  "tldr": "RoomWright is presented, an agentic usage-driven framework for generating 3D scenes represented entirely as code for embodied interaction, providing interactive environments for embodied AI and policy learning.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Zijian Xiao",
+   "Zipeng Ye",
+   "Jinkun Hao",
+   "Xiong Yang",
+   "Yu-Han Xie",
+   "Ran Yi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "06204c71c1ee1e6334be62011b206e569d2b5dd0",
+  "paper_id": "arxiv:2608.18840",
+  "doi": "",
+  "arxiv_id": "2608.18840",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/06204c71c1ee1e6334be62011b206e569d2b5dd0",
+  "published_iso": "2026-08-19",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Sim-and-Human Co-training for Data-Efficient and Generalizable Robotic Manipulation",
+  "title_norm": "sim and human co training for data efficient and generalizable robotic manipulat",
+  "abstract": "Synthetic simulation data and real-world human data provide scalable alternatives to circumvent the prohibitive costs of robot data collection. However, these sources suffer from the sim-to-real visual gap and the human-to-robot embodiment gap, respectively, which limits the policy's generalization to real-world scenarios. In this work, we identify a natural yet underexplored complementarity between these sources: simulation offers the robot action that human data lacks, while human data provides the real-world observation that simulation struggles to render. Motivated by this insight, we present SimHum, a co-training framework to simultaneously extract kinematic prior from simulated robot actions and visual prior from real-world human observations. Based on the two complementary priors, we achieve data-efficient and generalizable robotic manipulation in real-world tasks. Empirically, SimHum outperforms the baseline by up to $\\mathbf{40\\%}$ under the same data collection budget, and achieves a $\\mathbf{62.5\\%}$ OOD success with only 80 real data, outperforming the real only baseline by $7.1\\times$. Videos and additional information can be found at \\href{https://kaipengfang.github.io/sim-and-human}{project website}.",
+  "tldr": "This work presents SimHum, a co-training framework to simultaneously extract kinematic prior from simulated robot actions and visual prior from real-world human observations, which achieves data-efficient and generalizable robotic manipulation in real-world tasks.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kaipeng Fang",
+   "Wei Liang",
+   "Yuyang Li",
+   "Ji Zhang",
+   "Pengpeng Zeng",
+   "Lianli Gao"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "ce0d7cd9a42579745bd7d6aea83c10830b844dc4",
+  "paper_id": "dblp:journals/corr/abs-2601-19406",
+  "doi": "10.48550/arXiv.2601.19406",
+  "arxiv_id": "2601.19406",
+  "dblp_key": "journals/corr/abs-2601-19406",
+  "paper_url": "https://www.semanticscholar.org/paper/ce0d7cd9a42579745bd7d6aea83c10830b844dc4",
+  "published_iso": "2026-01-27",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Local Guidance, Global Impact: Gaussian-Reshaped Trust Region Unlocks Behavior Transitions",
+  "title_norm": "local guidance global impact gaussian reshaped trust region unlocks behavior tra",
+  "abstract": "While Proximal Policy Optimization (PPO) demonstrates strong performance in stationary settings, we show that its standard optimization paradigm struggles in continual and non-stationary environments. The failure does not stem from insufficient model capacity or overly restrictive clipping. Instead, PPO performs persistent, directionally inefficient local updates, which indicates a lack of geometry-aware guidance for accumulating meaningful behavioral change and ultimately hindering transitions toward new behavior patterns. Although divergence-based regularization introduces partial geometric awareness, its monotonically increasing penalties implicitly discourage large policy deviations, even when such shifts are necessary for effective adaptation. To address this limitation, we propose Gaussian Trust Region Policy Optimization (GTR), which reshapes the trust region using a Gaussian kernel. The resulting constraint is bounded and non-monotonic, providing strong local stability while progressively relaxing under sustained high-advantage updates. To further improve robustness, we introduce a Mixture Gaussian Anchor that adapts to recent policy trajectories, reducing variance induced by stale references. GTR is architecture-agnostic and achieves strong performance across games, simulated robotic control, open-world exploration, and language model post-training. These results demonstrate that geometry-aware trust-region design can be a promising direction for robust reinforcement learning in complex non-stationary environments. Our code is available at https://anonymous.4open.science/r/GTR_demo/README.md.",
+  "tldr": "Gaussian Trust Region Policy Optimization (GTR), which reshapes the trust region using a Gaussian kernel, achieves strong performance across games, simulated robotic control, open-world exploration, and language model post-training, demonstrating that geometry-aware trust-region design can be a promising direction for robust reinforcement learning in complex non-stationary environments.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Bing Liu",
+   "Jiashun Liu",
+   "Johan S. Obando-Ceron",
+   "Hao Wang",
+   "Runze Liu",
+   "Pablo Samuel Castro"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "552b6cf205fe88b752e041991514e113055ab5a1",
+  "paper_id": "dblp:journals/corr/abs-2606-03382",
+  "doi": "10.48550/arXiv.2606.03382",
+  "arxiv_id": "2606.03382",
+  "dblp_key": "journals/corr/abs-2606-03382",
+  "paper_url": "https://www.semanticscholar.org/paper/552b6cf205fe88b752e041991514e113055ab5a1",
+  "published_iso": "2026-06-02",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+  "title_norm": "dreamdojo a generalist robot world model from large scale human videos",
+  "abstract": "Being able to simulate the outcomes of actions in varied environments will revolutionize the development of generalist agents at scale. However, modeling these world dynamics, especially for dexterous robotics tasks, poses significant challenges due to limited data coverage and scarce action labels. As an endeavor towards this end, we introduce DreamDojo, a foundation world model that learns diverse interactions and dexterous controls from 44k hours of egocentric human videos. Our data mixture represents the largest video dataset to date for world model pretraining, spanning a wide range of daily scenarios with diverse objects and skills. To address the scarcity of action labels, we introduce continuous latent actions as unified proxy actions, enhancing interaction knowledge transfer from unlabeled videos. After post-training on small-scale target robot data, DreamDojo demonstrates a strong understanding of physics and precise action controllability. We also devise a distillation pipeline that accelerates DreamDojo to a real-time speed of 10.81 FPS and further improves context consistency. Our work enables several important applications based on generative world models, including live teleoperation, policy evaluation, and model-based planning. Systematic evaluation on multiple challenging out-of-distribution (OOD) benchmarks verifies the significance of our method for simulating open-world, contact-rich tasks, paving the way for general-purpose robot world models.",
+  "tldr": "Systematic evaluation on multiple challenging out-of-distribution (OOD) benchmarks verifies the significance of the method for simulating open-world, contact-rich tasks, paving the way for general-purpose robot world models.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shenyuan Gao",
+   "William Liang",
+   "Kaiyuan Zheng",
+   "A. Malik",
+   "Seonghyeon Ye",
+   "Sihyun Yu"
+  ],
+  "citations": 100,
+  "source": "semanticscholar",
+  "source_id": "ca524f499028275f21776ea4b1fd41fd2ff7844b",
+  "paper_id": "dblp:journals/corr/abs-2602-06949",
+  "doi": "10.48550/arXiv.2602.06949",
+  "arxiv_id": "2602.06949",
+  "dblp_key": "journals/corr/abs-2602-06949",
+  "paper_url": "https://www.semanticscholar.org/paper/ca524f499028275f21776ea4b1fd41fd2ff7844b",
+  "published_iso": "2026-02-06",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "SoK: Agentic Skills - Beyond Tool Use in LLM Agents",
+  "title_norm": "sok agentic skills beyond tool use in llm agents",
+  "abstract": "Agentic systems increasingly rely on reusable procedural capabilities, \\textit{a.k.a., agentic skills}, to execute long-horizon workflows reliably. These capabilities are callable modules that package procedural knowledge with explicit applicability conditions, execution policies, termination criteria, and reusable interfaces. Unlike one-off plans or atomic tool calls, skills operate (and often do well) across tasks. This paper maps the skill layer across the full lifecycle (discovery, practice, distillation, storage, composition, evaluation, and update) and introduces two complementary taxonomies. The first is a system-level set of \\textbf{seven design patterns} capturing how skills are packaged and executed in practice, from metadata-driven progressive disclosure and executable code skills to self-evolving libraries and marketplace distribution. The second is an orthogonal \\textbf{representation $\\times$ scope} taxonomy describing what skills \\emph{are} (natural language, code, policy, hybrid) and what environments they operate over (web, OS, software engineering, robotics). We analyze the security and governance implications of skill-based agents, covering supply-chain risks, prompt injection via skill payloads, and trust-tiered execution, grounded by a case study of the ClawHavoc campaign in which nearly 1{,}200 malicious skills infiltrated a major agent marketplace, exfiltrating API keys, cryptocurrency wallets, and browser credentials at scale. We further survey deterministic evaluation approaches, anchored by recent benchmark evidence that curated skills can substantially improve agent success rates while self-generated skills may degrade them. We conclude with open challenges toward robust, verifiable, and certifiable skills for real-world autonomous agents.",
+  "tldr": "This paper analyzes the security and governance implications of skill-based agents, covering supply-chain risks, prompt injection via skill payloads, and trust-tiered execution, grounded by a case study of the ClawHavoc campaign.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Yanna Jiang",
+   "Delong Li",
+   "Hai Deng",
+   "Baihe Ma",
+   "Xu Wang",
+   "Qin Wang"
+  ],
+  "citations": 103,
+  "source": "semanticscholar",
+  "source_id": "ae06bb0819ec521d45909b2cbf599ff36ea025e2",
+  "paper_id": "dblp:journals/corr/abs-2602-20867",
+  "doi": "10.48550/arXiv.2602.20867",
+  "arxiv_id": "2602.20867",
+  "dblp_key": "journals/corr/abs-2602-20867",
+  "paper_url": "https://www.semanticscholar.org/paper/ae06bb0819ec521d45909b2cbf599ff36ea025e2",
+  "published_iso": "2026-02-24",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "OSCAR: Omni-Embodiment Action-Conditioned World Model for Robotics",
+  "title_norm": "oscar omni embodiment action conditioned world model for robotics",
+  "abstract": "",
+  "tldr": "OSCAR is presented, a precise action-conditioned video world model that generalizes across different robot embodiments and enables robot policy evaluation and achieves significant improvement on action following, appearance quality, and motion consistency compared to existing baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhuoyuan Wu",
+   "Jun Gao"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "527e3e584c566c2d314d89707f8d645e0ed08701",
+  "paper_id": "dblp:journals/corr/abs-2606-04463",
+  "doi": "10.48550/arXiv.2606.04463",
+  "arxiv_id": "",
+  "dblp_key": "journals/corr/abs-2606-04463",
+  "paper_url": "https://www.semanticscholar.org/paper/527e3e584c566c2d314d89707f8d645e0ed08701",
+  "published_iso": null,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "KEM-Fabric: A Fabric Manipulation Method Based on Key Manipulation Sequence Matching",
+  "title_norm": "kem fabric a fabric manipulation method based on key manipulation sequence match",
+  "abstract": "Robotic manipulation of deformable objects, particularly fabrics, remains a formidable challenge due to their infinite degrees of freedom, complex dynamics, and severe self-occlusions. While data-driven approaches have made progress, they typically suffer from low data efficiency and struggle to generalize across instances with significant geometric or topological variations. To address these limitations, this paper proposes KEM-Fabric, a novel framework based on key manipulation sequence matching that bridges the simulation-to-reality gap via semantic alignment. Instead of learning a global end-to-end policy, our approach adopts a few-shot modeling strategy. To handle large-scale shape discrepancies in the real world, we leverage Vision-Language Models with Set-of-Mark prompting to extract semantic anchors from visual observations. A non-rigid spatial mapping algorithm is then employed to transfer the key manipulation points from the template to the target geometry based on these semantic constraints. Extensive real-world experiments across three distinct fabric categories demonstrate that KEM-Fabric achieves superior generalization capabilities. The results show that our method significantly outperforms state-of-the-art baselines, effectively manipulating topologically distinct garments with minimal training data.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Youth Academic Annual Conference of Chinese Association of Automation",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Xinbei Wang",
+   "Yinkai Zhu",
+   "Feili Yu",
+   "Yizhuo Sun"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "b93ce7c528273157160b0cf19a2f3de97dd700a6",
+  "paper_id": "doi:10.1109/YAC71005.2026.11615514",
+  "doi": "10.1109/YAC71005.2026.11615514",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/b93ce7c528273157160b0cf19a2f3de97dd700a6",
+  "published_iso": "2026-05-01",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "GigaWorld-1: A Roadmap to Build World Models for Robot Policy Evaluation",
+  "title_norm": "gigaworld 1 a roadmap to build world models for robot policy evaluation",
+  "abstract": "Evaluating embodied robot foundation models remains a critical bottleneck; unlike large language models efficiently assessed via digital benchmarks, robotic policies require slow, costly real-world rollouts limited by hardware and human supervision, which has driven interest in world models as surrogate policy evaluators, yet the key properties that make a world model reliable for policy assessment remain poorly understood. This work presents a systematic study of world models for robotic policy evaluation and introduces WMBench, a benchmark constructed from real-robot teleoperation data and matched policy rollouts covering diverse manipulation tasks to enable controlled comparisons across model families, action encodings, rollout horizons, and evaluation metrics. Using WMBench, we analyze 7 video world models, 4 action representation schemes, and over 324,000 simulated policy rollouts paired with real robot executions, further enriching our analysis with large-scale community submissions from the CVPR 2026 GigaBrain Challenge, curated synthetic trajectories, and a training videos spanning more than 12,000 hours. Our experiments deliver three core insights: evaluator quality is dominated by long-horizon, action-faithful rollout consistency rather than short-term visual realism; pretraining gains stem not only from data scale but from balancing general world knowledge with robot-specific controllability; and architectural choices including action encoding, memory design, and evaluator-focused post-training strongly determine alignment with real-world robot behavior. Drawing on these results, we derive a practical design roadmap and realize it in \\textit{GigaWorld-1}, a world model specially optimized for policy evaluation, and we fully release our code, models, datasets, and toolkits to advance scalable evaluation research for embodied foundation models.",
+  "tldr": "This work presents a systematic study of world models for robotic policy evaluation and introduces WMBench, a benchmark constructed from real-robot teleoperation data and matched policy rollouts covering diverse manipulation tasks to enable controlled comparisons across model families, action encodings, rollout horizons, and evaluation metrics.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "GigaWorld Team",
+   "Angyuan Ma",
+   "Boyuan Wang",
+   "Bohan Li",
+   "Chaojun Ni",
+   "Guo Li"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "ff84a80adb726c69a7e40e6b9c6da708f7cc0e2b",
+  "paper_id": "arxiv:2607.02642",
+  "doi": "",
+  "arxiv_id": "2607.02642",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ff84a80adb726c69a7e40e6b9c6da708f7cc0e2b",
+  "published_iso": "2026-07-02",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Understanding professional development: Insights from Foundation Phase Teachers in Gauteng West, South Africa",
+  "title_norm": "understanding professional development insights from foundation phase teachers i",
+  "abstract": "This qualitative study examined Foundation Phase teachers’ understanding of professional development (PD) activities in District Circuit 5, Cluster 2, Gauteng West, South Africa. Anchored in an interpretivist paradigm and Adult Learning Theory, the research employed an exploratory design using semi-structured interviews with purposively selected teachers and Departmental Heads. The elicited findings were thematically analysed using Braun and Clarke’s thematic analysis framework. The findings indicate that teachers view PD as essential for enhancing teaching competencies, updating pedagogical knowledge, and addressing diverse learner needs. However, participants reported that existing PD initiatives are often generic, misaligned with the realities of the Foundation Phase, and lacking practical applicability. The key challenge was a gap between PD content and classroom demands. The study highlights the need for context-sensitive, teacher-driven, and practice-embedded PD models. The recommendations include sustained, phase-specific interventions, such as mentoring, professional learning communities, and reflective practices, to improve instructional relevance, teaching quality, and learner outcomes. This research emphasises the importance of aligning PD with teachers’ classroom realities. The study contributes to existing knowledge by providing context-specific insights into how Foundation Phase teachers interpret and experience professional development, highlighting gaps between policy intentions and classroom realities, and offering evidence to inform the design of more responsive and practice-grounded PD models.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "E-Journal of Humanities, Arts and Social Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mathabiso Eunice Majahe",
+   "M. Taole"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c5c184c70c385e905cb2eb4f522ea6d9ebbef47e",
+  "paper_id": "doi:10.38159/ehass.2026769",
+  "doi": "10.38159/ehass.2026769",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://noyam.org/?sdm_process_download=1&download_id=18284",
+  "published_iso": "2026-07-14",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "τ0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+  "title_norm": "τ0 wm a unified video action world model for robotic manipulation",
+  "abstract": "Robotic manipulation requires models that generate executable actions while anticipating and evaluating their future consequences before physical execution. We present $\\tau_0$-World Model ($\\tau_0$-WM), a unified video-action world model that integrates policy learning, video prediction, and action evaluation within a single future-predictive framework. Built on a shared video diffusion backbone, $\\tau_0$-WM provides two complementary interfaces. First, a video action model jointly predicts future visual latents and continuous action chunks from multi-view observations, language instructions, and robot state. Second, an action-conditioned video simulator rolls out candidate action chunks into multi-view futures and predicts dense task-progress scores. The model is trained on approximately $27{,}300$ hours of real-robot teleoperation, UMI-style interaction, egocentric human videos, and rollout or failure trajectories using modality-specific supervision masks. At inference time, $\\tau_0$-WM uses test-time computation to sample action candidates, rank them with re-denoising consistency, and invoke simulator-based rectification for low-quality candidates. On challenging long-horizon and fine-grained robotic manipulation tasks, $\\tau_0$-WM shows superior performance over other relevant baselines.",
+  "tldr": "A unified video-action world model that integrates policy learning, video prediction, and action evaluation within a single future-predictive framework that shows superior performance over other relevant baselines on challenging long-horizon and fine-grained robotic manipulation tasks.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Pengfei Zhou",
+   "Shengcong Chen",
+   "Di Chen",
+   "Jiaxu Wang",
+   "Rongjun Jin",
+   "Bin Zhu"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+  "paper_id": "dblp:journals/corr/abs-2606-01027",
+  "doi": "10.48550/arXiv.2606.01027",
+  "arxiv_id": "2606.01027",
+  "dblp_key": "journals/corr/abs-2606-01027",
+  "paper_url": "https://www.semanticscholar.org/paper/f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+  "published_iso": "2026-05-31",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Identifying the IT Emerging Trends in Four- and Five-Star Hotels in Nairobi County, Kenya",
+  "title_norm": "identifying the it emerging trends in four and five star hotels in nairobi count",
+  "abstract": "Emerging trends in information technology such as artificial intelligence, automation and digital systems have been increasingly transforming operations in the hospitality sector by enhancing efficiency, service delivery and management of workflow. However, these advancements have introduced new demands in the sector which necessitates an understanding of the influence of such technologies on staff performance. The objective of the study was to identify the IT emerging trends in four- and five-star hotels in Nairobi County, Kenya. The study was anchored on technology acceptance model (TAM) theory. The study adopted a mixed method research approach guided by pragmatism paradigm and a correlational research design. The sample size comprised 420 employees comprising of 388 staffs and 32 managers sampled using stratified and simple random sampling techniques. The study used questionnaires and interview schedule for data collection. Reliability was evaluated using Cronbach Alpha with 0.7 as the threshold. Data analysis involved quantitative data analysis comprising of descriptive statistics and inferential statistics (regression analysis) and qualitative data analysis comprising of thematic analysis. Triangulation was done to combine both quantitative and qualitative results. The findings established widespread adoption of IT emerging trends such as contactless and mobile technologies, artificial intelligence and automation, internet of things and smart-room technologies, cybersecurity and data privacy, digital experience technologies and sustainability-oriented smart technologies. The findings of this study suggest several policy directions for enhancing staff performance and technology adoption in four- and five-star hotels in Nairobi County. First, in relation to IT emerging trends, the study recommends that hotels should adopt strategic IT integration policies that mandate regular assessment and structured adoption of digital tools such as contactless technologies, AI and automation, IoT and smart-room systems, robotics, AR/VR platforms, and sustainability-oriented technologies. These policies should be complemented by continuous staff training and awareness programs to ensure employees are updated on new IT systems and capable of leveraging them for operational efficiency and improved guest experience.",
+  "tldr": "It is recommended that hotels should adopt strategic IT integration policies that mandate regular assessment and structured adoption of digital tools such as contactless technologies, AI and automation, IoT and smart-room systems, robotics, AR/VR platforms, and sustainability-oriented technologies.",
+  "year": 2026,
+  "venue": "International journal of research in social sciences and humanities",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Eunice Ndunge Musyoka",
+   "Dr. Lawrence Kabuitu Wang’ombe",
+   "Daniel Makupi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "47f583e5c6f9c612298c7f2e9aac8a0191c2bb8e",
+  "paper_id": "doi:10.47505/ijrss.2026.6.13",
+  "doi": "10.47505/ijrss.2026.6.13",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.47505/ijrss.2026.6.13",
+  "published_iso": null,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation",
+  "title_norm": "pil world a chunk wise world model for vla policy in the loop evaluation",
+  "abstract": "Vision-language-action (VLA) policies operate in a closed loop in real-world robot tasks: a robot observes the scene, executes an action chunk, and conditions its next decision on the resulting observation. However, most existing world models for robot action evaluation are limited to open-loop prediction along pre-collected action trajectories. This prevents them from supporting closed-loop VLA evaluation, where each action chunk must be conditioned on the observation generated by the previous execution. To address this gap, we propose PiL-World, a chunk-wise world model designed for policy-in-the-loop VLA evaluation. Given the current observation and the action trajectory rolled out by a VLA policy, PiL-World generates multi-view future observations that are consistent with the VLA rollout and match the image inputs required by the policy. By alternating between VLA inference and world-model prediction, PiL-World enables closed-loop evaluation without real robot execution at every step. To improve rollout fidelity, PiL-World conditions video generation on action-derived visual control from head-view robot motion and latent histories that encode task execution context, while jointly predicting complementary multi-view observations. Beyond successful teleoperated demonstrations, it also learns from failed execution trajectories, helping the imagined rollouts better match the distribution of real policy executions. We evaluate PiL-World on three real dual-arm manipulation tasks. PiL-World generates imagined rollouts that are highly consistent with real robot executions. More importantly, compared with the baseline, it reduces the error between VLA success rates measured in real-world rollouts and those estimated through closed-loop world-model evaluation from 63.2% to 12.0%.",
+  "tldr": "PiL-World is proposed, a chunk-wise world model designed for policy-in-the-loop VLA evaluation that enables closed-loop evaluation without real robot execution at every step and reduces the error between VLA success rates measured in real-world rollouts and those estimated through closed-loop world-model evaluation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chong Ma",
+   "Taiyi Su",
+   "Jian Zhu",
+   "Jianjun Zhang",
+   "Zitai Huang",
+   "Yi Xu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "534713e7678da3acd12217d55a36a5e3cdc80e0c",
+  "paper_id": "dblp:journals/corr/abs-2606-05773",
+  "doi": "10.48550/arXiv.2606.05773",
+  "arxiv_id": "2606.05773",
+  "dblp_key": "journals/corr/abs-2606-05773",
+  "paper_url": "https://www.semanticscholar.org/paper/534713e7678da3acd12217d55a36a5e3cdc80e0c",
+  "published_iso": "2026-06-04",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "A ROBÓTICA EDUCACIONAL COMO FERRAMENTA DE ESTÍMULO COGNITIVO E INCLUSÃO DE ALUNOS COM TDAH E TRANSTORNO DO ESPECTRO AUTISTA",
+  "title_norm": "a robótica educacional como ferramenta de estímulo cognitivo e inclusão de aluno",
+  "abstract": "Teaching children with ADHD and Autism Spectrum Disorder (ASD) has always been, for most teachers, a territory of uncertainties. Conventional methodologies, designed for the hypothetical student who sits quietly and listens, rarely accommodate the neurological diversity that actually exists in Brazilian classrooms. This article arises precisely from the friction between what the curriculum proposes and what reality imposes, grounded in the teaching practice of the author at Colégio XV de Abril, in Jales, São Paulo, where educational robotics with the micro:bit has been used as a pedagogical tool in Computer Science and Robotics classes since January 2025. The central objective is to investigate how the use of educational robotics — specifically with the micro:bit microcontroller — can contribute to cognitive stimulation, engagement, and inclusion of students diagnosed with ADHD and ASD in elementary education. The methodology adopted is qualitative and exploratory, combining bibliographic review with a reflective teaching experience report. The theoretical framework is anchored in authors such as Papert (1980), Prensky (2001), Rodrigues (2011), and in the regulatory frameworks of the National Policy on Special Education from the Perspective of Inclusive Education (Brazil, 2008) and the BNCC (Brazil, 2018). Results indicate that the concrete, visual and interactive nature of block programming combined with the micro:bit favors concentration, behavioral self-regulation, and active participation of students with neurodiverse profiles, representing an accessible and promising pathway for technological inclusion in basic education.\n ",
+  "tldr": "",
+  "year": 2026,
+  "venue": "International Integralize Scientific",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "Eduardo Junior Alcântara da Silva"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "67712ed95d571970a4a72caa3a447777b1cdfc29",
+  "paper_id": "doi:10.63391/6yec4d20",
+  "doi": "10.63391/6yec4d20",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.63391/6yec4d20",
+  "published_iso": "2026-06-03",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "EA-WM: Event-Aware Generative World Model with Structured Kinematic-to-Visual Action Fields",
+  "title_norm": "ea wm event aware generative world model with structured kinematic to visual act",
+  "abstract": "Pretrained video diffusion models provide powerful spatiotemporal generative priors, making them a natural foundation for robotic world models. While recent world-action models jointly optimize future videos and actions, they predominantly treat video generation as an auxiliary representation for policy learning. Consequently, they insufficiently explore the inverse problem: leveraging action signals to guide video synthesis, thereby often failing to preserve precise robot spatial geometry and fine-grained robot-object interaction dynamics in the generated rollouts. To bridge this gap, we present EA-WM, an Event-Aware Generative World Model that effectively closes the loop between kinematic control and visual perception. Rather than injecting joint or end-effector actions as abstract, low-dimensional tokens, EA-WM projects actions and kinematic states directly into the target camera view as Structured Kinematic-to-Visual Action Fields. To fully exploit this geometrically grounded representation, we introduce event-aware bidirectional fusion blocks that modulate cross-branch attention, capturing object state changes and interaction dynamics. Evaluated on the comprehensive WorldArena benchmark, EA-WM achieves state-of-the-art performance, outperforming existing baselines by a significant margin.",
+  "tldr": "EA-WM is presented, an Event-Aware Generative World Model that effectively closes the loop between kinematic control and visual perception, and introduces event-aware bidirectional fusion blocks that modulate cross-branch attention, capturing object state changes and interaction dynamics.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhaoyang Yang",
+   "Yurun Jin",
+   "Lizhe Qi",
+   "Cong Huang",
+   "Kai Chen"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "93c4892c910c32d359747ce93795ff613b9a3fc7",
+  "paper_id": "dblp:journals/corr/abs-2605-06192",
+  "doi": "10.48550/arXiv.2605.06192",
+  "arxiv_id": "2605.06192",
+  "dblp_key": "journals/corr/abs-2605-06192",
+  "paper_url": "https://www.semanticscholar.org/paper/93c4892c910c32d359747ce93795ff613b9a3fc7",
+  "published_iso": "2026-05-07",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Change-Resilient Localization Estimation",
+  "title_norm": "change resilient localization estimation",
+  "abstract": "Indoor localization is essential in applications such as augmented reality or robotics. Existing solutions for localization in static scenes work well even for large environments, but localization in environments with movable objects whose pose in the scene change between sessions remains challenging. In this paper, we propose a change-resilient localization method based on a novel geometric descriptor computed only from geometric primitives. Our method is capable of re-identifying primitives that have moved in the scene. We leverage this feature to update a stored reference model (anchor) of the environment to accommodate the changes, which enables localization that is resilient to changes in the scene. We report on a set of experiments demonstrating the robustness and scalability of our method. In addition, we present use cases highlighting the importance of being able to update a reference model.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Conference on Virtual Reality and 3D User Interfaces",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Fernando Reyes-Aviles",
+   "Philipp Fleck",
+   "Dieter Schmalstieg",
+   "Clemens Arth"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8a0dfcc1646cb466206f413b0813ee791ff048d5",
+  "paper_id": "dblp:conf/vr/ReyesAvilesFSA26",
+  "doi": "10.1109/VR67842.2026.00041",
+  "arxiv_id": "",
+  "dblp_key": "conf/vr/ReyesAvilesFSA26",
+  "paper_url": "https://www.semanticscholar.org/paper/8a0dfcc1646cb466206f413b0813ee791ff048d5",
+  "published_iso": "2026-03-21",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "AR Forcing: Towards Long-Horizon Robot Navigation World Model",
+  "title_norm": "ar forcing towards long horizon robot navigation world model",
+  "abstract": "The diffusion based robot navigation world models are typically trained using parallel supervision, while autoregressive inference is employed during path planning. This results in a distribution shift between training and inference, which destabilizes the performance over long-horizon prediction. We propose AR Forcing, an autoregressive training strategy, which integrates the standard diffusion loss into the autoregressive training loop. At each step, the model uses its own predictions to update the context and optimize the single step noise prediction objective, thereby explicitly exposing the model to the inference state distribution during training. Our method does not require additional discriminators or distribution-matching losses, retains the original diffusion framework and sampler, and is easy to integrate. Experiments on multi-domain navigation datasets (RECON, SCAND, HuRoN, TartanDrive) show that compared with strong baselines, AR Forcing improved the consistency of generated images during long-horizon navigation and the accuracy of predicted trajectories, enhancing robustness of the model in complex known and unknown environments. We will release the code soon.",
+  "tldr": "Experiments show that compared with strong baselines, AR Forcing improved the consistency of generated images during long-horizon navigation and the accuracy of predicted trajectories, enhancing robustness of the model in complex known and unknown environments.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yifei Yang",
+   "Zehua Fan",
+   "Huan Li",
+   "Ao Wang",
+   "Lida Huang",
+   "Haibao Yu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0863b06eb5870a1508aaf638e5239157844ce828",
+  "paper_id": "dblp:journals/corr/abs-2605-31314",
+  "doi": "10.48550/arXiv.2605.31314",
+  "arxiv_id": "2605.31314",
+  "dblp_key": "journals/corr/abs-2605-31314",
+  "paper_url": "https://www.semanticscholar.org/paper/0863b06eb5870a1508aaf638e5239157844ce828",
+  "published_iso": "2026-05-29",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "StreamVLA: Breaking the Reason-Act Cycle via Completion-State Gating",
+  "title_norm": "streamvla breaking the reason act cycle via completion state gating",
+  "abstract": "Long-horizon robotic manipulation requires bridging the gap between high-level planning (System 2) and low-level control (System 1). Current Vision-Language-Action (VLA) models often entangle these processes, performing redundant multimodal reasoning at every timestep, which leads to high latency and goal instability. To address this, we present StreamVLA, a dual-system architecture that unifies textual task decomposition, visual goal imagination, and continuous action generation within a single parameter-efficient backbone. We introduce a\"Lock-and-Gated\"mechanism to intelligently modulate computation: only when a sub-task transition is detected, the model triggers slow thinking to generate a textual instruction and imagines the specific visual completion state, rather than generic future frames. Crucially, this completion state serves as a time-invariant goal anchor, making the policy robust to execution speed variations. During steady execution, these high-level intents are locked to condition a Flow Matching action head, allowing the model to bypass expensive autoregressive decoding for 72% of timesteps. This hierarchical abstraction ensures sub-goal focus while significantly reducing inference latency. Extensive evaluations demonstrate that StreamVLA achieves state-of-the-art performance, with a 98.5% success rate on the LIBERO benchmark and robust recovery in real-world interference scenarios, achieving a 48% reduction in latency compared to full-reasoning baselines.",
+  "tldr": "This work presents StreamVLA, a dual-system architecture that unifies textual task decomposition, visual goal imagination, and continuous action generation within a single parameter-efficient backbone, and introduces a \"Lock-and-Gated\"mechanism to intelligently modulate computation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tong Chen",
+   "Hang Wu",
+   "Jiasen Wang",
+   "Xiaotao Li",
+   "Lu Fang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "17fcc2b1136f19af317101e8a22dbd1a5fec9f57",
+  "paper_id": "dblp:journals/corr/abs-2602-01100",
+  "doi": "10.48550/arXiv.2602.01100",
+  "arxiv_id": "2602.01100",
+  "dblp_key": "journals/corr/abs-2602-01100",
+  "paper_url": "https://www.semanticscholar.org/paper/17fcc2b1136f19af317101e8a22dbd1a5fec9f57",
+  "published_iso": "2026-02-01",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Beyond Action Residuals: Real-World Robot Policy Steering via Bottleneck Latent Reinforcement Learning",
+  "title_norm": "beyond action residuals real world robot policy steering via bottleneck latent r",
+  "abstract": "Pretrained imitation policies have become a strong foundation for robot manipulation, but they often require online improvement to overcome execution errors, limited dataset coverage, and deployment mismatch. A central question is therefore how reinforcement learning (RL) should adapt policies after offline pretraining. Existing lightweight methods commonly apply residual corrections directly in action space, but this often leads to noisy and poorly structured exploration. In this work, we propose Z-Perturbation Reinforcement Learning (ZPRL), an approach that steers pretrained policies through a compact bottleneck latent rather than through policy weights or output actions. During offline training, we augment the policy with a plug-and-play variational information bottleneck (VIB) module to extract a task-relevant latent interface from observation embeddings. During online finetuning, the base policy is frozen and RL learns only a residual perturbation on this latent, whose decoded representation conditions the frozen action generator. We instantiate ZPRL on flow-matching policies and evaluate it on eight simulation tasks and four real-world tasks. Across diverse manipulation settings, ZPRL improves both sample efficiency and final performance over strong post-training baselines. In the real world, ZPRL improves the average success rate on four tasks by 33.7% over imitation base policies while producing smoother exploration behaviors than an action residual counterpart. These results suggest that a compact, task-aligned bottleneck latent provides an effective interface for online RL adaptation. More videos can be found at https://manutdmoon.github.io/ZPRL/.",
+  "tldr": "This work proposes Z-Perturbation Reinforcement Learning (ZPRL), an approach that steers pretrained policies through a compact bottleneck latent rather than through policy weights or output actions, and suggests that a compact, task-aligned bottleneck latent provides an effective interface for online RL adaptation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dongjie Yu",
+   "Kun Lei",
+   "Zhennan Jiang",
+   "Jia Pan",
+   "Huazhe Xu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "302c4834f55d00dd12ba1c73a090a83baf895f6f",
+  "paper_id": "dblp:journals/corr/abs-2605-19919",
+  "doi": "10.48550/arXiv.2605.19919",
+  "arxiv_id": "2605.19919",
+  "dblp_key": "journals/corr/abs-2605-19919",
+  "paper_url": "https://www.semanticscholar.org/paper/302c4834f55d00dd12ba1c73a090a83baf895f6f",
+  "published_iso": "2026-05-19",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Coupled Learning–Adoption Modeling with Cost Floor Constraints for Realistic Cost Projections of Flow Batteries",
+  "title_norm": "coupled learning adoption modeling with cost floor constraints for realistic cos",
+  "abstract": "Accurate cost projections for emerging energy storage technologies require a consistent treatment of the interdependence between technological learning and market adoption. Conventional techno-economic analyses often rely on simplified experience curves, such as Wright’s law, which assume continuous cost decline with cumulative production. However, such approaches neglect two critical realities: (i) cost reductions are physically and economically bonded by material and manufacturing constraints, and (ii) cumulative deployment itself is governed by market adoption dynamics, which are influenced by cost competitiveness. As a result, uncoupled or unconstrained models can lead to unrealistic long-term projections and misinformed policy or investment decisions.\n In this work, we have developed a refined learning–adoption modeling framework that explicitly captures the iterative coupling between cost evolution and market diffusion. The framework is combined with the Battery Performance and Cost model for Flow Batteries (BatPaC-Flow), a bottom-up techno-economic model developed at Argonne, to estimate the cost and commercialization rate for redox flow batteries. The framework integrates component-level learning curves, system-level cost aggregation, and a Bass-diffusion-based adoption model, enabling iterative feedback between deployment and cost reduction. This coupled formulation reflects the fundamental insight that cost declines only occur through deployment, while adoption itself is constrained by cost trajectories and competition with alternative technologies.\n \n A key refinement of this work, beyond state-of-the-art of learning curves, is the introduction of physically grounded cost floors\n 1\n . Unlike conventional experience curve models that allow indefinite cost decline, we impose lower bounds derived from raw material and precursor costs, calculated via stoichiometric relationships and representative process routes. In addition, fixed manufacturing cost components are incorporated as non-learning fractions to account for irreducible process expenses. These refinements prevent unrealistic extrapolation and ensure that projected cost trajectories remain consistent with supply chain and thermodynamic constraints. Results show that both mineral-based and manufacturing-based floors significantly alter long-term cost projections by imposing asymptotic limits on system-level cost reductions, particularly for main cost drivers such as vanadium electrolytes.\n \n \n At the component level, learning rates are systematically assigned based on technology-inherent characteristics, specifically design complexity and need for customization\n 2\n , assigned by stakeholders and experts via interviews and questionnaires. Components that are highly standardized and modular exhibit faster cost declines, while those requiring extensive engineering iteration or site-specific adaptation demonstrate slower learning. This classification enables a more mechanistic and transparent mapping between technology attributes and experience rates, improving the fidelity of bottom-up cost projections and avoiding arbitrary or uniform learning rate assumptions.\n \n \n On the adoption side, we have refined the Bass diffusion model parameters to better represent the deployment dynamics of flow batteries in stationary energy storage markets. The innovation coefficient and imitation coefficient are first calibrated using lithium-ion battery deployment data (from year 2009 to 2024)\n 3\n as an empirical anchor, through nonlinear least-squares fitting. These parameters are then adjusted to reflect flow battery–specific characteristics, including technology maturity, policy drivers, and expected market segmentation. In this framework, the innovation parameter primarily governs the timing of market takeoff, while the imitation parameter controls the rate of adoption acceleration. Furthermore, we have introduced a cost sensitivity parameter to explicitly capture how cost competitiveness relative to alternative technologies influences adoption rates, as well as incorporate constraints on total addressable market size.\n \n The resulting framework establishes a fully coupled, iterative system in which cost trajectories and adoption pathways co-evolve. System-level cost projections are dynamically updated based on cumulative installed capacity derived from the adoption model, while adoption rates respond to evolving cost competitiveness. This feedback loop enables more realistic projections of both cost reduction timelines and market penetration, compared to traditional one-directional models. Application of the framework to representative flow battery systems demonstrates that incorporating cost floors and adoption coupling can significantly delay or limit projected cost reductions, while also shifting adoption timelines. For example, scenarios that neglect cost floors may overestimate long-term cost reductions, whereas coupled models reveal more gradual and bounded cost declines, with adoption trajectories strongly dependent on early-stage cost competitiveness and policy-driven innovation effects. The approach is broadly applicable to other emerging technologies where cost and deployment are tightly coupled, such as electrochemical systems and separation technologies.\n \n \n References\n \n \n (1) Yao, A.; Benson, S. M.; Chueh, W. C. Critically assessing sodium-ion technology roadmaps and scenarios for techno-economic competitiveness against lithium-ion batteries.\n Nature Energy\n 2025\n ,\n 10\n (3), 404–416. DOI: 10.1038/s41560-024-01701-9.\n \n \n (2) Sievert, K.; Schmidt, T. S.; Steffen, B. Considering technology characteristics to project future costs of direct air capture.\n Joule\n 2024\n ,\n 8\n (4), 979–999. DOI: 10.1016/j.joule.2024.02.005.\n \n \n (3) Administration, U. S. E. I.\n 2024 Battery Storage Figures, 2024 Form EIA-860, Annual Electric Generator Report\n ; 2023.\n",
+  "tldr": "",
+  "year": 2026,
+  "venue": "ECS Meeting Abstracts",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaoxu Fu",
+   "Matthew E. Riddle",
+   "Á. Xavier",
+   "K. G. Menon",
+   "Kevin W. Knehr",
+   "Zoushuang Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a57a43c5c0fec53cbc21621494b349fc31aa5fe3",
+  "paper_id": "doi:10.1149/ma2026-0172834mtgabs",
+  "doi": "10.1149/ma2026-0172834mtgabs",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a57a43c5c0fec53cbc21621494b349fc31aa5fe3",
+  "published_iso": "2026-07-07",
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Morphology-Conditioned World Model for Cross-Embodiment Quadrupedal Locomotion",
+  "title_norm": "morphology conditioned world model for cross embodiment quadrupedal locomotion",
+  "abstract": "World models promise a paradigm shift in robotics, where an agent learns the physics of its environment once and then acquires behaviors efficiently. Yet the learned dynamics models at their core are typically morphology locked. In legged locomotion, a dynamics model trained on an ANYmal-D quadruped fails on a Unitree Go1 because it overfits to one robot's embodiment rather than capturing the locomotion dynamics shared across robots, so even a small change in actuator dynamics or limb length forces retraining from scratch. However, if we formalize a robot's unique physical traits into a morphology specification, a controller for a family of robots can utilize this blueprint in two ways. It can feed the specification to a model-free policy, or it can feed the specification to a learned dynamics model and extract the policy in imagination. We argue for the second route and introduce the Quadrupedal World Model (QWM), which conditions a single generative dynamics model on scale-invariant physical features and trains policies entirely inside it, through a physical morphology encoder, an adaptive reward normalizer, and morphology conditioning in the latent dynamics. Holding the morphology information identical, a model-free policy matches QWM on the training cohort but degrades on unseen morphologies, while QWM transfers zero-shot with no fine-tuning, adaptation, or warm-up in such cases. To our knowledge, this is the first world model to demonstrate zero-shot cross-embodiment transfer within the quadrupedal family.",
+  "tldr": "The Quadrupedal World Model is introduced, which conditions a single generative dynamics model on scale-invariant physical features and trains policies entirely inside it, through a physical morphology encoder, an adaptive reward normalizer, and morphology conditioning in the latent dynamics.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Mohamad H. Danesh",
+   "Chenhao Li",
+   "A. Abyaneh",
+   "A. Houssaini",
+   "Kirsty Ellis",
+   "G. Berseth"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1ee5738035b3894d3f725f6420e4e521d454c1db",
+  "paper_id": "arxiv:2604.08780",
+  "doi": "",
+  "arxiv_id": "2604.08780",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1ee5738035b3894d3f725f6420e4e521d454c1db",
+  "published_iso": "2026-04-09",
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ }
+]

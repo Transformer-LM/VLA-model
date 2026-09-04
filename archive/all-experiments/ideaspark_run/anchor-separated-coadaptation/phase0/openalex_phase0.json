@@ -1,0 +1,1150 @@
+[
+ {
+  "title": "Foundation models in robotics: Applications, challenges, and the future",
+  "title_norm": "foundation models in robotics applications challenges and the future",
+  "abstract": "We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper can be found here: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Roya Firoozi",
+   "Johnathan Tucker",
+   "Stephen Tian",
+   "Anirudha Majumdar",
+   "Jiankai Sun",
+   "Weiyu Liu"
+  ],
+  "citations": 199,
+  "source": "openalex",
+  "source_id": "W4402890475",
+  "doi": "10.1177/02783649241281508",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e3eb5469-f176-4c99-8231-efe683fe6399/02783649241281508.17904978.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Can Open Large Language Models Catch Vulnerabilities?",
+  "title_norm": "can open large language models catch vulnerabilities",
+  "abstract": "As Large Language Models (LLMs) become increasingly integrated into secure software development workflows, a critical question remains unanswered: can these models not only detect insecure code but also reliably classify vulnerabilities according to standardized taxonomies? In this work, we conduct a systematic evaluation of three state-of-the-art LLMs - Llama3, Codestral, and Deepseek R1 - using a carefully filtered subset of the Big-Vul dataset annotated with eight representative Common Weakness Enumeration categories. Adopting a closed-world classification setup, we assess each model’s performance in both identifying the presence of vulnerabilities and mapping them to the correct CWE label. Our findings reveal a sharp contrast between high detection rates and markedly poor classification accuracy, with frequent overgeneralization and misclassification. Moreover, we analyze model-specific biases and common failure modes, shedding light on the limitations of current LLMs in performing fine-grained security reasoning.These insights are especially relevant in educational contexts, where LLMs are being adopted as learning aids despite their limitations. A nuanced understanding of their behaviour is essential to prevent the propagation of misconceptions among students. Our results expose key challenges that must be addressed before LLMs can be reliably deployed in security-sensitive environments.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "DeepSeek-AI",
+   "Guo, Daya",
+   "Yang, Dejian",
+   "Zhang, Haowei",
+   "Junxiao Song",
+   "Wang, Peiyi"
+  ],
+  "citations": 530,
+  "source": "openalex",
+  "source_id": "W4406779522",
+  "doi": "10.4230/oasics.icpec.2025.4",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.12948",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+  "title_norm": "vision language action models for robotics a review towards real world applicati",
+  "abstract": "Amid growing efforts to leverage advances in large language models (LLMs) and visionlanguage models (VLMs) for robotics, Vision-Language-Action (VLA) models have recently gained significant attention. By unifying vision, language, and action data at scale, which have traditionally been studied separately, VLA models aim to learn policies that generalise across diverse tasks, objects, embodiments, and environments. This generalisation capability is expected to enable robots to solve novel downstream tasks with minimal or no additional task-specific data, facilitating more flexible and scalable real-world deployment. Unlike previous surveys that focus narrowly on action representations or high-level model architectures, this work offers a comprehensive, full-stack review, integrating both software and hardware components of VLA systems. In particular, this paper provides a systematic review of VLAs, covering their strategy and architectural transition, architectures and building blocks, modality-specific processing techniques, and learning paradigms. In addition, to support the deployment of VLAs in real-world robotic applications, we also review commonly used robot platforms, data collection strategies, publicly available datasets, data augmentation methods, and evaluation benchmarks. Throughout this comprehensive survey, this paper aims to offer practical guidance for the robotics community in applying VLAs to real-world robotic systems. All references categorized by training approach, evaluation method, modality, and dataset are available in the table on our project website: https://vla-survey.github.io.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Kento Kawaharazuka",
+   "Jihoon Oh",
+   "Jun Yamada",
+   "Ingmar Posner",
+   "Yuke Zhu"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4414198610",
+  "doi": "10.1109/access.2025.3609980",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414198610",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions",
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "ARTHUR: authoring human–robot collaboration processes with augmented reality using hybrid user interfaces",
+  "title_norm": "arthur authoring human robot collaboration processes with augmented reality usin",
+  "abstract": "Abstract While augmented reality shows promise for supporting human–robot collaboration, creating such interactive systems still poses great challenges. Addressing this, we introduce ARTHUR, an open-source authoring tool for augmented reality-supported human–robot collaboration. We thereby propose to combine desktop interfaces and touchscreen devices for effective authoring with head-mounted displays for testing and in-situ refinements. ARTHUR supports 20 types of multi-modal feedback to convey robot, task, and system state, 10 actions that enable the user to control the robot and system, and 18 conditions for feedback customization and triggering of actions. By combining these elements, users can create interaction spaces, controls, and information visualizations in augmented reality for collaboration with robot arms. To demonstrate the general applicability of ARTHUR for human–robot collaboration scenarios, we replicate representative examples from prior work. Further, in an evaluation with five domain-savvy participants, we reflect on the usefulness of our hybrid user interface approach and the supported functionality, highlighting its potential and directions for future work.",
+  "year": 2025,
+  "venue": "Virtual Reality",
+  "authors": [
+   "Rasmus Lunding",
+   "Sebastian Hubenschmid",
+   "Tiare Feuchtner",
+   "Kaj Grønbæk"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4409778113",
+  "doi": "10.1007/s10055-025-01149-6",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10055-025-01149-6.pdf",
+  "published_iso": "2025-04-24",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Wearable and Implantable Soft Robots",
+  "title_norm": "wearable and implantable soft robots",
+  "abstract": "Soft robotics presents innovative solutions across different scales. The flexibility and mechanical characteristics of soft robots make them particularly appealing for wearable and implantable applications. The scale and level of invasiveness required for soft robots depend on the extent of human interaction. This review provides a comprehensive overview of wearable and implantable soft robots, including applications in rehabilitation, assistance, organ simulation, surgical tools, and therapy. We discuss challenges such as the complexity of fabrication processes, the integration of responsive materials, and the need for robust control strategies, while focusing on advances in materials, actuation and sensing mechanisms, and fabrication techniques. Finally, we discuss the future outlook, highlighting key challenges and proposing potential solutions.",
+  "year": 2024,
+  "venue": "Chemical Reviews",
+  "authors": [
+   "Shukun Yin",
+   "Dickson R. Yao",
+   "Yu Song",
+   "Wenzheng Heng",
+   "Xiaotian Ma",
+   "Hong Han"
+  ],
+  "citations": 164,
+  "source": "openalex",
+  "source_id": "W4403332501",
+  "doi": "10.1021/acs.chemrev.4c00513",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12140402/pdf/nihms-2086088.pdf",
+  "published_iso": "2024-10-11",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods",
+  "title_norm": "survey on large language model enhanced reinforcement learning concept taxonomy ",
+  "abstract": "With extensive pretrained knowledge and high-level general capabilities, large language models (LLMs) emerge as a promising avenue to augment reinforcement learning (RL) in aspects, such as multitask learning, sample efficiency, and high-level task planning. In this survey, we provide a comprehensive review of the existing literature in LLM-enhanced RL and summarize its characteristics compared with conventional RL methods, aiming to clarify the research scope and directions for future studies. Utilizing the classical agent-environment interaction paradigm, we propose a structured taxonomy to systematically categorize LLMs' functionalities in RL, including four roles: information processor, reward designer, decision-maker, and generator. For each role, we summarize the methodologies, analyze the specific RL challenges that are mitigated and provide insights into future directions. Finally, the comparative analysis of each role, potential applications, prospective opportunities, and challenges of the LLM-enhanced RL are discussed. By proposing this taxonomy, we aim to provide a framework for researchers to effectively leverage LLMs in the RL field, potentially accelerating RL applications in complex applications, such as robotics, autonomous driving, and energy systems.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "authors": [
+   "Yuji Cao",
+   "Huan Zhao",
+   "Yuheng Cheng",
+   "Ting Shu",
+   "Yue Chen",
+   "Guolong Liu"
+  ],
+  "citations": 144,
+  "source": "openalex",
+  "source_id": "W4393763811",
+  "doi": "10.1109/tnnls.2024.3497992",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2404.00282",
+  "published_iso": "2024-11-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "SFT Memorizes, RL Generalizes: A Comparative Study of Foundation Model Post-training",
+  "title_norm": "sft memorizes rl generalizes a comparative study of foundation model post traini",
+  "abstract": "Supervised fine-tuning (SFT) and reinforcement learning (RL) are widely used post-training techniques for foundation models. However, their roles in enhancing model generalization capabilities remain unclear. This paper studies the difference between SFT and RL on generalization and memorization, focusing on text-based rule variants and visual variants. We introduce GeneralPoints, an arithmetic reasoning card game, and adopt V-IRL, a real-world navigation environment, to assess how models trained with SFT and RL generalize to unseen variants in both textual and visual domains. We show that RL, especially when trained with an outcome-based reward, generalizes across both rule-based textual and visual variants. SFT, in contrast, tends to memorize training data and struggles to generalize out-of-distribution scenarios. Further analysis reveals that RL improves the model's underlying visual recognition capabilities, contributing to its enhanced generalization in the visual domain. Despite RL's superior generalization, we show that SFT remains essential for effective RL training; SFT stabilizes the model's output format, enabling subsequent RL to achieve its performance gains. These findings demonstrates the capability of RL for acquiring generalizable knowledge in complex, multi-modal tasks.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chu, Tianzhe",
+   "Yuexiang Zhai",
+   "Jihan Yang",
+   "Shengbang Tong",
+   "Saining Xie",
+   "Dale Schuurmans"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4406961529",
+  "doi": "10.48550/arxiv.2501.17161",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.17161",
+  "published_iso": "2025-01-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+  "title_norm": "ai agents vs agentic ai a conceptual taxonomy applications and challenges",
+  "abstract": "This review critically distinguishes between AI Agents and Agentic AI, offering a structured, conceptual taxonomy, application mapping, and analysis of opportunities and challenges to clarify their divergent design philosophies and capabilities. We begin by outlining the search strategy and foundational definitions, characterizing AI Agents as modular systems driven and enabled by LLMs and LIMs for taskspecific automation. Generative AI is positioned as a precursor providing the foundation, with AI agents advancing through tool integration, prompt engineering, and reasoning enhancements. We then characterize Agentic AI systems, which, in contrast to AI Agents, represent a paradigm shift marked by multi-agent collaboration, dynamic task decomposition, persistent memory, and coordinated autonomy. Through a chronological evaluation of architectural evolution, operational mechanisms, interaction styles, and autonomy levels, we present a comparative analysis across both AI agents and agentic AI paradigms. Application domains enabled by AI Agents such as customer support, scheduling, and data summarization are then contrasted with Agentic AI deployments in research automation, robotic coordination, and medical decision support. We further examine unique challenges in each paradigm including hallucination, brittleness, emergent behavior, and coordination failure, and propose targeted solutions such as ReAct loops, retrieval-augmented generation (RAG), automation coordination layers, and causal modeling. This work aims to provide a roadmap for developing robust, scalable, and explainable AI-driven systems.",
+  "year": 2025,
+  "venue": "SuperIntelligence - Robotics - Safety & Alignment",
+  "authors": [
+   "Ranjan Sapkota",
+   "Konstantinos I. Roumeliotis",
+   "Manoj Karkee"
+  ],
+  "citations": 167,
+  "source": "openalex",
+  "source_id": "W4412505619",
+  "doi": "10.70777/si.v2i3.15161",
+  "arxiv_id": null,
+  "paper_url": "https://s-rsa.com/index.php/agi/article/download/15161/11079",
+  "published_iso": "2025-07-20",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Towards conversational diagnostic artificial intelligence",
+  "title_norm": "towards conversational diagnostic artificial intelligence",
+  "abstract": "Abstract At the heart of medicine lies physician–patient dialogue, where skillful history-taking enables effective diagnosis, management and enduring trust 1,2 . Artificial intelligence (AI) systems capable of diagnostic dialogue could increase accessibility and quality of care. However, approximating clinicians’ expertise is an outstanding challenge. Here we introduce AMIE (Articulate Medical Intelligence Explorer), a large language model (LLM)-based AI system optimized for diagnostic dialogue. AMIE uses a self-play-based 3 simulated environment with automated feedback for scaling learning across disease conditions, specialties and contexts. We designed a framework for evaluating clinically meaningful axes of performance, including history-taking, diagnostic accuracy, management, communication skills and empathy. We compared AMIE’s performance to that of primary care physicians in a randomized, double-blind crossover study of text-based consultations with validated patient-actors similar to objective structured clinical examination 4,5 . The study included 159 case scenarios from providers in Canada, the United Kingdom and India, 20 primary care physicians compared to AMIE, and evaluations by specialist physicians and patient-actors. AMIE demonstrated greater diagnostic accuracy and superior performance on 30 out of 32 axes according to the specialist physicians and 25 out of 26 axes according to the patient-actors. Our research has several limitations and should be interpreted with caution. Clinicians used synchronous text chat, which permits large-scale LLM–patient interactions, but this is unfamiliar in clinical practice. While further research is required before AMIE could be translated to real-world settings, the results represent a milestone towards conversational diagnostic AI.",
+  "year": 2025,
+  "venue": "Nature",
+  "authors": [
+   "Tao Tu",
+   "Mike Schaekermann",
+   "Anil Palepu",
+   "Khaled Saab",
+   "Jan Freyberg",
+   "Ryutaro Tanno"
+  ],
+  "citations": 295,
+  "source": "openalex",
+  "source_id": "W4409283601",
+  "doi": "10.1038/s41586-025-08866-7",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-025-08866-7.pdf",
+  "published_iso": "2025-04-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Embodied AI: From LLMs to World Models",
+  "title_norm": "embodied ai from llms to world models",
+  "abstract": "Embodied Artificial Intelligence (AI) is an intelligent system paradigm for achieving Artificial General Intelligence (AGI), serving as the cornerstone for various applications and driving the evolution from cyberspace to physical systems. Recent breakthroughs in Large Language Models (LLMs) and World Models (WMs) have drawn significant attention for embodied AI. On the one hand, LLMs empower embodied AI via semantic reasoning and task decomposition, bringing high-level natural language instructions and low-level natural language actions into embodied cognition. On the other hand, WMs empower embodied AI by building internal representations and future predictions of the external world, facilitating physical law-compliant embodied interactions. As such, this paper comprehensively explores the literature in embodied AI from basics to advances, covering both LLM driven and WM driven works. In particular, we first present the history, key technologies, key components, and hardware systems of embodied AI, as well as discuss its development via looking from unimodal to multimodal angle. We then scrutinize the two burgeoning fields of embodied AI, i.e., embodied AI with LLMs/multimodal LLMs (MLLMs) and embodied AI with WMs, meticulously delineating their indispensable roles in endto-end embodied cognition and physical laws-driven embodied interactions. Building upon the above advances, we further share our insights on the necessity of the joint MLLM-WM driven embodied AI architecture, shedding light on its profound significance in enabling complex tasks within physical worlds. In addition, we examine representative applications of embodied AI, demonstrating its wide applicability in real-world scenarios. Last but not least, we point out future research directions of embodied AI that deserve further investigation.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Tongtong Feng",
+   "Xiuli Wang",
+   "Yu–Gang Jiang",
+   "Wenwu Zhu"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4414857074",
+  "doi": "10.36227/techrxiv.175977432.27129012/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175977432.27129012",
+  "published_iso": "2025-10-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "The Taxation of Artificial Intelligence between New Taxes and Additional Incentives",
+  "title_norm": "the taxation of artificial intelligence between new taxes and additional incenti",
+  "abstract": "The profound changes that accompany the history of humanity seem to depend largely on the unstoppable force of knowledge and innovation. The diffusion of robotics and artificial intelligence has had a significant impact on the processes of wealth production, with inevitable repercussions also on the labour market: today intelligent robots can carry out activities that were only human until recently. In this view, following the growing importance of the use of robots in modern society, the theme of the “robot tax” has assumed no small importance. The essay examines the various solutions imagined, evaluating the proposals to recognize the tax subjectivity of robots or to define the taxable case, assuming, depending on the case, as a prerequisite for the tax, the ability to accumulate data and knowledge, the property value of the robot-good or the greater profits deriving from the activity carried out using it.",
+  "year": 2024,
+  "venue": "Wydawnictwo Uniwersytetu Łódzkiego eBooks",
+  "authors": [
+   "Antonio Felice Uricchio"
+  ],
+  "citations": 28,
+  "source": "openalex",
+  "source_id": "W4405711354",
+  "doi": "10.18778/8331-399-3.26",
+  "arxiv_id": null,
+  "paper_url": "http://dspace.uni.lodz.pl:8080/xmlui/bitstream/11089/55239/1/321-342_Uricchio.pdf",
+  "published_iso": "2024-12-23",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "On human-in-the-loop optimization of human–robot interaction",
+  "title_norm": "on human in the loop optimization of human robot interaction",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Nature",
+  "authors": [
+   "Patrick Slade",
+   "Christopher G. Atkeson",
+   "J. Maxwell Donelan",
+   "Han Houdijk",
+   "Kimberly A. Ingraham",
+   "Myunghee Kim"
+  ],
+  "citations": 133,
+  "source": "openalex",
+  "source_id": "W4402827264",
+  "doi": "10.1038/s41586-024-07697-2",
+  "arxiv_id": null,
+  "paper_url": "https://pure.eur.nl/ws/files/169691907/On_human-in-the-loop_optimization_of_human_robot_interaction.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "The Importance of AI Data Governance in Large Language Models",
+  "title_norm": "the importance of ai data governance in large language models",
+  "abstract": "AI data governance is a crucial framework for ensuring that data are utilized in the lifecycle of large language model (LLM) activity, from the development process to the end-to-end testing process, model validation, secure deployment, and operations. This requires the data to be managed responsibly, confidentially, securely, and ethically. The main objective of data governance is to implement a robust and intelligent data governance framework for LLMs, which tends to impact data quality management, the fine-tuning of model performance, biases, data privacy laws, security protocols, ethical AI practices, and regulatory compliance processes in LLMs. Effective data governance steps are important for minimizing data breach activity, enhancing data security, ensuring compliance and regulations, mitigating bias, and establishing clear policies and guidelines. This paper covers the foundation of AI data governance, key components, types of data governance, best practices, case studies, challenges, and future directions of data governance in LLMs. Additionally, we conduct a comprehensive detailed analysis of data governance and how efficient the integration of AI data governance must be for LLMs to gain a trustable approach for the end user. Finally, we provide deeper insights into the comprehensive exploration of the relevance of the data governance framework to the current landscape of LLMs in the healthcare, pharmaceutical, finance, supply chain management, and cybersecurity sectors and address the essential roles to take advantage of the approach of data governance frameworks and their effectiveness and limitations.",
+  "year": 2025,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Saurabh Pahune",
+   "Zahid Akhtar",
+   "Venkatesh Mandapati",
+   "Kamran Siddique"
+  ],
+  "citations": 40,
+  "source": "openalex",
+  "source_id": "W4410823183",
+  "doi": "10.3390/bdcc9060147",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/9/6/147/pdf?version=1748433182",
+  "published_iso": "2025-05-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Foundation models and intelligent decision-making: Progress, challenges, and perspectives",
+  "title_norm": "foundation models and intelligent decision making progress challenges and perspe",
+  "abstract": "Intelligent decision-making (IDM) is a cornerstone of artificial intelligence (AI) designed to automate or augment decision processes. Modern IDM paradigms integrate advanced frameworks to enable intelligent agents to make effective and adaptive choices and decompose complex tasks into manageable steps, such as AI agents and high-level reinforcement learning. Recent advances in multimodal foundation-based approaches unify diverse input modalities-such as vision, language, and sensory data-into a cohesive decision-making process. Foundation models (FMs) have become pivotal in science and industry, transforming decision-making and research capabilities. Their large-scale, multimodal data-processing abilities foster adaptability and interdisciplinary breakthroughs across fields such as healthcare, life sciences, and education. This survey examines IDM's evolution, advanced paradigms with FMs and their transformative impact on decision-making across diverse scientific and industrial domains, highlighting the challenges and opportunities in building efficient, adaptive, and ethical decision systems.",
+  "year": 2025,
+  "venue": "The Innovation",
+  "authors": [
+   "Jincai Huang",
+   "Yongjun Xu",
+   "Qi Wang",
+   "Qi Wang",
+   "Xingxing Liang",
+   "Fei Wang"
+  ],
+  "citations": 57,
+  "source": "openalex",
+  "source_id": "W4410291923",
+  "doi": "10.1016/j.xinn.2025.100948",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410291923",
+  "published_iso": "2025-05-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "Reinforcement learning as a robotics-inspired framework for insect navigation: from spatial representations to neural implementation",
+  "title_norm": "reinforcement learning as a robotics inspired framework for insect navigation fr",
+  "abstract": "Bees are among the master navigators of the insect world. Despite impressive advances in robot navigation research, the performance of these insects is still unrivaled by any artificial system in terms of training efficiency and generalization capabilities, particularly considering the limited computational capacity. On the other hand, computational principles underlying these extraordinary feats are still only partially understood. The theoretical framework of reinforcement learning (RL) provides an ideal focal point to bring the two fields together for mutual benefit. In particular, we analyze and compare representations of space in robot and insect navigation models through the lens of RL, as the efficiency of insect navigation is likely rooted in an efficient and robust internal representation, linking retinotopic (egocentric) visual input with the geometry of the environment. While RL has long been at the core of robot navigation research, current computational theories of insect navigation are not commonly formulated within this framework, but largely as an associative learning process implemented in the insect brain, especially in the mushroom body (MB). Here we propose specific hypothetical components of the MB circuit that would enable the implementation of a certain class of relatively simple RL algorithms, capable of integrating distinct components of a navigation task, reminiscent of hierarchical RL models used in robot navigation. We discuss how current models of insect and robot navigation are exploring representations beyond classical, complete map-like representations, with spatial information being embedded in the respective latent representations to varying degrees.",
+  "year": 2024,
+  "venue": "Frontiers in Computational Neuroscience",
+  "authors": [
+   "Stephan Lochner",
+   "Daniel Honerkamp",
+   "Abhinav Valada",
+   "Andrew Straw"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4402380956",
+  "doi": "10.3389/fncom.2024.1460006",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/computational-neuroscience/articles/10.3389/fncom.2024.1460006/pdf",
+  "published_iso": "2024-09-09",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Embodied large language models enable robots to complete complex tasks in unpredictable environments",
+  "title_norm": "embodied large language models enable robots to complete complex tasks in unpred",
+  "abstract": "Completing complex tasks in unpredictable settings challenges robotic systems, requiring a step change in machine intelligence. Sensorimotor abilities are considered integral to human intelligence. Thus, biologically inspired machine intelligence might usefully combine artificial intelligence with robotic sensorimotor capabilities. Here we report an embodied large-language-model-enabled robot (ELLMER) framework, utilizing GPT-4 and a retrieval-augmented generation infrastructure, to enable robots to complete long-horizon tasks in unpredictable settings. The method extracts contextually relevant examples from a knowledge base, producing action plans that incorporate force and visual feedback and enabling adaptation to changing conditions. We tested ELLMER on a robot tasked with coffee making and plate decoration; these tasks consist of a sequence of sub-tasks from drawer opening to pouring, each benefiting from distinct feedback types and methods. We show that the ELLMER framework allows the robot to complete the tasks. This demonstration marks progress towards scalable, efficient and 'intelligent robots' able to complete complex tasks in uncertain environments.",
+  "year": 2025,
+  "venue": "Nature Machine Intelligence",
+  "authors": [
+   "Ruaridh Mon-Williams",
+   "Gen Li",
+   "Ran Long",
+   "Wenqian Du",
+   "Christopher G. Lucas"
+  ],
+  "citations": 103,
+  "source": "openalex",
+  "source_id": "W4408555470",
+  "doi": "10.1038/s42256-025-01005-x",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408555470",
+  "published_iso": "2025-03-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Reducing misdiagnosis in AI-driven medical diagnostics: a multidimensional framework for technical, ethical, and policy solutions",
+  "title_norm": "reducing misdiagnosis in ai driven medical diagnostics a multidimensional framew",
+  "abstract": "Purpose: This study aims to systematically identify and address key barriers to misdiagnosis in AI-driven medical diagnostics. The main research question is how technical limitations, ethical concerns, and unclear accountability hinder safe and equitable use of AI in real-world clinical practice, and what integrated solutions can minimize errors and promote trust. Methods: We conducted a literature review and case analysis across major medical fields, evaluating failure modes such as data pathology, algorithmic bias, and human-AI interaction. Based on these findings, we propose a multidimensional framework combining technical strategies-such as dynamic data auditing and explainability engines-with ethical and policy interventions, including federated learning for bias mitigation and blockchain-based accountability. Results: Our analysis shows that misdiagnosis often results from data bias, lack of model transparency, and ambiguous responsibility. When applied to published case examples and comparative evaluations from the literature, elements of our framework are associated with improvements in diagnostic accuracy, transparency, and equity. Key recommendations include bias monitoring, real-time interpretability dashboards, and legal frameworks for shared accountability. Conclusion: A coordinated, multidimensional approach is essential to reduce the risk of misdiagnosis in AI-supported diagnostics. By integrating robust technical controls, clear ethical guidelines, and defined accountability, our framework provides a practical roadmap for responsible, transparent, and equitable AI adoption in healthcare-improving patient safety, clinician trust, and health equity.",
+  "year": 2025,
+  "venue": "Frontiers in Medicine",
+  "authors": [
+   "Yue Li",
+   "Xin Yi",
+   "Jia Fu",
+   "Yujing Yang",
+   "Chaojie Duan",
+   "Jun Wang"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4415721091",
+  "doi": "10.3389/fmed.2025.1594450",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1594450/pdf",
+  "published_iso": "2025-10-31",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "A review of embodied intelligence systems: a three-layer framework integrating multimodal perception, world modeling, and structured strategies",
+  "title_norm": "a review of embodied intelligence systems a three layer framework integrating mu",
+  "abstract": "Embodied intelligent systems build upon the foundations of behavioral robotics and classical cognitive architectures. They integrate multimodal perception, world modeling, and adaptive control to support closed-loop interaction in dynamic and uncertain environments. Recent breakthroughs in Multimodal Large Models (MLMs) and World Models (WMs) are profoundly transforming this field, providing the tools to achieve its long-envisioned capabilities of semantic understanding and robust generalization. Targeting the central challenge of how modern MLMs and WMs jointly advance embodied intelligence, this review provides a comprehensive overview across key dimensions, including multimodal perception, cross-modal alignment, adaptive decision-making, and Sim-to-Real transfer. Furthermore, we systematize these components into a three-stage theoretical framework termed \"Dynamic Perception-Task Adaptation (DP-TA)\". This framework integrates multimodal perception modeling, causally driven world state prediction, and semantically guided strategy optimization, establishing a comprehensive \"perception-modeling-decision\" loop. To support this, we introduce a \"Feature-Conditioned Modal Alignment (F-CMA)\" mechanism to enhance cross-modal fusion under task constraints.",
+  "year": 2025,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Yunwei Zhang",
+   "Jing Tian",
+   "Qiaochu Xiong"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4415947022",
+  "doi": "10.3389/frobt.2025.1668910",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1668910/pdf",
+  "published_iso": "2025-11-06",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "Bridging the Construction Productivity Gap—A Hierarchical Framework for the Age of Automation, Robotics, and AI",
+  "title_norm": "bridging the construction productivity gap a hierarchical framework for the age ",
+  "abstract": "The construction sector, facing a persistent productivity gap compared to other industries, is hindered by fragmented value streams, inconsistent performance metrics, and the limited scalability of process improvements. We introduce a pioneering, four-tiered hierarchical productivity framework to respond to these challenges. This innovative approach integrates operational, tactical, strategic, and normative layers. At its core, the framework applies standardised, repeatable process steps—mapped using Value Stream Mapping (VSM)—to capture key indicators such as input efficiency, output effectiveness, and First-Time Quality (FTQ). These are then aggregated through takt time compliance, schedule reliability, and workload balance to evaluate trade synchronisation and flow stability. Higher-level metrics—flow efficiency, multi-resource utilisation, and ESG-linked performance—are integrated into an Overall Productivity Index (OPI). Building on a modular production model, the proposed framework supports real-time sensing, AI-driven monitoring, and intelligent process control, as demonstrated through an empirical case study of continuous process monitoring for Kelly drilling operations. This validation illustrates how sensor-equipped machinery and machine learning algorithms can automate data capture, map observed activities to standardised process steps, and detect productivity deviations in situ. This paper contributes to a multi-scalar measurement architecture that links micro-level execution with macro-level decision-making. It provides a foundation for real-time monitoring, performance-based coordination, and data-driven innovation. The framework is applicable across modular construction, digital twins, and platform-based delivery models, offering benefits beyond specialised foundation work to all construction trades. Grounded in over a century of productivity research, the approach demonstrates how emerging technologies can deliver measurable and scalable improvements. Framing productivity as an integrative, actionable metric enables sector-wide performance gains. The framework supports construction firms, technology providers, and policymakers in advancing robust, outcome-oriented innovation strategies.",
+  "year": 2025,
+  "venue": "Buildings",
+  "authors": [
+   "Michael Max Bühler",
+   "Konrad Nübel",
+   "Thorsten Jelinek",
+   "Lothar Köhler",
+   "Pia Hollenbach"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4413372762",
+  "doi": "10.3390/buildings15162899",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-5309/15/16/2899/pdf?version=1755670992",
+  "published_iso": "2025-08-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "A Multiagent-Driven Robotic AI Chemist Enabling Autonomous Chemical Research On Demand",
+  "title_norm": "a multiagent driven robotic ai chemist enabling autonomous chemical research on ",
+  "abstract": "The successful integration of large language models (LLMs) into laboratory workflows has demonstrated robust capabilities in natural language processing, autonomous task execution, and collaborative problem-solving. This offers an exciting opportunity to realize the dream of autonomous chemical research on demand. Here, we report a robotic AI chemist powered by a hierarchical multiagent system, ChemAgents, based on an on-board Llama-3.1-70B LLM, capable of executing complex, multistep experiments with minimal human intervention. It operates through a Task Manager agent that interacts with human researchers and coordinates four role-specific agents─Literature Reader, Experiment Designer, Computation Performer, and Robot Operator─each leveraging one of four foundational resources: a comprehensive Literature Database, an extensive Protocol Library, a versatile Model Library, and a state-of-the-art Automated Lab. We demonstrate its versatility and efficacy through six experimental tasks of varying complexity, ranging from straightforward synthesis and characterization to more complex exploration and screening of experimental parameters, culminating in the discovery and optimization of functional materials. Additionally, we introduce a seventh task, where ChemAgents is deployed in a new robotic chemistry lab environment to autonomously perform photocatalytic organic reactions, highlighting ChemAgents's scalability and adaptability. Our multiagent-driven robotic AI chemist showcases the potential of on-demand autonomous chemical research to accelerate discovery and democratize access to advanced experimental capabilities across academic disciplines and industries.",
+  "year": 2025,
+  "venue": "Journal of the American Chemical Society",
+  "authors": [
+   "Tao Song",
+   "Man Luo",
+   "Xiaolong Zhang",
+   "Linjiang Chen",
+   "Yan Huang",
+   "Jiaqi Cao"
+  ],
+  "citations": 153,
+  "source": "openalex",
+  "source_id": "W4408247476",
+  "doi": "10.1021/jacs.4c17738",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408247476",
+  "published_iso": "2025-03-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Machine Learning-Based Modeling for Structural Engineering: A Comprehensive Survey and Applications Overview",
+  "title_norm": "machine learning based modeling for structural engineering a comprehensive surve",
+  "abstract": "Modeling and simulation have been extensively used to solve a wide range of problems in structural engineering. However, many simulations require significant computational resources, resulting in exponentially increasing computational time as the spatial and temporal scales of the models increase. This is particularly relevant as the demand for higher fidelity models and simulations increases. Recently, the rapid developments in artificial intelligence technologies, coupled with the wide availability of computational resources and data, have driven the extensive adoption of machine learning techniques to improve the computational accuracy and precision of simulations, which enhances their practicality and potential. In this paper, we present a comprehensive survey of the methodologies and techniques used in this context to solve computationally demanding problems, such as structural system identification, structural design, and prediction applications. Specialized deep neural network algorithms, such as the enhanced probabilistic neural network, have been the subject of numerous articles. However, other machine learning algorithms, including neural dynamic classification and dynamic ensemble learning, have shown significant potential for major advancements in specific applications of structural engineering. Our objective in this paper is to provide a state-of-the-art review of machine learning-based modeling in structural engineering, along with its applications in the following areas: (i) computational mechanics, (ii) structural health monitoring, (iii) structural design and manufacturing, (iv) stress analysis, (v) failure analysis, (vi) material modeling and design, and (vii) optimization problems. We aim to offer a comprehensive overview and provide perspectives on these powerful techniques, which have the potential to become alternatives to conventional modeling methods.",
+  "year": 2024,
+  "venue": "Buildings",
+  "authors": [
+   "Bassey B. Etim",
+   "Alia Al-Ghosoun",
+   "Jamil Renno",
+   "Mohammed Seaı̈d",
+   "M. Shadi Mohamed"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4404045225",
+  "doi": "10.3390/buildings14113515",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-5309/14/11/3515/pdf?version=1730638167",
+  "published_iso": "2024-11-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Multimodal fusion and vision–language models: A survey for robot vision",
+  "title_norm": "multimodal fusion and vision language models a survey for robot vision",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Information Fusion",
+  "authors": [
+   "Xiaofeng Han",
+   "Shunpeng Chen",
+   "Zheng Qing Fu",
+   "Zhe Feng",
+   "Lue Fan",
+   "Dong An"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4413788337",
+  "doi": "10.1016/j.inffus.2025.103652",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.02477",
+  "published_iso": "2025-08-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins",
+  "title_norm": "robotwin dual arm robot benchmark with generative digital twins",
+  "abstract": "In the rapidly advancing field of robotics, dual-arm co-ordination and complex object manipulation are essential capabilities for developing advanced autonomous systems. However, the scarcity of diverse, high-quality demonstration data and real-world-aligned evaluation benchmarks severely limits such development. To address this, we introduce RoboTwin, a generative digital twin framework that uses 3D generative foundation models and large language models to produce diverse expert datasets and provide a real-world-aligned evaluation platform for dual-arm robotic tasks. Specifically, RoboTwin creates varied digital twins of objects from single 2D images, generating realistic and interactive scenarios. It also introduces a spatial relation-aware code generation framework that combines object annotations with large language models to break down tasks, determine spatial constraints, and generate precise robotic movement code. Our framework offers a comprehensive benchmark with both simulated and real-world data, enabling standardized evaluation and better alignment between simulated training and real-world performance. We validated our approach using the open-source COBOT Magic Robot platform. Policies pre-trained on RoboTwin-generated data and fine-tuned with limited real-world samples demonstrate significant potential for enhancing dual-arm robotic manipulation systems by improving success rates by over 70% for single-arm tasks and over 40% for dual-arm tasks compared to models trained solely on real-world data.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Yao Mu",
+   "Tianxing Chen",
+   "Zanxin Chen",
+   "Shijia Peng",
+   "Zhiqian Lan",
+   "Zeyu Gao"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4413144615",
+  "doi": "10.1109/cvpr52734.2025.02575",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413144615",
+  "published_iso": "2025-06-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "OECD Regulatory Policy Outlook 2025",
+  "title_norm": "oecd regulatory policy outlook 2025",
+  "abstract": "Current global challenges require governments to improve the way they design and deliver rules, to ensure they remain smart, simple and streamlined, reflecting rapidly changing conditions. The fourth edition of the Regulatory Policy Outlook critically examines regulatory quality across the OECD with a specific focus on how governments can better regulate for people, the planet, and the future. It tracks OECD Members' efforts over the past decade to fully embed the 2012 OECD Recommendation on Regulatory Policy and Governance, and provides good regulatory practices to help close identified gaps. The Outlook provides a pragmatic pathway for governments to better engage citizens and businesses in the laws and regulations that affect their daily lives.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "OECD"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4408621655",
+  "doi": "10.1787/56b60e39-en",
+  "arxiv_id": null,
+  "paper_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/04/oecd-regulatory-policy-outlook-2025_a754bf4c/56b60e39-en.pdf",
+  "published_iso": "2025-03-19",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Extended reality in clinical neurology: From interdisciplinary innovations to clinical practice",
+  "title_norm": "extended reality in clinical neurology from interdisciplinary innovations to cli",
+  "abstract": "Extended reality (XR), encompassing virtual reality (VR), augmented reality (AR), and mixed reality (MR) technologies offer immersive and interactive experiences that are poised to transform clinical neurology. This review describes the technological foundations of XR systems, from multi-sensor headsets and real-time rendering pipelines to networked platforms, which together support emerging applications. In clinical practice, XR enables more sensitive and ecologically valid assessments of cognitive, motor, and sensory function; neurosurgical training and intraoperative XR guidance improve spatial understanding and decision support; and immersive rehabilitation programs for stroke, chronic neurological disorders, and pediatric conditions enhance engagement and functional recovery. Finally, we summarize adoption challenges and required supports for the clinical implementation of XR and highlight future directions. With continued interdisciplinary innovation and careful evaluation, XR is positioned to reshape neurology by providing powerful tools for understanding the brain and treating neurological disorders.",
+  "year": 2026,
+  "venue": "Cell Reports Medicine",
+  "authors": [
+   "Jiale Yang",
+   "Zhouyu Guan",
+   "Dian Zeng",
+   "Yiming Qin",
+   "Chufan Zhao",
+   "Shiyu Wang"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7141269931",
+  "doi": "10.1016/j.xcrm.2026.102696",
+  "arxiv_id": null,
+  "paper_url": "https://www.cell.com/cell-reports-medicine/pdf/S2666-3791(26)00113-8.pdf",
+  "published_iso": "2026-03-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Exploring adoption of humanoid robots in education: UTAUT-2 and TOE models for science teachers",
+  "title_norm": "exploring adoption of humanoid robots in education utaut 2 and toe models for sc",
+  "abstract": "Abstract This study examines the factors influencing science teachers’ intentions to adopt humanoid robots in educational settings. It employs the Unified Theory of Acceptance and Use of Technology 2 (UTAUT-2) and the Technology-Organization-Environment (TOE) framework as guiding theoretical models. By integrating UTAUT-2, which emphasizes individual factors, and TOE, which addresses organizational and environmental influences, the study constructs a comprehensive model that explores both personal and contextual drivers of adoption. Utilizing structural equation modeling on a sample of 1,150 pre-service and in-service science teachers, the study reveals that the integrated model demonstrates superior predictive power compared to each framework individually. Results highlight the moderating role of professional experience in the adoption process, with significant differences identified between pre-service and in-service teachers. The findings reveal significant differences between pre-service and in-service teachers, illustrating the moderating role of professional experience in the adoption process. This study provides a deeper understanding of how motivational, organizational, and environmental factors interact to influence adoption intentions. These insights provide practical guidance for developing targeted training programs, promoting institutional readiness through well-crafted policy initiatives, and implementing pilot projects to support schools in the effective integration of humanoid robots into educational curricula. These findings provide actionable insights for educational policymakers and practitioners aiming to enhance teaching quality and student engagement through innovative technologies.",
+  "year": 2025,
+  "venue": "Education and Information Technologies",
+  "authors": [
+   "Hüseyin Ateş",
+   "Merve Polat"
+  ],
+  "citations": 38,
+  "source": "openalex",
+  "source_id": "W4406414065",
+  "doi": "10.1007/s10639-025-13344-8",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10639-025-13344-8.pdf",
+  "published_iso": "2025-01-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Exploring the limits of hierarchical world models in reinforcement learning",
+  "title_norm": "exploring the limits of hierarchical world models in reinforcement learning",
+  "abstract": "Hierarchical model-based reinforcement learning (HMBRL) aims to combine the sample efficiency of model-based reinforcement learning with the abstraction capability of hierarchical reinforcement learning. While HMBRL has great potential, the structural and conceptual complexities of current approaches make it challenging to extract general principles, hindering understanding and adaptation to new use cases, and thereby impeding the overall progress of the field. In this work we describe a novel HMBRL framework and evaluate it thoroughly. We construct hierarchical world models that simulate the environment at various levels of temporal abstraction. These models are used to train a stack of agents that communicate top-down by proposing goals to their subordinate agents. A significant focus of this study is the exploration of a static and environment agnostic temporal abstraction, which allows concurrent training of models and agents throughout the hierarchy. Unlike most goal-conditioned H(MB)RL approaches, it also leads to comparatively low dimensional abstract actions. Although our HMBRL approach did not outperform traditional methods in terms of final episode returns, it successfully facilitated decision-making across two levels of abstraction. A central challenge in enhancing our method's performance, as uncovered through comprehensive experimentation, is model exploitation on the abstract level of our world model stack. We provide an in depth examination of this issue, discussing its implications and suggesting directions for future research to overcome this challenge. By sharing these findings, we aim to contribute to the broader discourse on refining HMBRL methodologies.",
+  "year": 2024,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Robin Schiewer",
+   "Anand Subramoney",
+   "Laurenz Wiskott"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4404054802",
+  "doi": "10.1038/s41598-024-76719-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-024-76719-w.pdf",
+  "published_iso": "2024-11-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "A Review of Multi-Sensor Fusion in Autonomous Driving",
+  "title_norm": "a review of multi sensor fusion in autonomous driving",
+  "abstract": "Multi-modal sensor fusion has become a cornerstone of robust autonomous driving systems, enabling perception models to integrate complementary cues from cameras, LiDARs, radars, and other modalities. This survey provides a structured overview of recent advances in deep learning-based fusion methods, categorizing them by architectural paradigms (e.g., BEV-centric fusion and cross-modal attention), learning strategies, and task adaptations. We highlight two dominant architectural trends: unified BEV representation and token-level cross-modal alignment, analyzing their design trade-offs and integration challenges. Furthermore, we review a wide range of applications, from object detection and semantic segmentation to behavior prediction and planning. Despite considerable progress, real-world deployment is hindered by issues such as spatio-temporal misalignment, domain shifts, and limited interpretability. We discuss how recent developments, such as diffusion models for generative fusion, Mamba-style recurrent architectures, and large vision-language models, may unlock future directions for scalable and trustworthy perception systems. Extensive comparisons, benchmark analyses, and design insights are provided to guide future research in this rapidly evolving field.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Qian Hui",
+   "Mingchen Wang",
+   "Maotao Zhu",
+   "Hai Wang"
+  ],
+  "citations": 67,
+  "source": "openalex",
+  "source_id": "W4414704765",
+  "doi": "10.3390/s25196033",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/19/6033/pdf?version=1759305405",
+  "published_iso": "2025-10-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA world model joint post-training real transitions"
+  ]
+ },
+ {
+  "title": "Towards Societally Beneficial Personalized Realities: A Conceptual Foundation for Responsible Ubiquitous Personalization Systems",
+  "title_norm": "towards societally beneficial personalized realities a conceptual foundation for",
+  "abstract": "Personalization of online realities is today ubiquitous to support decision making or reduce information overload.Recently, through the expanding capabilities and pervasiveness of Mixed Reality and Ubiquitous Computing technologies, we observe increasing personalization also of physical reality.This might yield more convenient, efficient and inclusive everyday interactions.However, it may readily lead to serious societal consequences such as the loss of shared worlds and the emergence of perceptual filter bubbles.To mitigate such harms while retaining the benefits of personalization, it is important to understand how ubiquitous personalization systems may operate responsibly.Responding to this need, we propose a conceptual model that overcomes the limitations of established personalization models and expands their applicable scope to physical, virtual, and hybrid environments.We validated our model in relation to existing literature and show how it provides a conceptual foundation for the analysis and study of responsible personalization systems that create individually and societally beneficial Personalized Realities.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Jannis Strecker",
+   "Simon Mayer",
+   "Kenan Bektaş"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4412035404",
+  "doi": "10.1145/3715336.3735709",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3715336.3735709",
+  "published_iso": "2025-07-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Sim-and-Real Co-Training: A Simple Recipe for Vision-Based Robotic Manipulation",
+  "title_norm": "sim and real co training a simple recipe for vision based robotic manipulation",
+  "abstract": "Large real-world robot datasets hold great potential to train generalist robot models, but scaling real-world human data collection is time-consuming and resource-intensive.Simulation has great potential in supplementing large-scale data, especially with recent advances in generative AI and automated data generation tools that enable scalable creation of robot behavior datasets.However, training a policy solely in simulation and transferring it to the real world often demands substantial human effort to bridge the reality gap.A compelling alternative is to co-train the policy on a mixture of simulation and real-world datasets.Preliminary studies have recently shown this strategy to substantially improve the performance of a policy over one trained on a limited amount of real-world data.Nonetheless, the community lacks a systematic understanding of sim-and-real cotraining and what it takes to reap the benefits of simulation data for real-robot learning.This work presents a simple yet effective recipe for utilizing simulation data to solve vision-based robotic manipulation tasks.We derive this recipe from comprehensive experiments that validate the co-training strategy on various simulation and real-world datasets.Using two domains-a robot arm and a humanoid-across diverse tasks, we demonstrate that simulation data can enhance real-world task performance by an average of 38%, even with notable differences between the simulation and real-world data.Videos and additional results can be found at co-training.github.io. * Equal contribution. † Project leads. Simulation Data Policy Co-Training DeploymentTraining on real-world and sim data Deploy to realworld environments Real-World Data Real-World Task Task-Aware Simulation Task-Agnostic Simulation Deployment task in real world No sim-to-real gap Expensive to collect data Aligned with real-world tasks Automated data generation Simulation tuning required Preexist & use out of the box Many tasks & environments Orders more data Least target task alignment",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Abhiram Maddukuri",
+   "Zhenyu Jiang",
+   "Lawrence R. Chen",
+   "Soroush Nasiriany",
+   "Yuqi Xie",
+   "Yu Fang"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4414051096",
+  "doi": "10.15607/rss.2025.xxi.109",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.109",
+  "published_iso": "2025-06-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Robots Can Multitask Too: Integrating a Memory Architecture and LLMs for Enhanced Cross-Task Robot Action Generation",
+  "title_norm": "robots can multitask too integrating a memory architecture and llms for enhanced",
+  "abstract": "Large Language Models (LLMs) have been recently used in robot applications for grounding LLM commonsense reasoning with the robot’s perception and physical abilities. In humanoid robots, memory also plays a critical role in fostering real-world embodiment and facilitating long-term interactive capabilities, especially in multi-task setups where the robot must remember previous task states, environment states, and executed actions. In this paper, we address incorporating memory processes with LLMs for generating cross-task robot actions, while the robot effectively switches between tasks. Our proposed dual-layered architecture features two LLMs, utilizing their complementary skills of reasoning and following instructions, combined with a memory model inspired by human cognition. Our results show a significant improvement in performance over a baseline of five robotic tasks, demonstrating the potential of integrating memory with LLMs for combining the robot’s action and perception for adaptive task execution.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Hassan Ali",
+   "Philipp Allgeuer",
+   "C Mazzola",
+   "Giulia Belgiovine",
+   "Burak Can Kaplan",
+   "Lukáš Gajdošech"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4404955232",
+  "doi": "10.1109/humanoids58906.2024.10769803",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4404955232",
+  "published_iso": "2024-11-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Unified World Models: Coupling Video and Action Diffusion for Pretraining on Large Robotic Datasets",
+  "title_norm": "unified world models coupling video and action diffusion for pretraining on larg",
+  "abstract": "Imitation learning has emerged as a promising approach towards building generalist robots.However, scaling imitation learning for large robot foundation models remains challenging due to its reliance on high-quality expert demonstrations.Meanwhile, large amounts of video data depicting a wide range of environments and diverse behaviors are readily available.This data provides a rich source of information about real-world dynamics and agent-environment interactions.Leveraging this data directly for imitation learning, however, has proven difficult due to the lack of action annotation required for most contemporary methods.In this work, we present Unified World Models (UWM), a framework that allows for leveraging both video and action data for policy learning.Specifically, a UWM integrates an action diffusion process and a video diffusion process within a unified transformer architecture, where independent diffusion timesteps govern each modality.By simply controlling each diffusion timestep, UWM can flexibly represent a policy, a forward dynamics, an inverse dynamics, and a video generator.Through simulated and real-world experiments, we show that: (1) UWM enables effective pretraining on largescale multitask robot datasets with both dynamics and action predictions, resulting in more generalizable and robust policies than imitation learning, (2) UWM naturally facilitates learning from action-free video data through independent control of modality-specific diffusion timesteps, further improving the performance of finetuned policies.Our results suggest that UWM offers a promising step toward harnessing large, heterogeneous datasets for scalable robot learning, and provides a simple unification between the often disparate paradigms of imitation learning and world modeling.Videos and code are available at https://weirdlabuw.github.io/uwm/",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Chuning Zhu",
+   "Raymond Yu",
+   "Siyuan Feng",
+   "Benjamin Burchfiel",
+   "Paarth Shah",
+   "Abhishek Gupta"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4414050443",
+  "doi": "10.15607/rss.2025.xxi.015",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.015",
+  "published_iso": "2025-06-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "A Policy Model Based Efficient and Accurate Scene Recognition Method for Service Robot",
+  "title_norm": "a policy model based efficient and accurate scene recognition method for service",
+  "abstract": "In domestic environments, assigning scene semantic labels (scene recognition) to each node of a topological semantic map is an important task. Given the limitations of current scene recognition methods in efficiency, and accuracy for service robot, this paper proposes a scene recognition method based on a policy model. Considering the similarity of images captured from the adjacent nodes and the low-quality image caused by the uncertain node position and observation direction of the robot, we develop a policy model using a deep Q-learning network (DQN). This model enhances accuracy and efficiency by deciding whether to (1) inherit the scene type from the preceding node without re-recognition or (2) adjust the robot's observation angle to capture a more informative image. A rule-based reward function integrated with a scene score model enables simultaneous learning of similarity assessment and viewpoint adjustment policies. Furthermore, a training strategy based on generated path is proposed to provide sufficient data for training the policy model. Extensive comparative experiments in simulated environments demonstrate that our method surpasses state-of-the-art approaches in both recognition accuracy and efficiency. Deployment on a mobile robot confirms its practical efficacy, achieving precise and efficient scene recognition across diverse real-world environments.",
+  "year": 2025,
+  "venue": "IEEE Robotics and Automation Letters",
+  "authors": [
+   "Shaopeng Liu",
+   "Guanzhong Zhou",
+   "Chao Huang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414603187",
+  "doi": "10.1109/lra.2025.3615525",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414603187",
+  "published_iso": "2025-09-29",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Robotic World Model: A Neural Network Simulator for Robust Policy Optimization in Robotics",
+  "title_norm": "robotic world model a neural network simulator for robust policy optimization in",
+  "abstract": "Learning robust and generalizable world models is crucial for enabling efficient and scalable robotic control in real-world environments. In this work, we introduce a novel framework for learning world models that accurately capture complex, partially observable, and stochastic dynamics. The proposed method employs a dual-autoregressive mechanism and self-supervised training to achieve reliable long-horizon predictions without relying on domain-specific inductive biases, ensuring adaptability across diverse robotic tasks. We further propose a policy optimization framework that leverages world models for efficient training in imagined environments and seamless deployment in real-world systems. This work advances model-based reinforcement learning by addressing the challenges of long-horizon prediction, error accumulation, and sim-to-real transfer. By providing a scalable and robust framework, the introduced methods pave the way for adaptive and efficient robotic systems in real-world applications.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chenhao Li",
+   "Andreas Krause",
+   "Marco Hutter"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4406604158",
+  "doi": "10.48550/arxiv.2501.10100",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.10100",
+  "published_iso": "2025-01-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "MoE-World: A Mixture-of-Experts Architecture for Multi-Task World Models",
+  "title_norm": "moe world a mixture of experts architecture for multi task world models",
+  "abstract": "World models are currently a mainstream approach in model-based deep reinforcement learning. Given the widespread use of Transformers in sequence modeling, they have provided substantial support for world models. However, world models often face the challenge of the seesaw phenomenon during training, as predicting transitions, rewards, and terminations is fundamentally a form of multi-task learning. To address this issue, we propose a Mixture-of-Experts-based world model (MoE-World), a novel architecture designed for multi-task learning in world models. The framework integrates Transformer blocks organized as mixture-of-experts (MoE) layers, with gating mechanisms implemented using multilayer perceptrons. Experiments on standard benchmarks demonstrate that it can significantly mitigate the seesaw phenomenon and achieve competitive performance on the world model’s reward metrics. Further analysis confirms that the proposed architecture enhances both the accuracy and efficiency of multi-task learning.",
+  "year": 2025,
+  "venue": "Electronics",
+  "authors": [
+   "Tang Cong",
+   "Yuang Liu",
+   "Yanhan Wu",
+   "Wence Han",
+   "Qian Yin",
+   "Xin Zheng"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4417246865",
+  "doi": "10.3390/electronics14244884",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417246865",
+  "published_iso": "2025-12-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Model-based contextual reinforcement learning for robotic cooperative manipulation",
+  "title_norm": "model based contextual reinforcement learning for robotic cooperative manipulati",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Engineering Applications of Artificial Intelligence",
+  "authors": [
+   "Wenrui Wang",
+   "Qirong Tang",
+   "Hao Yang",
+   "Chao Yang",
+   "Baoping Ma",
+   "Shuqing Wang"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4410217666",
+  "doi": "10.1016/j.engappai.2025.110919",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410217666",
+  "published_iso": "2025-05-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot policy world model co-training"
+  ]
+ },
+ {
+  "title": "Mitigating Bias in Reinforcement Learning from Human Feedback for Large Language Models",
+  "title_norm": "mitigating bias in reinforcement learning from human feedback for large language",
+  "abstract": "In this comprehensive study, we delve into the application of Reinforcement Learning from Human Feedback (RLHF) in fine-tuning large language models (LLMs) to align them with human preferences. We address the multifaceted challenges of potential bias in human feedback and propose robust mechanisms to mitigate these biases. Through extensive experimentation and analysis, we demonstrate the effectiveness of RLHF in refining model behaviors and improving alignment while ensuring adherence to ethical standards and diverse user expectations. Our research contributes to the ongoing effort to create more responsible and fair AI systems that can be safely deployed in various societal contexts.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Chaithanya Ravulu",
+   "Rahul Sarabu",
+   "Manoj Suryadevara",
+   "Venkata Gummadi",
+   "Mridula Dileepraj Kidiyur"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4410428050",
+  "doi": "10.1109/aixdke63520.2024.00019",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410428050",
+  "published_iso": "2024-12-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Assessing Policy Updates: Toward Trust-Preserving Intelligent User Interfaces",
+  "title_norm": "assessing policy updates toward trust preserving intelligent user interfaces",
+  "abstract": "Reinforcement learning agents are often updated with human feedback, yet such updates can be unreliable: reward misspecification, preference conflicts, or limited data may leave policies unchanged or even worse. Because policies are difficult to interpret directly, users face the challenge of deciding whether an update has truly helped. We propose that assessing model updates -- not just a single model -- is a critical design challenge for intelligent user interfaces. In a controlled study, participants provided feedback to an agent in a gridworld and then compared its original and updated policies. We evaluated four strategies for communicating updates: no demonstration, same-context, random-context, and salient-contrast demonstrations designed to highlight informative differences. Salient-contrast demonstrations significantly improved participants' ability to detect when updates helped or harmed performance, mitigating participants' bias towards assuming that feedback is always beneficial, and supported better trust calibration across contexts.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Solomon, Matan",
+   "Amir, Ofra",
+   "Ben-Porat, Omer"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7090894886",
+  "doi": "10.48550/arxiv.2510.10616",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7090894886",
+  "published_iso": "2025-10-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "The Hall of Illusions: How Heavy Synthetic Data Training Erodes Real-World Performance",
+  "title_norm": "the hall of illusions how heavy synthetic data training erodes real world perfor",
+  "abstract": "This paper argues that heavy use of synthetic (model-generated) data in training and fine-tuning large language models creates a structural risk of “hall of illusions” collapse: models become increasingly well-adapted to their own outputs while drifting away from real-world data, especially in the long tail. I formalize a simple synthetic feedback loop where a model trained on real data is then repeatedly retrained on mixtures of real and fake data. Using two transparent toy experiments—a 2D Gaussian mixture model and a tiny character-level n-gram language model—I show that as the synthetic fraction α and the number of generations increase, performance on held-out real data degrades and eventually collapses. In both cases, metrics on real test sets stay stable with no synthetic data, degrade under moderate synthetic use, and fail sharply when synthetic data dominates. The paper introduces the metaphor of a “hall of illusions” and a mirror-cavity analogy to explain why this behaviour is structurally expected, not an anomaly. Beyond the toy setups, the paper discusses implications for real LLM pipelines, surveys partial mitigations (self-critique, preference models, process supervision, diversification), and argues that they do not remove the underlying risk at high synthetic fractions. I propose concrete tests and disclosure requirements—including reporting approximate synthetic fractions, running multi-generation collapse tests, and stress-testing long-tail performance—as a minimum standard before synthetic data can safely become a central pillar of scaling. Figures and example code for the toy experiments are included to make the results easy to reproduce.",
+  "year": 2025,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Lei, Yu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7108210330",
+  "doi": "10.5281/zenodo.17782390",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7108210330",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Double Horizon Model-Based Policy Optimization",
+  "title_norm": "double horizon model based policy optimization",
+  "abstract": "Model-based reinforcement learning (MBRL) reduces the cost of real-environment sampling by generating synthetic trajectories (called rollouts) from a learned dynamics model. However, choosing the length of the rollouts poses two dilemmas: (1) Longer rollouts better preserve on-policy training but amplify model bias, indicating the need for an intermediate horizon to mitigate distribution shift (i.e., the gap between on-policy and past off-policy samples). (2) Moreover, a longer model rollout may reduce value estimation bias but raise the variance of policy gradients due to backpropagation through multiple steps, implying another intermediate horizon for stable gradient estimates. However, these two optimal horizons may differ. To resolve this conflict, we propose Double Horizon Model-Based Policy Optimization (DHMBPO), which divides the rollout procedure into a long \"distribution rollout\" (DR) and a short \"training rollout\" (TR). The DR generates on-policy state samples for mitigating distribution shift. In contrast, the short TR leverages differentiable transitions to offer accurate value gradient estimation with stable gradient updates, thereby requiring fewer updates and reducing overall runtime. We demonstrate that the double-horizon approach effectively balances distribution shift, model bias, and gradient instability, and surpasses existing MBRL methods on continuous-control benchmarks in terms of both sample efficiency and runtime.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Kubo, Akihiro",
+   "Parmas, Paavo",
+   "Ishii, Shin"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7116210930",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.15439",
+  "published_iso": "2025-12-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Like Parent, Like AI: Modeling Human Bias and Behavior Transmission in Machine Learning Agents",
+  "title_norm": "like parent like ai modeling human bias and behavior transmission in machine lea",
+  "abstract": "",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Azizi Othman"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W6922512839",
+  "doi": "10.13140/rg.2.2.17747.08480",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W6922512839",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "Removing Prompt-template Bias in Reinforcement Learning from Human Feedback",
+  "title_norm": "removing prompt template bias in reinforcement learning from human feedback",
+  "abstract": "Reinforcement Learning from Human Feedback (RLHF) has become an essential technique for enhancing pre-trained large language models (LLMs) to generate responses that align with human preferences and societal values.Although RLHF has shown promise, the training of reward models (RMs) still faces the challenge of reward hacking, motivating recent works to prevent RMs from finding shortcuts that bypass the intended optimization objectives by identifying simplistic patterns such as response length.Besides the issue of length bias, our work firstly reveals that prompt-template bias learned by RMs can also cause reward hacking when dealing with some marginal samples, resulting in LLMs preferring to generate responses in a specific format after RLHF fine-tuning, regardless of the format requested in the prompt.To this end, we propose a low-cost but effective method, namely Prompt Bias Calibration (PBC), to estimate the prompt-template bias term during reward modeling, which can be utilized to calibrate reward scores in the following RL fine-tuning process.Then, we show that our PBC method can be flexibly combined with existing algorithms of removing length bias, leading to a further improvement in the aspect of enhancing the quality of generated responses.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Chaojie Wang",
+   "Haonan Shi",
+   "Long Tian",
+   "Bo An",
+   "Shuicheng Yan"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4412944612",
+  "doi": "10.18653/v1/2025.findings-acl.1237",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2025.findings-acl.1237.pdf",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "synthetic world model rollouts policy feedback bias"
+  ]
+ },
+ {
+  "title": "RIG: Synergizing Reasoning and Imagination in End-to-End Generalist Policy",
+  "title_norm": "rig synergizing reasoning and imagination in end to end generalist policy",
+  "abstract": "Reasoning before action and imagining potential outcomes (i.e., world models) are essential for embodied agents operating in complex open-world environments. Yet, prior work either incorporates only one of these abilities in an end-to-end agent or integrates multiple specialized models into an agent system, limiting the learning efficiency and generalization of the policy. Thus, this paper makes the first attempt to synergize Reasoning and Imagination in an end-to-end Generalist policy, termed RIG. To train RIG in an end-to-end manner, we construct a data pipeline that progressively integrates and enriches the content of imagination and reasoning in the trajectories collected from existing agents. The joint learning of reasoning and next image generation explicitly models the inherent correlation between reasoning, action, and dynamics of environments, and thus exhibits more than $17\\times$ sample efficiency improvements and generalization in comparison with previous works. During inference, RIG first reasons about the next action, produces potential action, and then predicts the action outcomes, which offers the agent a chance to review and self-correct based on the imagination before taking real actions. Experimental results show that the synergy of reasoning and imagination not only improves the robustness, generalization, and interoperability of generalist policy but also enables test-time scaling to enhance overall performance.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhonghan Zhao",
+   "Wenwei Zhang",
+   "Haian Huang",
+   "Kuikun Liu",
+   "Jianfei Gao",
+   "Gaoang Wang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417222514",
+  "doi": "10.48550/arxiv.2503.24388",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2503.24388",
+  "published_iso": "2025-03-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Imagination-Augmented Hierarchical Reinforcement Learning for Safe and Interactive Autonomous Driving in Urban Environments",
+  "title_norm": "imagination augmented hierarchical reinforcement learning for safe and interacti",
+  "abstract": "Hierarchical reinforcement learning (HRL) incorporates temporal abstraction into reinforcement learning (RL) by explicitly taking advantage of hierarchical structures. Modern HRL typically designs a hierarchical agent composed of a high-level policy and low-level policies. The high-level policy selects which low-level policy to activate at a lower frequency and the activated low-level policy selects an action at each time step. Recent HRL algorithms have achieved performance gains over standard RL algorithms in synthetic navigation tasks. However, these HRL algorithms still cannot be applied to real-world navigation tasks. One of the main challenges is that real-world navigation tasks require an agent to perform safe and interactive behaviors in dynamic environments. In this paper, we propose imagination-augmented HRL (IAHRL) that efficiently integrates imagination into HRL to enable an agent to learn safe and interactive behaviors in real-world navigation tasks. Imagination is to predict the consequences of actions without interactions with actual environments. The key idea behind IAHRL is that the low-level policies imagine safe and structured behaviors, and then the high-level policy infers interactions with surrounding objects by interpreting the imagined behaviors. We also introduce a new attention mechanism that allows the high-level policy to be permutation-invariant to the order of surrounding objects and to prioritize our agent over them. To evaluate IAHRL, we introduce five complex urban driving tasks, which are among the most challenging real-world navigation tasks. The experimental results indicate that IAHRL enables an agent to perform safe and interactive behaviors, achieving higher success rates and lower average episode steps than baselines.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Intelligent Transportation Systems",
+  "authors": [
+   "Sang-Hyun Lee",
+   "Yoonjae Jung",
+   "Seung-Woo Seo"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4402742688",
+  "doi": "10.1109/tits.2024.3457776",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402742688",
+  "published_iso": "2024-09-23",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ },
+ {
+  "title": "Imagination at Inference: Synthesizing In-Hand Views for Robust Visuomotor Policy Inference",
+  "title_norm": "imagination at inference synthesizing in hand views for robust visuomotor policy",
+  "abstract": "Visual observations from different viewpoints can significantly influence the performance of visuomotor policies in robotic manipulation. Among these, egocentric (in-hand) views often provide crucial information for precise control. However, in some applications, equipping robots with dedicated in-hand cameras may pose challenges due to hardware constraints, system complexity, and cost. In this work, we propose to endow robots with imaginative perception - enabling them to 'imagine' in-hand observations from agent views at inference time. We achieve this via novel view synthesis (NVS), leveraging a fine-tuned diffusion model conditioned on the relative pose between the agent and in-hand views cameras. Specifically, we apply LoRA-based fine-tuning to adapt a pretrained NVS model (ZeroNVS) to the robotic manipulation domain. We evaluate our approach on both simulation benchmarks (RoboMimic and MimicGen) and real-world experiments using a Unitree Z1 robotic arm for a strawberry picking task. Results show that synthesized in-hand views significantly enhance policy inference, effectively recovering the performance drop caused by the absence of real in-hand cameras. Our method offers a scalable and hardware-light solution for deploying robust visuomotor policies, highlighting the potential of imaginative visual reasoning in embodied agents.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Haoran Ding",
+   "Anqing Duan",
+   "Zezhou Sun",
+   "Dezhen Song",
+   "Yoshihiko Nakamura"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414711700",
+  "doi": "10.48550/arxiv.2509.15717",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2509.15717",
+  "published_iso": "2025-09-19",
+  "oa_field": "Neuroscience",
+  "semantic_recall": true,
+  "from_query": [
+   "reality-anchored imagined robot policy updates"
+  ]
+ }
+]

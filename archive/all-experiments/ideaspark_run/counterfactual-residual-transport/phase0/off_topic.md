@@ -1,0 +1,122 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **Repair the Amplifier, Not the Symptom: Stable World-Model Correction for Agent Rollouts** (`semanticscholar:965c0cae557aed318e6305af2749aabb9b6a7051`)
+  - World-model repair for language-agent planning graphs, not robotic VLA or action-conditioned dynamics.
+- **CEDAR: Controlled and Event-Driven Demand Forecasting via Residual Decomposition** (`semanticscholar:4b86931ec74905b13a35d036d5644ba8eeddb95e`)
+  - Action-aware residual forecasting for e-commerce demand, a cross-domain retrieval false positive.
+- **Speculative Rollback Correction for Quality-Diverse Web Agent Imitation** (`semanticscholar:386c7c14ef71f3e191214eced30ef72abe9275e0`)
+  - Rollback correction trains web agents from teacher review rather than correcting robot counterfactual world predictions.
+- **Feasibility-Aware Inverse Virtual Metrology for Top-K Recipe Recommendation in Semiconductor Process** (`semanticscholar:77b545c12c44c5f6ab8232652fff5f04ed105af6`)
+  - Feasibility-aware corrective recipe ranking concerns semiconductor manufacturing, not robot manipulation.
+- **A Geometry-Aware Segmented Deep Reinforcement Learning Method for Speed Control in Airport Surface T** (`semanticscholar:29f3fc2ce0d291a6e45927fe6c94427934d70d20`)
+  - Aircraft taxi-speed control is outside VLA/WAM robotic manipulation despite residual terminology.
+- **Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique** (`semanticscholar:6c3a12cc9a82f3cda50c4f19ecc8fe1880219f98`)
+  - Latent hallucination correction targets tool-using language agents rather than robotic world models.
+- **From Closed-Loop Optimization to Open Decision Making: Coupled Digital Twins for Predictive and Auto** (`semanticscholar:df1632dc67b744a4d24bc54d5f4d7d15f35ad28b`)
+  - Residual calibration of microscopy digital twins is a different experimental domain.
+- **Streamlining Vulnerability Detection with Hybrid Static-Dynamic Analysis in Automated Toolchains for** (`openalex:W7123346090`)
+  - Software vulnerability analysis is an unrelated cross-domain false positive.
+- **Can Open Large Language Models Catch Vulnerabilities?** (`openalex:W4406779522`)
+  - LLM source-code vulnerability classification is unrelated to robot manipulation.
+- **Edge Computing and Its Application in Robotics: A Survey** (`openalex:W4411614560`)
+  - Pure survey of edge computing in robotics.
+- **Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications** (`openalex:W4414198610`)
+  - Pure full-stack survey of VLA models.
+- **Foundation models in robotics: Applications, challenges, and the future** (`openalex:W4402890475`)
+  - Pure survey of foundation models in robotics.
+- **Mobile robotics and 3D printing: addressing challenges in path planning and scalability** (`openalex:W4404982834`)
+  - Review of mobile robotics for 3D printing, outside manipulation WAM correction.
+- **A Survey of Robot Intelligence with Large Language Models** (`openalex:W4403074774`)
+  - Pure survey of LLM-based robot intelligence.
+- **Medical large language models are vulnerable to data-poisoning attacks** (`openalex:W4406152291`)
+  - Medical-LLM data poisoning is unrelated to robotic control.
+- **Fusion of Computer Vision and AI in Collaborative Robotics: A Review and Future Prospects** (`openalex:W4412470771`)
+  - Pure review of computer vision and AI in collaborative robotics.
+- **Machine learning based prediction models for cardiovascular disease risk using electronic health rec** (`openalex:W4403799240`)
+  - Medical risk-prediction meta-analysis is unrelated.
+- **Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a sur** (`openalex:W4417483688`)
+  - Pure survey of interactive imitation learning for dexterous manipulation.
+- **EEG-based brain-computer interface enables real-time robotic hand control at individual finger level** (`openalex:W4411829903`)
+  - EEG brain-computer control of a robotic hand is outside VLA/WAM manipulation.
+- **Safeguarding large language models: a survey** (`openalex:W4415271252`)
+  - Pure survey of LLM safeguards.
+- **A review on multimodal communications for human-robot collaboration in 5G: from visual to tactile** (`openalex:W4412100507`)
+  - Pure review of multimodal communications for human-robot collaboration.
+- **Multimodal fusion and vision–language models: A survey for robot vision** (`openalex:W4413788337`)
+  - Pure survey of multimodal fusion and vision-language models.
+- **Trending and emerging prospects of physics-based and ML-based wildfire spread models: a comprehensiv** (`openalex:W4402935610`)
+  - Wildfire-spread modeling review is an unrelated domain.
+- **Deep Reinforcement Learning for Surgical Robotics with State and Image Information: A Survey** (`openalex:W7125599892`)
+  - Pure survey of deep reinforcement learning for surgical robotics.
+- **Towards Generalist Robot Learning from Internet Video: A Survey** (`openalex:W4396600885`)
+  - Pure survey of robot learning from internet video.
+- **Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application** (`openalex:W4403221502`)
+  - Pure survey of knowledge distillation for language models.
+- **Comprehensive Review of Robotics Operating System-Based Reinforcement Learning in Robotics** (`openalex:W4407353104`)
+  - Pure review of ROS-based reinforcement learning.
+- **Survey on Factuality in Large Language Models** (`openalex:W4410964376`)
+  - Pure survey of factuality in language models.
+- **From Nano Robotic Manipulation to Nano Manipulation Robot** (`openalex:W4413794838`)
+  - Pure review of nanoscale robotic manipulation.
+- **Foundation models and intelligent decision-making: Progress, challenges, and perspectives** (`openalex:W4410291923`)
+  - Broad survey of foundation models for intelligent decision-making.
+- **Toward Generalist Neural Motion Planners for Robotic Manipulators: Challenges and Opportunities** (`openalex:W7127470505`)
+  - Review and perspective on neural motion planners for manipulators.
+- **Trustworthy agentic AI systems: a cross-layer review of architectures, threat models, and governance** (`openalex:W4414133540`)
+  - Broad cross-layer review of trustworthy agentic AI.
+- **Time series predictions in unmonitored sites: a survey of machine learning techniques in water resou** (`openalex:W4406716503`)
+  - Water-resource time-series prediction survey is unrelated.
+- **Frontiers in construction 3D printing: self-monitoring, multi-robot, drone-assisted processes** (`openalex:W4403155738`)
+  - Review of robotic construction and 3D printing, outside the target mechanism.
+- **Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey** (`openalex:W4413941679`)
+  - Pure survey of domain specialization for language models.
+- **An agent-Based service architecture for smart greenhouses: Telemetry analytics and decision support ** (`openalex:W7130653430`)
+  - Greenhouse IoT and RAG-agent actuation is an unrelated application domain.
+- **In-Situ Monitoring and Process Control in Material Extrusion Additive Manufacturing: A Comprehensive** (`openalex:W4412899484`)
+  - Pure review of monitoring and process control in additive manufacturing.
+- **A Survey of Embodied Learning for Object-centric Robotic Manipulation** (`openalex:W4405426927`)
+  - Pure survey of object-centric embodied manipulation.
+- **Discrete Meta-Modeling and Parameter Calibration of Harvested Alfalfa Stalks** (`openalex:W4415206593`)
+  - Agricultural-material parameter calibration is unrelated to robot VLA/WAM control.
+- **Research on the Control System for the Conveying and Separation Experimental Platform of Tiger Nut H** (`openalex:W4406087511`)
+  - Classical control of harvesting machinery is outside the research direction.
+- **Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods** (`openalex:W4393763811`)
+  - Pure survey of LLM-enhanced reinforcement learning.
+- **A survey on retrieval-augmentation generation (RAG) models for healthcare applications** (`openalex:W4415233873`)
+  - Healthcare RAG survey is unrelated.
+- **Multimodal Alignment and Fusion: A Survey** (`openalex:W4404988519`)
+  - Pure general survey of multimodal alignment and fusion.
+- **A review on flapping-wing robots: Recent progress and challenges** (`openalex:W4410800358`)
+  - Review of flapping-wing robot design and control is outside manipulation.
+- **Uncertainty-Aware Predictive Process Monitoring in Healthcare: Explainable Insights into Probability** (`openalex:W4412473112`)
+  - Healthcare conformal calibration is an unrelated domain.
+- **A review of learning-based dynamics models for robotic manipulation** (`openalex:W4414285669`)
+  - Pure review of learning-based dynamics models for manipulation.
+- **An EWS-LSTM-Based Deep Learning Early Warning System for Industrial Machine Fault Prediction** (`openalex:W4409218924`)
+  - Industrial fault prediction is unrelated to robot manipulation.
+- **Calibration of a hybrid model for HVAC systems for fault data generation** (`openalex:W4403707517`)
+  - HVAC calibration and fault-data generation is unrelated.
+- **Recipe for Vision-Language-Action Models in Robotic Manipulation: A Survey** (`openalex:W4413638658`)
+  - Pure survey of VLA models for robotic manipulation.
+- **Cleaning Robots: A Review of Sensor Technologies and Intelligent Control Strategies for Cleaning** (`openalex:W4406881428`)
+  - Pure review of cleaning-robot sensing and control.
+- **Recent Developments in Heavy Metals Detection: Modified Electrodes, Pretreatment Methods, Prediction** (`openalex:W4406674217`)
+  - Review of heavy-metal detection technologies is unrelated.
+- **Lithium Ion Batteries: Characteristics, Recycling and Deep‐Sea Mining** (`openalex:W4404773631`)
+  - Review of lithium-ion batteries is unrelated.
+- **Hybrid Mode Sensor Fusion for Accurate Robot Positioning** (`openalex:W4410284751`)
+  - Literature review of sensor fusion for robot micro-positioning.
+- **Beyond Binary Decisions: Evaluating the Effects of AI Error Type on Trust and Performance in AI-Assi** (`openalex:W4408628884`)
+  - Human trust in AI-assisted mental-rotation decisions is outside robotics.
+- **Gas Cluster Ion Beam Smoothing Technique: A Review** (`openalex:W4410543267`)
+  - Review of gas-cluster ion-beam surface smoothing is unrelated.
+- **Clutchable Fabric Actuator for Energy‐Efficient Wearable Robots** (`openalex:W4404324650`)
+  - Wearable soft-actuator hardware is unrelated to VLA/WAM prediction correction.
+- **Advancing Soil Organic Carbon Prediction: A Comprehensive Review of Technologies, AI, Process‐Based ** (`openalex:W4411653722`)
+  - Soil-carbon prediction review is an unrelated domain.
+- **Global sensitivity analyses prior to parameter calibration significantly improves prediction quality** (`openalex:W4412622158`)
+  - Crop-model sensitivity analysis and calibration is an unrelated domain.
+- **Multiaxis error modeling for high-precision calibration of motion simulator pose** (`openalex:W4417347031`)
+  - Satellite motion-simulator pose calibration is outside robotic manipulation learning.

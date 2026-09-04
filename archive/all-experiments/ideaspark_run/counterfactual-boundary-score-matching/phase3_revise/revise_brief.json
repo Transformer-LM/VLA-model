@@ -1,0 +1,80 @@
+{
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "Segment-level causal credit for the first geometry-induced violation.",
+        "sub_pattern": "C04",
+        "tactical_pattern_quoted": "Discriminate components by a magnitude-, sensitivity-, influence-, or redundancy-based criterion into a high-impact minority and a near-redundant bulk, then preserve, migrate, residually correct, or retain-at-full-precision the minority while aggressively quantizing, pruning, factorizing, or distilling the bulk.",
+        "instantiation_in_core_mechanism": "The candidate partitions action-chunk denoising error into prefix, first-violation, and suffix terms, applies a preference residual on the violation mask, and distills the complement. This transfers the idea of differentiated treatment, but it neither operates on an over-provisioned compression artifact nor demonstrates the high-impact-minority versus redundant-bulk structure that is load-bearing in C04.",
+        "verdict": "bypassed"
+      },
+      {
+        "gap": "Preserve compiler-defined alternative-positive modes while rejecting a geometry-invalid mode.",
+        "sub_pattern": "C02",
+        "tactical_pattern_quoted": "Construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score.",
+        "instantiation_in_core_mechanism": "Minimal one-parameter geometry edits hold instruction, terminal relation and pose, initial state, rendering, controller seed, and other geometry fixed; independent simulator traces score invalid execution and compiler-relative positive-mode retention.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "bypassed",
+    "reasoning": "C02 is materially instantiated, but the anchor's selected C04 recipe is only analogized: its compression-specific high-impact-minority structure and corresponding evidence are absent."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "heterogeneous_decomposition",
+      "self_supervised_signal_engineering",
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": "audit_decomp_supervisor",
+    "required_mitigation_quoted": "The decomposition criterion must be derivable from observed structure or task-level supervision (not just intuition), AND the manufactured signal must be the unique signal the decomposition implies. An ablation that holds the decomposition fixed and varies the signal (or vice versa) must show the two are not conflated.",
+    "mitigation_substantively_delivered": false,
+    "reasoning": "The first-violation mask is derivable from simulator supervision, but it does not uniquely imply a masked score-preference residual; masked imitation or a local feasibility penalty are obvious alternatives. Whole-chunk and mask-permutation controls vary decomposition or pairing, but no artifact-level ablation holds P/M/S fixed while changing the manufactured signal. This is repairable, so it is not a hard-floor abandonment by itself."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "Can Explicit Physical Feasibility Benefit VLA Learning?",
+    "threat_source": "lit_table",
+    "threat_channel": "alias",
+    "subsumption_argument": "From the available abstract, this work can subsume the broad claim that explicit geometry feasibility should suppress invalid robot actions. The present candidate is only distinguishable by first-violation localization, complement retention, and compiler-relative worst-mode preservation; the available record is insufficient to verify that those mechanisms are absent from the full paper.",
+    "addressable_via": "Narrow the differentiation claim to the exact boundary-localization-plus-retention mechanism and require a same-mask cheap-signal comparator before claiming mechanism novelty.",
+    "parametric_family_concern": "Novelty coverage is materially degraded: arXiv collision retrieval returned 0, only 2 of 25 literature records have full text, and 6 host references remain unresolved. The many lexical collision hits do not contain an identified exact mechanism, but they cannot compensate for the missing primary evidence; a nearby feasibility-weighting or local-credit family remains unexcluded."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "mean held-out boundary margin M_B = E[d_theta]",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The held-out comparison names executable success, invalid-mode execution, complement drift, compiler-roster coverage, and worst-mode success. Mask and pair-identity permutations are required to collapse downstream success and coverage, not merely the optimized margin, and removal of L_alt tests the retention leg. No invented numeric outcome threshold is used."
+  },
+  "verdict": "revise",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "Advance is not allowed. The anchor bypasses C04's load-bearing recipe, the reject-favored decomposition-plus-manufactured-signal composition lacks its required fixed-decomposition/signal ablation, and simulator-only compiler-relative coverage remains definition-dependent. Falsification is executable, and no exact-mechanism collision is identified, so these are revision blockers rather than an unrepairable hard floor. Evidence degradation (0 arXiv collisions, 2/25 full text, 6 unresolved host references) additionally prevents a reviewer-defensible novelty conclusion.",
+  "revision_targets": [
+    {
+      "scope": "sub_pattern",
+      "field": "gap_closure[0].sub_pattern",
+      "issue": "C04 is compression-specific and its high-impact-minority versus redundant-bulk recipe is not instantiated by temporal violation masking.",
+      "fix_direction": "Reselect or justify a sub-pattern whose literal tactical recipe entails segment-local counterfactual credit; do not rely on a loose decomposition analogy."
+    },
+    {
+      "scope": "tactical",
+      "field": "core_mechanism and steps",
+      "issue": "The audit_decomp_supervisor mitigation is missing because the proposed score signal is not shown to be uniquely implied by the fixed P/M/S decomposition.",
+      "fix_direction": "With P/M/S and data fixed, compare masked score preference against at least the obvious local supervised alternative, and separately hold the signal family fixed while removing localization."
+    },
+    {
+      "scope": "falsification",
+      "field": "falsification_plan",
+      "issue": "Eligibility conditioning can hide whether nonempty proper boundary runs and alternative-mode rosters are common enough for the claimed bottleneck to matter.",
+      "fix_direction": "Make pre-training eligibility rate, mask-length distribution, roster-size distribution, and excluded-pair outcomes mandatory reported gates rather than descriptive afterthoughts."
+    },
+    {
+      "scope": "tactical",
+      "field": "differentiation and claims",
+      "issue": "Mechanism novelty is not defensible under 2/25 full text, 6 unresolved host references, and zero arXiv collision coverage.",
+      "fix_direction": "Scope all novelty language to the retrieved-evidence boundary and withhold an exact-mechanism novelty claim until the unresolved primary records are checked."
+    }
+  ],
+  "_brief_note": "gap_closure_reject_check details omitted for context economy — full report at D:\\VLA-WAM Research\\ideaspark_run\\counterfactual-boundary-score-matching\\phase3_critique\\phase3_critique_output.json; read it ONLY if a revision_target's `issue` cites a specific reject lesson you need verbatim."
+}

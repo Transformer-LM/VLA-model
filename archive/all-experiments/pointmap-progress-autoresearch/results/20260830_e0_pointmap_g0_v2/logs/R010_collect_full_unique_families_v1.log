@@ -1,0 +1,13 @@
+[robosuite WARNING] No private macro file found! (__init__.py:7)
+[robosuite WARNING] It is recommended to use a private macro file (__init__.py:8)
+[robosuite WARNING] To setup, run: python <PERSONAL_RESEARCH_ROOT_ALIAS>/venvs/libero-eval-py310/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{
+  "output": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz",
+  "manifest": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.manifest.json",
+  "samples": 360,
+  "elapsed_seconds": 971.3125183582306,
+  "complete": true
+}

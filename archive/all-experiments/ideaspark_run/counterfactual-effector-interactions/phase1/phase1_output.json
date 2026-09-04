@@ -1,0 +1,339 @@
+{
+  "fulltext_degraded": true,
+  "intake": {
+    "domain": "仅使用 RGB 与本体感觉的多效应器机器人操作中的 VLA／世界动作模型：在同一检查点上分析左臂、右臂及动作通道的边际效应与真实交互效应，并让所识别的交互结构影响动作生成或定向纠错",
+    "venue": "面向 ICLR／ICML／NeurIPS 级别的具身智能方法论文",
+    "time": "先做可回滚的仿真 E0；真实机器人留待后续独立安全协议与操作者批准，投稿时间未指定",
+    "data": [
+      "LIBERO／RoboTwin 类仿真器中的 RGB、proprio 与动作轨迹",
+      "现有 π0.5／OpenPI 检查点和其他可对照 VLA 检查点",
+      "FastWAM 可生成或评估的动作条件滚动",
+      "同状态、同检查点下可执行的左臂／右臂／动作通道干预单元"
+    ],
+    "compute": "4 × NVIDIA A100-PCIE-40GB；先运行最小、可回滚 E0，只有前置门槛通过后才扩展",
+    "expertise": "能够使用 π0.5／OpenPI、LIBERO／RoboTwin 类模拟资产与 FastWAM，具备 VLA／WAM 训练和评测能力",
+    "preference": "both",
+    "baseline": "同一 π0.5／OpenPI 检查点（并可加入其他 VLA）在原始联合动作生成、仅诊断交互、以及交互感知生成／纠错设置下的配对比较",
+    "limitation": "不使用触觉；仅 RGB+proprio；必须隔离边际与非加性交互而非只做 Shapley、逐臂条件化、辅助预测、重排序或任务特定技巧；新颖性要求严格大于 7／10",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "expertise",
+      "preference"
+    ]
+  },
+  "bottleneck_statement": "多效应器操作具有一个可识别性瓶颈：在接触阶段，同一条联合动作—结果转移既可能由某一效应器的独立边际作用解释，也可能由两侧协同或动作通道间的非加性交互解释；仅观察联合动作条件下的 RGB+proprio 轨迹和任务损失时，这些解释在数据上可以等价，因此模型无法产生可用于定向修改动作的、效应器分辨的交互量。现有动作可控世界模型只验证整体动作改变是否改变未来（arxiv:2608.04653），双臂世界模型则预先采用 acting／stabilizing 的 leader–follower 分解（openalex:W4416749037），统一 VLA–world model 与 latent Envision–Verify–Act 只以整体预测或整体提案反馈改进动作（openalex:W4416716729；semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c）；另一方面，因子干预工作虽能刻画布尔交互或组合效应，却没有解决机器人联合动作、时序动力学与 VLA 生成的绑定问题（semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7；semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba）。结果是：当失败来自“单臂不足”还是“协同项错误”时，当前 machinery 可给出相似的整体预测误差，却不能决定应该改哪个效应器、哪些通道或是否必须联合修改。",
+  "closest_adjacent": [
+    {
+      "paper_id": "arxiv:2608.04653",
+      "is_anchor": true,
+      "summary_and_residue": "该工作用 reference、inverse-action、zero-action 及空间变换的一致性约束，使动作条件世界模型不再只靠视觉惯性，并用同状态多动作评测整体 action controllability。其公开摘要没有显示它把联合动作响应分解为左／右效应器与动作通道的边际项和真实交互项，也没有显示该结构会直接改变 VLA 动作生成或定向纠错；这一定义了本方向必须超越的 residue。 [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "openalex:W4416749037",
+      "is_anchor": false,
+      "summary_and_residue": "ManiGaussian++ 用分层 Gaussian world model 和 acting-arm／stabilizing-arm 的 leader–follower 顺序建模双臂时空动力学。其未闭合之处据摘要判断是角色分解被结构预设而非由同状态干预识别，因而不能确认效应是单臂边际、方向相反的协同，还是随阶段变化的交互。 [residue is abstract-level: fulltext cache degraded]"
+    },
+    {
+      "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+      "is_anchor": false,
+      "summary_and_residue": "ω-EVA 把提议动作送入 latent world model，再由 current state、proposal-conditioned future 与 proposed action 三分支 refiner 生成最终动作，从而让世界模型成为动作反馈模块。其未闭合之处据摘要判断是纠错信号仍针对整体 action chunk，不能判断应修改一个效应器还是必须修改跨效应器的联合关系。 [residue is abstract-level: paper absent from successful fulltext pool]"
+    },
+    {
+      "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+      "is_anchor": false,
+      "summary_and_residue": "该工作用 Möbius／Boolean effect 分解和因子干预给出隐藏优化器交互的可识别性、稳定性与实验复杂度。其未闭合之处据摘要判断是响应类与干预设计面向优化器实验，不包含像素／proprio 时序、闭环机器人动作生成或同一 VLA 检查点上的效应器干预语义。 [residue is abstract-level: fulltext cache degraded]"
+    },
+    {
+      "paper_id": "semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+      "is_anchor": false,
+      "summary_and_residue": "该工作把组合干预建成低秩张量并以边际贡献淘汰弱因子，目标是在有限预算内选出高表现策略。其未闭合之处据摘要判断是低秩假设服务于策略选择而非识别动作动力学中的真实交互，也没有把交互量约束到 VLA 的生成或纠错步骤。 [residue is abstract-level: fulltext cache degraded]"
+    },
+    {
+      "paper_id": "semanticscholar:20b75e3b0e78755b23dedafc3c9003af33915c9c",
+      "is_anchor": false,
+      "summary_and_residue": "Structure-Aware Diffusion Policy 用双臂任务空间几何和左右端力差显式约束闭链协作。其未闭合之处据摘要判断是关键交互线索依赖力／触觉侧信号并被写成固定结构先验，不能回答在仅 RGB+proprio 时哪些联合动作通道产生可识别的非加性效果。 [residue is abstract-level: paper absent from successful fulltext pool]"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+    "在 openalex:W4416749037 的 frontier residue 上，双臂方法尚未说明 acting／stabilizing 或 leader／follower 这样的作用分工在任务阶段、接触模式和左右对称交换时是否仍成立；当相同任务在不同阶段改变协同方向时，当前结果不能区分有效的结构分工与模型预设带来的表面收益 — stakes: 固定角色会在对称协作或角色反转任务中造成系统性失败，并使跨任务增益无法转移，研究上也会把架构偏置误当成已识别的交互规律。",
+    "在 openalex:W4416716729、semanticscholar:b722f499dc89d662efe815e4ed2a99664daad8fa 与 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 这些 frontier leaves 共同继承的 action-conditioned visual-dynamics 节点上，没有检验“把联合动作作为一个整体条件并以整体未来／任务损失监督”是否足以支撑多效应器协调归因；这里质疑的是这一共享假设本身，而不是预先指定替代机制 — stakes: 若该假设不成立，更多联合轨迹和更大模型仍会保留不可识别性，既浪费训练算力，也会动摇现有 VLA／WAM 在双臂增益可解释为协调学习的结论。",
+    "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。"
+  ],
+  "method_lineage": {
+    "line": "从受控状态转移建模，经动作条件视觉动力学与联合动作序列生成，到统一 VLA／world-action model 的多效应器动作—后果建模",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "受控 Markov 转移模型与系统辨识",
+        "move": "把动作作为外生控制量加入状态转移，而不只拟合无条件时间演化",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "低维、任务特定状态与已知控制接口难以覆盖像素观测和高维机器人动作",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "深度 action-conditioned visual dynamics／visual MPC",
+        "move": "从图像与动作直接预测未来视觉状态，使学习动力学可用于操作规划",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "视觉惯性可替代动作依赖，且联合动作通常作为单个条件块进入模型，效应器贡献不可识别",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Transformer／diffusion robot action-sequence modeling",
+        "move": "以多峰生成模型预测连续 action chunk，替代逐步单峰回归",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "动作分布可更丰富，但双臂和多通道仍在联合损失中纠缠，生成成功不等于交互可识别",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "早期 VLA／world-action joint training",
+        "move": "把语言、视觉理解、未来动力学和机器人动作放进共享或互相监督的模型",
+        "parent": "n2",
+        "provenance": "parametric",
+        "age_band": "2-4y",
+        "confidence": "medium",
+        "residual_problem": "统一任务目标没有单独决定每个效应器的边际责任及跨效应器协同项",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "CoCo counterfactual consistency for action-controllable world models",
+        "move": "通过 reference、inverse／zero action 和空间变换反事实约束抑制无动作视觉捷径",
+        "parent": "n1",
+        "provenance": "retrieved:arxiv:2608.04653",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "整体动作响应已被约束，但左右效应器和动作通道的边际与非加性交互仍未识别",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "ManiGaussian++ hierarchical bimanual Gaussian world model",
+        "move": "以 acting／stabilizing 的 leader–follower 结构显式建模双臂多体未来",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4416749037",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "角色分解由架构指定，未证明在对称、角色反转或阶段变化时等同于真实交互结构",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "RynnVLA-002 unified VLA and world model",
+        "move": "让动作生成与未来图像预测互相增强，而非训练两个独立模型",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4416716729",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "整体成功率和未来预测不能判别增益来自单臂作用还是跨臂交互",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "Donk unified video-action joint denoising",
+        "move": "在同一 denoiser 中联合生成交互视频与双手／双臂轨迹，并支持不同条件模式",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:b722f499dc89d662efe815e4ed2a99664daad8fa",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "联合分布提高生成质量，却仍没有给出效应器级因果贡献或交互边界",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "ω-EVA Envision–Verify–Act latent interactive world model",
+        "move": "用提议动作的 latent future 反馈并细化最终 action chunk",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "refiner 知道整体提案后果，却不能区分局部效应器错误与必须联合修复的交互错误",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c0",
+        "method": "全因子 ANOVA／Möbius effect decomposition",
+        "move": "用组合处理单元把总体响应分解为主效应和高阶交互效应",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "经典独立实验单元不直接处理高维连续动作、时序状态漂移和闭环策略更新",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c1",
+        "method": "COMA counterfactual multi-agent policy gradients",
+        "move": "固定其他智能体动作并边缘化单个智能体动作，构造反事实 credit baseline",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "单智能体 credit baseline 不等同于识别 VLA 连续动作通道中的真实高阶交互",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "coordination graphs／factorized joint value functions",
+        "move": "把联合决策的价值写成局部代理或邻接交互因子的组合",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "预设图结构或价值因子并不能证明像素世界模型中的动作—后果交互可识别",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "Shapley interaction indices",
+        "move": "对所有特征／参与者子集平均边际贡献以分配 credit 和交互",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "归因公理和组合平均不保证同检查点机器人干预的因果有效性，也不规定如何改变动作生成",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c4",
+        "method": "因果交互 contrasts／mediation under interventions",
+        "move": "用受控干预的 potential outcomes 区分直接、间接和交互效应",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "标准识别条件通常不包含学习策略诱导的状态分布、动作序列和生成模型内部通道",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "近期 frontier 由检索论文提供并仅据摘要级证据定位；parametric 节点只用于防止把旧方法重新包装为新颖机制，不作为可引用的 prior-art 证据。按 residue 识别并检查了五个历史机制家族：全因子效应分解、反事实多智能体 credit、coordination/value factorization、Shapley interaction、以及因果 interaction/mediation；均有可命名的窗外代表，因此作为 collateral awareness nodes 保留。2–4 年节点最可能受检索窗外遗漏影响，故仅给 medium confidence；没有为填满树而虚构其他祖先。"
+  },
+  "domain_pattern_distribution": {
+    "n_total": 47,
+    "n_on_topic": 43,
+    "patterns": [
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 8,
+        "share": 0.19,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 3,
+        "share": 0.07,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 2,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 5,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 1,
+        "share": 0.02,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 9,
+        "share": 0.21,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 8,
+        "share": 0.19,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 9,
+        "share": 0.21,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 11,
+        "share": 0.26,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 8,
+        "share": 0.19,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 2,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 1,
+        "share": 0.02,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 13,
+        "share": 0.3,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 4,
+        "share": 0.09,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 7,
+        "share": 0.16,
+        "saturation_band": "mid_frequency"
+      }
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "本语料使用最多的是 structural_prior_encoding（13／43）；采用该模式的相邻工作常把机器人几何、作用角色或空间锚点写成先验，却没有验证这些先验是否等同于可干预、可迁移的效应器交互结构。"
+  },
+  "state": "proceed"
+}

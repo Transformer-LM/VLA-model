@@ -1,0 +1,40 @@
+  [skip] openreview: missing env vars: OPENREVIEW_USER, OPENREVIEW_PASS
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  ⚠️  Phase 3.1 collision: CONNECTORS DEGRADED — ran 3/4.
+       used:    arxiv, openalex, semanticscholar
+       SKIPPED: openreview
+       Retrieval/collision coverage is WEAKER than a full run.
+       Common cause: the connector package is not importable in THIS
+       process (e.g. a background/non-login shell that dropped the
+       pip --user site-packages). Re-run `check_connectors` in the SAME
+       shell you launch phases from, or install into the active env.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  arxiv 'pairwise residual quotient transport' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'current suffix correction intervals' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'rollback coupled branch supervision' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'decision ranking abstention margin' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\arxiv_collision.json with 0 unique papers
+  openalex: 100 BM25 hits across 4 queries -> 98 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\openalex_collision.json with 98 unique papers
+  semanticscholar 'pairwise residual quotient transport' failed: HTTP Error 429: 
+    semanticscholar 'current suffix correction intervals' failed: HTTP Error 429: 
+    semanticscholar 'rollback coupled branch supervision' failed: HTTP Error 429: 
+    semanticscholar 'decision ranking abstention margin' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\semanticscholar_collision.json with 0 unique papers
+  arxiv 'set-valued heterogeneous treatment effects' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'selective prediction with conformal sets' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'potential outcome contrast calibration' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 3 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\arxiv_alias_collision.json with 0 unique papers
+  openalex: 75 BM25 hits across 3 queries -> 75 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\openalex_alias_collision.json with 75 unique papers
+  semanticscholar 'set-valued heterogeneous treatment effects' failed: HTTP Error 429: 
+    semanticscholar 'selective prediction with conformal sets' failed: HTTP Error 429: 
+    semanticscholar: 50 hits across 3 queries -> 50 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\counterfactual-residual-transport\phase3_collision\semanticscholar_alias_collision.json with 50 unique papers
+  channels: signature=98 hits (10mo), alias=+125 unique hits (48mo)
+  truncation[signature]: kept 72/98 (dropped 26 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept score 1)
+  truncation[alias]: kept 74/125 (dropped 2 zero-relevance + 49 below adaptive floor + 0 over cap 120; min kept score 3)

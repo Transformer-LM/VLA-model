@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "long-horizon-vla-progress-verification-recovery",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "面向长时序机器人任务的可靠进度估计、结果验证、可纠错任务状态与失败恢复；以 π0.5 或其他可复现 VLA 为执行器，WAM 为可选机制而非预设组件",
+    "exploration_level": "direction",
+    "selected_macro_direction": "长时序 VLA 的可靠任务进度、结果验证、可纠错 belief 与失败恢复",
+    "macro_direction_count": 1,
+    "embodiment": "用户现有 π0.5 机器人平台；必要时用标准仿真作机制验证",
+    "task_family": "长时序、多阶段、部分可观测、可发生执行失败的机器人操作",
+    "observation_modalities": ["RGB", "proprioception", "language", "optional force/tactile"],
+    "action_representation": "VLA continuous action chunks",
+    "seed_topics": [
+      "progress-aware VLA",
+      "correctable task belief",
+      "outcome verification",
+      "failure-aware memory",
+      "long-horizon recovery",
+      "optional WAM action-effect verification"
+    ],
+    "exploration_axes": [
+      "failure mechanism: forgetting versus progress misclassification versus motor failure versus recovery failure",
+      "memory content: frames, events, language, object relations, task belief, action effects",
+      "memory update: append-only, event-driven, evidence-gated, retractable, uncertainty-calibrated",
+      "verification: VLM, geometry, learned postcondition, latent dynamics, video WAM",
+      "control coupling: frozen VLA wrapper, action reranking, adaptive chunking, replanning, policy fine-tuning",
+      "evidence: paired aliased-state tests, stage accuracy, calibration, recovery and end-to-end success"
+    ],
+    "benchmark_priority": [
+      "用户现有 π0.5 长时序任务与失败日志",
+      "公开可复现的长时序或记忆依赖操作任务",
+      "带可控失败注入和 oracle progress 的诊断任务"
+    ],
+    "target_venues": ["CoRL", "RSS", "ICRA", "IROS", "ICLR", "NeurIPS"],
+    "simulation_first": false,
+    "literature_year_start": 2020,
+    "literature_recent_emphasis_year_start": 2024,
+    "literature_year_end": 2026
+  },
+  "automation": {
+    "mode": "plan",
+    "require_direction_checkpoint": false,
+    "auto_select_idea": true,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "remote_ssh_executable": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+    "remote_identity_file": "C:\\Users\\admin\\.ssh\\<SSH_KEY_NAME>",
+    "remote_workdir": "<PERSONAL_RESEARCH_ROOT>",
+    "remote_network_mode": "offline",
+    "gpu_policy": {
+      "default_physical_gpu_ids": [2, 3],
+      "conditionally_available_gpu_ids": [0, 1],
+      "never_preempt_or_share_with_other_experiments": true,
+      "recheck_before_every_job": true
+    },
+    "max_pilot_gpu_hours": 32.0,
+    "max_total_gpu_hours": 256.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true,
+    "remote_filesystem": {
+      "authorized_user": "liu_meng",
+      "authorized_root": "<PERSONAL_RESEARCH_ROOT>",
+      "read_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "write_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "allow_shared_storage_read": false,
+      "allow_shared_storage_write": false,
+      "allow_team_artifact_publish": false,
+      "require_personal_paths_for_all_artifacts": true,
+      "forbid_shell_profile_changes": true,
+      "forbid_privilege_escalation": true
+    }
+  },
+  "framework_preferences": ["openpi", "openvla-oft", "cosmos-policy"]
+}

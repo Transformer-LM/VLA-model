@@ -1,0 +1,295 @@
+[1m[33m[robosuite WARNING] [0mNo private macro file found! (__init__.py:7)
+[1m[33m[robosuite WARNING] [0mIt is recommended to use a private macro file (__init__.py:8)
+[1m[33m[robosuite WARNING] [0mTo setup, run: python <PERSONAL_RESEARCH_ROOT_ALIAS>/venvs/libero-eval-py310/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (__init__.py:9)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{
+  "action_dim": 7,
+  "action_spec": {
+    "high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ]
+  },
+  "action_state_replay_max_error": 0.0,
+  "action_trace_replay_max_error": 0.0,
+  "checks": {
+    "actual_pyopengl_platform_is_osmesa": true,
+    "all_four_restore_errors_le_1e_12": true,
+    "each_view_raw_rgb_depth_seg_valid": true,
+    "eef_displacement_gt_1e_5": true,
+    "four_traces_fixed_shape_real_numeric_finite": true,
+    "nonzero_action_state_replay_max_error_le_1e_10": true,
+    "nonzero_action_trace_replay_max_error_le_1e_10": true,
+    "output_and_bddl_resolve_under_personal_root": true,
+    "post_observation_captured_after_final_trace": true,
+    "required_proprio_present": true,
+    "two_view_metric_capture_shapes_valid": true,
+    "zero_action_state_replay_max_error_le_1e_10": true,
+    "zero_action_trace_replay_max_error_le_1e_10": true
+  },
+  "claim_limit": "Engineering substrate only; no physics outcome, WAM, VLA, or closed-loop claim.",
+  "cli": [
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/preflight_e1_env.py",
+    "--bddl-root",
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/third_party/LIBERO/libero/libero/bddl_files/libero_90",
+    "--output",
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R100_e1_environment_trace_preflight_v3.json",
+    "--height",
+    "96",
+    "--width",
+    "96",
+    "--steps",
+    "4",
+    "--seed",
+    "20260830"
+  ],
+  "commands": [
+    [
+      0.20000000298023224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.20000000298023224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.20000000298023224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.20000000298023224,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "complete": true,
+  "complete_semantics": "All registered preflight checks executed without an exception.",
+  "eef_displacement_m": 0.0066636804432027505,
+  "finished_at_utc": "2026-08-30T07:52:07.879117+00:00",
+  "image_observable_names": [
+    "agentview_image",
+    "agentview_depth",
+    "agentview_segmentation_instance",
+    "robot0_eye_in_hand_image",
+    "robot0_eye_in_hand_depth",
+    "robot0_eye_in_hand_segmentation_instance"
+  ],
+  "kind": "e1_environment_trace_preflight",
+  "observed_keys": [
+    "agentview_depth",
+    "agentview_image",
+    "agentview_segmentation_instance",
+    "alphabet_soup_1_pos",
+    "alphabet_soup_1_quat",
+    "alphabet_soup_1_to_robot0_eef_pos",
+    "alphabet_soup_1_to_robot0_eef_quat",
+    "basket_1_pos",
+    "basket_1_quat",
+    "basket_1_to_robot0_eef_pos",
+    "basket_1_to_robot0_eef_quat",
+    "cream_cheese_1_pos",
+    "cream_cheese_1_quat",
+    "cream_cheese_1_to_robot0_eef_pos",
+    "cream_cheese_1_to_robot0_eef_quat",
+    "ketchup_1_pos",
+    "ketchup_1_quat",
+    "ketchup_1_to_robot0_eef_pos",
+    "ketchup_1_to_robot0_eef_quat",
+    "object-state",
+    "robot0_eef_pos",
+    "robot0_eef_quat",
+    "robot0_eye_in_hand_depth",
+    "robot0_eye_in_hand_image",
+    "robot0_eye_in_hand_segmentation_instance",
+    "robot0_gripper_qpos",
+    "robot0_gripper_qvel",
+    "robot0_joint_pos",
+    "robot0_joint_pos_cos",
+    "robot0_joint_pos_sin",
+    "robot0_joint_vel",
+    "robot0_proprio-state",
+    "tomato_sauce_1_pos",
+    "tomato_sauce_1_quat",
+    "tomato_sauce_1_to_robot0_eef_pos",
+    "tomato_sauce_1_to_robot0_eef_quat"
+  ],
+  "pass": true,
+  "per_view_raw_render_checks": {
+    "agentview": {
+      "depth_finite": true,
+      "depth_real_float": true,
+      "depth_shape": true,
+      "rgb_finite": true,
+      "rgb_shape": true,
+      "rgb_uint8": true,
+      "seg_finite": true,
+      "seg_has_foreground": true,
+      "seg_integer": true,
+      "seg_shape": true
+    },
+    "robot0_eye_in_hand": {
+      "depth_finite": true,
+      "depth_real_float": true,
+      "depth_shape": true,
+      "rgb_finite": true,
+      "rgb_shape": true,
+      "rgb_uint8": true,
+      "seg_finite": true,
+      "seg_has_foreground": true,
+      "seg_integer": true,
+      "seg_shape": true
+    }
+  },
+  "raw_render_dtypes": {
+    "agentview_depth": "float32",
+    "agentview_image": "uint8",
+    "agentview_segmentation_instance": "int32",
+    "robot0_eye_in_hand_depth": "float32",
+    "robot0_eye_in_hand_image": "uint8",
+    "robot0_eye_in_hand_segmentation_instance": "int32"
+  },
+  "render_shapes": {
+    "depth": [
+      2,
+      96,
+      96
+    ],
+    "pixel_to_world": [
+      2,
+      4,
+      4
+    ],
+    "rgb": [
+      2,
+      96,
+      96,
+      3
+    ],
+    "seg": [
+      2,
+      96,
+      96
+    ]
+  },
+  "required_proprio_dtypes": {
+    "robot0_eef_pos": "float64",
+    "robot0_eef_quat": "float64",
+    "robot0_gripper_qpos": "float64",
+    "robot0_joint_pos": "float64"
+  },
+  "required_proprio_shapes": {
+    "robot0_eef_pos": [
+      3
+    ],
+    "robot0_eef_quat": [
+      4
+    ],
+    "robot0_gripper_qpos": [
+      2
+    ],
+    "robot0_joint_pos": [
+      7
+    ]
+  },
+  "resolved_bddl_path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/third_party/LIBERO/libero/libero/bddl_files/libero_90/LIVING_ROOM_SCENE1_pick_up_the_alphabet_soup_and_put_it_in_the_basket.bddl",
+  "resolved_output_path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R100_e1_environment_trace_preflight_v3.json",
+  "restore_max_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "run_id": "e1p0-4f9094c3c06a4198a470c713d1121428",
+  "runtime": {
+    "MUJOCO_GL": "osmesa",
+    "PYOPENGL_PLATFORM": "osmesa",
+    "actual_pyopengl_platform": "OSMesaPlatform",
+    "libero": "0.1.0",
+    "mujoco_py": "editable-or-unregistered",
+    "numpy": "1.26.4",
+    "platform": "Linux-5.15.0-186-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+    "render_context": "MjRenderContextOffscreen",
+    "robosuite": "1.4.0"
+  },
+  "schema_version": 2,
+  "script_sha256": "972d187660e9a174d19d2f8a27a138a8b0aac802678df4fedec69f85a0179bc3",
+  "seed": 20260830,
+  "started_at_utc": "2026-08-30T07:52:00.061571+00:00",
+  "steps": 4,
+  "task": "LIVING_ROOM_SCENE1_pick_up_the_alphabet_soup_and_put_it_in_the_basket.bddl",
+  "task_sha256": "99ae5af0f77aca18d2eab39e4b302a9af59ae86766b8e7dc528c08a75fa12515",
+  "trace_capture_events": [
+    "transition_start_restored",
+    "action_0_applied",
+    "proprio_0_captured",
+    "action_1_applied",
+    "proprio_1_captured",
+    "action_2_applied",
+    "proprio_2_captured",
+    "action_3_applied",
+    "proprio_3_captured",
+    "camera_observables_enabled",
+    "post_observation_captured"
+  ],
+  "zero_state_replay_max_error": 0.0,
+  "zero_trace_replay_max_error": 0.0
+}
+        Command being timed: "env PYTHONPATH=<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/third_party/LIBERO LIBERO_CONFIG_PATH=<PERSONAL_RESEARCH_ROOT_ALIAS>/config/libero MUJOCO_GL=osmesa PYOPENGL_PLATFORM=osmesa LD_LIBRARY_PATH=<PERSONAL_RESEARCH_ROOT_ALIAS>/renderer-runtime/osmesa/prefix/usr/lib/x86_64-linux-gnu:<PERSONAL_RESEARCH_ROOT_ALIAS>/renderer-runtime/osmesa/prefix/lib/x86_64-linux-gnu MESA_SHADER_CACHE_DIR=<PERSONAL_RESEARCH_ROOT_ALIAS>/renderer-runtime/osmesa/cache XDG_CACHE_HOME=<PERSONAL_RESEARCH_ROOT_ALIAS>/renderer-runtime/osmesa/cache <PERSONAL_RESEARCH_ROOT_ALIAS>/venvs/libero-eval-py310/bin/python <PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/preflight_e1_env.py --bddl-root <PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/third_party/LIBERO/libero/libero/bddl_files/libero_90 --output <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R100_e1_environment_trace_preflight_v3.json --height 96 --width 96 --steps 4 --seed 20260830"
+        User time (seconds): 15.97
+        System time (seconds): 7.53
+        Percent of CPU this job got: 282%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.31
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 1895340
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 857140
+        Voluntary context switches: 78145
+        Involuntary context switches: 1651
+        Swaps: 0
+        File system inputs: 16
+        File system outputs: 16
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0

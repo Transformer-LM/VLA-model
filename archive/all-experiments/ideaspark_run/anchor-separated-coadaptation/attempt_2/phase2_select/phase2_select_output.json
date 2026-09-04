@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": "reframe_as_solvable_object",
+      "companion_rationale": "The controlled diagnostic yields an importance-weighted stream O of paired, simulator-scored candidate-versus-incumbent outcomes under logged randomized allocation; reframing O as an anytime sequential test produces an executable accept-or-rollback decision for each joint VLA-WAM update.",
+      "selection_rationale": "This is the most load-bearing method-shaped gap because a trustworthy sign for each physical-dynamics update is the minimum artifact needed to stop self-confirming co-adaptation from being mistaken for progress. The controlled diagnostic blocks adaptive evidence selection with paired black-box simulator outcomes and known propensities, then the companion converts those outcomes into a continuously interleaved commit rule; every sensitivity is computed from observed outcomes rather than autodifferentiating through the simulator."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method -- anchor gap -> controlled_diagnostic_design supplies the de-confounded physical outcome instrument, and companion reframe_as_solvable_object turns it into a runnable anytime joint-update commit controller",
+  "composition_note": "",
+  "pattern_saturation": {
+    "controlled_diagnostic_design": {
+      "share": 0.26,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "reframe_as_solvable_object": {
+      "share": 0.17,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf tests whether it is valid for the policy that selects which states become observed and the world model that supplies unobserved consequences to be judged through the same adaptively changing evidence stream at every co-training cycle -- stakes: an unexamined shared assumption can invalidate reported co-improvement gains across VLA-WAM systems and blocks a principled account of when reciprocal training is statistically trustworthy.",
+      "reason": "fails removal test -- the anchor instrument already tests the operative evidence-selection failure, while a broader validity theorem would require separate machinery"
+    },
+    {
+      "gap": "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+      "reason": "fails removal test -- the cycle-sign commit controller is runnable without decomposing residual modes or estimating their alignment"
+    },
+    {
+      "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+      "reason": "fails removal test -- censoring correction can be studied later; the benchmark-reset target distribution makes the anchor's cycle-sign estimand and falsification independently runnable"
+    }
+  ]
+}

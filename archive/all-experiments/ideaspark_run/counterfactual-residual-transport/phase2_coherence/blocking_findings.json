@@ -1,0 +1,26 @@
+[
+  {
+    "finding": "The no-bias residual-linear form and donor shuffling do not identify cross-action residual transport or prevent a direct candidate correction: B(x)=u(x)w^T is legal, stores correction direction/value in candidate features, and uses w^T e only as a carrier; with fixed candidate targets donor shuffling collapses for centered donors and fits candidate targets for constant/nonzero-mean donors.",
+    "severity": "blocking",
+    "why_not_repaired": "This is the declared obstacle itself. Repair needs a different estimand/supervision intervention (for example paired oracle responses to the same candidate under varied source residuals with an identifying objective), which changes what the mechanism is; abstention, centering, or a derangement would only avoid the counterexample.",
+    "verbatim_step_quote": "5. Implement B_psi as a candidate-conditioned bank of bias-free linear maps evaluated at each DreamZero flow time; train B_psi e_t against r^* while shuffling residual donors across candidate records in every batch, outputting a time-indexed correction velocity rather than a score.",
+    "executed_evidence": "oddflow_minimal.py: centered donors e=[-1,1] with fixed target [2,2] produced B=0, predictions [0,0], MSE=4; constant donors e=[1,1] produced B(k1)=2 and B(k2)=-3 with exact candidate-specific predictions. The legal rank-one subfamily B(x)=u(x)w^T gave full=[2,-1], naive=[2,-1], max divergence=0.0. Algebra: B(x)e=u(x)(w^T e), so u(x) contains the candidate correction while deletion and sign-flip tests still pass.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "The support gate's estimand does not match the transport claim: conformal action typicality and equality of a coarse contact-transition class do not establish that the residual-response direction or scale is compatible for a new action, and neither calibration component as written controls conditional false admission of that event. Because S and B both depend on candidate/current-state features, the mode gate also supplies a direct candidate-dependent routing path despite the 'sole observed correction signal' claim.",
+    "severity": "blocking",
+    "why_not_repaired": "The gate closes the selected gap only if its label/score targets transport compatibility. Fixing this requires new paired counterfactual response labels or a justified response-Jacobian support test, plus a calibration guarantee for false admission; threshold wording or fail-closed edges cannot create that estimand.",
+    "verbatim_step_quote": "4. From training rollouts, fit the conformal action nonconformity model and the RGB/proprio/action contact-transition classifier; calibrate q_act and q_mode_min at alpha_sup, outputting the Boolean S_t^k for every candidate.",
+    "executed_evidence": "oddflow_minimal.py admitted two synthetic candidates under the same action-support and contact-class facts, but response Jacobians +1 and -1 yielded transported residuals [1,1] versus oracle responses [1,-1]. This is a counterexample to sufficiency independent of magnitude. With n=5 and alpha=0.10, the standard split-conformal index ceil((n+1)(1-alpha))=6 gives threshold +infinity, illustrating that marginal coverage can admit every candidate and does not bound transport false admissions.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "On the literal training reading, B_psi e_t is a flow-velocity vector but r* is a sequence of DINO feature residuals, so 'train B_psi e_t against r*' has no defined loss or common units. An endpoint-loss reading would require an unmentioned ODE integration, decoder, phi evaluation, and backpropagation path.",
+    "severity": "blocking",
+    "why_not_repaired": "Choosing a velocity oracle/Jacobian target versus an integrated endpoint-feature loss changes the training algorithm and its estimand; the coherence gate cannot select that redesign by wording patch.",
+    "verbatim_step_quote": "5. Implement B_psi as a candidate-conditioned bank of bias-free linear maps evaluated at each DreamZero flow time; train B_psi e_t against r^* while shuffling residual donors across candidate records in every batch, outputting a time-indexed correction velocity rather than a score.",
+    "executed_evidence": "oddflow_minimal.py instantiated len(B e)=3 and len(r*)=4 and printed UNIT_SHAPE_ERROR 3 4. The numeric sizes are illustrative; structurally, B e lives in DreamZero flow-state velocity units while r* was defined in step 3 as an H-step DINO feature difference. No map between those spaces is produced by steps 1-5.",
+    "reading_dependence": "reading_dependent: literal direct-loss reading; the only alternative coherent reading is not written and adds load-bearing operations"
+  }
+]

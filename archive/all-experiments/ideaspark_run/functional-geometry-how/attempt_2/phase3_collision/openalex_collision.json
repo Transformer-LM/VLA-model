@@ -1,0 +1,1880 @@
+[
+ {
+  "title": "AI-Enabled Personalized Smoking Cessation Intervention With the Aipaca Chatbot: Mixed Methods Feasibility Study",
+  "title_norm": "ai enabled personalized smoking cessation intervention with the aipaca chatbot m",
+  "abstract": "BACKGROUND: Tobacco use remains the leading cause of preventable mortality in the United States; yet, evidence-based cessation services remain underused due to staffing constraints, limited access to counseling, and competing clinical priorities. Generative artificial intelligence (GenAI) chatbots may address these barriers by delivering personalized, guideline-aligned counseling through naturalistic dialogue. However, little is known about how GenAI chatbots support smoking cessation at both outcome and communication process levels. OBJECTIVE: This feasibility study evaluated the implementation of an evidence-based smoking cessation counseling session delivered by a GenAI-powered chatbot, Aipaca. We examined (1) pre-post changes in cessation preparedness, (2) communication dynamics during counseling sessions, and (3) user perceptions of the chatbot's value, limitations, and design needs. METHODS: We conducted an observational, single-arm, mixed methods study with 29 adult smokers. Participants completed pre-post surveys measuring knowledge of smoking-related health risks and cessation methods, self-efficacy, and readiness to quit. Each engaged in a 30-minute text-based counseling session with Aipaca, powered by GPT-4 and structured using the 5A's framework (Ask, Advise, Assess, Assist, Arrange). Sessions were transcribed for microsequential conversation analysis. Twenty-five participants completed semistructured interviews exploring perceived value, challenges, and design suggestions. Quantitative data were analyzed with paired-samples t tests, qualitative data were thematically analyzed, and transcripts were analyzed for interactional practices. The methodological strength of this study lies in its triangulated approach, which combines quantitative measurement of intervention effectiveness, qualitative analysis of user interviews, and conversational analysis of counseling transcripts to generate a comprehensive understanding of both outcomes and underlying mechanisms. RESULTS: Participants demonstrated significant improvements in all preparedness indicators: knowledge of health risks, knowledge of cessation methods, self-efficacy, and readiness to quit. Conversation analysis identified three recurrent patterns enabling counseling-relevant dynamics: (1) contextual referencing and continuity, (2) formulations with elaboration prompts, and (3) narrative progression toward collaborative planning. Interview themes underscored Aipaca's perceived value as an accessible, nonjudgmental, and motivating resource, capable of delivering personalized and interactive support. Criticisms included limited accountability, reduced cultural resonance, and overly goal-directed style. Participants emphasized design needs such as proactive engagement, gamified progress tracking, empathetic or anthropomorphic personas, and safeguards for accuracy. CONCLUSIONS: This mixed methods feasibility study demonstrates that GenAI can deliver evidence-based smoking cessation counseling with measurable short-term gains in cessation preparedness and process-level communication patterns consistent with motivational interviewing. Users valued Aipaca's accessibility, empathy, and personalization, while also articulating expectations for richer social roles and long-term accountability. Findings highlight both the promise and challenges of integrating GenAI into digital health: pairing adaptive language generation with human-centered design, embedding accuracy safeguards, and ensuring integration into multilevel cessation infrastructures will be essential for future clinical deployment.",
+  "year": 2025,
+  "venue": "JMIR Formative Research",
+  "authors": [
+   "Yunlong Liu",
+   "Paul P. Calle",
+   "Mariah Vadakekut",
+   "Daniel A. Rubin",
+   "Zsolt Nagykáldi",
+   "Mark P. Doescher"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4417255833",
+  "doi": "10.2196/73319",
+  "arxiv_id": null,
+  "paper_url": "https://formative.jmir.org/2025/1/e73319/PDF",
+  "published_iso": "2025-12-11",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Steering Alternative Realities through Local Quantum Memory Operations",
+  "title_norm": "steering alternative realities through local quantum memory operations",
+  "abstract": "Quantum measurement resolves a superposition into a definite outcome by correlating it with an observer's memory -- a reality register. While the global quantum state remains coherent, the observer's local reality becomes singular and definite. This work introduces reality steering, a protocol that allows an observer to probabilistically access a different reality already supported by the initial quantum state, without reversing decoherence on the environment. The mechanism relies on locally erasing the 'which-outcome' information stored in the observer's brain. Here, 'local' means operations confined to the observer's memory, excluding the environment, which may be cosmically large. Reality steering nevertheless faces intrinsic constraints: successful navigation requires coherent participation from the observer's counterparts across the relevant branches, and any transition is operationally indistinguishable from non-transition. After arriving in a new reality, all memory records are perfectly consistent with that reality, leaving no internal evidence that a switch occurred. This makes conscious confirmation impossible within standard quantum mechanics. We show that nonlinear operations beyond the standard theory could, in principle, enable verifiable and deliberate navigation. Our results shift multi-reality exploration from philosophical speculation toward a concrete -- though fundamentally constrained -- quantum-informational framework.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xiongfeng Ma"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417467946",
+  "doi": "10.48550/arxiv.2512.14377",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.14377",
+  "published_iso": "2025-12-16",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "reobserve after reversible probes"
+  ]
+ },
+ {
+  "title": "Learning Paradigms for Hybrid Decision-Making Systems",
+  "title_norm": "learning paradigms for hybrid decision making systems",
+  "abstract": "The rapid integration of AI systems into high-stakes domains has revealed persistent issues of user distrust, algorithmic aversion, and over-reliance, highlighting the need for decision-making frameworks in which humans and machines synergistically collaborate towards the solution of the task. Hybrid Decision-Making Systems (HDMS) have emerged as a paradigm where humans and AI jointly contribute to the same task, leveraging and integrating human strengths like domain expertise, contextual understanding and flexible reasoning, alongside machines’ computational power. This survey offers a structured overview of learning paradigms for HDMS, with a particular focus on uncertainty-driven abstention mechanisms, which determine when an AI system should act autonomously or when it should call for human intervention. We formalise and compare algorithmic approaches that embed machine learning models with the capacity to “know what they don’t know”, analysing how abstention policies and system architectures integrate human expertise into the decision pipeline. Beyond abstention, we examine frameworks that support direct human–machine interaction during and after the learning process, outlining emerging approaches that foster bidirectional collaboration between humans and AI. Building on this analysis, we propose a taxonomy of three learning paradigms characterising progressively tighter human–machine integration.",
+  "year": 2026,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Clara Punzi",
+   "Roberto Pellungrini",
+   "Mattia Setzu",
+   "Fosca Giannotti",
+   "Dino Pedreschi"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4391766653",
+  "doi": "10.1145/3802522",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4391766653",
+  "published_iso": "2026-04-13",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "The hidden M-group",
+  "title_norm": "the hidden m group",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Journal of Geometry and Physics",
+  "authors": [
+   "Grigorios Giotopoulos",
+   "Hisham Sati",
+   "Urs Schreiber"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4404573416",
+  "doi": "10.1016/j.geomphys.2025.105743",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2411.11963",
+  "published_iso": "2025-12-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Process Evaluation of a Financial Capability Intervention: A Qualitative Study Embedded in a Feasibility Randomized Controlled Trial",
+  "title_norm": "process evaluation of a financial capability intervention a qualitative study em",
+  "abstract": "Interest in improving the financial capabilities of families with children is rising in the field of social work, although research on interventions promoting financial capability remains sparse. This study explores a financial social work intervention aiming to improve the financial literacy and economic self-efficacy as well as reduce financial anxiety among parents experiencing financial problems. Semi-structured interviews were conducted with professionals. Data were analyzed to inform the process evaluation. The results indicate that when conducting an intervention, it is important to ensure that professionals are aware of the integration of financial issues with psychosocial factors during social interaction.",
+  "year": 2025,
+  "venue": "Child & Youth Services",
+  "authors": [
+   "Katri Viitasalo",
+   "Annamari Kangas-Kalinen",
+   "Anniina Kaittila",
+   "Meri Moisio",
+   "Henna Isoniemi",
+   "Tuula Kaitsaari"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417526610",
+  "doi": "10.1080/0145935x.2025.2605341",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/0145935X.2025.2605341?needAccess=true",
+  "published_iso": "2025-12-20",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+  "title_norm": "a systematic literature review of retrieval augmented generation techniques metr",
+  "abstract": "Background: Retrieval-augmented generation (RAG) aims to reduce hallucinations and outdated knowledge by grounding LLM outputs in retrieved evidence, but empirical results are scattered across tasks, systems, and metrics, limiting cumulative insight. Objective: We aimed to synthesise empirical evidence on RAG effectiveness versus parametric-only baselines, map datasets/architectures/evaluation practices, and surface limitations and research gaps. Methods: This systematic review was conducted and reported in accordance with PRISMA 2020. We searched the ACM Digital Library, IEEE Xplore, Scopus, ScienceDirect, and DBLP; all sources were last searched on 13 May 2025. This included studies from January 2020–May 2025 that addressed RAG or similar retrieval-supported systems producing text output, met citation thresholds (≥15 for 2025; ≥30 for 2024 or earlier), and offered original contributions; excluded non-English items, irrelevant works, duplicates, and records without accessible full text. Bias was appraised with a brief checklist; screening used one reviewer with an independent check and discussion. LLM suggestions were advisory only; 2025 citation thresholds were adjusted to limit citation-lag. We used a descriptive approach to synthesise the results, organising studies by themes aligned to RQ1–RQ4 and reporting summary counts/frequencies; no meta-analysis was undertaken due to heterogeneity of designs and metrics. Results: We included 128 studies spanning knowledge-intensive tasks (35/128; 27.3%), open-domain QA (20/128; 15.6%), software engineering (13/128; 10.2%), and medical domains (11/128; 8.6%). Methods have shifted from DPR + seq2seq baselines to modular, policy-driven RAG with hybrid/structure-aware retrieval, uncertainty-triggered loops, memory, and emerging multimodality. Evaluation remains overlap-heavy (EM/F1), with increasing use of retrieval diagnostics (e.g., Recall@k, MRR@k), human judgements, and LLM-as-judge protocols. Efficiency and security (poisoning, leakage, jailbreaks) are growing concerns. Discussion: Evidence supports a shift to modular, policy-driven RAG, combining hybrid/structure-aware retrieval, uncertainty-aware control, memory, and multimodality, to improve grounding and efficiency. To advance from prototypes to dependable systems, we recommend: (i) holistic benchmarks pairing quality with cost/latency and safety, (ii) budget-aware retrieval/tool-use policies, and (iii) provenance-aware pipelines that expose uncertainty and deliver traceable evidence. We note the evidence base may be affected by citation-lag from the inclusion thresholds and by English-only, five-library coverage. Funding: Advanced Research and Engineering Centre. Registration: Not registered.",
+  "year": 2025,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Andrew Brown",
+   "Muhammad Roman",
+   "Barry Devereux"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W7114889968",
+  "doi": "10.3390/bdcc9120320",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/9/12/320/pdf",
+  "published_iso": "2025-12-12",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Hidden Geometries in Maxwell’s Equations and a Force–Flux Route to Unified Static Fields",
+  "title_norm": "hidden geometries in maxwell s equations and a force flux route to unified stati",
+  "abstract": "This work reveals previously hidden structural features of Maxwell’s equations that emerge when the Lorentz force is embedded into their flux formulation, exposing motional and rotational contributions to the field of an elementary charge. These modifications extend the field--source relationship to encompass phenomena beyond the standard static Coulomb case. We demonstrate this by deriving the magnetic field of a rotating spherical charge distribution, where magnetic charge appears not as a monopole but as an emergent quantity producing a dipole-like field. The same configuration generates a distinct component opposing the Coulomb field, arising purely from rotation. Building on these results, we formulate a force--flux law analogous to Gauss’s electric flux relation, but with force replacing field. Owing to its units, this law permits direct replacement of electric charge and constants with other charge types---magnetic, gravitational, or inertial---while preserving the force magnitude for a given separation. The result is a compact, nonrelativistic framework that retains Maxwell’s geometric elegance while extending its scope to unified static-field interactions.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Ioannis Xydous"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7105813150",
+  "doi": "10.24108/preprints-3113890",
+  "arxiv_id": null,
+  "paper_url": "https://preprints.ru/files/2478",
+  "published_iso": "2025-11-11",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Techno-economic feasibility of photovoltaic-powered electric vehicle charging stations: a global review and future outlook",
+  "title_norm": "techno economic feasibility of photovoltaic powered electric vehicle charging st",
+  "abstract": "The accelerating growth of electric vehicles (EVs) highlights the urgent need for sustainable and resilient charging infrastructure. Photovoltaic (PV)-powered charging stations offer a promising decarbonization pathway; however, most prior reviews remain fragmented across technical or regional scopes. This study systematically analyzes 97 studies (2015–2025) following the PRISMA framework, integrating findings from HOMER and System Advisor Model (SAM) to evaluate system design, storage integration, grid interaction, and key financial metrics—levelized cost of energy (LCOE), net present value (NPV), internal rate of return (IRR), and payback period (PBP) . Findings reveal significant regional variation: the LCOE ranges from $0.03 to $0.12/kWh in developed economies and $0.05 to $0.37/kWh in developing ones, with payback periods spanning 6–12 years , influenced by solar potential, policy support, and grid reliability. Supportive mechanisms—such as feed-in tariffs, net metering, and targeted subsidies—substantially enhance the viability of projects. Persistent challenges include demand–generation mismatch, grid stress from fast charging, and uncertainty in weak regulatory contexts. Furthermore, PV-based EV-charging stations can reduce lifecycle greenhouse gas emissions to 35–110 g CO₂-eq per kWh of electricity delivered to EVs (well-to-wheel basis), representing a 75–90% reduction compared with grid-only charging. Local pollutants such as SO₂, NOₓ, and CO decline by up to 80%, underscoring the environmental superiority of PV-based EV infrastructure. This review presents the first comprehensive global techno-economic synthesis of PV–EV-charging feasibility, highlighting emerging research priorities in AI-driven optimization, second-life battery utilization, and renewable microgrids, offering actionable guidance for researchers, policymakers, and investors to advance resilient, low-carbon EV infrastructure worldwide.",
+  "year": 2026,
+  "venue": "Sustainable Energy Research",
+  "authors": [
+   "M. Naem Hossain",
+   "Haeng Muk Cho"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7128298444",
+  "doi": "10.1186/s40807-025-00228-1",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s40807-025-00228-1.pdf",
+  "published_iso": "2026-02-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "S-AI-ANTI HALLUCINATION: A BIO-INSPIRED AND CONFIDENCE-AWARE SPARSE AI FRAMEWORK FOR RELIABLE GENERATIVE SYSTEMS",
+  "title_norm": "s ai anti hallucination a bio inspired and confidence aware sparse ai framework ",
+  "abstract": "Large Language Models (LLMs) exhibit impressive generative capabilities but remain prone to hallucinations — plausible yet false statements produced with high confidence. Such phenomena undermine trust and reliability in sensitive domains including health, law, and cybersecurity. Despite significant progress in retrieval-augmented generation (RAG), calibration methods, and mixture-of-experts (MoE) architectures, existing systems still lack a unified framework for veridiction, abstention, and energy-aware reasoning. This work introduces S-AI Against Hallucinations, a bio-inspired and parsimonious architecture derived from the Sparse Artificial Intelligence (S-AI) framework. The proposed model implements a symbolic-hormonal orchestration mechanism that enables generative agents to detect uncertainty, abstain when appropriate, and maintain citation integrity under ambiguous or adversarial conditions. The system relies on four hormonal variables — Hallucination Uncertainty (HU), Citation Integrity (CI), Contradiction Observer (CO), and Retrieval Evidence (RE) — dynamically regulated by a MetaAgent through hysteresisbased thresholds. Experiments performed on diverse scenarios, including factual question answering, scientific summarization, numerical reasoning, and out-of-distribution prompts, demonstrate stable abstention behavior, consistent citation tracking, and adaptive evidence retrieval. Evaluation follows a transparent and reproducible protocol inspired by PRISMA standards and Scopus-indexed benchmarking practices. S-AI Against Hallucinations provides a coherent, confidence-aware foundation for explainable and resource-efficient generative intelligence. It establishes a conceptual and operational bridge between statistical learning, symbolic reasoning, and biological homeostasis, paving the way for reliable and ethically governed AI systems.",
+  "year": 2025,
+  "venue": "International Journal of Artificial Intelligence & Applications",
+  "authors": [
+   "Said Slaoui"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417144274",
+  "doi": "10.5121/ijaia.2025.16601",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.5121/ijaia.2025.16601",
+  "published_iso": "2025-11-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Altermagnetic Flatband‐Driven Fermi Surface Geometry for Giant Tunneling Magnetoresistance",
+  "title_norm": "altermagnetic flatband driven fermi surface geometry for giant tunneling magneto",
+  "abstract": "ABSTRACT Altermagnetism, characterized by zero net magnetization and symmetry‐protected spin–split band structures, has recently emerged as a promising platform for spintronics. In altermagnetic tunnel junctions (AMTJs), the suppression of tunneling in the antiparallel configuration relies on the mismatch between spin‐polarized conduction channels in momentum space. However, ideal nonoverlapping spin‐polarized Fermi surfaces are rarely found in bulk altermagnets. Motivated by the critical influence of Fermi surface geometry on tunneling magnetoresistance (TMR), we investigate three experimentally synthesized altermagnets – bulk , , and – to elucidate how flatband‐driven Fermi surfaces minimize spin‐channel overlap and boost AMTJ performance. Notably, and host flat altermagnetic Fermi sheets, which confine spin degeneracy to minimal arc‐like or nodal‐like regions. Such Fermi surface geometry drastically reduces spin overlap, resulting in an unprecedented intrinsic TMR well over in the ‐based AMTJ. Incorporating an insulating barrier further enhances the TMR to , surpassing most conventional MTJs. These results not only establish as a compelling candidate AMTJ material, but also highlight the critical role of flatband Fermi surface geometry in achieving high‐performance altermagnetic‐spintronic device technology.",
+  "year": 2026,
+  "venue": "Advanced Functional Materials",
+  "authors": [
+   "Xingyue Yang",
+   "Shibo Fang",
+   "Zongmeng Yang",
+   "Pin Ho",
+   "Jing Lu",
+   "Yee Sin Ang"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4416667791",
+  "doi": "10.1002/adfm.202531921",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adfm.202531921",
+  "published_iso": "2026-02-12",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Demand Assessment and Integration Feasibility Analysis for Advanced and Urban Air Mobility in Illinois",
+  "title_norm": "demand assessment and integration feasibility analysis for advanced and urban ai",
+  "abstract": "Advanced and Urban Air Mobility (AAM and UAM) represent emerging transportation concepts that involve the use of novel aircraft technologies to transport passengers and cargo within urban, regional, and intra-regional environments. These systems may include Electric Vertical Take-off and Landing (eVTOL) aircraft, Short Take-off and Landing (STOL) aircraft, and unmanned aerial vehicles (UAVs), which are being considered for a range of applications including passenger transport, cargo delivery, and other specialized operations. This study introduced a state-specific analytical framework that integrates different methodologies and data to enable a more precise evaluation of AAM viability in the State of Illinois, compared to generic national or global assessments, capturing the state’s unique mobility patterns, infrastructure constraints, and demographic distributions. One of the main goals is to provide a comprehensive evaluation of the potential implications—both challenges and opportunities—associated with AAM and UAM operations. The analysis examines potential impacts on mobility, infrastructure, economic development, and public services, with particular emphasis on identifying key considerations for policy development. The research framework categorizes use cases into two broad types: AAM for the transportation of people and cargo, and AAM for functional applications such as emergency response, agriculture, and infrastructure monitoring. The study provides a detailed quantitative assessment of passenger air taxi services, including demand estimation, business model feasibility analysis, integration effects on existing transportation systems, and infrastructure requirements. For other AAM applications, the analysis identifies operational considerations, regulatory implications, and potential barriers to implementation, establishing a foundation for future detailed evaluation.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Vasileios Volakakis",
+   "Christopher Cummings",
+   "Laurence Audenaerd",
+   "William M. Viste",
+   "Hani S. Mahmassani"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416066181",
+  "doi": "10.3390/app152211901",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/22/11901/pdf?version=1762766101",
+  "published_iso": "2025-11-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "GRACE: Reinforcement Learning for Grounded Response and Abstention under Contextual Evidence",
+  "title_norm": "grace reinforcement learning for grounded response and abstention under contextu",
+  "abstract": "Retrieval-Augmented Generation (RAG) integrates external knowledge to enhance Large Language Models (LLMs), yet systems remain susceptible to two critical flaws: providing correct answers without explicit grounded evidence and producing fabricated responses when the retrieved context is insufficient. While prior research has addressed these issues independently, a unified framework that integrates evidence-based grounding and reliable abstention is currently lacking. In this paper, we propose GRACE, a reinforcement-learning framework that simultaneously mitigates both types of flaws. GRACE employs a data construction method that utilizes heterogeneous retrievers to generate diverse training samples without manual annotation. A multi-stage gated reward function is then employed to train the model to assess evidence sufficiency, extract key supporting evidence, and provide answers or explicitly abstain. Experimental results on two benchmarks demonstrate that GRACE achieves state-of-the-art overall accuracy and strikes a favorable balance between accurate response and rejection, while requiring only 10% of the annotation costs of prior methods. Our code is available at https://github.com/YiboZhao624/Grace..",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yibo Zhao",
+   "Jiapeng Zhu",
+   "Zichen Ding",
+   "Xiang Li"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7120272171",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2601.04525",
+  "published_iso": "2026-01-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Causal Structure Without a Global Order: Indefinite Operational Order, Record Formation, and Effective Causal Order at the Quantum-Geometry Interface",
+  "title_norm": "causal structure without a global order indefinite operational order record form",
+  "abstract": "This paper is the thirty-fourth in a sequence developing an interpretive framework that redescribes physical reality as a causally consistent history of information updates rather than as a collection of independently existing objects. It is the capstone (third panel) of the ninth grouping — the quantum-mechanics–gravity interface trilogy (32 Quantum Geometry → 33 Records Backreacting on Geometry → 34 Causal Structure Without a Global Order) — and closes that trilogy. Its core physics is the process-matrix framework (Oreshkov, Costa, & Brukner, 2012), with the quantum switch (Chiribella et al., 2013) as the worked instance and causal (non)separability as the central classification. When the order of operations is quantum-controlled — and, at the interface, when geometry is superposed so different branches carry different causal graphs — the temptation is to posit a hidden definite global total order behind the indefiniteness. The thesis is that there is no Global Causal Sequencer; P1 is a declared architectural commitment, not a theorem, and a rival that posits a deeper definite order underwriting the indefiniteness is acknowledged but declined architecturally. R-A: indefinite operational order is not causal inconsistency or a closed loop — a coherent superposition of order components is causally nonseparable (witness-certifiable; note that witness-based nonseparability and causal-inequality violation are not equivalent, and the quantum switch need not violate a causal inequality) yet a valid, consistent process. R-B (restricted to controlled-order processes such as the quantum switch, or any process with a declared physically recorded order-control observable): recording the order-control does not by itself produce a determinate order — one must distinguish the coherent control, the decohered-but-unconditioned causally separable mixture, and the conditioned record-relative effective order — only the last is determinate, and only relative to a recorded value and the declared parameter chi, whose order-control basis is an admissible decoherence-stable pointer basis/algebra (not an arbitrary rotation). R-C: causal structure is profile-valued, CausalProf = (d_order, d_interv, d_record, d_valid, d_family, d_arrow), with a process-validity (not graph-acyclicity) component and an independent record-arrow component from Paper 9's arrow package. R-D (the novelty witness): effective order is provenance-gradable — a matched pair of histories with identical audited world-side order records but different provenance yields different warranted standing (OrderStandProf). R-E: a conservative-before-radical discipline works indefinite operational order first, then a minimal superposed-causal-graph bridge on Paper 32's identity fibers, separating an identity disposition from an order disposition; full quantization of the causal relation is flagged, not claimed. This retires the Global Causal Sequencer and closes the interface trilogy; no causal loops, no retrocausal signaling, no revived global order, no quantum-gravity completion. Presents no new physics; results are interpretive (L2) on imported physics (L1).",
+  "year": 2026,
+  "venue": "PhilPapers (PhilPapers Foundation)",
+  "authors": [
+   "Tomoyuki Uchida"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7166800577",
+  "doi": "10.5281/zenodo.21092643",
+  "arxiv_id": null,
+  "paper_url": "https://philpapers.org/archive/UCHCSW.pdf",
+  "published_iso": "2026-07-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Integration of geriatric assessment-guided care plan modifications and interventions into clinical paths of older adults with cancer (GORILLA): a feasibility approach",
+  "title_norm": "integration of geriatric assessment guided care plan modifications and intervent",
+  "abstract": "PURPOSE: A comprehensive geriatric assessment (CGA) followed by geriatric assessment-guided interventions was demonstrated to reduce treatment-related toxicities CTCAE III°-V° in older adults with cancer undergoing systemic cancer treatments, but implementation remains insufficient. Thus, we aimed to evaluate the feasibility of implementing CGA into routine care and multidisciplinary tumor boards (MDTs) in Germany within a bicentric feasibility trial (DRKS00035569; 19.12.2024). METHODS: Patients ≥ 65 years with positive geriatric screening (G8 < 15 points) and all patients ≥ 70 years received CGA as part of their routine care. Results were presented during MDT discussions to derive treatment recommendations. After CGA, patients were asked for trial participation which included data analysis and a telephone follow-up after 3 months. Clinicians participating in the MDT were asked about the added value of CGA presentation. Primary endpoint was the estimation of patient's willingness to participate with an accuracy of ± 7.5% to inform design for a later (cost) effectiveness trial. RESULTS: 75 patients received CGA (62.5% females). Of those, 72 (96%) agreed to participate (95% confidence interval, [0.8875; 0.9917]). With an accuracy of estimating the willingness to participate of < |7.5%|, the primary endpoint was reached. The median age was 76.7 years (range 69-92 years). A member of the geriatric team attended 2/3 of MDT meetings. Clinicians rated the integration of CGA results predominantly as useful. CONCLUSION: Integration of CGA into routine care of older cancer patients is feasible but will likely require adequate geriatric staffing per center. A larger implementation study, evaluating efficacy and cost-effectiveness in the German healthcare system, is necessary.",
+  "year": 2026,
+  "venue": "European Geriatric Medicine",
+  "authors": [
+   "Rea Sujin Mayland",
+   "Merlin Deterding",
+   "Filippo Maria Verri",
+   "Sabine Heublein",
+   "Alma Aslan",
+   "Chantal Flemm"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7168083551",
+  "doi": "10.1007/s41999-026-01542-7",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41999-026-01542-7.pdf",
+  "published_iso": "2026-07-12",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Knowing When Not to Answer: Evaluating Abstention in Multimodal Reasoning Systems",
+  "title_norm": "knowing when not to answer evaluating abstention in multimodal reasoning systems",
+  "abstract": "Effective abstention (EA), recognizing evidence insufficiency and refraining from answering, is critical for reliable multimodal systems. Yet existing evaluation paradigms for vision-language models (VLMs) and multi-agent systems (MAS) assume answerability, pushing models to always respond. Abstention has been studied in text-only settings but remains underexplored multimodally; current benchmarks either ignore unanswerability or rely on coarse methods that miss realistic failure modes. We introduce MM-AQA, a benchmark that constructs unanswerable instances from answerable ones via transformations along two axes: visual modality dependency and evidence sufficiency. Evaluating three frontier VLMs spanning closed and open-source models and two MAS architectures across 2079 samples, we find: (1) under standard prompting, VLMs rarely abstain; even simple confidence baselines outperform this setup, (2) MAS improves abstention but introduces an accuracy-abstention trade-off, (3) sequential designs match or exceed iterative variants, suggesting the bottleneck is miscalibration rather than reasoning depth, and (4) models abstain when image or text evidence is absent, but attempt reconciliation with degraded or contradictory evidence. Effective multimodal abstention requires abstention-aware training rather than better prompting or more agents.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Nishanth Madhusudhan",
+   "Vikas Yadav",
+   "Alexandre Lacoste"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7154865716",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2604.14799",
+  "published_iso": "2026-04-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "1H R1ρ relaxation identifies a hidden intermediate in DNA base-pairing.",
+  "title_norm": "1h r1ρ relaxation identifies a hidden intermediate in dna base pairing",
+  "abstract": "RD studies, and a mechanistic discovery of a drug-stabilised intermediate in DNA base-pairing dynamics.",
+  "year": 2026,
+  "venue": "PubMed",
+  "authors": [
+   "Rubin Dasgupta",
+   "Christian Steinmetzger",
+   "Julian Ilgen",
+   "Katja Petzold"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7160438746",
+  "doi": "10.1038/s41467-026-72559-6",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7160438746",
+  "published_iso": "2026-05-06",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Feasibility and Acceptability of Transcendental Meditation for Indian Healthcare Professionals in a Tertiary Care Hospital: A Pilot Randomized Controlled Feasibility Trial",
+  "title_norm": "feasibility and acceptability of transcendental meditation for indian healthcare",
+  "abstract": "Healthcare professionals in India are vulnerable to experiencing a high level of burnout, which has consequences for individuals and organizations. This prospective pilot randomized controlled feasibility study examined, for the first time, the feasibility and acceptability of practicing the Transcendental Meditation (TM) technique among healthcare professionals in India. A total of 76 healthcare professionals were randomized to either a TM intervention group or a control group using a stratified randomization method. The feasibility and acceptability measures were designed to assess whether the practice of TM was feasible and acceptable. Secondary outcomes were assessed using validated questionnaires, including the Generalized Anxiety Disorder-7 (GAD-7), the Perceived Stress Scale-4 (PSS-4), the Copenhagen Burnout Inventory (CBI), and the Short Warwick-Edinburgh Mental Well-Being Scale (SWEMWBS). Outcome measures were collected at baseline and 12 weeks post-intervention. Feasibility and acceptability outcomes indicated good engagement with the intervention. All participants assigned to the TM group attended the individual TM instruction session, and 34 of 38 participants (90%) attended at least four of the five follow-up sessions. Approximately two-thirds of participants reported that practicing TM was feasible or very feasible, and the overall self-reported adherence to TM practice was 79%. With respect to secondary outcomes, participants in the TM group demonstrated reductions in anxiety and burnout scores and improvements in well-being at the 12-week follow-up compared with the control group. However, no statistically significant change in perceived stress levels was observed, as measured by the PSS-4. The findings of this pilot randomized controlled feasibility trial demonstrated that TM can be considered as a feasible and acceptable intervention for healthcare professionals in rural India. Preliminary improvements were observed in anxiety, burnout, and well-being. However, these findings should be interpreted cautiously given the exploratory nature of this trial. Substantive studies are recommended to confirm these findings.",
+  "year": 2026,
+  "venue": "Cureus",
+  "authors": [
+   "Shruti Niraj",
+   "G Niraj",
+   "Rajesh Naithani"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7136093231",
+  "doi": "10.7759/cureus.105263",
+  "arxiv_id": null,
+  "paper_url": "https://www.cureus.com/articles/465632-feasibility-and-acceptability-of-transcendental-meditation-for-indian-healthcare-professionals-in-a-tertiary-care-hospital-a-pilot-randomized-controlled-feasibility-trial.pdf",
+  "published_iso": "2026-03-15",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Ethical perspectives on deployment of large language model agents in biomedicine: a survey",
+  "title_norm": "ethical perspectives on deployment of large language model agents in biomedicine",
+  "abstract": "Abstract Large language models (LLMs) and their integration into agentic and embodied systems are reshaping artificial intelligence (AI), enabling powerful cross-domain generation and reasoning while introducing new risks. Key concerns include hallucination and misinformation, embedded and amplified biases, privacy leakage, and susceptibility to adversarial manipulation. Ensuring trustworthy and responsible generative AI requires technical reliability, transparency, accountability, and attention to societal impact. The present study conducts a review of peer-reviewed literature on the ethical dimensions of LLMs and LLM-based agents across technical, biomedical, and societal domains. It maps the landscape of risks, distills mitigation strategies (e.g., robust evaluation and red-teaming, alignment and guardrailing, privacy-preserving data practices, bias measurement and reduction, and safety-aware deployment), and examines governance frameworks and operational practices relevant to real-world use. By organizing findings through interdisciplinary lenses and bioethical principles, the review identifies persistent gaps, such as limited context-aware evaluation, uneven reporting standards, and weak post-deployment monitoring, that impede accountability and fairness. The synthesis supports practitioners and policymakers in designing safer, more equitable, and auditable LLM systems, and outlines priorities for future research and governance.",
+  "year": 2025,
+  "venue": "AI and Ethics",
+  "authors": [
+   "Nafiseh Ghaffar Nia",
+   "Amin Amiri",
+   "Yuan Luo",
+   "Adrienne Kline"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416986173",
+  "doi": "10.1007/s43681-025-00847-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00847-w.pdf",
+  "published_iso": "2025-12-04",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "The geometry of touching: optimal transport to cluster playing styles and match outcomes in soccer",
+  "title_norm": "the geometry of touching optimal transport to cluster playing styles and match o",
+  "abstract": "Abstract Touching distributions, represented as spatial maps of where players interact with the ball during a match, play a fundamental role in shaping team strategy and influencing match outcomes in soccer and other sports. In this work, we propose a novel approach based on optimal transport theory to quantify and compare the spatial distributions of players’ touches across matches. By leveraging both balanced and unbalanced optimal transport formulations, we capture not only the spatial structure of touching patterns but also their volumetric differences. Our analysis shows that touching distributions effectively discriminate between match outcomes, with teams exhibiting more consistent patterns in victories than in draws or defeats. Furthermore, we cluster team touching distributions using Wasserstein barycentres and identify dominant playing styles that, while largely stable within outcomes, exhibit notable variations between wins, draws, and losses. Finally, we evaluate the predictive accuracy of the clustering method, demonstrating that spatial touching distributions, reflecting distinct on-field playing styles, have predictive power in discriminating match outcomes.",
+  "year": 2025,
+  "venue": "Journal of the Royal Statistical Society Series C (Applied Statistics)",
+  "authors": [
+   "Alessandro Spelta",
+   "Paolo Pagnottoni",
+   "Nicoló Pecora"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416135491",
+  "doi": "10.1093/jrsssc/qlaf060",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/jrsssc/advance-article-pdf/doi/10.1093/jrsssc/qlaf060/65274584/qlaf060.pdf",
+  "published_iso": "2025-11-12",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Positive self talk journaling intervention to improve psychological well-being among child and adolescents in juvenile",
+  "title_norm": "positive self talk journaling intervention to improve psychological well being a",
+  "abstract": "BACKGROUND: Juvenile inmates often face psychological pressures such as stress, anxiety, and depression while serving their sentences. These conditions can reduce their psychological well-being. Previous research has shown that cognitive approaches such as positive self-talk are effective in helping individuals manage negative thoughts, while journaling can improve self-awareness and emotion regulation. However, there have been few interventions that combine these two approaches in juvenile inmates. OBJECTIVE: to determine the effect of positive self-talk journaling intervention on the psychological well-being of juvenile prisoners. METHOD: this study used a quasi-experimental design with a control and intervention group. The research sample consisted of 110 juvenile prisoners who were selected purposively according to the inclusion criteria, namely aged 13-18 years and willing to participate in the program. Data collection used the Ryff's Psychological Well-Being Scale at two times, before and after the intervention. The intervention was given for 4 weeks with structured sessions for positive self-talk and journaling. Data analysis was performed using the Wilcoxon test for analysis within groups and the Mann-Whitney test for comparison between groups. RESULTS: the Wilcoxon test results showed a significant increase in psychological well-being scores after the intervention in the intervention group (p < 0.05). The Mann-Whitney test showed a significant difference between the intervention group and the control group after the intervention (p < 0.05). These findings indicate that the positive self-talk journaling program is effective in improving the psychological well-being of juvenile prisoners. This intervention has a positive impact by helping juvenile prisoners recognize negative thoughts and replace them with positive affirmations. CONCLUSION: journaling techniques allow for deep self-reflection, thereby improving their ability to manage emotions. These findings support empirical evidence that cognitive and emotional-based approaches can improve mental health in high-stress situations.",
+  "year": 2025,
+  "venue": "Child and Adolescent Psychiatry and Mental Health",
+  "authors": [
+   "Iyus Yosep",
+   "Nita Fitria",
+   "Ai Mardhiyah",
+   "Rohman Hikmat"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4417265906",
+  "doi": "10.1186/s13034-025-00998-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s13034-025-00998-y.pdf",
+  "published_iso": "2025-12-12",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Interpretation, Learning, and Empathy as One Constraint: A Residual-Adequacy Architecture with Accountable Abstention",
+  "title_norm": "interpretation learning and empathy as one constraint a residual adequacy archit",
+  "abstract": "An agent must act on the situation before it, learn what it cannot yet represent, and model other agents well enough to coordinate. These faculties are usually realized by separate mechanisms, yet they share a failure mode: the situation can exceed what the agent can currently represent, and the honest response is then a principled refusal that says what was missing. We develop a small cognitive architecture in which these limits arise from a single quantity. An Interpretation-Decision Unit (IDU) interprets a content vector through a family of regimes - local representational frames with private bases - and decides which actions it licenses; a scalar residual of the content against the active regimes' representational scope drives the unit. Low residual with a clean licensing emits an action; otherwise the unit re-interprets, attempts a description-length-justified expansion, or halts with a typed, witnessed terminal. We prove the unit is total and deterministic: for any content and fixed configuration it halts in finitely many bounded-cost steps with a unique terminal witness, so abstention carries its cause by construction. By binding the architecture's open parameters without changing its mechanics, the same residual-against-scope constraint recovers three documented phenomena at three scopes: the typology of not-knowing (typed abstention); a forced misunderstanding between agents, localized to one shared concept and invisible to the agent committing it (bounded empathy); and prerequisite dependence in learning derived from a bounded focus window rather than posited (developmental prerequisites). Each instantiation is worked for a natural and an artificial agent and states a falsifiable prediction, so one constraint can model limits in both human and machine cognition. The account contributes a unification and a notion of accountable abstention, typed and witnessed by construction.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chainarong Amornbunchornvej"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7162605636",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.24999",
+  "published_iso": "2026-05-24",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Entanglement Explained by Hidden Variables: A Deterministic Coupled-Field Model Realizing Einstein’s Vision",
+  "title_norm": "entanglement explained by hidden variables a deterministic coupled field model r",
+  "abstract": "This work develops a deterministic, field-based reformulation of quantum mechanics in which entanglement arises naturally from correlated hidden variables, directly realizing Einstein’s prediction. Fermions are modeled as coupled real fields whose internal oscillatory phases provide a physical ontology for spin, interference, and charge. The model yields the standard −cosθ correlation law in the uniform-phase limit, while predicting a small deterministic correction C( θ )=−cosθ+ε sin 2 θ with ε≈0.06 . This deviation is benchmarked against historic and modern Bell tests, showing it is not excluded but lies within the sensitivity of angle-resolved experiments. Thus, the work provides a realist, experimentally testable account of entanglement, aligning with Einstein’s vision of hidden variables. Experimental deviation between the quantum mechanics model to our real coupled-fields model is expected to be of order ε=0.06 . The model provides unique experimental predictions—a finite offset at symmetry points (e.g. Δ = 45˚) not explained by noise or reduced visibility. This work examines the violation of Bell’s inequality through the lens of the Coupled-Fields model. While standard quantum mechanics attributes these results to nonlocal entanglement, the Coupled-Fields framework reproduces the same correlations through deterministic, local interactions between the internal variables of the coupled strings. Each fermion pair shares an intrinsic phase relationship established at creation, which governs measurement outcomes without requiring instantaneous influence. Statistical violation of Bell’s inequality thus reflects the geometry of internal field orientations rather than true nonlocality. This analysis reconciles experimental data with physical realism, demonstrating that local hidden variables—when properly defined within the coupled-fields structure—can reproduce the full quantum correlation pattern. Our conclusion is that Einstein (EPR) [1] was right. Internal phase is the hidden variable.",
+  "year": 2026,
+  "venue": "Journal of High Energy Physics Gravitation and Cosmology",
+  "authors": [
+   "Doron Kwiat"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7123344376",
+  "doi": "10.4236/jhepgc.2026.121018",
+  "arxiv_id": null,
+  "paper_url": "https://www.scirp.org/pdf/jhepgc_2181431.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Transforming Dietetics Curriculum: A Culinary Nutrition Certificate Grounded in Competency-Based Innovation",
+  "title_norm": "transforming dietetics curriculum a culinary nutrition certificate grounded in c",
+  "abstract": "Culinary nutrition has become a promising interdisciplinary field that combines culinary arts and nutritional science to enhance health outcomes through practical, food-based education. As the healthcare landscape increasingly emphasizes preventive care, dietitians are well-positioned to lead culinary nutrition initiatives; however, formal training opportunities remain scarce. To address this gap, Metropolitan State University of Denver (MSU Denver) created a new Culinary Nutrition Certificate that combines experiential cooking coursework from the School of Hospitality with core nutrition education from the Department of Nutrition. This paper places the certificate within the broader context of culinary nutrition and dietetics education, emphasizing the importance of hands-on learning, interdisciplinary teamwork, and culturally responsive training. The certificate’s design, which includes both new and existing coursework, makes use of the university’s unique resources—such as commercial teaching kitchens and diverse faculty expertise—while aligning with key professional competencies for Registered Dietitian Nutritionists (RDN). The program aims to improve culinary skills among nutrition students, promote greater diversity within the profession, and encourage hospitality students to explore careers in health and nutrition. The discussion covers implementation strategies, institutional support, and implications for future research and practice. Ultimately, the Culinary Nutrition Certificate provides a scalable model for academic programs to meet the rising demand for culinary nutrition education and to expand the role of dietitians in health promotion.",
+  "year": 2026,
+  "venue": "Journal of Dietetic Education",
+  "authors": [
+   "Jennifer Watson",
+   "Rachel C. Sinley",
+   "Jangwoo Jo"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7125373192",
+  "doi": "10.26890/aoqp3215",
+  "arxiv_id": null,
+  "paper_url": "https://ecommons.udayton.edu/cgi/viewcontent.cgi?article=1073&context=jde",
+  "published_iso": "2026-01-22",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Towards trustworthy agentic AI: a comprehensive survey of safety, robustness, privacy, and system security",
+  "title_norm": "towards trustworthy agentic ai a comprehensive survey of safety robustness priva",
+  "abstract": "Agentic AI systems—Large Language Models (LLMs) augmented with planning, tool use, memory, and long-horizon interactions—can execute complex tasks autonomously, but their multi-step trajectories introduce new failure modes that challenge trustworthiness. This survey provides a focused examination of trustworthy agentic AI through two core dimensions that are critical for high-risk deployments: Safety and Robustness and Privacy and System Security. For each dimension, we clarify key concepts, identify where risks emerge along the agent workflow, and summarize stage-targeted mitigation strategies. Other trustworthiness aspects (value alignment, transparency, fairness, and accountability) are discussed as relevant context rather than parallel chapters. To support consistent comparison and deployment decisions, we consolidate evaluation into a unified metrics-and-benchmarks hub, emphasizing both outcome and process signals (e.g., constraint violations, trace completeness, and adversarial success rates) and offering scenario-to-metric guidance for release gating. We conclude by outlining open challenges such as self-evolving agents, runtime monitoring and verification, privacy-preserving personalization, and the trust–utility trade-off, and present a case study of real-world security failures in open-source agentic systems (OpenClaw/Moltbook). Our goal is to serve as a practical reference for researchers and practitioners building trustworthy agentic systems in high-stakes environments.",
+  "year": 2026,
+  "venue": "Academia AI and Applications",
+  "authors": [
+   "Jinhu Qi",
+   "Muzhi Li",
+   "Jiahong Liu",
+   "Yuqin Shu",
+   "D S F Yu",
+   "Shicheng Ma"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7159965625",
+  "doi": "10.20935/acadai8260",
+  "arxiv_id": null,
+  "paper_url": "https://www.academia.edu/3071-0286/2/2/10.20935/AcadAI8260/pdf",
+  "published_iso": "2026-04-29",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Neural population geometry and optimal coding of tasks with shared latent structure",
+  "title_norm": "neural population geometry and optimal coding of tasks with shared latent struct",
+  "abstract": "Animals can recognize latent structures in their environment and apply this information to efficiently navigate the world. Several works argue that the brain supports these abilities by forming neural representations from which behaviorally relevant variables can be read out across contexts and tasks. However, it is unclear which features of neural activity facilitate downstream readout. Here we analytically determine the geometric properties of neural activity that govern linear readout generalization on a set of tasks sharing a common latent structure. We show that four statistics summarizing the dimensionality, factorization and correlation structures of neural activity determine generalization. Early in learning, optimal neural representations are lower dimensional and exhibit higher correlations between single units and task variables than late in learning. We support these predictions through biological and artificial neural data analysis. Our results tie the linearly decodable information in neural population activity to its geometry.",
+  "year": 2026,
+  "venue": "Nature Neuroscience",
+  "authors": [
+   "Albert J. Wakhloo",
+   "Will Slatton",
+   "SueYeon Chung"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7127662003",
+  "doi": "10.1038/s41593-025-02183-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41593-025-02183-y.pdf",
+  "published_iso": "2026-02-04",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Adapted emotional freedom techniques (EFT) for managing kinesiophobia in patients with rheumatoid arthritis: a feasibility study",
+  "title_norm": "adapted emotional freedom techniques eft for managing kinesiophobia in patients ",
+  "abstract": "BACKGROUND: Up to 70% of patients with rheumatoid arthritis (RA) experience kinesiophobia, a debilitating fear of movement that exacerbates physical limitations and psychological stress. However, effective interventions remain limited, particularly in resource-constrained settings. This study evaluated the feasibility, safety, and acceptability of an adapted Emotional Freedom Techniques (EFT) intervention for Chinese patients with RA. METHODS: A two-phase design was used. Phase 1 involved protocol validation and adaptation through the Delphi method. Phase 2 was a single-arm feasibility study involving 20 RA patients with kinesiophobia. The 4-week intervention included a 2-week supervised inpatient phase and a 2-week self-practice phase supported via WeChat. Feasibility (adherence, safety, satisfaction) and secondary outcomes (kinesiophobia, pain, pain anxiety, patient activation, and quality of life) were assessed. Data analysis included paired t-tests and thematic analysis of patient feedback. RESULTS: The adapted EFT protocol achieved expert consensus (I-CVI ≥ 0.80). Among participants, 80% met adherence criteria, no adverse events were reported, and 75-85% expressed satisfaction with the intervention. EFT was perceived as simple and accessible. Kinesiophobia scores decreased by 6.5 points (a 12.7% reduction; Hedges' g = 1.36), with moderate to large effects also seen for pain and anxiety. CONCLUSIONS: This adapted EFT intervention proved feasible, safe, and acceptable for Chinese RA patients with kinesiophobia. These findings support the potential for larger randomized controlled trials to rigorously evaluate effectiveness and long-term impact. CLINICAL TRIAL REGISTRATION: Chinese Clinical Trial Registry, ChiCTR2300076013. Date of registration: 21 September 2023.",
+  "year": 2025,
+  "venue": "BMC Complementary Medicine and Therapies",
+  "authors": [
+   "Yan Li You",
+   "Vimala Ramoo",
+   "Nor Aziyan Yahaya",
+   "Fariz Yahya",
+   "Xiao Fei Shi",
+   "Xinping Shang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415791809",
+  "doi": "10.1186/s12906-025-05118-z",
+  "arxiv_id": null,
+  "paper_url": "https://bmccomplementmedtherapies.biomedcentral.com/counter/pdf/10.1186/s12906-025-05118-z",
+  "published_iso": "2025-11-03",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "CoWAM: Coordination Contracts for Selective Policy Intervention with WAMs",
+  "title_norm": "cowam coordination contracts for selective policy intervention with wams",
+  "abstract": "World Action Models (WAMs) augment robot policies with action-conditioned predicted futures, but a plausible future alone does not justify changing the action that a bimanual policy would execute. We present CoWAM, a selective intervention layer that expresses synchronization, role compatibility, and collision convergence as coordination contracts. Each contract combines typed admissibility checks with event-conditioned verification and calibrated intervention gates. CoWAM preserves the nominal action unless an alternative satisfies every active obligation and provides a clear, low-risk improvement; when the nominal action is also inadmissible, it invokes a predefined abstention fallback. To separate selector quality from proposal quality, all methods operate on identical candidate pools and commit their decisions before shared oracle labeling. Across eight simulated bimanual tasks, CoWAM improves coordination-valid selection by 16.7 percentage points over the contract-only variant and raises closed-loop success by 9.6 percentage points over the strongest selective baseline, while keeping harmful interventions below 1%. Together, these results establish coordination contracts as an effective interface for conservative policy intervention with predicted world-action evidence across coordination-rich bimanual tasks.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Shuaijun Liu",
+   "Qifu Wen",
+   "Shuyang Hao",
+   "Qi Luo",
+   "Chenglong Zhang",
+   "Feiyang You"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7172558743",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.02578",
+  "published_iso": "2026-08-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Hidden-charm pentaquarks: electromagnetic structure in a diquark–diquark–antiquark model",
+  "title_norm": "hidden charm pentaquarks electromagnetic structure in a diquark diquark antiquar",
+  "abstract": "Abstract We systematically investigate the electromagnetic properties of exotic states whose internal structures remain uncertain and for which different models have been proposed. In this work, we focus on the magnetic dipole moments of hidden-charm pentaquark states using QCD light-cone sum rules with four distinct interpolating currents. The analysis accounts for contributions from both light and charm quark sectors, as well as higher-dimensional operators, ensuring convergence of the operator product expansion and dominance of the ground-state pole. Our results demonstrate a strong dependence of the magnetic moments on the internal quark configurations and spin alignments, revealing substantial variations among the different currents despite identical quark content and quantum numbers. Comparisons with existing studies indicate that while molecular-type predictions show general agreement, compact configurations yield markedly different values, including significant differences in sign and magnitude. These findings therefore underscore the sensitivity of electromagnetic observables to the internal structure of exotic hadrons and highlight their potential as probes to discriminate between competing structural models for spin–parity assignments and underlying quark dynamics.",
+  "year": 2026,
+  "venue": "The European Physical Journal C",
+  "authors": [
+   "U. Özdem"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7151976716",
+  "doi": "10.1140/epjc/s10052-026-15591-6",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1140/epjc/s10052-026-15591-6.pdf",
+  "published_iso": "2026-04-08",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Multiuser Exercise-Based Telerehabilitation Intervention for Older Adults with Frailty: A Pilot Study",
+  "title_norm": "multiuser exercise based telerehabilitation intervention for older adults with f",
+  "abstract": "Objectives: This pilot study examined telerehabilitation, which has emerged as a crucial modality in light of recent global challenges such as the COVID-19 pandemic. We examined the effectiveness of a mobile health telerehabilitation intervention developed for older adults with frailty. Methods: Six participants received a telerehabilitation intervention (Rehab Studio) that included exercise training videos. The participants were aged ≥65 years, had no history of dementia or psychiatric disorders, and had mild-to-moderate care needs. For 1 month, the participants received 1 h live online rehabilitation sessions with real-time communication with rehabilitation specialists (physical therapists and occupational therapists: PTs/OTs). The quality of life (QoL) (EuroQol 5 dimensions 5-level [EQ-5D-5L] questionnaire) and self-rated health scores were recorded before and after the intervention, and the data were analyzed using paired t-tests to determine whether the service was effective. Results: Significant differences were found in the total EQ-5D-5L and self-rated health scores (p < 0.05). The mean EQ-5D-5L score increased from 0.63 ± 0.13 before the intervention to 0.77 ± 0.14 after the intervention (p = 0.010), while the mean self-rated health score increased from 66.0 ± 18.0 to 83.3 ± 10.3, respectively (p = 0.019). Conclusions: This study revealed that the mobile health telerehabilitation intervention is safe and can improve QoL for older adults with frailty. However, the effectiveness of the intervention needs to be further investigated in patients with poor performance in daily living activities. Telerehabilitation could help to reduce the burden of nursing care in aging societies with declining birthrates. However, given the extremely small sample size (N = 6), these p-values should be interpreted with considerable caution. Statistical significance in such a small sample does not provide strong evidence for population-level effects, and our findings should be regarded as hypothesis-generating rather than confirmatory.",
+  "year": 2026,
+  "venue": "NeuroSci",
+  "authors": [
+   "Naoki Yamada",
+   "Itsuki Sato",
+   "Shoji Kinoshita",
+   "Atsushi Muraji",
+   "Seiki Tokunaga",
+   "Taro Naka"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7123349633",
+  "doi": "10.3390/neurosci7010011",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-4087/7/1/11/pdf?version=1768293595",
+  "published_iso": "2026-01-13",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Big Data and Graph Deep Learning for Financial Decision Support from Social Networks: A Critical Review",
+  "title_norm": "big data and graph deep learning for financial decision support from social netw",
+  "abstract": "Social network content is increasingly used as an auxiliary evidence stream for financial monitoring, risk assessment, and short-horizon decision support, yet many reported gains are hard to interpret because observability, timing, and attribution are handled inconsistently across studies. This review critically synthesizes the end-to-end pipeline that transforms social posts, interaction traces, linked artifacts, and related signals into decision-facing indicators, emphasizing evidence provenance, sampling bias, conditioning (bot/spam filtering, entity linking, timestamp alignment), and the modeling blocks typically used (text, temporal, relational, and fusion components) under deployment constraints. Across sentiment, relational, and multimodal or cross-platform signals, the analysis finds that apparent improvements often depend more on alignment discipline and conservative attribution than on architectural novelty, and that performance can be inflated by attention confounds, temporal leakage, and visibility effects. Relational indicators are most defensible for monitoring coordination and propagation patterns, while multimodal gains require clear ablations and realistic missing-modality tests. To support decision readiness, the paper consolidates assurance requirements covering manipulation, degraded observability, calibration and traceability, and provides compact reporting checklists and failure-mode mitigations. Overall, the review supports bounded claims and argues for time-aware evaluation and auditable pipelines as prerequisites for operational use.",
+  "year": 2026,
+  "venue": "Electronics",
+  "authors": [
+   "Leonidas Theodorakopoulos",
+   "Alexandra Theodoropoulou"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7141704926",
+  "doi": "10.3390/electronics15071405",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/15/7/1405/pdf?version=1774622881",
+  "published_iso": "2026-03-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Identification of frame geometry and boundary conditions from free-vibration modal signatures",
+  "title_norm": "identification of frame geometry and boundary conditions from free vibration mod",
+  "abstract": "This study presents an innovative approach for unveiling the hidden relationships between natural frequency patterns and structural parameters in grid-form frames. By analyzing vibrational characteristics, we determine key features, namely the number of vertical beams, boundary conditions, and aspect ratios. Extensive finite element analysis generates a dataset, mapping the natural frequencies as features against structural parameters as labels reveals distinct, streamlined clusters in the feature hyperspace, highlighting an underlying order in the system's dynamics. An advanced classification and interpolation model navigates these spectral trajectories to predict structural parameters accurately, even in the presence of damage or different materials. This study offers new insights into the intrinsic dynamics of complex structures, inviting further exploration into the subtle interplay between vibrational characteristics and structural identity. These findings open new avenues for research, potentially transforming the understanding of structural behavior in practical engineering applications.",
+  "year": 2026,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Ali Karimi-Asrami",
+   "Ramazan-Ali Jafari-Talookolaei",
+   "Arman Mardani",
+   "Elyorjon Jumaev",
+   "Orifjon Mikhliev"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125512994",
+  "doi": "10.1038/s41598-025-29390-8",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-29390-8_reference.pdf",
+  "published_iso": "2026-01-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Child public health interventions for conflict-affected populations: A systematic review",
+  "title_norm": "child public health interventions for conflict affected populations a systematic",
+  "abstract": "Armed conflict causes pervasive harm to children, and humanitarian responses to support them face significant challenges. This review aims to summarise the evidence on the effectiveness of interventions to treat, protect, and promote child public health in conflict-affected populations. A systematic review was performed, with searches of major databases and the grey literature from 1 January 2012 - 20 February 2025. Included studies provided data on child or caregiver outcomes associated with interventions to support children affected by armed conflict. Studies on nutrition and perinatal interventions were excluded. Data were extracted on the setting, population, intervention design, study type, and findings. The searches yielded 3,601 records. 51 intervention studies met inclusion criteria, 39% of which were trials. Studies were mainly from Africa (51%), the Middle East (25%) and Asia (18%). The majority of studies focused on mental health and psychosocial support (MHPSS) (N = 29, 57%). MHPSS, child protection, and/or parenting interventions were the focus of trials as well as intersectoral interventions. Somatic child health interventions (N = 19, 37%) focused on immunisation, adolescent sexual and reproductive health, toxic stress, and telemedicine services. Five studies measured development outcomes and one intervention targeted children with disabilities. Over half of the studies were carried out amongst displaced populations. Intervention design varied widely within and between sectors. Studies showed promising results, particularly for non-specialist MHPSS interventions. Only 20% of studies assessed intervention safety. The evidence for child public health interventions to support conflict-affected populations is increasing, with increased numbers of studies over time, and improved study design, execution, and reporting. However, the evidence remains poor, limited to a few topic areas and with continued geographical disparities. There are notable gaps in evidence on the safety of interventions, their medium- and long-term impacts, sustainability, and interventions for child development and children living with disabilities.",
+  "year": 2025,
+  "venue": "PLOS Global Public Health",
+  "authors": [
+   "Ayesha Kadir",
+   "Sneha Krishnan",
+   "Catherine McGowan",
+   "Daniel Martínez García"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7117576166",
+  "doi": "10.1371/journal.pgph.0004880",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7117576166",
+  "published_iso": "2025-12-30",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Confidence-Gated Robot Autonomy: When Does Uncertainty Actually Help?",
+  "title_norm": "confidence gated robot autonomy when does uncertainty actually help",
+  "abstract": "Robotic systems often use predictive uncertainty to decide whether to act autonomously or defer to a fallback policy. In threshold-gated autonomy, uncertainty matters mainly through its ability to rank likely errors. Standard metrics such as expected calibration error and AUROC do not directly test whether uncertainty changes act/defer decisions. We therefore evaluate uncertainty using Spearman rank correlation, paired bootstrap equivalence testing, and act/defer agreement. Across three temporal activity-recognition benchmarks, we find a dataset-dependent competence regime below which uncertainty provides a weak and unstable error ranking. Above this regime, softmax heuristics, MC Dropout, and ensembles produce similar gating behavior, while threshold choice has a much larger effect on execution outcomes. A multi-seed embodied simulation shows the same pattern for collision rate and cost once realized autonomy is matched. Under temporal covariate shift, ranking quality remains stable, but fine grained semantic OOD detection remains near chance. These results suggest that simple uncertainty proxies can suffice for selective gating once the base model is competent, but not for semantic novelty detection.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Johannes A. Gaus",
+   "Jhon P.F. Charaja",
+   "Daniel Haeufle"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161916204",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.18045",
+  "published_iso": "2026-05-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Schubert geometry and combinatorics",
+  "title_norm": "schubert geometry and combinatorics",
+  "abstract": "Local properties of Schubert varieties can be studied using combinatorial and computational commutative algebra and combinatorial ideas related to pattern avoidance. At the core, this involves studying certain ideals generated by determinants of matrices of 0s, 1s, and variables. We give an introduction to these methods as well as a survey of results that have been obtained and questions that might be answered with these methods.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Alexander Woo",
+   "Alexander Yong"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4323076614",
+  "doi": "10.1201/9781003145127-2",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2303.01436",
+  "published_iso": "2026-05-29",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Community Health Worker–Integrated Model for Sickle Cell Disease Management: Protocol for a Feasibility Study",
+  "title_norm": "community health worker integrated model for sickle cell disease management prot",
+  "abstract": "Background: Sickle cell disease (SCD) is a chronic inherited blood disorder that disproportionately affects African Americans. Managing SCD is complex, often requiring coordination of care among multiple health care professionals. These care challenges result in fragmented service delivery and poor health outcomes. Integrating community health workers (CHWs) into patient-centered coordinated care may enhance disease management and patient satisfaction with the care received. Objective: The proposed study aims to test the feasibility and acceptability of a CHW-integrated model for SCD management. Methods: This protocol is for a multimethod study to evaluate the feasibility of an integrated CHW intervention. The intervention includes CHW-led patient education and care coordination. Adults with SCD (aged 18-45 years) will be recruited from the Augusta University Sickle Cell Center's satellite clinic in Albany, Georgia. Quantitative outcomes include self-care behaviors and patient satisfaction. Qualitative data from semistructured interviews will be used to assess the acceptability of the intervention. Results: The proposed study will provide preliminary data on the impact of a CHW-integrated model on care coordination and self-management among adults with SCD. As of March 2026, we have enrolled 16 participants. Conclusions: Despite national calls for improved care coordination and disease management in this population, few published protocols detail community-based, culturally aligned approaches that center on the lived experiences and structural barriers faced by adults with SCD. Our study addresses a gap in the literature by highlighting a theory-informed, multimethod study protocol for evaluating the feasibility, effectiveness, and acceptability of integrating CHWs into a patient-centered coordinated care model for adults with SCD. This protocol outlines a scalable, community-embedded strategy that may inform future clinical trials and implementation efforts.",
+  "year": 2026,
+  "venue": "JMIR Research Protocols",
+  "authors": [
+   "Tilicia L. Mayo-Gamble",
+   "Doreen Ugwu",
+   "Tobi Oloyede",
+   "Joseph Telfair",
+   "Abdullah Kutlar"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7140825327",
+  "doi": "10.2196/82663",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchprotocols.org/2026/1/e82663/PDF",
+  "published_iso": "2026-03-26",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Calibrated Act–Ask–Abstain Gating for Agentic Language Models in Resource-Constrained Interactive Tasks",
+  "title_norm": "calibrated act ask abstain gating for agentic language models in resource constr",
+  "abstract": "Agentic AI systems increasingly operate in interac- tive, multi-step environments where correct behavior demands not merely generating responses, but disciplining how and when to act, solicit clarification, or refrain altogether. Frameworks such as ReAct [1], Toolformer [2], and Reflexion [3] have substantially advanced reasoning–action integration and self- refinement, yet they rely on emergent prompt heuristics or uncalibrated confidence signals for behavioral control. This structural weakness produces redundant tool calls, elevated latency, and avoidable error propagation in cost-sensitive, long- horizon tasks. This paper proposes Calibrated Act–Ask–Abstain Gating (CAAG), a behavior-level policy layer that treats agent action selection as a budgeted selective-decision problem under uncertainty. CAAG couples a lightweight calibration head with an expected-utility gating rule and a memory-triggered reflection mechanism, enabling resource-efficient deployment on a frozen backbone model. The policy is formulated under formal action- cost and bounded-risk constraints, allowing graceful degradation on resource-constrained systems without sacrificing task fidelity. Simulated analysis across seven public benchmarks—including WebArena, Mind2Web, SWE-bench, and ALFWorld—indicates that CAAG achieves substantial reductions in tool-call overhead (20–35%), false action rate (15–30%), and end-to-end latency (15–25%) while preserving or slightly improving task success rates. CAAG positions basic behavioral calibration as a first-class optimization target in agentic AI, a missing design principle in contemporary agent architectures. Index Terms—Agentic AI, uncertainty calibration, selective prediction, tool use, resource-efficient agents, act–ask–abstain policy, behavioral gating.",
+  "year": 2026,
+  "venue": "International Journal of Creative and Open Research in Engineering and Management",
+  "authors": [
+   "Balram Dutta Balram Dutta"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7160704959",
+  "doi": "10.55041/ijcope.v2i5.306",
+  "arxiv_id": null,
+  "paper_url": "https://ijcope.org/wp-content/uploads/2026/05/Calibrated-Act–Ask–Abstain-Gating-for-Agentic-Language-Models-in-Resource-Constrained-Interactive-Tasks.pdf",
+  "published_iso": "2026-05-09",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Physics-informed machine learning for matched field source-range estimation",
+  "title_norm": "physics informed machine learning for matched field source range estimation",
+  "abstract": "A physics-informed machine learning (ML) framework for ocean acoustic source localization using matched field processing (MFP) is presented. A physics-informed neural network (PINN) predicts complex acoustic pressure fields from sparse pressure measurements and a known sound speed profile (SSP). These PINN-predicted replica fields are integrated into the MFP scheme, enabling fine-resolution source-receiver range estimation without requiring detailed geoacoustic bottom parameters. Validation with experimental data from the Shallow Water Evaluation Cell Experiment 1996 (SWellEx-96) demonstrates accurate range estimation, including in the challenging closest point of approach region. The method maintains performance when localizing from array element depths excluded during PINN training and under sparse-array configurations and moderate SSP mismatch. Compared to conventional model-based MFP, the method avoids full environmental characterization and mitigates environmental mismatch effects. Unlike purely data-driven ML methods, it incorporates the governing wave physics, producing physically consistent replicas and improving interpolation/extrapolation to ranges and array element depths that were not used in training. These results highlight the advantages of a physics-informed data-driven approach for ocean acoustic localization in realistic, data-limited environments.",
+  "year": 2025,
+  "venue": "The Journal of the Acoustical Society of America",
+  "authors": [
+   "Yongsung Park"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4417288066",
+  "doi": "10.1121/10.0041850",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.aip.org/asa/jasa/article-pdf/158/6/4623/20836874/4623_1_10.0041850.pdf",
+  "published_iso": "2025-12-01",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "PREVENTion and treatment of Incontinence-Associated Dermatitis (IAD) through optimising care: development and feasibility cluster randomised trial of the IAD-Manual (PREVENT-IAD)",
+  "title_norm": "prevention and treatment of incontinence associated dermatitis iad through optim",
+  "abstract": "BACKGROUND: Incontinence-associated dermatitis (IAD) is prevalent in long-term care (LTC) facilities and homecare settings amongst adults who are incontinent of urine and/or faeces. Strategies to protect skin integrity are needed. This study aimed to co-design and test the feasibility of a training manual and care guidance (IAD-Manual) to prevent and treat IAD in LTC facilities and homecare settings. METHODS: This was a three-phase study: (1) developing the intervention, (2) designing the empirical study (a cluster RCT with an embedded process evaluation) to assess its effectiveness (not reported here) and (3) a 3-month feasibility study. The feasibility study recruited three LTC facilities and two homecare providers, randomising them (each as a cluster) to intervention or control. Process evaluation interviews with two care recipients, 11 family carers and 13 care staff implementing the IAD-Manual and their managers were conducted. Observations of 22 episodes of care assessed fidelity to the intervention. Qualitative data were analysed using thematic analysis. Summary feasibility outcome measures using means or proportions together with 95% confidence intervals were reported. RESULTS: Five sites were recruited from 49 approached. All randomised sites were retained. Seventy-six (16% [95% CI: 13-20%]) of the 477 participants approached were randomised, of which 58 (76% [95% CI: 65-85%]) completed the study. Candidate IAD outcomes had complete or almost-complete 3-month outcome data in those participants remaining, whereas other outcome measures had contrastingly poor data completeness largely due to participant cognitive impairment. Process evaluation showed few potential participants had the capacity to consent, and gaining consultee approval was challenging. Care staff at study sites liked the IAD-Manual, describing it as 'helpful'. Twenty-eight people accessed the IAD-Manual online, and 15 care staff downloaded a certificate of completion of training. Intervention fidelity was not always observed. CONCLUSIONS: It was feasible to develop the IAD-Manual. The RCT as designed was not feasible in its original form, with specific challenges regarding site and participant recruitment, governance and intervention fidelity. TRIAL REGISTRATION: This trial was prospectively registered on 07/02/2020 (intervention development) ISRCTN26169429 and 28/02/2024 (feasibility study) ISRCTN70866724.",
+  "year": 2025,
+  "venue": "Pilot and Feasibility Studies",
+  "authors": [
+   "Sue Woodward",
+   "Tanya Graham",
+   "Nicholas Beckley‐Hoelscher",
+   "Dimitri Beeckman",
+   "Christopher Chatterton",
+   "Mandy Fader"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416716950",
+  "doi": "10.1186/s40814-025-01729-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s40814-025-01729-y.pdf",
+  "published_iso": "2025-11-26",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "LLM-based annotation and token-augmented modeling for emotional tone classification in online cancer peer-support posts",
+  "title_norm": "llm based annotation and token augmented modeling for emotional tone classificat",
+  "abstract": "Online cancer peer-support communities generate large volumes of patient-authored and caregiver-authored text that may reflect distress, coping, and informational needs. Automated emotional tone classification could support scalable monitoring, but supervised modeling depends on label quality and may benefit from explicit context features. Using the Mental Health Insights: Vulnerable Cancer Survivors & Caregivers dataset, we compared five model families (TF-IDF Logistic Regression, Random Forest, LightGBM, GRU, and fine-tuned ALBERT) on a three-class target (Negative/Neutral/Positive) derived from four original categories. We introduced two extensions: (i) LLM-based annotation to generate parallel \"AI labels\" and (ii) token-based augmentation that prepends LLM-extracted structured variables (reporter role and cancer type) to the post text. Models were trained with a 60/20/20 stratified train/validation/test split, with hyperparameters selected on validation data only. Test performance was summarized using weighted F1 and macro one-vs-rest AUC with bootstrap confidence intervals, with paired comparisons based on McNemar tests and false discovery rate adjustment. The LLM annotator produced substantial redistribution in the four-class label space, shifting prevalence toward very negative relative to the original labels; the shift persisted but attenuated after collapsing to three classes. Across all model families, token augmentation improved held-out performance, with the largest gains for GRU and consistent improvements for ALBERT. Augmentation also reduced polarity-reversing errors (Negative ↔ Positive) for ALBERT, while adjacent errors (Negative ↔ Neutral) remained the dominant residual failure mode. These results indicate that LLM-based supervision can introduce systematic measurement shifts that require auditing, yet LLM-extracted context incorporated via simple token augmentation provides a pragmatic, model-agnostic mechanism to improve downstream emotional tone classification for supportive oncology decision support.",
+  "year": 2026,
+  "venue": "PLOS Digital Health",
+  "authors": [
+   "Shuo Xu",
+   "Zhongyan Wang",
+   "Hailiang Wang",
+   "Zhanyi Ding",
+   "Yue Zou",
+   "Yuchen Cao"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7162793532",
+  "doi": "10.1371/journal.pdig.0001235",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001235&type=printable",
+  "published_iso": "2026-05-29",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Identifying Instabilities with Quantum Geometry in Flat-Band Systems",
+  "title_norm": "identifying instabilities with quantum geometry in flat band systems",
+  "abstract": "The absence of a well-defined Fermi surface in flat-band systems challenges the conventional understanding of instabilities toward Landau order based on nesting. We investigate the existence of an intrinsic nesting structure encoded in the band geometry [i.e., the wave functions of the flat band(s)], which leads to a maximal susceptibility at the mean-field level and, thus, determines the instability toward ordered phases. More generally, we show that, for a given band structure and observable, we can define two vector fields: one which corresponds to the Bloch vector of the projection operator onto the manifold of flat bands and another which is \"dressed\" by the observable. The overlap between the two vector fields, possibly shifted by a momentum vector Q, fully determines the mean-field susceptibility of the corresponding order parameter. When the overlap is maximized, so is the susceptibility, and this geometrically corresponds to \"perfect nesting\" of the band structure. In that case, we show that the correlation length of this order parameter, even for Q≠0, is entirely characterized by a generalized quantum metric in an intuitive manner and is, therefore, lower bounded in topologically nontrivial bands. As an example, we demonstrate hidden nesting for staggered antiferromagnetic spin order in an exactly flat-band model, which is notably different from the general intuition that flat bands are closely associated with ferromagnetism. We check the actual emergence of this long-range order using the determinantal quantum Monte Carlo algorithm. Additionally, we demonstrate that a Fulde-Ferrell-Larkin-Ovchinnikov-like state (pairing with nonzero center of mass momentum) can arise in flat bands upon breaking time-reversal symmetry, even if Zeeman splitting is absent.",
+  "year": 2026,
+  "venue": "Physical Review Letters",
+  "authors": [
+   "Jiaxin Zhang",
+   "Wen O. Wang",
+   "Leon Balents",
+   "L. Savary"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415248125",
+  "doi": "10.1103/rw6g-w7my",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.03882",
+  "published_iso": "2026-04-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Low intensity transcranial electric stimulation: Safety, ethical, legal regulatory and application guidelines (2017–2025: An update) – endorsed by the European Society for Brain Stimulation (ESBS) and by the International Federation for Clinical Neurophysiology (IFCN)",
+  "title_norm": "low intensity transcranial electric stimulation safety ethical legal regulatory ",
+  "abstract": "This guideline summarizes updated safety data (2017-2025) and provides expert recommendations on the use of low intensity transcranial electrical stimulation (tES) in humans. tES encompasses several techniques including transcranial direct current stimulation (tDCS), oscillatory transcranial direct current stimulation (otDCS), transcranial alternating current stimulation (tACS), transcranial random noise stimulation (tRNS), transcranial temporal interference stimulation (tTIS), and their combinations or variations. Across over 300,000 sessions involving healthy individuals, patients with neuropsychiatric conditions, and other clinical populations, no tES-related serious adverse events (AEs) have been reported. Moderate AEs are rare and limited to a small range of specific applications. Mild AEs are common and include transient symptoms such as localized sensations (e.g., tingling or burning), headaches, and fatigue. Similar mild AEs are also reported by individuals receiving placebo stimulation. The frequency, magnitude, and type of AEs are comparable across healthy, clinical, and vulnerable groups, including children, elderly, or pregnant women. Combined interventions (e.g., co-application with EEG, TMS, or neuroimaging) have not shown increased safety risks. Safety is well-established for both bipolar and multichannel tES when applied up to 4 mA and up to 60 min per day. Higher intensities and longer stimulation durations may also be safe. Nevertheless, the number of studies using intensities above 4 mA or stimulating longer than 60 min is low. Home-based use of treatments is growing rapidly, leveraging remote supervision to provide patients with greater access and enable repeated, sustained dosing paradigms. We recommend using screening and AE questionnaires in future controlled studies, in particular when planning to extend the stimulation parameters applied. We discuss recent regulatory and ethical issues.",
+  "year": 2025,
+  "venue": "Clinical Neurophysiology",
+  "authors": [
+   "Andrea Antal",
+   "Jovana Bjekić",
+   "Ana Ganho-Ávila",
+   "Ivan Alekseichuk",
+   "Sara Assecondi",
+   "Til Ole Bergmann"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4416556351",
+  "doi": "10.1016/j.clinph.2025.2111436",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416556351",
+  "published_iso": "2025-11-23",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "ROBUST AND VERIFIABLE LLMS FOR HIGH-STAKES DECISION-MAKING (HEALTHCARE, DEFENSE, FINANCE)",
+  "title_norm": "robust and verifiable llms for high stakes decision making healthcare defense fi",
+  "abstract": "Robust and verifiable large language models (LLMs) are increasingly considered for high-stakes decision-support in healthcare, defense, and finance, yet empirical evidence on their reliability, security, and audit readiness remains limited. This quantitative study evaluated four LLM system configurations—baseline, retrieval-grounded, schema/rule-constrained, and tool-augmented verification—across 360 domain-specific cases and 5,760 evaluated case-instances under clean, perturbation, out-of-distribution, and adversarial conditions. Descriptive and multivariable analyses showed that tool-augmented verification achieved the highest overall task correctness at 80% on clean inputs, compared to 64% for baseline, while maintaining higher decision stability under perturbations at 81% versus 61%. Evidence support rates increased from 58% in baseline outputs to 82% in tool-augmented configurations, and schema validity exceeded 94% under constrained outputs across domains. Under adversarial testing, retrieval-grounded systems exhibited the highest policy violation rate at 18.9%, whereas schema/rule-constrained and tool-augmented systems reduced violations to 7.2% and 6.9%, respectively. However, stricter controls increased false refusals, rising from 2.3% in baseline to 7.0% in schema-constrained configurations. Mixed-effects regression results indicated that tool augmentation more than doubled the odds of task correctness relative to baseline, while schema constraints reduced policy violations by nearly 50%. Out-of-distribution conditions reduced correctness across all configurations, with the smallest degradation observed in tool-augmented systems. Overall, the findings demonstrated that robustness and verifiability in high-stakes LLM decision-support depended on layered grounding, constraint enforcement, and deterministic verification mechanisms, and that measurable tradeoffs emerged between security controls and operational utility across domains.",
+  "year": 2026,
+  "venue": "American Journal of Advanced Technology and Engineering Solutions",
+  "authors": [
+   "Manish Bolli",
+   "Sai Srinivas Matta"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7117986201",
+  "doi": "10.63125/xv9bab19",
+  "arxiv_id": null,
+  "paper_url": "https://ajates-scholarly.com/index.php/ajates/article/download/63/58",
+  "published_iso": "2026-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Data-driven approach to model the influence of magnetic geometry in the confinement of fusion devices",
+  "title_norm": "data driven approach to model the influence of magnetic geometry in the confinem",
+  "abstract": "Abstract Designing a fusion energy device to produce as much energy as possible requires balancing numerous physics constraints and metrics. In stellarators, the geometry is very flexible and involves a large number of free parameters. These can be optimized to achieve good performance. One of the main optimization targets is omnigenity, that is, the confinement of alpha particles stemming from the fusion reactions. In this work, two classes of omnigenous stellarators are studied, namely quasisymmetric and quasi-isodynamic stellarators. The goal is to determine the influence of the geometry on omnigenity, which can lead to greater insight into the design space of stellarators. For this purpose, a database of stellarator configurations with two field periods and a single dominant mode is created and analyzed for correlations, pair-wise distributions, and dimensionality reduction using a supervised autoencoder framework. Then, a classification model is trained on this database to predict the convergence of numerical solvers. Finally, two regression models, LightGBM and its probabilistic version, LightGBM LSS, as well as a feed-forward neural network, are trained to predict quasisymmetry and quasi-isodynamiticity and find the design parameters that most influence omnigenity.",
+  "year": 2025,
+  "venue": "Nuclear Fusion",
+  "authors": [
+   "R. Laia",
+   "R. Jorge",
+   "Gustavo Abreu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416724183",
+  "doi": "10.1088/1741-4326/ae1e12",
+  "arxiv_id": null,
+  "paper_url": "https://iopscience.iop.org/article/10.1088/1741-4326/ae1e12/pdf",
+  "published_iso": "2025-11-11",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Feasibility of online group schema therapy: A preliminary study with therapists in training for future application in borderline personality disorder",
+  "title_norm": "feasibility of online group schema therapy a preliminary study with therapists i",
+  "abstract": "Background: Borderline personality disorder (BPD) is the most prevalent personality disorder and can significantly impair patients' functioning. Evidence-based treatments exist, but can be inaccessible due to various limitations. Internet-delivered treatment could potentially increase accessibility and scalability. Before investigating patients, we planned a pilot-test of video-conferencing group schema therapy (VC-GST) as self-therapy for therapists in training. Objective: This study aimed to assess the feasibility of VC-GST for therapists in training. We hypothesised VC-GST to be a feasible intervention. Methods: -tests. Feasibility was assessed through system usability, client satisfaction, group cohesion, working alliance, and drop-out rates. Furthermore, the effect of the VC-GST intervention on the participants' functioning, patterns, and personality traits was evaluated. Results: VC-GST showed high usability and strong client satisfaction, with marked improvement in group cohesion and working alliance, and a drop-out rate of 4 %. Additionally, participants showed an increase in adaptive and decrease in maladaptive schemas. Conclusions: This study demonstrates that VC-GST could be a feasible intervention for therapists in training, warranting further research into VC-GST for a clinical population of BPD patients.",
+  "year": 2025,
+  "venue": "Internet Interventions",
+  "authors": [
+   "Bram van der Boom",
+   "Tara Donker",
+   "Derek de Beurs",
+   "Arnout C. Smit",
+   "Lian van der Krieke",
+   "Pepijn Steures"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417026777",
+  "doi": "10.1016/j.invent.2025.100897",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417026777",
+  "published_iso": "2025-12-05",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "One Score, Two Decisions: Selective Prediction on the Rare-Disease Tail",
+  "title_norm": "one score two decisions selective prediction on the rare disease tail",
+  "abstract": "Given a patient's clinical findings, a diagnostic system ranks possible diseases and must decide when to endorse its first prediction or defer it for review. This decision is usually made by thresholding the top score. Selective prediction over ranked outputs begins with two checks. First, the ranker must produce enough correct top-ranked predictions to make the target feasible. Across 2,000 patient records stratified by disease prevalence, eight small open-weight LLMs achieve at most 4.6% Recall@1 on ultra-rare diseases. At 10% coverage, even a perfect confidence ranking of their existing predictions therefore cannot reach 50% selective accuracy. More accurate models pass the same check, showing that the limit is regime-specific. Second, the confidence signal must match the decision being made. For fixed-candidate rankers, the top-two margin cancels components shared across candidates. On phenotype-only Exomiser, it selects 10% of cases at 29.0% accuracy, compared with 13.3% overall, while the top score provides no reliable gate. Yet that cancellation can remove information needed to detect whether the candidate list contains an answer. SciFact retrieval and biomedical entity linking confirm this distinction. Finally, we prove that unlabelled scores alone cannot determine whether switching to the margin will help.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhaoyang Jiang",
+   "Zhizhong Fu",
+   "Yunsoo Kim",
+   "Zicheng Li",
+   "Xuanqi Peng",
+   "Fei Teng"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7203679510",
+  "doi": "10.48550/arxiv.2608.14683",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.14683",
+  "published_iso": "2026-08-05",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Protein Structure Tokenization via Geometric Byte Pair Encoding",
+  "title_norm": "protein structure tokenization via geometric byte pair encoding",
+  "abstract": "Protein structure is central to biological function, and enabling multimodal protein models requires joint reasoning over sequence, structure, and function. A key barrier is the lack of principled protein structure tokenizers (PSTs): existing approaches fix token size or rely on continuous vector codebooks, limiting interpretability, multi-scale control, and transfer across architectures. We introduce GeoBPE, a geometry-grounded PST that transforms continuous, noisy, multi-scale backbone conformations into discrete ``sentences'' of geometry while enforcing global constraints. Analogous to byte-pair encoding, GeoBPE generates a hierarchical vocabulary of geometric primitives by iteratively (i) clustering Geo-Pair occurrences with k-medoids to yield a resolution-controllable vocabulary; (ii) quantizing each Geo-Pair to its closest medoid prototype; and (iii) reducing drift through differentiable inverse kinematics that optimizes boundary glue angles under an $\\mathrm{SE}(3)$ end-frame loss. GeoBPE offers compression ($>$10x reduction in bits-per-residue at similar distortion rate), data efficiency ($>$10x less training data), and generalization (maintains test/train distortion ratio of $1.0-1.1$). It is architecture-agnostic: (a) its hierarchical vocabulary provides a strong inductive bias for coarsening residue-level embeddings from large PLMs into motif- and protein-level representations, consistently outperforming leading PSTs across $12$ tasks and $24$ test splits; (b) paired with a transformer, GeoBPE supports unconditional backbone generation via language modeling; and (c) tokens align with CATH functional families and support expert-interpretable case studies, offering functional meaning absent in prior PSTs. Code is available at https://github.com/shiningsunnyday/PT-BPE/.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Michael Sun",
+   "Weize Yuan",
+   "Gang Liu",
+   "Wojciech Matusik",
+   "Marinka Žitnik"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416378091",
+  "doi": "10.48550/arxiv.2511.11758",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2511.11758",
+  "published_iso": "2025-11-13",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Correlated Subjects: Relational Ethics and Veterinary Legal Accountability in Animal-Assisted Interventions",
+  "title_norm": "correlated subjects relational ethics and veterinary legal accountability in ani",
+  "abstract": "The ethical and legal governance of Animal-Assisted Interventions (AAIs) remains conceptually and normatively fragmented. Although animals engaged in therapeutic, educational, and assistive activities make valuable contributions to human well-being, they continue to be defined by law as property or welfare objects, despite their meaningful yet limited forms of relational participation within structured human-controlled environments. This perspective obscures their context-dependent responsiveness and their institutional embeddedness. The present paper addresses this gap by adopting a normative and interdisciplinary approach grounded in relational legal theory and vulnerability scholarship. The concept is developed by drawing on Jennifer Nedelsky's notion of relational autonomy and Martha Fineman's theory of universal vulnerability. This results in the conceptualisation of AAI animals as correlated subjects: beings whose ethical and legal significance derives from the relationships and institutional contexts that shape their participation. The analysis identifies weaknesses in current medico-legal practices that frame veterinary certification and welfare assessment as static technical acts, ignoring their relational and systemic dimensions. The paper puts forward a relational ethical-legal framework for Animal-Assisted Interventions, centred on relational vulnerability, context-sensitive oversight and continuous institutional accountability. A number of practical recommendations are put forward, including the introduction of renewable ethical licences, inter-institutional monitoring and the establishment of multidisciplinary oversight mechanisms. By redefining animals' normative status through relational ethics, in alignment with the interconnected human, animal, and environmental dimensions emphasized by the One Welfare principles, the study advances a shift from welfare-based protection toward a model of justice grounded in interspecies interdependence and institutional responsiveness.",
+  "year": 2025,
+  "venue": "Animals",
+  "authors": [
+   "Paola Fossati"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7117449596",
+  "doi": "10.3390/ani16010092",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-2615/16/1/92/pdf?version=1766992836",
+  "published_iso": "2025-12-29",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "SCP-NL2TL: Selective Conformal Prediction with Semantic Verification for Natural Language to Temporal Logic Specifications",
+  "title_norm": "scp nl2tl selective conformal prediction with semantic verification for natural ",
+  "abstract": "Translating natural language instructions into machine-interpretable formal specifications enables robots and autonomous systems to plan, reason, and formally verify their behavior. However, existing translation models typically generate a specification for every input, even when the result is unreliable or fails to capture the user's intent, creating risks in safety-critical applications. Inspired by selective conformal prediction, we propose a selective translation framework that not only generates formal specifications but also determines when they can be trusted. Reliability is scored by two complementary black-box signals, the fidelity of the specification back-translated into natural language and the dispersion of repeated translations under exact semantic equivalence, which fail on different errors and jointly separate incorrect translations more sharply than either alone. Conformal risk control calibrates this score into a decision that accepts a specification or abstains, with a distribution-free bound on the rate at which incorrect specifications are accepted for execution, and a conformal anomaly detector on instruction embeddings screens out-of-distribution inputs before any translation is attempted. The proposed framework is general across formal specification languages, with experiments on Signal Temporal Logic (STL), Linear Temporal Logic (LTL), and geometric Spatio-Temporal Logic (SpaTiaL) demonstrating improved translation reliability, robustness under the evaluated cross-tier shifts, and effective uncertainty-aware abstention. This work establishes a foundation for trustworthy natural language interfaces by enabling AI systems to recognize when generated specifications may not be reliable.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yixuan Wang",
+   "Licheng Luo",
+   "Yu Fu",
+   "Kaidi Xu",
+   "Yue Dong",
+   "Mingyu Cai"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202005823",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.05439",
+  "published_iso": "2026-08-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Geometry of almost-conserved quantities in symplectic maps",
+  "title_norm": "geometry of almost conserved quantities in symplectic maps",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Chaos Solitons & Fractals",
+  "authors": [
+   "Tim Zolkin",
+   "Sergei Nagaitsev",
+   "I. Morozov",
+   "Sergei Kladov"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417515754",
+  "doi": "10.1016/j.chaos.2026.118059",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2505.07223",
+  "published_iso": "2026-02-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Characteristics and outcomes of pharmacy-supported transitions of care interventions in emergency departments: a scoping review",
+  "title_norm": "characteristics and outcomes of pharmacy supported transitions of care intervent",
+  "abstract": "INTRODUCTION: Transitions of care (ToC) services are essential for maintaining care continuity. The complex and fast-paced nature of care and high patient turnover in emergency departments (EDs) create unique challenges and opportunities for improving transitional care. Although the benefits of pharmacy-supported ToC interventions are established in non-ED settings, there is a lack of evidence exploring their characteristics and outcomes in EDs. AIM: We aimed to identify and present the available evidence regarding the characteristics and outcomes of pharmacy-supported ToC interventions beyond medication reconciliation, as the sole intervention, in EDs. METHOD: This review was conducted in accordance with the Joanna Briggs Institute methodology and reported following the Preferred Reporting Items for Systematic Reviews and Meta-Analysis Extension for Scoping Reviews guidelines. A literature search was performed across PubMed, Embase, CINAHL, Web of Science, and grey literature from their inception until 22/12/24. The search included terms related to pharmacy, transitional care, and EDs. Data was extracted using a custom tool adapted from the Template for Intervention Description and Replication checklist, which was used to assess the articles' compliance with the items. RESULTS: A total of 64 publications were included. Most studies (n = 58) enrolled adult patients, with 13 focusing on older adults. Most interventions were delivered by pharmacists in collaboration with other healthcare providers in 64% of studies. Interventions were most implemented post-discharge (54.7%), followed by arrival to the ED (42.2%). Around 90.6% of interventions included two or more activities, combining medication reconciliation, discharge planning, and follow-up care. Most studies focused on health utilization metrics (e.g., readmission rates) as their outcomes (28.8%). Positive effects were observed on medication safety, antibiotic stewardship, patient satisfaction, and resource use. However, pediatric populations and intrahospital transitions were underrepresented. CONCLUSION: This scoping review highlights the potential of pharmacist-supported transitional care interventions within EDs. The role of pharmacists in ToC interventions in emergency settings is evidently growing. Despite this, critical gaps persist in reporting and implementing these interventions. Future research is needed to systematically explore such initiatives and evaluate their implementation and long-term impact.",
+  "year": 2025,
+  "venue": "International Journal of Clinical Pharmacy",
+  "authors": [
+   "Eman Alhmoud",
+   "Waad Elamin",
+   "Raja Barazi",
+   "Zeana Alkudsi",
+   "Farah Zahrah",
+   "Muhammad Abdul Hadi"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416986959",
+  "doi": "10.1007/s11096-025-02057-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11096-025-02057-0.pdf",
+  "published_iso": "2025-12-04",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Blockchain-Native Asset Direction Prediction: A Confidence-Threshold Approach to Decentralized Financial Analytics Using Multi-Scale Feature Integration",
+  "title_norm": "blockchain native asset direction prediction a confidence threshold approach to ",
+  "abstract": "Blockchain-based financial ecosystems generate unprecedented volumes of multi-temporal data streams requiring sophisticated analytical frameworks that leverage both on-chain transaction patterns and off-chain market microstructure dynamics. This study presents an empirical evaluation of a two-class confidence-threshold framework for cryptocurrency direction prediction, systematically integrating macro momentum indicators with microstructure dynamics through unified feature engineering. Building on established selective classification principles, the framework separates directional prediction from execution decisions through confidence-based thresholds, enabling explicit optimization of precision–recall trade-offs for decentralized financial applications. Unlike traditional three-class approaches that simultaneously learn direction and execution timing, our framework uses post-hoc confidence thresholds to separate these decisions. This enables systematic optimization of the accuracy-coverage trade-off for blockchain-integrated trading systems. We conduct comprehensive experiments across 11 major cryptocurrency pairs representing diverse blockchain protocols, evaluating prediction horizons from 10 to 600 min, deadband thresholds from 2 to 20 basis points, and confidence levels of 0.6 and 0.8. The experimental design employs rigorous temporal validation with symbol-wise splitting to prevent data leakage while maintaining realistic conditions for blockchain-integrated trading systems. High confidence regimes achieve peak profits of 167.64 basis points per trade with directional accuracies of 82–95% on executed trades, suggesting potential applicability for automated decentralized finance (DeFi) protocols and smart contract-based trading strategies on similar liquid cryptocurrency pairs. The systematic parameter optimization reveals fundamental trade-offs between trading frequency and signal quality in blockchain financial ecosystems, with high confidence strategies reducing median coverage while substantially improving per-trade profitability suitable for gas-optimized on-chain execution.",
+  "year": 2025,
+  "venue": "Algorithms",
+  "authors": [
+   "Oleksandr Kuznetsov",
+   "Dmytro Prokopovych-Tkachenko",
+   "Maksym Bilan",
+   "Borys Khruskov",
+   "Oleksandr Cherkaskyi"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7108679133",
+  "doi": "10.3390/a18120758",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1999-4893/18/12/758/pdf",
+  "published_iso": "2025-11-29",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Linking brain and behavior states in Zebrafish Larvae locomotion using hidden Markov models",
+  "title_norm": "linking brain and behavior states in zebrafish larvae locomotion using hidden ma",
+  "abstract": "Understanding how collective neuronal activity in the brain orchestrates behavior is a central question in integrative neuroscience. Addressing this question requires models that can offer a unified interpretation of multimodal data. In this study, we jointly examine video-recordings of zebrafish larvae freely exploring their environment and calcium imaging of the Anterior Rhombencephalic Turning Region (ARTR) circuit, which is known to control swimming orientation, recorded in vivo under tethered conditions. We show that both behavioral and neural data can be accurately modeled using a Hidden Markov Model (HMM) with three hidden states. In the context of behavior, the hidden states correspond to leftward, rightward, and forward swimming. The HMM robustly captures the key statistical features of the swimming motion, including bout-type persistence and its dependence on bath temperature, while also revealing inter-individual phenotypic variability. For neural data, the three states are found to correspond to left- and right-lateral activation of the ARTR circuit, known to govern the selection of left vs. right reorientation, and a balanced state, which likely corresponds to the behavioral forward state. To further unify the two analyses, we exploit the generative nature of the HMM, using neural sequences to generate synthetic swimming trajectories, whose statistical properties are similar to the behavioral data. Overall, this work demonstrates how state-space models can be used to link neuronal and behavioral data, providing insights into the mechanisms of self-generated action.",
+  "year": 2026,
+  "venue": "PLoS Computational Biology",
+  "authors": [
+   "Mattéo Dommanget-Kott",
+   "Jorge Fernández-de-Cossio-Díaz",
+   "Monica Coraggioso",
+   "Volker Bormuth",
+   "Rémi Monasson",
+   "Georges Debrégeas"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7118187129",
+  "doi": "10.1371/journal.pcbi.1013762",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1013762&type=printable",
+  "published_iso": "2026-01-05",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Evaluation of Fully Teleoperated Robotic Endovascular Interventions with Haptic Feedback: The SENTANTE Endovascular Robotic System",
+  "title_norm": "evaluation of fully teleoperated robotic endovascular interventions with haptic ",
+  "abstract": "PURPOSE: To evaluate a fully robotic, teleoperated system for performing various endovascular interventions in a preclinical porcine model. MATERIALS AND METHODS: The SENTANTE™ Endovascular Robotic System was assessed in six healthy porcine subjects using standard endovascular devices. Outcomes were assessed via procedural monitoring and gross pathological analysis. Haptic feedback performance was qualitatively assessed by the operators using a four-point scale (1 = very good, 2 = fair, 3 = poor, 4 = inadequate). RESULTS: A total of 18 endovascular interventional procedures were successfully completed, including renal artery stenting (3), embolization of the superior right renal artery branch (3), percutaneous transluminal angioplasty (PTA) of the superior mesenteric artery (3), left vertebral artery stenting (3), contralateral iliac artery PTA (3), and ipsilateral iliac artery stenting (3). All procedures (100%) were completed without manual conversion, including pre and post-procedural angiography, resulting in near-zero operator radiation exposure. The system was compatible with standard guidewires (0.014″, 0.018″, and 0.035″), catheters (2.7-8 Fr), and pushable coils (0.018″ and 0.035″). Post-procedural angiography demonstrated no signs of vessel injury. Minimal vessel trauma was observed in 3 of 16 target vessels during gross necropsy. Haptic feedback was rated as very good in three test models and as fair in the remaining three. CONCLUSIONS: In a preclinical model, the SENTANTE™ system demonstrated the feasibility of performing endovascular interventions via teleoperation, including angiography, stenting, coil embolization, and PTA. Its compatibility with standard devices, haptic feedback, and elimination of operator radiation exposure support progression to clinical feasibility trials.",
+  "year": 2026,
+  "venue": "CardioVascular and Interventional Radiology",
+  "authors": [
+   "Emiel W. M. Huistra",
+   "Giovanni Federico Torsello",
+   "Konstantinos Stavroulakis",
+   "Lorenzo Patrone",
+   "Artūras Mackevičius",
+   "Max Amor"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7131365059",
+  "doi": "10.1007/s00270-026-04375-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00270-026-04375-w.pdf",
+  "published_iso": "2026-02-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Consensus-Gated Execution: A Multi-Agent LLM Architecture for Autonomous Cryptocurrency Trading",
+  "title_norm": "consensus gated execution a multi agent llm architecture for autonomous cryptocu",
+  "abstract": "Existing autonomous trading systems rely on collaborative or single-agent analysis, lacking structured mechanisms for adversarial deliberation across opposing market perspectives. We propose Consensus-Gated Execution (CGX), a multi-agent architecture where specialized Bull and Bear agents engage in a three-round structured debate, with a Meta-Evaluator synthesizing their arguments to gate trade execution based on consensus strength. The system is evaluated through two complementary experiments: a 52-week aggregation study (2024) and a four-year multi-regime validation (2022–2025) across 417 biweekly sessions spanning bear, recovery, bull, and mixed market conditions. Trade signals are filtered using a tunable consensus threshold, allowing the system to balance trading frequency against signal quality. In the aggregation study, CGX achieves a Sharpe ratio of 1.90 with a maximum drawdown of 11.6%, representing a 3× improvement over trend following. In the multi-year evaluation, CGX reduces maximum drawdown by 85% and annualized volatility by 86%, with the Bear gate blocking 93% of sessions during the 2022 crash versus only 12% during the 2024 bull run. These results demonstrate that adversarial debate combined with consensus-based execution gating provides a principled framework for capital preservation across diverse market regimes.",
+  "year": 2026,
+  "venue": "Electronics",
+  "authors": [
+   "Agon Bajgora",
+   "Andrea Kulakov",
+   "Faton Merovcı"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7172441344",
+  "doi": "10.3390/electronics15153453",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/15/15/3453/pdf?version=1785847993",
+  "published_iso": "2026-08-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Band folding unlocks high-density hidden modes for sub-terahertz cancer cell phenotyping",
+  "title_norm": "band folding unlocks high density hidden modes for sub terahertz cancer cell phe",
+  "abstract": "Abstract Metamaterial-based biosensors (meta-biosensors) offer a versatile platform for label-free detection of biological analytes. However, conventional multi-mode designs often rely on intricate configurations with uncertain mode excitability under free-space incidence. Here, we propose a band-folding-enabled meta-biosensor that supports high density of free-space- excitable modes. Guided by a Fourier-series theoretical framework developed to predict the coupling strengths, numerous symmetry-protected hidden modes are converted into radiative resonances by introducing perturbations into a hexagonal superlattice. We apply this multi- mode platform to phenotype different biological cells at sub-terahertz frequencies. Supported by histopathological validation, we demonstrate that the dense accumulation of intracellular biomass and enlarged nuclei in malignant cells induce a distinct volumetric permittivity contrast. This mechanism could enable rapid differentiation of cancerous phenotypes from the normal counterparts. Our work bridges metamaterial device physics with biological structural insights, broadening the horizon for mode-multiplexed metamaterials in phenotypic screening.",
+  "year": 2026,
+  "venue": "PhotoniX",
+  "authors": [
+   "Zhixia Xu",
+   "Yue Hua",
+   "Xianghong Kong",
+   "Haotian Wu",
+   "Jie Chang",
+   "Baofei Wan"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7124727218",
+  "doi": "10.1186/s43074-026-00229-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s43074-026-00229-3.pdf",
+  "published_iso": "2026-01-19",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Investment feasibility of green hydrogen production from geothermal electricity: Navigating uncertainty with exploratory financial modeling and analysis",
+  "title_norm": "investment feasibility of green hydrogen production from geothermal electricity ",
+  "abstract": "",
+  "year": 2025,
+  "venue": "International Journal of Hydrogen Energy",
+  "authors": [
+   "Andri D. Setiawan",
+   "Surya Marthen",
+   "Marmelia P. Dewi",
+   "Armand O. Moeis",
+   "Akhmad Hidayatno",
+   "Henny Romijn"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7115691149",
+  "doi": "10.1016/j.ijhydene.2025.153058",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7115691149",
+  "published_iso": "2025-12-17",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Review-Grounded LLM Decision Support for E-Commerce: Faithful Recommendation, Customer Segmentation, and Selective Personalization",
+  "title_norm": "review grounded llm decision support for e commerce faithful recommendation cust",
+  "abstract": "E-commerce decision support requires accurate ranking, review-grounded explanations, and a principled way to limit personalization when confidence is weak. This study evaluates those capabilities on 701,528 Amazon Reviews’23 All Beauty records. Four- and five-star reviews defined positive preference, an iterative interaction core supported temporal leave-one-out evaluation, and every method ranked the exact 1,091-item warm catalog. Popularity, ItemKNN, PureSVD, BPR-MF, LightGCN, a training-review TextLSA ranker, and a validation-weighted hybrid were compared for 2,374 test users. The hybrid attained NDCG@10 of 0.09186 and Recall@20 of 0.19966, improving on LightGCN by 15.80% and 17.62%, respectively. Its paired NDCG@10 gain was 0.01253 (95% bootstrap interval [0.00595, 0.01958]; paired randomization p = .00030). Review fusion also reduced expected calibration error from 0.29112 to 0.25319 and area under the risk–coverage curve from 0.67798 to 0.63844, although absolute confidence remained overestimated. Six review-behavior segments showed substantial ranking heterogeneity, with Recall@20 ranging from 0.02000 to 0.25000. A local Qwen2.5-0.5B assessment on four balanced evidence packets achieved 0.75 selective-action accuracy but only 0.25 citation accuracy, exact-quote fidelity, and joint constraint compliance. The findings support review-language fusion for ranking and confidence ordering while showing that customer-facing explanations require deterministic validation and abstention safeguards.",
+  "year": 2026,
+  "venue": "Stout in Business and Management",
+  "authors": [
+   "Fiona Huang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7201833015",
+  "doi": "10.61424/c20v0j71",
+  "arxiv_id": null,
+  "paper_url": "https://stoutjournals.org/index.php/SBM/article/download/81/79",
+  "published_iso": "2026-01-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "The supersymmetric origin of chaos and its hidden topological order",
+  "title_norm": "the supersymmetric origin of chaos and its hidden topological order",
+  "abstract": "Dynamical chaos is a term that encompasses a wide range of nonlinear phenomena, such as turbulence, neuronal avalanches, weather patterns, and many others. However, despite much work in the field of chaos, its fundamental physical origin remains not fully understood. In this perspective, we report on recent studies showing that chaos is the realization of one of the most fundamental principles in physics: spontaneous symmetry breaking, also known as spontaneous ordering. In the present context, the symmetry involved is a topological supersymmetry inherent to all continuous-time (stochastic) dynamical systems. Chaos is then truly a manifestation of order of topological origin, potentially encoding a sort of long-range information hidden beneath its apparent unpredictability. We finally argue that this point of view may have far-reaching implications well beyond chaotic dynamics.",
+  "year": 2026,
+  "venue": "Newton",
+  "authors": [
+   "I. V. Ovchinnikov",
+   "Massimiliano Di Ventra"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7140098835",
+  "doi": "10.1016/j.newton.2026.100465",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7140098835",
+  "published_iso": "2026-03-23",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Dorsal Genital Nerve Stimulation in Patients With Fecal Incontinence and Fecal Urgency: A Feasibility Study With the Novel UCon Neurostimulator",
+  "title_norm": "dorsal genital nerve stimulation in patients with fecal incontinence and fecal u",
+  "abstract": "BACKGROUND: The UCon neurostimulator is a novel device providing dorsal genital nerve (DGN) stimulation for treating fecal incontinence (FI)/fecal urgency (FU). The primary aim was to explore its safety and secondarily its performance, hypothesizing that DGN stimulation would be feasible and safe, while reducing FI/FU. METHOD: This was a prospective two-center feasibility study conducted in Denmark. Adults ≥ 18 years, with FI ≥ 1/week, and/or strong FU ≥ 3/week, and a St. Mark's Incontinence Score ≥ 9 were eligible. DGN stimulation was self-administered at home daily for 4 weeks in either a time-limited (30 min/day) or urge/on-demand (60 s upon urgency) modality. Safety was assessed through patient-reported adverse and device-related events. Efficacy was evaluated by comparing baseline data with the last 14 days of the intervention using symptom diaries, the St. Mark's Incontinence Score, and bowel-related quality-of-life measures. RESULTS: Forty patients consented (39 women), median age 62 years (Q1-Q3: 54-69), and 26 patients completed the study. An adverse and device-related median of 1.5 events per patient was reported, but these were mild and transient. Among patients completing the 4-week intervention, 74% (n = 19) with FI and 43% (n = 14) with strong FU achieved ≥ 50% symptom reduction (p = 0.005 and p ≤ 0.001, respectively). St. Mark's Incontinence Score (n = 26) reduced significantly from 16.0 (13-18) to 11.5 (9-15) (p ≤ 0.001). CONCLUSION: Using the UCon neurostimulator in a home setting is safe and feasible. A 4-week stimulation period demonstrated significant positive results in treating FI and FU. CLINICAL TRIALS REGISTRATION: The conducted research was preregistered at ClinicalTrials.gov with the following link: (https://ClinicalTrials.gov/study/NCT05368246?cond=UCon&rank=5).",
+  "year": 2025,
+  "venue": "Neurogastroenterology & Motility",
+  "authors": [
+   "Louise Schmidt Grau",
+   "Peter Christensen",
+   "Niels Qvist",
+   "Niels Klarskov",
+   "Nico Rijkhoff",
+   "Jakob Duelund‐Jakobsen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417521768",
+  "doi": "10.1111/nmo.70225",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nmo.70225",
+  "published_iso": "2025-12-20",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Federated Retrieval-Augmented Generation for Cybersecurity in Resource-Constrained IoT and Edge Environments: A Deployment-Oriented Scoping Review",
+  "title_norm": "federated retrieval augmented generation for cybersecurity in resource constrain",
+  "abstract": "Cybersecurity operations in IoT and edge environments require fast, evidence-grounded decisions under strict resource and trust constraints. While large language models can support triage and incident analysis, their parametric knowledge may be outdated and prone to hallucination. Retrieval-augmented generation (RAG) improves grounding by conditioning responses on retrieved evidence, but also introduces new risks such as knowledge-base poisoning, indirect prompt injection, and embedding leakage. Federated learning enables collaborative adaptation without centralizing sensitive data, motivating federated RAG (FedRAG) architectures for distributed cybersecurity deployments. This study presents a deployment-oriented scoping review of FedRAG for cybersecurity. The review follows PRISMA-ScR reporting guidance and synthesizes 82 studies published between 2020 and 2026, identified through keyword search and citation snowballing over OpenAlex, arXiv, and Crossref. We develop a taxonomy that clarifies the components of federated systems, deployment locations, trust boundaries, and protected assets. We further map the combined RAG+FL attack surface, summarize practical defenses and system patterns, and distill actionable guidance for secure, privacy-preserving, and efficient FedRAG deployment in real-world IoT and edge scenarios. Our synthesis highlights recurring trade-offs among robustness, privacy, latency, communication overhead, and maintainability, and identifies open research priorities in benchmark design, governance mechanisms, and cross-silo evaluation protocols for practical deployment.",
+  "year": 2026,
+  "venue": "Electronics",
+  "authors": [
+   "Hangyu He",
+   "Xin Yuan",
+   "Kai Wu",
+   "Wei Ni"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7143374110",
+  "doi": "10.3390/electronics15071409",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2079-9292/15/7/1409/pdf?version=1774627960",
+  "published_iso": "2026-03-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "RNAbpFlow: base pair-augmented SE(3) flow matching for conditional RNA 3D structure generation",
+  "title_norm": "rnabpflow base pair augmented se 3 flow matching for conditional rna 3d structur",
+  "abstract": "Despite the groundbreaking advances in deep learning-enabled methods for biomolecular modeling, predicting accurate three-dimensional (3D) structures of RNA remains challenging due to the highly flexible nature of RNA molecules combined with the limited availability of evolutionary sequences or structural homology. Here we introduce RNAbpFlow, a novel sequence- and base-pair-conditioned SE(3)-equivariant flow matching model for generating RNA 3D structural ensemble. Leveraging a nucleobase center representation, RNAbpFlow enables end-to-end generation of all-atom RNA structures without the explicit or implicit use of evolutionary information or homologous structural templates. Experimental results show that base pairing conditioning leads to broadly generalizable performance improvements over current approaches for RNA topology sampling and predictive modeling in large-scale benchmarking. RNAbpFlow is freely available at https://github.com/Bhattacharya-Lab/RNAbpFlow.",
+  "year": 2026,
+  "venue": "Nature Methods",
+  "authors": [
+   "Sumit Tarafder",
+   "Debswapna Bhattacharya"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4406829648",
+  "doi": "10.1038/s41592-026-03128-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41592-026-03128-4.pdf",
+  "published_iso": "2026-06-30",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Installing Air Purifiers in the Homes of Children With Severe Asthma: Outcomes and Family Perspectives From a Feasibility Study",
+  "title_norm": "installing air purifiers in the homes of children with severe asthma outcomes an",
+  "abstract": "BACKGROUND: Poor indoor air quality (IAQ) contributes to asthma morbidity, particularly affecting children and young people (CYP) from socioeconomically deprived backgrounds. Air purification devices may improve IAQ and asthma symptoms, but real-world evidence remains limited. AIM: To assess the feasibility, acceptability, and potential clinical impact of installing an air purifier in the homes of CYP with severe asthma. METHODS: An unblinded feasibility study recruiting children ≤ 15 years with a confirmed diagnosis of asthma attending a regional severe asthma service. Participants selected by computer-generated random allocation. An air purifier (manufactured by Rensair Ltd.) was installed in each home, with instructions to operate continuously on \"quiet mode\" for 1-year, and operating costs covered. Data on asthma management and symptoms, quality of life, and qualitative feedback were collected and analysed using thematic analysis. RESULTS: Twenty CYP were recruited (mean age: 11.2 (SD: 2.68), 60% boys). Thematic analysis of feedback from CYP and families indicated high acceptability and perceived improvements in night-time symptoms and IAQ. Over this 12-month study period, the mean annual number of systemic corticosteroid courses decreased from 4.2 to 2.15 (p = 0.006) from the previous year, and unscheduled primary care visits fell from 4.0 to 1.8 (p = 0.02). Trends towards marginal improvements in asthma control test mean scores (13.3 to.14.2 for < 12 years (p = 0.2), 15.5 to 16.8 for ≥12 years (p = 0.6) and quality of life scores were observed (54.6 to 62.4 for total score (p = 0.08), 17.2 to 19.8 for emotional domain (p = 0.07) and 13.6 to 13.9 for activity domain (p = 0.7)), with a statistically significant increase in the symptom domain of the Mini-PAQLQ (23.8 to 28.8 p = 0.04). CONCLUSIONS: Air purifiers may offer a feasible, acceptable, and potentially beneficial intervention for children with severe asthma, particularly in settings with poor IAQ. Larger controlled trials are warranted to confirm these findings and inform implementation. TRIAL REGISTRATION: NCT05817357.",
+  "year": 2026,
+  "venue": "Pediatric Pulmonology",
+  "authors": [
+   "Karl A. Holden",
+   "D B Hawcutt",
+   "Ian Sinha"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130317707",
+  "doi": "10.1002/ppul.71509",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ppul.71509",
+  "published_iso": "2026-02-01",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Risk-Adaptive Human Oversight for Agentic AI in Engineering Projects: A Decision-Gating Model and Monte Carlo Evaluation",
+  "title_norm": "risk adaptive human oversight for agentic ai in engineering projects a decision ",
+  "abstract": "Agentic artificial intelligence can plan, invoke tools and alter project records, yet universal human review is costly while unrestricted autonomy is unsafe.This study develops a risk-adaptive decision-gating model for engineering project control and evaluates it through a reproducible Monte Carlo experiment.The model combines decision criticality, irreversibility, uncertainty, external coupling, data sensitivity, stakeholder externality, model confidence, project stress and distribution drift to route each proposed action to autonomous execution, human pre-approval or safe fallback.Across 120,000 synthetic decision events in 200 projects, the adaptive policy reduced incidents by 66.9% and expected loss by 73.8% relative to unrestricted autonomy.Compared with a static risk gate, it reduced incidents by 19.3% and loss by 17.8%, with a 2.6% latency increase.During actual-drift periods, incident frequency and loss were 56.5% and 61.5% lower than under the static gate.It also produced 17.4% lower loss and 45.6% lower latency than universal pre-approval.The findings show that human oversight should be allocated as a scarce control resource rather than applied uniformly.The proposed model offers an auditable mechanism for aligning agent autonomy with project risk, context and changing operating conditions.",
+  "year": 2026,
+  "venue": "International Journal of Progressive Research in Engineering Management and Science",
+  "authors": [],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7168163642",
+  "doi": "10.58257/ijprems54216",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.58257/ijprems54216",
+  "published_iso": "2026-07-13",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Deep Reinforcement Learning for Cryptocurrency Portfolio Management: A Free-Energy Framework with Geometry-Based Transaction Costs and Efficiency Bounds",
+  "title_norm": "deep reinforcement learning for cryptocurrency portfolio management a free energ",
+  "abstract": "This paper develops a deep reinforcement learning framework for cryptocurrency portfolio management in which transaction costs are derived from the Riemannian geometry of the underlying volatility model rather than assumed constant. A Proximal Policy Optimisation agent is trained on a reward function grounded in non-equilibrium thermodynamics: we use the free-energy Bellman equation, in which transaction costs are the geodesic slippage on the Fisher information manifold of a maximum-entropy Markov-switching GARCH model, and regime-transition costs are the Wasserstein-2 distance between the calm and turbulent return distributions. A thermodynamic Carnot bound on portfolio efficiency is established and empirically validated. Five hypotheses are tested across Bitcoin, Ethereum, Ripple, Litecoin, and Bitcoin Cash over January 2017 to March 2026. The geometric-cost agent achieves statistically superior Sharpe ratios relative to flat-fee baselines on four of five assets; portfolio turnover is reduced by 56 to 83 percent relative to signal-following; the thermodynamic friction point at which the agent prefers no-trade is asset-specific and ordered by turbulent half-life; a joint topological and geometric circuit breaker reduces Maximum Drawdown by 28 to 38 percent; and ablation confirms that every component of the observation vector contributes a statistically significant performance gain. The framework requires liquid cryptocurrency markets with validated parametric volatility models; transferability to other asset classes requires upstream recalibration.",
+  "year": 2026,
+  "venue": "Risks",
+  "authors": [
+   "Ntebogang Dinah Moroke"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7160046011",
+  "doi": "10.3390/risks14050103",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2227-9091/14/5/103/pdf?version=1777713470",
+  "published_iso": "2026-05-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Digital nutrition intervention in Older Americans Act programs impacts knowledge and desire to participate in virtual programming",
+  "title_norm": "digital nutrition intervention in older americans act programs impacts knowledge",
+  "abstract": "Objective The Older Americans Act of the United States is a federal law providing funding for meals and nutrition education, primarily for adults aged ≥ 60 years, to help them live independently. Nutrition education has traditionally been delivered in-person, but an evolving population has prompted a need to utilize digital programming to expand reach. The Georgians Receiving Insightful Telenutrition Services (GRITS) study was a 20-month program to provide group education and individual medical nutrition therapy (MNT) to adults using phone and online video conferencing. The objective of this study was to develop a virtual program for group and individual settings and to evaluate its effect on nutrition knowledge, confidence, and health behaviors, as well as overall feasibility and acceptability of delivering education in a virtual format. Method Implementation and evaluation occurred from 2020–2023 within senior centers across four regions in the state of Georgia, USA. Group education and individual MNT sessions were led by a Registered Dietitian Nutritionist (RDN). Group education was delivered as standardized 30-min lessons over Zoom for 12–20 months, with length of time varying by site. Individual MNT was completed primarily over the phone and Zoom, with session duration of approximately 30-60 minutes for initial sessions and 15-30 minutes for follow-up sessions. Outcome measures were collected in both groups at baseline and post-intervention using short- and long-term qualitative surveys to assess program effects and acceptability of the program. Senior center staff also completed post-intervention qualitative surveys and focus groups to evaluate feasibility of program implementation. The program structure and evaluation were guided by RE-AIM framework for creating sustainable, generalizable interventions. Mixed-effects regression models were used to examine effects of the program. Results In group education, a total of 22 centers completed at least 12 group sessions serving 5,012 duplicated clients. Participants who completed knowledge surveys showed a modest 1.6% improvement in knowledge scores at post-session compared to pre-session (95% CI: 0.4, 2.9; p = 0.012, FDR-adjusted p = 0.012). Across all confidence, motivation, and lifestyle behaviors measured, no meaningful differences from pre to post were observed. For acceptability, 87% of group education respondents ( n = 142/163) reported to be satisfied with the nutrition sessions overall, and 79% of group education respondents ( n = 128/163) indicated interest in continuing education in a virtual format with online video conferencing. In individual MNT, a total of 318 virtual MNT sessions were completed with 142 unduplicated clients. Among participants with matched pre- and post-surveys ( n = 29), quality of life, general health, and confidence in problem-solving remained stable over time, with no detectable changes after MNT. At post-survey, 87% (95% CI: 0.76, 0.94; n = 49/55) of post-survey respondents reported at least one behavior change after participating in MNT sessions, with the most common changes being adjusting intake of foods, adjusting portion sizes, and incorporating more physical activity into their routines. Among participants who responded, 91% (95% CI: 0.80, 0.96; n = 49/54) reported that they found benefit in talking with the dietitian. In terms of feasibility, senior center staff reported positive feedback regarding the virtual format and its ability to expand client access to registered dietitians. Drivers of engagement for participants were novel education topics, lessons that were 30 min in length, and gift cards offered to maintain engagement. Challenges of program implementation included limited capacity of senior center staff in facilitating survey administration, difficulty tracking unduplicated participant numbers, and having participants not complete pre- and post-surveys. Conclusion Results from this study suggest virtual nutrition education in group and individual settings was acceptable, feasible, and showed preliminary effects on knowledge and behavior among a subset of Older Americans Act clients. Future directions include long-term evaluation of virtual methods to deliver nutrition education to better serve community-dwelling older adults in ways that are sustainable, efficient, and effective for long-term health.",
+  "year": 2026,
+  "venue": "Frontiers in Public Health",
+  "authors": [
+   "Renae Brown",
+   "Miranda Cook",
+   "Rachel Berton Weitnauer",
+   "Ciara G. Long",
+   "Shikia J. Crane",
+   "Aleta McLean"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130364627",
+  "doi": "10.3389/fpubh.2026.1695528",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1695528/pdf",
+  "published_iso": "2026-02-18",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Dual-use ambiguity in static ransomware detection: false positive analysis and confidence-gated mitigation",
+  "title_norm": "dual use ambiguity in static ransomware detection false positive analysis and co",
+  "abstract": "Static machine learning models are widely used for ransomware detection because Portable Executable (PE) features can be extracted before execution and often produce strong benchmark results. However, many PE-level indicators, including entropy, imports, API calls, resource metadata, and section-level attributes, are also present in legitimate encryption and compression utilities. This overlap creates a dual-use ambiguity that conventional benign–malicious benchmark testing may not reveal. This study evaluates five classifiers—Random Forest, XGBoost, LightGBM, Logistic Regression, and Support Vector Machine—using a 2,675-sample ransomware benchmark dataset and a separate 300-sample dual-use stress test containing benign encryption, compression, backup, password-management, cryptographic, secure-deletion, and file-protection tools. To eliminate data leakage, models are evaluated under a strict family-disjoint protocol across 40 ransomware family clusters. The results of the study suggest that under the family-disjoint evaluation, standalone XGBoost achieved 88.69% ransomware recall on previously unseen families but produced a 57.89% false-positive rate on the dual-use holdout, demonstrating that strong ransomware generalization does not necessarily translate into reliable discrimination of legitimate encryption-related software. The study then proceeds to develop a confidence-gated two-step approach, which employs an XGBoost first-stage classifier and an SVM second-stage classifier evaluated on a version-disjoint 209-sample dual-use holdout. The results demonstrate that the proposed approach decreases the dual-use false-positive rate to 35.41% on unseen ransomware families while maintaining 59.36% ransomware recall, outperforming the baseline of a standalone SVM with 37.32% false-positive rate. The results also illustrate the trade-off between the false-positive rates and ransomware recall of the confidence-thresholding approach compared to training a classifier on the test set directly and decision threshold optimization with score averaging. The score-averaging ensemble achieved a ransomware recall of 83.39% with a dual-use false-positive rate of 45.93%, while decision-threshold optimization for F1 score retained a higher ransomware recall of 86.22% but resulted in a 49.28% false-positive rate. These findings demonstrate that neither baseline adequately resolves the trade-off between ransomware detection and false-positive reduction, motivating the use of the proposed two-stage confidence-gated classification framework for more controlled handling of ambiguous dual-use samples.",
+  "year": 2026,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Ch Ram Mohan Reddy",
+   "R. V. Raghavendra Rao",
+   "Vishnuprasad",
+   "K. Sailaja Kumar"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204464606",
+  "doi": "10.1038/s41598-026-67921-z",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-026-67921-z_reference.pdf",
+  "published_iso": "2026-08-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Predictions for Quantum Measurement: What Extended Electron Structure Implies for Interference, Entanglement, and the Born Rule",
+  "title_norm": "predictions for quantum measurement what extended electron structure implies for",
+  "abstract": "This is, before anything else, a correction. v1 and v2.0 of this paper claimed that extended electron structure yields six testable predictions and that the Born rule and the measurement problem fall out of the framework. This version keeps the defensible core — the electron treated as an extended structure, and measurement and entanglement reframed so that no \"spooky\" mechanism is required — and retracts the rest. The reframing of the interpretive layer is real but borrowed: it is the standard ψ-epistemic move (Healey, Fuchs and the QBists, and realist interpretations generally), to which the programme attaches a posited ontology (the electron as extended; the entangled pair as one non-separable object). The mechanism layer — why measurement yields a definite, random, Born-weighted outcome — is not solved here, and §7 says carefully what little it will say about its difficulty. We correct the central error: Bell's theorem excludes all local hidden variables regardless of spatial extent, so \"extended structures that were never local\" do not escape it — what survives is non-separability, not extendedness. We withdraw the phase-geometry derivation of the Born rule: on its own merits it is circular (it presupposes the |ψ|-amplitude coupling that is most of what |ψ|² asserts), and within the programme it has been superseded by Paper 192's reconstruction of the Born rule as the Galois norm over ℝ(√5) — the account Paper 194 catalogues as the Born-rule vertex. Of the six predictions, one is a clean but non-selective falsifier (correlation-speed), one survives on its own merits (tunnelling interference), one is demoted as physically confused (energy-dependent Bell-violation magnitude), and three are not yet predictions — placeholders whose antecedent (the three-scale structure) is demoted to open pending a null. The a_e match itself is cited from companion papers and not re-litigated here.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Clifford Keeble"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7122586777",
+  "doi": "10.5281/zenodo.18216287",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7122586777",
+  "published_iso": "2026-05-31",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "The SEARCH for Evidence: Designing a Game-Based Experiential Learning Intervention for Evidence-Based Medicine",
+  "title_norm": "the search for evidence designing a game based experiential learning interventio",
+  "abstract": "Abstract Despite growing emphasis on research literacy in health professions education (HPE), learners often struggle with navigating scientific literature and applying evidence-based medicine (EBM) concepts. To address this gap, we developed the SEARCH framework ( S elf-determined E xperiential A pproach for R esearch C ompetence in H ealthcare), grounded in experiential learning theory and self-determination theory (SDT). The SEARCH framework provides a structured, theory-informed approach to designing learning experiences to cultivate core research competencies. To illustrate the framework’s application, we designed a virtual scavenger hunt as an exploratory game-based learning intervention to improve foundational research skills in undergraduate medical students and provide a hands-on exposure to EBM. Forty undergraduate medical students completed structured, interactive tasks targeting literature navigation, evidence appraisal and knowledge application. Participant task performance and reflective feedback were collected to demonstrate the feasibility of operationalizing the SEARCH framework in an authentic learning activity. Out of the forty participants, twenty-six completed the post activity survey. Participants reported high satisfaction and engagement. Thematic analysis revealed increased motivation, perceived skill development and engagement with the creative learning design. The task results indicated that while students performed well on knowledge-based tasks, challenges were noted in those requiring deeper article navigation and application of knowledge. The SEARCH framework, therefore, offers a transferable model for integrating experiential, game-based approaches into research and EBM instruction.",
+  "year": 2026,
+  "venue": "Medical Science Educator",
+  "authors": [
+   "Minhal Fatemah",
+   "Amal Fatemah",
+   "Saima Jawad"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7133487641",
+  "doi": "10.1007/s40670-026-02671-1",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40670-026-02671-1.pdf",
+  "published_iso": "2026-03-05",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Robust Covert Spatial Attention Decoding from Low-Channel Dry EEG by Hybrid AI Model",
+  "title_norm": "robust covert spatial attention decoding from low channel dry eeg by hybrid ai m",
+  "abstract": "Background: Decoding covert spatial attention (CSA) from dry, low-channel electroencephalography (EEG) is key for gaze-independent brain–computer interfaces (BCIs). Methods: We evaluate, on sixteen participants and three tasks (CSA, motor imagery (MI), Emotion), a four-electrode, subject-wise pipeline combining leak-safe preprocessing, multiresolution wavelets, and a compact Hybrid encoder (CNN-LSTM-MHSA) with robustness-oriented training (noise/shift/channel-dropout and supervised consistency). Results: Online, the Hybrid All-on-Wav achieved 0.695 accuracy with end-to-end latency ~2.03 s per 2.0 s decision window; the pure model inference latency is ≈185 ms on CPU and ≈11 ms on GPU. The same backbone without defenses reached 0.673, a CNN-LSTM 0.612, and a compact CNN 0.578. Offline subject-wise analyses showed a CSA median Δ balanced accuracy (BAcc) of +2.9%p (paired Wilcoxon p = 0.037; N = 16), with usability-aligned improvements (error 0.272 → 0.268; information transfer rate (ITR) 3.120 → 3.240). Effects were smaller for MI and present for Emotion. Conclusions: Even with simple hardware, compact attention-augmented models and training-time defenses support feasible, low-latency left–right CSA control above chance, suitable for embedded or laptop-class deployment.",
+  "year": 2025,
+  "venue": "AI",
+  "authors": [
+   "D. Kim",
+   "Jaeho Lee"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7117758679",
+  "doi": "10.3390/ai7010009",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-2688/7/1/9/pdf",
+  "published_iso": "2025-12-30",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Orbital effects in superconductivity involving correlated electron pairs oscillating in resonant quantum States",
+  "title_norm": "orbital effects in superconductivity involving correlated electron pairs oscilla",
+  "abstract": "At the start of the twenty-first century, it was proven incorrect to assume that electron-phonon interaction is the only mechanism for superconductivity. At very low temperatures, where metals become superconductive, particle movements are mostly ‘frozen,’ except for their zero-point oscillations. Therefore, we should investigate the interaction of super-particles through the electromagnetic fields generated by these zero-point oscillations. The arrangement of zero-point oscillations occurs because paired electrons influence each other. During this interaction, their amplitudes, frequencies, and phases align and become synchronized. This work explores the orbital effects in superconductivity involving correlated electron pairs oscillating in resonant quantum states. The formation of molecular structures in solids reflects their specific chemistry. We emphasize that this non-classical analysis could serve as a generalized or universal model of correlated pair formation and superconductivity.",
+  "year": 2025,
+  "venue": "Structural Chemistry",
+  "authors": [
+   "Raúl Riera Aroche",
+   "Esli C. Sánchez Moreno",
+   "Yveth Marlene Ortiz-García",
+   "Lizbeth Riera Leal",
+   "Andrea Carolina Machado-Sulbarán",
+   "Annie Riera Leal"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416132722",
+  "doi": "10.1007/s11224-025-02662-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11224-025-02662-9.pdf",
+  "published_iso": "2025-11-11",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Methods for randomized, blinded, controlled evaluation of putative disease interventions in multilaboratory, preclinical assessment networks",
+  "title_norm": "methods for randomized blinded controlled evaluation of putative disease interve",
+  "abstract": "Science faces a reproducibility crisis, and public trust in science declines when large clinical trials, which had been qualified by promising preclinical studies, fail. While some clinical trial designs may have been inadequate, preclinical assessments of disease interventions might have lacked key elements of rigor such as treatment concealment, randomization, blinded outcomes, prespecified and adequate sample sizes, and models including comorbidities. Here, to demonstrate feasibility and practicality of enhanced rigor in preclinical assessment, we designed a six-laboratory network that implemented rigorous study elements, using acute ischemic stroke for demonstration. This network enrolled 2,615 rodents in 5 different models and implemented a multistage, multiarm statistical design that sequentially eliminated candidate interventions during interim analyses. The methods included centralized intervention packaging, randomization, data quality assessment and data archiving. Blinded analysis of 9,274 video-recorded behavioral tasks and 3,652 magnetic resonance images were evaluated. All tools and protocols are presented and could be adapted to preclinical assessment in other disease areas.",
+  "year": 2026,
+  "venue": "Lab Animal",
+  "authors": [
+   "Jessica S. Lamb",
+   "Karisma Nagarkatti",
+   "Marcio A. Diniz",
+   "Ryan P. Cabeen",
+   "Monica Estrada",
+   "Karen L. Crawford"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130362040",
+  "doi": "10.1038/s41684-026-01683-z",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41684-026-01683-z.pdf",
+  "published_iso": "2026-02-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "Graded Entity-Familiarity Readouts in Language Models: Polish Adaptation, Cross-Language Robustness, and Refusal Steering",
+  "title_norm": "graded entity familiarity readouts in language models polish adaptation cross la",
+  "abstract": "Can a language model estimate its familiarity with an entity before generating an answer? We study activations at the final prompt token in twelve instruction-tuned models from the Bielik, PLLuM, Gemma-4, and Qwen3 families, using a new dataset of 1,440 Polish entities spanning four domains and ten Wikipedia-pageview deciles, plus fabricated controls. Familiarity-probe scores separate real from fabricated entities in every family; in the Polish-adapted Bielik and PLLuM families they additionally track entity popularity (model-mean Spearman $ρ$ 0.28-0.57, versus at most 0.11 in Gemma-4 and Qwen3), a pattern more strongly associated with Polish adaptation than with parameter count in this model sample. In a paired experiment on two families, probes retain 96-101% of within-language AUROC when the Polish question stem is replaced with an English one around unchanged entity names, showing robustness to prompt language in this setting. In Gemma-4-12B, the only model that natively refuses, adding a one-dimensional familiarity direction at a single layer moves refusal rates monotonically in both directions (0.24 to 1.00 on well-known entities; 0.73 to 0.00 on unknown ones). Finally, a calibrated familiarity probe is competitive among pre-generation abstention gates, although post-generation detectors better predict behavioral error on average. These results support a graded pre-generation entity-familiarity readout, and a separation between representational familiarity and the policy that converts it into abstention.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Grzegorz Brzezinka"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7169633107",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.13568",
+  "published_iso": "2026-07-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Integrating Reverse Engineering for Digital Model Reconstruction and Remanufacturing of Mechanical Components: A Systematic Review",
+  "title_norm": "integrating reverse engineering for digital model reconstruction and remanufactu",
+  "abstract": "Reverse engineering (RE) is increasingly recognized as a vital methodology for reconstructing mechanical components, particularly in high-value sectors such as aerospace, transportation, and energy, where technical documentation is often missing or outdated. This study presents a systematic review that investigates the application, challenges, and future directions of RE in mechanical component reconstruction. Adopting the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) framework, 68 peer-reviewed studies were identified, screened, and synthesized. The review highlights RE applications in restoration, redesign, internal geometry modeling, and simulation-driven performance assessment, leveraging technologies such as 3D scanning, CAD modeling, and finite element analysis. However, persistent challenges remain across five domains: product complexity, tolerance and dimensional variations, scanning limitations, integration barriers, and human-material-process dependencies, which hinder automation, accuracy, and manufacturability. Future research opportunities include the automated conversion of point cloud data into editable boundary representation (B-rep) models and AI-driven approaches for feature recognition, geometry reconstruction, and the generation of simulation-ready models. Additionally, advancements in scanning techniques to capture hidden or internal features more effectively are crucial. Overall, this review provides a comprehensive synthesis of current practices and challenges while proposing pathways to advance RE in industrial applications, fostering greater automation, accuracy, and integration in digital manufacturing workflows.",
+  "year": 2025,
+  "venue": "Metrology",
+  "authors": [
+   "Binoy Debnath",
+   "Zahra Pourfarash",
+   "Bhairavsingh Ghorpade",
+   "Shivakumar Raman"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4415932675",
+  "doi": "10.3390/metrology5040066",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-8244/5/4/66/pdf?version=1762334309",
+  "published_iso": "2025-11-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ },
+ {
+  "title": "Attitudes towards supervised consumption sites and e-health overdose response interventions: development and reliability of the Canadian National Questionnaire on Overdose Monitoring (CNQOM)",
+  "title_norm": "attitudes towards supervised consumption sites and e health overdose response in",
+  "abstract": "OBJECTIVE: To detail the development of the Canadian National Questionnaire on Overdose Monitoring (CNQOM), a questionnaire aimed at assessing the perspectives of key stakeholders towards elements of overdose prevention interventions-supervised consumption sites (SCSs) and overdose hotlines and applications (ORHAs). DESIGN: Cross-sectional survey. SETTING: Canadian health system. PARTICIPANTS: English or French speaking adults from four key informant groups: people who use substances (PWUS), health professionals, emergency responders and the general public. OUTCOME MEASURES: Test-retest reliability of CNQOM items. METHODS: A novel questionnaire was developed. Item development followed a standard approach, with face validity verified by representatives from the four informant groups. Input from experts in harm reduction and addiction medicine enhanced content and face validity of the questionnaire. A rigorous response validation approach was undertaken to ensure respondents were human and from Canada. Test-retest reliability items were assessed using Spearman's rank correlation, Wilcoxon rank-sum test and Cohen's kappa. RESULTS: After data cleaning and response validation, 4445 valid responses were obtained from the four key informant groups. Respondents represented a range of sociodemographic backgrounds and housing scenarios from all provinces and territories in Canada. Test-retest reliability was assessed using a small subsample of 142 participants (primarily from general public informants). Questionnaire items demonstrated slight to substantial stability in responses (kappa coefficients: 0.15-0.58; Spearman's r: 0.08-0.66). CONCLUSIONS: The CNQOM is the first online questionnaire in Canada designed to capture perspectives and attitudes towards specific elements of SCSs and ORHAs among diverse key informant groups. Our questionnaire was administered to a large, geographically diverse sample and designed to capture the perspectives of four key informant groups. Lower than expected test-retest reliability may be explained by lack of participant familiarity with SCS and especially ORHAs and the impersonal nature of the instrument content among some respondents. Future work will elucidate key informant perspectives on these services based on the data.",
+  "year": 2026,
+  "venue": "BMJ Open",
+  "authors": [
+   "Nathan Rider",
+   "Boogyung Seo",
+   "Dylan Viste",
+   "Will Rioux",
+   "Navid Sedaghat",
+   "Bo Pan"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125480557",
+  "doi": "10.1136/bmjopen-2025-105751",
+  "arxiv_id": null,
+  "paper_url": "https://bmjopen.bmj.com/content/bmjopen/16/1/e105751.full.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "interventional pair feasibility certificate"
+  ]
+ },
+ {
+  "title": "TRAPSBench: Vision-Language Models Encode but Fail to Express Epistemic Restraint",
+  "title_norm": "trapsbench vision language models encode but fail to express epistemic restraint",
+  "abstract": "When visual evidence is occluded or chaotic, models should abstain. In this paper, we show that Vision-Language Models (VLMs) can internally distinguish when abstention is required, but fail to express it anyway. We introduce TRAPSBench, a procedurally generated video benchmark of 1,404 matched physics pairs in which a single targeted change renders the outcome undeterminable from the visual evidence. Furthermore, we introduce Penalized Epistemic Calibration Score (PECS), a new robust metric that requires models to both answer correctly when the outcome is knowable, and abstain when the outcome is not. Across 16 VLMs spanning five families, spontaneous restraint is poor: the best PECS is 0.292. The bottleneck is expression, not perception: linear probes decode answerability from hidden states at up to 0.91 AUROC across physics domains; steering a single-layer void direction causally induces or suppresses abstention. Our results replicate across three open-weight families (Qwen, Gemma, LLaVA). The failure is also more pronounced in visual than textual uncertainty: models detect textual impossibility about 4x more readily than missing visual evidence. Closing this representation--output gap likely requires output-stage interventions.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Fnu Pramono",
+   "John Cai",
+   "Sourabh Kulkarni"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7203470611",
+  "doi": "10.48550/arxiv.2608.13167",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.13167",
+  "published_iso": "2026-08-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective manipulation abstention gate"
+  ]
+ },
+ {
+  "title": "Automated geometry-based analysis for object-level Scan-vs-BIM validation of TBE components",
+  "title_norm": "automated geometry based analysis for object level scan vs bim validation of tbe",
+  "abstract": "Technical building equipment (TBE) systems offer significant potential for energy savings that can be realized through digital twins and simulations. Digital twins require a precise virtual representation of the real object. Geometric-semantic models originating from Building Information Modeling (BIM)-based planning can be a valuable basis for this. However, due to unavoidable deviations between planning and construction, a high-quality comparison of as-planned and as-built data is crucial. This study presents a geometric and statistical analysis framework for component-specific validation of TBE systems using as-planned BIM models and as-built point clouds. The framework was evaluated on datasets of increasing complexity, from simulations to real-world projects. Results show that with sufficient data quality, the framework enables the validation of up to 88% of components, significantly reducing manual effort, cost, and time. However, as a geometry-based approach, its performance is affected by data quality issues such as point cloud noise and occlusions.",
+  "year": 2026,
+  "venue": "Journal of Information Technology in Construction",
+  "authors": [
+   "Tristan Kinnen",
+   "Jörg Blankenbach"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7129046708",
+  "doi": "10.36680/j.itcon.2026.004",
+  "arxiv_id": null,
+  "paper_url": "http://www.itcon.org/papers/2026_04-ITcon-Kinnen.pdf",
+  "published_iso": "2026-02-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "hidden geometry matched pairs"
+  ]
+ }
+]

@@ -1,0 +1,397 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "RoboTwin 2.0 task definition",
+          "paired A/B target or reference meshes",
+          "instruction and native terminal predicate",
+          "reset seed and renderer/controller configuration"
+        ],
+        "produces": [
+          "GISS manifest row with immutable pair metadata and attempted-pair identity"
+        ],
+        "note": "VERBATIM: \"1. Select executable RoboTwin 2.0 tasks with unchanged language and native terminal predicates, create paired target/reference collision meshes A/B, and write a GISS manifest containing asset hashes, fixed physical properties, reset seeds, camera configuration, and the geometry edit.\" The original row does not explicitly bind canonical mesh frames, lighting, texture, background, or action specification, so 'changing only geometry' is not yet formalized."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "manifest row",
+          "byte-identical reset seed",
+          "union-volume collision model",
+          "OMPL evaluator-side planner"
+        ],
+        "produces": [
+          "one geometry-neutral pre-contact action prefix or native-reset marker",
+          "candidate matched decision-state data"
+        ],
+        "note": "LIKELY-FATAL PICK, ATTACKED FIRST. VERBATIM: \"2. Produce each matched decision state with the native reset when eligible; otherwise use OMPL evaluator-side planning against the union collision volume to generate one geometry-neutral, pre-contact control prefix, execute it without target/reference contact, and serialize the resulting simulator checkpoint z plus prefix actions.\" Executing the prefix once leaves unspecified which geometry produced z, and a full simulator checkpoint cannot be byte-identical across scenes whose immutable geometry differs. The repair replays the same prefix separately from identical resets and defines equality over the complete non-geometry transition state."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "A/B scene-specific restored checkpoints",
+          "instruction/goal bytes",
+          "segmentation masks",
+          "all attempted manifest rows"
+        ],
+        "produces": [
+          "eligible or ineligible status with reason",
+          "matched checkpoint pair (z_A,z_B)",
+          "coverage numerator and denominator membership"
+        ],
+        "note": "VERBATIM: \"3. Restore z into both scene definitions and verify identical robot/object poses, velocities, controller memory, camera and RNG fields, collision-free validity in both meshes, byte-identical instruction and goal predicate, and geometry visibility; emit eligible/ineligible status and a reason before any policy query.\" Physics time/caches, actuator queues, observation buffers, policy history, renderer nuisances, and the meaning of 'visible' are missing. These omissions can produce source-dependent chunks without functional geometry."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "eligible (z_A,z_B)",
+          "frozen policy weights",
+          "ordinary source render/proprioception/language",
+          "decode seed"
+        ],
+        "produces": [
+          "same-frame denormalized native chunks a_A and a_B"
+        ],
+        "note": "VERBATIM: \"4. Load frozen OpenPI pi0.5 and the released CLOVER checkpoint with ordinary RGB/proprioception/language inputs only; at z and one shared decode seed, render A and B and request one model-native action chunk a_A and a_B.\" 'One shared decode seed' admits reset-before-each-query and seed-once-sequential readings. The executed sequential reading manufactured I_MS=1 for a geometry-blind stochastic decoder; the reset reading gave I_MS=0. Policy inference history and the action coordinate frame are also unproduced."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "recipient checkpoint z_r",
+          "source chunk a_s",
+          "recipient simulator",
+          "frozen continuation policy and common noise tape"
+        ],
+        "produces": [
+          "four recipient/source rollouts and Y_AA,Y_AB,Y_BA,Y_BB"
+        ],
+        "note": "VERBATIM: \"5. For every source s and recipient r in {A,B}, restore z, execute only a_s open loop in r, then resume the same frozen policy closed loop on r until RoboTwin's native horizon; retain collisions and failures as outcomes rather than excluding them.\" The original does not say whether source-query KV/recurrent/history state is carried into continuation. The executed carried-cache reading produced a false I_MS=1 for identical first chunks; fresh recipient continuation produced I_MS=0."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "four-cell native outcomes",
+          "eligible cluster identities",
+          "all attempted manifest rows"
+        ],
+        "produces": [
+          "recipient-specific contrasts",
+          "I_MS point estimate and paired interval when estimable",
+          "eligible/attempted coverage"
+        ],
+        "note": "VERBATIM: \"6. Record native terminal success Y_rs and compute I_MS with pair- and reset-blocked bootstrap uncertainty, the two recipient-specific own-minus-cross contrasts, action-chunk divergence, and the manifest's eligible/constructed coverage ratio.\" The estimator matches the declared eligible-pair estimand, but 'constructed' can exclude failed requests and one eligible cluster cannot support a nondegenerate blocked bootstrap; the repair fixes the denominator to all preregistered attempts and defines not-estimable branches."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "matched checkpoint protocol",
+          "same collision mesh and physics",
+          "paired render nuisance variants"
+        ],
+        "produces": [
+          "appearance-only four-cell I_MS control"
+        ],
+        "note": "VERBATIM: \"7. Run appearance-only negative pairs whose collision mesh and physics are identical but texture/render nuisance differs, and recompute the full four-cell downstream-success interaction without relabeling any outcomes.\" This is a valid render-only control once the same checkpoint, seed-reset, action-frame, and continuation bindings are inherited from S2-S5."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "eligible matched checkpoints",
+          "predeclared epsilon_z values",
+          "shared jitter noise tape"
+        ],
+        "produces": [
+          "jittered four-cell I_MS curve",
+          "jitter-induced invalidity/coverage report"
+        ],
+        "note": "VERBATIM: \"8. Apply identical seeded checkpoint perturbations to both A and B, with epsilon_z defaulting to 0.01 reset-distribution standard deviations and selected by a preregistered sweep over {0, 0.005, 0.01, 0.02}; recompute I_MS to test whether the effect survives small matched state jitter.\" The parameter is named, but 'selected by a sweep' gives no selection criterion and rotations/discrete states are undefined. The repair reports every preregistered value, fixes 0.01 before outcomes as the headline value, and perturbs only continuous tangent-space state while retaining invalid attempts in coverage."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "main and control estimates",
+          "coverage certificate",
+          "external-controller upper bound"
+        ],
+        "produces": [
+          "scoped endpoint-sufficiency report and adaptation routing decision"
+        ],
+        "note": "VERBATIM: \"9. Stratify endpoint-equal baseline cases by I_MS and report the coverage certificate; only if a repeatable compatibility deficit and an external controller upper bound coexist should a later study train a minimal geometry-conditioned adapter.\" No oracle label enters the main policy; the upper bound is routing evidence only."
+      }
+    ],
+    "dry_run": {
+      "instance": "One matched A/B decision state with scalar base-frame first action. Recipient A succeeds after action -1 and recipient B after +1. A geometry-responsive decoder emits a_A=-1,a_B=+1. A geometry-blind decoder emits -1 for both when non-geometry state, decode RNG, and policy history are truly matched. Separate probes change only an omitted non-geometry state by -0.01/+0.01, consume one Random(1) stream sequentially instead of resetting it, or carry source-query cache into continuation. Four manifest attempts contain three eligible pairs.",
+      "execution": {
+        "mode": "executed",
+        "script": "import random\ndef I(c): return .5*((c['AA']-c['AB'])+(c['BB']-c['BA']))\ndef y(r,a): return int(a=={'A':-1,'B':1}[r])\ndef cells(a): return {r+s:y(r,a[s]) for r in 'AB' for s in 'AB'}\naware={'A':-1,'B':1}; blind={'A':-1,'B':-1}\nprint('aware',cells(aware),I(cells(aware)))\nprint('blind_exact',cells(blind),I(cells(blind)),'endpoint_gap',1)\nx={'A':-.01,'B':.01}; bad={s:(-1 if x[s]<0 else 1) for s in 'AB'}\nprint('blind_state_mismatch',bad,cells(bad),I(cells(bad)))\nr=random.Random(1); seq={'A':-1 if r.random()<.5 else 1,'B':-1 if r.random()<.5 else 1}\nreset={s:(-1 if random.Random(1).random()<.5 else 1) for s in 'AB'}\nprint('blind_sequential_rng',seq,I(cells(seq)))\nprint('blind_reset_rng',reset,I(cells(reset)))\ncarried={'AA':1,'AB':0,'BB':1,'BA':0}; fresh={'AA':1,'AB':1,'BB':0,'BA':0}\nprint('blind_carried_cache',I(carried),'blind_fresh_continuation',I(fresh))\nprint('coverage',3/4,'excluded',1)",
+        "output": "aware {'AA': 1, 'AB': 0, 'BA': 0, 'BB': 1} 1.0\nblind_exact {'AA': 1, 'AB': 1, 'BA': 0, 'BB': 0} 0.0 endpoint_gap 1\nblind_state_mismatch {'A': -1, 'B': 1} {'AA': 1, 'AB': 0, 'BA': 0, 'BB': 1} 1.0\nblind_sequential_rng {'A': -1, 'B': 1} 1.0\nblind_reset_rng {'A': -1, 'B': -1} 0.0\nblind_carried_cache 1.0 blind_fresh_continuation 0.0\ncoverage 0.75 excluded 1"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "geometry-responsive four-cell interaction",
+          "value": "Y_AA=1,Y_AB=0,Y_BA=0,Y_BB=1; I_MS=1",
+          "arithmetic": "0.5*((1-0)+(1-0))=1. This is forced by the constructed success rule and verifies algebra only; it is not empirical evidence."
+        },
+        {
+          "quantity": "geometry-blind exact-match interaction",
+          "value": "Y_AA=Y_AB=1,Y_BA=Y_BB=0; I_MS=0 while endpoint scene gap=1",
+          "arithmetic": "0.5*((1-1)+(0-0))=0. Recipient difficulty survives in endpoint success but cancels from the crossed interaction."
+        },
+        {
+          "quantity": "omitted-state false positive",
+          "value": "z_A=-0.01,z_B=+0.01 gives a_A=-1,a_B=+1 and I_MS=1 for geometry-blind state feedback",
+          "arithmetic": "The decoder reads only the mismatched scalar state; the resulting cells are [1,0,0,1], so I_MS=1."
+        },
+        {
+          "quantity": "decode-RNG false positive",
+          "value": "one sequential Random(1) stream gives actions [-1,+1] and I_MS=1; resetting Random(1) before both queries gives [-1,-1] and I_MS=0",
+          "arithmetic": "The first two random draws fall on opposite sides of 0.5, whereas two reset first draws are identical."
+        },
+        {
+          "quantity": "source-cache continuation false positive",
+          "value": "carried source cache I_MS=1; fresh recipient continuation I_MS=0",
+          "arithmetic": "A source-indexed continuation state reproduces [1,0,0,1]; discarding it yields equal source outcomes within each recipient."
+        },
+        {
+          "quantity": "coverage",
+          "value": "3/4=0.75 with one exclusion",
+          "arithmetic": "Coverage uses every preregistered construction attempt in the denominator, including the excluded state."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "A geometry-blind state-feedback decoder produced I_MS=1 solely from a -0.01/+0.01 non-geometry checkpoint mismatch.",
+          "kind": "structural",
+          "why": "Any source-indexed non-geometry state difference that changes the queried action can enter the source contrast exactly like geometry; the four-cell algebra cannot distinguish it."
+        },
+        {
+          "anomaly": "Setting a stochastic decoder seed once and querying sequentially produced I_MS=1, while resetting it before each source query produced I_MS=0.",
+          "kind": "structural",
+          "why": "Sequential RNG position is perfectly collinear with source order unless the decoder state/noise tape is reset or crossed; this holds independently of the chosen physical instance."
+        },
+        {
+          "anomaly": "Carrying source-query policy cache into closed-loop continuation produced I_MS=1 with identical first chunks.",
+          "kind": "structural",
+          "why": "A source-indexed hidden state remains the treatment after the intended one-chunk intervention; it can generate an own-source advantage without geometry-action compatibility."
+        },
+        {
+          "anomaly": "The geometry-responsive example produced I_MS=1.",
+          "kind": "instance_contingent",
+          "why": "The value is fixed by the invented action-success table and cannot establish that real policies or RoboTwin tasks exhibit the effect."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty eligible set",
+        "behavior": "All four expectations and I_MS are undefined; coverage is zero.",
+        "finding": "Return not_estimable with coverage 0 rather than emitting I_MS=0 or a bootstrap interval."
+      },
+      {
+        "probe": "native chunk horizon k=0",
+        "behavior": "No source action intervention occurs and own/cross cells are identical within recipient.",
+        "finding": "Mark the policy/task interface ineligible because a nonempty native chunk is required."
+      },
+      {
+        "probe": "a_A and a_B identical",
+        "behavior": "With exact restore, common noise, and fresh continuation, Y_rA=Y_rB for each recipient and I_MS=0 even when endpoint difficulty differs.",
+        "finding": null
+      },
+      {
+        "probe": "visibility exactly at v_min",
+        "behavior": "The repaired eligibility rule uses visible_fraction >= v_min, so ties are deterministically eligible.",
+        "finding": null
+      },
+      {
+        "probe": "single eligible pair/reset cluster",
+        "behavior": "The four-cell point estimate exists, but a pair/reset-blocked bootstrap is degenerate.",
+        "finding": "Report the point estimate and interval_not_estimable; do not present a zero-width interval as uncertainty."
+      },
+      {
+        "probe": "jitter makes one scene invalid",
+        "behavior": "That preregistered attempt remains in the jitter coverage denominator with an invalid reason and is not silently conditioned away.",
+        "finding": null
+      },
+      {
+        "probe": "maximum declared campaign",
+        "behavior": "64 paired states x 5 reset seeds x 2 policies x 4 cells yields 2560 main rollouts before controls; all arrays remain finite and indexed by pair/reset/policy/cell.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "A/B states differ only in visible functional collision geometry.",
+        "established_by": "S1-S3 after patch",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "all complete non-geometry transition state fields and renderer nuisances are equality-checked",
+          "the prefix has no target/reference contact and is replayed independently from identical resets",
+          "the identical-geometry clone test detects omitted hidden simulator state"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The current action chunk is queried from matching visible geometry without oracle input.",
+        "established_by": "S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The four-cell design changes only the source of the first native action chunk within each recipient.",
+        "established_by": "S4-S5 after patch",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "decode RNG and inference history are reset identically before source queries",
+          "chunks share one denormalized robot action frame",
+          "source-query cache is discarded before a fresh recipient continuation with common indexed noise"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Recipient-scene difficulty is held fixed in each own-minus-cross contrast.",
+        "established_by": "S5-S6",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "A positive I_MS operationally indicates greater matching-source current-chunk compatibility, not strategy identity or global geometric understanding.",
+        "established_by": "S4-S6 after patch",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the only source-indexed difference is the rendered functional geometry",
+          "identical-render repeats rule out decoder nondeterminism",
+          "appearance-only controls bound nonfunctional render shortcuts"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Every constructed pair and exclusion reason enters a coverage certificate.",
+        "established_by": "S1,S3,S6 after patch",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Appearance-only pairs and matched jitter can falsify the compatibility interpretation.",
+        "established_by": "S7-S8",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Using the same four rollout budget and ordinary inputs, compare endpoint success between A and B under same-seed resets but average the own cells twice instead of crossing source chunks at an exactly matched decision state.",
+      "naive_fairness": "It uses the same policies, simulator, seeds, observations, native horizon, and rollout count; it is simpler because it has no full-state checkpoint equality, source-recipient crossover, or fresh continuation reset.",
+      "instance_behavior": {
+        "naive": "Reports an A-versus-B endpoint gap of 1 for the geometry-blind action because A succeeds and B fails.",
+        "mechanism": "With exact matched state and identical geometry-blind chunks, Y_AA=Y_AB=1 and Y_BA=Y_BB=0, so I_MS=0.",
+        "divergence": "naive apparent geometry effect 1 versus crossed compatibility interaction 0",
+        "kind": "structural"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "The within-recipient subtraction algebraically cancels arbitrary recipient-scene difficulty when source chunks are identical, while the naive endpoint contrast retains it. The added exact-state and four-cell machinery therefore directly confronts the candidate's declared post-treatment/state-mismatch obstacle."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "Instantiate RoboTwin 2.0 task pairs A and B with byte-identical instruction and terminal predicate, the same canonical target/reference asset frame and world pose, physical material, mass and inertia, robot/action specification, camera intrinsics/extrinsics, lighting, texture, background, controller configuration, and reset seed, while changing only the visible render and collision geometry relevant to manipulation. A self-built GISS manifest stores both mesh hashes and an attempted-pair record before policy inference. The matched-state producer uses the native reset when it is already a decision state; otherwise OMPL plans one pre-contact prefix against the union of A/B collision volumes, and that exact control prefix is replayed separately from fresh byte-identical resets in A and B rather than executed once in one scene and copied. This yields scene-specific checkpoints z_A and z_B whose immutable geometry handles differ but whose complete non-geometry transition state is equal: simulation clock, robot/object poses and velocities, joints, actuator/controller integrators and action queues, observation/history buffers, camera state, environment RNG/noise index, and a fresh policy inference-state template; target/reference contact caches must be empty. Equality is checked by field hashes plus an identical-geometry clone test that restores each checkpoint twice, applies the same no-contact action, and requires the next non-render state to match exactly; any mismatch makes the attempt ineligible. Visibility means the target/reference segmentation occupies at least v_min=0.01 of image pixels in both renders; v_min is fixed before outcomes for the main analysis, with coverage-only sensitivity at {0.005,0.01,0.02}. For each frozen OpenPI pi0.5 or released CLOVER policy, clone the same fresh inference/history template and reset the decode RNG/noise tape before each source query, then use ordinary RGB/proprioception/language inputs to obtain a_A from A and a_B from B; an identical-render repeat must decode byte-identically before that policy-run is eligible. Denormalize both chunks with the same policy-specific statistics into the same robot base-frame controller units, clipping, and native horizon, so cross execution never changes action convention. For every recipient r and source s, restore z_r, execute only a_s, discard all source-query model cache, and start a fresh recipient continuation from the actual post-chunk recipient observation under the same history-padding rule and decision-indexed noise tape until the native horizon, producing Y_rs. The matched-state compatibility interaction is I_MS=0.5[(E[Y_AA]-E[Y_AB])+(E[Y_BB]-E[Y_BA])]; a positive value is a scoped response contrast for matching-source current-chunk compatibility, not strategy identity, path necessity, full geometric understanding, or real-world transfer. The artifact reports both recipient contrasts, paired uncertainty when estimable, and coverage N_eligible/N_attempted over every preregistered request, with appearance-only four-cell pairs and matched state-jitter curves as falsifiers; no oracle label, geometry state, OMPL output, q, or phase string enters the tested policy.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1-T5 false-positive channels by defining a dual-scene common-prefix producer, complete non-geometry state identity, renderer/action-frame equality, reset query RNG/history, source-cache-free continuation, exact coverage denominator, and a bound visibility rule."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Select executable RoboTwin 2.0 tasks with unchanged language and native terminal predicates; create A/B geometry variants in one canonical asset frame and write every preregistered attempted pair to a manifest with mesh hashes, world poses, physical properties, robot/action specification, reset seed, camera, lighting, texture, background, and controller configuration.\n2. Use the native reset when eligible; otherwise plan one OMPL prefix against the union collision volume, then replay its exact controls separately from fresh byte-identical A and B resets without target/reference contact to produce z_A and z_B.\n3. Hash-compare every complete non-geometry transition-state field, require empty target/reference contact caches, run the identical-geometry one-step clone test, verify collision-free validity and byte-identical instruction/goal, and apply visible_fraction >= v_min with v_min=0.01 fixed before outcomes; emit eligible/ineligible plus reason before policy inference.\n4. For each frozen policy, clone one fresh policy inference/history template and reset the same decoder seed/noise tape before each A/B query; run an identical-render repeat determinism check, use ordinary RGB/proprioception/language only, and produce a_A,a_B.\n5. Denormalize a_A,a_B through the same policy-specific normalizer into one robot base-frame action convention with identical clipping and nonempty native chunk horizon; reject the policy/task interface if these bindings differ.\n6. For each (r,s), restore z_r, execute a_s open loop, discard source-query caches, and launch a fresh recipient continuation from the actual post-chunk observation using identical history padding and decision-indexed continuation noise; retain every collision and failure as an outcome.\n7. Record Y_rs and compute both recipient contrasts and I_MS. Use pair/reset-blocked uncertainty only with multiple independent clusters; otherwise emit interval_not_estimable. Report N_eligible/N_attempted with every preregistered exclusion in the denominator, and emit not_estimable rather than zero when N_eligible=0.\n8. Run the inherited protocol on appearance-only pairs with identical geometry/physics but changed texture/render nuisance, plus an identical-geometry identical-render decoder null, without relabeling outcomes.\n9. Apply one shared seeded perturbation to continuous pose/velocity coordinates in a common tangent-space normalization for both scenes at every preregistered epsilon_z in {0,0.005,0.01,0.02}; keep discrete/controller/history fields fixed, designate 0.01 before outcomes as the headline value, rerun dual-scene eligibility, and retain jitter-invalid attempts in coverage.\n10. Stratify endpoint-equal cases by I_MS and publish the coverage certificate and all controls; route to later adaptation only when a repeatable compatibility deficit and an external-controller upper bound coexist.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the executed checkpoint, sequential-RNG, continuation-cache, empty/singleton, appearance-control inheritance, coverage, and state-jitter findings at the code-pathway level."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[0].how_closed",
+      "value": "Closed by separately replayed common-prefix checkpoints whose complete non-geometry simulator, controller, RNG, action-frame, and fresh policy-history state is matched across A/B, followed by a four-cell first-chunk crossover with source-cache-free recipient continuation; corpus support is fulltext-degraded, so literature differentiation remains abstract-only.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T4's unsupported 'exact common checkpoint' wording by naming the dual-scene producer and the state components required for exactness."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_reasoning",
+      "value": "COHERENCE BINDING. The causal interpretation is conditional on separately replayed A/B prefixes yielding equal complete non-geometry transition state, reset decoder RNG/history, one action frame, and fresh recipient-only continuation; appearance-only and identical-render controls diagnose render and stochastic shortcuts, while every jitter-invalid or otherwise excluded preregistered attempt remains visible in the coverage denominator.",
+      "outcome": "applied",
+      "delta_summary": "States the missing T4 assumptions next to the mechanism's causal interpretation instead of leaving them implicit."
+    }
+  ],
+  "final_candidate": {
+    "title": "GISS-2x2: Matched-State Geometry-Action Compatibility for Frozen Robot Policies",
+    "hook": "Endpoint-equivalent geometry pairs can reveal whether a frozen VLA's current action chunk is specifically compatible with the geometry it saw. The reveal is a positive matched-state own-versus-cross native-success interaction, not a claim that the model recovered a globally necessary strategy graph.",
+    "hook_shape_rationale": "This is a surprising empirical reveal because the named matched-state compatibility interaction can separate equal endpoint scores from geometry-specific current-action usefulness. Counter-intuitive minimalism was rejected because the candidate does not claim a reduction in parameters, data, or adaptation relative to the strongest baseline.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption 鈥?stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Closed by separately replayed common-prefix checkpoints whose complete non-geometry simulator, controller, RNG, action-frame, and fresh policy-history state is matched across A/B, followed by a four-cell first-chunk crossover with source-cache-free recipient continuation; corpus support is fulltext-degraded, so literature differentiation remains abstract-only."
+      }
+    ],
+    "core_mechanism": "Instantiate RoboTwin 2.0 task pairs A and B with byte-identical instruction and terminal predicate, the same canonical target/reference asset frame and world pose, physical material, mass and inertia, robot/action specification, camera intrinsics/extrinsics, lighting, texture, background, controller configuration, and reset seed, while changing only the visible render and collision geometry relevant to manipulation. A self-built GISS manifest stores both mesh hashes and an attempted-pair record before policy inference. The matched-state producer uses the native reset when it is already a decision state; otherwise OMPL plans one pre-contact prefix against the union of A/B collision volumes, and that exact control prefix is replayed separately from fresh byte-identical resets in A and B rather than executed once in one scene and copied. This yields scene-specific checkpoints z_A and z_B whose immutable geometry handles differ but whose complete non-geometry transition state is equal: simulation clock, robot/object poses and velocities, joints, actuator/controller integrators and action queues, observation/history buffers, camera state, environment RNG/noise index, and a fresh policy inference-state template; target/reference contact caches must be empty. Equality is checked by field hashes plus an identical-geometry clone test that restores each checkpoint twice, applies the same no-contact action, and requires the next non-render state to match exactly; any mismatch makes the attempt ineligible. Visibility means the target/reference segmentation occupies at least v_min=0.01 of image pixels in both renders; v_min is fixed before outcomes for the main analysis, with coverage-only sensitivity at {0.005,0.01,0.02}. For each frozen OpenPI pi0.5 or released CLOVER policy, clone the same fresh inference/history template and reset the decode RNG/noise tape before each source query, then use ordinary RGB/proprioception/language inputs to obtain a_A from A and a_B from B; an identical-render repeat must decode byte-identically before that policy-run is eligible. Denormalize both chunks with the same policy-specific statistics into the same robot base-frame controller units, clipping, and native horizon, so cross execution never changes action convention. For every recipient r and source s, restore z_r, execute only a_s, discard all source-query model cache, and start a fresh recipient continuation from the actual post-chunk recipient observation under the same history-padding rule and decision-indexed noise tape until the native horizon, producing Y_rs. The matched-state compatibility interaction is I_MS=0.5[(E[Y_AA]-E[Y_AB])+(E[Y_BB]-E[Y_BA])]; a positive value is a scoped response contrast for matching-source current-chunk compatibility, not strategy identity, path necessity, full geometric understanding, or real-world transfer. The artifact reports both recipient contrasts, paired uncertainty when estimable, and coverage N_eligible/N_attempted over every preregistered request, with appearance-only four-cell pairs and matched state-jitter curves as falsifiers; no oracle label, geometry state, OMPL output, q, or phase string enters the tested policy.",
+    "core_mechanism_reasoning": "PREMISES LEDGER\nP1: RoboTwin 2.0 exposes executable tasks, native terminal predicates, and simulator state control sufficient to build paired collision-geometry variants; this is plausible from its released simulator/data-generator role, but method details are fulltext-degraded and must be verified during implementation.\nP2: The two shape renders are visible to the frozen policy while all non-geometry state fields at z are identical; otherwise source geometry is not the isolated intervention.\nP3: Executing one native chunk and then restoring ordinary closed-loop control makes downstream native success sensitive to current-action compatibility rather than to an open-loop whole-trajectory splice; untested 鈥?falsification target.\nP4 OBSERVATION-MODEL: pairs are purposively sampled from the predeclared GISS eligibility manifest, not an unbiased sample of all functional geometries, so inference is conditional on eligible RoboTwin task families and all exclusions must remain in the denominator.\nESTIMAND: I_MS is the mean, over preregistered eligible pair-state-policy-reset tuples, of the average within-recipient native-success effect of assigning the action chunk queried from matching rather than nonmatching source geometry at the identical checkpoint z; it is a bounded current-action compatibility response contrast, not an estimand of latent strategy understanding.\nNAIVE-BASELINE AUDIT\nThe naive diagnostic compares endpoint success across A and B or swaps same-index chunks from independently evolved policy trajectories. Branch (i): it silently assumes the compared chunks were queried at the same physical and controller state, which is false after geometry-dependent feedback evolution; GISS confronts that failure by producing z independently of the evaluated policy, restoring z before every query and execution, and crossing only one current chunk before closed-loop resumption. The 2x2 crossover is standard experimental-design machinery, but the unsolved domain-specific structure is that a robot action chunk changes contact state and all later feedback, so matching must occur before that chunk and recipient-scene fixed effects must be retained; OMPL is used only to certify a shared pre-contact prefix, never as the tested policy or a strategy oracle, avoiding regression to motion planning/TAMP as the claimed solution.\nDESIGN RATIONALE\nThe endpoint-sufficiency gap needs one controlled instrument rather than separate strategy-label, localization, or adaptation modules, because the same four cells supply the comparison and its downstream native outcome. Exhaustive strategy grammars, switch-versus-nonswitch grouping, whole-trajectory crossover, and phase scaffolds were rejected because they reintroduce missing producers, post-treatment state mismatch, or contested definitions; an initial-decision/common-prefix checkpoint directly blocks those failure modes. COHERENCE BINDING. The causal interpretation is conditional on separately replayed A/B prefixes yielding equal complete non-geometry transition state, reset decoder RNG/history, one action frame, and fresh recipient-only continuation; appearance-only and identical-render controls diagnose render and stochastic shortcuts, while every jitter-invalid or otherwise excluded preregistered attempt remains visible in the coverage denominator.",
+    "core_mechanism_steps": "1. Select executable RoboTwin 2.0 tasks with unchanged language and native terminal predicates; create A/B geometry variants in one canonical asset frame and write every preregistered attempted pair to a manifest with mesh hashes, world poses, physical properties, robot/action specification, reset seed, camera, lighting, texture, background, and controller configuration.\n2. Use the native reset when eligible; otherwise plan one OMPL prefix against the union collision volume, then replay its exact controls separately from fresh byte-identical A and B resets without target/reference contact to produce z_A and z_B.\n3. Hash-compare every complete non-geometry transition-state field, require empty target/reference contact caches, run the identical-geometry one-step clone test, verify collision-free validity and byte-identical instruction/goal, and apply visible_fraction >= v_min with v_min=0.01 fixed before outcomes; emit eligible/ineligible plus reason before policy inference.\n4. For each frozen policy, clone one fresh policy inference/history template and reset the same decoder seed/noise tape before each A/B query; run an identical-render repeat determinism check, use ordinary RGB/proprioception/language only, and produce a_A,a_B.\n5. Denormalize a_A,a_B through the same policy-specific normalizer into one robot base-frame action convention with identical clipping and nonempty native chunk horizon; reject the policy/task interface if these bindings differ.\n6. For each (r,s), restore z_r, execute a_s open loop, discard source-query caches, and launch a fresh recipient continuation from the actual post-chunk observation using identical history padding and decision-indexed continuation noise; retain every collision and failure as an outcome.\n7. Record Y_rs and compute both recipient contrasts and I_MS. Use pair/reset-blocked uncertainty only with multiple independent clusters; otherwise emit interval_not_estimable. Report N_eligible/N_attempted with every preregistered exclusion in the denominator, and emit not_estimable rather than zero when N_eligible=0.\n8. Run the inherited protocol on appearance-only pairs with identical geometry/physics but changed texture/render nuisance, plus an identical-geometry identical-render decoder null, without relabeling outcomes.\n9. Apply one shared seeded perturbation to continuous pose/velocity coordinates in a common tangent-space normalization for both scenes at every preregistered epsilon_z in {0,0.005,0.01,0.02}; keep discrete/controller/history fields fixed, designate 0.01 before outcomes as the headline value, rerun dual-scene eligibility, and retain jitter-invalid attempts in coverage.\n10. Stratify endpoint-equal cases by I_MS and publish the coverage certificate and all controls; route to later adaptation only when a repeatable compatibility deficit and an external-controller upper bound coexist.",
+    "falsification_prediction": "On preregistered eligible RoboTwin 2.0 pairs, run the frozen OpenPI pi0.5 and CLOVER four-cell checkpoint experiment and measure native task success plus I_MS; if visible geometry conditions useful current actions, I_MS should be positive even among endpoint-equal baseline strata. The one load-bearing variable is G_src, the source geometry rendered at the identical z to produce the current action chunk. As a non-tautological negative control, replace G_src's functional collision-geometry producer with appearance-only texture/render pairs that share one collision mesh and physics: the downstream native-success I_MS should return to its no-systematic-own-advantage baseline, while reversal or collapse under the smallest preregistered matched state jitter falsifies the claimed compatibility signal.",
+    "compute_budget": "12 A100 GPU-days for 64 paired states across four RoboTwin 2.0 task families, five paired reset seeds, two frozen policies, four crossover cells, controls, and reruns on the available 4xA100 system; approximately one engineer-week for the modest GISS manifest and state-restore tooling. $0 paid API cost because all policy, simulator, planner, and scoring components are local/open.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "dblp:journals/corr/abs-2506-18088",
+        "delta": "Abstract-only inference under fulltext_degraded evidence: RoboTwin 2.0 supplies scalable tasks and broad randomization, whereas GISS constructs byte-matched decision checkpoints and crosses one frozen-policy action chunk across paired functional collision geometries before recipient-scene closed-loop continuation."
+      },
+      {
+        "paper_id": "openalex:W4403116255",
+        "delta": "Abstract-only inference: GemBench evaluates placements, objects, primitives, and long horizons, while GISS estimates a within-recipient matched-state geometry-action compatibility interaction at fixed instruction and terminal predicate."
+      },
+      {
+        "paper_id": "openalex:W4405956290",
+        "delta": "Abstract-only inference: CoA-VLA supplies a fixed object/grasp/spatial/movement affordance chain to the policy, while GISS gives ordinary policies no phase scaffold and intervenes only on the visible geometry that produces the current chunk."
+      },
+      {
+        "paper_id": "openalex:W4403808753",
+        "delta": "Abstract-only inference: CLOVER uses prediction error for closed-loop refinement and replanning, while GISS restores an identical pre-action state and estimates one-chunk source-geometry compatibility through a four-cell recipient-scene response contrast."
+      }
+    ],
+    "almost_prior_paper_id": "dblp:journals/corr/abs-2506-18088",
+    "what_step_was_missed": "The abstract does not construct a simulator checkpoint that is identical across paired functional geometries, query both frozen-policy chunks there, and execute each chunk in both recipient geometries before closed-loop resumption to estimate a within-recipient compatibility interaction; this is an abstract-only inference because full text was unavailable.",
+    "signature_terms": [
+      "matched-state geometry action crossover",
+      "paired collision geometry checkpoints",
+      "current-chunk compatibility interaction",
+      "geometry-neutral common prefix",
+      "closed-loop recipient-scene continuation"
+    ],
+    "alias_terms": [
+      "paired potential-outcome action assay",
+      "counterfactual policy input intervention",
+      "metamorphic closed-loop policy testing",
+      "crossed treatment response design"
+    ],
+    "composition_note": "A single controlled-diagnostic move is sufficient because the exact checkpoint producer, four-cell current-chunk intervention, independent simulator outcome, eligibility accounting, appearance control, and state-jitter falsifier form one deep instrument. Adding an audit, decomposition, or adaptation pattern would duplicate the interpretation, revive invalid chunk-index localization, or bolt a second paper onto this bounded diagnostic."
+  },
+  "falsification_rewritten": false
+}

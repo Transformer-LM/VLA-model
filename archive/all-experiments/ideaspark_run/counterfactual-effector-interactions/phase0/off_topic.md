@@ -1,0 +1,126 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **Effect of Virtual Reality and Jacobson's Progressive Muscle Relaxation on Occupational Fatigue in In** (`semanticscholar:0baba0ffb7bcbdbe8d9c21142c4569e82dfc1401`)
+  - factorial trial on nurse fatigue; unrelated clinical domain
+- **Effect of Edible Cricket Enriched Complementary Porridge and Nutrition Education on Linear Growth of** (`semanticscholar:df999007f5486b5a59771556671eb8d8a366165e`)
+  - nutrition factorial trial in infants; unrelated domain
+- **Relational Intervention During Functional Collapse in Large Language Models: A Lexical-Statistical A** (`semanticscholar:112bba37f386ede4e9f678095e3d493fbf4e66c8`)
+  - factorial intervention on LLM behavior; cross-domain keyword match
+- **Computational Measurement of Team-Process Phase Dynamics in Collaborative Virtual Reality** (`semanticscholar:714acfc1e9c6867f0f186da3ef70c20230620937`)
+  - team communication phase analysis in collaborative VR; unrelated to robot manipulation
+- **Can provision of near vision glasses as an early intervention improve visual outcomes in infants at ** (`semanticscholar:64b44ccf8952caba710302318e298a3e36e42aa3`)
+  - infant vision clinical feasibility trial; unrelated domain
+- **Edge physics and the Casimir interaction in Maxwell-Chern-Simons theory on a strip** (`semanticscholar:f3b5b5f1fe11ae3918677ffa193af3c4a917ba80`)
+  - theoretical gauge physics; unrelated field
+- **Factors in Yunnan-Tibet door aesthetics: object attributes, individual differences, and visual attra** (`semanticscholar:9662f39a5dab6296ebec9adef75075c9ac5a6b02`)
+  - architectural aesthetics study; unrelated field
+- **Effectiveness of an anti-inflammatory diet intervention and cognitive behavioural therapy in endomet** (`semanticscholar:5ce12cf33ec7525ec2de9ba1cdb262c2c8009049`)
+  - clinical lifestyle factorial trial protocol; unrelated domain
+- **Reading Cognition as Decisions Unfold in Words: A Factorized Inverse Decision Model** (`semanticscholar:b3e37f404666319f35e3dcb8858520f7ec58cc21`)
+  - cognitive screening from verbal decision traces; unrelated application
+- **DoAtlas-1: A Causal Compilation Paradigm for Clinical AI** (`semanticscholar:8168805b937208c310eb4d4ce92533a109e870e0`)
+  - causal compilation for clinical evidence; unrelated domain
+- **Exercise training mitigates age-related cognitive decline by attenuating TMAO-induced inflammation** (`semanticscholar:1621848e00a96b59f37cfa8e16ff0bba54b74e7a`)
+  - biomedical exercise and inflammation study; unrelated domain
+- **Unified Functional Spectrum Analysis: A Framework for Understanding Nonverbal Multimodal Multifuncti** (`semanticscholar:8b01c3b75d4b18c6a5e7b324187e10e7930d06e1`)
+  - multiparty conversation behavior analysis; unrelated field
+- **Grant writing coaching groups: A randomized trial to discern the influences of coaching duration and** (`semanticscholar:fa75152aa44b979e995c9d93c41964b2567ebfa0`)
+  - grant-coaching factorial trial; unrelated domain
+- **Nutrition-sensitive agriculture programme impacts women’s mental health via food security in rural B** (`semanticscholar:9100137007d0ed8d4552d5c1d19c1c2092cb6c05`)
+  - nutrition and mental-health intervention study; unrelated domain
+- **An empirical analysis of spatial effects and their driving factors in urban green development using ** (`semanticscholar:92bdd5e926e1ef2a45580854b6e49bbd6cdb8130`)
+  - urban green-development econometrics; unrelated field
+- **Audit and feedback: effects on professional practice.** (`semanticscholar:5819e0104ba97d46489671e37db8348a8bf66d68`)
+  - pure healthcare audit-and-feedback review
+- **From Data Sharing to Credit Availability: Causal Identification and Transmission Path of Open Govern** (`semanticscholar:3e9592883837e6e09e2c072a14f7c0a021ba864e`)
+  - corporate finance causal study; cross-domain false positive
+- **A Dynamic Multi-Stage Group Decision-Making Method for Credit Risk Monitoring Using Non-equidistant ** (`semanticscholar:5745d74b0a6cbe085db8b88bc18fb35046a66e70`)
+  - financial credit-risk monitoring; unrelated domain
+- **Causal Inference under Threshold Manipulation: Bayesian Mixture Modeling and Heterogeneous Treatment** (`semanticscholar:131aa46b87bfc82bcd9687cddfda7ca0ab8611ac`)
+  - marketing threshold causal inference; cross-domain false positive
+- **Multi-Treatment-DML: Causal Estimation for Multi-Dimensional Continuous Treatments with Monotonicity** (`semanticscholar:a42cfd75338f2383d8de6ee3a94fe19d41c65394`)
+  - multi-treatment causal estimation for personal-loan risk; unrelated application
+- **Assessing the Spillover Effects of Marketing Promotions on Credit Risk in Consumer Finance: An Empir** (`semanticscholar:4cb3863d8822fa0c6f58b0f639fcff603adee2ac`)
+  - consumer-finance marketing and credit-risk study; unrelated domain
+- **Does China's green credit interest subsidies policy promote enterprises' green technology innovation** (`semanticscholar:5bc80fe9ad91ceeff013f4c7ecdb58102169a951`)
+  - green-credit policy econometrics; unrelated field
+- **Towards Generalizable Reasoning: Group Causal Counterfactual Policy Optimization for LLM Reasoning** (`semanticscholar:708e35f93b6fe63119ea91c07c2107f46832a288`)
+  - counterfactual optimization for LLM reasoning; wrong deployment domain
+- **The Causal Effects of Pilot Policies on Low-Altitude Economy Growth—Multi-Period DID and Event-Study** (`semanticscholar:ab26164bfc2e83a5fcda768a1944743bf87dea03`)
+  - regional policy DID study; unrelated field
+- **Hide-and-Shill: A Reinforcement Learning Framework for Market Manipulation Detection in Symphony-a D** (`semanticscholar:8b670509aa6e3e735d321373abfe0282f3cb6e88`)
+  - financial market manipulation detection; cross-domain MARL false positive
+- **Smooth Multi-Policy Causal Effect Estimation in Longitudinal Settings** (`semanticscholar:849baad620b786ae5c200761d49933dc94b80d07`)
+  - longitudinal healthcare treatment-policy estimation, not robotic interactions
+- **Long-term credit and green innovation : causal evidence from China** (`semanticscholar:2fd60885015e4dc70f7ca786df2ad9aa6235c88c`)
+  - green finance causal evidence; unrelated domain
+- **Green lending and corporate leverage manipulation: evidence from China's green credit guidelines** (`semanticscholar:064515d4dd81af06b99b3fc04128f6750e3d009e`)
+  - corporate leverage and green-credit policy study; unrelated domain
+- **Causal Transformer and Multi-Period Difference-in-Differences for Evaluating Synergistic Effects of ** (`semanticscholar:419cd7f856053541380631ef62d8a8eca46af013`)
+  - regional policy synergy econometrics; unrelated field
+- **Bridging Heritage Systems: Multi-Scale Spatial Coupling Between Tangible and Intangible Cultural Her** (`semanticscholar:20cb6245f1673f94e2f71d615e57e30c3489d6e2`)
+  - cultural-heritage spatial causal analysis; unrelated field
+- **Environmental credit evaluation policy and enterprise total factor productivity: Evidence from Chine** (`semanticscholar:ae8629ca3e1c7610c5f0fee922296b1c5973790d`)
+  - environmental credit policy econometrics; unrelated field
+- **Longitudinal multi-omic evaluation of biomarkers of health and ageing over smoking cessation interve** (`openalex:W4414012272`)
+  - smoking-cessation biomarker study; unrelated biomedical domain
+- **Educational robotics as a strategy for social inclusion and pedagogical intervention in vulnerable y** (`openalex:W4416841167`)
+  - educational robotics intervention; unrelated to manipulation policy research
+- **Structured Generative Models for Scene Understanding** (`openalex:W4405323352`)
+  - position paper on static scene understanding, not embodied action or manipulation
+- **Adaptive VR intervention on social-cognitive skills in children with ASD: a feasibility study** (`openalex:W7141349026`)
+  - adaptive VR therapy for children; unrelated domain
+- **Muscle synergies in upper limb stroke rehabilitation: a scoping review** (`openalex:W4402361414`)
+  - pure scoping review of stroke muscle synergies
+- **Audiovisual Affective Design of Humanoid Robot Appearance and Voice Based on Kansei Engineering** (`openalex:W4406801287`)
+  - humanoid appearance and voice affective design, unrelated to manipulation
+- **Understanding World or Predicting Future? A Comprehensive Survey of World Models** (`openalex:W4411735734`)
+  - pure comprehensive survey of world models
+- **Enhancing digital competence through STEM-integrated universal design for learning: a pedagogical fr** (`openalex:W4414531044`)
+  - secondary-school STEM pedagogy study; unrelated domain
+- **A survey on deep 3D human pose estimation** (`openalex:W4404703236`)
+  - pure survey of human pose estimation
+- **Cross-disciplinary perspectives on the potential for artificial intelligence across chemistry** (`openalex:W4409801681`)
+  - AI perspectives in chemistry; unrelated field
+- **Assessing brain-muscle networks during motor imagery to detect covert command-following** (`openalex:W4407193991`)
+  - clinical brain-muscle motor-imagery study; unrelated domain
+- **Through Massage to the Brain—Neuronal and Neuroplastic Mechanisms of Massage Based on Various Neuroi** (`openalex:W7125829598`)
+  - pure neuroimaging review of massage therapy
+- **A Review of Embodied Grasping** (`openalex:W4406984533`)
+  - pure review of embodied grasping
+- **Towards Photocrosslinkable Lyotropic Blends of Organosolv Lignin and Hydroxypropyl Cellulose for 3D ** (`openalex:W4403298079`)
+  - materials study on photocrosslinkable 3D-printing inks
+- **Addressing Inconsistency in Functional Neuroimaging: A Replicable Data-Driven Multi-Scale Functional** (`openalex:W4402391275`)
+  - functional neuroimaging atlas; unrelated field
+- **Chinese ethnic dance therapy: cultural anthropology and health science perspectives on Tujia ethnic ** (`openalex:W4411086483`)
+  - dance-therapy anthropology and health study; unrelated domain
+- **Industrial Robotics and Adaptive Control Systems in STEM Education: Systematic Review of Technology ** (`openalex:W7130349638`)
+  - systematic review of robotics in STEM education
+- **Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a sur** (`openalex:W4417483688`)
+  - pure survey of interactive imitation learning for dexterous manipulation
+- **Shaping Future Success: Evidence from an Early Childhood Human Capital Formation Intervention** (`openalex:W4414768864`)
+  - early-childhood human-capital intervention; unrelated domain
+- **Human activity recognition: A review of deep learning‐based methods** (`openalex:W4407062904`)
+  - pure review of human activity recognition
+- **Quality-centric digital twins in additive manufacturing: a review of the state-of-the-art, challenge** (`openalex:W7124296674`)
+  - pure review of digital twins for additive manufacturing
+- **Survey on Hand Gesture Recognition from Visual Input** (`openalex:W4406745524`)
+  - pure survey of hand-gesture recognition
+- **2024 Annual Meeting Abstracts – General Poster Discussion** (`openalex:W4403430901`)
+  - medical radiotherapy QA meeting abstract; unrelated domain
+- **Assessing heterogeneous causal effects across clusters in partially nested designs.** (`openalex:W4405906467`)
+  - psychology treatment effects in partially nested clinical designs
+- **P47 - Using causal trees to explore the heterogeneity of effects** (`openalex:W4410278655`)
+  - epidemiology poster on causal-effect heterogeneity; no robotics relevance
+- **Causal machine learning for high-dimensional mediation analysis using interventional effects mapped ** (`openalex:W4414633370`)
+  - clinical mediation analysis under hypothetical interventions; unrelated application
+- **CFC-ATE: Causal Feature Construction via Average Treatment Effect** (`openalex:W4408146799`)
+  - generic causal feature construction for tabular prediction, not interactions or robotics
+- **Null effects of armed condition on perceived state and trait emotions of friend after the removal of** (`openalex:W7111355914`)
+  - psychology regression artifact about an armed condition; unrelated domain
+- **INSTRUMENTS FOR MANAGING A BANK'S CREDIT PORTFOLIO AS MEANS OF ITS SUSTAINABLE GROWTH** (`openalex:W7077049566`)
+  - bank credit portfolio management; unrelated field
+- **Causal-GNN for ethical AI in financial services: ensuring fairness, compliance, and transparency in ** (`openalex:W4416024634`)
+  - ethical causal AI for financial services; cross-domain false positive

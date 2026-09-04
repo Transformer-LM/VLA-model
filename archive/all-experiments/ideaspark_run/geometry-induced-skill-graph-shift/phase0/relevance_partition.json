@@ -1,0 +1,312 @@
+[
+  {
+    "paper_id": "semanticscholar:09923ab80f59b9dbec32d1693b2863aa62fce365",
+    "relevance": "adjacent",
+    "reason": "Structured contact/geometry/motion/object-state scripts are useful relation-event representations, but this is human-object interaction detection rather than executable VLA/WAM manipulation under geometry-induced strategy shifts."
+  },
+  {
+    "paper_id": "semanticscholar:db2574be341621c2f004ef1a3124947c35d07e6d",
+    "relevance": "adjacent",
+    "reason": "Embodied navigation with relational inductive bias is a path-planning near-neighbor, but the available record does not establish target-reference geometry interventions or VLA/WAM manipulation."
+  },
+  {
+    "paper_id": "openalex:W4402890475",
+    "relevance": "off_topic",
+    "reason": "Pure broad survey of foundation models in robotics; it does not study the requested functional-geometry mechanism or controlled benchmark."
+  },
+  {
+    "paper_id": "openalex:W4402545715",
+    "relevance": "off_topic",
+    "reason": "Pure review/position paper on transfer learning across robotics, not a functional-geometry VLA/WAM study."
+  },
+  {
+    "paper_id": "openalex:W4412604838",
+    "relevance": "off_topic",
+    "reason": "Review of autonomy and AI in robotic surgery, without the requested geometry-conditioned policy or benchmark mechanism."
+  },
+  {
+    "paper_id": "openalex:W4409910717",
+    "relevance": "off_topic",
+    "reason": "Quantum reference frames and spacetime event localization are an unrelated physics-domain keyword collision."
+  },
+  {
+    "paper_id": "openalex:W4403116255",
+    "relevance": "adjacent",
+    "reason": "GemBench is a relevant manipulation-generalization benchmark covering novel placements, objects, and long-horizon tasks, but it does not isolate fixed-goal geometry changes that force a different intermediate strategy."
+  },
+  {
+    "paper_id": "openalex:W4413765256",
+    "relevance": "off_topic",
+    "reason": "Broad forward-looking perspective on robot manufacturing and intelligence, not a mechanism or benchmark for functional-geometry generalization."
+  },
+  {
+    "paper_id": "openalex:W4414902199",
+    "relevance": "adjacent",
+    "reason": "General-purpose VLA backbone coordinating reasoning and fast execution; useful baseline, but no controlled geometry-induced skill/path change."
+  },
+  {
+    "paper_id": "openalex:W4405956290",
+    "relevance": "adjacent",
+    "reason": "VLA affordance chain explicitly covers grasp part, placement space, and collision-free movement, but uses a fixed affordance scaffold and evaluates pose/obstacle generalization rather than geometry-forced sequence changes."
+  },
+  {
+    "paper_id": "openalex:W4405323352",
+    "relevance": "off_topic",
+    "reason": "Position/review paper on structured generative models for static scene understanding, outside executable robot policy generalization."
+  },
+  {
+    "paper_id": "openalex:W4413291859",
+    "relevance": "off_topic",
+    "reason": "Pure survey of 2D/3D visual grounding, not the requested manipulation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4415278795",
+    "relevance": "off_topic",
+    "reason": "Comprehensive review of LLMs and 3D robotic sensing; pure review rather than a functional-geometry intervention."
+  },
+  {
+    "paper_id": "openalex:W4403479245",
+    "relevance": "off_topic",
+    "reason": "Neuroscience perspective on neural encoding and decoding, unrelated to VLA/WAM robotic manipulation."
+  },
+  {
+    "paper_id": "openalex:W4407343310",
+    "relevance": "off_topic",
+    "reason": "Philosophical framework for digital twins, outside the requested simulator-grounded robot-learning question."
+  },
+  {
+    "paper_id": "openalex:W4412423271",
+    "relevance": "off_topic",
+    "reason": "Pure review of AI control for biomimetic robotics, not functional-geometry VLA/WAM generalization."
+  },
+  {
+    "paper_id": "openalex:W4415938232",
+    "relevance": "off_topic",
+    "reason": "Holistic synthesis/taxonomy of Physical AI rather than a concrete geometry-conditioned manipulation mechanism or benchmark."
+  },
+  {
+    "paper_id": "openalex:W4402830990",
+    "relevance": "off_topic",
+    "reason": "Study of category-selective representations in biological vision, an unrelated neuroscience domain."
+  },
+  {
+    "paper_id": "openalex:W4403630156",
+    "relevance": "off_topic",
+    "reason": "Pure survey of large vision-language models for autonomous vehicles, outside robot manipulation."
+  },
+  {
+    "paper_id": "openalex:W4415037842",
+    "relevance": "adjacent",
+    "reason": "VLA method and insertion benchmark for contact-rich manipulation, but its central adaptation signal is force sensing, explicitly outside the non-tactile direction."
+  },
+  {
+    "paper_id": "openalex:W4412944525",
+    "relevance": "adjacent",
+    "reason": "Atomic evaluation of internal world models in vision-language models is useful evaluation context, but the record does not establish functional-geometry robot execution."
+  },
+  {
+    "paper_id": "openalex:W7125405807",
+    "relevance": "off_topic",
+    "reason": "Manifesto about latent reality and predictive intervention, unrelated to embodied manipulation."
+  },
+  {
+    "paper_id": "openalex:W4412834287",
+    "relevance": "off_topic",
+    "reason": "Agentic 3D architectural model generation from sketches, not robotic manipulation despite vision-action terminology."
+  },
+  {
+    "paper_id": "openalex:W7125373900",
+    "relevance": "off_topic",
+    "reason": "Quantum-erasure interpretation is an unrelated quantum-physics keyword collision."
+  },
+  {
+    "paper_id": "openalex:W4403808753",
+    "relevance": "adjacent",
+    "reason": "Video-diffusion visual plans and closed-loop replanning are relevant WAM-style manipulation backbones, but geometry-conditioned strategy switching is not isolated."
+  },
+  {
+    "paper_id": "openalex:W4417537399",
+    "relevance": "adjacent",
+    "reason": "Long-horizon dexterous manipulation and stage sequencing are relevant, but the method relies centrally on tactile sensing and does not test the requested non-tactile geometry shift."
+  },
+  {
+    "paper_id": "openalex:W4406122761",
+    "relevance": "off_topic",
+    "reason": "Pure survey of visual large language model applications, not a robot functional-geometry study."
+  },
+  {
+    "paper_id": "openalex:W4412094040",
+    "relevance": "off_topic",
+    "reason": "State-of-the-art review of AI for construction robotics, not the requested mechanism."
+  },
+  {
+    "paper_id": "openalex:W4415014283",
+    "relevance": "adjacent",
+    "reason": "Robot imitation policy explicitly generalizes across object geometries using simulated data, but addresses appearance/domain robustness rather than fixed-goal geometry forcing a new path, grasp, or event sequence."
+  },
+  {
+    "paper_id": "openalex:W4411735734",
+    "relevance": "off_topic",
+    "reason": "Pure comprehensive survey of world models across domains, not a concrete functional-geometry WAM mechanism."
+  },
+  {
+    "paper_id": "openalex:W4409289950",
+    "relevance": "off_topic",
+    "reason": "Book on machine learning for sports analytics, an unrelated domain."
+  },
+  {
+    "paper_id": "openalex:W4412750609",
+    "relevance": "adjacent",
+    "reason": "Robotic disassembly with flexible task execution is in manipulation, but the contribution is a mixed-reality human interface rather than VLA/WAM geometry generalization."
+  },
+  {
+    "paper_id": "openalex:W4415557874",
+    "relevance": "adjacent",
+    "reason": "Hierarchical language planning, semantic paths, and object arrangement provide a planning baseline, but do not isolate target-reference geometry-induced strategy changes."
+  },
+  {
+    "paper_id": "openalex:W4410768329",
+    "relevance": "off_topic",
+    "reason": "Pure review/taxonomy of domain-specific multimodal-LLM benchmarks, not a manipulation benchmark contribution."
+  },
+  {
+    "paper_id": "openalex:W4417097990",
+    "relevance": "adjacent",
+    "reason": "VLA adaptation via sparse end-effector trajectories is a useful adaptation baseline, but it does not condition adaptation on functional geometry or changed intermediate strategies."
+  },
+  {
+    "paper_id": "openalex:W4416334117",
+    "relevance": "off_topic",
+    "reason": "fMRI study of compositional versus conjunctive brain representations; 'geometry' and task learning are unrelated neuroscience usage."
+  },
+  {
+    "paper_id": "openalex:W7127470505",
+    "relevance": "off_topic",
+    "reason": "Pure review of generalist neural motion planners; relevant themes but no original mechanism or benchmark, and pure reviews are excluded by the rubric."
+  },
+  {
+    "paper_id": "openalex:W4416223716",
+    "relevance": "adjacent",
+    "reason": "Robotic manipulation policy improves spatial robustness with disentangled depth/geometry features, but this is generic 3D feature injection rather than functional-geometry strategy generalization."
+  },
+  {
+    "paper_id": "openalex:W4411227566",
+    "relevance": "off_topic",
+    "reason": "Review of deep learning for photonic metasurfaces, an unrelated materials/physics domain."
+  },
+  {
+    "paper_id": "openalex:W7127541930",
+    "relevance": "adjacent",
+    "reason": "VLA robustness through diverse point clouds is a relevant 3D baseline, but is explicitly generic point-cloud feature injection rather than geometry-forced skill-graph change."
+  },
+  {
+    "paper_id": "openalex:W4406651559",
+    "relevance": "off_topic",
+    "reason": "Roadmap/review of motile active matter and micromachines, outside VLA/WAM manipulation."
+  },
+  {
+    "paper_id": "openalex:W4416967312",
+    "relevance": "adjacent",
+    "reason": "VLA reliability gating under distribution shift is a useful policy-robustness baseline, but it does not represent or test geometry-induced strategy changes."
+  },
+  {
+    "paper_id": "openalex:W4414198610",
+    "relevance": "off_topic",
+    "reason": "Pure full-stack review of VLA models and deployment, not the requested mechanism."
+  },
+  {
+    "paper_id": "openalex:W4410165966",
+    "relevance": "off_topic",
+    "reason": "Pure survey of physics-informed machine learning across domains, not robotic functional geometry."
+  },
+  {
+    "paper_id": "openalex:W4413788337",
+    "relevance": "off_topic",
+    "reason": "Pure survey of multimodal fusion and VLMs for robot vision, without an original manipulation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4410964376",
+    "relevance": "off_topic",
+    "reason": "Survey of factuality in language models, unrelated to robotic manipulation."
+  },
+  {
+    "paper_id": "openalex:W4417174623",
+    "relevance": "off_topic",
+    "reason": "Pure survey of reinforcement learning for VLAs, not an original functional-geometry benchmark or adaptation method."
+  },
+  {
+    "paper_id": "openalex:W4414704765",
+    "relevance": "off_topic",
+    "reason": "Pure review of sensor fusion for autonomous driving, outside manipulation."
+  },
+  {
+    "paper_id": "openalex:W4413168650",
+    "relevance": "off_topic",
+    "reason": "Pure survey of RGB-D human action recognition, not robot policy generalization."
+  },
+  {
+    "paper_id": "openalex:W4405426927",
+    "relevance": "off_topic",
+    "reason": "Pure survey of object-centric robotic manipulation, not a concrete functional-geometry contribution."
+  },
+  {
+    "paper_id": "openalex:W4409368288",
+    "relevance": "off_topic",
+    "reason": "Pure survey of reasoning with foundation models, outside the specific manipulation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4410407045",
+    "relevance": "off_topic",
+    "reason": "Broad survey of LLM capabilities and applications, not functional-geometry robot learning."
+  },
+  {
+    "paper_id": "openalex:W4409474206",
+    "relevance": "off_topic",
+    "reason": "Pure survey of biomimetic robotics and intelligence, not the requested VLA/WAM direction."
+  },
+  {
+    "paper_id": "openalex:W4415601459",
+    "relevance": "off_topic",
+    "reason": "Pure comprehensive review of peg-in-hole assembly; insertion is thematically relevant, but the rubric excludes pure reviews from the deep-read corpus."
+  },
+  {
+    "paper_id": "openalex:W4396600885",
+    "relevance": "off_topic",
+    "reason": "Pure survey of generalist robot learning from internet video, not an original geometry-conditioned method."
+  },
+  {
+    "paper_id": "openalex:W7125599892",
+    "relevance": "off_topic",
+    "reason": "Pure survey of deep reinforcement learning for surgical robotics, outside the requested contribution."
+  },
+  {
+    "paper_id": "openalex:W4406984533",
+    "relevance": "off_topic",
+    "reason": "Pure review of embodied grasping, not an original controlled geometry-generalization study."
+  },
+  {
+    "paper_id": "openalex:W4417050645",
+    "relevance": "off_topic",
+    "reason": "Pure survey of motion planning for autonomous driving, outside robotic manipulation."
+  },
+  {
+    "paper_id": "openalex:W4406123676",
+    "relevance": "off_topic",
+    "reason": "Broad survey of LLMs and AGI foundations, not the requested manipulation mechanism."
+  },
+  {
+    "paper_id": "openalex:W4413638658",
+    "relevance": "off_topic",
+    "reason": "Pure survey of VLA recipes for robotic manipulation, not an original functional-geometry method or benchmark."
+  },
+  {
+    "paper_id": "openalex:W4414097138",
+    "relevance": "off_topic",
+    "reason": "Pure survey of autonomous-driving trajectory prediction, outside manipulation."
+  },
+  {
+    "paper_id": "openalex:W4403794826",
+    "relevance": "off_topic",
+    "reason": "Pure survey of multimodal benchmarks across large AI models, not a simulator-grounded robot benchmark contribution."
+  }
+]

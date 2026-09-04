@@ -1,0 +1,14 @@
+# [user-supplied anchor] 2602.21531
+
+paper_id: user_ref:arxiv_id:2602.21531
+tier: U
+source_used: failed
+warning: fetch failed across all paths; intro filled with abstract; method empty
+
+## Intro
+
+
+
+## Method
+
+

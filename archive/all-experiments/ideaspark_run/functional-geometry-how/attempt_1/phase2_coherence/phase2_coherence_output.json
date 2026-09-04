@@ -1,0 +1,499 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S7",
+      "verbatim_quote": "7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance or retain h using the transition head; output a closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.",
+      "why_selected_first": "Z stores attention-derived anchors whose x_i and y_j were declared to be coordinates in the calibrated robot frame, yet S7 compiles Z only once and then physically moves the scene. The procedure names no producer that re-expresses later tokens in the updated observation, so the literal reading makes later anchors stale and the object-local reading requires an absent re-anchoring operation."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "verbatim_quote": "1. Build FG-Compose-Sim by recombining existing RoboCasa target and receptacle assets under a fixed named relation, assigning every object to training with other partners while holding out ordered pairs; output ordinary pairs plus a terminal-pose-matched subset with MuJoCo contact/collision oracle programs.",
+        "consumes": [
+          "RoboCasa asset set A",
+          "named relation r",
+          "MuJoCo simulator state and contact/collision logs"
+        ],
+        "produces": [
+          "training ordered-pair split D_train",
+          "held-out ordered-pair split D_test",
+          "terminal-pose-matched subset D_match with policy-independent oracle programs Z_oracle"
+        ],
+        "note": "The split keeps each individual object exposed in training but does not make pair identity statistically independent of the oracle program. 'Fixed' is read as exactly the same named relation and scripted terminal transform; no alternative defensible numerical reading is needed."
+      },
+      {
+        "step": "S2",
+        "verbatim_quote": "2. Convert each successful RoboCasa demonstration into supervision by reading PointMaps, end-effector poses, gripper commands, and MuJoCo contacts; output an ordered sequence of point anchors, relative frames, gripper modes, and END, and create the same fields for the modest FG-Compose-Robot demonstrations by pre-registered human clicks and phase boundaries.",
+        "consumes": [
+          "demonstration trajectory of length T",
+          "P_T in (R^3 x R^d)^{n_T} and P_R in (R^3 x R^d)^{n_R}",
+          "end-effector poses in SE(3)^T",
+          "gripper state sequence",
+          "simulator contacts or registered human labels"
+        ],
+        "produces": [
+          "supervised target Z*=((a_h^T in simplex^{n_T-1}, a_h^R in simplex^{n_R-1}, F_h in R^6, c_h, e_h))_{h=1}^m"
+        ],
+        "note": "The exact coordinate convention for F_h is not produced here: defensible readings are an absolute robot-frame pose, an object-local pose, or a target-to-reference transform. T2/T3/T5 were checked under all three; only the first is directly computable from the declared robot-frame anchors, while the latter two need a current pose/correspondence producer absent from S7."
+      },
+      {
+        "step": "S3",
+        "verbatim_quote": "3. Implement the relation-conditioned compiler over P_T and P_R so it autoregressively emits z_h and END up to M_max; input is the two observed PointMaps plus relation text, and output is program Z with explicit point distributions and frames.",
+        "consumes": [
+          "P_T with n_T observed points",
+          "P_R with n_R observed points",
+          "relation text r",
+          "M_max=6"
+        ],
+        "produces": [
+          "Z of length m<=M_max with attention vectors dimension n_T and n_R, two R^3 anchors, F_h in R^6, discrete contact mode, and END decision per token"
+        ],
+        "note": "Before repair, normalized attention is undefined for n_T=0 or n_R=0, m=0 is not excluded, and no rule says what happens if END is never emitted by M_max. The applied procedural repair makes these explicit task-failure states and binds the decoding tie."
+      },
+      {
+        "step": "S4",
+        "verbatim_quote": "4. Train the compiler first on program reconstruction, then train a binary program-swap objective using same-relation terminal-pose-matched foils; output a compiler whose own program matches its pair and rejects a functionally different swapped program without using the action policy.",
+        "consumes": [
+          "compiler state for (P_T,P_R,r)",
+          "positive program Z*",
+          "same-relation terminal-pose-matched swapped program Z_swap"
+        ],
+        "produces": [
+          "program reconstruction loss",
+          "pair-program compatibility score and binary loss",
+          "updated compiler parameters"
+        ],
+        "note": "Before repair, no compatibility scorer, loss path, or negative construction was specified, so 'rejects' consumed an unproduced scalar. The revision defines a compiler-attached score trained with BCE on a no-fixed-point minibatch derangement and discarded after training."
+      },
+      {
+        "step": "S5",
+        "verbatim_quote": "5. Add a structured-token prefix and phase-transition head to the existing OpenPI pi0.5 code path, freeze the base vision-language and action generators, and expose only rank-r_L conditioning LoRA plus the two small heads; output an active-token-conditioned action-chunk policy.",
+        "consumes": [
+          "active z_h",
+          "pi0.5 observation/language inputs",
+          "r_L=8 selected from {4,8,16}"
+        ],
+        "produces": [
+          "action chunk u_{t:t+L-1}",
+          "transition score q_h in [0,1]"
+        ],
+        "note": "A prefix changes the forward-pass input but does not guarantee a changed action; a zero or ignored conditioning projection is a valid parameter setting. The revision downgrades the causal guarantee to an empirical sensitivity claim."
+      },
+      {
+        "step": "S6",
+        "verbatim_quote": "6. Train the LoRA and transition head on the same pi0.5-compatible demonstrations used by the dense PointMap-prefix baseline, matching data, trainable-parameter count, and compute; output matched checkpoints in which only the functional interface differs.",
+        "consumes": [
+          "same demonstrations for both arms",
+          "frozen pi0.5 base",
+          "matched trainable-parameter and compute budgets"
+        ],
+        "produces": [
+          "FuncGraph checkpoint",
+          "dense PointMap-prefix checkpoint"
+        ],
+        "note": "This establishes resource matching if the accounting is enforced; it does not establish that the dense arm cannot infer the same geometry-to-action function."
+      },
+      {
+        "step": "S7",
+        "verbatim_quote": "7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance or retain h using the transition head; output a closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.",
+        "consumes": [
+          "once-compiled Z in the initial observation's declared robot coordinate frame",
+          "current observation o_t",
+          "robot state s_t",
+          "active index h",
+          "tau_adv=0.5"
+        ],
+        "produces": [
+          "executed chunk",
+          "updated observation o_{t+1}",
+          "new index h or task termination"
+        ],
+        "note": "Reading A (robot-frame F_h/anchors): later tokens remain at initial coordinates after scene motion. Reading B (object-local or relative F_h): a current object pose/correspondence transform is required but no prior step produces it. Reading C (the policy implicitly repairs coordinates from pixels): that is an unstated learned correction and defeats the claimed explicit point binding. The stale-binding finding is therefore reading_robust."
+      },
+      {
+        "step": "S8",
+        "verbatim_quote": "8. Evaluate dense PointMap prefix, fixed terminal-pose/trajectory conditioning, FuncGraph, token-permuted FuncGraph, and oracle-program FuncGraph on FG-Compose-Sim; output full-task success, first-contact correctness, phase-order edit distance, collision rate, and final-pose error on ordinary and terminal-pose-matched composition splits.",
+        "consumes": [
+          "matched checkpoints",
+          "D_test and D_match",
+          "learned, permuted, and oracle programs"
+        ],
+        "produces": [
+          "per-arm full-task success and four secondary metrics"
+        ],
+        "note": "This estimator targets the declared expected success over held-out ordered pairs and its terminal-pose-matched conditional subset. It is an experiment, not an internal guarantee."
+      },
+      {
+        "step": "S9",
+        "verbatim_quote": "9. Freeze all hyperparameters and run the same learned, permuted, and pre-registered-oracle conditions on FG-Compose-Robot using the available real-robot platform; output an ecological-validity check rather than generalizing the claim beyond the evaluated rigid-object relations.",
+        "consumes": [
+          "frozen hyperparameters and checkpoints",
+          "FG-Compose-Robot pairs and registered oracle programs"
+        ],
+        "produces": [
+          "real-robot metrics scoped to evaluated rigid-object relations"
+        ],
+        "note": "The scope statement is precise. 'Same' means the same intervention arms and frozen hyperparameters, not identical simulator and robot observations."
+      }
+    ],
+    "unbound_parameter_check": {
+      "findings_before_patch": [
+        "No bound episode/phase watchdog exists although S7 may retain h forever; this is a missing stopping parameter, not a bare magic number.",
+        "The compiler's END/continue decoding and its tie behavior are unspecified."
+      ],
+      "numbers_checked": [
+        "M_max=6: bound, with a training-demonstration coverage selection rule",
+        "r_L=8 from {4,8,16}: bound, with held-out success and matched-budget selection rule",
+        "tau_adv=0.5: bound, with validation phase-boundary-F1 selection rule",
+        "36 GPU-days, 3 robot days, and 300 trials: experiment scale, not method parameters",
+        "binary/6D/3D: structural or dimensional constants"
+      ],
+      "repair_binding": "H_phase=8 action chunks by default, selected as the smallest cap covering successful validation phase durations; END/continue ties prefer continue before M_max and transition-score equality retains h."
+    },
+    "estimand_match": {
+      "declared": "Expected full-task success over held-out ordered target-reference pairs conditional on both individual objects and the relation appearing in training; secondary estimand on terminal-pose-matched pairs with different oracle programs.",
+      "constructed_by": "S8 empirical mean of full-task success on D_test and the D_match restriction.",
+      "verdict": "match",
+      "note": "The policy-independent oracle arms diagnose components but are not substituted for the population used by the primary estimator."
+    },
+    "dry_run": {
+      "instance": "One-dimensional projection of two 3-point PointMaps: target [0.0,0.1,0.2] m, reference [1.0,1.1,1.2] m; two tokens attend one-hot to target/reference indices 0 then 2; the first legal chunk translates the target +0.4 m; tau_adv=0.5. The fair naive uses the same initial PointMaps, relation, two-chunk budget, and compile-once restriction but directly orders target extrema with no learned compiler or swap head.",
+      "execution": {
+        "mode": "executed",
+        "script": "from math import isclose\n\ndef anchor(points, attention):\n    if len(points) != len(attention) or not points:\n        raise ValueError(\"attention requires a non-empty point set of matching length\")\n    if not isclose(sum(attention), 1.0, abs_tol=1e-12):\n        raise ValueError(\"attention must be normalized\")\n    return sum(p * w for p, w in zip(points, attention))\n\ntarget_t0 = [0.0, 0.1, 0.2]\nreference_t0 = [1.0, 1.1, 1.2]\ntoken_attention = [[1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]\nstored_target_anchors = [anchor(target_t0, a) for a in token_attention]\nstored_reference_anchors = [anchor(reference_t0, a) for a in token_attention]\ntranslation = 0.4\ntarget_t1 = [p + translation for p in target_t0]\ncurrent_second_anchor = anchor(target_t1, token_attention[1])\nstale_second_anchor = stored_target_anchors[1]\nnaive_initial_anchors = [min(target_t0), max(target_t0)]\nnaive_current_second_anchor = max(target_t1)\ndef toy_action(base_action, conditioning_scale, token_value):\n    return base_action + conditioning_scale * token_value\naction_z0 = toy_action(0.25, 0.0, 0.0)\naction_z1 = toy_action(0.25, 0.0, 2.0)\npair_to_program = {(\"cup\", \"rack\"): \"left_then_align\", (\"mug\", \"peg\"): \"right_then_align\"}\nswap_examples = [((\"cup\", \"rack\"), \"left_then_align\", 1), ((\"cup\", \"rack\"), \"right_then_align\", 0), ((\"mug\", \"peg\"), \"right_then_align\", 1), ((\"mug\", \"peg\"), \"left_then_align\", 0)]\nidentity_correct = sum(int((pair_to_program[pair] == program) == bool(label)) for pair, program, label in swap_examples)\ntry:\n    anchor([], [])\n    empty_behavior = \"unexpected-success\"\nexcept Exception as exc:\n    empty_behavior = f\"{type(exc).__name__}: {exc}\"\ntry:\n    [][0]\n    k0_behavior = \"unexpected-success\"\nexcept Exception as exc:\n    k0_behavior = f\"{type(exc).__name__}: {exc}\"\ntau_adv = 0.5\ntie_advances = 0.5 > tau_adv\nstall_probs = [0.4] * 12\nadvances_in_12_chunks = sum(prob > tau_adv for prob in stall_probs)\nidentical_points = [0.5, 0.5, 0.5]\nidentical_anchor_first = anchor(identical_points, [1.0, 0.0, 0.0])\nidentical_anchor_last = anchor(identical_points, [0.0, 0.0, 1.0])\nprint(f\"stored_target_anchors={stored_target_anchors}\")\nprint(f\"stored_reference_anchors={stored_reference_anchors}\")\nprint(f\"target_after_first_chunk={target_t1}\")\nprint(f\"second_anchor_stored={stale_second_anchor:.3f}\")\nprint(f\"second_anchor_current={current_second_anchor:.3f}\")\nprint(f\"stale_anchor_error={stale_second_anchor - current_second_anchor:.3f}\")\nprint(f\"naive_initial_anchors={naive_initial_anchors}\")\nprint(f\"initial_program_vs_naive_max_abs_diff={max(abs(a-b) for a,b in zip(stored_target_anchors, naive_initial_anchors)):.3f}\")\nprint(f\"naive_current_second_anchor={naive_current_second_anchor:.3f}\")\nprint(f\"changed_token_actions=({action_z0:.3f},{action_z1:.3f}), action_difference={action_z1-action_z0:.3f}\")\nprint(f\"identity_swap_accuracy={identity_correct / len(swap_examples):.3f}\")\nprint(f\"empty_pointmap={empty_behavior}\")\nprint(f\"k0_program={k0_behavior}\")\nprint(f\"threshold_tie_advances={tie_advances}\")\nprint(f\"advances_in_12_chunks_below_threshold={advances_in_12_chunks}\")\nprint(f\"identical_point_anchor_difference={identical_anchor_first-identical_anchor_last:.3f}\")",
+        "output": "stored_target_anchors=[0.0, 0.2]\nstored_reference_anchors=[1.0, 1.2]\ntarget_after_first_chunk=[0.4, 0.5, 0.6000000000000001]\nsecond_anchor_stored=0.200\nsecond_anchor_current=0.600\nstale_anchor_error=-0.400\nnaive_initial_anchors=[0.0, 0.2]\ninitial_program_vs_naive_max_abs_diff=0.000\nnaive_current_second_anchor=0.600\nchanged_token_actions=(0.250,0.250), action_difference=0.000\nidentity_swap_accuracy=1.000\nempty_pointmap=ValueError: attention requires a non-empty point set of matching length\nk0_program=IndexError: list index out of range\nthreshold_tie_advances=False\nadvances_in_12_chunks_below_threshold=0\nidentical_point_anchor_difference=0.000"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "token-2 target anchor at compile time",
+          "value": "0.200 m",
+          "arithmetic": "0*0.0 + 0*0.1 + 1*0.2 = 0.2"
+        },
+        {
+          "quantity": "same physical surface anchor after first chunk",
+          "value": "0.600 m",
+          "arithmetic": "0*0.4 + 0*0.5 + 1*0.6 = 0.6"
+        },
+        {
+          "quantity": "once-compiled anchor error",
+          "value": "-0.400 m",
+          "arithmetic": "0.2 - 0.6 = -0.4"
+        },
+        {
+          "quantity": "changed-token action difference at zero conditioning projection",
+          "value": "0.000",
+          "arithmetic": "(0.25+0*2.0) - (0.25+0*0.0) = 0"
+        },
+        {
+          "quantity": "identity-only swap accuracy",
+          "value": "1.000",
+          "arithmetic": "4 correct decisions / 4 same-relation, same-terminal-pose swap examples"
+        },
+        {
+          "quantity": "full compiled contacts versus simpler direct-rule contacts at t0",
+          "value": "maximum absolute difference 0.000 m",
+          "arithmetic": "max(|0.0-0.0|, |0.2-0.2|) = 0"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The once-compiled second robot-frame anchor is 0.200 m while the corresponding current surface point is 0.600 m, a -0.400 m error after a legal first-phase translation.",
+          "kind": "structural",
+          "why": "For any nonzero rigid translation delta, a stored robot-frame anchor differs from the same current surface point by exactly -delta; changing the invented magnitude changes only the displayed error, not the failure."
+        },
+        {
+          "anomaly": "Two distinct tokens produce actions 0.250 and 0.250 under a permitted zero conditioning projection, so the action difference is 0.000.",
+          "kind": "structural",
+          "why": "Adding a prefix to a network input does not algebraically force output sensitivity; zero projection or downstream invariance is allowed by the written architecture."
+        },
+        {
+          "anomaly": "An identity lookup obtains swap accuracy 1.000 despite relation and terminal pose being matched.",
+          "kind": "structural",
+          "why": "This is a constructive counterexample to the universal 'object identity cannot suffice' wording: the split does not prohibit pair identity from correlating with the program."
+        },
+        {
+          "anomaly": "The compiled contact sequence and the fair simpler direct-extrema rule differ by 0.000 m on the instance.",
+          "kind": "instance_contingent",
+          "why": "Another geometry or relation could make this hand-built direct rule fail; the zero only shows that the compiled latent is not automatically load-bearing on this instance."
+        },
+        {
+          "anomaly": "Twelve consecutive transition scores of 0.4 produce zero advances and the original S7 supplies no stopping condition.",
+          "kind": "structural",
+          "why": "Any arbitrarily long sequence with q_h<=tau_adv retains h forever under the original rule; twelve chunks merely witnesses the missing watchdog."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty P_T or P_R",
+        "behavior": "The executed attention computation raises ValueError because no normalized distribution or weighted anchor exists.",
+        "finding": "Original S3 has no invalid-observation output although the algebra is undefined. Repaired by explicit compile failure scored as task failure."
+      },
+      {
+        "probe": "k=0 / END before any phase token",
+        "behavior": "The executed consumer raises IndexError when it requests the active token.",
+        "finding": "Original S3 does not require m>=1. Repaired by requiring one non-END token before END."
+      },
+      {
+        "probe": "all-identical points",
+        "behavior": "Attention on the first versus last point yields anchors 0.500 and 0.500, difference 0.000, so distinct point bindings collapse geometrically.",
+        "finding": "Point identity is unrecoverable from coordinates when observations contain no distinguishing features; this is conditional on violating P1's action-relevant-identifiability premise and is retained as a note."
+      },
+      {
+        "probe": "transition score exactly tied at tau_adv=0.5",
+        "behavior": "The literal 'exceeds' comparison evaluates False, so h is retained.",
+        "finding": null
+      },
+      {
+        "probe": "END/continue decoder tie",
+        "behavior": "The original procedure has no tie-break, so m is not reproducible.",
+        "finding": "Repaired by preferring continue before M_max and treating no END by M_max as compile failure."
+      },
+      {
+        "probe": "single point in each PointMap",
+        "behavior": "Each normalized attention is [1], both anchors are defined, and the program executes if the single point satisfies P1; no alternate contact can be represented.",
+        "finding": null
+      },
+      {
+        "probe": "m=M_max and all transition scores below threshold",
+        "behavior": "The original procedure retains the first token indefinitely; the executed first 12 chunks contain zero advances.",
+        "finding": "Repaired with named H_phase and explicit failure termination; representational failure for a true program longer than M_max remains honestly counted as task failure rather than success."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "every program element is computable from the inputs and compiler readouts rather than from an external planner",
+        "established_by": "S3",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "both PointMaps are non-empty",
+          "the compiler emits at least one token and END by M_max"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the directed chain is the structural prior that prevents the same terminal goal from implying the same grasp or approach",
+        "established_by": "S3+S5+S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed counterexample: token action difference 0.000 under zero conditioning projection."
+      },
+      {
+        "claim": "object identity and final pose cannot suffice for the program-swap classifier",
+        "established_by": "S1+S4",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed identity-only classifier accuracy 1.000 on four valid swap examples."
+      },
+      {
+        "claim": "changing a token changes the next pi0.5 forward pass and therefore the physical action",
+        "established_by": "S5+S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Changed token values yielded actions (0.250,0.250), difference 0.000, at a permitted zero projection."
+      },
+      {
+        "claim": "the full-observation oracle gate separates geometry-to-program compilation failure from executor failure",
+        "established_by": "S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the oracle program uses the same representation and conditioning interface as learned Z",
+          "oracle labels are correct",
+          "the intervention changes only Z"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the terminal-pose-matched split independently varies the oracle contact-and-phase program",
+        "established_by": "S1+S8",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the variable-length, point-bound program structurally conditions successive action chunks",
+        "established_by": "S3+S5+S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "a defined transformation binds later tokens to the moved target/reference surfaces",
+          "the action generator is sensitive to the active token"
+        ],
+        "arbitration": "argument",
+        "measured": "Literal robot-frame reading gives a -0.400 m second-anchor error."
+      },
+      {
+        "claim": "MuJoCo and pre-registered human labels are an oracle independent of the evaluated policy",
+        "established_by": "S1+S2+S8+S9",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "full-task success is predicted to improve while terminal-pose error need not",
+        "established_by": "S8",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the matched composition construction makes the dense PointMap-prefix baseline's premise false",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "The fair direct-geometry naive matches both compiled initial contacts exactly, maximum difference 0.000 m."
+      },
+      {
+        "claim": "matched checkpoints differ only in the functional interface",
+        "established_by": "S2+S4+S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Using the same initial target/reference PointMaps and relation, directly order the relevant geometric extrema into the two action-chunk contacts, with no learned program compiler, compatibility head, or auxiliary program representation.",
+      "naive_fairness": "It uses the same compile-once information, same two action chunks, same sensor inputs, and no extra deployment access; it is simpler because it is a deterministic rule instead of a compiler plus swap objective. The separately reported current-PointMap value 0.600 is only a note that the compile-once constraint may itself be unnecessary, not an unfair baseline win.",
+      "instance_behavior": {
+        "naive": "initial contact anchors [0.0,0.2] m",
+        "mechanism": "compiled target anchors [0.0,0.2] m",
+        "divergence": "maximum absolute difference 0.000 m",
+        "kind": "instance_contingent"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "On the executed instance the program machinery makes exactly the naive decisions. More importantly, the matched split removes final pose as sufficient information but does not remove geometry from the dense baseline, which receives the same PointMaps and relation; no step makes the dense model's role/topology inference premise logically false."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "S7 compiles point-bound anchors once in the calibrated robot frame, then executes motion and updates the observation without producing a transform that rebinds later tokens to the moved surfaces; literal robot-frame tokens become stale, while an object-local reading consumes an unproduced current pose/correspondence.",
+      "severity": "blocking",
+      "why_not_repaired": "Repair requires adding object tracking/correspondence and a token re-projection or recompilation path, which changes what the mechanism is and how it is trained. An abstain/clamp would only avoid the declared multi-phase geometry obstacle.",
+      "verbatim_step_quote": "7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance or retain h using the transition head; output a closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.",
+      "executed_evidence": "Stdlib excerpt: target_t0=[0.0,0.1,0.2]; a2=[0.0,0.0,1.0]; stored=sum(p*w)=0.200. After the legal first-chunk translation +0.4, target_t1=[0.4,0.5,0.6] and current=sum(p*w)=0.600. Stdout: second_anchor_stored=0.200; second_anchor_current=0.600; stale_anchor_error=-0.400. Algebraically the error is -delta for every nonzero rigid translation delta, so the defect is structural rather than a claim about this magnitude.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "The declared branch-(i) obstacle is not confronted by construction: the terminal-pose-matched split makes terminal pose insufficient but does not make dense PointMap conditioning unable to infer role binding or phase topology from the same geometry, and a fair simpler rule is behaviorally identical on the executed instance.",
+      "severity": "blocking",
+      "why_not_repaired": "T5 equivalent_to_naive is an obstacle hole by contract. Recasting the contribution as branch (ii), withholding geometry from the baseline, or forcing a hypothesis-class restriction would change the claimed contribution or redesign the comparison rather than repair prose.",
+      "verbatim_step_quote": "NAIVE-BASELINE AUDIT — branch (i). The runnable naive version concatenates dense target and reference PointMap tokens plus the relation into pi0.5 through a generic prefix/adapter and trains the same LoRA parameters; it silently assumes end-to-end attention will preserve target/reference role binding and infer phase topology when object identities are recombined, a premise made false by the matched composition construction because identical terminal targets coexist with different required contact programs. FuncGraph confronts that failure head-on through point-bound ordered tokens, program-swap identification, and active-token advancement, rather than adding a larger encoder to the naive adapter.",
+      "executed_evidence": "Stdlib excerpt: stored_target_anchors=[anchor([0.0,0.1,0.2],a) for a in [[1,0,0],[0,0,1]]]; naive_initial_anchors=[min([0.0,0.1,0.2]),max([0.0,0.1,0.2])]. Stdout: stored_target_anchors=[0.0, 0.2]; naive_initial_anchors=[0.0, 0.2]; initial_program_vs_naive_max_abs_diff=0.000. The numeric equality is instance-contingent, but the blocking basis is structural: both arms receive P_T,P_R,r, and no S1-S7 operation removes that information or proves the dense hypothesis class cannot implement the same map; matching terminal pose rules out only a terminal-pose-only naive.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "All-identical observed points make distinct attention distributions produce the same geometric anchor, so explicit point binding is not identifiable from coordinates alone.",
+      "severity": "note",
+      "why_not_repaired": "This probe violates P1's stated scoped premise that observed surfaces and relation identify action-relevant contacts; it should remain an empirical premise test rather than be hidden by a synthetic tie-break.",
+      "verbatim_step_quote": "Each token z_h=(a_h^T,a_h^R,F_h,c_h,e_h) contains normalized attention distributions over the two observed point sets, anchors p_h^T=sum_i a_hi^T x_i and p_h^R=sum_j a_hj^R y_j, a predicted 6D relative frame F_h, a gripper/contact mode c_h, and an END decision e_h, so every program element is computable from the inputs and compiler readouts rather than from an external planner.",
+      "executed_evidence": "Stdlib excerpt: points=[0.5,0.5,0.5]; anchor(points,[1,0,0])=0.5; anchor(points,[0,0,1])=0.5. Stdout: identical_point_anchor_difference=0.000.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "FuncGraph keeps the OpenPI pi0.5 vision-language and action-generation backbone fixed and redesigns only the interface through which target-reference geometry controls successive action chunks. For target and reference PointMaps P_T={(x_i,f_i)} and P_R={(y_j,g_j)}, x_i and y_j are observed 3D coordinates in the calibrated robot frame and f_i and g_j are their provided PointMap features; a lightweight relation-conditioned compiler emits a functional program Z=(z_1,...,z_m), with m no larger than M_max=6 by default and M_max reselected as the smallest cap covering all phase runs in the training demonstrations. Each token z_h=(a_h^T,a_h^R,F_h,c_h,e_h) contains normalized attention distributions over the two observed point sets, anchors p_h^T=sum_i a_hi^T x_i and p_h^R=sum_j a_hj^R y_j, a predicted 6D relative frame F_h, a gripper/contact mode c_h, and an END decision e_h, so every valid learned program element is computable from the inputs and compiler readouts rather than from an external planner. The variable-length token order is the pair-specific interaction graph O: its nodes bind actions to surface locations and relation frames, and its directed chain is a structural prior that makes pair-specific grasp, approach, and phase order representable even when terminal goals match; it does not by itself guarantee that the action generator uses the distinction. RoboCasa/MuJoCo contact logs and successful demonstration trajectories provide independent training targets for token anchors, modes, order, and END, while the modest FG-Compose-Robot resource supplies manually clicked surface anchors and phase boundaries for real demonstrations; a same-relation, terminal-pose-matched pair-program compatibility objective is trained after program reconstruction so relation and final pose alone cannot solve the objective, while object identity remains a possible shortcut to test rather than a ruled-out input. The active token is embedded as a structured key-value prefix to pi0.5, with the backbone frozen and only the compiler, a phase-transition head, and conditioning-projection LoRA of rank r_L=8 trained; r_L is selected from {4,8,16} by held-out full-task success under a matched trainable-parameter budget against a dense PointMap-prefix baseline. After each generated action chunk, the transition head reads the new observation, robot state, and active token and advances when its score exceeds tau_adv=0.5, with tau_adv reselected on validation to maximize phase-boundary F1, so changing a token changes the next pi0.5 forward-pass input and can change the physical action; action sensitivity is an empirical property measured by the token-permutation intervention. The C02 diagnostic uses RoboCasa asset recombinations in which each target and reference object appears in training but the ordered pair is held out, and a stricter subset shares the same scripted terminal transform while selecting pairs whose policy-independent MuJoCo collision/contact oracle programs differ. A full-observation oracle gate replaces learned Z with the MuJoCo-derived program in simulation and a pre-registered human program on the available real robot; this separates failure of geometry-to-program compilation from failure of the frozen/light pi0.5 executor to use the program, conditional on oracle-label correctness and an isolated Z intervention.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T4 overclaims exposed by the executed zero-sensitivity and identity-lookup counterexamples, and replaces ambiguous statistical independence wording without changing the mechanism."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Build FG-Compose-Sim by recombining existing RoboCasa target and receptacle assets under a fixed named relation, assigning every object to training with other partners while holding out ordered pairs; output ordinary pairs plus a terminal-pose-matched subset with MuJoCo contact/collision oracle programs.\n2. Convert each successful RoboCasa demonstration into supervision by reading PointMaps, end-effector poses, gripper commands, and MuJoCo contacts; output an ordered sequence of point anchors, relative frames, gripper modes, and END, and create the same fields for the modest FG-Compose-Robot demonstrations by pre-registered human clicks and phase boundaries.\n3. Implement the relation-conditioned compiler over P_T and P_R so it autoregressively emits z_h and END up to M_max; input is the two observed PointMaps plus relation text, and output is program Z with explicit point distributions and frames. Require both PointMaps to be non-empty and require at least one non-END token followed by END no later than M_max; an END/continue tie prefers continue before M_max, and an empty input or missing valid END returns an explicit compilation failure counted as task failure.\n4. Train the compiler first on program reconstruction, then attach a pair-program compatibility head s_phi(P_T,P_R,r,Z) to compiler states and program tokens. Within each same-relation terminal-pose-matched minibatch, form negatives by a no-fixed-point permutation of the positive programs, optimize binary cross-entropy for true versus permuted pair-program matches with gradients entering the compiler, and discard s_phi after training; output a compiler whose own program receives higher compatibility than a functionally different swapped program without using the action policy.\n5. Add a structured-token prefix and phase-transition head to the existing OpenPI pi0.5 code path, freeze the base vision-language and action generators, and expose only rank-r_L conditioning LoRA plus the two small heads; output an active-token-conditioned action-chunk policy.\n6. Train the LoRA and transition head on the same pi0.5-compatible demonstrations used by the dense PointMap-prefix baseline, matching data, trainable-parameter count, and compute; output matched checkpoints in which only the functional interface differs.\n7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance h only when the transition score is strictly greater than tau_adv, retaining h at equality. Halt success when the final token's transition fires; halt and count task failure after H_phase=8 chunks without a transition, with H_phase reselected as the smallest cap covering successful validation-demonstration phase durations. Output a finite closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.\n8. Evaluate dense PointMap prefix, fixed terminal-pose/trajectory conditioning, FuncGraph, token-permuted FuncGraph, and oracle-program FuncGraph on FG-Compose-Sim; output full-task success, first-contact correctness, phase-order edit distance, collision rate, and final-pose error on ordinary and terminal-pose-matched composition splits.\n9. Freeze all hyperparameters and run the same learned, permuted, and pre-registered-oracle conditions on FG-Compose-Robot using the available real-robot platform; output an ecological-validity check rather than generalizing the claim beyond the evaluated rigid-object relations.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1's missing swap-score producer and T3's empty, k=0, decoder-tie, final-token, and non-halting branches with explicit outputs and a named selected watchdog."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_reasoning",
+      "value": "Terminology clarification: in the DESIGN RATIONALE, 'independent oracle variable' means a policy-independent externally annotated program used for intervention, not statistical independence from pair geometry.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1 dual-reading ambiguity around 'independent' without altering the oracle intervention."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "Resource-accounting clarification for Step 6: the arms match raw demonstrations, trainable-parameter count, and compute, but FuncGraph additionally consumes anchor, phase, and program labels in Steps 2-4, so the main comparison estimates the joint effect of the supervised functional interface and does not isolate representation from supervision.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T4's 'only the functional interface differs' overclaim by making the extra program supervision and the resulting attribution limit explicit."
+    }
+  ],
+  "final_candidate": {
+    "title": "FuncGraph: Geometry-Compiled Variable-Phase Conditioning for Frozen VLA Policies",
+    "hook": "On terminal-pose-matched unseen object pairs, the same relation can require a different first contact and phase order, so full-task success is predicted to improve even when terminal-pose error does not. The claim is not that another PointMap adapter helps pi0.5, but that compiling two PointMaps into an ordered, point-bound functional program changes the action sequence.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal: the named outcome is full-task success on a terminal-pose-matched pair-composition split, where the predicted direction can diverge from final-pose error because the required first contact and phase order change. Shape (c) was also viable because pi0.5 remains frozen or lightly adapted, but it was rejected as the hook because parameter efficiency does not establish the functional-geometry mechanism.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement — stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "companion_pattern": "structural_prior_encoding",
+        "how_closed": "Closed by replacing static PointMap injection with a variable-length, point-bound functional program that selects contact anchors, local relation frames, gripper modes, and phase order, then structurally conditions successive pi0.5 action chunks; corpus support is thin for robotics, with the closest C24 exemplars redesigning conditioning interfaces outside manipulation."
+      },
+      {
+        "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings — stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Closed by a terminal-pose-matched pair-composition split that holds relation, individual-object exposure, and scripted goal transform fixed while independently varying the oracle contact-and-phase program; corpus support is thin in robot manipulation, so the C02 recipe is instantiated with MuJoCo contact state and pre-registered human real-robot labels as an oracle independent of the evaluated policy."
+      }
+    ],
+    "core_mechanism": "FuncGraph keeps the OpenPI pi0.5 vision-language and action-generation backbone fixed and redesigns only the interface through which target-reference geometry controls successive action chunks. For target and reference PointMaps P_T={(x_i,f_i)} and P_R={(y_j,g_j)}, x_i and y_j are observed 3D coordinates in the calibrated robot frame and f_i and g_j are their provided PointMap features; a lightweight relation-conditioned compiler emits a functional program Z=(z_1,...,z_m), with m no larger than M_max=6 by default and M_max reselected as the smallest cap covering all phase runs in the training demonstrations. Each token z_h=(a_h^T,a_h^R,F_h,c_h,e_h) contains normalized attention distributions over the two observed point sets, anchors p_h^T=sum_i a_hi^T x_i and p_h^R=sum_j a_hj^R y_j, a predicted 6D relative frame F_h, a gripper/contact mode c_h, and an END decision e_h, so every valid learned program element is computable from the inputs and compiler readouts rather than from an external planner. The variable-length token order is the pair-specific interaction graph O: its nodes bind actions to surface locations and relation frames, and its directed chain is a structural prior that makes pair-specific grasp, approach, and phase order representable even when terminal goals match; it does not by itself guarantee that the action generator uses the distinction. RoboCasa/MuJoCo contact logs and successful demonstration trajectories provide independent training targets for token anchors, modes, order, and END, while the modest FG-Compose-Robot resource supplies manually clicked surface anchors and phase boundaries for real demonstrations; a same-relation, terminal-pose-matched pair-program compatibility objective is trained after program reconstruction so relation and final pose alone cannot solve the objective, while object identity remains a possible shortcut to test rather than a ruled-out input. The active token is embedded as a structured key-value prefix to pi0.5, with the backbone frozen and only the compiler, a phase-transition head, and conditioning-projection LoRA of rank r_L=8 trained; r_L is selected from {4,8,16} by held-out full-task success under a matched trainable-parameter budget against a dense PointMap-prefix baseline. After each generated action chunk, the transition head reads the new observation, robot state, and active token and advances when its score exceeds tau_adv=0.5, with tau_adv reselected on validation to maximize phase-boundary F1, so changing a token changes the next pi0.5 forward-pass input and can change the physical action; action sensitivity is an empirical property measured by the token-permutation intervention. The C02 diagnostic uses RoboCasa asset recombinations in which each target and reference object appears in training but the ordered pair is held out, and a stricter subset shares the same scripted terminal transform while selecting pairs whose policy-independent MuJoCo collision/contact oracle programs differ. A full-observation oracle gate replaces learned Z with the MuJoCo-derived program in simulation and a pre-registered human program on the available real robot; this separates failure of geometry-to-program compilation from failure of the frozen/light pi0.5 executor to use the program, conditional on oracle-label correctness and an isolated Z intervention.",
+    "core_mechanism_reasoning": "PREMISES ledger:\nP1. For the scoped rigid-object relations in RoboCasa and the real-robot set, the visible target-reference surfaces plus the relation contain enough information to identify action-relevant contacts and ordering; this is plausible because contact affordances are geometric, but it is untested — falsification target.\nP2. Successful demonstration contact transitions and gripper-state changes provide usable weak phase supervision; MuJoCo exposes exact contacts, while real demonstrations receive modest manual boundary and surface-click annotation.\nP3. A frozen or rank-limited pi0.5 executor has sufficient action competence once the active contact/frame token is explicit; the full-observation oracle gate tests this rather than assuming it.\nOBSERVATION-MODEL premise. The provided PointMaps are visibility-censored surface samples from calibrated depth views, not unbiased samples of complete object geometry; training therefore uses the same view process plus point dropout, and the claim is scoped to relations whose decisive contact regions are observed.\nESTIMAND. The primary estimand is expected full-task success over ordered target-reference pairs drawn from held-out compositions, conditional on both individual objects and the relation appearing in training, with a secondary estimand restricted to terminal-pose-matched pairs whose oracle programs differ.\nNAIVE-BASELINE AUDIT — branch (i). The runnable naive version concatenates dense target and reference PointMap tokens plus the relation into pi0.5 through a generic prefix/adapter and trains the same LoRA parameters; it silently assumes end-to-end attention will preserve target/reference role binding and infer phase topology when object identities are recombined, a premise made false by the matched composition construction because identical terminal targets coexist with different required contact programs. FuncGraph confronts that failure head-on through point-bound ordered tokens, program-swap identification, and active-token advancement, rather than adding a larger encoder to the naive adapter. STANDARD-TOOL FOLLOW-UP. Structured prediction and hybrid-state estimation are standard tools, but the domain-specific unresolved structure is their coupling to partial 3D role binding, variable program length, and a frozen action-chunk generator under unseen pair composition; if the program is removed, the remaining dense adapter is explicitly treated as the baseline, not as a contribution.\nDESIGN RATIONALE. The diagnostic sibling shares machinery with the method because the same program Z that conditions execution is the independent oracle variable used to construct terminal-pose-matched controls; without that split, the method claim is not identifiable. Alternatives rejected were a terminal SE(3) trajectory, which cannot represent changed contact semantics or phase count; a fixed textual affordance list, which repeats CoA-VLA's abstract-level scaffold; a hand-written task-and-motion schema, which regresses to PDDLStream-style planning; and a generic PointMap adapter, which leaves the composition shortcut intact. Terminology clarification: in the DESIGN RATIONALE, 'independent oracle variable' means a policy-independent externally annotated program used for intervention, not statistical independence from pair geometry.",
+    "core_mechanism_steps": "1. Build FG-Compose-Sim by recombining existing RoboCasa target and receptacle assets under a fixed named relation, assigning every object to training with other partners while holding out ordered pairs; output ordinary pairs plus a terminal-pose-matched subset with MuJoCo contact/collision oracle programs.\n2. Convert each successful RoboCasa demonstration into supervision by reading PointMaps, end-effector poses, gripper commands, and MuJoCo contacts; output an ordered sequence of point anchors, relative frames, gripper modes, and END, and create the same fields for the modest FG-Compose-Robot demonstrations by pre-registered human clicks and phase boundaries.\n3. Implement the relation-conditioned compiler over P_T and P_R so it autoregressively emits z_h and END up to M_max; input is the two observed PointMaps plus relation text, and output is program Z with explicit point distributions and frames. Require both PointMaps to be non-empty and require at least one non-END token followed by END no later than M_max; an END/continue tie prefers continue before M_max, and an empty input or missing valid END returns an explicit compilation failure counted as task failure.\n4. Train the compiler first on program reconstruction, then attach a pair-program compatibility head s_phi(P_T,P_R,r,Z) to compiler states and program tokens. Within each same-relation terminal-pose-matched minibatch, form negatives by a no-fixed-point permutation of the positive programs, optimize binary cross-entropy for true versus permuted pair-program matches with gradients entering the compiler, and discard s_phi after training; output a compiler whose own program receives higher compatibility than a functionally different swapped program without using the action policy.\n5. Add a structured-token prefix and phase-transition head to the existing OpenPI pi0.5 code path, freeze the base vision-language and action generators, and expose only rank-r_L conditioning LoRA plus the two small heads; output an active-token-conditioned action-chunk policy.\n6. Train the LoRA and transition head on the same pi0.5-compatible demonstrations used by the dense PointMap-prefix baseline, matching data, trainable-parameter count, and compute; output matched checkpoints in which only the functional interface differs.\n7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance h only when the transition score is strictly greater than tau_adv, retaining h at equality. Halt success when the final token's transition fires; halt and count task failure after H_phase=8 chunks without a transition, with H_phase reselected as the smallest cap covering successful validation-demonstration phase durations. Output a finite closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.\n8. Evaluate dense PointMap prefix, fixed terminal-pose/trajectory conditioning, FuncGraph, token-permuted FuncGraph, and oracle-program FuncGraph on FG-Compose-Sim; output full-task success, first-contact correctness, phase-order edit distance, collision rate, and final-pose error on ordinary and terminal-pose-matched composition splits.\n9. Freeze all hyperparameters and run the same learned, permuted, and pre-registered-oracle conditions on FG-Compose-Robot using the available real-robot platform; output an ecological-validity check rather than generalizing the claim beyond the evaluated rigid-object relations. Resource-accounting clarification for Step 6: the arms match raw demonstrations, trainable-parameter count, and compute, but FuncGraph additionally consumes anchor, phase, and program labels in Steps 2-4, so the main comparison estimates the joint effect of the supervised functional interface and does not isolate representation from supervision.",
+    "falsification_prediction": "The minimal experiment fine-tunes only the FuncGraph compiler, transition head, and rank-limited conditioning LoRA around OpenPI pi0.5 on FG-Compose-Sim, then evaluates ordinary and terminal-pose-matched held-out target-reference compositions in RoboCasa and the modest FG-Compose-Robot real-robot set. If the mechanism works, full-task success and first-contact correctness increase while collision rate and phase-order edit distance decrease relative to the parameter-matched dense PointMap-prefix and terminal-pose baselines; final-pose error alone need not improve. The single load-bearing variable is the ordered point-bound functional program Z: permuting Z among terminal-pose-matched pairs while leaving observations, relation, weights, and action sampler unchanged should return downstream full-task success toward the dense-prefix baseline. As an oracle gate, replacing learned Z with the MuJoCo contact-derived program in simulation or the pre-registered human program on the real robot must improve the same downstream metric; if oracle Z does not help, the proposed interface/executor mechanism is falsified, whereas an oracle-only gain falsifies the geometry-to-program compiler premise.",
+    "compute_budget": "36 A100-80GB-equivalent GPU-days on the available 4xA100 node for compiler training, matched LoRA baselines, and repeats; $0 API. The modest FG-Compose-Robot resource adds 3 real-robot days and 300 evaluation trials, including oracle, learned, and permuted-program arms.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "openalex:W4403786340",
+        "delta": "Abstract-only inference: MATCH POLICY registers pick/place targets to stored key frames, whereas FuncGraph constructs from an unseen object pair a variable-length, surface-bound contact-and-phase program whose first grasp and ordering may differ despite the same terminal transform."
+      },
+      {
+        "paper_id": "openalex:W4404350837",
+        "delta": "Abstract-only inference: SPOT conditions execution on an object-centric SE(3) pose trajectory already supplied by demonstrations, whereas FuncGraph predicts from pair geometry which contact frames exist and how many ordered phases the frozen/light VLA should execute."
+      },
+      {
+        "paper_id": "openalex:W4405956290",
+        "delta": "Abstract-only inference: CoA-VLA injects a fixed four-part affordance chain, whereas FuncGraph grounds a variable-length program in explicit target/reference surface distributions and tests it on terminal-pose-matched unseen compositions with an independent oracle."
+      },
+      {
+        "paper_id": "openalex:W4405785418",
+        "delta": "Abstract-only inference: MIMO constructs an implicit multi-feature field for shape reconstruction, similarity, and spatial relations, whereas FuncGraph constructs an ordered executable program that binds those pair-specific geometric distinctions to successive pi0.5 action chunks."
+      }
+    ],
+    "almost_prior_paper_id": "openalex:W4405956290",
+    "what_step_was_missed": "Abstract-only inference: CoA-VLA would have needed to replace its predefined object-grasp-spatial-movement sequence with a pair-geometry-compiled, variable-length set of surface-bound contact/frame tokens, plus demonstrate that those tokens change execution on terminal-pose-matched unseen object compositions under an independent oracle.",
+    "signature_terms": [
+      "geometry compiled functional program",
+      "variable phase VLA conditioning",
+      "point bound action chunks",
+      "terminal pose matched composition split",
+      "frozen pi0.5 functional interface"
+    ],
+    "alias_terms": [
+      "latent option graph induction",
+      "contact-mode hybrid automaton inference",
+      "structured plan prompting for control",
+      "relational skill automaton learning"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

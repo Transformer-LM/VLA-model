@@ -1,0 +1,52 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement — stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+      "chosen_pattern_id": "generative_process_redesign",
+      "anchor_alternates": [
+        "heterogeneous_decomposition"
+      ],
+      "companion_pattern": "structural_prior_encoding",
+      "companion_rationale": "Liberating the fixed action-chunk scaffold yields a pair-specific functional interaction graph O whose nodes are required contact and motion phases and whose edges encode their admissible order; encoding O as a structural prior over pi0.5 chunk generation yields the runnable relation-conditioned policy rather than another terminal-pose or generic PointMap adapter.",
+      "selection_rationale": "This is the most load-bearing method gap because it requires one executable mechanism to make early contact choice and later alignment, approach, placement, and phase order co-vary with an unseen target-reference pair, which is the bottleneck rather than merely improving terminal pose. Treating phase topology as a free generative object, then constraining action generation with that object's geometry-derived structure, directly produces the method artifact while avoiding regression to fixed demonstration trajectories, hand-specified task-and-motion schemas, or keypoint templates."
+    },
+    {
+      "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings — stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "This sibling shares the anchor's evaluation framework: matched terminal-pose and registration-quality composition splits hold spatial fit fixed while varying whether unseen pair geometry requires a different grasp, approach, or phase graph. It passes the removal test because without this controlled split the anchor's claimed functional-geometry gain is not verifiable and could be explained by ordinary coordinate transfer."
+    }
+  ],
+  "coherence_thread_type": "shared_evaluation",
+  "deliverable_coverage": "method — the anchor gap's generative_process_redesign produces the variable-topology executable skill representation, and its structural_prior_encoding companion makes that representation operative inside a frozen or lightly adapted pi0.5 policy.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "generative_process_redesign": {
+      "share": 0.14,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "structural_prior_encoding": {
+      "share": 0.34,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.06,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances — stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+      "reason": "future work — a calibrated infeasibility decision is important but would require a separately validated negative-pair supervision and safety contract beyond the anchor's executable-composition claim."
+    },
+    {
+      "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required — stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+      "reason": "fails removal test — the anchor's variable-topology functional interaction graph already makes phase presence and order part of the same load-bearing method artifact, so a separate sibling leg would duplicate rather than complete the story."
+    }
+  ]
+}

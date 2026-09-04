@@ -1,0 +1,921 @@
+[
+ {
+  "title": "Ctrl-World: A Controllable Generative World Model for Robot Manipulation",
+  "title_norm": "ctrl world a controllable generative world model for robot manipulation",
+  "abstract": "Generalist robot policies can now perform a wide range of manipulation skills, but evaluating and improving their ability with unfamiliar objects and instructions remains a significant challenge. Rigorous evaluation requires a large number of real-world rollouts, while systematic improvement demands additional corrective data with expert labels. Both of these processes are slow, costly, and difficult to scale. World models offer a promising, scalable alternative by enabling policies to rollout within imagination space. However, a key challenge is building a controllable world model that can handle multi-step interactions with generalist robot policies. This requires a world model compatible with modern generalist policies by supporting multi-view prediction, fine-grained action control, and consistent long-horizon interactions, which is not achieved by previous works. In this paper, we make a step forward by introducing a controllable multi-view world model that can be used to evaluate and improve the instruction-following ability of generalist robot policies. Our model maintains long-horizon consistency with a pose-conditioned memory retrieval mechanism and achieves precise action control through frame-level action conditioning. Trained on the DROID dataset (95k trajectories, 564 scenes), our model generates spatially and temporally consistent trajectories under novel scenarios and new camera placements for over 20 seconds. We show that our method can accurately rank policy performance without real-world robot rollouts. Moreover, by synthesizing successful trajectories in imagination and using them for supervised fine-tuning, our approach can improve policy success by 44.7\\%.",
+  "tldr": "A controllable multi-view world model that can be used to evaluate and improve the instruction-following ability of generalist robot policies is introduced and it is shown that the method can accurately rank policy performance without real-world robot rollouts.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjiang Guo",
+   "L. Shi",
+   "Jianyu Chen",
+   "Chelsea Finn"
+  ],
+  "citations": 137,
+  "source": "semanticscholar",
+  "source_id": "1c35e2d08c749bea8029a4802270c10c1acbddc0",
+  "paper_id": "dblp:journals/corr/abs-2510-10125",
+  "doi": "10.48550/arXiv.2510.10125",
+  "arxiv_id": "2510.10125",
+  "dblp_key": "journals/corr/abs-2510-10125",
+  "paper_url": "https://www.semanticscholar.org/paper/1c35e2d08c749bea8029a4802270c10c1acbddc0",
+  "published_iso": "2025-10-11",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "OneTwoVLA: A Unified Vision-Language-Action Model with Adaptive Reasoning",
+  "title_norm": "onetwovla a unified vision language action model with adaptive reasoning",
+  "abstract": "General-purpose robots capable of performing diverse tasks require synergistic reasoning and acting capabilities. However, recent dual-system approaches, which separate high-level reasoning from low-level acting, often suffer from challenges such as limited mutual understanding of capabilities between systems and latency issues. This paper introduces OneTwoVLA, a single unified vision-language-action model that can perform both acting (System One) and reasoning (System Two). Crucially, OneTwoVLA adaptively switches between two modes: explicitly reasoning at critical moments during task execution, and generating actions based on the most recent reasoning at other times. To further unlock OneTwoVLA's reasoning and generalization capabilities, we design a scalable pipeline for synthesizing embodied reasoning-centric vision-language data, used for co-training with robot data. We validate OneTwoVLA's effectiveness through extensive experiments, highlighting its superior performance across four key capabilities: long-horizon task planning, error detection and recovery, natural human-robot interaction, and generalizable visual grounding, enabling the model to perform long-horizon, highly dexterous manipulation tasks such as making hotpot or mixing cocktails.",
+  "tldr": "This paper introduces OneTwoVLA, a single unified vision-language-action model that can perform both acting (System One) and reasoning (System Two), and validate OneTwoVLA's effectiveness through extensive experiments, highlighting its superior performance across four key capabilities.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fanqi Lin",
+   "Ruiqian Nai",
+   "Yingdong Hu",
+   "Jiacheng You",
+   "Junming Zhao",
+   "Yang Gao"
+  ],
+  "citations": 115,
+  "source": "semanticscholar",
+  "source_id": "030f9cc8b8d6d46d6239ef6ae29d9e20867194de",
+  "paper_id": "dblp:journals/corr/abs-2505-11917",
+  "doi": "10.48550/arXiv.2505.11917",
+  "arxiv_id": "2505.11917",
+  "dblp_key": "journals/corr/abs-2505-11917",
+  "paper_url": "https://www.semanticscholar.org/paper/030f9cc8b8d6d46d6239ef6ae29d9e20867194de",
+  "published_iso": "2025-05-17",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "τ0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+  "title_norm": "τ0 wm a unified video action world model for robotic manipulation",
+  "abstract": "Robotic manipulation requires models that generate executable actions while anticipating and evaluating their future consequences before physical execution. We present $\\tau_0$-World Model ($\\tau_0$-WM), a unified video-action world model that integrates policy learning, video prediction, and action evaluation within a single future-predictive framework. Built on a shared video diffusion backbone, $\\tau_0$-WM provides two complementary interfaces. First, a video action model jointly predicts future visual latents and continuous action chunks from multi-view observations, language instructions, and robot state. Second, an action-conditioned video simulator rolls out candidate action chunks into multi-view futures and predicts dense task-progress scores. The model is trained on approximately $27{,}300$ hours of real-robot teleoperation, UMI-style interaction, egocentric human videos, and rollout or failure trajectories using modality-specific supervision masks. At inference time, $\\tau_0$-WM uses test-time computation to sample action candidates, rank them with re-denoising consistency, and invoke simulator-based rectification for low-quality candidates. On challenging long-horizon and fine-grained robotic manipulation tasks, $\\tau_0$-WM shows superior performance over other relevant baselines.",
+  "tldr": "A unified video-action world model that integrates policy learning, video prediction, and action evaluation within a single future-predictive framework that shows superior performance over other relevant baselines on challenging long-horizon and fine-grained robotic manipulation tasks.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Pengfei Zhou",
+   "Shengcong Chen",
+   "Di Chen",
+   "Jiaxu Wang",
+   "Rongjun Jin",
+   "Bin Zhu"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+  "paper_id": "dblp:journals/corr/abs-2606-01027",
+  "doi": "10.48550/arXiv.2606.01027",
+  "arxiv_id": "2606.01027",
+  "dblp_key": "journals/corr/abs-2606-01027",
+  "paper_url": "https://www.semanticscholar.org/paper/f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+  "published_iso": "2026-05-31",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation",
+  "title_norm": "intentvla short horizon intent modeling for aliased robot manipulation",
+  "abstract": "Robot imitation data are often multimodal: similar visual-language observations may be followed by different action chunks because human demonstrators act with different short-horizon intents, task phases, or recent context. Existing frame-conditioned VLA policies infer each chunk from the current observation and instruction alone, so under partial observability they may resample different intents across adjacent replanning steps, leading to inter-chunk conflict and unstable execution. We introduce IntentVLA, a history-conditioned VLA framework that encodes recent visual observations into a compact short-horizon intent representation and uses it to condition chunk generation. We further introduce AliasBench, a 12-task ambiguity-aware benchmark on RoboTwin2 with matched training data and evaluation environments that isolate short-horizon observation aliasing. Across AliasBench, SimplerEnv, LIBERO, and RoboCasa, IntentVLA improves rollout stability and outperforms strong VLA baselines",
+  "tldr": "IntentVLA is introduced, a history-conditioned VLA framework that encodes recent visual observations into a compact short-horizon intent representation and uses it to condition chunk generation and improves rollout stability and outperforms strong VLA baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shijie Lian",
+   "Bin Yu",
+   "Xiaopeng Lin",
+   "Zhaolong Shen",
+   "Laurence T. Yang",
+   "Yurun Jin"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "3c71723b072e5924980d3602512919e8411139de",
+  "paper_id": "dblp:journals/corr/abs-2605-14712",
+  "doi": "10.48550/arXiv.2605.14712",
+  "arxiv_id": "2605.14712",
+  "dblp_key": "journals/corr/abs-2605-14712",
+  "paper_url": "https://www.semanticscholar.org/paper/3c71723b072e5924980d3602512919e8411139de",
+  "published_iso": "2026-05-14",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Motus: A Unified Latent Action World Model",
+  "title_norm": "motus a unified latent action world model",
+  "abstract": "While a general embodied agent must function as a unified system, current methods are built on isolated models for understanding, world modeling, and control. This fragmentation prevents unifying multimodal generative capabilities and hinders learning from large-scale, heterogeneous data. In this paper, we propose Motus, a unified latent action world model that leverages existing general pretrained models and rich, sharable motion information. Motus introduces a Mixture-of-Transformer (MoT) architecture to integrate three experts (i.e., understanding, video generation, and action) and adopts a UniDiffuser-style scheduler to enable flexible switching between different modeling modes (i.e., world models, vision-language-action models, inverse dynamics models, video generation models, and video-action joint prediction models). Motus further leverages the optical flow to learn latent actions and adopts a recipe with three-phase training pipeline and six-layer data pyramid, thereby extracting pixel-level\"delta action\"and enabling large-scale action pretraining. Experiments show that Motus achieves superior performance against state-of-the-art methods in both simulation (a +15% improvement over X-VLA and a +45% improvement over Pi0.5) and real-world scenarios(improved by +11~48%), demonstrating unified modeling of all functionalities and priors significantly benefits downstream robotic tasks.",
+  "tldr": "Motus is proposed, a unified latent action world model that leverages existing general pretrained models and rich, sharable motion information to enable large-scale action pretraining and achieves superior performance against state-of-the-art methods in both simulation and real-world scenarios.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hongzhe Bi",
+   "Hengkai Tan",
+   "Shenghao Xie",
+   "Zeyu Wang",
+   "Shuhe Huang",
+   "Haitian Liu"
+  ],
+  "citations": 182,
+  "source": "semanticscholar",
+  "source_id": "c9f926f18886a1e4107f91125aac209a4565bfa0",
+  "paper_id": "dblp:journals/corr/abs-2512-13030",
+  "doi": "10.48550/arXiv.2512.13030",
+  "arxiv_id": "2512.13030",
+  "dblp_key": "journals/corr/abs-2512-13030",
+  "paper_url": "https://www.semanticscholar.org/paper/c9f926f18886a1e4107f91125aac209a4565bfa0",
+  "published_iso": "2025-12-15",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Mamba2Diff: An enhanced diffusion framework for goal-conditioned imitation learning in robotic long-horizon action modeling",
+  "title_norm": "mamba2diff an enhanced diffusion framework for goal conditioned imitation learni",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Knowledge-Based Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Guangpeng Zhao",
+   "Quan Liu",
+   "Wupeng Deng",
+   "Jiwei Hu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "181945c578310d11c4671eda350a46145663199f",
+  "paper_id": "dblp:journals/kbs/ZhaoLDH26",
+  "doi": "10.1016/j.knosys.2025.114990",
+  "arxiv_id": "",
+  "dblp_key": "journals/kbs/ZhaoLDH26",
+  "paper_url": "https://www.semanticscholar.org/paper/181945c578310d11c4671eda350a46145663199f",
+  "published_iso": "2025-11-01",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "MAPF-World: Action World Model for Multi-Agent Path Finding",
+  "title_norm": "mapf world action world model for multi agent path finding",
+  "abstract": "Multi-agent path finding (MAPF) studies the problem of planning conflict-free paths for multiple agents from given start locations to designated goals, with applications in robot-assisted logistics and social navigation. Recent decentralized learned solvers have shown promise for large-scale MAPF, particularly when leveraging foundation models and large datasets. However, most existing methods rely on reactive policies, often resulting in congestion, deadlocks, and degraded generalization in high agent-density environments. To address these limitations, we propose MAPF-World, an autoregressive action world model for MAPF that unifies short-horizon local future prediction and action generation, enabling decision-making beyond immediate local observations. MAPF-World models short-horizon local dynamics by predicting the next local observation and neighboring agents’ action intentions, capturing both spatial structures and temporal interaction patterns. We further introduce a spatio-agent positional encoding that integrates spatial awareness with agent-level semantics in Transformer-based architectures, facilitating more coordinated multi-agent behaviors. In addition, we augment existing MAPF benchmarks by introducing an automated map generator grounded in real-world urban layouts, aiming to narrow the gap between synthetic simulation and practical deployment scenarios. Extensive experiments across diverse map types and interaction settings demonstrate that MAPF-World achieves strong performance compared with existing learned solvers. Notably, it exhibits robust zero-shot generalization and maintains a high success rate even as agent density increases.",
+  "tldr": "MAPF-World is proposed, an autoregressive action world model for MAPF that unifies short-horizon local future prediction and action generation, enabling decision-making beyond immediate local observations, and introduces a spatio-agent positional encoding that integrates spatial awareness with agent-level semantics in Transformer-based architectures.",
+  "year": 2025,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhanjiang Yang",
+   "Yue-Ming Li",
+   "Yang Shen",
+   "Meng Li",
+   "Li-Jun Sun"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "952e1888c5cafce5aac9d0be662c37cbfedca98b",
+  "paper_id": "dblp:journals/corr/abs-2508-12087",
+  "doi": "10.1109/LRA.2026.3726342",
+  "arxiv_id": "2508.12087",
+  "dblp_key": "journals/corr/abs-2508-12087",
+  "paper_url": "https://arxiv.org/pdf/2508.12087",
+  "published_iso": "2025-08-16",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Long-VLA: Unleashing Long-Horizon Capability of Vision Language Action Model for Robot Manipulation",
+  "title_norm": "long vla unleashing long horizon capability of vision language action model for ",
+  "abstract": "Vision-Language-Action (VLA) models have become a cornerstone in robotic policy learning, leveraging large-scale multimodal data for robust and scalable control. However, existing VLA frameworks primarily address short-horizon tasks, and their effectiveness on long-horizon, multi-step robotic manipulation remains limited due to challenges in skill chaining and subtask dependencies. In this work, we introduce Long-VLA, the first end-to-end VLA model specifically designed for long-horizon robotic tasks. Our approach features a novel phase-aware input masking strategy that adaptively segments each subtask into moving and interaction phases, enabling the model to focus on phase-relevant sensory cues and enhancing subtask compatibility. This unified strategy preserves the scalability and data efficiency of VLA training, and our architecture-agnostic module can be seamlessly integrated into existing VLA models. We further propose the L-CALVIN benchmark to systematically evaluate long-horizon manipulation. Extensive experiments on both simulated and real-world tasks demonstrate that Long-VLA significantly outperforms prior state-of-the-art methods, establishing a new baseline for long-horizon robotic control.",
+  "tldr": "Long-VLA is introduced, the first end-to-end VLA model specifically designed for long-horizon robotic tasks, which features a novel phase-aware input masking strategy that adaptively segments each subtask into moving and interaction phases, enabling the model to focus on phase-relevant sensory cues and enhancing subtask compatibility.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yiguo Fan",
+   "Pengxiang Ding",
+   "Shuanghao Bai",
+   "Xinyang Tong",
+   "Yuyang Zhu",
+   "Hongchao Lu"
+  ],
+  "citations": 51,
+  "source": "semanticscholar",
+  "source_id": "dbf73508252359dad435141f2d156b2643c45a02",
+  "paper_id": "dblp:journals/corr/abs-2508-19958",
+  "doi": "10.48550/arXiv.2508.19958",
+  "arxiv_id": "2508.19958",
+  "dblp_key": "journals/corr/abs-2508-19958",
+  "paper_url": "https://www.semanticscholar.org/paper/dbf73508252359dad435141f2d156b2643c45a02",
+  "published_iso": "2025-08-27",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "RynnVLA-002: A Unified Vision-Language-Action and World Model",
+  "title_norm": "rynnvla 002 a unified vision language action and world model",
+  "abstract": "We introduce RynnVLA-002, a unified Vision-Language-Action (VLA) and world model. The world model leverages action and visual inputs to predict future image states, learning the underlying physics of the environment to refine action generation. Conversely, the VLA model produces subsequent actions from image observations, enhancing visual understanding and supporting the world model's image generation. The unified framework of RynnVLA-002 enables joint learning of environmental dynamics and action planning. Our experiments show that RynnVLA-002 surpasses individual VLA and world models, demonstrating their mutual enhancement. We evaluate RynnVLA-002 in both simulation and real-world robot tasks. RynnVLA-002 achieves 97.4% success rate on the LIBERO simulation benchmark without pretraining, while in real-world LeRobot experiments, its integrated world model boosts the overall success rate by 50%.",
+  "tldr": "This work introduces RynnVLA-002, a unified Vision-Language-Action (VLA) and world model that enables joint learning of environmental dynamics and action planning and demonstrates their mutual enhancement.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jun Cen",
+   "Siteng Huang",
+   "Yuqian Yuan",
+   "Kehan Li",
+   "Hangjie Yuan",
+   "Chaohui Yu"
+  ],
+  "citations": 56,
+  "source": "semanticscholar",
+  "source_id": "10375c4e897d8b102113a47f616e5c9724cd50ce",
+  "paper_id": "dblp:journals/corr/abs-2511-17502",
+  "doi": "10.48550/arXiv.2511.17502",
+  "arxiv_id": "2511.17502",
+  "dblp_key": "journals/corr/abs-2511-17502",
+  "paper_url": "https://www.semanticscholar.org/paper/10375c4e897d8b102113a47f616e5c9724cd50ce",
+  "published_iso": "2025-11-21",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Counterfactual VLA: Self-Reflective Vision-Language-Action Model with Adaptive Reasoning",
+  "title_norm": "counterfactual vla self reflective vision language action model with adaptive re",
+  "abstract": "Recent reasoning-augmented Vision-Language-Action (VLA) models have improved the interpretability of end-to-end autonomous driving by generating intermediate reasoning traces. Yet these models primarily describe what they perceive and intend to do, rarely questioning whether their planned actions are safe or appropriate. This work introduces Counterfactual VLA (CF-VLA), a self-reflective VLA framework that enables the model to reason about and revise its planned actions before execution. CF-VLA first generates time-segmented meta-actions that summarize driving intent, and then performs counterfactual reasoning conditioned on both the meta-actions and the visual context. This step simulates potential outcomes, identifies unsafe behaviors, and outputs corrected meta-actions that guide the final trajectory generation. To efficiently obtain such self-reflective capabilities, we propose a rollout-filter-label pipeline that mines high-value scenes from a base (non-counterfactual) VLA's rollouts and labels counterfactual reasoning traces for subsequent training rounds. Experiments on large-scale driving datasets show that CF-VLA improves trajectory accuracy by up to 17.6%, enhances safety metrics by 20.5%, and exhibits adaptive thinking: it only enables counterfactual reasoning in challenging scenarios. By transforming reasoning traces from one-shot descriptions to causal self-correction signals, CF-VLA takes a step toward self-reflective autonomous driving agents that learn to think before they act.",
+  "tldr": "This work introduces Counterfactual VLA (CF-VLA), a self-reflective VLA framework that enables the model to reason about and revise its planned actions before execution, and proposes a rollout-filter-label pipeline that mines high-value scenes from a base (non-counterfactual) VLA's rollouts and labels counterfactual reasoning traces for subsequent training rounds.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "ZhenghaoMark''Peng",
+   "Wenhao Ding",
+   "Yurong You",
+   "Yuxiao Chen",
+   "Wen-Jie Luo",
+   "T. Tian"
+  ],
+  "citations": 18,
+  "source": "semanticscholar",
+  "source_id": "8eb7192f5c3ee6feed62153427afe6d000c56cdb",
+  "paper_id": "dblp:journals/corr/abs-2512-24426",
+  "doi": "10.48550/arXiv.2512.24426",
+  "arxiv_id": "2512.24426",
+  "dblp_key": "journals/corr/abs-2512-24426",
+  "paper_url": "https://www.semanticscholar.org/paper/8eb7192f5c3ee6feed62153427afe6d000c56cdb",
+  "published_iso": "2025-12-30",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "WMPO: World Model-based Policy Optimization for Vision-Language-Action Models",
+  "title_norm": "wmpo world model based policy optimization for vision language action models",
+  "abstract": "Vision-Language-Action (VLA) models have shown strong potential for general-purpose robotic manipulation, but their reliance on expert demonstrations limits their ability to learn from failures and perform self-corrections. Reinforcement learning (RL) addresses these through self-improving interactions with the physical environment, but suffers from high sample complexity on real robots. We introduce World-Model-based Policy Optimization (WMPO), a principled framework for on-policy VLA RL without interacting with the real environment. In contrast to widely used latent world models, WMPO focuses on pixel-based predictions that align the\"imagined\"trajectories with the VLA features pretrained with web-scale images. Crucially, WMPO enables the policy to perform on-policy GRPO that provides stronger performance than the often-used off-policy methods. Extensive experiments in both simulation and real-robot settings demonstrate that WMPO (i) substantially improves sample efficiency, (ii) achieves stronger overall performance, (iii) exhibits emergent behaviors such as self-correction, and (iv) demonstrates robust generalization and lifelong learning capabilities.",
+  "tldr": "World-Model-based Policy Optimization (WMPO) is introduced, a principled framework for on-policy VLA RL without interacting with the real environment that enables the policy to perform on-policy GRPO that provides stronger performance than the often-used off-policy methods.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fangqi Zhu",
+   "Zhengyang Yan",
+   "Zicong Hong",
+   "Quanxin Shou",
+   "Xiao Ma",
+   "Song Guo"
+  ],
+  "citations": 48,
+  "source": "semanticscholar",
+  "source_id": "d4c33afeb29d05c0c0e4e9e4c5daed53e9e1241a",
+  "paper_id": "dblp:journals/corr/abs-2511-09515",
+  "doi": "10.48550/arXiv.2511.09515",
+  "arxiv_id": "2511.09515",
+  "dblp_key": "journals/corr/abs-2511-09515",
+  "paper_url": "https://www.semanticscholar.org/paper/d4c33afeb29d05c0c0e4e9e4c5daed53e9e1241a",
+  "published_iso": "2025-11-12",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Scheduling Adaptive Imitation Learning for Long-Horizon Dexterous Robot Micromanipulation of Deformable Cell",
+  "title_norm": "scheduling adaptive imitation learning for long horizon dexterous robot microman",
+  "abstract": "Robots performing collaborative, long-horizon dexterity cell micromanipulation tasks are challenging and practically significant, such as stripping intact cell membranes, which is considered as one of the most technically demanding procedures. Imitation learning approach is expected to address the challenges of multi-task coupling and object modeling difficulties in long-horizon tasks. Existing imitation learning algorithms have significant shortcomings in long-horizon tasks due to the presence of compound errors, as performing only a simple mapping of the task environment space to the action space without adaptive action scheduling. In this letter, we propose scheduling adaptive imitation learning (SAIL) method for long-horizon dexterous robot micromanipulation tasks. The algorithm can adaptively output sparse action sequences and single-step interactive actions according to the complexity of the task. Physical experiments show that the SAIL algorithm can complete the deformable micrometer-scale zebrafish embryonic cells dexterous membrane stripping surgery. Ablation studies further confirmed SAIL's high efficiency in various subtasks including PushCell, PeelCell, ExtrudeCell, and Rotate, ultimately achieving an average accuracy of 84.4$\\%$, significantly outperforming existing methods.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Youchao Zhang",
+   "Xufang Shen",
+   "Chuhan Wang",
+   "Fanghao Wang",
+   "Antian Zhao",
+   "Yining Lyu"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "ce5efe2f240add8dc265732923732cce21f1b2c3",
+  "paper_id": "dblp:journals/ral/ZhangSWWZLKLYZ26",
+  "doi": "10.1109/LRA.2025.3629971",
+  "arxiv_id": "",
+  "dblp_key": "journals/ral/ZhangSWWZLKLYZ26",
+  "paper_url": "https://www.semanticscholar.org/paper/ce5efe2f240add8dc265732923732cce21f1b2c3",
+  "published_iso": "2026-01-01",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "WorldEval: World Model as Real-World Robot Policies Evaluator",
+  "title_norm": "worldeval world model as real world robot policies evaluator",
+  "abstract": "The field of robotics has made significant strides toward developing generalist robot manipulation policies. However, evaluating these policies in real-world scenarios remains time-consuming and challenging, particularly as the number of tasks scales and environmental conditions change. In this work, we demonstrate that world models can serve as a scalable, reproducible, and reliable proxy for real-world robot policy evaluation. A key challenge is generating accurate policy videos from world models that faithfully reflect the robot actions. We observe that directly inputting robot actions or using high-dimensional encoding methods often fails to generate action-following videos. To address this, we propose Policy2Vec, a simple yet effective approach to turn a video generation model into a world simulator that follows latent action to generate the robot video. We then introduce WorldEval, an automated pipeline designed to evaluate real-world robot policies entirely online. WorldEval effectively ranks various robot policies and individual checkpoints within a single policy, and functions as a safety detector to prevent dangerous actions by newly developed robot models. Through comprehensive paired evaluations of manipulation policies in real-world environments, we demonstrate a strong correlation between policy performance in WorldEval and real-world scenarios. Furthermore, our method significantly outperforms popular methods such as real-to-sim approach.",
+  "tldr": "This work proposes Policy2Vec, a simple yet effective approach to turn a video generation model into a world simulator that follows latent action to generate the robot video, and introduces WorldEval, an automated pipeline designed to evaluate real-world robot policies entirely online.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yaxuan Li",
+   "Yichen Zhu",
+   "Junjie Wen",
+   "Chaomin Shen",
+   "Yi Xu"
+  ],
+  "citations": 57,
+  "source": "semanticscholar",
+  "source_id": "0ac6e9af7417a3a33f2c6cee90fcf26284eff654",
+  "paper_id": "dblp:journals/corr/abs-2505-19017",
+  "doi": "10.48550/arXiv.2505.19017",
+  "arxiv_id": "2505.19017",
+  "dblp_key": "journals/corr/abs-2505-19017",
+  "paper_url": "https://www.semanticscholar.org/paper/0ac6e9af7417a3a33f2c6cee90fcf26284eff654",
+  "published_iso": "2025-05-25",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Adaptive Video-Conditioned Imitation Learning via Bidirectional Cross-Domain Skill Transfer",
+  "title_norm": "adaptive video conditioned imitation learning via bidirectional cross domain ski",
+  "abstract": "Imitation learning by watching humans offers a promising path to learning general-purpose robot skills with intuitive task specifications. While prior approaches for video-conditioned imitation learning directly extract skill embeddings from unstructured human videos and follow demonstrations step-by-step, such paradigm usually falls short in generalizing to unseen long-horizon tasks with a single human prompt video due to the significant embodiment and environment gap. To this end, our key insight is to infer local intentions from videos in order to retrieve robot skill memories from prior experience, and conversely select the feasible video clip to follow based on robot observations. Motivated by this, we introduce AdaMimic, a hierarchical imitation learning method that learns the bidirectional mapping of cross-domain sensorimotor skills and derives skill-based policy conditioned on adaptable latent plans. To enable generalization to unseen tasks given cross-domain human videos, AdaMimic leverages task-agnostic play data for interaction-aware skill embedding extraction and video-robot trajectory pairs for semantic and temporal human-to-robot skill alignment. In addition, our method exploits a skill adapter for robot-to-human alignment to adaptively align the robot with the skill intentions. We systematically evaluate AdaMimic on both simulated and real-world kitchen domains, demonstrating AdaMimic’s superiority over prior imitation learning methods in generalizing to novel long-horizon tasks with a single human prompt video. Note to Practitioners—In this work, we investigate the problem of imitating long-horizon manipulation tasks from raw human videos. Instead of collecting an unattainable amount of teleoperation data for learning unseen long-horizon tasks, we resort to easy-to-collect human videos in different environments to specify the intended robot goals, thus enabling new skill acquisition. Existing works on video-conditioned imitation learning are usually confined to relatively short-horizon tasks due to the high data supervision demands and similar layout constraints. We propose tackling these challenges via an adaptive skill-based imitation learning method AdaMimic, centered around taking human videos from a third-person perspective as input and producing robot actions conditioned on adaptable skill embeddings. To bridge cross-domain skills and capture the fine-grained knowledge encapsulated in human videos, we propose a bidirectional cross-domain skill transfer paradigm that maps video clips via transformer-based encoder to pre-trained robot skill embeddings for skill memory retrieval and inversely, aligns the robot with skill intentions in video clips based on current robot state for adaptively selecting most feasible video clips as the condition of low-level motion policies. Extensive experiments in both simulated and realistic kitchen environments show that our AdaMimic significantly outperforms other skill-based imitation learning baselines in generalizing one-shot to composite novel tasks and adapting to out-of-distribution tasks.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhenyang Lin",
+   "Yurou Chen",
+   "Zhengwei Li",
+   "Xianxiang Zhang",
+   "Bin Liang",
+   "Zhiyong Liu"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "ef5c9be1161d01127366c2b9d20fe7378dadd413",
+  "paper_id": "dblp:journals/tase/LinCLZLL25",
+  "doi": "10.1109/TASE.2025.3627627",
+  "arxiv_id": "",
+  "dblp_key": "journals/tase/LinCLZLL25",
+  "paper_url": "https://www.semanticscholar.org/paper/ef5c9be1161d01127366c2b9d20fe7378dadd413",
+  "published_iso": null,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "FlowDreamer: A RGB-D World Model With Flow-Based Motion Representations for Robot Manipulation",
+  "title_norm": "flowdreamer a rgb d world model with flow based motion representations for robot",
+  "abstract": "This paper investigates training better visual world models for robot manipulation, i.e., models that can predict future visual observations by conditioning on past frames and robot actions. Specifically, we consider world models that operate on RGB-D frames (RGB-D world models). As opposed to canonical approaches that handle dynamics prediction mostly implicitly and reconcile it with visual rendering in a single model, we introduce FlowDreamer, which adopts 3D scene flow as explicit motion representations. FlowDreamer first predicts 3D scene flow from the past frame and action conditions with a U-Net, and then a diffusion model will predict the future frame utilizing the scene flow. FlowDreamer is trained end-to-end despite its modularized nature. We conduct experiments on 4 different benchmarks, covering both video prediction and visual planning tasks. The results demonstrate that FlowDreamer achieves better performance compared to other baseline RGB-D world models by 7% on semantic similarity, 11% on pixel quality, and 6% on success rate in various robot manipulation domains.",
+  "tldr": "This paper introduces FlowDreamer, which adopts 3D scene flow as explicit motion representations and achieves better performance compared to other baseline RGB-D world models by 7% on semantic similarity, 11% on pixel quality, and 6% on success rate in various robot manipulation domains.",
+  "year": 2025,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jun Guo",
+   "Xiaojian Ma",
+   "Yikai Wang",
+   "Min Yang",
+   "Huaping Liu",
+   "Qing Li"
+  ],
+  "citations": 23,
+  "source": "semanticscholar",
+  "source_id": "2d1c66a1cdcd58e91b272b934f5b50c1566bbec0",
+  "paper_id": "dblp:journals/ral/GuoMWYLL26",
+  "doi": "10.1109/LRA.2026.3653273",
+  "arxiv_id": "2505.10075",
+  "dblp_key": "journals/ral/GuoMWYLL26",
+  "paper_url": "https://www.semanticscholar.org/paper/2d1c66a1cdcd58e91b272b934f5b50c1566bbec0",
+  "published_iso": "2025-05-15",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tracking",
+  "title_norm": "robotdancing residual action reinforcement learning enables robust long horizon ",
+  "abstract": "Long-horizon, high-dynamic motion tracking on humanoids remains brittle: retargeted reference motions are typically kinematically plausible but dynamically inconsistent with the robot, so small tracking errors accumulate and eventually destabilize control.We present RobotDancing, a practical single-stage reinforcement learning recipe that tracks retargeted motions by predicting reference-conditioned residual joint targets. By parameterizing actions as residual corrections on top of the reference, the policy can focus on compensating reference–robot dynamics mismatch (e.g., actuation limits, latency, friction, inertia) rather than re-synthesizing the motion. We train one policy per reference sequence while reusing a common training and deployment recipe across motions and platforms. We evaluate RobotDancing on eight LAFAN1 dance motions on Unitree G1 and conduct cross-platform experiments on H1 and H1-2. The resulting G1 policies execute long-horizon, high-energy behaviors on hardware without test-time modifications, and qualitative H1/H1-2 clips further illustrate cross-platform feasibility.",
+  "tldr": "RobotDancing is presented, a practical single-stage reinforcement learning recipe that tracks retargeted motions by predicting reference-conditioned residual joint targets and parameterizing actions as residual corrections on top of the reference to focus on compensating reference–robot dynamics mismatch.",
+  "year": 2025,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhenguo Sun",
+   "Yibo Peng",
+   "Yuan Meng",
+   "Xukun Li",
+   "Yu Sun",
+   "Haojun Jiang"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "1e7eaef5ed82f2552251e13464de99286a937007",
+  "paper_id": "dblp:journals/corr/abs-2509-20717",
+  "doi": "10.1109/LRA.2026.3723309",
+  "arxiv_id": "2509.20717",
+  "dblp_key": "journals/corr/abs-2509-20717",
+  "paper_url": "https://doi.org/10.1109/lra.2026.3723309",
+  "published_iso": "2025-09-25",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "GigaBrain-0: A World Model-Powered Vision-Language-Action Model",
+  "title_norm": "gigabrain 0 a world model powered vision language action model",
+  "abstract": "Training Vision-Language-Action (VLA) models for generalist robots typically requires large-scale real-world robot data, which is expensive and time-consuming to collect. The inefficiency of physical data collection severely limits the scalability, and generalization capacity of current VLA systems. To address this challenge, we introduce GigaBrain-0, a novel VLA foundation model empowered by world model-generated data (e.g., video generation, real2real transfer, human transfer, view transfer, sim2real transfer data). By leveraging world models to generate diverse data at scale, GigaBrain-0 significantly reduces reliance on real robot data while improving cross-task generalization. Our approach further improves policy robustness through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision, enabling the model to reason about spatial geometry, object states, and long-horizon dependencies during task execution. This leads to substantial gains in real-world performance on dexterous, long-horizon, and mobile manipulation tasks. Extensive experiments demonstrate that GigaBrain-0 achieves superior generalization across variations in appearances (e.g., textures, colors), object placements, and camera viewpoints. Additionally, we present GigaBrain-0-Small, an optimized lightweight variant designed to run efficiently on devices such as the NVIDIA Jetson AGX Orin.",
+  "tldr": "GigaBrain-0 is introduced, a novel VLA foundation model empowered by world model-generated data that significantly reduces reliance on real robot data while improving cross-task generalization and improves policy robustness through RGBD input modeling and embodied Chain-of-Thought supervision.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "G. Ye",
+   "Boyuan Wang",
+   "Chaojun Ni",
+   "Guan Huang",
+   "Guosheng Zhao",
+   "Haoyun Li"
+  ],
+  "citations": 42,
+  "source": "semanticscholar",
+  "source_id": "a77606bdf0d27e18331eea613b671dc7ef78d0cb",
+  "paper_id": "dblp:journals/corr/abs-2510-19430",
+  "doi": "10.48550/arXiv.2510.19430",
+  "arxiv_id": "2510.19430",
+  "dblp_key": "journals/corr/abs-2510-19430",
+  "paper_url": "https://www.semanticscholar.org/paper/a77606bdf0d27e18331eea613b671dc7ef78d0cb",
+  "published_iso": "2025-10-22",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "PATCH: Action-Chunk-Conditioned Latent Patch Innovation Monitoring for Robot Manipulation",
+  "title_norm": "patch action chunk conditioned latent patch innovation monitoring for robot mani",
+  "abstract": "Learning-based manipulation policies have made substantial progress in real-world robot manipulation, particularly for short-horizon action generation. However, deployment in open workspaces remains fragile under unexpected local scene dynamics, such as moving objects, transient occlusions, or disturbances near the intended motion. Existing runtime monitors often rely on global observation anomalies, policy uncertainty, or frame-level visual changes, and struggle to distinguish task-relevant execution risk from benign visual variation. We introduce PATCH, an action-chunk-conditioned latent patch innovation monitor for deployment-time intervention. Given the active action chunk, PATCH defines a projected execution corridor, predicts latent patch evolution inside it, and accumulates persistent residuals unexplained by the robot's own motion. These residuals form a localized intervention signal that allows PATCH-Router to pause execution, select an available recovery source, and resume the original policy once localized innovation subsides. Experiments on real robot rollout data show that PATCH produces more stable and context-relevant triggers than competing runtime monitors. Real-robot deployment further demonstrates monitor-driven intervention and policy resumption for disturbance-aware manipulation. Project Page: https://yananzhou5555.github.io/PATCH/.",
+  "tldr": "PATCH, an action-chunk-conditioned latent patch innovation monitor for deployment-time intervention that accumulates persistent residuals unexplained by the robot's own motion that allows PATCH-Router to pause execution, select an available recovery source, and resume the original policy once localized innovation subsides.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanan Zhou",
+   "Ranpeng Qiu",
+   "Yin-Chi Chen",
+   "Jiajie Cui",
+   "Weiming Zhi"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "60ad2f6f6ce05b12d3c356715f4a79385b2bedff",
+  "paper_id": "dblp:journals/corr/abs-2606-16690",
+  "doi": "10.48550/arXiv.2606.16690",
+  "arxiv_id": "2606.16690",
+  "dblp_key": "journals/corr/abs-2606-16690",
+  "paper_url": "https://www.semanticscholar.org/paper/60ad2f6f6ce05b12d3c356715f4a79385b2bedff",
+  "published_iso": "2026-06-15",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "3DFlowAction: Learning Cross-Embodiment Manipulation from 3D Flow World Model",
+  "title_norm": "3dflowaction learning cross embodiment manipulation from 3d flow world model",
+  "abstract": "Manipulation has long been a challenging task for robots, while humans can effortlessly perform complex interactions with objects, such as hanging a cup on the mug rack. A key reason is the lack of a large and uniform dataset for teaching robots manipulation skills. Current robot datasets often record robot action in different action spaces within a simple scene. This hinders the robot to learn a unified and robust action representation for different robots within diverse scenes. Observing how humans understand a manipulation task, we find that understanding how the objects should move in the 3D space is a critical clue for guiding actions. This clue is embodiment-agnostic and suitable for both humans and different robots. Motivated by this, we aim to learn a 3D flow world model from both human and robot manipulation data. This model predicts the future movement of the interacting objects in 3D space, guiding action planning for manipulation. Specifically, we synthesize a large-scale 3D optical flow dataset, named ManiFlow-110k, through a moving object auto-detect pipeline. A video diffusion-based world model then learns manipulation physics from these data, generating 3D optical flow trajectories conditioned on language instructions. With the generated 3D object optical flow, we propose a flow-guided rendering mechanism, which renders the predicted final state and leverages GPT-4o to assess whether the predicted flow aligns with the task description. This equips the robot with a closed-loop planning ability. Finally, we consider the predicted 3D optical flow as constraints for an optimization policy to determine a chunk of robot actions for manipulation. Extensive experiments demonstrate strong generalization across diverse robotic manipulation tasks and reliable cross-embodiment adaptation without hardware-specific training.",
+  "tldr": "This work synthesizes a large-scale 3D optical flow dataset, named ManiFlow-110k, through a moving object auto-detect pipeline, and proposes a flow-guided rendering mechanism, which renders the predicted final state and leverages GPT-4o to assess whether the predicted flow aligns with the task description.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hongyan Zhi",
+   "Peihao Chen",
+   "Siyuan Zhou",
+   "Dongjie Yu",
+   "Quanxi Wu",
+   "Lei Han"
+  ],
+  "citations": 36,
+  "source": "semanticscholar",
+  "source_id": "376f4c3176eb8ca594733fbead8387d05b8dcb9b",
+  "paper_id": "dblp:journals/corr/abs-2506-06199",
+  "doi": "10.48550/arXiv.2506.06199",
+  "arxiv_id": "2506.06199",
+  "dblp_key": "journals/corr/abs-2506-06199",
+  "paper_url": "https://www.semanticscholar.org/paper/376f4c3176eb8ca594733fbead8387d05b8dcb9b",
+  "published_iso": "2025-06-06",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Adaptive walking speed motion control of Kuavo humanoid robot based on inverse reinforcement learning",
+  "title_norm": "adaptive walking speed motion control of kuavo humanoid robot based on inverse r",
+  "abstract": "\n \n This paper aims to tackle the challenges of high dimensionality, strong nonlinearity and tight coupling in motion control for the Kuavo humanoid robot by introducing a novel method based on inverse reinforcement learning (IRL).\n \n \n \n To overcome traditional limitations relying on precise dynamic models and manual controllers, the authors use IRL to learn reward functions and policies from limited expert demonstrations. An action re-targeting technique maps human expert motion data to the Kuavo’s action space, generating initial motion references. This IRL framework uses these demonstrations to learn implicit reward functions and further incorporates velocity targets into the policy, thus formulating motion control as a velocity-conditioned Markov Decision Process to improve adaptability.\n \n \n \n Experimental results demonstrate that this method effectively recovers reward functions, generates natural and stable motion control policies and improves the robot’s adaptability across different speeds and environments. The Kuavo robot achieves real-time motion adjustments according to speed commands, ensuring rapid response and stable control during variations in speed.\n \n \n \n This study represents a pioneering application of IRL to humanoid robot motion control, particularly for the Kuavo robot. By leveraging limited expert demonstrations and integrating velocity-conditioned policies, the proposed method facilitates autonomous acquisition of diverse motion skills and adaptation to various tasks and environmental conditions, marking a significant advancement over traditional methods.\n",
+  "tldr": "By leveraging limited expert demonstrations and integrating velocity-conditioned policies, the proposed method facilitates autonomous acquisition of diverse motion skills and adaptation to various tasks and environmental conditions, marking a significant advancement over traditional methods.",
+  "year": 2025,
+  "venue": "Industrial robot",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu-Ching Wu",
+   "Song Wang",
+   "Yang Pan",
+   "Zhicheng He",
+   "X. Leng"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "6f4034c14c422c8e9c5bb4977c4408bd5b13decd",
+  "paper_id": "doi:10.1108/ir-01-2025-0015",
+  "doi": "10.1108/ir-01-2025-0015",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6f4034c14c422c8e9c5bb4977c4408bd5b13decd",
+  "published_iso": "2025-08-08",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "ResWM: Residual-Action World Model for Visual RL",
+  "title_norm": "reswm residual action world model for visual rl",
+  "abstract": "Learning predictive world models from raw visual observations is a central challenge in reinforcement learning (RL), especially for robotics and continuous control. Conventional model-based RL frameworks directly condition future predictions on absolute actions, which makes optimization unstable: the optimal action distributions are task-dependent, unknown a priori, and often lead to oscillatory or inefficient control. To address this, we introduce the Residual-Action World Model (ResWM), a new framework that reformulates the control variable from absolute actions to residual actions -- incremental adjustments relative to the previous step. This design aligns with the inherent smoothness of real-world control, reduces the effective search space, and stabilizes long-horizon planning. To further strengthen the representation, we propose an Observation Difference Encoder that explicitly models the changes between adjacent frames, yielding compact latent dynamics that are naturally coupled with residual actions. ResWM is integrated into a Dreamer-style latent dynamics model with minimal modifications and no extra hyperparameters. Both imagination rollouts and policy optimization are conducted in the residual-action space, enabling smoother exploration, lower control variance, and more reliable planning. Empirical results on the DeepMind Control Suite demonstrate that ResWM achieves consistent improvements in sample efficiency, asymptotic returns, and control smoothness, significantly surpassing strong baselines such as Dreamer and TD-MPC. Beyond performance, ResWM produces more stable and energy-efficient action trajectories, a property critical for robotic systems deployed in real-world environments. These findings suggest that residual action modeling provides a simple yet powerful principle for bridging algorithmic advances in RL with the practical requirements of robotics.",
+  "tldr": "The Residual-Action World Model is introduced, a new framework that reformulates the control variable from absolute actions to residual actions -- incremental adjustments relative to the previous step, suggesting that residual action modeling provides a simple yet powerful principle for bridging algorithmic advances in RL with the practical requirements of robotics.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jseen Zhang",
+   "Gabriel Adineera",
+   "Jinzhou Tan",
+   "Jinoh Kim"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "a352e88e3e8775a61be0fab603c4990e715f6124",
+  "paper_id": "dblp:journals/corr/abs-2603-11110",
+  "doi": "10.48550/arXiv.2603.11110",
+  "arxiv_id": "2603.11110",
+  "dblp_key": "journals/corr/abs-2603-11110",
+  "paper_url": "https://www.semanticscholar.org/paper/a352e88e3e8775a61be0fab603c4990e715f6124",
+  "published_iso": "2026-03-11",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+  "title_norm": "aha wam asynchronous horizon adaptive world action modeling with observation gui",
+  "abstract": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing world-action models couple world prediction and action execution at the same temporal resolution, forcing the world branch to model near-term frame variations that are redundant and weakly informative. We posit that strictly binding world prediction and action execution to the same temporal rhythm may underutilize the potential of the video branch for embodied control. Therefore, we propose AHA-WAM, an Asynchronous Horizon-Adaptive World-Action Model built on a dual Diffusion Transformer (DiT) architecture that reorganizes world-action modeling around this temporal asymmetry. AHA-WAM instantiates the video DiT as a low-frequency world planner that maintains rolling key-value memory over past observations and exposes reusable layerwise latent context encoding long-horizon scene evolution, while a high-frequency action DiT executes short action chunks in closed loop by querying this context through layerwise joint attention. To support asynchronous execution, we introduce horizon-adaptive offset training and Observation-Guided Video-Context Routing (OVCR), which together let the action expert exploit long-horizon world context while remaining responsive to real-time execution state without rerunning the video DiT. Experiments on RoboTwin and real-world manipulation tasks show that AHA-WAM achieves state-of-the-art performance without any robot-data pretraining, attaining 92.80% average success on RoboTwin and 78.3% success across 4 real-world tasks, while reaching 24.17 Hz closed-loop control with a 4.59x speedup over Fast-WAM.",
+  "tldr": "This work proposes AHA-WAM, an Asynchronous Horizon-Adaptive World-Action Model built on a dual Diffusion Transformer (DiT) architecture that reorganizes world-action modeling around this temporal asymmetry, and introduces horizon-adaptive offset training and Observation-Guided Video-Context Routing (OVCR), which together let the action expert exploit long-horizon world context while remaining responsive to real-time execution state without rerunning the video DiT.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jisong Cai",
+   "Long Ling",
+   "Shiwei Chu",
+   "Zhongshan Liu",
+   "Jiayue Kang",
+   "Zhixuan Liang"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "3136feb03c4c95b58c2336369024578d54681461",
+  "paper_id": "dblp:journals/corr/abs-2606-09811",
+  "doi": "10.48550/arXiv.2606.09811",
+  "arxiv_id": "2606.09811",
+  "dblp_key": "journals/corr/abs-2606-09811",
+  "paper_url": "https://www.semanticscholar.org/paper/3136feb03c4c95b58c2336369024578d54681461",
+  "published_iso": "2026-06-08",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+  "title_norm": "π0 a vision language action flow model for general robot control",
+  "abstract": "Robot learning holds tremendous promise to unlock the full potential of flexible, general, and dexterous robot systems, as well as to address some of the deepest questions in artificial intelligence. However, bringing robot learning to the level of generality required for effective real-world systems faces major obstacles in terms of data, generalization, and robustness. In this paper, we discuss how generalist robot policies (i.e., robot foundation models) can address these challenges, and how we can design effective generalist robot policies for complex and highly dexterous tasks. We propose a novel flow matching architecture built on top of a pre-trained vision-language model (VLM) to inherit Internet-scale semantic knowledge. We then discuss how this model can be trained on a large and diverse dataset from multiple dexterous robot platforms, including single-arm robots, dual-arm robots, and mobile manipulators. We evaluate our model in terms of its ability to perform tasks in zero shot after pre-training, follow language instructions from people and from a high-level VLM policy, and its ability to acquire new skills via fine-tuning. Our results cover a wide variety of tasks, such as laundry folding, table cleaning, and assembling boxes.",
+  "tldr": "A novel flow matching architecture built on top of a pre-trained vision-language model (VLM) to inherit Internet-scale semantic knowledge is proposed and evaluated in terms of its ability to perform tasks in zero shot after pre-training, follow language instructions from people and from a high-level VLM policy, and its ability to acquire new skills via fine-tuning.",
+  "year": 2024,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kevin Black",
+   "Noah Brown",
+   "Danny Driess",
+   "A. Esmail",
+   "Michael Equi",
+   "Chelsea Finn"
+  ],
+  "citations": 2491,
+  "source": "semanticscholar",
+  "source_id": "7e7e59d2e247d99954081080ddd5aae93d10b9e0",
+  "paper_id": "dblp:journals/corr/abs-2410-24164",
+  "doi": "10.48550/arXiv.2410.24164",
+  "arxiv_id": "2410.24164",
+  "dblp_key": "journals/corr/abs-2410-24164",
+  "paper_url": "https://www.semanticscholar.org/paper/7e7e59d2e247d99954081080ddd5aae93d10b9e0",
+  "published_iso": "2024-10-31",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "A Backbone for Long-Horizon Robot Task Understanding",
+  "title_norm": "a backbone for long horizon robot task understanding",
+  "abstract": "End-to-end robotlearning, particularly for long-horizon tasks, often results in unpredictable outcomes and poor generalization. To address these challenges, we propose a novel Therblig-Based Backbone Framework (TBBF) as a fundamental structure to enhance interpretability, data efficiency, and generalization in robotic systems. TBBF utilizes expert demonstrations to enable therblig-level task decomposition, facilitate efficient action-object mapping, and generate adaptive trajectories for new scenarios. The approach consists of two stages: offline training and online testing. During the offline training stage, we developed the Meta-RGate SynerFusion (MGSF) network for accurate therblig segmentation across various tasks. In the online testing stage, after a one-shot demonstration of a new task is collected, our MGSF network extracts high-level knowledge, which is then encoded into the image using Action Registration (ActionREG). Additionally, Large Language Model (LLM)-Alignment Policy for Visual Correction (LAP-VC) is employed to ensure precise action registration, facilitating trajectory transfer in novel robot scenarios. Experimental results validate these methods, achieving 94.37% recall in therblig segmentation and success rates of 94.4% and 80% in real-world online robot testing for simple and complex scenarios, respectively.",
+  "tldr": "A novel Therblig-Based Backbone Framework (TBBF) is proposed as a fundamental structure to enhance interpretability, data efficiency, and generalization in robotic systems.",
+  "year": 2024,
+  "venue": "IEEE Robotics and Automation Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaoshuai Chen",
+   "Wei Chen",
+   "Dongmyoung Lee",
+   "Yukun Ge",
+   "Nicolás Rojas",
+   "Petar Kormushev"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "4adb4f29ba3378a539ce8a12374a984b6abd484a",
+  "paper_id": "dblp:journals/ral/ChenCLGRK25",
+  "doi": "10.1109/LRA.2025.3526441",
+  "arxiv_id": "2408.01334",
+  "dblp_key": "journals/ral/ChenCLGRK25",
+  "paper_url": "https://www.semanticscholar.org/paper/4adb4f29ba3378a539ce8a12374a984b6abd484a",
+  "published_iso": "2024-08-02",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "ChatVLA: Unified Multimodal Understanding and Robot Control with Vision-Language-Action Model",
+  "title_norm": "chatvla unified multimodal understanding and robot control with vision language ",
+  "abstract": "Humans possess a unified cognitive ability to perceive, comprehend, and interact with the physical world. Why can't large language models replicate this holistic understanding? Through a systematic analysis of existing training paradigms in vision-language-action models (VLA), we identify two key challenges: spurious forgetting, where robot training overwrites crucial visual-text alignments, and task interference, where competing control and understanding tasks degrade performance when trained jointly. To overcome these limitations, we propose ChatVLA, a novel framework featuring Phased Alignment Training, which incrementally integrates multimodal data after initial control mastery, and a Mixture-of-Experts architecture to minimize task interference. ChatVLA demonstrates competitive performance on visual question-answering datasets and significantly surpasses state-of-the-art vision-language-action (VLA) methods on multimodal understanding benchmarks. Notably, it achieves a six times higher performance on MMMU and scores 47.2% on MMStar with a more parameter-efficient design than ECoT. Furthermore, ChatVLA demonstrates superior performance on 25 real-world robot manipulation tasks compared to existing VLA methods like OpenVLA. Our findings highlight the potential of our unified framework for achieving both robust multimodal understanding and effective robot control.",
+  "tldr": "ChatVLA is a novel framework featuring Phased Alignment Training, which incrementally integrates multimodal data after initial control mastery, and a Mixture-of-Experts architecture to minimize task interference, which demonstrates competitive performance on visual question-answering datasets and significantly surpasses state-of-the-art vision-language-action methods on multimodal understanding benchmarks.",
+  "year": 2025,
+  "venue": "Conference on Empirical Methods in Natural Language Processing",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Zhongyi Zhou",
+   "Yichen Zhu",
+   "Minjie Zhu",
+   "Junjie Wen",
+   "Ning Liu",
+   "Zhiyuan Xu"
+  ],
+  "citations": 135,
+  "source": "semanticscholar",
+  "source_id": "5976a31d1b0f3edb4032803168e33cb7fdacb5a4",
+  "paper_id": "dblp:conf/emnlp/ZhouZZWLXMPSFX25",
+  "doi": "10.48550/arXiv.2502.14420",
+  "arxiv_id": "2502.14420",
+  "dblp_key": "conf/emnlp/ZhouZZWLXMPSFX25",
+  "paper_url": "https://www.semanticscholar.org/paper/5976a31d1b0f3edb4032803168e33cb7fdacb5a4",
+  "published_iso": "2025-02-20",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "LLM-Guided Future Hypotheses for Horizon-Aware Exploration in Multi-Step Robot Manipulation",
+  "title_norm": "llm guided future hypotheses for horizon aware exploration in multi step robot m",
+  "abstract": "Multi-step robot manipulation requires acting under uncertainty about how the scene will evolve, making exploration and policy adaptation challenging. We study whether short-horizon, task-consistent future videos can provide useful structured priors for control and reinforcement-learning fine-tuning. We formalize this idea through Future-Experience Conditioning (FEC), a simple interface that conditions closed-loop policies on a latent representation of a short future video. In our simulation setup, future clips are generated in three stages, an LLM reasoner operating over a task ontology initialized from the current scene state, a robot-free digital-twin rollout of the intended object motion, and a mask-free video diffusion model that synthesizes a robot-consistent future clip without requiring segmentation at inference. We instantiate this future-conditioning interface primarily with BC and BC+RL, and compare against a future-conditioned Streaming Flow Policy (SFP) baseline on RoboCasa and CALVIN under NoFuture, GTFuture, GenFuture, and WrongFuture. Generated futures improve performance over no-future conditioning, while mismatched futures degrade it, and our BC+RL instantiation achieves the strongest overall results. An average BC+RL learning-curve analysis across 8 CALVIN tasks further shows that GTFuture improves fastest, GenFuture improves earlier and to a higher level than NoFuture, and WrongFuture remains at zero throughout training. These results suggest that short-horizon future videos can serve as useful structured priors for exploration and policy adaptation under imperfect future predictions. https://enact2026.github.io/",
+  "tldr": "Results suggest that short-horizon future videos can serve as useful structured priors for exploration and policy adaptation under imperfect future predictions, and suggest that BC+RL instantiation achieves the strongest overall results.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mohammad Khoshnazar",
+   "Andrew Melnik",
+   "Michael Beetz"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8a1edd9ea3b3204ecf0aaca675d85c0c06130ba7",
+  "paper_id": "dblp:journals/corr/abs-2605-29864",
+  "doi": "10.48550/arXiv.2605.29864",
+  "arxiv_id": "2605.29864",
+  "dblp_key": "journals/corr/abs-2605-29864",
+  "paper_url": "https://www.semanticscholar.org/paper/8a1edd9ea3b3204ecf0aaca675d85c0c06130ba7",
+  "published_iso": "2026-05-28",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "IRASim: A Fine-Grained World Model for Robot Manipulation",
+  "title_norm": "irasim a fine grained world model for robot manipulation",
+  "abstract": "World models allow autonomous agents to plan and explore by predicting the visual outcomes of different actions. However, for robot manipulation, it is challenging to accurately model the fine-grained robot-object interaction within the visual space using existing methods which overlooks precise alignment between each action and the corresponding frame. In this paper, we present IRASim, a novel world model capable of generating videos with fine-grained robotobject interaction details, conditioned on historical observations and robot action trajectories. We train a diffusion transformer and introduce a novel frame-level actionconditioning module within each transformer block to explicitly model and strengthen the action-frame alignment. Extensive experiments show that: (1) the quality of the videos generated by our method surpasses all the baseline methods and scales effectively with increased model size and computation; (2) policy evaluations using IRASim exhibit a strong correlation with those using the ground-truth simulator, highlighting its potential to accelerate real-world policy evaluation; (3) testing-time scaling through model-based planning with IRASim significantly enhances policy performance, as evidenced by an improvement in the IoU metric on the Push-T benchmark from 0.637 to 0.961; (4) IRASim provides flexible action controllability, allowing virtual robotic arms in datasets to be controlled via a keyboard or VR controller. Video and code are available at https://gen-irasim.github.io/.",
+  "tldr": "The quality of the videos generated by IRASim surpasses all the baseline methods and scales effectively with increased model size and computation, and policy evaluations using IRASim exhibit a strong correlation with those using the ground-truth simulator, highlighting its potential to accelerate real-world policy evaluation.",
+  "year": 2024,
+  "venue": "IEEE International Conference on Computer Vision",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Fangqi Zhu",
+   "Hongtao Wu",
+   "Song Guo",
+   "Yuxiao Liu",
+   "Chi-Hou Cheang",
+   "Tao Kong"
+  ],
+  "citations": 81,
+  "source": "semanticscholar",
+  "source_id": "280f2ea5ac05cab2d5a85c74f0a23257c7947690",
+  "paper_id": "dblp:conf/iccv/ZhuWGLCK25",
+  "doi": "10.1109/ICCV51701.2025.00917",
+  "arxiv_id": "2406.14540",
+  "dblp_key": "conf/iccv/ZhuWGLCK25",
+  "paper_url": "https://www.semanticscholar.org/paper/280f2ea5ac05cab2d5a85c74f0a23257c7947690",
+  "published_iso": "2024-06-20",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "GSPA:Geo-Semantic Prior-Guided Attention for Long-Horizon Robot Manipulation",
+  "title_norm": "gspa geo semantic prior guided attention for long horizon robot manipulation",
+  "abstract": "Long-horizon robot manipulation remains challenging because the policy must cope with cluttered scenes, contactrich dynamics, viewpoint variation, and stage transitions, while maintaining consistent visual grounding across the entire rollout. However, standard vision-language-action (VLA) policies often accumulate subtle perception and control errors across stages, and their internal attention is usually implicit and hard to intervene on when late-stage drift appears. In this study, we propose a geo-semantic prior-guided attention mechanism (GSPA). It extracts geometry priors from local correspondence and semantic priors from object detection, fuses them with a semantic-priority gate, and applies the fused map in selected attention layers. Subsequently, we integrate GSPA into OpenVLA. Experiments conducted under the LIBERO-10 setting demonstrate that our method outperforms representative guidance baselines on longhorizon manipulation tasks.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "International Conference on Swarm Intelligence",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "K. Che",
+   "Linbo Wang",
+   "Yifei Wen",
+   "Haixiang Wang",
+   "Yue Cheng",
+   "Jingguo Sun"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "593fe3f7bbdcbd6169f9903fcab28e8e65316c4e",
+  "paper_id": "doi:10.1109/ICSI70302.2026.11544583",
+  "doi": "10.1109/ICSI70302.2026.11544583",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/593fe3f7bbdcbd6169f9903fcab28e8e65316c4e",
+  "published_iso": "2026-04-24",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "VLAW: Iterative Co-Improvement of Vision-Language-Action Policy and World Model",
+  "title_norm": "vlaw iterative co improvement of vision language action policy and world model",
+  "abstract": "The goal of this paper is to improve the performance and reliability of vision-language-action (VLA) models through iterative online interaction. Since collecting policy rollouts in the real world is expensive, we investigate whether a learned simulator-specifically, an action-conditioned video generation model-can be used to generate additional rollout data. Unfortunately, existing world models lack the physical fidelity necessary for policy improvement: they are predominantly trained on demonstration datasets that lack coverage of many different physical interactions (particularly failure cases) and struggle to accurately model small yet critical physical details in contact-rich object manipulation. We propose a simple iterative improvement algorithm that uses real-world roll-out data to improve the fidelity of the world model, which can then, in turn, be used to generate supplemental synthetic data for improving the VLA model. In our experiments on a real robot, we use this approach to improve the performance of a state-of-the-art VLA model on multiple downstream tasks. We achieve a 39.2% absolute success rate improvement over the base policy and 11.6% improvement from training with the generated synthetic rollouts. Videos can be found at this anonymous website: https://sites.google.com/view/vla-w",
+  "tldr": "A simple iterative improvement algorithm is proposed that uses real-world roll-out data to improve the fidelity of the world model, which can then be used to generate supplemental synthetic data for improving the VLA model.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjiang Guo",
+   "Tony Lee",
+   "L. Shi",
+   "Jianyu Chen",
+   "Percy Liang",
+   "Chelsea Finn"
+  ],
+  "citations": 32,
+  "source": "semanticscholar",
+  "source_id": "affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "paper_id": "dblp:journals/corr/abs-2602-12063",
+  "doi": "10.48550/arXiv.2602.12063",
+  "arxiv_id": "2602.12063",
+  "dblp_key": "journals/corr/abs-2602-12063",
+  "paper_url": "https://www.semanticscholar.org/paper/affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+  "published_iso": "2026-02-12",
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection",
+  "title_norm": "goal2skill long horizon manipulation with adaptive planning and reflection",
+  "abstract": "Recent vision-language-action (VLA) systems have demonstrated strong capabilities in embodied manipulation. However, most existing VLA policies rely on limited observation windows and end-to-end action prediction, which makes them brittle in long-horizon, memory-dependent tasks with partial observability, occlusions, and multi-stage dependencies. Such tasks require not only precise visuomotor control, but also persistent memory, adaptive task decomposition, and explicit recovery from execution failures. To address these limitations, we propose a dual-system framework for long-horizon embodied manipulation. Our framework explicitly separates high-level semantic reasoning from low-level motor execution. A high-level planner, implemented as a VLM-based agentic module, maintains structured task memory and performs goal decomposition, outcome verification, and error-driven correction. A low-level executor, instantiated as a VLA-based visuomotor controller, carries out each sub-task through diffusion-based action generation conditioned on geometry-preserving filtered observations. Together, the two systems form a closed loop between planning and execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery. Experiments on representative RMBench tasks show that the proposed framework substantially outperforms representative baselines, achieving a 32.4% average success rate compared with 9.8% for the strongest baseline. Ablation studies further confirm the importance of structured memory and closed-loop recovery for long-horizon manipulation.",
+  "tldr": "This work proposes a dual-system framework for long-horizon embodied manipulation that explicitly separates high-level semantic reasoning from low-level motor execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhen Liu",
+   "Xinyu Ning",
+   "Zhengyu Hu",
+   "Xinxin Xie",
+   "Weize Li",
+   "Zhipeng Tang"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+  "paper_id": "dblp:journals/corr/abs-2604-13942",
+  "doi": "10.48550/arXiv.2604.13942",
+  "arxiv_id": "2604.13942",
+  "dblp_key": "journals/corr/abs-2604-13942",
+  "paper_url": "https://www.semanticscholar.org/paper/da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+  "published_iso": "2026-04-15",
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ }
+]

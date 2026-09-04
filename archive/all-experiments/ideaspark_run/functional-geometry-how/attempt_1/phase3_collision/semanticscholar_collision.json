@@ -1,0 +1,1440 @@
+[
+ {
+  "title": "Control and Communication Network for ac Three-Phase 13.8 kV Power Conditioning System Based on a Multilevel Flying-Capacitor Topology",
+  "title_norm": "control and communication network for ac three phase 13 8 kv power conditioning ",
+  "abstract": "This paper presents a control and communication architecture for a medium-voltage three-phase back-to-back power conditioning system (PCS) based on a multilevel flying-capacitor (FC) topology, targeted at 13.8 kV rms AC and a 22 kV DC link. The contribution is not the generic use of hierarchical control by itself, but the converter-communication network co-design. In the proposed approach, modulation is performed locally in intelligent gate drivers using synchronized real-time clocks; carrier-phase interleaving and variable switching frequency are implemented as communication primitives/data rather than raw PWM streams; and FC-voltage sensing and protection are coordinated with the converter state. Experimental validation is reported. Synchronization tests show negligible controller-to-gate-driver latency and less than 1 ns jitter. Gate-signal measurements at 2.6 kHz confirm the expected 60-deg phase shift among six complementary gate-driver pairs. A 6 kV single-phase phase-leg power test demonstrates balanced FC voltages and the expected stepped output voltage/current. The results show that the architecture decouples runtime communication traffic from switching-edge count while preserving synchronous PWM timing, and they clarify how the conclusions generalize to other multilevel converters with locally executable modulation and fast device-level protection.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "2026 International Power Electronics Conference (IPEC-Nagasaki 2026 - ECCE Asia)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Vladimir Mitrovic",
+   "Arthur Coimbra Mendes",
+   "Mingze Gao",
+   "David Nam",
+   "Rolando Burgos",
+   "Dushan Boroyevich"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "b6f65884bba04324107f643f8ccf810c16c8b32e",
+  "paper_id": "doi:10.23919/IPEC-Nagasaki2026-EC64663.2026.11597341",
+  "doi": "10.23919/IPEC-Nagasaki2026-EC64663.2026.11597341",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/b6f65884bba04324107f643f8ccf810c16c8b32e",
+  "published_iso": "2026-05-31",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Control Strategy for Variable Refrigerant Volume Air Conditioning System in an Office Building integrated with Phase Change Material Ceiling",
+  "title_norm": "control strategy for variable refrigerant volume air conditioning system in an o",
+  "abstract": "",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Building Engineering",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yilin Li",
+   "Hongpeng Cao",
+   "Shiji Zong",
+   "Yaolin Lin",
+   "Haizong Zhang",
+   "Ye-xiang Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "de0c64bef49025ef756182851eb14c65bb9296a0",
+  "paper_id": "doi:10.1016/j.jobe.2026.116154",
+  "doi": "10.1016/j.jobe.2026.116154",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://nottingham-repository.worktribe.com/63438806/1/Control%20Strategy%20for%20Variable%20Refrigerant%20Volume%20Air%20Conditioning%20System%20in%20an%20Office%20Building%20integrated%20with%20Phase%20Change%20Material%20Ceiling",
+  "published_iso": "2026-04-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Ka-Band Time-Modulated Variable Gain Amplifier with 30-dB Gain Tuning and <0.1-Degree Phase Variation via Duty Cycle Control",
+  "title_norm": "a ka band time modulated variable gain amplifier with 30 db gain tuning and 0 1 ",
+  "abstract": "Abstrack: The increasing demand for high-speed and low-latency wireless communication has driven significant interest inCMOS-based RF ICs for 5G New Radio (NR) systems. Among them, variable gain amplifiers (VGAs) are pivotal in signal conditioning such as gain control and beamforming. Specifically, VGAs should provide wide gain tuning with high linearity. Besides, VGAs must have consistent gain and phase across different operations. Conventional VGAs including cascode, current-steering, and Gilbert-cell topologies often exhibit limited gain tuning range and substantial phase variation when the gain level changes [1]–[7].",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Symposium on Security in Computing and Communications",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Dongfan Xu",
+   "Minzhe Tang",
+   "Haiyu Gu",
+   "Ziyuan Ren",
+   "Yilun Chen",
+   "Minghao Fan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "33d59ac24f066eb91d62a077da7985d657535e08",
+  "paper_id": "doi:10.1109/A-SSCC67472.2025.11349426",
+  "doi": "10.1109/A-SSCC67472.2025.11349426",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/33d59ac24f066eb91d62a077da7985d657535e08",
+  "published_iso": "2025-11-02",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Variable Phase Shift Control for ZVS in Two Parallel Three-Level T-Type NPC Converters",
+  "title_norm": "variable phase shift control for zvs in two parallel three level t type npc conv",
+  "abstract": "Achieving zero-voltage switching (ZVS) for parallel neutral-point-clamped (NPC) converters under high switching frequency and high power conditions is highly desirable for improving efficiency and power density, but remains challenging without auxiliary resonant circuits. In parallel converter systems, the circulating current between parallel legs provides an additional control degree of freedom that can be exploited to establish ZVS conditions. This article proposes a software-based ZVS strategy based on variable phase-shift control for two-parallel T-type NPC converters. By actively regulating the circulating current between parallel legs, the inductor current is shaped into a quadrilateral waveform, enabling ZVS turn-on operation while maintaining a strictly constant switching frequency. Based on accurate prediction of the circulating current within one switching cycle, the phase-shift angle required to satisfy the ZVS condition over the line cycle is analytically derived. The proposed method effectively decouples the three phases and is applicable to both single-phase and three-phase systems. Experimental results obtained from a laboratory prototype validate the feasibility and effectiveness of the proposed strategy.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE transactions on power electronics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Peng Zhang",
+   "Hao Xiao",
+   "Guoju Zhang",
+   "Wei Pei",
+   "Lei Zhang",
+   "Shiqian Ma"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f180b7dfe617685272e917598693fa30595e00ce",
+  "paper_id": "doi:10.1109/TPEL.2026.3695514",
+  "doi": "10.1109/TPEL.2026.3695514",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f180b7dfe617685272e917598693fa30595e00ce",
+  "published_iso": "2026-10-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "VLA Grounder: Language-Conditioning Space Optimization for Black-Box VLA Models",
+  "title_norm": "vla grounder language conditioning space optimization for black box vla models",
+  "abstract": "Vision-Language-Action (VLA) models are commonly treated as end-to-end action policies conditioned on natural-language task descriptions. In practice, however, their behavior often depends sharply on how the instruction is phrased, suggesting that language is not merely a task label but an optimizable conditioning input. We study whether frozen VLA policies can be improved by optimizing language space rather than updating action weights. Our method introduces a language-conditioning space policy that translates a human instruction into a short VLA-grounded command using object appearance, spatial relations, and target-grounding cues. The language-conditioning space policy is initialized with a failure-derived command-space prior and optimized with reinforcement learning from sparse task-completion rewards, while the downstream VLA remains fully frozen. This yields language-conditioning space optimization: RL discovers which VLA-grounded commands best elicit successful behavior from the frozen action policy. Experiments on RL4VLA and VL-Think show that language-conditioning space optimization improves success on instruction-sensitive, symbolic, and multi-object manipulation tasks, demonstrating that language can serve as an optimizable variable for a robot foundation models. Website: https://tttonyalpha.github.io/vla_grounder",
+  "tldr": "Experiments on RL4VLA and VL-Think show that language-conditioning space optimization improves success on instruction-sensitive, symbolic, and multi-object manipulation tasks, demonstrating that language can serve as an optimizable variable for a robot foundation models.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Damir Shodiev",
+   "A. Staroverov",
+   "Nikita Kachaev",
+   "A. Kovalev",
+   "Aleksandr I. Panov"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "4aa6fd1060eef65396d5ddcf74cbfb16b46d8848",
+  "paper_id": "arxiv:2607.04517",
+  "doi": "",
+  "arxiv_id": "2607.04517",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4aa6fd1060eef65396d5ddcf74cbfb16b46d8848",
+  "published_iso": "2026-07-05",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Magnitude and Phase Compensation in the Phase-Locked Loop of a Permanent Magnet Synchronous Motor-Driven Single-Rotor Air-Conditioning Compressor",
+  "title_norm": "magnitude and phase compensation in the phase locked loop of a permanent magnet ",
+  "abstract": "In a single-rotor air-conditioning compressor, continuous gas compression and discharge induce periodic load torque fluctuations at the same frequency as the rotor’s mechanical rotation, thereby introducing periodically fluctuating signals in the motor rotor angle and angular speed. A position sensorless control scheme is implemented under variable load conditions. This scheme combines an observer designed based on the permanent magnet synchronous motor (PMSM) model in the direct-quadrature (d-q) coordinate system with a conventional phase-locked loop (PLL) and field-oriented control (FOC). In this implementation, magnitude scaling and phase offset in the PLL module cause errors in the estimated rotor angle and speed. This angular error degrades the control accuracy of the FOC algorithm, leading to significant motor speed fluctuations. To address these limitations of conventional PLL architecture, this paper proposes a Magnitude and Phase Compensation PLL (MAPC-PLL). The proposed MAPC-PLL compensates for both magnitude and phase deviations in estimated rotor angle and speed signals through a compensation module with an additional control parameter, achieving enhanced performance over conventional PLL implementations while retaining the closed-loop transfer function’s original pole configuration. Experimental results demonstrate that regulating this control parameter in the MAPC-PLL controls the reduction level of rotor angle estimation error, thereby improving the accuracy and performance of FOC, significantly suppressing rotor speed fluctuations caused by the conventional PLL, and ultimately enhancing the overall system control performance.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jing Ma",
+   "Yang Yang",
+   "Xiaolei Che",
+   "Guoji Liu",
+   "Yibo Guo",
+   "Wenxin Xu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "82abc0a7f16423bd47bcace5261544276c2441c5",
+  "paper_id": "dblp:journals/access/MaYCLGX26",
+  "doi": "10.1109/ACCESS.2026.3667589",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/MaYCLGX26",
+  "paper_url": "https://doi.org/10.1109/access.2026.3667589",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A numerical study of solid–vapor phase conversion process with size-dependent thermal conductivity and variable boundary condition",
+  "title_norm": "a numerical study of solid vapor phase conversion process with size dependent th",
+  "abstract": "Abstract In this study, we present a mathematical model for a two phase sublimation process in a moving domain which involves the thermal conductivity as a function of size of the regions, mass density as a function of molar concentration and a boundary temperature as a function of time. Since analytical solution to this problem is not possible, therefore, we investigate the temperature movement and mass density by utilizing a boundary-fixing explicit finite difference approach. The stability and consistency of the numerical scheme are theoretically analyzed. A comparison between the obtained numerical results and exact solution for a specific case reveals that both results are nearly identical. It is observed that sublime particles need additional energy to break inter molecular bonds whenever thermal conductivity depends on the size of the domain, which slows down the conversion of solid particles into vapor phase. In this case, the heat flux coefficient γ and Peclet coefficient Pe can be utilized to accelerate the speed of sublimation process. The consequences of size depending nature of thermal conductivity are highlighted graphically. The outcomes from this analysis suggest some techniques to enhance the heat flow between sublime particles for phase transition with minimal energy absorption during sublimation process.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of thermal stresses",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jaya Joshi",
+   "Rajeev"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "7959d48693c57ee7d1bf7116b601adcc6d6c3827",
+  "paper_id": "doi:10.1080/01495739.2025.2458721",
+  "doi": "10.1080/01495739.2025.2458721",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7959d48693c57ee7d1bf7116b601adcc6d6c3827",
+  "published_iso": "2025-02-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "On a Class of Non-Local Kirchhoff-Type Double Phase Problem with Variable Exponents and Without the Ambrosetti-Rabinowitz Condition",
+  "title_norm": "on a class of non local kirchhoff type double phase problem with variable expone",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Iranian Journal of Science",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hind Bouaam",
+   "Mohamed El Ouaarabi",
+   "S. Melliani"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "f64cf14509636c646fd76a56f4da5a577045aa58",
+  "paper_id": "doi:10.1007/s40995-025-01813-1",
+  "doi": "10.1007/s40995-025-01813-1",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f64cf14509636c646fd76a56f4da5a577045aa58",
+  "published_iso": "2025-04-10",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Three Solutions for a Double-Phase Variable-Exponent Kirchhoff Problem",
+  "title_norm": "three solutions for a double phase variable exponent kirchhoff problem",
+  "abstract": "In this article, we study a double-phase variable-exponent Kirchhoff problem and show the existence of at least three solutions. The proposed model, as a generalization of the Kirchhoff equation, is interesting since it is driven by a double-phase operator that governs anisotropic and heterogeneous diffusion associated with the energy functional, as well as encapsulating two different types of elliptic behavior within the same framework. To tackle the problem, we obtain regularity results for the corresponding energy functional, which makes the problem suitable for the application of a well-known critical point result by Bonanno and Marano. We introduce an n-dimensional vector inequality, not covered in the literature, which provides a key auxiliary tool for establishing essential regularity properties of the energy functional such as C1-smoothness, the (S+)-condition, and sequential weak lower semicontinuity.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Mathematics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mustafa Avci"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "185a00c4f6f9b9eb07795d1b53332d2664d55518",
+  "paper_id": "arxiv:2507.06387",
+  "doi": "10.3390/math13152462",
+  "arxiv_id": "2507.06387",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/math13152462",
+  "published_iso": "2025-07-08",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Full Symmetric MEMS Rate Gyroscope Automatic Mode-Matching Method Based on Pendulum Variable Demodulation and Phase-Shifted Virtual Coriolis Force Modulation",
+  "title_norm": "full symmetric mems rate gyroscope automatic mode matching method based on pendu",
+  "abstract": "Full symmetric micro-gyroscopes, such as MEMS Hemispherical Resonator Gyroscopes (<inline-formula> <tex-math notation=\"LaTeX\">$\\mu $ </tex-math></inline-formula>HRGs) and nested-rings disk resonator gyroscopes (DRGs), offer advantages in terms of smaller size, lower cost, and reduced power consumption compared to traditional MEMS gyroscopes. However, the mode mismatch caused by MEMS processing errors limits the performance improvement of these gyroscopes. This article presents an automatic mode-matching technique for <inline-formula> <tex-math notation=\"LaTeX\">$\\mu $ </tex-math></inline-formula>HRG utilizing pendulum variable demodulation and phase-shifted virtual Coriolis force modulation. Initially, a force-to-rebalance (FTR) control loop scheme based on pendulum-variable demodulation is designed. Through an analysis of FTR mode performance optimization, it is concluded that suppressing stiffness errors can significantly reduce zero bias error, suppress circuit noise, and improve dynamic performance. Therefore, this study utilizes negative stiffness effects and phase-shifted virtual Coriolis force modulation to design an automatic identification, decoupling, and compensation (AIDC) process for stiffness errors based on phase-shifted virtual Coriolis force modulation to realize mode-matching. The experimental findings indicate that this method achieves a tuning accuracy of 1.04 MHz. After eliminating the stiffness error using the AIDC process, the bias instability (BI) improves to 0.195°/h, and the angle random walk decreases to 0.036°/<inline-formula> <tex-math notation=\"LaTeX\">$\\surd $ </tex-math></inline-formula>h. Compared to the mode mismatch condition, the BI and angle random walk (ARW) of the <inline-formula> <tex-math notation=\"LaTeX\">$\\mu $ </tex-math></inline-formula>HRG are improved by 61.91 and 50.53 times, respectively.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Sensors Journal",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Bei Li",
+   "Chenghao Huang",
+   "Zhuo Li",
+   "Zihao Zhao",
+   "Xi Wang",
+   "Xiyuan Chen"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "2535e01eabcc36fc78668970b6c7ff1677dbae02",
+  "paper_id": "doi:10.1109/JSEN.2025.3545282",
+  "doi": "10.1109/JSEN.2025.3545282",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2535e01eabcc36fc78668970b6c7ff1677dbae02",
+  "published_iso": "2025-05-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Variable Power Compensation Control of Electrolytic Capacitor-Less Dual Inverter with Single-Phase Power Supply",
+  "title_norm": "variable power compensation control of electrolytic capacitor less dual inverter",
+  "abstract": "This paper proposes a variable power compensation control method to reduce a floating capacitor capacitance of an electrolytic capacitor-less dual inverter with a single-phase power supply. In the system, a main inverter outputs pulsating power to the motor for a power factor correction, and an additional inverter compensates for power pulsation by charging and discharging a floating capacitor. However, the floating capacitor capacitance becomes larger with mechanical output, resulting in an increase in the system size. The proposed control method controls an additional inverter output power variably on the basis of load condition. The experimental results confirm the effectiveness of the proposed control method, as the capacitor capacity is reduced by 43% compared to the conventional control method. The proposed control method contributes to the system miniaturization of the electrolytic capacitor-less dual inverter with the single-phase power supply.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 Energy Conversion Congress & Expo Europe (ECCE Europe)",
+  "publication_types": [],
+  "authors": [
+   "Kotaro Takasu",
+   "T. Sakurai",
+   "Hitoshi Haga"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8cc771e79160e35010d81b9df373f5c7f6c36d73",
+  "paper_id": "doi:10.1109/ECCE-Europe62795.2025.11239019",
+  "doi": "10.1109/ECCE-Europe62795.2025.11239019",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/8cc771e79160e35010d81b9df373f5c7f6c36d73",
+  "published_iso": "2025-09-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Optimal Control of Ordinary Fractional‐Order Systems With a Delay in the Phase Variable",
+  "title_norm": "optimal control of ordinary fractional order systems with a delay in the phase v",
+  "abstract": "The paper considers a fractional model described by the Bolza problem of optimal control with delay in the phase variable depending on the fractional Caputo derivative of order 00$$ \\beta >0 $$ . For the problem posed, a necessary optimality condition in the form of the Pontryagin maximum principle is formulated. Moreover, for the control, which is singular, a necessary optimality condition of a higher order is obtained for the first time. Unlike previous works, the results are formulated for both conditions β≥α$$ \\beta \\ge \\alpha $$ and β",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Mathematical methods in the applied sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. Yusubov",
+   "Eilmhan N. Mahmudov",
+   "Shikhi Sh. Yusubov"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "3d02d7a676d74fbb142b29026eeddb0a1df3172b",
+  "paper_id": "doi:10.1002/mma.70219",
+  "doi": "10.1002/mma.70219",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3d02d7a676d74fbb142b29026eeddb0a1df3172b",
+  "published_iso": "2025-10-15",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Adaptive Phase Shift Information Compression for IRS Systems: A Prompt Conditioned Variable Rate Framework",
+  "title_norm": "adaptive phase shift information compression for irs systems a prompt conditione",
+  "abstract": "Intelligent reflecting surfaces (IRSs) have become a vital technology for improving the spectrum and energy efficiency of forthcoming wireless networks. Nevertheless, practical implementation is obstructed by the excessive overhead associated with the frequent transmission of phase shift information (PSI) over bandwidth-constrained control lines. Current deep learning-based compression methods mitigate this problem but are constrained by elevated decoder complexity, inadequate flexibility to dynamic channels, and static compression ratios. This research presents a prompt-conditioned PSI compression system that integrates prompt learning inspired by large models into the PSI compression process to address these difficulties. A hybrid prompt technique that integrates soft prompt concatenation with feature-wise linear modulation (FiLM) facilitates adaptive encoding across diverse signal-to-noise ratios (SNRs), fading kinds, and compression ratios. Furthermore, a variable rate technique incorporates the compression ratio into the prompt embeddings through latent masking, enabling a singular model to adeptly balance reconstruction accuracy. Additionally, a lightweight depthwise convolutional gating (DWCG) decoder facilitates precise feature reconstruction with minimal complexity. Comprehensive simulations indicate that the proposed framework significantly reduces NMSE compared to traditional autoencoder baselines, while ensuring robustness across various channel circumstances and accommodating variable compression ratios within a single model. These findings underscore the framework's promise as a scalable and efficient solution for real-time IRS control in next-generation wireless networks.",
+  "tldr": "Comprehensive simulations indicate that the proposed framework significantly reduces NMSE compared to traditional autoencoder baselines, while ensuring robustness across various channel circumstances and accommodating variable compression ratios within a single model underscore the framework's promise as a scalable and efficient solution for real-time IRS control in next-generation wireless networks.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Xianhua Yu",
+   "Dong Li",
+   "Bowen Gu",
+   "Liuqing Yang",
+   "Sumei Sun",
+   "G. Karagiannidis"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "e5cdaa26430d52034002809222719c7ada14b025",
+  "paper_id": "arxiv:2511.03923",
+  "doi": "",
+  "arxiv_id": "2511.03923",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/e5cdaa26430d52034002809222719c7ada14b025",
+  "published_iso": "2025-11-05",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "FAVLA: A Force-Adaptive Fast-Slow VLA model for Contact-Rich Robotic Manipulation",
+  "title_norm": "favla a force adaptive fast slow vla model for contact rich robotic manipulation",
+  "abstract": "Force/torque feedback can substantially improve Vision-Language-Action (VLA) models on contact-rich manipulation, but most existing approaches fuse all modalities at a single operating frequency. This design ignores the mismatched sampling rates of real robot sensors, forcing downsampling of the high-frequency contact cues needed for reactive correction. Combined with common VLM-action-expert (AE) pipelines that execute action chunks largely open loop between expensive VLM updates, unified-frequency fusion often yields delayed responses to impacts, stick-slip, and force spikes. We propose FAVLA, a force-adaptive fast-slow VLA that decouples slow perception planning from fast contact-aware control. FAVLA runs a slow VLM at a fixed low frequency to encode modalities to produce latent representations and to predict near-future force variation. A fast AE then executes at a variable high frequency, conditioning on the latest force sequence data to generate reactive actions. We further introduce a force adapter that injects high-frequency force features into multiple AE layers, and adaptively schedules the AE's execution frequency based on the VLM's predicted force variation. Extensive experiments on contact-rich tasks demonstrate that FAVLA significantly outperforms baselines, achieving superior reactivity and success rates, especially with a smaller contact force during manipulation.",
+  "tldr": "FAVLA is proposed, a force-adaptive fast-slow VLA that decouples slow perception planning from fast contact-aware control, and significantly outperforms baselines, achieving superior reactivity and success rates, especially with a smaller contact force during manipulation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yao Li",
+   "Peiyuan Tang",
+   "Wuyang Zhang",
+   "Cheng Zhu",
+   "Yifan Duan",
+   "Weikai Shi"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "5bead092032bf66f4c6454283480a789c5018bb2",
+  "paper_id": "dblp:journals/corr/abs-2602-23648",
+  "doi": "10.48550/arXiv.2602.23648",
+  "arxiv_id": "2602.23648",
+  "dblp_key": "journals/corr/abs-2602-23648",
+  "paper_url": "https://www.semanticscholar.org/paper/5bead092032bf66f4c6454283480a789c5018bb2",
+  "published_iso": "2026-02-27",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Logarithmic double phase embeddings with variable exponents: Necessary and Sufficient Conditions",
+  "title_norm": "logarithmic double phase embeddings with variable exponents necessary and suffic",
+  "abstract": "In this paper, we study the necessary and sufficient conditions in the domain for Sobolev-type embedding of the space $W^{1,\\Phi(\\cdot,\\cdot)}(\\Omega)$ where $\\Phi(x,t):=t^{p(x)}+ a(x) t^{q(x)}\\log^{r(x)}(e+t)$ with $1\\leq p(x)\\leq q(x).$ We have established subcritical embedding in bounded John domains under some regularity assumptions on exponents $p,$ $q,$ $r$, and $a$. Conversely, we have proved that if the embedding holds in any domain $\\Omega$ in $\\mathbb{R}^n,$ then $\\Omega$ must satisfy the log-measure density condition.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Ankur Pandey",
+   "Nijjwal Karak"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0c8f856dc5ecfeb1413ef37dc283053ea4afb6f1",
+  "paper_id": "arxiv:2511.13286",
+  "doi": "",
+  "arxiv_id": "2511.13286",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0c8f856dc5ecfeb1413ef37dc283053ea4afb6f1",
+  "published_iso": "2025-11-17",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Sustainable Air-Conditioning Systems Based on Cold Storage with Comparative Analysis of Efficiency and Costs",
+  "title_norm": "sustainable air conditioning systems based on cold storage with comparative anal",
+  "abstract": "The concept behind this undertaking was to create environmentally friendly and sustainable air-conditioning systems supported by energy storage units, as well as to conduct comparative calculations of investment and operational costs to assess their economic viability. In order to meet sustainability requirements, detailed analysis was followed by a decision to utilise cold storage units in which energy is stored through the phase change of water into ice. Aiming to achieve high efficiency, strong reliability and enhanced operational dynamics, a multi-circuit model for coolant flow was developed, incorporating a variable-speed compressor drive. High functionality and performance were attained through the introduction of container vibrations, which resulted in the formation of ice slurry particles in spherical containers placed within an aqueous glycol solution serving as the heat exchange medium. The concept of this technology, along with its accompanying mathematical models, was validated, and the results of this work are presented in the article. To evaluate the competitiveness of air-conditioning systems, the developed solution based on cold storage technology is compared with a lithium-ion battery system and a conventional configuration powered directly by the grid. The results demonstrate that the cold-storage-based air-conditioning system outperforms both reference systems in terms of energy efficiency. An analysis of the full operational cycle indicates that the proposed solution consumes significantly less energy than systems using lithium-ion battery storage. The investment costs are almost twenty percent lower, while service, maintenance and disposal expenses are negligible. These attributes make it a competitive solution that is both economically and environmentally sustainable. In summary, the proposed technology fully satisfies the key principles of sustainability. It does not deplete natural resources, minimises the environmental impact, offers long-term reliability and contributes to lower energy bills and more responsible resource use.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Sustainability",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "W. Jarzyna",
+   "Dariusz Zieliński",
+   "Marcin Fronc",
+   "P. Wolszczak",
+   "Grzegorz Litak"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "71099c9ddbb4e2317c68084552239ee070504085",
+  "paper_id": "doi:10.3390/su17198579",
+  "doi": "10.3390/su17198579",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2071-1050/17/19/8579/pdf?version=1758720277",
+  "published_iso": "2025-09-24",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Aspects Regarding the Operation of Ventilation and Air Conditioning Systems for Industrial Halls",
+  "title_norm": "aspects regarding the operation of ventilation and air conditioning systems for ",
+  "abstract": "This paper emphasizes, once again, the importance of ventilation systems for ensuring thermal comfort in industrial spaces. For this purpose, a dynamic fault regime of variable reluctance synchronous motors (RSM) used to drive such systems (case of occurring an accidental resistive torque) is analyzed from a theoretical point of view (with experimental confirmation). At the beginning, an introduction in the issues of the paper is made. A brief bibliographic analysis and some relevant images regarding the air flow driven by industrial ventilation and air conditioning systems are presented. In order to analyze dynamic regimes of RSM, a Matlab program was carried out, by using a mathematical model written in the two axes theory. A series of graphs have been obtained by running it for a specific case; they emphasize the evolution over time of the main electrical, magnetic and mechanical quantities of the motor. There have been obtained different evolutions of the operation points in various coordinates (phase current, longitudinal and transverse currents of the stator and rotor, magnetization current, magnetization flux, magnetization flux components, torque and speed). The graphs obtained led to a series of relevant conclusions regarding the behavior of the driving motor of the installation (conclusions regard the way in which an increase in the resistant torque influences the values and durations of the analyzed dynamic quantities). The paper ends with Acknowledgment and the corresponding References.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Annals of the University of Craiova, Electrical Engineering Series",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Enache Monica-Adela",
+   "Enache Elena-Mihaela",
+   "Pauliuc Mara"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2f3ea5e8ea1752eeacaf5dc9b8e5e9c4faf1431c",
+  "paper_id": "doi:10.52846/aucee.2024.11",
+  "doi": "10.52846/aucee.2024.11",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2f3ea5e8ea1752eeacaf5dc9b8e5e9c4faf1431c",
+  "published_iso": "2025-01-23",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Absence of the Lavrentiev phenomenon for generalized double-phase functionals with variable matrix weights",
+  "title_norm": "absence of the lavrentiev phenomenon for generalized double phase functionals wi",
+  "abstract": "\n We investigate a wide class of degenerate/singular variational integrals exhibiting generalized double-phase behavior governed by matrix weights. We establish absence of the Lavrentiev phenomenon under sharp structural assumptions on the pair of Orlicz functions and the associated modulating function. This is achieved by imposing a small\n \n \n \n log\n \\log\n \n \n \n -BMO condition on the matrix weight, which ensures sufficient control over its local oscillation and degeneracy/singularity. As a consequence, we show that the associated functional admits minimizers that can be stably approximated within the corresponding weighted Orlicz-Sobolev space. Our results extend the classical double-phase theory developed for constant matrix coefficients to a general framework with fully variable, anisotropic matrix weights.\n",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Proceedings of the American Mathematical Society",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sun-Sig Byun",
+   "Hamin Jung",
+   "Hongsoo Kim"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "4292a58d7d6d9df81d8948328b119be586fa48a0",
+  "paper_id": "doi:10.1090/proc/17602",
+  "doi": "10.1090/proc/17602",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4292a58d7d6d9df81d8948328b119be586fa48a0",
+  "published_iso": "2026-03-10",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Shunt active power filter with variable leaky least mean squares and multivariable filter phase-locked loop for fast harmonic compensation under non-ideal grid conditions",
+  "title_norm": "shunt active power filter with variable leaky least mean squares and multivariab",
+  "abstract": "Introduction. The widespread adoption of power-electronic loads has made harmonic distortion a critical power-quality issue. shunt active power filters (SAPFs) remain the most versatile solution. Problem. The conventional harmonic compensation algorithms suffer from degraded filtering performance under non-ideal grid condition, while the conventional low-pass filters (LPFs) in instantaneous reactive power theory (p-q theory) create an unavoidable trade-off between transient speed and harmonic rejection. Goal. To develop an adaptive and efficient harmonic current compensation algorithm that can generate reference currents with rapid convergence and high accuracy under non-ideal grid conditions. Methodology. The proposed method combines a multivariable filter phase-locked loop (MVF-PLL) for precise extraction of instantaneous components normalized to unit amplitude (i.e., sinq, cosq) with a variable leaky least mean squares (VLLMS) adaptive filter for DC component extraction. The algorithm was tested in MATLAB/Simulink across five scenarios, including balanced and unbalanced voltages, variable loads, and voltage distortions. Experimental validation was conducted on a field-programmable gate array (FPGA) using real-time co-simulation and hardware implementation. Results. MATLAB/Simulink simulations and real-time FPGA implementation on a low-cost Spartan-6 board show that the proposed method reduces the 2–98 % rise time of the extracted DC active power from ≈ 12 ms (4th-order Butterworth LPF) to 0.6– 0.8 ms (93–95 % improvement) while maintaining source current total harmonic distortion below 4.92 % in the worst case fully compliant with IEEE 519. The extremely low computational cost makes the solution ideal for industrial controllers. Scientific novelty. This paper proposes a novel control strategy that replaces the traditional LPF with a single-coefficient VLLMS adaptive filter while ensuring robust positive-sequence synchronisation via an MVF-PLL. Practical value. The algorithm improves SAPF performance, reduces response time, and ensures stable operation across diverse grid scenarios, offering a reliable solution for industrial applications. References 24, tables 2, figures 15.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Electrical Engineering &amp; Electromechanics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "M. M. Belhadj Mostefa",
+   "A. Boussaid",
+   "A. Khezzar"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1f3ff3182ab5b80742076c037ea8fa35e2936e3a",
+  "paper_id": "doi:10.20998/2074-272x.2026.4.06",
+  "doi": "10.20998/2074-272x.2026.4.06",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://eie.khpi.edu.ua/article/download/353265/351643",
+  "published_iso": "2026-07-02",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Tacho-Less Instantaneous Phase and Speed Estimation for Diagnosis of Rotating Machineries Under Variable Speed",
+  "title_norm": "a tacho less instantaneous phase and speed estimation for diagnosis of rotating ",
+  "abstract": "Instantaneous speed (IS) estimation from monitored vibration signals is critical for condition monitoring of variable speed rotating machineries, especially when a tachometer is not accessible. This study proposes a novel approach for estimating instantaneous phase (IP) and speed from nonstationary vibration components using a modified dynamic time warping (DTW) technique. The fundamental mechanism arises from the understanding that these nonstationary components can be perceived as distortions from stationary sinusoidal signals. The proposed approach flexibly aligns a vibration component to a reference with discernible phases. Generalized total least squares regression (GTLSR) is employed to pinpoint the IP and speed from the warping alignment path. The modification and regression mitigate the degradation of estimation caused by the pathological problem. It also finds that distances along the alignment path provide an indication of incomplete features or mode mixings, which can facilitate the determination of a bandpass filter to extract any nonstationary mono-component. The performance of proposed approach was validated through publicly accessible datasets from wind turbine and aircraft engine systems, demonstrating superior performance over existing techniques, such as Hilbert transform (HT)-based phase demodulation and ridge searching from timefrequency distributions (TFDs), particularly under noisy conditions.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Sensors Journal",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Li Zhang",
+   "Xiyue Tao",
+   "Liu Hong",
+   "Xiaoming Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "243ae46db3d162e294b8f6de9b9b6c5d89d86f17",
+  "paper_id": "doi:10.1109/JSEN.2026.3666522",
+  "doi": "10.1109/JSEN.2026.3666522",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/243ae46db3d162e294b8f6de9b9b6c5d89d86f17",
+  "published_iso": "2026-04-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Deterministic Minimum-Leakage Continuous-Variable Quantum Key Distribution with Phase-Conjugated Twin Beams",
+  "title_norm": "deterministic minimum leakage continuous variable quantum key distribution with ",
+  "abstract": "Minimum-leakage continuous-variable quantum key distribution suppresses Eve's Holevo information by engineering the signal ensemble at the state-preparation stage. Existing symmetric minimum-leakage protocols achieve this goal by heralding: Alice interferes two squeezed ensembles, measures one output mode, and sends the other to Bob. Here we propose a deterministic two-mode protocol that removes the Alice-side heralding step. Alice combines two oppositely squeezed Gaussian ensembles on a balanced beam splitter and transmits both output modes, which form phase-conjugated twin beams. We show that this protocol is related to the heralding protocol through a common entanglement-based source but corresponds to a different prepare-and-measure decomposition. In the very-large-squeezing limit, the two protocols give the same secret key rate per transmitted optical mode. For finite squeezing, however, the phase-conjugated twin-beam protocol requires approximately 3 dB less squeezing to achieve the same key rate. We further analyze correlated two-mode Gaussian attacks in which Eve injects ancillary modes with optimized inter-mode correlations. We find that the correlated attacks are slightly more efficient than independent attacks, but the advantage remains limited under the minimum-leakage condition. These results show that phase-conjugated twin beams provide a deterministic and experimentally appealing route to symmetric minimum-leakage CV-QKD.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Zhen Zhao",
+   "Dawei Wang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "99a7564ce340c8fb26782d8117387eab35f6f29c",
+  "paper_id": "arxiv:2607.12432",
+  "doi": "",
+  "arxiv_id": "2607.12432",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/99a7564ce340c8fb26782d8117387eab35f6f29c",
+  "published_iso": "2026-07-14",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Single-Variable Multi-Criteria Optimization of Solid-Phase Volume Fraction in Solid–Liquid Mixing System of High-Viscosity Polyurethane Adhesive Based on CFD Coupled with Machine Learning",
+  "title_norm": "single variable multi criteria optimization of solid phase volume fraction in so",
+  "abstract": "The solid-phase volume fraction is a core process parameter that determines the mixing quality of high-viscosity polyurethane adhesives. It exhibits complex nonlinear couplings with mixing homogeneity, rheological properties, and energy consumption. Traditional trial-and-error experiments and standalone CFD simulations are hindered by high costs, long computational cycles, and inefficient parameter optimization processes. Consequently, these limitations prevent them from satisfying industrial-scale process optimization demands. To address these challenges, this study proposes a single-variable, multi-criteria intelligent optimization method integrating CFD with machine learning. This study uses a 5000 L industrial stirred reactor as the research object. Twelve typical operating conditions were designed within the 8–32% solid-phase volume fraction range. Numerical simulations were conducted based on the laminar Mixture multiphase flow model. These simulations established a small-sample, high-fidelity operating condition database. To mitigate underfitting caused by limited CFD data, an adaptive cubic spline interpolation algorithm was employed for dataset augmentation. Subsequently, a comparative analysis was conducted between Gaussian process regression (GPR) and support vector regression (SVR) as small-sample surrogate models. Test results demonstrate that the GPR model achieves a coefficient of determination (R2) of 0.968, with significantly superior prediction accuracy and generalization performance compared to the SVR model. This study uses the solid-phase volume fraction as the sole decision variable. A five-criteria optimization model was constructed based on the optimal GPR surrogate, combined with the NSGA-II algorithm and ideal point decision criterion. Three optimal operating modes were identified—balanced, low-energy, and high-dispersion—tailored for different production scenarios. The proposed integrated collaborative optimization approach effectively reduces process development costs. It also provides comprehensive theoretical foundations and technical references for intelligent control and energy-efficient production of high-viscosity non-Newtonian solid–liquid mixing systems.",
+  "tldr": "The proposed integrated collaborative optimization approach effectively reduces process development costs and provides comprehensive theoretical foundations and technical references for intelligent control and energy-efficient production of high-viscosity non-Newtonian solid–liquid mixing systems.",
+  "year": 2026,
+  "venue": "Symmetry",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Bin He",
+   "Xurong Teng",
+   "Long Fan",
+   "Renlong Liu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "cb1ae8dd9b10f26617f81ae414f72e92d943c9ba",
+  "paper_id": "doi:10.3390/sym18071223",
+  "doi": "10.3390/sym18071223",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/sym18071223",
+  "published_iso": "2026-07-20",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Flow field patterns in train compartments based on jet ventilation under variable air volume system: isothermal conditions",
+  "title_norm": "flow field patterns in train compartments based on jet ventilation under variabl",
+  "abstract": "Variable air volume systems are widely used in trains as they provide effective energy savings for air conditioning. However, the design phase is usually carried out at a certain fixed airflow, resulting in a difference between the expected and actual flow fields. In this study, we first analyzed the flow field characteristics at variable airflow rates under isothermal conditions, and subsequently established a correlation equation between the airflow and the flow field parameters. The results show that the airflow just entering the compartment conforms to the characteristics of an attached jet, and then, after converging in the middle, conforms to the characteristics of a free jet. The flow field characteristics are significantly correlated with the Reynolds number (Re) and are limited by the small space inside the vehicle. When Re⩾2650, the axial velocities all conform to the classical um/u0−(x/b)′ or um/u0−(y/b)r law, the sectional velocities conform to the exponential and Gaussian distributions, and the characteristic thicknesses of the jets conform to a linear distribution. Derivation shows that the entrainment suction flow rate is related mainly to the initial flow rate and the air opening width. The results of this study will inform the design of ventilation systems for high-speed trains.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Zhejiang University: Science A",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Songbo Wu",
+   "Tian Li",
+   "Ji-ye Zhang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "cd03e27ac5143c50bda2b880aab3656756706ba4",
+  "paper_id": "doi:10.1631/jzus.A2500022",
+  "doi": "10.1631/jzus.A2500022",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/cd03e27ac5143c50bda2b880aab3656756706ba4",
+  "published_iso": "2025-12-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Robust Frequency Regulation of Power System Through Aggregated Variable Speed Air-Conditioner Systems",
+  "title_norm": "robust frequency regulation of power system through aggregated variable speed ai",
+  "abstract": "Frequency regulation services through demand-side measures such as thermostatically controlled loads have gained popularity in the recent decade. However, there is a significant need for a control strategy that has the capability to provide regulation even under parametric uncertainties. In this paper, a robust PI controller has been designed to homogeneously integrate aggregated Variable Speed Air-Conditioning (VSAC) systems into a Single-Area Power System (SAPS) with a reheat steam turbine. Based on parametric uncertainties, a worst-case model of the VSAC-SAPS system is obtained and its stability margins in terms of Phase and Gain margins are evaluated. Simulation results show that the dynamic responses of the power grid's frequency and power deviation of the grid were steady-state stable. Considering 30,000 homogeneous VSACs with 1.5 tonnes capacity, the rated power of the aggregated VSACs is 59MW (approx.). Simulation results showed that without a robust controller, the uncertain system was stable but sensitive to perturbations due to lower gain and phase margins. Frequency support services were utilized from the grid and aggregated VSAC systems, thereby significantly reducing the strain on the conventional grid. The robust PI controller in the VSAC system enhances transient stability by reducing overshoot and achieving faster damping, complementing the slower grid response.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 8th International Conference on Electronics, Materials Engineering & Nano-Technology (IEMENTech)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "V. S. K V Harish",
+   "A. Routh"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "3f7c605085269ad78f5edae2c169278361269bef",
+  "paper_id": "doi:10.1109/IEMENTech65115.2025.10959677",
+  "doi": "10.1109/IEMENTech65115.2025.10959677",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3f7c605085269ad78f5edae2c169278361269bef",
+  "published_iso": "2025-01-31",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "When Oracle Conditioning Misleads Deployment: Conditioning-Availability Bias in Echocardiographic Segmentation",
+  "title_norm": "when oracle conditioning misleads deployment conditioning availability bias in e",
+  "abstract": "Conditional segmentation models may be trained and evaluated with auxiliary signals cleaner than those available at deployment. We study this protocol-level manifestation of shortcut learning and auxiliary-variable shift in phase-conditioned echocardiographic segmentation. The complementary gap pair measures loss on the deployable oracle-estimated pathway and probes sensitivity on the oracle-random pathway. On held-out CAMUS data, one strong-cyclic, oracle-selected run fails severely with estimated phase, while sensitivity to incorrect phase persists across three runs. On EchoNet-Dynamic, the current estimator remains usable, but random-phase testing reveals strong latent sensitivity. Deployment-aware checkpoint selection and phase perturbation reduce both gaps with little change in mean Dice. Exploratory subgroup analyses quantify variation across measured strata, and a downstream ejection fraction (EF) audit shows that recovering segmentation does not necessarily recover EF error or signed bias. Together, the gaps test whether oracle-conditioned performance survives the inference pathway actually available at deployment.",
+  "tldr": "The complementary gap pair measures loss on the deployable oracle-estimated pathway and probes sensitivity on the oracle-random pathway to test whether oracle-conditioned performance survives the inference pathway actually available at deployment.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "D. Cao",
+   "Hieu D. Pham",
+   "Hieu Pham"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "96460aa8d5c35a93ad9c48bd9a9d06d84b8e8dc6",
+  "paper_id": "arxiv:2608.03342",
+  "doi": "",
+  "arxiv_id": "2608.03342",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/96460aa8d5c35a93ad9c48bd9a9d06d84b8e8dc6",
+  "published_iso": "2026-08-04",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Teaching Tiny VLA Models Where to Look and How to Move",
+  "title_norm": "teaching tiny vla models where to look and how to move",
+  "abstract": "Tiny Vision-Language-Action models are appealing for real-time robotic control, but reducing model scale often weakens two capabilities essential for manipulation: task-conditioned spatial grounding and coherent action generation. We introduce XS-VLA, a lightweight framework that teaches tiny VLA policies\"where to look\"and\"how to move\"without increasing deployment-time model cost. For spatial grounding, Coarse-Grained Spatial Distillation uses Qwen3-VL-4B to produce teacher-derived coarse image-plane location labels for task-relevant objects, which are quantized into a spatial vocabulary and distilled into a SmolVLM2-0.25B backbone without human annotations. For action generation, Latent Flow Matching combines a CVAE-style latent variable with flow-based policy learning to organize multimodal demonstrations during training and produce stable action chunks at deployment. On LIBERO, XS-VLA improves average success from 82.8\\% to 90.3\\% over SmolVLA-0.25B and improves LIBERO-Long from 63.0\\% to 89.0\\%. In real-world experiments, we design three tasks covering single-arm placement, precision bimanual stacking, and long-horizon sequential coordination, where XS-VLA improves average task success from 21.7\\% to 65.0\\%. These results show that explicit spatial grounding and latent action-structure learning can make tiny VLA models effective for robotic manipulation.",
+  "tldr": "XS-VLA is introduced, a lightweight framework that teaches tiny VLA policies \"where to look\" and \"how to move\" without increasing deployment-time model cost and shows that explicit spatial grounding and latent action-structure learning can make tiny VLA models effective for robotic manipulation.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Iok Tong Lei",
+   "Ying Jie Yap",
+   "Wei Huang",
+   "Qingchen Xie",
+   "Qianzhi Li",
+   "Yujie Zhang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "565a3929ae5941ae560d13f14c7b369fe8c78526",
+  "paper_id": "arxiv:2607.04171",
+  "doi": "",
+  "arxiv_id": "2607.04171",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/565a3929ae5941ae560d13f14c7b369fe8c78526",
+  "published_iso": "2026-07-05",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Mag-VLA: Vision-Language-Action Model for Bimanual Magnetically Actuated Microrobot Manipulation",
+  "title_norm": "mag vla vision language action model for bimanual magnetically actuated microrob",
+  "abstract": "Magnetically actuated microrobots have been used as wireless, non-contact manipulation tools at microscales, making them promising for minimally invasive applications. However, their control remains challenging due to indirect actuation, limited sensing, and nonlinear magnetic interactions. In this work, we propose Mag-VLA, a vision-language-action (VLA) model for dexterous magnetic microrobot manipulation using two robotic arms with mounted magnets for dynamic magnetic-field construction. Bimanual coordination enables capabilities such as microrobot reorientation that are difficult or infeasible with a single arm, but it also introduces coupled control challenges, as the policy must generate coordinated trajectories for both actuators within a shared workspace. Our framework adapts a Qwen2.5-VL-7B backbone using Low-Rank Adaptation (LoRA) to process visual observations and language instructions for action prediction. To capture task progression, we introduce a motion-aware phase classifier and a phase-conditioned Action Chunking Transformer (ACT) decoder for temporally coherent multi-step control. We further construct a teleoperated magnetic microrobot manipulation dataset covering three task configurations. Ablation studies show that the ACT-based decoder substantially outperforms alternative generative action heads. In real-robot experiments, Mag-VLA achieves a 90% approach success rate across all tasks and transport success rates of 80%, 70%, and 50% as task difficulty increases. These results demonstrate that hierarchical VLA modeling provides a promising framework for magnetic microrobot manipulation.",
+  "tldr": "The proposed Mag-VLA model, a vision-language-action (VLA) model for dexterous magnetic microrobot manipulation using two robotic arms with mounted magnets for dynamic magnetic-field construction, provides a promising framework for magnetic microrobot manipulation.",
+  "year": 2026,
+  "venue": "2026 International Conference on Manipulation, Automation and Robotics at Small Scales (MARSS)",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Yongchen Wang",
+   "Kangyi Lu",
+   "Lan Wei",
+   "Dandan Zhang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "8dfd0805079ac3c17772db1ce037b7abec57ecce",
+  "paper_id": "dblp:journals/corr/abs-2605-28486",
+  "doi": "10.1109/MARSS70227.2026.11655691",
+  "arxiv_id": "2605.28486",
+  "dblp_key": "journals/corr/abs-2605-28486",
+  "paper_url": "https://doi.org/10.48550/arxiv.2605.28486",
+  "published_iso": "2026-05-27",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "ForeTime-VLA: Causal Future-Token Distillation from a World Action Model for Conveyor-Belt Manipulation",
+  "title_norm": "foretime vla causal future token distillation from a world action model for conv",
+  "abstract": "Manipulating moving objects requires a policy to anticipate contact events, yet vision-language-action (VLA) policies are commonly fine-tuned from the current observation alone. World action models (WAMs) learn predictive dynamics, but running a video-scale teacher or explicitly imagining future frames at deployment is costly. We introduce ForeTime-VLA, a dense pi0.5 policy that distills a future-aware, action-equivalent representation from a frozen Fast-WAM-derived teacher while remaining causal at inference. Offline, current and future video latents are compressed into a whitened 64-D target. Online, an eight-frame history encoder predicts this target together with manipulation phase and normalized time-to-transition. Four future tokens and one phase token condition the VLM prefix, while the predicted future and transition horizon condition the action expert. Training retains the original flow-matching action target and adds cosine, relational geometry, phase, time-to-transition, and action-equivalence objectives. On a deduplicated conveyor-belt dataset, we compare 40k-step checkpoints on 768 matched windows per split. Test MAE decreases from 0.134119 to 0.130593 (2.63%; paired-bootstrap 95% CI: 0.82-4.48% improvement), and test L2 decreases by 3.02%, at a 2.46-2.93% latency cost. In quantitative real-robot evaluation, ForeTime-VLA achieves 81.1% stationary and 58.9% slow-moving grasp success, exceeding the next-best reference by 12.2 and 22.2 percentage points, respectively. Across three belt speeds, it completes 44/90 grasps versus 23/90 for pi0.5, including 11/30 versus 2/30 at fast speed. The agreement between offline orientation gains and reduced real-robot contact-pose failures supports causal future-token distillation as an effective way to improve dynamic manipulation without deploying the world-model teacher.",
+  "tldr": "The agreement between offline orientation gains and reduced real-robot contact-pose failures supports causal future-token distillation as an effective way to improve dynamic manipulation without deploying the world-model teacher.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Siyuan Ma",
+   "Yutian Zhang",
+   "Boshi Zhang",
+   "Qinglian Wu",
+   "Jiaqi Zhai",
+   "Dongjun Wei"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "cbe0a1c049eb4466716ffe4db632e17322de5e0c",
+  "paper_id": "arxiv:2608.20735",
+  "doi": "",
+  "arxiv_id": "2608.20735",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/cbe0a1c049eb4466716ffe4db632e17322de5e0c",
+  "published_iso": "2026-08-21",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models",
+  "title_norm": "bora bridging offline reinforcement learning and online residual adaptation for ",
+  "abstract": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for grounding visual-language understanding into real-world robotic manipulation. However, dexterous manipulation remains challenging for VLA policies due to high-dimensional hand control and compounding execution errors, which makes real-world RL post-training essential for bridging the gap between visually grounded action generation and physically reliable dexterous execution. However, high-dimensional dexterous exploration often triggers temporal inconsistency, sample inefficiency and hardware risks in the real world. To address these challenges, we propose BORA, an offline-to-online RL post-training framework designed for real-world dexterous VLA models. In the offline phase, BORA constructs a critic that takes both the VLM's cognition tokens and action chunks as inputs. This design enables action-conditioned value guidance, allowing the critic to evaluate dexterous hand motions beyond visual context alone. During the subsequent online phase, BORA freezes the VLA base and introduces a lightweight, Human-in-the-Loop (HiL) chunk-wise residual adaptation mechanism to mitigate real-world execution errors and further correct the offline-learned intents within the actual physical environment. By inheriting the offline critic and employing intervention-driven rewards, BORA effectively corrects execution discrepancies and adapts to real-world physical variances while preserving the pretrained policy as a stable prior. Extensive evaluations across five complex real-world dexterous tasks demonstrate that BORA significantly outperforms pure imitation learning and traditional decoupled RL baselines, achieving a 33% absolute increase in average success rate under standard settings and up to a 43% improvement in unseen object generalization.",
+  "tldr": "Extensive evaluations across five complex real-world dexterous tasks demonstrate that BORA significantly outperforms pure imitation learning and traditional decoupled RL baselines, achieving a 33% absolute increase in average success rate under standard settings and up to a 43% improvement in unseen object generalization.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhongxia Chen",
+   "Yifan Han",
+   "Yanming Shao",
+   "Huan Liu",
+   "Congsheng Xu",
+   "Xiaoyu Chen"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "e9f2af1e1eac0f1e8da884828cba57881a29203a",
+  "paper_id": "dblp:journals/corr/abs-2605-30226",
+  "doi": "10.48550/arXiv.2605.30226",
+  "arxiv_id": "2605.30226",
+  "dblp_key": "journals/corr/abs-2605-30226",
+  "paper_url": "https://www.semanticscholar.org/paper/e9f2af1e1eac0f1e8da884828cba57881a29203a",
+  "published_iso": "2026-05-28",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Variable Resistance Training Improves Velocity and Power Output by Reducing Concentric Deceleration in the Back Squat.",
+  "title_norm": "variable resistance training improves velocity and power output by reducing conc",
+  "abstract": "ABSTRACT\nChiang, YC, Lin, WC, Weakley, J, and Chiang, CY. Variable resistance training improves velocity and power output by reducing concentric deceleration in the back squat. J Strength Cond Res 40(7): e663-e669, 2026-Free-weight resistance training (FWT) presents constant resistance, potentially causing a sticking region that negatively affects velocity and power outputs. We aimed to compare FWT with 15, 25, and 35% variable resistance training (VRT) using elastic bands on back squat kinetics and kinematics in the concentric phase. Twenty resistance-trained men performed back squats at 90% of their one-repetition maximum across the 4 conditions in a counterbalanced order in a single session. Resistance in VRT conditions was normalized to ensure the average resistance was equivalent to the FWT condition. Kinetic and kinematic data in the concentric phase were recorded using force plates and linear position transducers. One-way repeated-measures analysis of variance with Bonferroni post hoc comparisons compared dependent variables between conditions. Significance was set at p ≤ 0.05. No significant differences were found between conditions for peak velocity, peak power, peak force, or mean force in the concentric phase. However, a dose-response relationship was observed for other variables. Increasing the VRT percentage led to a significant reduction in sticking region duration, particularly at 25% and 35%VRT, and a significant decrease in force at zero velocity. Conversely, mean concentric velocity, velocity at sticking region onset, and mean concentric power all increased with higher VRT percentages. In conclusion, VRT enhances back squat concentric mean velocity and power output by reducing force at zero velocity and increasing velocity at sticking region onset, representing an effective alternative to FWT for improving these specific performance characteristics.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Strength and Conditioning Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yi-Chien Chiang",
+   "Weihsuan Lin",
+   "J. Weakley",
+   "Chieh-Ying Chiang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7fd2014061e4fb67b291d4693c11ba25773752a4",
+  "paper_id": "doi:10.1519/JSC.0000000000005406",
+  "doi": "10.1519/JSC.0000000000005406",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7fd2014061e4fb67b291d4693c11ba25773752a4",
+  "published_iso": "2026-07-01",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Multimodal Bearing Fault Classification Under Variable Conditions: A 1D CNN with Transfer Learning",
+  "title_norm": "multimodal bearing fault classification under variable conditions a 1d cnn with ",
+  "abstract": "Bearings play an integral role in ensuring the reliability and efficiency of rotating machinery - reducing friction and handling critical loads. Bearing failures that constitute up to 90% of mechanical faults highlight the imperative need for reliable condition monitoring and fault detection. This study proposes a multimodal bearing fault classification approach that relies on vibration and motor phase current signals within a one-dimensional convolutional neural network (1D CNN) framework. The method fuses features from multiple signals to enhance the accuracy of fault detection. Under the baseline condition (1,500 rpm, 0.7 Nm load torque, and 1,000 N radial force), the model reaches an accuracy of 96% with addition of L2 regularization. This represents a notable improvement of 2% compared to the non-regularized model. In addition, the model demonstrates robust performance across three distinct operating conditions by employing transfer learning (TL) strategies. Among the tested TL variants, the approach that preserves parameters up to the first max-pool layer and then adjusts subsequent layers achieves the highest performance. While this approach attains excellent accuracy across varied conditions, it requires more computational time due to its greater number of trainable parameters. To address resource constraints, less computationally intensive models offer feasible trade-offs, albeit at a slight accuracy cost. Overall, this multimodal 1D CNN framework with late fusion and TL strategies lays a foundation for more accurate, adaptable, and efficient bearing fault classification in industrial environments with variable operating conditions.",
+  "tldr": "This study proposes a multimodal bearing fault classification approach that relies on vibration and motor phase current signals within a one-dimensional convolutional neural network (1D CNN) framework that fuses features from multiple signals to enhance the accuracy of fault detection.",
+  "year": 2025,
+  "venue": "Machine Learning with Applications",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tasfiq E. Alam",
+   "M. Ahsan",
+   "Shivakumar Raman"
+  ],
+  "citations": 18,
+  "source": "semanticscholar",
+  "source_id": "012651d5061c38cc464c7f1b7e159ee91baa445b",
+  "paper_id": "dblp:journals/corr/abs-2502-17524",
+  "doi": "10.48550/arXiv.2502.17524",
+  "arxiv_id": "2502.17524",
+  "dblp_key": "journals/corr/abs-2502-17524",
+  "paper_url": "https://www.semanticscholar.org/paper/012651d5061c38cc464c7f1b7e159ee91baa445b",
+  "published_iso": "2025-02-23",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Extrapolating Phase-Field Simulations in Space and Time with Purely Convolutional Architectures",
+  "title_norm": "extrapolating phase field simulations in space and time with purely convolutiona",
+  "abstract": "Phase-field models of liquid metal dealloying (LMD) can resolve rich microstructural dynamics but become intractable for large domains or long time horizons. We present a conditionally parameterized, fully convolutional U-Net surrogate that generalizes far beyond its training window in both space and time. The design integrates convolutional self-attention and physics-aware padding, while parameter conditioning enables variable time-step skipping and adaptation to diverse alloy systems. Although trained only on short, small-scale simulations, the surrogate exploits the translational invariance of convolutions to extend predictions to much longer horizons than traditional solvers. It accurately reproduces key LMD physics, with relative errors typically under 5% within the training regime and below 10% when extrapolating to larger domains and later times. The method accelerates computations by up to 16,000 times, cutting weeks of simulation down to seconds, and marks an early step toward scalable, high-fidelity extrapolation of LMD phase-field models.",
+  "tldr": "A conditionally parameterized, fully convolutional U-Net surrogate that generalizes far beyond its training window in both space and time, and marks an early step toward scalable, high-fidelity extrapolation of LMD phase-field models.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "C. Bonneville",
+   "Nathan Bieberdorf",
+   "Pieterjan Robbe",
+   "Mark Asta",
+   "H. Najm",
+   "Laurent Capolungo"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "ff9df857973b27c155fdd3a02eee3a1181e6c1a6",
+  "paper_id": "dblp:journals/corr/abs-2509-20770",
+  "doi": "10.48550/arXiv.2509.20770",
+  "arxiv_id": "2509.20770",
+  "dblp_key": "journals/corr/abs-2509-20770",
+  "paper_url": "https://www.semanticscholar.org/paper/ff9df857973b27c155fdd3a02eee3a1181e6c1a6",
+  "published_iso": "2025-09-25",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Investigation of the dynamic transmission accuracy of an industrial robot joint RV reducer under variable situations",
+  "title_norm": "investigation of the dynamic transmission accuracy of an industrial robot joint ",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Multibody system dynamics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lixin Xu",
+   "Yunlong Wu"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "33519e06dacaa1eb05a72ac969b04769dabafe7e",
+  "paper_id": "doi:10.1007/s11044-025-10056-2",
+  "doi": "10.1007/s11044-025-10056-2",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/33519e06dacaa1eb05a72ac969b04769dabafe7e",
+  "published_iso": "2025-02-10",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Research on Novel Control Strategies for Three-Phase Inverters in Railway Passenger Vehicles",
+  "title_norm": "research on novel control strategies for three phase inverters in railway passen",
+  "abstract": "To meet the demands of flexible configuration of three-phase loads and the use of variable-frequency air conditioning in railway passenger vehicles, this paper designs a novel control strategy for three-phase inverters under unbalanced and nonlinear load conditions. This strategy enhances the ability to control output voltage unbalance and suppress output voltage harmonics. The new control strategy employs a dual-loop voltage and current control based on feedforward decoupling, improving dynamic response characteristics. It decomposes the voltage and current into positive and negative sequence components and controls them separately, maintaining output voltage symmetry under unbalanced loads. Additionally, a quasi-resonant controller is incorporated to suppress specific harmonics, reducing the total harmonic distortion (THD) of the output voltage under nonlinear loads. The paper first introduces the main circuit principles of the three-phase inverter for railway passenger vehicles, then focuses on analyzing the control algorithms included in the new strategy, and finally verifies the feasibility and effectiveness of the proposed control strategy through simulations.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 2nd International Conference on Electrical Technology and Automation Engineering (ETAE)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Lijun Zhang",
+   "Pengchuang Liu",
+   "Xu-Lin Zhao",
+   "Bowei Zhu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "94eb05c1639313e0db5daa28d8881d94db077ee4",
+  "paper_id": "doi:10.1109/ETAE65337.2025.11089839",
+  "doi": "10.1109/ETAE65337.2025.11089839",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/94eb05c1639313e0db5daa28d8881d94db077ee4",
+  "published_iso": "2025-05-23",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "AS&SPO: A Digital Signal Phase Adjustment Method for High-Precision Spool Displacement Measurement in Electro-Hydraulic Control Valves",
+  "title_norm": "as spo a digital signal phase adjustment method for high precision spool displac",
+  "abstract": "Electro-hydraulic control valve (EHCV) with integrated controller commonly utilizes a linear variable displacement transformer (LVDT) to measure spool displacement and achieve closed-loop control. However, the switching power drive circuit controlled by pulsewidth modulation (PWM) within the controller introduces ripple interference to the electrical signal. In addition, as an inductive component, the LVDT exhibits hysteresis in its inductive signal, making the design of a high-precision conditioning circuit complicated and limiting the precision of spool displacement measurement. Based on the LVDT signal-conditioning hardware architecture, this study enables efficient and precise signal phase adjustments, achieving adaptive sampling (AS) to mitigate ripple interference. Noise-suppressing high-precision demodulation is further achieved through sampling position optimization (SPO), forming a novel digital conditioning method for spool displacement measurement in EHCVs. The experimental results of signal demodulation indicate that the proposed high-precision digital conditioning method effectively reduces the noise level of the standard spool displacement signal (SSDS). The SSDS’s mean precision is improved to 0.21%, and its mean maximum error is limited to 0.12%. The dynamic and static experimental results of the EHCV further validate that the high-precision digital conditioning method significantly enhances the valve performance.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "IEEE Transactions on Instrumentation and Measurement",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Junhui Zhang",
+   "Jinheng Liu",
+   "Qi Su",
+   "Ze-bing Mao",
+   "Haibin Li",
+   "Zhi Qiu"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "ddfe6515db8a9146c349fb43c68e33ffa40ee0c3",
+  "paper_id": "doi:10.1109/TIM.2026.3655951",
+  "doi": "10.1109/TIM.2026.3655951",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ddfe6515db8a9146c349fb43c68e33ffa40ee0c3",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Evaluating gvhd outcomes after chemotherapy-only conditioning in nicotinamide-expanded umbilical cord blood (omidubicel) transplantation: A retrospective cohort study",
+  "title_norm": "evaluating gvhd outcomes after chemotherapy only conditioning in nicotinamide ex",
+  "abstract": "\n \n \n INTRO: Omidubicel (Omi) is an ex vivo expanded hematopoietic progenitor cell product derived from a single umbilical cord blood (UCB) unit that was FDA approved in April 2023. In the Phase III trial (P3) comparing Omi transplant (HCT) to standard UCB transplant, overall aGVHD and cGVHD rates were similar between arms, though a subgroup analysis revealed a higher incidence of grade II-IV aGVHD among those receiving total body irradiation (TBI) compared to those receiving chemotherapy only based conditioning in the Omi group (Data Gamida-Cell). Here, we present our experience with Omi HCT to better characterize rates of GVHD in patients who received chemotherapy-only myeloablative conditioning (MAC) at Loyola University Medical Center (LUMC).\n METHODS: We identified all patients who received Omi HCT at LUMC through participation in the P3 (PMID:34157093), the Expanded Access Protocol (EAP) (PMID:40204073) or as commercially available therapy following FDA approval between 12/2/17 and 7/1/24. All patients received conditioning with thiotepa, busulfan, and fludarabine. No patients received TBI or anti-thymocyte globulin. All received GVHD prophylaxis with mycophenolate mofetil and tacrolimus. Data was collected retrospectively from medical records. Descriptive statistics were computed and summarized around variables of interest.\n RESULTS: Eighteen patients underwent Omi HCT at LUMC. Median age at transplant was 50 (42 – 64), 28% were female, and diseases were: AML (61%), ALL (11%), T cell leukemia/lymphoma (11%), MDS (11%), and CML (6%). Median time to neutrophil engraftment was 11.5 days (9.8-15.3) and median time to platelet engraftment was 34.5 days (28-49.3). Two patients failed to engraft but were successfully salvaged by haploidentical HCT. Median time to last follow up after transplant was 35 months (27.5-70.0). Fourteen (77.8%) were alive 1 year after transplant, and 11 (58.7%) were alive 2 years after. Disease relapse occurred in 7 patients (39%) – all with multiply relapsed or primary refractory disease. These were comparable to P3 and EAP outcomes.\n Six patients (33%) developed aGVHD within 100 days of transplant, including 4 (22%) with grade 3-4 aGVHD. In the P3, Day 100 aGVHD was 56% with 14% Grade 3-4; in the EAP, reported rates were 63% and 19%. The mean age at time of transplant was 59 (+/- 12.7) in those with aGVHD and 49 (+/- 11.3) in those without. There did not appear to be a difference comparing aGVHD+ vs aGVHD- with respect to: mean age of donor cord blood (DCB) unit (7.33 (+/- 5.13) vs 6.58 (+/-4.08)), mean DCB CD34+ cell dose (12.02 +/-3.62 x 106 vs 12.06 +/-2.67 x 106), mean total nucleated cell (TNC) dose (2.48 +/-0.57 x 109 vs 2.43 +/-0.55 x 109), degree of HLA matching (5.17 +/-1.17 vs 5.25 +/-1.29), and donor and recipient CMV status mismatch (50% of each group).\n Five patients (28%) developed cGVHD, 4 of these within 1 year of transplant. Three (17%) had mild, 1 had moderate (6%), and 1 (6%) had severe cGVHD. By comparison, the Phase 3 study reported a 1-year cGVHD rate of 35% with 27% mod-severe. The EAP reported 9% cGVHD; all mild. Mean age was 49 (+/- 12.13) in those with cGVHD and 54 (+/- 12.83) in those without. Notably, mean age of DCB unit was younger for those with cGVHD: 4.20 years (+/-2.77) in cGVHD+ vs 7.85 (+/- 4.45) in cGVHD-. There did not appear to be a difference comparing cGVHD+ vs cGVHD- with respect to: mean DCB CD34+ cell dose (13.50 +/-1.84 x 106 vs 11.49 +/- 3.10 x 109), mean TNC dose (2.54 +/- 0.40 x 109 vs 2.41 +/- 0.60 x 109), and degree of HLA match (4.80 +/- 1.48 vs 5.38 +/- 1.12). Donor-recipient CMV status was mismatched in 4/5 (80%) patients with cGVHD versus in 5/13 (38%) without.\n One-year GVHD-free relapse-free survival (GRFS) was 33% and cGVHD-free relapse-free survival (cGRFS) was 50%, rates affected by relapse in high risk disease. The P3 reported a GRFS of 36% and the EAP a cGRFS of 66%.\n CONCLUSION: Our practice with Omi HCT using exclusively chemo-only conditioning showed comparable outcomes with the pivotal P3 and with the EAP. However, rates of aGVHD appeared lower, and cGVHD was comparable to the lower rates in the EAP compared to the P3, in which 31/62 (50%) of patients in the Omni group received TBI. We did find increased cGVHD with CMV mismatch and younger DCB units, but not with other factors previously reported to affect GVHD rates in HCT. Our findings support use of a chemotherapy-only MAC prior to transplant with omidubicel.\n",
+  "tldr": "The experience with Omi HCT is presented to better characterize rates of GVHD in patients who received chemotherapy-only myeloablative conditioning (MAC) at Loyola University Medical Center to better characterize rates of GVHD in patients who received chemotherapy only based conditioning in the Omi group.",
+  "year": 2025,
+  "venue": "Blood",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Alexander O'Hara",
+   "Abhilasha Kumar",
+   "Dawn Marie Stull",
+   "Kayeromi Gomez",
+   "Patrick Hagen",
+   "Jorgena Kosti"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9ff1f723dd9c629d8bc4052ab75eaa17c13726aa",
+  "paper_id": "doi:10.1182/blood-2025-4223",
+  "doi": "10.1182/blood-2025-4223",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9ff1f723dd9c629d8bc4052ab75eaa17c13726aa",
+  "published_iso": "2025-11-03",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "SMPL Variable Model for 3D Reconstruction and Image Fusion in Animation Media Applications",
+  "title_norm": "smpl variable model for 3d reconstruction and image fusion in animation media ap",
+  "abstract": "3D human reconstruction is a pivotal research area in computer vision and computer graphics, with broad applications in fields such as virtual reality, animation media, and medical simulation. Traditional reconstruction approaches often rely on fixed-shape models, which limits their ability to accurately represent the dynamic soft tissue variations and complex interactions with the surrounding environment. These methods face challenges in managing occlusions in multi-person scenes, capturing a diverse range of poses, and handling extensive deformations in real-world scenarios, which constrains their practical application. To overcome these limitations, this paper introduces an enhanced 3D reconstruction model using the SMPL variable model, which integrates a soft tissue layer, UV space mapping, and a force-conditioning mechanism. The proposed model incorporates a variable-thickness soft tissue layer to better capture anatomical variations, utilizes UV space mapping to streamline deformation calculations, and employs force-conditioning to realistically simulate intricate interactions. Experimental results on datasets such as ShapeNet, ShapeNetCore, ABC, and Scan2CAD demonstrate that our approach surpasses current state-of-the-art methods in terms of accuracy, recall, F1 score, and AUC, while also achieving greater efficiency in both training and inference phases. This research not only delivers a more accurate and computationally efficient solution for 3D reconstruction but also contributes novel insights into multi-person interaction modeling and enhances generalization in real-world animation media applications.",
+  "tldr": "This research introduces an enhanced 3D reconstruction model using the SMPL variable model, which incorporates a soft tissue layer, UV space mapping, and a force-conditioning mechanism and contributes novel insights into multi-person interaction modeling and enhances generalization in real-world animation media applications.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tian Xie",
+   "Kunpeng Zhao"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "00fcaeac6abc0b1e24aef215b38a306f37c0b9b5",
+  "paper_id": "dblp:journals/access/XieZ25",
+  "doi": "10.1109/ACCESS.2025.3549466",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/XieZ25",
+  "paper_url": "https://doi.org/10.1109/access.2025.3549466",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Three-Phase Electromagnetic Harvester with a Single-Spring Coupled Moving Magnet Assembly",
+  "title_norm": "a three phase electromagnetic harvester with a single spring coupled moving magn",
+  "abstract": "Vibration energy harvesting is a promising approach to support and supplement power, thereby extending the lifetime of low-power sensor nodes under suitable vibration conditions, i.e., in environments where sufficient ambient vibrations are available. It is not a universal autonomous power-supply solution, particularly when generalized across the Internet of Things (IoT), because the harvested power is typically limited to the µW–mW range and depends strongly on the vibration frequency content, amplitude, and operating point relative to resonance. Furthermore, many practical harvesters rely on resonant mechanisms, which are inherently narrowband, and therefore their performance can degrade significantly under detuning or broadband/variable-frequency excitations. In addition, energy-management and power-conditioning electronics (rectification, storage, and regulation) are required to convert the generated electrical energy into a stable and usable DC supply for practical loads. In this work, we develop a nonlinear state-space model of a three-phase electromagnetic vibration energy harvester with spatially displaced coils and evaluate its electrical output characteristics and DC power behavior using numerical simulations.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Processes",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Marcin Fronc",
+   "Grzegorz Litak",
+   "K. Kolano",
+   "Magdalena Przybylska-Fronc",
+   "M. Waśkowicz"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "bdfffe8f257feba033f686820e99d62a790c31fe",
+  "paper_id": "doi:10.3390/pr14060966",
+  "doi": "10.3390/pr14060966",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2227-9717/14/6/966/pdf",
+  "published_iso": "2026-03-18",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A novel fault transfer diagnosis method using CBAM-MobileNetV2 and its application to mine hoist main bearings under variable working conditions",
+  "title_norm": "a novel fault transfer diagnosis method using cbam mobilenetv2 and its applicati",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Mechanical Science and Technology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fan Jiang",
+   "Hongyan Song",
+   "Xi Shen",
+   "tan huang",
+   "Gongbo Zhou",
+   "Zhencai Zhu"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "4f8d1a7ca741b29dbbef593eb1ea6a4dc1803208",
+  "paper_id": "doi:10.1007/s12206-025-0509-6",
+  "doi": "10.1007/s12206-025-0509-6",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4f8d1a7ca741b29dbbef593eb1ea6a4dc1803208",
+  "published_iso": "2025-05-31",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Synthetic Zero-Sequence Signal-Based Intelligent Location Method for Single-Phase Ground Fault in Distribution Networks",
+  "title_norm": "synthetic zero sequence signal based intelligent location method for single phas",
+  "abstract": "Distribution system structures are intricate and variable, with single-phase ground (SPG) fault occurring frequently. Existing section location methods for SPG faults are often influenced by manually set thresholds, resulting in low accuracy. This article analyzes the relationship between the zero-sequence voltage (ZSV) and zero-sequence current (ZSC) synthesized from three-phase voltage and current under the condition of no zero-sequence transformer installed on the line and proposes an SPG fault section threshold-free location method based on Swin-Transformer (S-T). First, Fourier transform-based data processing methods correct phase errors caused by current transformers (CTs) and eliminate the dc bias in synthesized ZSCs. Second, the synthesized ZSC waveform and the derivative of ZSC (DZSV) waveform are overlaid on the same image, with the enclosed areas shaded to highlight the relationship between the two electrical quantities. Finally, the transformer model is used to classify the differentiated images between the SPG fault section and sound section to achieve threshold-free fault location. The proposed method has been tested and validated on an industrial prototype in a 10-kV full-scale test system and deployed in the actual distribution network. Experimental results demonstrate that the method can accurately locate fault sections even under conditions of noise interference and inaccurate trigger timing.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Instrumentation and Measurement",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mou-fa Guo",
+   "Hongxin Lin",
+   "Jiahao Lin",
+   "Qiteng Hong"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "d873c0c83eb02bd7675690ac3dd9b685e14ae5f7",
+  "paper_id": "dblp:journals/tim/GuoLLH25",
+  "doi": "10.1109/TIM.2025.3548224",
+  "arxiv_id": "",
+  "dblp_key": "journals/tim/GuoLLH25",
+  "paper_url": "https://www.semanticscholar.org/paper/d873c0c83eb02bd7675690ac3dd9b685e14ae5f7",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "General multi-steps variable-coefficient formulation for computing quasi-periodic solutions with multiple base frequencies",
+  "title_norm": "general multi steps variable coefficient formulation for computing quasi periodi",
+  "abstract": "Quasi-periodic solutions with multiple base frequencies exhibit the feature of 2π-periodicity with respect to each of the hyper-time variables. However, it remains a challenge work, due to the lack of effective solution methods, to solve and track the quasi-periodic solutions with multiple base frequencies until now. In this work, a multi-steps variable-coefficient formulation is proposed, which provides a unified framework to enable either harmonic balance method or collocation method or finite difference method to solve quasi-periodic solutions with multiple base frequencies. For this purpose, a method of alternating U and S domain is also developed to efficiently evaluate the nonlinear force terms. Furthermore, a new robust phase condition is presented for all of the three methods to make them track the quasi-periodic solutions with prior unknown multiple base frequencies, while the stability of the quasi-periodic solutions is assessed by mean of Lyapunov exponents. The feasibility of the constructed methods under the above framework is verified by application to three nonlinear systems.",
+  "tldr": "A multi-steps variable-coefficient formulation (m-VCF) is proposed, which provides a unified framework to enable either harmonic balance method (HB) or collocation method (CO) or finite difference method (FD) to solve quasi-periodic solutions with multiple base frequencies.",
+  "year": 2025,
+  "venue": "Acta Mechanica Sinica",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Junqing Wu",
+   "Ling Hong",
+   "Mingwu Li",
+   "Jun Jiang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "1d09662efc3ddaa477fb613f85d1ad66e18fdbdc",
+  "paper_id": "arxiv:2505.02021",
+  "doi": "10.1007/s10409-025-25381-x",
+  "arxiv_id": "2505.02021",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1d09662efc3ddaa477fb613f85d1ad66e18fdbdc",
+  "published_iso": "2025-05-04",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Generalized CHSH nonlocality criteria for continuous variable bipartite Gaussian states: testing in a double-cavity optomechanical device.",
+  "title_norm": "generalized chsh nonlocality criteria for continuous variable bipartite gaussian",
+  "abstract": "We derive a general condition for nonlocality using the Banaszek-Wódkiewicz phase-space Wigner representation of Bell's function in continuous-variable Gaussian states, showing rigorously that while entanglement is necessary, it is not sufficient for nonlocality, whereas nonlocality always implies entanglement. Furthermore, to demonstrate the applicability of the framework, we analyze the two-mode squeezed output generated by a double-cavity optomechanical system coupled to a common mechanical resonator-an experimentally accessible hybrid electro/optomechanical interface. We show that maximal entanglement does not necessarily lead to Bell violation, whereas nonlocality may arise in states with lower entanglement, highlighting the crucial role of mixedness. The developed formalism is universally applicable to all bipartite Gaussian states and provides a general tool for investigating foundational and operational aspects of nonlocality in continuous-variable quantum platforms.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Optics Express",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Souvik Agasti"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "11b8dc0851987d9b33cbe760929e9101e5568d9c",
+  "paper_id": "arxiv:2507.21264",
+  "doi": "10.1364/OE.598825",
+  "arxiv_id": "2507.21264",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1364/oe.598825",
+  "published_iso": "2025-07-28",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Critical points approaches to fourth-order elastic beam equations with variable coefficients having combined effects of concave and convex nonlinearities",
+  "title_norm": "critical points approaches to fourth order elastic beam equations with variable ",
+  "abstract": "This study investigates the theoretical and practical aspects of fourth-order elastic beam equations characterized by variable coefficients and influenced by combined nonlinearities. The equations under consideration arise naturally in the context of high-order differential problems encountered in material science, particularly in the study of phase transitions. The research focuses on establishing the existence and multiplicity of solutions for these equations, which involve both concave and convex nonlinearities. Using advanced mathematical techniques, such as variational methods and critical point theory, the study provides rigorous proofs for the existence of solutions under specific conditions. A central result is the application of Bonanno's local minimum theorem, which ensures the existence of at least one solution. Moreover, the research shows that by imposing additional algebraic conditions, particularly the classical Ambrosetti–Rabinowitz condition, the presence of two distinct solutions can be guaranteed. Beyond this, critical point theorems from Averna and Bonanno are employed to demonstrate scenarios where three solutions are possible.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Electronic Journal of Qualitative Theory of Differential Equations",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. Heidarkhani",
+   "S. Moradi",
+   "G. Caristi",
+   "M. Ferrara"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "5f24c3b78f27d5ded44fd3624123e993357c7e91",
+  "paper_id": "doi:10.14232/ejqtde.2025.1.55",
+  "doi": "10.14232/ejqtde.2025.1.55",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.14232/ejqtde.2025.1.55",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Study on Resonant Multisoliton Solution for the (2+1)‐Dimensional Date–Jimbo–Kashiwara–Miwa Equation With Variable Coefficients",
+  "title_norm": "a study on resonant multisoliton solution for the 2 1 dimensional date jimbo kas",
+  "abstract": "The resonant multisoliton for the (2+1)$$ \\left(2&#x0002B;1\\right) $$ ‐dimensional Date–Jimbo–Kashiwara–Miwa equation with variable coefficients is studied using the Hirota bilinear method. The bilinear form is given for the first time. When a12=0$$ {a}_{12}&#x0003D;0 $$ or a12=∞$$ {a}_{12}&#x0003D;\\infty $$ , the resonance collision between two solitons occurs, resulting in Y‐shaped soliton. It turns out that this is not a completely elastic collision. Otherwise, when the condition a12≈0$$ {a}_{12}\\approx 0 $$ or a12≈∞$$ {a}_{12}\\approx \\infty $$ is satisfied, the collision between two solitons occurs, resulting in X‐shaped soliton. It is found that this is a completely elastic collision. The X‐shaped and Y‐shaped solitons are studied deeply, and the resonant collision process of the two solitons is explored. Some sufficient conditions based on parameters are given. Astonishingly, it is found that h(t)$$ h(t) $$ and g(t)$$ g(t) $$ affect the phase displacement trajectory of two solitons after resonance collision.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Mathematical methods in the applied sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Deniu Yang",
+   "Gang Chen"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c7ffc423eae4c4f077d1bd86a70c23a15c5fef9c",
+  "paper_id": "doi:10.1002/mma.10884",
+  "doi": "10.1002/mma.10884",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c7ffc423eae4c4f077d1bd86a70c23a15c5fef9c",
+  "published_iso": "2025-03-20",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Two-phase Stochastic Momentum-Based Algorithm for Nonconvex Expectation-Constrained Optimization",
+  "title_norm": "a two phase stochastic momentum based algorithm for nonconvex expectation constr",
+  "abstract": "",
+  "tldr": "A two-phase stochastic momentum-based algorithm TStoM that aims to minimize the infeasibility measure searching for a nearly feasible point in the expectation sense and performs a proximal stochastic gradient step to update the primal variable.",
+  "year": 2025,
+  "venue": "Journal of Scientific Computing",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yawen Cui",
+   "Xiao Wang",
+   "Xiantao Xiao"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "9af93bff3ee962a4995684844fd815ace36792dd",
+  "paper_id": "dblp:journals/jscic/CuiWX25a",
+  "doi": "10.1007/s10915-025-02941-x",
+  "arxiv_id": "",
+  "dblp_key": "journals/jscic/CuiWX25a",
+  "paper_url": "https://www.semanticscholar.org/paper/9af93bff3ee962a4995684844fd815ace36792dd",
+  "published_iso": "2025-05-21",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Effects of an isometric conditioning activity on sprint swimming performance in high-level swimmers.",
+  "title_norm": "effects of an isometric conditioning activity on sprint swimming performance in ",
+  "abstract": "This study examined whether a brief, catch-phase-resembling isometric conditioning activity (CA) combined with an individualised rest time (IRT) enhances dry-land performance and transfers to sprint swimming performance in swimmers. Twelve competitive swimmers performed a randomised, counterbalanced crossover design including two dry-land sessions and two in-water sessions. The CA consisted of maximal voluntary isometric contractions (MVIC, 3 × 3 s, 1 min rest) performed in a position resembling the front crawl catch phase. IRT was determined based on post-CA changes in MVIC measured at 4 and 8 min after the CA. Swimming kinematic and kinetic variables were assessed during a 25 m front crawl swim. The CA elicited a significant increase in the dominant arm MVIC following the IRT, whereas no significant changes were observed in the non-dominant arm. Despite this localised potentiation, no significant differences were found between experimental (with CA) and control conditions (without CA) for swimming velocity, time, force, power, stroke length, or stroke rate. A brief, catch-phase-resembling isometric dry-land CA combined with IRT enhanced dominant-arm MVIC, but did not improve sprint swimming performance. These findings suggest that isolated isometric potentiation may be insufficient to enhance performance in complex, highly coordinated tasks such as sprint swimming.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Sports Biomechanics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "W. Sadowski",
+   "Wojciech Rejdych",
+   "Wojciech Głyk",
+   "Michał Krzysztofik"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7133a8738c8f8ae43d41792e6067facf85ada430",
+  "paper_id": "doi:10.1080/14763141.2026.2720208",
+  "doi": "10.1080/14763141.2026.2720208",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7133a8738c8f8ae43d41792e6067facf85ada430",
+  "published_iso": "2026-08-20",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "A Quasi-Experimental Study of Synergistic Impact of Functional Conditioning on Biomotor Proficiencies in Adolescent Female Tennis Athletes",
+  "title_norm": "a quasi experimental study of synergistic impact of functional conditioning on b",
+  "abstract": "Adolescent female tennis players navigate a unique developmental phase where neuromuscular maturation and sport-specific physical demands intersect. Traditional training models often isolate physical attributes, potentially failing to address the multi-planar, high-intensity requirements of competitive tennis. This research work evaluates the efficacy of an 8-week functional training intervention compared to routine tennis practice in optimizing biomotor abilities. Twenty female athletes aged 14–18 were partitioned into a control group (n = 10) receiving standard technical training and an experimental group (n = 10) receiving a hybrid program of functional conditioning and routine practice. Metrics for speed, agility, flexibility, muscular strength, and anaerobic power were obtained through standardized testing protocols including the 10-m sprint, agility T-test, sit-and-reach, hand grip dynamometry, vertical jump, and hopping tests. Data analysis indicates that the control group achieved no significant statistical gains across the biomotor spectrum (p > 0.05). Conversely, the experimental group showed profound enhancements in all measured variables, particularly in agility and muscular strength (p < 0.0001). The comparative outcomes validate functional training as a superior modality for enhancing kinetic chain efficiency and explosive power. These results support the combination of multi-joint, sport-specific movement patterns into adolescent athletic conditioning to maximize physical development and competitive readiness",
+  "tldr": "The results support the combination of multi-joint, sport-specific movement patterns into adolescent athletic conditioning to maximize physical development and competitive readiness and validate functional training as a superior modality for enhancing kinetic chain efficiency and explosive power.",
+  "year": 2026,
+  "venue": "Journal of Pharma Insights and Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dhanalakshmi M",
+   "Bobby N N",
+   "Arunselvan D"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "368993fce0c8c0a6ff76d4a688f74eabefae1353",
+  "paper_id": "doi:10.69613/njh6qd24",
+  "doi": "10.69613/njh6qd24",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://jopir.in/index.php/journals/article/download/711/646",
+  "published_iso": "2026-04-05",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Effect of Variable Channel Angular Extrusion Deformation Temperature on Microstructure Evolution and Mechanical Properties of Mg-8.5Li-6.5Zn-1.3Y Alloy",
+  "title_norm": "effect of variable channel angular extrusion deformation temperature on microstr",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "JOM",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hailong Du",
+   "Liangming Yan",
+   "Di Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a97bbaa28cfff12d428a9012bff8a95e493ef998",
+  "paper_id": "doi:10.1007/s11837-024-07101-4",
+  "doi": "10.1007/s11837-024-07101-4",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/a97bbaa28cfff12d428a9012bff8a95e493ef998",
+  "published_iso": "2025-01-29",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Analysis of the effect of using a variable speed drive on the power consumption of the ID fan drive motor",
+  "title_norm": "analysis of the effect of using a variable speed drive on the power consumption ",
+  "abstract": "Cirebon Coal-Fired Power Plant Unit 1 uses an Induced Draft Fan (ID Fan) to regulate flue gas flow and maintain negative pressure inside the boiler. The current ID Fan control system still applies a blade pitch position mechanism with constant motor speed, resulting in high power consumption ranging from 2,547.9 kW to 4,311.2 kW. This condition is inefficient because the motor runs at constant speed regardless of changing load demands. This study aims to design a Variable Speed Drive (VSD) to control the ID Fan motor speed and analyze its impact on power consumption. The research was conducted using simulation with MATLAB/Simulink R2021a software. The VSD design consists of three main components: a three-phase rectifier, a buck converter-based DC link, and a three-phase PWM inverter, adjusted to meet the ID Fan operational pressure limit of 8.0 to 10.0 kPa. The simulation results show that with the implementation of VSD, the system pressure can be maintained within the safe range of 8.5 to 9.7 kPa, and the motor speed can be adjusted according to airflow demand. Power consumption decreased from 2,645.7 kW to 1,273.1 kW after implementing VSD, resulting in an energy saving of 62.1%. The application of VSD is proven to be effective in improving energy efficiency in the ID Fan system at the Cirebon Coal-Fired Power Plant Unit.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "E3S Web of Conferences",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "I. M. W. Kastawan",
+   "Rizki Amanda",
+   "Ahmad Deni Mulyadi",
+   "Dyah Ayu Yuli Murniyati",
+   "Ramon Zamora"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "efa762828511b4f296c6b922e368bb33bd4b7b12",
+  "paper_id": "doi:10.1051/e3sconf/202566402005",
+  "doi": "10.1051/e3sconf/202566402005",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.e3s-conferences.org/articles/e3sconf/pdf/2025/64/e3sconf_issat2025_02005.pdf",
+  "published_iso": null,
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ },
+ {
+  "title": "Multi-variable Current Shaping Control MCSC Scheme for a Four-Switch Resonant Inverting Buck–Boost DC/DC Converter",
+  "title_norm": "multi variable current shaping control mcsc scheme for a four switch resonant in",
+  "abstract": "",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Electrical Engineering and Technology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Faheem Muhammad",
+   "Wending Zhao",
+   "Jinxu Yang",
+   "Xinke Wu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "45d40f954491fc90112eac53ded27a2d4090de54",
+  "paper_id": "doi:10.1007/s42835-025-02142-4",
+  "doi": "10.1007/s42835-025-02142-4",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/45d40f954491fc90112eac53ded27a2d4090de54",
+  "published_iso": "2025-01-20",
+  "from_query": [
+   "variable phase VLA conditioning"
+  ]
+ }
+]

@@ -1,0 +1,1155 @@
+[
+ {
+  "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
+  "title_norm": "understanding world or predicting future a comprehensive survey of world models",
+  "abstract": "The concept of world models has garnered significant attention due to advancements in multimodal large language models such as GPT-4 and video generation models such as Sora, which are central to the pursuit of artificial general intelligence. This survey offers a comprehensive review of the literature on world models. Generally, world models are regarded as tools for either understanding the present state of the world or predicting its future dynamics. This review presents a systematic categorization of world models, emphasizing two primary functions: (1) constructing internal representations to understand the mechanisms of the world, and (2) predicting future states to simulate and guide decision-making. Initially, we examine the current progress in these two categories. We then explore the application of world models in key domains, including autonomous driving, robotics, and social simulacra, with a focus on how each domain utilizes these aspects. Finally, we outline key challenges and provide insights into potential future research directions. We summarize the representative articles along with their code repositories in https://github.com/tsinghua-fib-lab/World-Model .",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jingtao Ding",
+   "Yunke Zhang",
+   "Yu Shang",
+   "Y. Zhang",
+   "Zefang Zong",
+   "Jie Feng"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4411735734",
+  "doi": "10.1145/3746449",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3746449",
+  "published_iso": "2025-06-27",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "A review of learning-based dynamics models for robotic manipulation",
+  "title_norm": "a review of learning based dynamics models for robotic manipulation",
+  "abstract": "Dynamics models that predict the effects of physical interactions are essential for planning and control in robotic manipulation. Although models based on physical principles often generalize well, they typically require full-state information, which can be difficult or impossible to extract from perception data in complex, real-world scenarios. Learning-based dynamics models provide an alternative by deriving state transition functions purely from perceived interaction data, enabling the capture of complex, hard-to-model factors and predictive uncertainty and accelerating simulations that are often too slow for real-time control. Recent successes in this field have demonstrated notable advancements in robot capabilities, including long-horizon manipulation of deformable objects, granular materials, and complex multiobject interactions such as stowing and packing. A crucial aspect of these investigations is the choice of state representation, which determines the inductive biases in the learning system for reduced-order modeling of scene dynamics. This article provides a timely and comprehensive review of current techniques and trade-offs in designing learned dynamics models, highlighting their role in advancing robot capabilities through integration with state estimation and control and identifying critical research gaps for future exploration.",
+  "year": 2025,
+  "venue": "Science Robotics",
+  "authors": [
+   "Bo Ai",
+   "Stephen Tian",
+   "Haochen Shi",
+   "Yong Wang",
+   "Tobias Pfaff",
+   "Cheston Tan"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4414285669",
+  "doi": "10.1126/scirobotics.adt1497",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/scirobotics.adt1497?download=true",
+  "published_iso": "2025-09-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout",
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Foundation models in robotics: Applications, challenges, and the future",
+  "title_norm": "foundation models in robotics applications challenges and the future",
+  "abstract": "We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper can be found here: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Roya Firoozi",
+   "Johnathan Tucker",
+   "Stephen Tian",
+   "Anirudha Majumdar",
+   "Jiankai Sun",
+   "Weiyu Liu"
+  ],
+  "citations": 199,
+  "source": "openalex",
+  "source_id": "W4402890475",
+  "doi": "10.1177/02783649241281508",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e3eb5469-f176-4c99-8231-efe683fe6399/02783649241281508.17904978.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Sampling representational plasticity of simple imagined movements across days enables long-term neuroprosthetic control",
+  "title_norm": "sampling representational plasticity of simple imagined movements across days en",
+  "abstract": "The nervous system needs to balance the stability of neural representations with plasticity. It is unclear what the representational stability of simple well-rehearsed actions is, particularly in humans, and their adaptability to new contexts. Using an electrocorticography brain-computer interface (BCI) in tetraplegic participants, we found that the low-dimensional manifold and relative representational distances for a repertoire of simple imagined movements were remarkably stable. The manifold's absolute location, however, demonstrated constrained day-to-day drift. Strikingly, neural statistics, especially variance, could be flexibly regulated to increase representational distances during BCI control without somatotopic changes. Discernability strengthened with practice and was BCI-specific, demonstrating contextual specificity. Sampling representational plasticity and drift across days subsequently uncovered a meta-representational structure with generalizable decision boundaries for the repertoire; this allowed long-term neuroprosthetic control of a robotic arm and hand for reaching and grasping. Our study offers insights into mesoscale representational statistics that also enable long-term complex neuroprosthetic control.",
+  "year": 2025,
+  "venue": "Cell",
+  "authors": [
+   "Nikhilesh Natraj",
+   "Sarah Seko",
+   "Reza Abiri",
+   "Runfeng Miao",
+   "Hongyi Yan",
+   "Yasmin Graham"
+  ],
+  "citations": 38,
+  "source": "openalex",
+  "source_id": "W4408185406",
+  "doi": "10.1016/j.cell.2025.02.001",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408185406",
+  "published_iso": "2025-03-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods",
+  "title_norm": "survey on large language model enhanced reinforcement learning concept taxonomy ",
+  "abstract": "With extensive pretrained knowledge and high-level general capabilities, large language models (LLMs) emerge as a promising avenue to augment reinforcement learning (RL) in aspects, such as multitask learning, sample efficiency, and high-level task planning. In this survey, we provide a comprehensive review of the existing literature in LLM-enhanced RL and summarize its characteristics compared with conventional RL methods, aiming to clarify the research scope and directions for future studies. Utilizing the classical agent-environment interaction paradigm, we propose a structured taxonomy to systematically categorize LLMs' functionalities in RL, including four roles: information processor, reward designer, decision-maker, and generator. For each role, we summarize the methodologies, analyze the specific RL challenges that are mitigated and provide insights into future directions. Finally, the comparative analysis of each role, potential applications, prospective opportunities, and challenges of the LLM-enhanced RL are discussed. By proposing this taxonomy, we aim to provide a framework for researchers to effectively leverage LLMs in the RL field, potentially accelerating RL applications in complex applications, such as robotics, autonomous driving, and energy systems.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "authors": [
+   "Yuji Cao",
+   "Huan Zhao",
+   "Yuheng Cheng",
+   "Ting Shu",
+   "Yue Chen",
+   "Guolong Liu"
+  ],
+  "citations": 144,
+  "source": "openalex",
+  "source_id": "W4393763811",
+  "doi": "10.1109/tnnls.2024.3497992",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2404.00282",
+  "published_iso": "2024-11-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency",
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Invertible liquid neural network-based learning of inverse kinematics and dynamics for robotic manipulators",
+  "title_norm": "invertible liquid neural network based learning of inverse kinematics and dynami",
+  "abstract": "Accurate estimation of inverse kinematics and dynamics is essential for precise robotic manipulator control. Traditional analytical models, while effective for nominal conditions, often struggle to capture complex nonlinearities and unmodeled dynamics, necessitating compensatory controllers. However, these combined approaches can become computationally intensive and prone to redundancy. Conventional machine learning methods have shown promise in error compensation but typically demand large datasets and incur high computational costs, particularly when addressing high-dimensional state spaces. To overcome these limitations, this paper proposes a novel data-efficient framework based on Liquid Neural Networks (LNNs) for learning inverse kinematics and dynamics directly from simulation platform measurements. The inherent capability of LNN to model temporal dependencies and adapt continuously to evolving system dynamics enables accurate approximation of nonlinear manipulator behavior without reliance on extensive offline training. The proposed method is validated on two distinct robotic platforms-a UR5e manipulator with 6 DoF and a WAM manipulator with 7 DoF using both simulation and real-world trajectory data acquired through a targeted sampling strategy. Both simulation and experimental evaluations with previously unseen trajectories demonstrate that the ILNN-based approach achieves high-fidelity approximation of both inverse kinematics and inverse dynamics, delivering superior generalization and robustness compared to conventional analytical and data-driven methods. These results highlight the potential of LNNs as an efficient and scalable solution for real-time robot control in dynamic and uncertain environments.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Ye Zhang",
+   "Qi Chen",
+   "Longsen Gao",
+   "Rui Liu",
+   "Linyue Chu",
+   "Kangtong Mo"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4416764606",
+  "doi": "10.1038/s41598-025-26422-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-26422-1.pdf",
+  "published_iso": "2025-11-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout",
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Exploring Challenges and Opportunities in Manufacturing and Intelligence for Future Robotics",
+  "title_norm": "exploring challenges and opportunities in manufacturing and intelligence for fut",
+  "abstract": "Abstract This paper offers a forward-looking perspective on the challenges and opportunities shaping the future of robotics, drawing insights from both established and emerging research. It addresses two pivotal dimensions: the complexities of manufacturing and the integration of intelligence within robotic systems. On the manufacturing front, key elements such as structural materials, manufacturing processes, assembly methodologies, sensors, actuators, and power systems are explored. Simultaneously, the paper evaluates the evolution of robotic intelligence, focusing on frameworks for autonomous levels, artificial intelligence (AI), digital twin technology, and the transformative potential of quantum computing. By analyzing these elements, the study examines their implications for the broader deployment and functionality of robots across industrial, service, missional, and ethical domains. This perspective highlights how emerging technologies and strategies can address key challenges to drive robotic evolution, offering a roadmap for researchers, engineers, and policymakers to accelerate intelligent, scalable, and versatile robotic systems.",
+  "year": 2025,
+  "venue": "International Journal of Precision Engineering and Manufacturing",
+  "authors": [
+   "Jun Young Choi",
+   "Semin Ahn",
+   "Semin Ahn",
+   "Dohyeon Kim",
+   "Jun Heo",
+   "Won-Jae Yun"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4413765256",
+  "doi": "10.1007/s12541-025-01318-2",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s12541-025-01318-2.pdf",
+  "published_iso": "2025-08-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Causality, Machine Learning, and Feature Selection: A Survey",
+  "title_norm": "causality machine learning and feature selection a survey",
+  "abstract": "Causality, which involves distinguishing between cause and effect, is essential for understanding complex relationships in data. This paper provides a review of causality in two key areas: causal discovery and causal inference. Causal discovery transforms data into graphical structures that illustrate how variables influence one another, while causal inference quantifies the impact of these variables on a target outcome. The models are more robust and accurate with the integration of causal reasoning into machine learning, improving applications like prediction and classification. We present various methods used in detecting causal relationships and how these can be applied in selecting or extracting relevant features, particularly from sensor datasets. When causality is used in feature selection, it supports applications like fault detection, anomaly detection, and predictive maintenance applications critical to the maintenance of complex systems. Traditional correlation-based methods of feature selection often overlook significant causal links, leading to incomplete insights. Our research highlights how integrating causality can be integrated and lead to stronger, deeper feature selection and ultimately enable better decision making in machine learning tasks.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Asmae Lamsaf",
+   "Rui Carrilho",
+   "João C. Neves",
+   "Hugo Proença"
+  ],
+  "citations": 24,
+  "source": "openalex",
+  "source_id": "W4409303224",
+  "doi": "10.3390/s25082373",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/8/2373/pdf?version=1744181116",
+  "published_iso": "2025-04-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "Ethical implications in using robots among older adults living with dementia",
+  "title_norm": "ethical implications in using robots among older adults living with dementia",
+  "abstract": "The aging of the world's population due to accelerating demographic shift on all continents is causing increasing pressure worldwide, giving rise to a \"crisis of care\" or \"care wave.\" The increase in longevity is resulting in an increase in chronic diseases (such as dementia), an increase in care needs to perform the activities of daily living, and situations of isolation and profound loneliness among older adults. These circumstances are opening the debate on the need to use technology, such as robots, to improve the wellbeing of older adults and their caregivers. The aim of this paper is to address the ethical questions in using social and companion robots for people with dementia, such as concerning consent, the replacement of human care, the potential for increased dependency, and the burden on caregivers. Involving older adults and other stakeholders offers the potential to pursue robotics to support older people while also ensuring a strong ethical commitment. The study is a review of high-impact articles on the topic of the use of social and companion robots with older people with dementia.",
+  "year": 2024,
+  "venue": "Frontiers in Psychiatry",
+  "authors": [
+   "Blanca Deusdad"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4402849693",
+  "doi": "10.3389/fpsyt.2024.1436273",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1436273/pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Multimodal fusion and vision–language models: A survey for robot vision",
+  "title_norm": "multimodal fusion and vision language models a survey for robot vision",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Information Fusion",
+  "authors": [
+   "Xiaofeng Han",
+   "Shunpeng Chen",
+   "Zheng Qing Fu",
+   "Zhe Feng",
+   "Lue Fan",
+   "Dong An"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4413788337",
+  "doi": "10.1016/j.inffus.2025.103652",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.02477",
+  "published_iso": "2025-08-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Enhancing Student Performance Prediction in ELearning Environments: Advanced EnsembleTechniques and Robust Feature Selection",
+  "title_norm": "enhancing student performance prediction in elearning environments advanced ense",
+  "abstract": "By means of a thorough investigation of ensemble methodologies and feature selection approaches, this work explores enhancing predictive modelling in e-learning contexts.The setting is in the growing significance of data-driven decision-making in education and tailored learning programs.The main concern is how to fairly forecast student performance in environments of digital learning.This work intends to solve gaps by investigating new ensemble models and robust feature selection techniques based on already published research.Using cutting-edge analytical techniques including hybrid BR 2 -2T models and the Chi-square test, the study produces remarkable accuracy surpassing known limits.The results underline the need of feature selection and ensemble methods in improving forecast accuracy and dependability.Finally, this study marks a major step in the field of e-learning predictive modelling since it helps to improve educational results and enable data-driven interventions.",
+  "year": 2025,
+  "venue": "International Journal of Modern Education and Computer Science",
+  "authors": [
+   "N S Koti Mani Kumar Tirumanadham",
+   "S. Thaiyalnayaki"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4409109811",
+  "doi": "10.5815/ijmecs.2025.02.03",
+  "arxiv_id": null,
+  "paper_url": "https://www.mecs-press.org/ijmecs/ijmecs-v17-n2/IJMECS-V17-N2-3.pdf",
+  "published_iso": "2025-04-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "VLM See, Robot Do: Human Demo Video to Robot Action Plan via Vision Language Model",
+  "title_norm": "vlm see robot do human demo video to robot action plan via vision language model",
+  "abstract": "Vision Language Models (VLMs) have recently been adopted in robotics for their capability in common sense reasoning and generalizability. Existing work has applied VLMs to generate task and motion planning from natural language instructions and simulate training data for robot learning. In this work, we explore using VLM to interpret human demonstration videos and generate robot task planning. Our method integrates keyframe selection, visual perception, and VLM reasoning into a pipeline. We named it SeeDo because it enables the VLM to ''see'' human demonstrations and explain the corresponding plans to the robot for it to ''do''. To validate our approach, we collected a set of long-horizon human videos demonstrating pick-and-place tasks in three diverse categories and designed a set of metrics to comprehensively benchmark SeeDo against several baselines, including state-of-the-art video-input VLMs. The experiments demonstrate SeeDo's superior performance. We further deployed the generated task plans in both a simulation environment and on a real robot arm.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Beichen Wang",
+   "Juexiao Zhang",
+   "Shuwen Dong",
+   "Irving Fang",
+   "Feng, Chen"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4403444573",
+  "doi": "10.48550/arxiv.2410.08792",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2410.08792",
+  "published_iso": "2024-10-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "A survey on autonomous navigation for mobile robots: From traditional techniques to deep learning and large language models",
+  "title_norm": "a survey on autonomous navigation for mobile robots from traditional techniques ",
+  "abstract": "Autonomous navigation is a cornerstone of modern robotic systems. This review provides a comprehensive analysis of the landscape of obstacle avoidance and path planning techniques for mobile robots. We categorize and evaluate a range of approaches, beginning with traditional graph-based methods such as A* and Dijkstra, and geometric techniques like Voronoi diagrams and cell decomposition. The review extends to modern metaheuristic algorithms, including genetic algorithms (GA), particle swarm optimization (PSO), and ant colony optimization (ACO). Furthermore, we explore hybrid models that integrate traditional methods with machine learning, such as reinforcement learning (RL) and neural networks (NN). These hybrid approaches aim to address specific challenges, including escaping local minima and enabling real-time decision-making in uncertain environments. A significant focus is placed on the emerging role of Large Language Models (LLMs), analyzing their application in translating natural language commands into navigational actions and improving human-robot interaction. This work critically analyzes the trade-offs of each paradigm—including computational efficiency, scalability, and adaptability across these diverse methods. Finally, this review outlines emerging trends and open challenges, highlighting potential research directions in collaborative robotics, multi-agent systems, and the broader field of mobile robot navigation.",
+  "year": 2025,
+  "venue": "Journal of King Saud University - Computer and Information Sciences",
+  "authors": [
+   "Abderrahim Waga",
+   "Said Benhlima",
+   "Ali Bekri",
+   "Jawad Abdouni",
+   "Fatima Zahrae Saber"
+  ],
+  "citations": 22,
+  "source": "openalex",
+  "source_id": "W4413397855",
+  "doi": "10.1007/s44443-025-00216-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44443-025-00216-x.pdf",
+  "published_iso": "2025-08-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout",
+   "robot action world model rollout latency",
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Bayesian Optimization over Multiple Experimental Fidelities Accelerates Automated Discovery of Drug Molecules",
+  "title_norm": "bayesian optimization over multiple experimental fidelities accelerates automate",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide Different experiments of differing fidelities are commonly used in the search for new drug molecules. In classic experimental funnels, libraries of molecules undergo sequential rounds of virtual, coarse, and refined experimental screenings, with each level balanced between the cost of experiments and the number of molecules screened. Bayesian optimization offers an alternative approach, using iterative experiments to locate optimal molecules with fewer experiments than large-scale screening, but without the ability to weigh the costs and benefits of different types of experiments. In this work, we combine the multifidelity approach of the experimental funnel with Bayesian optimization to search for drug molecules iteratively, taking full advantage of different types of experiments, their costs, and the quality of the data they produce. We first demonstrate the utility of the multifidelity Bayesian optimization (MF-BO) approach on a series of drug targets with data reported in ChEMBL, emphasizing what properties of the chemical search space result in substantial acceleration with MF-BO. Then we integrate the MF-BO experiment selection algorithm into an autonomous molecular discovery platform to illustrate the prospective search for new histone deacetylase inhibitors using docking scores, single-point percent inhibitions, and dose–response IC 50 values as low-, medium-, and high-fidelity experiments. A chemical search space with appropriate diversity and fidelity correlation for use with MF-BO was constructed with a genetic generative algorithm. The MF-BO integrated platform then docked more than 3,500 molecules, automatically synthesized and screened more than 120 molecules for percent inhibition, and selected a handful of molecules for manual evaluation at the highest fidelity. Many of the molecules screened have never been reported in any capacity. At the end of the search, several new histone deacetylase inhibitors were found with submicromolar inhibition, free of problematic hydroxamate moieties that constrain the use of current inhibitors.",
+  "year": 2025,
+  "venue": "ACS Central Science",
+  "authors": [
+   "Matthew A. McDonald",
+   "Brent A. Koscher",
+   "Richard B. Canty",
+   "Jason Zhang",
+   "Angelina Ning",
+   "Klavs F. Jensen"
+  ],
+  "citations": 25,
+  "source": "openalex",
+  "source_id": "W4407170749",
+  "doi": "10.1021/acscentsci.4c01991",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4407170749",
+  "published_iso": "2025-02-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "The Worst Constitutional Decision of All Time",
+  "title_norm": "the worst constitutional decision of all time",
+  "abstract": "",
+  "year": 2025,
+  "venue": "SSRN Electronic Journal",
+  "authors": [
+   "Michael Stokes Paulsen"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W848767175",
+  "doi": "10.2139/ssrn.5365794",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W848767175",
+  "published_iso": "2025-01-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "Robot learning on the job: Human-in-the-loop autonomy and learning during deployment",
+  "title_norm": "robot learning on the job human in the loop autonomy and learning during deploym",
+  "abstract": "With the rapid growth of computing powers and recent advances in deep learning, we have witnessed impressive demonstrations of novel robot capabilities in research settings. Nonetheless, these learning systems exhibit brittle generalization and require excessive training data for practical tasks. To harness the capabilities of state-of-the-art robot learning models while embracing their imperfections, we present Sirius, a principled framework for humans and robots to collaborate through a division of work. In this framework, partially autonomous robots are tasked with handling a major portion of decision-making where they work reliably; meanwhile, human operators monitor the process and intervene in challenging situations. Such a human–robot team ensures safe deployments in complex tasks. Further, we introduce a new learning algorithm to improve the policy’s performance on the data collected from the task executions. The core idea is re-weighing training samples with approximated human trust and optimizing the policies with weighted behavioral cloning. We evaluate Sirius in simulation and on real hardware, showing that Sirius consistently outperforms baselines over a collection of contact-rich manipulation tasks, achieving an 8% boost in simulation and 27% on real hardware than the state-of-the-art methods in policy success rate, with twice faster convergence and 85% memory size reduction. Videos and more details are available at https://ut-austin-rpl.github.io/sirius/ .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Huihan Liu",
+   "Soroush Nasiriany",
+   "Lance Zhang",
+   "Zhiyao Bao",
+   "Yuke Zhu"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4403670026",
+  "doi": "10.1177/02783649241273901",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/61624b6e-0898-4a32-b0de-4f75e3bd5873/02783649241273901.17907421.pdf",
+  "published_iso": "2024-10-23",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Time-to-Fault Prediction Framework for Automated Manufacturing in Humanoid Robotics Using Deep Learning",
+  "title_norm": "time to fault prediction framework for automated manufacturing in humanoid robot",
+  "abstract": "Industry 4.0 is transforming predictive failure management by utilizing deep learning to enhance maintenance strategies and automate production processes. Traditional methods often fail to predict failures in time. This research addresses this issue by developing a time-to-fault prediction framework that utilizes an enhanced long short-term memory (LSTM) model to predict machine faults. The proposed method integrates real-time sensor data, including current, voltage, and temperature calibrated via ultra-sensitive optical sensing technologies based on the typical whispering gallery optical mode (WGM) to create a robust dataset. Due to the high-quality factor that these sensors exhibit, any minute change on the surrounding medium will makes a significant change on its transmission spectrum. The LSTM model trained on these data demonstrated rapid and stable convergence, outperforming other deep learning techniques with a mean absolute error (MAE) of 0.83, a root mean squared error (RMSE) of 1.62, and a coefficient of determination (R2) of 0.99. The results show the superior performance of LSTM in predicting machine failures early in real-world environments within 10 min lead time, improving productivity and reducing downtime. This framework advances smart industries by improving fault prediction in manufacturing precision robotics components, demonstrated through two humanoid robots, GUCnoid 1.0 and ARAtronica.",
+  "year": 2025,
+  "venue": "Technologies",
+  "authors": [
+   "Aida Ali",
+   "Hossam Kamal"
+  ],
+  "citations": 25,
+  "source": "openalex",
+  "source_id": "W4406667547",
+  "doi": "10.3390/technologies13020042",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2227-7080/13/2/42/pdf?version=1737466407",
+  "published_iso": "2025-01-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "A decision-space model explains context-specific decision-making",
+  "title_norm": "a decision space model explains context specific decision making",
+  "abstract": "Optimal decision-making requires consideration of internal and external contexts. Biased decision-making is a transdiagnostic symptom of neuropsychiatric disorders. We created a computational model demonstrating how the striosome compartment of the striatum constructs a context-dependent mathematical space for decision-making computations, and how the matrix compartment uses this space to define action value. The model explains multiple experimental results and unifies other theories like reward prediction error, roles of the direct versus indirect pathways, and roles of the striosome versus matrix, under one framework. We also found, through new analyses, that striosome and matrix neurons increase their synchrony during difficult tasks, caused by a necessary increase in dimensionality of the space. The model makes testable predictions about individual differences in disorder susceptibility, decision-making symptoms shared among neuropsychiatric disorders, and differences in neuropsychiatric disorder symptom presentation. The model provides evidence for the central role that striosomes play in neuroeconomic and disorder-affected decision-making.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Dirk W Beck",
+   "Cory N. Heaton",
+   "Luis D. Davila",
+   "Lara I. Rakocevic",
+   "Sabrina M. Drammis",
+   "Danil Tyulmankov"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4413139301",
+  "doi": "10.1038/s41467-025-61466-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-61466-x.pdf",
+  "published_iso": "2025-08-14",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "Upcoming multi-visceral robotic surgery systems: a SAGES review",
+  "title_norm": "upcoming multi visceral robotic surgery systems a sages review",
+  "abstract": "BACKGROUND: Robotic surgical procedures continue to increase both in the United States (US) and worldwide. Several novel robotic surgical platforms are under development or undergoing regulatory approval. This review explores robotic platforms that are expected to reach US consumers within the next 2-3 years. METHODS: The SAGES Robotic Platforms Working Group identified robotic surgery platforms in various stages of development and selected multi-visceral systems nearing or completing the US Food and Drug Administration (FDA) approval process. We outline key system components including architecture, unique features, development status, regulatory approval, and expected markets. RESULTS: We identified twenty robotic platforms that met our selection criteria. Ten companies were based in North America, and ten were based in Europe or Asia. Each system is described in detail and key features are summarized in table form for easy comparison. CONCLUSION: The emergence of novel robotic surgical platforms represents an important evolution in the growth of minimally invasive surgery. Increased competition has the potential to bring value to surgical patients by stimulating innovation and driving down cost. The impact of these platforms remains to be determined, but the continued growth of robotic surgery seems to be all but assured.",
+  "year": 2024,
+  "venue": "Surgical Endoscopy",
+  "authors": [
+   "Ankit Sarin",
+   "Sarah Samreen",
+   "Jennifer Moffett",
+   "Edmundo Inga-Zapata",
+   "Francesco M. Bianco",
+   "Nawar A. Alkhamesi"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4404349900",
+  "doi": "10.1007/s00464-024-11384-8",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4404349900",
+  "published_iso": "2024-11-14",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "SceneDiffuser: Efficient and Controllable Driving Simulation Initialization and Rollout",
+  "title_norm": "scenediffuser efficient and controllable driving simulation initialization and r",
+  "abstract": "Realistic and interactive scene simulation is a key prerequisite for autonomous vehicle (AV) development. In this work, we present SceneDiffuser, a scene-level diffusion prior designed for traffic simulation. It offers a unified framework that addresses two key stages of simulation: scene initialization, which involves generating initial traffic layouts, and scene rollout, which encompasses the closed-loop simulation of agent behaviors. While diffusion models have been proven effective in learning realistic and multimodal agent distributions, several challenges remain, including controllability, maintaining realism in closed-loop simulations, and ensuring inference efficiency. To address these issues, we introduce amortized diffusion for simulation. This novel diffusion denoising paradigm amortizes the computational cost of denoising over future simulation steps, significantly reducing the cost per rollout step (16x less inference steps) while also mitigating closed-loop errors. We further enhance controllability through the introduction of generalized hard constraints, a simple yet effective inference-time constraint mechanism, as well as language-based constrained scene generation via few-shot prompting of a large language model (LLM). Our investigations into model scaling reveal that increased computational resources significantly improve overall simulation realism. We demonstrate the effectiveness of our approach on the Waymo Open Sim Agents Challenge, achieving top open-loop performance and the best closed-loop performance among diffusion models.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chiyu Max Jiang",
+   "Bai, Yijing",
+   "Andre Cornman",
+   "Christopher A. Davis",
+   "Huang, Xiukun",
+   "Jeon, Hong"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4405561673",
+  "doi": "10.48550/arxiv.2412.12129",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2412.12129",
+  "published_iso": "2024-12-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Random Forests: The Wisdom of Crowds in Action",
+  "title_norm": "random forests the wisdom of crowds in action",
+  "abstract": "Random Forests are an extremely effective ensemble learning technique that utilizes the combined decision-making process of many decision trees for improved prediction. Based on \"the wisdom of crowds\" principle, Random Forests face the challenge of improving upon a single classifier by incorporating ways of randomness in both the data sampling through the bootstrapping technique and in the selection of features at each decision tree. By introducing this randomness, Random Forests reduce the variation of the original classifier and improve on generalization, while still avoiding overfitting and ensuring a level of robustness. In order to perform either a classification or regression task, the Random Forests algorithm makes a prediction by averaging across an ensemble of independently trained trees, with classification making predictions by majority vote and regression by averaging. Random Forests have shown to be more accurate, scalable, and provide resiliency against noise across a number of different application domains, such as medical diagnosis, finance, bioinformatics, and text mining. In addition, Random Forests provide an easy-to-interpret measure of variable importance for practitioners to understand which features are important to the prediction. Random Forests also employ high-dimensional data well and can generally produce reliable predictions even when the number of predictors exceeds the number of observations. However, maximizing the number of trees, addressing the dilemma of interpretability and complexity, and addressing the cost of computation on very large datasets are still challenges that Random Forests present. Overall, Random Forests continues to benchmark standardized ensemble technique and the ability of a collective learning technique to improve performance in predictive problems.",
+  "year": 2025,
+  "venue": "Journal of Emerging Trends in Computer Science and Applications",
+  "authors": [
+   "Swarnadwip Bose",
+   "Sangita Bose"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4417144284",
+  "doi": "10.65525/jetcsa.v1i1.5",
+  "arxiv_id": null,
+  "paper_url": "https://jetcsajournal.com/index.php/jetcsa/article/download/5/7",
+  "published_iso": "2025-11-25",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "FOCUS: object-centric world models for robotic manipulation",
+  "title_norm": "focus object centric world models for robotic manipulation",
+  "abstract": "Understanding the world in terms of objects and the possible interactions with them is an important cognitive ability. However, current world models adopted in reinforcement learning typically lack this structure and represent the world state in a global latent vector. To address this, we propose FOCUS, a model-based agent that learns an object-centric world model. This novel representation also enables the design of an object-centric exploration mechanism, which encourages the agent to interact with objects and discover useful interactions. We benchmark FOCUS in several robotic manipulation settings, where we found that our method can be used to improve manipulation skills. The object-centric world model leads to more accurate predictions of the objects in the scene and it enables more efficient learning. The object-centric exploration strategy fosters interactions with the objects in the environment, such as reaching, moving, and rotating them, and it allows fast adaptation of the agent to sparse reward reinforcement learning tasks. Using a Franka Emika robot arm, we also showcase how FOCUS proves useful in real-world applications. Website: focus-manipulation.github.io.",
+  "year": 2025,
+  "venue": "Frontiers in Neurorobotics",
+  "authors": [
+   "Stefano Ferraro",
+   "Pietro Mazzaglia",
+   "Tim Verbelen",
+   "Bart Dhoedt"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4409975538",
+  "doi": "10.3389/fnbot.2025.1585386",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1585386/pdf",
+  "published_iso": "2025-04-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "High-speed odor sensing using miniaturized electronic nose",
+  "title_norm": "high speed odor sensing using miniaturized electronic nose",
+  "abstract": "Animals have evolved to rapidly detect and recognize brief and intermittent encounters with odor packages, exhibiting recognition capabilities within milliseconds. Artificial olfaction has faced challenges in achieving comparable results-existing solutions are either slow; or bulky, expensive, and power-intensive-limiting applicability in real-world scenarios for mobile robotics. Here, we introduce a miniaturized high-speed electronic nose, characterized by high-bandwidth sensor readouts, tightly controlled sensing parameters, and powerful algorithms. The system is evaluated on a high-fidelity odor delivery benchmark. We showcase successful classification of tens-of-millisecond odor pulses and demonstrate temporal pattern encoding of stimuli switching with up to 60 hertz. Those timescales are unprecedented in miniaturized low-power settings and demonstrably exceed the performance observed in mice. It is now possible to match the temporal resolution of animal olfaction in robotic systems. This will allow for addressing challenges in environmental and industrial monitoring, security, neuroscience, and beyond.",
+  "year": 2024,
+  "venue": "Science Advances",
+  "authors": [
+   "Nik Dennler",
+   "Damien Drix",
+   "Tom P. A. Warner",
+   "Shavika Rastogi",
+   "Cecilia Della Casa",
+   "Tobias Ackels"
+  ],
+  "citations": 63,
+  "source": "openalex",
+  "source_id": "W4404090762",
+  "doi": "10.1126/sciadv.adp1764",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adp1764?download=true",
+  "published_iso": "2024-11-06",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "The affective gradient hypothesis: an affect-centered account of motivated behavior",
+  "title_norm": "the affective gradient hypothesis an affect centered account of motivated behavi",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Trends in Cognitive Sciences",
+  "authors": [
+   "Amitai Shenhav"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4402768293",
+  "doi": "10.1016/j.tics.2024.08.003",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt9211k496/qt9211k496.pdf?t=sl7lul",
+  "published_iso": "2024-09-24",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "Social robot navigation: a review and benchmarking of learning-based methods",
+  "title_norm": "social robot navigation a review and benchmarking of learning based methods",
+  "abstract": "For autonomous mobile robots to operate effectively in human environments, navigation must extend beyond obstacle avoidance to incorporate social awareness. Safe and fluid interaction in shared spaces requires the ability to interpret human motion and adapt to social norms-an area that is being reshaped by advances in learning-based methods. This review examines recent progress in learning-based social navigation methods that deal with the complexities of human-robot coexistence. We introduce a taxonomy of navigation methods and analyze core system components, including realistic training environments and objectives that promote socially compliant behavior. We conduct a comprehensive benchmark of existing frameworks in challenging crowd scenarios, showing their advantages and shortcomings, while providing critical insights into the architectural choices that impact performance. We find that many learning-based approaches outperform model-based methods in realistic coordination scenarios such as navigating doorways. A key highlight is the end-to-end models, which achieve strong performance by directly planning from raw sensor input, enabling more efficient and adaptive navigation. This review also maps current trends and outlines ongoing challenges, offering a strategic roadmap for future research. We emphasize the need for models that accurately anticipate human movement, training environments that realistically simulate crowded spaces, and evaluation methods that capture real-world complexity. Advancing these areas will help overcome current limitations and move social navigation systems closer to safe, reliable deployment in everyday environments. Additional resources are available at: https://socialnavigation.github.io.",
+  "year": 2025,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Rashid Alyassi",
+   "César Cadena",
+   "Robert Riener",
+   "Diego Páez-Granados"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4417229657",
+  "doi": "10.3389/frobt.2025.1658643",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1658643/pdf",
+  "published_iso": "2025-12-11",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Vision-Based Navigation and Perception for Autonomous Robots: Sensors, SLAM, Control Strategies, and Cross-Domain Applications—A Review",
+  "title_norm": "vision based navigation and perception for autonomous robots sensors slam contro",
+  "abstract": "Camera-centric perception has matured into a cornerstone of modern autonomy, from self-driving cars and factory cobots to underwater and planetary exploration. This review synthesizes more than a decade of progress in vision-based robotic navigation through an engineering lens, charting the full pipeline from sensing to deployment. We first examine the expanding sensor palette—monocular and multi-camera rigs, stereo and RGB-D devices, LiDAR–camera hybrids, event cameras, and infrared systems—highlighting the complementary operating envelopes and the rise of learning-based depth inference. The advances in visual localization and mapping are then analyzed, contrasting sparse and dense SLAM approaches, as well as monocular, stereo, and visual–inertial formulations. Additional topics include loop closure, semantic mapping, and LiDAR–visual–inertial fusion, which enables drift-free operation in dynamic environments. Building on these foundations, we review the navigation and control strategies, spanning classical planning, reinforcement and imitation learning, hybrid topological–metric memories, and emerging visual language guidance. Application case studies—autonomous driving, industrial manipulation, autonomous underwater vehicles, planetary rovers, aerial drones, and humanoids—demonstrate how tailored sensor suites and algorithms meet domain-specific constraints. Finally, the future research trajectories are distilled: generative AI for synthetic training data and scene completion; high-density 3D perception with solid-state LiDAR and neural implicit representations; event-based vision for ultra-fast control; and human-centric autonomy in next-generation robots. By providing a unified taxonomy, a comparative analysis, and engineering guidelines, this review aims to inform researchers and practitioners designing robust, scalable, vision-driven robotic systems.",
+  "year": 2025,
+  "venue": "Eng—Advances in Engineering",
+  "authors": [
+   "Eder A. Rodríguez-Martínez",
+   "Wendy Flores‐Fuentes",
+   "Farouk Achakir",
+   "Oleg Sergiyenko",
+   "Fabián N. Murrieta-Rico"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4412093083",
+  "doi": "10.3390/eng6070153",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-4117/6/7/153/pdf?version=1751878427",
+  "published_iso": "2025-07-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Shaping collective action in financial markets through popular expertise: An analysis of Due Diligence posts on WallStreetBets",
+  "title_norm": "shaping collective action in financial markets through popular expertise an anal",
+  "abstract": "In 2021, a social movement rallying retail investors unexpectedly shocked Wall Street, forcing a prominent multi-billion-dollar hedge fund to shut down one year later, after incurring massive financial losses. Social movements in financial markets have significantly developed in the wake of the 2007–09 financial crisis, resulting in the emergence of various collective actions. We analyze one recent example of such action undertaken by the r/WallStreetBets (WSB) community on Reddit, which disrupted the stock prices of several “meme stocks” (e.g., GameStop) by disseminating influential investment narratives. We analyze the 150 most upvoted Due Diligence posts on WSB and interview eight members of its community. We find that a popular expertise in investment narratives emerged, developed, and was propagated on this digital platform. WSB authors' claim to popular expertise is made in a hybrid language combining traditional financial expertise with an accessible and entertaining writing style, complemented by references to pop culture. Our analysis brings out a growing resentment among retail investors about the unfairness of financial markets, and its role in mobilizing them for collective action that challenged the existing order of things. Yet this widespread resentment did not spontaneously translate into a meaningful, sustainable collective action initiative. Our thesis is that the development of popular expertise played an instrumental role in the formation of WSB's collective action initiative targeting several perceived investment opportunities.",
+  "year": 2025,
+  "venue": "Accounting Organizations and Society",
+  "authors": [
+   "Yves Gendron",
+   "Alexandre Madelaine",
+   "Luc Paugam",
+   "Hervé Stolowy"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4408044364",
+  "doi": "10.1016/j.aos.2024.101588",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408044364",
+  "published_iso": "2025-02-28",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "decision stability stopping imagined action selection"
+  ]
+ },
+ {
+  "title": "LIRL: Latent Imagination-Based Reinforcement Learning for Efficient Coverage Path Planning",
+  "title_norm": "lirl latent imagination based reinforcement learning for efficient coverage path",
+  "abstract": "Coverage Path Planning (CPP) in unknown environments presents unique challenges that often require the system to maintain a symmetry between exploration and exploitation in order to efficiently cover unknown areas. This paper introduces latent imagination-based reinforcement learning (LIRL), a novel framework that addresses these challenges by integrating three key components: memory-augmented experience replay (MAER), a latent imagination module (LIM), and multi-step prediction learning (MSPL) within a soft actor–critic architecture. MAER enhances sample efficiency by prioritizing experience retrieval, LIM facilitates long-term planning via simulated trajectories, and MSPL optimizes the trade-off between immediate rewards and future outcomes through adaptive n-step learning. MAER, LIM, and MSPL work within a soft actor–critic architecture, and LIRL creates a dynamic equilibrium that enables efficient, adaptive decision-making. We evaluate LIRL across diverse simulated environments, demonstrating substantial improvements over state-of-the-art methods. Through this method, the agent optimally balances short-term actions with long-term planning, maintaining symmetrical responses to varying environmental changes. The results highlight LIRL’s potential for advancing autonomous CPP in real-world applications such as search and rescue, agricultural robotics, and warehouse automation. Our work contributes to the broader fields of robotics and reinforcement learning, offering insights into integrating memory, imagination, and adaptive learning for complex sequential decision-making tasks.",
+  "year": 2024,
+  "venue": "Symmetry",
+  "authors": [
+   "Zhenglin Wei",
+   "Tiejiang Sun",
+   "Mengjie Zhou"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4404485106",
+  "doi": "10.3390/sym16111537",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-8994/16/11/1537/pdf?version=1731829812",
+  "published_iso": "2024-11-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "RLDG: Robotic Generalist Policy Distillation via Reinforcement Learning",
+  "title_norm": "rldg robotic generalist policy distillation via reinforcement learning",
+  "abstract": "Generalization to Unseen ScenariosComposition for Long Horizon Tasks",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Charles Xu",
+   "Qiyang Li",
+   "Jianlan Luo",
+   "Sergey Levine"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4414079258",
+  "doi": "10.15607/rss.2025.xxi.028",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.028",
+  "published_iso": "2025-06-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Digital twin-based self-learning decision-making framework for industrial robots in manufacturing",
+  "title_norm": "digital twin based self learning decision making framework for industrial robots",
+  "abstract": "Abstract Industry 4.0 demands intelligent and autonomous manufacturing systems that can adapt to dynamic environments. A key enabler of such systems is self-learning, which supports effective decision-making under uncertainty. However, traditional approaches typically depend on large volumes of physical production data, limiting their utility during early deployment phases. To address this, we propose a digital twin-based self-learning decision-making framework that enables virtual training of decision models before physical deployment. The framework consists of four modular components: a digital twin for simulating the production environment, a learning module for generating and evaluating decisions, a real controller for executing validated actions, and the physical production system. A time-delayed deployment mechanism is introduced to ensure the safe application of learned behaviors. We also define the concept of self-learning in manufacturing and classify relevant learning paradigms—model-driven, data-driven, and hybrid. The framework is validated through two industrial use cases involving FANUC robots. In the first use case, Bayesian optimization is applied to a pick-and-place task, reducing energy consumption by 74.79%. In the second, a Genetic Algorithm is used for welding optimization, achieving a 36.06% reduction in energy usage. These results confirm the framework’s generalizability and effectiveness in enabling autonomous learning during the commissioning phase.",
+  "year": 2025,
+  "venue": "The International Journal of Advanced Manufacturing Technology",
+  "authors": [
+   "Fan Mo",
+   "Hamood Ur Rehman",
+   "Jack C. Chaplin",
+   "David Sanderson",
+   "Svetan Ratchev"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4411253665",
+  "doi": "10.1007/s00170-025-15844-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00170-025-15844-w.pdf",
+  "published_iso": "2025-06-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "An Analytical Latency Model of the Data Distribution Service in ROS 2",
+  "title_norm": "an analytical latency model of the data distribution service in ros 2",
+  "abstract": "After its initial release in 2007, the robot operating system (ROS) has been widely adopted as an open-source robotics middleware suite. In 2017, ROS 2 is introduced to offer enhanced performance, and it has since become the de facto standard for robot software development. In this paper, we propose an analytical latency model for the data distribution service (DDS) in ROS 2. DDS operates at the application layer on top of the user datagram protocol (UDP). In ROS 2, retransmissions for reliable data delivery are handled at the application layer, resulting in latency characteristics different from those of the transmission control protocol (TCP). We derive a closed-form analytical model to characterize the latency of DDS reliable data delivery in ROS 2, taking into account key parameters such as the packet delivery ratio, the data period, and the heartbeat period in DDS. Our extensive empirical study shows that the proposed model matches well with the empirical data, with an average error of 6.88 % across 35 different scenarios.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Hyung-Seok Park",
+   "Sanghoon Lee",
+   "Doosik Um",
+   "Hyunho Ryu",
+   "Kyung‐Joon Park"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4413557542",
+  "doi": "10.1109/infocom55648.2025.11044454",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413557542",
+  "published_iso": "2025-05-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Practical Latency Measurement for ROS2 in Visual Navigation Systems",
+  "title_norm": "practical latency measurement for ros2 in visual navigation systems",
+  "abstract": "Autonomous mobile robots require high throughput and low latency computation when calculating control values from sensor inputs. While ROS2 provides multiple communication methods, existing measurement tools require major system changes, limiting their use in practice. This paper proposes a measurement library that uses ID-based message tracking to assess ROS2 communication latency with minimal code changes. The library measures both processing times and communication latency across all three ROS2 communication methods. Testing using a real visual navigation system confirmed measurement capability while requiring only five lines of code changes per node. Performance results show that while results are consistent with previous studies, performance differences in real systems are smaller than experimental results, showing the value of testing with real systems.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Sho Kamiya",
+   "Miho Adachi",
+   "Ryusuke Miyamoto"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417282609",
+  "doi": "10.1109/gcce65946.2025.11275294",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417282609",
+  "published_iso": "2025-09-23",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "VLASH: Real-Time VLAs via Future-State-Aware Asynchronous Inference",
+  "title_norm": "vlash real time vlas via future state aware asynchronous inference",
+  "abstract": "Vision-Language-Action models (VLAs) are becoming increasingly capable across diverse robotic tasks. However, these models are typically deployed under synchronous inference, where the robot waits for model inference to complete before acting, and cannot perceive or respond to environmental changes during action execution. This not only introduces noticeable action stalls, but also significantly increases reaction latency, fundamentally limiting the applicability of VLAs to dynamic, real-time tasks. Asynchronous inference offers a promising solution to achieve continuous and low-latency control by enabling robots to execute actions and perform inference simultaneously. However, because the robot and environment continue to evolve during inference, a temporal misalignment arises between the prediction and execution intervals. This leads to significant action instability, while existing asynchronous methods either degrade accuracy or introduce runtime overhead to mitigate it. We propose VLASH, a simple yet effective method for asynchronous VLA inference that delivers smooth, accurate, and fast reaction control without architectural changes or additional runtime overhead. VLASH leverages the future execution-time state by rolling the robot state forward with the previous action chunk, thereby bridging the gap between prediction and execution. Experiments show that VLASH reduces reaction latency by up to 11.8x compared to synchronous inference and consistently outperforms all asynchronous baselines in accuracy. With action quantization, it further achieves 1.5-2.0x task completion speedup with minimal accuracy loss. Moreover, it empowers state-of-the-art VLAs such as $π_{0.5}$ to handle fast-reaction, high-precision tasks including playing ping-pong and playing whack-a-mole, where traditional synchronous inference fails. Code is available at https://github.com/mit-han-lab/vlash",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jiaming Tang",
+   "Yufei Sun",
+   "Yilong Zhao",
+   "Shang Tian Yang",
+   "Yujun Lin",
+   "Z. D. Zhang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416958104",
+  "doi": "10.48550/arxiv.2512.01031",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.01031",
+  "published_iso": "2025-11-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Latency-Aware Benchmarking of Large Language Models for Natural-Language Robot Navigation in ROS 2",
+  "title_norm": "latency aware benchmarking of large language models for natural language robot n",
+  "abstract": "A growing challenge in mobile robotics is the reliance on complex graphical interfaces and rigid control pipelines, which limit accessibility for non-expert users. This work introduces a latency-aware benchmarking framework that enables natural-language robot navigation by integrating multiple Large Language Models (LLMs) with the Robot Operating System 2 (ROS 2) Navigation 2 (Nav2) stack. The system allows robots to interpret and act upon free-form text instructions, replacing traditional Human-Machine Interfaces (HMIs) with conversational interaction. Using a simulated TurtleBot4 platform in Gazebo Fortress, we benchmarked a diverse set of contemporary LLMs, including GPT-3.5, GPT-4, GPT-5, Claude 3.7, Gemini 2.5, Mistral-7B Instruct, DeepSeek-R1, and LLaMA-3.3-70B, across three local planners, namely Dynamic Window Approach (DWB), Timed Elastic Band (TEB), and Regulated Pure Pursuit (RPP). The framework measures end-to-end response latency, instruction-parsing accuracy, path quality, and task success rate in standardised indoor scenarios. The results show that there are clear trade-offs between latency and accuracy, where smaller models respond quickly but have less spatial reasoning, while larger models have more consistent navigation intent but take longer to respond. The proposed framework is the first reproducible multi-LLM system with multi-planner evaluations within ROS 2, supporting the development of intuitive and latency-efficient natural-language interfaces for robot navigation.",
+  "year": 2026,
+  "venue": "Sensors",
+  "authors": [
+   "Manjulika Das",
+   "Zawar Hussain",
+   "Muhammad Nawaz"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7124490182",
+  "doi": "10.3390/s26020608",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/26/2/608/pdf?version=1768557916",
+  "published_iso": "2026-01-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "LAMARS: Large Language Model-Based Anticipation Mechanism Acceleration in Real-Time Robotic Systems",
+  "title_norm": "lamars large language model based anticipation mechanism acceleration in real ti",
+  "abstract": "Large language models (LLMs) have assumed an increasingly crucial role in robotic systems because of their ability to leverage the extensive knowledge they possess in robotic inference and task handling. Although LLMs offer significant potential, their integration into robotic systems poses substantial challenges, particularly with regard to computational efficiency and latency. To address this challenge, this study presents LAMARS, an LLM-based anticipation mechanism designed to accelerate real-time robotic systems. LAMARS leverages the predictive power and zero-shot capabilities of LLMs combined with an anticipation mechanism and vision-language processing to position a robot in advance for upcoming tasks. This reduces latency and optimizes path planning without requiring expensive training data. Our evaluations in a realistic simulation environment and with a variation of the RLBench dataset demonstrated that LAMARS achieved an average success rate of 0.79 and improves efficiency by up to 52.4% compared to existing methods, significantly lowering path planning costs. These results indicate that LAMARS effectively accelerates directive execution, making it a promising solution to minimize delays in real-time robotic systems.",
+  "year": 2024,
+  "venue": "IEEE Access",
+  "authors": [
+   "Yifang Gao",
+   "Wei Luo",
+   "Xuye Wang",
+   "Shunshun Zhang",
+   "Patrick Goh"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4405934524",
+  "doi": "10.1109/access.2024.3524906",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405934524",
+  "published_iso": "2024-12-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Reducing Latency in LLM-Based Natural Language Commands Processing for Robot Navigation",
+  "title_norm": "reducing latency in llm based natural language commands processing for robot nav",
+  "abstract": "The integration of Large Language Models (LLMs), such as GPT, in industrial robotics enhances operational efficiency and human-robot collaboration. However, the computational complexity and size of these models often provide latency problems in request and response times. This study explores the integration of the ChatGPT natural language model with the Robot Operating System 2 (ROS 2) to mitigate interaction latency and improve robotic system control within a simulated Gazebo environment. We present an architecture that integrates these technologies without requiring a middleware transport platform, detailing how a simulated mobile robot responds to text and voice commands. Experimental results demonstrate that this integration improves execution speed, usability, and accessibility of the human-robot interaction by decreasing the communication latency by 7.01\\% on average. Such improvements facilitate smoother, real-time robot operations, which are crucial for industrial automation and precision tasks.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Diego Pollini",
+   "Bruna Guterres",
+   "Rodrigo da Silva Guerra",
+   "Ricardo Bedin Grando"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414859109",
+  "doi": "10.48550/arxiv.2506.00075",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2506.00075",
+  "published_iso": "2025-05-29",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action world model rollout latency"
+  ]
+ },
+ {
+  "title": "Horizon-stability control for wheel-legged robot driving over unknow, rough terrain",
+  "title_norm": "horizon stability control for wheel legged robot driving over unknow rough terra",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Mechanism and Machine Theory",
+  "authors": [
+   "Kang Xu",
+   "Shoukun Wang",
+   "﻿Lei Shi",
+   "Jianyong Li",
+   "Binkai Yue"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W4405388058",
+  "doi": "10.1016/j.mechmachtheory.2024.105887",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405388058",
+  "published_iso": "2024-12-14",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "CoBL-Diffusion: Diffusion-Based Conditional Robot Planning in Dynamic Environments Using Control Barrier and Lyapunov Functions",
+  "title_norm": "cobl diffusion diffusion based conditional robot planning in dynamic environment",
+  "abstract": "Equipping autonomous robots with the ability to navigate safely and efficiently around humans is a crucial step toward achieving trusted robot autonomy. However, generating robot plans while ensuring safety in dynamic multi-agent environments remains a key challenge. Building upon recent work on leveraging deep generative models for robot planning in static environments, this paper proposes CoBL-Diffusion, a novel diffusion-based safe robot planner for dynamic environments. CoBL-Diffusion uses Control Barrier and Lyapunov functions to guide the denoising process of a diffusion model, iteratively refining the robot control sequence to satisfy the safety and stability constraints. We demonstrate the effectiveness of CoBL-Diffusion using two settings: a synthetic single-agent environment and a real-world pedestrian dataset. Our results show that CoBL-Diffusion generates smooth trajectories that enable the robot to reach goal locations while maintaining a low collision rate with dynamic obstacles.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Kazuki Mizuta",
+   "Karen Ka Yan Leung"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4405779038",
+  "doi": "10.1109/iros58592.2024.10802549",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405779038",
+  "published_iso": "2024-10-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Distributed Optimal Containment Control of Wheeled Mobile Robots via Adaptive Dynamic Programming",
+  "title_norm": "distributed optimal containment control of wheeled mobile robots via adaptive dy",
+  "abstract": "In this article, the distributed optimal containment (DOC) control of wheeled mobile robots (WMRs) is investigated via adaptive dynamic programming. To begin with, a novel performance index function which contains containment errors and their derivatives is designed for each following WMR without requiring the discount factor, which simplifies the controller design process and enhances the practicality of the control method. Subsequently, the DOC control of WMRs is formulated as a differential graphical game whose Nash equilibrium can be formed by using the optimal responses of all following WMRs. Moreover, a critic-only structure is built to obtain an approximate DOC control law, which provides a solution for the coupled Hamilton–Jacobi–Bellman equation of each following WMR. Stability analysis demonstrates that the containment error of each following WMR is uniformly ultimately bounded. Finally, a group of WMRs are utilized to verify the effectiveness of the present DOC control scheme.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Systems Man and Cybernetics Systems",
+  "authors": [
+   "Yongwei Zhang",
+   "Bo Zhao",
+   "Derong Liu"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4411408298",
+  "doi": "10.1109/tsmc.2025.3573738",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4411408298",
+  "published_iso": "2025-06-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Safe POMDP Online Planning Among Dynamic Agents via Adaptive Conformal Prediction",
+  "title_norm": "safe pomdp online planning among dynamic agents via adaptive conformal predictio",
+  "abstract": "Online planning for partially observable Markov decision processes (POMDPs) provides efficient techniques for robot decision-making under uncertainty. However, existing methods fall short of preventing safety violations in dynamic environments. This letter presents a novel safe POMDP online planning approach that maximizes expected returns while providing probabilistic safety guarantees amidst environments populated by multiple dynamic agents. Our approach utilizes data-driven trajectory prediction models of dynamic agents and applies Adaptive Conformal Prediction (ACP) to quantify the uncertainties in these predictions. Leveraging the obtained ACP-based trajectory predictions, our approach constructs safety shields on-the-fly to prevent unsafe actions within POMDP online planning. Through experimental evaluation in various dynamic environments using real-world pedestrian trajectory data, the proposed approach has been shown to effectively maintain probabilistic safety guarantees while accommodating up to hundreds of dynamic agents.",
+  "year": 2024,
+  "venue": "IEEE Robotics and Automation Letters",
+  "authors": [
+   "Shili Sheng",
+   "Pian Yu",
+   "David Parker",
+   "Marta Kwiatkowska",
+   "Lu Feng"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4402830181",
+  "doi": "10.1109/lra.2024.3468092",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402830181",
+  "published_iso": "2024-09-25",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Predictive Control With Indirect Adaptive Laws for Payload Transportation by Quadrupedal Robots",
+  "title_norm": "predictive control with indirect adaptive laws for payload transportation by qua",
+  "abstract": "This letter formally develops a novel hierarchical planning and control framework for robust payload transportation by quadrupedal robots, integrating a model predictive control (MPC) algorithm with a gradient-descent-based adaptive updating law. At the framework's high level, an indirect adaptive law estimates the unknown parameters of the reduced-order (template) locomotion model under varying payloads. These estimated parameters feed into an MPC algorithm for real-time trajectory planning, incorporating a convex stability criterion within the MPC constraints to ensure the stability of the template model's estimation error. The optimal reduced-order trajectories generated by the high-level adaptive MPC (AMPC) are then passed to a low-level nonlinear whole-body controller (WBC) for tracking. Extensive numerical investigations validate the framework's capabilities, showcasing the robot's proficiency in transporting unmodeled, unknown static payloads up to 109% in experiments on flat terrains and 91% on rough experimental terrains. The robot also successfully manages dynamic payloads with 73% of its mass on rough terrains. Performance comparisons with a normal MPC and an$\\mathcal {L}_{1}$MPC indicate a significant improvement. Furthermore, comprehensive hardware experiments conducted in indoor and outdoor environments confirm the method's efficacy on rough terrains despite uncertainties such as payload variations, push disturbances, and obstacles.",
+  "year": 2024,
+  "venue": "IEEE Robotics and Automation Letters",
+  "authors": [
+   "Leila Amanzadeh",
+   "Taizoon Chunawala",
+   "Randall T. Fawcett",
+   "Alexander Leonessa",
+   "Kaveh Akbari Hamed"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4403094416",
+  "doi": "10.1109/lra.2024.3474550",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.08831",
+  "published_iso": "2024-10-03",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Autonomous Driving Economic Car-Following Motion Strategy Based on Adaptive Rollout Model-Based Policy Optimization",
+  "title_norm": "autonomous driving economic car following motion strategy based on adaptive roll",
+  "abstract": "The reinforcement learning (RL) is a powerful framework with significant potential to enhance the autonomous driving (AD) performance. However, its trial-and-error nature presents significant hurdles in terms of safety, efficiency, and stability. To address these challenges, we propose an adaptive rollout model-based policy optimization (AR-MBPO) algorithm tailored for car-following motion planning in autonomous electric vehicles (AEVs). The algorithm improves the overall performance by incorporating an error-aware ensemble environmental model and leveraging branched rollouts for efficient sample collection and policy optimization. A key innovation of AR-MBPO is an adaptive rollout mechanism that dynamically adjusts based on the predictive accuracy, mitigating the impact of model inaccuracies. In addition, the energy efficiency is explicitly integrated into the optimization process to minimize the energy consumption. We evaluate AR-MBPO through AEV car-following simulations, where it demonstrates superior performance, including rapid convergence, and reduced reliance on real-world interactions. The method simultaneously optimizes safety, traffic efficiency, and energy efficiency through dynamic distance adjustments, as evidenced by a 0% collision rate in testing scenarios and an 8.2% energy consumption reduction compared with nonenergy-aware baselines. The results suggest potential applications in AD systems for improved safety and energy efficiency.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Transportation Electrification",
+  "authors": [
+   "Dong Hu",
+   "Chao Huang",
+   "Jing Zhao",
+   "Yifan Zhao",
+   "Jingda Wu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4412972170",
+  "doi": "10.1109/tte.2025.3590199",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4412972170",
+  "published_iso": "2025-07-17",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "adaptive horizon action-conditioned robot rollout"
+  ]
+ },
+ {
+  "title": "Revisiting Reward Design and Evaluation for Robust Humanoid Standing and Walking",
+  "title_norm": "revisiting reward design and evaluation for robust humanoid standing and walking",
+  "abstract": "A necessary capability for humanoid robots is the ability to stand and walk while rejecting natural disturbances. Recent progress has been made using sim-to-real reinforcement learning (RL) to train such locomotion controllers, with approaches differing mainly in their reward functions. However, prior works lack a clear method to systematically test new reward functions and compare controller performance through repeatable experiments. This limits our understanding of the trade-offs between approaches and hinders progress. To address this, we propose a low-cost, quantitative benchmarking method to evaluate and compare the real-world performance of standing and walking (SaW) controllers on metrics like command following, disturbance recovery, and energy efficiency. We also revisit reward function design and construct a minimally constraining reward function to train SaW controllers. We experimentally verify that our benchmarking framework can identify areas for improvement, which can be systematically addressed to enhance the policies. We also compare our new controller to state-of-the-art controllers on the Digit humanoid robot. The results provide clear quantitative trade-offs among the controllers and suggest directions for future improvements to the reward functions and expansion of the benchmarks.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Bart van Marum",
+   "Aayam Shrestha",
+   "Helei Duan",
+   "Pranay Dugar",
+   "Jeremy Dao",
+   "Alan Fern"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W4405785864",
+  "doi": "10.1109/iros58592.2024.10802680",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405785864",
+  "published_iso": "2024-10-14",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "Continual Learning Through Human-Robot Interaction: Human Perceptions of a Continual Learning Robot in Repeated Interactions",
+  "title_norm": "continual learning through human robot interaction human perceptions of a contin",
+  "abstract": "",
+  "year": 2025,
+  "venue": "International Journal of Social Robotics",
+  "authors": [
+   "Ali Ayub",
+   "Zachary De Francesco",
+   "Patrick Holthaus",
+   "Chrystopher L. Nehaniv",
+   "Kerstin Dautenhahn"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4407175372",
+  "doi": "10.1007/s12369-025-01214-9",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4407175372",
+  "published_iso": "2025-02-01",
+  "oa_field": "Psychology",
+  "semantic_recall": true,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ },
+ {
+  "title": "A Real-to-Sim-to-Real Approach to Robotic Manipulation with VLM-Generated Iterative Keypoint Rewards",
+  "title_norm": "a real to sim to real approach to robotic manipulation with vlm generated iterat",
+  "abstract": "Task specification for robotic manipulation in open-world environments is challenging, requiring flexible and adaptive objectives that align with human intentions and can evolve through iterative feedback. We introduce Iterative Keypoint Reward (IKER), a visually grounded, Python-based reward function that serves as a dynamic task specification. Our framework leverages VLMs to generate and refine these reward functions for multi-step manipulation tasks. Given RGB-D observations and free-form language instructions, we sample keypoints in the scene and generate a reward function conditioned on these keypoints. IKER operates on the spatial relationships between keypoints, leveraging commonsense priors about the desired behaviors, and enabling precise SE(3) control. We reconstruct real-world scenes in simulation and use the generated rewards to train reinforcement learning (RL) policies, which are then deployed into the real world-forming a real-to-sim-to-real loop. Our approach demonstrates notable capabilities across diverse scenarios, including both prehensile and non-prehensile tasks, showcasing multi-step task execution, spontaneous error recovery, and on-the-fly strategy adjustments. The results highlight IKER's effectiveness in enabling robots to perform multi-step tasks in dynamic environments through iterative reward shaping. Project Page: https://iker-robot.github.io/",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Shivansh Patel",
+   "Xinchen Yin",
+   "Wenlong Huang",
+   "Shubham Garg",
+   "Hooshang Nayyeri",
+   "Li Fei-Fei"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4413925997",
+  "doi": "10.1109/icra55743.2025.11127585",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413925997",
+  "published_iso": "2025-05-19",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "progressive fidelity robot action candidate evaluation"
+  ]
+ }
+]

@@ -1,0 +1,22 @@
+{
+  "boundary_plan": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_BOUNDARY_PLAN.json",
+    "sha256": "11ae175df05e7b8c1bec50f518732def512352ec9cd4de1efdabb79acff33f03"
+  },
+  "compiler_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_COMPILER_LOCK_V2.json",
+    "sha256": "1e9516d777e78b86ccbeb16c82eeeaa6c77c855c1895808c4ce2415d483f6aa0"
+  },
+  "confirmatory_label": "amended_confirmatory_with_disclosed_three_cell_pre_formal_contamination",
+  "created_at_utc": "2026-08-31T21:07:53.845880+00:00",
+  "kind": "p026_immutable_launch_record",
+  "matrix_job_count": 189,
+  "matrix_run_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_FORMAL_MATRIX_LOCK_V2.json",
+    "sha256": "ba1b442383448d41679f40e24a838fb6e7be761d0297e4144832a2984b653ee2"
+  },
+  "no_formal_cell_started_before_record": true,
+  "output_directory": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_FORMAL_V2",
+  "output_directory_entries_at_launch": [],
+  "purpose": "formal"
+}

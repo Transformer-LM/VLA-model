@@ -1,0 +1,684 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "pgr-audit-v1",
+  "created_at": "2026-08-07T10:13:57+08:00",
+  "status": "frozen-pending-independent-jury",
+  "paper_writing": false,
+  "claim_ceiling": {
+    "pilot": "implementation feasibility, C0 predictive validity, optimizer and P/Q feasibility, and measured timing only",
+    "stage1": "task-local controlled algorithmic effect relative to B and one fixed C placebo",
+    "stage2": "task-local placebo-relative reliance on one offline predictive projector",
+    "forbidden": [
+      "new world-objective novelty",
+      "natural causal mediation",
+      "physical causality",
+      "SOTA",
+      "cross-architecture generality",
+      "real-robot generality"
+    ]
+  },
+  "canonical_hashing": {
+    "file": "sha256(raw_bytes)",
+    "json": "sha256(UTF-8 JSON with sorted keys and separators comma and colon)",
+    "directory": "sort files by POSIX relative path; for each file append UTF-8 canonical JSON line with keys bytes,path,sha256; sha256 the concatenated lines"
+  },
+  "filesystem_contract": {
+    "ssh_user": "liu_meng",
+    "logical_personal_root": "<PERSONAL_RESEARCH_ROOT>",
+    "canonical_personal_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+    "project_data_artifact_io": "every project, data, model, checkpoint, environment, cache, temporary, log, metric, video, W&B, and result path must be specified under the logical personal root and resolve under the canonical personal root",
+    "new_output_rule": "canonical parent must pass the personal-root check before creation; reject symlink escape; use umask 077; output UUID directories must not preexist",
+    "runtime_read_only_exceptions": [
+      "/proc entries needed for the current launch and GPU occupancy",
+      "/sys entries needed for device identity",
+      "/dev/nvidia* runtime devices",
+      "nvidia-smi and NVML",
+      "system executables and read-only runtime libraries"
+    ],
+    "runtime_exception_limits": "exceptions may not be used to read project data, model data, checkpoints, another user's home, or team/shared storage and may never be written",
+    "forbidden_actions": [
+      "root",
+      "sudo",
+      "su",
+      "source or modify .bashrc",
+      "modify global Conda",
+      "modify system CUDA or drivers",
+      "write outside the personal root",
+      "read or write team/shared project, dataset, model, or checkpoint trees",
+      "kill, attach to, overwrite, or reuse an unrelated process",
+      "touch the dirty CF-DynAlign source as an experiment runtime"
+    ],
+    "dirty_source": {
+      "path": "<PERSONAL_RESEARCH_ROOT>/workspace/cf-dynalign-starvla/source/starVLA",
+      "policy": "read-only provenance audit only; never modify and never use as the H1 runtime",
+      "clean_head": "3422b9f2387b6f682cf02802904a77b23ab13afd"
+    },
+    "isolated_workspace": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla",
+    "runtime_roots": {
+      "home": "<PERSONAL_RESEARCH_ROOT>/runtime-home/h1-pgr-audit",
+      "tmp": "<PERSONAL_RESEARCH_ROOT>/tmp/h1-pgr-audit",
+      "xdg_cache": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit",
+      "xdg_config": "<PERSONAL_RESEARCH_ROOT>/config/h1-pgr-audit",
+      "hf_home": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/huggingface",
+      "torch_home": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/torch",
+      "torch_extensions": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/torch_extensions",
+      "cuda_cache": "<PERSONAL_RESEARCH_ROOT>/cache/h1-pgr-audit/nvidia/ComputeCache",
+      "wandb_mode": "offline",
+      "wandb_dir": "<PERSONAL_RESEARCH_ROOT>/logs/h1-pgr-audit/wandb"
+    }
+  },
+  "host_environment": {
+    "host": "zt-a100-01",
+    "offline": true,
+    "train_env": "<PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign",
+    "train_python": "3.11.15",
+    "train_packages": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "transformers": "4.57.0",
+      "accelerate": "1.5.2",
+      "peft": "0.19.1",
+      "numpy": "1.26.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.5",
+      "pyarrow": "14.0.1",
+      "av": "12.3.0",
+      "omegaconf": "2.3.1",
+      "einops": "0.8.2",
+      "timm": "1.0.28",
+      "websockets": "16.1.1"
+    },
+    "forbidden_new_dependency": true,
+    "implementation_dependency_rule": "use only locked environment packages; PCA, ridge, bootstrap, and statistics use NumPy, SciPy, or PyTorch; scikit-learn is not present and must not be installed",
+    "eval_env": "<PERSONAL_RESEARCH_ROOT>/venvs/libero-eval-py310",
+    "eval_python": "3.10.12",
+    "driver_version": "595.71.05",
+    "gpu_model": "NVIDIA A100-PCIE-40GB",
+    "expected_gpu_uuid_by_physical_index": {
+      "0": "GPU-417b37b2-bb07-cc79-ca59-2e43af96d3ea",
+      "1": "GPU-708fad71-ac97-0c67-85fc-15e9534b2f59",
+      "2": "GPU-c034ca59-aa0c-4629-ce5d-a0b5d92e2747",
+      "3": "GPU-aa863a6c-8482-fd6c-e957-424e559e9df4"
+    }
+  },
+  "rng": {
+    "master_seed": 1701,
+    "screen_seed": 7,
+    "head_seed": 1701,
+    "train_seed_order_10": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "train_seed_prefix_5": [0, 1, 2, 3, 4],
+    "pilot_seed": 0,
+    "batch_seed_formula": "10000 + train_seed",
+    "q_candidate_seed_formula": "900000 + 1000 * train_seed + candidate_index",
+    "projector_permutation_seed_formula": "38000 + train_seed",
+    "bootstrap_seeds": {
+      "head_control_joint": 2711,
+      "head_control_main": 2712,
+      "action_derangement_joint": 2721,
+      "action_derangement_main": 2722,
+      "representation_derangement_joint": 2731,
+      "representation_derangement_main": 2732,
+      "fold4_p_formula": "28000 + train_seed",
+      "fold4_q_formula": "28100 + train_seed",
+      "stage1_descriptive": 29001,
+      "stage2_descriptive": 29002
+    },
+    "role_derivation_fallback": "uint64 big-endian first 8 bytes of SHA256 of PGR-Audit-v1|role={role}|train_seed={train_seed}|master=1701"
+  },
+  "immutable_order": [
+    "freeze and hash protocol, input manifest, seed order, paths, budget atoms, quarantine rules, and source/environment locks",
+    "perform CPU/static source, path, and evaluator-semantics validation only; no model scoring, representation cache, parity, training, or GPU timing",
+    "after renewed jury approval, create the isolated personal source, materialize locks, implement the launch guard, sealed screen evaluator, and downstream code, pass CPU tests and fresh-agent code review, but do not load a model or launch a GPU",
+    "make the 1k, 5k, and 10k checkpoint screen the first and contiguous GPU launch class; run the seeded kernel witness inside the first screen launch envelope before checkpoint loading",
+    "automatically select and hash the checkpoint; stop if none qualifies",
+    "run a conditional timing-only 520-step trace only if the screen contains no real horizon failure",
+    "validate selected-checkpoint identity, direct-cache, hot-switch, data-window, and evaluator parity",
+    "build the selected-checkpoint cache and target, train head and controls, and open strict-test once",
+    "stop as H1 NO-RUN if C0 fails",
+    "build and hash the fixed C donor map",
+    "run the already-preregistered seed-0 A/B/C, P/Q folds0-3, and timing with scientific metrics sealed",
+    "compute seed count automatically from timing-only ledger fields and hash seed_count.json",
+    "reveal seed-0 offline metrics, apply immutable eligibility gates, and train the remaining fixed seed prefix",
+    "freeze every seed's folds0-3 P/Q and all parity artifacts",
+    "open fold4 exactly once for all selected seeds",
+    "run and seal all 300 Stage-1 rollouts; reveal once complete",
+    "run and seal all 200 Stage-2 rollouts only if Stage 1 and every Stage-2 eligibility row pass",
+    "run integrity audit and result-to-claim; do not write a paper"
+  ],
+  "data": {
+    "dataset_root": "<PERSONAL_RESEARCH_ROOT>/datasets/libero",
+    "dataset_name": "libero_10_no_noops_1.0.0_lerobot",
+    "future_horizon": 8,
+    "tasks": [
+      {
+        "libero_suite_task_id": 3,
+        "dataset_task_index": 8,
+        "instruction": "put the black bowl in the bottom drawer of the cabinet and close it",
+        "episode_ids": [14, 15, 16, 31, 32, 36, 75, 89, 90, 97, 112, 120, 144, 151, 155, 169, 177, 189, 192, 198, 254, 255, 262, 268, 274, 300, 304, 319, 327, 337, 338, 353, 371, 375, 377]
+      },
+      {
+        "libero_suite_task_id": 6,
+        "dataset_task_index": 1,
+        "instruction": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+        "episode_ids": [1, 4, 5, 11, 19, 21, 37, 52, 62, 68, 108, 110, 113, 130, 138, 146, 152, 168, 176, 197, 206, 210, 212, 216, 220, 224, 242, 248, 252, 271, 302, 322, 325, 355, 356, 369]
+      }
+    ],
+    "split_algorithm": {
+      "sort_key": "full lowercase SHA256 hex of UTF-8 PGR-Audit-v1|task={dataset_task_index}|episode={episode_index}|stream={stream}|seed=1701; tie episode_index ascending",
+      "allocator": "within each task, floor n*p for each label, then distribute remaining items by descending fractional remainder with label-order tie break; assign sorted episode list to contiguous label blocks",
+      "outer_labels": ["head", "adapter", "post"],
+      "outer_proportions": [0.45, 0.30, 0.25],
+      "head_labels": ["train", "val", "strict_test"],
+      "head_proportions": [0.625, 0.1875, 0.1875],
+      "post_labels": ["fold0", "fold1", "fold2", "fold3", "fold4"],
+      "post_proportions": [0.2222222222222222, 0.2222222222222222, 0.1111111111111111, 0.1111111111111111, 0.3333333333333333],
+      "reason_for_repaired_proportions": "the original 50/30/20 equal-fold sketch leaves only one fold4 episode per task; this frozen cardinality-aware allocation retains three locked fold4 episodes per task and is subject to renewed review"
+    },
+    "frozen_episode_allocation": {
+      "1": {
+        "head_train": [146, 37, 322, 68, 110, 210, 216, 4, 138, 5],
+        "head_val": [325, 206, 356],
+        "head_strict_test": [21, 355, 242],
+        "adapter": [220, 252, 113, 152, 212, 224, 168, 52, 271, 108, 19],
+        "post_fold0": [302, 369],
+        "post_fold1": [176, 197],
+        "post_fold2": [248],
+        "post_fold3": [1],
+        "post_fold4": [11, 62, 130]
+      },
+      "8": {
+        "head_train": [274, 112, 144, 353, 327, 254, 189, 337, 151, 192],
+        "head_val": [14, 89, 15],
+        "head_strict_test": [300, 97, 262],
+        "adapter": [304, 255, 371, 90, 31, 32, 375, 169, 177, 120],
+        "post_fold0": [338, 198],
+        "post_fold1": [268, 319],
+        "post_fold2": [75],
+        "post_fold3": [16],
+        "post_fold4": [377, 155, 36]
+      }
+    },
+    "sample_id": ["dataset_task_index", "episode_index", "t"],
+    "valid_window": "retain t only when t + 8 < episode_length; never pad or cross an episode",
+    "progress": "t / (episode_length - 1)",
+    "cameras": ["observation.images.image", "observation.images.wrist_image"],
+    "host_processor": "selected checkpoint's clean-HEAD QwenOFT processor in eval mode with no random augmentation; resolved config and source hashes must match INPUT_MANIFEST.json"
+  },
+  "action_normalization": {
+    "space": "frozen StarVLA host training space",
+    "source": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/dataset_statistics.json",
+    "dimensions_0_to_5": "2 * (x - min) / (max - min) - 1, no clipping",
+    "dimension_6_gripper": "identity, matching the clean Libero4in1DataConfig which does not normalize action.gripper",
+    "min": [-0.9375, -0.9375, -0.9375, -0.2582142949104309, -0.375, -0.3675000071525574, 0.0],
+    "max": [0.9375, 0.9375, 0.9375, 0.3557142913341522, 0.375, 0.375, 1.0],
+    "chunk_shape": [8, 7],
+    "flattened_dimension": 56,
+    "parity_and_support_space": "this exact normalized space"
+  },
+  "host_model": {
+    "backbone": "Qwen3-VL-4B-Instruct",
+    "backbone_frozen": true,
+    "action_head": "deterministic MLPResNet",
+    "action_head_frozen": true,
+    "action_head_loss": "mean absolute error over batch, 8 tokens, and 7 normalized action dimensions",
+    "action_token_shape": ["batch", 8, 2560],
+    "adapter": {
+      "formula": "m = h + U @ V @ LN0(h) applied tokenwise",
+      "rank": 32,
+      "layer_norm": "population variance over 2560 features, eps 1e-5, no affine",
+      "V_shape": [32, 2560],
+      "V_init": "PyTorch kaiming_uniform with train_seed",
+      "U_shape": [2560, 32],
+      "U_init": "zeros"
+    },
+    "identity_direct_cache_hot_switch_max_abs_action_error": 1e-6
+  },
+  "future_target": {
+    "encoder": "DINOv2 ViT-S/14 local source and local weight, strict state-dict load, eval, FP32, x_norm_clstoken",
+    "preprocess": {
+      "input": "RGB uint8",
+      "scale": "divide by 255 to float32",
+      "resize": "shorter edge 256, bicubic, antialias true",
+      "crop": "center 224 by 224",
+      "mean": [0.485, 0.456, 0.406],
+      "std": [0.229, 0.224, 0.225]
+    },
+    "per_camera_difference": "DINO_CLS(frame t+8) - DINO_CLS(frame t)",
+    "whitening": {
+      "fit_split": "D_head train only",
+      "mean": "population mean per camera",
+      "covariance": "population covariance per camera in FP64",
+      "eigendecomposition": "symmetric eigh, eigenvalues descending",
+      "eigen_floor": "1e-6 times largest eigenvalue",
+      "failure": "largest eigenvalue <= 0",
+      "transform": "V diag(max(lambda, floor)^-0.5) V^T (d - mean)"
+    },
+    "projection": {
+      "generator": "NumPy PCG64 seed 1701, draw main then wrist, each Gaussian matrix shape 384 by 32",
+      "orthonormalization": "reduced QR; fix each column sign so its maximum-absolute element is positive",
+      "persist_matrices": true
+    },
+    "target": "concatenate the 32-D main and 32-D wrist projected whitened differences",
+    "target_dimension": 64
+  },
+  "nuisance_residualization": {
+    "covariates": "z-scored current main CLS, z-scored current wrist CLS, task one-hot in dataset task order 1 then 8, progress, intercept",
+    "continuous_stats": "D_head train only with population std floor 1e-6",
+    "model": "multi-output ridge with unpenalized intercept",
+    "alphas": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0],
+    "cv": "five episode-level task-stratified folds allocated by the same largest-remainder algorithm with stream head_nuisance_cv",
+    "selection": "minimum task-equal D_head-val nMSE rounded to 12 decimals; tie choose larger alpha",
+    "train_target": "out-of-fold residual on D_head train at selected alpha",
+    "other_target": "fit ridge on all D_head train and subtract prediction on val, strict-test, D_adapter, and D_post",
+    "linear_solver": "FP64 solve of Z^T Z + alpha*D; use Moore-Penrose pseudoinverse with rcond 1e-12 only if direct solve fails; record fallback and fail if nonfinite"
+  },
+  "predictive_decoder": {
+    "ln0": "population feature normalization eps 1e-5 no affine per token",
+    "state_branch": "mean across 8 LN0 tokens, Linear 2560 to 256 with bias, GELU",
+    "action_branch": "flatten exact 8 by 7 normalized action chunk, Linear 56 to 128 with bias, GELU",
+    "fusion": "concatenate to exactly 384 dimensions, Linear 384 to 256 with bias, GELU, Linear 256 to 64 with bias",
+    "dropout": 0.0,
+    "initialization": "PyTorch 2.6.0 default Linear initialization under seed 1701",
+    "training_loss": "mean squared error over batch and 64 target dimensions",
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "batch_size": 256,
+      "max_epochs": 100,
+      "patience_epochs": 10
+    },
+    "batching": "task-balanced batches; within each task sample windows from a seed-1701 shuffled list without replacement per epoch",
+    "selection": "lowest task-equal D_head-val joint64 nMSE rounded to 12 decimals; tie earliest epoch"
+  },
+  "controls": {
+    "common_training": "same optimizer, batches, epochs, early stopping, and seed as full unless control is closed form",
+    "state_only": "same full architecture with the 56-D action input identically zero in train and evaluation",
+    "action_only": "same full architecture with the 2560-D pooled representation input identically zero in train and evaluation",
+    "current_dino_action": "z-scored concatenated current main and wrist CLS, Linear 768 to 256 with bias and GELU, then the same action branch and 384 to 256 to 64 fusion",
+    "additive": "same state and action branches; Linear 256 to 64 with bias plus Linear 128 to 64 without bias",
+    "nuisance_ridge": "same nuisance covariates and alpha grid fit directly to residual target",
+    "task_progress_mean": "D_head-train task by progress-decile mean; empty bin falls back to task mean then global mean",
+    "zero": "64-D zero vector"
+  },
+  "metrics": {
+    "nmse": {
+      "reference_mean": "D_head-train residual target mean for the evaluated coordinate set",
+      "per_task": "sum squared prediction error divided by sum squared deviation from fixed train reference mean",
+      "aggregate": "equal mean of task-index 1 and task-index 8 nMSE",
+      "joint_coordinates": [0, 64],
+      "main_coordinates": [0, 32],
+      "zero_denominator": "gate failure"
+    },
+    "control_improvement": "1 - nMSE(full) / min_control_nMSE",
+    "derangement_degradation": "nMSE(deranged full decoder) / nMSE(intact full decoder) - 1",
+    "bootstrap": {
+      "replicates": 10000,
+      "unit": "episode",
+      "sampling": "within each task sample the original number of episodes with replacement and retain every window of each sampled episode; task-equal aggregate",
+      "strongest_control": "reselected inside every replicate",
+      "one_sided_lcb": "0.05 quantile with NumPy method inverted_cdf",
+      "one_sided_ucb": "0.95 quantile with NumPy method inverted_cdf"
+    },
+    "projector_r2": "task-equal mean of 1 - SSE(model)/SSE(zero), where zero is the folds0-1 fit-target mean and each task is scored separately",
+    "permutation_p": "(1 + count(T_perm >= T_observed)) / 1001 using 1000 within-task episode-block target permutations"
+  },
+  "strict_predictive_gate": {
+    "evaluated_once_on": "D_head strict_test after all decoder, nuisance, whitening, projections, splits, preprocessing, controls, and hashes freeze",
+    "coordinate_sets": ["joint64", "main32"],
+    "full_vs_strongest_control": {
+      "point_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0.0
+    },
+    "action_derangement": {
+      "constraints": "different episode, same task, progress-decile and action-norm-tercile when feasible; use the fixed C merge hierarchy; no fixed point",
+      "point_degradation_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0.0
+    },
+    "representation_derangement": {
+      "constraints": "different episode, same task, progress-decile and action-norm-tercile when feasible; keep the demonstrated action fixed; use the fixed C merge hierarchy; no fixed point",
+      "point_degradation_minimum": 0.05,
+      "bootstrap_lcb_strictly_greater_than": 0.0
+    },
+    "failure": "H1 NO-RUN before adapter training"
+  },
+  "fixed_c_placebo": {
+    "split": "D_adapter only",
+    "progress_bin": "min(floor(10 * progress), 9)",
+    "action_norm": "L2 norm of flattened normalized 56-D action divided by sqrt(56)",
+    "action_terciles": "per task on D_adapter using NumPy quantile method inverted_cdf; an exact boundary belongs to the lower bin",
+    "merge_levels": [
+      "progress decile by action terciles {0},{1},{2}",
+      "progress decile by action groups {0,1},{2}",
+      "progress decile with all action terciles",
+      "progress quintile floor(decile/2) with all action terciles",
+      "progress half floor(decile/5) with all action terciles",
+      "task only"
+    ],
+    "merge_selection": "choose the first whole-dataset level at which every stratum has a perfect bijective derangement under different-episode and nonoverlapping-window constraints; do not choose locally or by outcome",
+    "identity_prediction": "frozen predictive decoder q(h,a)",
+    "huber": "elementwise 0.5*e^2 if abs(e)<=1 else abs(e)-0.5, mean over 64 dimensions",
+    "target_scalar": "L2 target norm divided by sqrt(64)",
+    "cost": "squared standardized query-donor target-norm difference plus squared standardized difference between intact identity Huber loss and query-prediction-to-donor-target Huber loss",
+    "cost_scales": "population standard deviations over all eligible D_adapter pairs, each floored at 1e-8",
+    "solver": "SciPy linear_sum_assignment in float64; invalid edges are infinity",
+    "tie_break": "add 1e-12 times uint64(first 8 SHA256 bytes of PGR-Audit-v1|C|query_sample_id|donor_sample_id) divided by 2^64 to every finite cost",
+    "pretraining_gates": {
+      "donor_to_query_mean_target_norm_ratio": [0.9, 1.1],
+      "matched_c_to_intact_mean_identity_huber_ratio": [0.9, 1.1],
+      "absolute_huber_saturation_rate_difference_max": 0.05,
+      "saturation": "absolute elementwise error greater than 1",
+      "failure_conditions": ["denominator <= 1e-12", "non-bijection", "duplicate donor", "fixed point", "invalid edge", "no feasible merge level"]
+    },
+    "resampling": false
+  },
+  "adapter_training": {
+    "arms": {
+      "A": "action gradient plus valid future-target gradient",
+      "B": "action gradient only; compute and log the same frozen future forward without auxiliary update",
+      "C": "action gradient plus fixed C-donor future-target gradient"
+    },
+    "shared": {
+      "identity_initialization": true,
+      "batch_order": true,
+      "steps": 500,
+      "batch_size": 256,
+      "batching": "exactly 128 samples per task; pre-generate and hash every batch index array using torch.Generator seed 10000+train_seed; sample with deterministic epoch cycling",
+      "optimizer": "manual plain SGD",
+      "learning_rate": 0.001,
+      "momentum": 0.0,
+      "weight_decay": 0.0,
+      "global_clip": 1.0,
+      "dtype": "FP32 gradients, norms, scales, and updates",
+      "create_graph": false
+    },
+    "future_loss": "mean elementwise Huber delta 1 over batch and 64 dimensions",
+    "gradient_norm": "L2 over the concatenation of every U and V gradient element before clipping",
+    "dose": {
+      "rho": "0.30 * norm of B action gradient on the common batch",
+      "scale": "clip(rho / (future_gradient_norm + 1e-12), 1e-3, 1e3), detached",
+      "composition": "combine action and scaled future gradients, then apply global norm clip 1.0",
+      "relative_error": "abs(norm(scaled_future_gradient) - rho) / max(rho,1e-12)",
+      "fallback": "future norm <=1e-12, rho<=1e-12, scale hits either cap, or relative error >0.01",
+      "maximum_fallback_batches": 5,
+      "minimum_pass_fraction": 0.99
+    },
+    "nonfinite": "immediate seed invalid and stop that launch",
+    "no_seed_drop_or_replacement": true
+  },
+  "predictive_projector": {
+    "delta": "mean across 8 tokens of m_A - m_B in 2560-D",
+    "fold_roles": {
+      "fold0_fold1": "cross-fit nuisance, PCA/whitening, ridge-SVD fit",
+      "fold2": "alpha and rank selection plus permutation gate",
+      "fold3": "Q calibration only",
+      "fold4": "locked one-time final eligibility"
+    },
+    "nuisance": {
+      "covariates": "z-scored current DINO main and wrist CLS, demonstrated normalized action chunk, task one-hot, progress, intercept",
+      "ridge_alphas": [0.0001, 0.001, 0.01, 0.1, 1.0],
+      "crossfit": "fit fold0 predict fold1 and fit fold1 predict fold0 for delta and target independently",
+      "selection": "lowest average task-equal OOF nMSE rounded to 12 decimals; tie larger alpha",
+      "refit": "union folds0-1 at the selected alpha for folds2-4"
+    },
+    "W": {
+      "fit_values": "fold0-1 OOF delta residuals after nuisance subtraction",
+      "raw_center": "mean raw delta on folds0-1, stored as mu_delta",
+      "covariance": "population covariance in FP64",
+      "dimension": "smallest d explaining at least 95 percent residual variance, capped at 128",
+      "eigen_floor": "1e-6 times largest retained eigenvalue",
+      "matrix": "diag(retained_eigenvalues^-0.5) times retained eigenvectors transpose, shape d by 2560"
+    },
+    "B_N": {
+      "values": "W times centered union-refit nuisance-predicted delta on folds0-1",
+      "basis": "left singular vectors in W space explaining at least 95 percent nuisance-prediction energy",
+      "zero_energy": "empty basis when total squared singular value <=1e-12"
+    },
+    "p_fit": {
+      "method": "multivariate ridge coefficient from W-space OOF residual delta to OOF residual target, then truncate coefficient SVD",
+      "alphas": [0.0001, 0.001, 0.01, 0.1, 1.0],
+      "ranks": [4, 8, 16, 32],
+      "basis": "take coefficient left singular vectors, project into complement of B_N, reduced QR with canonical positive signs",
+      "selection": "lowest task-equal fold2 nMSE rounded to 12 decimals; tie lower rank then larger alpha",
+      "fold2_incremental_r2_min": 0.02,
+      "fold2_permutation_p_strictly_less_than": 0.05
+    },
+    "q_fit": {
+      "candidate_count": 100,
+      "generation": "Gaussian d by selected-rank matrix from the fixed candidate seed; project into complement of B_N and B_pred; reduced QR with canonical signs",
+      "invalid": "numerical rank less than selected rank",
+      "fold3_energy_ratio": [0.9, 1.1],
+      "fold3_action_perturbation_ratios": "all 2 tasks by 8 tokens in [0.9,1.1]",
+      "fold3_point_r2_max": 0.005,
+      "nuisance_overlap_max": 0.001,
+      "score": "squared log energy ratio plus mean squared log of the 16 task-token action perturbation ratios",
+      "selection": "lowest score rounded to 12 decimals; tie lower candidate index",
+      "no_candidate": "Stage 2 ineligible; Stage 1 unaffected"
+    },
+    "projectors": {
+      "Pi_pred": "B_pred @ B_pred.T",
+      "Pi_Q": "B_Q @ B_Q.T",
+      "nuisance_overlap": "Frobenius norm of B_R.T @ B_N divided by sqrt(rank)"
+    },
+    "deployment": {
+      "x": "W @ (raw mean-token A-B delta - mu_delta)",
+      "pseudoinverse": "NumPy pinv(W,rcond=1e-8), linear only and never restore a mean",
+      "v_pred": "pinv(W) @ Pi_pred @ x",
+      "v_q": "pinv(W) @ Pi_Q @ x",
+      "application": "subtract the same 2560-D vector from each of the 8 A tokens",
+      "online_forbidden": ["DINO", "progress", "demonstrated action", "teacher target"]
+    },
+    "fold4_r2": "fit a readout from projected coordinates to residual target on folds0-1 with selected alpha; score task-equal R2 on fold4; Q uses the same alpha without retuning"
+  },
+  "eligibility": {
+    "stage1_every_seed": [
+      "A valid-target joint64 and main32 nMSE each beat identity, B, and C by at least 5 percent with one-sided episode-bootstrap LCB > 0",
+      "adapter residual RMS <= 10 percent of h RMS",
+      "identity, direct-cache, and hot-switch normalized-action max error < 1e-6",
+      "C matching, dose, optimizer, and nonfinite gates pass"
+    ],
+    "stage1_failure": "any selected seed failure forbids Stage 1; no seed replacement",
+    "stage2_every_seed": [
+      "P fold4 point R2 >= 0.02 and episode-bootstrap LCB > 0",
+      "Q fold4 episode-bootstrap UCB <= 0.005",
+      "P/Q removed-energy ratio and every task-token action-output perturbation ratio in [0.9,1.1]",
+      "nuisance overlap <= 0.001",
+      "A-to-B cached parity and two reserved deterministic-trace normalized-action max errors < 1e-6",
+      "fold4 PCA-distance support <= folds0-3 99th percentile and normalized action values within folds0-3 coordinatewise range"
+    ],
+    "stage2_failure": "any selected seed failure globally forbids Stage 2 but does not invalidate a passed Stage 1",
+    "fold4_bootstrap": "same 10000-replicate task-stratified episode-block procedure; fold4 has exactly three episodes per task",
+    "fold4_open_count": 1
+  },
+  "checkpoint_screen": {
+    "must_be_first_gpu_launch_class": true,
+    "checkpoints": [
+      {
+        "step": 1000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_1000_pytorch_model.pt",
+        "bytes": 9785060316,
+        "sha256": "6e2f52758054f0da6d76640dfcfc3dd324b0a14f2cf24d4626262781fd1d4735"
+      },
+      {
+        "step": 5000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_5000_pytorch_model.pt",
+        "bytes": 9785060316,
+        "sha256": "4b0067d806a321065d1521f4940d34920de234902ae4fe83a2a642ab984b277a"
+      },
+      {
+        "step": 10000,
+        "path": "<PERSONAL_RESEARCH_ROOT>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/checkpoints/steps_10000_pytorch_model.pt",
+        "bytes": 9785061050,
+        "sha256": "1687afbdcab4f4593c6261d64ac478fd151a0ebd7b641236b60ce1a01fbdee7b"
+      }
+    ],
+    "order": [1000, 5000, 10000],
+    "tasks": [3, 6],
+    "initial_state_indices": [0, 1, 2, 3, 4],
+    "rollouts": 30,
+    "qualification": "each task success rate independently in [0.2,0.8]",
+    "selection": "among qualified checkpoints minimize absolute pooled success rate minus 0.5; tie lower step",
+    "none_qualify": "NO-RUN",
+    "selector_output": "selected checkpoint step, path, bytes, SHA256, selector-rule hash, and sealed-screen artifact hash",
+    "detail_reveal": "screen details may be revealed only after selected_checkpoint.json is atomically written and hashed"
+  },
+  "closed_loop_evaluation": {
+    "suite": "libero_10",
+    "seed": 7,
+    "dummy_settle_actions": 10,
+    "policy_action_horizon": 520,
+    "chunk_size": 8,
+    "chunk_execution": "open loop execute all 8 returned actions before the next policy query",
+    "success": "environment done true only",
+    "horizon": "done false at horizon is a failure",
+    "exception_or_missing": "stage invalid; never convert to a failure success label and never impute",
+    "selected_seed_states": {
+      "10_seed_path": [5, 6, 7, 8, 9],
+      "5_seed_path": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    },
+    "stage1": {
+      "conditions": ["A", "B", "C"],
+      "total_rollouts": 300,
+      "sign_gate_10": "at least 9 of 10 seed-level paired differences positive; ties nonpositive; exact one-sided p=11/1024",
+      "sign_gate_5": "5 of 5 seed-level paired differences positive; ties nonpositive; exact one-sided p=1/32",
+      "contrasts": ["A-B", "A-C"],
+      "pooled_gain_min_pp": 10.0,
+      "each_task_mean_min_pp": 0.0,
+      "c_not_below_b_by_more_than_pp": 5.0
+    },
+    "stage2": {
+      "conditions": ["A_pred_removed", "A_Q_removed"],
+      "total_rollouts": 200,
+      "primary": "success_rate(A_Q_removed) - success_rate(A_pred_removed)",
+      "same_seed_sign_gate_as_stage1": true,
+      "pooled_gain_min_pp": 10.0,
+      "each_task_mean_min_pp": 0.0,
+      "A_Q_within_intact_A_pp": 5.0,
+      "A_pred_erases_fraction_of_A_minus_B_min": 0.5,
+      "A_pred_not_below_B_by_more_than_pp": 10.0
+    }
+  },
+  "outcome_isolation": {
+    "root": "<PERSONAL_RESEARCH_ROOT>/artifacts/h1-pgr-audit/quarantine",
+    "classes": {
+      "screen": "seal raw metrics, stdout, stderr, videos, and trajectories until selected_checkpoint.json is hashed",
+      "pilot_training": "before seed_count.json is hashed, expose only exit code, GPU seconds, peak memory, nonfinite boolean, safety-gate booleans, and artifact hashes; seal losses, R2, nMSE, P/Q score, and comparative arm metrics",
+      "stage1": "seal every rollout and all intermediate summaries until all 300 expected records exist and the batch manifest hash passes",
+      "stage2": "seal every rollout and all intermediate summaries until all 200 expected records exist and the batch manifest hash passes"
+    },
+    "stdout_whitelist_before_reveal": ["launch_uuid", "exit_code", "gpu_seconds", "peak_memory_bytes", "nonfinite", "safety_gate_booleans", "artifact_sha256"],
+    "seed_count_reader": "schema-level deny access to sealed scientific metric paths and fields",
+    "wandb": "offline only and sealed with its phase",
+    "videos": "sealed with their phase",
+    "failed_attempts": "preserve and charge; never delete or overwrite"
+  },
+  "budget": {
+    "accounting_unit": "occupied physical-GPU wall-clock hours",
+    "actual_definition": "for each physical GPU UUID, measure the union of this run's launch intervals; sum union lengths across UUIDs and divide by 3600",
+    "dedup_key": ["host", "physical_gpu_uuid", "launch_uuid", "interval_id"],
+    "child_process_rule": "children included in a charged launch envelope are attributed but not charged again",
+    "pilot_cap_gpu_hours": 2.0,
+    "complete_path_projection_cap_gpu_hours": 7.2,
+    "hard_actual_cap_gpu_hours": 8.0,
+    "pilot_admission": "pilot_spent + active_remaining_upper_bound + requested_gpu_count * next_launch_upper_wall_seconds / 3600 <= 2.0",
+    "seed0_artifact_policy": "seed-0 triplet and folds0-3 P/Q are formal retained artifacts",
+    "disjoint_cost_atoms": [
+      "screen checkpoint 1000",
+      "screen checkpoint 5000",
+      "screen checkpoint 10000",
+      "conditional full-horizon timing trace",
+      "B0 identity and cache parity",
+      "selected-checkpoint cache",
+      "target, nuisance, head, and controls",
+      "C donor build",
+      "triplet per seed",
+      "P/Q folds0-3 per seed",
+      "fold4 per seed",
+      "per-seed cache and A-to-B parity",
+      "two reserved deterministic-trace parities per seed",
+      "Stage1 300 rollouts",
+      "conditional Stage2 200 rollouts",
+      "model-server loads and teardown not already included in a measured atom",
+      "failed attempts",
+      "one predeclared infrastructure retry allowance"
+    ],
+    "unit_bounds": {
+      "u_triplet": "1.10 times measured seed-0 complete retained triplet GPUh including its load and teardown",
+      "u_pq03": "1.10 times measured retained seed-0 folds0-3 P/Q GPUh",
+      "u_fold4": "1.10 times a fold3 shadow timing scaled by fold4 sample count; never open fold4 for timing",
+      "u_seed_parity": "1.10 times measured seed-0 complete parity bundle including two reserved traces",
+      "u_roll": "1.10 * (max(real horizon-failure seconds, maximum screen rollout seconds) + measured 65-chunk wrapper overhead seconds) / 3600",
+      "u_stage_load": "1.10 times measured resident base load and teardown per future stage",
+      "u_retry": "0.20 GPUh, at most one infrastructure-only retry before Stage1"
+    },
+    "projection_formula": "pre_n = spent + active_remaining_UB + (n-1)*u_triplet + (n-1)*u_pq03 + n*u_fold4 + n*u_seed_parity + 500*u_roll + stage_load_atoms + u_retry; projection_n = pre_n + max(0.10*pre_n,0.30)",
+    "seed_decision": "choose 10 iff projection_10 <= 7.2; else choose 5 iff projection_5 <= 7.2; else STOP",
+    "decision_inputs": "timing, resource, exit, hash, and safety fields only; scientific outcomes forbidden",
+    "post_decision_admission": "recompute selected complete-path projection before every launch and require <=7.2 with no force override",
+    "hard_stop": "before launch reserve 0.05 GPUh teardown margin; watchdog may terminate only its own process group at the monotonic deadline; actual remains charged; never touch an external process"
+  },
+  "launch_guard": {
+    "freshness_seconds_max": 5,
+    "snapshot": "one fresh nvidia-smi/NVML snapshot of physical indices 0-3, hardware UUIDs, compute PIDs, process owners when readable, memory used, and utilization",
+    "idle_definition": "no compute process, memory.used <= 500 MiB, and utilization.gpu <= 5 percent",
+    "preferred_physical_order": [2, 3, 0, 1],
+    "normal_rule": "if requested GPU count can be satisfied by idle physical 2 and 3, allocate only from 2 then 3",
+    "gpu_0_1_rule": "0 or 1 may be used only for one atomic launch group when the same fresh snapshot shows all four GPUs idle; assignment order in that group is 2,3,0,1",
+    "binding": "CUDA_VISIBLE_DEVICES uses the verified hardware UUIDs",
+    "post_bind": "after CUDA context creation, take a second snapshot and verify assigned UUIDs and that every new PID belongs to this launch PID/PGID; an occupancy race stops only this launch",
+    "failure": "fail closed, charge any elapsed GPU time, preserve artifacts, and never kill or attach to an external PID",
+    "required_ledger_fields": [
+      "launch_uuid",
+      "logical_run_id",
+      "cost_atom_ids",
+      "attempt_no",
+      "retry_of",
+      "host",
+      "uid",
+      "pid",
+      "pgid",
+      "command_hash",
+      "config_hash",
+      "cwd",
+      "start_end_utc",
+      "start_end_monotonic",
+      "snapshot_uuid",
+      "snapshot_time",
+      "snapshot_age",
+      "physical_gpu_indices",
+      "physical_gpu_uuids",
+      "occupancy_before",
+      "all_four_idle",
+      "assignment_order",
+      "occupancy_post_bind",
+      "upper_wall_seconds",
+      "spent_before",
+      "active_remaining_upper_bound",
+      "projection_5",
+      "projection_10",
+      "projection_selected",
+      "pilot_pass",
+      "hard8_deadline",
+      "actual_intervals",
+      "actual_gpu_hours",
+      "checkpoint_hash",
+      "seed",
+      "fold",
+      "task_state_manifest_hash",
+      "input_output_hashes",
+      "quarantine_path_hash",
+      "visibility_class",
+      "exit_code",
+      "stop_reason",
+      "filesystem_guard_pass"
+    ]
+  },
+  "failure_and_retry": {
+    "scientific_gate_failure": "stop or narrow the claim exactly as specified; never retry, tune, change seed, or replace a seed",
+    "infrastructure_retry": "at most one pre-Stage1 retry for a predeclared infrastructure error class, new launch UUID and new GPU snapshot, old cost retained, unchanged config and seed",
+    "stage1_stage2_retry": "none; any exception, missing record, or incomplete batch invalidates that stage and leaves partial outcomes sealed for audit",
+    "budget_failure": "NO-RUN, never remove a control or conditional Stage2 cost to fit",
+    "pilot_overrun": "refuse the next launch; no result claim",
+    "paper": "out of scope"
+  }
+}

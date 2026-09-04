@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "pgr-audit-prereg-v1",
+  "created_at": "2026-08-07T10:24:36+08:00",
+  "status": "candidate-lock-pending-renewed-jury",
+  "assurance": "same-family-provisional",
+  "remote_mutation": false,
+  "gpu_hours": 0.0,
+  "locked_files": [
+    {
+      "path": "refine-logs/PGR_AUDIT_PROTOCOL.json",
+      "sha256": "62769676c1f2fe58cb36607eae6d36b04667990b2b9a84b3e3d6067921c75b64"
+    },
+    {
+      "path": "refine-logs/INPUT_MANIFEST.json",
+      "sha256": "9169fda8d5b931f34b69540631899fc5707d75c76dc44a978836bc9f9bd8b216"
+    },
+    {
+      "path": "refine-logs/FINAL_PROPOSAL.md",
+      "sha256": "91c7a5d5b9d4665b0806b4b0ebe0a8c4194227da5bbf356a94624770ea836f33"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN.md",
+      "sha256": "55b64d62a94d32fe8285a682428c3eed3a4dd45cd064be480cda56359f74e559"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER.md",
+      "sha256": "e0019d515fed6e83b3a26fd145b8c3b46016a1d220d302582e4f1ab9257cf1f0"
+    }
+  ],
+  "prior_jury": {
+    "verdict": "NO-GO",
+    "response_path": ".aris/traces/method-plan/2026-08-07_run01/007-experiment-plan-jury.response.md",
+    "response_sha256": "7c101c3f0867045c7d5ba457722ef7df9519c62c5a99dd7949945d80e62ab6f8",
+    "blocking_defects": 5
+  },
+  "frozen_decisions": {
+    "train_seed_order_10": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "train_seed_prefix_5": [0, 1, 2, 3, 4],
+    "pilot_seed": 0,
+    "screen_seed": 7,
+    "head_seed": 1701,
+    "checkpoint_candidates": [1000, 5000, 10000],
+    "screen_tasks": [3, 6],
+    "screen_states": [0, 1, 2, 3, 4],
+    "pilot_cap_gpu_hours": 2.0,
+    "projection_cap_gpu_hours": 7.2,
+    "hard_actual_cap_gpu_hours": 8.0,
+    "gpu_preference": [2, 3, 0, 1],
+    "all_four_idle_required_for_gpu_0_or_1": true,
+    "personal_only": true,
+    "paper_writing": false
+  },
+  "future_state_outputs": {
+    "selected_checkpoint": {
+      "status": "unselected-by-design",
+      "may_be_created_only_after": "all 30 sealed screen records",
+      "selection_source": "automatic predeclared selector only"
+    },
+    "seed_count": {
+      "status": "unselected-by-design",
+      "may_be_created_only_after": "sealed seed0 timing and disjoint cost ledger",
+      "selection_source": "timing-only automatic 10-to-5-to-STOP rule"
+    }
+  },
+  "next_gate": {
+    "name": "renewed-experiment-plan-jury",
+    "required_verdict": "GO or explicit CONDITIONAL-GO for isolated scaffolding and screen-first measured pilot",
+    "prohibited_before_pass": [
+      "remote filesystem mutation",
+      "isolated clone creation",
+      "model load",
+      "GPU launch",
+      "scientific outcome generation"
+    ]
+  }
+}
+

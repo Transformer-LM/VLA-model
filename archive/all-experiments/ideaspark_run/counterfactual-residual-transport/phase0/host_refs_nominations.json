@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Feedback World Model Enables Precise Guidance of Diffusion Policy",
+    "id_hint": "arxiv:2605.15705",
+    "why": "Closest online-correction anchor: executed observations update a shared latent feedback state that corrects later world predictions and guides manipulation actions under shift.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "Adapting World Models with Latent-State Dynamics Residuals",
+    "id_hint": "arxiv:2504.02252",
+    "why": "ReDRAW is the load-bearing residual-dynamics baseline for calibrating a visual latent world model to changed mechanisms, though its adaptation is offline and not VLA manipulation.",
+    "relevance": "adjacent",
+    "source": "websearch"
+  },
+  {
+    "title": "CheckVLA: Execution-Time Verification with Action-Conditioned World Model for Long-Horizon Mobile Manipulation",
+    "id_hint": "arxiv:2607.26789",
+    "why": "Direct execution-time comparator for action-conditioned residual detection, calibrated intervention, and suffix rewriting during long-horizon VLA manipulation.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "When to Trust Imagination: Adaptive Action Execution for World Action Models",
+    "id_hint": "arxiv:2605.06222",
+    "why": "Direct abstention and replanning anchor that tests future-reality consistency to decide how long a WAM action chunk remains trustworthy.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+    "id_hint": "arxiv:2608.13489",
+    "why": "Recent action-conditioned video-WM backbone whose geometry, arm-identity, and object-consistency constraints define a strong training-time alternative to online residual correction.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "τ_0-WM: A Unified Video-Action World Model for Robotic Manipulation",
+    "id_hint": "arxiv:2606.01027",
+    "why": "Central action-conditioned simulator and candidate-ranking baseline that already uses imagined futures for proposal evaluation and rectification before execution.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "DREAM-Chunk: Reactive Action Chunking with Latent World Model",
+    "id_hint": "arxiv:2606.18589",
+    "why": "Closest candidate-action transport neighbor: each real observation is matched against phase-aligned latent futures to switch among unexecuted VLA action chunks online.",
+    "relevance": "core",
+    "source": "websearch"
+  },
+  {
+    "title": "Leave No Observation Behind: Real-time Correction for VLA Action Chunks",
+    "id_hint": "arxiv:2509.23224",
+    "why": "A2C2 is the primary per-step VLA residual-correction baseline and is needed to separate WAM prediction-residual transport from ordinary action-head correction.",
+    "relevance": "adjacent",
+    "source": "websearch"
+  }
+]

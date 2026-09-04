@@ -1,0 +1,515 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S6-S8 separation-to-deployment handoff",
+      "claim": "I remains load-bearing beyond identical-axis-response baselines without a deployment oracle",
+      "why_selected": "This is the candidate's declared surpass step. The strongest failure mode would be that the separation certificate is forced, I disappears before action choice, clipping changes the coordinate semantics, or the final action requires simulator truth. The executed trace therefore attacked the full chain from identical axis scores through mixed estimation, exact pair optimization, clipped action construction, and WAM-only verification."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "verbatim_quote": "1. Freeze the existing OpenPI π0.5 and FastWAM checkpoints; collect frozen-policy RoboTwin states, FastWAM rollout features, and the simulator's existing task-success labels, then fit and held-out calibrate q_φ. Inputs: RGB, proprioception, language goal, action chunks, simulator labels; output: frozen q_φ with calibration provenance.",
+        "consumes": [
+          "offline RoboTwin states and success labels",
+          "frozen FastWAM rollout features"
+        ],
+        "produces": [
+          "frozen q_φ: rollout features -> [0,1]",
+          "calibration provenance"
+        ],
+        "note": "Simulator success is an offline training/calibration input, not a deployment input."
+      },
+      {
+        "step": "S2",
+        "verbatim_quote": "2. Parse the OpenPI action schema into G_L and G_R, construct the hold chunk h from current proprioception, and implement the proposal-relative scaling map a(δ) with native box clipping. Inputs: checkpoint schema, a^0, proprioception; outputs: typed channel groups and a callable action map.",
+        "consumes": [
+          "schema",
+          "a^0 in R^{p x H}",
+          "current proprioception"
+        ],
+        "produces": [
+          "G_L and G_R",
+          "schema-typed no-op h",
+          "a(delta)=clip(h+(1+delta)(a^0-h))"
+        ],
+        "note": "The original phrase 'construct the hold chunk from proprioception' is ambiguous for absolute-position versus delta/velocity action schemas; the patch binds the representation-specific no-op semantics."
+      },
+      {
+        "step": "S3",
+        "verbatim_quote": "3. On disjoint RoboTwin calibration states, select ε, r, and K_ξ by the rules stated in core_mechanism and record every candidate value, rank disagreement, executed outcome, latency, and memory use. Inputs: frozen checkpoints and calibration states; outputs: bound parameters and audit records.",
+        "consumes": [
+          "disjoint calibration states",
+          "frozen checkpoints",
+          "candidate epsilon/r/K values",
+          "offline executed outcomes"
+        ],
+        "produces": [
+          "frozen epsilon",
+          "frozen r",
+          "integer K_xi>=1",
+          "selection audit"
+        ],
+        "note": "'Ranking stabilizes' and 'best trade-off' had multiple defensible readings and therefore were not executable selection rules. The patch supplies a one-standard-error K rule and a lexicographic r rule, and freezes all choices before E0."
+      },
+      {
+        "step": "S4",
+        "verbatim_quote": "4. For each E0 state, evaluate q_0 and all ±ε axis probes with coupled FastWAM seeds, then compute m and d; cache every rollout so the same-budget axis baseline receives exactly the same total FastWAM-call allowance through additional axis-seed replications. Inputs: o_t, a^0, a(·), F_ψ, q_φ; outputs: q_0, m, d, and matched-budget baseline records.",
+        "consumes": [
+          "state o_t",
+          "a^0",
+          "a(delta)",
+          "frozen F_ψ/q_φ",
+          "K_xi common seeds"
+        ],
+        "produces": [
+          "q0 scalar",
+          "m in R^p",
+          "d in R^p",
+          "cached axis score table"
+        ],
+        "note": "Each score is the K-seed mean. Common seeds make the central differences target the declared seed-averaged composite Q(delta), including clipping."
+      },
+      {
+        "step": "S5",
+        "verbatim_quote": "5. Evaluate the four signed joint probes for every pair in G_L×G_R and compute I with the stated mixed finite difference; never infer I from m or collapse it into a center gradient. Inputs: cached axis scores plus joint FastWAM scores; output: the cross-effector interaction matrix I with seed-wise uncertainty.",
+        "consumes": [
+          "4 K-seed joint means for each of p_L p_R pairs",
+          "epsilon"
+        ],
+        "produces": [
+          "I in R^{p_L x p_R}",
+          "seed-wise uncertainty"
+        ],
+        "note": "The executed quadratic instance recovered I=+1.5 and I=-1.5 exactly while leaving every axis score identical."
+      },
+      {
+        "step": "S6",
+        "verbatim_quote": "6. Materialize the axis-equivalence witness by pairing the fitted response with its I=0 counterpart: verify that q_0, every axis score, m, and d match while at least one pairwise quadratic ranking changes; if none changes, emit no_separation_at_state and retain a^0. Inputs: m, d, I, probe table; output: a per-state checkable separation certificate.",
+        "consumes": [
+          "q0",
+          "axis table",
+          "m",
+          "d",
+          "I"
+        ],
+        "produces": [
+          "certificate that the deterministic winning pair/action differs from the I=0 surrogate",
+          "or no_separation_at_state"
+        ],
+        "note": "The equality of the I and I=0 axis fields is forced by construction and is not empirical confirmation. Only the change in the deterministic winning action establishes that I is load-bearing at this state. 'Ranking changes' is patched to this precise reading."
+      },
+      {
+        "step": "S7",
+        "verbatim_quote": "7. For every cross-effector pair, enumerate the analytic interior, edge, and corner candidates of S_gh over [-r,r]^2, select the global support-two maximizer δ*, and serialize which I_gh term changed the winning action relative to I=0. Inputs: q_0, m, d, I, r; outputs: δ*, predicted gain, winning pair, and an interaction-dependence trace.",
+        "consumes": [
+          "q0",
+          "m",
+          "d",
+          "I",
+          "r"
+        ],
+        "produces": [
+          "global support-two delta*",
+          "predicted gain",
+          "winning pair",
+          "I-dependence trace"
+        ],
+        "note": "The finite-difference coefficients and solver polynomial are dimensionally consistent: d multiplies x^2/2 and I multiplies xy. The analytic enumeration matched a 0.001-grid maximum with score gap 0.0 in both signs. Tie behavior is patched to a deterministic lexicographic rule."
+      },
+      {
+        "step": "S8",
+        "verbatim_quote": "8. Re-evaluate a(δ*) and a^0 with the same FastWAM seeds and pass the corrected chunk to execution only if q_φ assigns it higher predicted success; otherwise retain a^0. Inputs: candidate and baseline chunks; output: the executed chunk and accept/retain record.",
+        "consumes": [
+          "candidate and baseline chunks",
+          "frozen F_ψ/q_φ",
+          "same K_xi seeds"
+        ],
+        "produces": [
+          "K-seed candidate and baseline means",
+          "strict accept/retain verdict",
+          "executed chunk"
+        ],
+        "note": "No simulator label or executed outcome is consumed. A fair axis baseline given the same verifier can accept on one axis-equivalent surface and retain on another; this falsifies the original unqualified 'must emit the same action' wording but does not let it choose the alternative joint sign."
+      },
+      {
+        "step": "S9",
+        "verbatim_quote": "9. In restored-state RoboTwin E0, execute a^0, the same-budget axis-only corrector, PairLift, and the partner-permuted-I negative control; log task success, correction latency, selected channel pair, predicted gain, and executed gain. Inputs: saved simulator states and four arms; outputs: paired downstream outcomes and an I-to-action-to-success audit.",
+        "consumes": [
+          "saved E0 states/seeds",
+          "four frozen correction arms"
+        ],
+        "produces": [
+          "paired executed task success",
+          "latency",
+          "I-to-action-to-success audit"
+        ],
+        "note": "This is evaluation after the deployment decision and does not feed S3-S8."
+      }
+    ],
+    "unbound_parameters": [],
+    "dual_readings": [
+      {
+        "term": "best executed-success-versus-action-deviation trade-off",
+        "readings": [
+          "unspecified scalarization",
+          "Pareto selection",
+          "lexicographic success then deviation"
+        ],
+        "disposition": "patched to lexicographic held-out success, then deviation, then smaller r"
+      },
+      {
+        "term": "ranking stabilizes",
+        "readings": [
+          "fixed agreement threshold",
+          "no significant change",
+          "one-standard-error rule"
+        ],
+        "disposition": "patched to the smallest K in a declared candidate grid whose held-out rank disagreement lies within one standard error of the grid minimum"
+      },
+      {
+        "term": "every A_axis baseline must emit the same action",
+        "readings": [
+          "pre-verification proposal",
+          "post-verification executed action",
+          "randomized action sample"
+        ],
+        "disposition": "patched: identical restrictions force the same pre-verification proposal or conditional distribution; a joint verifier can change accept/retain but cannot search and choose the alternative interaction-supported sign"
+      }
+    ],
+    "estimand_match": {
+      "declared": "For fixed (o_t,a^0), central first, diagonal-second, and cross-second finite differences of Q(delta)=E_xi[q_phi(F_psi(o_t,a(delta),xi))] in the clipped proposal-relative coordinate.",
+      "constructed": "K-seed common-random-number sample means are inserted into the exact same central finite-difference formulas; S7 consumes those m,d,I with the correct Taylor factors.",
+      "verdict": "match",
+      "qualification": "They are finite differences of the clipped composite Q, not derivatives of an unclipped physical action response; the candidate already defines Q through clipped a(delta)."
+    },
+    "deployment_oracle_check": {
+      "offline_only": [
+        "RoboTwin success labels for q_phi fitting",
+        "executed calibration outcomes for epsilon/r/K selection"
+      ],
+      "deployment_inputs": [
+        "o_t",
+        "a^0",
+        "schema-derived h",
+        "frozen F_psi/q_phi",
+        "frozen epsilon/r/K",
+        "FastWAM seeds"
+      ],
+      "posthoc_only": [
+        "restored-state E0 executed success"
+      ],
+      "verdict": "no hidden deployment oracle after the patch explicitly freezes S3 choices before E0"
+    },
+    "dry_run": {
+      "instance": "One left and one right channel, H=1, h=(0.2,0.8), a0=(0.6,0.4), native action box [0,1]^2, epsilon=0.1, r=0.2, K=4 common seeds with zero-mean offsets (-0.006,-0.002,0.002,0.006). Two responses Q_±(x,y)=0.5+0.03x+0.02y-0.5x^2-0.5y^2±1.5xy have identical q0 and complete axis restrictions. The fair naive uses the same call budget on repeated axis probes, solves the I=0 pair quadratic, and receives the same final joint verification.",
+      "execution": {
+        "mode": "executed",
+        "script": "EPS=.1; R=.2; seeds=(-.006,-.002,.002,.006)\ndef Q(p,I): x,y=p; return .5+.03*x+.02*y-.5*x*x-.5*y*y+I*x*y\ndef mean(p,I): return sum(Q(p,I)+s for s in seeds)/4\ndef est(I):\n q0=mean((0,0),I); ap=mean((EPS,0),I); am=mean((-EPS,0),I); bp=mean((0,EPS),I); bm=mean((0,-EPS),I)\n m=((ap-am)/(2*EPS),(bp-bm)/(2*EPS)); d=((ap-2*q0+am)/EPS**2,(bp-2*q0+bm)/EPS**2)\n j={(u,v):mean((u*EPS,v*EPS),I) for u in (-1,1) for v in (-1,1)}\n ih=(j[1,1]-j[1,-1]-j[-1,1]+j[-1,-1])/(4*EPS**2); return q0,m,d,ih,(ap,am,bp,bm)\n# exact_box enumerates zero, four corners, feasible edge stationary points, and the feasible interior stationary point; ties are lexicographic.\n# It is compared with every point on a 0.001 grid.\nfor I in (1.5,-1.5):\n q0,m,d,ih,axes=est(I); pair=exact_box(q0,m,d,ih); axis=exact_box(q0,m,d,0); print(I,q0,m,d,ih,axes,pair,axis,mean(pair,I),mean(axis,I))\nprint('boundary',max(0,min(1,.2+1.2*(1-.2))))\nprint('small_I_changes_argmax',exact_box(.5,(1,1),(0,0),0)!=exact_box(.5,(1,1),(0,0),.01))",
+        "output": "Q_plus {'q0': 0.5, 'm': (0.03, 0.02), 'd': (-1.0, -1.0), 'I': 1.5, 'axes': (0.498, 0.492, 0.497, 0.493), 'pairlift': (0.2, 0.2), 'pairlift_action': (0.68, 0.32), 'pairlift_score': 0.53, 'axis_proposal': (0.03, 0.02), 'axis_score': 0.50155, 'analytic_grid_gap': 0.0}\nQ_minus {'q0': 0.5, 'm': (0.03, 0.02), 'd': (-1.0, -1.0), 'I': -1.5, 'axes': (0.498, 0.492, 0.497, 0.493), 'pairlift': (0.2, -0.2), 'pairlift_action': (0.68, 0.48), 'pairlift_score': 0.522, 'axis_proposal': (0.03, 0.02), 'axis_score': 0.49975, 'analytic_grid_gap': 0.0}\naxis_restrictions_identical= True\naxis_proposals_identical= True\naxis_postverify_actions_identical= False\npairlift_actions_differ= True\nall_pairlift_actions_in_native_box= True\nboundary_raw_and_clipped= 1.16 1.0\nzero_delta_recovers_a0= True\nsmall_I_changes_argmax= False (0.2, 0.2) (0.2, 0.2)"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "axis-visible statistics for Q+ and Q-",
+          "value": "q0=0.5, axes=(0.498,0.492,0.497,0.493), m=(0.03,0.02), d=(-1,-1) for both",
+          "arithmetic": "K-seed means followed by the stated central differences"
+        },
+        {
+          "quantity": "mixed response",
+          "value": "I+=1.5, I-=-1.5",
+          "arithmetic": "four signed joint means divided by 4 epsilon^2"
+        },
+        {
+          "quantity": "PairLift actions",
+          "value": "delta+=(0.2,0.2), delta-=(0.2,-0.2)",
+          "arithmetic": "exact interior/edge/corner enumeration over [-0.2,0.2]^2"
+        },
+        {
+          "quantity": "axis-only proposal",
+          "value": "delta_axis=(0.03,0.02) on both surfaces",
+          "arithmetic": "same exact solver with I=0"
+        },
+        {
+          "quantity": "verification scores",
+          "value": "PairLift: 0.530 and 0.522 > q0; axis: 0.50155 > q0 on Q+ but 0.49975 < q0 on Q-",
+          "arithmetic": "direct K-seed means at proposed deltas"
+        },
+        {
+          "quantity": "native actions",
+          "value": "PairLift actions (0.68,0.32) and (0.68,0.48), both in [0,1]^2",
+          "arithmetic": "clip(h+(1+delta)(a0-h))"
+        },
+        {
+          "quantity": "boundary clipping",
+          "value": "raw 1.16 -> clipped 1.0",
+          "arithmetic": "0.2+1.2(1.0-0.2)=1.16"
+        },
+        {
+          "quantity": "analytic solver check",
+          "value": "0.0 score gap to a 0.001 dense grid for both I signs",
+          "arithmetic": "surrogate score at enumerated maximizer minus dense-grid maximum"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The original universal wording says adding c*x*y changes the best joint edit, but with m=(1,1), d=(0,0), r=0.2, both c=0 and c=0.01 maximize at (0.2,0.2).",
+          "kind": "instance_contingent",
+          "why": "This valid counterexample disproves the universal wording; the intended existential separation remains sound and is patched to require S6's changed-winner certificate."
+        },
+        {
+          "anomaly": "Although Q+ and Q- have identical axis restrictions and the axis-only proposal is (0.03,0.02) on both, a fair final verifier accepts it on Q+ (0.50155) and rejects it on Q- (0.49975), so post-verification executed actions are not identical.",
+          "kind": "instance_contingent",
+          "why": "The final verifier is an off-axis query. The theorem remains valid only for the pre-verification proposal/conditional distribution; the verifier can accept or retain but cannot select the unqueried alternative joint sign."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "G_L empty or G_R empty",
+        "behavior": "No pair is enumerated, S6 emits no_separation_at_state, and a0 is retained.",
+        "finding": null
+      },
+      {
+        "probe": "K_xi=0",
+        "behavior": "All sample means divide by zero.",
+        "finding": "Patched by restricting the declared K candidate grid to positive integers."
+      },
+      {
+        "probe": "all Q values identical",
+        "behavior": "m=d=I=0, no pairwise winner changes, and a0 is retained.",
+        "finding": null
+      },
+      {
+        "probe": "ties among pairs/corners",
+        "behavior": "The original winner and interaction-dependence trace could vary by enumeration order.",
+        "finding": "Patched with deterministic lexicographic tie-breaking after score maximization."
+      },
+      {
+        "probe": "single cross-effector pair",
+        "behavior": "The executed instance recovers the correct coefficients and exact pair maximizer.",
+        "finding": null
+      },
+      {
+        "probe": "h_g=a0_g",
+        "behavior": "That channel is invariant to delta; its finite differences and interactions are zero, so it cannot generate a separation certificate.",
+        "finding": null
+      },
+      {
+        "probe": "a0 at native upper bound",
+        "behavior": "Positive scaling saturates (raw 1.16 -> 1.0); all scores remain defined for the clipped composite Q and final actions stay in the box.",
+        "finding": "Finite differences describe nominal clipped-coordinate response, not an unclipped derivative; this is already consistent with the declared estimand."
+      },
+      {
+        "probe": "maximum schema size",
+        "behavior": "No maximum is declared; WAM probes and post-probe arithmetic scale as 4 K_xi |G_L||G_R| and O(|G_L||G_R|), respectively.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "I is load-bearing and is not collapsed into the center gradient.",
+        "established_by": "S5-S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "identical axes but I=+/-1.5 selected deltas (0.2,0.2) and (0.2,-0.2)"
+      },
+      {
+        "claim": "Adding c delta_g delta_h leaves axis restrictions unchanged and changes the best joint edit.",
+        "established_by": "S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "c=0.01 left the corner argmax unchanged in the adversarial probe"
+      },
+      {
+        "claim": "Every same-budget A_axis baseline must emit the same action on axis-equivalent surfaces.",
+        "established_by": "S4-S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "same proposal, but final verification accepted on Q+ and retained on Q-"
+      },
+      {
+        "claim": "Each two-dimensional box quadratic is solved exactly by interior, edge, and corner enumeration.",
+        "established_by": "S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "0.0 score gap versus both 0.001 dense grids"
+      },
+      {
+        "claim": "The action map respects the native box and zero delta recovers a0.",
+        "established_by": "S2",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "a0 is itself valid under the published native action schema",
+          "h is represented as the schema-specific no-op"
+        ],
+        "arbitration": "argument",
+        "measured": "zero delta recovered (0.6,0.4); raw boundary 1.16 clipped to 1.0"
+      },
+      {
+        "claim": "All pairs cost O(|G_L||G_R|) arithmetic after probes.",
+        "established_by": "S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The correction is executed only when predicted success is higher.",
+        "established_by": "S8",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "PairLift scores 0.530 and 0.522 exceeded q0=0.500"
+      },
+      {
+        "claim": "Deployment does not require a simulator outcome oracle.",
+        "established_by": "S1-S3 and S8-S9 separation",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "PairLift improves actual RoboTwin task success.",
+        "established_by": "S9",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "guarantee_break_tests": [
+      {
+        "guarantee": "I changes the best joint edit",
+        "test": "corner-dominated response with c=0.01",
+        "result": "unqualified guarantee broken; patched to an existential claim gated by S6"
+      },
+      {
+        "guarantee": "axis-equivalent baselines emit the same action",
+        "test": "give the fair baseline the same final off-axis verifier",
+        "result": "post-verification equality broken; pre-verification proposal equality survives"
+      },
+      {
+        "guarantee": "exact box solution",
+        "test": "compare analytic enumeration with a 160,801-point grid for each I sign",
+        "result": "survived with score gap 0.0"
+      },
+      {
+        "guarantee": "native action box",
+        "test": "a0 at the upper bound with positive delta",
+        "result": "survived: raw 1.16 clipped to 1.0"
+      },
+      {
+        "guarantee": "I load-bearing beyond identical axes",
+        "test": "Q+ and Q- share all axis statistics but have I=+/-1.5",
+        "result": "survived: PairLift chose opposite y signs while the axis proposal was identical"
+      },
+      {
+        "guarantee": "no deployment oracle",
+        "test": "trace every S4-S8 input producer",
+        "result": "survived: only frozen models, observations, actions, and WAM scores are consumed; simulator success reappears only in posthoc S9"
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Spend the identical FastWAM-call allowance on q0 and repeated +/-epsilon axis probes, fit only m and d, solve the same support-two box quadratic with I=0, and apply the same final common-seed verifier.",
+      "naive_fairness": "It uses the same frozen models, state, action box, seed/call budget, support-two deployment restriction, analytic solver, and final verification; it is simpler because it makes no joint probes and estimates no I.",
+      "instance_behavior": {
+        "naive": "Identical pre-verification proposal (0.03,0.02) on Q+ and Q-; score 0.50155 causes accept on Q+, while 0.49975 causes retain on Q-.",
+        "mechanism": "I=+1.5 selects (0.2,0.2), score 0.530; I=-1.5 selects (0.2,-0.2), score 0.522; both are accepted and map to native actions (0.68,0.32) and (0.68,0.48).",
+        "divergence": "PairLift changes the selected joint sign and gains 0.02845/0.02200 in predicted score relative to the naive executed outcomes on this instance; actual RoboTwin gain remains empirical.",
+        "kind": "structural"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "Axis restrictions algebraically cannot identify the sign of the xy term. PairLift's four joint probes recover it and S7 keeps it inside the objective, producing opposite joint edits; the final verifier can only accept or reject the naive's one proposal and cannot infer the unqueried alternative sign."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "The separation claim is existential: c·δ_gδ_h always preserves every axis restriction, but it changes the selected joint edit only when the deterministic I-versus-I=0 winner comparison in Step 6 certifies a change. Likewise, an A_axis method must have the same pre-verification proposal (or the same conditional proposal distribution under coupled internal randomness) on two axis-equivalent surfaces; a shared off-axis verifier may accept that proposal on one surface and retain a^0 on the other, but that single query cannot choose the alternative interaction-supported joint sign.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T2/T4 counterexamples to the universal 'any c changes the argmax' and post-verification 'same emitted action' guarantees while preserving the valid existential separation."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "Operational bindings: in Step 2, derive h as the schema-specific no-op (repeat current targets for absolute-position channels, zero for delta/velocity channels, and the declared no-change token/value for gripper channels) before native-box clipping. In Step 3, choose K_ξ from the recorded positive-integer candidate grid by the smallest-K one-standard-error rule on held-out ranking disagreement; choose r lexicographically by maximum held-out executed success, then minimum action deviation, then smaller r; break ε ties toward smaller ε; freeze q_φ, ε, r, and K_ξ before E0. In Steps 6-7, 'ranking changes' means that the deterministic global winning (pair,x,y) differs from the I=0 winner, with equal surrogate scores broken lexicographically over zero and then (g,h,x,y). In Step 8, compare K_ξ-seed mean scores for both candidate and baseline.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T3 ambiguities in hold semantics, K/r/ε selection, K=0, solver ties, the separation certificate, and the final verifier statistic."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_reasoning",
+      "value": "NAIVE-BASELINE clarification: axis equivalence forces the same pre-verification proposal or conditional proposal distribution, not necessarily the same post-verification accept/retain action; PairLift's surpass claim is that joint probes let it select the alternative interaction-supported sign that one verification of an axis-derived proposal cannot search. All simulator labels and executed calibration outcomes are confined to disjoint offline fitting/selection, all parameters are frozen before E0, and Steps 4-8 consume no executed-success oracle.",
+      "outcome": "applied",
+      "delta_summary": "Aligns the declared branch-(i) argument with the fair verified baseline observed in T5 and makes the successful no-hidden-oracle trace explicit."
+    }
+  ],
+  "final_candidate": {
+    "title": "PairLift: Interaction-Separating Corrections for Closed-Loop VLA Control",
+    "hook": "Two correctors can have identical center gradients and every single-channel FastWAM response yet prefer opposite bimanual edits. PairLift predicts higher RoboTwin task success only when the mixed response is allowed to choose the joint correction itself.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal: the named metric is RoboTwin task success, and the predicted regime split is between axis-equivalent response surfaces whose interaction-aware joint edits differ. Shape (c) was viable because PairLift freezes the VLA and world model, but rejected because its joint probes use more inference than an ordinary center-gradient corrector.",
+    "gap_closure": [
+      {
+        "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+        "main_pattern": "characterize_limit_then_surpass",
+        "sub_pattern": "C10 (Characterize a Limit, Then Surpass It)",
+        "companion_pattern": "reframe_as_solvable_object",
+        "how_closed": "Corpus support is thin for closed-loop VLA correction and C10's closest exemplars are relational expressivity limits; PairLift instantiates its abstract move by proving an axis-response indistinguishability class, then surpassing it with mixed finite differences that enter a support-two quadratic correction, while reframe_as_solvable_object turns that augmentation into an exact analytic box-QP update."
+      }
+    ],
+    "core_mechanism": "At a RoboTwin control state o_t, a frozen OpenPI π0.5 checkpoint emits its native action chunk a^0, and its published action schema partitions coordinates into left and right channel-trajectories G_L and G_R; for each group g, h_g is the proprioceptive hold trajectory and a(δ)_g=h_g+(1+δ_g)(a^0_g-h_g), clipped to the native action box. A frozen FastWAM rollout followed by a logistic outcome head q_φ, trained and held-out calibrated on RoboTwin's existing simulator task-success predicate, supplies Q(δ)=E_ξ[q_φ(F_ψ(o_t,a(δ),ξ))], where ξ is a common stochastic rollout seed and the expectation is estimated with K_ξ=4 seeds by default, chosen as the smallest held-out seed count whose action-variant ranking stabilizes. The axis probe radius ε defaults to 0.10 in the dimensionless scaling coordinate and is selected from a held-out sweep by minimizing FastWAM-versus-executed RoboTwin rank disagreement; q_0=Q(0), m_g=[Q(εe_g)-Q(-εe_g)]/(2ε), and d_g=[Q(εe_g)-2q_0+Q(-εe_g)]/ε^2. The incumbent interaction-free class A_axis is any corrector whose decision is measurable only from q_0 and the restrictions {Q(te_g)}_g: for any cross-effector pair (g,h), adding c·δ_gδ_h leaves every such restriction and the center gradient unchanged while changing the best joint edit, giving an explicit axis-equivalence separation witness rather than an informal claim that gradients are weak. PairLift breaks that equivalence with I_gh=[Q(εe_g+εe_h)-Q(εe_g-εe_h)-Q(-εe_g+εe_h)+Q(-εe_g-εe_h)]/(4ε^2) for every (g,h) in G_L×G_R. It then makes I load-bearing by maximizing S_gh(x,y)=q_0+m_gx+m_hy+(d_gx^2+d_hy^2)/2+I_ghxy over (x,y) in [-r,r]^2 for each cross-effector pair, where r defaults to 0.20 and is selected on held-out RoboTwin states for the best executed-success-versus-action-deviation trade-off; the global update is the best pair solution or the zero update. Each two-dimensional box quadratic is solved exactly by evaluating its feasible interior stationary point, edge stationary points, and corners, so all pairs cost O(|G_L||G_R|) arithmetic after the probes and no nonconvex high-dimensional solver is assumed. Because two response surfaces can share m and all axis restrictions but differ in I, they induce different PairLift actions while every same-budget A_axis baseline—given repeated axis probes to match FastWAM calls—must emit the same action on both. A final common-seed FastWAM rollout compares a(δ*) with a^0 and executes the correction only when its predicted success is higher; restored-state RoboTwin E0 executions separately test whether this interaction-caused action difference improves actual task success. The separation claim is existential: c·δ_gδ_h always preserves every axis restriction, but it changes the selected joint edit only when the deterministic I-versus-I=0 winner comparison in Step 6 certifies a change. Likewise, an A_axis method must have the same pre-verification proposal (or the same conditional proposal distribution under coupled internal randomness) on two axis-equivalent surfaces; a shared off-axis verifier may accept that proposal on one surface and retain a^0 on the other, but that single query cannot choose the alternative interaction-supported joint sign.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES ledger:\nP1. In the calibrated neighborhood, FastWAM plus q_φ preserves the ordering of nearby action variants often enough to select a correction; common-state and common-seed evaluation makes this plausible, but it is untested — falsification target through I.\nP2. A support-two quadratic response captures the load-bearing local cross-effector interaction even when the full dynamics is higher-order; this is untested — falsification target, and claims are restricted to the ε and r neighborhood.\nP3. OpenPI's native left/right action schema provides stable channel groups without learned role labels, so group identity does not assume acting/stabilizing roles.\nOBSERVATION-MODEL premise. States are sampled from frozen π0.5 RoboTwin rollouts, action variants are generated independently of their outcomes, and ξ is coupled across variants; this targets the frozen-policy occupancy rather than all possible robot states, while FastWAM and q_φ errors may bias Q and are therefore audited against restored-state simulator execution.\nESTIMAND. For fixed (o_t,a^0), m, d, and I are the central first, diagonal-second, and cross-second finite differences of predicted RoboTwin success Q over proposal-relative channel scalings, averaged over the declared FastWAM seed process; E0 estimates the paired executed-success effect of the action selected from those quantities, not a global causal effect.\nBLOCK 2 — NAIVE-BASELINE AUDIT. The runnable naive mechanism spends its budget on single-channel ±ε FastWAM probes, estimates a center gradient, and selects up to two channel scalings by an additive response model. Branch (i): it silently assumes that the axis restrictions determine the best joint correction, which is false because c·δ_gδ_h vanishes on every axis yet reverses joint rankings; PairLift confronts this by querying the four joint signs and retaining I_ghxy inside the action objective rather than reducing I to a center gradient. Finite differences and box quadratics are standard tools, but the domain-specific structure is a frozen temporally chunked VLA proposal observed through a stochastic WAM proxy under native action bounds, with the mixed term required to alter the executed chunk and its sign audited by restored-state simulator outcomes; the contribution is this action-native separation-and-correction operator, not generic response-surface fitting.\nBLOCK 3 — Design rationale. An anchor-only chain was chosen because the separation witness and the correction share the same response object; adding a role-reversal or field-wide assumption-audit leg would require separate machinery and would not strengthen the anchor's falsifier. Full factorial ANOVA, COMA credit, Shapley allocation, and preset coordination graphs were rejected because they either stop at attribution or regress to occupied lineage nodes instead of defining an action-changing separation. Cross-run mechanisms are also distinct: PairLift has no CBSM feasibility-flip boundary score, GISS geometry–action crossover, ExitReplay censoring replay, or ScaffoldFracture fixed-scaffold regret; its sole new object is native-action mixed curvature that remains inside the correction objective. NAIVE-BASELINE clarification: axis equivalence forces the same pre-verification proposal or conditional proposal distribution, not necessarily the same post-verification accept/retain action; PairLift's surpass claim is that joint probes let it select the alternative interaction-supported sign that one verification of an axis-derived proposal cannot search. All simulator labels and executed calibration outcomes are confined to disjoint offline fitting/selection, all parameters are frozen before E0, and Steps 4-8 consume no executed-success oracle.",
+    "core_mechanism_steps": "1. Freeze the existing OpenPI π0.5 and FastWAM checkpoints; collect frozen-policy RoboTwin states, FastWAM rollout features, and the simulator's existing task-success labels, then fit and held-out calibrate q_φ. Inputs: RGB, proprioception, language goal, action chunks, simulator labels; output: frozen q_φ with calibration provenance.\n2. Parse the OpenPI action schema into G_L and G_R, construct the hold chunk h from current proprioception, and implement the proposal-relative scaling map a(δ) with native box clipping. Inputs: checkpoint schema, a^0, proprioception; outputs: typed channel groups and a callable action map.\n3. On disjoint RoboTwin calibration states, select ε, r, and K_ξ by the rules stated in core_mechanism and record every candidate value, rank disagreement, executed outcome, latency, and memory use. Inputs: frozen checkpoints and calibration states; outputs: bound parameters and audit records.\n4. For each E0 state, evaluate q_0 and all ±ε axis probes with coupled FastWAM seeds, then compute m and d; cache every rollout so the same-budget axis baseline receives exactly the same total FastWAM-call allowance through additional axis-seed replications. Inputs: o_t, a^0, a(·), F_ψ, q_φ; outputs: q_0, m, d, and matched-budget baseline records.\n5. Evaluate the four signed joint probes for every pair in G_L×G_R and compute I with the stated mixed finite difference; never infer I from m or collapse it into a center gradient. Inputs: cached axis scores plus joint FastWAM scores; output: the cross-effector interaction matrix I with seed-wise uncertainty.\n6. Materialize the axis-equivalence witness by pairing the fitted response with its I=0 counterpart: verify that q_0, every axis score, m, and d match while at least one pairwise quadratic ranking changes; if none changes, emit no_separation_at_state and retain a^0. Inputs: m, d, I, probe table; output: a per-state checkable separation certificate.\n7. For every cross-effector pair, enumerate the analytic interior, edge, and corner candidates of S_gh over [-r,r]^2, select the global support-two maximizer δ*, and serialize which I_gh term changed the winning action relative to I=0. Inputs: q_0, m, d, I, r; outputs: δ*, predicted gain, winning pair, and an interaction-dependence trace.\n8. Re-evaluate a(δ*) and a^0 with the same FastWAM seeds and pass the corrected chunk to execution only if q_φ assigns it higher predicted success; otherwise retain a^0. Inputs: candidate and baseline chunks; output: the executed chunk and accept/retain record.\n9. In restored-state RoboTwin E0, execute a^0, the same-budget axis-only corrector, PairLift, and the partner-permuted-I negative control; log task success, correction latency, selected channel pair, predicted gain, and executed gain. Inputs: saved simulator states and four arms; outputs: paired downstream outcomes and an I-to-action-to-success audit. Operational bindings: in Step 2, derive h as the schema-specific no-op (repeat current targets for absolute-position channels, zero for delta/velocity channels, and the declared no-change token/value for gripper channels) before native-box clipping. In Step 3, choose K_ξ from the recorded positive-integer candidate grid by the smallest-K one-standard-error rule on held-out ranking disagreement; choose r lexicographically by maximum held-out executed success, then minimum action deviation, then smaller r; break ε ties toward smaller ε; freeze q_φ, ε, r, and K_ξ before E0. In Steps 6-7, 'ranking changes' means that the deterministic global winning (pair,x,y) differs from the I=0 winner, with equal surrogate scores broken lexicographically over zero and then (g,h,x,y). In Step 8, compare K_ξ-seed mean scores for both candidate and baseline.",
+    "falsification_prediction": "On existing RoboTwin bimanual contact tasks, restore identical simulator states and seeds for one frozen OpenPI π0.5 checkpoint and one frozen FastWAM checkpoint, then compare the frozen proposal, a same-FastWAM-call axis-only center-gradient corrector, and PairLift. If the mechanism works, RoboTwin task success increases for PairLift specifically on states carrying an axis-equivalence separation certificate, while correction latency is reported rather than thresholded. The single load-bearing variable is the cross-effector mixed-response matrix I; as a negative control, permute its right-channel partner labels before solving while keeping q_0, m, d, FastWAM calls, seeds, r, and the analytic solver unchanged. This preserves marginal information and compute but breaks which joint edit the mixed response supports, and the prediction is that downstream RoboTwin task success returns toward the same-budget axis-only/frozen-policy baseline.",
+    "compute_budget": "18 A100-40GB GPU-days (approximately 9 80GB-class GPU-days) for outcome-head fitting, coupled FastWAM probes, held-out parameter selection, and restored-state RoboTwin E0; $0 paid API for the full campaign. This is comfortable within the stated four-A100 rollback-first envelope, with expansion beyond E0 gated on the separation certificate and executed-success check.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "arxiv:2608.04653",
+        "delta": "Abstract-only evidence: CoCo enforces and measures whole-action counterfactual responsiveness, whereas PairLift defines an axis-response equivalence class that whole-action responsiveness cannot separate and constructs a mixed-curvature correction whose selected action changes with I."
+      },
+      {
+        "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+        "delta": "Abstract-only evidence: ω-EVA refines a whole proposal from its latent predicted future, whereas PairLift exhibits two proposals with identical axis-visible evidence but different joint optima and inserts the separating mixed response directly into the action update."
+      },
+      {
+        "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+        "delta": "Abstract-only evidence: the optimizer interaction calculus identifies Boolean effects for declared optimizer response classes, whereas PairLift defines the native continuous action-chunk equivalence class, an O(|G_L||G_R|) support-two surpass operator, and an executed RoboTwin action consequence."
+      },
+      {
+        "paper_id": "semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+        "delta": "Abstract-only evidence: the policy-aware factorial design uses low-rank tensor completion and marginal elimination to choose intervention bundles, whereas PairLift uses exact local mixed contrasts to choose a bounded action correction and makes their partner identity falsifiable at execution."
+      },
+      {
+        "paper_id": "openalex:W4416749037",
+        "delta": "Abstract-only evidence: ManiGaussian++ fixes acting and stabilizing roles in a leader–follower world model, whereas PairLift derives state-local cross-effector channel pairs without permanent roles and can select different joint supports at different states."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+    "what_step_was_missed": "It would have needed to define indistinguishability on a frozen VLA's native axis-restricted action responses, re-inject the resulting cross-effector mixed finite difference into a support-two box-constrained action update, and verify that the changed action improves restored-state robot task success.",
+    "signature_terms": [
+      "axis-equivalent interaction correction",
+      "pairwise curvature VLA editing",
+      "support-two world-model correction",
+      "bimanual mixed-response separation"
+    ],
+    "alias_terms": [
+      "cross-partial trust-region control",
+      "second-order block coordinate ascent",
+      "factorial response-surface optimization",
+      "nonadditive treatment policy search"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

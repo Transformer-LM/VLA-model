@@ -1,0 +1,4 @@
+# Latest: Object × Geometry/4D WAM Idea Report
+
+Current version: [OBJECT_GEOMETRY_WAM_REPORT_20260825_160425.md](./OBJECT_GEOMETRY_WAM_REPORT_20260825_160425.md)
+

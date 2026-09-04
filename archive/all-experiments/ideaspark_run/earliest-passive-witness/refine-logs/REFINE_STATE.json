@@ -1,0 +1,12 @@
+{
+  "candidate": "WitnessWAM v4",
+  "status": "ready",
+  "rounds": 5,
+  "final_score": 9.3,
+  "final_proposal": "round-5-proposal.md",
+  "final_proposal_sha256": "d563f67ad3b49da2b89c9350aedfa1ae87ac110b6da3444f811ddaf1d766bd19",
+  "final_review": "round-5-review.md",
+  "final_verification": "round-5-final-verification.md",
+  "unresolved_blockers": [],
+  "next_gate": "strict_refined_novelty_above_7"
+}

@@ -1,0 +1,14 @@
+{
+  "approved_checkpoint_steps": [1000, 5000, 10000],
+  "canary_authorization": "GO",
+  "environment_lock_sha256": "REPLACE_AFTER_FINAL_REVIEW",
+  "overlay_source_sha256": "REPLACE_AFTER_FINAL_REVIEW",
+  "review_acceptance": "same-family-provisional",
+  "review_response_path": "<PERSONAL_RESEARCH_ROOT>/artifacts/h1-pgr-audit/code-review/v2-007/final-review.response.md",
+  "review_response_sha256": "REPLACE_AFTER_FINAL_REVIEW",
+  "schema": "pgr-v2-007-approval-v1",
+  "test_file_sha256": "REPLACE_AFTER_FINAL_REVIEW",
+  "test_log_path": "<PERSONAL_RESEARCH_ROOT>/artifacts/h1-pgr-audit/code-review/v2-007/final-cpu-static.log",
+  "test_log_sha256": "REPLACE_AFTER_FINAL_REVIEW",
+  "verdict": "PASS"
+}

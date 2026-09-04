@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "object-addressed-action-updated-belief-vla-wam",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "对象可寻址、动作更新且可纠错的长期 VLA belief：结合 OA-WAM 对象绑定与 EvoScene-VLA 场景演化记忆，筛选不重复 Idea 并自动推进离线/仿真实验",
+    "exploration_level": "direction",
+    "selected_macro_direction": "Object-addressed action-updated belief for long-horizon VLA execution",
+    "macro_direction_count": 1,
+    "embodiment": "general manipulation; no fixed box-carrying scenario",
+    "task_family": "long-horizon manipulation with occlusion, object ambiguity, scene changes, false progress, and reversible failures",
+    "observation_modalities": [
+      "RGB or RGB-D",
+      "language instruction",
+      "proprioception",
+      "executed action history"
+    ],
+    "action_representation": "action chunks proposed by a frozen or lightly adapted VLA; exact interface chosen after preflight",
+    "seed_topics": [
+      "OA-WAM persistent object address and object binding",
+      "EvoScene-VLA action-updated scene belief",
+      "object-centric belief state update under occlusion",
+      "counterfactual object-state prediction",
+      "belief invalidation and correction after failed action chunks",
+      "long-horizon progress verification for VLA"
+    ],
+    "exploration_axes": [
+      "object address versus dynamic object content and pose",
+      "action-updated belief versus passive visual memory",
+      "uncertain data association and occlusion",
+      "belief verification, invalidation, and recovery",
+      "auxiliary world objective versus inference-time verifier",
+      "matched direct-memory and global-latent baselines",
+      "model, action-selection, and closed-loop endpoints"
+    ],
+    "benchmark_priority": [
+      "existing personal pi0.5 or OpenPI assets if compatible",
+      "LIBERO-Long or other already installed long-horizon benchmark",
+      "branchable simulation stress tests with object swaps, occlusion, and failed substeps"
+    ],
+    "target_venues": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "ICLR",
+      "NeurIPS"
+    ],
+    "simulation_first": true,
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2024,
+    "literature_year_end": 2026
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": false,
+    "auto_select_idea": true,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "remote_ssh_executable": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+    "remote_identity_file": "C:\\Users\\admin\\.ssh\\<SSH_KEY_NAME>",
+    "remote_workdir": "<PERSONAL_RESEARCH_ROOT>",
+    "remote_network_mode": "offline",
+    "gpu_policy": {
+      "preferred_physical_gpu_ids": [2, 3],
+      "conditionally_available_gpu_ids": [0, 1],
+      "allow_each_gpu_only_when_idle_at_launch": true,
+      "idle_definition": "no compute process, memory.used<=500MiB, utilization.gpu<=5%",
+      "never_preempt_or_share_with_other_experiments": true,
+      "recheck_before_every_job": true
+    },
+    "max_pilot_gpu_hours": 32.0,
+    "max_total_gpu_hours": 400.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true,
+    "remote_filesystem": {
+      "authorized_user": "liu_meng",
+      "authorized_root": "<PERSONAL_RESEARCH_ROOT>",
+      "canonical_authorized_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+      "read_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "write_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "allow_shared_storage_read": false,
+      "allow_shared_storage_write": false,
+      "allow_team_artifact_publish": false,
+      "require_personal_paths_for_code_data_models_cache_logs_tmp_checkpoints_and_artifacts": true,
+      "forbid_shell_profile_changes": true,
+      "forbid_privilege_escalation": true,
+      "forbid_global_conda_system_cuda_and_system_package_changes": true
+    }
+  },
+  "framework_preferences": [
+    "openpi",
+    "existing personal pi0.5 reproduction",
+    "small standalone belief/verifier module before policy finetuning"
+  ]
+}

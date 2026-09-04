@@ -1,0 +1,300 @@
+{
+  "fulltext_degraded": true,
+  "evidence_warning": "Evidence is severely degraded rather than genuinely empty: only 2 of 25 full-text fetches succeeded and both are off-core to the VLA manipulation question; the arXiv path failed with SSL errors, the anchor top-up also failed, and six load-bearing host nominations remain unresolved and were not admitted. All method residues below are therefore abstract-level hypotheses unless explicitly marked parametric awareness-only, and non-retrieval is not used as novelty evidence.",
+  "intake": {
+    "domain": "Non-tactile post-training of continuous-action diffusion/flow Vision-Language-Action policies under functional-geometry counterfactuals",
+    "venue": "ICLR/NeurIPS/CoRL-level embodied-AI venue",
+    "time": "one paper cycle (approximately five months)",
+    "data": [
+      "simulator-grounded paired scenes made by minimal functional-geometry edits",
+      "successful action chunks whose validity flips under the paired geometry while language and task semantics remain fixed",
+      "clearance and contact traces sufficient to identify the earliest physically invalid segment",
+      "multiple geometry-specific alternative-positive action modes retained as positives"
+    ],
+    "compute": "4xA100 GPUs",
+    "expertise": "embodied-AI simulation, diffusion-policy/VLA post-training, and physical-feasibility evaluation",
+    "preference": "empirical",
+    "baseline": "pi0.5 or another continuous-action diffusion/flow VLA, compared with ordinary imitation post-training, global physical-feasibility supervision, action-manifold learning, and inference-time multi-sample selection",
+    "limitation": "No tactile sensing; intervention and supervision must be visual/proprioceptive and simulator-grounded, should affect only the first clearance/contact-violation segment while preserving alternative feasible modes, and experiments may begin only after an independent novelty assessment exceeds 7/10. Literature coverage is severely degraded, so that novelty threshold cannot be inferred from retrieval absence.",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "data",
+      "expertise",
+      "preference",
+      "contribution_type"
+    ]
+  },
+  "bottleneck_statement": "For conditional generative robot policies, a minimal geometry edit can leave the observation, instruction, and most of a previously successful action chunk semantically appropriate while changing physical validity only at a later clearance or contact boundary; trajectory-level imitation or feasibility signals then cannot distinguish a globally bad chunk from a geometry-conditionally bad suffix, so their update can corrupt the still-valid prefix or suppress other feasible modes. The available abstract evidence shows global geometry-aware representations and canonicalized action experts (dblp:journals/corr/abs-2606-08530), a simple geometry-grounded feasibility objective for a diffusion VLA (semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2), valid-action-manifold prediction (semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646), and largest-cluster action selection (semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383), but it does not establish a learning signal that attributes the validity flip to its first causal geometry boundary while preserving the conditional distribution's alternative positive modes. This is a structural credit-assignment and mode-preservation failure, not evidence that counterfactual local score repulsion itself is novel; the latter remains unverified because the most load-bearing full texts and six host nominations were unavailable.",
+  "closest_adjacent": [
+    {
+      "paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+      "is_anchor": true,
+      "summary_and_residue": "The abstract adds a geometry-grounded physical-feasibility objective to diffusion-based VLA training and reports improved obstacle-aware reliability. It does not reveal whether supervision is localized to the first geometry-caused violation or whether alternative feasible action modes survive the update. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract predicts actions on a learned valid action manifold using multi-view latent geometry. Its residue is whether that manifold remains correctly multi-modal when a minimal functional-geometry edit invalidates one previously successful chunk but leaves several alternatives valid; this is abstract-level because full text failed."
+    },
+    {
+      "paper_id": "semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract samples several diffusion/flow action chunks and executes the medoid of the largest continuous-action cluster at inference time. It can discard valid minority modes and does not post-train the score field from paired geometry validity flips; this residue is abstract-level because full text failed."
+    },
+    {
+      "paper_id": "dblp:journals/corr/abs-2606-08530",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract combines coarse-to-fine action learning, semantic-aligned 3D integration, and embodiment canonicalization around a DiT continuous-action expert. Representation-level geometry alignment does not specify how to assign a counterfactual invalidity signal to only the first violating segment of an otherwise successful chunk; this residue is abstract-level because full text failed."
+    },
+    {
+      "paper_id": "semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract jointly denoises future spatial-temporal latents and actions and modulates action attention with predicted depth and end-effector geometry. It couples prediction to control but does not establish boundary-local post-training from same-chunk valid/invalid geometry pairs or preservation of alternative positive modes; this residue is abstract-level because full text failed."
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "Within the severely degraded evidence, no retrieved frontier leaf establishes whether a chunk that is successful in one scene but fails after a minimal functional-geometry edit should be treated as globally incorrect or only conditionally invalid beyond the first changed clearance/contact boundary; the available feasibility and geometry-aware methods leave that attribution unresolved (semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2; dblp:journals/corr/abs-2606-08530) — stakes: practitioners can over-correct valid motion prefixes and waste scarce positive demonstrations, while the field can mistake generic feasibility regularization for learned functional-geometry discrimination.",
+    "No retrieved frontier leaf demonstrates segment-level causal credit for the first clearance or contact violation when earlier actions in the same diffusion chunk remain valid, rather than assigning one whole-chunk loss or selection outcome (semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b; semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383) — stakes: post-training can distort temporally correct behavior, increase sample complexity, and leave researchers unable to tell whether gains come from boundary learning or broad trajectory suppression.",
+    "No retrieved frontier leaf shows that rejecting a geometry-invalid action mode can coexist with preserving all geometry-specific alternative-positive modes, especially feasible minority modes outside the dominant action cluster or nominal manifold (semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646; semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383) — stakes: a robot may become safer on one edited object while losing legitimate grasps, approaches, or reorientation strategies elsewhere, and apparent reliability gains may actually be mode collapse.",
+    "The retrieved leaves inherit whole-chunk conditional density fitting, global auxiliary feasibility, or outcome-level selection from the imitation/diffusion lineage, but none tests whether geometry-conditioned feasibility learning must score the complete action chunk as one unit rather than admit different validity along its temporal support — stakes: deployment teams lack a principled granularity for corrective data, and published post-training conclusions may depend on an unexamined supervision unit that does not transfer to delayed contact failures."
+  ],
+  "method_lineage": {
+    "line": "Physical-feasibility shaping of conditional diffusion/flow action distributions for VLA manipulation",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Behavior cloning with pointwise or sequence action regression",
+        "move": "Learn a policy by increasing likelihood or reducing regression error on demonstrated actions conditioned on observations and task context.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Averaged or unimodal action prediction poorly represents multi-modal valid behavior and treats demonstrated labels as globally valid for their observed contexts.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "Score-based and diffusion generative modeling",
+        "move": "Replace direct prediction with iterative denoising that estimates a conditional score field over a multi-modal data distribution.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Density fitting preserves observed multimodality but does not itself encode task-specific hard physical feasibility under counterfactual conditions.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Diffusion Policy for receding-horizon action chunks",
+        "move": "Condition diffusion denoising on robot observations and generate temporally coherent continuous action sequences for imitation control.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "2-4y",
+        "confidence": "medium",
+        "residual_problem": "Chunk-level imitation leaves geometry-dependent clearance and contact constraints implicit and supplies no causal location for a delayed violation.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "VLA with diffusion/flow continuous-action expert, including the pi0 family",
+        "move": "Attach a generative continuous-action head to language-conditioned visual representations and scale it with diverse robot data.",
+        "parent": "n2",
+        "provenance": "parametric",
+        "age_band": "0-2y",
+        "confidence": "medium",
+        "residual_problem": "Broad semantic conditioning and data scale do not identify where functional geometry flips a chunk from feasible to infeasible or how to correct it without erasing alternatives.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f1",
+        "method": "Explicit physical-feasibility supervision for diffusion VLA",
+        "move": "Add a geometry-grounded feasibility objective during training and probe obstacle-aware manipulation.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The abstract does not establish boundary-local credit or alternative-mode preservation under minimal geometry validity flips.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f2",
+        "method": "Action Manifold Learning with multi-view latent geometry",
+        "move": "Predict actions directly on a learned valid-action manifold while adding geometry-guided multi-view features.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Coverage of multiple valid modes under newly edited functional constraints remains unclear at abstract level.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f3",
+        "method": "Geometry-guided action self-consistency",
+        "move": "Sample parallel action chunks, cluster them in continuous action space, and execute the largest-cluster medoid at inference.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Dominant-cluster selection can omit valid minority modes and provides no local post-training credit for a geometry-induced violation.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f4",
+        "method": "GEAR-VLA geometry-aware action representation",
+        "move": "Combine coarse-to-fine action learning, aligned 3D features, a DiT expert, and embodiment canonicalization.",
+        "parent": "n3",
+        "provenance": "retrieved:dblp:journals/corr/abs-2606-08530",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Global representation alignment does not identify the first action segment whose physical validity changes under a minimal geometry edit.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f5",
+        "method": "STARRY joint world-action diffusion",
+        "move": "Jointly denoise future spatial-temporal latents and actions and modulate action attention with predicted depth and end-effector geometry.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Prediction-action coupling does not establish counterfactual boundary attribution or selective preservation of alternative feasible modes.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f6",
+        "method": "X-DiffVLA unified cross-embodied diffusion head",
+        "move": "Use embodiment forcing and morphological tree diffusion to share action generation across related embodiments.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:c6c0f17d789e690ca4d152a7329b8fb7829132e3",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Cross-embodiment multimodality does not identify functional-geometry-specific invalid segments within one embodiment's chunk.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f7",
+        "method": "FlowHOI contact-state interaction generation",
+        "move": "Generate hand/object poses and explicit contact states as a flow-matched interaction representation before robot retargeting.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:d2c4fc3915649b76e92ebe0dd5eb594df222816d",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Explicit contact representation still requires retargeting and does not supply local post-training credit to an ordinary VLA action score.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f8",
+        "method": "COAST success-subspace activation steering",
+        "move": "Estimate success-critical latent subspaces from success/failure rollouts and steer policy activations at inference.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:ff54d4f113ca3ef58b8cad2da072a7a7ffb84bdb",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Task-level success subspaces are rollout-dependent and do not isolate geometry-local violation credit or guarantee preservation of positive modes.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c1",
+        "method": "CHOMP/STOMP-style trajectory optimization with collision costs",
+        "move": "Use signed-distance or sampled collision penalties to deform complete trajectories away from obstacles.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "It supplies geometric avoidance but is a planner-level trajectory optimizer, not distribution-preserving VLA post-training.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "Control-barrier-function safety filters and action shielding",
+        "move": "Project or override proposed controls online to maintain a certified safe set.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Online correction can guarantee local safety under stated models but does not teach the generative policy's conditional action distribution.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "Classifier-guided diffusion sampling",
+        "move": "Add a condition or classifier gradient to the diffusion score during sampling to shift probability toward desired outcomes.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Generic guidance does not determine temporally localized physical credit or protect multiple positive robot-action modes.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c4",
+        "method": "Energy-based contrastive learning with negative samples",
+        "move": "Lower energy on positive data and raise it on negatives to shape a conditional density or decision boundary.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Unstructured negatives can repel valid neighbors, and the classical move alone does not solve geometry-paired temporal localization.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c5",
+        "method": "DAgger-style corrective imitation and recovery data aggregation",
+        "move": "Collect states induced by the learned policy and add expert corrections to repair compounding errors.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Correction data addresses visited failures but does not by itself isolate minimal geometry-caused invalidity or retain alternative positive modes.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Retrieved leaves are grounded only to supplied records and, for every load-bearing VLA paper, to abstracts because method fetches failed. Parametric ancestry and collateral nodes are awareness-only: they prevent regression to generic collision-cost trajectory optimization, safety projection, classifier guidance, contrastive negative learning, or corrective data aggregation, but they are not cited as prior art or used to assert novelty. The 2-4y Diffusion Policy node is medium-confidence because it sits just outside retrieval; the six unresolved host nominations, including counterfactual VLA and robot-data-augmentation candidates, are explicit coverage holes that must be manually resolved before accepting any novelty score above 7/10."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 62,
+    "n_on_topic": 18,
+    "patterns": [
+      {"pattern_id": "assumption_audit_and_pivot", "count": 1, "share": 0.06, "saturation_band": "untested"},
+      {"pattern_id": "architectural_operator_substitution", "count": 7, "share": 0.39, "saturation_band": "mid_frequency"},
+      {"pattern_id": "generative_process_redesign", "count": 3, "share": 0.17, "saturation_band": "mid_frequency"},
+      {"pattern_id": "controlled_diagnostic_design", "count": 1, "share": 0.06, "saturation_band": "untested"},
+      {"pattern_id": "unify_into_shared_representation", "count": 6, "share": 0.33, "saturation_band": "mid_frequency"},
+      {"pattern_id": "reframe_as_solvable_object", "count": 4, "share": 0.22, "saturation_band": "mid_frequency"},
+      {"pattern_id": "self_supervised_signal_engineering", "count": 2, "share": 0.11, "saturation_band": "mid_frequency"},
+      {"pattern_id": "structural_prior_encoding", "count": 9, "share": 0.5, "saturation_band": "saturated"},
+      {"pattern_id": "algebraic_equivalence_unification", "count": 1, "share": 0.06, "saturation_band": "untested"},
+      {"pattern_id": "heterogeneous_decomposition", "count": 9, "share": 0.5, "saturation_band": "saturated"},
+      {"pattern_id": "decompose_and_delegate", "count": 3, "share": 0.17, "saturation_band": "mid_frequency"},
+      {"pattern_id": "relax_discrete_search_to_continuous", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "adapt_via_conditioning", "count": 2, "share": 0.11, "saturation_band": "mid_frequency"},
+      {"pattern_id": "characterize_limit_then_surpass", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "targeted_self_supervised_objective", "count": 1, "share": 0.06, "saturation_band": "untested"}
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "Among the 18 strict VLA/manipulation records, structural-prior encoding and heterogeneous decomposition are tied as most used (9/18 each), yet their abstract-level stopping points remain global geometry representation, component specialization, or task decomposition rather than localized counterfactual validity credit."
+  },
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

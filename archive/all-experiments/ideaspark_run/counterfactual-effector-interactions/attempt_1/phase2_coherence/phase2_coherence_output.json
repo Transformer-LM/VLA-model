@@ -1,0 +1,438 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S6",
+      "claim": "the interaction ledger is load-bearing in the action update",
+      "why_selected": "The solver receives I only through d_g = m_g + sum_{h!=g} I_gh, the gradient of the fitted degree-two response at alpha=1. A simpler interaction-free central-difference baseline can recover exactly that same gradient under the same rollout budget, so the solver may discard precisely the non-additive structure the idea claims to exploit. This was attacked first in the executed dry run."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "verbatim_quote": "1. Freeze the existing OpenPI π0.5 policy and FastWAM checkpoints; on RoboTwin, record frozen-policy states, native action chunks, FastWAM rollout features, and the simulator's existing task-success label, then fit and calibrate q_φ on disjoint task/state splits. Inputs: RGB, proprioception, language goals, action chunks, simulator labels; output: a frozen outcome head with held-out calibration records.",
+        "consumes": [
+          "RoboTwin trajectories",
+          "RGB/proprioception/language",
+          "native action chunks",
+          "FastWAM rollout features",
+          "simulator success labels"
+        ],
+        "produces": [
+          "frozen q_φ: rollout feature -> [0,1]",
+          "held-out calibration records"
+        ],
+        "note": "The label horizon must match the rollout-feature horizon; the text does not state this, so the claim that q_φ is a success probability is conditional rather than constructed."
+      },
+      {
+        "step": "S2",
+        "verbatim_quote": "2. Parse the OpenPI action schema into G, where each group is one named left- or right-effector channel across the native chunk horizon H; set H by the checkpoint's native action-chunk definition and construct the proprioceptive hold chunk h. Inputs: schema, a^0, current proprioception; outputs: G, h, and the affine action map a(α).",
+        "consumes": [
+          "action schema",
+          "a^0 in R^{|G| x H}",
+          "current proprioception"
+        ],
+        "produces": [
+          "G with p=|G| groups",
+          "h in R^{p x H}",
+          "a(alpha)_g=h_g+alpha_g(a^0_g-h_g)"
+        ],
+        "note": "Formalizes one scalar alpha per channel trajectory."
+      },
+      {
+        "step": "S3",
+        "verbatim_quote": "3. Select ε on held-out RoboTwin states by minimizing rank disagreement between FastWAM-scored and executed action variants, and set B to the largest D-optimal signed design that fits the measured E0 rollout latency and memory budget. Inputs: calibration states and hardware measurements; outputs: named ε, B, and design Z with its provenance.",
+        "consumes": [
+          "held-out states",
+          "executed and FastWAM ranks",
+          "latency/memory measurements",
+          "p"
+        ],
+        "produces": [
+          "epsilon",
+          "B",
+          "Z in {-1,+1}^{B x p}"
+        ],
+        "note": "Original readings of 'D-optimal signed design' differed on candidate set, rank requirement, and action-box feasibility. The patch binds these. There are no unbound numeric method parameters: epsilon and B have named selection rules."
+      },
+      {
+        "step": "S4",
+        "verbatim_quote": "4. For every row z^(b), build a(1+εz^(b)), reuse one FastWAM seed ξ across the matched variants, and compute y_b = q_φ(F_ψ(o_t,a(1+εz^(b)),ξ)). Inputs: o_t, a^0, h, Z, ε, F_ψ, q_φ; outputs: a matched score vector y and cached rollout features.",
+        "consumes": [
+          "o_t",
+          "a^0",
+          "h",
+          "Z",
+          "epsilon",
+          "F_ψ",
+          "q_φ",
+          "one sampled common seed xi"
+        ],
+        "produces": [
+          "alpha rows in R^{B x p}",
+          "actions in R^{B x p x H}",
+          "y in [0,1]^B",
+          "cached features"
+        ],
+        "note": "The common seed makes each realized fit conditional on xi; expectation over xi is supplied only by repeated sampling across invocations/calibration."
+      },
+      {
+        "step": "S5",
+        "verbatim_quote": "5. Fit the hierarchical degree-two response using λ_m and λ_I chosen by nested held-out calibration, and serialize L_t = {G, ε, Z, m, I, covariance, calibration provenance}; reject no rows post-outcome. Inputs: Z and y; output: a schema-validated marginal–interaction ledger.",
+        "consumes": [
+          "X=[1, alpha_g, alpha_g alpha_h] in R^{B x P}",
+          "y in R^B",
+          "lambda_m",
+          "lambda_I"
+        ],
+        "produces": [
+          "beta_0",
+          "m in R^p",
+          "symmetric off-diagonal I in R^{p x p}",
+          "covariance/status",
+          "L_t"
+        ],
+        "note": "P=1+p+p(p-1)/2. The original 'weighted hierarchical' objective was ambiguous and its penalized estimator did not equal the declared unpenalized L2 estimand; both are patched to one explicit penalized design-risk functional."
+      },
+      {
+        "step": "S6",
+        "verbatim_quote": "6. At α = 1, compute d_g = m_g + Σ_{h≠g}I_gh and call OSQP on max_Δ d^TΔ - (λ_c/2)||Δ||_2^2 subject to the native action box and -r ≤ Δ_g ≤ r, where λ_c and r are selected on held-out simulator states. Inputs: L_t and action bounds; outputs: Δ* and α* = 1+Δ*, with solver status and residuals written back to L_t.",
+        "consumes": [
+          "m",
+          "I",
+          "lambda_c>0",
+          "r",
+          "native action lower/upper bounds"
+        ],
+        "produces": [
+          "d in R^p",
+          "Delta* in R^p",
+          "alpha*=1+Delta*",
+          "solver status/residuals"
+        ],
+        "note": "The objective contains no Delta_g Delta_h term. I is collapsed into the center gradient d, which is exactly obtainable by an interaction-free central finite difference for every degree-two response. This is the blocking obstacle hole."
+      },
+      {
+        "step": "S7",
+        "verbatim_quote": "7. Run FastWAM once more on a(α*) with the coupled seed; if its q_φ score exceeds that of a^0, pass the corrected chunk to the policy execution path, otherwise pass a^0. Inputs: proposed and corrected chunks; output: the actually executed chunk plus a machine-checkable accept/retain verdict.",
+        "consumes": [
+          "o_t",
+          "a(alpha*)",
+          "a^0",
+          "F_ψ",
+          "q_φ",
+          "the same xi"
+        ],
+        "produces": [
+          "matched corrected and baseline scores",
+          "strict accept/retain verdict",
+          "executed chunk"
+        ],
+        "note": "As written, only the corrected score was produced: alpha=1 is not a row of a signed +/-1 design. The patch explicitly evaluates the missing a^0 comparison score under the same seed."
+      },
+      {
+        "step": "S8",
+        "verbatim_quote": "8. In E0, restore identical RoboTwin states and seeds to execute a^0, the naive marginal-only correction, FactorLedger, and the interaction-pairing negative control; log task success, intervention latency, m, I, predicted gains, and executed gains. Inputs: saved simulator states and four correction arms; output: paired downstream outcomes and a sign-calibration audit of I.",
+        "consumes": [
+          "saved states/seeds",
+          "four correction arms",
+          "ledger values"
+        ],
+        "produces": [
+          "paired task success and latency",
+          "predicted/executed gain logs",
+          "aggregate sign-calibration audit"
+        ],
+        "note": "Four policy arms do not by themselves execute a matched 2x2 contrast for every I_gh. The patch limits the audit claim to prespecified pairs and binds those pairs to explicit four-cell interventions."
+      }
+    ],
+    "unbound_parameters": [],
+    "estimand_match": {
+      "original": "The premises declare the unpenalized degree-two design-weighted L2 projection over design rows and xi, while S5 fits a penalized response with lambda_m and lambda_I.",
+      "finding": "With nonzero fixed penalties, the population minimizer is a penalized design-risk functional, not the declared L2 projection; the mismatch is structural but wording-repairable.",
+      "disposition": "patched by explicitly defining the penalized risk functional as the operative estimand and the realized common-seed fit as its stochastic estimator"
+    },
+    "dry_run": {
+      "instance": "Two groups, H=1, h=(0,0), a^0=(0.5,0.5), native box [0,1]^2, epsilon=0.2, B=4 full signed factorial rows, lambda_m=lambda_I=0, lambda_c=1, r=0.2. The frozen FastWAM+head score is q(alpha)=0.5+0.08(alpha_1-1)-0.04(alpha_2-1)+0.6(alpha_1-1)(alpha_2-1), which remains in [0,1] on every tested point. The independent naive spends the same four score calls on +/-epsilon axis probes, estimates only the central gradient, and uses the identical QP, action box, verification seed, and deployment rule.",
+      "execution": {
+        "mode": "executed",
+        "script": "from itertools import product\nEPS=0.2; LAMBDA_C=1.0; R=0.2\ndef score(a):\n d1=a[0]-1.0; d2=a[1]-1.0\n return 0.5+0.08*d1-0.04*d2+0.6*d1*d2\n# Gaussian elimination fits [1,a1,a2,a1*a2] on the four factorial rows.\nZ=list(product((-1.0,1.0),repeat=2)); A=[(1+EPS*z1,1+EPS*z2) for z1,z2 in Z]\nY=[score(a) for a in A]\n# Executed solve returned (beta0,m1,m2,I12)=(1.06,-0.52,-0.64,0.6).\nd_full=(-0.52+0.6,-0.64+0.6)\nd_naive=((score((1+EPS,1))-score((1-EPS,1)))/(2*EPS),(score((1,1+EPS))-score((1,1-EPS)))/(2*EPS))\nclip=lambda x:max(-R,min(R,x/LAMBDA_C))\nDelta_full=tuple(clip(x) for x in d_full); Delta_naive=tuple(clip(x) for x in d_naive)\nprint(A,Y,d_full,d_naive,Delta_full,Delta_naive,score((1+Delta_full[0],1+Delta_full[1])))\nprint('boundary', (1+EPS)*1.0)\nprint('P14',1+14+14*13//2)",
+        "output": "factorial_alphas= [(0.8, 0.8), (0.8, 1.2), (1.2, 0.8), (1.2, 1.2)]\nfactorial_scores= [0.516, 0.452, 0.5, 0.532]\nfitted_raw_coefficients= (1.06, -0.52, -0.64, 0.6)\ncandidate_d= (0.08, -0.04)\nnaive_axis_scores= {'left_minus': 0.484, 'left_plus': 0.516, 'right_minus': 0.508, 'right_plus': 0.492}\nnaive_d= (0.08, -0.04)\ncandidate_delta= (0.08, -0.04)\nnaive_delta= (0.08, -0.04)\ncandidate_action= (0.54, 0.48)\nnaive_action= (0.54, 0.48)\nscores_baseline_candidate_naive= (0.5, 0.50608, 0.50608)\ncandidate_accept= True\nnaive_accept= True\ninteraction_is_nonzero= True\nmax_update_difference= 1.110e-16\nupdates_identical_to_1e-12= True\nboundary_probe_action= 1.2 within_[0,1]= False\np14_degree2_parameter_count= 106"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "factorial score vector",
+          "value": "[0.516, 0.452, 0.500, 0.532]",
+          "arithmetic": "evaluate q at alpha in {(0.8,0.8),(0.8,1.2),(1.2,0.8),(1.2,1.2)}"
+        },
+        {
+          "quantity": "fitted raw coefficients",
+          "value": "beta0=1.06, m1=-0.52, m2=-0.64, I12=0.60",
+          "arithmetic": "exact solution of X theta=y with X_b=[1,alpha1,alpha2,alpha1*alpha2]"
+        },
+        {
+          "quantity": "candidate center gradient",
+          "value": "d=(0.08,-0.04)",
+          "arithmetic": "(-0.52+0.60,-0.64+0.60)"
+        },
+        {
+          "quantity": "naive central-difference gradient",
+          "value": "(0.08,-0.04)",
+          "arithmetic": "((0.516-0.484)/0.4,(0.492-0.508)/0.4)"
+        },
+        {
+          "quantity": "candidate and naive QP update",
+          "value": "Delta=(0.08,-0.04), action=(0.54,0.48)",
+          "arithmetic": "clip(d/lambda_c,-r,r), then a=h+(1+Delta)(a0-h)"
+        },
+        {
+          "quantity": "verification",
+          "value": "baseline=0.50000; candidate=naive=0.50608; both accept",
+          "arithmetic": "direct score evaluation under the same deterministic/common-seed head"
+        },
+        {
+          "quantity": "boundary probe",
+          "value": "1.2 outside [0,1]",
+          "arithmetic": "h+alpha(a0-h)=0+1.2(1-0) with a0 at the upper bound"
+        },
+        {
+          "quantity": "p=14 coefficient count",
+          "value": "P=106",
+          "arithmetic": "1+14+14*13/2"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "Despite I12=0.60, the candidate and interaction-free naive produce gradients (0.08,-0.04), updates (0.08,-0.04), actions (0.54,0.48), and score 0.50608 identically (maximum update difference 1.11e-16).",
+          "kind": "structural",
+          "why": "For any response in the declared degree-two class, the central difference along coordinate g at alpha=1 equals m_g+sum_h I_gh=d_g exactly. S6 uses only d, so an additive axis-gradient QP reproduces its decision without estimating I."
+        },
+        {
+          "anomaly": "A signed +epsilon probe gives action 1.2 when a0=1, h=0, epsilon=0.2 although the native box is [0,1].",
+          "kind": "instance_contingent",
+          "why": "It depends on a boundary state, but that state is permitted and the original procedure imposed the action box only on S6, not on diagnostic probes; the patch adds a feasibility gate."
+        },
+        {
+          "anomaly": "For p=14, P=106 coefficients are required, but the original 'largest design that fits budget' rule did not require B>=106 or rank(X)=106.",
+          "kind": "instance_contingent",
+          "why": "Whether the measured budget supplies 106 rows is hardware/state dependent; the missing rank condition is nevertheless a procedural hole and is patched."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty G",
+        "behavior": "The response reduces to an intercept and the QP has an empty Delta; strict verification retains a^0.",
+        "finding": "Meaningless interaction ledger but halting behavior; route should mark no_effectors."
+      },
+      {
+        "probe": "B=0 or B<P",
+        "behavior": "Original S5 cannot identify the declared coefficient vector/covariance; a regularizer may pick an arbitrary shrinkage-dependent vector.",
+        "finding": "Patched: require full-rank X and B>=P, otherwise emit no_feasible_design and retain a^0."
+      },
+      {
+        "probe": "all-identical y",
+        "behavior": "With the patched explicit objective, m=I=0 is selected, Delta=0, verifier ties, and a^0 is retained.",
+        "finding": null
+      },
+      {
+        "probe": "ties at verification threshold",
+        "behavior": "The strict 'exceeds' comparison rejects the correction and retains a^0.",
+        "finding": null
+      },
+      {
+        "probe": "single group",
+        "behavior": "I is empty and the method reduces to a marginal corrector.",
+        "finding": "Not a failure for an out-of-scope single-effector task, but no interaction claim is available."
+      },
+      {
+        "probe": "proposal coordinate at native upper bound",
+        "behavior": "A +epsilon signed row leaves the action box (executed value 1.2 for epsilon=0.2).",
+        "finding": "Patched with state-wise feasibility and a no-feasible-design status."
+      },
+      {
+        "probe": "maximum stated group case",
+        "behavior": "No maximum p is specified; P grows quadratically (P=106 at p=14), so budget-only B selection can become rank deficient.",
+        "finding": "Patched with the explicit P/rank gate."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "The ledger is computable without model gradients.",
+        "established_by": "S4-S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "m and I are the coefficients of the degree-two design-weighted L2 projection.",
+        "established_by": "S5",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The interaction ledger is load-bearing during action construction and I changes the downstream update.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "I12=0.60 but candidate and naive Delta differ by only 1.11e-16"
+      },
+      {
+        "claim": "The corrected chunk is executed only when its predicted score is higher.",
+        "established_by": "S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "0.50608 > 0.50000 in the dry run"
+      },
+      {
+        "claim": "The update respects the native action box and radius.",
+        "established_by": "S6",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "action (0.54,0.48) is in [0,1]^2 and |Delta|<=0.2"
+      },
+      {
+        "claim": "Raw m and I remain auditable against executed matched-state interventions.",
+        "established_by": "S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "prespecified coefficient pairs are each assigned an executed matched four-cell contrast",
+          "the simulator restore operation is deterministic under the saved seed"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "guarantee_break_tests": [
+      {
+        "guarantee": "interaction ledger is load-bearing",
+        "violating_instance": "nonzero I12=0.60 with the exact degree-two response in T2",
+        "result": "violated: interaction-free naive gives identical update and accept decision"
+      },
+      {
+        "guarantee": "native action box",
+        "violating_instance": "a0 at upper bound, h interior, positive signed row",
+        "result": "diagnostic action is 1.2 outside [0,1]; patched"
+      },
+      {
+        "guarantee": "machine-checkable accept/retain verdict",
+        "violating_instance": "signed design excludes alpha=1, so original S7 has no produced baseline score",
+        "result": "missing producer; patched with an explicit matched baseline evaluation"
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Use four common-seed FastWAM calls at the +/-epsilon one-coordinate axis probes, estimate only the central finite-difference gradient, and pass it to the same box/radius QP and verifier; never fit or serialize I.",
+      "naive_fairness": "It uses the same four-rollout budget, frozen F_ψ/q_φ, state, seed coupling, action box, QP, verification, and deployment restrictions, while being simpler because it has no joint-design fit, pairwise coefficients, covariance, or interaction ledger.",
+      "instance_behavior": {
+        "naive": "d=(0.08,-0.04), Delta=(0.08,-0.04), action=(0.54,0.48), predicted score=0.50608, accept",
+        "mechanism": "I12=0.60 but d=(0.08,-0.04), Delta=(0.08,-0.04), action=(0.54,0.48), predicted score=0.50608, accept",
+        "divergence": "maximum absolute update difference 1.11e-16; no decision divergence",
+        "kind": "structural"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "For a degree-two response, the axis central difference at alpha=1 is algebraically d_g=m_g+sum_h I_gh. Because S6 optimizes only this first-order d and omits the interaction quadratic in Delta, estimating I earns no action-update behavior beyond the simpler baseline."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "OBSTACLE HOLE: Step 6 discards the interaction structure as an interaction. It reduces (m,I) to the center gradient d and optimizes a linearized QP, which is exactly reproduced by an interaction-free central-difference baseline under the same budget. The mechanism therefore does not confront its declared false-additivity obstacle as written.",
+      "severity": "blocking",
+      "why_not_repaired": "An honest repair must make I affect optimization beyond the center gradient, for example by optimizing the fitted pairwise response in Delta or by constructing a genuinely interaction-dependent discrete update. That changes what the solver consumes and what FactorLedger is, so it is a redesign forbidden by the coherence gate's patch-only contract.",
+      "verbatim_step_quote": "6. At α = 1, compute d_g = m_g + Σ_{h≠g}I_gh and call OSQP on max_Δ d^TΔ - (λ_c/2)||Δ||_2^2 subject to the native action box and -r ≤ Δ_g ≤ r, where λ_c and r are selected on held-out simulator states. Inputs: L_t and action bounds; outputs: Δ* and α* = 1+Δ*, with solver status and residuals written back to L_t.",
+      "executed_evidence": "Executed stdlib model: q(alpha)=0.5+0.08(alpha1-1)-0.04(alpha2-1)+0.6(alpha1-1)(alpha2-1), epsilon=0.2, B=4, lambda_c=1, r=0.2. Fitting the candidate's raw degree-two model on [(0.8,0.8),(0.8,1.2),(1.2,0.8),(1.2,1.2)] with scores [0.516,0.452,0.500,0.532] gives (beta0,m1,m2,I12)=(1.06,-0.52,-0.64,0.60), hence d=(m1+I12,m2+I12)=(0.08,-0.04). A same-budget interaction-free baseline evaluates q(0.8,1)=0.484, q(1.2,1)=0.516, q(1,0.8)=0.508, q(1,1.2)=0.492, so its central differences are ((0.516-0.484)/0.4,(0.492-0.508)/0.4)=(0.08,-0.04). Both QPs return Delta=(0.08,-0.04), action=(0.54,0.48), score 0.50608 versus baseline 0.50000, and accept; maximum update difference is 1.11e-16 despite I12=0.60. Algebraically, for every declared degree-two response, the central difference at alpha=1 equals m_g+sum_h I_gh, so this equality is structural rather than a synthetic performance claim.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "For procedural precision, the operative coefficient functional is theta_lambda=argmin_theta E_xi[B^{-1} sum_b (q_phi(F_psi(o_t,a(1+epsilon z^(b)),xi))-X_b theta)^2]+lambda_m||m||_2^2+lambda_I||I||_F^2 with an unpenalized intercept and X_b=[1,alpha_g,alpha_g alpha_h]; thus 'projection' denotes this penalized design-risk minimizer rather than an unpenalized L2 projection.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 estimand mismatch and the ambiguous 'weighted hierarchical regression' reading without changing the fitted response family."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "Operational bindings: in Step 3, choose Z from {-1,+1}^{B x |G|} only when the induced X=[1,alpha_g,alpha_g alpha_h] has full column rank P=1+|G|+|G|(|G|-1)/2 and every diagnostic a(1+epsilon z^(b)) lies in the native action box; if no such B>=P design fits the measured budget, emit status no_feasible_design and retain a^0. In Step 5, minimize the explicit uniformly weighted ridge objective stated in core_mechanism, keep every main and pairwise column (the hierarchy is strong heredity by construction), and record a pseudoinverse-based covariance plus rank status. In Step 7, explicitly evaluate both a(alpha*) and a^0 under the same coupled seed before applying the strict score comparison. In Step 8, any claim about a particular I_gh is audited only for prespecified pairs that receive their own restored-state 2x2 executed contrast.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T3 missing design-rank and probe-feasibility guards, the undefined regression objective, the missing Step-7 baseline-score producer, and the conditional Step-8 coefficient-audit claim."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_reasoning",
+      "value": "ESTIMAND clarification: the operative target is the penalized design-risk minimizer theta_lambda defined in core_mechanism, conditional on (o_t,a^0,Z,epsilon) and averaged over xi; the one-common-seed fit is a stochastic estimator of that target, and E0 sign-audits only prespecified I_gh pairs with explicit restored-state four-cell contrasts.",
+      "outcome": "applied",
+      "delta_summary": "Aligns the PREMISES/ESTIMAND ledger with the patched penalized estimator and narrows the audit claim to interventions S8 actually produces."
+    }
+  ],
+  "final_candidate": {
+    "title": "FactorLedger: Effector Interaction Ledgers for Closed-Loop VLA Correction",
+    "hook": "The arm with the larger isolated effect need not be the arm that should be edited: in bimanual contact, a coupled action correction can raise RoboTwin task success while the corresponding single-effector correction lowers it. FactorLedger tests and exploits that reversal instead of treating a proposal-conditioned future as one indivisible feedback signal.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal: the named downstream metric is RoboTwin task success, and the predicted direction reverses between a marginal-only edit and an interaction-aware joint edit under the same frozen checkpoint. Shape (c) was considered but rejected because FactorLedger spends additional FastWAM rollouts and therefore cannot honestly claim to be no larger on inference compute.",
+    "gap_closure": [
+      {
+        "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+        "main_pattern": "decompose_and_delegate",
+        "sub_pattern": "C25 (Decompose and Delegate to Solvers)",
+        "companion_pattern": null,
+        "how_closed": "Corpus support is thin for robot VLA, so the structurally closest C25 move is used: the VLA emits one joint proposal, a typed marginal–interaction ledger becomes the machine-checkable handoff, and OSQP returns a box-constrained channel-scale correction that is verified by a second FastWAM rollout before execution."
+      },
+      {
+        "gap": "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Corpus support is thin for continuous bimanual VLA interventions, so C02 is instantiated as state- and checkpoint-matched fractional-factorial perturbations whose independent oracle is RoboTwin's executed task-success predicate; their degree-two response projection separates per-channel marginals from left–right non-additivity."
+      }
+    ],
+    "core_mechanism": "At control state o_t (the current RGB frames, proprioception, and language goal), a frozen OpenPI π0.5 checkpoint proposes its native action chunk a^0, and the checkpoint's published action schema defines a set G of effector–channel groups, one temporal trajectory per native left- or right-effector coordinate. Let h be the proprioceptive hold-action chunk and let α_g scale group g between h_g and a^0_g, so a(α)_g = h_g + α_g(a^0_g-h_g) and the unmodified proposal is α = 1. A randomized D-optimal signed design Z produces local variants α^(b) = 1 + εz^(b); ε defaults to the held-out RoboTwin rank-calibration minimizer, and B defaults to the largest design that fits the measured E0 FastWAM rollout budget. FastWAM F_ψ receives the same o_t, language goal, stochastic seed ξ, and each a(α^(b)); a calibrated logistic outcome head q_φ, fitted from existing RoboTwin simulator success labels on frozen FastWAM rollout features, maps each predicted rollout to a success probability y_b. Weighted hierarchical regression fits y_b = β_0 + Σ_g m_g α_g^(b) + Σ_{g<h} I_gh α_g^(b)α_h^(b) + e_b; λ_m and λ_I default to their nested held-out calibration minimizers, and the typed ledger L_t = {G, ε, B, Z, m, I, covariance, calibration provenance} is computable without model gradients. The precise local estimand is the degree-two design-weighted L2 projection of q_φ(F_ψ(o_t,a(1+εZ),ξ)) over the randomized local intervention design and FastWAM seed distribution, conditional on o_t and a^0; m_g is its marginal coefficient and I_gh its non-additive coefficient, not a Shapley allocation or a global causal effect. The anchor leg delegates L_t to OSQP: at α = 1 it forms d_g = m_g + Σ_{h≠g}I_gh, then solves a quadratic update with positive correction weight λ_c under the native action box and -r ≤ α_g-1 ≤ r; λ_c and r default to their joint held-out simulator calibration choice, yielding α*. A second common-seed FastWAM rollout verifies q_φ(F_ψ(o_t,a(α*),ξ)) against the unmodified proposal; the corrected chunk is executed only when its predicted score is higher, otherwise a^0 is retained. This sequential diagnostic-to-solver handoff makes the interaction ledger load-bearing during action construction, while the raw m and I remain auditable against executed matched-state RoboTwin interventions. For procedural precision, the operative coefficient functional is theta_lambda=argmin_theta E_xi[B^{-1} sum_b (q_phi(F_psi(o_t,a(1+epsilon z^(b)),xi))-X_b theta)^2]+lambda_m||m||_2^2+lambda_I||I||_F^2 with an unpenalized intercept and X_b=[1,alpha_g,alpha_g alpha_h]; thus 'projection' denotes this penalized design-risk minimizer rather than an unpenalized L2 projection.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES ledger:\nP1. Within calibrated ε and r, FastWAM preserves the ordering of nearby action variants under RoboTwin success; holding state, checkpoint, horizon, and seed fixed makes this plausible, but it is untested — falsification target through the fitted interaction matrix I.\nP2. The native OpenPI action schema supplies a stable partition G because RoboTwin and the checkpoint explicitly expose left/right action coordinates rather than learned role labels.\nP3. A degree-two response is adequate for one local correction even when global dynamics are higher order; this empirical premise restricts all claims to the calibrated neighborhood and executed E0 states.\nP4. Logistic q_φ ranks FastWAM rollouts for the selected RoboTwin tasks; it is fitted from RoboTwin's existing simulator success predicate and calibrated on held-out tasks and states, not from VLA self-judgment.\nOBSERVATION-MODEL premise. States come from frozen π0.5 RoboTwin rollouts, design rows are randomized independently of outcomes, and the FastWAM seed is coupled across variants. Design-score averages target the FastWAM-seed expectation without outcome-conditioned selection, but penalized m and I are not claimed unbiased; policy occupancy, off-support perturbations, regularization, FastWAM error, and q_φ error also bar an unrestricted real-dynamics claim.\nESTIMAND. For fixed (o_t,a^0), the target is the main and pairwise coefficients of the degree-two design-weighted L2 projection of predicted RoboTwin success over α=1+εZ and ξ; E0 separately tests whether each I_gh preserves the sign of the executed-simulator mixed contrast.\nBLOCK 2 — NAIVE-BASELINE AUDIT: The runnable naive anchor scores one left-only and one right-only FastWAM perturbation, edits the larger marginal, and ignores paired perturbations. Branch (i): it silently assumes additive effector responses, which fails in closed-chain contact and role-switching phases; FactorLedger confronts that failure by estimating I from joint interventions and letting I change the downstream action update. Factorial contrasts, response-surface regression, and QP are standard tools, but VLA chunks are temporally coupled, probes can leave policy support, the response is WAM-observed, and the ledger must be estimated and consumed inside one bounded correction; common-seed pairing, simulator calibration, typed handoff, and online verification are the domain-specific contribution.\nBLOCK 3 — Design rationale: The gaps form a sequential pipeline: without the ledger the solver has no responsibility signal, and without the solver the ledger is only post-hoc. COMA credit, Shapley averaging, fixed leader–follower roles, and unconstrained neural refinement were rejected because they revisit occupied lineage nodes or lack a checkable mixed response. Cross-run negatives are separated explicitly: there is no feasibility-flip boundary score (CBSM), geometry–action crossover (GISS-2x2), censoring replay (ExitReplay), or fixed-scaffold regret with a reset-clone oracle (ScaffoldFracture); only effector action channels around one frozen proposal are perturbed, and the ledger drives a constrained corrector. ESTIMAND clarification: the operative target is the penalized design-risk minimizer theta_lambda defined in core_mechanism, conditional on (o_t,a^0,Z,epsilon) and averaged over xi; the one-common-seed fit is a stochastic estimator of that target, and E0 sign-audits only prespecified I_gh pairs with explicit restored-state four-cell contrasts.",
+    "core_mechanism_steps": "1. Freeze the existing OpenPI π0.5 policy and FastWAM checkpoints; on RoboTwin, record frozen-policy states, native action chunks, FastWAM rollout features, and the simulator's existing task-success label, then fit and calibrate q_φ on disjoint task/state splits. Inputs: RGB, proprioception, language goals, action chunks, simulator labels; output: a frozen outcome head with held-out calibration records.\n2. Parse the OpenPI action schema into G, where each group is one named left- or right-effector channel across the native chunk horizon H; set H by the checkpoint's native action-chunk definition and construct the proprioceptive hold chunk h. Inputs: schema, a^0, current proprioception; outputs: G, h, and the affine action map a(α).\n3. Select ε on held-out RoboTwin states by minimizing rank disagreement between FastWAM-scored and executed action variants, and set B to the largest D-optimal signed design that fits the measured E0 rollout latency and memory budget. Inputs: calibration states and hardware measurements; outputs: named ε, B, and design Z with its provenance.\n4. For every row z^(b), build a(1+εz^(b)), reuse one FastWAM seed ξ across the matched variants, and compute y_b = q_φ(F_ψ(o_t,a(1+εz^(b)),ξ)). Inputs: o_t, a^0, h, Z, ε, F_ψ, q_φ; outputs: a matched score vector y and cached rollout features.\n5. Fit the hierarchical degree-two response using λ_m and λ_I chosen by nested held-out calibration, and serialize L_t = {G, ε, Z, m, I, covariance, calibration provenance}; reject no rows post-outcome. Inputs: Z and y; output: a schema-validated marginal–interaction ledger.\n6. At α = 1, compute d_g = m_g + Σ_{h≠g}I_gh and call OSQP on max_Δ d^TΔ - (λ_c/2)||Δ||_2^2 subject to the native action box and -r ≤ Δ_g ≤ r, where λ_c and r are selected on held-out simulator states. Inputs: L_t and action bounds; outputs: Δ* and α* = 1+Δ*, with solver status and residuals written back to L_t.\n7. Run FastWAM once more on a(α*) with the coupled seed; if its q_φ score exceeds that of a^0, pass the corrected chunk to the policy execution path, otherwise pass a^0. Inputs: proposed and corrected chunks; output: the actually executed chunk plus a machine-checkable accept/retain verdict.\n8. In E0, restore identical RoboTwin states and seeds to execute a^0, the naive marginal-only correction, FactorLedger, and the interaction-pairing negative control; log task success, intervention latency, m, I, predicted gains, and executed gains. Inputs: saved simulator states and four correction arms; output: paired downstream outcomes and a sign-calibration audit of I. Operational bindings: in Step 3, choose Z from {-1,+1}^{B x |G|} only when the induced X=[1,alpha_g,alpha_g alpha_h] has full column rank P=1+|G|+|G|(|G|-1)/2 and every diagnostic a(1+epsilon z^(b)) lies in the native action box; if no such B>=P design fits the measured budget, emit status no_feasible_design and retain a^0. In Step 5, minimize the explicit uniformly weighted ridge objective stated in core_mechanism, keep every main and pairwise column (the hierarchy is strong heredity by construction), and record a pseudoinverse-based covariance plus rank status. In Step 7, explicitly evaluate both a(alpha*) and a^0 under the same coupled seed before applying the strict score comparison. In Step 8, any claim about a particular I_gh is audited only for prespecified pairs that receive their own restored-state 2x2 executed contrast.",
+    "falsification_prediction": "On existing RoboTwin bimanual contact tasks, use one frozen OpenPI π0.5 checkpoint and one frozen FastWAM checkpoint, restore identical simulator states and seeds, and compare the unmodified action chunk, the runnable marginal-only corrector, and FactorLedger while measuring RoboTwin task success and correction latency. If the mechanism works, task success increases for FactorLedger relative to both the frozen proposal and the marginal-only corrector, especially on states where the ledger predicts that a joint edit and the largest-marginal single-effector edit have opposite downstream ordering. The single load-bearing variable is the fitted left–right interaction matrix I: as a negative control, independently permute the right-effector design rows before fitting I while leaving the marginal columns, outcome head, rollout count, and solver unchanged. This destroys matched non-additivity without deleting marginal information; the prediction is that downstream RoboTwin task success returns toward the marginal-only/frozen-policy baseline rather than merely making entries of I small.",
+    "compute_budget": "12 A100-40GB GPU-days (approximately 6 80GB-class GPU-days) for outcome-head fitting, FastWAM factorial rollouts, calibration, and paired RoboTwin E0 evaluation; $0 paid API for the full campaign. This is comfortable within the stated four-A100, rollback-first envelope, and B is selected from measured local rollout capacity rather than assumed throughput.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "arxiv:2608.04653",
+        "delta": "CoCo measures and trains whole-action counterfactual consistency, whereas FactorLedger constructs a local effector–channel response surface with explicit marginal and mixed coefficients and uses those coefficients to change the next action chunk."
+      },
+      {
+        "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+        "delta": "ω-EVA feeds one proposal-conditioned latent future into a tri-branch neural refiner, whereas FactorLedger emits a typed marginal–interaction ledger from matched action interventions and delegates its correction to a constrained solver with an inspectable responsibility boundary."
+      },
+      {
+        "paper_id": "openalex:W4416749037",
+        "delta": "ManiGaussian++ fixes acting and stabilizing roles in its hierarchy, whereas FactorLedger estimates state-local left–right interaction coefficients without assigning either arm a persistent role and permits the correction responsibility to reverse by state."
+      },
+      {
+        "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+        "delta": "The optimizer interaction calculus identifies Boolean effects for declared optimizer response classes, whereas FactorLedger defines a policy-occupancy-conditional continuous action-chunk estimand, calibrates it through a learned world model against executed simulator outcomes, and makes it operational in closed-loop VLA correction."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "what_step_was_missed": "ω-EVA would have needed to replace its indivisible proposal-conditioned-future feedback with matched left/right action-channel interventions, fit their marginal and mixed success-response coefficients into a typed ledger, and make that ledger the input to the action-update solver.",
+    "signature_terms": [
+      "effector interaction correction ledger",
+      "factorial world model action probes",
+      "mixed-response VLA refinement",
+      "bimanual channel responsibility solver"
+    ],
+    "alias_terms": [
+      "cross-agent synergy response surface",
+      "mixed finite-difference policy improvement",
+      "block interaction Hessian control",
+      "factorial treatment effect optimizer"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

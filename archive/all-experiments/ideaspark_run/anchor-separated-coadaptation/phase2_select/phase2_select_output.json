@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+      "chosen_pattern_id": "assumption_audit_and_pivot",
+      "anchor_alternates": [],
+      "companion_pattern": "generative_process_redesign",
+      "companion_rationale": "Auditing the visited-state locus yields a cycle-indexed censoring ledger O of logged transition edges whose probability falls under the new policy while their environment-recorded outcomes remain fixed; redesigning the co-training replay generator to consume O and continuously rehearse disappearing failure edges turns the locus shift into a runnable anti-forgetting intervention.",
+      "selection_rationale": "This method-shaped gap is load-bearing because policy-induced disappearance of failure evidence is a concrete route by which reciprocal improvement can look cleaner without repairing the physical failure, and it supports a deliberately narrow intervention on existing LIBERO and RoboCasa loops. The audit relocates evidence from the current policy's visited states to previously observed transition edges at the support boundary, while the companion changes the replay generator using observable policy likelihood ratios and stored outcomes rather than differentiating through a simulator or issuing sequential accept/reject certificates."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method -- anchor gap -> assumption_audit_and_pivot relocates evidence to policy-censored transition edges, and companion generative_process_redesign ships the runnable censoring-aware replay generator",
+  "composition_note": "",
+  "pattern_saturation": {
+    "assumption_audit_and_pivot": {
+      "share": 0.23,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "generative_process_redesign": {
+      "share": 0.05,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+      "reason": "fails removal test -- the narrow disappearing-failure replay intervention remains runnable and falsifiable without a broad cycle-sign certificate"
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether it is valid for the policy that selects which states become observed and the world model that supplies unobserved consequences to be judged through the same adaptively changing evidence stream at every co-training cycle -- stakes: an unexamined shared assumption can invalidate reported co-improvement gains across VLA-WAM systems and blocks a principled account of when reciprocal training is statistically trustworthy.",
+      "reason": "fails removal test -- a general validity account for all shared adaptive evidence is broader than the anchor's policy-censoring mechanism and would need separate theory"
+    },
+    {
+      "gap": "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+      "reason": "fails removal test -- residual-error alignment requires a separate directional estimator, whereas the anchor operates on directly logged disappearance of environment-observed failures"
+    }
+  ]
+}

@@ -1,0 +1,1620 @@
+{
+  "title": "GISS-2x2: Matched-State Geometry-Action Compatibility for Frozen Robot Policies",
+  "title_zh": "GISS-2x2：面向冻结机器人策略的匹配状态几何—动作兼容性诊断",
+  "method_name": "Matched-State Geometry-Action Crossover (GISS-2x2)",
+  "hook": "Endpoint-equivalent geometry pairs can reveal whether a frozen VLA's current action chunk is specifically compatible with the geometry it saw. The reveal is a positive matched-state own-versus-cross native-success interaction, not a claim that the model recovered a globally necessary strategy graph.",
+  "abstract_draft": "Frozen robot policies can complete geometrically varied tasks without revealing whether the action issued at a decision point is actually conditioned on the visible functional geometry. Existing benchmarks vary scenes and measure aggregate generalization, as in GemBench (openalex:W4403116255), while scalable generators such as RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) still leave state, dynamics, and policy-history changes entangled with geometry. We introduce GISS-2x2, a matched-state crossover diagnostic that restores one decision checkpoint under an endpoint-equivalent geometry pair, queries two frozen-policy action chunks from a shared fresh inference template, and executes each chunk in both recipient geometries before native closed-loop continuation. Its estimand is the within-recipient own-versus-cross success interaction, which asks whether each geometry preferentially benefits from the chunk it elicited while canceling recipient difficulty. The claim is falsified if this interaction is absent, reverses under the smallest preregistered state jitter, or remains positive for appearance-only pairs that share collision geometry and physics. With deterministic-query gates and cache-clean continuation, we expect a positive interaction only for eligible functional pairs, localized by task family and baseline-success stratum. The result would be a scoped, executable assay of current action compatibility—not evidence that a policy recovered a globally necessary strategy graph or broad co-adaptation competence.",
+  "motivation": {
+    "problem_framing": "A frozen robot policy can appear robust across geometric variations for several incompatible reasons: it may use visible functional geometry to select the current action, exploit an open-loop default that happens to work, or recover later through closed-loop feedback. Aggregate success cannot separate these explanations because geometry changes usually also change the realized state trajectory, contact dynamics, and inference history. The structural bottleneck is therefore an identification problem: measuring geometry-conditioned action compatibility while holding the decision state fixed and allowing the same native downstream success criterion for every comparison.\n\nThis issue is concrete in scalable manipulation suites such as RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) and in systematic geometry generalization benchmarks such as GemBench (openalex:W4403116255). Their task diversity makes the phenomenon observable, but their ordinary rollout comparisons do not provide the counterfactual cells needed to ask whether the action chunk elicited by geometry A is specifically better in A than the chunk elicited by endpoint-equivalent geometry B, and symmetrically for B. GISS-2x2 turns that missing comparison into a narrow matched-state diagnostic for frozen policies.",
+    "why_now": "The gap is now practical to close because recent simulators expose broad, editable functional geometry and reproducible task families—RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088)—while GemBench (openalex:W4403116255) and Any3D-VLA (openalex:W7127541930) make 3D generalization a current evaluation target rather than an incidental stress test. At the same time, local open frozen policies such as OpenPI pi0.5 and CLOVER can be queried repeatedly without training or paid APIs. State serialization, collision-mesh editing, and deterministic inference controls therefore make a four-cell checkpoint crossover possible at a scale that remains small enough for manual pair validation.",
+    "why_prior_stopped": [
+      {
+        "paper_id": "dblp:journals/corr/abs-2506-18088",
+        "venue_year": "arXiv 2025",
+        "what_they_did": "RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) provides scalable robot data and task variations for evaluating manipulation policies.",
+        "what_they_did_not_do": "It did not restore one decision checkpoint across an endpoint-equivalent functional geometry pair and cross the two resulting action chunks through both recipient geometries.",
+        "structural_reason_they_stopped": "Its unit of analysis is dataset or rollout performance, so the benchmark lacks a within-state counterfactual estimator for current action compatibility."
+      },
+      {
+        "paper_id": "openalex:W4403116255",
+        "venue_year": "arXiv 2025-05",
+        "what_they_did": "GemBench (openalex:W4403116255) systematizes 3D manipulation generalization across controlled geometric variations.",
+        "what_they_did_not_do": "It did not query two source-geometry chunks from an identical checkpoint and execute both chunks in each recipient geometry under one terminal predicate.",
+        "structural_reason_they_stopped": "Its split-based evaluation changes the condition being solved rather than constructing the crossed counterfactual cells needed to cancel recipient difficulty."
+      },
+      {
+        "paper_id": "openalex:W4405956290",
+        "venue_year": "arXiv (Cornell University) 2024",
+        "what_they_did": "CoA-VLA (openalex:W4405956290) conditions robot action generation on an explicit chain of action-relevant affordance structure.",
+        "what_they_did_not_do": "It did not test whether an unmodified frozen policy's current native action chunk is selectively compatible with the functional geometry that elicited it.",
+        "structural_reason_they_stopped": "Its mechanism places a structured affordance scaffold inside the policy, whereas the missing measurement requires geometry to be the only source-side intervention."
+      },
+      {
+        "paper_id": "openalex:W7127541930",
+        "venue_year": "arXiv (Cornell University) 2026",
+        "what_they_did": "Any3D-VLA (openalex:W7127541930) targets stronger use of 3D scene information for vision-language-action behavior.",
+        "what_they_did_not_do": "It did not isolate a same-state own-versus-cross action advantage under paired functional geometries and native task success.",
+        "structural_reason_they_stopped": "Representation and end-to-end policy evaluation do not by themselves supply the matched checkpoint, action swap, and recipient-controlled contrast required for identification."
+      },
+      {
+        "paper_id": "openalex:W4403808753",
+        "venue_year": "arXiv (Cornell University) 2024",
+        "what_they_did": "CLOVER (openalex:W4403808753) detects visual prediction error and replans online to improve manipulation robustness.",
+        "what_they_did_not_do": "It did not compare own and crossed first action chunks from a byte-matched pre-action state before restarting each recipient rollout from the actual post-chunk observation.",
+        "structural_reason_they_stopped": "Reactive recovery entangles error detection, replanning, and downstream feedback, so it cannot identify compatibility of the current action at the original decision point."
+      }
+    ],
+    "what_changes_when_gap_closes": "Closing the gap yields a policy-agnostic assay that can distinguish geometry-conditioned current actions from open-loop defaults and later recovery, localized to eligible task families rather than averaged into one capability score. It can complement the generalization claims studied by GemBench (openalex:W4403116255), Any3D-VLA (openalex:W7127541930), and the recovery behavior studied by CLOVER (openalex:W4403808753) by identifying exactly where native success depends on a geometry-compatible first chunk."
+  },
+  "core_claim": "For preregistered endpoint-equivalent geometry pairs, a frozen policy visibly using functional geometry should exhibit a positive matched-state own-versus-cross native-success interaction after inference-state-clean four-cell execution.",
+  "sub_claims": [
+    {
+      "id": "c1",
+      "statement": "Restoring the same serialized decision checkpoint and crossing both source-generated chunks through both recipient geometries removes recipient difficulty from the compatibility contrast.",
+      "supports_which_aspect": "identification of geometry-conditioned action compatibility at a fixed decision state"
+    },
+    {
+      "id": "c2",
+      "statement": "Fresh inference templates, deterministic repeated-query gates, and cache-clean continuation prevent hidden policy state from masquerading as a source-geometry effect.",
+      "supports_which_aspect": "control of inference-history and stochastic-decoding confounds"
+    },
+    {
+      "id": "c3",
+      "statement": "Appearance-only matched pairs and preregistered state jitter distinguish functional geometry compatibility from rendering sensitivity and brittle checkpoint coincidence.",
+      "supports_which_aspect": "non-tautological falsification of the proposed mechanism"
+    }
+  ],
+  "key_equations": [
+    {
+      "id": "E1",
+      "linked_step_id": "S4",
+      "latex": "u_s = \\pi_\\theta\\!\\left(o(z,G_s),h_0;\\xi\\right),\\qquad s\\in\\{A,B\\}",
+      "description": "Query the frozen policy at the same checkpoint z with a shared fresh history template h₀ and decode seed ξ; only the rendered source geometry G_s changes.",
+      "description_zh": "在同一检查点 z、同一份全新历史模板 h₀ 与解码种子 ξ 下查询冻结策略，唯一变化是源几何 G_s 的渲染。"
+    },
+    {
+      "id": "E2",
+      "linked_step_id": "S4",
+      "latex": "\\max_{k,k'} d\\!\\left(u_s^{(k)},u_s^{(k')}\\right) \\le \\varepsilon_{\\mathrm{det}}",
+      "description": "An identical-render repeat must keep chunk variation below the preregistered determinism tolerance before the pair is eligible.",
+      "description_zh": "同一渲染的重复查询必须使动作块差异低于预注册的确定性阈值，否则该配对不进入分析。"
+    },
+    {
+      "id": "E3",
+      "linked_step_id": "S5",
+      "latex": "Y_{r\\leftarrow s}=\\mathbf{1}\\!\\left\\{\\mathcal{R}\\!\\left(z,G_r,u_s,\\pi_\\theta^{\\mathrm{fresh}}\\right)\\models\\tau\\right\\},\\qquad r,s\\in\\{A,B\\}",
+      "description": "Cell Y_{r←s} is native task success when chunk u_s is executed in recipient geometry r and the frozen policy then resumes from the actual post-chunk observation.",
+      "description_zh": "Y_{r←s} 表示把源几何 s 产生的动作块放入接收几何 r 执行，并从真实动作后观测继续闭环后是否完成原生任务。"
+    },
+    {
+      "id": "E4",
+      "linked_step_id": "S6",
+      "latex": "I_{\\mathrm{MS}}=\\tfrac{1}{2}\\left[\\left(Y_{A\\leftarrow A}-Y_{A\\leftarrow B}\\right)+\\left(Y_{B\\leftarrow B}-Y_{B\\leftarrow A}\\right)\\right]",
+      "description": "The matched-state interaction averages each recipient's own-source advantage, canceling a recipient geometry that is simply easier.",
+      "description_zh": "匹配状态交互量对两个接收几何各自的同源优势取平均，从而抵消某个接收几何本身更容易造成的偏差。"
+    }
+  ],
+  "method_flow": {
+    "high_level_pipeline": "GISS-2x2 first compiles endpoint-equivalent functional geometry pairs and a corresponding appearance-only control while freezing the instruction, terminal predicate, and all non-geometry state. At a validated decision checkpoint, it queries one action chunk per source geometry from the same fresh inference template, then restores the checkpoint to execute both chunks in both recipient geometries. Native closed-loop success produces a matched-state interaction, and determinism, appearance, and state-jitter gates determine whether that interaction can be attributed to functional geometry compatibility within the registered scope.",
+    "steps": [
+      {
+        "step_id": "S1",
+        "title": "Register eligible task families",
+        "what_changes": "Define the task-family scope, terminal predicate, decision-event rule, pair-exclusion criteria, action-chunk horizon, and minimum baseline-success support before observing crossover outcomes.",
+        "why_this_step": "The claim is intentionally instrument-scoped; a fixed eligibility rule prevents a tiny diagnostic from expanding into a broad VLA competence claim.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "RoboTwin 2.0 task families, frozen policy interfaces, and simulator event logs",
+        "output": "A preregistered GISS manifest and eligible decision-event grammar"
+      },
+      {
+        "step_id": "S2",
+        "title": "Compile geometry-pair instruments",
+        "what_changes": "Construct endpoint-equivalent functional collision-geometry pairs A/B and appearance-only pairs that share one collision mesh and physics, keeping instruction, object identities, initial state, and success predicate fixed.",
+        "why_this_step": "Functional pairs instantiate the source intervention, while appearance-only pairs provide a non-tautological control for rendering sensitivity.",
+        "linked_component": "engineering",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The registered task manifest and editable simulator assets",
+        "output": "Validated functional and appearance-control pair manifests"
+      },
+      {
+        "step_id": "S3",
+        "title": "Capture a matched decision checkpoint",
+        "what_changes": "Serialize one pre-action simulator checkpoint z per pair and verify equality of every non-geometry state field, instruction, controller state, and terminal predicate across A and B.",
+        "why_this_step": "Fixing the decision state blocks open-loop state or dynamics mismatch from being counted as geometry-conditioned action compatibility.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "A validated geometry pair and its registered decision event",
+        "output": "A restore-tested matched checkpoint with an invariant audit record"
+      },
+      {
+        "step_id": "S4",
+        "title": "Query source-conditioned chunks",
+        "what_changes": "Clone one fresh inference/history template, render z under G_A and G_B, query the frozen policy for u_A and u_B with controlled decoding, repeat identical renders for a determinism gate, and discard all source-query cache state.",
+        "why_this_step": "Only the visible source geometry may produce the chunk; shared history and repeatability checks prevent cache or sampling state from becoming the effective intervention.",
+        "linked_component": "both",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The matched checkpoint, two source renders, and one frozen policy",
+        "output": "Two eligible action chunks plus a deterministic-query audit"
+      },
+      {
+        "step_id": "S5",
+        "title": "Execute the four crossover cells",
+        "what_changes": "For each recipient r in {A,B}, restore z, inject u_A or u_B for the fixed chunk horizon, then restart a cache-clean frozen-policy continuation from the actual post-chunk observation in recipient r until the native terminal predicate fires.",
+        "why_this_step": "The crossed cells hold the recipient fixed while changing only the source of the first chunk, and actual-observation continuation avoids replay-prefix or stale-cache artifacts.",
+        "linked_component": "engineering",
+        "linked_falsification": "both",
+        "input": "The restore-tested checkpoint and eligible chunks u_A and u_B",
+        "output": "Four native-success outcomes Y_{r←s} with execution traces"
+      },
+      {
+        "step_id": "S6",
+        "title": "Estimate the matched-state interaction",
+        "what_changes": "Compute I_MS as the mean of the two within-recipient own-minus-cross success contrasts and aggregate only within preregistered task-family, policy, and endpoint-equal baseline strata with paired uncertainty.",
+        "why_this_step": "The symmetric interaction cancels recipient difficulty and targets selective own-geometry compatibility rather than raw success or action difference.",
+        "linked_component": "both",
+        "linked_falsification": "metric_specification",
+        "input": "Four-cell native-success outcomes across registered pairs and reset seeds",
+        "output": "A scoped I_MS estimate, uncertainty interval, and eligibility coverage"
+      },
+      {
+        "step_id": "S7",
+        "title": "Apply mechanism validity gates",
+        "what_changes": "Recompute the same interaction for appearance-only pairs and after the smallest preregistered matched-state jitter; mark the mechanism unsupported if the control stays systematically positive, the sign reverses, or identical-render determinism fails.",
+        "why_this_step": "These gates distinguish functional geometry compatibility from texture preference, checkpoint brittleness, and hidden stochastic inference state.",
+        "linked_component": "both",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "The crossover estimator, control-pair manifest, jitter rule, and determinism audits",
+        "output": "A pass/fail compatibility finding bounded to eligible pairs and policies"
+      }
+    ],
+    "design_reasoning_echo": "The design uses a four-cell crossover because neither action-chunk difference nor ordinary two-geometry success can identify compatibility: both can be driven by recipient difficulty, state mismatch, or later feedback. Holding one checkpoint fixed, comparing own and crossed chunks within each recipient, and then averaging the two contrasts isolates the source-geometry interaction without differentiating through the simulator or imposing a strategy scaffold. Native task success keeps the readout behaviorally meaningful, while cache-clean continuation, appearance-only controls, and matched-state jitter make the narrow attribution falsifiable rather than turning every geometry-sensitive action into evidence for the claim."
+  },
+  "plain_motivation_en": "A frozen VLA (vision-language-action) policy can appear robust across geometry changes for different reasons. It may use visible functional geometry to choose its current action, follow an open-loop default that happens to work, or recover later through closed-loop feedback. Aggregate success cannot tell these explanations apart because changing geometry usually also changes the resulting state trajectory, contact dynamics, and inference history. The key problem is therefore to measure whether the current action is compatible with a particular geometry while holding the decision state fixed and using the same native success criterion in every comparison. RoboTwin 2.0 and GemBench make this problem observable, but ordinary rollout comparisons do not provide the four counterfactual cells needed to ask whether the chunk elicited by geometry A works better in A than the chunk elicited by endpoint-equivalent geometry B, and vice versa. GISS-2x2 supplies this narrow matched-state diagnostic for frozen policies.\n\nThis diagnostic is practical now because RoboTwin 2.0 provides broad, editable functional geometry and reproducible task families, while GemBench and Any3D-VLA make 3D generalization a current evaluation target. Local open frozen policies such as OpenPI pi0.5 and CLOVER can also be queried repeatedly without training or paid application programming interfaces. Together, simulator state serialization, collision-mesh editing, and deterministic inference controls make a four-cell checkpoint crossover feasible at a scale that still permits manual validation of geometry pairs.\n\nPrior work stopped short of this comparison for structural reasons. RoboTwin 2.0 studies dataset or rollout performance rather than a within-state counterfactual estimate of current action compatibility. GemBench changes the condition being solved through split-based evaluation instead of creating crossed cells that cancel recipient difficulty. CoA-VLA places an explicit affordance structure inside the policy rather than measuring an unmodified frozen policy. Any3D-VLA evaluates representation and end-to-end behavior without supplying the matched checkpoint, action swap, and recipient-controlled contrast. CLOVER studies reactive recovery, where error detection, replanning, and downstream feedback remain entangled with the original action choice.\n\nClosing this gap would provide a policy-agnostic assay that separates geometry-conditioned current actions from open-loop defaults and later recovery. The finding would remain localized to eligible task families rather than becoming one broad capability score, and it would identify where native success specifically depends on a geometry-compatible first action chunk.",
+  "plain_motivation_zh": "一个冻结的 VLA（vision-language-action，视觉—语言—动作）策略在几何变化下表现稳健，可能有几种不同原因：它确实利用可见的功能几何来选择当前动作；它只是执行一个碰巧有效的开环默认动作；或者它先犯错、再依靠后续闭环反馈恢复。只看总体成功率无法区分这些解释，因为几何变化通常也会改变实际状态轨迹、接触动力学和推理历史。因此，关键问题是在决策状态保持不变、所有比较都使用同一个原生成功标准的条件下，测量当前动作是否与特定几何相兼容。RoboTwin 2.0 和 GemBench 让这个问题可以被观察，但普通 rollout 比较没有提供所需的四个反事实单元，因而无法同时检验：几何 A 诱发的动作块是否在 A 中优于由终点等价几何 B 诱发的动作块，以及反向关系是否也成立。GISS-2x2 为冻结策略补上这个范围明确的匹配状态诊断。\n\n现在可以实际完成这项诊断，是因为 RoboTwin 2.0 提供了广泛、可编辑的功能几何和可复现的任务族，而 GemBench 与 Any3D-VLA 已把 3D 泛化变成当前的评测目标。OpenPI pi0.5 和 CLOVER 等本地开放冻结策略还可以在不训练、也不使用付费 API 的情况下被重复查询。结合模拟器状态序列化、碰撞网格编辑和确定性推理控制，就能以仍允许人工核验几何配对的规模，构造四单元检查点交叉实验。\n\n已有工作由于各自的分析结构而没有做到这一步。RoboTwin 2.0 以数据集或 rollout 表现为分析单位，没有同一状态下的当前动作兼容性反事实估计；GemBench 通过数据划分改变待解决条件，没有构造可抵消接收几何难度的交叉单元；CoA-VLA 把显式 affordance 结构放进策略内部，而不是测量未经修改的冻结策略；Any3D-VLA 评估表示和端到端行为，却没有提供匹配检查点、动作交换和受控接收几何对比；CLOVER 研究反应式恢复，其中错误检测、重新规划和后续反馈仍与原始动作选择纠缠在一起。\n\n补上这一缺口后，可以得到一个与具体策略实现无关的诊断，用来区分由几何条件决定的当前动作、开环默认动作和后续恢复。结论仍限定在符合资格的任务族内，而不是被汇总成一个宽泛能力分数；它还能指出原生任务成功具体在何处依赖与几何兼容的第一个动作块。",
+  "plain_method_steps_en": [
+    {
+      "step_id": "S1",
+      "what_to_do": "Using RoboTwin 2.0 task families, frozen-policy interfaces, and simulator event logs, define the task-family scope, native terminal predicate, decision-event rule, pair-exclusion criteria, action-chunk horizon, and minimum baseline-success support before examining crossover outcomes. Record them as a preregistered GISS manifest and an eligible decision-event grammar.",
+      "why_this_makes_sense": "The claim is deliberately limited to this instrument. Fixed eligibility rules stop a small diagnostic from being presented as a broad claim about VLA competence."
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "From the registered task manifest and editable simulator assets, construct endpoint-equivalent functional collision-geometry pairs A/B. Also construct appearance-only pairs that share one collision mesh and the same physics. Keep the instruction, object identities, initial state, and success predicate fixed, and output validated functional and appearance-control pair manifests.",
+      "why_this_makes_sense": "The functional pairs create the source intervention, while the appearance-only pairs test whether a result is merely caused by rendering sensitivity."
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "For each validated geometry pair and registered decision event, serialize one pre-action simulator checkpoint z. Verify that every non-geometry state field, the instruction, controller state, and terminal predicate are equal across A and B. Restore-test the checkpoint and save an invariant audit record.",
+      "why_this_makes_sense": "Holding the decision state fixed prevents open-loop state or dynamics mismatch from being counted as geometry-conditioned action compatibility."
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "Clone one fresh inference and history template, render checkpoint z under G_A and G_B, and query the same frozen policy with controlled decoding to obtain chunks u_A and u_B. Repeat each identical render and require chunk variation to stay within the preregistered determinism tolerance ε_det. Discard all source-query cache state and output the two eligible chunks with a deterministic-query audit.",
+      "why_this_makes_sense": "The visible source geometry should be the only cause of a changed chunk. Shared history, controlled decoding, repeated queries, and cache removal prevent hidden inference state or sampling variation from becoming the intervention."
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "For each recipient r in {A,B}, restore z and inject either u_A or u_B for the fixed action-chunk horizon. Then restart the frozen policy with a clean cache from the actual post-chunk observation in recipient r and continue until the native terminal predicate fires. Save the four native-success outcomes Y_{r←s} and their execution traces.",
+      "why_this_makes_sense": "Within each recipient, the crossed cells change only which source produced the first chunk. Continuing from the real post-chunk observation avoids replay-prefix and stale-cache artifacts."
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "From the four-cell native-success outcomes over registered pairs and reset seeds, compute I_MS as the mean of the two within-recipient own-minus-cross success contrasts. Aggregate only within preregistered task-family, policy, and endpoint-equal baseline strata, use paired uncertainty, and report the scoped estimate, uncertainty interval, and eligibility coverage.",
+      "why_this_makes_sense": "The symmetric interaction cancels the effect of one recipient geometry simply being easier and measures selective compatibility with the source geometry rather than raw success or raw action difference."
+    },
+    {
+      "step_id": "S7",
+      "what_to_do": "Recompute the same interaction for the appearance-only pairs and after the smallest preregistered matched-state jitter. Using the control-pair manifest, jitter rule, and determinism audits, mark the mechanism unsupported if the appearance control remains systematically positive, the interaction sign reverses after jitter, or the identical-render determinism gate fails. Output a pass/fail finding limited to eligible pairs and policies.",
+      "why_this_makes_sense": "These checks distinguish functional geometry compatibility from texture preference, a brittle coincidence at one checkpoint, and hidden stochastic inference state."
+    }
+  ],
+  "plain_method_steps_zh": [
+    {
+      "step_id": "S1",
+      "what_to_do": "使用 RoboTwin 2.0 任务族、冻结策略接口和模拟器事件日志，在查看任何交叉结果之前定义任务族范围、原生终止谓词、决策事件规则、配对排除条件、动作块时域和最低基线成功支持度，并把它们记录为预注册的 GISS manifest 与合格决策事件语法。",
+      "why_this_makes_sense": "这里的主张有意限定在该诊断工具的范围内。固定资格规则可以避免把一个小型诊断扩大成对 VLA 整体能力的宽泛主张。"
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "根据已注册的任务 manifest 和可编辑模拟器资产，构造终点等价的功能碰撞几何配对 A/B；同时构造共享同一碰撞网格和相同物理属性的仅外观配对。固定指令、物体身份、初始状态和成功谓词，输出经过验证的功能配对与外观控制配对 manifest。",
+      "why_this_makes_sense": "功能配对提供源侧干预，仅外观配对则检验结果是否只是由渲染敏感性造成。"
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "对每个已验证几何配对及其注册决策事件，序列化一个动作前模拟器检查点 z。验证 A 与 B 的所有非几何状态字段、指令、控制器状态和终止谓词完全相同；测试检查点能否恢复，并保存不变量审计记录。",
+      "why_this_makes_sense": "固定决策状态，可以阻止开环状态差异或动力学差异被误计为几何条件下的动作兼容性。"
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "复制一份全新的推理与历史模板，分别在 G_A 和 G_B 下渲染检查点 z，并用受控解码查询同一个冻结策略，得到动作块 u_A 与 u_B。对每个相同渲染重复查询，要求动作块变化不超过预注册的确定性容差 ε_det。丢弃所有源查询 cache 状态，输出两个合格动作块及确定性查询审计。",
+      "why_this_makes_sense": "动作块的变化应只由可见源几何引起。共享历史、受控解码、重复查询和清除 cache 可以防止隐藏推理状态或采样变化成为实际干预。"
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "对每个接收几何 r∈{A,B}，恢复 z，并在固定动作块时域内注入 u_A 或 u_B。随后从接收几何 r 的真实动作后观测出发，以干净 cache 重启冻结策略并继续执行，直到原生终止谓词触发。保存四个原生成功结果 Y_{r←s} 及其执行轨迹。",
+      "why_this_makes_sense": "在每个接收几何内部，交叉单元只改变第一个动作块来自哪个源。使用真实动作后观测继续执行，可以避开重放前缀和旧 cache 造成的伪差异。"
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "利用注册配对和 reset seeds 上的四单元原生成功结果，把两个接收几何各自的同源减异源成功对比取平均，得到 I_MS。只在预注册的任务族、策略和终点等价基线层内聚合，采用配对不确定性，并报告限定范围的估计值、不确定性区间与合格样本覆盖率。",
+      "why_this_makes_sense": "这个对称交互量抵消了某个接收几何本身更容易的影响，测量的是对源几何的选择性兼容，而不是原始成功率或原始动作差异。"
+    },
+    {
+      "step_id": "S7",
+      "what_to_do": "在仅外观配对上，以及施加最小预注册匹配状态扰动后，重新计算同一个交互量。结合控制配对 manifest、扰动规则和确定性审计，如果外观控制仍系统性为正、扰动后交互量符号反转，或相同渲染未通过确定性门槛，就把该机制标记为不受支持；最后输出仅适用于合格配对与策略的通过或失败结论。",
+      "why_this_makes_sense": "这些检查可以把功能几何兼容性与纹理偏好、只在单一检查点成立的脆弱巧合以及隐藏的随机推理状态区分开。"
+    }
+  ],
+  "plain_method_modules_en": [
+    {
+      "module_id": "M0_background",
+      "purpose_oneline": "Set the preregistered scope, build controlled geometry instruments, and establish a restore-tested matched decision state before running the crossover.",
+      "step_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "module_id": "M1_matched_state_crossover",
+      "purpose_oneline": "Query geometry-conditioned chunks from one checkpoint, execute all four source-recipient cells, and estimate the recipient-controlled compatibility interaction.",
+      "step_ids": [
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "module_id": "M2_validation",
+      "purpose_oneline": "Test the interaction against appearance-only controls, matched-state jitter, and deterministic-query failures.",
+      "step_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "plain_method_modules_zh": [
+    {
+      "module_id": "M0_background",
+      "purpose_oneline": "预注册研究范围，构造受控几何工具，并在运行交叉实验前建立经过恢复测试的匹配决策状态。",
+      "step_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "module_id": "M1_matched_state_crossover",
+      "purpose_oneline": "从同一检查点查询由几何条件决定的动作块，执行全部四个源—接收单元，并估计控制接收几何后的兼容性交互量。",
+      "step_ids": [
+        "S4",
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "module_id": "M2_validation",
+      "purpose_oneline": "用仅外观控制、匹配状态扰动和确定性查询失败来检验该交互量。",
+      "step_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "falsification_prediction": "On preregistered eligible RoboTwin 2.0 pairs, run the frozen OpenPI pi0.5 and CLOVER four-cell checkpoint experiment and measure native task success plus I_MS; if visible geometry conditions useful current actions, I_MS should be positive even among endpoint-equal baseline strata. The one load-bearing variable is G_src, the source geometry rendered at the identical z to produce the current action chunk. As a non-tautological negative control, replace G_src's functional collision-geometry producer with appearance-only texture/render pairs that share one collision mesh and physics: the downstream native-success I_MS should return to its no-systematic-own-advantage baseline, while reversal or collapse under the smallest preregistered matched state jitter falsifies the claimed compatibility signal.",
+  "compute_budget": "12 A100 GPU-days for 64 paired states across four RoboTwin 2.0 task families, five paired reset seeds, two frozen policies, four crossover cells, controls, and reruns on the available 4xA100 system; approximately one engineer-week for the modest GISS manifest and state-restore tooling. $0 paid API cost because all policy, simulator, planner, and scoring components are local/open.",
+  "almost_prior_paper_id": "dblp:journals/corr/abs-2506-18088",
+  "almost_prior_venue_year": "arXiv 2025",
+  "what_step_was_missed": "The abstract does not construct a simulator checkpoint that is identical across paired functional geometries, query both frozen-policy chunks there, and execute each chunk in both recipient geometries before closed-loop resumption to estimate a within-recipient compatibility interaction; this is an abstract-only inference because full text was unavailable.",
+  "feasibility_validation": {
+    "compute": {
+      "verdict": "tight",
+      "rationale": "GPU line ≈ 100 vs 100 GPU-day (100%) → tight; API line ≈ $0 vs $10000 (0%) → feasible. Overall (worse line) → tight."
+    },
+    "data": {
+      "verdict": "feasible",
+      "rationale": "RoboTwin 2.0 tasks, local frozen OpenPI pi0.5 and CLOVER policies, simulator states, and native success signals are accessible without private data or paid services."
+    },
+    "theoretical": {
+      "verdict": "n/a",
+      "rationale": "The contribution is a controlled diagnostic estimand and protocol, not a theorem or formal guarantee about policy strategy recovery."
+    },
+    "engineering": {
+      "verdict": "tight",
+      "rationale": "The binding cost is implementing restore-exact simulator checkpoints, controlled action injection, and verifiable fresh inference state across two policy stacks without altering their native continuation behavior."
+    },
+    "falsification": {
+      "verdict": "feasible",
+      "rationale": "Functional and appearance-only geometry edits, identical-render repeats, and small matched-state jitters are concrete simulator interventions whose outcomes use the existing native success predicate."
+    },
+    "overall": "tight"
+  },
+  "differentiation_from_lit": [
+    {
+      "paper_id": "dblp:journals/corr/abs-2506-18088",
+      "venue_year": "arXiv 2025",
+      "delta": "Abstract-only inference under fulltext_degraded evidence: RoboTwin 2.0 supplies scalable tasks and broad randomization, whereas GISS constructs byte-matched decision checkpoints and crosses one frozen-policy action chunk across paired functional collision geometries before recipient-scene closed-loop continuation."
+    },
+    {
+      "paper_id": "openalex:W4403116255",
+      "venue_year": "arXiv 2025-05",
+      "delta": "Abstract-only inference: GemBench evaluates placements, objects, primitives, and long horizons, while GISS estimates a within-recipient matched-state geometry-action compatibility interaction at fixed instruction and terminal predicate."
+    },
+    {
+      "paper_id": "openalex:W4405956290",
+      "venue_year": "arXiv (Cornell University) 2024",
+      "delta": "Abstract-only inference: CoA-VLA supplies a fixed object/grasp/spatial/movement affordance chain to the policy, while GISS gives ordinary policies no phase scaffold and intervenes only on the visible geometry that produces the current chunk."
+    },
+    {
+      "paper_id": "openalex:W4403808753",
+      "venue_year": "arXiv (Cornell University) 2024",
+      "delta": "Abstract-only inference: CLOVER uses prediction error for closed-loop refinement and replanning, while GISS restores an identical pre-action state and estimates one-chunk source-geometry compatibility through a four-cell recipient-scene response contrast."
+    }
+  ],
+  "reviewer_concerns_and_responses": [
+    {
+      "attack": "Paper-pointed threat: openalex:W7172173298 (collision_hits). The supplied abstract for Stage-Replay Divergence Follows the KV Cache is the most mechanism-specific threat because it shows that apparently matched replay prefixes can diverge solely through retained versus reconstructed inference state, and it uses a fixed-prefix 2x2 plus cache controls. It does not subsume the robot contribution on the available abstract: GISS-2x2 explicitly clones one fresh inference/history template, resets decode noise for both source queries, rejects nondeterministic identical-render repeats, discards every source-query cache before continuation, and restarts the recipient from its actual post-chunk observation. The collision therefore sharpens a necessary validity condition already present rather than establishing the same geometry-action assay.",
+      "severity": "non_blocking",
+      "response": "The defense is explicit in method_flow steps S3–S5: source queries clone one fresh history template, identical-render repeats reject nondeterminism, source-query caches are discarded, and each recipient continuation restarts from its actual post-chunk observation. The Phase 3.2 concern usefully establishes that matched simulator state alone is insufficient; these controls address that inference-state confound, while the cited replay-divergence work still does not implement the functional-geometry own-versus-cross native-success assay.",
+      "fields_changed_to_address": []
+    },
+    {
+      "attack": "Un-retrieved mechanism family flagged by the audit (parametric knowledge, not in the retrieved pool): Metamorphic testing and paired crossover testing for cyber-physical controllers; scoop-check vocabulary: 'metamorphic robot policy testing' and 'paired simulator action crossover'. — novelty vs this family is UNVERIFIED; run a targeted scoop-check on that vocabulary before investing.",
+      "severity": "non_blocking",
+      "response": "The novelty claim is deliberately conditional rather than declared settled: it is anchored in core_claim and the precise S3–S6 combination of a byte-matched checkpoint, two source-geometry queries, four recipient/source cells, and a native-success interaction. A targeted prior-art check for metamorphic robot-policy testing and paired simulator action crossover must find no earlier work combining all four elements before novelty is claimed.",
+      "fields_changed_to_address": []
+    },
+    {
+      "attack": "Gap-closure reject-check borderline on gap 1 (C02 (Design a Confound-Isolating Diagnostic)): Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and; Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insigh",
+      "severity": "non_blocking",
+      "response": "The candidate is explicitly simulator- and task-family-scoped in S1 and reports eligibility coverage and matched-stratum effects in S6 rather than extrapolating to broad VLA safety or real-world competence. Held-out rendering and multiple task families can test whether the instrument is more than a single-scene artifact, but ecological validity remains a limitation and no real-world claim follows without a hardware replication.",
+      "fields_changed_to_address": []
+    }
+  ],
+  "domain_landscape": {
+    "n_papers": 17,
+    "pattern_distribution": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 3,
+        "share": 0.18,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 6,
+        "share": 0.35,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 8,
+        "share": 0.47,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 7,
+        "share": 0.41,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 5,
+        "share": 0.29,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 3,
+        "share": 0.18,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      }
+    ],
+    "candidate_uses": [
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "role": "closes Gap 1",
+        "sub_pattern_id": "C02 (Design a Confound-Isolating Diagnostic)",
+        "saturation_in_domain": "mid_frequency"
+      }
+    ],
+    "position_note": "GISS-2x2 occupies the relatively uncommon controlled-diagnostic-design lane in this literature, contrasting with the field's more frequent structural-prior, heterogeneous-decomposition, and unified-model patterns."
+  },
+  "literature_breakdown": {
+    "summary": {
+      "n_phase0_total": 17,
+      "n_phase0_on_topic": 17,
+      "n_phase0_outside_taxonomy": 0,
+      "n_phase3_collision": 196
+    },
+    "phase0_by_pattern": [
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "pattern_name": "Substitute the Operator or Representation",
+        "papers": [
+          {
+            "paper_id": "openalex:W4417097990",
+            "title": "NoTVLA: Semantics-Preserving Robot Adaptation via Narrative Action Interfaces",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Dense action-trajectory fine-tuning is compute-intensive and causes cross-task catastrophic forgetting"
+          }
+        ]
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "pattern_name": "Design a Confound-Isolating Diagnostic",
+        "papers": [
+          {
+            "paper_id": "openalex:W4403116255",
+            "title": "Towards Generalizable Vision-Language Robotic Manipulation: A Benchmark and LLM-Guided 3D Policy",
+            "venue_year": "arXiv 2025-05",
+            "bottleneck_targeted": "Existing benchmarks and policies inadequately measure and solve manipulation generalization across placements, objects, and long-horizon tasks"
+          },
+          {
+            "paper_id": "openalex:W4412944525",
+            "title": "Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation",
+            "venue_year": "arXiv 2025-01",
+            "bottleneck_targeted": "Aggregate evaluation does not isolate the atomic capabilities needed to establish whether VLMs contain usable internal world models"
+          }
+        ]
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "pattern_name": "Decompose and Delegate to Solvers",
+        "papers": [
+          {
+            "paper_id": "openalex:W4412750609",
+            "title": "Human–Robot Interaction and Tracking System Based on Mixed Reality Disassembly Tasks",
+            "venue_year": "Robotics 2025",
+            "bottleneck_targeted": "Rigid sequential disassembly planning cannot accommodate unforeseen changes or direct multimodal operator control"
+          },
+          {
+            "paper_id": "openalex:W4415557874",
+            "title": "Hierarchical Language Models for Semantic Navigation and Manipulation in an Aerial–Ground Robotic System",
+            "venue_year": "Advanced Intelligent Systems 2025",
+            "bottleneck_targeted": "Static task-specific models do not coordinate high-level reasoning, perception, navigation, and manipulation across heterogeneous robots"
+          }
+        ]
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "pattern_name": "Liberate a Fixed Generative Component",
+        "papers": [
+          {
+            "paper_id": "openalex:W4415014283",
+            "title": "Sim-to-Real Dynamic Object Manipulation on Conveyor Systems via Optimization Path Shaping",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Simulated demonstrations suffer an appearance gap that can overwhelm transferable geometric structure"
+          },
+          {
+            "paper_id": "dblp:journals/corr/abs-2506-18088",
+            "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+            "venue_year": "arXiv 2025",
+            "bottleneck_targeted": "Existing bimanual datasets lack scalable task generation and realistic, diverse simulation; RoboTwin 2.0 frees data/task generation through MLLM-authored execut"
+          }
+        ]
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "pattern_name": "Decompose for Differentiated Treatment",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:09923ab80f59b9dbec32d1693b2863aa62fce365",
+            "title": "ScriptHOI: Learning Scripted State Transitions for Open-Vocabulary Human-Object Interaction Detection",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Open-vocabulary HOI predictions exploit object affordance and phrase co-occurrence without verifying contact, geometry, motion, and state evidence"
+          },
+          {
+            "paper_id": "openalex:W4416223716",
+            "title": "SpatialActor: Exploring Disentangled Spatial Representations for Robust Robotic Manipulation",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Entangled semantics and noisy depth obscure the low-level spatial cues needed for precise manipulation"
+          }
+        ]
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "pattern_name": "Manufacture the Supervisory Signal",
+        "papers": [
+          {
+            "paper_id": "openalex:W4416967312",
+            "title": "Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Flow-matching VLA policies lack an internal reliability signal under representation drift and long-horizon rollout"
+          }
+        ]
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "pattern_name": "Encode Structure by Construction",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:db2574be341621c2f004ef1a3124947c35d07e6d",
+            "title": "Rethinking Embodied Navigation via Relational Inductive Bias",
+            "venue_year": "arXiv 2026",
+            "bottleneck_targeted": "Navigation search underuses relational structure in online observations and failed-access events"
+          },
+          {
+            "paper_id": "openalex:W4405956290",
+            "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance",
+            "venue_year": "arXiv (Cornell University) 2024",
+            "bottleneck_targeted": "End-to-end VLA policies lack explicit object, grasp, placement, and motion affordance reasoning for complex manipulation"
+          },
+          {
+            "paper_id": "openalex:W4403808753",
+            "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+            "venue_year": "arXiv (Cornell University) 2024",
+            "bottleneck_targeted": "Open-loop robot policies accumulate error because they lack measurable visual feedback and online replanning"
+          }
+        ]
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "pattern_name": "Unify Heterogeneous Inputs into One Space",
+        "papers": [
+          {
+            "paper_id": "openalex:W4414902199",
+            "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Separate slow-reasoning and fast-control models limit knowledge sharing and execution efficiency"
+          },
+          {
+            "paper_id": "openalex:W4415037842",
+            "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+            "venue_year": "arXiv 2025-01",
+            "bottleneck_targeted": "Vision-language policies lack force feedback needed for fine contact control under occlusion and dynamic uncertainty"
+          },
+          {
+            "paper_id": "openalex:W4417537399",
+            "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Vision-only manipulation misses contact information, while vision and touch are difficult to fuse into a robust control representation"
+          },
+          {
+            "paper_id": "openalex:W7127541930",
+            "title": "Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds",
+            "venue_year": "arXiv (Cornell University) 2026",
+            "bottleneck_targeted": "VLA policies lack robust 3D understanding because 3D data are scarce and point-cloud sources have domain and scale gaps"
+          }
+        ]
+      }
+    ],
+    "phase0_outside_taxonomy": [],
+    "phase3_collision": [
+      {
+        "paper_id": "openalex:W7157664678",
+        "title": "Exhaustive Investigation into the Primorial Compile Algebra, Wheel Harmonic Frontiers, and the Universal Ontology of Continuous Prefix Compilation",
+        "venue_year": "Zenodo (CERN European Organization for Nuclear Research) 2026"
+      },
+      {
+        "paper_id": "openalex:W7164614280",
+        "title": "VLGA: Vision-Language-Geometry-Action Models for Autonomous Driving",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7131128685",
+        "title": "Force Sensing Control for Physical Human–Robot Interaction: A Transformer-Based Action Chunking Approach",
+        "venue_year": "Machines 2026"
+      },
+      {
+        "paper_id": "openalex:W7170111432",
+        "title": "GeoWorldAD: Geometry World Action Model for Autonomous Driving",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7172173298",
+        "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4417329376",
+        "title": "Adaptive Token Boundaries: Towards Integrating Human Chunking Mechanisms into Multimodal LLMs",
+        "venue_year": "Information 2025"
+      },
+      {
+        "paper_id": "openalex:W7129004006",
+        "title": "Refinement Geometry: Branching Structure from Stability and Prefix Order",
+        "venue_year": "PhilPapers (PhilPapers Foundation) 2026"
+      },
+      {
+        "paper_id": "openalex:W7155654857",
+        "title": "Neuro-Symbolic Manipulation Understanding with Enriched Semantic Event Chains",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7161090974",
+        "title": "Geometry Guided Self-Consistency for Physical AI",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7203640516",
+        "title": "Marionette: Predicting World States, Rendering Geometry, Painting Appearance",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7203916848",
+        "title": "DevGRU: Depth-guided Visual Navigation using a Collision-aware Recurrent Model",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7202005812",
+        "title": "MASS: Multiplayer World Models with Authoritative Shared State",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7162045360",
+        "title": "Beyond Isotropy in JEPAs: Hamiltonian Geometry and Symplectic Prediction",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416209962",
+        "title": "Predictive Risk-Aware Reinforcement Learning for Autonomous Vehicles Using Safety Potential",
+        "venue_year": "Electronics 2025"
+      },
+      {
+        "paper_id": "openalex:W4416237556",
+        "title": "Geometry induced chiral transport and entanglement in AdS2 background",
+        "venue_year": "Journal of High Energy Physics 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914968",
+        "title": "Right Reset: Chunking by Prefix Removal",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7125933805",
+        "title": "Enabling AI-Controlled additive manufacturing with real-time multiphysics digital twins",
+        "venue_year": "Virtual and Physical Prototyping 2026"
+      },
+      {
+        "paper_id": "openalex:W7125692645",
+        "title": "Modeling Road User Interactions with Dynamic Graph Attention Networks for Traffic Crash Prediction",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4396652686",
+        "title": "Large deviations of current for the symmetric simple exclusion process on a semi-infinite line and on an infinite line with a slow bond",
+        "venue_year": "Physical review. E 2026"
+      },
+      {
+        "paper_id": "openalex:W7130405307",
+        "title": "Benefits of Categorizing Noncovalent Bonds Based on Hydrogen, Halogen, Chalcogen, and Pnictogen Bonds",
+        "venue_year": "Angewandte Chemie International Edition 2026"
+      },
+      {
+        "paper_id": "openalex:W7163196370",
+        "title": "Research on the Integration Path of Red Family Letters into the Cultivation of College Students’ National Sentiment",
+        "venue_year": "Journal of Humanities and Social Sciences Studies 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914845",
+        "title": "Predict, Then Retrieve: Cross-Instance Future-State Retrieval from Video Prefixes",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416434667",
+        "title": "Superlinear Hall angle and carrier mobility from non-Boltzmann magnetotransport in the spatially disordered Yukawa-Sachdev-Ye-Kitaev model on a square lattice",
+        "venue_year": "Physical Review Research 2026"
+      },
+      {
+        "paper_id": "openalex:W4417491059",
+        "title": "Multi-Affection Prompt Learning for Sentiment, Emotion, and Sarcasm Joint Detection in Conversations",
+        "venue_year": "Tsinghua Science & Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W7169688753",
+        "title": "From Product-Centred Retrieval to Experience-Led Commerce:Twelve Candidate Design Principles for Fashion E-Commerce User Experience",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7152934005",
+        "title": "Beyond the Beep: Scalable Collision Anticipation and Real-Time Explainability with BADAS-2.0",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416921973",
+        "title": "Multi-view diffusion geometry using intertwined diffusion trajectories",
+        "venue_year": "arXiv (Cornell University) 2025"
+      },
+      {
+        "paper_id": "openalex:W7169473927",
+        "title": "From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7128097581",
+        "title": "Codified Finite-state Machines for Role-playing",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7162219378",
+        "title": "AnyMo: Geometry-Aware Setup-Agnostic Modeling of Human Motion in the Wild",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914938",
+        "title": "HyPASE: Hyperbolic Geometry for Parameter-Efficient Speech Emotion Fine-Tuning Framework for Large Audio-Language Models",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7204092070",
+        "title": "Pair size versus coherence length and quantum geometry in the spin-orbit coupled BCS-BEC crossover",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416916988",
+        "title": "Evolutionary Strategies in Nanocomposite Proton Exchange Membranes: A Physical Chemistry Applied Materials (PCAM) LAB Review on Material Design, High-Temperature Performance, and Durability",
+        "venue_year": "Polymers 2025"
+      },
+      {
+        "paper_id": "openalex:W7165746952",
+        "title": "21st CENTURY ORGANIZATION From the theatre metaphor to the performance metaphor",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7126384300",
+        "title": "Research on the Construction of Tourism Scenarios and the Reshaping of Relationships in Intelligent Media Environments— A Case Study of Short Videos",
+        "venue_year": "Journal of Global Trends in Social Science 2026"
+      },
+      {
+        "paper_id": "openalex:W4415844431",
+        "title": "Bispecific immunotherapy based on antibodies, T-cell receptors, and aptamers: mechanisms of action, adverse effects, and future perspectives",
+        "venue_year": "Frontiers in Immunology 2025"
+      },
+      {
+        "paper_id": "openalex:W7161914902",
+        "title": "Multi-LLM Systems Exhibit Robust Semantic Collapse",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4415248125",
+        "title": "Identifying Instabilities with Quantum Geometry in Flat-Band Systems",
+        "venue_year": "Physical Review Letters 2026"
+      },
+      {
+        "paper_id": "openalex:W7160311750",
+        "title": "Epilogue – Living with insecurity",
+        "venue_year": "Manchester University Press eBooks 2026"
+      },
+      {
+        "paper_id": "openalex:W7147721130",
+        "title": "Reconstructing the Literary Curriculum System Centred on 'Literary Imagination'",
+        "venue_year": "Curriculum and Teaching Methodology 2026"
+      },
+      {
+        "paper_id": "openalex:W7164134070",
+        "title": "The Brussels Bubble",
+        "venue_year": "Cambridge University Press eBooks 2026"
+      },
+      {
+        "paper_id": "openalex:W7135042669",
+        "title": "ChromSMF: integrated profiling of histone modifications, protein-DNA interactions and DNA methylation on multi-kilobase DNA molecules",
+        "venue_year": "bioRxiv (Cold Spring Harbor Laboratory) 2026"
+      },
+      {
+        "paper_id": "openalex:W4400668362",
+        "title": "Understanding the approach to thermalization from the eigenspectrum of non-Abelian gauge theories",
+        "venue_year": "Nuclear Physics B 2026"
+      },
+      {
+        "paper_id": "openalex:W7155175084",
+        "title": "A Multi-UAV Cooperative Decision-Making Method in Dynamic Aerial Interaction Environments Based on GA-GAT-PPO",
+        "venue_year": "Drones 2026"
+      },
+      {
+        "paper_id": "openalex:W7198950070",
+        "title": "Two more days : co-directing The tempest with the Baltic sea as artistic research",
+        "venue_year": "Taju (University of the Arts Helsinki) 2026"
+      },
+      {
+        "paper_id": "openalex:W4410459027",
+        "title": "DNA cross-over motifs-based, programmable supramolecular hydrogels for the mechanoregulatory effects of cellular behaviour and cytoskeleton reorganization",
+        "venue_year": "npj Biomedical Innovations. 2026"
+      },
+      {
+        "paper_id": "openalex:W4416758549",
+        "title": "SPACEc: a streamlined, interactive Python workflow for multiplexed image processing and analysis",
+        "venue_year": "Nature Communications 2025"
+      },
+      {
+        "paper_id": "openalex:W4416759095",
+        "title": "Consequences of symmetry fractionalization without 1-form global symmetries",
+        "venue_year": "Journal of High Energy Physics 2025"
+      },
+      {
+        "paper_id": "openalex:W4415848278",
+        "title": "A Photo‐ and Cobalt‐Catalyzed Enantioselective Hydroamination of Unactivated Alkenes with Amines",
+        "venue_year": "Angewandte Chemie International Edition 2025"
+      },
+      {
+        "paper_id": "openalex:W4386794225",
+        "title": "All you need is spin: SU(2) equivariant variational quantum circuits based on spin networks",
+        "venue_year": "Quantum Science and Technology 2026"
+      },
+      {
+        "paper_id": "openalex:W7172497808",
+        "title": "Channel-Aware Residual BiLSTM for Ship Trajectory Prediction and Collision Risk Assessment in Restricted Waters",
+        "venue_year": "Journal of Marine Science and Engineering 2026"
+      },
+      {
+        "paper_id": "openalex:W7148703437",
+        "title": "All-optical polarization control in time-varying low-index films via plasma symmetry breaking",
+        "venue_year": "Nature Photonics 2026"
+      },
+      {
+        "paper_id": "openalex:W7172321172",
+        "title": "Clustering Smoothed Particle Hydrodynamics Debris into N -body Fragments: A Collisional Code for Planet Formation",
+        "venue_year": "The Astronomical Journal 2026"
+      },
+      {
+        "paper_id": "openalex:W7202345208",
+        "title": "ScaleVid: Geometry-Aware Video Object Scaling with Mesh-Free Inference",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416068844",
+        "title": "Mneme: A Parallel Preprocessing Framework for Large Tabular Datasets",
+        "venue_year": "International Journal of Parallel Programming 2026"
+      },
+      {
+        "paper_id": "openalex:W7125416309",
+        "title": "Mathematical formalism of Ze",
+        "venue_year": "Longevity Horizon 2026"
+      },
+      {
+        "paper_id": "openalex:W7154427739",
+        "title": "Crossover Equation of State Constrained by Astronomical Observations and pQCD",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416026015",
+        "title": "Temporal Action Selection for Action Chunking",
+        "venue_year": "arXiv (Cornell University) 2025"
+      },
+      {
+        "paper_id": "openalex:W7123353165",
+        "title": "Asymptotics on the dynamics of the hanging chain pendulum",
+        "venue_year": "Meccanica 2026"
+      },
+      {
+        "paper_id": "openalex:W7166796650",
+        "title": "Gated Tree Cross-Attention for Checkpoint-Compatible Syntax Injection in Decoder-Only LLMs",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7135026173",
+        "title": "Digitized counterdiabatic quantum critical dynamics",
+        "venue_year": "npj Quantum Information 2026"
+      },
+      {
+        "paper_id": "openalex:W7164446578",
+        "title": "Geometry-Aware Reinforcement Learning for 2D Irregular Nesting",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4389714342",
+        "title": "The Parameterized Complexity of Coordinated Motion Planning",
+        "venue_year": "Discrete & Computational Geometry 2026"
+      },
+      {
+        "paper_id": "openalex:W7124179978",
+        "title": "Exposure to Nitrogen Dioxide (NO2) Emitted from Traffic-Related Sources: Review",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W7163777941",
+        "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7128586581",
+        "title": "Tunable Cellular Structures with Damping for Industry-Ready Dynamic Load Management in Bus Applications",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4416306296",
+        "title": "The Matter of Intellectual Property: Studying the Economic, Political and Cultural Nodes of the Contemporary Media Industries. 15th Media Mutations International Conference",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "openalex:W7116662311",
+        "title": "Optimization of End Mill Geometry for Machining 1.2379 Cold-Work Tool Steel Through Hybrid RSM-ANN-GA Coupled FEA Approach",
+        "venue_year": "Machines 2025"
+      },
+      {
+        "paper_id": "openalex:W7117491041",
+        "title": "A Comprehensive Review of Path-Planning Algorithms for Multi-UAV Swarms",
+        "venue_year": "Drones 2025"
+      },
+      {
+        "paper_id": "openalex:W7125587372",
+        "title": "Minimizing the total weighted earliness-tardiness about a non-restrictive common due date with optional job rejection on single and multiple machines",
+        "venue_year": "Computational and Applied Mathematics 2026"
+      },
+      {
+        "paper_id": "openalex:W7171620428",
+        "title": "Architecting Student Agency: A Revolutionary Framework for Post-Pandemic Educational Excellence — Transforming Learners from Passive Recipients to Empowered Change Agents",
+        "venue_year": "SSRN Electronic Journal 2026"
+      },
+      {
+        "paper_id": "openalex:W4416340555",
+        "title": "A multi-stage optimization strategy for multi-UAV path planning in complex urban 3D environments with obstacle avoidance",
+        "venue_year": "Complex & Intelligent Systems 2025"
+      },
+      {
+        "paper_id": "openalex:W4414812773",
+        "title": "Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W4417319149",
+        "title": "Modeling multiphase plasma in the corona: prominences and rain",
+        "venue_year": "Living Reviews in Solar Physics 2025"
+      },
+      {
+        "paper_id": "openalex:W4416936251",
+        "title": "Piezoelectric truss metamaterials: data-driven design and additive manufacturing",
+        "venue_year": "npj Metamaterials 2025"
+      },
+      {
+        "paper_id": "openalex:W4403786606",
+        "title": "Federated Large Language Models: Current Progress and Future Directions",
+        "venue_year": "Lecture notes in computer science 2026"
+      },
+      {
+        "paper_id": "openalex:W7170070907",
+        "title": "Cell division sets a universal flow geometry in cell layers",
+        "venue_year": "Proceedings of the National Academy of Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4405468223",
+        "title": "Pretrained event classification model for high energy physics analysis",
+        "venue_year": "Journal of Instrumentation 2026"
+      },
+      {
+        "paper_id": "openalex:W4415872180",
+        "title": "Current Trends in Synthesis and Characterization of Biomass-Based Materials for CO2 Capture",
+        "venue_year": "Biomass 2025"
+      },
+      {
+        "paper_id": "openalex:W4416385805",
+        "title": "Roadmap on quantum thermodynamics",
+        "venue_year": "Quantum Science and Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W7125768176",
+        "title": "Mitigating Hallucinations in Discipline Inspection QA: A Two-Stage RAG Framework with Late Interaction and Reranking",
+        "venue_year": "Electronics 2026"
+      },
+      {
+        "paper_id": "openalex:W7118171104",
+        "title": "The Role of Ceramides in Metabolic and Cardiovascular Diseases",
+        "venue_year": "Journal of Cardiovascular Development and Disease 2026"
+      },
+      {
+        "paper_id": "openalex:W7131246916",
+        "title": "Exploring cortical excitability modulation to promote cognitive resilience in aging: an rTMS study protocol",
+        "venue_year": "Frontiers in Human Neuroscience 2026"
+      },
+      {
+        "paper_id": "openalex:W7154685956",
+        "title": "On-Orbit Space AI: Federated, Multi-Agent, and Collaborative Algorithms for Satellite Constellations",
+        "venue_year": "Algorithms 2026"
+      },
+      {
+        "paper_id": "openalex:W4416249188",
+        "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+        "venue_year": "ACM Transactions on Storage 2025"
+      },
+      {
+        "paper_id": "openalex:W7167749340",
+        "title": "Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W1579825287",
+        "title": "The role of online discussion forums in supporting learning in higher education",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7123485256",
+        "title": "A Real-Time Mobile Robotic System for Crack Detection in Construction Using Two-Stage Deep Learning",
+        "venue_year": "Sensors 2026"
+      },
+      {
+        "paper_id": "openalex:W4415854760",
+        "title": "TapNav: Adaptive Spatiotactile Screen Readers for Tactually Guided Touchscreen Interactions for Blind and Low Vision People",
+        "venue_year": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies 2025"
+      },
+      {
+        "paper_id": "openalex:W4417042937",
+        "title": "An ontology-driven bi-directional workflow for integrating project management data into the IFC standard",
+        "venue_year": "Journal of Information Technology in Construction 2025"
+      },
+      {
+        "paper_id": "openalex:W4392822638",
+        "title": "Grammar as a behavioral biometric: using cognitively motivated grammar models for authorship verification",
+        "venue_year": "Humanities and Social Sciences Communications 2026"
+      },
+      {
+        "paper_id": "openalex:W4401306278",
+        "title": "Modular RAG: Transforming RAG Systems into LEGO-like Reconfigurable Frameworks",
+        "venue_year": "ACM Transactions on Information Systems 2026"
+      },
+      {
+        "paper_id": "openalex:W7167762831",
+        "title": "The Geometry of Language Model Hallucination",
+        "venue_year": "Digital Access to Scholarship at Harvard (DASH) (Harvard University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7160456608",
+        "title": "Shadow-Loom: Causal Reasoning over Graphical World Models of Narratives",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7140605112",
+        "title": "Corrosion Behavior and Discharge Performance of Germanium and Lanthanum Co-Doped AZ61 Alloy Anodes for Mg–Air Batteries",
+        "venue_year": "Materials 2026"
+      },
+      {
+        "paper_id": "openalex:W7160380685",
+        "title": "Probing into the Reshaping of Value Ranking in Palliative Care by Technological Rationality: An Analysis Based on the Application of AI Technology in the ICU",
+        "venue_year": "Communications in Humanities Research 2026"
+      },
+      {
+        "paper_id": "openalex:W7130504046",
+        "title": "The large scale geometry of inverse semigroups and their maximal group images",
+        "venue_year": "Geometriae Dedicata 2026"
+      },
+      {
+        "paper_id": "openalex:W4405967085",
+        "title": "From text to translation: using language models to prioritize variants for clinical review",
+        "venue_year": "Genome Medicine 2026"
+      },
+      {
+        "paper_id": "openalex:W7139922469",
+        "title": "The Third Path: The Fiction of Sytze Backer",
+        "venue_year": "Open MIND 2026"
+      },
+      {
+        "paper_id": "openalex:W7108622315",
+        "title": "Evaluating the quality of GenAI applications in software engineering: a multi-case study",
+        "venue_year": "Empirical Software Engineering 2025"
+      },
+      {
+        "paper_id": "openalex:W7170224621",
+        "title": "D$e^+e^-$ffusion: Capturing the Beam-Beam Physics of $e^+e^-$ Collisions with Diffusion Models",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7151672880",
+        "title": "Valence-Arousal Subspace in LLMs: Circular Emotion Geometry and Multi-Behavioral Control",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7155784765",
+        "title": "Optimization of carbonation parameters for recycled fine aggregate utilizing the Taguchi method and absorbent-assisted treatment",
+        "venue_year": "Scientific Reports 2026"
+      },
+      {
+        "paper_id": "openalex:W7204180000",
+        "title": "Recovering Weighted Tangent Geometry from a Single-Scale Score Field",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7172347516",
+        "title": "A Behaviour-Based Authentication and Encrypted Chunking Framework for Resilient Cloud Security",
+        "venue_year": "International Journal of Computer Information Systems and Industrial Management Applications 2026"
+      },
+      {
+        "paper_id": "openalex:W4389524350",
+        "title": "On the Potential and Limitations of Few-Shot In-Context Learning to Generate Metamorphic Specifications for Tax Preparation Software",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "openalex:W4394874164",
+        "title": "Prediction Under Interventions: Evaluation of Counterfactual Performance Using Longitudinal Observational Data",
+        "venue_year": "Epidemiology 2024"
+      },
+      {
+        "paper_id": "openalex:W4386765496",
+        "title": "Treatment‐resistant depression: definition, prevalence, detection, management, and investigational interventions",
+        "venue_year": "World Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4396946025",
+        "title": "Global burden and strength of evidence for 88 risk factors in 204 countries and 811 subnational locations, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021",
+        "venue_year": "The Lancet 2024"
+      },
+      {
+        "paper_id": "openalex:W4387393037",
+        "title": "Natural language processing for mental health interventions: a systematic review and research framework",
+        "venue_year": "Translational Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4400956092",
+        "title": "Mechanisms of action and therapeutic applications of GLP-1 and dual GIP/GLP-1 receptor agonists",
+        "venue_year": "Frontiers in Endocrinology 2024"
+      },
+      {
+        "paper_id": "openalex:W4310713220",
+        "title": "Scaling Agricultural Policy Interventions",
+        "venue_year": "National Bureau of Economic Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4380680803",
+        "title": "Microglia in Alzheimer’s disease: pathogenesis, mechanisms, and therapeutic potentials",
+        "venue_year": "Frontiers in Aging Neuroscience 2023"
+      },
+      {
+        "paper_id": "openalex:W4318923555",
+        "title": "AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease",
+        "venue_year": "Hepatology 2023"
+      },
+      {
+        "paper_id": "openalex:W4411449683",
+        "title": "VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation",
+        "venue_year": "Proceedings of the ACM on software engineering. 2025"
+      },
+      {
+        "paper_id": "openalex:W4311772359",
+        "title": "Towards an integrated framework for evaluating transformative innovation policy",
+        "venue_year": "Research Policy 2022"
+      },
+      {
+        "paper_id": "openalex:W4401497204",
+        "title": "Current advance of nanotechnology in diagnosis and treatment for malignant tumors",
+        "venue_year": "Signal Transduction and Targeted Therapy 2024"
+      },
+      {
+        "paper_id": "openalex:W4318948367",
+        "title": "Synthesizing explainable counterfactual policies for algorithmic recourse with program synthesis",
+        "venue_year": "Machine Learning 2023"
+      },
+      {
+        "paper_id": "openalex:W4319067061",
+        "title": "Review of counterfactual land change modeling for causal inference in land system science",
+        "venue_year": "Journal of Land Use Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4395483265",
+        "title": "Graph Neural Networks for Vulnerability Detection: A Counterfactual Explanation",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4415271604",
+        "title": "Perspectives for High-Purity Quartz from European Resources",
+        "venue_year": "Minerals 2025"
+      },
+      {
+        "paper_id": "openalex:W4384925410",
+        "title": "The global economic burden of chronic obstructive pulmonary disease for 204 countries and territories in 2020–50: a health-augmented macroeconomic modelling study",
+        "venue_year": "The Lancet Global Health 2023"
+      },
+      {
+        "paper_id": "openalex:W4387242094",
+        "title": "Accuracy and Reliability of Chatbot Responses to Physician Questions",
+        "venue_year": "JAMA Network Open 2023"
+      },
+      {
+        "paper_id": "openalex:W4320498213",
+        "title": "Speculative Histories, Just Futures: From Counterfactual Artifacts to Counterfactual Actions",
+        "venue_year": "ACM Transactions on Computer-Human Interaction 2023"
+      },
+      {
+        "paper_id": "openalex:W4391323272",
+        "title": "Counterfactual Explanation for Fairness in Recommendation",
+        "venue_year": "ACM Transactions on Information Systems 2024"
+      },
+      {
+        "paper_id": "openalex:W4385999933",
+        "title": "Reactive oxygen species, toxicity, oxidative stress, and antioxidants: chronic diseases and aging",
+        "venue_year": "Archives of Toxicology 2023"
+      },
+      {
+        "paper_id": "openalex:W4411433345",
+        "title": "Selecting among counterfactual methods to evaluate conservation interventions",
+        "venue_year": "Conservation Science and Practice 2025"
+      },
+      {
+        "paper_id": "openalex:W4323971780",
+        "title": "Extracellular matrix remodeling in tumor progression and immune escape: from mechanisms to treatments",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4400929582",
+        "title": "Response of Broiler Chickens to Three Different Energy Source Feedstuffs",
+        "venue_year": "International Journal of Innovative Science and Research Technology (IJISRT) 2024"
+      },
+      {
+        "paper_id": "openalex:W4405460058",
+        "title": "Therapeutic Potential of Cinnamon Oil: Chemical Composition, Pharmacological Actions, and Applications",
+        "venue_year": "Pharmaceuticals 2024"
+      },
+      {
+        "paper_id": "openalex:W4389732744",
+        "title": "Wastewater-based surveillance as a tool for public health action: SARS-CoV-2 and beyond",
+        "venue_year": "Clinical Microbiology Reviews 2023"
+      },
+      {
+        "paper_id": "openalex:W4386162581",
+        "title": "Environmentally Responsible Lightweight Passenger Vehicle Design and Manufacturing",
+        "venue_year": "Automotive Innovation 2023"
+      },
+      {
+        "paper_id": "openalex:W4376131634",
+        "title": "GAA-FGF14 ataxia (SCA27B): phenotypic profile, natural history progression and 4-aminopyridine treatment response",
+        "venue_year": "Brain 2023"
+      },
+      {
+        "paper_id": "openalex:W4407229447",
+        "title": "Artificial intelligence in mental health care: a systematic review of diagnosis, monitoring, and intervention applications",
+        "venue_year": "Psychological Medicine 2025"
+      },
+      {
+        "paper_id": "openalex:W4317390903",
+        "title": "Mesolimbic dopamine adapts the rate of learning from action",
+        "venue_year": "Nature 2023"
+      },
+      {
+        "paper_id": "openalex:W4406121395",
+        "title": "Mucosal immune response in biology, disease prevention and treatment",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W4360950006",
+        "title": "The function and mechanisms of action of circular RNAs in Urologic Cancer",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4308721998",
+        "title": "Spectrophotometric Methods for Measurement of Antioxidant Activity in Food and Pharmaceuticals",
+        "venue_year": "Antioxidants 2022"
+      },
+      {
+        "paper_id": "openalex:W4391897126",
+        "title": "Redefining Counterfactual Explanations for Reinforcement Learning: Overview, Challenges and Opportunities",
+        "venue_year": "ACM Computing Surveys 2024"
+      },
+      {
+        "paper_id": "openalex:W4405920650",
+        "title": "Pathways to Greener Primary Lithium Extraction for a Really Sustainable Energy Transition: Environmental Challenges and Pioneering Innovations",
+        "venue_year": "Sustainability 2024"
+      },
+      {
+        "paper_id": "openalex:W4401977912",
+        "title": "Digital Platforms as a Fertile Ground for the Economic Sustainability of Startups: Assaying Scenarios, Actions, Plans, and Players",
+        "venue_year": "Sustainability 2024"
+      },
+      {
+        "paper_id": "openalex:W4366000520",
+        "title": "The scars of supply shocks: Implications for monetary policy",
+        "venue_year": "Journal of Monetary Economics 2023"
+      },
+      {
+        "paper_id": "openalex:W4353109589",
+        "title": "Gut microbiota and its metabolites in depression: from pathogenesis to treatment",
+        "venue_year": "EBioMedicine 2023"
+      },
+      {
+        "paper_id": "openalex:W4319159815",
+        "title": "Optimization of the Hemolysis Assay for the Assessment of Cytotoxicity",
+        "venue_year": "International Journal of Molecular Sciences 2023"
+      },
+      {
+        "paper_id": "openalex:W4402557213",
+        "title": "Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050",
+        "venue_year": "The Lancet 2024"
+      },
+      {
+        "paper_id": "openalex:W4367319708",
+        "title": "CIRS: Bursting Filter Bubbles by Counterfactual Interactive Recommender System",
+        "venue_year": "ACM Transactions on Information Systems 2023"
+      },
+      {
+        "paper_id": "openalex:W4388863091",
+        "title": "Upadacitinib: Mechanism of action, clinical, and translational science",
+        "venue_year": "Clinical and Translational Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4311744984",
+        "title": "Aging and aging-related diseases: from molecular mechanisms to interventions and treatments",
+        "venue_year": "Signal Transduction and Targeted Therapy 2022"
+      },
+      {
+        "paper_id": "openalex:W4362704027",
+        "title": "Review of Antimicrobial Nanocoatings in Medicine and Dentistry: Mechanisms of Action, Biocompatibility Performance, Safety, and Benefits Compared to Antibiotics",
+        "venue_year": "ACS Nano 2023"
+      },
+      {
+        "paper_id": "openalex:W4389337793",
+        "title": "Causality-driven Testing of Autonomous Driving Systems",
+        "venue_year": "ACM Transactions on Software Engineering and Methodology 2023"
+      },
+      {
+        "paper_id": "openalex:W4387951757",
+        "title": "Safety Testing of Automated Driving Systems: A Literature Review",
+        "venue_year": "IEEE Access 2023"
+      },
+      {
+        "paper_id": "openalex:W4388468385",
+        "title": "Global warming in the pipeline",
+        "venue_year": "Oxford Open Climate Change 2023"
+      },
+      {
+        "paper_id": "openalex:W4379209901",
+        "title": "Appropriateness and Readability of ChatGPT-4-Generated Responses for Surgical Treatment of Retinal Diseases",
+        "venue_year": "Ophthalmology Retina 2023"
+      },
+      {
+        "paper_id": "openalex:W4318595487",
+        "title": "Small Molecule EGFR Inhibitors as Anti-Cancer Agents: Discovery, Mechanisms of Action, and Opportunities",
+        "venue_year": "International Journal of Molecular Sciences 2023"
+      },
+      {
+        "paper_id": "openalex:W4412170483",
+        "title": "Pattern recognition receptors: function, regulation and therapeutic potential",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W3143382951",
+        "title": "Do Family Policies Reduce Gender Inequality? Evidence from 60 Years of Policy Experimentation",
+        "venue_year": "American Economic Journal Economic Policy 2024"
+      },
+      {
+        "paper_id": "openalex:W4382011097",
+        "title": "Introduction to the Use of Linear and Nonlinear Regression Analysis in Quantitative Biological Assays",
+        "venue_year": "Current Protocols 2023"
+      },
+      {
+        "paper_id": "openalex:W4391170278",
+        "title": "Exploring the Potential of Bioactive Peptides: From Natural Sources to Therapeutics",
+        "venue_year": "International Journal of Molecular Sciences 2024"
+      },
+      {
+        "paper_id": "openalex:W4387452756",
+        "title": "Progressing nanotechnology to improve targeted cancer treatment: overcoming hurdles in its clinical implementation",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4391744412",
+        "title": "Advances in diagnosis and treatment of bladder cancer",
+        "venue_year": "BMJ 2024"
+      },
+      {
+        "paper_id": "openalex:W4308150896",
+        "title": "Bioinspired metal/metal oxide nanoparticles: A road map to potential applications",
+        "venue_year": "Materials Today Advances 2022"
+      },
+      {
+        "paper_id": "openalex:W4319303006",
+        "title": "What Can Time-Series Regressions Tell Us About Policy Counterfactuals?",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "openalex:W4404768371",
+        "title": "Deep learning adversarial attacks and defenses in autonomous vehicles: a systematic literature review from a safety perspective",
+        "venue_year": "Artificial Intelligence Review 2024"
+      },
+      {
+        "paper_id": "openalex:W4304695118",
+        "title": "Molecular targeted therapy for anticancer treatment",
+        "venue_year": "Experimental & Molecular Medicine 2022"
+      },
+      {
+        "paper_id": "openalex:W4300862852",
+        "title": "Colon cancer and colorectal cancer: Prevention and treatment by potential natural products",
+        "venue_year": "Chemico-Biological Interactions 2022"
+      },
+      {
+        "paper_id": "openalex:W4403520169",
+        "title": "In-Simulation Testing of Deep Learning Vision Models in Autonomous Robotic Manipulators",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4362672788",
+        "title": "Understanding bacterial biofilms: From definition to treatment strategies",
+        "venue_year": "Frontiers in Cellular and Infection Microbiology 2023"
+      },
+      {
+        "paper_id": "openalex:W4401834263",
+        "title": "Opportunities and Challenges of Geothermal Energy: A Comparative Analysis of Three European Cases—Belgium, Iceland, and Italy",
+        "venue_year": "Energies 2024"
+      },
+      {
+        "paper_id": "openalex:W4309503005",
+        "title": "Global mortality associated with 33 bacterial pathogens in 2019: a systematic analysis for the Global Burden of Disease Study 2019",
+        "venue_year": "The Lancet 2022"
+      },
+      {
+        "paper_id": "openalex:W4385620138",
+        "title": "Controlled release fertilizer delivery system derived from rice straw cellulose nanofibres: a circular economy based solution for sustainable development",
+        "venue_year": "Bioengineered 2023"
+      },
+      {
+        "paper_id": "openalex:W4309438426",
+        "title": "The Landscape of Potential Small and Drug Substance Related Nitrosamines in Pharmaceuticals",
+        "venue_year": "Journal of Pharmaceutical Sciences 2022"
+      },
+      {
+        "paper_id": "openalex:W4362671719",
+        "title": "Addressing uncertainty in the safety assurance of machine-learning",
+        "venue_year": "Frontiers in Computer Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4388486766",
+        "title": "Beyond the 5-HT2AReceptor: Classic and Nonclassic Targets in Psychedelic Drug Action",
+        "venue_year": "Journal of Neuroscience 2023"
+      },
+      {
+        "paper_id": "openalex:W4412199650",
+        "title": "A Cross-Disciplinary Review of Rare Earth Elements: Deposit Types, Mineralogy, Machine Learning, Environmental Impact, and Recycling",
+        "venue_year": "Minerals 2025"
+      },
+      {
+        "paper_id": "openalex:W4389265359",
+        "title": "Assessing the importance of H2O content in the tectono‐metamorphic evolution of shear zones: A case study from the Dora‐Maira Massif (Western Alps)",
+        "venue_year": "Journal of Metamorphic Geology 2023"
+      },
+      {
+        "paper_id": "openalex:W4377011124",
+        "title": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+        "venue_year": "Hepatology 2023"
+      },
+      {
+        "paper_id": "openalex:W4367693670",
+        "title": "Model vs system level testing of autonomous driving systems: a replication and extension study",
+        "venue_year": "Empirical Software Engineering 2023"
+      },
+      {
+        "paper_id": "openalex:W4307401860",
+        "title": "Metastatic colorectal cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+        "venue_year": "Annals of Oncology 2022"
+      },
+      {
+        "paper_id": "openalex:W4407681133",
+        "title": "Breast cancer: pathogenesis and treatments",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W4381570295",
+        "title": "Navigating the Ethical Challenges of Artificial Intelligence in Higher Education: An Analysis of Seven Global AI Ethics Policies",
+        "venue_year": "TEM Journal 2023"
+      },
+      {
+        "paper_id": "openalex:W4412703857",
+        "title": "NeuroStrata: Harnessing Neuro-Symbolic Paradigms for Improved Testability and Verifiability of Autonomous CPS",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "openalex:W4317811195",
+        "title": "Cognitive impairment in schizophrenia: aetiology, pathophysiology, and treatment",
+        "venue_year": "Molecular Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4309008621",
+        "title": "Alzheimer’s Disease: Treatment Strategies and Their Limitations",
+        "venue_year": "International Journal of Molecular Sciences 2022"
+      },
+      {
+        "paper_id": "openalex:W7115915065",
+        "title": "Development, challenges and potentials of underground energy storage systems",
+        "venue_year": "Tunnelling and Underground Space Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W4389781439",
+        "title": "Lights, fiber, action! A primer on in vivo fiber photometry",
+        "venue_year": "Neuron 2023"
+      },
+      {
+        "paper_id": "openalex:W4386390750",
+        "title": "A Survey on Graph Counterfactual Explanations: Definitions, Methods, Evaluation, and Research Challenges",
+        "venue_year": "ACM Computing Surveys 2023"
+      },
+      {
+        "paper_id": "openalex:W4387439311",
+        "title": "Cardiovascular-Kidney-Metabolic Health: A Presidential Advisory From the American Heart Association",
+        "venue_year": "Circulation 2023"
+      },
+      {
+        "paper_id": "openalex:W4313680674",
+        "title": "RNA editing: Expanding the potential of RNA therapeutics",
+        "venue_year": "Molecular Therapy 2023"
+      },
+      {
+        "paper_id": "openalex:W4381430247",
+        "title": "Microbial Biofilm: A Review on Formation, Infection, Antibiotic Resistance, Control Measures, and Innovative Treatment",
+        "venue_year": "Microorganisms 2023"
+      },
+      {
+        "paper_id": "openalex:W4366684343",
+        "title": "Obesity and type 2 diabetes mellitus: connections in epidemiology, pathogenesis, and treatments",
+        "venue_year": "Frontiers in Endocrinology 2023"
+      },
+      {
+        "paper_id": "openalex:W4399721741",
+        "title": "Cancer treatments: Past, present, and future",
+        "venue_year": "Cancer Genetics 2024"
+      },
+      {
+        "paper_id": "openalex:W4411918916",
+        "title": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030: a retrospective impact evaluation and forecasting analysis",
+        "venue_year": "The Lancet 2025"
+      },
+      {
+        "paper_id": "openalex:W4323865263",
+        "title": "From patterns to patients: Advances in clinical machine learning for cancer diagnosis, prognosis, and treatment",
+        "venue_year": "Cell 2023"
+      },
+      {
+        "paper_id": "openalex:W4314446173",
+        "title": "The effect of the policy mix of green credit and government subsidy on environmental innovation",
+        "venue_year": "Energy Economics 2023"
+      },
+      {
+        "paper_id": "openalex:W4312014271",
+        "title": "Techno-Economic Assessment of Geothermal Resources in the Variscan Basement of the Northern Upper Rhine Graben",
+        "venue_year": "Natural Resources Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4376602770",
+        "title": "Synaptic oligomeric tau in Alzheimer’s disease — A potential culprit in the spread of tau pathology through the brain",
+        "venue_year": "Neuron 2023"
+      }
+    ]
+  }
+}

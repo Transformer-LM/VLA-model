@@ -1,0 +1,65 @@
+python-utf8.cmd :   [skip] openreview: missing env vars: OPENREVIEW_USER, OPENREVIEW_PASS
+所在位置 行:1 字符: 1
++ & '<LOCAL_PROJECT_ROOT>\.agents\runtime\research-skills\python-utf8.cm ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  [skip] openre...OPENREVIEW_PASS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  鈿狅笍  Phase 3.1 collision: CONNECTORS DEGRADED 鈥?ran 3/4.
+       used:    arxiv, openalex, semanticscholar
+       SKIPPED: openreview
+       Retrieval/collision coverage is WEAKER than a full run.
+       Common cause: the connector package is not importable in THIS
+       process (e.g. a background/non-login shell that dropped the
+       pip --user site-packages). Re-run `check_connectors` in the SAME
+       shell you launch phases from, or install into the active env.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  arxiv 'cross-scene action swap diagnostic' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in
+ violation of protocol (_ssl.c:1010)>
+    arxiv 'geometry action compatibility interaction' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF oc
+curred in violation of protocol (_ssl.c:1010)>
+    arxiv 'involutive manipulation scene pairs' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred
+ in violation of protocol (_ssl.c:1010)>
+    arxiv 'within-pair chunk substitution' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in v
+iolation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_collision.json with
+ 0 unique papers
+  openalex: 78 BM25 hits across 4 queries -> 75 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_collision.json w
+ith 75 unique papers
+  semanticscholar 'cross-scene action swap diagnostic' failed: HTTP Error 429: 
+    semanticscholar 'geometry action compatibility interaction' failed: HTTP Error 429: 
+    semanticscholar 'involutive manipulation scene pairs' failed: HTTP Error 429: 
+    semanticscholar 'within-pair chunk substitution' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_collision
+.json with 0 unique papers
+  arxiv 'crossover potential outcomes design' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred i
+n violation of protocol (_ssl.c:1010)>
+    arxiv 'metamorphic robot policy testing' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in
+ violation of protocol (_ssl.c:1010)>
+    arxiv 'counterfactual trajectory splicing' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred 
+in violation of protocol (_ssl.c:1010)>
+    arxiv 'paired intervention interaction test' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurre
+d in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_alias_collision.jso
+n with 0 unique papers
+  openalex: 100 BM25 hits across 4 queries -> 99 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_alias_collision.
+json with 99 unique papers
+  semanticscholar 'crossover potential outcomes design' failed: HTTP Error 429: 
+    semanticscholar 'metamorphic robot policy testing' failed: HTTP Error 429: 
+    semanticscholar 'counterfactual trajectory splicing' failed: HTTP Error 429: 
+    semanticscholar 'paired intervention interaction test' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_alias_col
+lision.json with 0 unique papers
+  channels: signature=75 hits (10mo), alias=+99 unique hits (48mo)
+  truncation[signature]: kept 63/75 (dropped 12 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept scor
+e 1)
+  truncation[alias]: kept 90/99 (dropped 9 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept score 1)
+鉁?Phase 3.1 collision retrieval complete. collision_hits.json has 153 hits. retrieved at: 2026-08-30T17:38:58.721076+00:00

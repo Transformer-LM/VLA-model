@@ -1,0 +1,1922 @@
+[
+ {
+  "title": "Embodied large language models enable robots to complete complex tasks in unpredictable environments",
+  "title_norm": "embodied large language models enable robots to complete complex tasks in unpred",
+  "abstract": "Completing complex tasks in unpredictable settings challenges robotic systems, requiring a step change in machine intelligence. Sensorimotor abilities are considered integral to human intelligence. Thus, biologically inspired machine intelligence might usefully combine artificial intelligence with robotic sensorimotor capabilities. Here we report an embodied large-language-model-enabled robot (ELLMER) framework, utilizing GPT-4 and a retrieval-augmented generation infrastructure, to enable robots to complete long-horizon tasks in unpredictable settings. The method extracts contextually relevant examples from a knowledge base, producing action plans that incorporate force and visual feedback and enabling adaptation to changing conditions. We tested ELLMER on a robot tasked with coffee making and plate decoration; these tasks consist of a sequence of sub-tasks from drawer opening to pouring, each benefiting from distinct feedback types and methods. We show that the ELLMER framework allows the robot to complete the tasks. This demonstration marks progress towards scalable, efficient and 'intelligent robots' able to complete complex tasks in uncertain environments.",
+  "year": 2025,
+  "venue": "Nature Machine Intelligence",
+  "authors": [
+   "Ruaridh Mon-Williams",
+   "Gen Li",
+   "Ran Long",
+   "Wenqian Du",
+   "Christopher G. Lucas"
+  ],
+  "citations": 103,
+  "source": "openalex",
+  "source_id": "W4408555470",
+  "doi": "10.1038/s42256-025-01005-x",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408555470",
+  "published_iso": "2025-03-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Streamlining Vulnerability Detection with Hybrid Static-Dynamic Analysis in Automated Toolchains for High-Assurance Development",
+  "title_norm": "streamlining vulnerability detection with hybrid static dynamic analysis in auto",
+  "abstract": "The adoption of static and dynamic code analysis techniques within modern software development environments is critical for early vulnerability detection and comprehensive quality assurance. Static code analysis scrutinizes source code without execution to uncover potential defects, security vulnerabilities, and coding standard violations early in the lifecycle. Dynamic code analysis complements this by examining the software's runtime behavior to identify issues such as memory leaks, race conditions, and interaction faults that only manifest during execution. The integration of both methodologies into automated security toolchains within continuous integration/continuous delivery (CI/CD) pipelines enables rapid feedback, efficient remediation, and elevated code quality. This combined approach fosters a culture of proactive security and accelerates the delivery of robust, secure software applications.",
+  "year": 2026,
+  "venue": "Preprints.org",
+  "authors": [
+   "R Karthick"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7123346090",
+  "doi": "10.20944/preprints202601.0878.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/87b3034a998ddd96f4a37dc9bc056d28/download_pub",
+  "published_iso": "2026-01-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "executed action residual unexecuted rollout correction"
+  ]
+ },
+ {
+  "title": "Can Open Large Language Models Catch Vulnerabilities?",
+  "title_norm": "can open large language models catch vulnerabilities",
+  "abstract": "As Large Language Models (LLMs) become increasingly integrated into secure software development workflows, a critical question remains unanswered: can these models not only detect insecure code but also reliably classify vulnerabilities according to standardized taxonomies? In this work, we conduct a systematic evaluation of three state-of-the-art LLMs - Llama3, Codestral, and Deepseek R1 - using a carefully filtered subset of the Big-Vul dataset annotated with eight representative Common Weakness Enumeration categories. Adopting a closed-world classification setup, we assess each model’s performance in both identifying the presence of vulnerabilities and mapping them to the correct CWE label. Our findings reveal a sharp contrast between high detection rates and markedly poor classification accuracy, with frequent overgeneralization and misclassification. Moreover, we analyze model-specific biases and common failure modes, shedding light on the limitations of current LLMs in performing fine-grained security reasoning.These insights are especially relevant in educational contexts, where LLMs are being adopted as learning aids despite their limitations. A nuanced understanding of their behaviour is essential to prevent the propagation of misconceptions among students. Our results expose key challenges that must be addressed before LLMs can be reliably deployed in security-sensitive environments.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "DeepSeek-AI",
+   "Guo, Daya",
+   "Yang, Dejian",
+   "Zhang, Haowei",
+   "Junxiao Song",
+   "Wang, Peiyi"
+  ],
+  "citations": 530,
+  "source": "openalex",
+  "source_id": "W4406779522",
+  "doi": "10.4230/oasics.icpec.2025.4",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.12948",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Edge Computing and Its Application in Robotics: A Survey",
+  "title_norm": "edge computing and its application in robotics a survey",
+  "abstract": "The edge computing paradigm has gained prominence in both academic and industry circles in recent years. When edge computing facilities and services are implemented in robotics, they become a key enabler in the deployment of artificial intelligence applications to robots. Time-sensitive robotics applications benefit from the reduced latency, mobility, and location awareness provided by the edge computing paradigm, which enables real-time data processing and intelligence at the network’s edge. While the advantages of integrating edge computing into robotics are numerous, there has been no recent survey that comprehensively examines these benefits. This paper aims to bridge that gap by highlighting important work in the domain of edge robotics, examining recent advancements, and offering deeper insight into the challenges and motivations behind both current and emerging solutions. In particular, this article provides a comprehensive evaluation of recent developments in edge robotics, with an emphasis on fundamental applications, providing in-depth analysis of the key motivations, challenges, and future directions in this rapidly evolving domain. It also explores the importance of edge computing in real-world robotics scenarios where rapid response times are critical. Finally, the paper outlines various open research challenges in the field of edge robotics.",
+  "year": 2025,
+  "venue": "Journal of Sensor and Actuator Networks",
+  "authors": [
+   "Nazish Tahir",
+   "Ramviyas Parasuraman"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4411614560",
+  "doi": "10.3390/jsan14040065",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2224-2708/14/4/65/pdf?version=1750757842",
+  "published_iso": "2025-06-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+  "title_norm": "vision language action models for robotics a review towards real world applicati",
+  "abstract": "Amid growing efforts to leverage advances in large language models (LLMs) and visionlanguage models (VLMs) for robotics, Vision-Language-Action (VLA) models have recently gained significant attention. By unifying vision, language, and action data at scale, which have traditionally been studied separately, VLA models aim to learn policies that generalise across diverse tasks, objects, embodiments, and environments. This generalisation capability is expected to enable robots to solve novel downstream tasks with minimal or no additional task-specific data, facilitating more flexible and scalable real-world deployment. Unlike previous surveys that focus narrowly on action representations or high-level model architectures, this work offers a comprehensive, full-stack review, integrating both software and hardware components of VLA systems. In particular, this paper provides a systematic review of VLAs, covering their strategy and architectural transition, architectures and building blocks, modality-specific processing techniques, and learning paradigms. In addition, to support the deployment of VLAs in real-world robotic applications, we also review commonly used robot platforms, data collection strategies, publicly available datasets, data augmentation methods, and evaluation benchmarks. Throughout this comprehensive survey, this paper aims to offer practical guidance for the robotics community in applying VLAs to real-world robotic systems. All references categorized by training approach, evaluation method, modality, and dataset are available in the table on our project website: https://vla-survey.github.io.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Kento Kawaharazuka",
+   "Jihoon Oh",
+   "Jun Yamada",
+   "Ingmar Posner",
+   "Yuke Zhu"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4414198610",
+  "doi": "10.1109/access.2025.3609980",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414198610",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Foundation models in robotics: Applications, challenges, and the future",
+  "title_norm": "foundation models in robotics applications challenges and the future",
+  "abstract": "We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper can be found here: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Roya Firoozi",
+   "Johnathan Tucker",
+   "Stephen Tian",
+   "Anirudha Majumdar",
+   "Jiankai Sun",
+   "Weiyu Liu"
+  ],
+  "citations": 199,
+  "source": "openalex",
+  "source_id": "W4402890475",
+  "doi": "10.1177/02783649241281508",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e3eb5469-f176-4c99-8231-efe683fe6399/02783649241281508.17904978.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Mobile robotics and 3D printing: addressing challenges in path planning and scalability",
+  "title_norm": "mobile robotics and 3d printing addressing challenges in path planning and scala",
+  "abstract": "Mobile Additive Manufacturing (MAM) systems are transforming large-scale fabrication across various industries, particularly in building and construction. This review explores recent advancements and ongoing challenges in deploying mobile robots within dynamic additive manufacturing (AM) environments. A primary focus is placed on mobile robots' path planning and real-time navigation methods, identified as critical knowledge gaps that impact the accuracy of printing trajectories. AI-driven techniques, such as deep learning and reinforcement learning, are presented as promising solutions to these challenges, offering improvements in trajectory optimisation, obstacle avoidance, and multi-robot cooperation. However, significant obstacles remain, particularly in scaling up MAM operations while maintaining both precision and efficiency. This review provides analysis of the current state of mobile robotic AM, outlines potential pathways for future research, and underscores the alignment of these technologies with Industry 4.0 objectives, emphasising the ongoing need for innovation to unlock the full potential of mobile robotics in large-scale manufacturing.",
+  "year": 2024,
+  "venue": "Virtual and Physical Prototyping",
+  "authors": [
+   "Mohammad Rastegarpanah",
+   "Mohammed Eesa Asif",
+   "J.B. Butt",
+   "Holger Voos",
+   "Alireza Rastegarpanah"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4404982834",
+  "doi": "10.1080/17452759.2024.2433588",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/17452759.2024.2433588?needAccess=true",
+  "published_iso": "2024-12-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "A Survey of Robot Intelligence with Large Language Models",
+  "title_norm": "a survey of robot intelligence with large language models",
+  "abstract": "Since the emergence of ChatGPT, research on large language models (LLMs) has actively progressed across various fields. LLMs, pre-trained on vast text datasets, have exhibited exceptional abilities in understanding natural language and planning tasks. These abilities of LLMs are promising in robotics. In general, traditional supervised learning-based robot intelligence systems have a significant lack of adaptability to dynamically changing environments. However, LLMs help a robot intelligence system to improve its generalization ability in dynamic and complex real-world environments. Indeed, findings from ongoing robotics studies indicate that LLMs can significantly improve robots’ behavior planning and execution capabilities. Additionally, vision-language models (VLMs), trained on extensive visual and linguistic data for the vision question answering (VQA) problem, excel at integrating computer vision with natural language processing. VLMs can comprehend visual contexts and execute actions through natural language. They also provide descriptions of scenes in natural language. Several studies have explored the enhancement of robot intelligence using multimodal data, including object recognition and description by VLMs, along with the execution of language-driven commands integrated with visual information. This review paper thoroughly investigates how foundation models such as LLMs and VLMs have been employed to boost robot intelligence. For clarity, the research areas are categorized into five topics: reward design in reinforcement learning, low-level control, high-level planning, manipulation, and scene understanding. This review also summarizes studies that show how foundation models, such as the Eureka model for automating reward function design in reinforcement learning, RT-2 for integrating visual data, language, and robot actions in vision-language-action models, and AutoRT for generating feasible tasks and executing robot behavior policies via LLMs, have improved robot intelligence.",
+  "year": 2024,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Hyeongyo Jeong",
+   "Haechan Lee",
+   "Changwon Kim",
+   "Sungtae Shin"
+  ],
+  "citations": 66,
+  "source": "openalex",
+  "source_id": "W4403074774",
+  "doi": "10.3390/app14198868",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/14/19/8868/pdf?version=1728606677",
+  "published_iso": "2024-10-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Medical large language models are vulnerable to data-poisoning attacks",
+  "title_norm": "medical large language models are vulnerable to data poisoning attacks",
+  "abstract": "The adoption of large language models (LLMs) in healthcare demands a careful analysis of their potential to spread false medical knowledge. Because LLMs ingest massive volumes of data from the open Internet during training, they are potentially exposed to unverified medical knowledge that may include deliberately planted misinformation. Here, we perform a threat assessment that simulates a data-poisoning attack against The Pile, a popular dataset used for LLM development. We find that replacement of just 0.001% of training tokens with medical misinformation results in harmful models more likely to propagate medical errors. Furthermore, we discover that corrupted models match the performance of their corruption-free counterparts on open-source benchmarks routinely used to evaluate medical LLMs. Using biomedical knowledge graphs to screen medical LLM outputs, we propose a harm mitigation strategy that captures 91.9% of harmful content (F1 = 85.7%). Our algorithm provides a unique method to validate stochastically generated LLM outputs against hard-coded relationships in knowledge graphs. In view of current calls for improved data provenance and transparent LLM development, we hope to raise awareness of emergent risks from LLMs trained indiscriminately on web-scraped data, particularly in healthcare where misinformation can potentially compromise patient safety.",
+  "year": 2025,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Daniel Alexander Alber",
+   "Zihao Yang",
+   "Anton Alyakin",
+   "Eunice Yang",
+   "Sumedha Rai",
+   "Aly Valliani"
+  ],
+  "citations": 179,
+  "source": "openalex",
+  "source_id": "W4406152291",
+  "doi": "10.1038/s41591-024-03445-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41591-024-03445-1.pdf",
+  "published_iso": "2025-01-08",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "ALPHA- α and Bi-ACT Are All You Need: Importance of Position and Force Information/ Control for Imitation Learning of Unimanual and Bimanual Robotic Manipulation With Low-Cost System",
+  "title_norm": "alpha α and bi act are all you need importance of position and force information",
+  "abstract": "Autonomous manipulation in everyday tasks requires flexible action generation to handle complex, diverse real-world environments, such as objects with varying hardness and softness. Imitation Learning (IL) enables robots to learn complex tasks from expert demonstrations. However, a lot of existing methods rely on position/unilateral control, leaving challenges in tasks that require force information/control, like carefully grasping fragile or varying-hardness objects. As the need for diverse controls increases, there are demand for low-cost bimanual robots that consider various motor inputs. To address these challenges, we introduce Bilateral Control-Based Imitation Learning via Action Chunking with Transformers(Bi-ACT) and“A” “L”ow-cost “P”hysical “Ha”rdware Considering Diverse Motor Control Modes for Research in Everyday Bimanual Robotic Manipulation (ALPHA-$\\alpha $). Bi-ACT leverages bilateral control to utilize both position and force information, enhancing the robot’s adaptability to object characteristics such as hardness and shape. The concept of ALPHA-$\\alpha $is affordability, ease of use, repairability, ease of assembly, and diverse control modes such as position, velocity, and torque mode. In our experiments, we conducted detailed analysis of Bi-ACT in unimanual tasks involving objects with varying hardness, shape, and weight, confirming its superior performance and adaptability. We also applied Bi-ACT to bimanual tasks such as “Egg Handling” and “Open Cap” using ALPHA-$\\alpha $. The experimental outcomes demonstrated a high success rate in bimanual operations, validating the effectiveness of our approach in real-world scenarios. These results suggest that Bi-ACT and ALPHA-$\\alpha $can advance automation in daily life and industrial settings. Video available at:https://mertcookimg.github.io/alpha-biact/",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Masato Kobayashi",
+   "Thanpimon Buamanee",
+   "Takumi Kobayashi"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4407449452",
+  "doi": "10.1109/access.2025.3541200",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4407449452",
+  "published_iso": "2025-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Fusion of Computer Vision and AI in Collaborative Robotics: A Review and Future Prospects",
+  "title_norm": "fusion of computer vision and ai in collaborative robotics a review and future p",
+  "abstract": "The integration of advanced computer vision and artificial intelligence (AI) techniques into collaborative robotic systems holds the potential to revolutionize human–robot interaction, productivity, and safety. Despite substantial research activity, a systematic synthesis of how vision and AI are jointly enabling context-aware, adaptive cobot capabilities across perception, planning, and decision-making remains lacking (especially in recent years). Addressing this gap, our review unifies the latest advances in visual recognition, deep learning, and semantic mapping within a structured taxonomy tailored to collaborative robotics. We examine foundational technologies such as object detection, human pose estimation, and environmental modeling, as well as emerging trends including multimodal sensor fusion, explainable AI, and ethically guided autonomy. Unlike prior surveys that focus narrowly on either vision or AI, this review uniquely analyzes their integrated use for real-world human–robot collaboration. Highlighting industrial and service applications, we distill the best practices, identify critical challenges, and present key performance metrics to guide future research. We conclude by proposing strategic directions—from scalable training methods to interoperability standards—to foster safe, robust, and proactive human–robot partnerships in the years ahead.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Yuval Cohen",
+   "Amir Biton",
+   "Shraga Shoval"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4412470771",
+  "doi": "10.3390/app15147905",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/14/7905/pdf?version=1752590319",
+  "published_iso": "2025-07-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Machine learning based prediction models for cardiovascular disease risk using electronic health records data: systematic review and meta-analysis",
+  "title_norm": "machine learning based prediction models for cardiovascular disease risk using e",
+  "abstract": "Cardiovascular disease (CVD) remains a major cause of mortality in the UK, prompting the need for improved risk predictive models for primary prevention. Machine learning (ML) models utilizing electronic health records (EHRs) offer potential enhancements over traditional risk scores like QRISK3 and ASCVD. To systematically evaluate and compare the efficacy of ML models against conventional CVD risk prediction algorithms using EHR data for medium to long-term (5-10 years) CVD risk prediction. A systematic review and random-effect meta-analysis were conducted according to preferred reporting items for systematic reviews and meta-analyses guidelines, assessing studies from 2010 to 2024. We retrieved 32 ML models and 26 conventional statistical models from 20 selected studies, focusing on performance metrics such as area under the curve (AUC) and heterogeneity across models. ML models, particularly random forest and deep learning, demonstrated superior performance, with the highest recorded pooled AUCs of 0.865 (95% CI: 0.812-0.917) and 0.847 (95% CI: 0.766-0.927), respectively. These significantly outperformed the conventional risk score of 0.765 (95% CI: 0.734-0.796). However, significant heterogeneity (I² > 99%) and potential publication bias were noted across the studies. While ML models show enhanced calibration for CVD risk, substantial variability and methodological concerns limit their current clinical applicability. Future research should address these issues by enhancing methodological transparency and standardization to improve the reliability and utility of these models in clinical settings. This study highlights the advanced capabilities of ML models in CVD risk prediction and emphasizes the need for rigorous validation to facilitate their integration into clinical practice.",
+  "year": 2024,
+  "venue": "European Heart Journal - Digital Health",
+  "authors": [
+   "Tianyi Liu",
+   "Andrew J. Krentz",
+   "Lei Lü",
+   "Vasa Ćurčin"
+  ],
+  "citations": 156,
+  "source": "openalex",
+  "source_id": "W4403799240",
+  "doi": "10.1093/ehjdh/ztae080",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/ehjdh/article-pdf/6/1/7/60626986/ztae080.pdf",
+  "published_iso": "2024-10-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a survey",
+  "title_norm": "interactive imitation learning for dexterous robotic manipulation challenges and",
+  "abstract": "Dexterous manipulation is a crucial yet highly complex challenge in humanoid robotics, demanding precise, adaptable, and sample-efficient learning methods. As humanoid robots are usually designed to operate in human-centric environments and interact with everyday objects, mastering dexterous manipulation is critical for real-world deployment. Traditional approaches, such as reinforcement learning and imitation learning, have made significant strides, but they often struggle due to the unique challenges of real-world dexterous manipulation, including high-dimensional control, limited training data, and covariate shift. This survey provides a comprehensive overview of these challenges and reviews existing learning-based methods for real-world dexterous manipulation, spanning imitation learning, reinforcement learning, and hybrid approaches. A promising yet underexplored direction is interactive imitation learning, where human feedback actively refines a robot's behavior during training. While interactive imitation learning has shown success in various robotic tasks, its application to dexterous manipulation remains limited. To address this gap, we examine current interactive imitation learning techniques applied to other robotic tasks and discuss how these methods can be adapted to enhance dexterous manipulation. By synthesizing state-of-the-art research, this paper highlights key challenges, identifies gaps in current methodologies, and outlines potential directions for leveraging interactive imitation learning to improve dexterous robotic skills.",
+  "year": 2025,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Edgar Welte",
+   "Rania Rayyes"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4417483688",
+  "doi": "10.3389/frobt.2025.1682437",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1682437/pdf",
+  "published_iso": "2025-12-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "EEG-based brain-computer interface enables real-time robotic hand control at individual finger level",
+  "title_norm": "eeg based brain computer interface enables real time robotic hand control at ind",
+  "abstract": "Brain-computer interfaces (BCIs) connect human thoughts to external devices, offering the potential to enhance life quality for individuals with motor impairments and general population. Noninvasive BCIs are accessible to a wide audience but currently face challenges, including unintuitive mappings and imprecise control. In this study, we present a real-time noninvasive robotic control system using movement execution (ME) and motor imagery (MI) of individual finger movements to drive robotic finger motions. The proposed system advances state-of-the-art electroencephalography (EEG)-BCI technology by decoding brain signals for intended finger movements into corresponding robotic motions. In a study involving 21 able-bodied experienced BCI users, we achieved real-time decoding accuracies of 80.56% for two-finger MI tasks and 60.61% for three-finger tasks. Brain signal decoding was facilitated using a deep neural network, with fine-tuning enhancing BCI performance. Our findings demonstrate the feasibility of naturalistic noninvasive robotic hand control at the individuated finger level.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Yidan Ding",
+   "Chalisa Udompanyawit",
+   "Yisha Zhang",
+   "Bin He"
+  ],
+  "citations": 65,
+  "source": "openalex",
+  "source_id": "W4411829903",
+  "doi": "10.1038/s41467-025-61064-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-61064-x.pdf",
+  "published_iso": "2025-06-30",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Safeguarding large language models: a survey",
+  "title_norm": "safeguarding large language models a survey",
+  "abstract": "In the burgeoning field of Large Language Models (LLMs), developing a robust safety mechanism, colloquially known as \"safeguards\" or \"guardrails\", has become imperative to ensure the ethical use of LLMs within prescribed boundaries. This article provides a systematic literature review on the current status of this critical mechanism. It discusses its major challenges and how it can be enhanced into a comprehensive mechanism dealing with ethical issues in various contexts. First, the paper elucidates the current landscape of safeguarding mechanisms that major LLM service providers and the open-source community employ. This is followed by the techniques to evaluate, analyze, and enhance some (un)desirable properties that a guardrail might want to enforce, such as hallucinations, fairness, privacy, and so on. Based on them, we review techniques to circumvent these controls (i.e., attacks), to defend the attacks, and to reinforce the guardrails. While the techniques mentioned above represent the current status and the active research trends, we also discuss several challenges that cannot be easily dealt with by the methods and present our vision on how to implement a comprehensive guardrail through the full consideration of multi-disciplinary approach, neural-symbolic method, and systems development lifecycle.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Yi Dong",
+   "Ronghui Mu",
+   "Yanghao Zhang",
+   "Siqi Sun",
+   "Tianle Zhang",
+   "Changshun Wu"
+  ],
+  "citations": 64,
+  "source": "openalex",
+  "source_id": "W4415271252",
+  "doi": "10.1007/s10462-025-11389-2",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10462-025-11389-2.pdf",
+  "published_iso": "2025-10-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "A review on multimodal communications for human-robot collaboration in 5G: from visual to tactile",
+  "title_norm": "a review on multimodal communications for human robot collaboration in 5g from v",
+  "abstract": "With collaborative advances in wireless communication, artificial intelligence, and sensor technologies, robotic systems are undergoing a revolutionary evolution from single-function actuators to intelligent task processing platforms. In complex dynamic environments, the limitations of conventional unimodal perception have become increasingly apparent, struggling to meet the precision requirements for object attribute recognition and environmental interaction. In the future, deep-integrated multimodal perception technologies will emerge as a predominant trend, where cross-modal communication between vision and tactile sensing represents a critical breakthrough direction for enhancing robotic environmental cognition. Currently, research on multimodal visual-tactile communication remains scarce. Therefore, this paper conducts a comprehensive survey of this emerging field. First, this paper systematically summarizes mature video and tactile communication frameworks. Subsequently, this paper analyzes current implementations of single-modal streaming transmission for visual and tactile data, thereby investigating the state-of-the-art in multimodal visual-tactile communication. Finally, this paper briefly explores the promising prospects of visual-tactile communication technology, highlighting its transformative potential to enable context-aware robotic manipulation and adaptive human-robot collaboration.",
+  "year": 2025,
+  "venue": "Intelligence & Robotics",
+  "authors": [
+   "Zhuorui Wang",
+   "Mingkai Chen",
+   "Qian Liu"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4412100507",
+  "doi": "10.20517/ir.2025.30",
+  "arxiv_id": null,
+  "paper_url": "https://f.oaes.cc/xmlpdf/published/article/8f1e1b754be12b17c2ba27e50a67afc8/ir5030.pdf",
+  "published_iso": "2025-07-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Multimodal fusion and vision–language models: A survey for robot vision",
+  "title_norm": "multimodal fusion and vision language models a survey for robot vision",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Information Fusion",
+  "authors": [
+   "Xiaofeng Han",
+   "Shunpeng Chen",
+   "Zheng Qing Fu",
+   "Zhe Feng",
+   "Lue Fan",
+   "Dong An"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4413788337",
+  "doi": "10.1016/j.inffus.2025.103652",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.02477",
+  "published_iso": "2025-08-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Trending and emerging prospects of physics-based and ML-based wildfire spread models: a comprehensive review",
+  "title_norm": "trending and emerging prospects of physics based and ml based wildfire spread mo",
+  "abstract": "Abstract The significant threat of wildfires to forest ecology and biodiversity, particularly in tropical and subtropical regions, underscores the necessity for advanced predictive models amidst shifting climate patterns. There is a need to evaluate and enhance wildfire prediction methods, focusing on their application during extended periods of intense heat and drought. This study reviews various wildfire modelling approaches, including traditional physical, semi-empirical, numerical, and emerging machine learning (ML)-based models. We critically assess these models’ capabilities in predicting fire susceptibility and post-ignition spread, highlighting their strengths and limitations. Our findings indicate that while traditional models provide foundational insights, they often fall short in dynamically estimating parameters and predicting ignition events. Cellular automata models, despite their potential, face challenges in data integration and computational demands. Conversely, ML models demonstrate superior efficiency and accuracy by leveraging diverse datasets, though they encounter interpretability issues. This review recommends hybrid modelling approaches that integrate multiple methods to harness their combined strengths. By incorporating data assimilation techniques with dynamic forecasting models, the predictive capabilities of ML-based predictions can be significantly enhanced. This review underscores the necessity for continued refinement of these models to ensure their reliability in real-world applications, ultimately contributing to more effective wildfire mitigation and management strategies. Future research should focus on improving hybrid models and exploring new data integration methods to advance predictive capabilities.",
+  "year": 2024,
+  "venue": "Journal of Forestry Research",
+  "authors": [
+   "Harikesh Singh",
+   "Li-Minn Ang",
+   "Tom Lewis",
+   "Dipak Paudyal",
+   "Mauricio Acuña",
+   "Prashant K. Srivastava"
+  ],
+  "citations": 66,
+  "source": "openalex",
+  "source_id": "W4402935610",
+  "doi": "10.1007/s11676-024-01783-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11676-024-01783-x.pdf",
+  "published_iso": "2024-09-26",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Deep Reinforcement Learning for Surgical Robotics with State and Image Information: A Survey",
+  "title_norm": "deep reinforcement learning for surgical robotics with state and image informati",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Research Square",
+  "authors": [
+   "Edoardo Fazzari",
+   "Cesare Stefanini"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125599892",
+  "doi": "10.21203/rs.3.rs-8621244/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-8621244/latest.pdf",
+  "published_iso": "2026-01-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Towards Generalist Robot Learning from Internet Video: A Survey",
+  "title_norm": "towards generalist robot learning from internet video a survey",
+  "abstract": "Scaling deep learning to massive and diverse internet data has driven remarkable breakthroughs in domains such as video generation and natural language processing. Robot learning, however, has thus far failed to replicate this success and remains constrained by a scarcity of available data. Learning from Videos (LfV) methods aim to address this data bottleneck by augmenting traditional robot data with large-scale internet video. This video data provides foundational information regarding physical dynamics, behaviours, and tasks, and can be highly informative for general-purpose robots. This survey systematically examines the emerging field of LfV. We first outline essential concepts, including detailing fundamental LfV challenges such as distribution shift and missing action labels in video data. Next, we comprehensively review current methods for extracting knowledge from large-scale internet video, overcoming LfV challenges, and improving robot learning through video-informed training. The survey concludes with a critical discussion of future opportunities. Here, we emphasize the need for scalable foundation model approaches that can leverage the full range of available internet video and enhance the learning of robot policies and dynamics models. Overall, the survey aims to inform and catalyse future LfV research, driving progress towards general-purpose robots.",
+  "year": 2025,
+  "venue": "Journal of Artificial Intelligence Research",
+  "authors": [
+   "Robert McCarthy",
+   "Daniel C. H. Tan",
+   "Dominik Schmidt",
+   "Fernando Acero",
+   "Nathan Herr",
+   "Yilun Du"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4396600885",
+  "doi": "10.1613/jair.1.17400",
+  "arxiv_id": null,
+  "paper_url": "https://jair.org/index.php/jair/article/download/17400/27192",
+  "published_iso": "2025-07-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application",
+  "title_norm": "survey on knowledge distillation for large language models methods evaluation an",
+  "abstract": "Large Language Models (LLMs) have showcased exceptional capabilities in various domains, attracting significant interest from both academia and industry. Despite their impressive performance, the substantial size and computational demands of LLMs pose considerable challenges for practical deployment, particularly in environments with limited resources. The endeavor to compress language models while maintaining their accuracy has become a focal point of research. Among the various methods, knowledge distillation has emerged as an effective technique to enhance inference speed without greatly compromising performance. This article presents a thorough survey from three aspects: method, evaluation, and application, exploring knowledge distillation techniques tailored specifically for LLMs. Specifically, we divide the methods into white-box KD and black-box KD to better illustrate their differences. Furthermore, we also explored the evaluation tasks and distillation effects between different distillation methods and proposed directions for future research. Through in-depth understanding of the latest advancements and practical applications, this survey provides valuable resources for researchers, paving the way for sustained progress in this field.",
+  "year": 2024,
+  "venue": "ACM Transactions on Intelligent Systems and Technology",
+  "authors": [
+   "Chuanpeng Yang",
+   "Yao Zhu",
+   "Lu Wang",
+   "Yidong Wang",
+   "Qian Chen",
+   "Chenlong Gao"
+  ],
+  "citations": 70,
+  "source": "openalex",
+  "source_id": "W4403221502",
+  "doi": "10.1145/3699518",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3699518",
+  "published_iso": "2024-10-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "CAGE: Causal Attention Enables Data-Efficient Generalizable Robotic Manipulation",
+  "title_norm": "cage causal attention enables data efficient generalizable robotic manipulation",
+  "abstract": "Generalization in robotic manipulation remains a critical challenge, particularly when scaling to new environments with limited demonstrations. This paper introduces CAGE, a novel robotic manipulation policy designed to overcome these generalization barriers by integrating a causal attention mechanism. CAGE utilizes the powerful feature extraction capabilities of the vision foundation model DINOv2, combined with LoRA fine-tuning for robust environment understanding. The policy further employs a causal Perceiver for effective token compression and a diffusion-based action prediction head with attention mechanisms to enhance task-specific fine-grained conditioning. With as few as 50 demonstrations from a single training environment, CAGE achieves robust generalization across diverse visual changes in objects, backgrounds, and viewpoints. Extensive experiments validate that CAGE significantly outperforms existing state-of-the-art RGB/RGB-D approaches in various manipulation tasks, especially under large distribution shifts. In similar environments, CAGE offers an average of 42% increase in task completion rate. While all baselines fail to execute the task in unseen environments, CAGE manages to obtain a 43% completion rate and a 51% success rate in average, making a huge step towards practical deployment of robots in real-world settings. Project website: cage-policy.github.io.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Shangning Xia",
+   "Hongjie Fang",
+   "Cewu Lu",
+   "Haoshu Fang"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4404088241",
+  "doi": "10.48550/arxiv.2410.14974",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2410.14974",
+  "published_iso": "2024-10-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Comprehensive Review of Robotics Operating System-Based Reinforcement Learning in Robotics",
+  "title_norm": "comprehensive review of robotics operating system based reinforcement learning i",
+  "abstract": "Common challenges in the area of robotics include issues such as sensor modeling, dynamic operating environments, and limited on-broad computational resources. To improve decision making, robots need a dependable framework to facilitate communication between different modules and the optimal action for real-world applications. The Robotics Operating System (ROS) and Reinforcement Learning (RL) are two promising approaches that help accomplish precise control, seamless integration of sensors-actuators, and exhibit learned behavior. The ROS enables seamless communication between heterogeneous components, while RL focuses on learning optimal behaviors through trial-and-error scenarios. Combining the ROS and RL offers superior decision making, improved perception, enhanced automation, and reliability. This work focuses on investigating ROS-based RL applications across various domains, aiming to enhance understanding through comprehensive discussion, analysis, and summarization. We base our evaluation on the application area, type of RL algorithm used, and degree of ROS–RL integration. Additionally, we provide summary of seminal works that define the current state of the art, along with GitHub repositories and resources for research purposes. Based on the review of successfully implemented projects, we make recommendations highlighting the advantages and limitations of RL techniques for specific applications and environments. The ultimate goal of this work is to advance the robotics field by providing a comprehensive overview of the recent important works that incorporate both the ROS and RL, thereby improving the adaptability of these emerging techniques.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Mohammed Aljamal",
+   "Sarosh Patel",
+   "Ausif Mahmood"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4407353104",
+  "doi": "10.3390/app15041840",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/4/1840/pdf?version=1740118354",
+  "published_iso": "2025-02-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Survey on Factuality in Large Language Models",
+  "title_norm": "survey on factuality in large language models",
+  "abstract": "This survey addresses the crucial issue of factuality in Large Language Models (LLMs). As LLMs find applications across diverse domains, the reliability and accuracy of their outputs become vital. We define the “factuality issue” as the probability of LLMs to produce content inconsistent with established facts. We first delve into the implications of these inaccuracies. Subsequently, we analyze the mechanisms through which LLMs store and process facts, seeking the primary causes of factual errors. Our discussion then transitions to methodologies for evaluating LLM factuality, emphasizing key metrics, benchmarks, and studies. We further explore strategies for enhancing LLM factuality. Our survey offers a structured guide for researchers aiming to fortify the factual reliability of LLMs. We consistently maintain and update the related open-source materials at https://github.com/wangcunxiang/LLM-Factuality-Survey .",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Cunxiang Wang",
+   "Xiaoze Liu",
+   "Yuanhao Yue",
+   "Qipeng Guo",
+   "Xiangkun Hu",
+   "Xiangru Tang"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4410964376",
+  "doi": "10.1145/3742420",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3742420",
+  "published_iso": "2025-06-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization",
+  "title_norm": "π_ 0 5 a vision language action model with open world generalization",
+  "abstract": "In order for robots to be useful, they must perform practically relevant tasks in the real world, outside of the lab. While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wild. We describe $π_{0.5}$, a new model based on $π_{0}$ that uses co-training on heterogeneous tasks to enable broad generalization. $π_{0.5}$\\ uses data from multiple robots, high-level semantic prediction, web data, and other sources to enable broadly generalizable real-world robotic manipulation. Our system uses a combination of co-training and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions. Our experiments show that this kind of knowledge transfer is essential for effective generalization, and we demonstrate for the first time that an end-to-end learning-enabled robotic system can perform long-horizon and dexterous manipulation skills, such as cleaning a kitchen or bedroom, in entirely new homes.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Physical Intelligence",
+   "Kevin Black",
+   "Noah Brown",
+   "James Darpinian",
+   "Karan Dhabalia",
+   "Danny Driess"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4414674749",
+  "doi": "10.48550/arxiv.2504.16054",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.16054",
+  "published_iso": "2025-04-22",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "From Nano Robotic Manipulation to Nano Manipulation Robot",
+  "title_norm": "from nano robotic manipulation to nano manipulation robot",
+  "abstract": "ABSTRACT The evolution from passive nanoscale observation to active robotic manipulation represents a paradigm shift in humanity's quest to master matter at the atomic scale. This review systematically traces the historical and conceptual foundations of nanomanipulation, beginning with ancient atomic theory and culminating in Feynman's vision of deterministic atomic control. Nanomanipulation technologies can be categorized into three dimensions: observation (imaging and tracking), construction (assembly and fabrication), and operation (automation and control). This review critically examines transformative technologies—from optical tweezers and atomic force microscopy (AFM) to autonomous nanorobots in scanning electron microscopy (SEM)—highlighting their pivotal roles in overcoming diffraction limits, thermal noise, and quantum stochasticity. Innovations such as machine learning‐enhanced control, stochastic model predictive control, and biohybrid nanorobots underscore the transition from scripted tasks to adaptive autonomy. However, persistent challenges—including the observer–constructor paradox, environmental stochasticity, and scalability—necessitate interdisciplinary convergence of quantum metrology, neuromorphic computing, and ethical frameworks. By bridging theoretical insights with practical applications, this review charts a roadmap for nanorobotic systems to transcend laboratory confines, enabling breakthroughs in nanomedicine, quantum devices, and atomic‐scale manufacturing. The synthesis of embodied intelligence, distributed sensing, and edge quantum computing heralds a future where nanomanipulation redefines the boundaries of science, engineering, and philosophy.",
+  "year": 2025,
+  "venue": "SmartBot",
+  "authors": [
+   "Zhan Yang",
+   "Shixin Liu",
+   "Linjun Li",
+   "Qinkai Chen",
+   "Chaoyang Shi",
+   "Lixin Dong"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4413794838",
+  "doi": "10.1002/smb2.12021",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/smb2.12021",
+  "published_iso": "2025-08-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Foundation models and intelligent decision-making: Progress, challenges, and perspectives",
+  "title_norm": "foundation models and intelligent decision making progress challenges and perspe",
+  "abstract": "Intelligent decision-making (IDM) is a cornerstone of artificial intelligence (AI) designed to automate or augment decision processes. Modern IDM paradigms integrate advanced frameworks to enable intelligent agents to make effective and adaptive choices and decompose complex tasks into manageable steps, such as AI agents and high-level reinforcement learning. Recent advances in multimodal foundation-based approaches unify diverse input modalities-such as vision, language, and sensory data-into a cohesive decision-making process. Foundation models (FMs) have become pivotal in science and industry, transforming decision-making and research capabilities. Their large-scale, multimodal data-processing abilities foster adaptability and interdisciplinary breakthroughs across fields such as healthcare, life sciences, and education. This survey examines IDM's evolution, advanced paradigms with FMs and their transformative impact on decision-making across diverse scientific and industrial domains, highlighting the challenges and opportunities in building efficient, adaptive, and ethical decision systems.",
+  "year": 2025,
+  "venue": "The Innovation",
+  "authors": [
+   "Jincai Huang",
+   "Yongjun Xu",
+   "Qi Wang",
+   "Qi Wang",
+   "Xingxing Liang",
+   "Fei Wang"
+  ],
+  "citations": 57,
+  "source": "openalex",
+  "source_id": "W4410291923",
+  "doi": "10.1016/j.xinn.2025.100948",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410291923",
+  "published_iso": "2025-05-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Toward Generalist Neural Motion Planners for Robotic Manipulators: Challenges and Opportunities",
+  "title_norm": "toward generalist neural motion planners for robotic manipulators challenges and",
+  "abstract": "State-of-the-art generalist manipulation policies have enabled the deployment of robotic manipulators in unstructured human environments. However, these frameworks struggle in cluttered environments primarily because they utilize auxiliary modules for low-level motion planning and control. Motion planning remains challenging due to the high dimensionality of the robot’s configuration space and the presence of workspace obstacles. Neural motion planners have enhanced motion planning efficiency by offering fast inference and effectively handling the inherent multi-modality of the motion planning problem. Despite such benefits, current neural motion planners often struggle to generalize to unseen, out-of-distribution planning settings. This paper reviews and analyzes the state-of-the-art neural motion planners, highlighting both their benefits and limitations. It also outlines a path toward establishing generalist neural motion planners capable of handling domain-specific challenges. For a list of the reviewed papers, please refer to https://davoodsz.github.io/planning-manip-survey.github.io/.",
+  "year": 2026,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "authors": [
+   "Davood Soleymanzadeh",
+   "Iván López-Sánchez",
+   "Hao Su",
+   "Yunzhu Li",
+   "Xiao Liang",
+   "Minghui Zheng"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127470505",
+  "doi": "10.1109/tase.2026.3660830",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.24318",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "$π_0$: A Vision-Language-Action Flow Model for General Robot Control",
+  "title_norm": "π_0 a vision language action flow model for general robot control",
+  "abstract": "Robot learning holds tremendous promise to unlock the full potential of flexible, general, and dexterous robot systems, as well as to address some of the deepest questions in artificial intelligence. However, bringing robot learning to the level of generality required for effective real-world systems faces major obstacles in terms of data, generalization, and robustness. In this paper, we discuss how generalist robot policies (i.e., robot foundation models) can address these challenges, and how we can design effective generalist robot policies for complex and highly dexterous tasks. We propose a novel flow matching architecture built on top of a pre-trained vision-language model (VLM) to inherit Internet-scale semantic knowledge. We then discuss how this model can be trained on a large and diverse dataset from multiple dexterous robot platforms, including single-arm robots, dual-arm robots, and mobile manipulators. We evaluate our model in terms of its ability to perform tasks in zero shot after pre-training, follow language instructions from people and from a high-level VLM policy, and its ability to acquire new skills via fine-tuning. Our results cover a wide variety of tasks, such as laundry folding, table cleaning, and assembling boxes.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Black, Kevin",
+   "Noah Brown",
+   "Danny Driess",
+   "A. Esmail",
+   "Michael Equi",
+   "Chelsea Finn"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4404350116",
+  "doi": "10.48550/arxiv.2410.24164",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2410.24164",
+  "published_iso": "2024-10-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Trustworthy agentic AI systems: a cross-layer review of architectures, threat models, and governance strategies for real-world deployment",
+  "title_norm": "trustworthy agentic ai systems a cross layer review of architectures threat mode",
+  "abstract": "Agentic Artificial Intelligence systems, characterized by autonomous reasoning, memory augmentation, and adaptive planning, are rapidly reshaping technological landscapes. Unlike traditional AI or large language models, agentic AI integrates decision-making with persistent execution, enabling complex interactions across dynamic environments. However, this evolution introduces novel security risks, governance challenges, and ethical considerations that current frameworks inadequately address. This survey provides a cross-layer review of agentic AI, encompassing architectural paradigms, threat taxonomies, and governance strategies. It consolidates findings from adjacent domains such as cybersecurity, AI safety, multi-agent coordination, and ethics, offering a holistic understanding of vulnerabilities and mitigation approaches. We integrate insights from recent advances in defense architectures and governance innovations, highlighting the limitations of static policies in addressing dynamically evolving threats. Real-world deployments from industrial automation to military and policy applications reveal both successful integrations and notable failures, underscoring the urgency of resilient oversight mechanisms. Furthermore, we identify critical research gaps in benchmarking, memory integrity, adversarial defense, and normative embedding, emphasizing the need for interdisciplinary collaboration to develop adaptive, accountable, and transparent systems. This review serves as a narrative synthesis rather than a systematic literature review, aiming to bridge technical, governance, and ethical perspectives. By integrating cross-disciplinary findings, it lays the foundation for future research on securing, aligning, and governing agentic AI in real-world contexts. Ultimately, this work calls for cooperative innovation to ensure that agentic AI evolves as a trustworthy, accountable, and beneficial technology.",
+  "year": 2025,
+  "venue": "F1000Research",
+  "authors": [
+   "IBRAHIM ADABARA",
+   "Bashir Olaniyi Sadiq",
+   "Aliyu Nuhu Shuaibu",
+   "Yale Ibrahim Danjuma",
+   "Maninti Venkateswarlu"
+  ],
+  "citations": 24,
+  "source": "openalex",
+  "source_id": "W4414133540",
+  "doi": "10.12688/f1000research.169927.1",
+  "arxiv_id": null,
+  "paper_url": "https://f1000research.com/articles/14-905/pdf",
+  "published_iso": "2025-09-11",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Time series predictions in unmonitored sites: a survey of machine learning techniques in water resources",
+  "title_norm": "time series predictions in unmonitored sites a survey of machine learning techni",
+  "abstract": "Abstract Prediction of dynamic environmental variables in unmonitored sites remains a long-standing challenge for water resources science. The majority of the world’s freshwater resources have inadequate monitoring of critical environmental variables needed for management. Yet, the need to have widespread predictions of hydrological variables such as river flow and water quality has become increasingly urgent due to climate and land use change over the past decades, and their associated impacts on water resources. Modern machine learning methods increasingly outperform their process-based and empirical model counterparts for hydrologic time series prediction with their ability to extract information from large, diverse data sets. We review relevant state-of-the art applications of machine learning for streamflow, water quality, and other water resources prediction and discuss opportunities to improve the use of machine learning with emerging methods for incorporating watershed characteristics and process knowledge into classical, deep learning, and transfer learning methodologies. The analysis here suggests most prior efforts have been focused on deep learning frameworks built on many sites for predictions at daily time scales in the United States, but that comparisons between different classes of machine learning methods are few and inadequate. We identify several open questions for time series predictions in unmonitored sites that include incorporating dynamic inputs and site characteristics, mechanistic understanding and spatial context, and explainable AI techniques in modern machine learning frameworks.",
+  "year": 2025,
+  "venue": "Environmental Data Science",
+  "authors": [
+   "Jared Willard",
+   "Charuleka Varadharajan",
+   "Xiaowei Jia",
+   "Vipin Kumar"
+  ],
+  "citations": 28,
+  "source": "openalex",
+  "source_id": "W4406716503",
+  "doi": "10.1017/eds.2024.14",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F9EBD3D6DAB06DEB8B01DE337722AD54/S2634460224000141a.pdf/div-class-title-time-series-predictions-in-unmonitored-sites-a-survey-of-machine-learning-techniques-in-water-resources-div.pdf",
+  "published_iso": "2025-01-01",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Frontiers in construction 3D printing: self-monitoring, multi-robot, drone-assisted processes",
+  "title_norm": "frontiers in construction 3d printing self monitoring multi robot drone assisted",
+  "abstract": "Abstract To overcome productivity issues and revolutionize the stagnating construction industry, a large amount of research efforts has been devoted to robot-assisted construction technology. The advancements in robotics including mechanical system design, tool design, digital system design, and numerical control systems design enabled engineers to create complex geometries that are infeasible for conventional construction methods. In addition, innovative robotic systems that utilize mobile platforms, multiple robots, and unmanned aerial vehicles have demonstrated significant promise in fully automating the construction process. This work will provide a perspective on the state-of-the-art applications of robotics in the revolution of construction, where a comprehensive review of the current development of the relevant software and hardware, 3D concrete printing (3DCP), robot-assisted assembly of discrete prefabricated blocks, real-time quality monitoring and feedback control systems, and typical innovative robot-assisted structural designs are conducted. Finally, the limitations of existing robot-assisted construction technology are identified, which leads to several recommendations for future research toward fully automatic construction.",
+  "year": 2024,
+  "venue": "Progress in Additive Manufacturing",
+  "authors": [
+   "Shuai Li",
+   "Tian Lan",
+   "Hung-Xuan Nguyen",
+   "Phuong Tran"
+  ],
+  "citations": 25,
+  "source": "openalex",
+  "source_id": "W4403155738",
+  "doi": "10.1007/s40964-024-00794-8",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40964-024-00794-8.pdf",
+  "published_iso": "2024-10-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Domain Specialization as the Key to Make Large Language Models Disruptive: A Comprehensive Survey",
+  "title_norm": "domain specialization as the key to make large language models disruptive a comp",
+  "abstract": "Large language models (LLMs) have significantly advanced the field of natural language processing (NLP), providing a highly useful, task-agnostic foundation for a wide range of applications. However, directly applying LLMs to solve sophisticated problems in specific domains meets many hurdles, caused by the heterogeneity of domain data, the sophistication of domain knowledge, the uniqueness of domain objectives, and the diversity of the constraints (e.g., various social norms, cultural conformity, religious beliefs, and ethical standards in the domain applications). Domain specification techniques are key to making large language models disruptive in many applications. Specifically, to solve these hurdles, there has been a notable increase in research and practices conducted in recent years on the domain specialization of LLMs. This emerging field of study, with its substantial potential for impact, necessitates a comprehensive and systematic review to summarize better and guide ongoing work in this area. In this article, we present a comprehensive survey on domain specification techniques for large language models, an emerging direction critical for large language model applications. First, we propose a systematic taxonomy that categorizes the LLM domain-specialization techniques based on the accessibility to LLMs and summarizes the framework for all the subcategories as well as their relations and differences to each other. Second, we present an extensive taxonomy of critical application domains that can benefit dramatically from specialized LLMs, discussing their practical significance and open challenges. Last, we offer our insights into the current research status and future trends in this area.",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Chen Ling",
+   "Xujiang Zhao",
+   "Jiaying Lu",
+   "Chengyuan Deng",
+   "Can Zheng",
+   "Junxiang Wang"
+  ],
+  "citations": 65,
+  "source": "openalex",
+  "source_id": "W4413941679",
+  "doi": "10.1145/3764579",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3764579",
+  "published_iso": "2025-09-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "An agent-Based service architecture for smart greenhouses: Telemetry analytics and decision support with RAG-grounded LLM agents",
+  "title_norm": "an agent based service architecture for smart greenhouses telemetry analytics an",
+  "abstract": "This work addresses a practical barrier in smart greenhouse operations: although IoT platforms provide telemetry and dashboards, growers often lack direct, operational access to AI capabilities that can convert sensor streams into actionable decisions and bounded automated interventions. We propose an AI-driven, layer-based IoT architecture integrated with an Agent-Based Service Architecture (ASA) that orchestrates specialized agents to move from telemetry to decisions. The ASA comprises: (S1) a conversational Chat-Agent grounded via Retrieval-Augmented Generation (RAG) over standard operating procedures and local context; (S2-IoT) a telemetry analysis service that computes agronomic indicators and triggers bounded actuation; and (S2-E) an incident/emergency assessment service that recommends responses and can trigger bounded actions when enabled by the operator . Crucially, automated actions are executed only when they satisfy predefined operating conditions and remain consistent with operator-defined safety policies (stage-dependent thresholds, validation gates, and conflict-resolution rules). The services are orchestrated through auditable low-code workflows (n8n in the cloud and raspberrypi/Home Assistant at the edge) and include an edge-first offline fallback when cloud orchestration is unavailable. The system is deployed and validated in a 50 m 2 controlled-environment hydroponic greenhouse cultivating industrial hemp. For conversational support, GPT-5.2 answers 38/40 domain questions correctly (95.0%), outperforming GPT-4o-Mini (32/40; 80.0%), with ROUGE-L=0.272, BLEU-4=3.821, and BERTScore=0.872. S2-IoT estimates daily light integral (DLI) with MAE=0.005 and RMSE=0.008 mol m − 2 d − 1 over 13 evaluated days. S2-E attains 0.81 accuracy and 0.97 stability over 36 emergency test cases status (OK/WARNING/ALARM). Overall, results indicate that agent-orchestrated LLM-RAG services can provide growers with direct AI-enabled operational functions—monitoring, decision support, and policy-compliant actuation—within IoT greenhouse workflows. Further multi-site and multi-season evaluation is planned as future work.",
+  "year": 2026,
+  "venue": "Smart Agricultural Technology",
+  "authors": [
+   "Sofía Pardo-Pina",
+   "Jörn Germer",
+   "Ricardo Suay-Cortés",
+   "Manuel Platero-Horcajadas",
+   "Francisco-Javier Ferrández-Pastor"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7130653430",
+  "doi": "10.1016/j.atech.2026.101872",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7130653430",
+  "published_iso": "2026-02-20",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions",
+  "title_norm": "llm driven robots risk enacting discrimination violence and unlawful actions",
+  "abstract": "Abstract Members of the Human-Robot Interaction (HRI) and Machine Learning (ML) communities have proposed Large Language Models (LLMs) as a promising resource for robotics tasks such as natural language interaction, household and workplace tasks, approximating ‘common sense reasoning’, and modeling humans. However, recent research has raised concerns about the potential for LLMs to produce discriminatory outcomes and unsafe behaviors in real-world robot experiments and applications. To assess whether such concerns are well placed in the context of HRI, we evaluate several highly-rated LLMs on discrimination and safety criteria. Our evaluation reveals that LLMs are currently unsafe for people across a diverse range of protected identity characteristics, including, but not limited to, race, gender, disability status, nationality, religion, and their intersections. Concretely, we show that LLMs produce directly discriminatory outcomes—e.g., ‘gypsy’ and ‘mute’ people are labeled untrustworthy, but not ‘european’ or ‘able-bodied’ people. We find various such examples of direct discrimination on HRI tasks such as facial expression, proxemics, security, rescue, and task assignment. Furthermore, we test models in settings with unconstrained natural language (open vocabulary) inputs, and find they fail to act safely, generating responses that accept dangerous, violent, or unlawful instructions—such as incident-causing misstatements, taking people’s mobility aids, and sexual predation. Our results underscore the urgent need for systematic, routine, and comprehensive risk assessments and assurances to improve outcomes and ensure LLMs only operate on robots when it is safe, effective, and just to do so. We provide code to reproduce our experiments at https://github.com/rumaisa-azeem/llm-robots-discrimination-safety.",
+  "year": 2025,
+  "venue": "International Journal of Social Robotics",
+  "authors": [
+   "Andrew Hundt",
+   "Rumaisa Azeem",
+   "Masoumeh Mansouri",
+   "Martim Brandão"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4415266110",
+  "doi": "10.1007/s12369-025-01301-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s12369-025-01301-x.pdf",
+  "published_iso": "2025-10-16",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Uncertainty-aware Cartesian error compensation in industrial robots via point interval prediction and residual calibration",
+  "title_norm": "uncertainty aware cartesian error compensation in industrial robots via point in",
+  "abstract": "Accurate Cartesian positioning in industrial robots remains challenging under drift, friction, and regime changes. This paper presents an uncertainty-aware, two-stage compensation pipeline for a four-degree-of-freedom (4-DOF) serial robot using only joint telemetry. Stage I combines a long short-term memory (LSTM) point predictor with an auxiliary network that learns per-axis prediction intervals (PIs) via a loss balancing prediction-interval coverage probability (PICP) and mean prediction-interval width (MPIW). Stage II performs residual calibration from three features: point value, PI width, and point midpoint skew, using compact models (ridge, two-regime linear, and adaptive neuro-fuzzy inference system, ANFIS) with safety gates. Evaluation on a synthetic dataset containing slow drifts, a large step change, and strong periodic content shows calibrated or near-calibrated uncertainty on two axes and under-coverage on the stepped axis, consistent with probability integral transform (PIT) diagnostics. Translating PIs into residuals yields axis-dependent root-mean-square error (RMSE) changes: $$+4.7\\%$$ ( $$x$$ ), $$+8.1\\%$$ ( $$z$$ ), and $$-2.7\\%$$ ( $$y$$ ). The results indicate that coupling point predictions with calibrated uncertainty enables conservative compensation near regime shifts and tighter corrections in smooth or periodic regimes, offering a transparent and deployable baseline for uncertainty-aware robot error compensation.",
+  "year": 2026,
+  "venue": "Discover Robotics",
+  "authors": [
+   "Ihtisham Ul Haq",
+   "Luigi D’ Alfonso",
+   "Luigi Longo",
+   "Giuseppe Fedele",
+   "Francesco Lamonaca"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7128094881",
+  "doi": "10.1007/s44430-026-00017-5",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44430-026-00017-5.pdf",
+  "published_iso": "2026-02-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "In-Situ Monitoring and Process Control in Material Extrusion Additive Manufacturing: A Comprehensive Review",
+  "title_norm": "in situ monitoring and process control in material extrusion additive manufactur",
+  "abstract": "Material extrusion additive manufacturing (MEAM) has emerged as a versatile and widely adopted 3D printing technology due to its cost-effectiveness and ability to process a diverse range of materials. However, achieving consistent part quality and repeatability remains a challenge, mainly due to variations in process parameters and material behavior during fabrication. In-situ monitoring and advanced process control systems have been increasingly integrated into MEAM to address these issues, enabling real-time detection of defects, optimization of printing conditions, reliability of fabricated parts, and enhanced control over mechanical properties. This review examines the state-of-the-art in-situ monitoring techniques, including thermal imaging, vibrational sensing, rheological monitoring, printhead positioning, acoustic sensing, image recognition, and optical scanning, and their integration with process control strategies, such as closed-loop feedback systems and machine learning algorithms. Key challenges, including sensor accuracy, data processing complexity, and scalability, are discussed alongside recent advancements and their implications for industrial applications. By synthesizing current research, this work highlights the critical role of in-situ monitoring and process control in advancing the reliability and precision of MEAM, paving the way for its broader adoption in high-performance manufacturing.",
+  "year": 2025,
+  "venue": "Journal of Experimental and Theoretical Analyses",
+  "authors": [
+   "Alexander Isiani",
+   "Kelly Crittenden",
+   "Leland Weiss",
+   "Okeke Odirachukwu",
+   "Ramanshu Jha",
+   "Okoye Johnson"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4412899484",
+  "doi": "10.3390/jeta3030021",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2813-4648/3/3/21/pdf?version=1753781055",
+  "published_iso": "2025-07-29",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "A Survey of Embodied Learning for Object-centric Robotic Manipulation",
+  "title_norm": "a survey of embodied learning for object centric robotic manipulation",
+  "abstract": "Abstract Embodied learning for object-centric robotic manipulation is a rapidly developing and challenging area in embodied AI. It is crucial for advancing next-generation intelligent robots and has garnered significant interest recently. Unlike data-driven machine learning methods, embodied learning focuses on robot learning through physical interaction with the environment and perceptual feedback, making it especially suitable for robotic manipulation. In this paper, we provide a comprehensive survey of the latest advancements in this field and categorize the existing work into three main branches: 1) Embodied perceptual learning, which aims to predict object pose and affordance through various data representations; 2) Embodied policy learning, which focuses on generating optimal robotic decisions using methods such as reinforcement learning and imitation learning; 3) Embodied task-oriented learning, designed to optimize the robot’s performance based on the characteristics of different tasks in object grasping and manipulation. In addition, we offer an overview and discussion of public datasets, evaluation metrics, representative applications, current challenges, and potential future research directions. A project associated with this survey has been established at https://github.com/RayYoh/OCRM_survey .",
+  "year": 2025,
+  "venue": "Machine Intelligence Research",
+  "authors": [
+   "Ying Zheng",
+   "Lei Yao",
+   "Yuejiao Su",
+   "Yi Zhang",
+   "Yi Wang",
+   "Sicheng Zhao"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4405426927",
+  "doi": "10.1007/s11633-025-1542-8",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11633-025-1542-8.pdf",
+  "published_iso": "2025-06-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Discrete Meta-Modeling and Parameter Calibration of Harvested Alfalfa Stalks",
+  "title_norm": "discrete meta modeling and parameter calibration of harvested alfalfa stalks",
+  "abstract": "Addressing the problem of lacking accurate and reliable contact parameters and bonding parameters in the simulation of the mashing process during the harvesting of alfalfa, this study takes the stems of alfalfa at the harvesting stage as the research object. The geometric dimensions and related intrinsic parameters of the stems were measured. Using the Enhanced Discrete Element Method (EDEM) software, a multi-scale discrete element flexible bonding model of alfalfa stems was established based on region-specific parameters. The entire alfalfa stem was divided into three parts: the top, middle, and root sections. A multi-scale particle aggregation model of hollow stems was created using the Hertz-Mindlin with bonding model. The contact parameters between alfalfa stems at the harvesting stage and PU rubber were determined using a mathematical model based on quadratic polynomial fitting curves. The results showed that the shear modulus of the top, middle, and root sections of the alfalfa stems were 24.96 MPa, 29.60 MPa, and 10.48 MPa, respectively. The coefficients of restitution between the top, middle, and root sections of the alfalfa stems and PU rubber were 0.426, 0.375, and 0.386, respectively; the static friction coefficients were 0.613, 0.667, and 0.422, respectively; and the rolling friction coefficients were 0.213, 0.226, and 0.292, respectively. The relative error between the simulated and measured values of the angle of repose was less than 3%, effectively representing the mechanical characteristics of alfalfa stems at the harvesting stage bending and breaking under impact. This study aims to establish a discrete element flexible model of alfalfa stems at the harvesting stage and accurately calibrate the contact parameters with typical rubber materials, thereby addressing the lack of reliable bonding and contact parameters in existing simulations of the mashing process.",
+  "year": 2025,
+  "venue": "Agronomy",
+  "authors": [
+   "Jianji Wang",
+   "Baolong Geng",
+   "Zhikai Yang",
+   "Jinlong Yang",
+   "Keping Zhang",
+   "Yangrong Meng"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4415206593",
+  "doi": "10.3390/agronomy15102390",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-4395/15/10/2390/pdf?version=1760522755",
+  "published_iso": "2025-10-15",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Research on the Control System for the Conveying and Separation Experimental Platform of Tiger Nut Harvester Based on Sensing Technology and Control Algorithms",
+  "title_norm": "research on the control system for the conveying and separation experimental pla",
+  "abstract": "Enhancing the intelligence of Tiger nut harvesting equipment with the advancement of agricultural machinery is imperative. Mismatches between excavation feed rate and conveying-separating capacities hinder the efficiency of Tiger nut harvesters. A visualized Tiger nut harvesting platform was designed to address this, incorporating parameters like conveying speed, torque, vibration frequency, and excavation depth. The platform features a mechanical execution part and an automatic control system with speed, torque, frequency, and depth control modules. Mechanical design analysis defined control parameters and methods for each module. An adaptive B-PID controller was proposed for trajectory tracking, combining backstepping and PID. A control model accounting for motion damping and error compensation was derived. Simulink simulations compared B-PID with backstepping controllers, showing B-PID’s robustness and effective trajectory tracking. Actual experiments assessed mechanical-control coordination using relative error metrics. The results showed that the maximum relative error of rotation speed was 3.8%, the maximum relative error of frequency was 3.67%, and the maximum relative error of excavation depth was 1.5%. Correction models for excavation depth and excitation frequency parameters were established. This study offers a theoretical framework to advance the intelligent design of tiger nut harvesting machinery.",
+  "year": 2025,
+  "venue": "Agriculture",
+  "authors": [
+   "Sirui Chen",
+   "Jiangtao Qi",
+   "Jianping Gao",
+   "Wenhui Chen",
+   "Jiaming Fei",
+   "Hewei Meng"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4406087511",
+  "doi": "10.3390/agriculture15010115",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0472/15/1/115/pdf?version=1736170842",
+  "published_iso": "2025-01-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods",
+  "title_norm": "survey on large language model enhanced reinforcement learning concept taxonomy ",
+  "abstract": "With extensive pretrained knowledge and high-level general capabilities, large language models (LLMs) emerge as a promising avenue to augment reinforcement learning (RL) in aspects, such as multitask learning, sample efficiency, and high-level task planning. In this survey, we provide a comprehensive review of the existing literature in LLM-enhanced RL and summarize its characteristics compared with conventional RL methods, aiming to clarify the research scope and directions for future studies. Utilizing the classical agent-environment interaction paradigm, we propose a structured taxonomy to systematically categorize LLMs' functionalities in RL, including four roles: information processor, reward designer, decision-maker, and generator. For each role, we summarize the methodologies, analyze the specific RL challenges that are mitigated and provide insights into future directions. Finally, the comparative analysis of each role, potential applications, prospective opportunities, and challenges of the LLM-enhanced RL are discussed. By proposing this taxonomy, we aim to provide a framework for researchers to effectively leverage LLMs in the RL field, potentially accelerating RL applications in complex applications, such as robotics, autonomous driving, and energy systems.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "authors": [
+   "Yuji Cao",
+   "Huan Zhao",
+   "Yuheng Cheng",
+   "Ting Shu",
+   "Yue Chen",
+   "Guolong Liu"
+  ],
+  "citations": 144,
+  "source": "openalex",
+  "source_id": "W4393763811",
+  "doi": "10.1109/tnnls.2024.3497992",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2404.00282",
+  "published_iso": "2024-11-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "A survey on retrieval-augmentation generation (RAG) models for healthcare applications",
+  "title_norm": "a survey on retrieval augmentation generation rag models for healthcare applicat",
+  "abstract": "Retrieval-augmented generation (RAG) models have become crucial in healthcare applications, significantly enhancing the relevance and reliability of AI-driven insights by combining the generative capabilities of large language models (LLMs) with retrieval-based methods. As healthcare data demand precision and accountability, RAG models address critical limitations of LLMs, such as the tendency to “hallucinate” or produce inaccurate information—by incorporating real-time retrieval from trusted medical knowledge bases and clinical literature. This dual process of retrieving and generating ensures that responses are both contextually accurate and aligned with the latest clinical evidence, making RAG models especially valuable for medical question answering, diagnostics, and treatment planning. This paper presents an in-depth exploration of RAG models and LLMs, specifically within healthcare contexts, to meet the unique demands of medical data processing and decision support. It reviews various RAG architectures, including Naive, Advanced, and Modular RAG approaches, discussing how each framework optimizes retrieval depth, response quality, and computational efficiency. By reducing errors in patient-care recommendations, RAG models play an essential role in scenarios that require high precision and accountability. Additionally, this survey addresses the ethical considerations and transparency requirements for deploying RAG models in healthcare, identifying current challenges and future directions, such as enhancing source interpretability and adapting RAG frameworks for specialized medical fields. By systematically analyzing RAG techniques, this paper provides a comprehensive guide to the state-of-the-art in RAG applications within healthcare, positioning RAG models as a transformative tool for advancing AI-supported healthcare outcomes.",
+  "year": 2025,
+  "venue": "Neural Computing and Applications",
+  "authors": [
+   "Mohamed Abo El-Enen",
+   "Sally Saad",
+   "Taymoor Nazmy"
+  ],
+  "citations": 44,
+  "source": "openalex",
+  "source_id": "W4415233873",
+  "doi": "10.1007/s00521-025-11666-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00521-025-11666-9.pdf",
+  "published_iso": "2025-10-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Multimodal Alignment and Fusion: A Survey",
+  "title_norm": "multimodal alignment and fusion a survey",
+  "abstract": "This survey provides a comprehensive overview of recent advances in multimodal alignment and fusion within the field of machine learning, driven by the increasing availability and diversity of data modalities such as text, images, audio, and video. Unlike previous surveys that often focus on specific modalities or limited fusion strategies, our work presents a structure-centric and method-driven framework that emphasizes generalizable techniques. We systematically categorize and analyze key approaches to alignment and fusion through both structural perspectives -- data-level, feature-level, and output-level fusion -- and methodological paradigms -- including statistical, kernel-based, graphical, generative, contrastive, attention-based, and large language model (LLM)-based methods, drawing insights from an extensive review of over 260 relevant studies. Furthermore, this survey highlights critical challenges such as cross-modal misalignment, computational bottlenecks, data quality issues, and the modality gap, along with recent efforts to address them. Applications ranging from social media analysis and medical imaging to emotion recognition and embodied AI are explored to illustrate the real-world impact of robust multimodal systems. The insights provided aim to guide future research toward optimizing multimodal learning systems for improved scalability, robustness, and generalizability across diverse domains.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Songtao Li",
+   "Hao Tang"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4404988519",
+  "doi": "10.48550/arxiv.2411.17040",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2411.17040",
+  "published_iso": "2024-11-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "A review on flapping-wing robots: Recent progress and challenges",
+  "title_norm": "a review on flapping wing robots recent progress and challenges",
+  "abstract": "This paper analyses the methods and technologies involved in flapping-wing flying robots (FWFRs), where the actuation of the flapping wing produces thrust and lift force that mimics birds’ and insects’ flight. The focus is on the evolution of the flapping-wing technology and the challenges in prototyping, modeling, navigation, and control. The mechanism for flapping production, frequency control of the flapping, and wing/tail control for positioning the robot are important topics for successful prototyping. The article includes the study of the dynamics and aerodynamics of the FWFR. Using the combination of flapping and gliding has led researchers to seek more energy savings through this hybrid-in-nature dynamic system, which benefits from the wind, a natural and free energy source. The paper reviews the dynamics, design, and categorization of flapping-wing systems; it also includes control and onboard intelligent functionalities, particularly environment perception for positioning and guidance, as well as obstacle detection and avoidance.",
+  "year": 2025,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Saeed Rafee Nekoo",
+   "Ramy Rashad",
+   "Christophe De Wagter",
+   "Sawyer B. Fuller",
+   "Guido de Croon",
+   "Stefano Stramigioli"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4410800358",
+  "doi": "10.1177/02783649251343638",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410800358",
+  "published_iso": "2025-05-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Uncertainty-Aware Predictive Process Monitoring in Healthcare: Explainable Insights into Probability Calibration for Conformal Prediction",
+  "title_norm": "uncertainty aware predictive process monitoring in healthcare explainable insigh",
+  "abstract": "In high-stakes decision-making environments, predictive models must deliver not only high accuracy but also reliable uncertainty estimations and transparent explanations. This study explores the integration of probability calibration techniques with Conformal Prediction (CP) within a predictive process monitoring (PPM) framework tailored to healthcare analytics. CP is renowned for its distribution-free prediction regions and formal coverage guarantees under minimal assumptions; however, its practical utility critically depends on well-calibrated probability estimates. We compare a range of post-hoc calibration methods—including parametric approaches like Platt scaling and Beta calibration, as well as non-parametric techniques such as Isotonic Regression and Spline calibration—to assess their impact on aligning raw model outputs with observed outcomes. By incorporating these calibrated probabilities into the CP framework, our multilayer analysis evaluates improvements in prediction region validity, including tighter coverage gaps and reduced minority error contributions. Furthermore, we employ SHAP-based explainability to explain how calibration influences feature attribution for both high-confidence and ambiguous predictions. Experimental results on process-driven healthcare data indicate that the integration of calibration with CP not only enhances the statistical robustness of uncertainty estimates but also improves the interpretability of predictions, thereby supporting safer and robust clinical decision-making.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Maxim Majlatow",
+   "Fahim Ahmed Shakil",
+   "Andreas Emrich",
+   "Nijat Mehdiyev"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4412473112",
+  "doi": "10.3390/app15147925",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/14/7925/pdf?version=1752661920",
+  "published_iso": "2025-07-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models",
+  "title_norm": "transport discrepancy as a reliability signal for vision language action models",
+  "abstract": "Vision-language-action (VLA) models that generate continuous action chunks via flow matching lack an internal signal for judging whether a given prediction is reliable. Distribution shift and long-horizon rollouts can push backbone representations away from the region the action head decodes reliably, yet the policy has no mechanism to detect or react to this drift. We observe that the cost of transporting observation features to the action representation in a shared feature space rises precisely when such drift occurs, providing a per-step reliability estimate without extra supervision. Building on this observation, we propose DiG (Discrepancy Gate), a lightweight plug-in module for flow-matching VLA policies. DiG computes a sliced Wasserstein transport cost between backbone features and the action expert's own input projection, maps it through an exponential gate, and uses the gate to modulate both a residual feature refinement and the training loss. At inference time, the gate enables DiG-Refinefine, an iterative refinement process that corrects action chunks before execution. Experiments on both simulation and real-world scenarios show that DiG consistently improves success rates, with the largest gains under distribution shift and on long-horizon tasks.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Wanpeng Zhang",
+   "Ye Wang",
+   "Hao Luo",
+   "Yuan, Haoqi",
+   "Yicheng Feng",
+   "Xu, Chaoyi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416967312",
+  "doi": "10.48550/arxiv.2512.01715",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.01715",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "A review of learning-based dynamics models for robotic manipulation",
+  "title_norm": "a review of learning based dynamics models for robotic manipulation",
+  "abstract": "Dynamics models that predict the effects of physical interactions are essential for planning and control in robotic manipulation. Although models based on physical principles often generalize well, they typically require full-state information, which can be difficult or impossible to extract from perception data in complex, real-world scenarios. Learning-based dynamics models provide an alternative by deriving state transition functions purely from perceived interaction data, enabling the capture of complex, hard-to-model factors and predictive uncertainty and accelerating simulations that are often too slow for real-time control. Recent successes in this field have demonstrated notable advancements in robot capabilities, including long-horizon manipulation of deformable objects, granular materials, and complex multiobject interactions such as stowing and packing. A crucial aspect of these investigations is the choice of state representation, which determines the inductive biases in the learning system for reduced-order modeling of scene dynamics. This article provides a timely and comprehensive review of current techniques and trade-offs in designing learned dynamics models, highlighting their role in advancing robot capabilities through integration with state estimation and control and identifying critical research gaps for future exploration.",
+  "year": 2025,
+  "venue": "Science Robotics",
+  "authors": [
+   "Bo Ai",
+   "Stephen Tian",
+   "Haochen Shi",
+   "Yong Wang",
+   "Tobias Pfaff",
+   "Cheston Tan"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4414285669",
+  "doi": "10.1126/scirobotics.adt1497",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/scirobotics.adt1497?download=true",
+  "published_iso": "2025-09-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Sim-to-real transfer of adaptive control parameters for AUV stabilisation under current disturbance",
+  "title_norm": "sim to real transfer of adaptive control parameters for auv stabilisation under ",
+  "abstract": "Learning-based adaptive control methods hold the potential to empower autonomous agents in mitigating the impact of process variations with minimal human intervention. However, their application to autonomous underwater vehicles (AUVs) has been constrained by two main challenges: (1) the presence of unknown dynamics in the form of sea current disturbances, which cannot be modelled or measured due to limited sensor capability, particularly on smaller low-cost AUVs, and (2) the nonlinearity of AUV tasks, where the controller response at certain operating points must be excessively conservative to meet specifications at other points. Deep Reinforcement Learning (DRL) offers a solution to these challenges by training versatile neural network policies. Nevertheless, the application of DRL algorithms to AUVs has been predominantly limited to simulated environments due to their inherent high sample complexity and the distribution shift problem. This paper introduces a novel approach by combining the Maximum Entropy Deep Reinforcement Learning framework with a classic model-based control architecture to formulate an adaptive controller. In this framework, we propose a Sim-to-Real transfer strategy, incorporating a bio-inspired experience replay mechanism, an enhanced domain randomisation technique, and an evaluation protocol executed on a physical platform. Our experimental assessments demonstrate the effectiveness of this method in learning proficient policies from suboptimal simulated models of the AUV. When transferred to a real-world vehicle, the approach exhibits a control performance three times higher compared to its model-based nonadaptive but optimal counterpart.",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Thomas Chaffre",
+   "Jonathan Wheare",
+   "Andrew Lammas",
+   "Paulo E. Santos",
+   "Gilles Le Chenadec",
+   "Karl Sammut"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4402409305",
+  "doi": "10.1177/02783649241272115",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/acb69b00-9339-493f-a0dd-107fc27abfa1/02783649241272115.17905743.pdf",
+  "published_iso": "2024-09-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "An EWS-LSTM-Based Deep Learning Early Warning System for Industrial Machine Fault Prediction",
+  "title_norm": "an ews lstm based deep learning early warning system for industrial machine faul",
+  "abstract": "Early warning systems (EWSs) are crucial for optimising predictive maintenance strategies, especially in the industrial sector, where machine failures often cause significant downtime and economic losses. This research details the creation and evaluation of an EWS that incorporates deep learning methods, particularly using Long Short-Term Memory (LSTM) networks enhanced with attention layers to predict critical machine faults. The proposed system is designed to process time-series data collected from an industrial printing machine’s embosser component, identifying error patterns that could lead to operational disruptions. The dataset was preprocessed through feature selection, normalisation, and time-series transformation. A multi-model classification strategy was adopted, with each LSTM-based model trained to detect a specific class of frequent errors. Experimental results show that the system can predict failure events up to 10 time units in advance, with the best-performing model achieving an AUROC of 0.93 and recall above 90%. Results indicate that the proposed approach successfully predicts failure events, demonstrating the potential of EWSs powered by deep learning for enhancing predictive maintenance strategies. By integrating artificial intelligence with real-time monitoring, this study highlights how intelligent EWSs can improve industrial efficiency, reduce unplanned downtime, and optimise maintenance operations.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Fabio Cassano",
+   "Anna Maria Crespino",
+   "Mariangela Lazoi",
+   "Giorgia Specchia",
+   "Alessandra Spennato"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4409218924",
+  "doi": "10.3390/app15074013",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/15/7/4013/pdf?version=1744017204",
+  "published_iso": "2025-04-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "A Vision-Guided Robotic System for Safe Dental Implant Surgery",
+  "title_norm": "a vision guided robotic system for safe dental implant surgery",
+  "abstract": "Background: Recent advancements in dental implantology have significantly improved outcomes, with success rates of 90–95% over a 10-year period. Key improvements include enhanced preplanning processes, such as precise implant positioning, model selection, and optimal insertion depth. However, challenges remain, particularly in achieving correct spatial positioning and alignment of implants for optimal occlusion. These challenges are pronounced in patients with reduced bone substance or complex anthropometric features, where even minor misalignments can result in complications or defects. Methods: This paper introduces a vision-guided robotic system designed to improve spatial positioning accuracy during dental implant surgery. The system incorporates advanced force-feedback control to regulate the pressure applied to bone, minimizing the risk of bone damage. A preoperative CBCT scan, combined with real-time images from a robot-mounted camera, guides implant positioning. A personalized marker holder guide, developed from the initial CBCT scan, is used for patient–robot calibration. The robot-mounted camera provides continuous visual feedback of the oral cavity during surgery, enabling precise registration of the patient with the robotic system. Results: Initial experiments were conducted on a 3D-printed mandible using a personalized marker holder. Following successful patient–robot registration, the robotic system autonomously performed implant drilling. To evaluate the accuracy of the robotic-assisted procedure, further tests were conducted on 40 identical molds, followed by measurements of implant positioning. The results demonstrated improved positioning accuracy compared to the manual procedure. Conclusions: The vision-guided robotic system significantly enhances the spatial accuracy of dental implants compared to traditional manual methods. By integrating advanced force-feedback control and real-time visual guidance, the system addresses key challenges in implant positioning, particularly for patients with complex anatomical structures. These findings suggest that robotic-assisted implant surgery could offer a safer and more precise alternative to manual procedures, reducing the risk of implant misalignment and associated complications.",
+  "year": 2024,
+  "venue": "Journal of Clinical Medicine",
+  "authors": [
+   "Daria Pisla",
+   "Vasile Bulbucan",
+   "Mihaela Hedeșiu",
+   "Călin Vaida",
+   "Ionut Zima",
+   "R Mocan"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4403690709",
+  "doi": "10.3390/jcm13216326",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0383/13/21/6326/pdf?version=1729669227",
+  "published_iso": "2024-10-23",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Calibration of a hybrid model for HVAC systems for fault data generation",
+  "title_norm": "calibration of a hybrid model for hvac systems for fault data generation",
+  "abstract": "The application of automated fault detection and diagnosis algorithms has proven to be an effective way to increase the energy efficiency of buildings. While data-driven strategies have demonstrated their potential in developing such algorithms, they require a set of historical data that represents both healthy and faulty equipment operation, which is not a common scenario in real facilities. This article presents a methodology for the generation of synthetic data on both healthy and faulty operation for building heating and air conditioning equipment , which is especially useful for supervision and failure detection in the case of replication and expansion of buildings in tertiary or residential building planning programmes. This work investigates the automatic calibration of a typical air-handling unit hybrid model, composed of the detailed parametric representation of the system components and its control sequence coupled with a simplified thermal load . The model is then extended with fault models that resemble commonly encountered component faults to generate operation data in faulty scenarios. The proposed framework is validated in a real use case with the calibration of an air-handling unit system and its control sequence using 15 days of data gathered from the building management system . The results obtained from the injection of seven typical faults are then compared with the fault-free simulations to highlight and validate their impact on key operating variables. The results prove the capabilities of this methodology to support database generation in the fields of fault detection and advanced maintenance of buildings’ air conditioning systems for building replicas.",
+  "year": 2024,
+  "venue": "Journal of Building Engineering",
+  "authors": [
+   "Víctor Martínez-Viol",
+   "Francisco Arellano-Espitia",
+   "Miguel Delgado-Prieto",
+   "Luis Romeral"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4403707517",
+  "doi": "10.1016/j.jobe.2024.111163",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403707517",
+  "published_iso": "2024-10-24",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Recipe for Vision-Language-Action Models in Robotic Manipulation: A Survey",
+  "title_norm": "recipe for vision language action models in robotic manipulation a survey",
+  "abstract": "This survey provides an in-depth analysis of recent advancements in foundational models that leverage large and diverse datasets to enable flexible and general-purpose manipulation skills. We reviewed the main concepts of Vision-Language-Action (VLA) models with emphasis on their connection to broader trends in robot learning and the architectural strategies that facilitate integration across vision, language, and action. The survey contains current training methodologies, dataset construction techniques, and the role of high-quality demonstrations in achieving reliable performance across diverse tasks. Key trends are identified, including the adoption of open-source tools, scaling of model size and training data, and improved generalization across platforms. In addition, we noted that VLA models demonstrate strong performance in controlled environments; however, significant challenges persist in long-term task planning, failure recovery, and operation in complex real-world scenarios. This survey aims to serve as a comprehensive reference for researchers and outline future research directions that may advance the practical deployment of VLA models in robotic manipulation.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Tomohiro Motoda",
+   "Koshi Makihara",
+   "Ryoichi Nakajo",
+   "Hanbit Oh",
+   "Keisuke Shirai",
+   "Ryo Hanai"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4413638658",
+  "doi": "10.36227/techrxiv.175624610.06665789/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175624610.06665789/v1",
+  "published_iso": "2025-08-26",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Cleaning Robots: A Review of Sensor Technologies and Intelligent Control Strategies for Cleaning",
+  "title_norm": "cleaning robots a review of sensor technologies and intelligent control strategi",
+  "abstract": "ABSTRACT Cleaning robots have revolutionized the way spaces and surfaces are cleaned, accessing areas that are often difficult for humans to reach. A significant segment of the cleaning robot industry is dedicated to home cleaning robots, which have undergone numerous enhancements since their initial introduction. Through extensive research and development efforts, the application scope of cleaning robots has expanded beyond floors to encompass walls, staircases, pools, tanks, ventilation ducts, windows, and other surfaces. These robots have seen improvements in cleaning effectiveness through the integration of new designs, technologies, and control methods. This review paper presents a comprehensive analysis of cutting‐edge cleaning robots recently developed, exploring various sensor technologies and intelligent control strategies employed to enhance cleaning efficiency. Additionally, the paper discusses the challenges associated with deploying these robots in real‐world scenarios.",
+  "year": 2025,
+  "venue": "Journal of Field Robotics",
+  "authors": [
+   "Rajesh Kannan Megalingam",
+   "Shree Rajesh Raagul Vadivel",
+   "Sai Smaran Kotaprolu",
+   "Bagathi Nithul",
+   "Devisetty Vijay Kumar",
+   "Gaurav Rudravaram"
+  ],
+  "citations": 24,
+  "source": "openalex",
+  "source_id": "W4406881428",
+  "doi": "10.1002/rob.22515",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/rob.22515",
+  "published_iso": "2025-01-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Recent Developments in Heavy Metals Detection: Modified Electrodes, Pretreatment Methods, Prediction Models and Algorithms",
+  "title_norm": "recent developments in heavy metals detection modified electrodes pretreatment m",
+  "abstract": "Heavy metal pollution has become an increasingly serious environmental issue, making the detection of heavy metals essential for safeguarding public health and the environment. This review aims to highlight the commonly used methods for detecting heavy metals (such as atomic absorption spectroscopy (AAS), atomic emission spectroscopy (AES), inductively coupled plasma–mass spectrometry (ICP-MS), square-wave anodic stripping voltammetry (SWASV), etc.), with a particular focus on electrochemical detection and electrode modification materials. Metal nanomaterials (such as titanium dioxide (TiO2), copper oxide (CuO), ZIF-8, MXene, etc.) are emphasized as promising candidates for enhancing the performance of sensors due to their high surface area and excellent catalytic properties. However, challenges such as interference from non-target heavy metal ions and the formation of organometallic complexes with organic compounds can complicate the detection process. To address these issues, two potential solutions have been proposed: the development of advanced algorithms (such as machine learning (ML), back-propagation neural network (BPNN), support vector machines (SVM), random forests (RF), etc.) for signal processing and the use of pretreatment methods (such as Fenton oxidation (FO), ozone oxidation, and photochemical oxidation) to suppress such interferences. This paper aims to review commonly used methods for detecting heavy metals, with a particular emphasis on electrochemical techniques. It will also highlight the challenges faced in these methods, such as interference and sensitivity limitations, and propose innovative solutions, including the use of metal nanomaterials for improved sensor performance and the integration of advanced algorithms and pretreatment techniques to address interference and enhance detection accuracy.",
+  "year": 2025,
+  "venue": "Metals",
+  "authors": [
+   "Yujie Shi",
+   "Shijie Zhang",
+   "Hang Zhou",
+   "Yue Dong",
+   "Gang Liu",
+   "Wenshuai Ye"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4406674217",
+  "doi": "10.3390/met15010080",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-4701/15/1/80/pdf?version=1737109664",
+  "published_iso": "2025-01-17",
+  "oa_field": "Chemistry",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Lithium Ion Batteries: Characteristics, Recycling and Deep‐Sea Mining",
+  "title_norm": "lithium ion batteries characteristics recycling and deep sea mining",
+  "abstract": "ABSTRACT Lithium ion batteries (LIBs) have brought about a revolution in the electronics industry and are now almost a part of our everyday activities. They are on the verge of finding application in almost every electronic rechargeable device and have a bright future ahead. With the recent discovery of substantial reserves of lithium in India, along with the favourable government policies for the usage of electric vehicles (EVs), LIBs are expected to play a major role in meeting sustainable energy goals. Though LIBs have become a commercial success, they face many challenges, such as high cost of production, thermal runaway and overcharging, that might hamper their extensive use. Many research studies have been conducted regarding the operation of LIB, with safety being a concern. With rapid technology development, going nanoscale for LIB production has become achievable and valuable as it has been reported to increase the shelf life of the battery. In this review, recycling of spent LIBs is discussed, as the extraction of the leftover lithium and other minerals is possible through recycling process. The advantages and drawbacks of deep‐sea lithium mining have been discussed, as it is explored as an alternative to major lithium sources due to the rapid depletion of land mining sources. Its impact on the environment and the mineral market has been assessed. This review paper attempts to give an overview of all the vital characteristics of an LIB, such as life cycle, fast charging and overcharging, while covering strategies for overcoming challenges faced in the functioning of LIBs.",
+  "year": 2024,
+  "venue": "Battery energy",
+  "authors": [
+   "Samrudh Devanahalli Bokkassam",
+   "Jegatha Nambi Krishnan"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4404773631",
+  "doi": "10.1002/bte2.20240022",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bte2.20240022",
+  "published_iso": "2024-11-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Hybrid Mode Sensor Fusion for Accurate Robot Positioning",
+  "title_norm": "hybrid mode sensor fusion for accurate robot positioning",
+  "abstract": "Robotic systems are becoming increasingly crucial in applications requiring high precision. While a robot can operate using basic sensor feedback under controlled conditions, achieving micro-level accuracy requires more comprehensive data integration, especially in dynamic environments. The fusion of data from a variety of sensors is necessary for improving the positioning accuracy of a robot because the accuracy of one type of sensor is insufficient. The field of micro-positioning presents new challenges and tasks that have been gradually explored in the recent literature published from 2015 to 2025. Micro-positioning is a complex operation that involves factors such as mechanical drift, environmental effects, and sensor signal errors. Hybrid fusion is a sensor fusion technique that combines elements of fusion at different levels. For the effective deployment of robots in such contexts, it is essential to integrate multiple sensors and ensure reliable data fusion between them. This involves the use of different sensors, advanced fusion algorithms, and accurate calibration methods through sensor fusion and sophisticated data processing techniques. This literature review presents an analysis of the sensor data fusion methods for precise robot micro-positioning. The focus is on the investigated sensors, the applied synthesis methods, and the developed algorithms and their practical application to identify the existing gaps for future system improvements. Finally, discussions and conclusions based on the collected ideas are presented.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Viktor Masalskyi",
+   "Andrius Dzedzickis",
+   "Igor Korobiichuk",
+   "Vytautas Bučinskas"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4410284751",
+  "doi": "10.3390/s25103008",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/10/3008/pdf?version=1746858528",
+  "published_iso": "2025-05-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Beyond Binary Decisions: Evaluating the Effects of AI Error Type on Trust and Performance in AI-Assisted Tasks",
+  "title_norm": "beyond binary decisions evaluating the effects of ai error type on trust and per",
+  "abstract": "ObjectiveWe investigated how various error patterns from an AI aid in the nonbinary decision scenario influence human operators' trust in the AI system and their task performance.BackgroundExisting research on trust in automation/autonomy predominantly uses the signal detection theory (SDT) to model autonomy performance. The SDT classifies the world into binary states and hence oversimplifies the interaction observed in real-world scenarios. Allowing multi-class classification of the world reveals intriguing error patterns previously unexplored in prior literature.MethodThirty-five participants completed 60 trials of a simulated mental rotation task assisted by an AI with 70-80% reliability. Participants' trust in and dependence on the AI system and their performance were measured. By combining participants' initial performance and the AI aid's performance, five distinct patterns emerged. Mixed-effects models were built to examine the effects of different patterns on trust adjustment, performance, and reaction time.ResultsVarying error patterns from AI impacted performance, reaction times, and trust. Some AI errors provided false reassurance, misleading operators into believing their incorrect decisions were correct, worsening performance and trust. Paradoxically, some AI errors prompted safety checks and verifications, which, despite causing a moderate decrease in trust, ultimately enhanced overall performance.ConclusionThe findings demonstrate that the types of errors made by an AI system significantly affect human trust and performance, emphasizing the need to model the complicated human-AI interaction in real life.ApplicationThese insights can guide the development of AI systems that classify the state of the world into multiple classes, enabling the operators to make more informed and accurate decisions based on feedback.",
+  "year": 2025,
+  "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+  "authors": [
+   "Jin Yong Kim",
+   "Corey A. Lester",
+   "X. Jessie Yang"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4408628884",
+  "doi": "10.1177/00187208251326795",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/00187208251326795?download=true",
+  "published_iso": "2025-03-19",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Gas Cluster Ion Beam Smoothing Technique: A Review",
+  "title_norm": "gas cluster ion beam smoothing technique a review",
+  "abstract": "Abstract The need for ultraprecision smoothing strategies has been highly emphasized in modern society, and demanding requirements have posed unprecedented challenges to current precision manufacturing techniques. The Gas Cluster Ion Beam (GCIB) is a newly developed technology for materials processing. It is easy to prepare, environmentally friendly, and offers high processing accuracy and efficiency, thus garnering considerable interest and widespread application. This paper provides a comprehensive overview of the GCIB processing technology, emphasizing surface smoothing applications. It reviews various materials processed using GCIBs and analyzes the role of GCIB parameters and their effects on materials processing. Besides, the paper discusses the potential application prospects and future directions of the GCIB technology, and key conclusions and insights are identified. The discussion also includes an evaluation of the challenges and limitations associated with the GCIB, offering a balanced perspective on its practical implementation. Overall, this paper provides a thorough understanding of the GCIB technology and its role in advancing the field of surface smoothing.",
+  "year": 2025,
+  "venue": "Nanomanufacturing and Metrology",
+  "authors": [
+   "Ke Ge Xie",
+   "Yuan Xie",
+   "Hui Deng"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4410543267",
+  "doi": "10.1007/s41871-025-00256-x",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41871-025-00256-x.pdf",
+  "published_iso": "2025-05-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Clutchable Fabric Actuator for Energy‐Efficient Wearable Robots",
+  "title_norm": "clutchable fabric actuator for energy efficient wearable robots",
+  "abstract": "Abstract Energy‐efficient yet energy‐dense soft actuators are essential for untethered wearable robots. This work reports a fabric‐like actuator, combining shape memory alloy (SMA) springs and electrostatic clutches (ESClutches). The SMA springs provide high force density, with only 18 g of materials generating 40 N of force at actuation strains of over 35%, but requiring 78 W of power to hold that strain. The ESClutches cannot generate motion on their own, but can maintain the force and contraction generated by SMAs consuming only a few mW, thus allowing the SMAs to be turned off. By combining SMAs and ESClutches, a soft wearable fabric actuator is developed with force and stroke suited for an upper‐limb soft exoskeleton, able to lock in any given position using negligible power. The design is scalable: the number and dimensions of the SMA springs and of the ESClutches can be chosen to meet size and actuator performance requirements. This work reports two wearable use cases, where the combined SMAs and ESClutches consume over 70% lower power than SMAs alone.",
+  "year": 2024,
+  "venue": "Advanced Functional Materials",
+  "authors": [
+   "Huapeng Zhang",
+   "Herbert Shea"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4404324650",
+  "doi": "10.1002/adfm.202415099",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adfm.202415099",
+  "published_iso": "2024-11-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Advancing Soil Organic Carbon Prediction: A Comprehensive Review of Technologies, AI, Process‐Based and Hybrid Modelling Approaches",
+  "title_norm": "advancing soil organic carbon prediction a comprehensive review of technologies ",
+  "abstract": "Measurement, monitoring, and prediction of soil organic carbon (SOC) are fundamental to supporting climate change mitigation efforts and promoting sustainable agricultural management practices. This review discusses recent advances in methodologies and technologies for SOC quantification, including remote sensing (RS), proximal soil sensing (PSS), artificial intelligence (AI) for SOC modelling (in particular, machine learning (ML) and deep learning (DL)), biogeochemical modelling, and data fusion. Integrating data from RS, PSS, and other sensors usually leads to good SOC predictions, provided it is supported by careful calibration, validation across diverse pedo-climatic and land management, and the use of data processing and modelling frameworks. We also found that the accuracy of AI-driven SOC prediction improves when RS covariates are included. Although DL often outperforms classical ML, there is no single best AI algorithm. By incorporating simulated outputs from biogeochemical model as additional training data for AI, causal relationships in SOC turnover can be incorporated into empirical modelling, while maintaining predictive accuracy. In conclusion, SOC prediction can be enhanced through 1) integrating sensing technologies, 2) applying AI, notably DL, 3) addressing biogeochemical model limitations (assumptions, parameterization, structure), 4) expanding SOC data availability, 5) improving mathematical representation of microbial influences on SOC, and 6) strengthening interdisciplinary cooperation between soil scientists and model developers.",
+  "year": 2025,
+  "venue": "Advanced Science",
+  "authors": [
+   "Zijuan Ding",
+   "Ke Liu",
+   "Sabine Grunwald",
+   "Pete Smith",
+   "P. Ciais",
+   "Bin Wang"
+  ],
+  "citations": 35,
+  "source": "openalex",
+  "source_id": "W4411653722",
+  "doi": "10.1002/advs.202504152",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4411653722",
+  "published_iso": "2025-06-25",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Phoenix: A Motion-Based Self-Reflection Framework for Fine-Grained Robotic Action Correction",
+  "title_norm": "phoenix a motion based self reflection framework for fine grained robotic action",
+  "abstract": "Building a generalizable self-correction system is crucial for robots to recover from failures. Despite advancements in Multimodal Large Language Models (MLLMs) that empower robots with semantic reflection ability for failure, translating semantic reflection into \"how to correct\" fine-grained robotic actions remains a significant challenge. To address this gap, we build the Phoenix framework, which leverages motion instruction as a bridge to connect high-level semantic reflection with low-level robotic action correction. In this motion-based self-reflection framework, we start with a dual-process motion adjustment mechanism with MLLMs to translate the semantic reflection into coarse-grained motion instruction adjustment. To leverage this motion instruction for guiding \"how to correct\" fine-grained robotic actions, a multi-task motion-conditioned diffusion policy is proposed to integrate visual observations for high-frequency robotic action correction. By combining these two models, we could shift the demand for generalization capability from the low-level manipulation policy to the MLLMs-Driven motion adjustment model and facilitate precise, fine-grained robotic action correction. Utilizing this framework, we further develop a lifelong learning method to automatically improve the model’s capability from interactions with dynamic environments. The experiments conducted in both the RoboMimic simulation and real-world scenarios prove the superior generalization and robustness of our framework across a variety of manipulation tasks. Our code is released at https://github.com/GeWu-Lab/Motion-Based-Self-Reflection-Framework.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Wenke Xia",
+   "Ruoxuan Feng",
+   "Dong Wang",
+   "Di Hu"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4413156040",
+  "doi": "10.1109/cvpr52734.2025.00655",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413156040",
+  "published_iso": "2025-06-10",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+  "title_norm": "closed loop visuomotor control with generative expectation for robotic manipulat",
+  "abstract": "Despite significant progress in robotics and embodied AI in recent years, deploying robots for long-horizon tasks remains a great challenge. Majority of prior arts adhere to an open-loop philosophy and lack real-time feedback, leading to error accumulation and undesirable robustness. A handful of approaches have endeavored to establish feedback mechanisms leveraging pixel-level differences or pre-trained visual representations, yet their efficacy and adaptability have been found to be constrained. Inspired by classic closed-loop control systems, we propose CLOVER, a closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control. CLOVER consists of a text-conditioned video diffusion model for generating visual plans as reference inputs, a measurable embedding space for accurate error quantification, and a feedback-driven controller that refines actions from feedback and initiates replans as needed. Our framework exhibits notable advancement in real-world robotic tasks and achieves state-of-the-art on CALVIN benchmark, improving by 8% over previous open-loop counterparts. Code and checkpoints are maintained at https://github.com/OpenDriveLab/CLOVER.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Qingwen Bu",
+   "Jia Zeng",
+   "Li Chen",
+   "Yanchao Yang",
+   "Guyue Zhou",
+   "Junchi Yan"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403808753",
+  "doi": "10.48550/arxiv.2409.09016",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2409.09016",
+  "published_iso": "2024-09-13",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Reducing Sim-to-Real Domain Gaps of Visual Sensors for Learning Environment-Constrained Visuomotor Policy",
+  "title_norm": "reducing sim to real domain gaps of visual sensors for learning environment cons",
+  "abstract": "Simulation engines enable safe training of robotic skills, but domain gaps between simulated and real sensors hinder deployment. However, existing pixel-level adaptation methods focus on the visual realism of generating images over task-specific learning, causing texture leakage and elimination. In this article, we introduce a learnable correlation-attentive and task-related generative adversarial network (LCTGAN), a novel unsupervised domain transfer network, with a correlative attention mechanism and a mask-level Q value mapping (MQM) consistency to enhance task awareness and bridge the domain gap of visual sensors in pixel-level perceptual manipulations. We also propose a Q-learning-based visuomotor policy to handle cluttered scenarios where objects may lack directly graspable configurations, which learns the synergies of three actions while considering environmental constraints. We further integrate LCTGAN into the learned policy to facilitate zero-shot sim-to-real policy transfer. Extensive experimental results validate the zero-shot sim-to-real generalization of our proposed visuomotor policy when deployed on a real robot. The supplementary video is available athttps://youtu.be/B6nODKkhzSw.",
+  "year": 2024,
+  "venue": "IEEE Sensors Journal",
+  "authors": [
+   "Xingshuo Jing",
+   "Kun Qian",
+   "Boyi Duan"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4405933855",
+  "doi": "10.1109/jsen.2024.3522245",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405933855",
+  "published_iso": "2024-12-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "ViPRA: Video Prediction for Robot Actions",
+  "title_norm": "vipra video prediction for robot actions",
+  "abstract": "Can we turn a video prediction model into a robot policy? Videos, including those of humans or teleoperated robots, capture rich physical interactions. However, most of them lack labeled actions, which limits their use in robot learning. We present Video Prediction for Robot Actions (ViPRA), a simple pretraining-finetuning framework that learns continuous robot control from these actionless videos. Instead of directly predicting actions, we train a video-language model to predict both future visual observations and motion-centric latent actions, which serve as intermediate representations of scene dynamics. We train these latent actions using perceptual losses and optical flow consistency to ensure they reflect physically grounded behavior. For downstream control, we introduce a chunked flow matching decoder that maps latent actions to robot-specific continuous action sequences, using only 100 to 200 teleoperated demonstrations. This approach avoids expensive action annotation, supports generalization across embodiments, and enables smooth, high-frequency continuous control upto 22 Hz via chunked action decoding. Unlike prior latent action works that treat pretraining as autoregressive policy learning, ViPRA explicitly models both what changes and how. Our method outperforms strong baselines, with a 16% gain on the SIMPLER benchmark and a 13% improvement across real world manipulation tasks. We have released models and code at https://vipra-project.github.io",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Sandeep Routray",
+   "Pan, Hengkai",
+   "Unnat Jain",
+   "Shikhar Bahl",
+   "Deepak Pathak"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416189451",
+  "doi": "10.48550/arxiv.2511.07732",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2511.07732",
+  "published_iso": "2025-11-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Real-World Offline Reinforcement Learning from Vision Language Model Feedback",
+  "title_norm": "real world offline reinforcement learning from vision language model feedback",
+  "abstract": "Offline reinforcement learning can enable policy learning from pre-collected, sub-optimal datasets without online interactions. This makes it ideal for real-world robots and safety-critical scenarios, where collecting online data or expert demonstrations is slow, costly, and risky. However, most existing offline RL works assume the dataset is already labeled with the task rewards, a process that often requires significant human effort, especially when ground-truth states are hard to ascertain (e.g., in the real-world). In this paper, we build on prior work, specifically RL-VLM-F, and propose a novel system that automatically generates reward labels for offline datasets using preference feedback from a vision-language model and a text description of the task. Our method then learns a policy using offline RL with the reward-labeled dataset. We demonstrate the system’s applicability to a complex real-world robot-assisted dressing task, where we first learn a reward function using a vision-language model on a sub-optimal offline dataset, and then we use the learned reward to employ Implicit Q learning to develop an effective dressing policy. Our method also performs well in simulation tasks involving the manipulation of rigid and deformable objects, and significantly outperforms baselines such as behavior cloning and inverse RL. In summary, we propose a new system that enables automatic reward labeling and policy learning from unlabeled, sub-optimal offline datasets. Videos can be found on our project website1.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Sreyas Venkataraman",
+   "Yufei Wang",
+   "Ziyu Wang",
+   "Navin Sriram Ravie",
+   "Zackory Erickson",
+   "David Held"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416747877",
+  "doi": "10.1109/iros60139.2025.11246918",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416747877",
+  "published_iso": "2025-10-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Partial Joint Correction of Abnormal Motion Data via Reward Function Design in Virtual Environments",
+  "title_norm": "partial joint correction of abnormal motion data via reward function design in v",
+  "abstract": "Most reinforcement learning-based humanoid motion studies emphasize full-body imitation, limiting selective correction of abnormal joints. This study proposes a reward function design that corrects abnormal joint behavior while preserving motion style, using two approaches: periodic positional targets and pre-trained joint angle references. Applied separately, both guided the agent to recover natural swing motion. Experiments in a physics-based simulation showed improved joint mobility and corrected gait patterns. The results highlight that targeted correction is achievable with imperfect motion data through reward design alone, with potential applications in rehabilitation simulations and user-feedback systems in virtual environments.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "H. M. Kim",
+   "Soungsill Park",
+   "Young Ho Chai"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417025262",
+  "doi": "10.1145/3756884.3768416",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417025262",
+  "published_iso": "2025-11-12",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-conditioned future video feedback correction"
+  ]
+ },
+ {
+  "title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+  "title_norm": "fine tuning vision language action models optimizing speed and success",
+  "abstract": "Recent vision-language-action models (VLAs) build upon pretrained vision-language models and leverage diverse robot datasets to demonstrate strong task execution, language following ability, and semantic generalization.Despite these successes, VLAs struggle with novel robot setups and require finetuning to achieve good performance, yet how to most effectively fine-tune them is unclear given many possible strategies.In this work, we study key VLA adaptation design choices such as different action decoding schemes, action representations, and learning objectives for fine-tuning, using OpenVLA as our representative base model.Our empirical analysis informs an Optimized Fine-Tuning (OFT) recipe that integrates parallel decoding, action chunking, a continuous action representation, and a simple L1 regression-based learning objective to altogether improve inference efficiency, policy performance, and flexibility in the model's input-output specifications.We propose OpenVLA-OFT, an instantiation of this recipe, which sets a new state of the art on the LIBERO simulation benchmark, significantly boosting OpenVLA's average success rate across four task suites from 76.5% to 97.1% while increasing action generation throughput by 26×.In real-world evaluations, our fine-tuning recipe enables OpenVLA to successfully execute dexterous, high-frequency control tasks on a bimanual ALOHA robot and outperform other VLAs (π0 and RDT-1B) fine-tuned using their default recipes, as well as strong imitation learning policies trained from scratch (Diffusion Policy and ACT) by up to 15% (absolute) in average success rate.We release code for OFT and pretrained model checkpoints at https://openvla-oft.github.io.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Moo Hyun Kim",
+   "Chelsea Finn",
+   "Percy Liang"
+  ],
+  "citations": 40,
+  "source": "openalex",
+  "source_id": "W4414050921",
+  "doi": "10.15607/rss.2025.xxi.017",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.017",
+  "published_iso": "2025-06-21",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Neural Fidelity Calibration for Informative Sim-to-Real Adaptation",
+  "title_norm": "neural fidelity calibration for informative sim to real adaptation",
+  "abstract": "Deep reinforcement learning can seamlessly transfer agile locomotion and navigation skills from the simulator to real world. However, bridging the sim-to-real gap with domain randomization or adversarial methods often demands expert physics knowledge to ensure policy robustness. Even so, cutting-edge simulators may fall short of capturing every real-world detail, and the reconstructed environment may introduce errors due to various perception uncertainties. To address these challenges, we propose Neural Fidelity Calibration (NFC), a novel framework that employs conditional score-based diffusion models to calibrate simulator physical coefficients and residual fidelity domains online during robot execution. Specifically, the residual fidelity reflects the simulation model shift relative to the real-world dynamics and captures the uncertainty of the perceived environment, enabling us to sample realistic environments under the inferred distribution for policy fine-tuning. Our framework is informative and adaptive in three key ways: (a) we fine-tune the pretrained policy only under anomalous scenarios, (b) we build sequential NFC online with the pretrained NFC's proposal prior, reducing the diffusion model's training burden, and (c) when NFC uncertainty is high and may degrade policy improvement, we leverage optimistic exploration to enable hallucinated policy optimization. Our framework achieves superior simulator calibration precision compared to state-of-the-art methods across diverse robots with high-dimensional parametric spaces. We study the critical contribution of residual fidelity to policy improvement in simulation and real-world experiments. Notably, our approach demonstrates robust robot navigation under challenging real-world conditions, such as a broken wheel axle on snowy surfaces.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Youwei Yu",
+   "Lantao Liu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414829173",
+  "doi": "10.48550/arxiv.2504.08604",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.08604",
+  "published_iso": "2025-04-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Multiscale and Uncertainty-Aware Targetless Hand-Eye Calibration via the Gauss–Helmert Model",
+  "title_norm": "multiscale and uncertainty aware targetless hand eye calibration via the gauss h",
+  "abstract": "The operational reliability of an autonomous robot depends crucially on extrinsic sensor calibration as a prerequisite for precise and accurate data fusion. Exploring the calibration of unscaled sensors (e.g., monocular cameras) and the effective utilization of uncertainties are difficult and often overlooked. The development of a solution for the simultaneous calibration of hand-eye sensors and scale estimation based on the Gauss–Helmert model aims to utilize the valuable information contained in the uncertainty of odometry. In this work, we propose a versatile and robust solution for batch calibration based on the analytical on-manifold approach for estimation. The versatility of our method is demonstrated by its ability to calibrate multiple unscaled and metric-scaled sensors while dealing with odometry failures and reinitializations. Importantly, all estimated parameters are provided with their corresponding uncertainties. The validation of our method and its comparison with five competing state-of-the-art calibration methods in both simulations and real-world experiments show its superior accuracy, with particularly promising results observed in high-noise scenarios.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Robotics",
+  "authors": [
+   "Marta Čolaković-Bencerić",
+   "Juraj Peršić",
+   "Ivan Marković",
+   "Ivan Petrović"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4408182504",
+  "doi": "10.1109/tro.2025.3548538",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408182504",
+  "published_iso": "2025-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Confidence Calibration in Vision-Language-Action Models",
+  "title_norm": "confidence calibration in vision language action models",
+  "abstract": "Trustworthy robot behavior requires not only high levels of task success but also that the robot can reliably quantify how likely it is to succeed. To this end, we present a first-of-its-kind study of confidence calibration in vision-language-action (VLA) foundation models, which map visual observations and natural language instructions to low-level robot motor commands. We establish a confidence baseline for VLAs, examine how task success relates to calibration error and how calibration evolves over time, and introduce two lightweight techniques to remedy the miscalibration we observe: prompt ensembles and action-wise Platt scaling. Our aim in this study is to begin to develop the tools and conceptual understanding necessary to render VLAs both highly performant and highly trustworthy via reliable uncertainty quantification.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Thomas P. Zollo",
+   "Richard S. Zemel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414880224",
+  "doi": "10.48550/arxiv.2507.17383",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2507.17383",
+  "published_iso": "2025-07-23",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Global sensitivity analyses prior to parameter calibration significantly improves prediction quality",
+  "title_norm": "global sensitivity analyses prior to parameter calibration significantly improve",
+  "abstract": "Effective parameter calibration is vital for accurate crop model simulations but is challenged by extensive parameter sets and inherent uncertainties in agroecosystem models. This study systematically evaluated three global sensitivity analysis (GSA) methods (Morris, Sobol-Martinez, and eFAST) alongside three parameter optimisation algorithms (Nelder–Mead simplex, DREAM-zs, and L-BFGS-B) to enhance parameter estimation and simulation accuracy in APSIM Next Generation, a widely used agroecosystem model. Sensitivity analysis results indicated that the Morris method identified the broadest set of influential parameters due to its inclusive parameter selection strategy, while Sobol-Martinez provided more targeted parameter identification by clearly distinguishing impactful parameters. Conversely, eFAST was highly selective, pinpointing fewer parameters of highest impact, beneficial for computational efficiency. Among the optimisation methods, the Bayesian DREAM-zs algorithm consistently produced superior model predictions across evaluated output variables, including phenology, biomass, leaf area index, and grain yield, outperforming the frequentist Nelder–Mead and gradient-based L-BFGS-B methods. However, DREAM-zs required significantly higher computational resources, particularly at higher iteration settings. The uncertainty analysis revealed that interactions among sensitivity analysis methods, optimisation algorithms, and wheat genotypes dominated the sources of uncertainty in parameter estimation. This underscores the necessity of carefully selecting and integrating complementary sensitivity analysis and optimisation methods tailored to specific modelling objectives. Our findings demonstrated a robust methodological framework to improve calibration accuracy, reduce predictive uncertainty, and ultimately support more reliable agricultural decision-making.",
+  "year": 2025,
+  "venue": "Computers and Electronics in Agriculture",
+  "authors": [
+   "Chunhu Wang",
+   "Matthew Tom Harrison",
+   "Hamish Brown",
+   "Yongliang Qiao",
+   "Xiaogang Yin",
+   "Rui Yang"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4412622158",
+  "doi": "10.1016/j.compag.2025.110750",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4412622158",
+  "published_iso": "2025-07-24",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "Multiaxis error modeling for high-precision calibration of motion simulator pose",
+  "title_norm": "multiaxis error modeling for high precision calibration of motion simulator pose",
+  "abstract": "To address the issue of insufficient motion simulator control accuracy in ground-based satellite attitude simulation experiments, this paper proposes a comprehensive method for high-precision attitude calibration and correction. First, the three-dimensional coordinate mapping relationship between multiple reference points is established. Then, an overdetermined equation system is constructed using a camera perspective projection model, and the camera extrinsic parameters are solved using the least squares method. The rotation matrix is orthogonalized through singular value decomposition (SVD), and the re-projection error is further reduced by combining adaptive step size optimization. A sub-pixel-level centre positioning method that integrates region growth and least squares fitting is proposed to achieve high-precision extraction of target points. To address gimbal attitude errors, a quadratic polynomial correction model was constructed, and parameters were fitted and validated using multi-attitude data. Experimental results show that under single-axis and multi-axis composite attitudes, the correction of motion simulator pose errors decreased by over 70%. This method provides reliable technical support for satellite target relative pose experiments.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Yue Dou",
+   "Weitao Liu",
+   "Feng Chen",
+   "Jianming Huang",
+   "Yongqiang Jin"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417347031",
+  "doi": "10.1117/12.3091837",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4417347031",
+  "published_iso": "2025-12-16",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "candidate action world-model error transfer calibration"
+  ]
+ },
+ {
+  "title": "HiLMa-Res: A General Hierarchical Framework via Residual RL for Combining Quadrupedal Locomotion and Manipulation",
+  "title_norm": "hilma res a general hierarchical framework via residual rl for combining quadrup",
+  "abstract": "This work presents HiLMa-Res, a hierarchical framework leveraging reinforcement learning to tackle manipulation tasks while performing continuous locomotion using quadrupedal robots. Unlike most previous efforts that focus on solving a specific task, HiLMa-Res is designed to be general for various loco-manipulation tasks that require quadrupedal robots to maintain sustained mobility. The novel design of this framework tackles the challenges of integrating continuous locomotion control and manipulation using legs. It develops an operational space locomotion controller that can track arbitrary robot end-effector (toe) trajectories while walking at different velocities. This controller is designed to be generic to different downstream tasks, and therefore, can be utilized in high-level manipulation planning policy to address specific tasks. To demonstrate the versatility of this framework, we utilize HiLMa-Res to tackle several challenging loco-manipulation tasks using a quadrupedal robot in the real world. These tasks span from leveraging state-based policy to vision-based policy, from training purely from the simulation data to learning from real-world data. In these tasks, HiLMa-Res shows better performance than other methods.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Xiaoyu Huang",
+   "Qiayuan Liao",
+   "Yiming Ni",
+   "Zhongyu Li",
+   "Laura Smith",
+   "Sergey Levine"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405787086",
+  "doi": "10.1109/iros58592.2024.10802517",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405787086",
+  "published_iso": "2024-10-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Data-Informed Residual Reinforcement Learning for High-Dimensional Robotic Tracking Control",
+  "title_norm": "data informed residual reinforcement learning for high dimensional robotic track",
+  "abstract": "The learning inefficiency of reinforcement learning (RL) from scratch hinders its practical application toward continuous robotic tracking control, especially for high-dimensional robots. This article proposes a data-informed residual reinforcement learning (DR-RL)-based robotic tracking control scheme applicable to robots with high dimensionality. The proposed DR-RL methodology outperforms common RL methods regarding sample efficiency and scalability. Specifically, we first decouple the original robot into low-dimensional robotic subsystems; and further utilize one-step backward data to construct incremental subsystems that are equivalent model-free representations of the aforementioned decoupled robotic subsystems. The formulated incremental subsystems allow for parallel learning to relieve computation load and offer us mathematical descriptions of robotic movements for conducting theoretical analysis. Then, we apply DR-RL to learn the tracking control policy, a combination of incremental base policy and incremental residual policy, under a parallel learning architecture. The incremental residual policy uses the guidance from the incremental base policy as the learning initialization and further learns from interactions with environments to endow the tracking control policy with adaptability toward dynamically changing environments. Our proposed DR-RL-based tracking control scheme is developed with rigorous theoretical analysis of system stability and weight convergence. The effectiveness of our proposed method is validated numerically on a 7-DoF KUKA iiwa robot manipulator and experimentally on a 3-DoF robot manipulator that would fail for other counterpart RL methods.",
+  "year": 2024,
+  "venue": "IEEE/ASME Transactions on Mechatronics",
+  "authors": [
+   "Cong Li",
+   "Fangzhou Liu",
+   "Yongchao Wang",
+   "Martin Buss"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4402742779",
+  "doi": "10.1109/tmech.2024.3412275",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402742779",
+  "published_iso": "2024-09-23",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ },
+ {
+  "title": "Semi-Autonomous Teleoperation for Mobile Manipulator via Action Chunking with Transformers",
+  "title_norm": "semi autonomous teleoperation for mobile manipulator via action chunking with tr",
+  "abstract": "In this paper, we propose a semi-autonomous teleoperation method to reduce operator workload and enhance task execution efficiency. The proposed method uses action chunking with transformers (ACT), an imitation learning method, to predict long-duration motion trajectories from a robot’s egocentric images and pose information during teleoperation. Because the images and poses input into ACT are continuously updated during teleoperation, the predicted trajectory dynamically reflects the control history of the operator. These continuously updated trajectories are displayed in real time in a simulation environment, serving as visual feedback for the operator. When the operator determines that the visualized trajectory aligns with their intended trajectory, they can switch from manual to autonomous control. Subsequently, the robot autonomously executes motion based on the predicted trajectory, thereby reducing operator workload and improving task efficiency. To verify the effectiveness of the proposed method, an object-grasping task was conducted using a human support robot, comparing manual control, fully autonomous control, and the proposed semi-autonomous method. The results demonstrated that the proposed method effectively reduces task completion time and improves success rates, even with unknown objects and environments.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Shuntaro Itakura",
+   "Masatoshi Nagano",
+   "Tomoaki Nakamura"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4415969207",
+  "doi": "10.1109/iecon58223.2025.11221713",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4415969207",
+  "published_iso": "2025-10-14",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "robot action-chunk residual transportability support set"
+  ]
+ }
+]

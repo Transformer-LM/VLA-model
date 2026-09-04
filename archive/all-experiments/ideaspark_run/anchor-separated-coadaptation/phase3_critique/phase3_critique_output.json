@@ -1,0 +1,93 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_failure_mode_quoted": "The recurring failure is a successful relocation that is demonstrated but not adversarially closed: the paper shows its new-locus attack or defense beats a fixed, non-adaptive baseline, yet never stress-tests against an informed adversary who also operates at the new locus, so stealthiness, evasion, or robustness claims are asserted rather than proven. A second shape is a novelty-boundary collapse — the \"new\" locus turns out to be one a prior paper already used (normalization statistics, activation-similarity alignment, pre-encoded semantic concepts), and the work fails to quantify what is genuinely different.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Claiming a relocated signal is 'stealthier' or 'harder to remove' without defeating an adaptive defender who searches the same new locus leaves the central claim unverified.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes no stealthiness or removal-resistance claim and includes a policy-update stress intervention directed at its checkpoint-relative locus."
+          },
+          {
+            "lesson_quoted": "Relocating to a locus already exploited by published work — normalization statistics, activation-similarity losses, semantic concept triggers — collapses the novelty boundary unless the difference is made explicit and measured.",
+            "candidate_match": "borderline",
+            "reasoning": "Historical robot-failure traces and replay are occupied loci, including REFLECT and generic rehearsal, although the candidate explicitly narrows its difference to checkpoint-relative prefix divergence plus dual WAM/policy consumption and proposes uniform and score-permutation controls."
+          },
+          {
+            "lesson_quoted": "A defense whose relocation silently depends on a clean reference model or a known anomaly distribution reintroduces precisely the strong assumption the move was supposed to eliminate.",
+            "candidate_match": "no",
+            "reasoning": "The source checkpoint is the policy that actually generated each logged failure rather than a clean reference, and no known anomaly distribution is assumed."
+          },
+          {
+            "lesson_quoted": "Demonstrating the new locus only on fixed, non-adaptive or outdated baselines while omitting any account of why it works reads as a stacked pipeline of existing components rather than a principled shift.",
+            "candidate_match": "no",
+            "reasoning": "The falsification plan includes uniform replay, a matched score-permutation control, and an adaptive action-agreement stress test, while the premises ledger supplies a structural sequential-visitation account."
+          },
+          {
+            "lesson_quoted": "Wiring off-the-shelf generators or tools into a new attack setting without a structural reason for the locus change gets judged as engineering integration, not insight.",
+            "candidate_match": "no",
+            "reasoning": "This is not an attack-setting integration, and the candidate gives the structural reason that policy action divergence removes later failure prefixes from the current visitation stream."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The sole gap, under assumption_audit_and_pivot, is borderline because the lesson 'Relocating to a locus already exploited by published work — normalization statistics, activation-similarity losses, semantic concept triggers — collapses the novelty boundary unless the difference is made explicit and measured.' applies in part to the already-occupied historical-replay locus. The candidate does explicitly isolate its proposed difference with uniform and score-permutation controls, so this is not a triggered Reject lesson."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_pattern_quoted": "Across this cluster the audited assumption is always about the representational locus at which a security, detection, provenance, or safety property is presumed to be enforced — and the tactical move is to relocate the attack or defense to a different locus the field treated as irrelevant or invariant. The unifying verbs are \"relocate the signal,\" \"re-anchor enforcement,\" and \"demonstrate exploitability/robustness at the new locus.\"",
+        "instantiation_in_core_mechanism": "The core mechanism explicitly moves evidence from the current policy's visited-state stream to a historical environment-observed failure-prefix ledger, computes checkpoint-relative action divergence there, and uses the same ledger score to select both teacher-forced WAM replay and imagined policy restart states; this performs C01's abstract locus relocation and coupled action move under the declared thin-corpus exception.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The single C01 entry performs the distinctive move by relocating the load-bearing evidence signal from current visitation to historical failure-prefix traces and coupling replay and restart action through that relocated signal."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "assumption_audit_and_pivot",
+      "generative_process_redesign"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains no heterogeneous_decomposition component, so none of the three documented reject-favored pairs matches."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+    "threat_source": "lit_table",
+    "threat_channel": null,
+    "subsumption_argument": "VLAW is the closest system-level prior because it already reports iterative co-improvement of a VLA policy and world model and targets failure/detail under-coverage; an ExitReplay contribution therefore stands only on the additional historical source-checkpoint ledger, checkpoint-relative prefix-divergence score, and joint use of the selected prefix for real WAM loss and imagined policy restart. The candidate's almost_prior_paper_id and what_step_was_missed state those missing operations explicitly, while neither the lit-table row nor the collision pool supplies evidence that VLAW implements them, so this is a pointed framing threat rather than exact-mechanism overlap.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": null
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the checkpoint-relative censoring coordinate c_{k,i}",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The three-arm matched-seed LIBERO/RoboCasa experiment names final native simulator task success and its increase as the downstream outcome, and permuting c_{k,i} predicts that success returns toward uniform replay. The seed count and fixed rho are design settings, not numeric outcome bars."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "The multiplicative priority r_{k,i}=c_{k,i}h_{k,i} does not retain a policy-censored failure when its recorded transition is already well modeled",
+      "status": "upheld",
+      "basis": "The quoted product gives h_{k,i}=0 and therefore r_{k,i}=0 whenever ell_{k,i}=0<ell_{b_i,i}, exactly matching the executed arithmetic and stated fallback, so confronting the declared retention obstacle requires an h-independent policy-retention channel or a different priority composition and thus redesigns what the mechanism is."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "blocking_findings_disposition[0] is upheld: the candidate can assign zero priority to the very policy-censored, unrepaired physical failure it claims to retain, and the blocking-obstacle rule requires abandon because correcting that product requires mechanism redesign rather than a field-level patch. recipe_application_check.entries[0].verdict is applied and falsification_structure_check.verdict is sound, while paper_pointed_threat.subsumption_argument finds no exact VLAW overlap, but those checks cannot override the executed load-bearing failure; gap_closure_reject_check.entries[0].reject_lessons_evaluated[1].lesson_quoted remains only borderline.",
+  "revision_targets": []
+}

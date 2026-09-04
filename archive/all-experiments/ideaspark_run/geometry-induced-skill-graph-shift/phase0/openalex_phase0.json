@@ -1,0 +1,1565 @@
+[
+ {
+  "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+  "title_norm": "vision language action models for robotics a review towards real world applicati",
+  "abstract": "Amid growing efforts to leverage advances in large language models (LLMs) and visionlanguage models (VLMs) for robotics, Vision-Language-Action (VLA) models have recently gained significant attention. By unifying vision, language, and action data at scale, which have traditionally been studied separately, VLA models aim to learn policies that generalise across diverse tasks, objects, embodiments, and environments. This generalisation capability is expected to enable robots to solve novel downstream tasks with minimal or no additional task-specific data, facilitating more flexible and scalable real-world deployment. Unlike previous surveys that focus narrowly on action representations or high-level model architectures, this work offers a comprehensive, full-stack review, integrating both software and hardware components of VLA systems. In particular, this paper provides a systematic review of VLAs, covering their strategy and architectural transition, architectures and building blocks, modality-specific processing techniques, and learning paradigms. In addition, to support the deployment of VLAs in real-world robotic applications, we also review commonly used robot platforms, data collection strategies, publicly available datasets, data augmentation methods, and evaluation benchmarks. Throughout this comprehensive survey, this paper aims to offer practical guidance for the robotics community in applying VLAs to real-world robotic systems. All references categorized by training approach, evaluation method, modality, and dataset are available in the table on our project website: https://vla-survey.github.io.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Kento Kawaharazuka",
+   "Jihoon Oh",
+   "Jun Yamada",
+   "Ingmar Posner",
+   "Yuke Zhu"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4414198610",
+  "doi": "10.1109/access.2025.3609980",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414198610",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan",
+   "robot manipulation benchmark functional geometry object pair compositional generalization",
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "When physics meets machine learning: a survey of physics-informed machine learning",
+  "title_norm": "when physics meets machine learning a survey of physics informed machine learnin",
+  "abstract": "Abstract Physics-informed machine learning (PIML), the combination of prior physics knowledge with data-driven machine learning models, has emerged as an effective means of mitigating a shortage of training data, increasing model generalizability, and ensuring physical plausibility of results. In this paper, we survey a wide variety of recent works in PIML and summarize them from three key aspects: 1) motivations of PIML, 2) physics knowledge in PIML, and 3) methods of physics knowledge integration in PIML. We additionally discuss current challenges and corresponding research opportunities in PIML.",
+  "year": 2025,
+  "venue": "Machine learning for computational science and engineering",
+  "authors": [
+   "Chuizheng Meng",
+   "Sam Griesemer",
+   "Defu Cao",
+   "Sungyong Seo",
+   "Yan Liu"
+  ],
+  "citations": 194,
+  "source": "openalex",
+  "source_id": "W4410165966",
+  "doi": "10.1007/s44379-025-00016-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44379-025-00016-0.pdf",
+  "published_iso": "2025-05-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Multimodal fusion and vision–language models: A survey for robot vision",
+  "title_norm": "multimodal fusion and vision language models a survey for robot vision",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Information Fusion",
+  "authors": [
+   "Xiaofeng Han",
+   "Shunpeng Chen",
+   "Zheng Qing Fu",
+   "Zhe Feng",
+   "Lue Fan",
+   "Dong An"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4413788337",
+  "doi": "10.1016/j.inffus.2025.103652",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.02477",
+  "published_iso": "2025-08-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation",
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Foundation models in robotics: Applications, challenges, and the future",
+  "title_norm": "foundation models in robotics applications challenges and the future",
+  "abstract": "We survey applications of pretrained foundation models in robotics. Traditional deep learning models in robotics are trained on small datasets tailored for specific tasks, which limits their adaptability across diverse applications. In contrast, foundation models pretrained on internet-scale data appear to have superior generalization capabilities, and in some instances display an emergent ability to find zero-shot solutions to problems that are not present in the training data. Foundation models may hold the potential to enhance various components of the robot autonomy stack, from perception to decision-making and control. For example, large language models can generate code or provide common sense reasoning, while vision-language models enable open-vocabulary visual recognition. However, significant open research challenges remain, particularly around the scarcity of robot-relevant training data, safety guarantees and uncertainty quantification, and real-time execution. In this survey, we study recent papers that have used or built foundation models to solve robotics problems. We explore how foundation models contribute to improving robot capabilities in the domains of perception, decision-making, and control. We discuss the challenges hindering the adoption of foundation models in robot autonomy and provide opportunities and potential pathways for future advancements. The GitHub project corresponding to this paper can be found here: https://github.com/robotics-survey/Awesome-Robotics-Foundation-Models .",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Roya Firoozi",
+   "Johnathan Tucker",
+   "Stephen Tian",
+   "Anirudha Majumdar",
+   "Jiankai Sun",
+   "Weiyu Liu"
+  ],
+  "citations": 199,
+  "source": "openalex",
+  "source_id": "W4402890475",
+  "doi": "10.1177/02783649241281508",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e3eb5469-f176-4c99-8231-efe683fe6399/02783649241281508.17904978.pdf",
+  "published_iso": "2024-09-25",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Survey on Factuality in Large Language Models",
+  "title_norm": "survey on factuality in large language models",
+  "abstract": "This survey addresses the crucial issue of factuality in Large Language Models (LLMs). As LLMs find applications across diverse domains, the reliability and accuracy of their outputs become vital. We define the “factuality issue” as the probability of LLMs to produce content inconsistent with established facts. We first delve into the implications of these inaccuracies. Subsequently, we analyze the mechanisms through which LLMs store and process facts, seeking the primary causes of factual errors. Our discussion then transitions to methodologies for evaluating LLM factuality, emphasizing key metrics, benchmarks, and studies. We further explore strategies for enhancing LLM factuality. Our survey offers a structured guide for researchers aiming to fortify the factual reliability of LLMs. We consistently maintain and update the related open-source materials at https://github.com/wangcunxiang/LLM-Factuality-Survey .",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Cunxiang Wang",
+   "Xiaoze Liu",
+   "Yuanhao Yue",
+   "Qipeng Guo",
+   "Xiangkun Hu",
+   "Xiangru Tang"
+  ],
+  "citations": 30,
+  "source": "openalex",
+  "source_id": "W4410964376",
+  "doi": "10.1145/3742420",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3742420",
+  "published_iso": "2025-06-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Transfer learning in robotics: An upcoming breakthrough? A review of promises and challenges",
+  "title_norm": "transfer learning in robotics an upcoming breakthrough a review of promises and ",
+  "abstract": "Transfer learning is a conceptually-enticing paradigm in pursuit of truly intelligent embodied agents. The core concept—reusing prior knowledge to learn in and from novel situations—is successfully leveraged by humans to handle novel situations. In recent years, transfer learning has received renewed interest from the community from different perspectives, including imitation learning, domain adaptation, and transfer of experience from simulation to the real world, among others. In this paper, we unify the concept of transfer learning in robotics and provide the first taxonomy of its kind considering the key concepts of robot, task, and environment. Through a review of the promises and challenges in the field, we identify the need of transferring at different abstraction levels, the need of quantifying the transfer gap and the quality of transfer, as well as the dangers of negative transfer. Via this position paper, we hope to channel the effort of the community towards the most significant roadblocks to realize the full potential of transfer learning in robotics.",
+  "year": 2024,
+  "venue": "The International Journal of Robotics Research",
+  "authors": [
+   "Noémie Jaquier",
+   "Michael C. Welle",
+   "Andrej Gams",
+   "Kunpeng Yao",
+   "Bernardo Fichera",
+   "Aude Billard"
+  ],
+  "citations": 39,
+  "source": "openalex",
+  "source_id": "W4402545715",
+  "doi": "10.1177/02783649241273565",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/e543b361-c7d6-4088-8091-4bbd76ce542e/02783649241273565.17905540.pdf",
+  "published_iso": "2024-09-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Will your next surgeon be a robot? Autonomy and AI in robotic surgery",
+  "title_norm": "will your next surgeon be a robot autonomy and ai in robotic surgery",
+  "abstract": "State-of-the-art surgery is performed robotically under direct surgeon control. However, surgical outcome is limited by the availability, skill, and day-to-day performance of the operating surgeon. What will it take to improve surgical outcomes independent of human limitations? In this Review, we explore the technological evolution of robotic surgery and current trends in robotics and artificial intelligence that could lead to a future generation of autonomous surgical robots that will outperform today's teleoperated robots.",
+  "year": 2025,
+  "venue": "Science Robotics",
+  "authors": [
+   "Samuel Schmidgall",
+   "Justin D. Opfermann",
+   "Ji Woong Kim",
+   "Axel Krieger"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W4412604838",
+  "doi": "10.1126/scirobotics.adt0187",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/scirobotics.adt0187?download=true",
+  "published_iso": "2025-07-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation",
+  "title_norm": "a survey on reinforcement learning of vision language action models for robotic ",
+  "abstract": "The vision of building generalist robotic systems capable of performing diverse manipulation tasks has been significantly advanced by Vision-Language-Action models (VLAs), which leverage large-scale pretraining to acquire general visuomotor priors via imitation learning. Current pre-trained VLAs still require fine-tuning to adapt to real-world deployment, where conventional imitation learning struggles with out-ofdistribution (OOD) generalization due to the dependence on collected datasets with limited coverage of states and actions. Reinforcement learning (RL) leverages self-exploration and resultdriven optimization to enhance OOD generalization in VLAs. This survey outlines how RL can bridge the gap between pretraining and real-world deployment, offering a comprehensive overview of the RL-VLA training paradigm. Our taxonomy is organized along four core dimensions that reflect the full learning-to-deployment lifecycle: RL-VLA architecture, training paradigms, real-world deployment, and benchmarking and evaluation. First, we introduce the key design principles of RL-VLA components, including action, reward, and transition modeling. Second, we review online, offline, and test-time RL paradigms, analyzing their effectiveness and challenges in improving VLA generalization. Third, we examine real-world deployment frameworks, from sim-to-real transfer to safe exploration, autonomous recovery, and human-in-the-loop alignment. Finally, we summarize benchmarking methods, highlight open challenges, and outline the path toward general robotic systems. Our project page can be found here.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Haoyuan Deng",
+   "Zhenyu Wu",
+   "Haichao Liu",
+   "Wenkai Guo",
+   "Yuquan Xue",
+   "Ziyu Shan"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417174623",
+  "doi": "10.36227/techrxiv.176531955.54563920/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176531955.54563920",
+  "published_iso": "2025-12-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan",
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "A Review of Multi-Sensor Fusion in Autonomous Driving",
+  "title_norm": "a review of multi sensor fusion in autonomous driving",
+  "abstract": "Multi-modal sensor fusion has become a cornerstone of robust autonomous driving systems, enabling perception models to integrate complementary cues from cameras, LiDARs, radars, and other modalities. This survey provides a structured overview of recent advances in deep learning-based fusion methods, categorizing them by architectural paradigms (e.g., BEV-centric fusion and cross-modal attention), learning strategies, and task adaptations. We highlight two dominant architectural trends: unified BEV representation and token-level cross-modal alignment, analyzing their design trade-offs and integration challenges. Furthermore, we review a wide range of applications, from object detection and semantic segmentation to behavior prediction and planning. Despite considerable progress, real-world deployment is hindered by issues such as spatio-temporal misalignment, domain shifts, and limited interpretability. We discuss how recent developments, such as diffusion models for generative fusion, Mamba-style recurrent architectures, and large vision-language models, may unlock future directions for scalable and trustworthy perception systems. Extensive comparisons, benchmark analyses, and design insights are provided to guide future research in this rapidly evolving field.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Qian Hui",
+   "Mingchen Wang",
+   "Maotao Zhu",
+   "Hai Wang"
+  ],
+  "citations": 67,
+  "source": "openalex",
+  "source_id": "W4414704765",
+  "doi": "10.3390/s25196033",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/19/6033/pdf?version=1759305405",
+  "published_iso": "2025-10-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Quantum coordinates, localisation of events, and the quantum hole argument",
+  "title_norm": "quantum coordinates localisation of events and the quantum hole argument",
+  "abstract": "The study of quantum reference frames (QRFs) is motivated by the idea of taking into account the quantum properties of the reference frames used, explicitly or implicitly, in our description of physical systems. Like classical reference frames, QRFs can be used to define physical quantities relationally. Unlike their classical analogue, they relativise the notions of superposition and entanglement. Here, we explain this feature by examining how configurations or locations are identified across different branches in superposition. We show that, in the presence of symmetries, whether a system is in \"the same\" or \"different\" configurations across the branches depends on the choice of QRF. Hence, sameness and difference - and thus superposition and entanglement - lose their absolute meaning. We apply these ideas to the context of semi-classical spacetimes in superposition and use coincidences of four scalar fields to construct a comparison map between spacetime points in the different branches. This reveals that the localisation of an event is frame-dependent. We discuss the implications for indefinite causal order and the locality of interaction and conclude with a generalisation of Einstein's hole argument to the quantum context.",
+  "year": 2025,
+  "venue": "Communications Physics",
+  "authors": [
+   "Viktoria Kabel",
+   "Anne-Catherine de la Hamette",
+   "Luca Apadula",
+   "Carlo Cepollaro",
+   "Henrique L. Gomes",
+   "Jeremy Butterfield"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4409910717",
+  "doi": "10.1038/s42005-025-02084-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s42005-025-02084-3.pdf",
+  "published_iso": "2025-04-30",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Towards Generalizable Vision-Language Robotic Manipulation: A Benchmark and LLM-Guided 3D Policy",
+  "title_norm": "towards generalizable vision language robotic manipulation a benchmark and llm g",
+  "abstract": "Generalizing language-conditioned robotic policies to new tasks remains a significant challenge, hampered by the lack of suitable simulation benchmarks. In this paper, we address this gap by introducing GemBench, a novel benchmark to assess generalization capabilities of vision-language robotic manipulation policies. GemBench incorporates seven general action primitives and four levels of generalization, spanning novel placements, rigid and articulated objects, and complex long-horizon tasks. We evaluate state-of-the-art approaches on GemBench and also introduce a new method. Our approach 3D- LOTUS leverages rich 3D information for action prediction conditioned on language. While 3D-LOTUS excels in both efficiency and performance on seen tasks, it struggles with novel tasks. To address this, we present 3D-LOTUS++, a framework that integrates 3D-LOTUS's motion planning capabilities with the task planning capabilities of LLMs and the object grounding accuracy of VLMs. 3D-LOTUS++ achieves state-of-the-art per-formance on novel tasks of GemBench, setting a new standard for generalization in robotic manipulation. Code, dataset, real robot videos and trained models are available at https://www.di.ens.fr/willow/research/gembench/.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Ricardo Garcı́a",
+   "Shizhe Chen",
+   "Cordelia Schmid"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4403116255",
+  "doi": "10.1109/icra55743.2025.11127315",
+  "arxiv_id": null,
+  "paper_url": "https://hal.science/hal-04721101v1/file/ICRA25_Ricardo_GemBench_arxiv.pdf",
+  "published_iso": "2025-05-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "A comprehensive survey on RGB-D-based human action recognition: algorithms, datasets, and popular applications",
+  "title_norm": "a comprehensive survey on rgb d based human action recognition algorithms datase",
+  "abstract": "Due to the rapid advances in computer vision and deep learning, human action recognition has become one of the most important representative tasks for video understanding. Especially for human action recognition based on RGB-D data, a promising research direction, there has been a number of researchers to work on. In particular, convolutional neural networks (CNNs) are capable of image classification tasks, recurrent neural networks (RNNs) are skilled in sequence-based problems, and Transformer is good at global modeling. In this survey, we introduce a number of algorithms based on CNNs, RNNs and Transformer for RGB-D based human action recognition, which could be categorized into four parts: RGB-based, depth-based, skeleton-based and RGB-D based. As a survey focusing on the RGB-D based human action recognition, we thoroughly represent the algorithms, datasets and popular applications for it. What’s more, we give some possible future research directions for this field in the last part.",
+  "year": 2025,
+  "venue": "EURASIP Journal on Image and Video Processing",
+  "authors": [
+   "Yumin Zhang",
+   "Yanyong Wang"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4413168650",
+  "doi": "10.1186/s13640-025-00677-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s13640-025-00677-0.pdf",
+  "published_iso": "2025-08-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "A Survey of Embodied Learning for Object-centric Robotic Manipulation",
+  "title_norm": "a survey of embodied learning for object centric robotic manipulation",
+  "abstract": "Abstract Embodied learning for object-centric robotic manipulation is a rapidly developing and challenging area in embodied AI. It is crucial for advancing next-generation intelligent robots and has garnered significant interest recently. Unlike data-driven machine learning methods, embodied learning focuses on robot learning through physical interaction with the environment and perceptual feedback, making it especially suitable for robotic manipulation. In this paper, we provide a comprehensive survey of the latest advancements in this field and categorize the existing work into three main branches: 1) Embodied perceptual learning, which aims to predict object pose and affordance through various data representations; 2) Embodied policy learning, which focuses on generating optimal robotic decisions using methods such as reinforcement learning and imitation learning; 3) Embodied task-oriented learning, designed to optimize the robot’s performance based on the characteristics of different tasks in object grasping and manipulation. In addition, we offer an overview and discussion of public datasets, evaluation metrics, representative applications, current challenges, and potential future research directions. A project associated with this survey has been established at https://github.com/RayYoh/OCRM_survey .",
+  "year": 2025,
+  "venue": "Machine Intelligence Research",
+  "authors": [
+   "Ying Zheng",
+   "Lei Yao",
+   "Yuejiao Su",
+   "Yi Zhang",
+   "Yi Wang",
+   "Sicheng Zhao"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4405426927",
+  "doi": "10.1007/s11633-025-1542-8",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11633-025-1542-8.pdf",
+  "published_iso": "2025-06-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "A Survey of Reasoning with Foundation Models: Concepts, Methodologies, and Outlook",
+  "title_norm": "a survey of reasoning with foundation models concepts methodologies and outlook",
+  "abstract": "Reasoning, a crucial ability for complex problem-solving, plays a pivotal role in various real-world settings such as negotiation, medical diagnosis, and criminal investigation. It serves as a fundamental methodology in the field of Artificial General Intelligence (AGI). With the ongoing development of foundation models, there is a growing interest in exploring their abilities in reasoning tasks. In this paper, we introduce seminal foundation models proposed or adaptable for reasoning, highlighting the latest advancements in various reasoning tasks, methods, and benchmarks. We then delve into the potential future directions behind the emergence of reasoning abilities within foundation models. We also discuss the relevance of multimodal learning, autonomous agents, and super alignment in the context of reasoning. By discussing these future research directions, we hope to inspire researchers in their exploration of this field, stimulate further advancements in reasoning with foundation models, e.g. Large Language Models (LLMs), and contribute to the development of AGI.",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jiankai Sun",
+   "Chuanyang Zheng",
+   "Enze Xie",
+   "Zhengying Liu",
+   "Ruihang Chu",
+   "Jianing Qiu"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4409368288",
+  "doi": "10.1145/3729218",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3729218",
+  "published_iso": "2025-04-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Exploring Challenges and Opportunities in Manufacturing and Intelligence for Future Robotics",
+  "title_norm": "exploring challenges and opportunities in manufacturing and intelligence for fut",
+  "abstract": "Abstract This paper offers a forward-looking perspective on the challenges and opportunities shaping the future of robotics, drawing insights from both established and emerging research. It addresses two pivotal dimensions: the complexities of manufacturing and the integration of intelligence within robotic systems. On the manufacturing front, key elements such as structural materials, manufacturing processes, assembly methodologies, sensors, actuators, and power systems are explored. Simultaneously, the paper evaluates the evolution of robotic intelligence, focusing on frameworks for autonomous levels, artificial intelligence (AI), digital twin technology, and the transformative potential of quantum computing. By analyzing these elements, the study examines their implications for the broader deployment and functionality of robots across industrial, service, missional, and ethical domains. This perspective highlights how emerging technologies and strategies can address key challenges to drive robotic evolution, offering a roadmap for researchers, engineers, and policymakers to accelerate intelligent, scalable, and versatile robotic systems.",
+  "year": 2025,
+  "venue": "International Journal of Precision Engineering and Manufacturing",
+  "authors": [
+   "Jun Young Choi",
+   "Semin Ahn",
+   "Semin Ahn",
+   "Dohyeon Kim",
+   "Jun Heo",
+   "Won-Jae Yun"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4413765256",
+  "doi": "10.1007/s12541-025-01318-2",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s12541-025-01318-2.pdf",
+  "published_iso": "2025-08-27",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+  "title_norm": "fast in slow a dual system foundation model unifying fast manipulation within sl",
+  "abstract": "Generalized policy and execution efficiency constitute the two critical challenges in robotic manipulation. While recent foundation policies benefit from the common-sense reasoning capabilities of internet-scale pretrained vision-language models (VLMs), they often suffer from low execution frequency. To mitigate this dilemma, dual-system approaches, inspired by Kahneman's theory, have been proposed to leverage a VLM-based System 2 model handling high-level reasoning and a separate System 1 action model ensuring real-time control. However, existing designs maintain both systems as separate models, limiting System 1 from fully leveraging the rich pretrained knowledge from the VLM-based System 2. In this work, we propose Fast-in-Slow (FiS), a unified dual-system vision-language-action (VLA) model that embeds the System 1 execution module within the VLM-based System 2 by partially sharing parameters. This innovative paradigm not only enables high-frequency execution in System 1 but also facilitates coordination between the reasoning and execution components within a single foundation model of System 2. Given their fundamentally distinct roles within FiS-VLA, we design the two systems to incorporate heterogeneous modality inputs alongside asynchronous operating frequencies, enabling both fast and precise manipulation. To enable coordination between the two systems, a dual-aware co-training strategy is proposed that equips System 1 with action generation capabilities while preserving System 2's contextual reasoning representation. For evaluation, FiS-VLA outperforms previous state-of-the-art methods by 8% in simulation and 11% in real-world tasks in terms of average success rate, while achieving a 117.7 Hz control frequency with action chunk set to eight. Project web page: fast-in-slow.github.io.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hao Chen",
+   "Jiaming Liu",
+   "Chenyang Gu",
+   "Zhuoyang Liu",
+   "Renrui Zhang",
+   "Xiaoqi Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4414902199",
+  "doi": "10.48550/arxiv.2506.01953",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2506.01953",
+  "published_iso": "2025-06-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Fundamental Capabilities and Applications of Large Language Models: A Survey",
+  "title_norm": "fundamental capabilities and applications of large language models a survey",
+  "abstract": "Large Language Models (LLMs) have demonstrated remarkable effectiveness across various domain-specific applications. However, which fundamental capabilities most contribute to their success in different domains remains unclear. This uncertainty complicates LLM evaluation, as existing benchmark-based assessments often fail to capture their real-world performance, where the required capabilities may differ from those measured in the benchmarks. In this survey, we provide a systematic introduction to LLMs’ fundamental capabilities, encompassing their definitions, formation mechanisms, and practical applications. We further explore the relationships among these capabilities and discuss how they collectively support complex problem-solving in domain-specific applications. Building on this foundation, we review recent advances in LLM-driven applications across nine specific domains: medicine, law, computational biology, finance, social sciences and psychology, computer programming and software engineering, robots and agents, AI for disciplines, and creative work. We analyze how specific capabilities are leveraged for each domain to address unique requirements. This perspective enables us to establish connections between these capabilities and domain requirements, and to evaluate the varying importance of different capabilities across different domains. Based on these insights, we propose evaluation strategies tailored to the essential capabilities required in each domain, offering practical guidance for selecting suitable backbone LLMs in real-world applications.",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jiawei Li",
+   "Yang Gao",
+   "Yizhe Yang",
+   "Yu Bai",
+   "Xiaofeng Zhou",
+   "Yinghao Li"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4410407045",
+  "doi": "10.1145/3735632",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3735632",
+  "published_iso": "2025-05-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance",
+  "title_norm": "coa vla improving vision language action models via visual textual chain of affo",
+  "abstract": "Robot foundation models, particularly Vision-Language-Action (VLA) models, have garnered significant attention for their ability to enhance robot policy learning, greatly improving robot's generalization and robustness. OpenAI's recent model, O1, showcased impressive capabilities in solving complex problems by utilizing extensive reasoning chains. This prompts an important question: can robot models achieve better performance in multi-task , complex environments by reviewing prior observations and then providing task-specific reasoning to guide action prediction? In this paper, we introduce Chain-of-Affordance (CoA-VLA) , a novel approach to scaling robot models by incorporating reasoning in the format of sequential robot affordances to facilitate task completion. Specifically, we prompt the model to consider the following four types of affordances before taking action: (1) object affordance - what object to manipulate and where it is ; (2) grasp affordance - the specific object part to grasp ; (3) spatial affordance - the optimal space to place the object ; and (4) movement affordance-the collision - free path for movement. We further transform each affordance into two prompting formats: visual affordance and textual affordance. We introduce a novel vision-language co-injection module that integrates this knowledge into the policy network. This allows the robot to leverage essential contextual information during action inference, resulting in improved precision and robustness. Our experiments demonstrate that CoA-VLA outperforms state-of-the-art robot foundation models, including OpenVLA and Octo, on a variety of tasks. Furthermore, CoA-VLA exhibits strong generalization capabilities, including recognizing unseen object poses, identifying free space, and avoiding obstacles in novel environments.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jinming Li",
+   "Yichen Zhu",
+   "Zhibin Tang",
+   "Junjie Wen",
+   "Minjie Zhu",
+   "Xiaoyu Liu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4405956290",
+  "doi": "10.48550/arxiv.2412.20451",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2412.20451",
+  "published_iso": "2024-12-29",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Structured Generative Models for Scene Understanding",
+  "title_norm": "structured generative models for scene understanding",
+  "abstract": "Abstract This position paper argues for the use of structured generative models (SGMs) for the understanding of static scenes. This requires the reconstruction of a 3D scene from an input image (or a set of multi-view images), whereby the contents of the image(s) are causally explained in terms of models of instantiated objects, each with their own type, shape, appearance and pose, along with global variables like scene lighting and camera parameters. This approach also requires scene models which account for the co-occurrences and inter-relationships of objects in a scene. The SGM approach has the merits that it is compositional and generative, which lead to interpretability and editability. To pursue the SGM agenda, we need models for objects and scenes, and approaches to carry out inference. We first review models for objects, which include “things” (object categories that have a well defined shape), and “stuff” (categories which have amorphous spatial extent). We then move on to review scene models which describe the inter-relationships of objects. Perhaps the most challenging problem for SGMs is inference of the objects, lighting and camera parameters, and scene inter-relationships from input consisting of a single or multiple images. We conclude with a discussion of issues that need addressing to advance the SGM agenda.",
+  "year": 2024,
+  "venue": "International Journal of Computer Vision",
+  "authors": [
+   "Christopher K. I. Williams"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405323352",
+  "doi": "10.1007/s11263-024-02316-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11263-024-02316-z.pdf",
+  "published_iso": "2024-12-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Biomimetic Robotics and Intelligence: A Survey",
+  "title_norm": "biomimetic robotics and intelligence a survey",
+  "abstract": "ABSTRACT Biomimetic robotics and intelligence, which draws inspiration from biological systems, is an emerging field that bridges biology, engineering, and artificial intelligence. By replicating biological structures, behaviors, and sensory systems, biomimetic robotics are designed to operate effectively in diverse environments, such as humanoid robots for domestic use, quadruped robots for uneven terrains, and aerial robots for navigation through confined spaces. Biomimetic intelligence, grounded in the study of natural cognitive processes, has led to the development of advanced algorithms like genetic algorithms and neural networks, which optimize problem‐solving and decision‐making in robotic systems. These innovations enhance the capabilities of biomimetic robots, enabling them to perform complex tasks autonomously and adapt to dynamic conditions. This survey provides an overview of the latest advancements in biomimetic robotics and intelligence, focusing on key areas such as biomimetic robots, sensors and sensing technologies, and intelligence algorithms. It also discusses the current challenges in the field and outlines potential directions for future research.",
+  "year": 2025,
+  "venue": "SmartBot",
+  "authors": [
+   "Yixuan Sheng",
+   "Wei Nie",
+   "Zhao Liu",
+   "Hanlin Zhang",
+   "Hao Zhou",
+   "Ziyong Liu"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4409474206",
+  "doi": "10.1002/smb2.12010",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/smb2.12010",
+  "published_iso": "2025-04-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Visual Grounding in 2D and 3D: A unified perspective and survey",
+  "title_norm": "visual grounding in 2d and 3d a unified perspective and survey",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Information Fusion",
+  "authors": [
+   "Keyu Guo",
+   "Yongle Huang",
+   "Tinglei Jia",
+   "Xiangyu Song",
+   "Shijie Sun",
+   "Hongkai Wei"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4413291859",
+  "doi": "10.1016/j.inffus.2025.103625",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413291859",
+  "published_iso": "2025-08-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert",
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Large Language Models and 3D Vision for Intelligent Robotic Perception and Autonomy",
+  "title_norm": "large language models and 3d vision for intelligent robotic perception and auton",
+  "abstract": "With the rapid advancement of artificial intelligence and robotics, the integration of Large Language Models (LLMs) with 3D vision is emerging as a transformative approach to enhancing robotic sensing technologies. This convergence enables machines to perceive, reason, and interact with complex environments through natural language and spatial understanding, bridging the gap between linguistic intelligence and spatial perception. This review provides a comprehensive analysis of state-of-the-art methodologies, applications, and challenges at the intersection of LLMs and 3D vision, with a focus on next-generation robotic sensing technologies. We first introduce the foundational principles of LLMs and 3D data representations, followed by an in-depth examination of 3D sensing technologies critical for robotics. The review then explores key advancements in scene understanding, text-to-3D generation, object grounding, and embodied agents, highlighting cutting-edge techniques such as zero-shot 3D segmentation, dynamic scene synthesis, and language-guided manipulation. Furthermore, we discuss multimodal LLMs that integrate 3D data with touch, auditory, and thermal inputs, enhancing environmental comprehension and robotic decision-making. To support future research, we catalog benchmark datasets and evaluation metrics tailored for 3D-language and vision tasks. Finally, we identify key challenges and future research directions, including adaptive model architectures, enhanced cross-modal alignment, and real-time processing capabilities, which pave the way for more intelligent, context-aware, and autonomous robotic sensing systems.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Vinit Mehta",
+   "Charu Sharma",
+   "Karthick Thiyagarajan"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4415278795",
+  "doi": "10.3390/s25206394",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/20/6394/pdf?version=1760679400",
+  "published_iso": "2025-10-16",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Advances in Robotic Peg-in-Hole Assembly: A Comprehensive Review",
+  "title_norm": "advances in robotic peg in hole assembly a comprehensive review",
+  "abstract": "Abstract As the demands for assembly quality and efficiency increase, robot-assisted assembly applications are becoming more widespread. Peg-in-hole assembly, as a typical form of assembly, has been widely researched by scholars. Currently, robotic peg-in-hole assembly faces challenges such as complex analysis of part contact forces, difficulties in task modeling, and the failure of traditional strategies. Simply controlling the position of the robot's end effector cannot achieve high precision, high efficiency peg-in-hole assembly. Flexible assembly, especially intelligent flexible assembly, is becoming the future development trend. So there is a lack of comprehensive reviews on robotic flexible peg-in-hole assembly. This paper first outlines the basic components of peg-in-hole assembly and summarizes the two basic operational processes of peg-in-hole assembly, along with their related theoretical foundations. We then review and analyze the research on passive compliant assembly, active compliant assembly, and intelligent flexible assembly. Finally, it presents an outlook on the future development directions of robotic peg-in-hole assembly.",
+  "year": 2025,
+  "venue": "Chinese Journal of Mechanical Engineering",
+  "authors": [
+   "Suming Li",
+   "Hao Gong",
+   "Jianhua Liu",
+   "J. Li",
+   "Xinlu Deng"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4415601459",
+  "doi": "10.1186/s10033-025-01349-w",
+  "arxiv_id": null,
+  "paper_url": "https://cjme.springeropen.com/counter/pdf/10.1186/s10033-025-01349-w",
+  "published_iso": "2025-10-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Decoding the brain: From neural representations to mechanistic models",
+  "title_norm": "decoding the brain from neural representations to mechanistic models",
+  "abstract": "A central principle in neuroscience is that neurons within the brain act in concert to produce perception, cognition, and adaptive behavior. Neurons are organized into specialized brain areas, dedicated to different functions to varying extents, and their function relies on distributed circuits to continuously encode relevant environmental and body-state features, enabling other areas to decode (interpret) these representations for computing meaningful decisions and executing precise movements. Thus, the distributed brain can be thought of as a series of computations that act to encode and decode information. In this perspective, we detail important concepts of neural encoding and decoding and highlight the mathematical tools used to measure them, including deep learning methods. We provide case studies where decoding concepts enable foundational and translational science in motor, visual, and language processing.",
+  "year": 2024,
+  "venue": "Cell",
+  "authors": [
+   "Mackenzie Weygandt Mathis",
+   "Adriana Perez Rotondo",
+   "Edward F. Chang",
+   "Andreas S. Tolias",
+   "Alexander Mathis"
+  ],
+  "citations": 72,
+  "source": "openalex",
+  "source_id": "W4403479245",
+  "doi": "10.1016/j.cell.2024.08.051",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403479245",
+  "published_iso": "2024-10-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "The philosophical foundations of digital twinning",
+  "title_norm": "the philosophical foundations of digital twinning",
+  "abstract": "Abstract Digital twins are a new paradigm for our time, offering the possibility of interconnected virtual representations of the real world. The concept is very versatile and has been adopted by multiple communities of practice, policymakers, researchers, and innovators. A significant part of the digital twin paradigm is about interconnecting digital objects, many of which have previously not been combined. As a result, members of the newly forming digital twin community are often talking at cross-purposes, based on different starting points, assumptions, and cultural practices. These differences are due to the philosophical world-view adopted within specific communities. In this paper, we explore the philosophical context which underpins the digital twin concept. We offer the building blocks for a philosophical framework for digital twins, consisting of 21 principles that are intended to help facilitate their further development. Specifically, we argue that the philosophy of digital twins is fundamentally holistic and emergentist. We further argue that in order to enable emergent behaviors, digital twins should be designed to reconstruct the behavior of a physical twin by “dynamically assembling” multiple digital “components”. We also argue that digital twins naturally include aspects relating to the philosophy of artificial intelligence, including learning and exploitation of knowledge. We discuss the following four questions (i) What is the distinction between a model and a digital twin? (ii) What previously unseen results can we expect from a digital twin? (iii) How can emergent behaviours be predicted? (iv) How can we assess the existence and uniqueness of digital twin outputs?",
+  "year": 2025,
+  "venue": "Data-Centric Engineering",
+  "authors": [
+   "David Wagg",
+   "Christopher Burr",
+   "Jason F. Shepherd",
+   "Zack Xuereb Conti",
+   "Mark Enzer",
+   "Steven Niederer"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4407343310",
+  "doi": "10.1017/dce.2025.4",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/7C2E25F20DDB7EF7DDD560363DE9E171/S2632673625000048a.pdf/div-class-title-the-philosophical-foundations-of-digital-twinning-div.pdf",
+  "published_iso": "2025-01-01",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "AI-Driven Control Strategies for Biomimetic Robotics: Trends, Challenges, and Future Directions",
+  "title_norm": "ai driven control strategies for biomimetic robotics trends challenges and futur",
+  "abstract": "Biomimetic robotics aims to replicate biological movement, perception, and cognition, drawing inspiration from nature to develop robots with enhanced adaptability, flexibility, and intelligence. The integration of artificial intelligence has significantly advanced the control mechanisms of biomimetic robots, enabling real-time learning, optimization, and adaptive decision-making. This review systematically examines AI-driven control strategies for biomimetic robots, categorizing recent advancements and methodologies. First, we review key aspects of biomimetic robotics, including locomotion, sensory perception, and cognitive learning inspired by biological systems. Next, we explore various AI techniques-such as machine learning, deep learning, and reinforcement learning-that enhance biomimetic robot control. Furthermore, we analyze existing AI-based control methods applied to different types of biomimetic robots, highlighting their effectiveness, algorithmic approaches, and performance compared to traditional control techniques. By synthesizing the latest research, this review provides a comprehensive overview of AI-driven biomimetic robot control and identifies key challenges and future research directions. Our findings offer valuable insights into the evolving role of AI in enhancing biomimetic robotics, paving the way for more intelligent, adaptive, and efficient robotic systems.",
+  "year": 2025,
+  "venue": "Biomimetics",
+  "authors": [
+   "Hoejin Jung",
+   "Soyoon Park",
+   "S Bestley Joe",
+   "Sangyoon Woo",
+   "Wonchil Choi",
+   "Won‐Gyu Bae"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4412423271",
+  "doi": "10.3390/biomimetics10070460",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2313-7673/10/7/460/pdf?version=1752570965",
+  "published_iso": "2025-07-14",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Physical AI: Bridging the Sim-to-Real Divide Toward Embodied, Ethical, and Autonomous Intelligence",
+  "title_norm": "physical ai bridging the sim to real divide toward embodied ethical and autonomo",
+  "abstract": "Physical Artificial Intelligence (Physical AI) delineates a new scientific frontier wherein cognition is not abstracted from the world but materially instantiated within it. It represents the fusion of algorithmic reasoning, embodied perception, and dynamic control into cyber–physical substrates capable of autonomous, safe, and ethically aligned interaction. In contrast to digital AI that operates solely over symbolic or pixel domains, Physical AI functions through closed perception–decision–action feedback loops governed by real-world physics, causality, and thermodynamic constraints. This article delivers the first holistic synthesis of the field—uniting previously fragmented developments in robotics, differentiable simulation, neuromorphic computation, and autonomous control under a coherent theoretical and architectural framework. It formalizes the conceptual vocabulary of Physical AI, introduces a capabilitybased taxonomy spanning reflexive, adaptive, and anticipatory intelligence, and proposes a layered reference stack integrating sensing, learning, reasoning, assurance, and governance. To quantify progress, a suite of mathematically grounded evaluation metrics is defined, encompassing task efficiency, safety reliability, sim-to-real transfer fidelity, energy–performance optimization, and ecological sustainability. Beyond technical integration, the work establishes normative foundations for trustworthy autonomy through formal verification, provenance-aware data engines, and human-in-the-loop assurance architectures. Forward-looking trajectories are articulated across federated learning, affectaware robotics, hybrid edge–cloud orchestration, and global benchmarking toward planetary-scale coordination. Envisioned as an evolutionary continuum from automation to agency, Physical AI redefines intelligence as a physically grounded, ethically interpretable, and self-adaptive process—where the boundaries between mind, machine, and matter progressively converge.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Partha Pratim Ray"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415938232",
+  "doi": "10.36227/techrxiv.176238257.73914361/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176238257.73914361",
+  "published_iso": "2025-11-05",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Contrastive learning explains the emergence and function of visual category-selective regions",
+  "title_norm": "contrastive learning explains the emergence and function of visual category sele",
+  "abstract": "Modular and distributed coding theories of category selectivity along the human ventral visual stream have long existed in tension. Here, we present a reconciling framework-contrastive coding-based on a series of analyses relating category selectivity within biological and artificial neural networks. We discover that, in models trained with contrastive self-supervised objectives over a rich natural image diet, category-selective tuning naturally emerges for faces, bodies, scenes, and words. Further, lesions of these model units lead to selective, dissociable recognition deficits, highlighting their distinct functional roles in information processing. Finally, these pre-identified units can predict neural responses in all corresponding face-, scene-, body-, and word-selective regions of human visual cortex, under a highly constrained sparse positive encoding procedure. The success of this single model indicates that brain-like functional specialization can emerge without category-specific learning pressures, as the system learns to untangle rich image content. Contrastive coding, therefore, provides a unifying account of object category emergence and representation in the human brain.",
+  "year": 2024,
+  "venue": "Science Advances",
+  "authors": [
+   "Jacob S. Prince",
+   "George A. Alvarez",
+   "Talia Konkle"
+  ],
+  "citations": 41,
+  "source": "openalex",
+  "source_id": "W4402830990",
+  "doi": "10.1126/sciadv.adl1776",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adl1776?download=true",
+  "published_iso": "2024-09-25",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "Large (Vision) Language Models for Autonomous Vehicles: Current Trends and Future Directions",
+  "title_norm": "large vision language models for autonomous vehicles current trends and future d",
+  "abstract": "As autonomous vehicles (AVs) advance, the integration of Large (Vision) Language Models (L(V)LMs) has emerged as a promising approach to enhance AV capabilities in perception, planning, decision-making, and data generation. However, the practical challenges of incorporating L(V)LMs into AV systems, including computational efficiency, real-time processing, and ethical considerations, remain underexplored. This survey aims to provide a comprehensive review of the current research on L(V)LM applications in AVs, focusing on four key areas: modular integration, end-to-end integration, data generation, and evaluation platforms. We systematically analyse 62 recent papers published before June 2024, detailing methodologies, models, datasets, and benchmarks used, while identifying common tradeoffs and limitations. Our findings highlight the potential of L(V)LMs to improve AV system performance but emphasise the need for further research in real-world integration, regulatory challenges, and V2X communication. This survey offers valuable insights and guidance for researchers and practitioners aiming to optimise L(V)LMs in autonomous vehicles.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Hanlin Tian",
+   "K Rama Subba Reddy",
+   "Yuxiang Feng",
+   "Mohammed Quddus",
+   "Yiannis Demiris",
+   "Panagiotis Angeloudis"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4403630156",
+  "doi": "10.36227/techrxiv.172963218.80161917/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.172963218.80161917",
+  "published_iso": "2024-10-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Towards Generalist Robot Learning from Internet Video: A Survey",
+  "title_norm": "towards generalist robot learning from internet video a survey",
+  "abstract": "Scaling deep learning to massive and diverse internet data has driven remarkable breakthroughs in domains such as video generation and natural language processing. Robot learning, however, has thus far failed to replicate this success and remains constrained by a scarcity of available data. Learning from Videos (LfV) methods aim to address this data bottleneck by augmenting traditional robot data with large-scale internet video. This video data provides foundational information regarding physical dynamics, behaviours, and tasks, and can be highly informative for general-purpose robots. This survey systematically examines the emerging field of LfV. We first outline essential concepts, including detailing fundamental LfV challenges such as distribution shift and missing action labels in video data. Next, we comprehensively review current methods for extracting knowledge from large-scale internet video, overcoming LfV challenges, and improving robot learning through video-informed training. The survey concludes with a critical discussion of future opportunities. Here, we emphasize the need for scalable foundation model approaches that can leverage the full range of available internet video and enhance the learning of robot policies and dynamics models. Overall, the survey aims to inform and catalyse future LfV research, driving progress towards general-purpose robots.",
+  "year": 2025,
+  "venue": "Journal of Artificial Intelligence Research",
+  "authors": [
+   "Robert McCarthy",
+   "Daniel C. H. Tan",
+   "Dominik Schmidt",
+   "Fernando Acero",
+   "Nathan Herr",
+   "Yilun Du"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4396600885",
+  "doi": "10.1613/jair.1.17400",
+  "arxiv_id": null,
+  "paper_url": "https://jair.org/index.php/jair/article/download/17400/27192",
+  "published_iso": "2025-07-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+  "title_norm": "forcevla enhancing vla models with a force aware moe for contact rich manipulati",
+  "abstract": "Vision-Language-Action (VLA) models have advanced general-purpose robotic manipulation by leveraging pretrained visual and linguistic representations. However, they struggle with contact-rich tasks that require fine-grained control involving force, especially under visual occlusion or dynamic uncertainty. To address these limitations, we propose ForceVLA, a novel end-to-end manipulation framework that treats external force sensing as a first-class modality within VLA systems. ForceVLA introduces FVLMoE, a force-aware Mixture-of-Experts fusion module that dynamically integrates pretrained visual-language embeddings with real-time 6-axis force feedback during action decoding. This enables context-aware routing across modality-specific experts, enhancing the robot's ability to adapt to subtle contact dynamics. We also introduce \\textbf{ForceVLA-Data}, a new dataset comprising synchronized vision, proprioception, and force-torque signals across five contact-rich manipulation tasks. ForceVLA improves average task success by 23.2% over strong pi_0-based baselines, achieving up to 80% success in tasks such as plug insertion. Our approach highlights the importance of multimodal integration for dexterous manipulation and sets a new benchmark for physically intelligent robotic control. Code and data will be released at https://sites.google.com/view/forcevla2025.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Jiawen Yu",
+   "H X Liu",
+   "Qi Yu",
+   "Jieji Ren",
+   "Chong Hao",
+   "Haitong Ding"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4415037842",
+  "doi": "10.52202/085713-3124",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2505.22159",
+  "published_iso": "2025-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation",
+  "title_norm": "do vision language models have internal world models towards an atomic evaluatio",
+  "abstract": "Qiyue Gao, Xinyu Pi, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, Stone Tao, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu. Findings of the Association for Computational Linguistics: ACL 2025. 2025.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Qiyue Gao",
+   "Xinyu Pi",
+   "Kevin Liu",
+   "Junrong Chen",
+   "Ruolan Yang",
+   "Xinqi Huang"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4412944525",
+  "doi": "10.18653/v1/2025.findings-acl.1342",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2025.findings-acl.1342.pdf",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "Ze System Manifesto",
+  "title_norm": "ze system manifesto",
+  "abstract": "This manifesto presents the theoretical and operational foundation of the Ze System—a radical framework for the scientific investigation of latent reality. Moving beyond the paradigm of passive observation, it posits that a substantial portion of reality exists in an unmanifested, wave-like state of potentialities, statistical shadows, and distributed correlations. Ze redefines scientific inquiry as an active, provocative engagement with this latent field. Its core thesis is that the hidden is not revealed by observation but by conflict: it is forced into observable, particle-like localization when placed in a situation where it hinders the predictive certainty of a model. The manifesto unfolds across ten principles, constructing an ontology where information precedes manifestation, a methodology centered on predictive pressure and dual (causal/counterfactual) readings, and an ethics of profound responsibility for the changes wrought by interventionist knowledge. Ze is defined not as an intelligence or a neutral observer, but as a new type of measuring instrument where measurement equals enacted prediction, observation equals intervention, and truth is localized in the structured failure of expectations. It concludes as an invitation to experiment with the very architecture of knowledge production, proposing a second-order science that treats our cognitive and experimental frameworks as the primary subjects of a Ze-like meta-analysis.",
+  "year": 2026,
+  "venue": "Longevity Horizon",
+  "authors": [
+   "Jaba Tkemaladze"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W7125405807",
+  "doi": "10.65649/3hm9b025",
+  "arxiv_id": null,
+  "paper_url": "https://longevity.ge/longhoriz/article/download/53/pdf",
+  "published_iso": "2026-01-09",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Deep Reinforcement Learning for Surgical Robotics with State and Image Information: A Survey",
+  "title_norm": "deep reinforcement learning for surgical robotics with state and image informati",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Research Square",
+  "authors": [
+   "Edoardo Fazzari",
+   "Cesare Stefanini"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125599892",
+  "doi": "10.21203/rs.3.rs-8621244/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.researchsquare.com/article/rs-8621244/latest.pdf",
+  "published_iso": "2026-01-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "An agentic vision-action framework for generative 3D architectural modeling from sketches",
+  "title_norm": "an agentic vision action framework for generative 3d architectural modeling from",
+  "abstract": "In recent years, advances in generative AI have enabled the direct generation of 3D models from sketches or images, offering new possibilities in architectural design. However, most current AI-driven modeling approaches still operate as “black boxes,” exhibiting issues such as opaque modeling processes, non-editable outputs, and a lack of semantic depth. In the field of architectural design, ideal tools should not only support structured component generation and spatial reasoning but also facilitate iterative workflows and collaborative creation. To address these challenges, inspired by the iterative design processes of human architects, we propose an agentic vision-action framework to assist architects in reasoning controllable and explainable 3D models from simple sketches. The framework involves the collaboration of multiple AI agents—including a Vision Agent, a 3D Reasoning Agent, a Reflection Agent, and a Data-Driven 3D Layout Agent—that collectively support sketch interpretation, spatial reasoning, and the generation of editable, structured 3D models. By integrating vision-language models (VLMs) with data-driven techniques, the system predicts detailed 3D spatial layouts and enables intuitive modifications through both visual and language inputs. Experimental results show that our approach surpasses existing methods in sketch interpretation, spatial reasoning, and structured 3D model generation. The outputs are not only editable and semantically rich but also composed of interpretable and traceable modeling steps, highlighting the potential of AI to assist architects in explainable and controllable design workflows. Instead of replicating human cognition, the framework is designed to augment it by enabling iterative feedback loops that interpret ambiguity, co-evolve design intent, and support co-constructive human–AI collaboration.",
+  "year": 2025,
+  "venue": "International Journal of Architectural Computing",
+  "authors": [
+   "Ximing Zhong",
+   "Xianchuan Meng",
+   "Yingkai Li",
+   "Pia Fricker",
+   "Jizhong Liang",
+   "Immanuel Koh"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4412834287",
+  "doi": "10.1177/14780771251352950",
+  "arxiv_id": null,
+  "paper_url": "https://journals.sagepub.com/history/92e9c083-4c6c-4693-8c1a-c83aefe8d0d0/14780771251352950.22375853.pdf",
+  "published_iso": "2025-07-28",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "A Review of Embodied Grasping",
+  "title_norm": "a review of embodied grasping",
+  "abstract": "Pre-trained models trained with internet-scale data have achieved significant improvements in perception, interaction, and reasoning. Using them as the basis of embodied grasping methods has greatly promoted the development of robotics applications. In this paper, we provide a comprehensive review of the latest developments in this field. First, we summarize the embodied foundations, including cutting-edge embodied robots, simulation platforms, publicly available datasets, and data acquisition methods, to fully understand the research focus. Then, the embodied algorithms are introduced, starting from pre-trained models, with three main research goals: (1) embodied perception, using data captured by visual sensors to perform point cloud extraction or 3D reconstruction, combined with pre-trained models, to understand the target object and external environment and directly predict the execution of actions; (2) embodied strategy: In imitation learning, the pre-trained model is used to enhance data or as a feature extractor to enhance the generalization ability of the model. In reinforcement learning, the pre-trained model is used to obtain the optimal reward function, which improves the learning efficiency and ability of reinforcement learning; (3) embodied agent: The pre-trained model adopts hierarchical or holistic execution to achieve end-to-end robot control. Finally, the challenges of the current research are summarized, and a perspective on feasible technical routes is provided.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Jianghao Sun",
+   "Pengjun Mao",
+   "Lingju Kong",
+   "Jun Wang"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4406984533",
+  "doi": "10.3390/s25030852",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/3/852/pdf?version=1738254202",
+  "published_iso": "2025-01-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Ze, Decoherence, and the Quantum Eraser",
+  "title_norm": "ze decoherence and the quantum eraser",
+  "abstract": "The quantum eraser experiment, while confirming the mathematical formalism of quantum mechanics, has persistently challenged intuitive understanding, often invoking concepts of retrocausality or the necessity of a conscious observer. This paper develops and articulates the Ze interpretation as a comprehensive framework that resolves these conceptual challenges without such metaphysical additions. We propose that quantum dynamics is fundamentally governed by the competition between two active generative models: a direct causal model (Model A, \"particle-like\") and a counterfactual wave model (Model B, \"wave-like\"). Decoherence is reinterpreted not as information loss, but as the environmental amplification of a structural incompatibility between these models, leading to a forced stabilization of the system into a state compatible with a single, definite narrative—a process we identify as physical collapse. The quantum eraser is shown to be an active intervention that dismantles this incompatibility by removing the environmental basis for discriminating between models, thereby restoring the conditions for a low-conflict consensus state that manifests as interference. This framework seamlessly unifies unitary evolution, decoherence, collapse, and erasure as facets of a single process of model competition and stabilization. It eliminates the need for an observer-centric explanation, replaces the \"collapse\" postulate with a dynamical physical mechanism, and yields novel, testable predictions regarding interference in complex systems and the dynamic nature of the quantum-classical threshold.",
+  "year": 2026,
+  "venue": "Longevity Horizon",
+  "authors": [
+   "Jaba Tkemaladze"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7125373900",
+  "doi": "10.65649/39hf1h41",
+  "arxiv_id": null,
+  "paper_url": "https://longevity.ge/longhoriz/article/download/52/pdf",
+  "published_iso": "2026-01-10",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+  "title_norm": "closed loop visuomotor control with generative expectation for robotic manipulat",
+  "abstract": "Despite significant progress in robotics and embodied AI in recent years, deploying robots for long-horizon tasks remains a great challenge. Majority of prior arts adhere to an open-loop philosophy and lack real-time feedback, leading to error accumulation and undesirable robustness. A handful of approaches have endeavored to establish feedback mechanisms leveraging pixel-level differences or pre-trained visual representations, yet their efficacy and adaptability have been found to be constrained. Inspired by classic closed-loop control systems, we propose CLOVER, a closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control. CLOVER consists of a text-conditioned video diffusion model for generating visual plans as reference inputs, a measurable embedding space for accurate error quantification, and a feedback-driven controller that refines actions from feedback and initiates replans as needed. Our framework exhibits notable advancement in real-world robotic tasks and achieves state-of-the-art on CALVIN benchmark, improving by 8% over previous open-loop counterparts. Code and checkpoints are maintained at https://github.com/OpenDriveLab/CLOVER.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Qingwen Bu",
+   "Jia Zeng",
+   "Li Chen",
+   "Yanchao Yang",
+   "Guyue Zhou",
+   "Junchi Yan"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403808753",
+  "doi": "10.48550/arxiv.2409.09016",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2409.09016",
+  "published_iso": "2024-09-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+  "title_norm": "vitacformer learning cross modal representation for visuo tactile dexterous mani",
+  "abstract": "Dexterous manipulation is a cornerstone capability for robotic systems aiming to interact with the physical world in a human-like manner. Although vision-based methods have advanced rapidly, tactile sensing remains crucial for fine-grained control, particularly in unstructured or visually occluded settings. We present ViTacFormer, a representation-learning approach that couples a cross-attention encoder to fuse high-resolution vision and touch with an autoregressive tactile prediction head that anticipates future contact signals. Building on this architecture, we devise an easy-to-challenging curriculum that steadily refines the visual-tactile latent space, boosting both accuracy and robustness. The learned cross-modal representation drives imitation learning for multi-fingered hands, enabling precise and adaptive manipulation. Across a suite of challenging real-world benchmarks, our method achieves approximately 50% higher success rates than prior state-of-the-art systems. To our knowledge, it is also the first to autonomously complete long-horizon dexterous manipulation tasks that demand highly precise control with an anthropomorphic hand, successfully executing up to 11 sequential stages and sustaining continuous operation for 2.5 minutes.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Heng, Liang",
+   "Geng, Haoran",
+   "Zhang, Kaifeng",
+   "Abbeel, Pieter",
+   "Malik, Jitendra"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417537399",
+  "doi": "10.48550/arxiv.2506.15953",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2506.15953",
+  "published_iso": "2025-06-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Visual Large Language Models for Generalized and Specialized Applications",
+  "title_norm": "visual large language models for generalized and specialized applications",
+  "abstract": "Visual-language models (VLM) have emerged as a powerful tool for learning a unified embedding space for vision and language. Inspired by large language models, which have demonstrated strong reasoning and multi-task capabilities, visual large language models (VLLMs) are gaining increasing attention for building general-purpose VLMs. Despite the significant progress made in VLLMs, the related literature remains limited, particularly from a comprehensive application perspective, encompassing generalized and specialized applications across vision (image, video, depth), action, and language modalities. In this survey, we focus on the diverse applications of VLLMs, examining their using scenarios, identifying ethics consideration and challenges, and discussing future directions for their development. By synthesizing these contents, we aim to provide a comprehensive guide that will pave the way for future innovations and broader applications of VLLMs. The paper list repository is available: https://github.com/JackYFL/awesome-VLLMs.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yixuan Li",
+   "Zhixin Lai",
+   "Wentao Bao",
+   "Zhen Tan",
+   "Anh Dao",
+   "Kewei Sui"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4406122761",
+  "doi": "10.48550/arxiv.2501.02765",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.02765",
+  "published_iso": "2025-01-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "A Survey of Reinforcement Learning-Based Motion Planning for Autonomous Driving: Lessons Learned from a Driving Task Perspective",
+  "title_norm": "a survey of reinforcement learning based motion planning for autonomous driving ",
+  "abstract": "Reinforcement learning (RL), with its ability to explore and optimize policies in complex, dynamic decision-making tasks, has emerged as a promising approach to addressing motion planning (MoP) challenges in autonomous driving (AD). Despite rapid advancements in RL and AD, a systematic description and interpretation of the RL design process tailored to diverse driving tasks remains underdeveloped. This survey provides a comprehensive review of RL-based MoP for AD, focusing on lessons from task-specific perspectives. We first outline the fundamentals of RL methodologies, and then survey their applications in MoP, analyzing scenario-specific features and task requirements to shed light on their influence on RL design choices. Building on this analysis, we summarize key design experiences, extract insights from various driving task applications, and provide guidance for future implementations. Additionally, we examine the frontier challenges in RL-based MoP, review recent efforts to addresse these challenges, and propose strategies for overcoming unresolved issues.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhuoren Li",
+   "Jin, Guizhe",
+   "Ran Yu",
+   "Zhang, Weiqi",
+   "Zhiwen Chen",
+   "Li, Nan"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417050645",
+  "doi": "10.48550/arxiv.2503.23650",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2503.23650",
+  "published_iso": "2025-03-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "Large language models for artificial general intelligence (AGI): A survey of foundational principles and approaches",
+  "title_norm": "large language models for artificial general intelligence agi a survey of founda",
+  "abstract": "Generative artificial intelligence (AI) systems based on large-scale pretrained foundation models (PFMs) such as vision-language models, large language models (LLMs), diffusion models and vision-language-action (VLA) models have demonstrated the ability to solve complex and truly non-trivial AI problems in a wide variety of domains and contexts. Multimodal large language models (MLLMs), in particular, learn from vast and diverse data sources, allowing rich and nuanced representations of the world and, thereby, providing extensive capabilities, including the ability to reason, engage in meaningful dialog; collaborate with humans and other agents to jointly solve complex problems; and understand social and emotional aspects of humans. Despite this impressive feat, the cognitive abilities of state-of-the-art LLMs trained on large-scale datasets are still superficial and brittle. Consequently, generic LLMs are severely limited in their generalist capabilities. A number of foundational problems -- embodiment, symbol grounding, causality and memory -- are required to be addressed for LLMs to attain human-level general intelligence. These concepts are more aligned with human cognition and provide LLMs with inherent human-like cognitive properties that support the realization of physically-plausible, semantically meaningful, flexible and more generalizable knowledge and intelligence. In this work, we discuss the aforementioned foundational issues and survey state-of-the art approaches for implementing these concepts in LLMs. Specifically, we discuss how the principles of embodiment, symbol grounding, causality and memory can be leveraged toward the attainment of artificial general intelligence (AGI) in an organic manner.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Alhassan Mumuni",
+   "Fuseini Mumuni"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4406123676",
+  "doi": "10.48550/arxiv.2501.03151",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.03151",
+  "published_iso": "2025-01-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events",
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "The Role of AI in On-Site Construction Robotics: A State-of-the-Art Review Using the Sense–Think–Act Framework",
+  "title_norm": "the role of ai in on site construction robotics a state of the art review using ",
+  "abstract": "The construction sector is confronted with significant challenges, such as reduced productivity, high injury rates, and labor deficits, driving research into autonomous robotics as a viable solution. This study delivers a comprehensive review of recent advancements in AI-driven autonomous construction robotics, organized within the sense–think–act (STA) framework. A rigorous bibliometric analysis of 319 selected publications from 2015 to 2024 highlights key research trends and notable contributors. A systematic content analysis elaborates on advancements in each STA component, including technologies for perception and environmental understanding, decision-making algorithms for reasoning and planning, and varied actuation methods addressing scale and collaborative robotics. The study also explores challenges such as environmental unpredictability, specialized task demands, and structural safety concerns. Finally, it underscores future research priorities, focusing on balanced robotic system design, dataset standardization, domain-specific knowledge incorporation, and enhanced robustness to support the broader implementation of autonomous construction robotics.",
+  "year": 2025,
+  "venue": "Buildings",
+  "authors": [
+   "Zhihao Ren",
+   "Jung In Kim"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4412094040",
+  "doi": "10.3390/buildings15132374",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-5309/15/13/2374/pdf?version=1751874716",
+  "published_iso": "2025-07-07",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Sim-to-Real Dynamic Object Manipulation on Conveyor Systems via Optimization Path Shaping",
+  "title_norm": "sim to real dynamic object manipulation on conveyor systems via optimization pat",
+  "abstract": "Realizing generalizable dynamic object manipulation on conveyor systems is important for enhancing manufacturing efficiency, as it eliminates specialized engineering for different scenarios. To this end, imitation learning emerges as a promising paradigm, leveraging expert demonstrations to teach a policy manipulation skills. Although the generalization of an imitation learning policy can be improved by increasing demonstrations, demonstration collection is labor-intensive. Besides, public dynamic object manipulation data is scarce. In this work, we address this data scarcity problem via generating demonstrations in a simulator. A significant challenge of using simulated data lies in the appearance gap between simulated and real-world observations. To tackle this challenge, we propose Geometry-Enhanced Model (GEM), which employs our designed appearance noise annealing strategy to shape the policy optimization path, thereby prioritizing the geometry information in observations. Extensive experiments in simulated and real-world tasks demonstrate that GEM can generalize across environment backgrounds, robot embodiments, motion dynamics, and object geometries. Notably, GEM is deployed in a real canteen for tableware collection. Without test-scene data, GEM achieves a success rate of over 97% across more than 10,000 operations.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhuoling Li",
+   "Yang, Jinrong",
+   "Zhao, Yong",
+   "Ren, Liangliang",
+   "Wu, Xiaoyang",
+   "Xu, Zhenhua"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4415014283",
+  "doi": "10.48550/arxiv.2508.14042",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2508.14042",
+  "published_iso": "2025-08-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
+  "title_norm": "understanding world or predicting future a comprehensive survey of world models",
+  "abstract": "The concept of world models has garnered significant attention due to advancements in multimodal large language models such as GPT-4 and video generation models such as Sora, which are central to the pursuit of artificial general intelligence. This survey offers a comprehensive review of the literature on world models. Generally, world models are regarded as tools for either understanding the present state of the world or predicting its future dynamics. This review presents a systematic categorization of world models, emphasizing two primary functions: (1) constructing internal representations to understand the mechanisms of the world, and (2) predicting future states to simulate and guide decision-making. Initially, we examine the current progress in these two categories. We then explore the application of world models in key domains, including autonomous driving, robotics, and social simulacra, with a focus on how each domain utilizes these aspects. Finally, we outline key challenges and provide insights into potential future research directions. We summarize the representative articles along with their code repositories in https://github.com/tsinghua-fib-lab/World-Model .",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jingtao Ding",
+   "Yunke Zhang",
+   "Yu Shang",
+   "Y. Zhang",
+   "Zefang Zong",
+   "Jie Feng"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4411735734",
+  "doi": "10.1145/3746449",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3746449",
+  "published_iso": "2025-06-27",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation",
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Machine Learning in Sports",
+  "title_norm": "machine learning in sports",
+  "abstract": "This open access book provides cutting-edge work on machine learning in sports analytics, emphasizing the integration of computer vision, data analytics, and machine learning to redefine strategic sports analysis. This book not only covers the essential methodologies of capturing and analyzing real sports data but also pioneers the integration of real-world analytics with digital modeling, advancing the field toward sophisticated digital modeling in sports. Through a seamless blend of theoretical frameworks and practical applications, the book illustrates how these integrated technologies can be utilized to predict, evaluate, and suggest next plays in sports. By leveraging the power of machine learning, the book presents cutting-edge approaches to sports analytics, where data from actual games is enhanced with predictive simulations for strategic planning and decision-making. The use of digital modeling in sports opens up new dimensions of interaction between the physical play and its digital analysis, offering a comprehensive understanding that was previously unattainable. This book is an essential read for postgraduates, researchers, and technologists, who are interested in sports analysts. The book consists of five parts: Part I, which comprises a single chapter exploring the fundamentals and scope of learning-based sports analytics; Parts II, III, IV, and V review the various aspects of this field, including data acquisition with computer vision, predictive analysis and play evaluation with machine learning, potential play evaluation with learning-based agent modeling, and future perspectives and ecosystems on the field. This structure provides a comprehensive overview that will engage and inform researchers and practitioners interested in the intersection of analytical research and cutting-edge technology in sports.",
+  "year": 2025,
+  "venue": "SpringerBriefs in computer science",
+  "authors": [
+   "Keisuke Fujii"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4409289950",
+  "doi": "10.1007/978-981-96-1445-5",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4409289950",
+  "published_iso": "2025-01-01",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Human–Robot Interaction and Tracking System Based on Mixed Reality Disassembly Tasks",
+  "title_norm": "human robot interaction and tracking system based on mixed reality disassembly t",
+  "abstract": "Disassembly is a crucial process in industrial operations, especially in tasks requiring high precision and strict safety standards when handling components with collaborative robots. However, traditional methods often rely on rigid and sequential task planning, which makes it difficult to adapt to unforeseen changes or dynamic environments. This rigidity not only limits flexibility but also leads to prolonged execution times, as operators must follow predefined steps that do not allow for real-time adjustments. Although techniques like teleoperation have attempted to address these limitations, they often hinder direct human–robot collaboration within the same workspace, reducing effectiveness in dynamic environments. In response to these challenges, this research introduces an advanced human–robot interaction (HRI) system leveraging a mixed-reality (MR) interface embedded in a head-mounted device (HMD). The system enables operators to issue real-time control commands using multimodal inputs, including voice, gestures, and gaze tracking. These inputs are synchronized and processed via the Robot Operating System (ROS2), enabling dynamic and flexible task execution. Additionally, the integration of deep learning algorithms ensures precise detection and validation of disassembly components, enhancing accuracy. Experimental evaluations demonstrate significant improvements, including reduced task completion times, enhanced operator experience, and compliance with strict adherence to safety standards. This scalable solution offers broad applicability for general-purpose disassembly tasks, making it well-suited for complex industrial scenarios.",
+  "year": 2025,
+  "venue": "Robotics",
+  "authors": [
+   "Raúl Calderón-Sesmero",
+   "Adrián Lozano-Hernández",
+   "Fernando Frontela-Encinas",
+   "Guillermo Cabezas-López",
+   "Mireya De-Diego-Moro"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4412750609",
+  "doi": "10.3390/robotics14080106",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2218-6581/14/8/106/pdf?version=1753884242",
+  "published_iso": "2025-07-30",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Recipe for Vision-Language-Action Models in Robotic Manipulation: A Survey",
+  "title_norm": "recipe for vision language action models in robotic manipulation a survey",
+  "abstract": "This survey provides an in-depth analysis of recent advancements in foundational models that leverage large and diverse datasets to enable flexible and general-purpose manipulation skills. We reviewed the main concepts of Vision-Language-Action (VLA) models with emphasis on their connection to broader trends in robot learning and the architectural strategies that facilitate integration across vision, language, and action. The survey contains current training methodologies, dataset construction techniques, and the role of high-quality demonstrations in achieving reliable performance across diverse tasks. Key trends are identified, including the adoption of open-source tools, scaling of model size and training data, and improved generalization across platforms. In addition, we noted that VLA models demonstrate strong performance in controlled environments; however, significant challenges persist in long-term task planning, failure recovery, and operation in complex real-world scenarios. This survey aims to serve as a comprehensive reference for researchers and outline future research directions that may advance the practical deployment of VLA models in robotic manipulation.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Tomohiro Motoda",
+   "Koshi Makihara",
+   "Ryoichi Nakajo",
+   "Hanbit Oh",
+   "Keisuke Shirai",
+   "Ryo Hanai"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4413638658",
+  "doi": "10.36227/techrxiv.175624610.06665789/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.175624610.06665789/v1",
+  "published_iso": "2025-08-26",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Hierarchical Language Models for Semantic Navigation and Manipulation in an Aerial‐Ground Robotic System",
+  "title_norm": "hierarchical language models for semantic navigation and manipulation in an aeri",
+  "abstract": "Heterogeneous multirobot systems show great potential in complex tasks requiring coordinated hybrid cooperation. However, existing methods that rely on static or task‐specific models often lack generalizability across diverse tasks and dynamic environments. This highlights the need for generalizable intelligence that can bridge high‐level reasoning with low‐level execution across heterogeneous agents. To address this, a hierarchical multimodal framework that integrates a prompted large language model (LLM) with a fine‐tuned vision‐language model (VLM) is proposed. At the system level, the LLM performs hierarchical task decomposition and constructs a global semantic map, while the VLM provides semantic perception and object localization, where the proposed GridMask significantly enhances the VLM's spatial accuracy for reliable fine‐grained manipulation. The aerial robot leverages this global map to generate semantic paths and guide the ground robot's local navigation and manipulation, ensuring robust coordination even in target‐absent or ambiguous scenarios. The framework is validated through extensive simulation and real‐world experiments on long‐horizon object arrangement tasks, demonstrating zero‐shot adaptability, robust semantic navigation, and reliable manipulation in dynamic environments. To the best of our knowledge, this work presents the first heterogeneous aerial–ground robotic system that integrates VLM‐based perception with LLM‐driven reasoning for global high‐level task planning and execution.",
+  "year": 2025,
+  "venue": "Advanced Intelligent Systems",
+  "authors": [
+   "Haokun Liu",
+   "Zheng Ma",
+   "Yunong Li",
+   "Junichiro Sugihara",
+   "Yicheng Chen",
+   "Jinjie Li"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415557874",
+  "doi": "10.1002/aisy.202500640",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aisy.202500640",
+  "published_iso": "2025-10-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "A Survey of Autonomous Driving Trajectory Prediction: Methodologies, Challenges, and Future Prospects",
+  "title_norm": "a survey of autonomous driving trajectory prediction methodologies challenges an",
+  "abstract": "Trajectory prediction is a critical component of autonomous driving decision-making systems, directly impacting driving safety and traffic efficiency. Despite advancements, existing reviews exhibit limitations in timeliness, classification frameworks, and challenge analysis. This paper systematically reviews multi-agent trajectory prediction technologies, focusing on generating future position sequences from historical trajectories, high-precision maps, and scene context. We propose a multi-dimensional classification framework integrating input representation, output forms, method paradigms, and interaction modeling. The review comprehensively compares conventional methods and deep learning architectures, including diffusion models and large language models. We further analyze five core challenges: complex interactions, rule and map dependence, long-term prediction errors, extreme-scene generalization, and real-time constraints. Finally, interdisciplinary solutions are prospectively explored.",
+  "year": 2025,
+  "venue": "Machines",
+  "authors": [
+   "Miao Xu",
+   "Zhi Liu",
+   "B.C.M. Wang",
+   "S Li"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4414097138",
+  "doi": "10.3390/machines13090818",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1702/13/9/818/pdf?version=1757323894",
+  "published_iso": "2025-09-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "Domain Specific Benchmarks for Evaluating Multimodal Large Language Models",
+  "title_norm": "domain specific benchmarks for evaluating multimodal large language models",
+  "abstract": "Large language models (LLMs) are increasingly being deployed across disciplines due to their advanced reasoning and problem-solving capabilities. To measure their effectiveness, various benchmarks have been developed that measure aspects of LLM reasoning, comprehension, and problem-solving. While several surveys address LLM evaluation and benchmarks, a domain-specific analysis remains underexplored in the literature. This paper introduces a taxonomy of seven key disciplines, encompassing various domains and application areas where LLMs are extensively utilized. Additionally, we provide a comprehensive review of LLM benchmarks and survey papers within each domain, highlighting the unique capabilities of LLMs and the challenges faced in their application. Finally, we compile and categorize these benchmarks by domain to create an accessible resource for researchers, aiming to pave the way for advancements toward artificial general intelligence (AGI).",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+   "Khizar Anjum",
+   "Muhammad Arshad",
+   "Kadhim Hayawi",
+   "Efstathios Polyzos",
+   "Asadullah Tariq",
+   "Mohamed Adel Serhani"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4410768329",
+  "doi": "10.20944/preprints202505.1993.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/d56e264011a4a69f9edd5f4fdcfbb212/download_pub",
+  "published_iso": "2025-05-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "NoTVLA: Semantics-Preserving Robot Adaptation via Narrative Action Interfaces",
+  "title_norm": "notvla semantics preserving robot adaptation via narrative action interfaces",
+  "abstract": "Vision-Language-Action (VLA) models represent a pivotal advance in embodied intelligence, yet they confront critical barriers to real-world deployment, most notably catastrophic forgetting. This issue stems from their overreliance on continuous action sequences or action chunks, which inadvertently create isolated data silos that disrupt knowledge retention across tasks. To tackle these challenges, we propose the Narrowing of Trajectory VLA (NoTVLA) framework: a novel approach that narrows its focus to sparse trajectories, thereby avoiding the catastrophic forgetting associated with dense trajectory fine-tuning. A key innovation of NoTVLA lies in its trajectory planning strategy: instead of centering on the target object's trajectory, it leverages temporal compression and spatial reasoning pruning specifically for the robot end effector's trajectory. Furthermore, training is conducted using these sparse trajectories rather than dense action trajectories, an optimization that delivers remarkable practical advantages with better performance in zero-shot. In multi-task evaluation scenarios, NoTVLA achieves superior performance and generalization compared to pi0 while operating under two critical constraints: it uses over an order of magnitude less computing power than pi0 and requires no wrist-mounted camera. This design ensures that NoTVLA's operational accuracy closely approximates that of single-task expert models. Crucially, it also preserves the model's inherent language capabilities, enabling zero-shot generalization in specific scenarios, supporting unified model deployment across multiple robot platforms, and fostering a degree of generalization even when perceiving tasks from novel perspectives.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zheng Huang",
+   "Mingyu Liu",
+   "Lin, Xiaoyi",
+   "Muzhi Zhu",
+   "Canyu Zhao",
+   "Zongze Du"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4417097990",
+  "doi": "10.48550/arxiv.2510.03895",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2510.03895",
+  "published_iso": "2025-10-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Dynamically shifting from compositional to conjunctive brain representations supports cognitive task learning",
+  "title_norm": "dynamically shifting from compositional to conjunctive brain representations sup",
+  "abstract": "During cognitive task learning, neural representations must be rapidly constructed for novel task performance, then optimized for robust practiced task performance. How the geometry of neural representations changes to enable this transition from novel to practiced performance remains unknown. We hypothesized that practice involves a shift from compositional representations (task-general activity patterns that can be flexibly reused across tasks) to conjunctive representations (task-specific activity patterns specialized for the current task). Functional MRI during learning of multiple complex tasks substantiated this dynamic shift from compositional to conjunctive representations, which was associated with reduced cross-task interference (via pattern separation) and behavioral improvement. Further, we found that conjunctions originated in subcortex (hippocampus and cerebellum) and slowly spread to cortex, extending multiple memory systems theories to encompass cognitive task learning. The strengthening of conjunctive representations hence serves as a computational signature of learning, reflecting cortical-subcortical dynamics that optimize task representations in the human brain. Learning shifts multi-task representations from compositional to conjunctive formats. Cortical conjunctions uniquely associate with effects of practice, and index switch costs. Subcortex is critical for cross-region binding of task rule information.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Ravi D. Mill",
+   "Michael W. Cole"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416334117",
+  "doi": "10.1038/s41467-025-65041-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-65041-2.pdf",
+  "published_iso": "2025-11-18",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "Toward Generalist Neural Motion Planners for Robotic Manipulators: Challenges and Opportunities",
+  "title_norm": "toward generalist neural motion planners for robotic manipulators challenges and",
+  "abstract": "State-of-the-art generalist manipulation policies have enabled the deployment of robotic manipulators in unstructured human environments. However, these frameworks struggle in cluttered environments primarily because they utilize auxiliary modules for low-level motion planning and control. Motion planning remains challenging due to the high dimensionality of the robot’s configuration space and the presence of workspace obstacles. Neural motion planners have enhanced motion planning efficiency by offering fast inference and effectively handling the inherent multi-modality of the motion planning problem. Despite such benefits, current neural motion planners often struggle to generalize to unseen, out-of-distribution planning settings. This paper reviews and analyzes the state-of-the-art neural motion planners, highlighting both their benefits and limitations. It also outlines a path toward establishing generalist neural motion planners capable of handling domain-specific challenges. For a list of the reviewed papers, please refer to https://davoodsz.github.io/planning-manip-survey.github.io/.",
+  "year": 2026,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "authors": [
+   "Davood Soleymanzadeh",
+   "Iván López-Sánchez",
+   "Hao Su",
+   "Yunzhu Li",
+   "Xiao Liang",
+   "Minghui Zheng"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127470505",
+  "doi": "10.1109/tase.2026.3660830",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.24318",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "SpatialActor: Exploring Disentangled Spatial Representations for Robust Robotic Manipulation",
+  "title_norm": "spatialactor exploring disentangled spatial representations for robust robotic m",
+  "abstract": "Robotic manipulation requires precise spatial understanding to interact with objects in the real world. Point-based methods suffer from sparse sampling, leading to the loss of fine-grained semantics. Image-based methods typically feed RGB and depth into 2D backbones pre-trained on 3D auxiliary tasks, but their entangled semantics and geometry are sensitive to inherent depth noise in real-world that disrupts semantic understanding. Moreover, these methods focus on high-level geometry while overlooking low-level spatial cues essential for precise interaction. We propose SpatialActor, a disentangled framework for robust robotic manipulation that explicitly decouples semantics and geometry. The Semantic-guided Geometric Module adaptively fuses two complementary geometry from noisy depth and semantic-guided expert priors. Also, a Spatial Transformer leverages low-level spatial cues for accurate 2D-3D mapping and enables interaction among spatial features. We evaluate SpatialActor on multiple simulation and real-world scenarios across 50+ tasks. It achieves state-of-the-art performance with 87.4% on RLBench and improves by 13.9% to 19.4% under varying noisy conditions, showing strong robustness. Moreover, it significantly enhances few-shot generalization to new tasks and maintains robustness under various spatial perturbations. Project Page: https://shihao1895.github.io/SpatialActor",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hao Shi",
+   "Bin Xie",
+   "Yingfei Liu",
+   "Yang Yue",
+   "Tiancai Wang",
+   "Haoqiang Fan"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416223716",
+  "doi": "10.48550/arxiv.2511.09555",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2511.09555",
+  "published_iso": "2025-11-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ },
+ {
+  "title": "Deep learning in metasurfaces: from automated design to adaptive metadevices",
+  "title_norm": "deep learning in metasurfaces from automated design to adaptive metadevices",
+  "abstract": "Metasurface modeling, designs, and applications using computational approaches are by now well established as an essential pillar in photonics, physics, and materials science. The past years have witnessed tremendous advances in methodologies and technologies to unearth the intricate light–matter interaction and promote adaptive metadevices. They have pushed the studies of metasurfaces from early passive, reconfigurable modalities to the next generation of intelligent metasurfaces. In this review, we elaborate general architecture for intelligent metasurfaces, constructed by the algorithm layer, tunable metasurface layer, and application layer. We first discuss a variety of deep learning models, ranging from the fundamental neural networks inspired by computer science to sophisticated algorithms embedded with physical specialty, highlighting their potential in the forward prediction, inverse design, and spectral correlation of metasurfaces. We then discuss adaptive metadevices in the main applications of invisibility cloaks, smart vision, intelligent sensing, and wireless communication. Finally, we pinpoint current challenges and future perspectives to embrace the coming era of intelligent metasurfaces.",
+  "year": 2025,
+  "venue": "Advanced Photonics",
+  "authors": [
+   "Yasir Saifullah",
+   "Nanxuan Wu",
+   "Huaping Wang",
+   "Bin Zheng",
+   "Chao Qian",
+   "Hongsheng Chen"
+  ],
+  "citations": 45,
+  "source": "openalex",
+  "source_id": "W4411227566",
+  "doi": "10.1117/1.ap.7.3.034005",
+  "arxiv_id": null,
+  "paper_url": "https://www.spiedigitallibrary.org/journals/advanced-photonics/volume-7/issue-3/034005/Deep-learning-in-metasurfaces--from-automated-design-to-adaptive/10.1117/1.AP.7.3.034005.pdf",
+  "published_iso": "2025-06-12",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "vision-language-action functional geometry compositional generalization object geometry action sequence manipulation"
+  ]
+ },
+ {
+  "title": "Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds",
+  "title_norm": "any3d vla enhancing vla robustness via diverse point clouds",
+  "abstract": "Existing Vision-Language-Action (VLA) models typically take 2D images as visual input, which limits their spatial understanding in complex scenes. How can we incorporate 3D information to enhance VLA capabilities? We conduct a pilot study across different observation spaces and visual representations. The results show that explicitly lifting visual input into point clouds yields representations that better complement their corresponding 2D representations. To address the challenges of (1) scarce 3D data and (2) the domain gap induced by cross-environment differences and depth-scale biases, we propose Any3D-VLA. It unifies the simulator, sensor, and model-estimated point clouds within a training pipeline, constructs diverse inputs, and learns domain-agnostic 3D representations that are fused with the corresponding 2D representations. Simulation and real-world experiments demonstrate Any3D-VLA's advantages in improving performance and mitigating the domain gap. Our project homepage is available at https://xianzhefan.github.io/Any3D-VLA.github.io.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xianzhe Fan",
+   "Shengliang Deng",
+   "Xiaoyang Wu",
+   "Yuxiang Lu",
+   "Zhuoling Li",
+   "Mi Yan"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7127541930",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2602.00807",
+  "published_iso": "2026-01-31",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "VLA 3D geometry unseen object shapes skill adaptation action plan"
+  ]
+ },
+ {
+  "title": "A Survey on Multimodal Benchmarks: In the Era of Large AI Models",
+  "title_norm": "a survey on multimodal benchmarks in the era of large ai models",
+  "abstract": "The rapid evolution of Multimodal Large Language Models (MLLMs) has brought substantial advancements in artificial intelligence, significantly enhancing the capability to understand and generate multimodal content. While prior studies have largely concentrated on model architectures and training methodologies, a thorough analysis of the benchmarks used for evaluating these models remains underexplored. This survey addresses this gap by systematically reviewing 211 benchmarks that assess MLLMs across four core domains: understanding, reasoning, generation, and application. We provide a detailed analysis of task designs, evaluation metrics, and dataset constructions, across diverse modalities. We hope that this survey will contribute to the ongoing advancement of MLLM research by offering a comprehensive overview of benchmarking practices and identifying promising directions for future work. An associated GitHub repository collecting the latest papers is available.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Lin Li",
+   "Guikun Chen",
+   "Hanrong Shi",
+   "Jun Xiao",
+   "Long Chen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403794826",
+  "doi": "10.48550/arxiv.2409.18142",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2409.18142",
+  "published_iso": "2024-09-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "world action model object-centric geometry counterfactual action verification relation events"
+  ]
+ },
+ {
+  "title": "The 2025 motile active matter roadmap",
+  "title_norm": "the 2025 motile active matter roadmap",
+  "abstract": "Activity and autonomous motion are fundamental aspects of many living and engineering systems. Here, the scale of biological agents covers a wide range, from nanomotors, cytoskeleton, and cells, to insects, fish, birds, and people. Inspired by biological active systems, various types of autonomous synthetic nano- and micromachines have been designed, which provide the basis for multifunctional, highly responsive, intelligent active materials. A major challenge for understanding and designing active matter is their inherent non-equilibrium nature due to persistent energy consumption, which invalidates equilibrium concepts such as free energy, detailed balance, and time-reversal symmetry. Furthermore, interactions in ensembles of active agents are often non-additive and non-reciprocal. An important aspect of biological agents is their ability to sense the environment, process this information, and adjust their motion accordingly. It is an important goal for the engineering of micro-robotic systems to achieve similar functionality. Many fundamental properties of motile active matter are by now reasonably well understood and under control. Thus, the ground is now prepared for the study of physical aspects and mechanisms of motion in complex environments, the behavior of systems with new physical features like chirality, the development of novel micromachines and microbots, the emergent collective behavior and swarming of intelligent self-propelled particles, and particular features of microbial systems. The vast complexity of phenomena and mechanisms involved in the self-organization and dynamics of motile active matter poses major challenges, which can only be addressed by a truly interdisciplinary effort involving scientists from biology, chemistry, ecology, engineering, mathematics, and physics. The 2025 motile active matter roadmap of Journal of Physics: Condensed Matter reviews the current state of the art of the field and provides guidance for further progress in this fascinating research area.",
+  "year": 2025,
+  "venue": "Journal of Physics Condensed Matter",
+  "authors": [
+   "Gerhard Gompper",
+   "Howard A. Stone",
+   "Christina Kurzthaler",
+   "David Saintillan",
+   "Fernando Peruani",
+   "Dmitry A. Fedosov"
+  ],
+  "citations": 36,
+  "source": "openalex",
+  "source_id": "W4406651559",
+  "doi": "10.1088/1361-648x/adac98",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406651559",
+  "published_iso": "2025-01-21",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "robot manipulation benchmark functional geometry object pair compositional generalization"
+  ]
+ },
+ {
+  "title": "Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models",
+  "title_norm": "transport discrepancy as a reliability signal for vision language action models",
+  "abstract": "Vision-language-action (VLA) models that generate continuous action chunks via flow matching lack an internal signal for judging whether a given prediction is reliable. Distribution shift and long-horizon rollouts can push backbone representations away from the region the action head decodes reliably, yet the policy has no mechanism to detect or react to this drift. We observe that the cost of transporting observation features to the action representation in a shared feature space rises precisely when such drift occurs, providing a per-step reliability estimate without extra supervision. Building on this observation, we propose DiG (Discrepancy Gate), a lightweight plug-in module for flow-matching VLA policies. DiG computes a sliced Wasserstein transport cost between backbone features and the action expert's own input projection, maps it through an exponential gate, and uses the gate to modulate both a residual feature refinement and the training loss. At inference time, the gate enables DiG-Refinefine, an iterative refinement process that corrects action chunks before execution. Experiments on both simulation and real-world scenarios show that DiG consistently improves success rates, with the largest gains under distribution shift and on long-horizon tasks.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Wanpeng Zhang",
+   "Ye Wang",
+   "Hao Luo",
+   "Yuan, Haoqi",
+   "Yicheng Feng",
+   "Xu, Chaoyi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416967312",
+  "doi": "10.48550/arxiv.2512.01715",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2512.01715",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry-aware VLA unseen object instances grasp align insert"
+  ]
+ }
+]

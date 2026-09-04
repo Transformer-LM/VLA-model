@@ -1,0 +1,98 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "鍦?semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 鐨?frontier residue 涓婏紝proposal-conditioned future 鑳借鏄庢暣浣撴彁妗堝彲鑳藉け璐ｏ紝鍗存病鏈夐棴鍚堚€滃け璐ョ敱鍗曚釜鏁堝簲鍣ㄥ姩浣滀笉瓒炽€侀€氶亾闂村啿绐侊紝杩樻槸鍙湁鑱斿悎鏀瑰彉鎵嶅彲淇鈥濈殑鍐崇瓥姝т箟 鈥?stakes: 绾犻敊鍣ㄥ彲鑳藉弽澶嶄慨鏀规棤鍏冲姩浣滅淮搴︺€侀檷浣庢垚鍔熺巼骞跺鍔犻棴鐜绠楋紝鐞嗚涓婁篃缂哄皯鎶婁笘鐣屾ā鍨嬭瘖鏂噺杩炴帴鍒板姩浣滄洿鏂拌矗浠昏竟鐣岀殑鍘熷垯銆?",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often by attaching a different conditioning encoder, latent space, or control channel to an existing refinement backbone and presenting the swap itself as the contribution, without isolating it. The recurring structural shortcut is the missing ablation that holds backbone, data, and compute fixed while toggling only the new interface, so reviewers cannot tell whether the gain comes from the redesigned conditioning pathway or from a stronger borrowed encoder, more data, or more compute.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Eliminating two inherited bottlenecks at once is only compelling if the combined system clearly beats systems that removed each in isolation; marginal gains plus a regression in primary quality read as recombination, not a new method.",
+            "candidate_match": "no",
+            "reasoning": "Steps 7 and 10 specify matched monolithic-future, recursive-branch, marginal-only, and zero-token arms that isolate the redesigned carrier and interaction-token pathway, although no result is assumed."
+          },
+          {
+            "lesson_quoted": "Swapping the conditioning encoder for a more powerful one is not a new model class if the output quality still trails incumbents and the encoder's advantage is never ablated against the prior encoder under matched conditions.",
+            "candidate_match": "no",
+            "reasoning": "CarrierLock does not substitute a stronger pretrained encoder; it introduces a bias-free token encoder and matched interface ablations under a frozen backbone and parameter budget."
+          },
+          {
+            "lesson_quoted": "A controllable pipeline assembled from frozen pretrained modules needs an ablation proving that the new control surface鈥攏ot the off-the-shelf components鈥攄rives the gain, or it collapses into prior synthetic-data and adapter work.",
+            "candidate_match": "no",
+            "reasoning": "The proposed E0 includes matched-parameter monolithic, recursive, marginal-only, zero-token, and token-permutation controls while OpenPI and FastWAM remain fixed, so the required attribution experiment is explicit."
+          },
+          {
+            "lesson_quoted": "Claiming a unified or foundation-model reframe obligates you to actually demonstrate the unification (multi-domain pretraining plus transfer); per-setting retraining under a single architecture does not substantiate the claim.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes no unified- or foundation-model claim and confines itself to frozen OpenPI/FastWAM on RoboTwin."
+          },
+          {
+            "lesson_quoted": "Importing a representation from a semantically adjacent domain as the conditioning signal fails when that space is orthogonal to the geometry or dynamics that actually determine the output being synthesized.",
+            "candidate_match": "borderline",
+            "reasoning": "The native FastWAM latent is not imported from an adjacent domain, but the second executed blocker proves that its nonlinear coordinate geometry can manufacture c under physically additive dynamics, so the token is not tied to the physical interaction the paired action branch is supposed to use."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The sole generative_process_redesign entry avoids the usual missing-interface-ablation failures and does not overclaim unification. It remains borderline on the lesson about a conditioning representation disconnected from determining dynamics because an invertible nonlinear FastWAM coordinate change can create the central interaction token without physical coupling."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "鍦?semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 鐨?frontier residue 涓婏紝proposal-conditioned future 鑳借鏄庢暣浣撴彁妗堝彲鑳藉け璐ｏ紝鍗存病鏈夐棴鍚堚€滃け璐ョ敱鍗曚釜鏁堝簲鍣ㄥ姩浣滀笉瓒炽€侀€氶亾闂村啿绐侊紝杩樻槸鍙湁鑱斿悎鏀瑰彉鎵嶅彲淇鈥濈殑鍐崇瓥姝т箟 鈥?stakes: 绾犻敊鍣ㄥ彲鑳藉弽澶嶄慨鏀规棤鍏冲姩浣滅淮搴︺€侀檷浣庢垚鍔熺巼骞跺鍔犻棴鐜绠楋紝鐞嗚涓婁篃缂哄皯鎶婁笘鐣屾ā鍨嬭瘖鏂噺杩炴帴鍒板姩浣滄洿鏂拌矗浠昏竟鐣岀殑鍘熷垯銆?",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "tactical_pattern_quoted": "Hold an iterative-refinement generative backbone fixed and treat its conditioning interface or operating representation space as the free variable. Redesign what the procedure conditions on, how the condition enters, or the space in which refinement runs, then isolate that interface as the only moving part.",
+        "instantiation_in_core_mechanism": "Steps 2-6 keep OpenPI and FastWAM frozen, replace the monolithic recursively produced future with a common-carrier four-cell transition bundle, and route its vector interaction token as the exclusive producer of paired residuals in a second-pass adapter. Steps 7 and 10 hold backbone, data, parameter budget, and calls fixed across interface ablations.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "CarrierLock performs C24's distinctive conditioning-interface redesign rather than merely citing the parent pattern: the common-carrier bundle replaces the inherited future interface and is isolated under frozen backbones. The executed blockers concern whether the resulting estimand is valid, not whether the C24 recipe was instantiated."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "generative_process_redesign",
+      "targeted_self_supervised_objective"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "Neither component is heterogeneous_decomposition, so none of the three documented reject-favored compositions matches."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "arxiv:2608.04653",
+    "threat_source": "lit_table",
+    "threat_channel": null,
+    "subsumption_argument": "Overcoming Statistical Bias in Action-Controllable World Models already uses same-state multi-action counterfactuals to expose action-insensitive or biased WAM behavior and enforces action-response consistency, so the broad re-anchoring intuition is occupied. CarrierLock retains a defensible paper-level delta in factorizing the same-carrier responses into effector-pair vector Möbius defects and making the token the exclusive paired VLA-refinement input, but that delta stands only if c distinguishes physical coupling from path mediation and latent-coordinate curvature; the supplied executed blockers show that it currently does neither.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": "Path-specific effects, longitudinal mediation, and representation-invariant causal interaction measures; scoop-check vocabulary: 'sequential g-computation interaction effect', 'path-mediated joint action effect', and 'coordinate-invariant causal interaction representation'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the carrier-locked interaction token c",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names a restored-state RoboTwin comparison, gives the direction of task-success change, identifies c as the single load-bearing variable, and predicts that a partner/horizon permutation returns downstream success toward named baselines. It contains no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "OBSTACLE HOLE: same-carrier re-anchoring deletes genuine state-mediated multi-step interaction, not only false branch drift.",
+      "status": "upheld",
+      "basis": "The executed x'=x^2+l+r example satisfies the candidate's action-additive one-step premise, has recursive mixed effect 4 at H=2, and yields carrier-locked c=0; there is no arithmetic error or premise violation, so CarrierLock provably discards a genuine path-mediated joint effect and would require a new estimand and probes."
+    },
+    {
+      "finding_ref": "OBSTACLE HOLE: a four-cell linear contrast in FastWAM's native pre-decoder latent is not causally valid.",
+      "status": "upheld",
+      "basis": "For physical x'=x+l+r the mixed contrast is zero, while the invertible coordinate z=x^2 gives c_z=4 on the same four states; the calculation is correct and directly applies to the declared unconstrained native latent, so a representation constraint or observable-space estimand is required."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "Both blocking_findings_disposition entries are upheld and attack the central c estimand: common-carrier re-anchoring deletes genuine path-mediated interaction, while nonlinear latent coordinates manufacture nonzero c under physically additive dynamics. Although recipe_application_check.entries[0].verdict is applied, falsification_structure_check is sound, and no exact collision was retrieved, these are redesign-level failures of the token, probes, and causal interpretation rather than patchable C24 interface details; advance is forbidden and Phase 3.3 cannot repair them.",
+  "revision_targets": []
+}

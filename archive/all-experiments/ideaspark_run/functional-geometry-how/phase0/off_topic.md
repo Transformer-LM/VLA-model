@@ -1,0 +1,84 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **HandDiff: 3D Hand Pose Estimation with Diffusion on Image-Point Cloud** (`semanticscholar:e2021ca292b14ff91eca52d4c4bab227233bf949`)
+  - Human hand keypoint estimation from image-point clouds; no robot manipulation relation, policy, or functional-geometry transfer.
+- **Camera Pose Estimation in Multi-Object Scenes Using Ray Diffusion and Point Cloud Alignment** (`semanticscholar:c27e6a65c63fd2ab7a67e20130f9b1aafb4693f7`)
+  - Camera trajectory estimation for multi-object image sets; unrelated to manipulation-policy adaptation or relational skill execution.
+- **mmDiffusion: mmWave Diffusion for Sequential 3D Human Dense Point Cloud Generation** (`semanticscholar:4a5cd65ddca85c587c2efb66dc3afc5c82df490f`)
+  - mmWave human point-cloud densification for interfaces; cross-domain point-cloud generation with no robotic manipulation.
+- **Integrated Real-Time Automated fiber placement Inspection System with High-Speed Point Cloud Alignme** (`semanticscholar:a583f6dcdc85c8039d487e6b60c68aac896bba90`)
+  - Industrial fiber-placement inspection and point-cloud stitching; measures manufactured parts rather than controlling manipulation skills.
+- **EADReg: Probabilistic Correspondence Generation with Efficient Autoregressive Diffusion Model for Ou** (`semanticscholar:8a618109b3b8e4c7fa03781853288ad99bdcf896`)
+  - Outdoor LiDAR registration for driving scenes; different domain and no object manipulation relation.
+- **PocoLoco: A Point Cloud Diffusion Model of Human Shape in Loose Clothing** (`semanticscholar:6cdac52fbe0fe6ef43686be0c2d6793db51e0766`)
+  - Generates clothed human avatars as point clouds; unrelated to robot manipulation or relational geometry.
+- **AIM2PC: Aerial Image to 3D Building Point Cloud Reconstruction** (`semanticscholar:2387572e8e18f3024b1299f28b8ac0db402db6f6`)
+  - Aerial-image reconstruction of building point clouds; cross-domain 3D generation with no manipulation.
+- **DiffS-NOCS: 3D Point Cloud Reconstruction through Coloring Sketches to NOCS Maps Using Diffusion Mod** (`semanticscholar:c938f6c70b14726241d7cfde52dc1e708c692a32`)
+  - Sketch-conditioned point-cloud reconstruction; no robotic manipulation setting or target-reference relation.
+- **3D Hand Pose Estimation Based on Hand Denoising Diffusion Probabilistic Robustness Model** (`semanticscholar:ea868e9a8896eb9909e58e11d077e3a03dc16c37`)
+  - Human hand gesture pose estimation under point-cloud corruption; not robot manipulation policy learning.
+- **4D-RaDiff: Latent Diffusion for 4D Radar Point Cloud Generation** (`semanticscholar:a3ed46adc22b9a7eea9cb98e7f2d28b08736b42b`)
+  - Automotive radar point-cloud generation for object detection; unrelated sensing domain.
+- **Object-Centric Seamless Pose Estimation in Multi-Object Scenes by Scale Alignment of Ray Diffusion a** (`semanticscholar:6dc5f0ea531532793f54f7512a138952ee4c3082`)
+  - Object-centric camera trajectory estimation across video sub-scenes; no robot action or manipulation relation.
+- **Diffusion Transformer for point cloud registration: digital modeling of cultural heritage** (`semanticscholar:27569d9543230b6ce764a6c8b1eb6f31c4036033`)
+  - Cultural-heritage point-cloud registration; clear application-domain false positive with no manipulation policy.
+- **Quartet of Diffusions: Structure-Aware Point Cloud Generation through Part and Symmetry Guidance** (`semanticscholar:0312f2f64d46cea722d15a51bf64cc4a21cc5733`)
+  - Structure-aware 3D shape generation from part and symmetry priors; no robotic task, relation, or action execution.
+- **3D hand pose estimation based on relational graph attention mechanism** (`semanticscholar:3f8df332fcd51aea0954834095c24c6e892c7a3f`)
+  - Title-only human hand-pose estimation record; clearly outside robot manipulation-policy generalization.
+- **Pose-Aware Diffusion for 3D Generation** (`semanticscholar:7fe82922dbdc8a3a2c6c4afc574bc0476d770968`)
+  - Pose-aligned 3D asset generation and scene reconstruction; no robot policy or manipulation execution.
+- **Transferable Adversarial Attacks on 3-D Point Cloud Semantic Segmentation via Diffusion Models in Au** (`semanticscholar:276f2307543e412400023a69172fc1ecd9ebabbc`)
+  - Adversarial attacks on autonomous-driving point-cloud segmentation; unrelated task and domain.
+- **Post-Refining LiDAR Point Cloud Registration via Diffusion-Based Correspondence Refinement** (`semanticscholar:586c3fc72259ec4f4397b67adcc376a5646844ca`)
+  - Outdoor LiDAR registration refinement for localization and mapping; no object manipulation relation.
+- **Cross-Modal Driven Object Restoration for 3D Point Cloud Backdoor Defense** (`semanticscholar:4f2dfed56e1b92052bf09727abd3079a71389ebb`)
+  - Point-cloud backdoor defense through reconstruction; security objective is unrelated to manipulation generalization.
+- **Predictive learning shapes the representational geometry of the human brain** (`openalex:W4404190818`)
+  - Human neuroscience study of predictive representational geometry; cross-domain keyword false positive.
+- **Text to Point Cloud Localization with Multi-Level Negative Contrastive Learning** (`openalex:W4409367427`)
+  - Text-to-location retrieval in outdoor point clouds; localization rather than robot object manipulation.
+- **Can Open Large Language Models Catch Vulnerabilities?** (`openalex:W4406779522`)
+  - Software-vulnerability classification by language models; unrelated field.
+- **A Cognitive Load Approach to Molecular Geometries: Augmented Reality Technology and Visuospatial Abi** (`openalex:W4402731419`)
+  - Chemistry education study using augmented reality and molecular geometry; unrelated domain.
+- **A guidance to intelligent metamaterials and metamaterials intelligence** (`openalex:W4406951686`)
+  - Pure review of AI and electromagnetic metamaterials; unrelated field and survey.
+- **Taming Infinity One Chunk at a Time: Concisely Represented Strategies in One-Counter MDPs** (`openalex:W7110420710`)
+  - Theoretical one-counter MDP strategy synthesis; no embodied manipulation or geometry.
+- **Foundation models in robotics: Applications, challenges, and the future** (`openalex:W4402890475`)
+  - Pure survey of foundation models across robotics; rubric excludes surveys despite field overlap.
+- **Leveraging generative AI for urban digital twins: a scoping review on the autonomous generation of u** (`openalex:W4403371192`)
+  - Scoping review of generative AI for urban digital twins; unrelated domain and survey.
+- **Adaptive anomaly detection for identifying attacks in cyber-physical systems: A systematic literatur** (`openalex:W4404652934`)
+  - Systematic review of cybersecurity anomaly detection; cross-domain and survey.
+- **Towards VM Rescheduling Optimization Through Deep Reinforcement Learning** (`openalex:W4408847715`)
+  - Virtual-machine rescheduling in data centers; cross-domain relational-optimization false positive.
+- **Consistency Prototype Module and Motion Compensation for few-shot action recognition (CLIP-CPM 2 C)** (`openalex:W4402813010`)
+  - Few-shot human action recognition; no robotic manipulation policy.
+- **Adaptive Pitfall: Exploring the Effectiveness of Adaptation in Skeleton-Based Action Recognition** (`openalex:W4405755225`)
+  - Skeleton-based human action recognition; unrelated to robot manipulation.
+- **Fine-grained action learning for human-object interaction detection** (`openalex:W4403823838`)
+  - Human-object interaction detection and action recognition; no robot control or relational skill transfer.
+- **Keypoint-Integrated Instruction-Following Data Generation for Enhanced Human Pose and Action Underst** (`openalex:W7117970886`)
+  - Human pose and action understanding data generation; no robotic manipulation.
+- **Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications** (`openalex:W4414198610`)
+  - Comprehensive VLA review rather than a mechanism paper; pure surveys are excluded by the rubric.
+- **A Survey on Privacy and Security in Distributed Cloud Computing: Exploring Federated Learning and Be** (`openalex:W4409356896`)
+  - Survey of privacy and security in distributed cloud computing; unrelated domain.
+- **A comprehensive survey of Network Digital Twin architecture, capabilities, challenges, and requireme** (`openalex:W4408567138`)
+  - Survey of network digital twins for edge-cloud systems; unrelated domain.
+- **Perceptual video quality assessment: a survey** (`openalex:W4403601500`)
+  - Survey of perceptual video quality assessment; unrelated field and pure survey.
+- **Edge intelligence unleashed: a survey on deploying large language models in resource-constrained env** (`openalex:W4415048600`)
+  - Survey of deploying LLMs on edge devices; unrelated to robot manipulation geometry.
+- **Advancing paleontology: a survey on deep learning methodologies in fossil image analysis** (`openalex:W4406113259`)
+  - Survey of deep learning for fossil-image analysis; unrelated domain and survey.
+- **Wearable Sensors, Data Processing, and Artificial Intelligence in Pregnancy Monitoring: A Review** (`openalex:W4403134377`)
+  - Review of wearable sensors and AI for pregnancy monitoring; unrelated domain.
+- **A Survey on Diffusion Policy for Robotic Manipulation: Taxonomy, Analysis, and Future Directions** (`openalex:W4409160955`)
+  - Pure survey of diffusion policies for manipulation; rubric excludes surveys even when topically broad.

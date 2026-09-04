@@ -1,0 +1,103 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances 鈥?stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_failure_mode_quoted": "The recurring failure is a successful relocation that is demonstrated but not adversarially closed: the paper shows its new-locus attack or defense beats a fixed, non-adaptive baseline, yet never stress-tests against an informed adversary who also operates at the new locus, so stealthiness, evasion, or robustness claims are asserted rather than proven. A second shape is a novelty-boundary collapse — the \"new\" locus turns out to be one a prior paper already used (normalization statistics, activation-similarity alignment, pre-encoded semantic concepts), and the work fails to quantify what is genuinely different.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Claiming a relocated signal is 'stealthier' or 'harder to remove' without defeating an adaptive defender who searches the same new locus leaves the central claim unverified.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes no stealth or removal-resistance claim, and its safety claim is tested through downstream unsafe execution rather than an adversarial-evasion metric."
+          },
+          {
+            "lesson_quoted": "Relocating to a locus already exploited by published work — normalization statistics, activation-similarity losses, semantic concept triggers — collapses the novelty boundary unless the difference is made explicit and measured.",
+            "candidate_match": "no",
+            "reasoning": "Neither the literature table nor either collision channel contains a paper using guarded physical probe-response transcripts to decide hidden-geometry pair feasibility before manipulation execution."
+          },
+          {
+            "lesson_quoted": "A defense whose relocation silently depends on a clean reference model or a known anomaly distribution reintroduces precisely the strong assumption the move was supposed to eliminate.",
+            "candidate_match": "no",
+            "reasoning": "The labeled feasible/infeasible response models are explicit calibration resources, not a hidden clean-reference dependency, and the audited assumption is passive visible-geometry sufficiency rather than absence of labeled calibration data."
+          },
+          {
+            "lesson_quoted": "Demonstrating the new locus only on fixed, non-adaptive or outdated baselines while omitting any account of why it works reads as a stacked pipeline of existing components rather than a principled shift.",
+            "candidate_match": "borderline",
+            "reasoning": "The candidate supplies a structural matched-visible-observation argument and a same-transcript MLP, but the allowed singleton-U, B_probe=1 regime is equivalent to a fixed-probe same-information rule, so the strongest fair new-locus baseline is not separated."
+          },
+          {
+            "lesson_quoted": "Wiring off-the-shelf generators or tools into a new attack setting without a structural reason for the locus change gets judged as engineering integration, not insight.",
+            "candidate_match": "no",
+            "reasoning": "Although IFG uses SAM2, a RealSense camera, and frozen pi0.5, the locus change is structurally motivated by exact visible-PointMap aliasing under different hidden clearances."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The sole gap, under assumption_audit_and_pivot, genuinely relocates evidence from passive PointMaps to probe-response transcripts. The borderline is carried by the lesson 'Demonstrating the new locus only on fixed, non-adaptive or outdated baselines while omitting any account of why it works reads as a stacked pipeline of existing components rather than a principled shift,' because an allowed one-probe instance does not beat a fair same-information fixed-probe rule."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances 鈥?stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "tactical_pattern_quoted": "Across this cluster the audited assumption is always about the representational locus at which a security, detection, provenance, or safety property is presumed to be enforced — and the tactical move is to relocate the attack or defense to a different locus the field treated as irrelevant or invariant. The unifying verbs are \"relocate the signal,\" \"re-anchor enforcement,\" and \"demonstrate exploitability/robustness at the new locus.\"",
+        "instantiation_in_core_mechanism": "The core mechanism explicitly replaces the passive locus (initial P_T^0, P_R^0) with O_K={(r,type(u_k),y_k)} built by Steps 5-7 from guarded interventions, fresh reobservations, and coordinate-discarded response summaries; I_K then drives execute/block/defer. This performs C01's distinctive representational-locus relocation rather than merely auditing an assumption in prose.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The single C01 entry is applied because Steps 5-7 operationally relocate feasibility evidence from static visible geometry to intervention-response transcripts and couple that signal to the gating action."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "assumption_audit_and_pivot",
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains neither heterogeneous_decomposition nor any of its three reject-favored partners, so no documented anti-pattern pair matches."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7161916204",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "openalex:W7161916204 directly challenges generic confidence-gated robot-autonomy novelty by showing that, at matched realized autonomy, threshold choice can dominate uncertainty-method choice and produce similar collision/cost outcomes. IFG therefore stands only if its interventional response evidence improves unsafe-execution risk at matched coverage beyond calibrated passive and same-transcript gates; the candidate already commits to that comparison, while the threat does not acquire hidden geometry through physical probes or establish pair-feasibility certificates.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": "Active tactile perception and sequential Bayesian experimental design are obvious older mechanism families not adequately covered by the retrieved pool; a scoop-check should query 'active touch object feasibility identification' and 'sequential probability ratio test robotic contact sensing'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "I_K, the accumulated pair-bound interventional response evidence",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names matched simulation/Franka comparisons, predicts lower unsafe-execution and relation-failure rates at matched coverage, pivots on I_K, and predicts that cross-pair response permutation raises downstream unsafe execution toward the passive baseline. It asserts no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "Step 7 accumulates evidence for one feasible/infeasible hypothesis across probe-induced object motion, but Step 8 releases",
+      "status": "upheld",
+      "basis": "The quoted procedure explicitly permits object motion and sums earlier log evidence, yet supplies no state-preservation, restoration, or dynamic-state transition model; the shown F-to-I state flip is a legal instance and makes the release decision stale, requiring a mechanism redesign."
+    },
+    {
+      "finding_ref": "The training/calibration label does not identify the declared selective-risk estimand: S1 labels geometric/library feasibility from exhaustive probe-library",
+      "status": "upheld",
+      "basis": "Step 1 produces geometry/library-feasibility labels, while the premises ledger defines selective risk using frozen-pi0.5 relation failure or safety violation conditional on release; zero label error can therefore coexist with the shown 0.5 executor-unsafe rate, requiring a new executor-specific target ontology and labels."
+    },
+    {
+      "finding_ref": "The independently constructed fair naive uses the same guarded probe and transcript and is decision-equivalent to IFG in",
+      "status": "upheld",
+      "basis": "Singleton U and B_probe=1 are allowed by the candidate, making disagreement maximization vacuous and reducing IFG to the same binary response threshold as the constructed fixed-probe rule; no candidate premise excludes the executed instance, so the declared adaptive/sequential depth is unestablished."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "All three executed blocking findings are upheld, and the first two require redesigning the mechanism's state model and executor-risk label ontology rather than field-level Phase 3.3 edits; the third also realizes gap_closure_reject_check.entries[0].reject_lessons_evaluated[3].lesson_quoted by making an allowed IFG regime equivalent to a fixed-probe same-information rule. Although recipe_application_check.entries[0].verdict is applied, anti_pattern_check.mitigation_substantively_delivered is n/a, and openalex:W7161916204 is not an exact-mechanism collision, an upheld redesign-level obstacle forbids advance and routes to abandon under soft judgment.",
+  "revision_targets": []
+}

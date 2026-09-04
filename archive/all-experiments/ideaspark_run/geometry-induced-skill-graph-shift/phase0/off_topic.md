@@ -1,0 +1,96 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **Foundation models in robotics: Applications, challenges, and the future** (`openalex:W4402890475`)
+  - Pure broad survey of foundation models in robotics; it does not study the requested functional-geometry mechanism or controlled benchmark.
+- **Transfer learning in robotics: An upcoming breakthrough? A review of promises and challenges** (`openalex:W4402545715`)
+  - Pure review/position paper on transfer learning across robotics, not a functional-geometry VLA/WAM study.
+- **Will your next surgeon be a robot? Autonomy and AI in robotic surgery** (`openalex:W4412604838`)
+  - Review of autonomy and AI in robotic surgery, without the requested geometry-conditioned policy or benchmark mechanism.
+- **Quantum coordinates, localisation of events, and the quantum hole argument** (`openalex:W4409910717`)
+  - Quantum reference frames and spacetime event localization are an unrelated physics-domain keyword collision.
+- **Exploring Challenges and Opportunities in Manufacturing and Intelligence for Future Robotics** (`openalex:W4413765256`)
+  - Broad forward-looking perspective on robot manufacturing and intelligence, not a mechanism or benchmark for functional-geometry generalization.
+- **Structured Generative Models for Scene Understanding** (`openalex:W4405323352`)
+  - Position/review paper on structured generative models for static scene understanding, outside executable robot policy generalization.
+- **Visual Grounding in 2D and 3D: A unified perspective and survey** (`openalex:W4413291859`)
+  - Pure survey of 2D/3D visual grounding, not the requested manipulation mechanism.
+- **Large Language Models and 3D Vision for Intelligent Robotic Perception and Autonomy** (`openalex:W4415278795`)
+  - Comprehensive review of LLMs and 3D robotic sensing; pure review rather than a functional-geometry intervention.
+- **Decoding the brain: From neural representations to mechanistic models** (`openalex:W4403479245`)
+  - Neuroscience perspective on neural encoding and decoding, unrelated to VLA/WAM robotic manipulation.
+- **The philosophical foundations of digital twinning** (`openalex:W4407343310`)
+  - Philosophical framework for digital twins, outside the requested simulator-grounded robot-learning question.
+- **AI-Driven Control Strategies for Biomimetic Robotics: Trends, Challenges, and Future Directions** (`openalex:W4412423271`)
+  - Pure review of AI control for biomimetic robotics, not functional-geometry VLA/WAM generalization.
+- **Physical AI: Bridging the Sim-to-Real Divide Toward Embodied, Ethical, and Autonomous Intelligence** (`openalex:W4415938232`)
+  - Holistic synthesis/taxonomy of Physical AI rather than a concrete geometry-conditioned manipulation mechanism or benchmark.
+- **Contrastive learning explains the emergence and function of visual category-selective regions** (`openalex:W4402830990`)
+  - Study of category-selective representations in biological vision, an unrelated neuroscience domain.
+- **Large (Vision) Language Models for Autonomous Vehicles: Current Trends and Future Directions** (`openalex:W4403630156`)
+  - Pure survey of large vision-language models for autonomous vehicles, outside robot manipulation.
+- **Ze System Manifesto** (`openalex:W7125405807`)
+  - Manifesto about latent reality and predictive intervention, unrelated to embodied manipulation.
+- **An agentic vision-action framework for generative 3D architectural modeling from sketches** (`openalex:W4412834287`)
+  - Agentic 3D architectural model generation from sketches, not robotic manipulation despite vision-action terminology.
+- **Ze, Decoherence, and the Quantum Eraser** (`openalex:W7125373900`)
+  - Quantum-erasure interpretation is an unrelated quantum-physics keyword collision.
+- **Visual Large Language Models for Generalized and Specialized Applications** (`openalex:W4406122761`)
+  - Pure survey of visual large language model applications, not a robot functional-geometry study.
+- **The Role of AI in On-Site Construction Robotics: A State-of-the-Art Review Using the Sense–Think–Act** (`openalex:W4412094040`)
+  - State-of-the-art review of AI for construction robotics, not the requested mechanism.
+- **Understanding World or Predicting Future? A Comprehensive Survey of World Models** (`openalex:W4411735734`)
+  - Pure comprehensive survey of world models across domains, not a concrete functional-geometry WAM mechanism.
+- **Machine Learning in Sports** (`openalex:W4409289950`)
+  - Book on machine learning for sports analytics, an unrelated domain.
+- **Domain Specific Benchmarks for Evaluating Multimodal Large Language Models** (`openalex:W4410768329`)
+  - Pure review/taxonomy of domain-specific multimodal-LLM benchmarks, not a manipulation benchmark contribution.
+- **Dynamically shifting from compositional to conjunctive brain representations supports cognitive task** (`openalex:W4416334117`)
+  - fMRI study of compositional versus conjunctive brain representations; 'geometry' and task learning are unrelated neuroscience usage.
+- **Toward Generalist Neural Motion Planners for Robotic Manipulators: Challenges and Opportunities** (`openalex:W7127470505`)
+  - Pure review of generalist neural motion planners; relevant themes but no original mechanism or benchmark, and pure reviews are excluded by the rubric.
+- **Deep learning in metasurfaces: from automated design to adaptive metadevices** (`openalex:W4411227566`)
+  - Review of deep learning for photonic metasurfaces, an unrelated materials/physics domain.
+- **The 2025 motile active matter roadmap** (`openalex:W4406651559`)
+  - Roadmap/review of motile active matter and micromachines, outside VLA/WAM manipulation.
+- **Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications** (`openalex:W4414198610`)
+  - Pure full-stack review of VLA models and deployment, not the requested mechanism.
+- **When physics meets machine learning: a survey of physics-informed machine learning** (`openalex:W4410165966`)
+  - Pure survey of physics-informed machine learning across domains, not robotic functional geometry.
+- **Multimodal fusion and vision–language models: A survey for robot vision** (`openalex:W4413788337`)
+  - Pure survey of multimodal fusion and VLMs for robot vision, without an original manipulation mechanism.
+- **Survey on Factuality in Large Language Models** (`openalex:W4410964376`)
+  - Survey of factuality in language models, unrelated to robotic manipulation.
+- **A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation** (`openalex:W4417174623`)
+  - Pure survey of reinforcement learning for VLAs, not an original functional-geometry benchmark or adaptation method.
+- **A Review of Multi-Sensor Fusion in Autonomous Driving** (`openalex:W4414704765`)
+  - Pure review of sensor fusion for autonomous driving, outside manipulation.
+- **A comprehensive survey on RGB-D-based human action recognition: algorithms, datasets, and popular ap** (`openalex:W4413168650`)
+  - Pure survey of RGB-D human action recognition, not robot policy generalization.
+- **A Survey of Embodied Learning for Object-centric Robotic Manipulation** (`openalex:W4405426927`)
+  - Pure survey of object-centric robotic manipulation, not a concrete functional-geometry contribution.
+- **A Survey of Reasoning with Foundation Models: Concepts, Methodologies, and Outlook** (`openalex:W4409368288`)
+  - Pure survey of reasoning with foundation models, outside the specific manipulation mechanism.
+- **Fundamental Capabilities and Applications of Large Language Models: A Survey** (`openalex:W4410407045`)
+  - Broad survey of LLM capabilities and applications, not functional-geometry robot learning.
+- **Biomimetic Robotics and Intelligence: A Survey** (`openalex:W4409474206`)
+  - Pure survey of biomimetic robotics and intelligence, not the requested VLA/WAM direction.
+- **Advances in Robotic Peg-in-Hole Assembly: A Comprehensive Review** (`openalex:W4415601459`)
+  - Pure comprehensive review of peg-in-hole assembly; insertion is thematically relevant, but the rubric excludes pure reviews from the deep-read corpus.
+- **Towards Generalist Robot Learning from Internet Video: A Survey** (`openalex:W4396600885`)
+  - Pure survey of generalist robot learning from internet video, not an original geometry-conditioned method.
+- **Deep Reinforcement Learning for Surgical Robotics with State and Image Information: A Survey** (`openalex:W7125599892`)
+  - Pure survey of deep reinforcement learning for surgical robotics, outside the requested contribution.
+- **A Review of Embodied Grasping** (`openalex:W4406984533`)
+  - Pure review of embodied grasping, not an original controlled geometry-generalization study.
+- **A Survey of Reinforcement Learning-Based Motion Planning for Autonomous Driving: Lessons Learned fro** (`openalex:W4417050645`)
+  - Pure survey of motion planning for autonomous driving, outside robotic manipulation.
+- **Large language models for artificial general intelligence (AGI): A survey of foundational principles** (`openalex:W4406123676`)
+  - Broad survey of LLMs and AGI foundations, not the requested manipulation mechanism.
+- **Recipe for Vision-Language-Action Models in Robotic Manipulation: A Survey** (`openalex:W4413638658`)
+  - Pure survey of VLA recipes for robotic manipulation, not an original functional-geometry method or benchmark.
+- **A Survey of Autonomous Driving Trajectory Prediction: Methodologies, Challenges, and Future Prospect** (`openalex:W4414097138`)
+  - Pure survey of autonomous-driving trajectory prediction, outside manipulation.
+- **A Survey on Multimodal Benchmarks: In the Era of Large AI Models** (`openalex:W4403794826`)
+  - Pure survey of multimodal benchmarks across large AI models, not a simulator-grounded robot benchmark contribution.

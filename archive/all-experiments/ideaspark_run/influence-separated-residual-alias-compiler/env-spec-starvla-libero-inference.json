@@ -1,0 +1,22 @@
+{
+  "base": "existing personal Python 3.11 CUDA Conda prefix on direct SSH host",
+  "system_pkgs": [],
+  "pip_phases": [
+    ["torch==2.6.0+cu124", "numpy==1.26.4"],
+    ["transformers", "omegaconf", "websockets"]
+  ],
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "run_commands": [],
+  "weight_dirs": {
+    "starvla_libero_4in1": "<PERSONAL_RESEARCH_ROOT>/checkpoints/starvla/Qwen3-VL-OFT-LIBERO-4in1",
+    "qwen3_vl_4b": "<PERSONAL_RESEARCH_ROOT>/checkpoints/qwen/Qwen3-VL-4B-Instruct"
+  },
+  "smoke": {
+    "import_names": ["torch", "numpy", "transformers", "omegaconf"],
+    "gpu_tests": ["torch_cuda_matmul"],
+    "cli_checks": []
+  }
+}

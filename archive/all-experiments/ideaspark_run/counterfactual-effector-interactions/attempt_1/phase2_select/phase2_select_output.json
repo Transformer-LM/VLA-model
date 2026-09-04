@@ -1,0 +1,45 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+      "chosen_pattern_id": "decompose_and_delegate",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "这是瓶颈中最直接要求可运行方法的缺口：只有把交互诊断连接到动作更新，效应器级结构才不止是离线解释。decompose_and_delegate 让 VLA 只负责提出联合动作，把可机检的效应器交互账本交给约束动作求解器产生局部或联合修正，从而直接闭合责任边界歧义，而不是退回 COMA、Shapley 或预设 coordination graph。"
+    },
+    {
+      "gap": "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "该缺口通过 sequential_pipeline 连接到锚点：其效应器级交互量是锚点定向纠错器必须读取的输入；移除它会令动作责任无法计算，使锚点机制不可运行。controlled_diagnostic_design 在同状态、同检查点下控制非目标动作与滚动条件，隔离单效应器边际和联合非加性响应；它测量的是连续动作—未来动力学交互而非几何兼容、首个违例分数、退出重放或固定脚手架。"
+    }
+  ],
+  "coherence_thread_type": "sequential_pipeline",
+  "deliverable_coverage": "method — anchor gap → decompose_and_delegate yields the runnable proposal-to-interaction-ledger-to-constrained-correction loop",
+  "composition_note": "",
+  "pattern_saturation": {
+    "decompose_and_delegate": {
+      "share": 0.19,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.21,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "在 openalex:W4416749037 的 frontier residue 上，双臂方法尚未说明 acting／stabilizing 或 leader／follower 这样的作用分工在任务阶段、接触模式和左右对称交换时是否仍成立；当相同任务在不同阶段改变协同方向时，当前结果不能区分有效的结构分工与模型预设带来的表面收益 — stakes: 固定角色会在对称协作或角色反转任务中造成系统性失败，并使跨任务增益无法转移，研究上也会把架构偏置误当成已识别的交互规律。",
+      "reason": "fails removal test — anchor stands without it; phase- or role-specific validation can reuse the interaction diagnostic later but is not required to define and execute the correction rule"
+    },
+    {
+      "gap": "在 openalex:W4416716729、semanticscholar:b722f499dc89d662efe815e4ed2a99664daad8fa 与 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 这些 frontier leaves 共同继承的 action-conditioned visual-dynamics 节点上，没有检验“把联合动作作为一个整体条件并以整体未来／任务损失监督”是否足以支撑多效应器协调归因；这里质疑的是这一共享假设本身，而不是预先指定替代机制 — stakes: 若该假设不成立，更多联合轨迹和更大模型仍会保留不可识别性，既浪费训练算力，也会动摇现有 VLA／WAM 在双臂增益可解释为协调学习的结论。",
+      "reason": "fails removal test — anchor stands without it; a full shared-assumption audit requires its own identification claim and is broader than the runnable correction pipeline"
+    }
+  ]
+}

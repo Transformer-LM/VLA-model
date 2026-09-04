@@ -1,0 +1,2511 @@
+[
+ {
+  "title": "Tirzepatide for the Treatment of Obstructive Sleep Apnea and Obesity",
+  "title_norm": "tirzepatide for the treatment of obstructive sleep apnea and obesity",
+  "abstract": "BACKGROUND: Obstructive sleep apnea is characterized by disordered breathing during sleep and is associated with major cardiovascular complications; excess adiposity is an etiologic risk factor. Tirzepatide may be a potential treatment. METHODS: We conducted two phase 3, double-blind, randomized, controlled trials involving adults with moderate-to-severe obstructive sleep apnea and obesity. Participants who were not receiving treatment with positive airway pressure (PAP) at baseline were enrolled in trial 1, and those who were receiving PAP therapy at baseline were enrolled in trial 2. The participants were assigned in a 1:1 ratio to receive either the maximum tolerated dose of tirzepatide (10 mg or 15 mg) or placebo for 52 weeks. The primary end point was the change in the apnea-hypopnea index (AHI, the number of apneas and hypopneas during an hour of sleep) from baseline. Key multiplicity-controlled secondary end points included the percent change in AHI and body weight and changes in hypoxic burden, patient-reported sleep impairment and disturbance, high-sensitivity C-reactive protein (hsCRP) concentration, and systolic blood pressure. RESULTS: At baseline, the mean AHI was 51.5 events per hour in trial 1 and 49.5 events per hour in trial 2, and the mean body-mass index (BMI, the weight in kilograms divided by the square of the height in meters) was 39.1 and 38.7, respectively. In trial 1, the mean change in AHI at week 52 was -25.3 events per hour (95% confidence interval [CI], -29.3 to -21.2) with tirzepatide and -5.3 events per hour (95% CI, -9.4 to -1.1) with placebo, for an estimated treatment difference of -20.0 events per hour (95% CI, -25.8 to -14.2) (P<0.001). In trial 2, the mean change in AHI at week 52 was -29.3 events per hour (95% CI, -33.2 to -25.4) with tirzepatide and -5.5 events per hour (95% CI, -9.9 to -1.2) with placebo, for an estimated treatment difference of -23.8 events per hour (95% CI, -29.6 to -17.9) (P<0.001). Significant improvements in the measurements for all prespecified key secondary end points were observed with tirzepatide as compared with placebo. The most frequently reported adverse events with tirzepatide were gastrointestinal in nature and mostly mild to moderate in severity. CONCLUSIONS: Among persons with moderate-to-severe obstructive sleep apnea and obesity, tirzepatide reduced the AHI, body weight, hypoxic burden, hsCRP concentration, and systolic blood pressure and improved sleep-related patient-reported outcomes. (Funded by Eli Lilly; SURMOUNT-OSA ClinicalTrials.gov number, NCT05412004.).",
+  "year": 2024,
+  "venue": "New England Journal of Medicine",
+  "authors": [
+   "Atul Malhotra",
+   "Ronald R. Grunstein",
+   "Ingo Fietze",
+   "Terri E. Weaver",
+   "Susan Redline",
+   "Ali Azarbarzin"
+  ],
+  "citations": 755,
+  "source": "openalex",
+  "source_id": "W4399907994",
+  "doi": "10.1056/nejmoa2404881",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt5xf6509x/qt5xf6509x.pdf",
+  "published_iso": "2024-06-21",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Zero-Shot Medical Image Translation via Frequency-Guided Diffusion Models",
+  "title_norm": "zero shot medical image translation via frequency guided diffusion models",
+  "abstract": "Recently, the diffusion model has emerged as a superior generative model that can produce high quality and realistic images. However, for medical image translation, the existing diffusion models are deficient in accurately retaining structural information since the structure details of source domain images are lost during the forward diffusion process and cannot be fully recovered through learned reverse diffusion, while the integrity of anatomical structures is extremely important in medical images. For instance, errors in image translation may distort, shift, or even remove structures and tumors, leading to incorrect diagnosis and inadequate treatments. Training and conditioning diffusion models using paired source and target images with matching anatomy can help. However, such paired data are very difficult and costly to obtain, and may also reduce the robustness of the developed model to out-of-distribution testing data. We propose a frequency-guided diffusion model (FGDM) that employs frequency-domain filters to guide the diffusion model for structure-preserving image translation. Based on its design, FGDM allows zero-shot learning, as it can be trained solely on the data from the target domain, and used directly for source-to-target domain translation without any exposure to the source-domain data during training. We evaluated it on three cone-beam CT (CBCT)-to-CT translation tasks for different anatomical sites, and a cross-institutional MR imaging translation task. FGDM outperformed the state-of-the-art methods (GAN-based, VAE-based, and diffusion-based) in metrics of Fréchet Inception Distance (FID), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index Measure (SSIM), showing its significant advantages in zero-shot medical image translation.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Medical Imaging",
+  "authors": [
+   "Yunxiang Li",
+   "Hua‐Chieh Shao",
+   "Xiao Liang",
+   "Liyuan Chen",
+   "Ruiqi Li",
+   "Steve Jiang"
+  ],
+  "citations": 93,
+  "source": "openalex",
+  "source_id": "W4387757480",
+  "doi": "10.1109/tmi.2023.3325703",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11000254/pdf/nihms-1972649.pdf",
+  "published_iso": "2023-10-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+  "title_norm": "accurate structure prediction of biomolecular interactions with alphafold 3",
+  "abstract": "Abstract The introduction of AlphaFold 2 1 has spurred a revolution in modelling the structure of proteins and their interactions, enabling a huge range of applications in protein modelling and design 2–6 . Here we describe our AlphaFold 3 model with a substantially updated diffusion-based architecture that is capable of predicting the joint structure of complexes including proteins, nucleic acids, small molecules, ions and modified residues. The new AlphaFold model demonstrates substantially improved accuracy over many previous specialized tools: far greater accuracy for protein–ligand interactions compared with state-of-the-art docking tools, much higher accuracy for protein–nucleic acid interactions compared with nucleic-acid-specific predictors and substantially higher antibody–antigen prediction accuracy compared with AlphaFold-Multimer v.2.3 7,8 . Together, these results show that high-accuracy modelling across biomolecular space is possible within a single unified deep-learning framework.",
+  "year": 2024,
+  "venue": "Nature",
+  "authors": [
+   "Josh Abramson",
+   "Jonas Adler",
+   "Jack Dunger",
+   "Richard Evans",
+   "Tim Green",
+   "Alexander Pritzel"
+  ],
+  "citations": 15393,
+  "source": "openalex",
+  "source_id": "W4396721167",
+  "doi": "10.1038/s41586-024-07487-w",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4396721167",
+  "published_iso": "2024-05-08",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Exploiting Generative AI to Scale up Intelligent Tutoring Systems",
+  "title_norm": "exploiting generative ai to scale up intelligent tutoring systems",
+  "abstract": "As a present to Mizar on its 50th anniversary, we develop an AI/TP system that automatically proves about 60% of the Mizar theorems in the hammer setting. We also automatically prove 75% of the Mizar theorems when the automated provers are helped by using only the premises used in the human-written Mizar proofs. We describe the methods and large-scale experiments leading to these results. This includes in particular the E and Vampire provers, their ENIGMA and Deepire learning modifications, a number of learning-based premise selection methods, and the incremental loop that interleaves growing a corpus of millions of ATP proofs with training increasingly strong AI/TP systems on them. We also present a selection of Mizar problems that were proved automatically.",
+  "year": 2023,
+  "venue": "DROPS (Schloss Dagstuhl – Leibniz Center for Informatics)",
+  "authors": [
+   "Jakubův, Jan",
+   "Chvalovský, Karel",
+   "Goertzel, Zarathustra",
+   "Kaliszyk, Cezary",
+   "Olšák, Mirek",
+   "Piotrowski, Bartosz"
+  ],
+  "citations": 79071,
+  "source": "openalex",
+  "source_id": "W4385245566",
+  "doi": "10.4230/lipics.itp.2023.19",
+  "arxiv_id": null,
+  "paper_url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol268-itp2023/LIPIcs.ITP.2023.19/LIPIcs.ITP.2023.19.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Revisiting Event-Study Designs: Robust and Efficient Estimation",
+  "title_norm": "revisiting event study designs robust and efficient estimation",
+  "abstract": "Abstract We develop a framework for difference-in-differences designs with staggered treatment adoption and heterogeneous causal effects. We show that conventional regression-based estimators fail to provide unbiased estimates of relevant estimands absent strong restrictions on treatment-effect homogeneity. We then derive the efficient estimator addressing this challenge, which takes an intuitive “imputation” form when treatment-effect heterogeneity is unrestricted. We characterize the asymptotic behaviour of the estimator, propose tools for inference, and develop tests for identifying assumptions. Our method applies with time-varying controls, in triple-difference designs, and with certain non-binary treatments. We show the practical relevance of our results in a simulation study and an application. Studying the consumption response to tax rebates in the U.S., we find that the notional marginal propensity to consume is between 8 and 11% in the first quarter—about half as large as benchmark estimates used to calibrate macroeconomic models—and predominantly occurs in the first month after the rebate.",
+  "year": 2024,
+  "venue": "The Review of Economic Studies",
+  "authors": [
+   "Kirill Borusyak",
+   "Xavier Jaravel",
+   "Jann Spiess"
+  ],
+  "citations": 1989,
+  "source": "openalex",
+  "source_id": "W3196836501",
+  "doi": "10.1093/restud/rdae007",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdae007/56588588/rdae007.pdf",
+  "published_iso": "2024-01-17",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Zero Trust Architecture: A Systematic Literature Review",
+  "title_norm": "zero trust architecture a systematic literature review",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Journal of Network and Systems Management",
+  "authors": [
+   "Muhammad Liman Gambo",
+   "Ahmad Almulhem"
+  ],
+  "citations": 39,
+  "source": "openalex",
+  "source_id": "W4416237116",
+  "doi": "10.1007/s10922-025-09998-x",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2503.11659",
+  "published_iso": "2025-11-13",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal prediction: A unified review of theory and new challenges",
+  "title_norm": "conformal prediction a unified review of theory and new challenges",
+  "abstract": "In this work we provide a review of basic ideas and novel developments about Conformal Prediction — an innovative distribution-free, non-parametric forecasting method, based on minimal assumptions — that is able to yield in a very straightforward way prediction sets that are valid in a statistical sense also in the finite sample case. The discussion provided in the paper covers the theoretical underpinnings of Conformal Prediction, and then proceeds to list the more advanced developments and adaptations of the original idea.",
+  "year": 2022,
+  "venue": "Bernoulli",
+  "authors": [
+   "Matteo Fontana",
+   "Gianluca Zeni",
+   "Simone Vantini"
+  ],
+  "citations": 166,
+  "source": "openalex",
+  "source_id": "W3025031475",
+  "doi": "10.3150/21-bej1447",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2005.07972",
+  "published_iso": "2022-10-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Microglia states and nomenclature: A field at its crossroads",
+  "title_norm": "microglia states and nomenclature a field at its crossroads",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Neuron",
+  "authors": [
+   "Rosa Chiara Paolicelli",
+   "Amanda Sierra",
+   "Beth Stevens",
+   "Marie‐Ève Tremblay",
+   "Adriano Aguzzi",
+   "Bahareh Ajami"
+  ],
+  "citations": 2005,
+  "source": "openalex",
+  "source_id": "W4308150510",
+  "doi": "10.1016/j.neuron.2022.10.020",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/am/pii/S0896627322009539?via%3Dihub",
+  "published_iso": "2022-11-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "The photocatalytic process in the treatment of polluted water",
+  "title_norm": "the photocatalytic process in the treatment of polluted water",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Chemical Papers",
+  "authors": [
+   "Marwah A. Al-Nuaim",
+   "Asawer A. Alwasiti",
+   "Zainab Y. Shnain"
+  ],
+  "citations": 508,
+  "source": "openalex",
+  "source_id": "W4300089528",
+  "doi": "10.1007/s11696-022-02468-7",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11696-022-02468-7.pdf",
+  "published_iso": "2022-10-03",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Regression shrinkage and selection via least quantile shrinkage and selection operator",
+  "title_norm": "regression shrinkage and selection via least quantile shrinkage and selection op",
+  "abstract": "Over recent years, the state-of-the-art lasso and adaptive lasso have aquired remarkable consideration. Unlike the lasso technique, adaptive lasso welcomes the variables' effects in penalty meanwhile specifying adaptive weights to penalize coefficients in a different manner. However, if the initial values presumed for the coefficients are less than one, the corresponding weights would be relatively large, leading to an increase in bias. To dominate such an impediment, a new class of weighted lasso will be introduced that employs all aspects of data. That is to say, signs and magnitudes of the initial coefficients will be taken into account simultaneously for proposing appropriate weights. To allocate a particular form to the suggested penalty, the new method will be nominated as 'lqsso', standing for the least quantile shrinkage and selection operator. In this paper, we demonstate that lqsso encompasses the oracle properties under certain mild conditions and delineate an efficient algorithm for the computation purpose. Simulation studies reveal the predominance of our proposed methodology when compared with other lasso methods from various aspects, particularly in ultra high-dimensional condition. Application of the proposed method is further underlined with real-world problem based on the rat eye dataset.",
+  "year": 2023,
+  "venue": "PLoS ONE",
+  "authors": [
+   "Alireza Daneshvar",
+   "Mousa Golalizadeh"
+  ],
+  "citations": 44,
+  "source": "openalex",
+  "source_id": "W4321004578",
+  "doi": "10.1371/journal.pone.0266267",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0266267&type=printable",
+  "published_iso": "2023-02-16",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Dietary restriction of isoleucine increases healthspan and lifespan of genetically heterogeneous mice",
+  "title_norm": "dietary restriction of isoleucine increases healthspan and lifespan of genetical",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Cell Metabolism",
+  "authors": [
+   "Cara L. Green",
+   "Michaela E. Trautman",
+   "Krittisak Chaiyakul",
+   "Raghav Jain",
+   "Yasmine H. Alam",
+   "Reji Babygirija"
+  ],
+  "citations": 121,
+  "source": "openalex",
+  "source_id": "W4388451093",
+  "doi": "10.1016/j.cmet.2023.10.005",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt1xc0m5kr/qt1xc0m5kr.pdf",
+  "published_iso": "2023-11-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Adeno-associated virus as a delivery vector for gene therapy of human diseases",
+  "title_norm": "adeno associated virus as a delivery vector for gene therapy of human diseases",
+  "abstract": "Adeno-associated virus (AAV) has emerged as a pivotal delivery tool in clinical gene therapy owing to its minimal pathogenicity and ability to establish long-term gene expression in different tissues. Recombinant AAV (rAAV) has been engineered for enhanced specificity and developed as a tool for treating various diseases. However, as rAAV is being more widely used as a therapy, the increased demand has created challenges for the existing manufacturing methods. Seven rAAV-based gene therapy products have received regulatory approval, but there continue to be concerns about safely using high-dose viral therapies in humans, including immune responses and adverse effects such as genotoxicity, hepatotoxicity, thrombotic microangiopathy, and neurotoxicity. In this review, we explore AAV biology with an emphasis on current vector engineering strategies and manufacturing technologies. We discuss how rAAVs are being employed in ongoing clinical trials for ocular, neurological, metabolic, hematological, neuromuscular, and cardiovascular diseases as well as cancers. We outline immune responses triggered by rAAV, address associated side effects, and discuss strategies to mitigate these reactions. We hope that discussing recent advancements and current challenges in the field will be a helpful guide for researchers and clinicians navigating the ever-evolving landscape of rAAV-based gene therapy.",
+  "year": 2024,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Jiang-Hui Wang",
+   "Dominic J. Gessler",
+   "Wei Zhan",
+   "Thomas L. Gallagher",
+   "Guangping Gao"
+  ],
+  "citations": 799,
+  "source": "openalex",
+  "source_id": "W4393581315",
+  "doi": "10.1038/s41392-024-01780-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-024-01780-w.pdf",
+  "published_iso": "2024-04-02",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Corporate Climate Risk: Measurements and Responses",
+  "title_norm": "corporate climate risk measurements and responses",
+  "abstract": "Abstract This paper conducts a textual analysis of earnings call transcripts to quantify climate risk exposure at the firm level. We construct dictionaries that measure physical and transition climate risks separately and identify firms that proactively respond to climate risks. Our validation analysis shows that our measures capture firm-level variations in respective climate risk exposure. Firms facing high transition risk, especially those that do not proactively respond, have been valued at a discount in recent years as aggregate investor attention to climate-related issues has been increasing. We document differences in how firms respond through investment, green innovation, and employment when facing high climate risk exposure.",
+  "year": 2024,
+  "venue": "Review of Financial Studies",
+  "authors": [
+   "Qing Li",
+   "Hongyu Shan",
+   "Yuehua Tang",
+   "Vincent Yao"
+  ],
+  "citations": 462,
+  "source": "openalex",
+  "source_id": "W4390954288",
+  "doi": "10.1093/rfs/hhad094",
+  "arxiv_id": null,
+  "paper_url": "https://repository.ceibs.cn/ws/files/66560573/Corporate_Climate_Risk_Measurements_and.pdf",
+  "published_iso": "2024-01-08",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "ReIGNITE Radiation Therapy Boost: A Prospective, International Study of Radiation Oncologists’ Accuracy in Contouring Prostate Tumors for Focal Radiation Therapy Boost on Conventional Magnetic Resonance Imaging Alone or With Assistance of Restriction Spectrum Imaging",
+  "title_norm": "reignite radiation therapy boost a prospective international study of radiation ",
+  "abstract": "",
+  "year": 2023,
+  "venue": "International Journal of Radiation Oncology*Biology*Physics",
+  "authors": [
+   "Asona Lui",
+   "Karoline Kallis",
+   "Allison Y. Zhong",
+   "Troy S. Hussain",
+   "Christopher C. Conlin",
+   "Leonardino A. Digma"
+  ],
+  "citations": 38,
+  "source": "openalex",
+  "source_id": "W4384343681",
+  "doi": "10.1016/j.ijrobp.2023.07.004",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt5gt5z58q/qt5gt5z58q.pdf",
+  "published_iso": "2023-07-14",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Oral squamous cell carcinomas: state of the field and emerging directions",
+  "title_norm": "oral squamous cell carcinomas state of the field and emerging directions",
+  "abstract": "Oral squamous cell carcinoma (OSCC) develops on the mucosal epithelium of the oral cavity. It accounts for approximately 90% of oral malignancies and impairs appearance, pronunciation, swallowing, and flavor perception. In 2020, 377,713 OSCC cases were reported globally. According to the Global Cancer Observatory (GCO), the incidence of OSCC will rise by approximately 40% by 2040, accompanied by a growth in mortality. Persistent exposure to various risk factors, including tobacco, alcohol, betel quid (BQ), and human papillomavirus (HPV), will lead to the development of oral potentially malignant disorders (OPMDs), which are oral mucosal lesions with an increased risk of developing into OSCC. Complex and multifactorial, the oncogenesis process involves genetic alteration, epigenetic modification, and a dysregulated tumor microenvironment. Although various therapeutic interventions, such as chemotherapy, radiation, immunotherapy, and nanomedicine, have been proposed to prevent or treat OSCC and OPMDs, understanding the mechanism of malignancies will facilitate the identification of therapeutic and prognostic factors, thereby improving the efficacy of treatment for OSCC patients. This review summarizes the mechanisms involved in OSCC. Moreover, the current therapeutic interventions and prognostic methods for OSCC and OPMDs are discussed to facilitate comprehension and provide several prospective outlooks for the fields.",
+  "year": 2023,
+  "venue": "International Journal of Oral Science",
+  "authors": [
+   "Yunhan Tan",
+   "Zhihan Wang",
+   "Mengtong Xu",
+   "Bowen Li",
+   "Zhao Huang",
+   "Siyuan Qin"
+  ],
+  "citations": 778,
+  "source": "openalex",
+  "source_id": "W4386945111",
+  "doi": "10.1038/s41368-023-00249-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41368-023-00249-w.pdf",
+  "published_iso": "2023-09-22",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Pan-cancer T cell atlas links a cellular stress response state to immunotherapy resistance",
+  "title_norm": "pan cancer t cell atlas links a cellular stress response state to immunotherapy ",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Yanshuo Chu",
+   "Enyu Dai",
+   "Yating Li",
+   "Guangchun Han",
+   "Guangsheng Pei",
+   "Davis R. Ingram"
+  ],
+  "citations": 513,
+  "source": "openalex",
+  "source_id": "W4378648463",
+  "doi": "10.1038/s41591-023-02371-y",
+  "arxiv_id": null,
+  "paper_url": "https://discovery.ucl.ac.uk/10213405/1/nihms-2010124.pdf",
+  "published_iso": "2023-05-29",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Autoregressive conditional betas",
+  "title_norm": "autoregressive conditional betas",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Journal of Econometrics",
+  "authors": [
+   "Francisco Blasques",
+   "Christian Francq",
+   "Sébastien Laurent"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4389733377",
+  "doi": "10.1016/j.jeconom.2023.105630",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4389733377",
+  "published_iso": "2023-12-14",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Kirigami‐Structured, Low‐Impedance, and Skin‐Conformal Electronics for Long‐Term Biopotential Monitoring and Human–Machine Interfaces",
+  "title_norm": "kirigami structured low impedance and skin conformal electronics for long term b",
+  "abstract": "Abstract Epidermal dry electrodes with high skin‐compliant stretchability, low bioelectric interfacial impedance, and long‐term reliability are crucial for biopotential signal recording and human–machine interaction. However, incorporating these essential characteristics into dry electrodes remains a challenge. Here, a skin‐conformal dry electrode is developed by encapsulating kirigami‐structured poly(3,4‐ethylenedioxythiophene):poly(styrene sulfonate) (PEDOT:PSS)/polyvinyl alcohol (PVA)/silver nanowires (Ag NWs) film with ultrathin polyurethane (PU) tape. This Kirigami‐structured PEDOT:PSS/PVA/Ag NWs/PU epidermal electrode exhibits a low sheet resistance (≈3.9 Ω sq−1), large skin‐compliant stretchability (>100%), low interfacial impedance (≈27.41 kΩ at 100 Hz and ≈59.76 kΩ at 10 Hz), and sufficient mechanoelectrical stability. This enhanced performance is attributed to the synergistic effects of ionic/electronic current from PEDOT:PSS/Ag NWs dual conductive network, Kirigami structure, and unique encapsulation. Compared with the existing dry electrodes or standard gel electrodes, the as‐prepared electrodes possess lower interfacial impedance and noise in various conditions (e.g., sweat, wet, and movement), indicating superior water/motion‐interference resistance. Moreover, they can acquire high‐quality biopotential signals even after water rinsing and ultrasonic cleaning. These outstanding advantages enable the Kirigami‐structured PEDOT:PSS/PVA/Ag NWs/PU electrodes to effectively monitor human motions in real‐time and record epidermal biopotential signals, such as electrocardiogram, electromyogram, and electrooculogram under various conditions, and control external electronics, thereby facilitating human–machine interactions.",
+  "year": 2023,
+  "venue": "Advanced Science",
+  "authors": [
+   "Meili Xia",
+   "Jianwen Liu",
+   "Beom Jin Kim",
+   "Yongju Gao",
+   "Yunlong Zhou",
+   "Yongjing Zhang"
+  ],
+  "citations": 75,
+  "source": "openalex",
+  "source_id": "W4388851619",
+  "doi": "10.1002/advs.202304871",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388851619",
+  "published_iso": "2023-11-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Dual effector population modification gene-drive strains of the African malaria mosquitoes, Anopheles gambiae and Anopheles coluzzii",
+  "title_norm": "dual effector population modification gene drive strains of the african malaria ",
+  "abstract": "Proposed genetic approaches for reducing human malaria include population modification, which introduces genes into vector mosquitoes to reduce or prevent parasite transmission. We demonstrate the potential of Cas9/guide RNA (gRNA)–based gene-drive systems linked to dual antiparasite effector genes to spread rapidly through mosquito populations. Two strains have an autonomous gene-drive system coupled to dual anti- Plasmodium falciparum effector genes comprising single-chain variable fragment monoclonal antibodies targeting parasite ookinetes and sporozoites in the African malaria mosquitoes Anopheles gambiae (AgTP13) and Anopheles coluzzii (AcTP13). The gene-drive systems achieved full introduction within 3 to 6 mo after release in small cage trials. Life-table analyses revealed no fitness loads affecting AcTP13 gene-drive dynamics but AgTP13 males were less competitive than wild types. The effector molecules reduced significantly both parasite prevalence and infection intensities. These data supported transmission modeling of conceptual field releases in an island setting that shows meaningful epidemiological impacts at different sporozoite threshold levels (2.5 to 10 k) for human infection by reducing malaria incidence in optimal simulations by 50 to 90% within as few as 1 to 2 mo after a series of releases, and by ≥90% within 3 mo. Modeling outcomes for low sporozoite thresholds are sensitive to gene-drive system fitness loads, gametocytemia infection intensities during parasite challenges, and the formation of potentially drive-resistant genome target sites, extending the predicted times to achieve reduced incidence. TP13-based strains could be effective for malaria control strategies following validation of sporozoite transmission threshold numbers and testing field-derived parasite strains. These or similar strains are viable candidates for future field trials in a malaria-endemic region.",
+  "year": 2023,
+  "venue": "Proceedings of the National Academy of Sciences",
+  "authors": [
+   "Rebeca Carballar‐Lejarazú",
+   "Yuemei Dong",
+   "Thai Binh Pham",
+   "Taylor Tushar",
+   "Rodrigo M. Corder",
+   "Agastya Mondal"
+  ],
+  "citations": 100,
+  "source": "openalex",
+  "source_id": "W4383752915",
+  "doi": "10.1073/pnas.2221118120",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt8vc6n49z/qt8vc6n49z.pdf?t=rzuf3j",
+  "published_iso": "2023-07-10",
+  "oa_field": "Immunology and Microbiology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "From patterns to patients: Advances in clinical machine learning for cancer diagnosis, prognosis, and treatment",
+  "title_norm": "from patterns to patients advances in clinical machine learning for cancer diagn",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Cell",
+  "authors": [
+   "Kyle Swanson",
+   "Eric Q. Wu",
+   "Angela Zhang",
+   "Ash A. Alizadeh",
+   "James Zou"
+  ],
+  "citations": 597,
+  "source": "openalex",
+  "source_id": "W4323865263",
+  "doi": "10.1016/j.cell.2023.01.035",
+  "arxiv_id": null,
+  "paper_url": "http://www.cell.com/article/S0092867423000946/pdf",
+  "published_iso": "2023-03-10",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Semiparametric Conditional Factor Models: Estimation and Inference",
+  "title_norm": "semiparametric conditional factor models estimation and inference",
+  "abstract": "This paper introduces a simple and tractable sieve estimation of semiparametric conditional factor models with latent factors.We establish large-N-asymptotic properties of the estimators without requiring large T. We also develop a simple bootstrap procedure for conducting inference about the conditional pricing errors as well as the shapes of the factor loading functions.These results enable us to estimate conditional factor structure of a large set of individual assets by utilizing arbitrary nonlinear functions of a number of characteristics without the need to pre-specify the factors, while allowing us to disentangle the characteristics' role in capturing factor betas from alphas (i.e., undiversifiable risk from mispricing).We apply these methods to the cross-section of individual U.S. stock returns and find strong evidence of large nonzero pricing errors that combine to produce arbitrage portfolios with Sharpe ratios above 3.We also document a significant decline in apparent mispricing over time.",
+  "year": 2023,
+  "venue": "National Bureau of Economic Research",
+  "authors": [
+   "Qihui Chen",
+   "Nikolai Roussanov",
+   "Xiaoliang Wang"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4388103308",
+  "doi": "10.3386/w31817",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.3386/w31817",
+  "published_iso": "2023-10-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Modular Commutators in Conformal Field Theory",
+  "title_norm": "modular commutators in conformal field theory",
+  "abstract": "The modular commutator is a recently discovered entanglement quantity that quantifies the chirality of the underlying many-body quantum state. In this Letter, we derive a universal expression for the modular commutator in conformal field theories in 1+1 dimensions and discuss its salient features. We show that the modular commutator depends only on the chiral central charge and the conformal cross ratio. We test this formula for a gapped (2+1)-dimensional system with a chiral edge, i.e., the quantum Hall state, and observe excellent agreement with numerical simulations. Furthermore, we propose a geometric dual for the modular commutator in certain preferred states of the AdS/CFT correspondence. For these states, we argue that the modular commutator can be obtained from a set of crossing angles between intersecting Ryu-Takayanagi surfaces.",
+  "year": 2022,
+  "venue": "Physical Review Letters",
+  "authors": [
+   "Yijian Zou",
+   "Bowen Shi",
+   "Jonathan Sorce",
+   "Ian T. Lim",
+   "Isaac H. Kim"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4281735601",
+  "doi": "10.1103/physrevlett.129.260402",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2206.00027",
+  "published_iso": "2022-12-22",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "An Overview on the Advancements of Support Vector Machine Models in Healthcare Applications: A Review",
+  "title_norm": "an overview on the advancements of support vector machine models in healthcare a",
+  "abstract": "Support vector machines (SVMs) are well-known machine learning algorithms for classification and regression applications. In the healthcare domain, they have been used for a variety of tasks including diagnosis, prognosis, and prediction of disease outcomes. This review is an extensive survey on the current state-of-the-art of SVMs developed and applied in the medical field over the years. Many variants of SVM-based approaches have been developed to enhance their generalisation capabilities. We illustrate the most interesting SVM-based models that have been developed and applied in healthcare to improve performance metrics on benchmark datasets, including hybrid classification methods that combine, for instance, optimization algorithms with SVMs. We even report interesting results found in medical applications related to real-world data. Several issues around SVMs, such as selection of hyperparameters and learning from data of questionable quality, are discussed as well. The several variants developed and introduced over the years could be useful in designing new methods to improve performance in critical fields such as healthcare, where accuracy, specificity, and other metrics are crucial. Finally, current research trends and future directions are underlined.",
+  "year": 2024,
+  "venue": "Information",
+  "authors": [
+   "Rosita Guido",
+   "Stefania Ferrisi",
+   "Danilo Lofaro",
+   "Domenico Conforti"
+  ],
+  "citations": 353,
+  "source": "openalex",
+  "source_id": "W4394952741",
+  "doi": "10.3390/info15040235",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2078-2489/15/4/235/pdf?version=1713536669",
+  "published_iso": "2024-04-19",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Machine Learning for Lung Cancer Diagnosis, Treatment, and Prognosis",
+  "title_norm": "machine learning for lung cancer diagnosis treatment and prognosis",
+  "abstract": "The recent development of imaging and sequencing technologies enables systematic advances in the clinical study of lung cancer. Meanwhile, the human mind is limited in effectively handling and fully utilizing the accumulation of such enormous amounts of data. Machine learning-based approaches play a critical role in integrating and analyzing these large and complex datasets, which have extensively characterized lung cancer through the use of different perspectives from these accrued data. In this review, we provide an overview of machine learning-based approaches that strengthen the varying aspects of lung cancer diagnosis and therapy, including early detection, auxiliary diagnosis, prognosis prediction, and immunotherapy practice. Moreover, we highlight the challenges and opportunities for future applications of machine learning in lung cancer.",
+  "year": 2022,
+  "venue": "Genomics Proteomics & Bioinformatics",
+  "authors": [
+   "Yawei Li",
+   "Wu Xin",
+   "Ping Yang",
+   "Guoqian Jiang",
+   "Yuan Luo"
+  ],
+  "citations": 261,
+  "source": "openalex",
+  "source_id": "W4310668250",
+  "doi": "10.1016/j.gpb.2022.11.003",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S1672022922001449/pdf",
+  "published_iso": "2022-10-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Conformal Prediction With Conditional Guarantees",
+  "title_norm": "conformal prediction with conditional guarantees",
+  "abstract": "We consider the problem of constructing distribution-free prediction sets with finite-sample conditional guarantees. Prior work has shown that it is impossible to provide exact conditional coverage universally in finite samples. Thus, most popular methods only guarantee marginal coverage over the covariates or are restricted to a limited set of conditional targets, e.g. coverage over a finite set of pre-specified subgroups. This paper bridges this gap by defining a spectrum of problems that interpolate between marginal and conditional validity. We motivate these problems by reformulating conditional coverage as coverage over a class of covariate shifts. When the target class of shifts is finite-dimensional, we show how to simultaneously obtain exact finite-sample coverage over all possible shifts. For example, given a collection of subgroups, our prediction sets guarantee coverage over each group. For more flexible, infinite-dimensional classes where exact coverage is impossible, we provide a procedure for quantifying the coverage errors of our algorithm. Moreover, by tuning interpretable hyperparameters, we allow the practitioner to control the size of these errors across shifts of interest. Our methods can be incorporated into existing split conformal inference pipelines, and thus can be used to quantify the uncertainty of modern black-box algorithms without distributional assumptions.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Isaac Gibbs",
+   "John J. Cherian",
+   "Emmanuel J. Candès"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4377864534",
+  "doi": "10.48550/arxiv.2305.12616",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2305.12616",
+  "published_iso": "2023-05-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator",
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Soft scalars and the geometry of the space of celestial conformal field theories",
+  "title_norm": "soft scalars and the geometry of the space of celestial conformal field theories",
+  "abstract": "Known examples of the holographic dictionary in asymptotically anti--de Sitter spacetimes equate moduli spaces of bulk vacua with conformal manifolds in the dual quantum field theory. We demonstrate that the same identification holds for gravity in asymptotically flat spacetimes in any dimension, in accord with expectations derived from the celestial conformal field theory (CCFT) formalism. Soft limits of moduli scalars described by the sigma model are universal, and relate to parallel transport of $S$-matrix observables over the moduli space of bulk vacua. The leading ``soft moduli operator'' is the shadow transform of a dimension $\\mathrm{\\ensuremath{\\Delta}}=d$ marginal operator $M(x)$. The universal form of the soft limit guarantees that $M(x)$ acts as a marginal deformation in the ${\\mathrm{CCFT}}_{d}$, and coherent states of the soft scalars correspond to finite deformations along the conformal manifold. This manifold typically has curvature, which is captured by the antisymmetric double-soft theorem and which reflects the Berry curvature in ${\\mathrm{CCFT}}_{d}$. We also compute the Mellin-transformed four-point function in the sigma model and compare to a formula of Kutasov for the curvature of the conformal manifold.",
+  "year": 2023,
+  "venue": "Physical review. D/Physical review. D.",
+  "authors": [
+   "Daniel Kapec",
+   "Y. T. Albert Law",
+   "Sruthi A. Narayanan"
+  ],
+  "citations": 31,
+  "source": "openalex",
+  "source_id": "W4322626481",
+  "doi": "10.1103/physrevd.107.046024",
+  "arxiv_id": null,
+  "paper_url": "http://link.aps.org/pdf/10.1103/PhysRevD.107.046024",
+  "published_iso": "2023-02-28",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Enhancing K-nearest neighbor algorithm: a comprehensive review and performance analysis of modifications",
+  "title_norm": "enhancing k nearest neighbor algorithm a comprehensive review and performance an",
+  "abstract": "Abstract The k-Nearest Neighbors (kNN) method, established in 1951, has since evolved into a pivotal tool in data mining, recommendation systems, and Internet of Things (IoT), among other areas. This paper presents a comprehensive review and performance analysis of modifications made to enhance the exact kNN techniques, particularly focusing on kNN Search and kNN Join for high-dimensional data. We delve deep into 31 kNN search methods and 12 kNN join methods, providing a methodological overview and analytical insight into each, emphasizing their strengths, limitations, and applicability. An important feature of our study is the provision of the source code for each of the kNN methods discussed, fostering ease of experimentation and comparative analysis for readers. Motivated by the rising significance of kNN in high-dimensional spaces and a recognized gap in comprehensive surveys on exact kNN techniques, our work seeks to bridge this gap. Additionally, we outline existing challenges and present potential directions for future research in the domain of kNN techniques, offering a holistic guide that amalgamates, compares, and dissects existing methodologies in a coherent manner. Graphical Abstract",
+  "year": 2024,
+  "venue": "Journal Of Big Data",
+  "authors": [
+   "Rajib Kumar Halder",
+   "Mohammed Nasir Uddin",
+   "Md. Ashraf Uddin",
+   "Sunil Aryal",
+   "Ansam Khraisat"
+  ],
+  "citations": 490,
+  "source": "openalex",
+  "source_id": "W4401495975",
+  "doi": "10.1186/s40537-024-00973-y",
+  "arxiv_id": null,
+  "paper_url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-024-00973-y",
+  "published_iso": "2024-08-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "A physicochemical-sensing electronic skin for stress response monitoring",
+  "title_norm": "a physicochemical sensing electronic skin for stress response monitoring",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Nature Electronics",
+  "authors": [
+   "Changhao Xu",
+   "Yu Song",
+   "Juliane R. Sempionatto",
+   "Samuel A. Solomon",
+   "You Yu",
+   "Hnin Yin Yin Nyein"
+  ],
+  "citations": 384,
+  "source": "openalex",
+  "source_id": "W4391027752",
+  "doi": "10.1038/s41928-023-01116-6",
+  "arxiv_id": null,
+  "paper_url": "https://escholarship.org/content/qt5dk314ns/qt5dk314ns.pdf",
+  "published_iso": "2024-01-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Conditional Independence Testing in Hilbert Spaces with Applications to Functional Data Analysis",
+  "title_norm": "conditional independence testing in hilbert spaces with applications to function",
+  "abstract": "Abstract We study the problem of testing the null hypothesis that X and Y are conditionally independent given Z, where each of X, Y and Z may be functional random variables. This generalises testing the significance of X in a regression model of scalar response Y on functional regressors X and Z. We show, however, that even in the idealised setting where additionally (X, Y, Z) has a Gaussian distribution, the power of any test cannot exceed its size. Further modelling assumptions are needed and we argue that a convenient way of specifying these assumptions is based on choosing methods for regressing each of X and Y on Z. We propose a test statistic involving inner products of the resulting residuals that is simple to compute and calibrate: type I error is controlled uniformly when the in-sample prediction errors are sufficiently small. We show this requirement is met by ridge regression in functional linear model settings without requiring any eigen-spacing conditions or lower bounds on the eigenvalues of the covariance of the functional regressor. We apply our test in constructing confidence intervals for truncation points in truncated functional linear models and testing for edges in a functional graphical model for EEG data.",
+  "year": 2022,
+  "venue": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+  "authors": [
+   "Anton Rask Lundborg",
+   "Rajen D. Shah",
+   "Jonas Peters"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W3125755977",
+  "doi": "10.1111/rssb.12544",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W3125755977",
+  "published_iso": "2022-11-01",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal Methods in General Relativity",
+  "title_norm": "conformal methods in general relativity",
+  "abstract": "This book offers a systematic exposition of conformal methods and how they can be used to study the global properties of solutions to the equations of Einstein's theory of gravity. It shows that combining these ideas with differential geometry can elucidate the existence and stability of the basic solutions of the theory. Introducing the differential geometric, spinorial and PDE background required to gain a deep understanding of conformal methods, this text provides an accessible account of key results in mathematical relativity over the last thirty years, including the stability of de Sitter and Minkowski spacetimes. For graduate students and researchers, this self-contained account includes useful visual models to help the reader grasp abstract concepts and a list of further reading, making this an ideal reference companion on the topic. This title, first published in 2016, has been reissued as an Open Access publication on Cambridge Core.",
+  "year": 2022,
+  "venue": "Cambridge University Press eBooks",
+  "authors": [
+   "Juan A. Valiente Kroon"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4308238881",
+  "doi": "10.1017/9781009291309",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/72AC946BEF2C74BD5D0AB790B31FAEB7/9781009291347AR.pdf/Conformal_Methods_in_General_Relativity.pdf?event-type=FTLA",
+  "published_iso": "2022-11-03",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "RNA modifications: importance in immune cell biology and related diseases",
+  "title_norm": "rna modifications importance in immune cell biology and related diseases",
+  "abstract": "Abstract RNA modifications have become hot topics recently. By influencing RNA processes, including generation, transportation, function, and metabolization, they act as critical regulators of cell biology. The immune cell abnormality in human diseases is also a research focus and progressing rapidly these years. Studies have demonstrated that RNA modifications participate in the multiple biological processes of immune cells, including development, differentiation, activation, migration, and polarization, thereby modulating the immune responses and are involved in some immune related diseases. In this review, we present existing knowledge of the biological functions and underlying mechanisms of RNA modifications, including N 6 -methyladenosine (m 6 A), 5-methylcytosine (m 5 C), N 1 -methyladenosine (m 1 A), N 7 -methylguanosine (m 7 G), N 4 -acetylcytosine (ac 4 C), pseudouridine (Ψ), uridylation, and adenosine-to-inosine (A-to-I) RNA editing, and summarize their critical roles in immune cell biology. Via regulating the biological processes of immune cells, RNA modifications can participate in the pathogenesis of immune related diseases, such as cancers, infection, inflammatory and autoimmune diseases. We further highlight the challenges and future directions based on the existing knowledge. All in all, this review will provide helpful knowledge as well as novel ideas for the researchers in this area.",
+  "year": 2022,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Lian Cui",
+   "Rui Ma",
+   "Jiangluyi Cai",
+   "Chunyuan Guo",
+   "Zeyu Chen",
+   "Lingling Yao"
+  ],
+  "citations": 402,
+  "source": "openalex",
+  "source_id": "W4296808020",
+  "doi": "10.1038/s41392-022-01175-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-022-01175-9.pdf",
+  "published_iso": "2022-09-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Economics of Artificial Intelligence in Healthcare: Diagnosis vs. Treatment",
+  "title_norm": "economics of artificial intelligence in healthcare diagnosis vs treatment",
+  "abstract": "Motivation: The price of medical treatment continues to rise due to (i) an increasing population; (ii) an aging human growth; (iii) disease prevalence; (iv) a rise in the frequency of patients that utilize health care services; and (v) increase in the price. Objective: Artificial Intelligence (AI) is already well-known for its superiority in various healthcare applications, including the segmentation of lesions in images, speech recognition, smartphone personal assistants, navigation, ride-sharing apps, and many more. Our study is based on two hypotheses: (i) AI offers more economic solutions compared to conventional methods; (ii) AI treatment offers stronger economics compared to AI diagnosis. This novel study aims to evaluate AI technology in the context of healthcare costs, namely in the areas of diagnosis and treatment, and then compare it to the traditional or non-AI-based approaches. Methodology: PRISMA was used to select the best 200 studies for AI in healthcare with a primary focus on cost reduction, especially towards diagnosis and treatment. We defined the diagnosis and treatment architectures, investigated their characteristics, and categorized the roles that AI plays in the diagnostic and therapeutic paradigms. We experimented with various combinations of different assumptions by integrating AI and then comparing it against conventional costs. Lastly, we dwell on three powerful future concepts of AI, namely, pruning, bias, explainability, and regulatory approvals of AI systems. Conclusions: The model shows tremendous cost savings using AI tools in diagnosis and treatment. The economics of AI can be improved by incorporating pruning, reduction in AI bias, explainability, and regulatory approvals.",
+  "year": 2022,
+  "venue": "Healthcare",
+  "authors": [
+   "Narendra N. Khanna",
+   "Mahesh Maindarkar",
+   "Vijay Viswanathan",
+   "José Fernandes e Fernandes",
+   "Sudip Paul",
+   "Mrinalini Bhagawati"
+  ],
+  "citations": 340,
+  "source": "openalex",
+  "source_id": "W4312000342",
+  "doi": "10.3390/healthcare10122493",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2227-9032/10/12/2493/pdf?version=1670894037",
+  "published_iso": "2022-12-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "cglasso: An R Package for Conditional Graphical Lasso Inference with Censored and Missing Values",
+  "title_norm": "cglasso an r package for conditional graphical lasso inference with censored and",
+  "abstract": "Sparse graphical models have revolutionized multivariate inference. With the advent of high-dimensional multivariate data in many applied fields, these methods are able to detect a much lower-dimensional structure, often represented via a sparse conditional independence graph. There have been numerous extensions of such methods in the past decade. Many practical applications have additional covariates or suffer from missing or censored data. Despite the development of these extensions of sparse inference methods for graphical models, there have been so far no implementations for, e.g., conditional graphical models. Here we present the general-purpose package cglasso for estimating sparse conditional Gaussian graphical models with potentially missing or censored data. The method employs an efficient expectation-maximization estimation of an ℓ1 -penalized likelihood via a block-coordinate descent algorithm. The package has a user-friendly data manipulation interface. It estimates a solution path and includes various automatic selection algorithms for the two ℓ1 tuning parameters, associated with the sparse precision matrix and sparse regression coefficients, respectively. The package pays particular attention to the visualization of the results, both by means of marginal tables and figures, and of the inferred conditional independence graphs. This package provides a unique and computational efficient implementation of a conditional Gaussian graphical model that is able to deal with the additional complications of missing and censored data. As such it constitutes an important contribution for empirical scientists wishing to detect sparse structures in high-dimensional data.",
+  "year": 2023,
+  "venue": "Journal of Statistical Software",
+  "authors": [
+   "Luigi Augugliaro",
+   "Gianluca Sottile",
+   "Ernst C. Wit",
+   "Veronica Vinciotti"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4317356149",
+  "doi": "10.18637/jss.v105.i01",
+  "arxiv_id": null,
+  "paper_url": "https://www.jstatsoft.org/index.php/jss/article/download/v105i01/4418",
+  "published_iso": "2023-01-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Unexpected Quasi‐Axial Conformer in Thermally Activated Delayed Fluorescence DMAC‐TRZ, Pushing Green OLEDs to Blue",
+  "title_norm": "unexpected quasi axial conformer in thermally activated delayed fluorescence dma",
+  "abstract": "Abstract Hidden photophysics is elucidated in the very well‐known thermally activated delayed fluorescence (TADF) emitter, DMAC‐TRZ. A molecule that, based on its structure, is considered not to have more than one structural conformation. However, based on experimental and computational studies, two conformers, a quasi‐axial (QA) and a quasi‐equatorial (QE) are found, and the effect of their co‐existence on both optical and electrical excitation isexplored. The relative small population of the QA conformer has a disproportionate effect because of its strong local excited state character. The energy transfer efficiency from the QA to the QE conformer is high, even at low concentrations, dependent on the host environment. The current accepted triplet energy of DMAC‐TRZ is shown to originate from the QA conformer, completely changing the understanding of DMAC‐TRZ. The contribution of the QA conformer in devices helps to explain the good performance of the material in non‐doped organic light‐emitting diodes (OLEDs). Moreover, hyperfluorescence (HF) devices, using v‐DABNA emitter show direct energy transfer from the QA conformer to v‐DABNA, explaining the relatively improved Förster resonance energy transfer efficiency compared to similar HF systems. Highly efficient OLEDs where green light (TADF‐only devices) is converted to blue light (HF devices) with the maximum external quantum efficiency remaining close to 30% are demonstrated.",
+  "year": 2023,
+  "venue": "Advanced Functional Materials",
+  "authors": [
+   "Kleitos Stavrou",
+   "Larissa Gomes Franca",
+   "Tobias Böhmer",
+   "Luka M. Duben",
+   "Christel M. Marian",
+   "Andrew P. Monkman"
+  ],
+  "citations": 40,
+  "source": "openalex",
+  "source_id": "W4324143109",
+  "doi": "10.1002/adfm.202300910",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adfm.202300910",
+  "published_iso": "2023-03-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Cancer neuroscience: State of the field, emerging directions",
+  "title_norm": "cancer neuroscience state of the field emerging directions",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Cell",
+  "authors": [
+   "Frank Winkler",
+   "Humsa S. Venkatesh",
+   "Moran Amit",
+   "Tracy T. Batchelor",
+   "İhsan Ekin Demir",
+   "Benjamin Deneen"
+  ],
+  "citations": 539,
+  "source": "openalex",
+  "source_id": "W4365446430",
+  "doi": "10.1016/j.cell.2023.02.002",
+  "arxiv_id": null,
+  "paper_url": "http://www.cell.com/article/S0092867423001046/pdf",
+  "published_iso": "2023-04-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Mammal responses to global changes in human activity vary by trophic group and landscape",
+  "title_norm": "mammal responses to global changes in human activity vary by trophic group and l",
+  "abstract": "Wildlife must adapt to human presence to survive in the Anthropocene, so it is critical to understand species responses to humans in different contexts. We used camera trapping as a lens to view mammal responses to changes in human activity during the COVID-19 pandemic. Across 163 species sampled in 102 projects around the world, changes in the amount and timing of animal activity varied widely. Under higher human activity, mammals were less active in undeveloped areas but unexpectedly more active in developed areas while exhibiting greater nocturnality. Carnivores were most sensitive, showing the strongest decreases in activity and greatest increases in nocturnality. Wildlife managers must consider how habituation and uneven sensitivity across species may cause fundamental differences in human-wildlife interactions along gradients of human influence.",
+  "year": 2024,
+  "venue": "Nature Ecology & Evolution",
+  "authors": [
+   "A. Cole Burton",
+   "Christopher Beirne",
+   "Kaitlyn M. Gaynor",
+   "Catherine Sun",
+   "Alys Granados",
+   "Maximilian L. Allen"
+  ],
+  "citations": 107,
+  "source": "openalex",
+  "source_id": "W4392906873",
+  "doi": "10.1038/s41559-024-02363-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41559-024-02363-2.pdf",
+  "published_iso": "2024-03-18",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "A conditional and regularized approach for large-scale spatiotemporal wind power forecasting",
+  "title_norm": "a conditional and regularized approach for large scale spatiotemporal wind power",
+  "abstract": "Large-scale wind power forecasting at intraday horizons of minutes-ahead up to hours-ahead is essential to secure important operations in transmission systems. It is clear that recent information collected about neighboring sites improve the predictive performance of autoregressive models. At the scale of a region or of a country, regularization or feature selection are needed to mitigate the high dimensionality of the autoregressive model. Unconditional approaches of regularization have shown limited added value compared to benchmark models in the context of wind power forecasting. This work proposes an intraday wind power forecasting method that predicts the production of any wind farm in the control area of a Transmission System Operator (TSO), taking into account the information collected from other wind farms. The method combines feature selection, regularization and local-learning via conditioning on recent production levels or on expected weather conditions. Improvements in Root Mean Squared Error (RMSE) with respect to other models, evaluated on a dataset with a large number of wind farms are comprised between 4% (10-min horizon) and 11% (3-h horizon). Interpretability of the forecasting model is demonstrated via an analysis of the model coefficients and a discussion of the performance in a challenging situation, namely a wind front.",
+  "year": 2024,
+  "venue": "Sustainable Energy Technologies and Assessments",
+  "authors": [
+   "Simon Camal",
+   "Robin Girard",
+   "Maxime Fortin",
+   "Augustin Touron",
+   "Laurent Dubus"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4392910620",
+  "doi": "10.1016/j.seta.2024.103743",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S2213138824001395-ga1_lrg.jpg",
+  "published_iso": "2024-03-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal bootstrap in Liouville theory",
+  "title_norm": "conformal bootstrap in liouville theory",
+  "abstract": "We developed a general approach to CFTs, something like complex analysis in the quantum domain.It worked very well in the various problems of statistical mechanics but the Liouville theory remained unsolved.\"Alexander Polyakov -From quarks to strings (2008) c. guillarmou, a. kupiainen, r. rhodes and v.",
+  "year": 2024,
+  "venue": "Acta Mathematica",
+  "authors": [
+   "Colin Guillarmou",
+   "A. Kupiainen",
+   "Rémi Rhodes",
+   "Vincent Vargas"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4403146268",
+  "doi": "10.4310/acta.2024.v233.n1.a2",
+  "arxiv_id": null,
+  "paper_url": "https://intlpress.com/api/bgcloud-front/resource/pdf/volume/1841840441228574721-1841840441228574721-d7c1da2e39f7569dc4d8253032447c1f.pdf",
+  "published_iso": "2024-01-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "RNA modifications in physiology and disease: towards clinical applications",
+  "title_norm": "rna modifications in physiology and disease towards clinical applications",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Reviews Genetics",
+  "authors": [
+   "Sylvain Delaunay",
+   "Mark Helm",
+   "Michaela Frye"
+  ],
+  "citations": 338,
+  "source": "openalex",
+  "source_id": "W4386766251",
+  "doi": "10.1038/s41576-023-00645-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41576-023-00645-2.pdf",
+  "published_iso": "2023-09-15",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Randomized Trial of Early Detection and Treatment of Postpartum Hemorrhage",
+  "title_norm": "randomized trial of early detection and treatment of postpartum hemorrhage",
+  "abstract": "BACKGROUND: Delays in the detection or treatment of postpartum hemorrhage can result in complications or death. A blood-collection drape can help provide objective, accurate, and early diagnosis of postpartum hemorrhage, and delayed or inconsistent use of effective interventions may be able to be addressed by a treatment bundle. METHODS: We conducted an international, cluster-randomized trial to assess a multicomponent clinical intervention for postpartum hemorrhage in patients having vaginal delivery. The intervention included a calibrated blood-collection drape for early detection of postpartum hemorrhage and a bundle of first-response treatments (uterine massage, oxytocic drugs, tranexamic acid, intravenous fluids, examination, and escalation), supported by an implementation strategy (intervention group). Hospitals in the control group provided usual care. The primary outcome was a composite of severe postpartum hemorrhage (blood loss, ≥1000 ml), laparotomy for bleeding, or maternal death from bleeding. Key secondary implementation outcomes were the detection of postpartum hemorrhage and adherence to the treatment bundle. RESULTS: A total of 80 secondary-level hospitals across Kenya, Nigeria, South Africa, and Tanzania, in which 210,132 patients underwent vaginal delivery, were randomly assigned to the intervention group or the usual-care group. Among hospitals and patients with data, a primary-outcome event occurred in 1.6% of the patients in the intervention group, as compared with 4.3% of those in the usual-care group (risk ratio, 0.40; 95% confidence interval [CI], 0.32 to 0.50; P<0.001). Postpartum hemorrhage was detected in 93.1% of the patients in the intervention group and in 51.1% of those in the usual-care group (rate ratio, 1.58; 95% CI, 1.41 to 1.76), and the treatment bundle was used in 91.2% and 19.4%, respectively (rate ratio, 4.94; 95% CI, 3.88 to 6.28). CONCLUSIONS: Early detection of postpartum hemorrhage and use of bundled treatment led to a lower risk of the primary outcome, a composite of severe postpartum hemorrhage, laparotomy for bleeding, or death from bleeding, than usual care among patients having vaginal delivery. (Funded by the Bill and Melinda Gates Foundation; E-MOTIVE ClinicalTrials.gov number, NCT04341662.).",
+  "year": 2023,
+  "venue": "New England Journal of Medicine",
+  "authors": [
+   "Ioannis Gallos",
+   "Adam Devall",
+   "James Martín",
+   "Lee Middleton",
+   "Leanne Beeson",
+   "Hadiza Galadanci"
+  ],
+  "citations": 225,
+  "source": "openalex",
+  "source_id": "W4375949635",
+  "doi": "10.1056/nejmoa2303966",
+  "arxiv_id": null,
+  "paper_url": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2303966?articleTools=true",
+  "published_iso": "2023-05-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Drone Navigation and Target Interception Using Deep Reinforcement Learning: A Cascade Reward Approach",
+  "title_norm": "drone navigation and target interception using deep reinforcement learning a cas",
+  "abstract": "This paper proposes an architecture for drone navigation and target interception, utilizing a self-supervised, model-free deep reinforcement learning approach. Unlike traditional methods relying on complex controllers, our approach uses deep reinforcement learning with cascade rewards, enabling a single drone to navigate obstacles and intercept targets using only a forward-facing depth-RGB camera. This research has significant implications for robotics, as it demonstrates how complex tasks can be tackled using deep reinforcement learning. Our work encompasses three key contributions. First, we tackle the challenge of partial observability when employing non-linear function approximators for learning stochastic policies. Second, we optimize the task of maximizing the overall expected reward. Finally, we develop a software library for training drones to track and intercept targets Through our experiments, we demonstrated that our approach, incorporating cascade reward, outperforms state-of-the-art deep Q-network algorithms in terms of learning policies. By leveraging our methodology, drones can successfully navigate complex indoor and outdoor environments and effectively intercept targets based on visual cues.",
+  "year": 2023,
+  "venue": "IEEE Journal of Indoor and Seamless Positioning and Navigation",
+  "authors": [
+   "A. Darwish",
+   "Arie Nakhmani"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4388837933",
+  "doi": "10.1109/jispin.2023.3334690",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/9955032/10108967/10323488.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Superstrings near the conformal boundary of AdS3",
+  "title_norm": "superstrings near the conformal boundary of ads3",
+  "abstract": "A bstract We study worldsheet sphere amplitudes, in the RNS formalism, in superstring theory on AdS 3 × X with pure NS-NS flux using the near-boundary approximation. By computing a number of amplitudes at low-lying spectral flow, we deduce a candidate for a dual CFT for generic X . Specialising to X = S 3 × 𝕋 4 and with minimal NS-NS flux, i.e., to the tensionless limit, we explore the effect of the interaction term which we ignore in the near-boundary consideration. We show, under some assumptions, that amplitudes in the tensionless superstring theory on AdS 3 × S 3 × 𝕋 4 do not receive perturbative contributions from such an interaction term.",
+  "year": 2024,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Vit Sriprachyakul"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4401925108",
+  "doi": "10.1007/jhep08(2024)203",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP08(2024)203.pdf",
+  "published_iso": "2024-08-26",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Viral Vector-Based Gene Therapy",
+  "title_norm": "viral vector based gene therapy",
+  "abstract": "Gene therapy is a technique involving the modification of an individual's genes for treating a particular disease. The key to effective gene therapy is an efficient carrier delivery system. Viral vectors that have been artificially modified to lose their pathogenicity are used widely as a delivery system, with the key advantages of their natural high transduction efficiency and stable expression. With decades of development, viral vector-based gene therapies have achieved promising clinical outcomes. Currently, the three key vector strategies are based on adeno-associated viruses, adenoviruses, and lentiviruses. However, certain challenges, such as immunotoxicity and \"off-target\", continue to exist. In the present review, the above three viral vectors are discussed along with their respective therapeutic applications. In addition, the major translational challenges encountered in viral vector-based gene therapies are summarized, and the possible strategies to address these challenges are also discussed.",
+  "year": 2023,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Xuedan Li",
+   "Yang Le",
+   "Zhegang Zhang",
+   "Xuanxuan Nian",
+   "Бо Лю",
+   "Xiaoming Yang"
+  ],
+  "citations": 196,
+  "source": "openalex",
+  "source_id": "W4366826949",
+  "doi": "10.3390/ijms24097736",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/24/9/7736/pdf?version=1682300495",
+  "published_iso": "2023-04-23",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "The Chinese Society of Clinical Oncology (CSCO): Clinical guidelines for the diagnosis and treatment of gastric cancer, 2023",
+  "title_norm": "the chinese society of clinical oncology csco clinical guidelines for the diagno",
+  "abstract": "The 2023 update of the Chinese Society of Clinical Oncology (CSCO) Clinical Guidelines for Gastric Cancer focuses on standardizing cancer diagnosis and treatment in China, reflecting the latest advancements in evidence-based medicine, healthcare resource availability, and precision medicine. These updates address the differences in epidemiological characteristics, clinicopathological features, tumor biology, treatment patterns, and drug selections between Eastern and Western gastric cancer patients. Key revisions include a structured template for imaging diagnosis reports, updated standards for molecular marker testing in pathological diagnosis, and an elevated recommendation for neoadjuvant chemotherapy in stage III gastric cancer. For advanced metastatic gastric cancer, the guidelines introduce new recommendations for immunotherapy, anti-angiogenic therapy and targeted drugs, along with updated management strategies for human epidermal growth factor receptor 2 (HER2)-positive and deficient DNA mismatch repair (dMMR)/microsatellite instability-high (MSI-H) patients. Additionally, the guidelines offer detailed screening recommendations for hereditary gastric cancer and an appendix listing drug treatment regimens for various stages of gastric cancer. The 2023 CSCO Clinical Guidelines for Gastric Cancer updates are based on both Chinese and international clinical research and expert consensus to enhance their applicability and relevance in clinical practice, particularly in the heterogeneous healthcare landscape of China, while maintaining a commitment to scientific rigor, impartiality, and timely revisions.",
+  "year": 2023,
+  "venue": "癌症：英文版",
+  "authors": [
+   "Feng‐Hua Wang",
+   "Xiao‐Tian Zhang",
+   "Lei Tang",
+   "Qi Wu",
+   "Muyan Cai",
+   "Yuanfang Li"
+  ],
+  "citations": 418,
+  "source": "openalex",
+  "source_id": "W4390469429",
+  "doi": "10.1002/cac2.12516",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cac2.12516",
+  "published_iso": "2023-12-31",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Learning Reactive Power Control Polices in Distribution Networks Using Conditional Value-at-Risk and Artificial Neural Networks",
+  "title_norm": "learning reactive power control polices in distribution networks using condition",
+  "abstract": "Scalable coordination of photovoltaic (PV) inverters, considering the uncertainty in PV and load in distribution networks (DNs), is challenging due to the lack of real-time communications. Decentralized PV inverter setpoints can be achieved to address this issue by capitalizing on the abundance of data from smart utility meters and the scalable architecture of artificial neural networks (ANNs). To this end, we first use an offline, centralized data-driven conservative convex approximation of chance-constrained optimal power flow (CVaR-OPF) in which conditional value-at-risk (CVaR) is used to compute reactive power setpoints of PV inverter, taking into account PV and load uncertainties in DNs. Following that, an artificial neural network (ANN) controller is trained for each PV inverter to emulate the optimal behavior of the centralized control set- points of PV inverter in a decentralized fashion. Additionally, the voltage regulation performance of the developed ANN controllers is compared with other decentralized designs (local controllers) developed using model-based learning (regression-based controller), optimization (affine feedback controller), and case-based learning (mapping) approaches. Numerical tests using real-world feeders corroborate the effectiveness of ANN controllers in voltage regulation and loss minimization.",
+  "year": 2023,
+  "venue": "Journal of Modern Power Systems and Clean Energy",
+  "authors": [
+   "Krishna Sandeep Ayyagari",
+   "Reynaldo Gonzalez",
+   "Yufang Jin",
+   "Miltiadis Alamaniotis",
+   "Sara Ahmed",
+   "Nikolaos Gatsis"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4318407372",
+  "doi": "10.35833/mpce.2022.000477",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/8685265/10026485/10026489.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Symmetries and spectral statistics in chaotic conformal field theories",
+  "title_norm": "symmetries and spectral statistics in chaotic conformal field theories",
+  "abstract": "A bstract We discuss spectral correlations in coarse-grained chaotic two-dimensional CFTs with large central charge. We study a partition function describing the dense part of the spectrum of primary states in a way that disentangles the chaotic properties of the spectrum from those which are a consequence of Virasoro symmetry and modular invariance. We argue that random matrix universality in the near-extremal limit is an independent feature of each spin sector separately; this is a non-trivial statement because the exact spectrum is fully determined by only the spectrum of spin zero primaries and those of a single non-zero spin (“spectral determinacy”). We then describe an argument analogous to the one leading to Cardy’s formula for the averaged density of states, but in our case applying it to spectral correlations: assuming statistical universalities in the near-extremal spectrum in all spin sectors, we find similar random matrix universality in a large spin regime far from extremality.",
+  "year": 2023,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Felix M. Haehl",
+   "Charles Marteau",
+   "Wyatt Reeves",
+   "Moshe Rozali"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4385268819",
+  "doi": "10.1007/jhep07(2023)196",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP07(2023)196.pdf",
+  "published_iso": "2023-07-25",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Lactylation of METTL16 promotes cuproptosis via m6A-modification on FDX1 mRNA in gastric cancer",
+  "title_norm": "lactylation of mettl16 promotes cuproptosis via m6a modification on fdx1 mrna in",
+  "abstract": "Abstract Cuproptosis, caused by excessively high copper concentrations, is urgently exploited as a potential cancer therapeutic. However, the mechanisms underlying the initiation, propagation, and ultimate execution of cuproptosis in tumors remain unknown. Here, we show that copper content is significantly elevated in gastric cancer (GC), especially in malignant tumors. Screening reveals that METTL16, an atypical methyltransferase, is a critical mediator of cuproptosis through the m 6 A modification on FDX1 mRNA. Furthermore, copper stress promotes METTL16 lactylation at site K229 followed by cuproptosis. The process of METTL16 lactylation is inhibited by SIRT2. Elevated METTL16 lactylation significantly improves the therapeutic efficacy of the copper ionophore– elesclomol. Combining elesclomol with AGK2, a SIRT2-specific inhibitor, induce cuproptosis in gastric tumors in vitro and in vivo. These results reveal the significance of non-histone protein METTL16 lactylation on cuproptosis in tumors. Given the high copper and lactate concentrations in GC, cuproptosis induction becomes a promising therapeutic strategy for GC.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Lianhui Sun",
+   "Yuan Zhang",
+   "Boyu Yang",
+   "Sijun Sun",
+   "Pengshan Zhang",
+   "Zai Luo"
+  ],
+  "citations": 459,
+  "source": "openalex",
+  "source_id": "W4387815001",
+  "doi": "10.1038/s41467-023-42025-8",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-42025-8.pdf",
+  "published_iso": "2023-10-20",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Nanotechnology based drug delivery systems for the treatment of anterior segment eye diseases",
+  "title_norm": "nanotechnology based drug delivery systems for the treatment of anterior segment",
+  "abstract": "Diseases affecting the anterior segment of the eye are the primary causes of vision impairment and blindness globally. Drug administration through the topical ocular route is widely accepted because of its user/patient friendliness - ease of administration and convenience. However, it remains a significant challenge to efficiently deliver drugs to the eye through this route because of various structural and physiological constraints that restrict the distribution of therapeutic molecules into the ocular tissues. The bioavailability of topically applied ocular medications such as eye drops is typically less than 5%. Developing novel delivery systems to increase the retention time on the ocular surfaces and permeation through the cornea is one of the approaches adopted to boost the bioavailability of topically administered medications. Drug delivery systems based on nanotechnology such as micelles, nanosuspensions, nanoparticles, nanoemulsions, liposomes, dendrimers, niosomes, cubosomes and nanowafers have been investigated as effective alternatives to conventional ocular delivery systems in treating diseases of the anterior segment of the eye. This review discussed different nanotechnology-based delivery systems that are currently investigated for treating and managing diseases affecting the anterior ocular tissues. We also looked at the challenges in translating these systems into clinical use and the prospects of nanocarriers as a vehicle for the delivery of phytoactive compounds to the anterior segment of the eye.",
+  "year": 2023,
+  "venue": "Journal of Controlled Release",
+  "authors": [
+   "Adaeze Linda Onugwu",
+   "Chinekwu Sherridan Nwagwu",
+   "Obinna Sabastine Onugwu",
+   "Adaeze Chidiebere Echezona",
+   "Chinazom Precious Agbo",
+   "Stella Amarachi Ihim"
+  ],
+  "citations": 342,
+  "source": "openalex",
+  "source_id": "W4316687599",
+  "doi": "10.1016/j.jconrel.2023.01.018",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4316687599",
+  "published_iso": "2023-01-19",
+  "oa_field": "Pharmacology, Toxicology and Pharmaceutics",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "The known unknowns in international border interceptions of non-native insects",
+  "title_norm": "the known unknowns in international border interceptions of non native insects",
+  "abstract": "Abstract Propagule pressure is one of the key drivers of establishment success of non-native species, including insects. However, border interception data, which have the potential to act as a proxy for true arrival rates (i.e., propagule pressure) of insects into a country, are seldom used to predict invasions. This can be due to the limited amount of interception data in some countries, difficulties accessing such data, and when these data are available, difficulties in addressing biases caused by variation in interception probability for different taxa due to policy changes, and operational influences of import inspections. The type of interception data required to reliably estimate arrival rates is rarely available. To improve the use of interception data as a proxy for propagule pressure, we investigated the fraction of established species which had interceptions and vice versa by taxonomic group and by biological characteristics (development type and feeding group), using several national datasets from five continents. We identified higher fractions of established species that were intercepted for plant feeding insect groups compared to fractions of non-plant feeding groups, even in countries with more general import inspection strategies. This is likely to reflect greater search effort for and recording of plant-feeding insect groups during inspections. To address this variation in interception probability and improve establishment predictions based on interception frequency, we developed a methodology to account for such taxonomic variation. We apply this to three hazard lists of insects, containing potential pests for an industry or potential pests for a country, to assess its effectiveness.",
+  "year": 2024,
+  "venue": "Biological Invasions",
+  "authors": [
+   "Rebecca M. Turner",
+   "Andrew M. Liebhold",
+   "Helen F. Nahrung",
+   "C.B. Phillips",
+   "Takehiko Yamanaka",
+   "Eckehard G. Brockerhoff"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4405691953",
+  "doi": "10.1007/s10530-024-03502-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10530-024-03502-3.pdf",
+  "published_iso": "2024-12-23",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Feynman rules for scalar conformal blocks",
+  "title_norm": "feynman rules for scalar conformal blocks",
+  "abstract": "Abstract We complete the proof of “Feynman rules” for constructing M-point conformal blocks with external and internal scalars in any topology for arbitrary M in any spacetime dimension by combining the rules for the blocks (based on their Witten diagram interpretation) with the rules for the construction of conformal cross ratios (based on the OPE and “flow diagrams”). The full set of Feynman rules leads to blocks as power series of the hypergeometric type in the conformal cross ratios. We then provide a proof by recursion of the Feynman rules which relies heavily on the first Barnes lemma and the decomposition of the topology of interest in comb structures. Finally, we provide a nine-point example to illustrate the rules.",
+  "year": 2022,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Jean-François Fortin",
+   "Sarah Hoback",
+   "Wen-Jie Ma",
+   "Sarthak Parikh",
+   "Witold Skiba"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4306291341",
+  "doi": "10.1007/jhep10(2022)097",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP10(2022)097.pdf",
+  "published_iso": "2022-10-14",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Emerging non-viral vectors for gene delivery",
+  "title_norm": "emerging non viral vectors for gene delivery",
+  "abstract": "Gene therapy holds great promise for treating a multitude of inherited and acquired diseases by delivering functional genes, comprising DNA or RNA, into targeted cells or tissues to elicit manipulation of gene expression. However, the clinical implementation of gene therapy remains substantially impeded by the lack of safe and efficient gene delivery vehicles. This review comprehensively outlines the novel fastest-growing and efficient non-viral gene delivery vectors, which include liposomes and lipid nanoparticles (LNPs), highly branched poly(β-amino ester) (HPAE), single-chain cyclic polymer (SCKP), poly(amidoamine) (PAMAM) dendrimers, and polyethyleneimine (PEI). Particularly, we discuss the research progress, potential development directions, and remaining challenges. Additionally, we provide a comprehensive overview of the currently approved non-viral gene therapeutics, as well as ongoing clinical trials. With advances in biomedicine, molecular biology, materials science, non-viral gene vectors play an ever-expanding and noteworthy role in clinical gene therapy.",
+  "year": 2023,
+  "venue": "Journal of Nanobiotechnology",
+  "authors": [
+   "Chenfei Wang",
+   "Chaolan Pan",
+   "Haiyang Yong",
+   "Feifei Wang",
+   "Tao Bo",
+   "Yitong Zhao"
+  ],
+  "citations": 272,
+  "source": "openalex",
+  "source_id": "W4385952061",
+  "doi": "10.1186/s12951-023-02044-5",
+  "arxiv_id": null,
+  "paper_url": "https://jnanobiotechnology.biomedcentral.com/counter/pdf/10.1186/s12951-023-02044-5",
+  "published_iso": "2023-08-17",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Difference-in-differences with a Continuous Treatment",
+  "title_norm": "difference in differences with a continuous treatment",
+  "abstract": "This paper analyzes difference-in-differences designs with a continuous treatment. We show that treatment effect on the treated-type parameters can be identified under a generalized parallel trends assumption that is similar to the binary treatment setup. However, interpreting differences in these parameters across different values of the treatment can be particularly challenging due to selection bias that is not ruled out by the parallel trends assumption. We discuss alternative, typically stronger, assumptions that alleviate these challenges. We also provide a variety of treatment effect decomposition results, highlighting that parameters associated with popular linear two-way fixed-effect (TWFE) specifications can be hard to interpret, even when there are only two time periods. We introduce alternative estimation procedures that do not suffer from these TWFE drawbacks, and show in an application that they can lead to different conclusions.",
+  "year": 2024,
+  "venue": "National Bureau of Economic Research",
+  "authors": [
+   "Brantly Callaway",
+   "Andrew Goodman-Bacon",
+   "Pedro H. C. Sant’Anna"
+  ],
+  "citations": 157,
+  "source": "openalex",
+  "source_id": "W4392145544",
+  "doi": "10.3386/w32117",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.3386/w32117",
+  "published_iso": "2024-02-01",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Physiological Predictors of Operator Performance: The Role of Mental Effort and Its Link to Task Performance",
+  "title_norm": "physiological predictors of operator performance the role of mental effort and i",
+  "abstract": "ObjectiveThe present study investigated how pupil size and heart rate variability (HRV) can contribute to the prediction of operator performance. We illustrate how focusing on mental effort as the conceptual link between physiological measures and task performance can align relevant empirical findings across research domains.BackgroundPhysiological measures are often treated as indicators of operators' mental state. Thereby, they could enable a continuous and unobtrusive assessment of operators' current ability to perform the task.MethodFifty participants performed a process monitoring task consisting of ten 9-minute task blocks. Blocks alternated between low and high task demands, and the last two blocks introduced a task reward manipulation. We measured response times as primary performance indicator, pupil size and HRV as physiological measures, and mental fatigue, task engagement, and perceived effort as subjective ratings.ResultsBoth increased pupil size and increased HRV significantly predicted better task performance. However, the underlying associations between physiological measures and performance were influenced by task demands and time on task. Pupil size, but not HRV, results were consistent with subjective ratings.ConclusionThe empirical findings suggest that, by capturing variance in operators' mental effort, physiological measures, specifically pupil size, can contribute to the prediction of task performance. Their predictive value is limited by confounding effects that alter the amount of effort required to achieve a given level of performance.ApplicationThe outlined conceptual approach and empirical results can guide study designs and performance prediction models that examine physiological measures as the basis for dynamic operator assistance.",
+  "year": 2024,
+  "venue": "Human Factors The Journal of the Human Factors and Ergonomics Society",
+  "authors": [
+   "Sebastian Pütz",
+   "Alexander Mertens",
+   "Lewis L. Chuang",
+   "Verena Nitsch"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4403906094",
+  "doi": "10.1177/00187208241296830",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403906094",
+  "published_iso": "2024-10-30",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Optimal delivery of RNA interference by viral vectors for cancer therapy",
+  "title_norm": "optimal delivery of rna interference by viral vectors for cancer therapy",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Molecular Therapy",
+  "authors": [
+   "Boaz Wong",
+   "Rayanna Birtch",
+   "Reza Rezaei",
+   "Taylor R. Jamieson",
+   "Mathieu J. F. Crupi",
+   "Jean‐Simon Diallo"
+  ],
+  "citations": 46,
+  "source": "openalex",
+  "source_id": "W4386886878",
+  "doi": "10.1016/j.ymthe.2023.09.012",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10638062/pdf/main.pdf",
+  "published_iso": "2023-09-20",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Response surface methodology for process optimization in livestock wastewater treatment: A review",
+  "title_norm": "response surface methodology for process optimization in livestock wastewater tr",
+  "abstract": "With increasing demand for meat and dairy products, the volume of wastewater generated from the livestock industry has become a significant environmental concern. The treatment of livestock wastewater (LWW) is a challenging process that involves removing nutrients, organic matter, pathogens, and other pollutants from livestock manure and urine. In response to this challenge, researchers have developed and investigated different biological, physical, and chemical treatment technologies that perform better upon optimization. Optimization of LWW handling processes can help improve the efficacy and sustainability of treatment systems as well as minimize environmental impacts and associated costs. Response surface methodology (RSM) as an optimization approach can effectively optimize operational parameters that affect process performance. This review article summarizes the main steps of RSM, recent applications of RSM in LWW treatment, highlights the advantages and limitations of this technique, and provides recommendations for future research and practice, including its cost-effectiveness, accuracy, and ability to improve treatment efficiency.",
+  "year": 2024,
+  "venue": "Heliyon",
+  "authors": [
+   "Arif Reza",
+   "Lide Chen",
+   "Xinwei Mao"
+  ],
+  "citations": 71,
+  "source": "openalex",
+  "source_id": "W4395085438",
+  "doi": "10.1016/j.heliyon.2024.e30326",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4395085438",
+  "published_iso": "2024-04-24",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Conditional Generative Adversarial Network Model for Conversion of 2 Dimensional Radiographs Into 3 Dimensional Views",
+  "title_norm": "conditional generative adversarial network model for conversion of 2 dimensional",
+  "abstract": "The inefficacy of 2-Dimensional techniques in visualizing all perspectives of an organ may lead to inaccurate diagnosis of a disease or deformity. This raises a need for adopting 3-Dimensional medical images. But, the high expense, exposure to a high volume of harmful radiations, and limited availability of machinery for capturing images are limiting factors in implementing 3-Dimensional medical imaging for the whole populace. Thus, the conversion of 2-Dimensional images to 3-Dimensional images gained high popularity in the field of medical imaging. However, numerous research works offer the potential for the reconstruction of 3-Dimensional images. But, none of these provides the visualization of all angles of view from 0° to 360° for a 2-Dimensional input image such as X-ray and dual-energy X-ray absorptiometry. Also, these techniques fail to handle noisy and deformed input images. The purpose of this research is to propose a tailored Conditional Adversarial Network Model for the translation of 2-Dimensional images of bones into their corresponding 3-Dimensional view. The model is preceded by pre-processing techniques for dataset cleaning, noise removal, and converting the dataset to a uniform format. Further, the efficacy of the model is improved by determining the optimal values of model parameters, employing the customized activation function, and optimizers. Additionally, the visual quality of the generated 3-Dimensional images is evaluated to showcase the degree of quality degradation while translating. The experimental results obtained on the real-life datasets collected from hospitals across India prove the efficacy of the proposed model in generating 3-Dimensional images. The generated images are similar in quality to the input image and also effective in retaining the information available in an input image.",
+  "year": 2023,
+  "venue": "IEEE Access",
+  "authors": [
+   "Nitesh Pradhan",
+   "Vijaypal Singh Dhaka",
+   "Geeta Rani",
+   "Vivek Krishna Pradhan",
+   "Eugenio Vocaturo",
+   "Ester Zumpano"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4386025771",
+  "doi": "10.1109/access.2023.3307198",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10225524.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Navigating duplication in pharmacovigilance databases: a scoping review",
+  "title_norm": "navigating duplication in pharmacovigilance databases a scoping review",
+  "abstract": "OBJECTIVES: Pharmacovigilance databases play a critical role in monitoring drug safety. The duplication of reports in pharmacovigilance databases, however, undermines their data integrity. This scoping review sought to provide a comprehensive understanding of duplication in pharmacovigilance databases worldwide. DESIGN: A scoping review. DATA SOURCES: Reviewers comprehensively searched the literature in PubMed, Web of Science, Wiley Online Library, EBSCOhost, Google Scholar and other relevant websites. ELIGIBILITY CRITERIA: Peer-reviewed publications and grey literature, without language restriction, describing duplication and/or methods relevant to duplication in pharmacovigilance databases from inception to 1 September 2023. DATA EXTRACTION AND SYNTHESIS: We used the Joanna Briggs Institute guidelines for scoping reviews and conformed with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Reviews. Two reviewers independently screened titles, abstracts and full texts. One reviewer extracted the data and performed descriptive analysis, which the second reviewer assessed. Disagreements were resolved by discussion and consensus or in consultation with a third reviewer. RESULTS: We screened 22 745 unique titles and 156 were eligible for full-text review. Of the 156 titles, 58 (47 peer-reviewed; 11 grey literature) fulfilled the inclusion criteria for the scoping review. Included titles addressed the extent (5 papers), prevention strategies (15 papers), causes (32 papers), detection methods (25 papers), management strategies (24 papers) and implications (14 papers) of duplication in pharmacovigilance databases. The papers overlapped, discussing more than one field. Advances in artificial intelligence, particularly natural language processing, hold promise in enhancing the efficiency and precision of deduplication of large and complex pharmacovigilance databases. CONCLUSION: Duplication in pharmacovigilance databases compromises risk assessment and decision-making, potentially threatening patient safety. Therefore, efficient duplicate prevention, detection and management are essential for more reliable pharmacovigilance data. To minimise duplication, consistent use of worldwide unique identifiers as the key case identifiers is recommended alongside recent advances in artificial intelligence.",
+  "year": 2024,
+  "venue": "BMJ Open",
+  "authors": [
+   "Ronald Kiguba",
+   "Gerald Isabirye",
+   "Julius Mayengo",
+   "Jonathan Owiny",
+   "Phil Tregunno",
+   "Kendal Harrison"
+  ],
+  "citations": 35,
+  "source": "openalex",
+  "source_id": "W4396214493",
+  "doi": "10.1136/bmjopen-2023-081990",
+  "arxiv_id": null,
+  "paper_url": "https://bmjopen.bmj.com/content/bmjopen/14/4/e081990.full.pdf",
+  "published_iso": "2024-04-01",
+  "oa_field": "Pharmacology, Toxicology and Pharmaceutics",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Finite-Temperature Field Theory",
+  "title_norm": "finite temperature field theory",
+  "abstract": "This book develops the basic formalism and theoretical techniques for studying relativistic quantum field theory at high temperature and density. Specific physical theories treated include QED, QCD, electroweak theory, and effective nuclear field theories of hadronic and nuclear matter. Topics covered include: functional integral representation of the partition function, diagrammatic expansions, linear response theory, screening and plasma oscillations, spontaneous symmetry breaking, Goldstone theorem, resummation and hard thermal loops, lattice gauge theory, phase transitions, nucleation theory, quark-gluon plasma, and color superconductivity. Applications to astrophysics and cosmology cover white dwarf and neutron stars, neutrino emissivity, baryon number violation in the early universe, and cosmological phase transitions. Applications to relativistic nucleus-nucleus collisions are also included. The book is written for theorists in elementary particle physics, nuclear physics, astrophysics, and cosmology. Released initially in 2006, this title has been reissued as an Open Access publication on Cambridge Core.",
+  "year": 2023,
+  "venue": "Cambridge University Press eBooks",
+  "authors": [
+   "Joseph I. Kapusta",
+   "Charles Gale"
+  ],
+  "citations": 290,
+  "source": "openalex",
+  "source_id": "W4384023756",
+  "doi": "10.1017/9781009401968",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/799D4793749D3BFDEA193F97EE543395/9781009401951AR.pdf/Finite-Temperature_Field_Theory.pdf?event-type=FTLA",
+  "published_iso": "2023-07-12",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Diagnostic and prognostic potential of the microbiome in ovarian cancer treatment response",
+  "title_norm": "diagnostic and prognostic potential of the microbiome in ovarian cancer treatmen",
+  "abstract": "Ovarian cancer (OC) is the second most common gynecological malignancy and the fifth leading cause of death due to cancer in women in the United States mainly due to the late-stage diagnosis of this cancer. It is, therefore, critical to identify potential indicators to aid in early detection and diagnosis of this disease. We investigated the microbiome associated with OC and its potential role in detection, progression as well as prognosis of the disease. We identified a distinct OC microbiome with general enrichment of several microbial taxa, including Dialister, Corynebacterium, Prevotella, and Peptoniphilus in the OC cohort in all body sites excluding stool and omentum which were not sampled from the benign cohort. These taxa were, however, depleted in the advanced-stage and high-grade OC patients compared to early-stage and low-grade OC patients suggestive of decrease accumulation in advanced disease and could serve as potential indicators for early detection of OC. Similarly, we also observed the accumulation of these mainly pathogenic taxa in OC patients with adverse treatment outcomes compared to those without events and could also serve as potential indicators for predicting patients' responses to treatment. These findings provide important insights into the potential use of the microbiome as indicators in (1) early detection of and screening for OC and (2) predicting patients' response to treatment. Given the limited number of patients enrolled in the study, these results would need to be further investigated and confirmed in a larger study.",
+  "year": 2023,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Abigail E. Asangba",
+   "Jun Chen",
+   "Krista M. Goergen",
+   "Melissa C. Larson",
+   "Ann L. Oberg",
+   "Jvan Casarin"
+  ],
+  "citations": 64,
+  "source": "openalex",
+  "source_id": "W4315874510",
+  "doi": "10.1038/s41598-023-27555-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-023-27555-x.pdf",
+  "published_iso": "2023-01-13",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Achieving net-zero emission target in Africa: Are sustainable energy innovations and financialization crucial for environmental sustainability of sub-Saharan African state?",
+  "title_norm": "achieving net zero emission target in africa are sustainable energy innovations ",
+  "abstract": "Following the rising importance of energy transition in the environmental sustainability discussion, it is imperative to understand the roles of sustainable energy innovations and financialization to reach informed inferences for policy formulation. We examined the environmental quality performance in Sub-Sahara Africa using the case of the resource-rich Ghanaian state vis-à-vis the possible moderating influence of green innovations and financial development. The empirical analysis encompassed various estimation issues, including structural breaks, heteroscedasticity, and normality in data structure. We simulated with the dynamic autoregressive-distributed lag technique and confirmed that financialization, resource rents, and economic growth are significant positive determinants of pollutant emissions. However, green innovations decrease the rate of pollution in the nation. Moreover, the interaction between green innovations and financial development improves ecological quality, while that between natural resources and financial development spurs pollution in the ecosystem. Furthermore, causal connections in the series indicated unidirectional causalities from green innovations, financialization, natural resource rents, and economic growth to pollutant emissions. However, the interactive terms between green innovations and financial development and between natural resource rents and financial development are bi-directionally related to ecological pollution. Hence, the study essentially suggests that the net-zero emission agenda of the Paris Accord is achievable from higher investments in green innovations while harnessing the benefits of international financial flows to boost the sustainability capacity of the Sub-Saharan Ghanian economy.",
+  "year": 2024,
+  "venue": "Applied Energy",
+  "authors": [
+   "Mohammed Musah",
+   "Stephen Taiwo Onifade",
+   "Isaac Ankrah",
+   "Bright Akwasi Gyamfi",
+   "George Kofi Amoako"
+  ],
+  "citations": 32,
+  "source": "openalex",
+  "source_id": "W4394018968",
+  "doi": "10.1016/j.apenergy.2024.123120",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4394018968",
+  "published_iso": "2024-04-06",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Modular conjugations in 2D conformal field theory and holographic bit threads",
+  "title_norm": "modular conjugations in 2d conformal field theory and holographic bit threads",
+  "abstract": "A bstract We study the geometric action of some modular conjugations in two dimensional (2D) conformal field theories. We investigate the bipartition given by an interval when the system is in the ground state, either on the line or on the circle, and in the thermal Gibbs state on the line. We find that the restriction of the corresponding inversion maps to a spatial slice is obtained also in the gauge/gravity correspondence through the geodesic bit threads in a constant time slice of the dual static asymptotically AdS background. For a conformal field theory in the thermal state on the line, the modular conjugation suggests the occurrence of a second world which can be related through the geodesic bit threads to the horizon of the BTZ black brane background. An inversion map is constructed also for the massless Dirac fermion in the ground state and on the line bipartite by the union of two disjoint intervals.",
+  "year": 2022,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Mihail Mintchev",
+   "Erik Tonni"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4313421292",
+  "doi": "10.1007/jhep12(2022)149",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP12(2022)149.pdf",
+  "published_iso": "2022-12-27",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Two new Later Stone Age sites from the Final Pleistocene in the Falémé Valley, eastern Senegal",
+  "title_norm": "two new later stone age sites from the final pleistocene in the falémé valley ea",
+  "abstract": "17 pages, 3 figures, 2 tables.-- This is an open access article distributed under the terms of the Creative Commons Attribution License",
+  "year": 2024,
+  "venue": "Research Portal (King's College London)",
+  "authors": [
+   "Ndiaye, Matar",
+   "Lespez, Laurent",
+   "Tribolo, Chantal",
+   "Rasse, Michel",
+   "Hadjas, Irka",
+   "Davidoux, Sarah"
+  ],
+  "citations": 24074,
+  "source": "openalex",
+  "source_id": "W4392145873",
+  "doi": "10.3929/ethz-b-000667478",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4392145873",
+  "published_iso": "2024-03-28",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Spatially varying coefficients can improve parsimony and descriptive power for species distribution models",
+  "title_norm": "spatially varying coefficients can improve parsimony and descriptive power for s",
+  "abstract": "Species distribution models (SDMs) are widely used to relate species occurrence and density to local environmental conditions, and often include a spatially correlated variable to account for spatial patterns in residuals. Ecologists have extended SDMs to include spatially varying coefficients (SVCs), where the response to a given covariate varies smoothly over space and time. However, SVCs see relatively little use perhaps because they remain less known relative to other SDM techniques. We therefore review ecological contexts where SVCs can improve the interpretability and descriptive power from SDMs, including local responses to regional indices that represent ecological teleconnections; density‐dependent habitat selection; spatially varying detectability; and context‐dependent covariate responses that represent interactions with unmeasured covariates. We then illustrate three additional examples in detail using the vector autoregressive spatio‐temporal (VAST) model. First, a spatially varying decadal trends model identifies decadal trends for arrowtooth flounder Atheresthes stomias density in the Bering Sea from 1982 to 2019. Second, a trait‐based joint SDM highlights the role of body size and temperature in spatial community assembly in the Gulf of Alaska. Third, an age‐structured SDM for walleye pollock Gadus chalcogrammus in the Bering Sea contrasts cohorts with broad spatial distributions (1996 and 2009) and those that are more spatially constrained (2002 and 2015). We conclude that SVCs extend SDMs to address a wide variety of ecological contexts and can be used to better understand a range of ecological processes, e.g. density dependence, community assembly and population dynamics.",
+  "year": 2023,
+  "venue": "Ecography",
+  "authors": [
+   "James T. Thorson",
+   "Cheryl L. Barnes",
+   "Sarah T. Friedman",
+   "Janelle L. Morano",
+   "Margaret C. Siple"
+  ],
+  "citations": 47,
+  "source": "openalex",
+  "source_id": "W4363678594",
+  "doi": "10.1111/ecog.06510",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ecog.06510",
+  "published_iso": "2023-04-10",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Online Muscle Activation Onset Detection Using Likelihood of Conditional Heteroskedasticity of Electromyography Signals",
+  "title_norm": "online muscle activation onset detection using likelihood of conditional heteros",
+  "abstract": "Surface electromyography (sEMG) signals are crucial in developing human-machine interfaces, as they contain rich information about human neuromuscular activities. OBJECTIVE: The real-time, accurate detection of muscle activation onset (MAO) is significant for EMG-triggered control strategies in embedded applications like prostheses and exoskeletons. METHODS: This paper investigates sEMG signals using the generalized autoregressive conditional heteroskedasticity (GARCH) model, focusing on variance. A novel feature, the likelihood of conditional heteroskedasticity (LCH) extracted from the maximum likelihood estimation of GARCH parameters, is proposed. This feature effectively distinguishes signal from noise based on heteroskedasticity, allowing for the detection of MAO through the LCH feature and a basic threshold classifier. For online calculation, the model parameter estimation is simplified, enabling direct calculation of the LCH value using fixed parameters. RESULTS: The proposed method was validated on two open-source datasets and demonstrated superior performance over existing methods. The mean absolute error of onset detection, compared with visual detection results, is approximately 65 ms under online conditions, showcasing high accuracy, universality, and noise insensitivity. CONCLUSION: The results indicate that the proposed method using the LCH feature from the GARCH model is highly effective for real-time detection of muscle activation onset in sEMG signals. SIGNIFICANCE: This novel approach shows great potential and possibility for real-world applications, reflecting its superior performance in accuracy, universality, and insensitivity to noise.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Biomedical Engineering",
+  "authors": [
+   "Yansong Wang",
+   "Nathan Routledge",
+   "Yanzheng Zhao",
+   "Dingguo Zhang"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4390421853",
+  "doi": "10.1109/tbme.2023.3346358",
+  "arxiv_id": null,
+  "paper_url": "https://purehost.bath.ac.uk/ws/files/313093512/TBME.pdf",
+  "published_iso": "2023-12-29",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Covariant action for conformal higher spin gravity",
+  "title_norm": "covariant action for conformal higher spin gravity",
+  "abstract": "Abstract Conformal higher spin (HS) gravity is a HS extension of Weyl gravity and is a family of local HS theories, which was put forward by Segal and Tseytlin. We propose a manifestly covariant and coordinate-independent action for these theories. The result is based on an interplay between HS symmetries and deformation quantization: a locally equivalent but manifestly background-independent reformulation, known as the parent system, of the off-shell multiplet of conformal HS fields (Fradkin–Tseytlin fields) can be interpreted in terms of Fedosov deformation quantization of the underlying cotangent bundle. This brings into the game the invariant quantum trace, induced by the Feigin–Felder–Shoikhet cocycle of Weyl algebra, which extends Segal’s action into a gauge invariant and globally well-defined action functional on the space of configurations of the parent system. The same action can be understood within the worldline approach as a correlation function in the topological quantum mechanics on the circle.",
+  "year": 2023,
+  "venue": "Journal of Physics A Mathematical and Theoretical",
+  "authors": [
+   "Thomas Basile",
+   "Maxim Grigoriev",
+   "Evgeny Skvortsov"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4385693607",
+  "doi": "10.1088/1751-8121/aceeca",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4385693607",
+  "published_iso": "2023-08-09",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Introducing Rich Heterojunction Surfaces to Enhance the High-Frequency Electromagnetic Attenuation Response of Flexible Fiber-Based Wearable Absorbers",
+  "title_norm": "introducing rich heterojunction surfaces to enhance the high frequency electroma",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Advanced Fiber Materials",
+  "authors": [
+   "He Han",
+   "Zhichao Lou",
+   "Qiuyi Wang",
+   "Lei Xu",
+   "Yanjun Li"
+  ],
+  "citations": 184,
+  "source": "openalex",
+  "source_id": "W4392560663",
+  "doi": "10.1007/s42765-024-00387-8",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4392560663",
+  "published_iso": "2024-03-07",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Improved Multiple Feature-Electrochemical Thermal Coupling Modeling of Lithium-Ion Batteries at Low-Temperature with Real-Time Coefficient Correction",
+  "title_norm": "improved multiple feature electrochemical thermal coupling modeling of lithium i",
+  "abstract": "Monitoring various internal parameters plays a core role in ensuring the safety of lithium-ion batteries in power supply applications. It also influences the sustainability effect and online state of charge prediction. An improved multiple feature-electrochemical thermal coupling modeling method is proposed considering low-temperature performance degradation for the complete characteristic expression of multi-dimensional information. This is to obtain the parameter influence mechanism with a multi-variable coupling relationship. An optimized decoupled deviation strategy is constructed for accurate state of charge prediction with real-time correction of time-varying current and temperature effects. The innovative decoupling method is combined with the functional relationships of state of charge and open-circuit voltage to capture energy management effectively. Then, an adaptive equivalent-prediction model is constructed using the state-space equation and iterative feedback correction, making the proposed model adaptive to fractional calculation. The maximum state of charge estimation errors of the proposed method are 4.57% and 0.223% under the Beijing bus dynamic stress test and dynamic stress test conditions, respectively. The improved multiple feature-electrochemical thermal coupling modeling realizes the effective correction of the current and temperature variations with noise influencing coefficient, and provides an efficient state of charge prediction method adaptive to complex conditions.",
+  "year": 2024,
+  "venue": "Protection and Control of Modern Power Systems",
+  "authors": [
+   "Shunli Wang",
+   "Haiying Gao",
+   "Paul Takyi‐Aninakwa",
+   "Josep M. Guerrero",
+   "Carlos Fernández",
+   "Qi Huang"
+  ],
+  "citations": 229,
+  "source": "openalex",
+  "source_id": "W4396708270",
+  "doi": "10.23919/pcmp.2023.000257",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/10352418/10518001/10521737.pdf",
+  "published_iso": "2024-05-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Plasma phosphorylated tau 217 in preclinical Alzheimer’s disease",
+  "title_norm": "plasma phosphorylated tau 217 in preclinical alzheimer s disease",
+  "abstract": "Abstract An accurate blood test for Alzheimer’s disease that is sensitive to preclinical proteinopathy and cognitive decline has clear implications for early detection and secondary prevention. We assessed the performance of plasma phosphorylated tau 217 (pTau217) against brain PET markers of amyloid [[11C]-labelled Pittsburgh compound B (PiB)] and tau ([18F]MK-6240) and its utility for predicting longitudinal cognition. Samples were analysed from a subset of participants with up to 8 years follow-up in the Wisconsin Registry for Alzheimer’s Prevention (WRAP; 2001–present; plasma 2011–present), a longitudinal cohort study of adults from midlife, enriched for parental history of Alzheimer’s disease. Participants were a convenience sample who volunteered for at least one PiB scan, had usable banked plasma and were cognitively unimpaired at first plasma collection. Study personnel who interacted with participants or samples were blind to amyloid status. We used mixed effects models and receiver–operator characteristic curves to assess concordance between plasma pTau217 and PET biomarkers of Alzheimer’s disease and mixed effects models to understand the ability of plasma pTau217 to predict longitudinal performance on WRAP’s preclinical Alzheimer’s cognitive composite (PACC-3). The primary analysis included 165 people (108 women; mean age = 62.9 ± 6.06; 160 still enrolled; 2 deceased; 3 discontinued). Plasma pTau217 was strongly related to PET-based estimates of concurrent brain amyloid (β^ = 0.83 (0.75, 0.90), P < 0.001). Concordance was high between plasma pTau217 and both amyloid PET (area under the curve = 0.91, specificity = 0.80, sensitivity = 0.85, positive predictive value = 0.58, negative predictive value = 0.94) and tau PET (area under the curve = 0.95, specificity = 1, sensitivity = 0.85, positive predictive value = 1, negative predictive value = 0.98). Higher baseline pTau217 levels were associated with worse cognitive trajectories (β^pTau×age = −0.07 (−0.09, −0.06), P < 0.001). In a convenience sample of unimpaired adults, plasma pTau217 levels correlate well with concurrent brain Alzheimer’s disease pathophysiology and with prospective cognitive performance. These data indicate that this marker can detect disease before clinical signs and thus may disambiguate presymptomatic Alzheimer’s disease from normal cognitive ageing.",
+  "year": 2023,
+  "venue": "Brain Communications",
+  "authors": [
+   "Erin M. Jonaitis",
+   "Shorena Janelidze",
+   "Karly Alex Cody",
+   "Rebecca Langhough",
+   "Lianlian Du",
+   "Nathaniel A. Chin"
+  ],
+  "citations": 125,
+  "source": "openalex",
+  "source_id": "W4323357232",
+  "doi": "10.1093/braincomms/fcad057",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/braincomms/advance-article-pdf/doi/10.1093/braincomms/fcad057/49432242/fcad057.pdf",
+  "published_iso": "2023-03-02",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Quantum ontology without textbooks. Nor overlapping",
+  "title_norm": "quantum ontology without textbooks nor overlapping",
+  "abstract": "In this paper, I critically assess two recent proposals for an interpretation-independent understanding of non-relativistic quantum mechanics: the overlap strategy (Fraser & Vickers, 2022) and the textbook account (Egg, 2021). My argument has three steps. I first argue that they presume a Quinean-Carnapian meta-ontological framework that yields flat, structureless ontologies. Second, such ontologies are unable to solve the problems that quantum ontologists want to solve. Finally, only structured ontologies are capable of solving the problems that quantum ontologists want to solve. But they require some dose of speculation. In the end, I defend the conservative way to do quantum ontology, which is (and must be) speculative and non-neutral.",
+  "year": 2024,
+  "venue": "European Journal for Philosophy of Science",
+  "authors": [
+   "Cristian López"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4392012838",
+  "doi": "10.1007/s13194-024-00573-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s13194-024-00573-w.pdf",
+  "published_iso": "2024-02-21",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Candidate biomarkers in psychiatric disorders: state of the field",
+  "title_norm": "candidate biomarkers in psychiatric disorders state of the field",
+  "abstract": "The field of psychiatry is hampered by a lack of robust, reliable and valid biomarkers that can aid in objectively diagnosing patients and providing individualized treatment recommendations. Here we review and critically evaluate the evidence for the most promising biomarkers in the psychiatric neuroscience literature for autism spectrum disorder, schizophrenia, anxiety disorders and post-traumatic stress disorder, major depression and bipolar disorder, and substance use disorders. Candidate biomarkers reviewed include various neuroimaging, genetic, molecular and peripheral assays, for the purposes of determining susceptibility or presence of illness, and predicting treatment response or safety. This review highlights a critical gap in the biomarker validation process. An enormous societal investment over the past 50 years has identified numerous candidate biomarkers. However, to date, the overwhelming majority of these measures have not been proven sufficiently reliable, valid and useful to be adopted clinically. It is time to consider whether strategic investments might break this impasse, focusing on a limited number of promising candidates to advance through a process of definitive testing for a specific indication. Some promising candidates for definitive testing include the N170 signal, an event-related brain potential measured using electroencephalography, for subgroup identification within autism spectrum disorder; striatal resting-state functional magnetic resonance imaging (fMRI) measures, such as the striatal connectivity index (SCI) and the functional striatal abnormalities (FSA) index, for prediction of treatment response in schizophrenia; error-related negativity (ERN), an electrophysiological index, for prediction of first onset of generalized anxiety disorder, and resting-state and structural brain connectomic measures for prediction of treatment response in social anxiety disorder. Alternate forms of classification may be useful for conceptualizing and testing potential biomarkers. Collaborative efforts allowing the inclusion of biosystems beyond genetics and neuroimaging are needed, and online remote acquisition of selected measures in a naturalistic setting using mobile health tools may significantly advance the field. Setting specific benchmarks for well-defined target application, along with development of appropriate funding and partnership mechanisms, would also be crucial. Finally, it should never be forgotten that, for a biomarker to be actionable, it will need to be clinically predictive at the individual level and viable in clinical settings.",
+  "year": 2023,
+  "venue": "World Psychiatry",
+  "authors": [
+   "Anissa Abi‐Dargham",
+   "Scott J. Moeller",
+   "Farzana Ali",
+   "Christine DeLorenzo",
+   "Katharina Domschke",
+   "Guillermo Horga"
+  ],
+  "citations": 363,
+  "source": "openalex",
+  "source_id": "W4376108699",
+  "doi": "10.1002/wps.21078",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wps.21078",
+  "published_iso": "2023-05-09",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "A non-antibiotic-disrupted gut microbiome is associated with clinical responses to CD19-CAR-T cell cancer immunotherapy",
+  "title_norm": "a non antibiotic disrupted gut microbiome is associated with clinical responses ",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Christoph K. Stein‐Thoeringer",
+   "Neeraj Saini",
+   "Eli Zamir",
+   "Viktoria Blumenberg",
+   "Maria‐Luisa Schubert",
+   "Uria Mor"
+  ],
+  "citations": 239,
+  "source": "openalex",
+  "source_id": "W4324044824",
+  "doi": "10.1038/s41591-023-02234-6",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10121864/pdf/nihms-1887917.pdf",
+  "published_iso": "2023-03-13",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "M‐quantile regression shrinkage and selection via the Lasso and Elastic Net to assess the effect of meteorology and traffic on air quality",
+  "title_norm": "m quantile regression shrinkage and selection via the lasso and elastic net to a",
+  "abstract": "In this work, we intersect data on size-selected particulate matter (PM) with vehicular traffic counts and a comprehensive set of meteorological covariates to study the effect of traffic on air quality. To this end, we develop an M-quantile regression model with Lasso and Elastic Net penalizations. This allows (i) to identify the best proxy for vehicular traffic via model selection, (ii) to investigate the relationship between fine PM concentration and the covariates at different M-quantiles of the conditional response distribution, and (iii) to be robust to the presence of outliers. Heterogeneity in the data is accounted by fitting a B-spline on the effect of the day of the year. Analytic and bootstrap-based variance estimates of the regression coefficients are provided, together with a numerical evaluation of the proposed estimation procedure. Empirical results show that atmospheric stability is responsible for the most significant effect on fine PM concentration: this effect changes at different levels of the conditional response distribution and is relatively weaker on the tails. On the other hand, model selection allows to identify the best proxy for vehicular traffic whose effect remains essentially the same at different levels of the conditional response distribution.",
+  "year": 2023,
+  "venue": "Biometrical Journal",
+  "authors": [
+   "Maria Giovanna Ranalli",
+   "Nicola Salvati",
+   "Lea Petrella",
+   "Francesco Pantalone"
+  ],
+  "citations": 43,
+  "source": "openalex",
+  "source_id": "W4386994139",
+  "doi": "10.1002/bimj.202100355",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bimj.202100355",
+  "published_iso": "2023-09-24",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "A framework for investigating new firm entry: The (limited) overlap between informal-formal and necessity-opportunity entrepreneurship",
+  "title_norm": "a framework for investigating new firm entry the limited overlap between informa",
+  "abstract": "We analyse entrepreneurial entry along the dimensions of informal-formal and necessity-opportunity entrepreneurship, distinguishing between them yet considering them jointly. While the dominant view in the literature conflates necessity with informal entry, and opportunity with formal entry, we hypothesise that informal entrepreneurship may be attractive to higher-income individuals as a testing ground for entrepreneurial ideas. We also explain why higher-income individuals may undertake necessity entrepreneurship. We utilise individual Global Entrepreneurship Monitor (GEM) data from Chile (2019–2021), which identifies informal-formal and necessity-opportunity entrepreneurial entry modes, to test hypotheses on the role of individuals´ income in the four types of entrepreneurial entry. We also consider changes in entrepreneurial entry during a crisis and a non-crisis periods. Our results confirm that the patterns in the data are consistent with hypotheses derived from our proposed theoretical framework. Emerging markets economies have very large informal sectors, and their entrepreneurial entry is often motivated by economic necessity rather than by business opportunity. But neither informal nor necessity entrepreneurship are usually expected to generate the positive benefits for growth and development predicted for formal and opportunity entrepreneurship. We argue that the dominant stream in the literature actually conflates informal and necessity entrepreneurship, both of which have been associated with low human and financial capital and productivity. We propose that the appropriate typology is more complex than this because there are examples of successful and dynamic informal firms. This leads us to identify four categories of entrepreneurial entry: informal-necessity (Type 1), formal-opportunity (Type 2), informal-opportunity (Type 3), and formal-necessity (Type 4). While necessity entrepreneurship has typically been associated with low-income individuals, we propose that formal-necessity entrepreneurship may be an entry path for both low- and high-income individuals, though for different reasons. Informal opportunity entry may likewise be an option for people with low-income as well as high-income. We therefore seek to disentangle the analysis of opportunity-necessity and of formal-informal entry and to demonstrate that the two less explored entry modes - informal-opportunity, and formal-necessity - are of considerable theoretical and practical significance in emerging economies. We test our framework in the emerging market economy setting of Chile, one of the more prosperous and open economies in Latin America. We use Global Entrepreneurship Monitor (GEM) data which uniquely for Chile allow us to distinguish between individuals along both the formal-informal and the necessity-opportunity dimensions. On this basis, we distinguish empirically between these four categories of entrepreneurial entry and explain how higher-income individuals may use informal-opportunity entrepreneurial entry as a “seed bed” to test their new business ideas. At the same time, we show that necessity entrepreneurship may be attractive to both lower- and higher-income individuals. We also show that the interplay between individuals´ income groups and four entrepreneurial entry modes is stable over “normal times” versus “crisis periods”. We observe that in response to a crisis, individuals with lower-incomes are likely to engage more in informal-necessity entrepreneurship while opportunity-informal entry by higher-income individuals will decline. These changes represent a more complex adjustment pattern than has been identified for developed economies, where entrepreneurial activity has been found to be countercyclical. Thus, in emerging markets, informal-necessity entrepreneurship plays a stabilizing role for those individuals with a more marginal position in the labor market during the crisis. In contrast, for those individuals who have access to higher household income, all forms of entrepreneurship become a less attractive option. We interpret this as indicating that these individuals have the option to wait for higher return opportunities to re-emerge. This is one of the first papers to explore the impact of the COVID-19 pandemic on entrepreneurship in an emerging market economy.",
+  "year": 2024,
+  "venue": "Journal of Business Venturing",
+  "authors": [
+   "Saul Estrin",
+   "Maribel Guerrero",
+   "Tomasz Mickiewicz"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W4395108909",
+  "doi": "10.1016/j.jbusvent.2024.106404",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4395108909",
+  "published_iso": "2024-04-24",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
+  "title_norm": "dictionary learning for integrative multimodal and scalable single cell analysis",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Biotechnology",
+  "authors": [
+   "Yuhan Hao",
+   "Tim Stuart",
+   "Madeline H. Kowalski",
+   "Saket Choudhary",
+   "Paul Hoffman",
+   "Austin Hartman"
+  ],
+  "citations": 5332,
+  "source": "openalex",
+  "source_id": "W4378212544",
+  "doi": "10.1038/s41587-023-01767-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41587-023-01767-y.pdf",
+  "published_iso": "2023-05-25",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Data to intelligence: The role of data-driven models in wastewater treatment",
+  "title_norm": "data to intelligence the role of data driven models in wastewater treatment",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Expert Systems with Applications",
+  "authors": [
+   "Majid Bahramian",
+   "Recep Kaan Dereli",
+   "Wanqing Zhao",
+   "Matteo Giberti",
+   "Eoin Casey"
+  ],
+  "citations": 167,
+  "source": "openalex",
+  "source_id": "W4312143562",
+  "doi": "10.1016/j.eswa.2022.119453",
+  "arxiv_id": null,
+  "paper_url": "https://ueaeprints.uea.ac.uk/id/eprint/90369/1/1_s2.0_S0957417422024721_main.pdf",
+  "published_iso": "2022-12-26",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "ergm 4: New Features for Analyzing Exponential-Family Random Graph Models",
+  "title_norm": "ergm 4 new features for analyzing exponential family random graph models",
+  "abstract": "The ergm package supports the statistical analysis and simulation of network data. It anchors the statnet suite of packages for network analysis in R introduced in a special issue in Journal of Statistical Software in 2008. This article provides an overview of the new functionality in the 2021 release of ergm version 4. These include more flexible handling of nodal covariates, term operators that extend and simplify model specification, new models for networks with valued edges, improved handling of constraints on the sample space of networks, and estimation with missing edge data. We also identify the new packages in the statnet suite that extend ergm's functionality to other network data types and structural features and the robust set of online resources that support the statnet development process and applications.",
+  "year": 2023,
+  "venue": "Journal of Statistical Software",
+  "authors": [
+   "Pavel N. Krivitsky",
+   "David R. Hunter",
+   "Martina Morris",
+   "Chad Klumb"
+  ],
+  "citations": 65,
+  "source": "openalex",
+  "source_id": "W4318262829",
+  "doi": "10.18637/jss.v105.i06",
+  "arxiv_id": null,
+  "paper_url": "https://www.jstatsoft.org/index.php/jss/article/download/v105i06/4424",
+  "published_iso": "2023-01-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "A survey on federated learning: challenges and applications",
+  "title_norm": "a survey on federated learning challenges and applications",
+  "abstract": "",
+  "year": 2022,
+  "venue": "International Journal of Machine Learning and Cybernetics",
+  "authors": [
+   "Jie Wen",
+   "Zhixia Zhang",
+   "Yang Lan",
+   "Zhihua Cui",
+   "Jianghui Cai",
+   "Wensheng Zhang"
+  ],
+  "citations": 851,
+  "source": "openalex",
+  "source_id": "W4309080560",
+  "doi": "10.1007/s13042-022-01647-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s13042-022-01647-y.pdf",
+  "published_iso": "2022-11-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Polymers as Efficient Non-Viral Gene Delivery Vectors: The Role of the Chemical and Physical Architecture of Macromolecules",
+  "title_norm": "polymers as efficient non viral gene delivery vectors the role of the chemical a",
+  "abstract": "Gene therapy is the technique of inserting foreign genetic elements into host cells to achieve a therapeutic effect. Although gene therapy was initially formulated as a potential remedy for specific genetic problems, it currently offers solutions for many diseases with varying inheritance patterns and acquired diseases. There are two major groups of vectors for gene therapy: viral vector gene therapy and non-viral vector gene therapy. This review examines the role of a macromolecule's chemical and physical architecture in non-viral gene delivery, including their design and synthesis. Polymers can boost circulation, improve delivery, and control cargo release through various methods. The prominent examples discussed include poly-L-lysine, polyethyleneimine, comb polymers, brush polymers, and star polymers, as well as hydrogels and natural polymers and their modifications. While significant progress has been made, challenges still exist in gene stabilization, targeting specificity, and cellular uptake. Overcoming cytotoxicity, improving delivery efficiency, and utilizing natural polymers and hybrid systems are vital factors for prospects. This comprehensive review provides an illuminating overview of the field, guiding the way toward innovative non-viral-based gene delivery solutions.",
+  "year": 2024,
+  "venue": "Polymers",
+  "authors": [
+   "Majad Khan"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4402600974",
+  "doi": "10.3390/polym16182629",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-4360/16/18/2629/pdf?version=1726641658",
+  "published_iso": "2024-09-18",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Microbial Fuel Cell Construction Features and Application for Sustainable Wastewater Treatment",
+  "title_norm": "microbial fuel cell construction features and application for sustainable wastew",
+  "abstract": "A microbial fuel cell (MFC) is a system that can generate electricity by harnessing microorganisms' metabolic activity. MFCs can be used in wastewater treatment plants since they can convert the organic matter in wastewater into electricity while also removing pollutants. The microorganisms in the anode electrode oxidize the organic matter, breaking down pollutants and generating electrons that flow through an electrical circuit to the cathode compartment. This process also generates clean water as a byproduct, which can be reused or released back into the environment. MFCs offer a more energy-efficient alternative to traditional wastewater treatment plants, as they can generate electricity from the organic matter in wastewater, offsetting the energy needs of the treatment plants. The energy requirements of conventional wastewater treatment plants can add to the overall cost of the treatment process and contribute to greenhouse gas emissions. MFCs in wastewater treatment plants can increase sustainability in wastewater treatment processes by increasing energy efficiency and reducing operational cost and greenhouse gas emissions. However, the build-up to the commercial-scale still needs a lot of study, as MFC research is still in its early stages. This study thoroughly describes the principles underlying MFCs, including their fundamental structure and types, construction materials and membrane, working mechanism, and significant process elements influencing their effectiveness in the workplace. The application of this technology in sustainable wastewater treatment, as well as the challenges involved in its widespread adoption, are discussed in this study.",
+  "year": 2023,
+  "venue": "Membranes",
+  "authors": [
+   "Hridoy Roy",
+   "Tanzim Ur Rahman",
+   "Nishat Tasnim",
+   "Jannatul Arju",
+   "Md. Mustafa Rafid",
+   "Md. Reazul Islam"
+  ],
+  "citations": 227,
+  "source": "openalex",
+  "source_id": "W4367624896",
+  "doi": "10.3390/membranes13050490",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0375/13/5/490/pdf?version=1682852737",
+  "published_iso": "2023-04-30",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "ZEKRA: Zero-Knowledge Control-Flow Attestation",
+  "title_norm": "zekra zero knowledge control flow attestation",
+  "abstract": "To detect runtime attacks against programs running on a remote computing platform, Control-Flow Attestation (CFA) lets a (trusted) verifier determine the legality of the program’s execution path, as recorded and reported by the remote platform (prover). However, besides complicating scalability due to verifier complexity, this assumption regarding the verifier’s trustworthiness renders existing CFA schemes prone to privacy breaches and implementation disclosure attacks under “honest-but-curious” adversaries. Thus, to suppress sensitive details from the verifier, we propose to have the prover outsource the verification of the attested execution path to an intermediate worker of which the verifier only learns the result. However, since a worker might be dishonest about the outcome of the verification, we propose a purely cryptographical solution of transforming the verification of the attested execution path into a verifiable computational task that can be reliably outsourced to a worker without relying on any trusted execution environment. Specifically, we propose to express a program-agnostic execution path verification task inside an arithmetic circuit whose correct execution can be verified by untrusted verifiers in zero knowledge.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Heini Bergsson Debes",
+   "Edlira Dushku",
+   "Thanassis Giannetsos",
+   "Ali Marandi"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4383221394",
+  "doi": "10.1145/3579856.3582833",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3579856.3582833",
+  "published_iso": "2023-07-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal truncation of chern-simons theory at large $N$f",
+  "title_norm": "conformal truncation of chern simons theory at large n f",
+  "abstract": "We set up and analyze the lightcone Hamiltonian for an abelian Chern-Simons field coupled to Nf fermions in the limit of large Nf using conformal truncation, i.e. with a truncated space of states corresponding to primary operators with dimension below a maximum cutoff Δmax. In both the Chern-Simons theory, and in the O(N) model at infinite N, we compute the current spectral functions analytically as a function of Δmax and reproduce previous results in the limit that the truncation Δmax is taken to ∞. Along the way, we determine how to preserve gauge invariance and how to choose an optimal discrete basis for the momenta of states in the truncation space.",
+  "year": 2023,
+  "venue": "OSTI OAI (U.S. Department of Energy Office of Scientific and Technical Information)",
+  "authors": [
+   "Luca V. Delacrétaz"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W3098746865",
+  "doi": "10.1007/jhep03%282019%29107",
+  "arxiv_id": null,
+  "paper_url": "https://www.osti.gov/servlets/purl/1612339",
+  "published_iso": "2023-07-03",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Successes and challenges in clinical gene therapy",
+  "title_norm": "successes and challenges in clinical gene therapy",
+  "abstract": "Despite the ups and downs in the field over three decades, the science of gene therapy has continued to advance and provide enduring treatments for increasing number of diseases. There are active clinical trials approaching a variety of inherited and acquired disorders of different organ systems. Approaches include ex vivo modification of hematologic stem cells (HSC), T lymphocytes and other immune cells, as well as in vivo delivery of genes or gene editing reagents to the relevant target cells by either local or systemic administration. In this article, we highlight success and ongoing challenges in three areas of high activity in gene therapy: inherited blood cell diseases by targeting hematopoietic stem cells, malignant disorders using immune effector cells genetically modified with chimeric antigen receptors, and ophthalmologic, neurologic, and coagulation disorders using in vivo administration of adeno-associated virus (AAV) vectors. In recent years, there have been true cures for many of these diseases, with sustained clinical benefit that exceed those from other medical approaches. Each of these treatments faces ongoing challenges, namely their high one-time costs and the complexity of manufacturing the therapeutic agents, which are biological viruses and cell products, at pharmacologic standards of quality and consistency. New models of reimbursement are needed to make these innovative treatments widely available to patients in need.",
+  "year": 2023,
+  "venue": "Gene Therapy",
+  "authors": [
+   "Donald B. Kohn",
+   "Yvonne Y. Chen",
+   "Melissa J. Spencer"
+  ],
+  "citations": 173,
+  "source": "openalex",
+  "source_id": "W4388479805",
+  "doi": "10.1038/s41434-023-00390-5",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41434-023-00390-5.pdf",
+  "published_iso": "2023-11-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Diverse clonal fates emerge upon drug treatment of homogeneous cancer cells",
+  "title_norm": "diverse clonal fates emerge upon drug treatment of homogeneous cancer cells",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature",
+  "authors": [
+   "Yogesh Goyal",
+   "Gianna T. Busch",
+   "Maalavika Pillai",
+   "Jingxin Li",
+   "Ryan H. Boe",
+   "Emanuelle I. Grody"
+  ],
+  "citations": 189,
+  "source": "openalex",
+  "source_id": "W4384819865",
+  "doi": "10.1038/s41586-023-06342-8",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10628994/pdf/nihms-1937493.pdf",
+  "published_iso": "2023-07-19",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Factors that affect the outcomes of root canal treatment and retreatment—A reframing of the principles",
+  "title_norm": "factors that affect the outcomes of root canal treatment and retreatment a refra",
+  "abstract": "This paper undertakes a broad and comprehensive synthesis of relevant clinical, biological, biomechanical, technical and healthcare services data to understand the factors affecting outcomes of periapical healing after root canal (re)treatment. The medical and dental evidence-based era (1980-present) is contextualized with the earlier evidence drive in endodontics (1911-1940) triggered by the focal infection era. The current evidence-based approach has a sharper focus on evidence quality and derivation of practice guidelines. Contrary views question whether guideline-driven, or expertise-development-driven endeavours would best serve outcome improvement in society. The endodontic discipline functions in a broad healthcare framework and sustains industrial, economic and trend pressures that may be deemed to influence outcomes. The nature of root canal treatment and the challenges in determining the factors that affect its outcomes is discussed. The factors potentially affecting periapical healing after root canal treatment are classified into pre-operative, intra-operative and postoperative groups. These categories subsume multiple elements with interactive influences, creating a complex picture, further confounded by some apparently surprising, counter-intuitive and contradictory findings. The technical versus biological conundrum in root canal treatment continues to cause cognitive dissonance. However, due reflection and cross-discipline-synthesis resolve the apparent data conflicts into a very simple, consistent and plausible picture of how root canal treatment works and the key factors that affect periapical healing. Root canal retreatment is considered mainly in the context of its differences from primary treatment as the majority of factors influencing outcomes are common to both. The exceptional difference is that retreatments have a proportionately reduced probability of healing by virtue of compromised apical root canal ramification access or modified host/infection interactions. Root canal (re)treatment outcomes are dominantly influenced by the nature of prior dynamic host/infection interaction (pre-operative patient factors) and how the direction of this dynamic is influenced by two factors: (1) the active efficacy of the operators' root canal treatment protocol to sustain a microbial ecological shift (intra-operative treatment factors) and dampen periapical inflammation; and (2) the passive ability of the functional tooth (and its restoration margin) to maintain its integrity to resist infection reversal (postoperative restorative factors).",
+  "year": 2023,
+  "venue": "International Endodontic Journal",
+  "authors": [
+   "K. Gulabivala",
+   "Y.‐L. Ng"
+  ],
+  "citations": 280,
+  "source": "openalex",
+  "source_id": "W4318465290",
+  "doi": "10.1111/iej.13897",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/iej.13897",
+  "published_iso": "2023-01-30",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal Antireflective Multilayers for High‐Numerical‐Aperture Deep‐Ultraviolet Lenses",
+  "title_norm": "conformal antireflective multilayers for high numerical aperture deep ultraviole",
+  "abstract": "Abstract Precise surface reflectance control at specific deep‐ultraviolet (DUV) wavelengths across wide angles is crucial for semiconductor inspection and lithography tools. The inherent challenges in designing DUV antireflective multilayers stem from limited transparent materials and the resultant fabrication complexity owing to numerous interfaces. Here, wide‐angle antireflective multilayers finely tuned to 248 nm designed using an active learning scheme is presented. The active learning scheme employing factorization machines (FM) identifies the optimal configurations for binary‐material‐based multilayers (AlF 3 /LaF 3 , AlF 3 /MgF 2 , and AlF 3 /Al 2 O 3 ) with varying index contrasts, achieving minimal figure‐of‐merit (i.e., average angular reflectance) values at predetermined total thicknesses. High‐index‐contrast AlF 3 /Al 2 O 3 multilayers are fabricated via atomic layer deposition, thus enabling the conformal coating of high‐numerical‐aperture (NA) lenses with atomic precision. An optimized AlF 3 /Al 2 O 3 tri‐layer with a total thickness of 180 nm results in an average (0°–45°) reflectance of 0.4% on a CaF 2 planar substrate and 0.6% on a CaF 2 convex lens (NA = 0.47), similar to the performance of an ideal single‐layer coating requiring a practically unavailable refractive index. Phasor analysis, which considers only first‐order reflections between adjacent layers, supports the benefits of high‐index‐contrast binary materials and the use of the FM‐based active learning scheme in antireflective multilayer design.",
+  "year": 2024,
+  "venue": "Advanced Optical Materials",
+  "authors": [
+   "Geon‐Tae Park",
+   "Jae‐Hyun Kim",
+   "Seunghun Lee",
+   "Dong In Kim",
+   "Ki‐Seok An",
+   "Eungkyu Lee"
+  ],
+  "citations": 15,
+  "source": "openalex",
+  "source_id": "W4400008813",
+  "doi": "10.1002/adom.202401040",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adom.202401040",
+  "published_iso": "2024-06-25",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Charged particle motion and radiation in strong electromagnetic fields",
+  "title_norm": "charged particle motion and radiation in strong electromagnetic fields",
+  "abstract": "Ultrastrong electromagnetic fields occur not only in astrophysical settings but also in dense lepton bunches, special crystals, and at the focus of high peak power lasers. For fields of sufficient magnitude including quantum electrodynamics effects becomes essential. Electron-positron pair creation and interaction of these pairs with the fields results in fascinating phenomena. In this review these particle dynamics are analyzed and shown to exhibit complex behavior including chaotic motion with strange attractors and limit cycles, as well as cascades where the vacuum ``explodes'' and acts back on the strong fields. An overview of planned experiments points to new discoveries which will challenge long-held theoretical expectations.",
+  "year": 2022,
+  "venue": "Reviews of Modern Physics",
+  "authors": [
+   "Arkady Gonoskov",
+   "Tom Blackburn",
+   "M. Marklund",
+   "S. S. Bulanov"
+  ],
+  "citations": 325,
+  "source": "openalex",
+  "source_id": "W4287100776",
+  "doi": "10.1103/revmodphys.94.045001",
+  "arxiv_id": null,
+  "paper_url": "https://www.osti.gov/servlets/purl/1994346",
+  "published_iso": "2022-10-07",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Spatiotemporal single-cell analysis decodes cellular dynamics underlying different responses to immunotherapy in colorectal cancer",
+  "title_norm": "spatiotemporal single cell analysis decodes cellular dynamics underlying differe",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Cancer Cell",
+  "authors": [
+   "Yuqing Chen",
+   "Dongfang Wang",
+   "Yingjie Li",
+   "Qi Lu",
+   "Wen Si",
+   "Yufei Bo"
+  ],
+  "citations": 188,
+  "source": "openalex",
+  "source_id": "W4400415211",
+  "doi": "10.1016/j.ccell.2024.06.009",
+  "arxiv_id": null,
+  "paper_url": "http://www.cell.com/article/S1535610824002344/pdf",
+  "published_iso": "2024-07-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Distributionally robust optimal power flow with contextual information",
+  "title_norm": "distributionally robust optimal power flow with contextual information",
+  "abstract": "In this paper, we develop a distributionally robust chance-constrained formulation of the Optimal Power Flow problem (OPF) whereby the system operator can leverage contextual information. For this purpose, we exploit an ambiguity set based on probability trimmings and optimal transport through which the dispatch solution is protected against the incomplete knowledge of the relationship between the OPF uncertainties and the context that is conveyed by a sample of their joint probability distribution. We provide a tractable reformulation of the proposed distributionally robust chance-constrained OPF problem under the popular conditional-value-at-risk approximation. By way of numerical experiments run on a modified IEEE-118 bus network with wind uncertainty, we show how the power system can substantially benefit from taking into account the well-known statistical dependence between the point forecast of wind power outputs and its associated prediction error. Furthermore, the experiments conducted also reveal that the distributional robustness conferred on the OPF solution by our probability-trimmings-based approach is superior to that bestowed by alternative approaches in terms of expected cost and system reliability.",
+  "year": 2022,
+  "venue": "European Journal of Operational Research",
+  "authors": [
+   "Adrián Esteban-Pérez",
+   "Juan M. Morales"
+  ],
+  "citations": 33,
+  "source": "openalex",
+  "source_id": "W3199208146",
+  "doi": "10.1016/j.ejor.2022.10.024",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S0377221722008128/pdf",
+  "published_iso": "2022-10-19",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Automorphic spectra and the conformal bootstrap",
+  "title_norm": "automorphic spectra and the conformal bootstrap",
+  "abstract": "We describe a new method for constraining Laplacian spectra of hyperbolic surfaces and 2-orbifolds. The main ingredient is consistency of the spectral decomposition of integrals of products of four automorphic forms. Using a combination of representation theory of P S L 2 ( R ) \\mathrm {PSL}_2(\\mathbb {R}) and semidefinite programming, the method yields rigorous upper bounds on the Laplacian spectral gap. In several examples, the bound is nearly sharp. For instance, our bound on all genus-2 surfaces is λ 1 ≤ 3.8388976481 \\lambda _1\\leq 3.8388976481 , while the Bolza surface has λ 1 ≈ 3.838887258 \\lambda _1\\approx 3.838887258 . The bounds also allow us to determine the set of spectral gaps attained by all hyperbolic 2-orbifolds. Our methods can be generalized to higher-dimensional hyperbolic manifolds and to yield stronger bounds in the two-dimensional case. The ideas were closely inspired by modern conformal bootstrap.",
+  "year": 2024,
+  "venue": "Communications of the American Mathematical Society",
+  "authors": [
+   "Petr Kravchuk",
+   "Dalimil Mazáč",
+   "Sridip Pal"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W3214895751",
+  "doi": "10.1090/cams/26",
+  "arxiv_id": null,
+  "paper_url": "https://www.ams.org/cams/2024-04-01/S2692-3688-2024-00026-3/S2692-3688-2024-00026-3.pdf",
+  "published_iso": "2024-01-17",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "2D materials-based nanoscale tunneling field effect transistors: current developments and future prospects",
+  "title_norm": "2d materials based nanoscale tunneling field effect transistors current developm",
+  "abstract": "Abstract The continuously intensifying demand for high-performance and miniaturized semiconductor devices has pushed the aggressive downscaling of field-effect transistors (FETs) design. However, the detrimental short-channel effects and the fundamental limit on the sub-threshold swing (SS) in FET have led to a drastic increase in static and dynamic power consumption. The operational limit of nanoscale transistors motivates the exploration of post-CMOS devices like Tunnel FET (TFET), having steeper SS and immunity toward short channel effects. Thus the field of nanoscale 2D-TFET has gained compelling attention in recent times. The nanoscale TFET, with two-dimensional (2D) semiconductor materials, has shown a significant improvement in terms of higher on-state current and lower sub-threshold swing. In this context, the review presented here has comprehensively covered the gradual development and present state-of-arts in the field of nanoscale 2D-TFET design. The relative merits and demerits of each class of 2D materials are identified, which sheds light on the specific design challenges associated with individual 2D materials. Subsequently, the potential device/material co-optimization strategies for the development of efficient TFET designs are highlighted. Next, the experimental development in 2D-TFET design is discussed, and specific synthesis/fabrication challenges for individual material systems are indicated. Finally, an extensive comparative performance study is presented between the simulated as well as experimentally reported potential 2D materials and state-of-the-art bulk material-based TFETs.",
+  "year": 2022,
+  "venue": "npj 2D Materials and Applications",
+  "authors": [
+   "Sayan Kanungo",
+   "Gufran Ahmad",
+   "Parikshit Sahatiya",
+   "A. Mukhopadhyay",
+   "Sanatan Chattopadhyay"
+  ],
+  "citations": 130,
+  "source": "openalex",
+  "source_id": "W4309471667",
+  "doi": "10.1038/s41699-022-00352-2",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41699-022-00352-2.pdf",
+  "published_iso": "2022-11-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Apigenin: A Bioflavonoid with a Promising Role in Disease Prevention and Treatment",
+  "title_norm": "apigenin a bioflavonoid with a promising role in disease prevention and treatmen",
+  "abstract": "Apigenin is a powerful flavone compound found in numerous fruits and vegetables, and it offers numerous health-promoting benefits. Many studies have evidenced that this compound has a potential role as an anti-inflammatory and antioxidant compound, making it a promising candidate for reducing the risk of pathogenesis. It has also been found to positively affect various systems in the body, such as the respiratory, digestive, immune, and reproductive systems. Apigenin is effective in treating liver, lung, heart, kidney, neurological diseases, diabetes, and maintaining good oral and skin health. Multiple studies have reported that this compound is capable of suppressing various types of cancer through the induction of apoptosis and cell-cycle arrest, suppressing cell migration and invasion, reduction of inflammation, and inhibiting angiogenesis. When used in combination with other drugs, apigenin increases their efficacy, reduces the risk of side effects, and improves the response to chemotherapy. This review broadly analyzes apigenin's potential in disease management by modulating various biological activities. In addition, this review also described apigenin's interaction with other compounds or drugs and the potential role of nanoformulation in different pathogeneses. Further extensive research is needed to explore the mechanism of action, safety, and efficacy of this compound in disease prevention and treatment.",
+  "year": 2024,
+  "venue": "Biomedicines",
+  "authors": [
+   "Khaled S. Allemailem",
+   "Ahmad Almatroudi",
+   "Hajed Obaid Alharbi",
+   "Naif Alsuhaymi",
+   "Mahdi H. Alsugoor",
+   "Fahad M. Aldakheel"
+  ],
+  "citations": 136,
+  "source": "openalex",
+  "source_id": "W4399809648",
+  "doi": "10.3390/biomedicines12061353",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4399809648",
+  "published_iso": "2024-06-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "A critical literature review of security and privacy in smart home healthcare schemes adopting IoT & blockchain: Problems, challenges and solutions",
+  "title_norm": "a critical literature review of security and privacy in smart home healthcare sc",
+  "abstract": "Protecting private data in smart homes, a popular Internet-of-Things (IoT) application, remains a significant data security and privacy challenge due to the large-scale development and distributed nature of IoT networks. Recently, smart healthcare has leveraged smart home systems, thereby compounding security concerns in terms of the confidentiality of sensitive and private data and by extension the privacy of the data owner. However, PoA-based Blockchain DLT has emerged as a promising solution for protecting private data from indiscriminate use and thereby preserving the privacy of individuals residing in IoT-enabled smart homes. This review elicits some concerns, issues, and problems that have hindered the adoption of blockchain and IoT (BCoT) in some domains and suggests requisite solutions using the aging-in-place scenario. Implementation issues with BCoT were examined as well as the combined challenges BCoT can pose when utilised for security gains. The study discusses recent findings, opportunities, and barriers, and provide recommendations that could facilitate the continuous growth of blockchain application in healthcare. Lastly, the study then explored the potential of using a PoA-based permission blockchain with an applicable consent-based privacy model for decision-making in the information disclosure process, including the use of publisher-subscriber contracts for fine-grained access control to ensure secure data processing and sharing, as well as ethical trust in personal information disclosure, as a solution direction. The proposed authorisation framework could guarantee data ownership, conditional access management, scalable and tamper-proof data storage, and a more resilient system against threat models such as interception and insider attacks.",
+  "year": 2023,
+  "venue": "Blockchain Research and Applications",
+  "authors": [
+   "Olusogo Popoola",
+   "Marcos Rodrigues",
+   "Jims Marchang",
+   "Alex Shenfield",
+   "Augustine Ikpehai",
+   "Jumoke Popoola"
+  ],
+  "citations": 77,
+  "source": "openalex",
+  "source_id": "W4390014322",
+  "doi": "10.1016/j.bcra.2023.100178",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4390014322",
+  "published_iso": "2023-12-20",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Conformal prediction bands for two-dimensional functional time series",
+  "title_norm": "conformal prediction bands for two dimensional functional time series",
+  "abstract": "Time evolving surfaces can be modeled as two-dimensional Functional time series, exploiting the tools of Functional data analysis. Leveraging this approach, a forecasting framework for such complex data is developed. The main focus revolves around Conformal Prediction, a versatile nonparametric paradigm used to quantify uncertainty in prediction problems. Building upon recent variations of Conformal Prediction for Functional time series, a probabilistic forecasting scheme for two-dimensional functional time series is presented, while providing an extension of Functional Autoregressive Processes of order one to this setting. Estimation techniques for the latter process are introduced, and their performance are compared in terms of the resulting prediction regions. Finally, the proposed forecasting procedure and the uncertainty quantification technique are applied to a real dataset, collecting daily observations of Sea Level Anomalies of the Black Sea.",
+  "year": 2023,
+  "venue": "Computational Statistics & Data Analysis",
+  "authors": [
+   "Niccolò Ajroldi",
+   "Jacopo Diquigiovanni",
+   "Matteo Fontana",
+   "Simone Vantini"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4384564633",
+  "doi": "10.1016/j.csda.2023.107821",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4384564633",
+  "published_iso": "2023-07-17",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "Assessing the Current State of Amber Force Field Modifications for DNA─2023 Edition",
+  "title_norm": "assessing the current state of amber force field modifications for dna 2023 edit",
+  "abstract": "Advances in molecular dynamics (MD) software alongside enhanced computational power and hardware have allowed for MD simulations to significantly expand our knowledge of biomolecular structure, dynamics, and interactions. Furthermore, it has allowed for the extension of conformational sampling times from nanoseconds to the microsecond level and beyond. This has not only made convergence of conformational ensembles through comprehensive sampling possible but consequently exposed deficiencies and allowed the community to overcome limitations in the available force fields. The reproducibility and accuracy of the force fields are imperative in order to produce biologically relevant data. The Amber nucleic acid force fields have been used widely since the mid-1980s, and improvement of these force fields has been a community effort with several artifacts revealed, corrected, and reevaluated by various research groups. Here, we focus on the Amber force fields for use with double-stranded DNA and present the assessment of two recently developed force field parameter sets (OL21 and Tumuc1). Extensive MD simulations were performed with six test systems and two different water models. We observe the improvement of OL21 and Tumuc1 compared to previous generations of the Amber DNA force. We did not detect any significant improvement in the performance of Tumuc1 compared to OL21 despite the reparameterization of bonded force field terms in the former; however, we did note discrepancies in Tumuc1 when modeling Z-DNA sequences.",
+  "year": 2023,
+  "venue": "Journal of Chemical Theory and Computation",
+  "authors": [
+   "Olivia Love",
+   "Rodrigo Galindo‐Murillo",
+   "Marie Zgarbová",
+   "Jiřı́ Šponer",
+   "Petr Jurečka",
+   "Thomas E. Cheatham"
+  ],
+  "citations": 69,
+  "source": "openalex",
+  "source_id": "W4381469504",
+  "doi": "10.1021/acs.jctc.3c00233",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4381469504",
+  "published_iso": "2023-06-21",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ },
+ {
+  "title": "Systematic review reveals that EQ-5D minimally important differences vary with treatment type and may decrease with increasing baseline score",
+  "title_norm": "systematic review reveals that eq 5d minimally important differences vary with t",
+  "abstract": "OBJECTIVES: To provide an updated summary of published anchor-based Minimally Important Difference (MID) estimates for the EQ-5D index and EQ visual analog scale (EQ VAS) scores and identify factors influencing those estimates. STUDY DESIGN AND SETTING: We systematically searched eight electronic databases from January 1990 to March 2023. We examined the association of baseline score, type of score change (improvement/worsening), data source, value set, disease/condition, treatment type (surgical/non-surgical), and type of anchor (clinical vs. self-rated) with MID estimates for the EQ-5D-3L and EQ-5D-5L indices, and EQ VAS. Significant variables were used to develop prediction formulas for MID by testing both linear and nonlinear regression models. RESULTS: Of 6786 records reviewed, 47 articles were included for analysis. MID ranges for improved scores were -0.13 to 0.68 (EQ-5D-3L), 0.01-0.41 (EQ-5D-5L), and 0.42-23.0 (EQ VAS). Surgical intervention and lower baseline scores were associated with higher MIDs for both the EQ indices but not for EQ VAS. The nonlinear polynomial model outperformed the linear model in predicting the MIDs. MIDs based on deteriorated scores were insufficient for quantitative synthesis (mean: -0.02 for EQ-5D-3L; -0.04 for EQ-5D-5L; and -6.5 for EQ VAS). CONCLUSION: This review revealed that the MID of EQ-5D index scores varies with baseline score and treatment type, indicating that use of a uniform MID may not be appropriate. We recommend using baseline score-adjusted and treatment type-specific EQ-5D MIDs, and call for more MID research, particularly in the context of assessing deterioration in health using this widely used generic health-status instrument.",
+  "year": 2024,
+  "venue": "Journal of Clinical Epidemiology",
+  "authors": [
+   "Ling Jie Cheng",
+   "Le Ann Chen",
+   "Jing Ying Cheng",
+   "Michael Herdman",
+   "Nan Luo"
+  ],
+  "citations": 80,
+  "source": "openalex",
+  "source_id": "W4401155189",
+  "doi": "10.1016/j.jclinepi.2024.111487",
+  "arxiv_id": null,
+  "paper_url": "https://www.jclinepi.com/article/S0895-4356(24)00243-9/pdf",
+  "published_iso": "2024-07-29",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "varying-coefficient treatment response"
+  ]
+ },
+ {
+  "title": "Maximum Conditional Alpha Test for Conditional Multi-Factor Models",
+  "title_norm": "maximum conditional alpha test for conditional multi factor models",
+  "abstract": "In this paper, a novel test, called the maximum conditional alpha (MCA) test, which enhances the testing power for detecting alpha in linear multi-factor models, is proposed. This test is specifically designed for conditional multi-factor models with time-varying coefficients, where the number of test assets (N ) exceeds the number of observations (T ) and the alternative hypothesis is a sparse vector, meaning that only a few components violate the null hypothesis.",
+  "year": 2023,
+  "venue": "Statistica Sinica",
+  "authors": [
+   "Jun Zhang",
+   "Wei Lan",
+   "Xinyan Fan",
+   "Wen Chen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4387932233",
+  "doi": "10.5705/ss.202022.0137",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.5705/ss.202022.0137",
+  "published_iso": "2023-10-26",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "zero-intercept conditional operator"
+  ]
+ },
+ {
+  "title": "Lagrange multiplier imposition of non-conforming essential boundary conditions in implicit material point method",
+  "title_norm": "lagrange multiplier imposition of non conforming essential boundary conditions i",
+  "abstract": "Abstract The Material Point Method (MPM) is an established and powerful numerical method particularly useful for simulating large-scale, rapid soil deformations. Therefore, it is often used for the numerical investigation of mass movement hazards such as landslides, debris flows, or avalanches. It combines the benefits of both mesh-free and mesh-based continuum-based discretization techniques by discretizing the physical domain with Lagrangian moving particles carrying the history-dependent variables while the governing equations are solved at the Eulerian background grid, which brings many similarities with commonly used finite element methods. However, due to this hybrid nature, the material boundaries do not usually coincide with the nodes of the computational grid, which complicates the imposition of boundary conditions. Furthermore, the position of the boundary may change at each time step and, moreover, may be defined at arbitrary locations within the computational grid that do not necessarily coincide with the body contour, leading to different interactions between the material and the boundary. To cope with these challenges, this paper presents a novel element-wise formulation to weakly impose non-conforming Dirichlet conditions using Lagrange multipliers. The proposed formulation introduces a constant Lagrange multiplier approximation within the constrained elements in combination with a methodology to eliminate superfluous constraints. Therefore, in combination with simple element-wise interpolation functions classically utilized in MPM (and FEM) to approximate the unknown field, a suitable Lagrange multiplier discretization is obtained. In this way, we obtain a robust, efficient, and user-friendly boundary imposition method for immersed methods specified herein for implicit MPM. Furthermore, the extension to frictionless slip conditions is derived. The proposed methodologies are assessed by comparing the numerical results with both analytical and experimental data to demonstrate their accuracy and wide range of applications.",
+  "year": 2023,
+  "venue": "Computational Mechanics",
+  "authors": [
+   "Veronika Singer",
+   "Tobias Teschemacher",
+   "Antonia Larese",
+   "Roland Wüchner",
+   "Kai‐Uwe Bletzinger"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4388794010",
+  "doi": "10.1007/s00466-023-02412-w",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388794010",
+  "published_iso": "2023-11-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "conformal overlap restriction"
+  ]
+ },
+ {
+  "title": "RNA modifications in cellular metabolism: implications for metabolism-targeted therapy and immunotherapy",
+  "title_norm": "rna modifications in cellular metabolism implications for metabolism targeted th",
+  "abstract": "Cellular metabolism is an intricate network satisfying bioenergetic and biosynthesis requirements of cells. Relevant studies have been constantly making inroads in our understanding of pathophysiology, and inspiring development of therapeutics. As a crucial component of epigenetics at post-transcription level, RNA modification significantly determines RNA fates, further affecting various biological processes and cellular phenotypes. To be noted, immunometabolism defines the metabolic alterations occur on immune cells in different stages and immunological contexts. In this review, we characterize the distribution features, modifying mechanisms and biological functions of 8 RNA modifications, including N6-methyladenosine (m6A), N6,2'-O-dimethyladenosine (m6Am), N1-methyladenosine (m1A), 5-methylcytosine (m5C), N4-acetylcytosine (ac4C), N7-methylguanosine (m7G), Pseudouridine (Ψ), adenosine-to-inosine (A-to-I) editing, which are relatively the most studied types. Then regulatory roles of these RNA modification on metabolism in diverse health and disease contexts are comprehensively described, categorized as glucose, lipid, amino acid, and mitochondrial metabolism. And we highlight the regulation of RNA modifications on immunometabolism, further influencing immune responses. Above all, we provide a thorough discussion about clinical implications of RNA modification in metabolism-targeted therapy and immunotherapy, progression of RNA modification-targeted agents, and its potential in RNA-targeted therapeutics. Eventually, we give legitimate perspectives for future researches in this field from methodological requirements, mechanistic insights, to therapeutic applications.",
+  "year": 2024,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Weiwei Liu",
+   "Si-Qing Zheng",
+   "Li Tian",
+   "Yun-Fei Fei",
+   "Chen Wang",
+   "Shuang Zhang"
+  ],
+  "citations": 160,
+  "source": "openalex",
+  "source_id": "W4394738984",
+  "doi": "10.1038/s41392-024-01777-5",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-024-01777-5.pdf",
+  "published_iso": "2024-03-26",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "effect-modification vector field"
+  ]
+ }
+]

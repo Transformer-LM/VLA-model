@@ -1,0 +1,1938 @@
+[
+ {
+  "title": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+  "title_norm": "aasld practice guidance on prevention diagnosis and treatment of hepatocellular ",
+  "abstract": "Singal, Amit G.; Llovet, Josep M.; Yarchoan, Mark; Mehta, Neil; Heimbach, Julie K.; Dawson, Laura A.; Jou, Janice H.; Kulik, Laura M.; Agopian, Vatche G.; Marrero, Jorge A.; Mendiratta-Lala, Mishal; Brown, Daniel B.; Rilling, William S.; Goyal, Lipika; Wei, Alice C.; Taddei, Tamar H. Author Information",
+  "year": 2023,
+  "venue": "Hepatology",
+  "authors": [
+   "Amit G. Singal",
+   "Josep M. Llovet",
+   "Mark Yarchoan",
+   "Neil Mehta",
+   "Julie K. Heimbach",
+   "Laura A. Dawson"
+  ],
+  "citations": 1862,
+  "source": "openalex",
+  "source_id": "W4377011124",
+  "doi": "10.1097/hep.0000000000000466",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/pdf/nihms-1931411.pdf",
+  "published_iso": "2023-05-18",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+  "title_norm": "accurate structure prediction of biomolecular interactions with alphafold 3",
+  "abstract": "Abstract The introduction of AlphaFold 2 1 has spurred a revolution in modelling the structure of proteins and their interactions, enabling a huge range of applications in protein modelling and design 2–6 . Here we describe our AlphaFold 3 model with a substantially updated diffusion-based architecture that is capable of predicting the joint structure of complexes including proteins, nucleic acids, small molecules, ions and modified residues. The new AlphaFold model demonstrates substantially improved accuracy over many previous specialized tools: far greater accuracy for protein–ligand interactions compared with state-of-the-art docking tools, much higher accuracy for protein–nucleic acid interactions compared with nucleic-acid-specific predictors and substantially higher antibody–antigen prediction accuracy compared with AlphaFold-Multimer v.2.3 7,8 . Together, these results show that high-accuracy modelling across biomolecular space is possible within a single unified deep-learning framework.",
+  "year": 2024,
+  "venue": "Nature",
+  "authors": [
+   "Josh Abramson",
+   "Jonas Adler",
+   "Jack Dunger",
+   "Richard Evans",
+   "Tim Green",
+   "Alexander Pritzel"
+  ],
+  "citations": 15393,
+  "source": "openalex",
+  "source_id": "W4396721167",
+  "doi": "10.1038/s41586-024-07487-w",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4396721167",
+  "published_iso": "2024-05-08",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "DealMVC: Dual Contrastive Calibration for Multi-view Clustering",
+  "title_norm": "dealmvc dual contrastive calibration for multi view clustering",
+  "abstract": "Benefiting from the strong view-consistent information mining capacity, multi-view contrastive clustering has attracted plenty of attention in recent years. However, we observe the following drawback, which limits the clustering performance from further improvement. The existing multi-view models mainly focus on the consistency of the same samples in different views while ignoring the circumstance of similar but different samples in cross-view scenarios. To solve this problem, we propose a novel Dual contrastive calibration network for Multi-View Clustering (DealMVC). Specifically, we first design a fusion mechanism to obtain a global cross-view feature. Then, a global contrastive calibration loss is proposed by aligning the view feature similarity graph and the high-confidence pseudo-label graph. Moreover, to utilize the diversity of multi-view information, we propose a local contrastive calibration loss to constrain the consistency of pair-wise view features. The feature structure is regularized by reliable class information, thus guaranteeing similar samples have similar features in different views. During the training procedure, the interacted cross-view feature is jointly optimized at both local and global levels. In comparison with other state-of-the-art approaches, the comprehensive experimental results obtained from eight benchmark datasets provide substantial validation of the effectiveness and superiority of our algorithm. We release the code of DealMVC at https://github.com/xihongyang1999/DealMVC on GitHub.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Xihong Yang",
+   "Jiaqi Jin",
+   "Siwei Wang",
+   "Ke Liang",
+   "Yue Liu",
+   "Yi Wen"
+  ],
+  "citations": 134,
+  "source": "openalex",
+  "source_id": "W4387968141",
+  "doi": "10.1145/3581783.3611951",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3581783.3611951",
+  "published_iso": "2023-10-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Breast cancer: pathogenesis and treatments",
+  "title_norm": "breast cancer pathogenesis and treatments",
+  "abstract": "Breast cancer, characterized by unique epidemiological patterns and significant heterogeneity, remains one of the leading causes of malignancy-related deaths in women. The increasingly nuanced molecular subtypes of breast cancer have enhanced the comprehension and precision treatment of this disease. The mechanisms of tumorigenesis and progression of breast cancer have been central to scientific research, with investigations spanning various perspectives such as tumor stemness, intra-tumoral microbiota, and circadian rhythms. Technological advancements, particularly those integrated with artificial intelligence, have significantly improved the accuracy of breast cancer detection and diagnosis. The emergence of novel therapeutic concepts and drugs represents a paradigm shift towards personalized medicine. Evidence suggests that optimal diagnosis and treatment models tailored to individual patient risk and expected subtypes are crucial, supporting the era of precision oncology for breast cancer. Despite the rapid advancements in oncology and the increasing emphasis on the clinical precision treatment of breast cancer, a comprehensive update and summary of the panoramic knowledge related to this disease are needed. In this review, we provide a thorough overview of the global status of breast cancer, including its epidemiology, risk factors, pathophysiology, and molecular subtyping. Additionally, we elaborate on the latest research into mechanisms contributing to breast cancer progression, emerging treatment strategies, and long-term patient management. This review offers valuable insights into the latest advancements in Breast Cancer Research, thereby facilitating future progress in both basic research and clinical application.",
+  "year": 2025,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Xin Xiong",
+   "Lewei Zheng",
+   "Yu‐Qiang Ding",
+   "Yufei Chen",
+   "Yuwen Cai",
+   "Leiping Wang"
+  ],
+  "citations": 869,
+  "source": "openalex",
+  "source_id": "W4407681133",
+  "doi": "10.1038/s41392-024-02108-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-024-02108-4.pdf",
+  "published_iso": "2025-02-18",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Discovery and characterization of a selective IKZF2 glue degrader for cancer immunotherapy",
+  "title_norm": "discovery and characterization of a selective ikzf2 glue degrader for cancer imm",
+  "abstract": "Malignant tumors can evade destruction by the immune system by attracting immune-suppressive regulatory T cells (Treg) cells. The IKZF2 (Helios) transcription factor plays a crucial role in maintaining function and stability of Treg cells, and IKZF2 deficiency reduces tumor growth in mice. Here we report the discovery of NVP-DKY709, a selective molecular glue degrader of IKZF2 that spares IKZF1/3. We describe the recruitment-guided medicinal chemistry campaign leading to NVP-DKY709 that redirected the degradation selectivity of cereblon (CRBN) binders from IKZF1 toward IKZF2. Selectivity of NVP-DKY709 for IKZF2 was rationalized by analyzing the DDB1:CRBN:NVP-DKY709:IKZF2(ZF2 or ZF2-3) ternary complex X-ray structures. Exposure to NVP-DKY709 reduced the suppressive activity of human Treg cells and rescued cytokine production in exhausted T-effector cells. In vivo, treatment with NVP-DKY709 delayed tumor growth in mice with a humanized immune system and enhanced immunization responses in cynomolgus monkeys. NVP-DKY709 is being investigated in the clinic as an immune-enhancing agent for cancer immunotherapy.",
+  "year": 2023,
+  "venue": "Cell chemical biology",
+  "authors": [
+   "Simone Bonazzi",
+   "Eva d’Hennezel",
+   "Rohan E. J. Beckwith",
+   "Lei Xu",
+   "Aleem Fazal",
+   "Anna Magracheva"
+  ],
+  "citations": 158,
+  "source": "openalex",
+  "source_id": "W4322733068",
+  "doi": "10.1016/j.chembiol.2023.02.005",
+  "arxiv_id": null,
+  "paper_url": "http://www.cell.com/article/S2451945623000545/pdf",
+  "published_iso": "2023-03-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Metabolomic profiles predict individual multidisease outcomes",
+  "title_norm": "metabolomic profiles predict individual multidisease outcomes",
+  "abstract": "Risk stratification is critical for the early identification of high-risk individuals and disease prevention. Here we explored the potential of nuclear magnetic resonance (NMR) spectroscopy-derived metabolomic profiles to inform on multidisease risk beyond conventional clinical predictors for the onset of 24 common conditions, including metabolic, vascular, respiratory, musculoskeletal and neurological diseases and cancers. Specifically, we trained a neural network to learn disease-specific metabolomic states from 168 circulating metabolic markers measured in 117,981 participants with ~1.4 million person-years of follow-up from the UK Biobank and validated the model in four independent cohorts. We found metabolomic states to be associated with incident event rates in all the investigated conditions, except breast cancer. For 10-year outcome prediction for 15 endpoints, with and without established metabolic contribution, a combination of age and sex and the metabolomic state equaled or outperformed established predictors. Moreover, metabolomic state added predictive information over comprehensive clinical variables for eight common diseases, including type 2 diabetes, dementia and heart failure. Decision curve analyses showed that predictive improvements translated into clinical utility for a wide range of potential decision thresholds. Taken together, our study demonstrates both the potential and limitations of NMR-derived metabolomic profiles as a multidisease assay to inform on the risk of many common diseases simultaneously.",
+  "year": 2022,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Thore Buergel",
+   "Jakob Steinfeldt",
+   "Greg Ruyoga",
+   "Maik Pietzner",
+   "Daniele Bizzarri",
+   "Dina Vojinović"
+  ],
+  "citations": 416,
+  "source": "openalex",
+  "source_id": "W4296691261",
+  "doi": "10.1038/s41591-022-01980-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41591-022-01980-3.pdf",
+  "published_iso": "2022-09-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Major depressive disorder: hypothesis, mechanism, prevention and treatment",
+  "title_norm": "major depressive disorder hypothesis mechanism prevention and treatment",
+  "abstract": "Worldwide, the incidence of major depressive disorder (MDD) is increasing annually, resulting in greater economic and social burdens. Moreover, the pathological mechanisms of MDD and the mechanisms underlying the effects of pharmacological treatments for MDD are complex and unclear, and additional diagnostic and therapeutic strategies for MDD still are needed. The currently widely accepted theories of MDD pathogenesis include the neurotransmitter and receptor hypothesis, hypothalamic-pituitary-adrenal (HPA) axis hypothesis, cytokine hypothesis, neuroplasticity hypothesis and systemic influence hypothesis, but these hypothesis cannot completely explain the pathological mechanism of MDD. Even it is still hard to adopt only one hypothesis to completely reveal the pathogenesis of MDD, thus in recent years, great progress has been made in elucidating the roles of multiple organ interactions in the pathogenesis MDD and identifying novel therapeutic approaches and multitarget modulatory strategies, further revealing the disease features of MDD. Furthermore, some newly discovered potential pharmacological targets and newly studied antidepressants have attracted widespread attention, some reagents have even been approved for clinical treatment and some novel therapeutic methods such as phototherapy and acupuncture have been discovered to have effective improvement for the depressive symptoms. In this work, we comprehensively summarize the latest research on the pathogenesis and diagnosis of MDD, preventive approaches and therapeutic medicines, as well as the related clinical trials.",
+  "year": 2024,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Lulu Cui",
+   "Shu Li",
+   "Siman Wang",
+   "Xiafang Wu",
+   "Yingyu Liu",
+   "Weiyang Yu"
+  ],
+  "citations": 1013,
+  "source": "openalex",
+  "source_id": "W4392731282",
+  "doi": "10.1038/s41392-024-01738-y",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-024-01738-y.pdf",
+  "published_iso": "2024-02-08",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Conformal selective prediction with cost aware deferral for safe clinical triage under distribution shift",
+  "title_norm": "conformal selective prediction with cost aware deferral for safe clinical triage",
+  "abstract": "We propose a selective prediction framework for clinical triage that combines calibrated probabilistic modeling, conformal prediction, and cost-aware deferral to prioritize patient safety. The system produces set-valued predictions with finite-sample coverage control and defers low-confidence cases to clinicians when doing so reduces an explicit expected clinical cost. We construct prediction sets using split conformal prediction, a group-conditional Mondrian variant for gender-stratified coverage, and an importance-weighted variant to improve robustness under distribution shift, and we select a single deferral threshold by minimizing expected cost on a held-out calibration set. On temporally separated in-distribution and out-of-distribution test splits for early sepsis prediction, selective deferral yields a favorable risk-coverage trade-off, reducing error on retained cases by 49.6% on the in-distribution (ID) test split and 46.7% on the out-of-distribution (OOD) test split, both at 80% coverage, while achieving low expected cost on both splits with only a moderate increase under shift. Calibration remains strong with low expected calibration error on both test sets, and rule-out performance is conservative, attaining near-perfect negative predictive value at a 95% sensitivity target. Coverage stays close to the nominal 90% target in-distribution and degrades only slightly out-of-distribution, with the weighted method most robust, and the Mondrian method reduces the gender coverage gap to 1.4 percentage points. These results indicate that conformal uncertainty quantification combined with cost-aware deferral can provide transparent and safer clinical decision support that degrades gracefully under temporal distribution shift.",
+  "year": 2026,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Hyun Kwon",
+   "Dae-Jin Kim"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W7130707108",
+  "doi": "10.1038/s41598-026-40637-w",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-026-40637-w_reference.pdf",
+  "published_iso": "2026-02-20",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "JWST Census for the Mass–Metallicity Star Formation Relations at z = 4–10 with Self-consistent Flux Calibration and Proper Metallicity Calibrators",
+  "title_norm": "jwst census for the mass metallicity star formation relations at z 4 10 with sel",
+  "abstract": "Abstract We present the evolution of the mass–metallicity (MZ) relation at z = 4–10 derived with 135 galaxies identified in JWST/NIRSpec data taken from the three major public spectroscopy programs of ERO, GLASS, and CEERS. Because there are many discrepancies between the flux measurements reported by the early ERO studies, we first establish our NIRSpec data reduction procedure for reliable emission-line flux measurements and errors, successfully explaining Balmer decrements with no statistical tensions thorough comparisons with the early ERO studies. Applying the reduction procedure to the 135 galaxies, we obtain emission-line fluxes for physical property measurements. We confirm that 10 out of the 135 galaxies with [O iii ] λ 4363 lines have electron temperatures of ≃(1.1–2.3) × 10 4 K, similar to lower- z star-forming galaxies, which can be explained by heating by young massive stars. We derive the metallicities of the 10 galaxies by a direct method and the rest of the galaxies with strong lines using the metallicity calibrations of Nakajima et al. applicable for these low-mass metal-poor galaxies, anchoring the metallicities with the direct-method measurements. We thus obtain the MZ relation and star formation rate (SFR)–MZ relation over z = 4–10. We find that there is a small evolution of the MZ relation from z ∼ 2–3 to z = 4–10, while interestingly the SFR–MZ relation shows no evolution up to z ∼ 8 but a significant decrease at z > 8 beyond the errors This SFR–MZ relation decrease at z > 8 may suggest a break of the metallicity equilibrium state via star formation, inflow, and outflow, while further statistical and local-baseline studies are needed for a conclusion.",
+  "year": 2023,
+  "venue": "The Astrophysical Journal Supplement Series",
+  "authors": [
+   "Kimihiko Nakajima",
+   "Masami Ouchi",
+   "Yuki Isobe",
+   "Yuichi Harikane",
+   "Yechi Zhang",
+   "Yoshiaki Ono"
+  ],
+  "citations": 283,
+  "source": "openalex",
+  "source_id": "W4388639323",
+  "doi": "10.3847/1538-4365/acd556",
+  "arxiv_id": null,
+  "paper_url": "https://iopscience.iop.org/article/10.3847/1538-4365/acd556/pdf",
+  "published_iso": "2023-11-13",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Revisiting Event-Study Designs: Robust and Efficient Estimation",
+  "title_norm": "revisiting event study designs robust and efficient estimation",
+  "abstract": "Abstract We develop a framework for difference-in-differences designs with staggered treatment adoption and heterogeneous causal effects. We show that conventional regression-based estimators fail to provide unbiased estimates of relevant estimands absent strong restrictions on treatment-effect homogeneity. We then derive the efficient estimator addressing this challenge, which takes an intuitive “imputation” form when treatment-effect heterogeneity is unrestricted. We characterize the asymptotic behaviour of the estimator, propose tools for inference, and develop tests for identifying assumptions. Our method applies with time-varying controls, in triple-difference designs, and with certain non-binary treatments. We show the practical relevance of our results in a simulation study and an application. Studying the consumption response to tax rebates in the U.S., we find that the notional marginal propensity to consume is between 8 and 11% in the first quarter—about half as large as benchmark estimates used to calibrate macroeconomic models—and predominantly occurs in the first month after the rebate.",
+  "year": 2024,
+  "venue": "The Review of Economic Studies",
+  "authors": [
+   "Kirill Borusyak",
+   "Xavier Jaravel",
+   "Jann Spiess"
+  ],
+  "citations": 1989,
+  "source": "openalex",
+  "source_id": "W3196836501",
+  "doi": "10.1093/restud/rdae007",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdae007/56588588/rdae007.pdf",
+  "published_iso": "2024-01-17",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "3D Printed Conformal Strain and Humidity Sensors for Human Motion Prediction and Health Monitoring via Machine Learning",
+  "title_norm": "3d printed conformal strain and humidity sensors for human motion prediction and",
+  "abstract": "Wearable sensors have garnered considerable attention due to their flexibility and lightweight characteristics in the realm of healthcare applications. However, developing robust wearable sensors with facile fabrication and good conformity remains a challenge. In this study, a conductive graphene nanoplate-carbon nanotube (GC) ink is synthesized for multi jet fusion (MJF) printing. The layer-by-layer fabrication process of MJF not only improves the mechanical and flame-retardant properties of the printed GC sensor but also bolsters its robustness and sensitivity. The direction of sensor bending significantly impacts the relative resistance changes, allowing for precise investigations of joint motions in the human body, such as those of the fingers, wrists, elbows, necks, and knees. Furthermore, the data of resistance changes collected by the GC sensor are utilized to train a support vector machine with a 95.83% accuracy rate for predicting human motions. Due to its stable humidity sensitivity, the sensor also demonstrates excellent performance in monitoring human breath and predicting breath modes (normal, fast, and deep breath), thereby expanding its potential applications in healthcare. This work opens up new avenues for using MJF-printed wearable sensors for a variety of healthcare applications.",
+  "year": 2023,
+  "venue": "Advanced Science",
+  "authors": [
+   "Yanbei Hou",
+   "Ming Gao",
+   "Jingwen Gao",
+   "Lihua Zhao",
+   "Edwin Hang Tong Teo",
+   "Dong Wang"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4388485395",
+  "doi": "10.1002/advs.202304132",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388485395",
+  "published_iso": "2023-11-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Measuring and Understanding Trust Calibrations for Automated Systems: A Survey of the State-Of-The-Art and Future Directions",
+  "title_norm": "measuring and understanding trust calibrations for automated systems a survey of",
+  "abstract": "Trust has been recognized as a central variable to explain the resistance to using automated systems (under-trust) and the overreliance on automated systems (over-trust). To achieve appropriate reliance, users’ trust should be calibrated to reflect a system’s capabilities. Studies from various disciplines have examined different interventions to attain such trust calibration. Based on a literature body of 1000+ papers, we identified 96 relevant publications which aimed to calibrate users’ trust in automated systems. To provide an in-depth overview of the state-of-the-art, we reviewed and summarized measurements of the trust calibration, interventions, and results of these efforts. For the numerous promising calibration interventions, we extract common design choices and structure these into four dimensions of trust calibration interventions to guide future studies. Our findings indicate that the measurement of the trust calibration often limits the interpretation of the effects of different interventions. We suggest future directions for this problem.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Magdalena Wischnewski",
+   "Nicole C. Krämer",
+   "Emmanuel Müller"
+  ],
+  "citations": 123,
+  "source": "openalex",
+  "source_id": "W4366548373",
+  "doi": "10.1145/3544548.3581197",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3544548.3581197",
+  "published_iso": "2023-04-19",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Heterogeneous Treatment Effects of Therapeutic-Dose Heparin in Patients Hospitalized for COVID-19",
+  "title_norm": "heterogeneous treatment effects of therapeutic dose heparin in patients hospital",
+  "abstract": "Importance: Randomized clinical trials (RCTs) of therapeutic-dose heparin in patients hospitalized with COVID-19 produced conflicting results, possibly due to heterogeneity of treatment effect (HTE) across individuals. Better understanding of HTE could facilitate individualized clinical decision-making. Objective: To evaluate HTE of therapeutic-dose heparin for patients hospitalized for COVID-19 and to compare approaches to assessing HTE. Design, Setting, and Participants: Exploratory analysis of a multiplatform adaptive RCT of therapeutic-dose heparin vs usual care pharmacologic thromboprophylaxis in 3320 patients hospitalized for COVID-19 enrolled in North America, South America, Europe, Asia, and Australia between April 2020 and January 2021. Heterogeneity of treatment effect was assessed 3 ways: using (1) conventional subgroup analyses of baseline characteristics, (2) a multivariable outcome prediction model (risk-based approach), and (3) a multivariable causal forest model (effect-based approach). Analyses primarily used bayesian statistics, consistent with the original trial. Exposures: Participants were randomized to therapeutic-dose heparin or usual care pharmacologic thromboprophylaxis. Main Outcomes and Measures: Organ support-free days, assigning a value of -1 to those who died in the hospital and the number of days free of cardiovascular or respiratory organ support up to day 21 for those who survived to hospital discharge; and hospital survival. Results: Baseline demographic characteristics were similar between patients randomized to therapeutic-dose heparin or usual care (median age, 60 years; 38% female; 32% known non-White race; 45% Hispanic). In the overall multiplatform RCT population, therapeutic-dose heparin was not associated with an increase in organ support-free days (median value for the posterior distribution of the OR, 1.05; 95% credible interval, 0.91-1.22). In conventional subgroup analyses, the effect of therapeutic-dose heparin on organ support-free days differed between patients requiring organ support at baseline or not (median OR, 0.85 vs 1.30; posterior probability of difference in OR, 99.8%), between females and males (median OR, 0.87 vs 1.16; posterior probability of difference in OR, 96.4%), and between patients with lower body mass index (BMI <30) vs higher BMI groups (BMI ≥30; posterior probability of difference in ORs >90% for all comparisons). In risk-based analysis, patients at lowest risk of poor outcome had the highest propensity for benefit from heparin (lowest risk decile: posterior probability of OR >1, 92%) while those at highest risk were most likely to be harmed (highest risk decile: posterior probability of OR <1, 87%). In effect-based analysis, a subset of patients identified at high risk of harm (P = .05 for difference in treatment effect) tended to have high BMI and were more likely to require organ support at baseline. Conclusions and Relevance: Among patients hospitalized for COVID-19, the effect of therapeutic-dose heparin was heterogeneous. In all 3 approaches to assessing HTE, heparin was more likely to be beneficial in those who were less severely ill at presentation or had lower BMI and more likely to be harmful in sicker patients and those with higher BMI. The findings illustrate the importance of considering HTE in the design and analysis of RCTs. Trial Registration: ClinicalTrials.gov Identifiers: NCT02735707, NCT04505774, NCT04359277, NCT04372589.",
+  "year": 2023,
+  "venue": "JAMA",
+  "authors": [
+   "Ewan C. Goligher",
+   "Patrick R. Lawler",
+   "Thomas P. Jensen",
+   "Victor B. Talisa",
+   "Lindsay R. Berry",
+   "Elizabeth Lorenzi"
+  ],
+  "citations": 100,
+  "source": "openalex",
+  "source_id": "W4328049154",
+  "doi": "10.1001/jama.2023.3651",
+  "arxiv_id": null,
+  "paper_url": "https://jamanetwork.com/journals/jama/articlepdf/2802856/jama_goligher_2023_oi_230032_1680552331.36.pdf",
+  "published_iso": "2023-03-21",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Overcoming the Pitfalls of Computing Reaction Selectivity from Ensembles of Transition States",
+  "title_norm": "overcoming the pitfalls of computing reaction selectivity from ensembles of tran",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide The prediction of reaction selectivity is a challenging task for computational chemistry, not only because many molecules adopt multiple conformations but also due to the exponential relationship between effective activation energies and rate constants. To account for molecular flexibility, an increasing number of methods exist that generate conformational ensembles of transition state (TS) structures. Typically, these TS ensembles are Boltzmann weighted and used to compute selectivity assuming Curtin-Hammett conditions. This strategy, however, can lead to erroneous predictions if the appropriate filtering of the conformer ensembles is not conducted. Here, we demonstrate how any possible selectivity can be obtained by processing the same sets of TS ensembles for a model reaction. To address the burdensome filtering task in a consistent and automated way, we introduce marc, a tool for the modular analysis of representative conformers that aids in avoiding human errors while minimizing the number of reoptimization computations needed to obtain correct reaction selectivity.",
+  "year": 2024,
+  "venue": "The Journal of Physical Chemistry Letters",
+  "authors": [
+   "Rubén Laplaza",
+   "Matthew D. Wodrich",
+   "Clémence Corminbœuf"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4400526779",
+  "doi": "10.1021/acs.jpclett.4c01657",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acs.jpclett.4c01657",
+  "published_iso": "2024-07-11",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Use of Artificial Intelligence in Improving Outcomes in Heart Disease: A Scientific Statement From the American Heart Association",
+  "title_norm": "use of artificial intelligence in improving outcomes in heart disease a scientif",
+  "abstract": "A major focus of academia, industry, and global governmental agencies is to develop and apply artificial intelligence and other advanced analytical tools to transform health care delivery. The American Heart Association supports the creation of tools and services that would further the science and practice of precision medicine by enabling more precise approaches to cardiovascular and stroke research, prevention, and care of individuals and populations. Nevertheless, several challenges exist, and few artificial intelligence tools have been shown to improve cardiovascular and stroke care sufficiently to be widely adopted. This scientific statement outlines the current state of the art on the use of artificial intelligence algorithms and data science in the diagnosis, classification, and treatment of cardiovascular disease. It also sets out to advance this mission, focusing on how digital tools and, in particular, artificial intelligence may provide clinical and mechanistic insights, address bias in clinical studies, and facilitate education and implementation science to improve cardiovascular and stroke outcomes. Last, a key objective of this scientific statement is to further the field by identifying best practices, gaps, and challenges for interested stakeholders.",
+  "year": 2024,
+  "venue": "Circulation",
+  "authors": [
+   "Antonis A. Armoundas",
+   "Sanjiv M. Narayan",
+   "Donna K. Arnett",
+   "Kayte Spector‐Bagdady",
+   "Derrick Bennett",
+   "Leo Anthony Celi"
+  ],
+  "citations": 304,
+  "source": "openalex",
+  "source_id": "W4392238077",
+  "doi": "10.1161/cir.0000000000001201",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11042786/pdf/nihms-1979537.pdf",
+  "published_iso": "2024-02-28",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Towards optimal doubly robust estimation of heterogeneous causal effects",
+  "title_norm": "towards optimal doubly robust estimation of heterogeneous causal effects",
+  "abstract": "Heterogeneous effect estimation is crucial in causal inference, with applications across medicine and social science. Many methods for estimating conditional average treatment effects (CATEs) have been proposed, but there are gaps in understanding if and when such methods are optimal. This is especially true when the CATE has nontrivial structure (e.g., smoothness or sparsity). Our work contributes in several ways. First, we study a two-stage doubly robust CATE estimator and give a generic error bound, which yields rates faster than much of the literature. We apply the bound to derive error rates in smooth nonparametric models, and give sufficient conditions for oracle efficiency. Along the way we give a general error bound for regression with estimated outcomes; this is the second main contribution. The third contribution is aimed at understanding the fundamental statistical limits of CATE estimation. To that end, we propose and study a local polynomial adaptation of double-residual regression. We show that this estimator can be oracle efficient under even weaker conditions, and we conjecture that they are minimal in a minimax sense. We go on to give error bounds in the non-trivial regime where oracle rates cannot be achieved. Some finite-sample properties are explored with simulations.",
+  "year": 2023,
+  "venue": "Electronic Journal of Statistics",
+  "authors": [
+   "Edward H. Kennedy"
+  ],
+  "citations": 157,
+  "source": "openalex",
+  "source_id": "W4388656403",
+  "doi": "10.1214/23-ejs2157",
+  "arxiv_id": null,
+  "paper_url": "https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-17/issue-2/Towards-optimal-doubly-robust-estimation-of-heterogeneous-causal-effects/10.1214/23-EJS2157.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Protein structure prediction with in-cell photo-crosslinking mass spectrometry and deep learning",
+  "title_norm": "protein structure prediction with in cell photo crosslinking mass spectrometry a",
+  "abstract": "While AlphaFold2 can predict accurate protein structures from the primary sequence, challenges remain for proteins that undergo conformational changes or for which few homologous sequences are known. Here we introduce AlphaLink, a modified version of the AlphaFold2 algorithm that incorporates experimental distance restraint information into its network architecture. By employing sparse experimental contacts as anchor points, AlphaLink improves on the performance of AlphaFold2 in predicting challenging targets. We confirm this experimentally by using the noncanonical amino acid photo-leucine to obtain information on residue-residue contacts inside cells by crosslinking mass spectrometry. The program can predict distinct conformations of proteins on the basis of the distance restraints provided, demonstrating the value of experimental data in driving protein structure prediction. The noise-tolerant framework for integrating data in protein structure prediction presented here opens a path to accurate characterization of protein structures from in-cell data.",
+  "year": 2023,
+  "venue": "Nature Biotechnology",
+  "authors": [
+   "Kolja Stahl",
+   "Andrea Graziadei",
+   "Therese Dau",
+   "Oliver Brock",
+   "Juri Rappsilber"
+  ],
+  "citations": 173,
+  "source": "openalex",
+  "source_id": "W4328048207",
+  "doi": "10.1038/s41587-023-01704-z",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41587-023-01704-z.pdf",
+  "published_iso": "2023-03-20",
+  "oa_field": "Chemistry",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Data drift in medical machine learning: implications and potential remedies",
+  "title_norm": "data drift in medical machine learning implications and potential remedies",
+  "abstract": "Data drift refers to differences between the data used in training a machine learning (ML) model and that applied to the model in real-world operation. Medical ML systems can be exposed to various forms of data drift, including differences between the data sampled for training and used in clinical operation, differences between medical practices or context of use between training and clinical use, and time-related changes in patient populations, disease patterns, and data acquisition, to name a few. In this article, we first review the terminology used in ML literature related to data drift, define distinct types of drift, and discuss in detail potential causes within the context of medical applications with an emphasis on medical imaging. We then review the recent literature regarding the effects of data drift on medical ML systems, which overwhelmingly show that data drift can be a major cause for performance deterioration. We then discuss methods for monitoring data drift and mitigating its effects with an emphasis on pre- and post-deployment techniques. Some of the potential methods for drift detection and issues around model retraining when drift is detected are included. Based on our review, we find that data drift is a major concern in medical ML deployment and that more research is needed so that ML models can identify drift early, incorporate effective mitigation strategies and resist performance decay.",
+  "year": 2023,
+  "venue": "British Journal of Radiology",
+  "authors": [
+   "Berkman Sahiner",
+   "Weijie Chen",
+   "Ravi K. Samala",
+   "Nicholas Petrick"
+  ],
+  "citations": 243,
+  "source": "openalex",
+  "source_id": "W4361003621",
+  "doi": "10.1259/bjr.20220878",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/bjr/article-pdf/96/1150/20220878/57370848/bjr.20220878.pdf",
+  "published_iso": "2023-03-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Diverse values of nature for sustainability",
+  "title_norm": "diverse values of nature for sustainability",
+  "abstract": "Abstract Twenty-five years since foundational publications on valuing ecosystem services for human well-being 1,2 , addressing the global biodiversity crisis 3 still implies confronting barriers to incorporating nature’s diverse values into decision-making. These barriers include powerful interests supported by current norms and legal rules such as property rights, which determine whose values and which values of nature are acted on. A better understanding of how and why nature is (under)valued is more urgent than ever 4 . Notwithstanding agreements to incorporate nature’s values into actions, including the Kunming-Montreal Global Biodiversity Framework (GBF) 5 and the UN Sustainable Development Goals 6 , predominant environmental and development policies still prioritize a subset of values, particularly those linked to markets, and ignore other ways people relate to and benefit from nature 7 . Arguably, a ‘values crisis’ underpins the intertwined crises of biodiversity loss and climate change 8 , pandemic emergence 9 and socio-environmental injustices 10 . On the basis of more than 50,000 scientific publications, policy documents and Indigenous and local knowledge sources, the Intergovernmental Platform on Biodiversity and Ecosystem Services (IPBES) assessed knowledge on nature’s diverse values and valuation methods to gain insights into their role in policymaking and fuller integration into decisions 7,11 . Applying this evidence, combinations of values-centred approaches are proposed to improve valuation and address barriers to uptake, ultimately leveraging transformative changes towards more just (that is, fair treatment of people and nature, including inter- and intragenerational equity) and sustainable futures.",
+  "year": 2023,
+  "venue": "Nature",
+  "authors": [
+   "Unai Pascual",
+   "Patricia Balvanera",
+   "Christopher B. Anderson",
+   "Rebecca Chaplin‐Kramer",
+   "Mike Christie",
+   "David González-Jiménez"
+  ],
+  "citations": 671,
+  "source": "openalex",
+  "source_id": "W4385691013",
+  "doi": "10.1038/s41586-023-06406-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-023-06406-9.pdf",
+  "published_iso": "2023-08-09",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Chemistry-intuitive explanation of graph neural networks for molecular property prediction with substructure masking",
+  "title_norm": "chemistry intuitive explanation of graph neural networks for molecular property ",
+  "abstract": "Abstract Graph neural networks (GNNs) have been widely used in molecular property prediction, but explaining their black-box predictions is still a challenge. Most existing explanation methods for GNNs in chemistry focus on attributing model predictions to individual nodes, edges or fragments that are not necessarily derived from a chemically meaningful segmentation of molecules. To address this challenge, we propose a method named substructure mask explanation (SME). SME is based on well-established molecular segmentation methods and provides an interpretation that aligns with the understanding of chemists. We apply SME to elucidate how GNNs learn to predict aqueous solubility, genotoxicity, cardiotoxicity and blood–brain barrier permeation for small molecules. SME provides interpretation that is consistent with the understanding of chemists, alerts them to unreliable performance, and guides them in structural optimization for target properties. Hence, we believe that SME empowers chemists to confidently mine structure-activity relationship (SAR) from reliable GNNs through a transparent inspection on how GNNs pick up useful signals when learning from data.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Zhenhua Wu",
+   "Jike Wang",
+   "Hongyan Du",
+   "Dejun Jiang",
+   "Yu Kang",
+   "Dan Li"
+  ],
+  "citations": 185,
+  "source": "openalex",
+  "source_id": "W4372330430",
+  "doi": "10.1038/s41467-023-38192-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-38192-3.pdf",
+  "published_iso": "2023-05-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "The Rise and Potential of Large Language Model Based Agents: A Survey",
+  "title_norm": "the rise and potential of large language model based agents a survey",
+  "abstract": "For a long time, humanity has pursued artificial intelligence (AI) equivalent to or surpassing the human level, with AI agents considered a promising vehicle for this pursuit. AI agents are artificial entities that sense their environment, make decisions, and take actions. Many efforts have been made to develop intelligent agents, but they mainly focus on advancement in algorithms or training strategies to enhance specific capabilities or performance on particular tasks. Actually, what the community lacks is a general and powerful model to serve as a starting point for designing AI agents that can adapt to diverse scenarios. Due to the versatile capabilities they demonstrate, large language models (LLMs) are regarded as potential sparks for Artificial General Intelligence (AGI), offering hope for building general AI agents. Many researchers have leveraged LLMs as the foundation to build AI agents and have achieved significant progress. In this paper, we perform a comprehensive survey on LLM-based agents. We start by tracing the concept of agents from its philosophical origins to its development in AI, and explain why LLMs are suitable foundations for agents. Building upon this, we present a general framework for LLM-based agents, comprising three main components: brain, perception, and action, and the framework can be tailored for different applications. Subsequently, we explore the extensive applications of LLM-based agents in three aspects: single-agent scenarios, multi-agent scenarios, and human-agent cooperation. Following this, we delve into agent societies, exploring the behavior and personality of LLM-based agents, the social phenomena that emerge from an agent society, and the insights they offer for human society. Finally, we discuss several key topics and open problems within the field. A repository for the related papers at https://github.com/WooooDyy/LLM-Agent-Paper-List.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhiheng Xi",
+   "Wen-Xiang Chen",
+   "Xin Guo",
+   "Wei He",
+   "Yiwen Ding",
+   "Boyang Hong"
+  ],
+  "citations": 256,
+  "source": "openalex",
+  "source_id": "W4386794445",
+  "doi": "10.48550/arxiv.2309.07864",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2309.07864",
+  "published_iso": "2023-09-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Estimating heterogeneous treatment effects with right-censored data via causal survival forests",
+  "title_norm": "estimating heterogeneous treatment effects with right censored data via causal s",
+  "abstract": "Abstract Forest-based methods have recently gained in popularity for non-parametric treatment effect estimation. Building on this line of work, we introduce causal survival forests, which can be used to estimate heterogeneous treatment effects in survival and observational setting where outcomes may be right-censored. Our approach relies on orthogonal estimating equations to robustly adjust for both censoring and selection effects under unconfoundedness. In our experiments, we find our approach to perform well relative to a number of baselines.",
+  "year": 2023,
+  "venue": "Journal of the Royal Statistical Society Series B (Statistical Methodology)",
+  "authors": [
+   "Yifan Cui",
+   "Michael R. Kosorok",
+   "Erik Sverdrup",
+   "Stefan Wager",
+   "Ruoqing Zhu"
+  ],
+  "citations": 100,
+  "source": "openalex",
+  "source_id": "W4322397527",
+  "doi": "10.1093/jrsssb/qkac001",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/jrsssb/advance-article-pdf/doi/10.1093/jrsssb/qkac001/49531685/qkac001.pdf",
+  "published_iso": "2023-02-27",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Selective conformal inference with false coverage-statement rate control",
+  "title_norm": "selective conformal inference with false coverage statement rate control",
+  "abstract": "SUMMARY Conformal inference is a popular tool for constructing prediction intervals. We consider here the scenario of post-selection/selective conformal inference, that is, prediction intervals are reported only for individuals selected from unlabelled test data. To account for multiplicity, we develop a general split conformal framework to construct selective prediction intervals with the false coverage-statement rate control. We first investigate the false coverage rate–adjusted method of Benjamini & Yekutieli (2005) in the present setting, and show that it is able to achieve false coverage-statement rate control, but yields uniformly inflated prediction intervals. We then propose a novel solution to the problem called selective conditional conformal prediction. Our method performs selection procedures on both the calibration set and test set, and then constructs conformal prediction intervals for the selected test candidates with the aid of the conditional empirical distribution obtained by the post-selection calibration set. When the selection rule is exchangeable, we show that our proposed method can exactly control the false coverage-statement rate in a model-free and distribution-free guarantee. For nonexchangeable selection procedures involving the calibration set, we provide non-asymptotic bounds for the false coverage-statement rate under mild distributional assumptions. Numerical results confirm the effectiveness and robustness of our method under false coverage-statement rate control and show that it achieves more narrowed prediction intervals over existing methods across various settings.",
+  "year": 2024,
+  "venue": "Biometrika",
+  "authors": [
+   "Yajie Bao",
+   "Yuyang Huo",
+   "Haojie Ren",
+   "Changliang Zou"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4393339782",
+  "doi": "10.1093/biomet/asae010",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4393339782",
+  "published_iso": "2024-02-19",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Nanomaterial-based contrast agents",
+  "title_norm": "nanomaterial based contrast agents",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Nature Reviews Methods Primers",
+  "authors": [
+   "Jessica C. Hsu",
+   "Zhongmin Tang",
+   "Olga E. Eremina",
+   "Alexandros Marios Sofias",
+   "Twan Lammers",
+   "Jonathan F. Lovell"
+  ],
+  "citations": 127,
+  "source": "openalex",
+  "source_id": "W4365452725",
+  "doi": "10.1038/s43586-023-00211-4",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10732545/pdf/nihms-1907529.pdf",
+  "published_iso": "2023-04-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Two-way fixed effects and differences-in-differences estimators with several treatments",
+  "title_norm": "two way fixed effects and differences in differences estimators with several tre",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Journal of Econometrics",
+  "authors": [
+   "Clément de Chaisemartin",
+   "Xavier D’Haultfœuille"
+  ],
+  "citations": 183,
+  "source": "openalex",
+  "source_id": "W4385356382",
+  "doi": "10.1016/j.jeconom.2023.105480",
+  "arxiv_id": null,
+  "paper_url": "https://sciencespo.hal.science/hal-04187969v2/document",
+  "published_iso": "2023-07-27",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Exploding the myths: An introduction to artificial neural networks for prediction and forecasting",
+  "title_norm": "exploding the myths an introduction to artificial neural networks for prediction",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Environmental Modelling & Software",
+  "authors": [
+   "Holger R. Maier",
+   "Stefano Galelli",
+   "Saman Razavi",
+   "Andrea Castelletti",
+   "Andrea Emilio Rizzoli",
+   "Ioannis N. Athanasiadis"
+  ],
+  "citations": 138,
+  "source": "openalex",
+  "source_id": "W4383215559",
+  "doi": "10.1016/j.envsoft.2023.105776",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S1364815223001627-ga1_lrg.jpg",
+  "published_iso": "2023-07-05",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "A Survey of Confidence Estimation and Calibration in Large Language Models",
+  "title_norm": "a survey of confidence estimation and calibration in large language models",
+  "abstract": "Jiahui Geng, Fengyu Cai, Yuxia Wang, Heinz Koeppl, Preslav Nakov, Iryna Gurevych. Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers). 2024.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Jiahui Geng",
+   "Fengyu Cai",
+   "Yuxia Wang",
+   "Heinz Koeppl",
+   "Preslav Nakov",
+   "Iryna Gurevych"
+  ],
+  "citations": 74,
+  "source": "openalex",
+  "source_id": "W4401042444",
+  "doi": "10.18653/v1/2024.naacl-long.366",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2024.naacl-long.366.pdf",
+  "published_iso": "2024-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Interoperability of heterogeneous health information systems: a systematic literature review",
+  "title_norm": "interoperability of heterogeneous health information systems a systematic litera",
+  "abstract": "BACKGROUND: The lack of interoperability between health information systems reduces the quality of care provided to patients and wastes resources. Accordingly, there is an urgent need to develop integration mechanisms among the various health information systems. The aim of this review was to investigate the interoperability requirements for heterogeneous health information systems and to summarize and present them. METHODS: In accordance with the PRISMA guideline, a broad electronic search of all literature was conducted on the topic through six databases, including PubMed, Web of science, Scopus, MEDLINE, Cochrane Library and Embase to 25 July 2022. The inclusion criteria were to select English-written articles available in full text with the closest objectives. 36 articles were selected for further analysis. RESULTS: Interoperability has been raised in the field of health information systems from 2003 and now it is one of the topics of interest to researchers. The projects done in this field are mostly in the national scope and to achieve the electronic health record. HL7 FHIR, CDA, HIPAA and SNOMED-CT, SOA, RIM, XML, API, JAVA and SQL are among the most important requirements for implementing interoperability. In order to guarantee the concept of data exchange, semantic interaction is the best choice because the systems can recognize and process semantically similar information homogeneously. CONCLUSIONS: The health industry has become more complex and has new needs. Interoperability meets this needs by communicating between the output and input of processor systems and making easier to access the data in the required formats.",
+  "year": 2023,
+  "venue": "BMC Medical Informatics and Decision Making",
+  "authors": [
+   "Amir Torab-Miandoab",
+   "Taha Samad‐Soltani",
+   "Ahmadreza Jodati",
+   "Peyman Rezaei‐Hachesu"
+  ],
+  "citations": 376,
+  "source": "openalex",
+  "source_id": "W4317904523",
+  "doi": "10.1186/s12911-023-02115-5",
+  "arxiv_id": null,
+  "paper_url": "https://bmcmedinformdecismak.biomedcentral.com/counter/pdf/10.1186/s12911-023-02115-5",
+  "published_iso": "2023-01-24",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Hippocampo-cortical circuits for selective memory encoding, routing, and replay",
+  "title_norm": "hippocampo cortical circuits for selective memory encoding routing and replay",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Neuron",
+  "authors": [
+   "Ryan E. Harvey",
+   "Heath L. Robinson",
+   "Can Liu",
+   "Azahara Oliva",
+   "Antonio Fernández‐Ruiz"
+  ],
+  "citations": 108,
+  "source": "openalex",
+  "source_id": "W4376649526",
+  "doi": "10.1016/j.neuron.2023.04.015",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11146684/pdf/nihms-1895653.pdf",
+  "published_iso": "2023-05-16",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Unlocking potential: An integrated approach using PLS-SEM, NCA, and fsQCA for informed decision making",
+  "title_norm": "unlocking potential an integrated approach using pls sem nca and fsqca for infor",
+  "abstract": "This study demonstrates the value of integrating different analytical perspectives to identify significant factors and characterize their importance. Specifically, we combine three analytical methods – partial least squares structural equation modeling (PLS-SEM), necessary condition analysis (NCA), and fuzzy set qualitative comparative analysis (fsQCA) – to create an expanded analytical process that enables informed decision-making. PLS-SEM identifies significant correlations between the predictor and outcome variables, NCA identifies critical bottlenecks required for a specific outcome, and fsQCA identifies configurations of conditions sufficient for producing a specific outcome. By applying this expanded analytical process to subjectively reported data on service quality and perceived accessibility, collected from five Nordic cities, we gain new insights into attracting an aging population to public transport. This study contributes to a better understanding of the nuances in the data, which is valuable for both research and practice.",
+  "year": 2023,
+  "venue": "Journal of Retailing and Consumer Services",
+  "authors": [
+   "Alexandre Sukhov",
+   "Margareta Friman",
+   "Lars E. Olsson"
+  ],
+  "citations": 192,
+  "source": "openalex",
+  "source_id": "W4377115674",
+  "doi": "10.1016/j.jretconser.2023.103424",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4377115674",
+  "published_iso": "2023-05-19",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Treatment of Metastatic Colorectal Cancer: ASCO Guideline",
+  "title_norm": "treatment of metastatic colorectal cancer asco guideline",
+  "abstract": "PURPOSE To develop recommendations for treatment of patients with metastatic colorectal cancer (mCRC). METHODS ASCO convened an Expert Panel to conduct a systematic review of relevant studies and develop recommendations for clinical practice. RESULTS Five systematic reviews and 10 randomized controlled trials met the systematic review inclusion criteria. RECOMMENDATIONS Doublet chemotherapy should be offered, or triplet therapy may be offered to patients with previously untreated, initially unresectable mCRC, on the basis of included studies of chemotherapy in combination with anti–vascular endothelial growth factor antibodies. In the first-line setting, pembrolizumab is recommended for patients with mCRC and microsatellite instability-high or deficient mismatch repair tumors; chemotherapy and anti–epidermal growth factor receptor therapy is recommended for microsatellite stable or proficient mismatch repair left-sided treatment-naive RAS wild-type mCRC; chemotherapy and anti–vascular endothelial growth factor therapy is recommended for microsatellite stable or proficient mismatch repair RAS wild-type right-sided mCRC. Encorafenib plus cetuximab is recommended for patients with previously treated BRAF V600E–mutant mCRC that has progressed after at least one previous line of therapy. Cytoreductive surgery plus systemic chemotherapy may be recommended for selected patients with colorectal peritoneal metastases; however, the addition of hyperthermic intraperitoneal chemotherapy is not recommended. Stereotactic body radiation therapy may be recommended following systemic therapy for patients with oligometastases of the liver who are not considered candidates for resection. Selective internal radiation therapy is not routinely recommended for patients with unilobar or bilobar metastases of the liver. Perioperative chemotherapy or surgery alone should be offered to patients with mCRC who are candidates for potentially curative resection of liver metastases. Multidisciplinary team management and shared decision making are recommended. Qualifying statements with further details related to implementation of guideline recommendations are also included. Additional information is available at www.asco.org/gastrointestinal-cancer-guidelines .",
+  "year": 2022,
+  "venue": "Journal of Clinical Oncology",
+  "authors": [
+   "Van K. Morris",
+   "Erin B. Kennedy",
+   "Nancy N. Baxter",
+   "Al B. Benson",
+   "Andrea Cercek",
+   "May Cho"
+  ],
+  "citations": 646,
+  "source": "openalex",
+  "source_id": "W4306660133",
+  "doi": "10.1200/jco.22.01690",
+  "arxiv_id": null,
+  "paper_url": "https://ascopubs.org/doi/pdfdirect/10.1200/JCO.22.01690?role=tab",
+  "published_iso": "2022-10-17",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Using Data Science for Mechanistic Insights and Selectivity Predictions in a Non-Natural Biocatalytic Reaction",
+  "title_norm": "using data science for mechanistic insights and selectivity predictions in a non",
+  "abstract": "The study of non-natural biocatalytic transformations relies heavily on empirical methods, such as directed evolution, for identifying improved variants. Although exceptionally effective, this approach provides limited insight into the molecular mechanisms behind the transformations and necessitates multiple protein engineering campaigns for new reactants. To address this limitation, we disclose a strategy to explore the biocatalytic reaction space and garner insight into the molecular mechanisms driving enzymatic transformations. Specifically, we explored the selectivity of an \"ene\"-reductase, GluER-T36A, to create a data-driven toolset that explores reaction space and rationalizes the observed and predicted selectivities of substrate/mutant combinations. The resultant statistical models related structural features of the enzyme and substrate to selectivity and were used to effectively predict selectivity in reactions with out-of-sample substrates and mutants. Our approach provided a deeper understanding of enantioinduction by GluER-T36A and holds the potential to enhance the virtual screening of enzyme mutants.",
+  "year": 2023,
+  "venue": "Journal of the American Chemical Society",
+  "authors": [
+   "Hanna D. Clements",
+   "Autumn R. Flynn",
+   "Bryce T. Nicholls",
+   "Daria Grosheva",
+   "Sarah J. Lefave",
+   "Morgan T. Merriman"
+  ],
+  "citations": 35,
+  "source": "openalex",
+  "source_id": "W4385477286",
+  "doi": "10.1021/jacs.3c03639",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10602048/pdf/nihms-1937464.pdf",
+  "published_iso": "2023-08-02",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Traumatic brain injury: progress and challenges in prevention, clinical care, and research",
+  "title_norm": "traumatic brain injury progress and challenges in prevention clinical care and r",
+  "abstract": "",
+  "year": 2022,
+  "venue": "The Lancet Neurology",
+  "authors": [
+   "Andrew I.R. Maas",
+   "David Menon",
+   "Geoffrey T. Manley",
+   "Mathew Abrams",
+   "Cecilia Åkerlund",
+   "Nada Anđelić"
+  ],
+  "citations": 1475,
+  "source": "openalex",
+  "source_id": "W4297983178",
+  "doi": "10.1016/s1474-4422(22)00309-x",
+  "arxiv_id": null,
+  "paper_url": "http://www.thelancet.com/article/S147444222200309X/pdf",
+  "published_iso": "2022-09-29",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "The prevalence and long-term health effects of Long Covid among hospitalised and non-hospitalised populations: a systematic review and meta-analysis",
+  "title_norm": "the prevalence and long term health effects of long covid among hospitalised and",
+  "abstract": "Background: The aim of this study was to systematically synthesise the global evidence on the prevalence of persistent symptoms in a general post COVID-19 population. Methods: A systematic literature search was conducted using multiple electronic databases (MEDLINE and The Cochrane Library, Scopus, CINAHL, and medRxiv) until January 2022. Studies with at least 100 people with confirmed or self-reported COVID-19 symptoms at ≥28 days following infection onset were included. Patient-reported outcome measures and clinical investigations were both assessed. Results were analysed descriptively, and meta-analyses were conducted to derive prevalence estimates. This study was pre-registered (PROSPERO-ID: CRD42021238247). Findings: 194 studies totalling 735,006 participants were included, with five studies conducted in those <18 years of age. Most studies were conducted in Europe (n = 106) or Asia (n = 49), and the time to follow-up ranged from ≥28 days to 387 days. 122 studies reported data on hospitalised patients, 18 on non-hospitalised, and 54 on hospitalised and non-hospitalised combined (mixed). On average, at least 45% of COVID-19 survivors, regardless of hospitalisation status, went on to experience at least one unresolved symptom (mean follow-up 126 days). Fatigue was frequently reported across hospitalised (28.4%; 95% CI 24.7%-32.5%), non-hospitalised (34.8%; 95% CI 17.6%-57.2%), and mixed (25.2%; 95% CI 17.7%-34.6%) cohorts. Amongst the hospitalised cohort, abnormal CT patterns/x-rays were frequently reported (45.3%; 95% CI 35.3%-55.7%), alongside ground glass opacification (41.1%; 95% CI 25.7%-58.5%), and impaired diffusion capacity for carbon monoxide (31.7%; 95% CI 25.8%-3.2%). Interpretation: Our work shows that 45% of COVID-19 survivors, regardless of hospitalisation status, were experiencing a range of unresolved symptoms at ∼ 4 months. Current understanding is limited by heterogeneous study design, follow-up durations, and measurement methods. Definition of subtypes of Long Covid is unclear, subsequently hampering effective treatment/management strategies. Funding: No funding.",
+  "year": 2022,
+  "venue": "EClinicalMedicine",
+  "authors": [
+   "Lauren L. O’Mahoney",
+   "Ash Routen",
+   "Clare Gillies",
+   "Winifred Ekezie",
+   "Anneka Welford",
+   "Alexa Zhang"
+  ],
+  "citations": 837,
+  "source": "openalex",
+  "source_id": "W4310508485",
+  "doi": "10.1016/j.eclinm.2022.101762",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4310508485",
+  "published_iso": "2022-12-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Deep learning methods for drug response prediction in cancer: Predominant and emerging trends",
+  "title_norm": "deep learning methods for drug response prediction in cancer predominant and eme",
+  "abstract": "Cancer claims millions of lives yearly worldwide. While many therapies have been made available in recent years, by in large cancer remains unsolved. Exploiting computational predictive models to study and treat cancer holds great promise in improving drug development and personalized design of treatment plans, ultimately suppressing tumors, alleviating suffering, and prolonging lives of patients. A wave of recent papers demonstrates promising results in predicting cancer response to drug treatments while utilizing deep learning methods. These papers investigate diverse data representations, neural network architectures, learning methodologies, and evaluations schemes. However, deciphering promising predominant and emerging trends is difficult due to the variety of explored methods and lack of standardized framework for comparing drug response prediction models. To obtain a comprehensive landscape of deep learning methods, we conducted an extensive search and analysis of deep learning models that predict the response to single drug treatments. A total of 61 deep learning-based models have been curated, and summary plots were generated. Based on the analysis, observable patterns and prevalence of methods have been revealed. This review allows to better understand the current state of the field and identify major challenges and promising solution paths.",
+  "year": 2023,
+  "venue": "Frontiers in Medicine",
+  "authors": [
+   "Alexander Partin",
+   "Thomas Brettin",
+   "Yitan Zhu",
+   "Oleksandr Narykov",
+   "Austin Clyde",
+   "Jamie Overbeek"
+  ],
+  "citations": 141,
+  "source": "openalex",
+  "source_id": "W4320920782",
+  "doi": "10.3389/fmed.2023.1086097",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4320920782",
+  "published_iso": "2023-02-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Elexacaftor/tezacaftor/ivacaftor projected survival and long-term health outcomes in people with cystic fibrosis homozygous for F508del",
+  "title_norm": "elexacaftor tezacaftor ivacaftor projected survival and long term health outcome",
+  "abstract": "BACKGROUND: A series of phase 3 clinical trials have demonstrated that elexacaftor plus tezacaftor plus ivacaftor (ELX/TEZ/IVA) is safe and efficacious in people with cystic fibrosis (pwCF) aged ≥12 years with ≥1 F508del mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene. The impact of this treatment on lifetime clinical outcomes and survival, however, has yet to be assessed. METHODS: We used a person-level microsimulation model to estimate the survival and lifetime clinical benefits of ELX/TEZ/IVA treatment versus other CFTR modulator combinations (tezacaftor plus ivacaftor [TEZ/IVA] or lumacaftor plus ivacaftor [LUM/IVA]) or best supportive care (BSC) alone in pwCF aged ≥12 years who are homozygous for F508del-CFTR. Disease progression inputs were derived from published literature; clinical efficacy inputs were derived from an indirect treatment comparison conducted using relevant phase 3 clinical trial data and extrapolations of clinical data. RESULTS: The median projected survival for pwCF homozygous for F508del-CFTR treated with ELX/TEZ/IVA was 71.6 years. This was an increase of 23.2 years versus TEZ/IVA, 26.2 years versus LUM/IVA, and 33.5 years versus BSC alone. Treatment with ELX/TEZ/IVA also reduced disease severity as well as the number of pulmonary exacerbations and lung transplants. In a scenario analysis, the median projected survival for pwCF initiating ELX/TEZ/IVA between the ages of 12 and 17 years was 82.5 years, an increase of 45.4 years compared with BSC alone. CONCLUSIONS: The results from our model suggest ELX/TEZ/IVA treatment may substantially increase survival for pwCF, with early initiation potentially allowing pwCF to achieve near-normal life expectancy.",
+  "year": 2023,
+  "venue": "Journal of Cystic Fibrosis",
+  "authors": [
+   "Andrea Lopez",
+   "Conor Daly",
+   "G. Vega-Hernández",
+   "Gordon MacGregor",
+   "Jaime Rubin"
+  ],
+  "citations": 151,
+  "source": "openalex",
+  "source_id": "W4322124118",
+  "doi": "10.1016/j.jcf.2023.02.004",
+  "arxiv_id": null,
+  "paper_url": "http://www.cysticfibrosisjournal.com/article/S1569199323000486/pdf",
+  "published_iso": "2023-02-26",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Progressing nanotechnology to improve targeted cancer treatment: overcoming hurdles in its clinical implementation",
+  "title_norm": "progressing nanotechnology to improve targeted cancer treatment overcoming hurdl",
+  "abstract": "The use of nanotechnology has the potential to revolutionize the detection and treatment of cancer. Developments in protein engineering and materials science have led to the emergence of new nanoscale targeting techniques, which offer renewed hope for cancer patients. While several nanocarriers for medicinal purposes have been approved for human trials, only a few have been authorized for clinical use in targeting cancer cells. In this review, we analyze some of the authorized formulations and discuss the challenges of translating findings from the lab to the clinic. This study highlights the various nanocarriers and compounds that can be used for selective tumor targeting and the inherent difficulties in cancer therapy. Nanotechnology provides a promising platform for improving cancer detection and treatment in the future, but further research is needed to overcome the current limitations in clinical translation.",
+  "year": 2023,
+  "venue": "Molecular Cancer",
+  "authors": [
+   "Mohammad Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Omer Qutaiba B. Allela",
+   "Renzon Daniel Cosme Pecho"
+  ],
+  "citations": 1044,
+  "source": "openalex",
+  "source_id": "W4387452756",
+  "doi": "10.1186/s12943-023-01865-0",
+  "arxiv_id": null,
+  "paper_url": "https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01865-0",
+  "published_iso": "2023-10-09",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Determining structures of RNA conformers using AFM and deep neural networks",
+  "title_norm": "determining structures of rna conformers using afm and deep neural networks",
+  "abstract": "Abstract Much of the human genome is transcribed into RNAs 1 , many of which contain structural elements that are important for their function. Such RNA molecules—including those that are structured and well-folded 2 —are conformationally heterogeneous and flexible, which is a prerequisite for function 3,4 , but this limits the applicability of methods such as NMR, crystallography and cryo-electron microscopy for structure elucidation. Moreover, owing to the lack of a large RNA structure database, and no clear correlation between sequence and structure, approaches such as AlphaFold 5 for protein structure prediction do not apply to RNA. Therefore, determining the structures of heterogeneous RNAs remains an unmet challenge. Here we report holistic RNA structure determination method using atomic force microscopy, unsupervised machine learning and deep neural networks (HORNET), a novel method for determining three-dimensional topological structures of RNA using atomic force microscopy images of individual molecules in solution. Owing to the high signal-to-noise ratio of atomic force microscopy, this method is ideal for capturing structures of large RNA molecules in distinct conformations. In addition to six benchmark cases, we demonstrate the utility of HORNET by determining multiple heterogeneous structures of RNase P RNA and the HIV-1 Rev response element (RRE) RNA. Thus, our method addresses one of the major challenges in determining heterogeneous structures of large and flexible RNA molecules, and contributes to the fundamental understanding of RNA structural biology.",
+  "year": 2024,
+  "venue": "Nature",
+  "authors": [
+   "Maximilia Frazão de Souza Degenhardt",
+   "Hermann F. Degenhardt",
+   "Yuba R. Bhandari",
+   "Yun-Tzai Lee",
+   "Jienyu Ding",
+   "Ping Yu"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4405514994",
+  "doi": "10.1038/s41586-024-07559-x",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-024-07559-x.pdf",
+  "published_iso": "2024-12-18",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Consensus design of a calibration experiment for human fear conditioning",
+  "title_norm": "consensus design of a calibration experiment for human fear conditioning",
+  "abstract": "Fear conditioning is a widely used laboratory model to investigate learning, memory, and psychopathology across species. The quantification of learning in this paradigm is heterogeneous in humans and psychometric properties of different quantification methods can be difficult to establish. To overcome this obstacle, calibration is a standard metrological procedure in which well-defined values of a latent variable are generated in an established experimental paradigm. These intended values then serve as validity criterion to rank methods. Here, we develop a calibration protocol for human fear conditioning. Based on a literature review, series of workshops, and survey of N = 96 experts, we propose a calibration experiment and settings for 25 design variables to calibrate the measurement of fear conditioning. Design variables were chosen to be as theory-free as possible and allow wide applicability in different experimental contexts. Besides establishing a specific calibration procedure, the general calibration process we outline may serve as a blueprint for calibration efforts in other subfields of behavioral neuroscience that need measurement refinement.",
+  "year": 2023,
+  "venue": "Neuroscience & Biobehavioral Reviews",
+  "authors": [
+   "Dominik R. Bach",
+   "Juliana Sporrer",
+   "Rany Abend",
+   "Tom Beckers",
+   "Joseph E. Dunsmoor",
+   "Miquel À. Fullana"
+  ],
+  "citations": 47,
+  "source": "openalex",
+  "source_id": "W4361000169",
+  "doi": "10.1016/j.neubiorev.2023.105146",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4361000169",
+  "published_iso": "2023-03-27",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Understanding bacterial biofilms: From definition to treatment strategies",
+  "title_norm": "understanding bacterial biofilms from definition to treatment strategies",
+  "abstract": "Bacterial biofilms are complex microbial communities encased in extracellular polymeric substances. Their formation is a multi-step process. Biofilms are a significant problem in treating bacterial infections and are one of the main reasons for the persistence of infections. They can exhibit increased resistance to classical antibiotics and cause disease through device-related and non-device (tissue) -associated infections, posing a severe threat to global health issues. Therefore, early detection and search for new and alternative treatments are essential for treating and suppressing biofilm-associated infections. In this paper, we systematically reviewed the formation of bacterial biofilms, associated infections, detection methods, and potential treatment strategies, aiming to provide researchers with the latest progress in the detection and treatment of bacterial biofilms.",
+  "year": 2023,
+  "venue": "Frontiers in Cellular and Infection Microbiology",
+  "authors": [
+   "Ailing Zhao",
+   "Jiazheng Sun",
+   "Yipin Liu"
+  ],
+  "citations": 703,
+  "source": "openalex",
+  "source_id": "W4362672788",
+  "doi": "10.3389/fcimb.2023.1137947",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4362672788",
+  "published_iso": "2023-04-06",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Conformal Metasurfaces: A Novel Solution for Vehicular Communications",
+  "title_norm": "conformal metasurfaces a novel solution for vehicular communications",
+  "abstract": "In future 6G millimeter-wave/sub-THz vehicle-to-everything communication systems, vehicles are expected to be equipped with massive antenna arrays to compensate for the severe path loss. However, vehicle-to-vehicle (V2V) direct links are prone to blockage by surrounding vehicles. Emerging metasurface technologies enable the control of the electromagnetic wave reflection towards the desired direction to boost communication performance. Reconfigurable intelligent surfaces (RIS), and the pre-configured counterpart intelligent reflecting surfaces (IRS), are promising low-cost relaying systems for 6G. This paper proposes the usage of conformal metasurfaces (C-RIS or C-IRS) deployed on vehicles’ body to mitigate the blockage impact by creating artificial reflections, compensating for the non-flat shape of the vehicle’s body with proper phase patterns. We analytically derive the phase pattern for a cylindrical C-RIS/C-IRS, accounting for the shape of the car body, which generalizes the conventional planar ones. We propose a novel design for optimally pre-configured C-IRS proving its benefits in a V2V highway scenario. The traffic simulation results show a reduction of blockage probability by 20% for C-IRS and 70% for C-RIS as a benchmark, as well as a remarkable improvement in average signal-to-noise ratio by 10–20 dB for C-IRS and 30–40 dB for C-RIS.",
+  "year": 2022,
+  "venue": "IEEE Transactions on Wireless Communications",
+  "authors": [
+   "Marouan Mizmizi",
+   "Reza Aghazadeh Ayoubi",
+   "Dario Tagliaferri",
+   "Kai Dong",
+   "Gian Guido Gentili",
+   "Umberto Spagnolini"
+  ],
+  "citations": 50,
+  "source": "openalex",
+  "source_id": "W4312925915",
+  "doi": "10.1109/twc.2022.3213901",
+  "arxiv_id": null,
+  "paper_url": "https://re.public.polimi.it/bitstream/11311/1233445.12/4/11311-1233445_Spagnolini.pdf",
+  "published_iso": "2022-11-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Regression diagnostics meets forecast evaluation: conditional calibration, reliability diagrams, and coefficient of determination",
+  "title_norm": "regression diagnostics meets forecast evaluation conditional calibration reliabi",
+  "abstract": "A common principle in model diagnostics and forecast evaluation is that fitted or predicted distributions ought to be reliable, ideally in the sense of auto-calibration, where the outcome is a random draw from the posited distribution. For binary responses, auto-calibration is the universal concept of reliability. For real-valued outcomes, a general theory of calibration has been elusive, despite a recent surge of interest in distributional regression and machine learning. We develop a framework rooted in probability theory, which gives rise to hierarchies of calibration, and applies to both predictive distributions and stand-alone point forecasts. In a nutshell, a prediction is conditionally T-calibrated if it can be taken at face value in terms of an identifiable functional T. We introduce population versions of T-reliability diagrams and revisit a score decomposition into measures of miscalibration, discrimination, and uncertainty. In empirical settings, stable and efficient estimators of T-reliability diagrams and score components arise via nonparametric isotonic regression and the pool-adjacent-violators algorithm. For in-sample model diagnostics, we propose a universal coefficient of determination that nests and reinterprets the classical R2 in least squares regression and its natural analog R1 in quantile regression, yet applies to T-regression in general.",
+  "year": 2023,
+  "venue": "Electronic Journal of Statistics",
+  "authors": [
+   "Tilmann Gneiting",
+   "Johannes Resin"
+  ],
+  "citations": 48,
+  "source": "openalex",
+  "source_id": "W3192681150",
+  "doi": "10.1214/23-ejs2180",
+  "arxiv_id": null,
+  "paper_url": "https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-17/issue-2/Regression-diagnostics-meets-forecast-evaluation--conditional-calibration-reliability-diagrams/10.1214/23-EJS2180.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "The photocatalytic process in the treatment of polluted water",
+  "title_norm": "the photocatalytic process in the treatment of polluted water",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Chemical Papers",
+  "authors": [
+   "Marwah A. Al-Nuaim",
+   "Asawer A. Alwasiti",
+   "Zainab Y. Shnain"
+  ],
+  "citations": 508,
+  "source": "openalex",
+  "source_id": "W4300089528",
+  "doi": "10.1007/s11696-022-02468-7",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11696-022-02468-7.pdf",
+  "published_iso": "2022-10-03",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Predicting Endocrine Disruption Using Conformal Prediction – A Prioritization Strategy to Identify Hazardous Chemicals with Confidence",
+  "title_norm": "predicting endocrine disruption using conformal prediction a prioritization stra",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide Receptor-mediated molecular initiating events (MIEs) and their relevance in endocrine activity (EA) have been highlighted in literature. More than 15 receptors have been associated with neurodevelopmental adversity and metabolic disruption. MIEs describe chemical interactions with defined biological outcomes, a relationship that could be described with quantitative structure–activity relationship (QSAR) models. QSAR uncertainty can be assessed using the conformal prediction (CP) framework, which provides similarity (i.e., nonconformity) scores relative to the defined classes per prediction. CP calibration can indirectly mitigate data imbalance during model development, and the nonconformity scores serve as intrinsic measures of chemical applicability domain assessment during screening. The focus of this work was to propose an in silico predictive strategy for EA. First, 23 QSAR models for MIEs associated with EA were developed using high-throughput data for 14 receptors. To handle the data imbalance, five protocols were compared, and CP provided the most balanced class definition. Second, the developed QSAR models were applied to a large data set (∼55,000 chemicals), comprising chemicals representative of potential risk for human exposure. Using CP, it was possible to assess the uncertainty of the screening results and identify model strengths and out of domain chemicals. Last, two clustering methods, t-distributed stochastic neighbor embedding and Tanimoto similarity, were used to identify compounds with potential EA using known endocrine disruptors as reference. The cluster overlap between methods produced 23 chemicals with suspected or demonstrated EA potential. The presented models could be utilized for first-tier screening and identification of compounds with potential biological activity across the studied MIEs.",
+  "year": 2022,
+  "venue": "Chemical Research in Toxicology",
+  "authors": [
+   "Maria Sapounidou",
+   "Ulf Norinder",
+   "Patrik L. Andersson"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4311934114",
+  "doi": "10.1021/acs.chemrestox.2c00267",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acs.chemrestox.2c00267",
+  "published_iso": "2022-12-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Conditional calibration for false discovery rate control under dependence",
+  "title_norm": "conditional calibration for false discovery rate control under dependence",
+  "abstract": "We introduce a new class of methods for finite-sample false discovery rate (FDR) control in multiple testing problems with dependent test statistics where the dependence is known. Our approach separately calibrates a data-dependent p-value rejection threshold for each hypothesis, relaxing or tightening the threshold as appropriate to target exact FDR control. In addition to our general framework, we propose a concrete algorithm, the dependence-adjusted Benjamini–Hochberg (dBH) procedure, which thresholds the BH-adjusted p-value for each hypothesis. Under positive regression dependence, the dBH procedure uniformly dominates the standard BH procedure, and in general it uniformly dominates the Benjamini–Yekutieli (BY) procedure (also known as BH with log correction), which makes a conservative adjustment for worst-case dependence. Simulations and real data examples show substantial power gains over the BY procedure, and competitive performance with knockoffs in settings where both methods are applicable. When the BH procedure empirically controls FDR (as it typically does in practice), the dBH procedure performs comparably.",
+  "year": 2022,
+  "venue": "The Annals of Statistics",
+  "authors": [
+   "William Fithian",
+   "Lihua Lei"
+  ],
+  "citations": 47,
+  "source": "openalex",
+  "source_id": "W3044871282",
+  "doi": "10.1214/21-aos2137",
+  "arxiv_id": null,
+  "paper_url": "https://projecteuclid.org/journals/annals-of-statistics/volume-50/issue-6/Conditional-calibration-for-false-discovery-rate-control-under-dependence/10.1214/21-AOS2137.pdf",
+  "published_iso": "2022-12-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Nanotechnology’s frontier in combatting infectious and inflammatory diseases: prevention and treatment",
+  "title_norm": "nanotechnology s frontier in combatting infectious and inflammatory diseases pre",
+  "abstract": "Inflammation-associated diseases encompass a range of infectious diseases and non-infectious inflammatory diseases, which continuously pose one of the most serious threats to human health, attributed to factors such as the emergence of new pathogens, increasing drug resistance, changes in living environments and lifestyles, and the aging population. Despite rapid advancements in mechanistic research and drug development for these diseases, current treatments often have limited efficacy and notable side effects, necessitating the development of more effective and targeted anti-inflammatory therapies. In recent years, the rapid development of nanotechnology has provided crucial technological support for the prevention, treatment, and detection of inflammation-associated diseases. Various types of nanoparticles (NPs) play significant roles, serving as vaccine vehicles to enhance immunogenicity and as drug carriers to improve targeting and bioavailability. NPs can also directly combat pathogens and inflammation. In addition, nanotechnology has facilitated the development of biosensors for pathogen detection and imaging techniques for inflammatory diseases. This review categorizes and characterizes different types of NPs, summarizes their applications in the prevention, treatment, and detection of infectious and inflammatory diseases. It also discusses the challenges associated with clinical translation in this field and explores the latest developments and prospects. In conclusion, nanotechnology opens up new possibilities for the comprehensive management of infectious and inflammatory diseases.",
+  "year": 2024,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Yujing Huang",
+   "Xiaohan Guo",
+   "Yi Wu",
+   "Xingyu Chen",
+   "Lixiang Feng",
+   "Na Xie"
+  ],
+  "citations": 468,
+  "source": "openalex",
+  "source_id": "W4392775085",
+  "doi": "10.1038/s41392-024-01745-z",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-024-01745-z.pdf",
+  "published_iso": "2024-02-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "The seventh blind test of crystal structure prediction: structure generation methods",
+  "title_norm": "the seventh blind test of crystal structure prediction structure generation meth",
+  "abstract": "A seventh blind test of crystal structure prediction was organized by the Cambridge Crystallographic Data Centre featuring seven target systems of varying complexity: a silicon and iodine-containing molecule, a copper coordination complex, a near-rigid molecule, a cocrystal, a polymorphic small agrochemical, a highly flexible polymorphic drug candidate, and a polymorphic morpholine salt. In this first of two parts focusing on structure generation methods, many crystal structure prediction (CSP) methods performed well for the small but flexible agrochemical compound, successfully reproducing the experimentally observed crystal structures, while few groups were successful for the systems of higher complexity. A powder X-ray diffraction (PXRD) assisted exercise demonstrated the use of CSP in successfully determining a crystal structure from a low-quality PXRD pattern. The use of CSP in the prediction of likely cocrystal stoichiometry was also explored, demonstrating multiple possible approaches. Crystallographic disorder emerged as an important theme throughout the test as both a challenge for analysis and a major achievement where two groups blindly predicted the existence of disorder for the first time. Additionally, large-scale comparisons of the sets of predicted crystal structures also showed that some methods yield sets that largely contain the same crystal structures.",
+  "year": 2024,
+  "venue": "Acta Crystallographica Section B Structural Science Crystal Engineering and Materials",
+  "authors": [
+   "Lily M. Hunnisett",
+   "Jonas Nyman",
+   "Nicholas Francia",
+   "Nathan S. Abraham",
+   "Claire S. Adjiman",
+   "Srinivasulu Aitipamula"
+  ],
+  "citations": 83,
+  "source": "openalex",
+  "source_id": "W4403445782",
+  "doi": "10.1107/s2052520624007492",
+  "arxiv_id": null,
+  "paper_url": "https://journals.iucr.org/b/issues/2024/06/00/aw5093/aw5093.pdf",
+  "published_iso": "2024-09-13",
+  "oa_field": "Chemistry",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Predicting hematoma expansion in acute spontaneous intracerebral hemorrhage: integrating clinical factors with a multitask deep learning model for non-contrast head CT",
+  "title_norm": "predicting hematoma expansion in acute spontaneous intracerebral hemorrhage inte",
+  "abstract": "PURPOSE: To predict hematoma growth in intracerebral hemorrhage patients by combining clinical findings with non-contrast CT imaging features analyzed through deep learning. METHODS: Three models were developed to predict hematoma expansion (HE) in 572 patients. We utilized multi-task learning for both hematoma segmentation and prediction of expansion: the Image-to-HE model processed hematoma slices, extracting features and computing a normalized DL score for HE prediction. The Clinical-to-HE model utilized multivariate logistic regression on clinical variables. The Integrated-to-HE model combined image-derived and clinical data. Significant clinical variables were selected using forward selection in logistic regression. The two models incorporating clinical variables were statistically validated. RESULTS: For hematoma detection, the diagnostic performance of the developed multi-task model was excellent (AUC, 0.99). For expansion prediction, three models were evaluated for predicting HE. The Image-to-HE model achieved an accuracy of 67.3%, sensitivity of 81.0%, specificity of 64.0%, and an AUC of 0.76. The Clinical-to-HE model registered an accuracy of 74.8%, sensitivity of 81.0%, specificity of 73.3%, and an AUC of 0.81. The Integrated-to-HE model, merging both image and clinical data, excelled with an accuracy of 81.3%, sensitivity of 76.2%, specificity of 82.6%, and an AUC of 0.83. The Integrated-to-HE model, aligning closest to the diagonal line and indicating the highest level of calibration, showcases superior performance in predicting HE outcomes among the three models. CONCLUSION: The integration of clinical findings with non-contrast CT imaging features analyzed through deep learning showed the potential for improving the prediction of HE in acute spontaneous intracerebral hemorrhage patients.",
+  "year": 2024,
+  "venue": "Neuroradiology",
+  "authors": [
+   "Hyochul Lee",
+   "Junhyeok Lee",
+   "Joon Hwan Jang",
+   "Inpyeong Hwang",
+   "Kyu Sung Choi",
+   "Jung Hyun Park"
+  ],
+  "citations": 29,
+  "source": "openalex",
+  "source_id": "W4392737370",
+  "doi": "10.1007/s00234-024-03298-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00234-024-03298-y.pdf",
+  "published_iso": "2024-02-09",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Presidential Address: Sustainable Finance and ESG Issues— Value versus Values",
+  "title_norm": "presidential address sustainable finance and esg issues value versus values",
+  "abstract": "ABSTRACT In this address, I discuss differences across investor and manager motivations for considering sustainable finance— value versus values motivations—and how these differences contribute to misunderstandings about environmental, social, and governance investment approaches. The finance research community has the ability and responsibility to help clear up these misunderstandings through additional research, which I suggest.",
+  "year": 2023,
+  "venue": "The Journal of Finance",
+  "authors": [
+   "Laura T. Starks"
+  ],
+  "citations": 457,
+  "source": "openalex",
+  "source_id": "W4381429409",
+  "doi": "10.1111/jofi.13255",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.13255",
+  "published_iso": "2023-06-19",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Conformal Prediction with Large Language Models for Multi-Choice Question Answering",
+  "title_norm": "conformal prediction with large language models for multi choice question answer",
+  "abstract": "As large language models continue to be widely developed, robust uncertainty quantification techniques will become crucial for their safe deployment in high-stakes scenarios. In this work, we explore how conformal prediction can be used to provide uncertainty quantification in language models for the specific task of multiple-choice question-answering. We find that the uncertainty estimates from conformal prediction are tightly correlated with prediction accuracy. This observation can be useful for downstream applications such as selective classification and filtering out low-quality predictions. We also investigate the exchangeability assumption required by conformal prediction to out-of-subject questions, which may be a more realistic scenario for many practical applications. Our work contributes towards more trustworthy and reliable usage of large language models in safety-critical situations, where robust guarantees of error rate are required.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Bhawesh Kumar",
+   "Charlie Lu",
+   "Gauri Gupta",
+   "Anil Palepu",
+   "David Bellamy",
+   "Ramesh Raskar"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4378942327",
+  "doi": "10.48550/arxiv.2305.18404",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2305.18404",
+  "published_iso": "2023-05-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "An adversarial collaboration protocol for testing contrasting predictions of global neuronal workspace and integrated information theory",
+  "title_norm": "an adversarial collaboration protocol for testing contrasting predictions of glo",
+  "abstract": "The relationship between conscious experience and brain activity has intrigued scientists and philosophers for centuries. In the last decades, several theories have suggested different accounts for these relationships. These theories have developed in parallel, with little to no cross-talk among them. To advance research on consciousness, we established an adversarial collaboration between proponents of two of the major theories in the field, Global Neuronal Workspace and Integrated Information Theory. Together, we devised and preregistered two experiments that test contrasting predictions of these theories concerning the location and timing of correlates of visual consciousness, which have been endorsed by the theories' proponents. Predicted outcomes should either support, refute, or challenge these theories. Six theory-impartial laboratories will follow the study protocol specified here, using three complementary methods: Functional Magnetic Resonance Imaging (fMRI), Magneto-Electroencephalography (M-EEG), and intracranial electroencephalography (iEEG). The study protocol will include built-in replications, both between labs and within datasets. Through this ambitious undertaking, we hope to provide decisive evidence in favor or against the two theories and clarify the footprints of conscious visual perception in the human brain, while also providing an innovative model of large-scale, collaborative, and open science practice.",
+  "year": 2023,
+  "venue": "PLoS ONE",
+  "authors": [
+   "Lucía Melloni",
+   "Liad Mudrik",
+   "Michael Pitts",
+   "Katarina Bendtz",
+   "Oscar Ferrante",
+   "Urszula Górska"
+  ],
+  "citations": 115,
+  "source": "openalex",
+  "source_id": "W4319825978",
+  "doi": "10.1371/journal.pone.0268577",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0268577&type=printable",
+  "published_iso": "2023-02-10",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Using and Interpreting Fixed Effects Models",
+  "title_norm": "using and interpreting fixed effects models",
+  "abstract": "ABSTRACT Fixed effects (FE) have emerged as a ubiquitous and powerful tool for eliminating unwanted variation in observational accounting studies. Unwanted variation is plentiful in accounting research because we often use rich data to test precise hypotheses derived from abstract theories. By eliminating unwanted variation, FE reduce concerns that omitted variables bias our estimates or weaken test power. FE are not costless, though, so their use should be carefully justified by theoretical and institutional considerations. FE also transform samples and variables in ways that are not immediately apparent, and in doing so affect how we should interpret regression results. This primer explains the mechanics of FE and provides practical guidance for the informed use, transparent reporting, and careful interpretation of FE models.",
+  "year": 2024,
+  "venue": "Journal of Accounting Research",
+  "authors": [
+   "Matthias Breuer",
+   "Ed deHaan"
+  ],
+  "citations": 371,
+  "source": "openalex",
+  "source_id": "W4399688201",
+  "doi": "10.1111/1475-679x.12559",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1475-679X.12559",
+  "published_iso": "2024-06-13",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Theoretical Foundations of Conformal Prediction",
+  "title_norm": "theoretical foundations of conformal prediction",
+  "abstract": "This book is about conformal prediction and related inferential techniques that build on permutation tests and exchangeability. These techniques are useful in a diverse array of tasks, including hypothesis testing and providing uncertainty quantification guarantees for machine learning systems. Much of the current interest in conformal prediction is due to its ability to integrate into complex machine learning workflows, solving the problem of forming prediction sets without any assumptions on the form of the data generating distribution. Since contemporary machine learning algorithms have generally proven difficult to analyze directly, conformal prediction's main appeal is its ability to provide formal, finite-sample guarantees when paired with such methods. The goal of this book is to teach the reader about the fundamental technical arguments that arise when researching conformal prediction and related questions in distribution-free inference. Many of these proof strategies, especially the more recent ones, are scattered among research papers, making it difficult for researchers to understand where to look, which results are important, and how exactly the proofs work. We hope to bridge this gap by curating what we believe to be some of the most important results in the literature and presenting their proofs in a unified language, with illustrations, and with an eye towards pedagogy.",
+  "year": 2024,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Anastasios N. Angelopoulos",
+   "Rina Foygel Barber",
+   "Stephen Bates"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4404571268",
+  "doi": "10.48550/arxiv.2411.11824",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2411.11824",
+  "published_iso": "2024-11-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Image quality characterization of an ultra‐high‐speed kilovoltage cone‐beam computed tomography imaging system on an O‐ring linear accelerator",
+  "title_norm": "image quality characterization of an ultra high speed kilovoltage cone beam comp",
+  "abstract": "PURPOSE: The quality of on-board imaging systems, including cone-beam computed tomography (CBCT), plays a vital role in image-guided radiation therapy (IGRT) and adaptive radiotherapy. Recently, there has been an upgrade of the CBCT systems fused in the O-ring linear accelerators called HyperSight, featuring a high imaging performance. As the characterization of a new imaging system is essential, we evaluated the image quality of the HyperSight system by comparing it with Halcyon 3.0 CBCT and providing benchmark data for routine imaging quality assurance. METHODS: The HyperSight features ultra-fast scan time, a larger kilovoltage (kV) detector, a more substantial kV tube, and an advanced reconstruction algorithm. Imaging protocols in the two modes of operation, treatment mode with IGRT and the CBCT for planning (CBCTp) mode were evaluated and compared with Halcyon 3.0 CBCT. Image quality metrics, including spatial resolution, contrast resolution, uniformity, noise, computed tomography (CT) number linearity, and calibration error, were assessed using a Catphan and an electron density phantom and analyzed with TotalQA software. RESULTS: HyperSight demonstrated substantial improvements in contrast-to-noise ratio and noise in both IGRT and CBCTp modes compared to Halcyon 3.0 CBCT. CT number calibration error of HyperSight CBCTp mode (1.06%) closely matches that of a full CT scanner (0.72%), making it suitable for adaptive planning. In addition, the advanced hardware of HyperSight, such as ultra-fast scan time (5.9 s) or 2.5 times larger heat unit capacity, enhanced the clinical efficiency in our experience. CONCLUSIONS: HyperSight represented a significant advancement in CBCT imaging. With its image quality, CT number accuracy, and ultra-fast scans, HyperSight has a potential to transform patient care and treatment outcomes. The enhanced scan speed and image quality of HyperSight are expected to significantly improve the quality and efficiency of treatment, particularly benefiting patients.",
+  "year": 2024,
+  "venue": "Journal of Applied Clinical Medical Physics",
+  "authors": [
+   "Euidam Kim",
+   "Yang Kyun Park",
+   "Tianyu Zhao",
+   "Eric Laugeman",
+   "Xiaodong Zhao",
+   "Yao Hao"
+  ],
+  "citations": 54,
+  "source": "openalex",
+  "source_id": "W4393987791",
+  "doi": "10.1002/acm2.14337",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4393987791",
+  "published_iso": "2024-04-04",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Causal machine learning for predicting treatment outcomes",
+  "title_norm": "causal machine learning for predicting treatment outcomes",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Nature Medicine",
+  "authors": [
+   "Stefan Feuerriegel",
+   "Dennis Frauen",
+   "Valentyn Melnychuk",
+   "Jonas Schweisthal",
+   "Konstantin Heß",
+   "Alicia Curth"
+  ],
+  "citations": 309,
+  "source": "openalex",
+  "source_id": "W4394964969",
+  "doi": "10.1038/s41591-024-02902-1",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2410.08770",
+  "published_iso": "2024-04-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "A Stock Price Prediction Model Based on Investor Sentiment and Optimized Deep Learning",
+  "title_norm": "a stock price prediction model based on investor sentiment and optimized deep le",
+  "abstract": "Accurate prediction of stock prices can reduce investment risks and increase returns. This paper combines the multi-source data affecting stock prices and applies sentiment analysis, swarm intelligence algorithm, and deep learning to build the MS-SSA-LSTM model. Firstly, we crawl the East Money forum posts information to establish the unique sentiment dictionary and calculate the sentiment index. Then, the Sparrow Search Algorithm (SSA) optimizes the Long and Short-Term Memory network (LSTM) hyperparameters. Finally, the sentiment index and fundamental trading data are integrated, and LSTM is used to forecast stock prices in the future. Experiments demonstrate that the MS-SSA-LSTM model outperforms the others and has high universal applicability. Compared with standard LSTM, the$R^{2}$of MS-SSA-LSTM is improved by 10.74% on average. We found that: 1) Adding the sentiment index can enhance the model’s predictive performance. 2) The LSTM’s hyperparameters are optimized using SSA, which objectively explains the model parameter settings and improves the prediction effect. 3) The high volatility of China’s financial market is more suitable for short-term prediction.",
+  "year": 2023,
+  "venue": "IEEE Access",
+  "authors": [
+   "Guangyu Mu",
+   "Gao Nan",
+   "Yuhan Wang",
+   "Dai Li"
+  ],
+  "citations": 97,
+  "source": "openalex",
+  "source_id": "W4377292358",
+  "doi": "10.1109/access.2023.3278790",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/6287639/10005208/10130578.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Tumour response to hypoxia: understanding the hypoxic tumour microenvironment to improve treatment outcome in solid tumours",
+  "title_norm": "tumour response to hypoxia understanding the hypoxic tumour microenvironment to ",
+  "abstract": "Hypoxia is a common feature of solid tumours affecting their biology and response to therapy. One of the main transcription factors activated by hypoxia is hypoxia-inducible factor (HIF), which regulates the expression of genes involved in various aspects of tumourigenesis including proliferative capacity, angiogenesis, immune evasion, metabolic reprogramming, extracellular matrix (ECM) remodelling, and cell migration. This can negatively impact patient outcomes by inducing therapeutic resistance. The importance of hypoxia is clearly demonstrated by continued research into finding clinically relevant hypoxia biomarkers, and hypoxia-targeting therapies. One of the problems is the lack of clinically applicable methods of hypoxia detection, and lack of standardisation. Additionally, a lot of the methods of detecting hypoxia do not take into consideration the complexity of the hypoxic tumour microenvironment (TME). Therefore, this needs further elucidation as approximately 50% of solid tumours are hypoxic. The ECM is important component of the hypoxic TME, and is developed by both cancer associated fibroblasts (CAFs) and tumour cells. However, it is important to distinguish the different roles to develop both biomarkers and novel compounds. Fibronectin (FN), collagen (COL) and hyaluronic acid (HA) are important components of the ECM that create ECM fibres. These fibres are crosslinked by specific enzymes including lysyl oxidase (LOX) which regulates the stiffness of tumours and induces fibrosis. This is partially regulated by HIFs. The review highlights the importance of understanding the role of matrix stiffness in different solid tumours as current data shows contradictory results on the impact on therapeutic resistance. The review also indicates that further research is needed into identifying different CAF subtypes and their exact roles; with some showing pro-tumorigenic capacity and others having anti-tumorigenic roles. This has made it difficult to fully elucidate the role of CAFs within the TME. However, it is clear that this is an important area of research that requires unravelling as current strategies to target CAFs have resulted in worsened prognosis. The role of immune cells within the tumour microenvironment is also discussed as hypoxia has been associated with modulating immune cells to create an anti-tumorigenic environment. Which has led to the development of immunotherapies including PD-L1. These hypoxia-induced changes can confer resistance to conventional therapies, such as chemotherapy, radiotherapy, and immunotherapy. This review summarizes the current knowledge on the impact of hypoxia on the TME and its implications for therapy resistance. It also discusses the potential of hypoxia biomarkers as prognostic and predictive indictors of treatment response, as well as the challenges and opportunities of targeting hypoxia in clinical trials.",
+  "year": 2024,
+  "venue": "Frontiers in Oncology",
+  "authors": [
+   "Kamilla J. A. Bigos",
+   "Conrado Guerrero Quiles",
+   "Sapna Lunj",
+   "Danielle Smith",
+   "Mechthild Krause",
+   "Esther G.C. Troost"
+  ],
+  "citations": 126,
+  "source": "openalex",
+  "source_id": "W4391359162",
+  "doi": "10.3389/fonc.2024.1331355",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2024.1331355/pdf",
+  "published_iso": "2024-01-30",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Adverse effects of tyrosine kinase inhibitors in cancer therapy: pathophysiology, mechanisms and clinical management",
+  "title_norm": "adverse effects of tyrosine kinase inhibitors in cancer therapy pathophysiology ",
+  "abstract": "Since their invention in the early 2000s, tyrosine kinase inhibitors (TKIs) have gained prominence as the most effective pathway-directed anti-cancer agents. TKIs have shown significant utility in the treatment of multiple hematological malignancies and solid tumors, including chronic myelogenous leukemia, non-small cell lung cancers, gastrointestinal stromal tumors, and HER2-positive breast cancers. Given their widespread applications, an increasing frequency of TKI-induced adverse effects has been reported. Although TKIs are known to affect multiple organs in the body including the lungs, liver, gastrointestinal tract, kidneys, thyroid, blood, and skin, cardiac involvement accounts for some of the most serious complications. The most frequently reported cardiovascular side effects range from hypertension, atrial fibrillation, reduced cardiac function, and heart failure to sudden death. The potential mechanisms of these side effects are unclear, leading to critical knowledge gaps in the development of effective therapy and treatment guidelines. There are limited data to infer the best clinical approaches for the early detection and therapeutic modulation of TKI-induced side effects, and universal consensus regarding various management guidelines is yet to be reached. In this state-of-the-art review, we examine multiple pre-clinical and clinical studies and curate evidence on the pathophysiology, mechanisms, and clinical management of these adverse reactions. We expect that this review will provide researchers and allied healthcare providers with the most up-to-date information on the pathophysiology, natural history, risk stratification, and management of emerging TKI-induced side effects in cancer patients.",
+  "year": 2023,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Sunitha Shyam Sunder",
+   "Umesh C. Sharma",
+   "Saraswati Pokharel"
+  ],
+  "citations": 487,
+  "source": "openalex",
+  "source_id": "W4383315118",
+  "doi": "10.1038/s41392-023-01469-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41392-023-01469-6.pdf",
+  "published_iso": "2023-07-06",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Perceiver CPI: a nested cross-attention network for compound–protein interaction prediction",
+  "title_norm": "perceiver cpi a nested cross attention network for compound protein interaction ",
+  "abstract": "MOTIVATION: Compound-protein interaction (CPI) plays an essential role in drug discovery and is performed via expensive molecular docking simulations. Many artificial intelligence-based approaches have been proposed in this regard. Recently, two types of models have accomplished promising results in exploiting molecular information: graph convolutional neural networks that construct a learned molecular representation from a graph structure (atoms and bonds), and neural networks that can be applied to compute on descriptors or fingerprints of molecules. However, the superiority of one method over the other is yet to be determined. Modern studies have endeavored to aggregate information that is extracted from compounds and proteins to form the CPI task. Nonetheless, these approaches have used a simple concatenation to combine them, which cannot fully capture the interaction between such information. RESULTS: We propose the Perceiver CPI network, which adopts a cross-attention mechanism to improve the learning ability of the representation of drug and target interactions and exploits the rich information obtained from extended-connectivity fingerprints to improve the performance. We evaluated Perceiver CPI on three main datasets, Davis, KIBA and Metz, to compare the performance of our proposed model with that of state-of-the-art methods. The proposed method achieved satisfactory performance and exhibited significant improvements over previous approaches in all experiments. AVAILABILITY AND IMPLEMENTATION: Perceiver CPI is available at https://github.com/dmis-lab/PerceiverCPI. SUPPLEMENTARY INFORMATION: Supplementary data are available at Bioinformatics online.",
+  "year": 2022,
+  "venue": "Bioinformatics",
+  "authors": [
+   "Ngoc-Quang Nguyen",
+   "Gwanghoon Jang",
+   "Hajung Kim",
+   "Jaewoo Kang"
+  ],
+  "citations": 83,
+  "source": "openalex",
+  "source_id": "W4309728351",
+  "doi": "10.1093/bioinformatics/btac731",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/bioinformatics/article-pdf/39/1/btac731/48763603/btac731.pdf",
+  "published_iso": "2022-11-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "From fundamentals in calibration to modern methodologies: A tutorial for small molecules quantification in liquid chromatography–mass spectrometry bioanalysis",
+  "title_norm": "from fundamentals in calibration to modern methodologies a tutorial for small mo",
+  "abstract": "Over the last two decades, liquid chromatography coupled to mass-spectrometry (LC‒MS) has become the gold standard to perform qualitative and quantitative analyses of small molecules. When quantitative analysis is developed, an analyst usually refers to international guidelines for analytical method validation. In this context, the design of calibration curves plays a key role in providing accurate results. During recent years and along with instrumental advances, strategies to build calibration curves have dramatically evolved, introducing innovative approaches to improve quantitative precision and throughput. For example, when a labeled standard is available to be spiked directly into the study sample, the concentration of the unlabeled analog can be easily determined using the isotopic pattern deconvolution or the internal calibration approach, eliminating the need for multipoint calibration curves. This tutorial aims to synthetize the advances in LC‒MS quantitative analysis for small molecules in complex matrices, going from fundamental aspects in calibration to modern methodologies and applications. Different work schemes for calibration depending on the sample characteristics (analyte and matrix nature) are distinguished and discussed. Finally, this tutorial outlines the importance of having international guidelines for analytical method validation that agree with the advances in calibration strategies and analytical instrumentation.",
+  "year": 2022,
+  "venue": "Analytica Chimica Acta",
+  "authors": [
+   "Gioele Visconti",
+   "Julien Boccard",
+   "Max Feinberg",
+   "Serge Rudaz"
+  ],
+  "citations": 70,
+  "source": "openalex",
+  "source_id": "W4310802239",
+  "doi": "10.1016/j.aca.2022.340711",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S000326702201282X-ga1_lrg.jpg",
+  "published_iso": "2022-12-07",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Heterogeneous treatment effects and optimal targeting policy evaluation",
+  "title_norm": "heterogeneous treatment effects and optimal targeting policy evaluation",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Quantitative Marketing and Economics",
+  "authors": [
+   "Günter J. Hitsch",
+   "Sanjog Misra",
+   "Walter W. Zhang"
+  ],
+  "citations": 32,
+  "source": "openalex",
+  "source_id": "W4393986369",
+  "doi": "10.1007/s11129-023-09278-5",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4393986369",
+  "published_iso": "2024-04-05",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "High Accuracy Prediction of PROTAC Complex Structures",
+  "title_norm": "high accuracy prediction of protac complex structures",
+  "abstract": "The design of PROteolysis-TArgeting Chimeras (PROTACs) requires bringing an E3 ligase into proximity with a target protein to modulate the concentration of the latter through its ubiquitination and degradation. Here, we present a method for generating high-accuracy structural models of E3 ligase-PROTAC-target protein ternary complexes. The method is dependent on two computational innovations: adding a \"silent\" convolution term to an efficient protein-protein docking program to eliminate protein poses that do not have acceptable linker conformations and clustering models of multiple PROTACs that use the same E3 ligase and target the same protein. Results show that the largest consensus clusters always have high predictive accuracy and that the ensemble of models can be used to predict the dissociation rate and cooperativity of the ternary complex that relate to the degrading activity of the PROTAC. The method is demonstrated by applications to known PROTAC structures and a blind test involving PROTACs against BRAF mutant V600E. The results confirm that PROTACs function by stabilizing a favorable interaction between the E3 ligase and the target protein but do not necessarily exploit the most energetically favorable geometry for interaction between the proteins.",
+  "year": 2023,
+  "venue": "Journal of the American Chemical Society",
+  "authors": [
+   "Mikhail Ignatov",
+   "Akhil Jindal",
+   "Sergei Kotelnikov",
+   "Dmitri Beglov",
+   "Ganna Posternak",
+   "Xiaojing Tang"
+  ],
+  "citations": 59,
+  "source": "openalex",
+  "source_id": "W4360825536",
+  "doi": "10.1021/jacs.2c09387",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10240388/pdf/nihms-1896217.pdf",
+  "published_iso": "2023-03-24",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "SPeC: A Soft Prompt-Based Calibration on Performance Variability of Large Language Model in Clinical Notes Summarization",
+  "title_norm": "spec a soft prompt based calibration on performance variability of large languag",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Journal of Biomedical Informatics",
+  "authors": [
+   "Yu-Neng Chuang",
+   "Ruixiang Tang",
+   "Xiaoqian Jiang",
+   "Xia Hu"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4391826804",
+  "doi": "10.1016/j.jbi.2024.104606",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11608453/pdf/nihms-2035862.pdf",
+  "published_iso": "2024-02-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Infectious Diseases Society of America 2023 Guidance on the Treatment of Antimicrobial Resistant Gram-Negative Infections",
+  "title_norm": "infectious diseases society of america 2023 guidance on the treatment of antimic",
+  "abstract": "BACKGROUND: The Infectious Diseases Society of America (IDSA) is committed to providing up-to-date guidance on the treatment of antimicrobial-resistant infections. This guidance document focuses on infections caused by extended-spectrum β-lactamase producing Enterobacterales (ESBL-E), AmpC β-lactamase-producing Enterobacterales (AmpC-E), carbapenem-resistant Enterobacterales (CRE), Pseudomonas aeruginosa with difficult-to-treat resistance (DTR-P. aeruginosa), carbapenem-resistant Acinetobacter baumannii (CRAB), and Stenotrophomonas maltophilia. This updated document replaces previous versions of the guidance document. METHODS: A panel of six infectious diseases specialists with expertise in managing antimicrobial-resistant infections formulated questions about the treatment of infections caused by ESBL-E, AmpC-E, CRE, DTR-P. aeruginosa, CRAB, and S. maltophilia. Because of differences in the epidemiology of resistance and availability of specific anti-infectives internationally, this document focuses on the treatment of infections in the United States. RESULTS: Preferred and alternative suggested treatment approaches are provided with accompanying rationales, assuming the causative organism has been identified and antibiotic susceptibility results are known. Approaches to empiric treatment, transitioning to oral therapy, duration of therapy, and other management considerations are also discussed briefly. Suggested approaches apply for both adult and pediatric populations, although suggested antibiotic dosages are provided only for adults. CONCLUSIONS: The field of antimicrobial resistance is highly dynamic. Consultation with an infectious diseases specialist is recommended for the treatment of antimicrobial resistant infections. This document is current as of December 31, 2022 and will be updated periodically. The most current version of this document, including date of publication, is available at www.idsociety.org/practice-guideline/amr-guidance/.",
+  "year": 2023,
+  "venue": "Clinical Infectious Diseases",
+  "authors": [
+   "Pranita D. Tamma",
+   "Samuel L Aitken",
+   "Robert A. Bonomo",
+   "Amy J. Mathers",
+   "David van Duin",
+   "Cornelius J. Clancy"
+  ],
+  "citations": 700,
+  "source": "openalex",
+  "source_id": "W4384665204",
+  "doi": "10.1093/cid/ciad428",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/cid/advance-article-pdf/doi/10.1093/cid/ciad428/51246148/ciad428.pdf",
+  "published_iso": "2023-07-17",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "A Review of Macroscopic Carbon Emission Prediction Model Based on Machine Learning",
+  "title_norm": "a review of macroscopic carbon emission prediction model based on machine learni",
+  "abstract": "Under the background of global warming and the energy crisis, the Chinese government has set the goal of carbon peaking and carbon neutralization. With the rapid development of machine learning, some advanced machine learning algorithms have also been applied to the control and prediction of carbon emissions due to their high efficiency and accuracy. In this paper, the current situation of machine learning applied to carbon emission prediction is studied in detail by means of paper retrieval. It was found that machine learning has become a hot topic in the field of carbon emission prediction models, and the main carbon emission prediction models are mainly based on back propagation neural networks, support vector machines, long short-term memory neural networks, random forests and extreme learning machines. By describing the characteristics of these five types of carbon emission prediction models and conducting a comparative analysis, we determined the applicable characteristics of each model, and based on this, future research ideas for carbon emission prediction models based on machine learning are proposed.",
+  "year": 2023,
+  "venue": "Sustainability",
+  "authors": [
+   "Yuhong Zhao",
+   "Ruirui Liu",
+   "Zhansheng Liu",
+   "Liang Liu",
+   "Jingjing Wang",
+   "Wenxiang Liu"
+  ],
+  "citations": 69,
+  "source": "openalex",
+  "source_id": "W4366598224",
+  "doi": "10.3390/su15086876",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/15/8/6876/pdf?version=1681901800",
+  "published_iso": "2023-04-19",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Data-Driven Calibration Algorithm and Pre-Launch Performance Simulations for the SWOT Mission",
+  "title_norm": "data driven calibration algorithm and pre launch performance simulations for the",
+  "abstract": "The Surface Water and Ocean Topography (SWOT) mission will be affected by various sources of systematic errors, which are correlated in space and in time. Their amplitude before calibration might be as large as tens of centimeters, i.e., able to dominate the mission error budget. To reduce their magnitude, we developed so-called data-driven (or empirical) calibration algorithms. This paper provided a summary of the overall problem, and then presented the calibration framework used for SWOT, as well as the pre-launch performance simulations. We presented two complete algorithm sequences that use ocean measurements to calibrate KaRIN globally. The simple and robust Level-2 algorithm was implemented in the ground segment to control the main source of error of SWOT’s hydrology products. In contrast, the more sophisticated Level-3 (multi-mission) algorithm was developed to improve the accuracy of ocean products, as well as the one-day orbit of the SWOT mission. The Level-2 algorithm yielded a mean inland error of 3–6 cm, i.e., a margin of 25–80% (of the signal variance) with respect to the error budget requirements. The Level-3 algorithm yielded ocean residuals of 1 cm, i.e., a variance reduction of 60–80% with respect to the Level-2 algorithm.",
+  "year": 2022,
+  "venue": "Remote Sensing",
+  "authors": [
+   "Gérald Dibarboure",
+   "Clément Ubelmann",
+   "Benjamin Flamant",
+   "Frédéric Briol",
+   "Eva Peral",
+   "Geoffroy Bracher"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4311011786",
+  "doi": "10.3390/rs14236070",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-4292/14/23/6070/pdf?version=1669958340",
+  "published_iso": "2022-11-30",
+  "oa_field": "Earth and Planetary Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Recent developments, advances and strategies in heterogeneous photocatalysts for water splitting",
+  "title_norm": "recent developments advances and strategies in heterogeneous photocatalysts for ",
+  "abstract": ", strong light absorption, and synthesis of structures with a nanometer scale. Future research will focus on developing novel materials, investigating potential synthesis techniques, and improving existing high-energy raw materials. The endeavors aim is to enhance the efficiency of energy conversion, the absorption of radiation, and the coherence of physiochemical processes.",
+  "year": 2024,
+  "venue": "Nanoscale Advances",
+  "authors": [
+   "Muhammad Sohail",
+   "Sana Rauf",
+   "Muhammad Irfan",
+   "Asif Hayat",
+   "Majed M. Alghamdi",
+   "Adel A. El–Zahhar"
+  ],
+  "citations": 209,
+  "source": "openalex",
+  "source_id": "W4390521620",
+  "doi": "10.1039/d3na00442b",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2024/na/d3na00442b",
+  "published_iso": "2024-01-01",
+  "oa_field": "Energy",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "TRFM-LS: Transformer-Based Deep Learning Method for Vessel Trajectory Prediction",
+  "title_norm": "trfm ls transformer based deep learning method for vessel trajectory prediction",
+  "abstract": "In the context of the rapid development of deep learning theory, predicting future motion states based on time series sequence data of ship trajectories can significantly improve the safety of the traffic environment. Considering the spatiotemporal correlation of AIS data, a trajectory time window panning and smoothing filtering method is proposed for the abnormal values existing in the trajectory data. The application of this method can effectively deal with the jump values and outliers in the trajectory data, make the trajectory smooth and continuous, and ensure the temporal order and integrity of the trajectory data. In this paper, for the features of spatiotemporal data of trajectories, the LSTM structure is integrated on the basis of the deep learning Transformer algorithm framework, abbreviated as TRFM-LS. The LSTM module can learn the temporal features of spatiotemporal data in the process of computing the target sequence, while the self-attention mechanism in Transformer can solve the drawback of applying LSTM to capture the sequence information weakly at a distance. The advantage of complementarity of the fusion model in the training process of trajectory sequences with respect to the long-range dependence of temporal and spatial features is realized. Finally, in the comparative analysis section of the error metrics, by comparing with current state-of-the-art methods, the algorithm in this paper is shown to have higher accuracy in predicting time series trajectory data. The research in this paper provides an early warning information reference for autonomous navigation and autonomous collision avoidance of ships in practice.",
+  "year": 2023,
+  "venue": "Journal of Marine Science and Engineering",
+  "authors": [
+   "Dapeng Jiang",
+   "Guoyou Shi",
+   "Na Li",
+   "Lin Ma",
+   "Weifeng Li",
+   "Jiahui Shi"
+  ],
+  "citations": 85,
+  "source": "openalex",
+  "source_id": "W4366771311",
+  "doi": "10.3390/jmse11040880",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-1312/11/4/880/pdf?version=1682065930",
+  "published_iso": "2023-04-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Agent-based modeling in cancer biomedicine: applications and tools for calibration and validation",
+  "title_norm": "agent based modeling in cancer biomedicine applications and tools for calibratio",
+  "abstract": "Computational models are not just appealing because they can simulate and predict the development of biological phenomena across multiple spatial and temporal scales, but also because they can integrate information from well-established in vitro and in vivo models and test new hypotheses in cancer biomedicine. Agent-based models and simulations are especially interesting candidates among computational modeling procedures in cancer research due to the capability to, for instance, recapitulate the dynamics of neoplasia and tumor – host interactions. Yet, the absence of methods to validate the consistency of the results across scales can hinder adoption by turning fine-tuned models into black boxes. This review compiles relevant literature that explores strategies to leverage high-fidelity simulations of multi-scale, or multi-level, cancer models with a focus on verification approached as simulation calibration. We consolidate our review with an outline of modern approaches for agent-based models’ validation and provide an ambitious outlook toward rigorous and reliable calibration.",
+  "year": 2024,
+  "venue": "Cancer Biology & Therapy",
+  "authors": [
+   "Nicolò Cogno",
+   "Cristian Axenie",
+   "Roman Bauer",
+   "Vasileios Vavourakis"
+  ],
+  "citations": 43,
+  "source": "openalex",
+  "source_id": "W4395958399",
+  "doi": "10.1080/15384047.2024.2344600",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/15384047.2024.2344600?needAccess=true",
+  "published_iso": "2024-04-28",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Triple Negative Breast Cancer Treatment Options and Limitations: Future Outlook",
+  "title_norm": "triple negative breast cancer treatment options and limitations future outlook",
+  "abstract": "Triple negative breast cancer (TNBC) has a negative expression of estrogen receptors (ER), progesterone receptors (PR), and human epidermal growth factor receptors (HER2). The survival rate for TNBC is generally worse than other breast cancer subtypes. TNBC treatment has made significant advances, but certain limitations remain. Treatment for TNBC can be challenging since the disease has various molecular subtypes. A variety of treatment options are available, such as chemotherapy, immunotherapy, radiotherapy, and surgery. Chemotherapy is the most common of these options. TNBC is generally treated with systemic chemotherapy using drugs such as anthracyclines and taxanes in neoadjuvant or adjuvant settings. Developing resistance to anticancer drugs and off-target toxicity are the primary hindrances to chemotherapeutic solutions for cancer. It is imperative that researchers, clinicians, and pharmaceutical companies work together to develop effective treatment options for TNBC. Several studies have suggested nanotechnology as a potential solution to the problem of suboptimal TNBC treatment. In this review, we summarized possible treatment options for TNBC, including chemotherapy, immunotherapy, targeted therapy, combination therapy, and nanoparticle-based therapy, and some solutions for the treatment of TNBC in the future. Moreover, we gave general information about TNBC in terms of its characteristics and aggressiveness.",
+  "year": 2023,
+  "venue": "Pharmaceutics",
+  "authors": [
+   "Onyinyechi Obidiro",
+   "Gantumur Battogtokh",
+   "Emmanuel O. Akala"
+  ],
+  "citations": 437,
+  "source": "openalex",
+  "source_id": "W4382068653",
+  "doi": "10.3390/pharmaceutics15071796",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1999-4923/15/7/1796/pdf?version=1687506745",
+  "published_iso": "2023-06-23",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Selection by Prediction with Conformal p-values",
+  "title_norm": "selection by prediction with conformal p values",
+  "abstract": "Decision making or scientific discovery pipelines such as job hiring and drug discovery often involve multiple stages: before any resource-intensive step, there is often an initial screening that uses predictions from a machine learning model to shortlist a few candidates from a large pool. We study screening procedures that aim to select candidates whose unobserved outcomes exceed user-specified values. We develop a method that wraps around any prediction model to produce a subset of candidates while controlling the proportion of falsely selected units. Building upon the conformal inference framework, our method first constructs p-values that quantify the statistical evidence for large outcomes; it then determines the shortlist by comparing the p-values to a threshold introduced in the multiple testing literature. In many cases, the procedure selects candidates whose predictions are above a data-dependent threshold. Our theoretical guarantee holds under mild exchangeability conditions on the samples, generalizing existing results on multiple conformal p-values. We demonstrate the empirical performance of our method via simulations, and apply it to job hiring and drug discovery datasets.",
+  "year": 2022,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Ying Jin",
+   "Emmanuel J. Candès"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4302306162",
+  "doi": "10.48550/arxiv.2210.01408",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2210.01408",
+  "published_iso": "2022-10-04",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Neural network potentials for chemistry: concepts, applications and prospects",
+  "title_norm": "neural network potentials for chemistry concepts applications and prospects",
+  "abstract": "Artificial Neural Networks (NN) are already heavily involved in methods and applications for frequent tasks in the field of computational chemistry such as representation of potential energy surfaces (PES) and spectroscopic predictions. This perspective provides an overview of the foundations of neural network-based full-dimensional potential energy surfaces, their architectures, underlying concepts, their representation and applications to chemical systems. Methods for data generation and training procedures for PES construction are discussed and means for error assessment and refinement through transfer learning are presented. A selection of recent results illustrates the latest improvements regarding accuracy of PES representations and system size limitations in dynamics simulations, but also NN application enabling direct prediction of physical results without dynamics simulations. The aim is to provide an overview for the current state-of-the-art NN approaches in computational chemistry and also to point out the current challenges in enhancing reliability and applicability of NN methods on a larger scale.",
+  "year": 2022,
+  "venue": "Digital Discovery",
+  "authors": [
+   "Silvan Käser",
+   "Luis Itza Vazquez-Salazar",
+   "Markus Meuwly",
+   "Kai Töpfer"
+  ],
+  "citations": 132,
+  "source": "openalex",
+  "source_id": "W4312043350",
+  "doi": "10.1039/d2dd00102k",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2023/dd/d2dd00102k",
+  "published_iso": "2022-12-21",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Spatiotemporally heterogeneous coordination of cholinergic and neocortical activity",
+  "title_norm": "spatiotemporally heterogeneous coordination of cholinergic and neocortical activ",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Nature Neuroscience",
+  "authors": [
+   "Sweyta Lohani",
+   "Andrew H. Moberly",
+   "Hadas Benisty",
+   "Boris Landa",
+   "Miao Jing",
+   "Yulong Li"
+  ],
+  "citations": 151,
+  "source": "openalex",
+  "source_id": "W4310151068",
+  "doi": "10.1038/s41593-022-01202-6",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10661869/pdf/nihms-1936584.pdf",
+  "published_iso": "2022-11-28",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "set-valued heterogeneous treatment effects"
+  ]
+ },
+ {
+  "title": "Conformal Prediction for Uncertainty Quantification and Reliable HER2 Status Classification in Breast Cancer IHC Images",
+  "title_norm": "conformal prediction for uncertainty quantification and reliable her2 status cla",
+  "abstract": "Accurate assessment of Human Epidermal growth factor receptor 2 (HER2) status in breast cancer is crucial for determining treatment eligibility for targeted therapies. Although machine learning approaches have shown promise in automating HER2 status classification from immunohistochemistry (IHC) images, they struggle to maintain reliable accuracy in equivocal cases. This study introduces a novel application of Conformal Prediction (CP) framework that, instead of making potentially incorrect predictions for uncertain cases, explicitly identifies them for further examination. The CP framework achieves this by generating prediction sets whose size reflects uncertainty, inherently aligning with the clinical practice of identifying cases that require confirmatory testing. Using dual in situ hybridization (DISH) results as the gold standard for HER2 status, we developed our system using handcrafted features—including color intensity, local binary patterns, and Haralick features—combined with tree-based classifiers. In experiments on 2,570 IHC images (94 cases) from the Institute of Pathology, Bangkok, Thailand, our framework demonstrated the ability to make highly accurate predictions on unambiguous cases while automatically filtering out uncertain ones. At a significance level of 0.05, the XGBoost-based conformal predictor achieved 90.1% (95% CI: 87.4-92.2%) accuracy on the equivocal cases, while identifying 69.8% (95% CI: 67.7-71.9%) of cases as requiring additional testing. This selective prediction approach represents a practical step toward reliable automated HER2 assessment by focusing on high-confidence predictions. The source code of our implementation is available at:https://github.com/Surayuth/her2cp.git.",
+  "year": 2025,
+  "venue": "IEEE Access",
+  "authors": [
+   "Surayuth Pintawong",
+   "Shanop Shuangshoti",
+   "Tikamporn Jitpasutham",
+   "Somruethai Shuangshoti",
+   "Kulachet Wiwatwarayos",
+   "Thananop Kobchaisawat"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4408609208",
+  "doi": "10.1109/access.2025.3552934",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408609208",
+  "published_iso": "2025-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "selective prediction with conformal sets"
+  ]
+ },
+ {
+  "title": "Liquid biopsy approaches to capture tumor evolution and clinical outcomes during cancer immunotherapy",
+  "title_norm": "liquid biopsy approaches to capture tumor evolution and clinical outcomes during",
+  "abstract": "Circulating cell-free tumor DNA (ctDNA) can serve as a real-time biomarker of tumor burden and provide unique insights into the evolving molecular landscape of cancers under the selective pressure of immunotherapy. Tracking the landscape of genomic alterations detected in ctDNA may reveal the clonal architecture of the metastatic cascade and thus improve our understanding of the molecular wiring of therapeutic responses. While liquid biopsies may provide a rapid and accurate evaluation of tumor burden dynamics during immunotherapy, the complexity of antitumor immune responses is not fully captured through single-feature ctDNA analyses. This underscores a need for integrative studies modeling the tumor and the immune compartment to understand the kinetics of tumor clearance in association with the quality of antitumor immune responses. Clinical applications of ctDNA testing in patients treated with immune checkpoint inhibitors have shown both predictive and prognostic value through the detection of genomic biomarkers, such as tumor mutational burden and microsatellite instability, as well as allowing for real-time monitoring of circulating tumor burden and the assessment of early on-therapy responses. These efforts highlight the emerging role of liquid biopsies in selecting patients for cancer immunotherapy, monitoring therapeutic efficacy, determining the optimal duration of treatment and ultimately guiding treatment selection and sequencing. The clinical translation of liquid biopsies is propelled by the increasing number of ctDNA-directed interventional clinical trials in the immuno-oncology space, signifying a critical step towards implementation of liquid biopsies in precision immuno-oncology.",
+  "year": 2023,
+  "venue": "Journal for ImmunoTherapy of Cancer",
+  "authors": [
+   "Lavanya Sivapalan",
+   "Joseph C. Murray",
+   "Jenna VanLiere Canzoniero",
+   "Blair V. Landon",
+   "Jennifer Jackson",
+   "Susan C. Scott"
+  ],
+  "citations": 117,
+  "source": "openalex",
+  "source_id": "W4317434397",
+  "doi": "10.1136/jitc-2022-005924",
+  "arxiv_id": null,
+  "paper_url": "https://jitc.bmj.com/content/jitc/11/1/e005924.full.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ }
+]

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "timestamp": "2026-08-30T15:22:00+08:00",
+  "evaluation_type": "simulation_only",
+  "reviewer": "/root/e0_v3_integrity_audit/fresh_integrity_reviewer",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "integrity_status": "warn",
+  "scientific_gate": "pass",
+  "gate_conditions": {
+    "oracle_macro_f1_ge_0_75": true,
+    "oracle_test_frr_le_0_05": true,
+    "pointmap_imr_within_depth_plus_0_05": true,
+    "pointmap_macro_f1_within_depth_minus_0_03": true,
+    "pointmap_input_at_least_10x_smaller": true
+  },
+  "recomputed_values": {
+    "oracle_macro_f1": 0.9532298678442299,
+    "oracle_test_frr": 0.03666666666666667,
+    "pointmap_imr": 0.1222222222222222,
+    "depth_imr": 0.35555555555555557,
+    "pointmap_macro_f1": 0.9001641945503025,
+    "depth_macro_f1": 0.6487439587301378,
+    "pointmap_input_bytes": 152,
+    "depth_input_bytes": 442368,
+    "pointmap_minus_depth_f1": 0.2514202358201646,
+    "pointmap_minus_depth_f1_ci95": [0.03151211450707199, 0.4676979920289289],
+    "pointmap_minus_depth_imr": -0.23333333333333334,
+    "pointmap_minus_depth_imr_ci95": [-0.5833333333333333, 0.11666666666666665]
+  },
+  "evidence_counts": {
+    "modalities": 4,
+    "learned_runs": 60,
+    "test_predictions": 4320,
+    "validation_predictions": 4320,
+    "deterministic_probe_predictions": 360
+  },
+  "warnings": [
+    "R011 does not bind the geometry dependency and its current auditor expects the obsolete 112-D PointMap shape; R025 mitigates this by rebuilding all 360 current 38-D projections.",
+    "The unselected no-retract sentinel candidates are NumPy scalar-promotion sensitive; accepted selected thresholds and gate are unchanged.",
+    "The unregistered global min_epochs=20 floor changes 2/15 RGB and 3/15 Depth best checkpoints, but not PointMap/Oracle, and a conservative v2-Depth counterfactual leaves G0 passing."
+  ],
+  "fraud_checks": {
+    "fake_ground_truth": "not_found",
+    "score_normalization_fraud": "not_found",
+    "phantom_runs": "not_found",
+    "seed_cherry_picking": "not_found",
+    "test_threshold_tuning": "not_found",
+    "scope_inflation": "not_found"
+  },
+  "hashes": {
+    "dataset": "ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+    "manifest": "3fffc93c264e47122a8b5069e45efbaccf90d3e206940a90339295cb68657191",
+    "aggregate": "7be5a00c4451a37f0e5ac6e54876ea023a4d420fb7da90cd5d348fdfc71cfb0a",
+    "aggregator": "d1d6cfbbe14c861fb2db8aa844093b29e1426affe541ed0dd39091e1ba9f51a1",
+    "trainer": "be5f34532b8e996ece79205ba8ce1438c9c57799cd49b5ed9d5eb4f701c35a7b",
+    "geometry": "dbf8b6ba42025aa2df9b2df8e2603d78e8694a2e586472bb39ff3841a9dda81a",
+    "probe": "88caae6ae885dfa33ee3fd5e3f6e961f26af0bab2c6bbdd1069964a3d4f9d542"
+  },
+  "claim_ceiling": "Controlled simulator-mask PointMap representation headroom only; no action-conditioned WAM, VLA, recovery, closed-loop, learned-mask, or real-robot claim.",
+  "routing_action": "result-to-claim"
+}

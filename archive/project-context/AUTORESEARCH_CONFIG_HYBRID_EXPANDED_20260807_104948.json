@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "project": {
+    "language": "zh-CN",
+    "domain": "H1-predictive-world-objective-shapes-VLA-representation",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "H1｜预测式 world objective 塑造 VLA 表征",
+    "exploration_level": "selected-method-execution",
+    "selected_macro_direction": "H1",
+    "selected_protocol": "pgr-audit-v2-parallel-real",
+    "idea_selection_locked": true,
+    "host_policy_family": "StarVLA with frozen Qwen3-VL-4B and deterministic action head",
+    "simulation_suite": "LIBERO-10",
+    "simulation_tasks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "real_robot_available": true,
+    "real_robot_domain_status": "awaiting endpoint, embodiment, interface, task, data, and safety contract",
+    "simulation_observation_modalities": ["main RGB", "wrist RGB"],
+    "simulation_action_representation": "8x7 StarVLA normalized action chunk",
+    "real_observation_modalities": "blocked until frozen real contract",
+    "real_action_representation": "blocked until exact dimensions, units, frame, frequency, and chunk semantics freeze",
+    "validation_domains": ["simulation", "real robot"],
+    "offline_data_role": "lane-internal training or identification source, not a third validation lane",
+    "validation_domain_order": "parallel or evidence-driven; no simulation-first requirement",
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2023,
+    "literature_year_end": null,
+    "target_venues": ["CoRL", "RSS", "ICRA", "IROS", "ICLR", "NeurIPS", "ICML", "CVPR"]
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": true,
+    "auto_select_idea": false,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "repair_scope": "pre-freeze specification or implementation repair only; scientific logical-job retry is exclusively governed by the protocol's one allowlisted unchanged retry",
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true,
+    "current_gate": "renewed PGR-Audit v2 execution jury"
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "remote_ssh_executable": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+    "remote_identity_file": "C:\\Users\\admin\\.ssh\\<SSH_KEY_NAME>",
+    "remote_workdir": "<PERSONAL_RESEARCH_ROOT>",
+    "internet_egress": false,
+    "allowed_control_networks": ["existing SSH connection to <PRIVATE_SERVER>"],
+    "robot_endpoint_allowlist": [],
+    "robot_endpoint_policy": "empty means no robot connection; populate only from the separately frozen contract with exact host, port, transport, authentication boundary, and command namespace",
+    "gpu_policy": {
+      "preferred_physical_gpu_ids": [2, 3],
+      "conditionally_available_gpu_ids": [0, 1],
+      "allow_each_conditionally_available_gpu_when_that_gpu_is_idle_at_launch": true,
+      "all_four_simultaneously_idle_not_required": true,
+      "fresh_snapshot_max_age_seconds": 5,
+      "idle_definition": "no compute process, memory.used<=500MiB, utilization.gpu<=5%",
+      "require_physical_uuid_binding": true,
+      "require_atomic_per_uuid_launch_reservation": true,
+      "require_post_bind_pid_pgid_verification": true,
+      "never_preempt_or_share_with_other_experiments": true,
+      "recheck_before_every_launch_attempt": true,
+      "max_concurrent_gpu_jobs": "min(4, count of freshly idle and atomically reserved physical GPU UUIDs)"
+    },
+    "compute_budget_mode": "no preset GPU-hour cap; actual usage is telemetry only",
+    "max_pilot_gpu_hours": null,
+    "max_total_gpu_hours": null,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0,
+    "real_robot_trial_policy": "replace zero only with an exact count after endpoint/interface/domain/safety/scientific contract freeze and separate jury"
+  },
+  "acceptance": {
+    "minimum_main_seeds": 20,
+    "exact_seed_cohorts": {
+      "primary": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "replication": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    },
+    "allow_adaptive_seed_count": false,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "matched_budget_meaning": "A, B, and C have identical update count, batch schedule, action backward, future forward/backward compute, optimizer schedule, and rollout cells; B discards its valid-target future gradient and C is the target-validity placebo; this is not a GPU-hour admission cap",
+    "require_matched_algorithmic_exposure_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "real_robot_available_but_live_action_locked": true,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": false,
+    "real_robot_execution": {
+      "unlock_condition": "complete endpoint, robot identity, interface, domain, task, data, limit, operator, and emergency-stop contract plus separate jury",
+      "requires_documented_endpoint_and_robot_identity": true,
+      "requires_user_defined_workspace_and_action_limits": true,
+      "requires_emergency_stop_owner": true,
+      "requires_no_motion_connectivity_check_before_live_actions": true,
+      "requires_low_speed_bounded_first_trial": true,
+      "never_disable_hardware_or_software_interlocks": true,
+      "never_issue_live_actions_without_robot_connection_contract": true
+    },
+    "remote_filesystem": {
+      "authorized_user": "liu_meng",
+      "authorized_root": "<PERSONAL_RESEARCH_ROOT>",
+      "canonical_authorized_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+      "read_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "write_roots": ["<PERSONAL_RESEARCH_ROOT>"],
+      "allow_shared_storage_read": false,
+      "allow_shared_storage_write": false,
+      "allow_team_artifact_publish": false,
+      "require_personal_paths_for_code_data_models_cache_logs_tmp_checkpoints_and_artifacts": true,
+      "forbid_shell_profile_changes": true,
+      "forbid_privilege_escalation": true,
+      "forbid_global_conda_system_cuda_and_system_package_changes": true
+    }
+  },
+  "framework_preferences": {
+    "locked_runtime": "StarVLA clean bundle at commit 3422b9f2387b6f682cf02802904a77b23ab13afd",
+    "automatic_framework_switching": false
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S0-FATAL-ATTACK",
+        "consumes": [
+          "Step 6 measured g_j at the current VLA/WAM parameters",
+          "Step 1 tentative joint update u",
+          "Step 7 request for c_j = derivative of g_j with respect to the tentative joint update"
+        ],
+        "produces": [
+          "no valid sensitivity row c_j"
+        ],
+        "note": "Picked first because Step 7 is the sole producer of the constrained joint update and therefore load-bearing. Under the literal dataflow, g_j is already a completed measurement and does not consume u, so its derivative with respect to u is zero. Under the only alternative defensible reading, g_j must be re-evaluated after a hypothetical joint update, but the candidate supplies neither that producer nor a differentiable path through the simulator, SVD, rank selection, and sign partition. The constraint also combines g_j at the current parameters with a displacement centered at u, so it is not a Taylor expansion around one point."
+      },
+      {
+        "step": "S1",
+        "consumes": [
+          "current VLA parameters",
+          "current WAM parameters",
+          "ordinary real/imagined objectives"
+        ],
+        "produces": [
+          "tentative VLA update u_pi",
+          "tentative WAM update u_M",
+          "joint tentative update u"
+        ],
+        "note": "The update is computed but not applied."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "b current-policy simulator snapshots",
+          "WAM predicted next observations",
+          "simulator next observations",
+          "frozen WAM observation encoder"
+        ],
+        "produces": [
+          "residual matrix E in R^(b x d)"
+        ],
+        "note": "This is a black-box observation-stage measurement at the current parameters."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "E",
+          "k_max = 8",
+          "energy fraction alpha with default 0.90 and stated sweep"
+        ],
+        "produces": [
+          "rank k",
+          "orthonormal residual modes q_j in R^d"
+        ],
+        "note": "Rank selection and mode identity are discrete/non-smooth at spectral ties."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "q_j",
+          "paired latent interventions +/- eta q_j",
+          "imagined objective"
+        ],
+        "produces": [
+          "centered WAM-to-policy susceptibility",
+          "per-snapshot induced action direction v_ij"
+        ],
+        "note": "This stage is evaluated at the current parameters."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "current simulator snapshots",
+          "paired actions a_i +/- epsilon v_ij/||v_ij||",
+          "black-box simulator transition"
+        ],
+        "produces": [
+          "centered physical residual response projected onto q_j"
+        ],
+        "note": "The simulator response is measurable but is not an autodiff operation."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "WAM-to-policy susceptibility",
+          "physical residual response",
+          "two half-batch estimates"
+        ],
+        "produces": [
+          "measured signed gain g_j",
+          "positive sign-stable set A",
+          "remaining set S"
+        ],
+        "note": "The written producer returns a scalar measured at the current parameters; it does not return a function of a hypothetical update."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "g_j for j in A",
+          "claimed sensitivity c_j",
+          "u",
+          "RMS whitening scales"
+        ],
+        "produces": [
+          "projected update u_tilde if c_j exists and the QP is feasible"
+        ],
+        "note": "BLOCKING: no prior step produces c_j. Literal autodiff yields zero because u is not an input to the measured g_j. Hypothetical post-update evaluation is not specified and crosses black-box/discrete operations. Moreover, g_j is based at the current parameters while c_j dot (u_tilde-u) is centered at u."
+      },
+      {
+        "step": "S8-S10",
+        "consumes": [
+          "u_tilde",
+          "negative-control pairing",
+          "baseline arms"
+        ],
+        "produces": [
+          "atomic VLA/WAM commit",
+          "logged imagined return and physical success comparisons"
+        ],
+        "note": "These downstream steps are unreachable for a positive mode when Step 7 has no valid c_j."
+      }
+    ],
+    "dry_run": {
+      "instance": "Use a one-dimensional joint-update coordinate. Step 1 produces u = 1.0. Steps 2-6 measure one sign-stable positive mode with g = 0.20 at the current parameters. Treat the written Step 6 output literally: g_measured(proposed_update) = 0.20 because proposed_update is not an input to its computation.",
+      "execution": {
+        "mode": "unexecuted",
+        "script": "",
+        "output": "No extra script was run, per the task constraint. Hand execution: c = [g(1.0+h)-g(1.0-h)]/(2h) = (0.20-0.20)/(2h) = 0. The Step 7 constraint becomes 0.20 + 0*(u_tilde-1.0) <= 0, which is false for every u_tilde."
+      },
+      "computed_quantities": [
+        {
+          "quantity": "literal update sensitivity",
+          "value": "c = 0",
+          "arithmetic": "For any h > 0, [0.20-0.20]/(2h) = 0 because the Step 6 graph does not consume the proposed update."
+        },
+        {
+          "quantity": "positive-mode affine constraint",
+          "value": "infeasible for every u_tilde",
+          "arithmetic": "0.20 + 0*(u_tilde-1.0) <= 0 reduces to 0.20 <= 0."
+        },
+        {
+          "quantity": "consistent Taylor alternatives",
+          "value": "neither matches the written constraint",
+          "arithmetic": "Expansion at the current parameters would use g(theta) + grad_g(theta) dot u_tilde. Expansion around the ordinary tentative update would use g(theta+u) + grad_g(theta+u) dot (u_tilde-u). The candidate instead uses g(theta) with (u_tilde-u)."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The literal sensitivity is zero and a measured positive gain gives an infeasible constraint: 0.20 <= 0.",
+          "kind": "structural",
+          "why": "The written dataflow never makes the measured g_j a function of the tentative or projected update, so the zero derivative and infeasibility hold for any positive measured g_j, not just this numeric instance."
+        },
+        {
+          "anomaly": "The base value and displacement use different expansion points.",
+          "kind": "structural",
+          "why": "This follows symbolically from pairing a current-parameter g_j with (u_tilde-u); changing the instance cannot make that a valid first-order expansion."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty snapshot set",
+        "behavior": "E, its SVD, half-batch signs, and averaged g_j are undefined.",
+        "finding": "Operational precondition is unstated; this is not the load-bearing mechanism blocker."
+      },
+      {
+        "probe": "k = 0 or all-zero residual matrix",
+        "behavior": "The explained-energy ratio and q_j set are undefined or empty, so no constraint is produced.",
+        "finding": "No fallback is specified; recorded as a non-blocking edge note."
+      },
+      {
+        "probe": "all singular values tied",
+        "behavior": "Individual q_j identities can rotate within the tied subspace, making per-mode sign labels basis-dependent.",
+        "finding": "No tie-invariant subspace rule is specified; non-blocking for this audit because Step 7 already fails without a tie."
+      },
+      {
+        "probe": "v_ij = 0",
+        "behavior": "The paired action direction divides by ||v_ij|| = 0.",
+        "finding": "Undefined edge behavior; non-blocking for the load-bearing trace."
+      },
+      {
+        "probe": "one sign-stable mode with g_j > 0 and literal c_j = 0",
+        "behavior": "The QP contains an impossible constraint g_j <= 0 and cannot produce u_tilde.",
+        "finding": "Blocking; it is the minimal concrete manifestation of the missing sensitivity producer."
+      },
+      {
+        "probe": "maximum k = 8",
+        "behavior": "The same missing-producer failure occurs independently for every positive mode; adding rows cannot repair it.",
+        "finding": "The blocker persists at the stated maximum."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "g_j is a signed reciprocal co-error loop gain on current-policy support",
+        "established_by": "S4-S6",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the latent and physical residual responses are normalized into compatible units",
+          "the local paired perturbations remain in the response-linear regime"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the constraint removes positive first-order residual feedback",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "the projection minimally changes the tentative updates",
+        "established_by": "S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "valid sensitivity rows exist",
+          "the affine constraint set is feasible",
+          "all whitening scales are positive"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "the projection-distance inequality bounds first-order degradation of the task objective",
+        "established_by": "S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the stated task gradient and update distance use dual compatible norms",
+          "higher-order terms are negligible"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "the joint commit changes both the next VLA and WAM rather than only a diagnostic score",
+        "established_by": "S8-S10",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "S7 first produces a feasible u_tilde"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Using the same current snapshots and ordinary tentative update, compute scalar residual magnitude and gate/downweight the imagined contribution without SVD modes, paired latent probes, physical response probes, or a constrained QP.",
+      "naive_fairness": "It uses no additional information, deployment access, or probe budget and is strictly simpler because it removes the mode decomposition, paired interventions, and joint projection.",
+      "instance_behavior": {
+        "naive": "Produces a defined gated or ordinary tentative update on the scalar instance.",
+        "mechanism": "Produces no projected update because 0.20 + 0*(u_tilde-1.0) <= 0 is infeasible.",
+        "divergence": "No numerical update-to-update comparison exists because the full mechanism halts at Step 7.",
+        "kind": "structural"
+      },
+      "verdict": "n_a",
+      "reasoning": "A fair naive can run, but the candidate cannot produce its own update on the same instance. The depth failure is therefore the missing c_j producer, not an empirical performance difference or an equivalent-to-naive claim."
+    }
+  },
+  "verdict": "pass",
+  "unrepaired": [
+    {
+      "finding": "Step 7 has no valid producer for c_j. The written g_j is measured at the current VLA/WAM parameters through a black-box simulator response, SVD-derived modes, rank selection, and a sign-stability partition; it is not a differentiable function of the tentative joint update. Literal autodiff therefore yields c_j = 0, making every constraint with g_j > 0 infeasible. Interpreting c_j as a derivative after hypothetically applying an update does not repair the procedure because no such re-evaluation graph or finite-difference estimator is supplied and the graph crosses non-differentiable simulator/discrete operations. The constraint additionally mixes expansion points by using current-parameter g_j with the displacement (u_tilde-u).",
+      "severity": "blocking",
+      "why_not_repaired": "An honest repair must add a new executable sensitivity estimator (for example, a specified finite-difference or differentiable-surrogate producer), define which SVD/sign objects are frozen during that estimator, pay its probe cost, and choose one consistent Taylor expansion point. Those changes redesign the load-bearing mechanism and cannot be made by a coherence wording patch.",
+      "verbatim_step_quote": "7. Differentiate each sign-stable positive gj with respect to the tentative joint update, assemble the sensitivity rows cj",
+      "executed_evidence": "No extra script was run per the task constraint. Self-contained literal trace: take u=1.0 and a Step 6 current-parameter measurement g_j=0.20. Because the written Step 6 graph has no proposed-update input, g_j(1.0+h)=g_j(1.0-h)=0.20 for any h, hence c_j=[0.20-0.20]/(2h)=0. The Step 7 constraint is then 0.20+0*(u_tilde-1.0)<=0, i.e. 0.20<=0, infeasible for every u_tilde. On the alternative hypothetical-update reading, the physical-response producer is a black-box LIBERO/RoboCasa simulator call and q_j/A come from SVD, rank selection, and sign partition; no autodiff path or substitute estimator is written. Expansion check: current-base linearization requires g(theta)+grad_g(theta) dot u_tilde, while centering at u requires g(theta+u)+grad_g(theta+u) dot (u_tilde-u); the candidate combines the first base value with the second displacement.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": []
+}

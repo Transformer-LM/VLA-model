@@ -1,0 +1,1518 @@
+[
+  {
+    "title": "Understanding Asynchronous Inference Methods for Vision-Language-Action Models",
+    "title_norm": "understanding asynchronous inference methods for vision language action models",
+    "abstract": "Vision-Language-Action (VLA) models offer a promising path to generalist robot control, but their inference latency causes observation staleness when generated actions are executed asynchronously. Several methods have been proposed concurrently to mitigate this problem: inference-time inpainting (IT-RTC), training-time delay simulation (TT-RTC), future-state-aware conditioning (VLASH), and lightweight residual correction (A2C2). Each takes a fundamentally different approach, but they have so far been evaluated independently with different codebases, base policies, and protocols. We present a systematic comparison of these four methods under controlled conditions. We develop two unified codebases that integrate all methods with harmonized library and dataset versions, and we benchmark them on the Kinetix suite with MLPMixer policies and on the LIBERO manipulation benchmark with SmolVLA, sweeping inference delays up to $d=20$ control steps. A2C2's per-step residual correction is the most effective method on Kinetix, holding above 90% solve rate up to $d=8$, and also leads on LIBERO from $d=4$ onwards. IT-RTC is competitive at low delays but degrades sharply under long chunks ($H=30$) and high delays. TT-RTC is the most robust training-based method: stable across $d_\\max$ choices, generalizes beyond its training delay distribution, and adds zero inference overhead. VLASH exhibits a clear low-delay vs. high-delay trade-off governed by the fine-tuning delay range $[0,d_\\max]$. Code is available at https://github.com/TheAyos/async-vla-inference",
+    "tldr": "Two unified codebases that integrate all methods with harmonized library and dataset versions are developed, and they are benchmarked on the Kinetix suite with MLPMixer policies and on the LIBERO manipulation benchmark with SmolVLA.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Ayoub Agouzoul"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "025d9c3fb14149f7d49d7f0e2cbc6092e987fc95",
+    "paper_id": "semanticscholar:025d9c3fb14149f7d49d7f0e2cbc6092e987fc95",
+    "doi": "10.48550/arXiv.2605.08168",
+    "arxiv_id": "2605.08168",
+    "dblp_key": "journals/corr/abs-2605-08168",
+    "paper_url": "https://www.semanticscholar.org/paper/025d9c3fb14149f7d49d7f0e2cbc6092e987fc95",
+    "published_iso": "2026-05-04",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "SEAM: Smooth Execution of Action-Chunked Motion for Vision-Language-Action Policies",
+    "title_norm": "seam smooth execution of action chunked motion for vision language action polici",
+    "abstract": "Vision-Language-Action (VLA) policies that execute fixed-length action chunks can exhibit multimodal bifurcation: a cross-chunk inconsistency in which adjacent chunks generated from independent Gaussian latents can converge to incompatible trajectory modes, producing abrupt discontinuities at chunk boundaries. Existing remedies either require backpropagation through the policy at each denoising step, rely on rejection sampling, or require retraining, each trading computational cost or task reliability for smoother transitions. We propose SEAM (Smooth Execution of Action-Chunked Motion), a training-free inference-time method for flow matching VLAs. SEAM exploits a simple synchronous-execution insight: after the robot consumes the executed prefix, the previous chunk's unexecuted tail is already available as an analytic consistency reference. Its core mechanism, Velocity-guided Loss Steering (VLS), derives a time-dependent target from this tail and applies a closed-form correction after each Euler step without backpropagating through the policy network. On LIBERO-10 with pi_0.5, SEAM reduces boundary jerk by 28%, reduces chunk transition discontinuity by 27%, preserves baseline-level task success, and keeps denoising-loop cost near the unguided baseline.",
+    "tldr": "SEAM (Smooth Execution of Action-Chunked Motion), a training-free inference-time method for flow matching VLAs, exploits a simple synchronous-execution insight: after the robot consumes the executed prefix, the previous chunk's unexecuted tail is already available as an analytic consistency reference.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Dijia Zhan",
+      "Xuemiao Xu",
+      "Jinyi Li",
+      "Jie Tang"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "d4f228f950c3231639f987608afa25263d5e5460",
+    "paper_id": "semanticscholar:d4f228f950c3231639f987608afa25263d5e5460",
+    "doi": "",
+    "arxiv_id": "2607.04609",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/d4f228f950c3231639f987608afa25263d5e5460",
+    "published_iso": "2026-07-06",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "FBFM: A Training-Free Asynchronous Feedback Mechanism for Flow-Matching in World-Action Models Execution",
+    "title_norm": "fbfm a training free asynchronous feedback mechanism for flow matching in world ",
+    "abstract": "Although world-action models (WAMs) enhance long-horizon robot control by predicting visual evolution before acting, long-horizon reliability demands repeated re-grounding in real observations--not recursive rollout. Existing WAMs address this by refreshing history or KV cache with ground-truth data between chunks. However, such chunk-wise feedback operates at a coarse temporal granularity and thus fails to correct prediction errors at the individual time-step level. To address this, we propose Feedback Flow Matching (FBFM), a training-free inference mechanism that pushes re-grounding inside the actively generated chunk. During flow matching, FBFM applies a masked pseudoinverse correction to the conditional velocity field: it leverages the preceding action chunk to guide generation of the next action chunk, and uses the image observed after executing that preceding chunk to guide the next frame prediction. This cross-chunk pairing--where feedback from one chunk arrives in time to shape the next--creates an asynchronous loop that corrects errors without waiting for chunk boundaries. Being training-free, the mechanism improves responsiveness to unexpected events and suppresses drift in long-horizon tasks. We evaluate FBFM on both a joint-generation WAM (DreamZero) and a stage-wise WAM (LingBot-VA). On selected LIBERO and RoboTwin2.0 tasks, it improves success rates by over 5% in favorable settings, and real-world robot observation-prediction diagnostics show notably better tracking. We argue that FBFM offers a new paradigm for fine-grained online correction, bridging open-loop flow generation with closed-loop real-world dynamics.",
+    "tldr": "It is argued that FBFM offers a new paradigm for fine-grained online correction, bridging open-loop flow generation with closed-loop real-world dynamics.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Peize Li",
+      "Ruimeng Zhang",
+      "Ru Zhang",
+      "Cong Huang",
+      "Kai Chen",
+      "Shanghang Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "a77ce57cc8614da8e469228797af4c69274a1428",
+    "paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+    "doi": "",
+    "arxiv_id": "2607.29235",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/a77ce57cc8614da8e469228797af4c69274a1428",
+    "published_iso": "2026-07-31",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "FabriVLA: A Lightweight Vision-Language-Action Model with Conformal Action Chunk Uncertainty",
+    "title_norm": "fabrivla a lightweight vision language action model with conformal action chunk ",
+    "abstract": "Vision-Language-Action (VLA) models have become a leading paradigm for general purpose robotic manipulation, but their computational cost and limited uncertainty awareness hinder practical deployment. We present FabriVLA, a lightweight VLA that fuses shallow and intermediate VLM layers to preserve fine-grained visual features, and gates self-attention among action tokens so that its flow matching head admits inter step structure only as far as training warrants. Trained end-to-end in a single stage, FabriVLA reaches a state-of-the-art 90.0\\% average success on Meta-World MT50 with only 0.88B parameters. We further introduce Joint Conformal Action Chunk Calibration (JCAC), a post-training method that augments a frozen policy with a lightweight residual scale head. From a single policy query, JCAC turns a learned elementwise error scale into a set that covers the whole executed action prefix at a user chosen confidence level, 3.3$\\times$ tighter in mean radius than an unconditional conformal set. On LIBERO-Safety, these bounds rank rollouts by risk before execution, supporting risk ranked review. Together, FabriVLA and JCAC provide a lightweight and auditable framework for multi-task manipulation with calibrated action uncertainty.",
+    "tldr": "FabriVLA is presented, a lightweight VLA that fuses shallow and intermediate VLM layers to preserve fine-grained visual features, and gates self-attention among action tokens so that its flow matching head admits inter step structure only as far as training warrants.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [
+      "Review"
+    ],
+    "authors": [
+      "Shiyuan Yang",
+      "Borong Zhang",
+      "Jizheng Zhang",
+      "Zhijia Tao",
+      "Junfei Guo",
+      "Donglai Ran"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "1d5bc2cc0c0e48cadb7d2fd43c183a27f84efe2a",
+    "paper_id": "semanticscholar:1d5bc2cc0c0e48cadb7d2fd43c183a27f84efe2a",
+    "doi": "",
+    "arxiv_id": "2607.08575",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/1d5bc2cc0c0e48cadb7d2fd43c183a27f84efe2a",
+    "published_iso": "2026-07-09",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Force-Aware Residual DAgger via Trajectory Editing for Precision Insertion with Impedance Control",
+    "title_norm": "force aware residual dagger via trajectory editing for precision insertion with ",
+    "abstract": "Imitation learning (IL) has shown strong potential for contact-rich precision insertion tasks. However, its practical deployment is often hindered by covariate shift and the need for continuous expert monitoring to recover from failures during execution. In this paper, we propose Trajectory Editing Residual Dataset Aggregation (TER-DAgger), a scalable and force-aware human-in-the-loop imitation learning framework that mitigates covariate shift by learning residual policies through optimization-based trajectory editing. This approach smoothly fuses policy rollouts with human corrective trajectories, providing consistent and stable supervision. Second, we introduce a force-aware failure anticipation mechanism that triggers human intervention only when discrepancies arise between predicted and measured end-effector forces, significantly reducing the requirement for continuous expert monitoring. Third, all learned policies are executed within a Cartesian impedance control framework, ensuring compliant and safe behavior during contact-rich interactions. Extensive experiments in both simulation and real-world precision insertion tasks show that TER-DAgger improves the average success rate by over 37\\% compared to behavior cloning, human-guided correction, retraining, and fine-tuning baselines, demonstrating its effectiveness in mitigating covariate shift and enabling scalable deployment in contact-rich manipulation.",
+    "tldr": "A scalable and force-aware human-in-the-loop imitation learning framework that mitigates covariate shift by learning residual policies through optimization-based trajectory editing, and introduces a force-aware failure anticipation mechanism that triggers human intervention only when discrepancies arise between predicted and measured end-effector forces.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yiou Huang",
+      "Maizhen Ning",
+      "Wei Zhao",
+      "Zinuo Liu",
+      "Jun Sun",
+      "Qiufeng Wang"
+    ],
+    "citations": 3,
+    "source": "semanticscholar",
+    "source_id": "df73252b3184317f6bc8a394b168404776bb1b33",
+    "paper_id": "semanticscholar:df73252b3184317f6bc8a394b168404776bb1b33",
+    "doi": "10.48550/arXiv.2603.04038",
+    "arxiv_id": "2603.04038",
+    "dblp_key": "journals/corr/abs-2603-04038",
+    "paper_url": "https://www.semanticscholar.org/paper/df73252b3184317f6bc8a394b168404776bb1b33",
+    "published_iso": "2026-03-04",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-03",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Uncovering Vulnerability of Vision-Language-Action Models under Joint-Level Physical Faults",
+    "title_norm": "uncovering vulnerability of vision language action models under joint level phys",
+    "abstract": "Deploying Vision-Language-Action (VLA) models in real robotic systems requires robustness not only to semantic and perceptual variations, but also to embodiment-side faults that change how actions are physically realized. Real robots can experience joint-level changes caused by actuator degradation, hardware faults, safety limits, collision damage, or wear-induced friction. These faults are critical because they alter the action-to-motion interface of a policy, disrupting the learned closed-loop relationship between commanded actions, realized motion, and subsequent observations. In this work, we study realistic joint-level physical faults and show that VLA models are vulnerable when predicted actions are executed through a perturbed robot body. Our analysis reveals joint-dependent effects, with heterogeneous degradation in task success across affected joints. We also show that performance drops cannot be attributed solely to physical infeasibility, since feasible faults such as increased joint friction can still substantially reduce success rates and induce closed-loop execution mismatch. Motivated by these findings, we propose Joint-level Physical-fault Aware Residual Calibrator (J-PARC), a lightweight residual calibration framework built on top of a frozen VLA policy. J-PARC infers a latent joint-fault regime from recent joint dynamics and conditions a shared residual calibrator on this regime, enabling adaptive action correction across faulty joints. Experiments show that J-PARC improves robustness under joint-level faults while preserving fault-free environment performance.",
+    "tldr": "This work studies realistic joint-level physical faults and shows that VLA models are vulnerable when predicted actions are executed through a perturbed robot body, and proposes J-PARC, a lightweight residual calibration framework built on top of a frozen VLA policy that improves robustness under joint-level faults while preserving fault-free environment performance.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Minsoo Jo",
+      "Taejun Kwon",
+      "Junha Chun",
+      "Youngjoon Jeong",
+      "Taesup Kim"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "59d874def17557f3e5cba97fbfcaec9283f3bf0f",
+    "paper_id": "semanticscholar:59d874def17557f3e5cba97fbfcaec9283f3bf0f",
+    "doi": "10.48550/arXiv.2606.10501",
+    "arxiv_id": "2606.10501",
+    "dblp_key": "journals/corr/abs-2606-10501",
+    "paper_url": "https://www.semanticscholar.org/paper/59d874def17557f3e5cba97fbfcaec9283f3bf0f",
+    "published_iso": "2026-06-09",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Trajectory-Level Redirection Attacks on Vision-Language-Action Models",
+    "title_norm": "trajectory level redirection attacks on vision language action models",
+    "abstract": "Vision-language-action (VLA) policies bring natural language into closed-loop robot control, enabling robots to execute manipulation tasks directly from text instructions. The same interface gives text a recurring role in control because the prompt is reused at every replanning step, and each prompt-conditioned action changes the future observations on which the policy acts. Existing VLA attacks study adversarial prompts that elicit targeted low-level actions or make such actions persist across changing images. We identify a stronger trajectory-level failure mode: a prompt that still $\\textit{appears}$ to specify the intended task but redirects the final physical outcome. We mathematically formalize this setting as $\\textit{command-preserving trajectory redirection}$, a prompt-only threat model in which the attacker chooses one prompt before the episode, all policy and environment components remain fixed, and the prompt must stay close to the benign instruction while omitting target words and correction language. To find such prompts, we introduce an on-policy prompt search method that uses rollouts to discover perturbations whose closed-loop behavior tracks a target task while satisfying the command-preserving constraints. Experiments in simulation and on hardware show that near-benign prompt perturbations can redirect VLA rollouts to attacker-specified targets. These results expose a trajectory-level vulnerability in VLA instruction grounding: text that appears to preserve the intended command can still give an adversary control over the robot's final physical outcome. Project website: https://vla-redirection-attack.github.io/",
+    "tldr": "An on-policy prompt search method is introduced that uses rollouts to discover perturbations whose closed-loop behavior tracks a target task while satisfying the command-preserving constraints, exposing a trajectory-level vulnerability in VLA instruction grounding.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Gokul Puthumanaillam",
+      "Vardhan Dongre",
+      "Pranay Thangeda",
+      "H. Nayyeri",
+      "Dilek Z. Hakkani-Tür",
+      "M. Ornik"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "df7842dcecf6890dd0bfb3829bead913e30dd743",
+    "paper_id": "semanticscholar:df7842dcecf6890dd0bfb3829bead913e30dd743",
+    "doi": "10.48550/arXiv.2606.12978",
+    "arxiv_id": "2606.12978",
+    "dblp_key": "journals/corr/abs-2606-12978",
+    "paper_url": "https://www.semanticscholar.org/paper/df7842dcecf6890dd0bfb3829bead913e30dd743",
+    "published_iso": "2026-06-11",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Robust Koopman Control Barrier Filters for Safe Actor-Critic Reinforcement Learning",
+    "title_norm": "robust koopman control barrier filters for safe actor critic reinforcement learn",
+    "abstract": "Safe reinforcement learning (RL) for robotic systems requires policies that improve task performance while satisfying state and input constraints during both training and deployment. Control barrier functions (CBFs) provide a principled mechanism for enforcing forward invariance through minimally invasive safety filters, but their use in model-free RL is limited by the need for accurate dynamics and hand-designed barrier certificates. We propose Robust Koopman-CBF SAC, a safety-filtered actor--critic framework that learns a finite-dimensional Koopman predictor from data, constructs affine CBF constraints in the lifted space, and enforces them through a quadratic-program safety layer. To account for finite-dimensional Koopman approximation error, the CBF condition is tightened using a projected residual margin estimated from held-out rollout data. The critic is trained on the executed safe action, while the actor is regularized toward the Koopman-CBF feasible set, reducing dependence on the filter over training. Across safe-control benchmarks, the method achieves zero constraint violations on CartPole stabilization and tracking while matching or exceeding unconstrained SAC returns. On high-dimensional Safety Gymnasium locomotion tasks, the method reduces violations in some settings but also exposes important limitations of first-order velocity barriers and linear EDMD models, motivating high-order and multi-step Koopman-CBF extensions. These results suggest that robust Koopman-CBF filters are a promising bridge between model-free RL and certifiable safety, while clarifying the structural conditions under which such filters remain effective.",
+    "tldr": "Robust Koopman-CBF SAC is proposed, a safety-filtered actor--critic framework that learns a finite-dimensional Koopman predictor from data, constructs affine CBF constraints in the lifted space, and enforces them through a quadratic-program safety layer.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "D. Kushwaha",
+      "Z. Biron"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "cdfa7423b1f2b37aa415415fb4500eac0f5c2724",
+    "paper_id": "semanticscholar:cdfa7423b1f2b37aa415415fb4500eac0f5c2724",
+    "doi": "10.48550/arXiv.2605.26452",
+    "arxiv_id": "2605.26452",
+    "dblp_key": "journals/corr/abs-2605-26452",
+    "paper_url": "https://www.semanticscholar.org/paper/cdfa7423b1f2b37aa415415fb4500eac0f5c2724",
+    "published_iso": "2026-05-26",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Vid2WAM: Distilling Video Diffusion Priors into World Action Models",
+    "title_norm": "vid2wam distilling video diffusion priors into world action models",
+    "abstract": "World Action Models (WAMs) improve robot policy learning by jointly modeling future visual dynamics and actions. However, their scalability and generalization remain constrained by their reliance on costly expert demonstrations. We challenge this by asking whether future supervision for WAMs must originate from target-task expert trajectories. In this paper, we propose Vid2WAM, an offline distillation framework that transfers visual diffusion priors from a large video foundation model into a compact WAM student. Given an observation and language instruction, Vid2WAM distills supervision through two complementary channels: task-conditioned future rollouts directly supervise the student's future prediction branch, while an inverse dynamics model recovers embodiment-specific pseudo-actions for action learning. To robustly integrate synthetic and real supervision, we introduce source-aware residual action adaptation that learns source-specific corrections around a shared action backbone and mitigates interference from noisy pseudo-actions. During inference, both the video teacher and inverse dynamics model are discarded, leaving only the WAM student for efficient deployment. Simulation and real-world experiments demonstrate that Vid2WAM improves novel-task generalization and data efficiency under limited expert demonstrations while preserving low-latency inference.",
+    "tldr": "Vid2WAM is proposed, an offline distillation framework that transfers visual diffusion priors from a large video foundation model into a compact WAM student and introduces source-aware residual action adaptation that learns source-specific corrections around a shared action backbone and mitigates interference from noisy pseudo-actions.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Chenhao Qiu",
+      "Ruixiang Wang",
+      "Runyi Zhao",
+      "Sixu Lin",
+      "Songen Gu",
+      "S. Nan"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "19f706a79c1bd6322d5d55e24ae05d29bd46f03d",
+    "paper_id": "semanticscholar:19f706a79c1bd6322d5d55e24ae05d29bd46f03d",
+    "doi": "",
+    "arxiv_id": "2608.08558",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/19f706a79c1bd6322d5d55e24ae05d29bd46f03d",
+    "published_iso": "2026-08-09",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-08",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "MeshPriorDiT: Hierarchical Modeling for Action-Conditioned Cloth Dynamics",
+    "title_norm": "meshpriordit hierarchical modeling for action conditioned cloth dynamics",
+    "abstract": "Action-conditioned cloth dynamics prediction requires both locally plausible deformation and long-range coordination. Existing approaches largely follow two paradigms. Mesh-based GNNs capture local physical responses through material connectivity. However, their finite message-passing range limits coordination between topologically distant regions, while autoregressive rollouts tend to accumulate prediction errors. Transformer-based dynamics models capture long-range interactions through global attention, but often operate without explicit material connectivity and must learn local topological responses directly from data. We propose MeshPriorDiT, a hierarchical dynamics model that decomposes future cloth motion into a structured mesh prior and a generative residual. An action-conditioned mesh GNN first predicts multi-step vertex displacements, yielding a reference trajectory that respects material topology and grasp constraints. Conditioned on historical states, planned actions, and the mesh prior, a Residual DiT then uses conditional flow matching to jointly generate the residual motion not captured by the prior. The generated residual is further rescaled and decoded using material adjacency to coordinate corrections across neighboring vertices. We evaluate MeshPriorDiT on 15-step autoregressive rollouts across three cloth manipulation tasks. Averaged over the three tasks, MeshPriorDiT reduces average Global MSE by 43.42% relative to the GNN-Only baseline and by 75.03% relative to the DiT-DDPM baseline, while maintaining a favorable Edge-strain MSE comparable to that of GNN-Only.",
+    "tldr": "MeshPriorDiT is proposed, a hierarchical dynamics model that decomposes future cloth motion into a structured mesh prior and a generative residual and is evaluated on 15-step autoregressive rollouts across three cloth manipulation tasks.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Zi-Hang Wang",
+      "Jian-Ming Hu",
+      "Shang Su",
+      "Hao Huang",
+      "Mengkai Shi",
+      "Jun Gao"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "5c2ff0d48587d5077d6d971e1e7d93f9ee0d603d",
+    "paper_id": "semanticscholar:5c2ff0d48587d5077d6d971e1e7d93f9ee0d603d",
+    "doi": "",
+    "arxiv_id": "2608.26766",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/5c2ff0d48587d5077d6d971e1e7d93f9ee0d603d",
+    "published_iso": "2026-08-27",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-08",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Elastic Queries Reinforcement Learning: Self-Aware Policy Execution for VLA Models",
+    "title_norm": "elastic queries reinforcement learning self aware policy execution for vla model",
+    "abstract": "Vision-language-action (VLA) models are powerful action generators for robot manipulation, but they are typically executed with fixed inference and replanning schedules. This rigidity ignores the uneven difficulty of robot control: contact-rich or uncertain states may need more computation and fresher feedback, while easier states can often be handled with fewer inference steps and longer open-loop execution. We propose Elastic Queries Reinforcement Learning (EQRL), a framework that makes each VLA policy query elastic. A lightweight latent-schedule adaptor jointly selects the latent input, denoising budget, and action chunk length, without fine-tuning the underlying VLA model. To make scheduling difficulty-aware, EQRL trains a critic over the joint latent-schedule action and derives a state difficulty signal from critic ensemble disagreement. This signal guides compute toward difficult states, while a learned residual allows task-driven correction. We formulate variable chunk execution as query-level macro-action RL with chunk-dependent discounting and an amortized number-of-function-evaluations (NFE) budget. Across simulation and real-robot manipulation, EQRL reduces amortized inference cost while preserving or improving task success.",
+    "tldr": "EQRL proposes Elastic Queries Reinforcement Learning (EQRL), a framework that makes each VLA policy query elastic and reduces amortized inference cost while preserving or improving task success.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Gennan Wang",
+      "Xinyu Tan",
+      "Xiang Li",
+      "Man Luo",
+      "Cheng Yao",
+      "Shenhao Yan"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "47fdda4887f68eabb5d864756536c92c7b9b56f6",
+    "paper_id": "semanticscholar:47fdda4887f68eabb5d864756536c92c7b9b56f6",
+    "doi": "10.48550/arXiv.2606.14375",
+    "arxiv_id": "2606.14375",
+    "dblp_key": "journals/corr/abs-2606-14375",
+    "paper_url": "https://www.semanticscholar.org/paper/47fdda4887f68eabb5d864756536c92c7b9b56f6",
+    "published_iso": "2026-06-12",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Koopman Dreamer: Spectrally Constrained Latent Dynamics for Stable World-Model Imagination",
+    "title_norm": "koopman dreamer spectrally constrained latent dynamics for stable world model im",
+    "abstract": "Latent world models improve sample efficiency in continuous control by optimizing policies over imagined latent trajectories, but common neural transitions offer limited direct control over modal persistence and error accumulation in long rollouts. We propose Koopman Dreamer, a Dreamer-style world model with a spectrally constrained deterministic latent dynamics core. Its Koopman-inspired backbone uses two-dimensional rotation--scaling blocks with bounded radii to represent damping, rotation, and near-periodic modes. Linear and low-rank bilinear action terms capture global and state-dependent control effects, while stochastic-state modulation supplies local correction information. To reduce the mismatch between posterior-conditioned training and prior-only imagination, the model combines posterior-conditioned EMA teacher targets with one-step consistency, multi-step rollout, and open-loop observation-prediction objectives. We further derive a multi-step rollout-error bound that separates amplification by the spectral backbone and bilinear interaction from the additive effects of stochastic-state mismatch and modeling residuals, clarifying the trade-off between error attenuation and long-term information retention. Experimental results on proprioceptive continuous-control tasks from the DeepMind Control Suite and UAV-LiDAR autonomous navigation demonstrate that Koopman Dreamer improves the stability of long-horizon latent rollouts and achieves stronger closed-loop control performance on tasks that rely on high-quality multi-step imagination.",
+    "tldr": "Koopman Dreamer is proposed, a Dreamer-style world model with a spectrally constrained deterministic latent dynamics core that improves the stability of long-horizon latent rollouts and achieves stronger closed-loop control performance on tasks that rely on high-quality multi-step imagination.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Jiaqi Li",
+      "Xinglong Zhang",
+      "Haibin Xie",
+      "Yixing Lan",
+      "Wei Pan",
+      "Xin Xu"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "7194d2bf17c5447a62cfd98964f943dd064fda4e",
+    "paper_id": "semanticscholar:7194d2bf17c5447a62cfd98964f943dd064fda4e",
+    "doi": "",
+    "arxiv_id": "2607.19719",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/7194d2bf17c5447a62cfd98964f943dd064fda4e",
+    "published_iso": "2026-07-22",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CRAFT: Counterfactual-to-Interactive Reinforcement Fine-Tuning for Driving Policies",
+    "title_norm": "craft counterfactual to interactive reinforcement fine tuning for driving polici",
+    "abstract": "Open-loop imitation learning has advanced modern autonomous driving policy architectures, but closed-loop deployment remains vulnerable to policy-induced distribution shift. Existing post-training paradigms exhibit fundamental trade-offs: closed-loop RL fine-tuning provides grounded feedback from executed actions but is constrained by the sparsity of informative events, whereas counterfactual fine-tuning provides dense supervision over candidate futures but inherits bias from imperfect future estimates. We introduce Counterfactual-to-Interactive Reinforcement Fine-Tuning (CRAFT), an on-policy framework that formulates closed-loop post-training as proxy-residual optimization. CRAFT uses group-normalized counterfactual advantages as a dense proxy for real closed-loop advantages and aligns this proxy with the closed-loop world through grounded residual correction from interaction-critical events. To stabilize adaptation, CRAFT regularizes the online policy toward an EMA teacher via asymmetric KL self-distillation. Theoretically, CRAFT decomposes the real closed-loop policy gradient into proxy and residual terms under the same visited-state distribution, reducing residual variance with an aligned proxy while mitigating proxy bias through grounded residual approximation. Empirically, CRAFT achieves the strongest closed-loop gains on Bench2Drive across hierarchical planning, vision-language-action, and vocabulary-scoring architectures. Ablations, scaling behavior, stability analyses, and transfer results further validate the complementary roles of dense counterfactual proxy and grounded residual correction. Project page: https://currychen77.github.io/CRAFT.",
+    "tldr": "Counterfactual-to-Interactive Reinforcement Fine-Tuning (CRAFT), an on-policy framework that formulates closed-loop post-training as proxy-residual optimization, achieves the strongest closed-loop gains on Bench2Drive across hierarchical planning, vision-language-action, and vocabulary-scoring architectures.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Keyu Chen",
+      "Nanfei Ye",
+      "Yida Wang",
+      "Wenchao Sun",
+      "Dan Zhao",
+      "Hao Cheng"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "4d8621982122520882f7210f2ef57c16c55b1d11",
+    "paper_id": "semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11",
+    "doi": "10.48550/arXiv.2605.04470",
+    "arxiv_id": "2605.04470",
+    "dblp_key": "journals/corr/abs-2605-04470",
+    "paper_url": "https://www.semanticscholar.org/paper/4d8621982122520882f7210f2ef57c16c55b1d11",
+    "published_iso": "2026-05-06",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning",
+    "title_norm": "triage role typed credit assignment for agentic reinforcement learning",
+    "abstract": "Agentic reinforcement learning requires assigning credit to environment-facing actions such as searches, clicks, edits, navigation commands, and object interactions. Standard GRPO uses the final verifier outcome as a uniform advantage over all action tokens. This outcome signal is useful but structurally incomplete: it punishes useful exploration in failed rollouts and reinforces redundant or regressive actions in successful rollouts. We propose TRIAGE, a role-typed credit assignment framework that adds a semantic role axis to outcome credit. A structured judge classifies each segment as decisive progress, useful exploration, no-progress infrastructure, or regression, and a fixed role-conditioned rule maps these labels to bounded segment-level process rewards. This keeps verifier outcomes as the source of optimization direction while correcting the two main blind spots of outcome-only credit. We further show that the Bayes-optimal role-measurable correction is the L2 projection of the per-segment advantage residual onto the role variable, and that TRIAGE's fixed role constants approximate this projection, reducing advantage estimation error whenever the judge is reliable; we connect this to lower-variance policy gradients. Across ALFWorld, Search-QA, and WebShop, TRIAGE improves success rates over GRPO for two policy models and outperforms both a scalar judge-derived process reward and an outcome-supervised shared-backbone value baseline. Ablations show that the gain comes from role typing rather than merely adding dense rewards: reliable detection of regression inside successful trajectories is the dominant contributor, while exploration credit provides a consistent secondary gain; on completed ALFWorld and WebShop rollouts, TRIAGE also reduces environment-facing turns by an additional $10.4\\%$ and $14.8\\%$ relative to GRPO.",
+    "tldr": "TRIAGE is proposed, a role-typed credit assignment framework that adds a semantic role axis to outcome credit and improves success rates over GRPO for two policy models and outperforms both a scalar judge-derived process reward and an outcome-supervised shared-backbone value baseline.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yuanda Xu",
+      "Zhengze Zhou",
+      "Hejian Sang",
+      "Xiaomin Li",
+      "Jiaxin Zhang",
+      "Xinchen Du"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "e7c90ef5995ee2e6052ebe2764741c8d3b32da93",
+    "paper_id": "semanticscholar:e7c90ef5995ee2e6052ebe2764741c8d3b32da93",
+    "doi": "10.48550/arXiv.2606.32017",
+    "arxiv_id": "2606.32017",
+    "dblp_key": "journals/corr/abs-2606-32017",
+    "paper_url": "https://www.semanticscholar.org/paper/e7c90ef5995ee2e6052ebe2764741c8d3b32da93",
+    "published_iso": "2026-06-30",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Executable Reference Trajectory Construction and Conflict-Aware Residual Reinforcement Learning for Urban Multi-UAV Navigation",
+    "title_norm": "executable reference trajectory construction and conflict aware residual reinfor",
+    "abstract": "Urban multi-UAV navigation in dense building environments requires not only collision-free geometric paths but also executable flight processes under motion constraints and inter-UAV safety requirements. A static path that is feasible in a geometric map may still fail during closed-loop execution because of velocity limits, acceleration constraints, local path-association errors, and coupled multi-UAV interactions. Meanwhile, end-to-end reinforcement learning often suffers from unstable training, weak geometric interpretability, poor early-stage safety, and high sample complexity. To address these issues, this paper proposes a hierarchical planning-and-learning framework that connects static reference path generation, executable reference tracking, successful demonstration distillation, and conflict-aware residual reinforcement learning. First, three-dimensional reference paths are generated offline in an OpenStreetMap-based urban scene represented by cuboid buildings. Second, a damped reference-tracking mechanism transforms these static paths into closed-loop executable reference processes through local path association, monotonic progress updating, path recapture, look-ahead guidance, and bounded action construction. Third, successful pure-reference executions are distilled for behavior-cloning initialization. Finally, a bounded residual TD3 module is introduced as a local conflict-correction mechanism around the verified executable reference baseline. Experiments in an urban scene containing 754 buildings show that simplified tracking strategies fail to execute the static paths reliably, whereas the proposed full-damped reference-tracking controller achieves a 91.67% all-success rate and eliminates building collision episodes in the tracking-ablation test. Speed-sensitivity experiments at 10, 15, and 20 m/s show the same 91.67% all-success rate, indicating that the conclusion is not dependent on a single speed setting. In constructed conflict-stress tests, the conflict-aware residual TD3 module increases the all-success rate from 33.33% to 80.09%, reduces inter-UAV collision episodes from 66.67% to 11.57%, and improves the hard-safety satisfaction rate from 33.33% to 87.04%. These results show that the main contribution of the proposed framework lies in converting static geometric paths into executable reference trajectories and further enabling bounded residual correction under inter-UAV conflict conditions.",
+    "tldr": "Results show that the main contribution of the proposed framework lies in converting static geometric paths into executable reference trajectories and further enabling bounded residual correction under inter-UAV conflict conditions.",
+    "year": 2026,
+    "venue": "Aerospace",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Xiangzhi Zhou",
+      "Siqing Li",
+      "Qianjin Xia",
+      "Shanmei Li"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "189e88836d66d8b94473fb45d3632179c5357ef4",
+    "paper_id": "semanticscholar:189e88836d66d8b94473fb45d3632179c5357ef4",
+    "doi": "10.3390/aerospace13070636",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://doi.org/10.3390/aerospace13070636",
+    "published_iso": "2026-07-13",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Balancing Accuracy and Efficiency: Adaptive Dynamics Orchestration for Model Predictive Control",
+    "title_norm": "balancing accuracy and efficiency adaptive dynamics orchestration for model pred",
+    "abstract": "Model Predictive Control (MPC) for autonomous navigation faces a fundamental trade-off between model accuracy and real-time efficiency. High-fidelity dynamics models can accurately predict complex vehicle-terrain interactions during trajectory rollouts, but incur significant computational cost, increasing inference latency and reducing control frequency. Conversely, lightweight models enable fast updates and dense sampling, yet may produce erroneous predictions under safety-critical conditions, potentially leading to catastrophic failures such as vehicle rollover. To address this trade-off, we propose Adaptive Dynamics Orchestration (ADO), a framework that dynamically selects the most appropriate dynamics model for the current navigation context. ADO maintains a library of models spanning diverse accuracy-efficiency profiles and continuously refines terrain-conditioned performance estimates using residual errors from online counterfactual rollouts, where executed control actions are replayed across the model library to assess predictive discrepancy. These estimates guide model selection in real time, balancing computational efficiency and predictive accuracy. Real-world experiments on an off-road ground robot demonstrate that ADO significantly reduces modeling error compared to a fixed low-latency baseline, while approaching the accuracy of the highest-fidelity model without incurring its computational cost, resulting in more reliable and effective navigation in challenging terrain.",
+    "tldr": "Adaptive Dynamics Orchestration (ADO) is proposed, a framework that dynamically selects the most appropriate dynamics model for the current navigation context using residual errors from online counterfactual rollouts, to approach the accuracy of the highest-fidelity model without incurring its computational cost.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Francesco Cancelliere",
+      "A. Datar",
+      "Giovanni Muscato",
+      "Xuesu Xiao"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "paper_id": "semanticscholar:f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "doi": "10.48550/arXiv.2606.00085",
+    "arxiv_id": "2606.00085",
+    "dblp_key": "journals/corr/abs-2606-00085",
+    "paper_url": "https://www.semanticscholar.org/paper/f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "published_iso": "2026-05-22",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+    "title_norm": "touchworld a predictive and reactive tactile foundation model for dexterous mani",
+    "abstract": "Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.",
+    "tldr": "By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Jianyi Zhou",
+      "Feiyang Hong",
+      "Yunhao Li",
+      "Yicheng Zhao",
+      "Yongjue Cen",
+      "Zirui Liu"
+    ],
+    "citations": 3,
+    "source": "semanticscholar",
+    "source_id": "393609ffbd1eda3811cf97cdc04e3ce8e2c36bb5",
+    "paper_id": "semanticscholar:393609ffbd1eda3811cf97cdc04e3ce8e2c36bb5",
+    "doi": "",
+    "arxiv_id": "2607.07287",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/393609ffbd1eda3811cf97cdc04e3ce8e2c36bb5",
+    "published_iso": "2026-07-08",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Retrieve in Time, Correct in Frequency",
+    "title_norm": "retrieve in time correct in frequency",
+    "abstract": "Frozen vision-language-action (VLA) policies generate temporally extended action chunks, but long-horizon manipulation remains vulnerable to accumulated execution error and visual aliasing across task stages. Successful rollouts provide useful corrective evidence, yet current frame retrieval can return progress-misaligned actions,while direct replay or time-domain fusion can overwrite the reactive structure of the policy proposal. We introduce Retrieve in Time, Correct in Frequency (RTCF), a training-free test-time correction framework that improves frozen VLA performance with low model-side overhead.RTCF separates which experience to retrieve from which part of its action to transfer. Progressive Memory Alignment (PMA) causally aligns the growing visual execution history with complete successful trajectories through incrementally updated monotonic frontiers, jointly identifying a relevant memory and the current aligned memory position without stage labels. From the aligned action chunk,RTCF transfers a coefficient-wise-clipped low-frequency residual on motion channels. Higher-frequency components and gripper decisions remain inherited from the frozen policy. Across four LIBERO suites and 2,000 episodes per condition, RTCF raises aggregate success from 86.4% to 88.4% and improves LIBERO-Long from 61.6% to 68.6%.These gains require no parameter updates, repeated VLA inference, or additional GPU resources: correction can be performed on the client CPU after a single policy invocation, and the median latencies sum to only 10.99 ms per action chunk",
+    "tldr": "Retrieve in Time, Correct in Frequency (RTCF), a training-free test-time correction framework that improves frozen VLA performance with low model-side overhead and requires no parameter updates, repeated VLA inference, or additional GPU resources.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Yuze Fan",
+      "Yue Cao",
+      "Pengjie Gao",
+      "Haojia Gao",
+      "Guangqiu Guo",
+      "Ziyue Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "104fb9ac1ffd3720dd134c1c7c7504f7431c5629",
+    "paper_id": "semanticscholar:104fb9ac1ffd3720dd134c1c7c7504f7431c5629",
+    "doi": "",
+    "arxiv_id": "2608.04527",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/104fb9ac1ffd3720dd134c1c7c7504f7431c5629",
+    "published_iso": "2026-08-05",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-08",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "LAMP: Latent Motion Prior-Guided Real-World Learning for Dexterous Hand Manipulation",
+    "title_norm": "lamp latent motion prior guided real world learning for dexterous hand manipulat",
+    "abstract": "Real-world learning for dexterous hands remains brittle because high-dimensional hand actions amplify imitation errors and make reinforcement-learning exploration prone to contact-breaking motion. While combining imitation learning (IL) with online reinforcement learning (RL) can reduce manual supervision, unconstrained exploration in raw hand-action spaces is sample-inefficient and risky for physical hardware. We introduce a latent motion prior module (\\prior{}) that maps recent hand-action histories to a compact, history-conditioned latent prior and decodes continuous latent commands into executable high-dimensional hand targets. Built on this prior, \\method{} is a three-stage real-world dexterous learning framework: it pretrains \\prior{} from demonstrations, trains a visuomotor policy that predicts native arm commands and latent hand-action offsets, and improves the policy with online residual RL in the same latent hand-action space. This shared, decodable interface lets residual exploration make local corrections near demonstrated, contact-consistent hand motions rather than perturbing every finger joint independently. We evaluate \\method{} on four real-robot dexterous manipulation tasks against raw, linear, and discrete hand-action interfaces. Starting from small task-specific demonstration sets, \\method{} achieves a 56.25\\% average IL success rate and raises it to 98.75\\% after online RL, reaching 100\\% final success on three tasks and 95\\% on the remaining task.",
+    "tldr": "A latent motion prior module (\\prior{}) is introduced that maps recent hand-action histories to a compact, history-conditioned latent prior and decodes continuous latent commands into executable high-dimensional hand targets and improves the policy with online residual RL in the same latent hand-action space.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Xinye Yang",
+      "Zhiyuan Ma",
+      "Hongze Yu",
+      "Yuanpei Chen",
+      "Yaodong Yang",
+      "Xiaojie Chai"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "930617b37b2de87b8a7359549aa04cb45a433a91",
+    "paper_id": "semanticscholar:930617b37b2de87b8a7359549aa04cb45a433a91",
+    "doi": "",
+    "arxiv_id": "2607.06323",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/930617b37b2de87b8a7359549aa04cb45a433a91",
+    "published_iso": "2026-07-07",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Learning Actionable Manipulation Recovery via Counterfactual Failure Synthesis",
+    "title_norm": "learning actionable manipulation recovery via counterfactual failure synthesis",
+    "abstract": "While recent foundation models have significantly advanced robotic manipulation, these systems still struggle to autonomously recover from execution errors. Current failure-learning paradigms rely on either costly and unsafe real-world data collection or simulator-based perturbations, which introduce a severe sim-to-real gap. Furthermore, existing visual analyzers predominantly output coarse, binary diagnoses rather than the executable, trajectory-level corrections required for actual recovery. To bridge the gap between failure diagnosis and actionable recovery, we introduce Dream2Fix, a framework that synthesizes photorealistic, counterfactual failure rollouts directly from successful real-world demonstrations. By perturbing actions within a generative world model, Dream2Fix creates paired failure-correction data without relying on simulators. To ensure the generated data is physically viable for robot learning, we implement a structured verification mechanism that strictly filters rollouts for task validity, visual coherence, and kinematic safety. This engine produces a high-fidelity dataset of over 120k paired samples. Using this dataset, we fine-tune a vision-language model to jointly predict failure types and precise recovery trajectories, mapping visual anomalies directly to corrective actions. Extensive real-world robotic experiments show our approach achieves state-of-the-art correction accuracy, improving from 19.7% to 81.3% over prior baselines, and successfully enables zero-shot closed-loop failure recovery in physical deployments.",
+    "tldr": "This work introduces Dream2Fix, a framework that synthesizes photorealistic, counterfactual failure rollouts directly from successful real-world demonstrations, and achieves state-of-the-art correction accuracy, improving from 19.7% to 81.3% over prior baselines.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Dayou Li",
+      "Jiuzhou Lei",
+      "Hao Wang",
+      "Lu Liu",
+      "Yunhao Yang",
+      "Zi-Han Wang"
+    ],
+    "citations": 3,
+    "source": "semanticscholar",
+    "source_id": "cfcbb504f0490b1a690c1aaf2bafbb2b23978a8c",
+    "paper_id": "semanticscholar:cfcbb504f0490b1a690c1aaf2bafbb2b23978a8c",
+    "doi": "10.48550/arXiv.2603.13528",
+    "arxiv_id": "2603.13528",
+    "dblp_key": "journals/corr/abs-2603-13528",
+    "paper_url": "https://www.semanticscholar.org/paper/cfcbb504f0490b1a690c1aaf2bafbb2b23978a8c",
+    "published_iso": "2026-03-13",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-03",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "TACO: TActile World Model as a Self-COrrector forScalable VLA Post-Training",
+    "title_norm": "taco tactile world model as a self corrector forscalable vla post training",
+    "abstract": "Vision-Language-Action (VLA) models have shown promising generalization in robotic manipulation, but they still struggle with contact-rich tasks, where minor contact perturbations can cause unrecoverable failures that are hard to detect from vision alone. Since these failures are localized rather than task-level semantic errors, tactile-aware corrective post-training offers an efficient way to improve recovery. However, scaling such supervision through human intervention is costly. Recent works have explored world models to synthesize imagined rollouts for policy improvement, but vision-only world models may produce visually plausible yet contact-inconsistent trajectories. We therefore introduce TACO, a tactile-aware world-model-driven framework for scalable VLA post-training in contact-rich manipulation. Given real robot rollouts, TACO follows a Recognize-Imagine-Label loop with a tactile-aware world model: a unified progress-action model recognizes failure-adjacent states using progress estimates, a visuo-tactile generation model imagines local correction segments, and the progress-action model labels them with executable corrective actions. To incorporate tactile corrective supervision into VLA post-training, TACO combines knowledge-insulated tactile adaptation with advantage-conditioned training, enabling the policy to learn from imagined corrections without degrading pretrained visual-language priors. These components enable TACO to convert real-world failures into imagined visuo-tactile corrections for iterative VLA post-training. Experiments on real-world contact-rich manipulation tasks show that TACO achieves 44% absolute success rate improvement over the base policy and 32% over the policy without knowledge-insulated tactile adaptation.",
+    "tldr": "TACO combines knowledge-insulated tactile adaptation with advantage-conditioned training, enabling the policy to learn from imagined corrections without degrading pretrained visual-language priors, and to convert real-world failures into imagined visuo-tactile corrections for iterative VLA post-training.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Shengbang Liu",
+      "Yueru Jia",
+      "Yuyang Yan",
+      "Jiaming Liu",
+      "Xinran Y. Zhang",
+      "Qiuxuan Feng"
+    ],
+    "citations": 2,
+    "source": "semanticscholar",
+    "source_id": "1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+    "paper_id": "semanticscholar:1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+    "doi": "",
+    "arxiv_id": "2607.02840",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+    "published_iso": "2026-07-03",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "AnchorVLA: Anchored Diffusion for Efficient End-to-End Mobile Manipulation",
+    "title_norm": "anchorvla anchored diffusion for efficient end to end mobile manipulation",
+    "abstract": "A central challenge in mobile manipulation is preserving multiple plausible action models while remaining reactive during execution. A bottle in a cluttered scene can often be approached and grasped in multiple valid ways. Robust behavior depends on preserving this action diversity while remaining reactive as the scene evolves. Diffusion policies are appealing because they model multimodal action distributions rather than collapsing to one solution. But in practice, full iterative denoising is costly at control time. Action chunking helps amortize inference, yet it also creates partially open-loop behavior, allowing small mismatches to accumulate into drift. We present AnchorVLA, a diffusion-based VLA policy for mobile manipulation built on the core insight that when sampling begins near a plausible solution manifold, extensive denoising is unnecessary to recover multimodal, valid actions. AnchorVLA combines a lightweight VLA adaptation backbone with an anchored diffusion action head, which denoises locally around anchor trajectories using a truncated diffusion schedule. This retains multimodal action generation while reducing inference cost for closed-loop control. Crucially, to mitigate chunking-induced drift, we introduce a test-time self-correction mechanism via a lightweight residual correction module that makes high-frequency, per-step adjustments during rollout. Across diverse mobile manipulation tasks, AnchorVLA improves success and stability under disturbances and distribution shifts while maintaining low-latency inference. The source code is made available at https://github.com/jason-lim26/AnchorVLA.",
+    "tldr": "AnchorVLA is presented, a diffusion-based VLA policy for mobile manipulation built on the core insight that when sampling begins near a plausible solution manifold, extensive denoising is unnecessary to recover multimodal, valid actions.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Jia Syuen Lim",
+      "Zhizheng Zhang",
+      "Peter Bohm",
+      "Brendan Tidd",
+      "Zi Huang",
+      "Yadan Luo"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "c83a165bd41da1bf859be7bbfb4f34a064c3a4e0",
+    "paper_id": "semanticscholar:c83a165bd41da1bf859be7bbfb4f34a064c3a4e0",
+    "doi": "10.48550/arXiv.2604.01567",
+    "arxiv_id": "2604.01567",
+    "dblp_key": "journals/corr/abs-2604-01567",
+    "paper_url": "https://www.semanticscholar.org/paper/c83a165bd41da1bf859be7bbfb4f34a064c3a4e0",
+    "published_iso": "2026-04-02",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "FADA: Few-Shot Domain Adaptation via Dynamics Alignment for Humanoid Control",
+    "title_norm": "fada few shot domain adaptation via dynamics alignment for humanoid control",
+    "abstract": "High-precision humanoid control is limited by target-domain dynamics mismatch, where the same control objective can induce different realized motions under changes in terrain, payload, or actuator response. Existing methods either pursue zero-shot transfer through domain randomization or in-context adaptation without target-domain specialization, or require heavy adaptation pipelines that leverage target-domain data, such as model calibration, residual learning, or policy retraining. In this paper, we present FADA (Few-Shot Domain Adaptation via Dynamics Alignment), a three-stage Planner-Inverse Dynamics Model (Planner-IDM) framework for few-shot adaptation in humanoid control. FADA first trains an oracle policy with privileged information and then distills the oracle behavior into a deployable Planner-IDM student through DAgger. At deployment, FADA freezes the planner and finetunes only the IDM using approximately 2 minutes of target-domain rollouts with standard supervised learning. Rather than requiring optimal demonstrations or rewards, FADA uses the paired actions and observations that are observed during these rollouts as supervision, aligning the IDM's action generation with target-domain dynamics. Experiments show that FADA outperforms both in-context and end-to-end adaptation baselines, improving task performance under dynamics shifts and enabling real humanoid robots to execute diverse high-precision whole-body tasks. Implementation details and qualitative hardware rollout videos are available at https://lecar-lab.github.io/FADA-humanoid/.",
+    "tldr": "Experiments show that FADA outperforms both in-context and end-to-end adaptation baselines, improving task performance under dynamics shifts and enabling real humanoid robots to execute diverse high-precision whole-body tasks.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Angchen Xie",
+      "Nikhil Sobanbabu",
+      "Ishayu Shikhare",
+      "Alan Wang",
+      "Max Simchowitz",
+      "Guanya Shi"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "32e118f5f0c9ee9bf1ec7c9d4569ae42296193c6",
+    "paper_id": "semanticscholar:32e118f5f0c9ee9bf1ec7c9d4569ae42296193c6",
+    "doi": "10.48550/arXiv.2606.28476",
+    "arxiv_id": "2606.28476",
+    "dblp_key": "journals/corr/abs-2606-28476",
+    "paper_url": "https://www.semanticscholar.org/paper/32e118f5f0c9ee9bf1ec7c9d4569ae42296193c6",
+    "published_iso": "2026-06-26",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Meta-Adaptive Beam Search Planning for Transformer-Based Reinforcement Learning Control of UAVs with Overhead Manipulators under Flight Disturbances",
+    "title_norm": "meta adaptive beam search planning for transformer based reinforcement learning ",
+    "abstract": "Drones equipped with overhead manipulators offer unique capabilities for inspection, maintenance, and contact-based interaction. However, the motion of the drone and its manipulator is tightly linked, and even small attitude changes caused by wind or control imperfections shift the end-effector away from its intended path. This coupling makes reliable tracking difficult and also limits the direct use of learning-based arm controllers that were originally designed for fixed-base robots. These effects appear consistently in our tests whenever the UAV body experiences drift or rapid attitude corrections. To address this behavior, we develop a reinforcement-learning (RL) framework with a transformer-based double deep Q learning (DDQN), with the core idea of using an adaptive beam-search planner that applies a short-horizon beam search over candidate control sequences using the learned critic as the forward estimator. This allows the controller to anticipate the end-effector's motion through simulated rollouts rather than executing those actions directly on the actual model, realizing a software-in-the-loop (SITL) approach. The lookahead relies on value estimates from a Transformer critic that processes short sequences of states, while a DDQN backbone provides the one-step targets needed to keep the learning process stable. Evaluated on a 3-DoF aerial manipulator under identical training conditions, the proposed meta-adaptive planner shows the strongest overall performance with a 10.2% reward increase, a substantial reduction in mean tracking error (from about 6% to 3%), and a 29.6% improvement in the combined reward-error metric relative to the DDQN baseline. Our method exhibits elevated stability in tracking target tip trajectory (by maintaining 5 cm tracking error) when the drone base exhibits drifts due to external disturbances, as opposed to the fixed-beam and Transformer-only variants.",
+    "tldr": "A reinforcement-learning framework with a transformer-based double deep Q learning (DDQN) backbone that allows the controller to anticipate the end-effector's motion through simulated rollouts rather than executing those actions directly on the actual model, realizing a software-in-the-loop (SITL) approach.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Hazim Alzorgan",
+      "Sayed Pedram Haeri Boroujeni",
+      "Abolfazl Razi"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "9d65daceaefde54de218e054f553f62fb80ed424",
+    "paper_id": "semanticscholar:9d65daceaefde54de218e054f553f62fb80ed424",
+    "doi": "10.48550/arXiv.2603.26612",
+    "arxiv_id": "2603.26612",
+    "dblp_key": "journals/corr/abs-2603-26612",
+    "paper_url": "https://www.semanticscholar.org/paper/9d65daceaefde54de218e054f553f62fb80ed424",
+    "published_iso": "2026-03-27",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-03",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Embodied large language models enable robots to complete complex tasks in unpredictable environments",
+    "title_norm": "embodied large language models enable robots to complete complex tasks in unpred",
+    "abstract": "Completing complex tasks in unpredictable settings challenges robotic systems, requiring a step change in machine intelligence. Sensorimotor abilities are considered integral to human intelligence. Thus, biologically inspired machine intelligence might usefully combine artificial intelligence with robotic sensorimotor capabilities. Here we report an embodied large-language-model-enabled robot (ELLMER) framework, utilizing GPT-4 and a retrieval-augmented generation infrastructure, to enable robots to complete long-horizon tasks in unpredictable settings. The method extracts contextually relevant examples from a knowledge base, producing action plans that incorporate force and visual feedback and enabling adaptation to changing conditions. We tested ELLMER on a robot tasked with coffee making and plate decoration; these tasks consist of a sequence of sub-tasks from drawer opening to pouring, each benefiting from distinct feedback types and methods. We show that the ELLMER framework allows the robot to complete the tasks. This demonstration marks progress towards scalable, efficient and 'intelligent robots' able to complete complex tasks in uncertain environments.",
+    "year": 2025,
+    "venue": "Nature Machine Intelligence",
+    "authors": [
+      "Ruaridh Mon-Williams",
+      "Gen Li",
+      "Ran Long",
+      "Wenqian Du",
+      "Christopher G. Lucas"
+    ],
+    "citations": 103,
+    "source": "openalex",
+    "source_id": "W4408555470",
+    "doi": "10.1038/s42256-025-01005-x",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4408555470",
+    "published_iso": "2025-03-18",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4408555470",
+    "year_month": "2025-03",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ALPHA- α and Bi-ACT Are All You Need: Importance of Position and Force Information/ Control for Imitation Learning of Unimanual and Bimanual Robotic Manipulation With Low-Cost System",
+    "title_norm": "alpha α and bi act are all you need importance of position and force information",
+    "abstract": "Autonomous manipulation in everyday tasks requires flexible action generation to handle complex, diverse real-world environments, such as objects with varying hardness and softness. Imitation Learning (IL) enables robots to learn complex tasks from expert demonstrations. However, a lot of existing methods rely on position/unilateral control, leaving challenges in tasks that require force information/control, like carefully grasping fragile or varying-hardness objects. As the need for diverse controls increases, there are demand for low-cost bimanual robots that consider various motor inputs. To address these challenges, we introduce Bilateral Control-Based Imitation Learning via Action Chunking with Transformers(Bi-ACT) and“A” “L”ow-cost “P”hysical “Ha”rdware Considering Diverse Motor Control Modes for Research in Everyday Bimanual Robotic Manipulation (ALPHA-$\\alpha $). Bi-ACT leverages bilateral control to utilize both position and force information, enhancing the robot’s adaptability to object characteristics such as hardness and shape. The concept of ALPHA-$\\alpha $is affordability, ease of use, repairability, ease of assembly, and diverse control modes such as position, velocity, and torque mode. In our experiments, we conducted detailed analysis of Bi-ACT in unimanual tasks involving objects with varying hardness, shape, and weight, confirming its superior performance and adaptability. We also applied Bi-ACT to bimanual tasks such as “Egg Handling” and “Open Cap” using ALPHA-$\\alpha $. The experimental outcomes demonstrated a high success rate in bimanual operations, validating the effectiveness of our approach in real-world scenarios. These results suggest that Bi-ACT and ALPHA-$\\alpha $can advance automation in daily life and industrial settings. Video available at:https://mertcookimg.github.io/alpha-biact/",
+    "year": 2025,
+    "venue": "IEEE Access",
+    "authors": [
+      "Masato Kobayashi",
+      "Thanpimon Buamanee",
+      "Takumi Kobayashi"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4407449452",
+    "doi": "10.1109/access.2025.3541200",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4407449452",
+    "published_iso": "2025-01-01",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4407449452",
+    "year_month": "2025-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CAGE: Causal Attention Enables Data-Efficient Generalizable Robotic Manipulation",
+    "title_norm": "cage causal attention enables data efficient generalizable robotic manipulation",
+    "abstract": "Generalization in robotic manipulation remains a critical challenge, particularly when scaling to new environments with limited demonstrations. This paper introduces CAGE, a novel robotic manipulation policy designed to overcome these generalization barriers by integrating a causal attention mechanism. CAGE utilizes the powerful feature extraction capabilities of the vision foundation model DINOv2, combined with LoRA fine-tuning for robust environment understanding. The policy further employs a causal Perceiver for effective token compression and a diffusion-based action prediction head with attention mechanisms to enhance task-specific fine-grained conditioning. With as few as 50 demonstrations from a single training environment, CAGE achieves robust generalization across diverse visual changes in objects, backgrounds, and viewpoints. Extensive experiments validate that CAGE significantly outperforms existing state-of-the-art RGB/RGB-D approaches in various manipulation tasks, especially under large distribution shifts. In similar environments, CAGE offers an average of 42% increase in task completion rate. While all baselines fail to execute the task in unseen environments, CAGE manages to obtain a 43% completion rate and a 51% success rate in average, making a huge step towards practical deployment of robots in real-world settings. Project website: cage-policy.github.io.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Shangning Xia",
+      "Hongjie Fang",
+      "Cewu Lu",
+      "Haoshu Fang"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W4404088241",
+    "doi": "10.48550/arxiv.2410.14974",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2410.14974",
+    "published_iso": "2024-10-19",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4404088241",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "$π_{0.5}$: a Vision-Language-Action Model with Open-World Generalization",
+    "title_norm": "π_ 0 5 a vision language action model with open world generalization",
+    "abstract": "In order for robots to be useful, they must perform practically relevant tasks in the real world, outside of the lab. While vision-language-action (VLA) models have demonstrated impressive results for end-to-end robot control, it remains an open question how far such models can generalize in the wild. We describe $π_{0.5}$, a new model based on $π_{0}$ that uses co-training on heterogeneous tasks to enable broad generalization. $π_{0.5}$\\ uses data from multiple robots, high-level semantic prediction, web data, and other sources to enable broadly generalizable real-world robotic manipulation. Our system uses a combination of co-training and hybrid multi-modal examples that combine image observations, language commands, object detections, semantic subtask prediction, and low-level actions. Our experiments show that this kind of knowledge transfer is essential for effective generalization, and we demonstrate for the first time that an end-to-end learning-enabled robotic system can perform long-horizon and dexterous manipulation skills, such as cleaning a kitchen or bedroom, in entirely new homes.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Physical Intelligence",
+      "Kevin Black",
+      "Noah Brown",
+      "James Darpinian",
+      "Karan Dhabalia",
+      "Danny Driess"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W4414674749",
+    "doi": "10.48550/arxiv.2504.16054",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2504.16054",
+    "published_iso": "2025-04-22",
+    "oa_field": "Social Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4414674749",
+    "year_month": "2025-04",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "$π_0$: A Vision-Language-Action Flow Model for General Robot Control",
+    "title_norm": "π_0 a vision language action flow model for general robot control",
+    "abstract": "Robot learning holds tremendous promise to unlock the full potential of flexible, general, and dexterous robot systems, as well as to address some of the deepest questions in artificial intelligence. However, bringing robot learning to the level of generality required for effective real-world systems faces major obstacles in terms of data, generalization, and robustness. In this paper, we discuss how generalist robot policies (i.e., robot foundation models) can address these challenges, and how we can design effective generalist robot policies for complex and highly dexterous tasks. We propose a novel flow matching architecture built on top of a pre-trained vision-language model (VLM) to inherit Internet-scale semantic knowledge. We then discuss how this model can be trained on a large and diverse dataset from multiple dexterous robot platforms, including single-arm robots, dual-arm robots, and mobile manipulators. We evaluate our model in terms of its ability to perform tasks in zero shot after pre-training, follow language instructions from people and from a high-level VLM policy, and its ability to acquire new skills via fine-tuning. Our results cover a wide variety of tasks, such as laundry folding, table cleaning, and assembling boxes.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Black, Kevin",
+      "Noah Brown",
+      "Danny Driess",
+      "A. Esmail",
+      "Michael Equi",
+      "Chelsea Finn"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4404350116",
+    "doi": "10.48550/arxiv.2410.24164",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2410.24164",
+    "published_iso": "2024-10-31",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4404350116",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "LLM-Driven Robots Risk Enacting Discrimination, Violence, and Unlawful Actions",
+    "title_norm": "llm driven robots risk enacting discrimination violence and unlawful actions",
+    "abstract": "Abstract Members of the Human-Robot Interaction (HRI) and Machine Learning (ML) communities have proposed Large Language Models (LLMs) as a promising resource for robotics tasks such as natural language interaction, household and workplace tasks, approximating ‘common sense reasoning’, and modeling humans. However, recent research has raised concerns about the potential for LLMs to produce discriminatory outcomes and unsafe behaviors in real-world robot experiments and applications. To assess whether such concerns are well placed in the context of HRI, we evaluate several highly-rated LLMs on discrimination and safety criteria. Our evaluation reveals that LLMs are currently unsafe for people across a diverse range of protected identity characteristics, including, but not limited to, race, gender, disability status, nationality, religion, and their intersections. Concretely, we show that LLMs produce directly discriminatory outcomes—e.g., ‘gypsy’ and ‘mute’ people are labeled untrustworthy, but not ‘european’ or ‘able-bodied’ people. We find various such examples of direct discrimination on HRI tasks such as facial expression, proxemics, security, rescue, and task assignment. Furthermore, we test models in settings with unconstrained natural language (open vocabulary) inputs, and find they fail to act safely, generating responses that accept dangerous, violent, or unlawful instructions—such as incident-causing misstatements, taking people’s mobility aids, and sexual predation. Our results underscore the urgent need for systematic, routine, and comprehensive risk assessments and assurances to improve outcomes and ensure LLMs only operate on robots when it is safe, effective, and just to do so. We provide code to reproduce our experiments at https://github.com/rumaisa-azeem/llm-robots-discrimination-safety.",
+    "year": 2025,
+    "venue": "International Journal of Social Robotics",
+    "authors": [
+      "Andrew Hundt",
+      "Rumaisa Azeem",
+      "Masoumeh Mansouri",
+      "Martim Brandão"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4415266110",
+    "doi": "10.1007/s12369-025-01301-x",
+    "arxiv_id": null,
+    "paper_url": "https://link.springer.com/content/pdf/10.1007/s12369-025-01301-x.pdf",
+    "published_iso": "2025-10-16",
+    "oa_field": "Social Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4415266110",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Uncertainty-aware Cartesian error compensation in industrial robots via point interval prediction and residual calibration",
+    "title_norm": "uncertainty aware cartesian error compensation in industrial robots via point in",
+    "abstract": "Accurate Cartesian positioning in industrial robots remains challenging under drift, friction, and regime changes. This paper presents an uncertainty-aware, two-stage compensation pipeline for a four-degree-of-freedom (4-DOF) serial robot using only joint telemetry. Stage I combines a long short-term memory (LSTM) point predictor with an auxiliary network that learns per-axis prediction intervals (PIs) via a loss balancing prediction-interval coverage probability (PICP) and mean prediction-interval width (MPIW). Stage II performs residual calibration from three features: point value, PI width, and point midpoint skew, using compact models (ridge, two-regime linear, and adaptive neuro-fuzzy inference system, ANFIS) with safety gates. Evaluation on a synthetic dataset containing slow drifts, a large step change, and strong periodic content shows calibrated or near-calibrated uncertainty on two axes and under-coverage on the stepped axis, consistent with probability integral transform (PIT) diagnostics. Translating PIs into residuals yields axis-dependent root-mean-square error (RMSE) changes: $$+4.7\\%$$ ( $$x$$ ), $$+8.1\\%$$ ( $$z$$ ), and $$-2.7\\%$$ ( $$y$$ ). The results indicate that coupling point predictions with calibrated uncertainty enables conservative compensation near regime shifts and tighter corrections in smooth or periodic regimes, offering a transparent and deployable baseline for uncertainty-aware robot error compensation.",
+    "year": 2026,
+    "venue": "Discover Robotics",
+    "authors": [
+      "Ihtisham Ul Haq",
+      "Luigi D’ Alfonso",
+      "Luigi Longo",
+      "Giuseppe Fedele",
+      "Francesco Lamonaca"
+    ],
+    "citations": 7,
+    "source": "openalex",
+    "source_id": "W7128094881",
+    "doi": "10.1007/s44430-026-00017-5",
+    "arxiv_id": null,
+    "paper_url": "https://link.springer.com/content/pdf/10.1007/s44430-026-00017-5.pdf",
+    "published_iso": "2026-02-05",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W7128094881",
+    "year_month": "2026-02",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models",
+    "title_norm": "transport discrepancy as a reliability signal for vision language action models",
+    "abstract": "Vision-language-action (VLA) models that generate continuous action chunks via flow matching lack an internal signal for judging whether a given prediction is reliable. Distribution shift and long-horizon rollouts can push backbone representations away from the region the action head decodes reliably, yet the policy has no mechanism to detect or react to this drift. We observe that the cost of transporting observation features to the action representation in a shared feature space rises precisely when such drift occurs, providing a per-step reliability estimate without extra supervision. Building on this observation, we propose DiG (Discrepancy Gate), a lightweight plug-in module for flow-matching VLA policies. DiG computes a sliced Wasserstein transport cost between backbone features and the action expert's own input projection, maps it through an exponential gate, and uses the gate to modulate both a residual feature refinement and the training loss. At inference time, the gate enables DiG-Refinefine, an iterative refinement process that corrects action chunks before execution. Experiments on both simulation and real-world scenarios show that DiG consistently improves success rates, with the largest gains under distribution shift and on long-horizon tasks.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Wanpeng Zhang",
+      "Ye Wang",
+      "Hao Luo",
+      "Yuan, Haoqi",
+      "Yicheng Feng",
+      "Xu, Chaoyi"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416967312",
+    "doi": "10.48550/arxiv.2512.01715",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2512.01715",
+    "published_iso": "2025-12-01",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4416967312",
+    "year_month": "2025-12",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Sim-to-real transfer of adaptive control parameters for AUV stabilisation under current disturbance",
+    "title_norm": "sim to real transfer of adaptive control parameters for auv stabilisation under ",
+    "abstract": "Learning-based adaptive control methods hold the potential to empower autonomous agents in mitigating the impact of process variations with minimal human intervention. However, their application to autonomous underwater vehicles (AUVs) has been constrained by two main challenges: (1) the presence of unknown dynamics in the form of sea current disturbances, which cannot be modelled or measured due to limited sensor capability, particularly on smaller low-cost AUVs, and (2) the nonlinearity of AUV tasks, where the controller response at certain operating points must be excessively conservative to meet specifications at other points. Deep Reinforcement Learning (DRL) offers a solution to these challenges by training versatile neural network policies. Nevertheless, the application of DRL algorithms to AUVs has been predominantly limited to simulated environments due to their inherent high sample complexity and the distribution shift problem. This paper introduces a novel approach by combining the Maximum Entropy Deep Reinforcement Learning framework with a classic model-based control architecture to formulate an adaptive controller. In this framework, we propose a Sim-to-Real transfer strategy, incorporating a bio-inspired experience replay mechanism, an enhanced domain randomisation technique, and an evaluation protocol executed on a physical platform. Our experimental assessments demonstrate the effectiveness of this method in learning proficient policies from suboptimal simulated models of the AUV. When transferred to a real-world vehicle, the approach exhibits a control performance three times higher compared to its model-based nonadaptive but optimal counterpart.",
+    "year": 2024,
+    "venue": "The International Journal of Robotics Research",
+    "authors": [
+      "Thomas Chaffre",
+      "Jonathan Wheare",
+      "Andrew Lammas",
+      "Paulo E. Santos",
+      "Gilles Le Chenadec",
+      "Karl Sammut"
+    ],
+    "citations": 17,
+    "source": "openalex",
+    "source_id": "W4402409305",
+    "doi": "10.1177/02783649241272115",
+    "arxiv_id": null,
+    "paper_url": "https://journals.sagepub.com/history/acb69b00-9339-493f-a0dd-107fc27abfa1/02783649241272115.17905743.pdf",
+    "published_iso": "2024-09-10",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W4402409305",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "A Vision-Guided Robotic System for Safe Dental Implant Surgery",
+    "title_norm": "a vision guided robotic system for safe dental implant surgery",
+    "abstract": "Background: Recent advancements in dental implantology have significantly improved outcomes, with success rates of 90–95% over a 10-year period. Key improvements include enhanced preplanning processes, such as precise implant positioning, model selection, and optimal insertion depth. However, challenges remain, particularly in achieving correct spatial positioning and alignment of implants for optimal occlusion. These challenges are pronounced in patients with reduced bone substance or complex anthropometric features, where even minor misalignments can result in complications or defects. Methods: This paper introduces a vision-guided robotic system designed to improve spatial positioning accuracy during dental implant surgery. The system incorporates advanced force-feedback control to regulate the pressure applied to bone, minimizing the risk of bone damage. A preoperative CBCT scan, combined with real-time images from a robot-mounted camera, guides implant positioning. A personalized marker holder guide, developed from the initial CBCT scan, is used for patient–robot calibration. The robot-mounted camera provides continuous visual feedback of the oral cavity during surgery, enabling precise registration of the patient with the robotic system. Results: Initial experiments were conducted on a 3D-printed mandible using a personalized marker holder. Following successful patient–robot registration, the robotic system autonomously performed implant drilling. To evaluate the accuracy of the robotic-assisted procedure, further tests were conducted on 40 identical molds, followed by measurements of implant positioning. The results demonstrated improved positioning accuracy compared to the manual procedure. Conclusions: The vision-guided robotic system significantly enhances the spatial accuracy of dental implants compared to traditional manual methods. By integrating advanced force-feedback control and real-time visual guidance, the system addresses key challenges in implant positioning, particularly for patients with complex anatomical structures. These findings suggest that robotic-assisted implant surgery could offer a safer and more precise alternative to manual procedures, reducing the risk of implant misalignment and associated complications.",
+    "year": 2024,
+    "venue": "Journal of Clinical Medicine",
+    "authors": [
+      "Daria Pisla",
+      "Vasile Bulbucan",
+      "Mihaela Hedeșiu",
+      "Călin Vaida",
+      "Ionut Zima",
+      "R Mocan"
+    ],
+    "citations": 16,
+    "source": "openalex",
+    "source_id": "W4403690709",
+    "doi": "10.3390/jcm13216326",
+    "arxiv_id": null,
+    "paper_url": "https://www.mdpi.com/2077-0383/13/21/6326/pdf?version=1729669227",
+    "published_iso": "2024-10-23",
+    "oa_field": "Dentistry",
+    "semantic_recall": false,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4403690709",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Phoenix: A Motion-Based Self-Reflection Framework for Fine-Grained Robotic Action Correction",
+    "title_norm": "phoenix a motion based self reflection framework for fine grained robotic action",
+    "abstract": "Building a generalizable self-correction system is crucial for robots to recover from failures. Despite advancements in Multimodal Large Language Models (MLLMs) that empower robots with semantic reflection ability for failure, translating semantic reflection into \"how to correct\" fine-grained robotic actions remains a significant challenge. To address this gap, we build the Phoenix framework, which leverages motion instruction as a bridge to connect high-level semantic reflection with low-level robotic action correction. In this motion-based self-reflection framework, we start with a dual-process motion adjustment mechanism with MLLMs to translate the semantic reflection into coarse-grained motion instruction adjustment. To leverage this motion instruction for guiding \"how to correct\" fine-grained robotic actions, a multi-task motion-conditioned diffusion policy is proposed to integrate visual observations for high-frequency robotic action correction. By combining these two models, we could shift the demand for generalization capability from the low-level manipulation policy to the MLLMs-Driven motion adjustment model and facilitate precise, fine-grained robotic action correction. Utilizing this framework, we further develop a lifelong learning method to automatically improve the model’s capability from interactions with dynamic environments. The experiments conducted in both the RoboMimic simulation and real-world scenarios prove the superior generalization and robustness of our framework across a variety of manipulation tasks. Our code is released at https://github.com/GeWu-Lab/Motion-Based-Self-Reflection-Framework.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Wenke Xia",
+      "Ruoxuan Feng",
+      "Dong Wang",
+      "Di Hu"
+    ],
+    "citations": 4,
+    "source": "openalex",
+    "source_id": "W4413156040",
+    "doi": "10.1109/cvpr52734.2025.00655",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4413156040",
+    "published_iso": "2025-06-10",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4413156040",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+    "title_norm": "closed loop visuomotor control with generative expectation for robotic manipulat",
+    "abstract": "Despite significant progress in robotics and embodied AI in recent years, deploying robots for long-horizon tasks remains a great challenge. Majority of prior arts adhere to an open-loop philosophy and lack real-time feedback, leading to error accumulation and undesirable robustness. A handful of approaches have endeavored to establish feedback mechanisms leveraging pixel-level differences or pre-trained visual representations, yet their efficacy and adaptability have been found to be constrained. Inspired by classic closed-loop control systems, we propose CLOVER, a closed-loop visuomotor control framework that incorporates feedback mechanisms to improve adaptive robotic control. CLOVER consists of a text-conditioned video diffusion model for generating visual plans as reference inputs, a measurable embedding space for accurate error quantification, and a feedback-driven controller that refines actions from feedback and initiates replans as needed. Our framework exhibits notable advancement in real-world robotic tasks and achieves state-of-the-art on CALVIN benchmark, improving by 8% over previous open-loop counterparts. Code and checkpoints are maintained at https://github.com/OpenDriveLab/CLOVER.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Qingwen Bu",
+      "Jia Zeng",
+      "Li Chen",
+      "Yanchao Yang",
+      "Guyue Zhou",
+      "Junchi Yan"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4403808753",
+    "doi": "10.48550/arxiv.2409.09016",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2409.09016",
+    "published_iso": "2024-09-13",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4403808753",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Reducing Sim-to-Real Domain Gaps of Visual Sensors for Learning Environment-Constrained Visuomotor Policy",
+    "title_norm": "reducing sim to real domain gaps of visual sensors for learning environment cons",
+    "abstract": "Simulation engines enable safe training of robotic skills, but domain gaps between simulated and real sensors hinder deployment. However, existing pixel-level adaptation methods focus on the visual realism of generating images over task-specific learning, causing texture leakage and elimination. In this article, we introduce a learnable correlation-attentive and task-related generative adversarial network (LCTGAN), a novel unsupervised domain transfer network, with a correlative attention mechanism and a mask-level Q value mapping (MQM) consistency to enhance task awareness and bridge the domain gap of visual sensors in pixel-level perceptual manipulations. We also propose a Q-learning-based visuomotor policy to handle cluttered scenarios where objects may lack directly graspable configurations, which learns the synergies of three actions while considering environmental constraints. We further integrate LCTGAN into the learned policy to facilitate zero-shot sim-to-real policy transfer. Extensive experimental results validate the zero-shot sim-to-real generalization of our proposed visuomotor policy when deployed on a real robot. The supplementary video is available athttps://youtu.be/B6nODKkhzSw.",
+    "year": 2024,
+    "venue": "IEEE Sensors Journal",
+    "authors": [
+      "Xingshuo Jing",
+      "Kun Qian",
+      "Boyi Duan"
+    ],
+    "citations": 3,
+    "source": "openalex",
+    "source_id": "W4405933855",
+    "doi": "10.1109/jsen.2024.3522245",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405933855",
+    "published_iso": "2024-12-31",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4405933855",
+    "year_month": "2024-12",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "ViPRA: Video Prediction for Robot Actions",
+    "title_norm": "vipra video prediction for robot actions",
+    "abstract": "Can we turn a video prediction model into a robot policy? Videos, including those of humans or teleoperated robots, capture rich physical interactions. However, most of them lack labeled actions, which limits their use in robot learning. We present Video Prediction for Robot Actions (ViPRA), a simple pretraining-finetuning framework that learns continuous robot control from these actionless videos. Instead of directly predicting actions, we train a video-language model to predict both future visual observations and motion-centric latent actions, which serve as intermediate representations of scene dynamics. We train these latent actions using perceptual losses and optical flow consistency to ensure they reflect physically grounded behavior. For downstream control, we introduce a chunked flow matching decoder that maps latent actions to robot-specific continuous action sequences, using only 100 to 200 teleoperated demonstrations. This approach avoids expensive action annotation, supports generalization across embodiments, and enables smooth, high-frequency continuous control upto 22 Hz via chunked action decoding. Unlike prior latent action works that treat pretraining as autoregressive policy learning, ViPRA explicitly models both what changes and how. Our method outperforms strong baselines, with a 16% gain on the SIMPLER benchmark and a 13% improvement across real world manipulation tasks. We have released models and code at https://vipra-project.github.io",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Sandeep Routray",
+      "Pan, Hengkai",
+      "Unnat Jain",
+      "Shikhar Bahl",
+      "Deepak Pathak"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416189451",
+    "doi": "10.48550/arxiv.2511.07732",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2511.07732",
+    "published_iso": "2025-11-11",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4416189451",
+    "year_month": "2025-11",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Real-World Offline Reinforcement Learning from Vision Language Model Feedback",
+    "title_norm": "real world offline reinforcement learning from vision language model feedback",
+    "abstract": "Offline reinforcement learning can enable policy learning from pre-collected, sub-optimal datasets without online interactions. This makes it ideal for real-world robots and safety-critical scenarios, where collecting online data or expert demonstrations is slow, costly, and risky. However, most existing offline RL works assume the dataset is already labeled with the task rewards, a process that often requires significant human effort, especially when ground-truth states are hard to ascertain (e.g., in the real-world). In this paper, we build on prior work, specifically RL-VLM-F, and propose a novel system that automatically generates reward labels for offline datasets using preference feedback from a vision-language model and a text description of the task. Our method then learns a policy using offline RL with the reward-labeled dataset. We demonstrate the system’s applicability to a complex real-world robot-assisted dressing task, where we first learn a reward function using a vision-language model on a sub-optimal offline dataset, and then we use the learned reward to employ Implicit Q learning to develop an effective dressing policy. Our method also performs well in simulation tasks involving the manipulation of rigid and deformable objects, and significantly outperforms baselines such as behavior cloning and inverse RL. In summary, we propose a new system that enables automatic reward labeling and policy learning from unlabeled, sub-optimal offline datasets. Videos can be found on our project website1.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Sreyas Venkataraman",
+      "Yufei Wang",
+      "Ziyu Wang",
+      "Navin Sriram Ravie",
+      "Zackory Erickson",
+      "David Held"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416747877",
+    "doi": "10.1109/iros60139.2025.11246918",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4416747877",
+    "published_iso": "2025-10-19",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4416747877",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Partial Joint Correction of Abnormal Motion Data via Reward Function Design in Virtual Environments",
+    "title_norm": "partial joint correction of abnormal motion data via reward function design in v",
+    "abstract": "Most reinforcement learning-based humanoid motion studies emphasize full-body imitation, limiting selective correction of abnormal joints. This study proposes a reward function design that corrects abnormal joint behavior while preserving motion style, using two approaches: periodic positional targets and pre-trained joint angle references. Applied separately, both guided the agent to recover natural swing motion. Experiments in a physics-based simulation showed improved joint mobility and corrected gait patterns. The results highlight that targeted correction is achievable with imperfect motion data through reward design alone, with potential applications in rehabilitation simulations and user-feedback systems in virtual environments.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "H. M. Kim",
+      "Soungsill Park",
+      "Young Ho Chai"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4417025262",
+    "doi": "10.1145/3756884.3768416",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4417025262",
+    "published_iso": "2025-11-12",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-conditioned future video feedback correction"
+    ],
+    "paper_id": "openalex:W4417025262",
+    "year_month": "2025-11",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Fine-Tuning Vision-Language-Action Models: Optimizing Speed and Success",
+    "title_norm": "fine tuning vision language action models optimizing speed and success",
+    "abstract": "Recent vision-language-action models (VLAs) build upon pretrained vision-language models and leverage diverse robot datasets to demonstrate strong task execution, language following ability, and semantic generalization.Despite these successes, VLAs struggle with novel robot setups and require finetuning to achieve good performance, yet how to most effectively fine-tune them is unclear given many possible strategies.In this work, we study key VLA adaptation design choices such as different action decoding schemes, action representations, and learning objectives for fine-tuning, using OpenVLA as our representative base model.Our empirical analysis informs an Optimized Fine-Tuning (OFT) recipe that integrates parallel decoding, action chunking, a continuous action representation, and a simple L1 regression-based learning objective to altogether improve inference efficiency, policy performance, and flexibility in the model's input-output specifications.We propose OpenVLA-OFT, an instantiation of this recipe, which sets a new state of the art on the LIBERO simulation benchmark, significantly boosting OpenVLA's average success rate across four task suites from 76.5% to 97.1% while increasing action generation throughput by 26×.In real-world evaluations, our fine-tuning recipe enables OpenVLA to successfully execute dexterous, high-frequency control tasks on a bimanual ALOHA robot and outperform other VLAs (π0 and RDT-1B) fine-tuned using their default recipes, as well as strong imitation learning policies trained from scratch (Diffusion Policy and ACT) by up to 15% (absolute) in average success rate.We release code for OFT and pretrained model checkpoints at https://openvla-oft.github.io.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Moo Hyun Kim",
+      "Chelsea Finn",
+      "Percy Liang"
+    ],
+    "citations": 40,
+    "source": "openalex",
+    "source_id": "W4414050921",
+    "doi": "10.15607/rss.2025.xxi.017",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.017",
+    "published_iso": "2025-06-21",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W4414050921",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Neural Fidelity Calibration for Informative Sim-to-Real Adaptation",
+    "title_norm": "neural fidelity calibration for informative sim to real adaptation",
+    "abstract": "Deep reinforcement learning can seamlessly transfer agile locomotion and navigation skills from the simulator to real world. However, bridging the sim-to-real gap with domain randomization or adversarial methods often demands expert physics knowledge to ensure policy robustness. Even so, cutting-edge simulators may fall short of capturing every real-world detail, and the reconstructed environment may introduce errors due to various perception uncertainties. To address these challenges, we propose Neural Fidelity Calibration (NFC), a novel framework that employs conditional score-based diffusion models to calibrate simulator physical coefficients and residual fidelity domains online during robot execution. Specifically, the residual fidelity reflects the simulation model shift relative to the real-world dynamics and captures the uncertainty of the perceived environment, enabling us to sample realistic environments under the inferred distribution for policy fine-tuning. Our framework is informative and adaptive in three key ways: (a) we fine-tune the pretrained policy only under anomalous scenarios, (b) we build sequential NFC online with the pretrained NFC's proposal prior, reducing the diffusion model's training burden, and (c) when NFC uncertainty is high and may degrade policy improvement, we leverage optimistic exploration to enable hallucinated policy optimization. Our framework achieves superior simulator calibration precision compared to state-of-the-art methods across diverse robots with high-dimensional parametric spaces. We study the critical contribution of residual fidelity to policy improvement in simulation and real-world experiments. Notably, our approach demonstrates robust robot navigation under challenging real-world conditions, such as a broken wheel axle on snowy surfaces.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Youwei Yu",
+      "Lantao Liu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4414829173",
+    "doi": "10.48550/arxiv.2504.08604",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2504.08604",
+    "published_iso": "2025-04-11",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W4414829173",
+    "year_month": "2025-04",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Multiscale and Uncertainty-Aware Targetless Hand-Eye Calibration via the Gauss–Helmert Model",
+    "title_norm": "multiscale and uncertainty aware targetless hand eye calibration via the gauss h",
+    "abstract": "The operational reliability of an autonomous robot depends crucially on extrinsic sensor calibration as a prerequisite for precise and accurate data fusion. Exploring the calibration of unscaled sensors (e.g., monocular cameras) and the effective utilization of uncertainties are difficult and often overlooked. The development of a solution for the simultaneous calibration of hand-eye sensors and scale estimation based on the Gauss–Helmert model aims to utilize the valuable information contained in the uncertainty of odometry. In this work, we propose a versatile and robust solution for batch calibration based on the analytical on-manifold approach for estimation. The versatility of our method is demonstrated by its ability to calibrate multiple unscaled and metric-scaled sensors while dealing with odometry failures and reinitializations. Importantly, all estimated parameters are provided with their corresponding uncertainties. The validation of our method and its comparison with five competing state-of-the-art calibration methods in both simulations and real-world experiments show its superior accuracy, with particularly promising results observed in high-noise scenarios.",
+    "year": 2025,
+    "venue": "IEEE Transactions on Robotics",
+    "authors": [
+      "Marta Čolaković-Bencerić",
+      "Juraj Peršić",
+      "Ivan Marković",
+      "Ivan Petrović"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W4408182504",
+    "doi": "10.1109/tro.2025.3548538",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4408182504",
+    "published_iso": "2025-01-01",
+    "oa_field": "Medicine",
+    "semantic_recall": true,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W4408182504",
+    "year_month": "2025-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Confidence Calibration in Vision-Language-Action Models",
+    "title_norm": "confidence calibration in vision language action models",
+    "abstract": "Trustworthy robot behavior requires not only high levels of task success but also that the robot can reliably quantify how likely it is to succeed. To this end, we present a first-of-its-kind study of confidence calibration in vision-language-action (VLA) foundation models, which map visual observations and natural language instructions to low-level robot motor commands. We establish a confidence baseline for VLAs, examine how task success relates to calibration error and how calibration evolves over time, and introduce two lightweight techniques to remedy the miscalibration we observe: prompt ensembles and action-wise Platt scaling. Our aim in this study is to begin to develop the tools and conceptual understanding necessary to render VLAs both highly performant and highly trustworthy via reliable uncertainty quantification.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Thomas P. Zollo",
+      "Richard S. Zemel"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4414880224",
+    "doi": "10.48550/arxiv.2507.17383",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2507.17383",
+    "published_iso": "2025-07-23",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "candidate action world-model error transfer calibration"
+    ],
+    "paper_id": "openalex:W4414880224",
+    "year_month": "2025-07",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "HiLMa-Res: A General Hierarchical Framework via Residual RL for Combining Quadrupedal Locomotion and Manipulation",
+    "title_norm": "hilma res a general hierarchical framework via residual rl for combining quadrup",
+    "abstract": "This work presents HiLMa-Res, a hierarchical framework leveraging reinforcement learning to tackle manipulation tasks while performing continuous locomotion using quadrupedal robots. Unlike most previous efforts that focus on solving a specific task, HiLMa-Res is designed to be general for various loco-manipulation tasks that require quadrupedal robots to maintain sustained mobility. The novel design of this framework tackles the challenges of integrating continuous locomotion control and manipulation using legs. It develops an operational space locomotion controller that can track arbitrary robot end-effector (toe) trajectories while walking at different velocities. This controller is designed to be generic to different downstream tasks, and therefore, can be utilized in high-level manipulation planning policy to address specific tasks. To demonstrate the versatility of this framework, we utilize HiLMa-Res to tackle several challenging loco-manipulation tasks using a quadrupedal robot in the real world. These tasks span from leveraging state-based policy to vision-based policy, from training purely from the simulation data to learning from real-world data. In these tasks, HiLMa-Res shows better performance than other methods.",
+    "year": 2024,
+    "venue": "",
+    "authors": [
+      "Xiaoyu Huang",
+      "Qiayuan Liao",
+      "Yiming Ni",
+      "Zhongyu Li",
+      "Laura Smith",
+      "Sergey Levine"
+    ],
+    "citations": 7,
+    "source": "openalex",
+    "source_id": "W4405787086",
+    "doi": "10.1109/iros58592.2024.10802517",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405787086",
+    "published_iso": "2024-10-14",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4405787086",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Data-Informed Residual Reinforcement Learning for High-Dimensional Robotic Tracking Control",
+    "title_norm": "data informed residual reinforcement learning for high dimensional robotic track",
+    "abstract": "The learning inefficiency of reinforcement learning (RL) from scratch hinders its practical application toward continuous robotic tracking control, especially for high-dimensional robots. This article proposes a data-informed residual reinforcement learning (DR-RL)-based robotic tracking control scheme applicable to robots with high dimensionality. The proposed DR-RL methodology outperforms common RL methods regarding sample efficiency and scalability. Specifically, we first decouple the original robot into low-dimensional robotic subsystems; and further utilize one-step backward data to construct incremental subsystems that are equivalent model-free representations of the aforementioned decoupled robotic subsystems. The formulated incremental subsystems allow for parallel learning to relieve computation load and offer us mathematical descriptions of robotic movements for conducting theoretical analysis. Then, we apply DR-RL to learn the tracking control policy, a combination of incremental base policy and incremental residual policy, under a parallel learning architecture. The incremental residual policy uses the guidance from the incremental base policy as the learning initialization and further learns from interactions with environments to endow the tracking control policy with adaptability toward dynamically changing environments. Our proposed DR-RL-based tracking control scheme is developed with rigorous theoretical analysis of system stability and weight convergence. The effectiveness of our proposed method is validated numerically on a 7-DoF KUKA iiwa robot manipulator and experimentally on a 3-DoF robot manipulator that would fail for other counterpart RL methods.",
+    "year": 2024,
+    "venue": "IEEE/ASME Transactions on Mechatronics",
+    "authors": [
+      "Cong Li",
+      "Fangzhou Liu",
+      "Yongchao Wang",
+      "Martin Buss"
+    ],
+    "citations": 5,
+    "source": "openalex",
+    "source_id": "W4402742779",
+    "doi": "10.1109/tmech.2024.3412275",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4402742779",
+    "published_iso": "2024-09-23",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4402742779",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Semi-Autonomous Teleoperation for Mobile Manipulator via Action Chunking with Transformers",
+    "title_norm": "semi autonomous teleoperation for mobile manipulator via action chunking with tr",
+    "abstract": "In this paper, we propose a semi-autonomous teleoperation method to reduce operator workload and enhance task execution efficiency. The proposed method uses action chunking with transformers (ACT), an imitation learning method, to predict long-duration motion trajectories from a robot’s egocentric images and pose information during teleoperation. Because the images and poses input into ACT are continuously updated during teleoperation, the predicted trajectory dynamically reflects the control history of the operator. These continuously updated trajectories are displayed in real time in a simulation environment, serving as visual feedback for the operator. When the operator determines that the visualized trajectory aligns with their intended trajectory, they can switch from manual to autonomous control. Subsequently, the robot autonomously executes motion based on the predicted trajectory, thereby reducing operator workload and improving task efficiency. To verify the effectiveness of the proposed method, an object-grasping task was conducted using a human support robot, comparing manual control, fully autonomous control, and the proposed semi-autonomous method. The results demonstrated that the proposed method effectively reduces task completion time and improves success rates, even with unknown objects and environments.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Shuntaro Itakura",
+      "Masatoshi Nagano",
+      "Tomoaki Nakamura"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4415969207",
+    "doi": "10.1109/iecon58223.2025.11221713",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4415969207",
+    "published_iso": "2025-10-14",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "robot action-chunk residual transportability support set"
+    ],
+    "paper_id": "openalex:W4415969207",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "When to Trust Imagination: Adaptive Action Execution for World Action Models",
+    "title_norm": "when to trust imagination adaptive action execution for world action models",
+    "abstract": "World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.",
+    "tldr": "Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted, is proposed.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Rui Wang",
+      "Yue Zhang",
+      "Jiehong Lin",
+      "Kuncheng Luo",
+      "Jianan Wang",
+      "Zhongrui Wang"
+    ],
+    "citations": 12,
+    "source": "semanticscholar",
+    "source_id": "c77a28b7b601d656325599b768a821c1151918e2",
+    "paper_id": "dblp:journals/corr/abs-2605-06222",
+    "doi": "10.48550/arXiv.2605.06222",
+    "arxiv_id": "2605.06222",
+    "dblp_key": "journals/corr/abs-2605-06222",
+    "paper_url": "https://www.semanticscholar.org/paper/c77a28b7b601d656325599b768a821c1151918e2",
+    "published_iso": "2026-05-07",
+    "retrieved_via": "host_web",
+    "host_why": "Direct abstention and replanning anchor that tests future-reality consistency to decide how long a WAM action chunk remains trustworthy.",
+    "relevance": "core"
+  },
+  {
+    "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+    "title_norm": "dreamx phi 1 0 action conditioned video world model for robotic manipulation",
+    "abstract": "We present \\textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\\mathrm{SE}(3)$ transformations into attention via \\textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \\textbf{depth branch} for scene-level geometry and use \\textbf{SAM3 masks} with a frozen \\textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \\model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.",
+    "tldr": "An action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations is presented.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Dream Team",
+      "Rui Chen",
+      "Xiangxiang Chu",
+      "Ge Li",
+      "Jifa Li",
+      "Qingfeng Shi"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "3d0e38c7462472925b1c31cfd694be44227c365c",
+    "paper_id": "arxiv:2608.13489",
+    "doi": "",
+    "arxiv_id": "2608.13489",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/3d0e38c7462472925b1c31cfd694be44227c365c",
+    "published_iso": "2026-08-13",
+    "retrieved_via": "host_web",
+    "host_why": "Recent action-conditioned video-WM backbone whose geometry, arm-identity, and object-consistency constraints define a strong training-time alternative to online residual correction.",
+    "relevance": "core"
+  }
+]

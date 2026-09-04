@@ -1,0 +1,887 @@
+[
+ {
+  "title": "Hierarchical Diffusion Policy for Kinematics-Aware Multi-Task Robotic Manipulation",
+  "title_norm": "hierarchical diffusion policy for kinematics aware multi task robotic manipulati",
+  "abstract": "This paper introduces Hierarchical Diffusion Policy (HDP), a hierarchical agent for multi-task robotic manipulation. HDP factorises a manipulation policy into a hierarchical structure: a high-level task-planning agent which predicts a distant next-best end-effector pose (NBP), and a low-level goal-conditioned diffusion policy which generates optimal motion trajectories. The factorised policy representation allows HDP to tackle both long-horizon task planning while generating fine-grained low-level actions. To generate context-aware motion trajectories while satisfying robot kinematics constraints, we present a novel kinematics-aware goal-conditioned control agent, Robot Kinematics Diffuser (RK-Diffuser). Specifically, RK-Diffuser learns to generate both the end-effector pose and joint position trajectories, and distill the accurate but kinematics-unaware end-effector pose diffuser to the kinematics-aware but less accurate joint position diffuser via differentiable kinematics. Empirically, we show that HDP achieves a significantly higher success rate than the state-of-the-art methods in both simulation and real-world.11Code and videos are available in our project page.",
+  "tldr": "A novel kinematics-aware goal-conditioned control agent, Robot Kinematics Diffuser (RK-Diffuser), which learns to generate both the end-effector pose and joint position trajectories, and distill the accurate but kinematics-unaware end-effector pose diffuser to the kinematics-aware but less accurate joint position diffuser via differentiable kinematics.",
+  "year": 2024,
+  "venue": "Computer Vision and Pattern Recognition",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Xiao Ma",
+   "Sumit Patidar",
+   "Iain Haughton",
+   "Stephen James"
+  ],
+  "citations": 161,
+  "source": "semanticscholar",
+  "source_id": "7359b10949dc8dd271388976b133aad214d59281",
+  "paper_id": "dblp:conf/cvpr/0006PHJ24",
+  "doi": "10.1109/CVPR52733.2024.01712",
+  "arxiv_id": "2403.03890",
+  "dblp_key": "conf/cvpr/0006PHJ24",
+  "paper_url": "https://arxiv.org/pdf/2403.03890",
+  "published_iso": "2024-03-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "From Data Sharing to Credit Availability: Causal Identification and Transmission Path of Open Government Data on Corporate Financing Constraints",
+  "title_norm": "from data sharing to credit availability causal identification and transmission ",
+  "abstract": "ABSTRACT Information asymmetry fundamentally drives corporate financing constraints; yet traditional firm-level disclosures frequently fail to mitigate it due to their susceptibility to strategic manipulation and credibility deficits. This paper identifies open government data (OGD) as a pivotal solution that is an exogenous and institutionally validated information infrastructure, transcending the limitations of firm-controlled mechanisms. Leveraging China’s staggered provincial OGD platform launches in a quasi-natural experiment, we deploy a multi-period difference-in-differences (DID) design to identify causal effects. Results show OGD reduces financing constraints by 3.4% on average, primarily via two democratizing pathways: (i) expanding bank credit availability through increased unsecured lending, reducing reliance on traditional collateral; and (ii) strengthening non-bank financing via enhanced supply chain trade credit access, a critical yet policy-neglected channel. Heterogeneity analyses show that OGD most significantly alleviates financing constraints for informationally marginalized firms: SMEs and digitally mature firms by mitigating “thin-file” disadvantages; low-quality disclosers by offsetting credibility gaps; and firms with concentrated ownership by facilitating external monitoring. Crucially, for firms with robust internal controls, OGD complements governance through independent validation, highlighting its role as a governance amplifier rather than a substitute. This study provides empirical evidence that public data sharing can offer scalable solutions for enhancing financial inclusion.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Emerging markets finance & trade",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dongqing Chen",
+   "Chaoqun Ma",
+   "Xianhua Mi",
+   "M. Luo",
+   "Ting Yang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "3e9592883837e6e09e2c072a14f7c0a021ba864e",
+  "paper_id": "doi:10.1080/1540496X.2025.2604601",
+  "doi": "10.1080/1540496X.2025.2604601",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3e9592883837e6e09e2c072a14f7c0a021ba864e",
+  "published_iso": "2025-12-30",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "A Multi-Agent Policy Optimization Algorithm Integrating Causal Inference",
+  "title_norm": "a multi agent policy optimization algorithm integrating causal inference",
+  "abstract": "Multi-Agent Reinforcement Learning (MARL) has demonstrated significant potential in the field of collaborative decision-making. However, its performance is often limited by environmental non-stationarity and complex interdependencies among agents. Traditional methods typically learn policies based on correlations, which can lead to the acquisition of spurious associations, resulting in poor policy generalization and insufficient robustness. To address these issues, this paper proposes a novel Multi-Agent Policy Optimization algorithm integrating Causal Inference (Causal-MAPO). The core of this algorithm lies in constructing a differentiable causal graph model to explicitly model the causal structure between agent actions and joint rewards. By introducing an attention-based mechanism to infer the causal graph from observational data and utilizing this graph to guide credit assignment and information sharing among agents during training, the algorithm filters out non-causal interference signals. Experimental results on the StarCraft II Multi-Agent Challenge (SMAC) and a simulated traffic network environment demonstrate that compared to baseline algorithms, Causal-MAPO achieves higher win rates and sample efficiency in complex tasks. Furthermore, it exhibits significantly enhanced decision-making robustness and generalization capability when facing dynamic disturbances and previously unseen opponent strategies.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "2025 International Conference on Computer, Internet of Things and Smart City (CIoTSC)",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Minghao Chen",
+   "Xiaohui Zhang",
+   "Delei Zhang",
+   "Jie Zhang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0f9cc7016ed54fdc9be67532d419388349f30370",
+  "paper_id": "doi:10.1109/CIoTSC67482.2025.11413108",
+  "doi": "10.1109/CIoTSC67482.2025.11413108",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0f9cc7016ed54fdc9be67532d419388349f30370",
+  "published_iso": "2025-11-07",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "M4Diffuser: Multi-View Diffusion Policy with Manipulability-Aware Control for Robust Mobile Manipulation",
+  "title_norm": "m4diffuser multi view diffusion policy with manipulability aware control for rob",
+  "abstract": "Mobile manipulation requires the coordinated control of a mobile base and a robotic arm while simultaneously perceiving both global scene context and fine-grained object details. Existing single-view approaches often fail in unstructured environments due to limited fields of view, exploration, and generalization abilities. Moreover, classical controllers, although stable, struggle with efficiency and manipulability near singularities. To address these challenges, we propose M4Diffuser, a hybrid framework that integrates a Multi-View Diffusion Policy with a novel Reduced and Manipulability-aware QP (ReM-QP) controller for mobile manipulation. The diffusion policy leverages proprioceptive states and complementary camera perspectives with both close-range object details and global scene context to generate task-relevant end-effector goals in the world frame. These high-level goals are then executed by the ReM-QP controller, which eliminates slack variables for computational efficiency and incorporates manipulability-aware preferences for robustness near singularities. Comprehensive experiments in simulation and real-world environments show that M4Diffuser achieves 7 to 56 percent higher success rates and reduces collisions by 3 to 31 percent over baselines. Our approach demonstrates robust performance for smooth whole-body coordination, and strong generalization to unseen tasks, paving the way for reliable mobile manipulation in unstructured environments. Details of the demo and supplemental material are available on our project website https://sites.google.com/view/m4diffuser.",
+  "tldr": "The proposed M4Diffuser is a hybrid framework that integrates a Multi-View Diffusion Policy with a novel Reduced and Manipulability-aware QP (ReM-QP) controller for mobile manipulation, demonstrating robust performance for smooth whole-body coordination, and strong generalization to unseen tasks, paving the way for reliable mobile manipulation in unstructured environments.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ju Dong",
+   "Lei Zhang",
+   "Liding Zhang",
+   "Yao Ling",
+   "Yuqian Fu",
+   "Kaixin Bai"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "2b0f5fc3c9bc3e5bd710d6e7a487ba634918dc0a",
+  "paper_id": "dblp:journals/corr/abs-2509-14980",
+  "doi": "10.48550/arXiv.2509.14980",
+  "arxiv_id": "2509.14980",
+  "dblp_key": "journals/corr/abs-2509-14980",
+  "paper_url": "https://www.semanticscholar.org/paper/2b0f5fc3c9bc3e5bd710d6e7a487ba634918dc0a",
+  "published_iso": "2025-09-18",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Multi-Fingered End-Effector Grasp Reflex Modeling for One-Shot Tactile Servoing in Tool Manipulation Tasks",
+  "title_norm": "multi fingered end effector grasp reflex modeling for one shot tactile servoing ",
+  "abstract": "Autonomous tool manipulation tasks are challenging for robots because they must reason over the tool’s object affordances, how to grasp the tool so it may be used, how the tool will interact with other objects in the environment, and how to perform the complex tool affordances to complete the manipulation task. Focusing on tool grasping presents further challenges, specifically generalization to novel tools and modeling the problem in an explainable way suitable for safety-critical task domains, such as robots operating autonomously to perform repair tasks in NASA lunar habitats. In this work, we focus on grasping tools in an explainable way that can be generalized to novel tools. We present a logistic regression based grasp reflex model, which maps continuous end-effector sensor data to a set of discrete symbolic states. An adjustment policy uses these symbolic states to compute the appropriate gradient to change the end-effector pose and increase the probability of a secure tool grasp. Once the tool grasp is sufficiently secure, the robot proceeds with the rest of the manipulation task. We test our grasp reflex model on 6 novel tools, and find that the model achieves one-shot generalization by successfully using tactile servoing to secure grasps from one example of a secure grasp state. The robot’s ability to learn to grasp tools in an explainable way that achieves one-shot generalization to novel tools demonstrates the power of our grasp reflex model in allowing robots to achieve autonomous tool manipulation tasks.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE/RJS International Conference on Intelligent RObots and Systems",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "E. Sheetz",
+   "Misha Savchenko",
+   "Emma Zemler",
+   "Abbas Presswala",
+   "Andrew Crouch",
+   "S. Azimi"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c124f2e641f7e4c5f3804e9a476ccaacf771898c",
+  "paper_id": "dblp:conf/iros/SheetzSZPCAK24",
+  "doi": "10.1109/IROS58592.2024.10801477",
+  "arxiv_id": "",
+  "dblp_key": "conf/iros/SheetzSZPCAK24",
+  "paper_url": "https://www.semanticscholar.org/paper/c124f2e641f7e4c5f3804e9a476ccaacf771898c",
+  "published_iso": "2024-10-14",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Multi-critic Learning for Whole-body End-effector Twist Tracking",
+  "title_norm": "multi critic learning for whole body end effector twist tracking",
+  "abstract": "Learning whole-body control for locomotion and arm motions in a single policy has challenges, as the two tasks have conflicting goals. For instance, efficient locomotion typically favors a horizontal base orientation, while end-effector tracking may benefit from base tilting to extend reachability. Additionally, current Reinforcement Learning (RL) approaches using a pose-based task specification lack the ability to directly control the end-effector velocity, making smoothly executing trajectories very challenging. To address these limitations, we propose an RL-based framework that allows for dynamic, velocity-aware whole-body end-effector control. Our method introduces a multi-critic actor architecture that decouples the reward signals for locomotion and manipulation, simplifying reward tuning and allowing the policy to resolve task conflicts more effectively. Furthermore, we design a twist-based end-effector task formulation that can track both discrete poses and motion trajectories. We validate our approach through a set of simulation and hardware experiments using a quadruped robot equipped with a robotic arm. The resulting controller can simultaneously walk and move its end-effector and shows emergent whole-body behaviors, where the base assists the arm in extending the workspace, despite a lack of explicit formulations. Videos and supplementary material can be found at multi-critic-locomanipulation.github.io.",
+  "tldr": "This work introduces a multi-critic actor architecture that decouples the reward signals for locomotion and manipulation, simplifying reward tuning and allowing the policy to resolve task conflicts more effectively, and designs a twist-based end-effector task formulation that can track both discrete poses and motion trajectories.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. E. Vijayan",
+   "Andrei Cramariuc",
+   "Mattia Risiglione",
+   "Christian Gehring",
+   "Marco Hutter"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "8932dccd02104715dcfcd622a1659eeb3cc5caa0",
+  "paper_id": "dblp:journals/corr/abs-2507-08656",
+  "doi": "10.48550/arXiv.2507.08656",
+  "arxiv_id": "2507.08656",
+  "dblp_key": "journals/corr/abs-2507-08656",
+  "paper_url": "https://www.semanticscholar.org/paper/8932dccd02104715dcfcd622a1659eeb3cc5caa0",
+  "published_iso": "2025-07-11",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "CMIX: Causal Value Decomposition for Cooperative Multi-Agent Reinforcement Learning",
+  "title_norm": "cmix causal value decomposition for cooperative multi agent reinforcement learni",
+  "abstract": "Value decomposition plays a pivotal role in ensuring effective credit assignment within Multi-Agent Reinforcement Learning (MARL), particularly in cooperative multi-agent tasks where agents are limited to accessing team rewards only. However, existing methods treat the mixing network as a black box, implicitly assuming that neural networks can autonomously extract important information and achieve rational credit assignment during policy learning. This approach not only lacks interpretability but may also prove inefficient in complex scenarios. To enhance the interpretability and rationality of value decomposition, we propose an innovative approach called “Causal Value Decomposition”(CMIX). CMIX employs causal inference-based models, introducing a set of metrics beyond environmental rewards to enhance robustness and model interpretability. Specifically, CMIX establishes intricate relational structures among agents in complex environments and leverages causal relationships between agents and their surroundings to address the credit assignment challenge in MARL. By employing do-calculus, CMIX accurately measures the impact of each agent's actions on environmental states, precisely determining their contribution to the collective reward. This approach not only enhances the interpretability of existing black-box models but also improves the accuracy of credit assignment in multi-agent systems. Moreover, CMIX exhibits high scalability and complements existing value decomposition techniques. Its effectiveness and scalability have been rigorously tested across various settings, including MPE, LBF, and SMAC environments.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE International Conference on Systems, Man and Cybernetics",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Dunqi Yao",
+   "Chuxiong Sun",
+   "Kai Li",
+   "Kaijie Zhou",
+   "Hanyu Li",
+   "Rui Wang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "5626bcb2355b8eaad10c7c751c2f39d065c85e01",
+  "paper_id": "dblp:conf/smc/YaoSLZL0L24",
+  "doi": "10.1109/SMC54092.2024.10831507",
+  "arxiv_id": "",
+  "dblp_key": "conf/smc/YaoSLZL0L24",
+  "paper_url": "https://www.semanticscholar.org/paper/5626bcb2355b8eaad10c7c751c2f39d065c85e01",
+  "published_iso": "2024-10-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Contextual Counterfactual Credit Assignment for Multi-Agent Reinforcement Learning in LLM Collaboration",
+  "title_norm": "contextual counterfactual credit assignment for multi agent reinforcement learni",
+  "abstract": "",
+  "tldr": "Contex-tual Counterfactual Counterfactual Credit Assignment (C3) isolates the causal impact of individual messages by freezing the exact transcript-derived context, evaluating context-matched alternatives via fixed-continuation replay, and applying a leave-one-out (LOO) baseline.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yanjun Chen",
+   "Yirong Sun",
+   "Hanlin Wang",
+   "Xinming Zhang",
+   "Xiaoyu Shen",
+   "Wenjie Li"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "f59c13163a159e627f9f6d08acc0a3276ad01ef6",
+  "paper_id": "dblp:journals/corr/abs-2603-06859",
+  "doi": "10.48550/arXiv.2603.06859",
+  "arxiv_id": "",
+  "dblp_key": "journals/corr/abs-2603-06859",
+  "paper_url": "https://www.semanticscholar.org/paper/f59c13163a159e627f9f6d08acc0a3276ad01ef6",
+  "published_iso": null,
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "AnchorDP3: 3D Affordance Guided Sparse Diffusion Policy for Robotic Manipulation",
+  "title_norm": "anchordp3 3d affordance guided sparse diffusion policy for robotic manipulation",
+  "abstract": "We present AnchorDP3, a diffusion policy framework for dual-arm robotic manipulation that achieves state-of-the-art performance in highly randomized environments. AnchorDP3 integrates three key innovations: (1) Simulator-Supervised Semantic Segmentation, using rendered ground truth to explicitly segment task-critical objects within the point cloud, which provides strong affordance priors; (2) Task-Conditioned Feature Encoders, lightweight modules processing augmented point clouds per task, enabling efficient multi-task learning through a shared diffusion-based action expert; (3) Affordance-Anchored Keypose Diffusion with Full State Supervision, replacing dense trajectory prediction with sparse, geometrically meaningful action anchors, i.e., keyposes such as pre-grasp pose, grasp pose directly anchored to affordances, drastically simplifying the prediction space; the action expert is forced to predict both robot joint angles and end-effector poses simultaneously, which exploits geometric consistency to accelerate convergence and boost accuracy. Trained on large-scale, procedurally generated simulation data, AnchorDP3 achieves a 98.7% average success rate in the RoboTwin benchmark across diverse tasks under extreme randomization of objects, clutter, table height, lighting, and backgrounds. This framework, when integrated with the RoboTwin real-to-sim pipeline, has the potential to enable fully autonomous generation of deployable visuomotor policies from only scene and instruction, totally eliminating human demonstrations from learning manipulation skills.",
+  "tldr": "This framework, when integrated with the RoboTwin real-to-sim pipeline, has the potential to enable fully autonomous generation of deployable visuomotor policies from only scene and instruction, totally eliminating human demonstrations from learning manipulation skills.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ziyan Zhao",
+   "Ke Fan",
+   "He-Yang Xu",
+   "Ning Qiao",
+   "Bo Peng",
+   "Wenlong Gao"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "88bb52ab80b2f1866c62f67d4b5f87b258352ca3",
+  "paper_id": "dblp:journals/corr/abs-2506-19269",
+  "doi": "10.48550/arXiv.2506.19269",
+  "arxiv_id": "2506.19269",
+  "dblp_key": "journals/corr/abs-2506-19269",
+  "paper_url": "https://www.semanticscholar.org/paper/88bb52ab80b2f1866c62f67d4b5f87b258352ca3",
+  "published_iso": "2025-06-23",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Embodying Multi-Hand Manipulation Policies by Searching the Assignment and Null Spaces",
+  "title_norm": "embodying multi hand manipulation policies by searching the assignment and null ",
+  "abstract": "Learned manipulation policies increasingly predict motions for abstract “hands” and are attractive in practice because they rely on easily collected demonstrations and transfer across robot platforms. Executing these trajectories on multi-arm robots, however, is not trivial. Multi-hand policy outputs must be assigned to physical arms, each arm must realize a configuration-space motion that tracks its prescribed end-effector trajectory, and all arms must respect kinematic limits and avoid collisions. In the absence of algorithms that directly address this problem, practitioners typically extend single-arm inverse-kinematics (IK) pipelines in an ad hoc way, with no guarantees of feasibility or safety. In this work, we close this execution gap with a search-based framework that is theoretically complete for grounding policy-generated multi-hand trajectories onto physical multi-arm systems. Building on Conflict-Based Search, our method explicitly searches over both the discrete assignment of trajectories to arms and the continuous Jacobian null spaces of redundant manipulators, using redundancy to avoid inter-arm collisions while tracking the prescribed motions. This unified treatment of assignment and null-space motion yields a practically efficient planner that safely realizes coordinated manipulation-policy outputs on multi-arm robots. See omcbsa.github.io for more.",
+  "tldr": "This work proposes a search-based framework that is theoretically complete for grounding policy-generated multi-hand trajectories onto physical multi-arm systems, and explicitly searches over both the discrete assignment of trajectories to arms and the continuous Jacobian null spaces of redundant manipulators.",
+  "year": 2026,
+  "venue": "Proceedings of the International Symposium on Combinatorial Search",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yorai Shaoul",
+   "Jiaoyang Li",
+   "Maxim Likhachev"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2304f510a492c50ccf9cbe6b5d9e5a8777792a30",
+  "paper_id": "arxiv:2607.22020",
+  "doi": "10.1609/socs.v19i1.43096",
+  "arxiv_id": "2607.22020",
+  "dblp_key": "",
+  "paper_url": "https://ojs.aaai.org/index.php/SOCS/article/download/43096/50656",
+  "published_iso": "2026-07-24",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "A Dynamic Multi-Stage Group Decision-Making Method for Credit Risk Monitoring Using Non-equidistant Interval Time Framework and Fuzzy Cognitive Prediction",
+  "title_norm": "a dynamic multi stage group decision making method for credit risk monitoring us",
+  "abstract": "Credit risk monitoring of defaulters is a multi-stage, dynamic process that requires continuous evaluation at policy-driven milestones. While traditional approaches predominantly rely on equidistant time intervals, they often fail to align with the irregular, event-based nature of regulatory decisions. To address this limitation, this paper proposes a novel decision-making method for credit risk monitoring by establishing a non-equidistant interval time frame. Unlike static or equidistant models, our framework allows for evaluation at flexible, key time points defined by practical management needs. Specifically, the methodology utilizes dynamic multigranularity linguistic tools to capture and preserve heterogeneous expert assessments over time and employs fuzzy cognitive maps to model complex causal relationships for predictive modeling, ensuring that the decision-making process is both forward-looking, robust, and information-rich. By shifting from equidistant time steps to policy-relevant intervals, the proposed method provides a more adaptive and interpretable monitoring mechanism. At each key time point, the framework integrates defaulters historical data, current data, and predicted future data, which are then aggregated using the TOPSIS method to compute credit risk scores and support entire-process monitoring. An illustrative example demonstrates that the framework effectively captures risk evolution during the monitoring process, offering superior decision-support value compared to traditional equidistant-interval methods.",
+  "tldr": "A novel decision-making method for credit risk monitoring by establishing a non-equidistant interval time frame and utilizing dynamic multigranularity linguistic tools to capture and preserve heterogeneous expert assessments over time, offering superior decision-support value compared to traditional equidistant-interval methods.",
+  "year": 2026,
+  "venue": "International Journal of Information Technology &amp; Decision Making",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Shuning Pan",
+   "Yuanxiang Dong",
+   "Bianbian Yang",
+   "Guoye Zhang",
+   "Ke Gong",
+   "Chitacumbi Lidia Kassi Bumba"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "5745d74b0a6cbe085db8b88bc18fb35046a66e70",
+  "paper_id": "doi:10.1142/s0219622026500586",
+  "doi": "10.1142/s0219622026500586",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5745d74b0a6cbe085db8b88bc18fb35046a66e70",
+  "published_iso": "2026-05-22",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "ADPro: a Test-time Adaptive Diffusion Policy for Robot Manipulation via Manifold and Initial Noise Constraints",
+  "title_norm": "adpro a test time adaptive diffusion policy for robot manipulation via manifold ",
+  "abstract": "",
+  "tldr": "The Adaptive Diffusion Policy (ADP) is proposed, a test-time adaptation method that introduces two key inductive biases into the diffusion, enabling test-time adaptation that tailors the policy to specific tasks, thereby enhancing generalization across novel tasks and environments.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zezeng Li",
+   "Rui Yang",
+   "Ruochen Chen",
+   "ZhongXuan Luo",
+   "Liming Chen"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "63a4cae51c8f35ef9f9b365fb7728d300920feb8",
+  "paper_id": "dblp:journals/corr/abs-2508-06266",
+  "doi": "10.48550/arXiv.2508.06266",
+  "arxiv_id": "",
+  "dblp_key": "journals/corr/abs-2508-06266",
+  "paper_url": "https://www.semanticscholar.org/paper/63a4cae51c8f35ef9f9b365fb7728d300920feb8",
+  "published_iso": null,
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Causal Inference under Threshold Manipulation: Bayesian Mixture Modeling and Heterogeneous Treatment Effects",
+  "title_norm": "causal inference under threshold manipulation bayesian mixture modeling and hete",
+  "abstract": "Many marketing applications, including credit card incentive programs, offer rewards to customers who exceed specific spending thresholds to encourage increased consumption. \nQuantifying the causal effect of these thresholds on customers is crucial for effective marketing strategy design. \nAlthough regression discontinuity design is a standard method for such causal inference tasks, its assumptions can be violated when customers, aware of the thresholds, strategically manipulate their spending to qualify for the rewards.\nTo address this issue, we propose a novel framework for estimating the causal effect under threshold manipulation.\nThe main idea is to model the observed spending distribution as a mixture of two distributions: one representing customers strategically affected by the threshold, and the other representing those unaffected. \nTo fit the mixture model, we adopt a two-step Bayesian approach consisting of modeling non-bunching customers and fitting a mixture model to a sample around the threshold. \nWe show posterior contraction of the resulting posterior distribution of the causal effect under large samples. \nFurthermore, we extend this framework to a hierarchical Bayesian setting to estimate heterogeneous causal effects across customer subgroups, allowing for stable inference even with small subgroup sample sizes. \nWe demonstrate the effectiveness of our proposed methods through simulation studies and illustrate their practical implications using a real-world marketing dataset.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "AAAI Conference on Artificial Intelligence",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Kohsuke Kubota",
+   "S. Sugasawa"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "131aa46b87bfc82bcd9687cddfda7ca0ab8611ac",
+  "paper_id": "dblp:conf/aaai/KubotaS26",
+  "doi": "10.48550/arXiv.2509.19814",
+  "arxiv_id": "2509.19814",
+  "dblp_key": "conf/aaai/KubotaS26",
+  "paper_url": "https://www.semanticscholar.org/paper/131aa46b87bfc82bcd9687cddfda7ca0ab8611ac",
+  "published_iso": "2025-09-24",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Multi-Treatment-DML: Causal Estimation for Multi-Dimensional Continuous Treatments with Monotonicity Constraints in Personal Loan Risk Optimization",
+  "title_norm": "multi treatment dml causal estimation for multi dimensional continuous treatment",
+  "abstract": "Optimizing credit limits, interest rates, and loan terms is crucial for managing borrower risk and lifetime value (LTV) in personal loan platform. However, counterfactual estimation of these continuous, multi-dimensional treatments faces significant challenges: randomized trials are often prohibited by risk controls and long repayment cycles, forcing reliance on biased observational data. Existing causal methods primarily handle binary/discrete treatments and struggle with continuous, multi-dimensional settings. Furthermore, financial domain knowledge mandates provably monotonic treatment-outcome relationships (e.g., risk increases with credit limit).To address these gaps, we propose Multi-Treatment-DML, a novel framework leveraging Double Machine Learning (DML) to: (i) debias observational data for causal effect estimation; (ii) handle arbitrary-dimensional continuous treatments; and (iii) enforce monotonic constraints between treatments and outcomes, guaranteeing adherence to domain requirements.Extensive experiments on public benchmarks and real-world industrial datasets demonstrate the effectiveness of our approach. Furthermore, online A/B testing conducted on a realworld personal loan platform, confirms the practical superiority of Multi-Treatment-DML in real-world loan operations.",
+  "tldr": "Multi-Treatment-DML is proposed, a novel framework leveraging Double Machine Learning (DML) to handle arbitrary-dimensional continuous treatments and enforce monotonic constraints between treatments and outcomes, guaranteeing adherence to domain requirements.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kexin Zhao",
+   "Bo Wang",
+   "Cuiyin Zhao",
+   "Tongyao Wan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "a42cfd75338f2383d8de6ee3a94fe19d41c65394",
+  "paper_id": "dblp:journals/corr/abs-2508-02183",
+  "doi": "10.48550/arXiv.2508.02183",
+  "arxiv_id": "2508.02183",
+  "dblp_key": "journals/corr/abs-2508-02183",
+  "paper_url": "https://www.semanticscholar.org/paper/a42cfd75338f2383d8de6ee3a94fe19d41c65394",
+  "published_iso": "2025-08-04",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Assessing the Spillover Effects of Marketing Promotions on Credit Risk in Consumer Finance: An Empirical Study Based on AB Testing and Causal Inference",
+  "title_norm": "assessing the spillover effects of marketing promotions on credit risk in consum",
+  "abstract": "While marketing campaigns enhance customer acquisition in consumer finance, they may also induce unintended credit risk spillovers. This study develops a computer-aided causal inference framework to quantitatively evaluate the trade-off between conversion gains and risk exposure under various promotional strategies. Leveraging real-world A/B testing data from over two million users, the system integrates doubly robust estimation, causal forest modeling, and offline policy evaluation techniques into a unified computational pipeline. The modeling components are implemented using high-performance computing tools, including gradient-boosted decision trees and cross-fitted treatment effect learners, to capture nonlinear covariate interactions and estimate treatment heterogeneity. Furthermore, a counterfactual simulation engine is designed to evaluate policy effects under safety constraints based on Conditional Value at Risk (CVaR), allowing scalable strategy testing without online deployment. Experimental results show that promotions increase loan conversion rates by 12.3% but raise default rates by 1.8 percentage points on average. By deploying a CATE-based selective targeting strategy through the computational framework, the optimized policy reduces default rates by 9.7% while maintaining acquisition efficiency. The findings demonstrate the value of combining machine learning and causal inference with computer-based simulation platforms to support risk-sensitive decision-making in financial marketing. This research contributes a replicable computational approach for credit risk-aware campaign optimization, offering both methodological innovation and practical relevance for consumer finance institutions.",
+  "tldr": "A computer-aided causal inference framework to quantitatively evaluate the trade-off between conversion gains and risk exposure under various promotional strategies is developed, offering both methodological innovation and practical relevance for consumer finance institutions.",
+  "year": 2025,
+  "venue": "Proceedings of the 2025 2nd International Conference on Economic Data Analytics and Artificial Intelligence",
+  "publication_types": [
+   "Book",
+   "Conference"
+  ],
+  "authors": [
+   "Jiajing Wang",
+   "Yiran Xiao"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "4cb3863d8822fa0c6f58b0f639fcff603adee2ac",
+  "paper_id": "doi:10.1145/3789297.3789303",
+  "doi": "10.1145/3789297.3789303",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1145/3789297.3789303",
+  "published_iso": "2025-11-14",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Does China's green credit interest subsidies policy promote enterprises' green technology innovation quality? Based on the perspective of financial and fiscal coordination.",
+  "title_norm": "does china s green credit interest subsidies policy promote enterprises green te",
+  "abstract": "Against the backdrop of escalating energy and environmental challenges, examining how the green credit policy empowers enterprises to build external pressure transmission mechanisms, activate internal governance capacities, and enhance green technology innovation quality bears substantial practical relevance for accomplishing the 'Dual Carbon' objectives (i.e., carbon peak and carbon neutrality) and propelling high-quality green economic transition. China's green credit interest subsidies policy (GCISP) is an important deployment measure of green credit policy. Using green credit interest subsidies policy as a quasi-natural experiment and based on data from Chinese A-share listed companies from 2007 to 2022, this study examines the impact of green credit policy on enterprises' green technology innovation quality and the underlying mechanisms using the multi-period difference-in-differences (DID) method. The conclusions of the study are as follows: (1) GCISP can effectively enhance enterprises' green technology innovation quality. This conclusion remains valid after robustness tests such as instrumental variable method, bacon decomposition, and dual machine learning method. (2) Mechanism analysis shows that GCISP can improve enterprises' green technology innovation quality by reducing the enterprises' green washing, enhancing the external pressure effect of green investors' attention, alleviating financing constraints and improving the internal governance effect of resource allocation efficiency. (3) Heterogeneous analysis indicates that the impact of GCISP on the improvement of the quality of green technology innovation is more significant in enterprises with strong local intellectual property protection and the strong green awareness of corporate executives and newly established ventures. (4) The policy coordination intensity, as measured by fiscal expenditure, can positively moderate the influence of local governments' effective implementation of the green credit policy on improving enterprises' green technology innovation quality. Meanwhile, higher green technological innovation quality can produce ecological and environmental protection and economic performance values. Overall, this study has useful policy implications for promoting green financial policies and improving the green technology innovation system.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Environmental Management",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuegang Song",
+   "Wen-fei Gao",
+   "Chien‐Chiang Lee"
+  ],
+  "citations": 47,
+  "source": "semanticscholar",
+  "source_id": "5bc80fe9ad91ceeff013f4c7ecdb58102169a951",
+  "paper_id": "doi:10.1016/j.jenvman.2025.126366",
+  "doi": "10.1016/j.jenvman.2025.126366",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.jenvman.2025.126366",
+  "published_iso": "2025-06-26",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Towards Generalizable Reasoning: Group Causal Counterfactual Policy Optimization for LLM Reasoning",
+  "title_norm": "towards generalizable reasoning group causal counterfactual policy optimization ",
+  "abstract": "Large language models (LLMs) excel at complex tasks with advances in reasoning capabilities. However, existing reward mechanisms remain tightly coupled to final correctness and pay little attention to the underlying reasoning process: trajectories with sound reasoning but wrong answers receive low credit, while lucky guesses with flawed logic may be highly rewarded, affecting reasoning generalization. From a causal perspective, we interpret multi-candidate reasoning for a fixed question as a family of counterfactual experiments with theoretical supports. Building on this, we propose Group Causal Counterfactual Policy Optimization to explicitly train LLMs to learn generalizable reasoning patterns. It proposes an episodic causal counterfactual reward that jointly captures (i) robustness, encouraging the answer distribution induced by a reasoning step to remain stable under counterfactual perturbations; and (ii) effectiveness, enforcing sufficient variability so that the learned reasoning strategy can transfer across questions. We then construct token-level advantages from this reward and optimize the policy, encouraging LLMs to favor reasoning patterns that are process-valid and counterfactually robust. Extensive experiments on diverse benchmarks demonstrate its advantages.",
+  "tldr": "This work proposes an episodic causal counterfactual reward that jointly captures robustness and effectiveness, and construct token-level advantages from this reward and optimize the policy, encouraging LLMs to favor reasoning patterns that are process-valid and counterfactually robust.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jingyao Wang",
+   "Peizheng Guo",
+   "Wenwen Qiang",
+   "Jiahuan Zhou",
+   "Huijie Guo",
+   "Changwen Zheng"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "708e35f93b6fe63119ea91c07c2107f46832a288",
+  "paper_id": "dblp:journals/corr/abs-2602-06475",
+  "doi": "10.48550/arXiv.2602.06475",
+  "arxiv_id": "2602.06475",
+  "dblp_key": "journals/corr/abs-2602-06475",
+  "paper_url": "https://www.semanticscholar.org/paper/708e35f93b6fe63119ea91c07c2107f46832a288",
+  "published_iso": "2026-02-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "The Causal Effects of Pilot Policies on Low-Altitude Economy Growth—Multi-Period DID and Event-Study Evidence from China",
+  "title_norm": "the causal effects of pilot policies on low altitude economy growth multi period",
+  "abstract": "As a strategic emerging industry, the low-altitude economy is pivotal to restructuring China’s industrial system and advancing regionally balanced, high-quality growth. Using a provincial panel for 30 regions over 2012–2023, we construct composite indices of the low-altitude economy and the digital economy via an entropy-weighting approach (with PCA as an alternative measure), and identify the causal impact of provincial low-altitude pilot programs through a multi-period difference-in-differences framework combined with an event-study design, controlling for province and year fixed effects. We find that the pilot policy significantly promotes low-altitude development: the index rises by about 47.73 points on average, with effects materializing in the adoption year and persisting for at least three subsequent years. The policy impact is insensitive to baseline digitalization, no statistically significant threshold is detected, and effect sizes strengthen with policy duration, consistent with institutional learning and adaptation. We also document “compensatory selection”: provinces with relatively lagging digital economies but stronger low-altitude industrial foundations are more likely to be designated as pilots. Conditional on pilot status, the digital-economy index is negatively associated with the low-altitude index, suggesting short-run resource substitution. Results remain robust to PSM-DID, placebo tests, instrumental-variable strategies, alternative time windows, and index remeasurement. The study provides credible evidence on the effectiveness of emerging-industry policies and actionable implications for optimizing regional development strategies.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Journal of Global Economics and Management",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xueyan Liu",
+   "Y. Ge",
+   "Jiachen Wu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "ab26164bfc2e83a5fcda768a1944743bf87dea03",
+  "paper_id": "doi:10.62051/ijgem.v8n2.20",
+  "doi": "10.62051/ijgem.v8n2.20",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.62051/ijgem.v8n2.20",
+  "published_iso": "2025-09-27",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Digital Twin-Assisted Causal Multi-Agent Reinforcement Learning for Large-Scale Network Service Migration",
+  "title_norm": "digital twin assisted causal multi agent reinforcement learning for large scale ",
+  "abstract": "Dynamic service migration is essential for guaranteeing quality of service (QoS) for mobile users in multi-access edge computing (MEC). However, conventional reinforcement learning and other strategies frequently result in suboptimal policies. These methods are unable to differentiate between actual cause-and-effect relationships and fake patterns due to their reliance on correlational data, resulting in inefficient and expensive migrations. This paper introduces a novel digital twinassisted causal multi-agent reinforcement learning (DT-CausalMARL) framework to address this fundamental limitation. We change the optimization objective from minimizing direct system cost to maximizing the causal gain of migration actions. This is accomplished by employing a digital twin as a counterfactual analysis engine to assess the actual consequences of decisions in comparison to a baseline policy. This causal gain is subsequently employed as a robust reward signal by a causal multi-agent deep deterministic policy gradient (Causal-MADDPG) algorithm to train cooperative agents. Our framework outperforms standard MARL baselines by reducing harmful ‘regretful migrations' and improving system stability under dynamic traffic loads.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "International Conference on Speech Technology and Human-Computer Dialogue",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Chang Che",
+   "Luping Xiang",
+   "Jie Hu",
+   "Kun Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "787ead55968d4fd7503bb7d27c7c2e526c3e6dae",
+  "paper_id": "doi:10.1109/ICCT67417.2025.11374267",
+  "doi": "10.1109/ICCT67417.2025.11374267",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/787ead55968d4fd7503bb7d27c7c2e526c3e6dae",
+  "published_iso": "2025-10-16",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Hide-and-Shill: A Reinforcement Learning Framework for Market Manipulation Detection in Symphony-a Decentralized Multi-Agent System",
+  "title_norm": "hide and shill a reinforcement learning framework for market manipulation detect",
+  "abstract": "Decentralized finance (DeFi) has introduced a new era of permissionless financial innovation but also led to unprecedented market manipulation. Without centralized oversight, malicious actors coordinate shilling campaigns and pump-and-dump schemes across various platforms. We propose a Multi-Agent Reinforcement Learning (MARL) framework for decentralized manipulation detection, modeling the interaction between manipulators and detectors as a dynamic adversarial game. This framework identifies suspicious patterns using delayed token price reactions as financial indicators.Our method introduces three innovations: (1) Group Relative Policy Optimization (GRPO) to enhance learning stability in sparse-reward and partially observable settings; (2) a theory-based reward function inspired by rational expectations and information asymmetry, differentiating price discovery from manipulation noise; and (3) a multi-modal agent pipeline that integrates LLM-based semantic features, social graph signals, and on-chain market data for informed decision-making.The framework is integrated within the Symphony system, a decentralized multi-agent architecture enabling peer-to-peer agent execution and trust-aware learning through distributed logs, supporting chain-verifiable evaluation. Symphony promotes adversarial co-evolution among strategic actors and maintains robust manipulation detection without centralized oracles, enabling real-time surveillance across global DeFi ecosystems.Trained on 100,000 real-world discourse episodes and validated in adversarial simulations, Hide-and-Shill achieves top performance in detection accuracy and causal attribution. This work bridges multi-agent systems with financial surveillance, advancing a new paradigm for decentralized market intelligence. All resources are available at the Hide-and-Shill GitHub repository to promote open research and reproducibility.",
+  "tldr": "A Multi-Agent Reinforcement Learning (MARL) framework for decentralized manipulation detection, modeling the interaction between manipulators and detectors as a dynamic adversarial game, and integrating LLM-based semantic features, social graph signals, and on-chain market data for informed decision-making.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "R. Shi",
+   "Yi-Ou Liu",
+   "Xin-Yu Ying",
+   "Yang Tan",
+   "Yuchun Feng",
+   "Lynn Ai"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "8b670509aa6e3e735d321373abfe0282f3cb6e88",
+  "paper_id": "dblp:journals/corr/abs-2507-09179",
+  "doi": "10.48550/arXiv.2507.09179",
+  "arxiv_id": "2507.09179",
+  "dblp_key": "journals/corr/abs-2507-09179",
+  "paper_url": "https://www.semanticscholar.org/paper/8b670509aa6e3e735d321373abfe0282f3cb6e88",
+  "published_iso": "2025-07-12",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Spatially Conditioned Diffusion Policy: Learning Precise and Robust Manipulation with a Single RGB Camera",
+  "title_norm": "spatially conditioned diffusion policy learning precise and robust manipulation ",
+  "abstract": "Recent visual imitation learning systems have widely adopted multi-camera setups with wrist-mounted cameras as the de facto standard. However, manipulation from a single global view remains challenging, as the policy should capture fine-grained interaction details and identify task-relevant regions without local wrist views. To address this challenge, we present Spatially Conditioned Diffusion Policy (SCDP), a diffusion-based visuomotor policy that achieves precise and robust manipulation in a single-camera setting. Our key idea is that end-effector trajectories can serve as visual attention anchors that reflect task-relevant regions. Building on this idea, SCDP consists of two key components: (i) a visual encoder that produces multi-scale feature maps to capture both broader context and fine-grained visual features, and (ii) a spatial conditioning module that samples point-wise features along intermediate end-effector trajectories in the diffusion loop. Extensive simulation experiments show that SCDP consistently outperforms strong single-view baselines and achieves performance comparable to multi-camera baselines. Real-world experiments further demonstrate precise manipulation and robustness to visual distractors, highlighting the potential of single-camera imitation learning.",
+  "tldr": "Spatially Conditioned Diffusion Policy is presented, a diffusion-based visuomotor policy that achieves precise and robust manipulation in a single-camera setting and consistently outperforms strong single-view baselines and achieves performance comparable to multi-camera baselines.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Seoyoon Kim",
+   "Kanghyun Kim",
+   "Dongwoo Ko",
+   "Y. Heo",
+   "Min Jun Kim"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "41593529a8cf461b1ca41ffc93ed1ee7de0fd0c2",
+  "paper_id": "dblp:journals/corr/abs-2606-14535",
+  "doi": "10.48550/arXiv.2606.14535",
+  "arxiv_id": "2606.14535",
+  "dblp_key": "journals/corr/abs-2606-14535",
+  "paper_url": "https://www.semanticscholar.org/paper/41593529a8cf461b1ca41ffc93ed1ee7de0fd0c2",
+  "published_iso": "2026-06-12",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Smooth Multi-Policy Causal Effect Estimation in Longitudinal Settings",
+  "title_norm": "smooth multi policy causal effect estimation in longitudinal settings",
+  "abstract": "Comparative evaluation of multiple dynamic treatment policies is essential for healthcare and policy decisions, yet conventional longitudinal causal inference methods estimate each in isolation, preventing information sharing across counterfactuals. We demonstrate that this separate estimation paradigm induces a structurally uncontrolled second-order bias, inflating finite-sample variance even after standard debiasing with longitudinal targeted maximum likelihood estimation(LTMLE). To address this, we propose a policy-aware reparameterization of Iterative Conditional Expectation (ICE) Q-functions that enables joint estimation through shared representations. We implement this approach in the Policy-Encoded Q Network (PEQ-Net), an architecture centered on a shared policy encoder. The encoder is trained using kernel mean embeddings, ensuring that the learned representation space reflects population-level policy dissimilarities. After applying an LTMLE correction step, we prove this design imposes a structural constraint on the second-order remainder, thereby stabilizing finite-sample variance. Experiments on semi-synthetic datasets demonstrate that PEQ-Net consistently outperforms existing ICE-based methods, achieving substantial reductions in root-mean-square error, particularly when evaluating closely related policies.",
+  "tldr": "This work proposes a policy-aware reparameterization of Iterative Conditional Expectation Q-functions that enables joint estimation through shared representations and implements this approach in the Policy-Encoded Q Network (PEQ-Net), an architecture centered on a shared policy encoder.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wenxin Chen",
+   "Weishen Pan",
+   "Kyra Gan",
+   "Fei Wang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "849baad620b786ae5c200761d49933dc94b80d07",
+  "paper_id": "dblp:journals/corr/abs-2605-14284",
+  "doi": "10.48550/arXiv.2605.14284",
+  "arxiv_id": "2605.14284",
+  "dblp_key": "journals/corr/abs-2605-14284",
+  "paper_url": "https://www.semanticscholar.org/paper/849baad620b786ae5c200761d49933dc94b80d07",
+  "published_iso": "2026-05-14",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Long-term credit and green innovation : causal evidence from China",
+  "title_norm": "long term credit and green innovation causal evidence from china",
+  "abstract": "ABSTRACT Environmental issues are a global challenge. In bank-centric financial systems such as China’s, the impact of long-term credit on sustainable development is a crucial yet underexplored issue. We use a plausibly exogenous long-term credit policy (LCP) implemented in 2019 to identify the impact of long-term credit on green innovations. Using a difference-in-differences (DID) approach, we find that long-term credit increases firms’ low-quality green innovations by optimizing credit term structures and generates spillover effects on environmental performance. Moreover, long-term credit significantly enhances high-quality green innovation in regions with more stringent environmental disclosure regulations. These findings reveal a quantity-over-quality effect of long-term credit on green innovation and highlight the critical role of integrating financial and environmental policies.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Applied Economics Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaoyi Lyu",
+   "Chenghao Liu",
+   "Langlei Ji"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "2fd60885015e4dc70f7ca786df2ad9aa6235c88c",
+  "paper_id": "doi:10.1080/13504851.2024.2369223",
+  "doi": "10.1080/13504851.2024.2369223",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2fd60885015e4dc70f7ca786df2ad9aa6235c88c",
+  "published_iso": "2024-06-19",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Causal Knowledge Transfer for Multi-Agent Reinforcement Learning in Dynamic Environments",
+  "title_norm": "causal knowledge transfer for multi agent reinforcement learning in dynamic envi",
+  "abstract": "[Context] Multi-agent reinforcement learning (MARL) has shown strong performance in environments requiring coordinated behavior. However, transferring knowledge remains a significant challenge in dynamic settings with changing goals. [Problem] Traditional knowledge transfer methods in MARL struggle to generalize, and agents often require costly retraining to adapt. [Approach] This paper introduces a causal knowledge transfer framework that enables agents to learn and share compact causal representations of paths within a non-stationary environment. As the environment changes (with new obstacles), agents' collisions necessitate adaptive recovery strategies. We model each collision as a causal intervention instantiated as a sequence of recovery action macros whose effect corresponds to causal knowledge of how to circumvent the obstacle while increasing the chances of achieving the agent's goal (maximizing cumulative reward). The recovery action macro is transferred online from a teacher agent in a zero-shot fashion, i.e., without retraining, just by querying a lookup model with local context information (collisions). [Results] Our findings reveal two key insights: (1) agents with heterogeneous goals were able to bridge about half of the gap between random exploration and a fully retrained policy when adapting to new environments, and (2) the effectiveness of knowledge transfer depends on the interplay between environment complexity and heterogeneity of agents' goals.",
+  "tldr": "A causal knowledge transfer framework that enables agents to learn and share compact causal representations of paths within a non-stationary environment and reveals the effectiveness of knowledge transfer depends on the interplay between environment complexity and heterogeneity of agents' goals.",
+  "year": 2025,
+  "venue": "2025 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Kathrin Korte",
+   "C. Adriano",
+   "Sona Ghahremani",
+   "Holger Giese"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "727974a27c489fc565b9bc393373c142b257abd2",
+  "paper_id": "dblp:journals/corr/abs-2507-13846",
+  "doi": "10.1109/ACSOS-C66519.2025.00046",
+  "arxiv_id": "2507.13846",
+  "dblp_key": "journals/corr/abs-2507-13846",
+  "paper_url": "https://www.semanticscholar.org/paper/727974a27c489fc565b9bc393373c142b257abd2",
+  "published_iso": "2025-07-18",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Green lending and corporate leverage manipulation: evidence from China's green credit guidelines",
+  "title_norm": "green lending and corporate leverage manipulation evidence from china s green cr",
+  "abstract": "\n \n This study aims to investigate how the transition from unidimensional (financial) to multidimensional (financial and environmental) bank screening – induced by China's 2012 Green Credit Guidelines (GCG) – affects corporate leverage manipulation. Specifically, we examine whether integrating environmental criteria into credit decisions exacerbates leverage manipulation due to heightened financing constraints or generates a disciplinary governance spillover that curbs such opportunism.\n \n \n \n Exploiting the promulgation of the GCG as a quasi-natural experiment, we employ a difference-in-differences (DID) design on a comprehensive sample of Chinese listed firms from 2007 to 2016. To ensure robust causal identification, our empirical strategy isolates the credit supply channel via triple-difference (DDD) estimations and explicitly controls for concurrent macro-environmental policies and high-dimensional fixed effects.\n \n \n \n We document that the GCG significantly inhibits leverage manipulation among high-polluting firms, yielding a deleveraging effect that is economically comparable to major national macroeconomic shocks. Mechanistically, the policy operates by redirecting banks' attention toward environmental performance and intensifying their financial scrutiny of borrowers. Cross-sectional tests reveal that this external disciplinary effect is stronger in regions with heightened environmental awareness and less competitive banking sectors and acts as a crucial compensatory governance substitute for firms with lower information transparency and weaker corporate governance. Furthermore, curbing this manipulation facilitates substantive green innovation and optimal capital structure adjustments.\n \n \n \n This study bridges the environmental finance and accounting manipulation literatures by uncovering a novel “governance spillover” of green credit policies. We demonstrate that multidimensional screening standards extend beyond capital reallocation to fundamentally discipline corporate financial integrity, highlighting the profound implications of sustainable finance regulations for the corporate information environment.\n",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Journal of Accounting Literature",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Feng Cao",
+   "Linfeng Li",
+   "Xueyan Zhang",
+   "Ziru Lian"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "064515d4dd81af06b99b3fc04128f6750e3d009e",
+  "paper_id": "doi:10.1108/jal-11-2025-0596",
+  "doi": "10.1108/jal-11-2025-0596",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/064515d4dd81af06b99b3fc04128f6750e3d009e",
+  "published_iso": "2026-07-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "ImaginationPolicy: Towards Generalizable, Precise and Reliable End-to-End Policy for Robotic Manipulation",
+  "title_norm": "imaginationpolicy towards generalizable precise and reliable end to end policy f",
+  "abstract": "End-to-end robot manipulation policies offer significant potential for enabling embodied agents to understand and interact with the world. Unlike traditional modular pipelines, end-to-end learning mitigates key limitations such as information loss between modules and feature misalignment caused by isolated optimization targets. Despite these advantages, existing end-to-end neural networks for robotic manipulation--including those based on large VLM/VLA models--remain insufficiently performant for large-scale practical deployment. In this paper, we take a step towards an end-to-end manipulation policy that is generalizable, accurate and reliable. To achieve this goal, we propose a novel Chain of Moving Oriented Keypoints (CoMOK) formulation for robotic manipulation. Our formulation is used as the action representation of a neural policy, which can be trained in an end-to-end fashion. Such an action representation is general, as it extends the standard end-effector pose action representation and supports a diverse set of manipulation tasks in a unified manner. The oriented keypoint in our method enables natural generalization to objects with different shapes and sizes, while achieving sub-centimeter accuracy. Moreover, our formulation can easily handle multi-stage tasks, multi-modal robot behaviors, and deformable objects. Extensive simulated and hardware experiments demonstrate the effectiveness of our method.",
+  "tldr": "This paper proposes a novel Chain of Moving Oriented Keypoints (CoMOK) formulation for robotic manipulation, which uses the oriented keypoint as the action representation of a neural policy, which can be trained in an end-to-end fashion.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Dekun Lu",
+   "Wei Gao",
+   "Kui Jia"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "cbb4e32304b29a0c9b482c29e0b92229dcf71081",
+  "paper_id": "dblp:journals/corr/abs-2509-20841",
+  "doi": "10.48550/arXiv.2509.20841",
+  "arxiv_id": "2509.20841",
+  "dblp_key": "journals/corr/abs-2509-20841",
+  "paper_url": "https://www.semanticscholar.org/paper/cbb4e32304b29a0c9b482c29e0b92229dcf71081",
+  "published_iso": "2025-09-25",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Causal Transformer and Multi-Period Difference-in-Differences for Evaluating Synergistic Effects of Data-Element Mobility Policies",
+  "title_norm": "causal transformer and multi period difference in differences for evaluating syn",
+  "abstract": "Accurately evaluating the synergistic effects of data-element mobility policies has become a core issue for coordinated regional development in the New Western Land-Sea Corridor. This paper proposes a unified evaluation framework that integrates policy text mining, a Causal Transformer, and a multi-period difference-in-differences (DID) design. Using panel data from 11 corridor node and spillover cities from 2017 to 2022, we define six core hub cities as the treatment group and five non-node cities as the control group. We construct a policy intensity index from policy documents via latent Dirichlet allocation (LDA) topic modeling, and compute a regional coordination index using an entropy-weighted indicator system. The Causal Transformer learns confounder-aware representations and generates counterfactual outcome trajectories, which are then combined with a multi-period DID estimator to identify dynamic policy effects under staggered adoption. Empirical results indicate that a one-unit increase in policy intensity is associated with an average increase of 0.0061 in the coordination index, and the effect accumulates over time: the coefficient in the third year after implementation reaches 0.2070, significantly exceeding the contemporaneous effect. We further show strong context dependence: regions with weak digital infrastructure and low internet penetration may experience data overload and resource misallocation when advancing policies prematurely. Financial development and education endowment act as complementary factors that amplify the synergy effects. The integrated framework achieves an adjusted goodness-of-fit of 0.961 and reveals a policy pathway from infrastructure readiness to marketization and to cross-city coordination. The proposed approach improves identification precision and provides actionable evidence for differentiated, stepwise policy design in corridor cities.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Proceedings of the 2026 International Conference on Big Data and Informatization Education",
+  "publication_types": [
+   "Book",
+   "Conference"
+  ],
+  "authors": [
+   "Junxi Zhao"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "419cd7f856053541380631ef62d8a8eca46af013",
+  "paper_id": "doi:10.1145/3806980.3807094",
+  "doi": "10.1145/3806980.3807094",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1145/3806980.3807094",
+  "published_iso": "2026-02-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Bridging Heritage Systems: Multi-Scale Spatial Coupling Between Tangible and Intangible Cultural Heritage in China Using Hierarchical Bayesian Model and Causal Inference",
+  "title_norm": "bridging heritage systems multi scale spatial coupling between tangible and inta",
+  "abstract": "Cultural heritage systems play a crucial role in decoding human–environment interactions and social evolution. This study aims to reveal the spatial coupling characteristics of tangible and intangible cultural heritage in China, as well as the heterogeneity of their driving mechanisms. After quantifying heritage coupling at three geographic scales, we integrated a hierarchical Bayesian model with a hybrid causal inference framework to identify the correlations, causal effects, and heterogeneity of the driving factors. The empirical results indicate the following: (1) The coupling patterns exhibit scale dependence. The proportion of strongly coupled areas decreases from the prefecture-level scale to the provincial scale but increases at the cultural–geographical unit scale. This suggests that China’s cultural system has a cohesive effect that transcends administrative boundaries. (2) The hierarchical Bayesian model identifies the significant effects of mean annual temperature, population density, GDP–population interaction, transport–hydrological network interaction, and industrial structure. Effect strengths generally peak at the prefecture-level scale and decrease at the provincial scale. (3) Causal inference estimates the causal effects of mean annual temperature, transport–hydrological network interaction, mean annual precipitation, and water network density on coupling. (4) Heterogeneity tests reveal that the positive causal effect of transport–hydrological network interaction and the negative causal effect of mean annual precipitation are significant only in low-temperature regions. By integrating hierarchical modeling with causal verification, this study elucidates the mechanisms underlying heritage coupling. This provides a scientific basis for understanding the spatial patterns of cultural heritage systems and formulating differentiated conservation policies.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Land",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuxi Liu",
+   "Xinyu Du",
+   "Yu Bai",
+   "Qibing Chen",
+   "Shiliang Liu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "20cb6245f1673f94e2f71d615e57e30c3489d6e2",
+  "paper_id": "doi:10.3390/land14122386",
+  "doi": "10.3390/land14122386",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2073-445X/14/12/2386/pdf?version=1765027293",
+  "published_iso": "2025-12-06",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Environmental credit evaluation policy and enterprise total factor productivity: Evidence from Chinese listed companies.",
+  "title_norm": "environmental credit evaluation policy and enterprise total factor productivity ",
+  "abstract": "Unlike command-based, market-based, and voluntary-based environmental regulations, credit-based environmental regulation leverages social credit to foster sustainable development. Drawing on panel data from Chinese A-share listed companies spanning 2010 to 2022, this study employs a multi-period difference-in-differences (DID) approach to examine how credit-based environmental regulation influences enterprise total factor productivity (TFP), leveraging the implementation of China's Environmental Credit Evaluation Policy (ECEP) as a quasi-natural experiment. The findings indicate that the ECEP significantly enhances enterprise TFP. Mechanism analysis reveals that the ECEP enhances enterprise TFP by optimizing capital allocation efficiency and stimulating green technology innovation. Cross-sectional analysis demonstrates that the ECEP's TFP enhancement effect is more pronounced in regions with rigorous environmental enforcement and superior green credit, in industries with intense market competition, and among firms with weak internal controls. Overall, this study underscores the significance of credit-based environmental regulation in advancing green development.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Journal of Environmental Management",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lianchao Yu",
+   "Haobin Sha",
+   "Peinan Ji",
+   "K. F. See"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "ae8629ca3e1c7610c5f0fee922296b1c5973790d",
+  "paper_id": "doi:10.1016/j.jenvman.2025.124783",
+  "doi": "10.1016/j.jenvman.2025.124783",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ae8629ca3e1c7610c5f0fee922296b1c5973790d",
+  "published_iso": "2025-03-05",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Latent Action Diffusion for Cross-Embodiment Manipulation",
+  "title_norm": "latent action diffusion for cross embodiment manipulation",
+  "abstract": "End-to-end learning is emerging as a powerful paradigm for robotic manipulation, but its effectiveness is limited by data scarcity and the heterogeneity of action spaces across robot embodiments. In particular, diverse action spaces across different end-effectors create barriers for cross-embodiment learning and skill transfer. We address this challenge through diffusion policies learned in a latent action space that unifies diverse end-effector actions. We first show that we can learn a semantically aligned latent action space for anthropomorphic robotic hands, a human hand, and a parallel jaw gripper using encoders trained with a contrastive loss. Second, we show that by using our proposed latent action space for co-training on manipulation data from different end-effectors, we can utilize a single policy for multi-robot control and obtain up to 25.3% improved manipulation success rates, indicating successful skill transfer despite a significant embodiment gap. Our approach using latent cross-embodiment policies presents a new method to unify different action spaces across embodiments, enabling efficient multi-robot control and data sharing across robot setups. This unified representation significantly reduces the need for extensive data collection for each new robot morphology, accelerates generalization across embodiments, and ultimately facilitates more scalable and efficient robotic learning.",
+  "tldr": "This work shows that by using its proposed latent action space for co-training on manipulation data from different end-effectors, it can utilize a single policy for multi-robot control and obtain up to 25.3% improved manipulation success rates, indicating successful skill transfer despite a significant embodiment gap.",
+  "year": 2025,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Erik Bauer",
+   "Elvis Nava",
+   "Robert K. Katzschmann"
+  ],
+  "citations": 26,
+  "source": "semanticscholar",
+  "source_id": "79ff88a2aac50d0762e18bd9d111de66889b25c2",
+  "paper_id": "dblp:journals/corr/abs-2506-14608",
+  "doi": "10.48550/arXiv.2506.14608",
+  "arxiv_id": "2506.14608",
+  "dblp_key": "journals/corr/abs-2506-14608",
+  "paper_url": "https://www.semanticscholar.org/paper/79ff88a2aac50d0762e18bd9d111de66889b25c2",
+  "published_iso": "2025-06-17",
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ }
+]

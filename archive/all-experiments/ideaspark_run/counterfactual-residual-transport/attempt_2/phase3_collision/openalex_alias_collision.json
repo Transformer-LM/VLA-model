@@ -1,0 +1,2497 @@
+[
+ {
+  "title": "Robust Control Barrier Functions for Uncertain Parameter-Varying Control Affine Systems With Set-Membership Parameter Estimation",
+  "title_norm": "robust control barrier functions for uncertain parameter varying control affine ",
+  "abstract": "This paper introduces robust control barrier functions for uncertain parameter-varying control affine systems, where the parametric uncertainties can be time-varying and nonlinearly affecting the system dynamics and/or safety sets. In particular, we propose two methods based on mixed-monotone decomposition and concave bounding, where the controlled invariance condition remains linear in the control inputs despite nonlinear uncertainties. Moreover, we design alternative robust control Lyapunov functions where the control inputs also appear linearly; thus, these robust control barrier and Lyapunov functions can be coupled to obtain a quadratic program that can be solved online. Additionally, we propose two set-membership parameter estimation methods using polyhedral intersections and interval observers to reduce the conservatism of the robust approaches. Our robust approaches are observed to have comparable performance with adaptive approaches and robust safety guarantees, even when the (robust) adaptive methods may not.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Automatic Control",
+  "authors": [
+   "Tarun Pati",
+   "Sze Zheng Yong"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4410808232",
+  "doi": "10.1109/tac.2025.3574548",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410808232",
+  "published_iso": "2025-05-28",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Exploring treatment options in cancer: tumor treatment strategies",
+  "title_norm": "exploring treatment options in cancer tumor treatment strategies",
+  "abstract": "Traditional therapeutic approaches such as chemotherapy and radiation therapy have burdened cancer patients with onerous physical and psychological challenges. Encouragingly, the landscape of tumor treatment has undergone a comprehensive and remarkable transformation. Emerging as fervently pursued modalities are small molecule targeted agents, antibody-drug conjugates (ADCs), cell-based therapies, and gene therapy. These cutting-edge treatment modalities not only afford personalized and precise tumor targeting, but also provide patients with enhanced therapeutic comfort and the potential to impede disease progression. Nonetheless, it is acknowledged that these therapeutic strategies still harbour untapped potential for further advancement. Gaining a comprehensive understanding of the merits and limitations of these treatment modalities holds the promise of offering novel perspectives for clinical practice and foundational research endeavours. In this review, we discussed the different treatment modalities, including small molecule targeted drugs, peptide drugs, antibody drugs, cell therapy, and gene therapy. It will provide a detailed explanation of each method, addressing their status of development, clinical challenges, and potential solutions. The aim is to assist clinicians and researchers in gaining a deeper understanding of these diverse treatment options, enabling them to carry out effective treatment and advance their research more efficiently.",
+  "year": 2024,
+  "venue": "Signal Transduction and Targeted Therapy",
+  "authors": [
+   "Beilei Liu",
+   "Hongyu Zhou",
+   "Licheng Tan",
+   "Kin To Hugo Siu",
+   "Xin‐Yuan Guan"
+  ],
+  "citations": 1102,
+  "source": "openalex",
+  "source_id": "W4400748356",
+  "doi": "10.1038/s41392-024-01856-7",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4400748356",
+  "published_iso": "2024-07-16",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "DINOv2: Learning Robust Visual Features without Supervision",
+  "title_norm": "dinov2 learning robust visual features without supervision",
+  "abstract": "The recent breakthroughs in natural language processing for model pretraining on large quantities of data have opened the way for similar foundation models in computer vision. These models could greatly simplify the use of images in any system by producing all-purpose visual features, i.e., features that work across image distributions and tasks without finetuning. This work shows that existing pretraining methods, especially self-supervised methods, can produce such features if trained on enough curated data from diverse sources. We revisit existing approaches and combine different techniques to scale our pretraining in terms of data and model size. Most of the technical contributions aim at accelerating and stabilizing the training at scale. In terms of data, we propose an automatic pipeline to build a dedicated, diverse, and curated image dataset instead of uncurated data, as typically done in the self-supervised literature. In terms of models, we train a ViT model (Dosovitskiy et al., 2020) with 1B parameters and distill it into a series of smaller models that surpass the best available all-purpose features, OpenCLIP (Ilharco et al., 2021) on most of the benchmarks at image and pixel levels.",
+  "year": 2023,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Maxime Oquab",
+   "Timothée Darcet",
+   "Théo Moutakanni",
+   "Huy Vo",
+   "Marc Szafraniec",
+   "Vasil Khalidov"
+  ],
+  "citations": 1070,
+  "source": "openalex",
+  "source_id": "W4366208220",
+  "doi": "10.48550/arxiv.2304.07193",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2304.07193",
+  "published_iso": "2023-04-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Cauchy slice holography: a new AdS/CFT dictionary",
+  "title_norm": "cauchy slice holography a new ads cft dictionary",
+  "abstract": "A bstract We investigate a new approach to holography in asymptotically AdS spacetimes, in which time rather than space is the emergent dimension. By making a sufficiently large T 2 -deformation of a Euclidean CFT, we define a holographic theory that lives on Cauchy slices of the Lorentzian bulk. (More generally, for an arbitrary Hamiltonian constraint equation that closes, we show how to obtain it by an irrelevant deformation from a CFT with suitable anomalies.) The partition function of this theory defines a natural map between the bulk canonical quantum gravity theory Hilbert space, and the Hilbert space of the usual (undeformed) boundary CFT. We argue for the equivalence of the ADM and CFT Hamiltonians. We also explain how bulk unitarity emerges naturally, even though the boundary theory is not reflection-positive. This allows us to reformulate the holographic principle in the language of Wheeler-DeWitt canonical quantum gravity. Along the way, we outline a procedure for obtaining a bulk Hilbert space from the gravitational path integral with Dirichlet boundary conditions. Following previous conjectures, we postulate that this finite-cutoff gravitational path integral agrees with the T 2 -deformed theory living on an arbitrary boundary manifold — at least near the semiclassical regime. However, the T 2 -deformed theory may be easier to UV complete, in which case it would be natural to take it as the definition of nonperturbative quantum gravity.",
+  "year": 2023,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Gonçalo Araujo-Regado",
+   "Rifath Khan",
+   "Aron C. Wall"
+  ],
+  "citations": 73,
+  "source": "openalex",
+  "source_id": "W4323363901",
+  "doi": "10.1007/jhep03(2023)026",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP03(2023)026.pdf",
+  "published_iso": "2023-03-03",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust Sensor Fault Detection Using Set-Membership Threshold for Uncertain Systems and Its Application to Aero-Engine Control System",
+  "title_norm": "robust sensor fault detection using set membership threshold for uncertain syste",
+  "abstract": "This article proposes a robust sensor fault detection method using set-membership threshold for the uncertain systems subject to unknown disturbance, measurement noise and parameter uncertainties. First, a robust fault detection observer is designed based onH–=L∞analysis with considering the finite frequency characteristics of fault signal. Then, a residual evaluation method based on the dynamic threshold generated by set-membership method is proposed. The structures of the parameter uncertainties are considered in the threshold generation to reduce conservatism. In addition, a fault isolation strategy based on setmembership threshold is presented. Finally, a hardware-in-the-loop (HIL) experiment of aero-engine control system is conducted to demonstrate the effectiveness of the proposed method.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Industrial Electronics",
+  "authors": [
+   "Wentao Tang",
+   "Changyi Xu",
+   "Shui Fu",
+   "Z.C. Qiu",
+   "Xi‐Ming Sun"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4410950050",
+  "doi": "10.1109/tie.2025.3566747",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410950050",
+  "published_iso": "2025-06-02",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Metastatic colorectal cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+  "title_norm": "metastatic colorectal cancer esmo clinical practice guideline for diagnosis trea",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Annals of Oncology",
+  "authors": [
+   "Andrés Cervantes",
+   "R. Adam",
+   "Susana Roselló",
+   "Dirk Arnold",
+   "Nicola Normanno",
+   "Julien Taı̈eb"
+  ],
+  "citations": 1759,
+  "source": "openalex",
+  "source_id": "W4307401860",
+  "doi": "10.1016/j.annonc.2022.10.003",
+  "arxiv_id": null,
+  "paper_url": "https://www.annalsofoncology.org/article/S0923-7534(22)04192-8/pdf",
+  "published_iso": "2022-10-25",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Wicked Problems in Public Policy",
+  "title_norm": "wicked problems in public policy",
+  "abstract": "",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Brian Head"
+  ],
+  "citations": 738,
+  "source": "openalex",
+  "source_id": "W1739686760",
+  "doi": "10.1007/978-3-030-90434-0_43-1",
+  "arxiv_id": null,
+  "paper_url": "https://library.oapen.org/bitstream/20.500.12657/53360/1/978-3-030-94580-0.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Deep evidential fusion with uncertainty quantification and reliability learning for multimodal medical image segmentation",
+  "title_norm": "deep evidential fusion with uncertainty quantification and reliability learning ",
+  "abstract": "",
+  "year": 2024,
+  "venue": "Information Fusion",
+  "authors": [
+   "Ling Huang",
+   "Su Ruan",
+   "Pierre Decazes",
+   "Thierry Denœux"
+  ],
+  "citations": 75,
+  "source": "openalex",
+  "source_id": "W4401815590",
+  "doi": "10.1016/j.inffus.2024.102648",
+  "arxiv_id": null,
+  "paper_url": "https://hal.science/hal-04681852v1/file/deep_fusion_v3.pdf",
+  "published_iso": "2024-08-22",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust Fault-Tolerant Control Based on Set-Membership Estimation and Tube MPC",
+  "title_norm": "robust fault tolerant control based on set membership estimation and tube mpc",
+  "abstract": "A robust fault-tolerant control method based on set-membership estimation and tube model predictive control (MPC) is proposed for the constrained linear systems subject to unknown disturbance and noise. Firstly, an augmented observer is used to estimate state and fault simultaneously. A fault-tolerant controller is proposed based on the state and fault estimation. And the estimation and feedback errors are bounded using set-membership estimation method. Then, the obtained error sets are used to design robust output feedback tube MPC strategy. In order to make the estimation error robust against disturbance and noise, the observer gain is designed based onL∞method. Finally, the effectiveness and real-time performance of the proposed method is verified by a hardware-in-the-loop (HIL) test, which shows its potential application value in aeroengine control systems.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "authors": [
+   "W. Qin",
+   "Wentao Tang",
+   "Weiguo Xia"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4412801743",
+  "doi": "10.1109/tase.2025.3594583",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4412801743",
+  "published_iso": "2025-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "A perspective on using partial least squares structural equation modelling in data articles",
+  "title_norm": "a perspective on using partial least squares structural equation modelling in da",
+  "abstract": "This perspective article on using partial least squares structural equation modelling (PLS-SEM) is intended as a guide for authors who wish to publish datasets that can be analysed with this method as stand-alone data articles. Stand-alone data articles are different from supporting data articles in that they are not linked to a full research article published in another journal. Nevertheless, authors of stand-alone data articles will be required to clearly demonstrate and justify the usefulness of their dataset. This perspective article offers actionable recommendations regarding the conceptualisation phase, the types of data suitable for PLS-SEM and quality criteria to report, which are generally applicable to studies using PLS-SEM. We also present adjusted versions of the HTMT metric for discriminant validity testing that broaden its applicability. Further, we highlight the benefit of linking data articles to already published research papers that employ the PLS-SEM method.",
+  "year": 2023,
+  "venue": "Data in Brief",
+  "authors": [
+   "Christian M. Ringle",
+   "Marko Sarstedt",
+   "Noemi Sinkovics",
+   "Rudolf R. Sinkovics"
+  ],
+  "citations": 732,
+  "source": "openalex",
+  "source_id": "W4328137216",
+  "doi": "10.1016/j.dib.2023.109074",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4328137216",
+  "published_iso": "2023-03-21",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+  "title_norm": "diffusion policy visuomotor policy learning via action diffusion",
+  "abstract": "",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Cheng Chi",
+   "Siyuan Feng",
+   "Yilun Du",
+   "Zhenjia Xu",
+   "Eric Cousineau",
+   "Benjamin Burchfiel"
+  ],
+  "citations": 473,
+  "source": "openalex",
+  "source_id": "W4385403811",
+  "doi": "10.15607/rss.2023.xix.026",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2023.xix.026",
+  "published_iso": "2023-07-10",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Reconstructing higher-order interactions in coupled dynamical systems",
+  "title_norm": "reconstructing higher order interactions in coupled dynamical systems",
+  "abstract": "Higher-order interactions play a key role for the operation and function of a complex system. However, how to identify them is still an open problem. Here, we propose a method to fully reconstruct the structural connectivity of a system of coupled dynamical units, identifying both pairwise and higher-order interactions from the system time evolution. Our method works for any dynamics, and allows the reconstruction of both hypergraphs and simplicial complexes, either undirected or directed, unweighted or weighted. With two concrete applications, we show how the method can help understanding the complexity of bacterial systems, or the microscopic mechanisms of interaction underlying coupled chaotic oscillators.",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "authors": [
+   "Federico Malizia",
+   "Alessandra Corso",
+   "Lucia Valentina Gambuzza",
+   "Giovanni Russo",
+   "Vito Latora",
+   "Mattia Frasca"
+  ],
+  "citations": 50,
+  "source": "openalex",
+  "source_id": "W4399780438",
+  "doi": "10.1038/s41467-024-49278-x",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4399780438",
+  "published_iso": "2024-06-18",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust adaptive MPC using control contraction metrics",
+  "title_norm": "robust adaptive mpc using control contraction metrics",
+  "abstract": "We present a robust adaptive model predictive control (MPC) framework for nonlinear continuous-time systems with bounded parametric uncertainty and additive disturbance. We utilize general control contraction metrics (CCMs) to parameterize a homothetic tube around a nominal prediction that contains all uncertain trajectories. Furthermore, we incorporate model adaptation using set-membership estimation. As a result, the proposed MPC formulation is applicable to a large class of nonlinear systems, reduces conservatism during online operation, and guarantees robust constraint satisfaction and convergence to a neighborhood of the desired setpoint. One of the main technical contributions is the derivation of corresponding tube dynamics based on CCMs that account for the state and input dependent nature of the model mismatch. Furthermore, we online optimize over the nominal parameter, which enables general set-membership updates for the parametric uncertainty in the MPC. Benefits of the proposed homothetic tube MPC and online adaptation are demonstrated using a numerical example involving a planar quadrotor.",
+  "year": 2023,
+  "venue": "Automatica",
+  "authors": [
+   "András Sasfi",
+   "Melanie N. Zeilinger",
+   "Johannes Köhler"
+  ],
+  "citations": 59,
+  "source": "openalex",
+  "source_id": "W4383336640",
+  "doi": "10.1016/j.automatica.2023.111169",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4383336640",
+  "published_iso": "2023-07-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Decision Theory for Treatment Choice Problems with Partial Identification",
+  "title_norm": "decision theory for treatment choice problems with partial identification",
+  "abstract": "Abstract We apply classical statistical decision theory to a large class of treatment choice problems with partial identification. We show that, in a general class of problems with Gaussian likelihood, all decision rules are admissible; it is maximin-welfare optimal to ignore all data; and, for severe enough partial identification, there are infinitely many minimax-regret optimal decision rules, all of which sometimes randomize the policy recommendation. We uniquely characterize the minimax-regret optimal rule that least frequently randomizes, and show that, in some cases, it can outperform other minimax-regret optimal rules in terms of what we call profiled regret. We analyse the implications of our results in the aggregation of experimental estimates for policy adoption, extrapolation of Local Average Treatment Effects, and policy making in the presence of omitted variable bias.",
+  "year": 2026,
+  "venue": "The Review of Economic Studies",
+  "authors": [
+   "José Luis Montiel Olea",
+   "Chen Qiu",
+   "Jörg Stoye"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7129726978",
+  "doi": "10.1093/restud/rdag015",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7129726978",
+  "published_iso": "2026-02-14",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Distributionally robust optimization",
+  "title_norm": "distributionally robust optimization",
+  "abstract": "Distributionally robust optimization (DRO) studies decision problems under uncertainty where the probability distribution governing the uncertain problem parameters is itself uncertain. A key component of any DRO model is its ambiguity set, that is, a family of probability distributions consistent with any available structural or statistical information. DRO seeks decisions that perform best under the worst distribution in the ambiguity set. This worst case criterion is supported by findings in psychology and neuroscience, which indicate that many decision-makers have a low tolerance for distributional ambiguity. DRO is rooted in statistics, operations research and control theory, and recent research has uncovered its deep connections to regularization techniques and adversarial training in machine learning. This survey presents the key findings of the field in a unified and self-contained manner.",
+  "year": 2025,
+  "venue": "Acta Numerica",
+  "authors": [
+   "Daniel Kühn",
+   "Soroosh Shafieezadeh-Abadeh",
+   "Wolfram Wiesemann"
+  ],
+  "citations": 76,
+  "source": "openalex",
+  "source_id": "W4411917733",
+  "doi": "10.1017/s0962492924000084",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5B4E65E3A5A2AEF24E218A6B34E6EAA2/S0962492924000084a.pdf/div-class-title-distributionally-robust-optimization-div.pdf",
+  "published_iso": "2025-06-30",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Google search trends and stock markets: Sentiment, attention or uncertainty?",
+  "title_norm": "google search trends and stock markets sentiment attention or uncertainty",
+  "abstract": "Keyword based measures purporting to reflect investor sentiment attention or uncertainty have been increasingly used to model stock market behaviour. We investigate and shed light on the narrative reflected by Google search trends (GST) by constructing a neutral and general stock market-related GST index. To do so e apply elastic net regression to select investor relevant search terms using a sample of 77 international stock markets. The index peaks around significant events that impacted global financial markets moves closely with established measures of market uncertainty and is predominantly correlated with uncertainty measures in differences implying that GST reflect an uncertainty narrative. Returns and volatility for developed emerging and frontier markets widely reflect changing Google search volumes and relationships conform to a prior expectations associated with uncertainty. Our index performs well relative to existing keyword-based uncertainty measures in its ability to approximate and predict systematic stock market drivers and factor dispersion underlying return volatility both in-sample and out-of-sample. Our study contributes to the understanding of the information reflected by GST their relationship with stock markets and points towards generalisability thus facilitating the development of further applications using search and return data.",
+  "year": 2023,
+  "venue": "International Review of Financial Analysis",
+  "authors": [
+   "Jan Jakub Szczygielski",
+   "Ailie Charteris",
+   "Princess Rutendo Bwanya",
+   "Janusz Brzeszczyński"
+  ],
+  "citations": 51,
+  "source": "openalex",
+  "source_id": "W4318561979",
+  "doi": "10.1016/j.irfa.2023.102549",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4318561979",
+  "published_iso": "2023-01-30",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust Quantum Control for Set-Membership Hamiltonian Uncertainty",
+  "title_norm": "robust quantum control for set membership hamiltonian uncertainty",
+  "abstract": "We provide a brief review of a recently proposed approach to robust quantum control which rests on three theoretical foundations: the classic method of averaging, set-membership uncertainty modeling, and the known topological properties of the quantum control landscape. Application of the method of averaging directly results in a multi-criterion optimization problem consisting of the uncertainty-free fidelity competing with a generic robustness measure, the latter being a norm of a time-domain product of a function of the uncertainty-free system and the character of the uncertainty set. If this term is sufficiently small, then at most, only fourth order error effects can accrue. Lastly, the topological features promote a two-stage algorithm: in stage-1 the uncertainty-free fidelity is set to a high threshold, then in stage-2 the robustness measure is minimized while maintaing the threshold. Each stage-2 control update is found by solving a convex optimization problem.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Robert L. Kosut",
+   "Herschel Rabitz"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4389158907",
+  "doi": "10.1109/qce57702.2023.00147",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4389158907",
+  "published_iso": "2023-09-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Treatment‐resistant depression: definition, prevalence, detection, management, and investigational interventions",
+  "title_norm": "treatment resistant depression definition prevalence detection management and in",
+  "abstract": "Treatment-resistant depression (TRD) is common and associated with multiple serious public health implications. A consensus definition of TRD with demonstrated predictive utility in terms of clinical decision-making and health outcomes does not currently exist. Instead, a plethora of definitions have been proposed, which vary significantly in their conceptual framework. The absence of a consensus definition hampers precise estimates of the prevalence of TRD, and also belies efforts to identify risk factors, prevention opportunities, and effective interventions. In addition, it results in heterogeneity in clinical practice decision-making, adversely affecting quality of care. The US Food and Drug Administration (FDA) and the European Medicines Agency (EMA) have adopted the most used definition of TRD (i.e., inadequate response to a minimum of two antidepressants despite adequacy of the treatment trial and adherence to treatment). It is currently estimated that at least 30% of persons with depression meet this definition. A significant percentage of persons with TRD are actually pseudo-resistant (e.g., due to inadequacy of treatment trials or non-adherence to treatment). Although multiple sociodemographic, clinical, treatment and contextual factors are known to negatively moderate response in persons with depression, very few factors are regarded as predictive of non-response across multiple modalities of treatment. Intravenous ketamine and intranasal esketamine (co-administered with an antidepressant) are established as efficacious in the management of TRD. Some second-generation antipsychotics (e.g., aripiprazole, brexpiprazole, cariprazine, quetiapine XR) are proven effective as adjunctive treatments to antidepressants in partial responders, but only the olanzapine-fluoxetine combination has been studied in FDA-defined TRD. Repetitive transcranial magnetic stimulation (TMS) is established as effective and FDA-approved for individuals with TRD, with accelerated theta-burst TMS also recently showing efficacy. Electroconvulsive therapy is regarded as an effective acute and maintenance intervention in TRD, with preliminary evidence suggesting non-inferiority to acute intravenous ketamine. Evidence for extending antidepressant trial, medication switching and combining antidepressants is mixed. Manual-based psychotherapies are not established as efficacious on their own in TRD, but offer significant symptomatic relief when added to conventional antidepressants. Digital therapeutics are under study and represent a potential future clinical vista in this population.",
+  "year": 2023,
+  "venue": "World Psychiatry",
+  "authors": [
+   "Roger S. McIntyre",
+   "Mohammad Alsuwaidan",
+   "Bernhard T. Baune",
+   "Michael Berk",
+   "Koen Demyttenaere",
+   "Joseph F. Goldberg"
+  ],
+  "citations": 770,
+  "source": "openalex",
+  "source_id": "W4386765496",
+  "doi": "10.1002/wps.21120",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wps.21120",
+  "published_iso": "2023-09-15",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Data‐driven distributionally robust supplier selection and order allocation problems considering carbon emissions",
+  "title_norm": "data driven distributionally robust supplier selection and order allocation prob",
+  "abstract": "Abstract Under the constraints of uncertainty and carbon emission policies, reasonable and flexible supplier selection and order allocation can minimize the total cost, which is of great significance to the supply chain. We study sustainable supplier selection and order allocation problems with multiple periods, multiple suppliers, and multiple products under a carbon cap‐and‐trade policy. We exploit distributionally robust versions of supplier selection and order allocation problems with an explicit distributional uncertainty set and derive computationally tractable reformulations of the distributionally robust optimization model with chance constraints by cone duality theory and conditional value‐at‐risk measure. Numerical experiments show that the proposed distributionally robust optimization models with nice computational tractability and probability guarantees are superior to the existing distributionally robust chance‐constrained optimization models in terms of cost and risk aversion. Relevant management insights on different carbon emission regulations and the application of distributionally robust optimization models are provided for policymakers and enterprises' decision‐makers based on the derived results.",
+  "year": 2023,
+  "venue": "International Transactions in Operational Research",
+  "authors": [
+   "Qiandong Dong",
+   "Yichao Yuan"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4378837292",
+  "doi": "10.1111/itor.13328",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/itor.13328",
+  "published_iso": "2023-05-31",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Techno-Economic and Life Cycle Cost Analysis through the Lens of Uncertainty: A Scoping Review",
+  "title_norm": "techno economic and life cycle cost analysis through the lens of uncertainty a s",
+  "abstract": "Researchers have long been interested in developing new economic assessment methods to provide credible information and facilitate the sustainable development of new technologies and products. The techno-economic analysis (TEA) and the life cycle cost analysis (LCCA) are the most widely used approaches for modeling and calculating processes’ economic impacts. A simulation-based TEA is a cost-benefit analysis that simultaneously considers technical and economic factors. In addition, the method facilitates the development of the entire project and provides a systematic approach for examining the interrelationships between economic and technological aspects. When it comes to economic studies, it is intimately bonded with uncertainty. There are numerous uncertainty sources, classified in various ways. The uncertainty reflects “an inability to determine the precise value of one or more parameters affecting a system.” The variability refers to the different values a given parameter may take. This implies that a probability density function (PDF), for instance, can be employed to estimate and quantify the variability of a given parameter. The bias refers to “assumptions that skew an analysis in a certain direction while ignoring other legitimate alternatives, factors, or data.” The present study identifies the frequency with which TEA/LCCA studies address uncertainty and gaps within the selected papers through a scoping review. The results indicate that the uncertainty associated with economic factors and model uncertainties were the main sources of uncertainty in TEA and LCCA. Moreover, possibilistic approaches such as the Monte Carlo methodology were the most frequently used tool to cope with the uncertainties associated with LCCA and TEA.",
+  "year": 2022,
+  "venue": "Sustainability",
+  "authors": [
+   "Zahir Barahmand",
+   "Marianne S. Eikeland"
+  ],
+  "citations": 45,
+  "source": "openalex",
+  "source_id": "W4297536960",
+  "doi": "10.3390/su141912191",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/14/19/12191/pdf?version=1664333403",
+  "published_iso": "2022-09-26",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust constraint satisfaction and stability of virtually coupled train set with uncertain dynamics: A dual-mode robust MPC approach",
+  "title_norm": "robust constraint satisfaction and stability of virtually coupled train set with",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Transportation Research Part C Emerging Technologies",
+  "authors": [
+   "Xiaolin Luo",
+   "Tao Tang",
+   "Xiaoyu Sean Lu",
+   "Jidong Lv",
+   "Hongjie Liu"
+  ],
+  "citations": 41,
+  "source": "openalex",
+  "source_id": "W4387388484",
+  "doi": "10.1016/j.trc.2023.104356",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4387388484",
+  "published_iso": "2023-10-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Treatment of Metastatic Colorectal Cancer: ASCO Guideline",
+  "title_norm": "treatment of metastatic colorectal cancer asco guideline",
+  "abstract": "PURPOSE To develop recommendations for treatment of patients with metastatic colorectal cancer (mCRC). METHODS ASCO convened an Expert Panel to conduct a systematic review of relevant studies and develop recommendations for clinical practice. RESULTS Five systematic reviews and 10 randomized controlled trials met the systematic review inclusion criteria. RECOMMENDATIONS Doublet chemotherapy should be offered, or triplet therapy may be offered to patients with previously untreated, initially unresectable mCRC, on the basis of included studies of chemotherapy in combination with anti–vascular endothelial growth factor antibodies. In the first-line setting, pembrolizumab is recommended for patients with mCRC and microsatellite instability-high or deficient mismatch repair tumors; chemotherapy and anti–epidermal growth factor receptor therapy is recommended for microsatellite stable or proficient mismatch repair left-sided treatment-naive RAS wild-type mCRC; chemotherapy and anti–vascular endothelial growth factor therapy is recommended for microsatellite stable or proficient mismatch repair RAS wild-type right-sided mCRC. Encorafenib plus cetuximab is recommended for patients with previously treated BRAF V600E–mutant mCRC that has progressed after at least one previous line of therapy. Cytoreductive surgery plus systemic chemotherapy may be recommended for selected patients with colorectal peritoneal metastases; however, the addition of hyperthermic intraperitoneal chemotherapy is not recommended. Stereotactic body radiation therapy may be recommended following systemic therapy for patients with oligometastases of the liver who are not considered candidates for resection. Selective internal radiation therapy is not routinely recommended for patients with unilobar or bilobar metastases of the liver. Perioperative chemotherapy or surgery alone should be offered to patients with mCRC who are candidates for potentially curative resection of liver metastases. Multidisciplinary team management and shared decision making are recommended. Qualifying statements with further details related to implementation of guideline recommendations are also included. Additional information is available at www.asco.org/gastrointestinal-cancer-guidelines .",
+  "year": 2022,
+  "venue": "Journal of Clinical Oncology",
+  "authors": [
+   "Van K. Morris",
+   "Erin B. Kennedy",
+   "Nancy N. Baxter",
+   "Al B. Benson",
+   "Andrea Cercek",
+   "May Cho"
+  ],
+  "citations": 646,
+  "source": "openalex",
+  "source_id": "W4306660133",
+  "doi": "10.1200/jco.22.01690",
+  "arxiv_id": null,
+  "paper_url": "https://ascopubs.org/doi/pdfdirect/10.1200/JCO.22.01690?role=tab",
+  "published_iso": "2022-10-17",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Monetary Policy, Corporate Finance, and Investment",
+  "title_norm": "monetary policy corporate finance and investment",
+  "abstract": "Abstract In response to a change in interest rates, younger firms not paying dividends adjust both their capital expenditure and borrowing significantly more than older firms paying dividends. The reason is that the debt of younger non-dividend payers is far more sensitive to fluctuations in collateral values, which are significantly affected by monetary policy. The results are robust to a wide range of possible confounding factors. Other channels, including movements in interest payments, product demand, profitability, and mark-ups, are also significant but seem unlikely to explain the heterogeneity in the response of capital expenditure. Our findings suggest that these types of financial frictions play an important role in the transmission of monetary policy.",
+  "year": 2023,
+  "venue": "Journal of the European Economic Association",
+  "authors": [
+   "James Cloyne",
+   "Clodomiro Ferreira",
+   "Maren Froemel",
+   "Paolo Surico"
+  ],
+  "citations": 160,
+  "source": "openalex",
+  "source_id": "W2981473075",
+  "doi": "10.1093/jeea/jvad009",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/jeea/advance-article-pdf/doi/10.1093/jeea/jvad009/50149818/jvad009.pdf",
+  "published_iso": "2023-03-17",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Workflow-Induced Uncertainty in Data-Driven Mineral Prospectivity Mapping",
+  "title_norm": "workflow induced uncertainty in data driven mineral prospectivity mapping",
+  "abstract": "Abstract The primary goal of mineral prospectivity mapping (MPM) is to narrow the search for mineral resources by producing spatially selective maps. However, in the data-driven domain, MPM products vary depending on the workflow implemented. Although the data science framework is popular to guide the implementation of data-driven MPM tasks, and is intended to create objective and replicable workflows, this does not necessarily mean that maps derived from data science workflows are optimal in a spatial sense. In this study, we explore interactions between key components of a geodata science-based MPM workflow on the geospatial outcome, within the modeling stage by modulating: (1) feature space dimensionality, (2) the choice of machine learning algorithms, and (3) performance metrics that guide hyperparameter tuning. We specifically relate these variations in the data science workflow to the spatial selectivity of resulting maps using uncertainty propagation. Results demonstrate that typical geodata science-based MPM workflows contain substantial local minima, as it is highly probable for an arbitrary combination of workflow choices to produce highly discriminating models. In addition, variable domain metrics, which are key to guide the iterative implementation of the data science framework, exhibit inconsistent relationships with spatial selectivity. We refer to this class of uncertainty as workflow-induced uncertainty. Consequently, we propose that the canonical concept of scientific consensus from the greater experimental science framework should be adhered to, in order to quantify and mitigate against workflow-induced uncertainty as part of data-driven experimentation. Scientific consensus stipulates that the degree of consensus of experimental outcomes is the determinant in the reliability of findings. Indeed, we demonstrate that consensus through purposeful modulations of components of a data-driven MPM workflow is an effective method to understand and quantify workflow-induced uncertainty on MPM products. In other words, enlarging the search space for workflow design and experimenting with workflow components can result in more meaningful reductions in the physical search space for mineral resources.",
+  "year": 2024,
+  "venue": "Natural Resources Research",
+  "authors": [
+   "Steven E. Zhang",
+   "C J M Lawley",
+   "Julie E. Bourdeau",
+   "Glen T. Nwaila",
+   "Yousef Ghorbani"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4392351052",
+  "doi": "10.1007/s11053-024-10322-8",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11053-024-10322-8.pdf",
+  "published_iso": "2024-03-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Re-evaluation on fuzzy logic controlled system by optimizing the membership functions",
+  "title_norm": "re evaluation on fuzzy logic controlled system by optimizing the membership func",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Materials Today Proceedings",
+  "authors": [
+   "Aarti Varshney",
+   "Vishal Goyal"
+  ],
+  "citations": 28,
+  "source": "openalex",
+  "source_id": "W4364379077",
+  "doi": "10.1016/j.matpr.2023.03.799",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4364379077",
+  "published_iso": "2023-04-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Progressing nanotechnology to improve targeted cancer treatment: overcoming hurdles in its clinical implementation",
+  "title_norm": "progressing nanotechnology to improve targeted cancer treatment overcoming hurdl",
+  "abstract": "The use of nanotechnology has the potential to revolutionize the detection and treatment of cancer. Developments in protein engineering and materials science have led to the emergence of new nanoscale targeting techniques, which offer renewed hope for cancer patients. While several nanocarriers for medicinal purposes have been approved for human trials, only a few have been authorized for clinical use in targeting cancer cells. In this review, we analyze some of the authorized formulations and discuss the challenges of translating findings from the lab to the clinic. This study highlights the various nanocarriers and compounds that can be used for selective tumor targeting and the inherent difficulties in cancer therapy. Nanotechnology provides a promising platform for improving cancer detection and treatment in the future, but further research is needed to overcome the current limitations in clinical translation.",
+  "year": 2023,
+  "venue": "Molecular Cancer",
+  "authors": [
+   "Mohammad Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Matin Chehelgerdi",
+   "Omer Qutaiba B. Allela",
+   "Renzon Daniel Cosme Pecho"
+  ],
+  "citations": 1044,
+  "source": "openalex",
+  "source_id": "W4387452756",
+  "doi": "10.1186/s12943-023-01865-0",
+  "arxiv_id": null,
+  "paper_url": "https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01865-0",
+  "published_iso": "2023-10-09",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Co-selection for antibiotic resistance by environmental contaminants",
+  "title_norm": "co selection for antibiotic resistance by environmental contaminants",
+  "abstract": "The environment is increasingly recognised as a hotspot for the selection and dissemination of antibiotic resistant bacteria and antibiotic resistance genes. These can be selected for by antibiotics and non-antibiotic agents (such as metals and biocides), with the evidence to support this well established by observational and experimental studies. However, there is emerging evidence to suggest that plant protection products (such as herbicides), and non-antibiotic drugs (such as chemotherapeutic agents), can also co-select for antibiotic resistance. This review aims to provide an overview of four classes of non-antibiotic agents (metals, biocides, plant protection products, and non-antibiotic drugs) and how they may co-select for antibiotic resistance, with a particular focus on the environment. It also aims to identify key knowledge gaps that should be addressed in future work, to better understand these potential co-selective agents.",
+  "year": 2024,
+  "venue": "npj Antimicrobials and Resistance",
+  "authors": [
+   "Laura Murray",
+   "April Hayes",
+   "Jason Snape",
+   "Barbara Kasprzyk‐Hordern",
+   "William H. Gaze",
+   "Aimee K. Murray"
+  ],
+  "citations": 281,
+  "source": "openalex",
+  "source_id": "W4393380881",
+  "doi": "10.1038/s44259-024-00026-7",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s44259-024-00026-7.pdf",
+  "published_iso": "2024-04-01",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Knowledge-driven learning, optimization, and experimental design under uncertainty for materials discovery",
+  "title_norm": "knowledge driven learning optimization and experimental design under uncertainty",
+  "abstract": "Significant acceleration of the future discovery of novel functional materials requires a fundamental shift from the current materials discovery practice, which is heavily dependent on trial-and-error campaigns and high-throughput screening, to one that builds on knowledge-driven advanced informatics techniques enabled by the latest advances in signal processing and machine learning. In this review, we discuss the major research issues that need to be addressed to expedite this transformation along with the salient challenges involved. We especially focus on Bayesian signal processing and machine learning schemes that are uncertainty aware and physics informed for knowledge-driven learning, robust optimization, and efficient objective-driven experimental design.",
+  "year": 2023,
+  "venue": "Patterns",
+  "authors": [
+   "Xiaoning Qian",
+   "Byung-Jun Yoon",
+   "Raymundo Arróyave",
+   "Xiaofeng Qian",
+   "Edward R. Dougherty"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4388576024",
+  "doi": "10.1016/j.patter.2023.100863",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388576024",
+  "published_iso": "2023-11-01",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust adaptive model predictive control with persistent excitation conditions",
+  "title_norm": "robust adaptive model predictive control with persistent excitation conditions",
+  "abstract": "For constrained linear systems with bounded disturbances and parametric uncertainty, we propose a robust adaptive model predictive control strategy with online parameter estimation. Constraints enforcing persistently exciting closed loop control actions are introduced for a set-membership parameter identification scheme. The algorithm requires the online solution of a convex program, satisfies constraints robustly, and ensures recursive feasibility and input-to-state stability. Almost sure convergence to the actual system parameters is demonstrated under assumptions on stabilizability, reachability, and tight disturbance bounds.",
+  "year": 2023,
+  "venue": "Automatica",
+  "authors": [
+   "Xiaonan Lu",
+   "Mark Cannon"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4361023998",
+  "doi": "10.1016/j.automatica.2023.110959",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4361023998",
+  "published_iso": "2023-03-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Treatment choice, mean square regret and partial identification",
+  "title_norm": "treatment choice mean square regret and partial identification",
+  "abstract": "Abstract We consider a decision maker who faces a binary treatment choice when their welfare is only partially identified from data. We contribute to the literature by anchoring our finite-sample analysis on mean square regret, a decision criterion advocated by Kitagawa et al. in (2022) \"Treatment Choice with Nonlinear Regret\" . We find that optimal rules are always fractional, irrespective of the width of the identified set and precision of its estimate. The optimal treatment fraction is a simple logistic transformation of the commonly used t-statistic multiplied by a factor calculated by a simple constrained optimization. This treatment fraction gets closer to 0.5 as the width of the identified set becomes wider, implying the decision maker becomes more cautious against the adversarial Nature.",
+  "year": 2023,
+  "venue": "Japanese Economic Review",
+  "authors": [
+   "Toru Kitagawa",
+   "Sokbae Lee",
+   "Chen Qiu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4388398425",
+  "doi": "10.1007/s42973-023-00144-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s42973-023-00144-3.pdf",
+  "published_iso": "2023-10-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Energy storage technologies: An integrated survey of developments, global economical/environmental effects, optimal scheduling model, and sustainable adaption policies",
+  "title_norm": "energy storage technologies an integrated survey of developments global economic",
+  "abstract": "Energy Storage Technology is one of the major components of renewable energy integration and decarbonization of world energy systems. It significantly benefits addressing ancillary power services, power quality stability, and power supply reliability. However, the recent years of the COVID-19 pandemic have given rise to the energy crisis in various industrial and technology sectors. An integrated survey of energy storage technology development, its classification, performance, and safe management is made to resolve these challenges. The development of energy storage technology has been classified into electromechanical, mechanical, electromagnetic, thermodynamics, chemical, and hybrid methods. The current study identifies potential technologies, operational framework, comparison analysis, and practical characteristics. This proposed study also provides useful and practical information to readers, engineers, and practitioners on the global economic effects, global environmental effects, organization resilience, key challenges, and projections of energy storage technologies. An optimal scheduling model is also proposed. Policies for sustainable adaptation are then described. An extensive list of publications to date in the open literature is canvassed to portray various developments in this area.",
+  "year": 2023,
+  "venue": "Journal of Energy Storage",
+  "authors": [
+   "Mohammad Amir",
+   "Radhika G. Deshmukh",
+   "Haris M. Khalid",
+   "Zafar Said",
+   "Ali Raza",
+   "S. M. Muyeen"
+  ],
+  "citations": 567,
+  "source": "openalex",
+  "source_id": "W4386006872",
+  "doi": "10.1016/j.est.2023.108694",
+  "arxiv_id": null,
+  "paper_url": "https://ars.els-cdn.com/content/image/1-s2.0-S2352152X23020911-ga1_lrg.jpg",
+  "published_iso": "2023-08-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Developing Dictionary Skills through Monolingual and Bilingual English Dictionaries at Tertiary-level Education in Hungary",
+  "title_norm": "developing dictionary skills through monolingual and bilingual english dictionar",
+  "abstract": "Among reference works, dictionaries are particularly important in foreign language learning. Dictionaries provide language learners with a wide range of data, however, wading through the mass of data and information can be a daunting task. Mastering dictionary skills should be important in the language learning process; however, in official educational documents in Hungary, there are no clear guidelines on how to develop these skills. By integrating dictionary skills into the curriculum and teaching them explicitly in lessons, teachers could play an important role in bridging the gap between lexicographers and dictionary users. In the present study, we report on our methods of teaching lexicography and dictionary skills to students at a Hungarian university. The authors are speaking from experience, the discussion and accompanying material are based on more than 15 years of teaching practice. To ensure that the training can meet the expanding needs of young students, a longitudinal study was launched in 2020 to examine students' changing habits and needs. The aims of the article are threefold: first, to encourage the teaching of lexicography at university level by providing concrete methods, then to highlight the importance of dictionary skills, and finally, to emphasise the importance of integrating the effective teaching of the use of electronic dictionaries into dictionary didactics. In this context, the article underlines the need to incorporate new evaluation criteria as well as to develop new skills for digital dictionaries, different from those for print dictionaries, into education. Keywords: teaching lexicography, dictionary didactics, reference skills, dictionary skills, dictionary use, university course design, course evaluation, online dictionaries, evaluation of dictionaries",
+  "year": 2023,
+  "venue": "Lexikos",
+  "authors": [
+   "Katalin P. Márkus",
+   "Ida Dringó-Horváth"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4387350055",
+  "doi": "10.5788/33-1-1821",
+  "arxiv_id": null,
+  "paper_url": "https://lexikos.journals.ac.za/pub/article/download/1821/1050",
+  "published_iso": "2023-01-01",
+  "oa_field": "Arts and Humanities",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Adaptive Set-Membership Filter Based Discrete Sliding Mode Control for Pneumatic Artificial Muscle Systems With Hardware Experiments",
+  "title_norm": "adaptive set membership filter based discrete sliding mode control for pneumatic",
+  "abstract": "Pneumatic artificial muscle (PAM), featuring good flexibility and safety, has been widely used in rehabilitation and bionic robots. However, the complex hysteretic nonlinearities and uncertainties of the PAM cause great difficulties and challenges to the accurate modeling and controller design, especially when confronted with unknown external disturbances in applications. This paper proposes a robust control strategy with disturbance compensation for the hysteresis compensation and trajectory tracking of PAMs. Considering the high hysteretic nonlinearity of the PAM, a modified Prandtl-Ishlinskii model is used as a feedforward hysteresis compensator. For the linearized system, adaptive set-membership filtering (ASMF) is used to estimate the nonlinear terms and external disturbances of the overall system. A sliding mode controller (SMC) with disturbance compensation is designed and cascaded to the feedforward hysteresis compensator in series. The stability of the closed-loop system is theoretically proved. The proposed method guarantees that the tracking error of the PAM system is bounded. Finally, the effectiveness and robustness of the proposed controller are verified via a series of experiments on an in-house built testbench for PAMs. Note to Practitioners—With the increasing demand on human-robot interaction, the safety and compliance of robots have become one key requirement. PAM is a compliant actuator, exhibiting good flexibility, safety, and clean energy. PAM is widely used in rehabilitation robots, whereas its strong hysteresis nonlinearity and sensitivity to external disturbances affect its motion accuracy. This paper proposes an ASMF-based discrete SMC, which uses an inverse hysteresis model to compensate for the strong hysteresis of the PAM and uses ASMF to estimate the lumped disturbance of the system. Compared with the other filters, ASMF is unique in that its estimation error is bounded, which is very useful in the stability proof of the overall system. The effectiveness of the proposed controller is experimentally verified. Experimental results show that PAM’s hysteresis can be efficiently compensated, and the influence of external disturbances can be attenuated by the proposed controller, resulting in improved motion accuracy and robustness. In future work, efforts will be directed towards the modeling and control of PAMs in multi-DOF robots.",
+  "year": 2023,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "authors": [
+   "Yanding Qin",
+   "Haoqi Zhang",
+   "Xiangyu Wang",
+   "Ning Sun",
+   "Jianda Han"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4321021046",
+  "doi": "10.1109/tase.2023.3243119",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4321021046",
+  "published_iso": "2023-02-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "ROBUST BAYES TREATMENT CHOICE WITH PARTIAL IDENTIFICATION",
+  "title_norm": "robust bayes treatment choice with partial identification",
+  "abstract": "We study a class of binary treatment choice problems with partial identification through the lens of robust (multiple prior) Bayesian analysis. We use a convenient set of prior distributions to derive ex-ante and ex-post robust Bayes decision rules, both for decision makers who can randomize and for decision makers who cannot. Our main messages are as follows: First, ex-ante and ex-post robust Bayes decision rules do not agree in general, whether or not randomized rules are allowed. Second, randomized treatment assignment for some data realizations can be optimal in both ex-ante and, perhaps more surprisingly, ex-post problems. Therefore, it is usually with loss of generality to exclude randomized rules from consideration, even when regret is evaluated ex post. We apply our results to a stylized problem where a policy maker uses experimental data to choose whether to implement a new policy in a population of interest, but is concerned about the external validity of the experiment at hand, and to aggregation of data generated by multiple randomized control trials in different sites to make a policy choice in a population for which no experimental data are available.",
+  "year": 2026,
+  "venue": "Econometric Theory",
+  "authors": [
+   "Andres Fernandez",
+   "José Luis Montiel Olea",
+   "Chen Qiu",
+   "Jörg Stoye",
+   "Serdil Tinda"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4405426959",
+  "doi": "10.1017/s0266466626100486",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/4125FE898E298193C00B107953D36ECC/S0266466626100486a.pdf/div-class-title-robust-bayes-treatment-choice-with-partial-identification-div.pdf",
+  "published_iso": "2026-07-23",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Genomic selection in plant breeding: Key factors shaping two decades of progress",
+  "title_norm": "genomic selection in plant breeding key factors shaping two decades of progress",
+  "abstract": "Genomic selection, the application of genomic prediction (GP) models to select candidate individuals, has significantly advanced in the past two decades, effectively accelerating genetic gains in plant breeding. This article provides a holistic overview of key factors that have influenced GP in plant breeding during this period. We delved into the pivotal roles of training population size and genetic diversity, and their relationship with the breeding population, in determining GP accuracy. Special emphasis was placed on optimizing training population size. We explored its benefits and the associated diminishing returns beyond an optimum size. This was done while considering the balance between resource allocation and maximizing prediction accuracy through current optimization algorithms. The density and distribution of single-nucleotide polymorphisms, level of linkage disequilibrium, genetic complexity, trait heritability, statistical machine-learning methods, and non-additive effects are the other vital factors. Using wheat, maize, and potato as examples, we summarize the effect of these factors on the accuracy of GP for various traits. The search for high accuracy in GP-theoretically reaching one when using the Pearson's correlation as a metric-is an active research area as yet far from optimal for various traits. We hypothesize that with ultra-high sizes of genotypic and phenotypic datasets, effective training population optimization methods and support from other omics approaches (transcriptomics, metabolomics and proteomics) coupled with deep-learning algorithms could overcome the boundaries of current limitations to achieve the highest possible prediction accuracy, making genomic selection an effective tool in plant breeding.",
+  "year": 2024,
+  "venue": "Molecular Plant",
+  "authors": [
+   "Admas Alemu",
+   "Johanna Åstrand",
+   "Osval A. Montesinos‐López",
+   "Julio Isidro y Sánchez",
+   "Javier Fernández-Gónzalez",
+   "Wuletaw Tadesse"
+  ],
+  "citations": 316,
+  "source": "openalex",
+  "source_id": "W4392714200",
+  "doi": "10.1016/j.molp.2024.03.007",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4392714200",
+  "published_iso": "2024-03-11",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Multi-Source Domain Adaptation Through Dataset Dictionary Learning in Wasserstein Space",
+  "title_norm": "multi source domain adaptation through dataset dictionary learning in wasserstei",
+  "abstract": "This paper seeks to solve Multi-Source Domain Adaptation (MSDA), which aims to mitigate data distribution shifts when transferring knowledge from multiple labeled source domains to an unlabeled target domain. We propose a novel MSDA framework based on dictionary learning and optimal transport. We interpret each domain in MSDA as an empirical distribution. As such, we express each domain as a Wasserstein barycenter of dictionary atoms, which are empirical distributions. We propose a novel algorithm, DaDiL, for learning via mini-batches: (i) atom distributions; (ii) a matrix of barycentric coordinates. Based on our dictionary, we propose two novel methods for MSDA: DaDil-R, based on the reconstruction of labeled samples in the target domain, and DaDiL-E, based on the ensembling of classifiers learned on atom distributions. We evaluate our methods in 3 benchmarks: Caltech-Office, Office 31, and CRWU, where we improved previous state-of-the-art by 3.15%, 2.29%, and 7.71% in classification performance. Finally, we show that interpolations in the Wasserstein hull of learned atoms provide data that can generalize to the target domain.",
+  "year": 2023,
+  "venue": "Frontiers in artificial intelligence and applications",
+  "authors": [
+   "Eduardo Fernandes Montesuma",
+   "Fred Maurice Ngolè Mboula",
+   "Antoine Souloumiac"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4387185507",
+  "doi": "10.3233/faia230459",
+  "arxiv_id": null,
+  "paper_url": "https://ebooks.iospress.nl/pdf/doi/10.3233/FAIA230459",
+  "published_iso": "2023-09-28",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust Control Barrier Functions for Nonlinear Control Systems with Uncertainty: A Duality-based Approach",
+  "title_norm": "robust control barrier functions for nonlinear control systems with uncertainty ",
+  "abstract": "This paper studies the design of controllers that guarantee stability and safety of nonlinear control affine systems with parametric uncertainty in both the drift and control vector fields. To this end, we introduce novel classes of robust control barrier functions (RCBF) and robust control Lyapunov functions (RCLF) that facilitate the synthesis of safety-critical controllers in the presence of parametric uncertainty using quadratic programming. Since the initial bounds on the system uncertainty may be highly conservative, we present a data-driven approach to reducing such bounds using input-output data collected online. In particular, we leverage an integral set-membership identification algorithm that iteratively shrinks the set of possible system parameters online and guarantees stability and safety during learning. The efficacy of the developed approach is illustrated via numerical examples.",
+  "year": 2022,
+  "venue": "2022 IEEE 61st Conference on Decision and Control (CDC)",
+  "authors": [
+   "M. Cohen",
+   "Călin Belta",
+   "Roberto Tron"
+  ],
+  "citations": 22,
+  "source": "openalex",
+  "source_id": "W4315472218",
+  "doi": "10.1109/cdc51059.2022.9992667",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4315472218",
+  "published_iso": "2022-12-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Generative AI in higher education: A global perspective of institutional adoption policies and guidelines",
+  "title_norm": "generative ai in higher education a global perspective of institutional adoption",
+  "abstract": "Integrating generative AI (GAI) into higher education is crucial for preparing a future generation of GAI-literate students. However, a comprehensive understanding of global institutional adoption policies remains absent, with most prior studies focusing on the Global North and lacking a theoretical lens. This study utilizes the Diffusion of Innovations Theory to examine GAI adoption strategies in higher education across 40 universities from six global regions. It explores the characteristics of GAI innovation, including compatibility, trialability, and observability, and analyses the communication channels and roles and responsibilities outlined in university policies and guidelines. The findings reveal that universities are proactively addressing GAI integration by emphasising academic integrity, enhancing teaching and learning practices, and promoting equity. Key policy measures include the development of guidelines for ethical GAI use, the design of authentic assessments to mitigate misuse, and the provision of training programs for faculty and students to foster GAI literacy. Despite these efforts, gaps remain in comprehensive policy frameworks, particularly in addressing data privacy concerns and ensuring equitable access to GAI tools. The study underscores the importance of clear communication channels, stakeholder collaboration, and ongoing evaluation to support effective GAI adoption. These insights provide actionable insights for policymakers to craft inclusive, transparent, and adaptive strategies for integrating GAI into higher education.",
+  "year": 2024,
+  "venue": "Computers and Education Artificial Intelligence",
+  "authors": [
+   "Yueqiao Jin",
+   "Lixiang Yan",
+   "Vanessa Echeverría",
+   "Dragan Gašević",
+   "Roberto Martínez‐Maldonado"
+  ],
+  "citations": 325,
+  "source": "openalex",
+  "source_id": "W4405586205",
+  "doi": "10.1016/j.caeai.2024.100348",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405586205",
+  "published_iso": "2024-12-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Tube Acceleration: Robust Dexterous Throwing Against Release Uncertainty",
+  "title_norm": "tube acceleration robust dexterous throwing against release uncertainty",
+  "abstract": "In robotic throwing, the release phase involves complex dynamic interactions due to object deformation and limited gripper opening speed, often resulting in inaccurate and nonrepeatable throws. While data-driven methods can be employed to compensate for the release uncertainty, the generalizability of learned models to unseen objects is not guaranteed, and object-specific fine-tuning with new data may be required. This fine-tuning process raises concerns about the scalability of such methods for dexterous throwing, where the robot needs to execute diverse motions for throwing various objects. Instead of case-by-case fine-tuning, we aim at designing throwing motion robust against release uncertainty. We encapsulate all uncertainties resulting from complex contact dynamics in a surrogate model of their resulting effect ongripper opening delay. We introduce the notion oftube accelerationto model the class of constant-acceleration motion in joint space that guarantees a release within the set of valid throwing configurations. We propose a convex relaxation of the primal optimization problem with a tight error bound and evaluate its performance in terms of reliability and efficiency. Results show that the approach offers run-time performance to allow online computation of throws on a 7-DoF robot arm. It achieves a high accuracy and success rate (97% for planar throws) at throwing a variety of complex objects, even when using a simple ballistic model for the object's flying dynamics.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Robotics",
+  "authors": [
+   "Yang Liu",
+   "Aude Billard"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4394698817",
+  "doi": "10.1109/tro.2024.3386391",
+  "arxiv_id": null,
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/8860/4359257/10494917.pdf",
+  "published_iso": "2024-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Virtual reference feedback tuning for linear discrete-time systems with robust stability guarantees based on set membership",
+  "title_norm": "virtual reference feedback tuning for linear discrete time systems with robust s",
+  "abstract": "In this paper we propose a novel methodology that allows us to design, in a purely data-based fashion and for linear single-input and single-output systems, both robustly stable and performing control systems for tracking piecewise constant reference signals. The approach uses both (i) virtual reference feedback tuning for enforcing suitable performance and (ii) the set membership framework for providing a-priori robust stability guarantees. Indeed, an uncertainty set for the system parameters is obtained through set membership identification, where an algorithm based on the scenario approach is proposed to estimate the inflation parameter in a probabilistic way. Based on this set, robust stability conditions are enforced as linear matrix inequality constraints within an optimization problem whose linear cost function relies on virtual reference feedback tuning. To show the generality and effectiveness of our approach, we apply it to two of the most widely used yet simple control schemes, i.e., where tracking is achieved thanks to (i) a static feedforward action and (ii) an integrator in closed-loop. The proposed method is not direct due to the set membership identification. However, the uncertainty set is used with the objective of providing robust stability guarantees for the closed-loop system and it is not used for the definition of the cost function, which instead is based on data. The effectiveness of the method is shown with reference to three simulation examples. A comparison with other data-driven methods is carried out.",
+  "year": 2023,
+  "venue": "Automatica",
+  "authors": [
+   "William D’Amico",
+   "Marcello Farina"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4385889073",
+  "doi": "10.1016/j.automatica.2023.111228",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4385889073",
+  "published_iso": "2023-08-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Breakthrough treatments for accelerated wound healing",
+  "title_norm": "breakthrough treatments for accelerated wound healing",
+  "abstract": "Skin injuries across the body continue to disrupt everyday life for millions of patients and result in prolonged hospital stays, infection, and death. Advances in wound healing devices have improved clinical practice but have mainly focused on treating macroscale healing versus underlying microscale pathophysiology. Consensus is lacking on optimal treatment strategies using a spectrum of wound healing products, which has motivated the design of new therapies. We summarize advances in the development of novel drug, biologic products, and biomaterial therapies for wound healing for marketed therapies and those in clinical trials. We also share perspectives for successful and accelerated translation of novel integrated therapies for wound healing.",
+  "year": 2023,
+  "venue": "Science Advances",
+  "authors": [
+   "Benjamin R. Freedman",
+   "Charles Hwang",
+   "Simon G. Talbot",
+   "Brian P. Hibler",
+   "Simon Matoori",
+   "David Mooney"
+  ],
+  "citations": 431,
+  "source": "openalex",
+  "source_id": "W4376869874",
+  "doi": "10.1126/sciadv.ade7007",
+  "arxiv_id": null,
+  "paper_url": "https://www.science.org/doi/pdf/10.1126/sciadv.ade7007?download=true",
+  "published_iso": "2023-05-17",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Improved anti-noise adaptive long short-term memory neural network modeling for the robust remaining useful life prediction of lithium-ion batteries",
+  "title_norm": "improved anti noise adaptive long short term memory neural network modeling for ",
+  "abstract": "",
+  "year": 2022,
+  "venue": "Reliability Engineering & System Safety",
+  "authors": [
+   "Shunli Wang",
+   "Yongcun Fan",
+   "Siyu Jin",
+   "Paul Takyi‐Aninakwa",
+   "Carlos Fernández"
+  ],
+  "citations": 552,
+  "source": "openalex",
+  "source_id": "W4307897928",
+  "doi": "10.1016/j.ress.2022.108920",
+  "arxiv_id": null,
+  "paper_url": "https://vbn.aau.dk/ws/files/766460645/WANG_2023_Improved_anti-noise_adaptive_AAM_.pdf",
+  "published_iso": "2022-10-29",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Housing, income, and precarity: The Australian suburban settlement in an age of uncertainty",
+  "title_norm": "housing income and precarity the australian suburban settlement in an age of unc",
+  "abstract": "",
+  "year": 2024,
+  "venue": "ANU Press eBooks",
+  "authors": [
+   "Laurence Troy"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4395089849",
+  "doi": "10.22459/aup.2024.17",
+  "arxiv_id": null,
+  "paper_url": "http://dx.doi.org/10.22459/aup.2024.17",
+  "published_iso": "2024-03-18",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robustness in deep learning models for medical diagnostics: security and adversarial challenges towards robust AI applications",
+  "title_norm": "robustness in deep learning models for medical diagnostics security and adversar",
+  "abstract": "The current study investigates the robustness of deep learning models for accurate medical diagnosis systems with a specific focus on their ability to maintain performance in the presence of adversarial or noisy inputs. We examine factors that may influence model reliability, including model complexity, training data quality, and hyperparameters; we also examine security concerns related to adversarial attacks that aim to deceive models along with privacy attacks that seek to extract sensitive information. Researchers have discussed various defenses to these attacks to enhance model robustness, such as adversarial training and input preprocessing, along with mechanisms like data augmentation and uncertainty estimation. Tools and packages that extend the reliability features of deep learning frameworks such as TensorFlow and PyTorch are also being explored and evaluated. Existing evaluation metrics for robustness are additionally being discussed and evaluated. This paper concludes by discussing limitations in the existing literature and possible future research directions to continue enhancing the status of this research topic, particularly in the medical domain, with the aim of ensuring that AI systems are trustworthy, reliable, and stable.",
+  "year": 2024,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Haseeb Javed",
+   "Shaker El–Sappagh",
+   "Tamer Abuhmed"
+  ],
+  "citations": 166,
+  "source": "openalex",
+  "source_id": "W4404127725",
+  "doi": "10.1007/s10462-024-11005-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10462-024-11005-9.pdf",
+  "published_iso": "2024-11-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Guidelines for the Diagnosis and Treatment of Primary Liver Cancer (2022 Edition)",
+  "title_norm": "guidelines for the diagnosis and treatment of primary liver cancer 2022 edition",
+  "abstract": "Background: Primary liver cancer, of which around 75-85% is hepatocellular carcinoma in China, is the fourth most common malignancy and the second leading cause of tumor-related death, thereby posing a significant threat to the life and health of the Chinese people. Summary: Since the publication of Guidelines for Diagnosis and Treatment of Primary Liver Cancer in China in June 2017, which were updated by the National Health Commission in December 2019, additional high-quality evidence has emerged from researchers worldwide regarding the diagnosis, staging, and treatment of liver cancer, that requires the guidelines to be updated again. The new edition (2022 Edition) was written by more than 100 experts in the field of liver cancer in China, which not only reflects the real-world situation in China but also may reshape the nationwide diagnosis and treatment of liver cancer. Key Messages: The new guideline aims to encourage the implementation of evidence-based practice and improve the national average 5-year survival rate for patients with liver cancer, as proposed in the \"Health China 2030 Blueprint.\"",
+  "year": 2023,
+  "venue": "Liver Cancer",
+  "authors": [
+   "Jian Zhou",
+   "Hui‐Chuan Sun",
+   "Zheng Wang",
+   "Wen‐Ming Cong",
+   "Mengsu Zeng",
+   "Weiping Zhou"
+  ],
+  "citations": 470,
+  "source": "openalex",
+  "source_id": "W4362640431",
+  "doi": "10.1159/000530495",
+  "arxiv_id": null,
+  "paper_url": "https://www.karger.com/Article/Pdf/530495",
+  "published_iso": "2023-01-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "The distribution of subsurface microplastics in the ocean",
+  "title_norm": "the distribution of subsurface microplastics in the ocean",
+  "abstract": "Marine plastic pollution is a global issue, with microplastics (1 µm–5 mm) dominating the measured plastic count1,2. Although microplastics can be found throughout the oceanic water column3,4, most studies collect microplastics from surface waters (less than about 50-cm depth) using net tows5. Consequently, our understanding of the microplastics distribution across ocean depths is more limited. Here we synthesize depth-profile data from 1,885 stations collected between 2014 and 2024 to provide insights into the distribution and potential transport mechanisms of subsurface (below about 50-cm depth, which is not usually sampled by traditional practices3,6) microplastics throughout the oceanic water column. We find that the abundances of microplastics range from 10−4 to 104 particles per cubic metre. Microplastic size affects their distribution; the abundance of small microplastics (1 µm to 100 µm) decreases gradually with depth, indicating a more even distribution and longer lifespan in the water column compared with larger microplastics (100 µm to 5,000 µm) that tend to concentrate at the stratified layers. Mid-gyre accumulation zones extend into the subsurface ocean but are concentrated in the top 100 m and predominantly consist of larger microplastics. Our analysis suggests that microplastics constitute a measurable fraction of the total particulate organic carbon, increasing from 0.1% at 30 m to 5% at 2,000 m. Although our study establishes a global benchmark, our findings underscore that the lack of standardization creates substantial uncertainties, making it challenging to advance our comprehension of the distribution of microplastics and its impact on the oceanic environment. Global data collected between 2014 and 2024 provide insights into the distribution and potential transport mechanisms of subsurface microplastics throughout the oceanic water column.",
+  "year": 2025,
+  "venue": "Nature",
+  "authors": [
+   "Shiye Zhao",
+   "Karin Kvale",
+   "Lixin Zhu",
+   "Erik Zettler",
+   "Matthias Egger",
+   "Tracy J. Mincer"
+  ],
+  "citations": 265,
+  "source": "openalex",
+  "source_id": "W4410019287",
+  "doi": "10.1038/s41586-025-08818-1",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410019287",
+  "published_iso": "2025-04-30",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Breaking the Sisyphean loop: reconceptualizing the treatment of risk and uncertainty in transport projects",
+  "title_norm": "breaking the sisyphean loop reconceptualizing the treatment of risk and uncertai",
+  "abstract": "Worldwide transport projects repeatedly exceed their budgets.This problem has received widespread attention over several decades, with little progress made to improve project cost performance.Consequently, this has led to the emergence of the following recurring question: How can public agencies responsible for delivering transport projects improve the estimation accuracy of their actual construction costs?We use the metaphor of the Sisyphean task to assist us in suggesting that the conflation of risk and uncertainty results in an inability to estimate actual construction costs accurately.Ambiguity aversion, an illusion of certainty, and the repeated occurrence of cost deviations, as demonstrated by our illustrative example and analysis of the elemental cost models of 39 transport projects, collectively create a Sisyphean loop that is impossible to break.Thus, we question the prevailing conceptualisation and treatment of risk and uncertainty used to estimate the actual construction costs of projects.We offer a new theoretical lens framed around ecologically rational heuristics and provide suggestions to reconceptualize and recalibrate the treatment and assessment of uncertainty in cost estimates.We hope this paper provides a much-needed circuit breaker to public agencies' prevailing treatment of risk and uncertainty and stimulates new lines of inquiry to improve the cost performance of transport projects.",
+  "year": 2024,
+  "venue": "Production Planning & Control",
+  "authors": [
+   "Peter E.D. Love",
+   "Jane Matthews",
+   "Lavagnon A. Ika"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4396954359",
+  "doi": "10.1080/09537287.2024.2352838",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/09537287.2024.2352838?download=true",
+  "published_iso": "2024-05-16",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Logistic autonomous vehicles assessment using decision support model under spherical fuzzy set integrated Choquet Integral approach",
+  "title_norm": "logistic autonomous vehicles assessment using decision support model under spher",
+  "abstract": "Autonomous vehicles (AVs) are the newest products in the intelligent transportation system that can move around with minimal human intervention. These products continue their path with all kinds of sensors with different parts. Effective use of these technologies in the logistics industry can create a competitive advantage. Nowadays, there are many AVs, some of which are superior to others in terms of build quality, variety of features, and design. Choosing an efficient, optimal, and reliable vehicle is one of the most important challenges in logistics planning. Therefore, choosing an AV based on a series of criteria can be considered a multi-criteria decision-making (MCDM) problem. Due to the complication of decision-making issues, criteria are usually not independent of each other and there are relationships between them. Therefore, this study develop an extended MCDM framework based on Choquet integral (CI) under group decision-making with a Spherical fuzzy set (SFS) for assessing logistics AVs. The CI technique is expanded with SFS to increase the power of CI. Furthermore, the combination of CI with SFS leads to greater freedom for decision makers to express opinions and use three independent membership functions. Accordingly, the interactions between the criteria are considered and the skepticism and uncertainty present during the decision are controlled. The proposed approach is implemented in selecting the best AVs in the logistics industry, and the results are compared with Pythagorean fuzzy CI and Intuitionistic fuzzy CI. Moreover, sensitivity analysis is done by changing the weights and creating different scenarios to confirm and check the robustness of the proposed approach results. The results indicate the suggested approach's efficiency and the ranking's stability in different scenarios.",
+  "year": 2022,
+  "venue": "Expert Systems with Applications",
+  "authors": [
+   "Shabnam Rahnamay Bonab",
+   "Saeid Jafarzadeh Ghoushchi",
+   "Muhammet Deveci",
+   "Gholamreza Haseli"
+  ],
+  "citations": 76,
+  "source": "openalex",
+  "source_id": "W4308194486",
+  "doi": "10.1016/j.eswa.2022.119205",
+  "arxiv_id": null,
+  "paper_url": "https://www.sciencedirect.com/science/article/pii/S0957417422022230/pdf",
+  "published_iso": "2022-11-04",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "CAR-cell therapy in the era of solid tumor treatment: current challenges and emerging therapeutic advances",
+  "title_norm": "car cell therapy in the era of solid tumor treatment current challenges and emer",
+  "abstract": "In the last decade, Chimeric Antigen Receptor (CAR)-T cell therapy has emerged as a promising immunotherapeutic approach to fight cancers. This approach consists of genetically engineered immune cells expressing a surface receptor, called CAR, that specifically targets antigens expressed on the surface of tumor cells. In hematological malignancies like leukemias, myeloma, and non-Hodgkin B-cell lymphomas, adoptive CAR-T cell therapy has shown efficacy in treating chemotherapy refractory patients. However, the value of this therapy remains inconclusive in the context of solid tumors and is restrained by several obstacles including limited tumor trafficking and infiltration, the presence of an immunosuppressive tumor microenvironment, as well as adverse events associated with such therapy. Recently, CAR-Natural Killer (CAR-NK) and CAR-macrophages (CAR-M) were introduced as a complement/alternative to CAR-T cell therapy for solid tumors. CAR-NK cells could be a favorable substitute for CAR-T cells since they do not require HLA compatibility and have limited toxicity. Additionally, CAR-NK cells might be generated in large scale from several sources which would suggest them as promising off-the-shelf product. CAR-M immunotherapy with its capabilities of phagocytosis, tumor-antigen presentation, and broad tumor infiltration, is currently being investigated. Here, we discuss the emerging role of CAR-T, CAR-NK, and CAR-M cells in solid tumors. We also highlight the advantages and drawbacks of CAR-NK and CAR-M cells compared to CAR-T cells. Finally, we suggest prospective solutions such as potential combination therapies to enhance the efficacy of CAR-cells immunotherapy.",
+  "year": 2023,
+  "venue": "Molecular Cancer",
+  "authors": [
+   "Karama Makni‐Maalej",
+   "Maysaloun Merhi",
+   "Varghese Inchakalody",
+   "S Mestiri",
+   "Majid Alam",
+   "Cristina Maccalli"
+  ],
+  "citations": 612,
+  "source": "openalex",
+  "source_id": "W4318465547",
+  "doi": "10.1186/s12943-023-01723-z",
+  "arxiv_id": null,
+  "paper_url": "https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01723-z",
+  "published_iso": "2023-01-30",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Addressing global environmental pollution using environmental control techniques: a focus on environmental policy and preventive environmental management",
+  "title_norm": "addressing global environmental pollution using environmental control techniques",
+  "abstract": "Abstract Global environmental pollution presents formidable obstacles to the long-term viability of the planet. This study synthesized current relevant literature with statistical snapshots from pollution statistics and reports and presented feasible recommendations to address the ramifications of global environmental pollution. A central focus is laid on the importance of preventive environmental management (PEM) and the strategic enforcement of environmental policies (EP), with a detailed exploration of history evolution and current application challenges. Specifically, the study centers on the significance of environmental policy and preventive environmental management in combatting global pollution. The examination encompasses an overview of environmental pollution and its implications for the environment and human health. It explores the role of environmental policy in mitigating environmental pollution, scrutinizes the principles underlying preventive environmental management, and evaluates the effectiveness of environmental management systems in curbing pollution. Furthermore, the study identifies and analyzes the challenges of implementing environmental control techniques, offering recommendations to overcome these obstacles. The outcomes of this research contribute to a more comprehensive understanding of the potential of environmental control methods in tackling global environmental pollution. The study underscores the crucial nature of robust environmental policies and proactive approaches to prevent pollution and foster sustainable development. Additionally, it offers insights into the necessity for collaboration and cooperation among stakeholders at various levels to attain effective pollution control and environmental management.",
+  "year": 2024,
+  "venue": "Discover Environment",
+  "authors": [
+   "Jonathan Awewomom",
+   "Felicia Dzeble",
+   "Yaw Doudu Takyi",
+   "Winfred Bediakoh Ashie",
+   "Emil Nana Yaw Osei Ettey",
+   "Patricia Eyram Afua"
+  ],
+  "citations": 324,
+  "source": "openalex",
+  "source_id": "W4391557630",
+  "doi": "10.1007/s44274-024-00033-5",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44274-024-00033-5.pdf",
+  "published_iso": "2024-02-06",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Into the Unknown: Uncertainty, Foreboding and Financial Markets",
+  "title_norm": "into the unknown uncertainty foreboding and financial markets",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Asia-Pacific Financial Markets",
+  "authors": [
+   "Smita Roy Trivedi"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4364378477",
+  "doi": "10.1007/s10690-023-09404-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10690-023-09404-z.pdf",
+  "published_iso": "2023-04-11",
+  "oa_field": "Economics, Econometrics and Finance",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "The STRING database in 2023: protein–protein association networks and functional enrichment analyses for any sequenced genome of interest",
+  "title_norm": "the string database in 2023 protein protein association networks and functional ",
+  "abstract": "Much of the complexity within cells arises from functional and regulatory interactions among proteins. The core of these interactions is increasingly known, but novel interactions continue to be discovered, and the information remains scattered across different database resources, experimental modalities and levels of mechanistic detail. The STRING database (https://string-db.org/) systematically collects and integrates protein-protein interactions-both physical interactions as well as functional associations. The data originate from a number of sources: automated text mining of the scientific literature, computational interaction predictions from co-expression, conserved genomic context, databases of interaction experiments and known complexes/pathways from curated sources. All of these interactions are critically assessed, scored, and subsequently automatically transferred to less well-studied organisms using hierarchical orthology information. The data can be accessed via the website, but also programmatically and via bulk downloads. The most recent developments in STRING (version 12.0) are: (i) it is now possible to create, browse and analyze a full interaction network for any novel genome of interest, by submitting its complement of encoded proteins, (ii) the co-expression channel now uses variational auto-encoders to predict interactions, and it covers two new sources, single-cell RNA-seq and experimental proteomics data and (iii) the confidence in each experimentally derived interaction is now estimated based on the detection method used, and communicated to the user in the web-interface. Furthermore, STRING continues to enhance its facilities for functional enrichment analysis, which are now fully available also for user-submitted genomes.",
+  "year": 2022,
+  "venue": "Nucleic Acids Research",
+  "authors": [
+   "Damian Szklarczyk",
+   "Rebecca Kirsch",
+   "Mikaela Koutrouli",
+   "Katerina Nastou",
+   "Farrokh Mehryary",
+   "Radja Hachilif"
+  ],
+  "citations": 9476,
+  "source": "openalex",
+  "source_id": "W4308834893",
+  "doi": "10.1093/nar/gkac1000",
+  "arxiv_id": null,
+  "paper_url": "https://academic.oup.com/nar/article-pdf/51/D1/D638/48440966/gkac1000.pdf",
+  "published_iso": "2022-10-19",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Advanced oxidation processes for water and wastewater treatment – Guidance for systematic future research",
+  "title_norm": "advanced oxidation processes for water and wastewater treatment guidance for sys",
+  "abstract": "Advanced oxidation processes (AOPs) are a growing research field with a large variety of different process variants and materials being tested at laboratory scale. However, despite extensive research in recent years and decades, many variants have not been transitioned to pilot- and full-scale operation. One major concern are the inconsistent experimental approaches applied across different studies that impede identification, comparison, and upscaling of the most promising AOPs. The aim of this tutorial review is to streamline future studies on the development of new solutions and materials for advanced oxidation by providing guidance for comparable and scalable oxidation experiments. We discuss recent developments in catalytic, ozone-based, radiation-driven, and other AOPs, and outline future perspectives and research needs. Since standardized experimental procedures are not available for most AOPs, we propose basic rules and key parameters for lab-scale evaluation of new AOPs including selection of suitable probe compounds and scavengers for the measurement of (major) reactive species. A two-phase approach to assess new AOP concepts is proposed, consisting of (i) basic research and proof-of-concept (technology readiness levels (TRL) 1-3), followed by (ii) process development in the intended water matrix including a cost comparison with an established process, applying comparable and scalable parameters such as UV fluence or ozone consumption (TRL 3-5). Subsequent demonstration of the new process (TRL 6-7) is briefly discussed, too. Finally, we highlight important research tools for a thorough mechanistic process evaluation and risk assessment including screening for transformation products that should be based on chemical logic and combined with complementary tools (mass balance, chemical calculations).",
+  "year": 2024,
+  "venue": "Heliyon",
+  "authors": [
+   "Uwe Hübner",
+   "Stephanie Spahr",
+   "Holger V. Lutze",
+   "Arne Wieland",
+   "Steffen Rüting",
+   "Wolfgang Gernjak"
+  ],
+  "citations": 373,
+  "source": "openalex",
+  "source_id": "W4395961526",
+  "doi": "10.1016/j.heliyon.2024.e30402",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4395961526",
+  "published_iso": "2024-04-28",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Deep deterministic policy gradient algorithm: A systematic review",
+  "title_norm": "deep deterministic policy gradient algorithm a systematic review",
+  "abstract": "Deep Reinforcement Learning (DRL) has gained significant adoption in diverse fields and applications, mainly due to its proficiency in resolving complicated decision-making problems in spaces with high-dimensional states and actions. Deep Deterministic Policy Gradient (DDPG) is a well-known DRL algorithm that adopts an actor-critic approach, synthesizing the advantages of value-based and policy-based reinforcement learning methods. The aim of this study is to provide a thorough examination of the latest developments, patterns, obstacles, and potential opportunities related to DDPG. A systematic search was conducted using relevant academic databases (Scopus, Web of Science, and ScienceDirect) to identify 85 relevant studies published in the last five years (2018-2023). We provide a comprehensive overview of the key concepts and components of DDPG, including its formulation, implementation, and training. Then, we highlight the various applications and domains of DDPG, including Autonomous Driving, Unmanned Aerial Vehicles, Resource Allocation, Communications and the Internet of Things, Robotics, and Finance. Additionally, we provide an in-depth comparison of DDPG with other DRL algorithms and traditional RL methods, highlighting its strengths and weaknesses. We believe that this review will be an essential resource for researchers, offering them valuable insights into the methods and techniques utilized in the field of DRL and DDPG.",
+  "year": 2024,
+  "venue": "Heliyon",
+  "authors": [
+   "Ebrahim Hamid Sumiea",
+   "Said Jadid Abdulkadir",
+   "Hitham Alhussian",
+   "Safwan Mahmood Al-Selwi",
+   "Alawi Alqushaibi",
+   "Mohammed Gamal Ragab"
+  ],
+  "citations": 207,
+  "source": "openalex",
+  "source_id": "W4396689868",
+  "doi": "10.1016/j.heliyon.2024.e30697",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4396689868",
+  "published_iso": "2024-05-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Estimate for the Bulk Viscosity of Strongly Coupled Quark Matter Using Perturbative QCD and Holography",
+  "title_norm": "estimate for the bulk viscosity of strongly coupled quark matter using perturbat",
+  "abstract": "Modern hydrodynamic simulations of core-collapse supernovae and neutron-star mergers require knowledge not only of the equilibrium properties of strongly interacting matter, but also of the system's response to perturbations, encoded in various transport coefficients. Using perturbative and holographic tools, we derive here an improved weak-coupling and a new strong-coupling result for the most important transport coefficient of unpaired quark matter, its bulk viscosity. These results are combined in a simple analytic pocket formula for the quantity that is rooted in perturbative quantum chromodynamics at high densities but takes into account nonperturbative holographic input at neutron-star densities, where the system is strongly coupled. This expression can be used in the modeling of unpaired quark matter at astrophysically relevant temperatures and densities.",
+  "year": 2024,
+  "venue": "Physical Review Letters",
+  "authors": [
+   "Jesús Cruz Rojas",
+   "Tyler Gorda",
+   "Carlos Hoyos",
+   "Niko Jokela",
+   "Matti Järvinen",
+   "Aleksi Kurkela"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4391506092",
+  "doi": "10.1103/physrevlett.133.071901",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4391506092",
+  "published_iso": "2024-08-13",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "AgrEvader: Poisoning Membership Inference against Byzantine-robust Federated Learning",
+  "title_norm": "agrevader poisoning membership inference against byzantine robust federated lear",
+  "abstract": "The Poisoning Membership Inference Attack (PMIA) is a newly emerging privacy attack that poses a significant threat to federated learning (FL). An adversary conducts data poisoning (i.e., performing adversarial manipulations on training examples) to extract membership information by exploiting the changes in loss resulting from data poisoning. The PMIA significantly exacerbates the traditional poisoning attack that is primarily focused on model corruption. However, there has been a lack of a comprehensive systematic study that thoroughly investigates this topic. In this work, we conduct a benchmark evaluation to assess the performance of PMIA against the Byzantine-robust FL setting that is specifically designed to mitigate poisoning attacks. We find that all existing coordinate-wise averaging mechanisms fail to defend against the PMIA, while the detect-then-drop strategy was proven to be effective in most cases, implying that the poison injection is memorized and the poisonous effect rarely dissipates. Inspired by this observation, we propose AgrEvader, a PMIA that maximizes the adversarial impact on the victim samples while circumventing the detection by Byzantine-robust mechanisms. AgrEvader significantly outperforms existing PMIAs. For instance, AgrEvader achieved a high attack accuracy of between 72.78% (on CIFAR-10) to 97.80% (on Texas100), which is an average accuracy increase of 13.89% compared to the strongest PMIA reported in the literature. We evaluated AgrEvader on five datasets across different domains, against a comprehensive list of threat models, which included black-box, gray-box and white-box models for targeted and non-targeted scenarios. AgrEvader demonstrated consistent high accuracy across all settings tested. The code is available at: https://github.com/PrivSecML/AgrEvader.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Yanjun Zhang",
+   "Guangdong Bai",
+   "M.A.P. Chamikara",
+   "Mengyao Ma",
+   "Liyue Shen",
+   "Jingwei Wang"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4367046777",
+  "doi": "10.1145/3543507.3583542",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3543507.3583542",
+  "published_iso": "2023-04-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Precision Medicine: Disease Subtyping and Tailored Treatment",
+  "title_norm": "precision medicine disease subtyping and tailored treatment",
+  "abstract": "The genomics-based concept of precision medicine began to emerge following the completion of the Human Genome Project. In contrast to evidence-based medicine, precision medicine will allow doctors and scientists to tailor the treatment of different subpopulations of patients who differ in their susceptibility to specific diseases or responsiveness to specific therapies. The current precision medicine model was proposed to precisely classify patients into subgroups sharing a common biological basis of diseases for more effective tailored treatment to achieve improved outcomes. Precision medicine has become a term that symbolizes the new age of medicine. In this review, we examine the history, development, and future perspective of precision medicine. We also discuss the concepts, principles, tools, and applications of precision medicine and related fields. In our view, for precision medicine to work, two essential objectives need to be achieved. First, diseases need to be classified into various subtypes. Second, targeted therapies must be available for each specific disease subtype. Therefore, we focused this review on the progress in meeting these two objectives.",
+  "year": 2023,
+  "venue": "Cancers",
+  "authors": [
+   "Richard Wang",
+   "Zhixiang Wang"
+  ],
+  "citations": 299,
+  "source": "openalex",
+  "source_id": "W4385342688",
+  "doi": "10.3390/cancers15153837",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-6694/15/15/3837/pdf?version=1690529059",
+  "published_iso": "2023-07-28",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Biomaterials technology and policies in the building sector: a review",
+  "title_norm": "biomaterials technology and policies in the building sector a review",
+  "abstract": "Abstract Traditional building materials have some drawbacks in the construction industry, particularly in terms of greenhouse gas emissions and energy consumption. Biomaterials derived from renewable sources are a promising alternative, significantly reducing the greenhouse effect and enhancing energy efficiency. However, traditional materials still dominate the construction sector, and there is a lack of understanding among some policymakers and developers regarding biomaterials. Here, we review building biomaterials and their policies and life cycle assessment through case studies. Bio-based materials have the potential to reduce over 320,000 tons of carbon dioxide emissions by 2050. They also exhibit advantages like decreasing water absorption by 40%, reducing energy consumption by 8.7%, enhancing acoustic absorption by 6.7%, and improving mechanical properties. We summarize recent advancements in mycelial materials, bioconcrete, natural fibers, and fiber-reinforced composites. We also explore the contributions of nanotechnology and microalgae technology in enhancing biomaterials' thermal insulation and eco-friendliness.",
+  "year": 2024,
+  "venue": "Environmental Chemistry Letters",
+  "authors": [
+   "Lin Chen",
+   "Yubing Zhang",
+   "Zhonghao Chen",
+   "Yitong Dong",
+   "Yushan Jiang",
+   "Jianmin Hua"
+  ],
+  "citations": 185,
+  "source": "openalex",
+  "source_id": "W4391320605",
+  "doi": "10.1007/s10311-023-01689-w",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10311-023-01689-w.pdf",
+  "published_iso": "2024-01-28",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "The Macroeconomic Effects of Climate Policy Uncertainty",
+  "title_norm": "the macroeconomic effects of climate policy uncertainty",
+  "abstract": "We develop a novel measure of climate policy uncertainty based on newspaper coverage.Our index spikes during key U.S. climate policy events-including presidential announcements on international agreements, congressional debates, and regulatory disputes-and shows a recent upward trend.Using an instrument for plausibly exogenous uncertainty shifts, we find that higher climate policy uncertainty decreases output and emissions while raising commodity and consumer prices, acting as supply rather than demand shocks.Faced with this trade-off, monetary policy does not accommodate climate policy uncertainty shocks, shaping their transmission.Firm-level analyses show stronger declines in investment and R&D when firms have higher climate change exposure.",
+  "year": 2026,
+  "venue": "National Bureau of Economic Research",
+  "authors": [
+   "Konstantinos Gavriilidis",
+   "Diego R. Känzig",
+   "Ramya Raghavan",
+   "James Stock"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W7127163886",
+  "doi": "10.3386/w34762",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.3386/w34762",
+  "published_iso": "2026-01-01",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Set-Membership Adaptive Robot Control With Deterministically Bounded Learning Gains",
+  "title_norm": "set membership adaptive robot control with deterministically bounded learning ga",
+  "abstract": "As a powerful set-membership adaptive identification algorithm, the optimal bounded ellipsoid (OBE) enables fast convergence speeds because it exploits a priori information about system dynamics by estimating sets of feasible solutions rather than single-point solutions. However, its learning gain matrix suffers from vanishing or unbounded growth, which seriously limits its practical performance. In this article, a novel OBE algorithm is proposed to ensure that the learning gain matrix is constrained by upper and lower bounds, which are unaffected by the hardly predictable excitation levels and can be determined before implementing the algorithm. Thus, the system robustness and tracking capability for time-varying dynamics can be improved. In light of the proposed OBE identification algorithm, an adaptive robot control strategy is further proposed, where the robot dynamics are reconstructed through neural networks. The practical partial asymptotic stability of the closed-loop system is demonstrated using the Lyapunov method. Furthermore, noisy acceleration signals and the inversion of the inertial matrix are eliminated with the proposed control strategy. Experimental results on a robot manipulator validate the effectiveness of the proposed approach.",
+  "year": 2022,
+  "venue": "IEEE Transactions on Industrial Informatics",
+  "authors": [
+   "Kai Guo",
+   "Zekun Zhang",
+   "Dongdong Zheng",
+   "Jie Sun"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4312337493",
+  "doi": "10.1109/tii.2022.3220892",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4312337493",
+  "published_iso": "2022-11-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "RETRACTED: Biomarkers: Promising and valuable tools towards diagnosis, prognosis and treatment of Covid-19 and other diseases",
+  "title_norm": "retracted biomarkers promising and valuable tools towards diagnosis prognosis an",
+  "abstract": "The use of biomarkers as early warning systems in the evaluation of disease risk has increased markedly in the last decade. Biomarkers are indicators of typical biological processes, pathogenic processes, or pharmacological reactions to therapy. The application and identification of biomarkers in the medical and clinical fields have an enormous impact on society. In this review, we discuss the history, various definitions, classifications, characteristics, and discovery of biomarkers. Furthermore, the potential application of biomarkers in the diagnosis, prognosis, and treatment of various diseases over the last decade are reviewed. The present review aims to inspire readers to explore new avenues in biomarker research and development.",
+  "year": 2023,
+  "venue": "Heliyon",
+  "authors": [
+   "Ali Bodaghi",
+   "Nadia Fattahi",
+   "Ali Ramazani"
+  ],
+  "citations": 331,
+  "source": "openalex",
+  "source_id": "W4318473522",
+  "doi": "10.1016/j.heliyon.2023.e13323",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4318473522",
+  "published_iso": "2023-01-30",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Residuals-based distributionally robust optimization with covariate information",
+  "title_norm": "residuals based distributionally robust optimization with covariate information",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Mathematical Programming",
+  "authors": [
+   "Rohit Kannan",
+   "Güzi̇n Bayraksan",
+   "James Luedtke"
+  ],
+  "citations": 48,
+  "source": "openalex",
+  "source_id": "W3108895748",
+  "doi": "10.1007/s10107-023-02014-7",
+  "arxiv_id": null,
+  "paper_url": "https://vtechworks.lib.vt.edu/bitstreams/235a5b88-ce8c-4141-82fe-53bcfef18947/download",
+  "published_iso": "2023-09-26",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Multispectral and Hyperspectral Image Fusion Based on Regularized Coupled Non-Negative Block-Term Tensor Decomposition",
+  "title_norm": "multispectral and hyperspectral image fusion based on regularized coupled non ne",
+  "abstract": "The problem of multispectral and hyperspectral image fusion (MHF) is to reconstruct images by fusing the spatial information of multispectral images and the spectral information of hyperspectral images. Focusing on the problem that the hyperspectral canonical polyadic decomposition model and the Tucker model cannot introduce the physical interpretation of the latent factors into the framework, it is difficult to use the known properties and abundance of endmembers to generate high-quality fusion images. This paper proposes a new fusion algorithm. In this paper, a coupled non-negative block-term tensor model is used to estimate the ideal high spatial resolution hyperspectral images, its sparsity is characterized by adding 1-norm, and total variation (TV) is introduced to describe piecewise smoothness. Secondly, the different operators in two directions are defined and introduced to characterize their piecewise smoothness. Finally, the proximal alternating optimization (PAO) algorithm and the alternating multiplier method (ADMM) are used to iteratively solve the model. Experiments on two standard datasets and two local datasets show that the performance of this method is better than the state-of-the-art methods.",
+  "year": 2022,
+  "venue": "Remote Sensing",
+  "authors": [
+   "Hao Guo",
+   "Wenxing Bao",
+   "Kewen Qu",
+   "Xuan Ma",
+   "Meng Cao"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4307189210",
+  "doi": "10.3390/rs14215306",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-4292/14/21/5306/pdf?version=1667095643",
+  "published_iso": "2022-10-23",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Sequential Fusion Estimation for Multirate Complex Networks With Uniform Quantization: A Zonotopic Set-Membership Approach",
+  "title_norm": "sequential fusion estimation for multirate complex networks with uniform quantiz",
+  "abstract": "In this article, the sequential fusion estimation problem is investigated for multirate complex networks (MRCNs) with uniformly quantized measurements. The process and measurement noises, which are unknown-yet-bounded (UYB), are restrained into a family of zonotopes, and the multiple sensors are allowed to have different sampling periods. To facilitate digital transmissions, the sensor measurements are uniformly quantized before being sent to the remote estimator. The purpose of this article is to design a sequential set-membership estimator such that, in the simultaneous presence of UYB noises, multirate samplings, and uniform quantization effects, the estimation error (after each measurement update) is confined to a zonotope with minimum F -radius at each time instant. By introducing certain virtual measurements, the MRCNs are first transformed into single-rate ones exhibiting a switching phenomenon. Then, by utilizing the properties of zonotopes, the desired zonotopes are derived, which contain the estimation error dynamics after each measurement update. Subsequently, the gain matrices of the sequential estimator are derived by minimizing the F -radii of these zonotopes, and the uniform boundedness is analyzed for the F -radius of the zonotope containing the estimation error after all measurement updates. Furthermore, sufficient conditions are derived to ensure the existence of the desired uniform upper/lower bounds. Finally, an illustrated example is proposed to show the effectiveness of the proposed sequential fusion estimation method.",
+  "year": 2022,
+  "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+  "authors": [
+   "Zhongyi Zhao",
+   "Zidong Wang",
+   "Lei Zou"
+  ],
+  "citations": 44,
+  "source": "openalex",
+  "source_id": "W4308056986",
+  "doi": "10.1109/tnnls.2022.3209135",
+  "arxiv_id": null,
+  "paper_url": "http://bura.brunel.ac.uk/bitstream/2438/26049/1/FullText.pdf",
+  "published_iso": "2022-11-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "A brief review of partial least squares structural equation modeling (PLS-SEM) use in quality management studies",
+  "title_norm": "a brief review of partial least squares structural equation modeling pls sem use",
+  "abstract": "Purpose Partial least squares structural equation modeling (PLS-SEM) has become an established social sciences multivariate analysis technique. Since quality management researchers also increasingly using PLS-SEM, this growing interest calls for guidance. Design/methodology/approach Based on established guidelines for applying PLS-SEM and evaluating the results, this research reviews 107 articles applying the method and published in eight leading quality management journals. Findings The use of PLS-SEM in quality management often only draws on limited information and analysis results. The discipline would benefit from the method's more comprehensive use by following established guidelines. Specifically, the use of predictive model assessment and more advanced PLS-SEM analyses harbors the potential to provide more detailed findings and conclusions when applying the method. Research limitations/implications This research provides first insights into PLS-SEM's use in quality management. Future research should identify the key areas and the core quality management models that best support the method's capabilities and researchers' goals. Practical implications The results of this analysis guide researchers who use the PLS-SEM method for their quality management studies. Originality/value This is the first article to systematically review the use of PLS-SEM in the quality management discipline.",
+  "year": 2022,
+  "venue": "The TQM Journal",
+  "authors": [
+   "Francesca Magno",
+   "Fabio Cassia",
+   "Christian M. Ringle"
+  ],
+  "citations": 295,
+  "source": "openalex",
+  "source_id": "W4311038332",
+  "doi": "10.1108/tqm-06-2022-0197",
+  "arxiv_id": null,
+  "paper_url": "https://www.emerald.com/insight/content/doi/10.1108/TQM-06-2022-0197/full/pdf?title=a-brief-review-of-partial-least-squares-structural-equation-modeling-pls-sem-use-in-quality-management-studies",
+  "published_iso": "2022-11-30",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Genome‐wide association and genomic selection in aquaculture",
+  "title_norm": "genome wide association and genomic selection in aquaculture",
+  "abstract": "Abstract Recent advancements in genomic technologies have led to the discovery and application of DNA‐markers [e.g. single nucleotide polymorphisms (SNPs)] for the genetic improvement of several aquaculture species. The identification of specific genomic regions associated with economically important traits, using, for example, genome‐wide association studies (GWAS), has allowed the discovery and incorporation of markers linked to quantitative trait loci (QTL) into aquaculture breeding programs through marker‐assisted selection (MAS). However, most of the traits of economic relevance are expected to be controlled by many QTLs, each one explaining only a small proportion of the genetic variation. For traits under polygenic control, prediction of the genetic merit of animals based on the sum of effects at positions across the entire genome (i.e. genomic estimated breeding values, GEBV, which are used for what has become known as genomic selection), has been demonstrated to speed the rate of genetic gain for several traits in aquaculture breeding. The aim of this review was to provide an overview of the development and application of genomic technologies in uncovering the genetic basis of complex traits and accelerating the genetic progress in aquaculture species, as well as providing future perspectives about the deployment of novel molecular technologies for selective breeding in coming years.",
+  "year": 2022,
+  "venue": "Reviews in Aquaculture",
+  "authors": [
+   "José M. Yáñez",
+   "Agustin Barría",
+   "María E. López",
+   "Thomas Moen",
+   "Baltasar F. García",
+   "Grazyella Yoshida"
+  ],
+  "citations": 183,
+  "source": "openalex",
+  "source_id": "W4309466470",
+  "doi": "10.1111/raq.12750",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/raq.12750",
+  "published_iso": "2022-11-17",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Single-photon Sources and Detectors Dictionary",
+  "title_norm": "single photon sources and detectors dictionary",
+  "abstract": "experimental procedure adequately.Such identification does not imply recommendation or endorsement of any product or service by NIST, nor does it imply that the materials or equipment identified are necessarily the best available for the purpose.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Joshua C. Bienfang",
+   "Thomas Gerrits",
+   "Paulina Kuo",
+   "Alan Migdall",
+   "Sergey Polyakov",
+   "Oliver T Slattery"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4412894464",
+  "doi": "10.6028/nist.ir.8486r1",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.6028/nist.ir.8486r1",
+  "published_iso": "2025-08-04",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Robust particle filter for state estimation in presence of bounded but uncertain parameters based on ellipsoidal set membership approach",
+  "title_norm": "robust particle filter for state estimation in presence of bounded but uncertain",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Journal of Process Control",
+  "authors": [
+   "Qinghua Li",
+   "Aditya Tulsyan",
+   "Zhonggai Zhao",
+   "Biao Huang",
+   "Fei Liu"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4320080932",
+  "doi": "10.1016/j.jprocont.2023.01.014",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4320080932",
+  "published_iso": "2023-02-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Skin cancer: understanding the journey of transformation from conventional to advanced treatment approaches",
+  "title_norm": "skin cancer understanding the journey of transformation from conventional to adv",
+  "abstract": "Skin cancer is a global threat to the healthcare system and is estimated to incline tremendously in the next 20 years, if not diagnosed at an early stage. Even though it is curable at an early stage, novel drug identification, clinical success, and drug resistance is another major challenge. To bridge the gap and bring effective treatment, it is important to understand the etiology of skin carcinoma, the mechanism of cell proliferation, factors affecting cell growth, and the mechanism of drug resistance. The current article focusses on understanding the structural diversity of skin cancers, treatments available till date including phytocompounds, chemotherapy, radiotherapy, photothermal therapy, surgery, combination therapy, molecular targets associated with cancer growth and metastasis, and special emphasis on nanotechnology-based approaches for downregulating the deleterious disease. A detailed analysis with respect to types of nanoparticles and their scope in overcoming multidrug resistance as well as associated clinical trials has been discussed.",
+  "year": 2023,
+  "venue": "Molecular Cancer",
+  "authors": [
+   "Nazeer Hasan",
+   "Arif Nadaf",
+   "Mohammad Imran",
+   "Umme Jiba",
+   "Afsana Sheikh",
+   "Waleed Hassan Almalki"
+  ],
+  "citations": 307,
+  "source": "openalex",
+  "source_id": "W4387407657",
+  "doi": "10.1186/s12943-023-01854-3",
+  "arxiv_id": null,
+  "paper_url": "https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-023-01854-3",
+  "published_iso": "2023-10-06",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Beyond generalization: a theory of robustness in machine learning",
+  "title_norm": "beyond generalization a theory of robustness in machine learning",
+  "abstract": "Abstract The termrobustnessis ubiquitous in modern Machine Learning (ML). However, its meaning varies depending on context and community. Researchers either focus on narrow technical definitions, such as adversarial robustness, natural distribution shifts, and performativity, or they simply leave open what exactly they mean by robustness. In this paper, we provide a conceptual analysis of the termrobustness, with the aim to develop a common language, that allows us to weave together different strands of robustness research. We define robustness as the relative stability of a robustness target with respect to specific interventions on a modifier. Our account captures the various sub-types of robustness that are discussed in the research literature, including robustness to distribution shifts, prediction robustness, or the robustness of algorithmic explanations. Finally, we delineate robustness from adjacent key concepts in ML, such as extrapolation, generalization, and uncertainty, and establish it as an independent epistemic concept.",
+  "year": 2023,
+  "venue": "Synthese",
+  "authors": [
+   "Timo Freiesleben",
+   "Thomas Grote"
+  ],
+  "citations": 102,
+  "source": "openalex",
+  "source_id": "W4387103552",
+  "doi": "10.1007/s11229-023-04334-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11229-023-04334-9.pdf",
+  "published_iso": "2023-09-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "PyApprox: A software package for sensitivity analysis, Bayesian inference, optimal experimental design, and multi-fidelity uncertainty quantification and surrogate modeling",
+  "title_norm": "pyapprox a software package for sensitivity analysis bayesian inference optimal ",
+  "abstract": "",
+  "year": 2023,
+  "venue": "Environmental Modelling & Software",
+  "authors": [
+   "John Jakeman"
+  ],
+  "citations": 20,
+  "source": "openalex",
+  "source_id": "W4387311458",
+  "doi": "10.1016/j.envsoft.2023.105825",
+  "arxiv_id": null,
+  "paper_url": "https://www.osti.gov/servlets/purl/2311280",
+  "published_iso": "2023-10-03",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Adaptive learning-based model predictive control for uncertain interconnected systems: A set membership identification approach",
+  "title_norm": "adaptive learning based model predictive control for uncertain interconnected sy",
+  "abstract": "We propose a novel adaptive learning-based model predictive control (MPC) scheme for interconnected systems which can be decomposed into several smaller dynamically coupled subsystems with uncertain coupling. The proposed scheme is mainly divided into two main online phases; a learning phase and an adaptation phase. Set membership identification is used in the learning phase to learn an uncertainty set that contains the coupling strength using online data. In the adaptation phase, rigid tube-based robust MPC is used to compute the optimal predicted states and inputs. Besides computing the optimal trajectories, the MPC ingredients are adapted in the adaptation phase taking the learnt uncertainty set into account. These MPC ingredients include the prestabilizing controller, the rigid tube, the tightened constraints and the terminal ingredients. The recursive feasibility of the proposed scheme as well as the stability of the corresponding closed-loop system are discussed. The developed scheme is compared in simulations to existing schemes including robust, adaptive and learning-based MPC.",
+  "year": 2024,
+  "venue": "Automatica",
+  "authors": [
+   "Ahmed Aboudonia",
+   "John Lygeros"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4403224799",
+  "doi": "10.1016/j.automatica.2024.111943",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4403224799",
+  "published_iso": "2024-10-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Methods to prepare biosorbents and magnetic sorbents for water treatment: a review",
+  "title_norm": "methods to prepare biosorbents and magnetic sorbents for water treatment a revie",
+  "abstract": "Abstract Access to drinkable water is becoming more and more challenging due to worldwide pollution and the cost of water treatments. Water and wastewater treatment by adsorption on solid materials is usually cheap and effective in removing contaminants, yet classical adsorbents are not sustainable because they are derived from fossil fuels, and they can induce secondary pollution. Therefore, biological sorbents made of modern biomass are increasingly studied as promising alternatives. Indeed, such biosorbents utilize biological waste that would otherwise pollute water systems, and they promote the circular economy. Here we review biosorbents, magnetic sorbents, and other cost-effective sorbents with emphasis on preparation methods, adsorbents types, adsorption mechanisms, and regeneration of spent adsorbents. Biosorbents are prepared from a wide range of materials, including wood, bacteria, algae, herbaceous materials, agricultural waste, and animal waste. Commonly removed contaminants comprise dyes, heavy metals, radionuclides, pharmaceuticals, and personal care products. Preparation methods include coprecipitation, thermal decomposition, microwave irradiation, chemical reduction, micro-emulsion, and arc discharge. Adsorbents can be classified into activated carbon, biochar, lignocellulosic waste, clays, zeolites, peat, and humic soils. We detail adsorption isotherms and kinetics. Regeneration methods comprise thermal and chemical regeneration and supercritical fluid desorption. We also discuss exhausted adsorbent management and disposal. We found that agro-waste biosorbents can remove up to 68–100% of dyes, while wooden, herbaceous, bacterial, and marine-based biosorbents can remove up to 55–99% of heavy metals. Animal waste-based biosorbents can remove 1–99% of heavy metals. The average removal efficiency of modified biosorbents is around 90–95%, but some treatments, such as cross-linked beads, may negatively affect their efficiency.",
+  "year": 2023,
+  "venue": "Environmental Chemistry Letters",
+  "authors": [
+   "Ahmed I. Osman",
+   "Eman M. Abd El-Monaem",
+   "Ahmed M. Elgarahy",
+   "Chukwunonso O. Aniagor",
+   "Mohamed Hosny",
+   "Mohamed Farghali"
+  ],
+  "citations": 317,
+  "source": "openalex",
+  "source_id": "W4368363688",
+  "doi": "10.1007/s10311-023-01603-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10311-023-01603-4.pdf",
+  "published_iso": "2023-05-04",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Ethics and diversity in artificial intelligence policies, strategies and initiatives",
+  "title_norm": "ethics and diversity in artificial intelligence policies strategies and initiati",
+  "abstract": "A burgeoning of Artificial Intelligence (AI) technologies in recent years has led to increased discussion about its potential to address many issues considered otherwise intractable, including those highlighted by the United Nations 2030 Agenda for Sustainable Development and associated Sustainable Development Goals. In tandem with this growth in AI is an expanding body of documentation regarding how such advanced technologies should be governed and managed. Issued by a variety of sources and comprising frameworks, policies and guidelines, this body of work encompasses the legal, social, ethical and policy issues around AI. With at least 470 such documents identified, as of May 2021, in the Council of Europe's tracker of AI initiatives, questions are emerging around the diversity of views expressed, especially regarding the influence of the Global North or Euro-American perspectives. Our previous analysis of a corpus of largely grey literature discovered blind spots regarding both gender representation and perspectives from the Global South. Expanding on that work, this paper examines a significantly extended corpus, with a focus on the role of underrepresented groups in the wider AI discourse. We find that voices from the Global South and consideration of alternative ethical approaches are largely absent from the conversation. In light of the prominence of social, cultural and ethical perspectives from the Global North, this paper explores implications for the development of standards for ethical AI. Concluding by offering approaches to incorporate more diverse ethical viewpoints and beliefs, we call for increased consideration of power structures when developing AI ethics policies and standards within these alternative socio-cultural and socio-economic contexts.",
+  "year": 2022,
+  "venue": "AI and Ethics",
+  "authors": [
+   "Cathy Roche",
+   "P. J. Wall",
+   "David Lewis"
+  ],
+  "citations": 178,
+  "source": "openalex",
+  "source_id": "W4302305162",
+  "doi": "10.1007/s43681-022-00218-9",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s43681-022-00218-9.pdf",
+  "published_iso": "2022-10-06",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Words as Archaeological Objects: A Study of Marine Lifeways, Seascapes, and Coastal Environmental Knowledge in the Yagan-English Dictionary",
+  "title_norm": "words as archaeological objects a study of marine lifeways seascapes and coastal",
+  "abstract": "Abstract Reverend Thomas Bridges’ Yagan-English dictionary (1879) has hitherto been little explored outside of linguistics but is highly valuable as a complementary source to archaeological, ethnohistorical, and ethnographic records in Tierra del Fuego (Argentina and Chile). The dictionary contains 22,800 entries and yields rich information concerning the marine lifeways of the Yagan and their and intimate knowledge about Fuegian seascapes. The idea behind this paper is that environments have strong bearings on linguistic vocabularies. Treating words as archaeological objects that map onto landscapes, we identify important landforms for Yagan marine foragers and Norwegian fisher-farmers in a comparative study of word frequencies in Bridges’ dictionary and Ivar Aasen’s Norwegian dictionary (1850). Moreover, we explore in detail how marine lifestyles and Fuegian seascapes emerge in Bridges’ dictionary and discuss the dictionary’s relevance for historical archaeology in Tierra del Fuego.",
+  "year": 2024,
+  "venue": "International Journal of Historical Archaeology",
+  "authors": [
+   "Jo Sindre Pålssønn Eidshaug",
+   "Hein B. Bjerck",
+   "Terje Lohndal",
+   "Ole Risbøl"
+  ],
+  "citations": 10,
+  "source": "openalex",
+  "source_id": "W4391995064",
+  "doi": "10.1007/s10761-024-00729-7",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10761-024-00729-7.pdf",
+  "published_iso": "2024-02-21",
+  "oa_field": "Health Professions",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Control of Tissue Development by Morphogens",
+  "title_norm": "control of tissue development by morphogens",
+  "abstract": "Intercellular signaling molecules, known as morphogens, act at a long range in developing tissues to provide spatial information and control properties such as cell fate and tissue growth. The production, transport, and removal of morphogens shape their concentration profiles in time and space. Downstream signaling cascades and gene regulatory networks within cells then convert the spatiotemporal morphogen profiles into distinct cellular responses. Current challenges are to understand the diverse molecular and cellular mechanisms underlying morphogen gradient formation, as well as the logic of downstream regulatory circuits involved in morphogen interpretation. This knowledge, combining experimental and theoretical results, is essential to understand emerging properties of morphogen-controlled systems, such as robustness and scaling.",
+  "year": 2023,
+  "venue": "Annual Review of Cell and Developmental Biology",
+  "authors": [
+   "Anna Kicheva",
+   "James Briscoe"
+  ],
+  "citations": 132,
+  "source": "openalex",
+  "source_id": "W4383500681",
+  "doi": "10.1146/annurev-cellbio-020823-011522",
+  "arxiv_id": null,
+  "paper_url": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-cellbio-020823-011522",
+  "published_iso": "2023-07-07",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Isolated Prolongation of Activated Partial Thromboplastin Time: Not Just Bleeding Risk!",
+  "title_norm": "isolated prolongation of activated partial thromboplastin time not just bleeding",
+  "abstract": "Activated partial thromboplastin time (aPTT) is a fundamental screening test for coagulation disturbances. An increased aPTT ratio is quite common in clinical practice. How the detection of prolonged activated aPTT with a normal prothrombin time is interpreted is therefore very important. In daily practice, the detection of this abnormality often leads to delayed surgery and emotional stress for patients and their families and may be associated with increased costs due to re-testing and coagulation factor assessment. An isolated, prolonged aPTT is seen in (a) patients with congenital or acquired deficiencies of specific coagulation factors, (b) patients receiving treatment with anticoagulants, mainly heparin, and (c) individuals/patients with circulating anticoagulants. We summarize here what may cause an isolated prolonged aPTT and evaluate the preanalytical interferences. The identification of the cause of an isolated prolonged aPTT is of the utmost importance in ensuring the correct diagnostic workup and therapeutic choices.",
+  "year": 2023,
+  "venue": "Medicina",
+  "authors": [
+   "Rita Santoro",
+   "Angelo Claudio Molinari",
+   "Marzia Leotta",
+   "Tiziano Martini"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W4381249783",
+  "doi": "10.3390/medicina59061169",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1648-9144/59/6/1169/pdf?version=1687155965",
+  "published_iso": "2023-06-17",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Towards optimal doubly robust estimation of heterogeneous causal effects",
+  "title_norm": "towards optimal doubly robust estimation of heterogeneous causal effects",
+  "abstract": "Heterogeneous effect estimation is crucial in causal inference, with applications across medicine and social science. Many methods for estimating conditional average treatment effects (CATEs) have been proposed, but there are gaps in understanding if and when such methods are optimal. This is especially true when the CATE has nontrivial structure (e.g., smoothness or sparsity). Our work contributes in several ways. First, we study a two-stage doubly robust CATE estimator and give a generic error bound, which yields rates faster than much of the literature. We apply the bound to derive error rates in smooth nonparametric models, and give sufficient conditions for oracle efficiency. Along the way we give a general error bound for regression with estimated outcomes; this is the second main contribution. The third contribution is aimed at understanding the fundamental statistical limits of CATE estimation. To that end, we propose and study a local polynomial adaptation of double-residual regression. We show that this estimator can be oracle efficient under even weaker conditions, and we conjecture that they are minimal in a minimax sense. We go on to give error bounds in the non-trivial regime where oracle rates cannot be achieved. Some finite-sample properties are explored with simulations.",
+  "year": 2023,
+  "venue": "Electronic Journal of Statistics",
+  "authors": [
+   "Edward H. Kennedy"
+  ],
+  "citations": 157,
+  "source": "openalex",
+  "source_id": "W4388656403",
+  "doi": "10.1214/23-ejs2157",
+  "arxiv_id": null,
+  "paper_url": "https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-17/issue-2/Towards-optimal-doubly-robust-estimation-of-heterogeneous-causal-effects/10.1214/23-EJS2157.pdf",
+  "published_iso": "2023-01-01",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "GEMMI and Servalcat restrain REFMAC5",
+  "title_norm": "gemmi and servalcat restrain refmac5",
+  "abstract": "Macromolecular refinement uses experimental data together with prior chemical knowledge (usually digested into geometrical restraints) to optimally fit an atomic structural model into experimental data, while ensuring that the model is chemically plausible. In the CCP4 suite this chemical knowledge is stored in a Monomer Library, which comprises a set of restraint dictionaries. To use restraints in refinement, the model is analysed and template restraints from the dictionary are used to infer (i) restraints between concrete atoms and (ii) the positions of riding hydrogen atoms. Recently, this mundane process has been overhauled. This was also an opportunity to enhance the Monomer Library with new features, resulting in a small improvement in REFMAC5 refinement. Importantly, the overhaul of this part of CCP4 has increased flexibility and eased experimentation, opening up new possibilities.",
+  "year": 2023,
+  "venue": "Acta Crystallographica Section D Structural Biology",
+  "authors": [
+   "Keitaro Yamashita",
+   "Marcin Wojdyr",
+   "Fei Long",
+   "Robert A. Nicholls",
+   "Garib N. Murshudov"
+  ],
+  "citations": 52,
+  "source": "openalex",
+  "source_id": "W4368362681",
+  "doi": "10.1107/s2059798323002413",
+  "arxiv_id": null,
+  "paper_url": "https://journals.iucr.org/d/issues/2023/05/00/qe5004/qe5004.pdf",
+  "published_iso": "2023-04-04",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Interval Type-2 Fuzzy Set-Theoretic Control Design for Uncertain Dynamical Systems",
+  "title_norm": "interval type 2 fuzzy set theoretic control design for uncertain dynamical syste",
+  "abstract": "",
+  "year": 2024,
+  "venue": "International Journal of Fuzzy Systems",
+  "authors": [
+   "Yifan Liu",
+   "Hui Yin",
+   "Baizhan Xia",
+   "Dejie Yu",
+   "Ye‐Hwa Chen"
+  ],
+  "citations": 17,
+  "source": "openalex",
+  "source_id": "W4391896470",
+  "doi": "10.1007/s40815-023-01654-3",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4391896470",
+  "published_iso": "2024-02-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Advancements in the treatment of non-alcoholic fatty liver disease (NAFLD)",
+  "title_norm": "advancements in the treatment of non alcoholic fatty liver disease nafld",
+  "abstract": "Non-alcoholic fatty liver disease (NAFLD) is a series of diseases, involving excessive lipid deposition in the liver and is often accompanied by obesity, diabetes, dyslipidemia, abnormal blood pressure, and other metabolic disorders. In order to more accurately reflect its pathogenesis, an international consensus renamed NAFLD in 2020 as metabolic (dysfunction) associated with fatty liver disease (MAFLD). The changes in diet and lifestyle are recognized the non-drug treatment strategies; however, due to the complex pathogenesis of NAFLD, the current drug therapies are mainly focused on its pathogenic factors, key links of pathogenesis, and related metabolic disorders as targets. There is still a lack of specific drugs. In clinical studies, the common NAFLD treatments include the regulation of glucose and lipid metabolism to protect the liver and anti-inflammation. The NAFLD treatments based on the enterohepatic axis, targeting gut microbiota, are gradually emerging, and various new metabolism-regulating drugs are also under clinical development. Therefore, this review article has comprehensively discussed the research advancements in NAFLD treatment in recent years.",
+  "year": 2023,
+  "venue": "Frontiers in Endocrinology",
+  "authors": [
+   "Rong Li",
+   "Junyan Zou",
+   "Wei Ran",
+   "Xiaohong Qi",
+   "Yaokai Chen",
+   "Hongjuan Cui"
+  ],
+  "citations": 299,
+  "source": "openalex",
+  "source_id": "W4316363239",
+  "doi": "10.3389/fendo.2022.1087260",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/articles/10.3389/fendo.2022.1087260/pdf",
+  "published_iso": "2023-01-15",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "A critical examination of robustness and generalizability of machine learning prediction of materials properties",
+  "title_norm": "a critical examination of robustness and generalizability of machine learning pr",
+  "abstract": "Abstract Recent advances in machine learning (ML) have led to substantial performance improvement in material database benchmarks, but an excellent benchmark score may not imply good generalization performance. Here we show that ML models trained on Materials Project 2018 can have severely degraded performance on new compounds in Materials Project 2021 due to the distribution shift. We discuss how to foresee the issue with a few simple tools. Firstly, the uniform manifold approximation and projection (UMAP) can be used to investigate the relation between the training and test data within the feature space. Secondly, the disagreement between multiple ML models on the test data can illuminate out-of-distribution samples. We demonstrate that the UMAP-guided and query by committee acquisition strategies can greatly improve prediction accuracy by adding only 1% of the test data. We believe this work provides valuable insights for building databases and models that enable better robustness and generalizability.",
+  "year": 2023,
+  "venue": "npj Computational Materials",
+  "authors": [
+   "Kangming Li",
+   "Brian DeCost",
+   "Kamal Choudhary",
+   "Michael Greenwood",
+   "Jason Hattrick‐Simpers"
+  ],
+  "citations": 113,
+  "source": "openalex",
+  "source_id": "W4362700002",
+  "doi": "10.1038/s41524-023-01012-9",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41524-023-01012-9.pdf",
+  "published_iso": "2023-04-07",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Dictionary Attack on IMU-based Gait Authentication",
+  "title_norm": "dictionary attack on imu based gait authentication",
+  "abstract": "We present a novel adversarial model for authentication systems that use gait patterns recorded by the inertial measurement unit (IMU) built into smartphones. The attack idea is inspired by and named after the concept of a dictionary attack on knowledge (PIN or password) based authentication systems. In particular, this work investigates whether it is possible to build a dictionary of IMUGait patterns and use it to launch an attack or find an imitator who can actively reproduce IMUGait patterns that match the target's IMUGait pattern. Nine physically and demographically diverse individuals walked at various levels of four predefined controllable and adaptable gait factors (speed, step length, step width, and thigh-lift), producing 178 unique IMUGait patterns. Each pattern attacked a wide variety of user authentication models. The deeper analysis of error rates (before and after the attack) challenges the belief that authentication systems based on IMUGait patterns are the most difficult to spoof; further research is needed on adversarial models and associated countermeasures.",
+  "year": 2023,
+  "venue": "",
+  "authors": [
+   "Rajesh Kumar",
+   "Can Işık",
+   "Chilukuri K. Mohan"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4388887286",
+  "doi": "10.1145/3605764.3623909",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3605764.3623909",
+  "published_iso": "2023-11-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Defenses to Membership Inference Attacks: A Survey",
+  "title_norm": "defenses to membership inference attacks a survey",
+  "abstract": "Machine learning (ML) has gained widespread adoption in a variety of fields, including computer vision and natural language processing. However, ML models are vulnerable to membership inference attacks (MIAs), which can infer whether access data was used in training a target model, thus compromising the privacy of training data. This has led researchers to focus on protecting the privacy of ML. To date, although there have been extensive efforts to defend against MIAs, we still lack a comprehensive understanding of the progress made in this area, which can often impede our ability to design the most effective defense strategies. In this article, we aim to fill this critical knowledge gap by providing a systematic analysis of membership inference defense. Specifically, we classify and summarize the existing membership inference defense schemes, focusing on optimization phase and objective, basic intuition, and key technology, and we discuss possible research directions of membership inference defense in the future.",
+  "year": 2023,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Li Hu",
+   "Anli Yan",
+   "Hongyang Yan",
+   "Jin Li",
+   "Teng Huang",
+   "Yingying Zhang"
+  ],
+  "citations": 41,
+  "source": "openalex",
+  "source_id": "W4386831200",
+  "doi": "10.1145/3620667",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3620667",
+  "published_iso": "2023-09-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Factors that affect the outcomes of root canal treatment and retreatment—A reframing of the principles",
+  "title_norm": "factors that affect the outcomes of root canal treatment and retreatment a refra",
+  "abstract": "This paper undertakes a broad and comprehensive synthesis of relevant clinical, biological, biomechanical, technical and healthcare services data to understand the factors affecting outcomes of periapical healing after root canal (re)treatment. The medical and dental evidence-based era (1980-present) is contextualized with the earlier evidence drive in endodontics (1911-1940) triggered by the focal infection era. The current evidence-based approach has a sharper focus on evidence quality and derivation of practice guidelines. Contrary views question whether guideline-driven, or expertise-development-driven endeavours would best serve outcome improvement in society. The endodontic discipline functions in a broad healthcare framework and sustains industrial, economic and trend pressures that may be deemed to influence outcomes. The nature of root canal treatment and the challenges in determining the factors that affect its outcomes is discussed. The factors potentially affecting periapical healing after root canal treatment are classified into pre-operative, intra-operative and postoperative groups. These categories subsume multiple elements with interactive influences, creating a complex picture, further confounded by some apparently surprising, counter-intuitive and contradictory findings. The technical versus biological conundrum in root canal treatment continues to cause cognitive dissonance. However, due reflection and cross-discipline-synthesis resolve the apparent data conflicts into a very simple, consistent and plausible picture of how root canal treatment works and the key factors that affect periapical healing. Root canal retreatment is considered mainly in the context of its differences from primary treatment as the majority of factors influencing outcomes are common to both. The exceptional difference is that retreatments have a proportionately reduced probability of healing by virtue of compromised apical root canal ramification access or modified host/infection interactions. Root canal (re)treatment outcomes are dominantly influenced by the nature of prior dynamic host/infection interaction (pre-operative patient factors) and how the direction of this dynamic is influenced by two factors: (1) the active efficacy of the operators' root canal treatment protocol to sustain a microbial ecological shift (intra-operative treatment factors) and dampen periapical inflammation; and (2) the passive ability of the functional tooth (and its restoration margin) to maintain its integrity to resist infection reversal (postoperative restorative factors).",
+  "year": 2023,
+  "venue": "International Endodontic Journal",
+  "authors": [
+   "K. Gulabivala",
+   "Y.‐L. Ng"
+  ],
+  "citations": 280,
+  "source": "openalex",
+  "source_id": "W4318465290",
+  "doi": "10.1111/iej.13897",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/iej.13897",
+  "published_iso": "2023-01-30",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Conservation Agriculture and Soil Organic Carbon: Principles, Processes, Practices and Policy Options",
+  "title_norm": "conservation agriculture and soil organic carbon principles processes practices ",
+  "abstract": "Intensive agriculture causes land degradation and other environmental problems, such as pollution, soil erosion, fertility loss, biodiversity decline, and greenhouse gas (GHG) emissions, which exacerbate climate change. Sustainable agricultural practices, such as reduced tillage, growing cover crops, and implementing crop residue retention measures, have been proposed as cost-effective solutions that can address land degradation, food security, and climate change mitigation and adaptation by enhancing soil organic carbon (SOC) sequestration in soils and its associated co-benefits. In this regard, extensive research has demonstrated that conservation agriculture (CA) improves soil physical, chemical, and biological properties that are crucial for maintaining soil health and increasing agroecosystem resilience to global change. However, despite the research that has been undertaken to implement the three principles of CA (minimum mechanical soil disturbance, permanent soil organic cover with crop residues and/or cover crops, and crop diversification) worldwide, there are still many technical and socio-economic barriers that restrict their adoption. In this review, we gather current knowledge on the potential agronomic, environmental, and socio-economic benefits and drawbacks of implementing CA principles and present the current agro-environmental policy frameworks. Research needs are identified, and more stringent policy measures are urgently encouraged to achieve climate change mitigation targets.",
+  "year": 2023,
+  "venue": "Soil Systems",
+  "authors": [
+   "Rosa Francaviglia",
+   "María Almagro",
+   "José Luis Vicente‐Vicente"
+  ],
+  "citations": 204,
+  "source": "openalex",
+  "source_id": "W4321599421",
+  "doi": "10.3390/soilsystems7010017",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2571-8789/7/1/17/pdf?version=1677552009",
+  "published_iso": "2023-02-22",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Unaddressed Uncertainties When Scaling Regional Aircraft Emission Surveys to Basin Emission Estimates",
+  "title_norm": "unaddressed uncertainties when scaling regional aircraft emission surveys to bas",
+  "abstract": "Wide-area aerial methods provide comprehensive screening of methane emissions from oil and gas (O & G) facilities in production basins. Emission detections (\"plumes\") from these studies are also frequently scaled to the basin level, but little is known regarding the uncertainties during scaling. This study analyzed an aircraft field study in the Denver-Julesburg basin to quantify how often plumes identified maintenance events, using a geospatial inventory of 12,629 O & G facilities. Study partners (7 midstream and production operators) provided the timing and location of 5910 maintenance events during the 6 week study period. Results indicated three substantial uncertainties with potential bias that were unaddressed in prior studies. First, plumes often detect maintenance events, which are large, short-duration, and poorly estimated by aircraft methods: 9.2 to 46% (38 to 52%) of plumes on production were likely known maintenance events. Second, plumes on midstream facilities were both infrequent and unpredictable, calling into question whether these estimates were representative of midstream emissions. Finally, 4 plumes attributed to O & G (19% of emissions detected by aircraft) were not aligned with any O & G location, indicating that the emissions had drifted downwind of some source. It is unclear how accurately aircraft methods estimate this type of plume; in this study, it had material impact on emission estimates. While aircraft surveys remain a powerful tool for identifying methane emissions on O & G facilities, this study indicates that additional data inputs, e.g., detailed GIS data, a more nuanced analysis of emission persistence and frequency, and improved sampling strategies are required to accurately scale plume estimates to basin emissions.",
+  "year": 2024,
+  "venue": "Environmental Science & Technology",
+  "authors": [
+   "Daniel Zimmerle",
+   "Sonu Dileep",
+   "Casey Quinn"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W4393563466",
+  "doi": "10.1021/acs.est.3c08972",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4393563466",
+  "published_iso": "2024-04-02",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Active Data-Driven Model and Robust Control Scheme for Twisted Tendon-Sheath Hysteresis System Using Koopman Operator",
+  "title_norm": "active data driven model and robust control scheme for twisted tendon sheath hys",
+  "abstract": "Hysteresis is a typical nonlinear characteristic that exists in mechanical systems, which brings significant challenges to the robust tracking control of twisted tendon-sheath systems. In this paper, an active data-driven model is proposed to describe the hysteresis phenomenon of a twisted tendon-sheath system based on the Koopman operator, and a robust controller is designed to cancel the effect of the model error and deal with the physical constraints in practical applications. First, by utilizing the Koopman theory, an active data-driven model is built to describe the twisted tendon-sheath hysteresis system in a straightforward linear form. Then, an active model is proposed based on a modified set-membership filter to estimate the finite-dimensional approximation error. Furthermore, a robust controller is developed by taking advantage of both the magnitude and bound of the model error (obtained by the active model) to enhance the control performance while considering security constraints. To the best of our knowledge, the rule-based constraint term is first considered in the data-driven model-based control scheme to prevent potential instabilities for the twisted tendon-sheath system. The theoretical stability of the closed-loop system is proven by using the barrier Lyapunov theory to ensure the security boundary. Extensive experiments are also carried out on a self-built robotic ureteroscopy prototype to demonstrate the superior tracking performance and robustness of the proposed method. Note to Practitioners—This paper is motivated by the accurate transmission problems of twisted tendon-sheath hysteresis systems, which aims to provide a precise active modeling method and a robust controller for the robotic-assisted instrument (e.g., endoscope, catheter, etc.) twisting in the sheath/orifice. Most existing studies on tendon-sheath hysteresis systems realize trajectory tracking controllers by using parametric-model-based compensation, which still lacks a practical data-driven modeling approach to characterize the hysteresis phenomenon in the linear form, and ignore the security constraints of tendon outputs. Based on the set-membership filter, this paper builds an active Koopman-based model, which is a practical method to follow for systems characterized by complex dynamics. Subsequently, by employing the constructed active model and a rule-based term to handle output constraints, a robust controller is elaborately designed to realize accurate tracking control for twisted tendon-sheath hysteresis systems. In particular, no priori knowledge of the complex dynamics is required in the implementation and gains selection of the proposed controller, which holds theoretically and practically significance for various tendon-sheath hysteresis systems. A series of comparative hardware experiments further validate the effectiveness and robustness of the suggested control scheme. In future work, we will aim to extend the applicability of the proposed active modeling and control scheme to interventional procedures of endoscopic operation robots for complex steerings with varying sheath configurations.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Automation Science and Engineering",
+  "authors": [
+   "Xiangyu Wang",
+   "Yongchun Fang",
+   "Jianda Han",
+   "Ningbo Yu"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4400409175",
+  "doi": "10.1109/tase.2024.3423789",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4400409175",
+  "published_iso": "2024-07-08",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Editor's Choice -- European Society for Vascular Surgery (ESVS) 2024 Clinical Practice Guidelines on the Management of Asymptomatic Lower Limb Peripheral Arterial Disease and Intermittent Claudication",
+  "title_norm": "editor s choice european society for vascular surgery esvs 2024 clinical practic",
+  "abstract": "No abstract available",
+  "year": 2023,
+  "venue": "European Journal of Vascular and Endovascular Surgery",
+  "authors": [
+   "Joakim Nordanstig",
+   "Christian‐Alexander Behrendt",
+   "Iris Baumgärtner",
+   "J. J. F. Belch",
+   "Maria Bäck",
+   "Robert Fitridge"
+  ],
+  "citations": 480,
+  "source": "openalex",
+  "source_id": "W4388572803",
+  "doi": "10.1016/j.ejvs.2023.08.067",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4388572803",
+  "published_iso": "2023-11-10",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Fertility, employment and family policy",
+  "title_norm": "fertility employment and family policy",
+  "abstract": "This paper analyses the association of labour market outcomes and family policies with fertility trends between 2002 and 2019 in 26 OECD countries. While the average age of mothers at birth of their children continued to increase over the entire period, these years have been marked by an initial catching-up of total fertility rates after marked declines in previous decades. Furthermore, after peaking in 2008, total fertility rates declined substantially, fueling concerns about demographic, economic and fiscal implications. Using panel data models and building on prior work, this paper links these changes in fertility outcomes to changes in the labour market position of men and women as well as with changes in family policies, such as parental leaves and early childhood education and care. This paper provides insights into the complex dynamics between family policies, employment and fertility, shedding light on the factors influencing overall population dynamics in OECD countries.",
+  "year": 2023,
+  "venue": "OECD social employment and migration working papers",
+  "authors": [
+   "Jonas Fluchtmann",
+   "Violetta van Veen",
+   "Willem Adema"
+  ],
+  "citations": 105,
+  "source": "openalex",
+  "source_id": "W4386930557",
+  "doi": "10.1787/326844f0-en",
+  "arxiv_id": null,
+  "paper_url": "https://www.oecd-ilibrary.org/deliver/326844f0-en.pdf?itemId=%2Fcontent%2Fpaper%2F326844f0-en&mimeType=pdf",
+  "published_iso": "2023-09-21",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Heat extremes in Western Europe increasing faster than simulated due to atmospheric circulation trends",
+  "title_norm": "heat extremes in western europe increasing faster than simulated due to atmosphe",
+  "abstract": "Over the last 70 years, extreme heat has been increasing at a disproportionate rate in Western Europe, compared to climate model simulations. This mismatch is not well understood. Here, we show that a substantial fraction (0.8 °C [0.2°-1.4 °C] of 3.4 °C per global warming degree) of the heat extremes trend is induced by atmospheric circulation changes, through more frequent southerly flows over Western Europe. In the 170 available simulations from 32 different models that we analyzed, including 3 large model ensembles, none have a circulation-induced heat trend as large as observed. This can be due to underestimated circulation response to external forcing, or to a systematic underestimation of low-frequency variability, or both. The former implies that future projections are too conservative, the latter that we are left with deep uncertainty regarding the pace of future summer heat in Europe. This calls for caution when interpreting climate projections of heat extremes over Western Europe, in view of adaptation to heat waves.",
+  "year": 2023,
+  "venue": "Nature Communications",
+  "authors": [
+   "Robert Vautard",
+   "Julien Cattiaux",
+   "Tamara Happé",
+   "Jitendra Singh",
+   "R. M. Bonnet",
+   "Christophe Cassou"
+  ],
+  "citations": 168,
+  "source": "openalex",
+  "source_id": "W4387959243",
+  "doi": "10.1038/s41467-023-42143-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-023-42143-3.pdf",
+  "published_iso": "2023-10-26",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "Adaptive Robust Tracking Control With Active Learning for Linear Systems With Ellipsoidal Bounded Uncertainties",
+  "title_norm": "adaptive robust tracking control with active learning for linear systems with el",
+  "abstract": "This article is concerned with the robust tracking control of linear uncertain systems, whose unknown system parameters and disturbances are bounded within ellipsoidal sets. We propose an adaptive robust control that can actively learn the ellipsoid sets. Particularly, our approach utilizes the ellipsoidal set-membership estimation in learning the ellipsoid sets, aiming at narrowing the uncertainty boundaries to reduce the conservativeness in robust control. To further improve the transient performance during the uncertainty learning, we enrich the information fed to the learning by maximizing the volume of the ellipsoid set. The maximized set volume stimulates the system to actively learn the uncertainties and leads to accelerated uncertainty reduction. We conduct numerical simulations to demonstrate the improvement of the proposed method.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Automatic Control",
+  "authors": [
+   "Xuehui Ma",
+   "Shiliang Zhang",
+   "Yushuai Li",
+   "Fucai Qian",
+   "Zhiyong Sun",
+   "Tingwen Huang"
+  ],
+  "citations": 9,
+  "source": "openalex",
+  "source_id": "W4399411714",
+  "doi": "10.1109/tac.2024.3410912",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2308.03727",
+  "published_iso": "2024-06-06",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "IWGDF/IDSA guidelines on the diagnosis and treatment of diabetes‐related foot infections (IWGDF/IDSA 2023)",
+  "title_norm": "iwgdf idsa guidelines on the diagnosis and treatment of diabetes related foot in",
+  "abstract": "The International Working Group on the Diabetic Foot (IWGDF) has published evidence-based guidelines on the management and prevention of diabetes-related foot diseases since 1999. The present guideline is an update of the 2019 IWGDF guideline on the diagnosis and management of foot infections in persons with diabetes mellitus. The Grading of Recommendations, Assessment, Development, and Evaluation (GRADE) framework was used for the development of this guideline. This was structured around identifying clinically relevant questions in the P(A)ICO format, determining patient-important outcomes, systematically reviewing the evidence, assessing the certainty of the evidence, and finally moving from evidence to the recommendation. This guideline was developed for healthcare professionals involved in diabetes-related foot care to inform clinical care around patient-important outcomes. Two systematic reviews from 2019 were updated to inform this guideline, and a total of 149 studies (62 new) meeting inclusion criteria were identified from the updated search and incorporated in this guideline. Updated recommendations are derived from these systematic reviews, and best practice statements made where evidence was not available. Evidence was weighed in light of benefits and harms to arrive at a recommendation. The certainty of the evidence for some recommendations was modified in this update with a more refined application of the GRADE framework centred around patient important outcomes. This is highlighted in the rationale section of this update. A note is also made where the newly identified evidence did not alter the strength or certainty of evidence for previous recommendations. The recommendations presented here continue to cover various aspects of diagnosing soft tissue and bone infections, including the classification scheme for diagnosing infection and its severity. Guidance on how to collect microbiological samples, and how to process them to identify causative pathogens, is also outlined. Finally, we present the approach to treating foot infections in persons with diabetes, including selecting appropriate empiric and definitive antimicrobial therapy for soft tissue and bone infections; when and how to approach surgical treatment; and which adjunctive treatments may or may not affect the infectious outcomes of diabetes-related foot problems. We believe that following these recommendations will help healthcare professionals provide better care for persons with diabetes and foot infections, prevent the number of foot and limb amputations, and reduce the patient and healthcare burden of diabetes-related foot disease.",
+  "year": 2023,
+  "venue": "Diabetes/Metabolism Research and Reviews",
+  "authors": [
+   "Éric Senneville",
+   "Zaina Albalawi",
+   "Suzanne Van Asten",
+   "Zulfiqarali G. Abbas",
+   "Genève Allison",
+   "Javier Aragón‐Sánchez"
+  ],
+  "citations": 326,
+  "source": "openalex",
+  "source_id": "W4387241578",
+  "doi": "10.1002/dmrr.3687",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/dmrr.3687",
+  "published_iso": "2023-10-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "EHR foundation models improve robustness in the presence of temporal distribution shift",
+  "title_norm": "ehr foundation models improve robustness in the presence of temporal distributio",
+  "abstract": "Temporal distribution shift negatively impacts the performance of clinical prediction models over time. Pretraining foundation models using self-supervised learning on electronic health records (EHR) may be effective in acquiring informative global patterns that can improve the robustness of task-specific models. The objective was to evaluate the utility of EHR foundation models in improving the in-distribution (ID) and out-of-distribution (OOD) performance of clinical prediction models. Transformer- and gated recurrent unit-based foundation models were pretrained on EHR of up to 1.8 M patients (382 M coded events) collected within pre-determined year groups (e.g., 2009-2012) and were subsequently used to construct patient representations for patients admitted to inpatient units. These representations were used to train logistic regression models to predict hospital mortality, long length of stay, 30-day readmission, and ICU admission. We compared our EHR foundation models with baseline logistic regression models learned on count-based representations (count-LR) in ID and OOD year groups. Performance was measured using area-under-the-receiver-operating-characteristic curve (AUROC), area-under-the-precision-recall curve, and absolute calibration error. Both transformer and recurrent-based foundation models generally showed better ID and OOD discrimination relative to count-LR and often exhibited less decay in tasks where there is observable degradation of discrimination performance (average AUROC decay of 3% for transformer-based foundation model vs. 7% for count-LR after 5-9 years). In addition, the performance and robustness of transformer-based foundation models continued to improve as pretraining set size increased. These results suggest that pretraining EHR foundation models at scale is a useful approach for developing clinical prediction models that perform well in the presence of temporal distribution shift.",
+  "year": 2023,
+  "venue": "Scientific Reports",
+  "authors": [
+   "Lin Guo",
+   "Ethan Steinberg",
+   "Scott L. Fleming",
+   "Jose Posada",
+   "Joshua Lemmon",
+   "Stephen Pfohl"
+  ],
+  "citations": 49,
+  "source": "openalex",
+  "source_id": "W4323359744",
+  "doi": "10.1038/s41598-023-30820-8",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-023-30820-8.pdf",
+  "published_iso": "2023-03-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "edgeR v4: powerful differential analysis of sequencing data with expanded functionality and improved support for small counts and larger datasets",
+  "title_norm": "edger v4 powerful differential analysis of sequencing data with expanded functio",
+  "abstract": "edgeR is an R/Bioconductor software package for differential analyses of sequencing data in the form of read counts for genes or genomic features. Over the past 15 years, edgeR has been a popular choice for statistical analysis of data from sequencing technologies such as RNA-seq or ChIP-seq. edgeR pioneered the use of the negative binomial distribution to model read count data with replicates and the use of generalized linear models to analyze complex experimental designs. edgeR implements empirical Bayes moderation methods to allow reliable inference when the number of replicates is small. This article announces edgeR version 4, which includes new developments across a range of application areas. Infrastructure improvements include support for fractional counts, implementation of model fitting in C and a new statistical treatment of the quasi-likelihood pipeline that improves accuracy for small counts. The revised package has new functionality for differential methylation analysis, differential transcript expression, differential transcript and exon usage, testing relative to a fold-change threshold and pathway analysis. This article reviews the statistical framework and computational implementation of edgeR, briefly summarizing all the existing features and functionalities but with special attention to new features and those that have not been described previously.",
+  "year": 2025,
+  "venue": "Nucleic Acids Research",
+  "authors": [
+   "Yunshun Chen",
+   "Lizhong Chen",
+   "Aaron T. L. Lun",
+   "Pedro L. Baldoni",
+   "Gordon K. Smyth"
+  ],
+  "citations": 678,
+  "source": "openalex",
+  "source_id": "W4406778273",
+  "doi": "10.1093/nar/gkaf018",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4406778273",
+  "published_iso": "2025-01-08",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ },
+ {
+  "title": "A noise‐tolerant fuzzy‐type zeroing neural network for robust synchronization of chaotic systems",
+  "title_norm": "a noise tolerant fuzzy type zeroing neural network for robust synchronization of",
+  "abstract": "Summary As a significant research issue in control and science field, chaos synchronization has attracted wide attention in recent years. However, it is difficult for traditional control methods to realize synchronization in predefined time and resist external interference effectively. Inspired by the excellent performance of zeroing neural network (ZNN) and the wide application of fuzzy logic system (FLS), a noise‐tolerant fuzzy‐type zeroing neural network (NTFTZNN) with fuzzy time‐varying convergent parameter is proposed for the synchronization of chaotic systems in this paper. Notably the fuzzy parameter generated from FLS combined with traditional convergent parameter embedded into this NTFTZNN can adjust the convergence rate according to the synchronization errors. For the sake of emphasizing the advantages of NTFTZNN model, other three sets of contrast models (FTZNN, VPZNN, and PTZNN) are constructed for the purpose of comparison. Besides, the predefined‐time convergence and noise‐tolerant ability of NTFTZNN model are distinctly demonstrated by detailed theoretical analysis. Furthermore, synchronization simulation experiments including two chaotic systems with different dimensions are provided to verify the related mathematical theories. Finally, the schematic of NTFTZNN model for chaos synchronization is accomplished completely through Simulink, further accentuating its effectiveness and potentials in practical applications.",
+  "year": 2024,
+  "venue": "Concurrency and Computation Practice and Experience",
+  "authors": [
+   "Xin Liu",
+   "Lv Zhao",
+   "Jie Jin"
+  ],
+  "citations": 90,
+  "source": "openalex",
+  "source_id": "W4400447389",
+  "doi": "10.1002/cpe.8218",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cpe.8218",
+  "published_iso": "2024-07-09",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "set membership robust control"
+  ]
+ },
+ {
+  "title": "Current and future immunotherapeutic approaches in pancreatic cancer treatment",
+  "title_norm": "current and future immunotherapeutic approaches in pancreatic cancer treatment",
+  "abstract": "Pancreatic cancer is a major cause of cancer-related death, but despondently, the outlook and prognosis for this resistant type of tumor have remained grim for a long time. Currently, it is extremely challenging to prevent or detect it early enough for effective treatment because patients rarely exhibit symptoms and there are no reliable indicators for detection. Most patients have advanced or spreading cancer that is difficult to treat, and treatments like chemotherapy and radiotherapy can only slightly prolong their life by a few months. Immunotherapy has revolutionized the treatment of pancreatic cancer, yet its effectiveness is limited by the tumor's immunosuppressive and hard-to-reach microenvironment. First, this article explains the immunosuppressive microenvironment of pancreatic cancer and highlights a wide range of immunotherapy options, including therapies involving oncolytic viruses, modified T cells (T-cell receptor [TCR]-engineered and chimeric antigen receptor [CAR] T-cell therapy), CAR natural killer cell therapy, cytokine-induced killer cells, immune checkpoint inhibitors, immunomodulators, cancer vaccines, and strategies targeting myeloid cells in the context of contemporary knowledge and future trends. Lastly, it discusses the main challenges ahead of pancreatic cancer immunotherapy.",
+  "year": 2024,
+  "venue": "Journal of Hematology & Oncology",
+  "authors": [
+   "Pooya Farhangnia",
+   "Hossein Khorramdelazad",
+   "Hamid Nickho",
+   "Ali‐Akbar Delbandi"
+  ],
+  "citations": 215,
+  "source": "openalex",
+  "source_id": "W4399323585",
+  "doi": "10.1186/s13045-024-01561-6",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4399323585",
+  "published_iso": "2024-06-04",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "partial identification treatment choice"
+  ]
+ },
+ {
+  "title": "Tobacco promotion restriction policies on social media",
+  "title_norm": "tobacco promotion restriction policies on social media",
+  "abstract": "Tobacco promotion is prolific on social media, with each platform setting their own restrictions on tobacco promotion and sales. We evaluated the policies related to tobacco product promotion and sales on 11 sites that are popular with youth in May 2021: Discord, Facebook, Instagram, Pinterest, Reddit, Snapchat, TikTok, Tumblr, Twitch, Twitter and YouTube. Nine of the 11 sites prohibited paid advertising for tobacco products. However, only three of them clearly prohibited sponsored content (ie, social influencers) that promotes tobacco. Six platforms restricted content that sells tobacco products and three tried to prohibit underage access to content that promotes or sells tobacco products. Although most platform policies prohibited paid tobacco advertising, few addressed more novel strategies, such as sponsored/influencer content and few had age-gating to prevent youth access. There is a pressing need to regulate tobacco promotion on social media platforms.",
+  "year": 2022,
+  "venue": "Tobacco Control",
+  "authors": [
+   "Grace Kong",
+   "Linnea Laestadius",
+   "Julia Vassey",
+   "Anuja Majmundar",
+   "Andrea M Stroup",
+   "Helen I. Meissner"
+  ],
+  "citations": 129,
+  "source": "openalex",
+  "source_id": "W4308045436",
+  "doi": "10.1136/tc-2022-057348",
+  "arxiv_id": null,
+  "paper_url": "https://tobaccocontrol.bmj.com/content/tobaccocontrol/early/2022/11/03/tc-2022-057348.full.pdf",
+  "published_iso": "2022-11-03",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "distributionally robust policy selection"
+  ]
+ },
+ {
+  "title": "Mega-scale experimental analysis of protein folding stability in biology and design",
+  "title_norm": "mega scale experimental analysis of protein folding stability in biology and des",
+  "abstract": "Abstract Advances in DNA sequencing and machine learning are providing insights into protein sequences and structures on an enormous scale 1 . However, the energetics driving folding are invisible in these structures and remain largely unknown 2 . The hidden thermodynamics of folding can drive disease 3,4 , shape protein evolution 5–7 and guide protein engineering 8–10 , and new approaches are needed to reveal these thermodynamics for every sequence and structure. Here we present cDNA display proteolysis, a method for measuring thermodynamic folding stability for up to 900,000 protein domains in a one-week experiment. From 1.8 million measurements in total, we curated a set of around 776,000 high-quality folding stabilities covering all single amino acid variants and selected double mutants of 331 natural and 148 de novo designed protein domains 40–72 amino acids in length. Using this extensive dataset, we quantified (1) environmental factors influencing amino acid fitness, (2) thermodynamic couplings (including unexpected interactions) between protein sites, and (3) the global divergence between evolutionary amino acid usage and protein folding stability. We also examined how our approach could identify stability determinants in designed proteins and evaluate design methods. The cDNA display proteolysis method is fast, accurate and uniquely scalable, and promises to reveal the quantitative rules for how amino acid sequences encode folding stability.",
+  "year": 2023,
+  "venue": "Nature",
+  "authors": [
+   "Kotaro Tsuboyama",
+   "Justas Dauparas",
+   "Jonathan H. Chen",
+   "Élodie Laine",
+   "Yasser Mohseni Behbahani",
+   "Jonathan J. Weinstein"
+  ],
+  "citations": 365,
+  "source": "openalex",
+  "source_id": "W4384820649",
+  "doi": "10.1038/s41586-023-06328-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-023-06328-6.pdf",
+  "published_iso": "2023-07-19",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "coupled dictionary uncertainty set"
+  ]
+ }
+]

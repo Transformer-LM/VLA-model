@@ -1,0 +1,650 @@
+[
+ {
+  "title": "XCoT-VLA: Executable Chain-of-Thought for Vision-Language-Action Driving",
+  "title_norm": "xcot vla executable chain of thought for vision language action driving",
+  "abstract": "Vision-Language-Action (VLA) models can connect scene understanding, semantic reasoning, and trajectory generation for autonomous driving. However, verbose natural-language Chain-of-Thought (CoT) is poorly suited to real-time control because it is open-ended, costly to decode, and difficult to optimize as an action-facing representation. We propose XCoT-VLA, which replaces descriptive rationales with compact executable CoT tokens learned from automatically constructed Reason-Action supervision. Logged trajectories provide action evidence, while scene context supplies causal semantics. The predicted XCoT sequence remains in context and conditions fixed trajectory queries through shared multimodal self-attention. Deterministic token-function routing applies the Reason FFN to XCoT tokens and the Control FFN to trajectory queries for flow-matching trajectory generation. We further introduce XCoT Policy Optimization (XCPO) as an optional refinement extension in the same executable token space. XCoT-VLA reduces longitudinal ADE from 1.645 to 1.323 on a general-distribution set and lateral FDE from 1.616 to 0.648 in lane-change scenarios. By representing driving-oriented reasoning with only 2-6 executable XCoT tokens, our method substantially reduces autoregressive reasoning overhead and remains within the real-time planning budget. These results demonstrate that driving-oriented reasoning can be compact, executable, and directly connected to trajectory generation.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Foundation Model Team",
+   "XPeng Inc"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202300165",
+  "doi": "10.48550/arxiv.2608.10976",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.10976",
+  "published_iso": "2026-08-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Unleashing VLA Potentials in Autonomous Driving via Explicit Learning from Failures",
+  "title_norm": "unleashing vla potentials in autonomous driving via explicit learning from failu",
+  "abstract": "Vision-Language-Action (VLA) models for autonomous driving often hit a performance plateau during Reinforcement Learning (RL) optimization. This stagnation arises from exploration capabilities constrained by previous Supervised Fine-Tuning (SFT), leading to persistent failures in long-tail scenarios. In these critical situations, all explored actions yield a zero-value driving score. This information-sparse reward signals a failure, yet fails to identify its root cause -- whether it is due to incorrect planning, flawed reasoning, or poor trajectory execution. To address this limitation, we propose VLA with Explicit Learning from Failures (ELF-VLA), a framework that augments RL with structured diagnostic feedback. Instead of relying on a vague scalar reward, our method produces detailed, interpretable reports that identify the specific failure mode. The VLA policy then leverages this explicit feedback to generate a Feedback-Guided Refinement. By injecting these corrected, high-reward samples back into the RL training batch, our approach provides a targeted gradient, which enables the policy to solve critical scenarios that unguided exploration cannot. Extensive experiments demonstrate that our method unlocks the latent capabilities of VLA models, achieving state-of-the-art (SOTA) performance on the public NAVSIM benchmark for overall PDMS, EPDMS score and high-level planning accuracy.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yuechen Luo",
+   "Qimao Chen",
+   "Fang Li",
+   "Shaoqing Xu",
+   "Jaxin Liu",
+   "Ziying Song"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7133365477",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.01063",
+  "published_iso": "2026-03-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Overcoming Dynamics-Blindness: Training-Free Pace-and-Path Correction for VLA Models",
+  "title_norm": "overcoming dynamics blindness training free pace and path correction for vla mod",
+  "abstract": "Vision-Language-Action (VLA) models achieve remarkable flexibility and generalization beyond classical control paradigms. However, most prevailing VLAs are trained under a single-frame observation paradigm, which leaves them structurally blind to temporal dynamics. Consequently, these models degrade severely in non-stationary scenarios, even when trained or finetuned on dynamic datasets. Existing approaches either require expensive retraining or suffer from latency bottlenecks and poor temporal consistency across action chunks. We propose Pace-and-Path Correction, a training-free, closed-form inference-time operator that wraps any chunked-action VLA. From a single quadratic cost, joint minimization yields a unified solution that decomposes orthogonally into two distinct channels. The pace channel compresses execution along the planned direction, while the path channel applies an orthogonal spatial offset, jointly absorbing the perceived dynamics within the chunk window. We evaluate our approach on a comprehensive diagnostic benchmark MoveBench designed to isolate motion as the sole controlled variable. Empirical results demonstrate that our framework consistently outperforms state-of-the-art training-free wrappers and dynamic-adaptive methods and improves success rates by up to 28.8% and 25.9% in absolute terms over foundational VLA models in dynamic-only and static-dynamic mixed environments, respectively.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yanyan Zhang",
+   "Chaoda Song",
+   "Vikash Singh",
+   "Xinpeng Li",
+   "Kai Ye",
+   "Zhe Hu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161203838",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.11459",
+  "published_iso": "2026-05-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "LIBERO-Para: A Diagnostic Benchmark and Metrics for Paraphrase Robustness in VLA Models",
+  "title_norm": "libero para a diagnostic benchmark and metrics for paraphrase robustness in vla ",
+  "abstract": "Vision-Language-Action (VLA) models achieve strong performance in robotic manipulation by leveraging pre-trained vision-language backbones. However, in downstream robotic settings, they are typically fine-tuned with limited data, leading to overfitting to specific instruction formulations and leaving robustness to paraphrased instructions underexplored. To study this gap, we introduce LIBERO-Para, a controlled benchmark that independently varies action expressions and object references for fine-grained analysis of linguistic generalization. Across seven VLA configurations (0.6B-7.5B), we observe consistent performance degradation of 22-52 pp under paraphrasing. This degradation is primarily driven by object-level lexical variation: even simple synonym substitutions cause large drops, indicating reliance on surface-level matching rather than semantic grounding. Moreover, 80-96% of failures arise from planning-level trajectory divergence rather than execution errors, showing that paraphrasing disrupts task identification. Binary success rate treats all paraphrases equally, obscuring whether models perform consistently across difficulty levels or rely on easier cases. To address this, we propose PRIDE, a metric that quantifies paraphrase difficulty using semantic and syntactic factors. Our benchmark and corresponding code are available at: https://github.com/cau-hai-lab/LIBERO-Para",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chanyoung Kim",
+   "Minwoo Kim",
+   "Minseok Kang",
+   "Hyunwoo Kim",
+   "Dahuin Jung"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7148176135",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.28301",
+  "published_iso": "2026-03-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "LoopVLA: Learning Sufficiency in Recurrent Refinement for Vision-Language-Action Models",
+  "title_norm": "loopvla learning sufficiency in recurrent refinement for vision language action ",
+  "abstract": "Current Vision-Language-Action (VLA) models typically treat the deepest representation of a vision-language backbone as universally optimal for action prediction. However, robotic manipulation is composed of many frequent closed-loop spatial adjustments, for which excessive abstraction may waste computation and weaken low-level geometric cues essential for precise control. Existing early-exit strategies attempt to reduce computation by stopping at predefined layers or applying heuristic rules such as action consistency, but they do not directly answer when a representation is actually sufficient for action. In this paper, we present LoopVLA, a recurrent VLA architecture that jointly learns representation refinement, action prediction, and sufficiency estimation. LoopVLA iteratively applies a shared Transformer block to refine multimodal tokens, and at each iteration produces both a candidate action and a sufficiency score that estimates whether further refinement is necessary. By sharing parameters across iterations, LoopVLA decouples refinement from absolute layer indices and grounds sufficiency estimation in the evolving representation itself. Since sufficiency has no direct supervision, we introduce a self-supervised distribution alignment objective, where intermediate confidence scores are trained to match the relative action quality across refinement steps, thereby linking sufficiency learning to policy optimization signals. Experiments on LIBERO, LIBERO-Plus, and VLA-Arena show that LoopVLA pushes the efficiency-performance frontier of VLA policies, reducing parameters by 45% and improving inference throughput by up to 1.7 times while matching or outperforming strong baselines in task success.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Boyang Shen",
+   "Kaixiang Yang",
+   "Hao Wang",
+   "Qiuyu Yu",
+   "Qiang Xie",
+   "Qiang Li"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161089861",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.09948",
+  "published_iso": "2026-05-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "FabriMAE I Trust Myself? Self-Evaluating VLA Action Generation with Markov Attention Entropy",
+  "title_norm": "fabrimae i trust myself self evaluating vla action generation with markov attent",
+  "abstract": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge. Existing methods either rely on expert annotations or estimate uncertainty only from output statistics, largely ignoring internal signals. In this work, we observe that internal visual modality entropy exhibits consistent distinctions between successful and failed tasks across heterogeneous VLAs. Although VLAs' architectures differ in their action generation, we show that they share a common latent action generation abstraction evolving under visual perception, language instruction, and state input, which we formulate as a Conditional Generative Markov Chain. Based on this formulation, we propose MAE (Markov Attention Entropy), a self-evaluation framework that directly converts internal attention signals into architecture-aware reliability scores, and introduce LIBERO-Reflect, a 4,000-episode benchmark combining 2,000 standard episodes and 2,000 challenging episodes across four subsets. Extensive experiments across heterogeneous VLA architectures and diverse scenarios show that MAE consistently outperforms state-of-the-art baselines on AUPR, AUROC, and FPR@95. We further instantiate FabriMAE for verifier-free test-time action selection, showing that MAE-guided multiple sampling improves PI-family robustness on LIBERO-Plus with small observed runtime overhead.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Aniri",
+   "Chen Yilin",
+   "Jinhe Bi",
+   "Junfei Guo",
+   "Donglai Ran",
+   "Xu Bian"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7203710646",
+  "doi": "10.48550/arxiv.2608.16697",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.16697",
+  "published_iso": "2026-08-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
+  "title_norm": "samoe vla a scene adaptive mixture of experts vision language action model for a",
+  "abstract": "Recent advances in Vision-Language-Action (VLA) models have shown promising capabilities in autonomous driving by leveraging the understanding and reasoning strengths of Large Language Models(LLMs).However, our empirical analysis reveals that directly applying existing token-level MoE mechanisms--which are inherited from LLM architectures--to VLA models results in unstable performance and safety degradation in autonomous driving, highlighting a misalignment between token-based expert specialization and scene-level decision-making.To address this, we propose SAMoE-VLA, a scene-adaptive Vision-Language-Action framework that conditions expert selection on structured scene representations instead of token embeddings. Our key idea is to derive the MoE routing signal from bird's-eye-view (BEV) features that encapsulates traffic scene context, enabling scenario-dependent expert weighting and merging tailored to distinct driving conditions. Furthermore, to support temporally consistent reasoning across world-knowledge, perception, language, and action, we introduce a Conditional Cross-Modal Causal Attention mechanism that integrates world state, linguistic intent, and action history into a unified causal reasoning process. Extensive experiments on the nuScenes open loop planning dataset and LangAuto closed-loop benchmark demonstrate that SAMoE-VLA achieves state-of-the-art performance, outperforming prior VLA-based and world-model-based approaches with fewer parameters.Our code will be released soon.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zihan You",
+   "Hongwei Liu",
+   "Chenxu Dang",
+   "Zhe Wang",
+   "Sining Ang",
+   "Aoqi Wang"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7134860510",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.08113",
+  "published_iso": "2026-03-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Large language models for multi-robot systems: a survey",
+  "title_norm": "large language models for multi robot systems a survey",
+  "abstract": "Abstract The rapid advancement of Large Language Models (LLMs) has opened new possibilities in Multi-Robot Systems (MRS), enabling enhanced communication, task allocation and planning, and human-robot interaction. Unlike traditional single-robot and multi-agent systems, MRS poses unique challenges, including coordination, scalability, and real-world adaptability. This survey provides the first dedicated review of LLM integration into MRS. It systematically categorizes their applications across high-level task allocation, mid-level motion planning, low-level action generation, and human intervention. We highlight key applications in diverse domains, such as household robotics, construction, formation control, target tracking, and robot games, showcasing the versatility and transformative potential of LLMs in MRS. Furthermore, we examine the challenges that limit adapting LLMs to MRS, including mathematical reasoning limitations, hallucination, latency issues, and the need for robust benchmarking systems. Finally, we outline opportunities for future research, emphasizing advancements in fine-tuning, reasoning techniques, and task-specific models. This survey aims to guide researchers in the intelligence and real-world deployment of MRS powered by LLMs. Given the rapidly evolving nature of research in the field, we continuously update the paper list in the open-source GitHub repository .",
+  "year": 2026,
+  "venue": "Autonomous Robots",
+  "authors": [
+   "Peihan Li",
+   "Zijian An",
+   "Shams Abrar",
+   "Lifeng Zhou"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4407244916",
+  "doi": "10.1007/s10514-026-10257-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10514-026-10257-4.pdf",
+  "published_iso": "2026-06-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Generative AI and the Foundation Model Era: A Comprehensive Review",
+  "title_norm": "generative ai and the foundation model era a comprehensive review",
+  "abstract": "Generative artificial intelligence and foundation models have changed machine learning by allowing systems to produce readable text, realistic images, and other multimodal content with little direct input from a user. Foundation models are large neural networks trained on very large and varied datasets, and they form the core of many current generative AI (GenAI) systems. Their rapid development has led to major advances in areas like natural language processing, computer vision, multimodal learning, and robotics. Examples include GPT, LLaMA, and diffusion-based architectures, such as models often used for image generation. Systems such as Stable Diffusion show this shift by illustrating how AI can interpret information, draw basic inferences, and produce new outputs using more than one type of data. This review surveys common foundation model architectures and examines what they can do in generative tasks. It reviews Transformer, diffusion, and multimodal architectures, focusing on methods that support scaling and transfer across domains. The paper also reviews key approaches to pretraining and fine-tuning, including self-supervised learning, instruction tuning, and parameter-efficient adaptation, which support these systems’ ability to generalize across tasks. In addition to the technical details, this review discusses how GenAI is being used for text generation, image synthesis, robotics, and biomedical research. The study also notes continuing challenges, such as the high computing and energy demands of large models, ethical concerns about data bias and misinformation, and worries about privacy, reliability, and responsible use of AI in real settings. This review brings together ideas about model design, training methods, and social implications to point future research toward GenAI systems that are efficient, easy to interpret, and reliable, while supporting scientific progress and ethical responsibility.",
+  "year": 2026,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Abdussalam Elhanashi",
+   "Siham Essahraui",
+   "Pierpaolo Dini",
+   "Davide Paolini",
+   "Qinghe Zheng",
+   "Sergio Saponara"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7139951491",
+  "doi": "10.3390/bdcc10030094",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/10/3/94/pdf",
+  "published_iso": "2026-03-20",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Advances in surrogate modeling for biological agent-based simulations: trends, challenges, and future prospects",
+  "title_norm": "advances in surrogate modeling for biological agent based simulations trends cha",
+  "abstract": "Agent-based modeling (ABM) is a powerful computational approach for studying complex biological and biomedical systems, yet its widespread use remains limited by significant computational demands. As models become increasingly sophisticated, the number of parameters and interactions rises rapidly, exacerbating the so-called \"curse of dimensionality\" and making comprehensive parameter exploration and uncertainty analyses computationally prohibitive. Surrogate modeling provides a promising solution by approximating ABM behavior through computationally efficient alternatives, greatly reducing the runtime needed for parameter estimation, sensitivity analysis, and uncertainty quantification. In this review, we examine traditional approaches for performing these tasks directly within ABMs-providing a baseline for comparison-and then synthesize recent developments in surrogate-assisted methodologies for biological and biomedical applications. We cover statistical, mechanistic, and machine-learning-based approaches, emphasizing emerging hybrid strategies that integrate mechanistic insights with machine learning to balance interpretability and scalability. Finally, we discuss current challenges and outline directions for future research, including the development of standardized benchmarks to enhance methodological rigor and facilitate the broad adoption of surrogate-assisted ABMs in biology and medicine.",
+  "year": 2025,
+  "venue": "Journal of Mathematical Biology",
+  "authors": [
+   "Kerri‐Ann Norton",
+   "Daniel Bergman",
+   "Harsh Jain",
+   "Trachette L. Jackson"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4410105703",
+  "doi": "10.1007/s00285-025-02318-6",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s00285-025-02318-6.pdf",
+  "published_iso": "2025-12-03",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Engineered immune-driven theranostics for clinical cardiology",
+  "title_norm": "engineered immune driven theranostics for clinical cardiology",
+  "abstract": "Immunotherapy for cardiovascular diseases (CVDs) holds great promise for precision management by modulating localized immune-inflammatory responses. The interplay between focal cardiovascular pathology and panvascular disease, necessitates highly integrated therapeutic strategies. Nano-technology-based theranostic platforms address this challenge by enabling both regulation and real-time imaging of immune cell activity within cardiovascular lesions. These functional nanotherapy systems not only halt disease progression at pathological sites but also reduce secondary cardiovascular events driven by shared inflammatory mechanisms. Additionally, nanoplatform-based dynamic visualization of immune cell responses facilitates adaptive, personalized interventions. This review introduces the role of immune cells in CVDs. It summarizes recent advances in nanomaterial-based immunomodulation strategies, including mechanisms of immune regulation, enhanced imaging, and therapeutic applications in atherosclerosis, myocardial infarction, ischemic stroke, abdominal aortic aneurysm, and myocarditis. Collectively, this integrated nanotheranostic paradigm establishes a robust foundation for the next generation of cardiovascular precision medicine.",
+  "year": 2025,
+  "venue": "Military Medical Research",
+  "authors": [
+   "Jing-Ben Zheng",
+   "Xiaoye Li",
+   "Ji‐Min Zhu",
+   "Cheng Liu",
+   "Xiaotian Song",
+   "Bin Wang"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4415898311",
+  "doi": "10.1186/s40779-025-00664-6",
+  "arxiv_id": null,
+  "paper_url": "https://mmrjournal.biomedcentral.com/counter/pdf/10.1186/s40779-025-00664-6",
+  "published_iso": "2025-11-05",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Visio-verbal teleimpedance interface: enabling semi-autonomous control of physical interaction via eye tracking and speech",
+  "title_norm": "visio verbal teleimpedance interface enabling semi autonomous control of physica",
+  "abstract": "The paper presents a visio-verbal teleimpedance interface for commanding 3D stiffness ellipsoids to the remote robot with a combination of the operator's gaze and verbal interaction. The gaze is detected by an eye-tracker, allowing the system to understand the context in terms of what the operator is currently looking at in the scene. Along with verbal interaction, a Vision-Language Model (VLM) processes this information, enabling the operator to communicate their intended action or provide corrections. Based on these inputs, the interface can then generate appropriate stiffness matrices for different physical interaction actions. To validate the proposed visio-verbal teleimpedance interface, we conducted a series of experiments on a setup including a Force Dimension Sigma.7 haptic device to control the motion of the remote Kuka LBR iiwa robotic arm. The human operator's gaze is tracked by Tobii Pro Glasses 2, while human verbal commands are processed by a VLM using GPT-4o. The first experiment explored the optimal prompt configuration for the interface. The second and third experiments demonstrated different functionalities of the interface on a slide-in-the-groove task.",
+  "year": 2026,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Henk H. A. Jekel",
+   "Alejandro Díaz Rosales",
+   "Luka Peternel"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7127987506",
+  "doi": "10.3389/frobt.2026.1749105",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2026.1749105/pdf",
+  "published_iso": "2026-02-05",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Dual-defect LaFeO3 photo-Fenton removes β-E2 from dairy wastewater",
+  "title_norm": "dual defect lafeo3 photo fenton removes β e2 from dairy wastewater",
+  "abstract": "Herein, LaFeO 3 photocatalysts (HX-LFO and SX-LFO) were synthesized using hydrothermal and sol–gel methods, respectively, for removing β-E2 from dairy cattle breeding wastewater. A combination of flocculation pretreatment and photocatalytic Fenton oxidation was used to achieve efficient β-E2 degradation. Results revealed that HX-LFO had high defect concentrations and achieved better photocatalytic Fenton oxidation efficiency for β-E2 than SX-LFO. The H0.7-LFO/H 2 O 2 /visible (Vis) system completely degraded 2 mg/L of β-E2 within 2 h and achieved a total organic carbon (TOC) mineralization rate of 99.7%. The intermediate products, degradation pathways, and ecological toxicity of β-E2 degradation were analyzed. The H0.7-LFO/H 2 O 2 /Vis system exhibited stable degradation performance when humic acid and multiple anions coexisted in the reaction solution. The developed system increased the β-E2 degradation rate to 83.38%–100%. Characterizations and density functional theory calculations revealed that the La-defect formation energy in La/O dual-defect LaFeO 3 was lower than that in LaFeO 3 containing only La defects. Moreover, O defects facilitated the formation of La defects that lowered the energy barrier for free-radical desorption, making it easier for free radicals to form and diffuse into the reaction solution. La/O dual-defect LaFeO 3 exhibited lower binding energy for β-E2, accelerating charge transfer within itself and from itself to β-E2.",
+  "year": 2025,
+  "venue": "npj Clean Water",
+  "authors": [
+   "Shiyu Lv",
+   "Tian Yuan",
+   "Xueyan Zhang",
+   "Yang Pu",
+   "Kai Fu",
+   "Xia Yao"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417021879",
+  "doi": "10.1038/s41545-025-00535-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41545-025-00535-6_reference.pdf",
+  "published_iso": "2025-12-05",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Deep Reinforcement Learning in the Era of Foundation Models: A Survey",
+  "title_norm": "deep reinforcement learning in the era of foundation models a survey",
+  "abstract": "Deep reinforcement learning (DRL) and large foundation models (FMs) have reshaped modern artificial intelligence (AI) by enabling systems that learn from interaction while leveraging broad generalization and multimodal reasoning capabilities. This survey examines the growing convergence of these paradigms and reviews how reinforcement learning from human feedback (RLHF), reinforcement learning from AI feedback (RLAIF), world-model pretraining, and preference-based optimization refine foundation model capabilities. We organize existing work into a taxonomy of model-centric, RL-centric, and hybrid DRL–FM integration pathways, and synthesize applications across language and multimodal agents, autonomous control, scientific discovery, and societal and ethical alignment. We also identify technical, behavioral, and governance challenges that hinder scalable and reliable DRL–FM integration, and outline emerging research directions that suggest how reinforcement-driven adaptation may shape the next generation of intelligent systems. This review provides researchers and practitioners with a structured overview of the current state and future trajectory of DRL in the era of foundation models.",
+  "year": 2026,
+  "venue": "Computers",
+  "authors": [
+   "Ibomoiye Domor Mienye",
+   "Ebenezer Esenogho",
+   "Cameron Modisane"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7119495052",
+  "doi": "10.3390/computers15010040",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-431X/15/1/40/pdf",
+  "published_iso": "2026-01-09",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "α4 Integrin blockade impairs CD8+ T cell neuroimmune surveillance following SIV infection",
+  "title_norm": "α4 integrin blockade impairs cd8 t cell neuroimmune surveillance following siv i",
+  "abstract": "Integrin-targeted therapies are under investigation for HIV-associated neuroinflammation, yet their effect on CNS antiviral immunity remains undefined. We examined the role of α4 integrin in T cell-mediated neuroimmune surveillance using SIV-infected macaques with α4 blockade and T cell-specific α4-deficient mice. In macaques, α4 blockade preserved CD4+ Th1 cell access to the brain parenchyma but impaired CD8 effector recruitment, disrupting antiviral control. Despite stable cerebrospinal fluid viral loads, hippocampal SIV RNA increased under blockade. Single-cell analyses revealed α4 enrichment in CD8 effector memory (Tem) cells; blockade reduced inferred CD8+ Tem-monocyte interactions and heightened innate immune activation in the hippocampus. Microscopy demonstrated persistent SIV-induced microglial simplification despite treatment. Th1 CD4 effectors correlated positively with gray matter viral RNA, whereas α4β7+ CD8+ T cells correlated inversely, implicating impaired CD8+ Tem recruitment in elevated parenchymal viral burden. In mice, α4 proved dispensable for CD4 trafficking to inflamed brain but essential for CD8 effector access across CNS compartments and for both subsets to reach skull marrow. These findings establish that α4 integrin governs CD8-mediated neuroimmune surveillance through coordinated cellular positioning, with blockade enabling viral seeding while disrupting spatially organized antiviral defense.",
+  "year": 2026,
+  "venue": "Journal of Clinical Investigation",
+  "authors": [
+   "Pabitra B Pal",
+   "Sonny R. Elizaldi",
+   "Giovanne B. Diniz",
+   "Ravi Prakash Rai",
+   "Yashavanth Shaan Lakshmanappa",
+   "Anil Verma"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7131250631",
+  "doi": "10.1172/jci198730",
+  "arxiv_id": null,
+  "paper_url": "http://www.jci.org/articles/view/198730/files/pdf",
+  "published_iso": "2026-02-24",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Physical AI: Bridging the Sim-to-Real Divide Toward Embodied, Ethical, and Autonomous Intelligence",
+  "title_norm": "physical ai bridging the sim to real divide toward embodied ethical and autonomo",
+  "abstract": "Physical Artificial Intelligence (Physical AI) delineates a new scientific frontier wherein cognition is not abstracted from the world but materially instantiated within it. It represents the fusion of algorithmic reasoning, embodied perception, and dynamic control into cyber–physical substrates capable of autonomous, safe, and ethically aligned interaction. In contrast to digital AI that operates solely over symbolic or pixel domains, Physical AI functions through closed perception–decision–action feedback loops governed by real-world physics, causality, and thermodynamic constraints. This article delivers the first holistic synthesis of the field—uniting previously fragmented developments in robotics, differentiable simulation, neuromorphic computation, and autonomous control under a coherent theoretical and architectural framework. It formalizes the conceptual vocabulary of Physical AI, introduces a capabilitybased taxonomy spanning reflexive, adaptive, and anticipatory intelligence, and proposes a layered reference stack integrating sensing, learning, reasoning, assurance, and governance. To quantify progress, a suite of mathematically grounded evaluation metrics is defined, encompassing task efficiency, safety reliability, sim-to-real transfer fidelity, energy–performance optimization, and ecological sustainability. Beyond technical integration, the work establishes normative foundations for trustworthy autonomy through formal verification, provenance-aware data engines, and human-in-the-loop assurance architectures. Forward-looking trajectories are articulated across federated learning, affectaware robotics, hybrid edge–cloud orchestration, and global benchmarking toward planetary-scale coordination. Envisioned as an evolutionary continuum from automation to agency, Physical AI redefines intelligence as a physically grounded, ethically interpretable, and self-adaptive process—where the boundaries between mind, machine, and matter progressively converge.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Partha Pratim Ray"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415938232",
+  "doi": "10.36227/techrxiv.176238257.73914361/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176238257.73914361",
+  "published_iso": "2025-11-05",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Heterogeneous treatment response in metastatic breast cancer: discordance between FDG-PET and CT classification",
+  "title_norm": "heterogeneous treatment response in metastatic breast cancer discordance between",
+  "abstract": "BACKGROUND: Heterogeneous treatment response, characterized by simultaneous regression of some lesions and progression of others within the same patient, is increasingly recognized in metastatic breast cancer (mBC) and may reflect biological heterogeneity. However, this response pattern is not captured by current response assessment frameworks. We aimed to determine the prevalence of heterogeneous treatment response on FDG-PET and mixed response on CT during mBC systemic therapy. METHODS: This retrospective study included 51 female patients with mBC, treated between November 2017 and November 2025, each undergoing ≥ 2 FDG-PET/CT scans. Response was assessed according to RECIST 1.1 (CT) and PERCIST (FDG-PET), with using study‑specific definitions for heterogeneous/mixed response informed by literature. RESULTS: Heterogeneous metabolic response was observed in 30% of all follow‑up FDG‑PET examinations (40/132). These examinations accounted for 60% (40/67) of the scans classified as progressive metabolic disease (PMD) according to PERCIST. Among CT-examinations, 65 of 141 (46%) follow-up examinations had measurable disease; none of these scans (0/65, 0%) fulfilled the mixed response criteria. CONCLUSION: In this real-world cohort of mBC undergoing systemic therapy, FDG-PET identified heterogeneous treatment response in a substantial proportion of patients; however, under current PERCIST criteria, these cases were uniformly classified as PMD. In contrast, using RECIST-inspired criteria, CT did not classify any patient as mixed response. These findings suggest that existing frameworks may not fully capture intra-patient response heterogeneity. As heterogeneous response is not an established PERCIST response category, further work is needed to determine how such patterns should be defined and incorporated into future response assessment frameworks. CLINICAL TRIAL NUMBER: Not applicable.",
+  "year": 2026,
+  "venue": "Cancer Imaging",
+  "authors": [
+   "Vilma Landfors Andersson",
+   "Kristin Johnson",
+   "Ida Skarping"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204233062",
+  "doi": "10.1186/s40644-026-01119-4",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s40644-026-01119-4.pdf",
+  "published_iso": "2026-08-26",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Deconstructing Spatial Intelligence in Vision-Language Models",
+  "title_norm": "deconstructing spatial intelligence in vision language models",
+  "abstract": "Vision-Language Models (VLMs) have achieved remarkable success but exhibit a fundamental deficiency in spatial intelligence, a critical capability for progress in embodied AI, autonomous driving, and spatially coherent generation. In response, the research community has produced an explosion of work dedicated to enhancing these models, but this rapid progress has resulted in a fragmented and disorganized landscape lacking a unified framework. This paper presents the first comprehensive survey to address this gap, uniquely providing a systematic review that spans the foundations of spatial intelligence in VLMs, root causes of spatial limitations, enhancement methodologies, evaluation protocols, and real-world applications. Specifically, we introduce a novel, intervention-based taxonomy that categorizes enhancement methodologies according to where spatial information is incorporated: (1) training-free prompting, (2) model-centric enhancements (training strategies, architectural modules, encoder improvements), (3) explicit 2D information injection, (4) 3D spatial enrichment, and (5) data-centric approaches. To further assess the true capabilities of current models, we conduct a rigorous empirical study evaluating 37 models across 9 representative benchmarks. Our results and analysis reveal the state-of-the-art, identify the strengths and weaknesses of different methods, and uncover critical limitations in existing evaluation protocols. By structuring this rapidly evolving field and establishing a clear research agenda, this survey serves as an indispensable resource for advancing the next generation of spatially intelligent AI systems.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Disheng Liu",
+   "Tuo Liang",
+   "Zhe Hu",
+   "Jierui Peng",
+   "Yiren Lu",
+   "Yi Xu"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4415899732",
+  "doi": "10.36227/techrxiv.176231405.57942913/v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176231405.57942913/v1",
+  "published_iso": "2025-11-05",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "How Ti Doping Improves the Catalytic Methane Dry Reforming of Nanoporous Reduced LaNiO 3 Perovskites",
+  "title_norm": "how ti doping improves the catalytic methane dry reforming of nanoporous reduced",
+  "abstract": "High Resolution Image Download MS PowerPoint Slide We studied the effect of Ti substitution on nickel B-sites in LaNiO 3 to unravel the influence of Ti doping on structural stability, Ni exsolution, and methane dry reforming (DRM) properties. Ni can be substituted by Ti down to compositions of x Ni = 0.25 without compromising both phase and structure purity. At even higher Ti doping levels, formation of the pyrochlore-type La 2 Ti 2 O 7 phase occurs. Ti substitution has a significant influence on the stability under reducing conditions and the appearance of specific intermediate structures relevant for DRM operation. Full decomposition is only observed for LaNiO 3 and the x Ni = 0.75 sample, which yield the La 2 O 3 phase relevant for DRM activity at low Ti doping levels. A common impurity phase between x Ni = 0.75 and 0.25 is La 2 TiO 5, which acts as a Ti and La sink and hinders the formation of La 2 O 3 . For higher Ti doping levels, hydrogen reduction increases the amount of La 2 Ti 2 O 7 . A common denominator of all samples after hydrogen reduction is the full leaching of all nominally available Ni from the perovskite. The self-activation properties during DRM operation strongly depend on the Ti substitution level. Self-activation with either full or partial decomposition is only possible for LaNiO 3 and x Ni = 0.75, where intermediate lanthanum oxycarbonate formation occurs. For x Ni = 0.50, the remaining perovskite structure is stable, but Ni exsolution nevertheless occurs, triggering DRM activity. Successive Ti doping invokes a change in the DRM mechanism from oxycarbonate-based at low Ti amounts (LaNiO 3 and x Ni = 0.75) to a more reactive-oxygen─dominated one for samples x Ni ≤ 0.50, as indicated by X-ray photoelectron spectra. Ti doping also allows to economize the amount of Ni for DRM applications─ it can be lowered to a quarter of the initial amount referenced to pure LaNiO 3 without compromising DRM activity.",
+  "year": 2025,
+  "venue": "ACS Applied Nano Materials",
+  "authors": [
+   "Thomas F. Winterstein",
+   "Andreas Oss",
+   "Christoph Malleier",
+   "Asghar Mohammadi",
+   "Bernhard Klötzer",
+   "Stefan Stöber"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4415980775",
+  "doi": "10.1021/acsanm.5c04175",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.acs.org/doi/pdf/10.1021/acsanm.5c04175?ref=article_openPDF",
+  "published_iso": "2025-11-06",
+  "oa_field": "Chemical Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Unveiling Customer Expectations of Chatbot Interactions: A Systematic Literature Review and Research Agenda",
+  "title_norm": "unveiling customer expectations of chatbot interactions a systematic literature ",
+  "abstract": "Chatbots have become pivotal in communications between the customer and the organization, offering continuous support by promptly addressing queries. However, despite their prevalence, many customers report unsatisfactory experiences. This study addresses this issue by conducting a systematic literature review that aims to identify and analyze customer expectations of chatbot interactions. Incorporating insights from 91 studies, our review reveals that the literature predominantly focuses on customer perceptions, or post-experience evaluations, rather than pre-interaction expectations. Leveraging existing categorizations, we present a conceptual framework that identifies two overarching dimensions of pre-interaction expectations: functional and experiential. We explore factors shaping these expectations, highlighting personal and situational influences. Our analysis highlights the complex ways in which different expectations combine to shape how customers interact with chatbots. Drawing on these insights, we propose a research agenda that outlines key gaps and future directions to advance understanding of customer expectations in AI-mediated service contexts.",
+  "year": 2025,
+  "venue": "International Journal of Human-Computer Interaction",
+  "authors": [
+   "Daniela Castillo",
+   "Lawrence Farrugia Caruana"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416735717",
+  "doi": "10.1080/10447318.2025.2588815",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/10447318.2025.2588815?needAccess=true",
+  "published_iso": "2025-11-27",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Survey of General End-to-End Autonomous Driving: A Unified Perspective",
+  "title_norm": "survey of general end to end autonomous driving a unified perspective",
+  "abstract": "The quest for autonomous driving converges on the fundamental challenge of creating an integrated system that seamlessly maps raw sensory inputs directly to driving decisions. This ambition has catalyzed a paradigm shift from classic modular pipelines toward data-driven, end-to-end (E2E) approaches, aiming to overcome inherent limitations like information loss and error accumulation. In recent years, the E2E landscape has rapidly diversified into three prominent yet seemingly disparate paradigms. These include vision-centric methods that jointly optimize specialized modules, VLM-centric approaches that harness the world knowledge of large foundation models, and hybrid models that synergize the complementary strengths of the former two. While architecturally distinct, we posit that these are not divergent paths but rather different dialects of a common language. At their core, all three paradigms strive to solve the same General End-to-End (GE2E) problem. However, the literature lacks a unified survey that systematically analyzes and contrasts them from this holistic viewpoint. This paper bridges that critical gap. Through a comprehensive review of over 200 papers, we first dissect the architectures, design philosophies, and learning strategies that characterize each paradigm. Subsequently, we present a consolidated overview of mainstream evaluation benchmarks and a comparative performance analysis. By synthesizing their commonalities, we distill the field's core challenges and chart a course for future research. Our work aims to provide a foundational resource and a guiding compass for researchers navigating the dynamic landscape of end-to-end autonomous driving. Our project page is available at https://github.com/AutoLab-SAI-SJTU/GE2EAD.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Yixiang Yang",
+   "Yixiang Yang",
+   "Chuanrong Han",
+   "Runhao Mao",
+   "Hanshi Wang",
+   "Zhiwen Chen"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417478957",
+  "doi": "10.36227/techrxiv.176523315.56439138/v2",
+  "arxiv_id": null,
+  "paper_url": "https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.176523315.56439138/v2",
+  "published_iso": "2025-12-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Master Micro Residual Correction with Adaptive Tactile Fusion and Force-Mixed Control for Contact-Rich Manipulation",
+  "title_norm": "master micro residual correction with adaptive tactile fusion and force mixed co",
+  "abstract": "Robotic contact-rich and fine-grained manipulation remains a significant challenge due to complex interaction dynamics and the competing requirements of multi-timescale control. While current visual imitation learning methods excel at long-horizon planning, they often fail to perceive critical interaction cues like friction variations or incipient slip, and struggle to balance global task coherence with local reactive feedback. To address these challenges, we propose M2-ResiPolicy, a novel Master-Micro residual control architecture that synergizes high-level action guidance with low-level correction. The framework consists of a Master-Guidance Policy (MGP) operating at 10 Hz, which generates temporally consistent action chunks via a diffusion-based backbone and employs a tactile-intensity-driven adaptive fusion mechanism to dynamically modulate perceptual weights between vision and touch. Simultaneously, a high-frequency (60 Hz) Micro-Residual Corrector (MRC) utilizes a lightweight GRU to provide real-time action compensation based on TCP wrench feedback. This policy is further integrated with a force-mixed PBIC execution layer, effectively regulating contact forces to ensure interaction safety. Experiments across several demanding tasks including fragile object grasping and precision insertion, demonstrate that M2-ResiPolicy significantly outperforms standard Diffusion Policy (DP) and state-of-the-art Reactive Diffusion Policy (RDP), achieving a 93\\% damage-free success rate in chip grasping and superior force regulation stability.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Xingting Li",
+   "Yifan Xie",
+   "Han Liu",
+   "Wei Hou",
+   "Guangyu Chen",
+   "Shoujie Li"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7139146958",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.15152",
+  "published_iso": "2026-03-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Compensatory responses to glaucoma pathology in the dorsolateral geniculate nucleus",
+  "title_norm": "compensatory responses to glaucoma pathology in the dorsolateral geniculate nucl",
+  "abstract": "Glaucoma disrupts the conveyance of retinal signals to visual regions of the brain such as the dorsolateral geniculate nucleus (dLGN) due to degeneration of retinal ganglion cells (RGCs) and their axons. Although plasticity during development allows altered visual experience to modulate dLGN synapses and excitability, evidence for experience-dependent dLGN plasticity in adults is limited. However, glaucoma might trigger compensatory plasticity in adult dLGN, thereby compensating for diminished RGC synaptic drive. Here, we tested this theory using aged DBA/2J mice, which develop high intraocular pressure and glaucoma. In brain slice recordings, we found that diminished RGC inputs could drive robust action potential firing in dLGN relay neurons that was comparable to controls. This was accompanied by increased intrinsic excitability and decreased magnitude of sustained inhibitory currents from delta subunit-containing GABA receptors. These results implicate multiple cellular and synaptic mechanisms that support signaling despite the diminished RGC inputs in glaucoma.",
+  "year": 2026,
+  "venue": "iScience",
+  "authors": [
+   "S.C. McCool",
+   "Arnav Jain",
+   "Jennie C. Smith",
+   "Victoria L. Schaal",
+   "Gurudutt Pendyala",
+   "Sowmya V. Yelamanchili"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7132850050",
+  "doi": "10.1016/j.isci.2026.115176",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7132850050",
+  "published_iso": "2026-02-28",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Learning Vision-Language-Action World Models for Autonomous Driving",
+  "title_norm": "learning vision language action world models for autonomous driving",
+  "abstract": "Vision-Language-Action (VLA) models have recently achieved notable progress in end-to-end autonomous driving by integrating perception, reasoning, and control within a unified multimodal framework. However, they often lack explicit modeling of temporal dynamics and global world consistency, which limits their foresight and safety. In contrast, world models can simulate plausible future scenes but generally struggle to reason about or evaluate the imagined future they generate. In this work, we present VLA-World, a simple yet effective VLA world model that unifies predictive imagination with reflective reasoning to improve driving foresight. VLA-World first uses an action-derived feasible trajectory to guide the generation of the next-frame image, capturing rich spatial and temporal cues that describe how the surrounding environment evolves. The model then reasons over this self-generated future imagined frame to refine the predicted trajectory, achieving higher performance and better interpretability. To support this pipeline, we curate nuScenes-GR-20K, a generative reasoning dataset derived from nuScenes, and employ a three-stage training strategy that includes pretraining, supervised fine-tuning, and reinforcement learning. Extensive experiments demonstrate that VLA-World consistently surpasses state-of-the-art VLA and world-model baselines on both planning and future-generation benchmarks. Project page: https://vlaworld.github.io",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Guoqing Wang",
+   "Pin Tang",
+   "Xiangxuan Ren",
+   "Guodongfang Zhao",
+   "Bailan Feng",
+   "Chao Ma"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7154426872",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2604.09059",
+  "published_iso": "2026-04-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ },
+ {
+  "title": "Climate Change Education in the Home–School–Community Nexus: Intergenerational Learning, Youth Agency, and Action Competence in Philippine Basic Education",
+  "title_norm": "climate change education in the home school community nexus intergenerational le",
+  "abstract": "Abstract This study examines how climate change education (CCE) initiatives in Philippine basic education shape learners’ climate-related knowledge, awareness, behaviours, and perceptions of environmental well-being through the interconnected influences of families, schools, and communities. While many CCE initiatives focus on school-based knowledge and awareness, less attention has been given to how environmental practices are sustained across everyday socioecological contexts. Guided by action competence, intergenerational learning, and socioecological perspectives, the study integrates a systematic review of 109 Department of Education (DepEd) and government issuances with key informant interviews involving teachers and school-level programme implementers. Findings show that DepEd initiatives – such as YES-O, WASH programmes, and school-based greening activities – serve as critical entry points for environmental engagement but do not consistently lead to sustained behavioural change. The continuity of environmental practices depends on the degree of alignment across school, home, and community systems. Inconsistent family routines, limited local government unit (LGU) support, infrastructural constraints, and programme discontinuities weaken learners’ capacity to internalise environmental practices. Conversely, experiential learning, family modelling, lived experiences of climate risks, and active community participation strengthen children’s action competence and resilience. The study advances a socioecological alignment framework that conceptualises CCE as a relational and multi-level process shaped by structural, cultural, and institutional conditions. It argues that strengthening intergenerational learning, community engagement, and governance continuity is essential for cultivating sustained climate action. These insights offer implications for rethinking climate education in the Philippines and other climate-vulnerable and resource-constrained contexts.",
+  "year": 2026,
+  "venue": "Australian Journal of Environmental Education",
+  "authors": [
+   "Allen A. Espinosa",
+   "Ma. Arsenia C. Gomez",
+   "Praksis A. Miranda",
+   "Nikolee Marie A. Serafico-Reyes",
+   "Marie Grace Pamela G. Faylona",
+   "Adonis P. David"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7154950050",
+  "doi": "10.1017/aee.2026.10164",
+  "arxiv_id": null,
+  "paper_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/70E6ACC10F03735174A157D06E85A742/S0814062626101645a.pdf/div-class-title-climate-change-education-in-the-home-school-community-nexus-intergenerational-learning-youth-agency-and-action-competence-in-philippine-basic-education-div.pdf",
+  "published_iso": "2026-04-20",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "mixed-response VLA refinement"
+  ]
+ }
+]

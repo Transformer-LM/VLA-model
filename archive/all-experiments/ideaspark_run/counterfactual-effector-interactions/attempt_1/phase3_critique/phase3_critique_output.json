@@ -1,0 +1,139 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+        "main_pattern": "decompose_and_delegate",
+        "sub_pattern": "C25 (Decompose and Delegate to Solvers)",
+        "tactical_failure_mode_quoted": "The recurring failure is assembling a decompose-and-delegate pipeline whose components are all off-the-shelf — role-agents, prompts, existing engines, retrieval modules — so that no single piece is shown to be both novel and load-bearing. The intermediate artifact stays advisory (read by the next stage but never closed by a verification signal), reducing the system to sampling-plus-filtering or to a re-skin of an already-published neighbor that performed the same routing move.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A decomposition that merely chains off-the-shelf agents or engines, with no single component demonstrated to be both novel and load-bearing, reads as engineering assembly rather than a contribution.",
+            "candidate_match": "yes",
+            "reasoning": "FastWAM, a logistic head, ridge response fitting, and OSQP are off-the-shelf, while the only proposed novel handoff—the full interaction ledger—is not load-bearing because Step 6 collapses it to a center gradient exactly reproducible by an interaction-free central-difference baseline."
+          },
+          {
+            "lesson_quoted": "If the 'key' prompt or elicitation scheme is tuned to one benchmark and not validated across settings, reviewers treat it as a dataset-specific hack instead of a transferable mechanism.",
+            "candidate_match": "no",
+            "reasoning": "The candidate uses a formal signed intervention design and held-out calibration rather than a benchmark-tuned prompt or elicitation scheme, and scopes its empirical claim to RoboTwin."
+          },
+          {
+            "lesson_quoted": "Delegating a sub-problem to a sound but costly solver (NP-hard search, materialized intermediate state) sinks the contribution when latency and scalability are left unexamined.",
+            "candidate_match": "no",
+            "reasoning": "OSQP is a convex quadratic solver, and correction latency, rollout capacity B, memory, and GPU-day cost are explicitly measured or budgeted."
+          },
+          {
+            "lesson_quoted": "Without an ablation isolating the decomposition's marginal effect from extra data, more epochs, or the base model's prior knowledge, the reported gains read as confounded and unattributable.",
+            "candidate_match": "no",
+            "reasoning": "E0 includes frozen, marginal-only, FactorLedger, and a row-permutation negative control that keeps the outcome head, rollout count, and solver unchanged, so the planned intervention-information ablation is compute- and model-matched."
+          },
+          {
+            "lesson_quoted": "Re-deriving a routing move that a closely neighboring published system already demonstrated, while showing only marginal gains, fails the novelty bar regardless of engineering polish.",
+            "candidate_match": "no",
+            "reasoning": "The closest listed neighbor routes a proposal-conditioned latent future into a neural refiner; neither the literature table nor collision pool shows the same typed marginal–interaction ledger routed to a constrained solver."
+          },
+          {
+            "lesson_quoted": "A self-improvement or decomposition loop whose reliability hinges on an unvalidated data-generation, retrieval, or filtering component invites rejection when error propagation across iterations is never analyzed.",
+            "candidate_match": "no",
+            "reasoning": "The outcome head is fitted from the simulator's existing success predicate with held-out calibration, and E0 separately checks predicted interaction signs against restored-state executed contrasts."
+          }
+        ],
+        "verdict": "triggered"
+      },
+      {
+        "gap": "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions — the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate (using the evaluated models as their own oracle, or hardcoding a contested definition of the target property), so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "no",
+            "reasoning": "The proposed marginal-versus-joint ordering reversal is the unresolved effector-level residue in the cited corpus, not merely the already-known whole-action insensitivity diagnosed by CoCo."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "no",
+            "reasoning": "The central empirical claim is explicitly bounded to existing RoboTwin tasks and executed RoboTwin success, rather than generalized to real-robot deployment."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "The oracle is RoboTwin's existing task-success predicate and the diagnostic contrast is produced by restored-state action interventions, not by a new self-asserted definition of coordination."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "FastWAM scores are audited against independent executed simulator outcomes rather than peer-model judgments."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "no",
+            "reasoning": "The claim is scoped to RoboTwin bimanual contact states and targets a specific additivity confound through matched factorial interventions."
+          }
+        ],
+        "verdict": "clear"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The first gap, under decompose_and_delegate, drives the aggregate verdict. Its lesson that an off-the-shelf chain must contain a component that is both novel and load-bearing is triggered because the executed evidence shows the full interaction ledger can be replaced by same-budget central differences without changing Step 6's correction."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+        "sub_pattern": "C25 (Decompose and Delegate to Solvers)",
+        "tactical_pattern_quoted": "Have the learned model emit a structured, machine-checkable intermediate artifact at the decomposition boundary — an executable program, a formal domain/world model, a relational-or-constraint graph, a concrete state waypoint, an interleaved reason-act/tool-call trace, or a typed inter-agent deliverable — in place of a final answer, then route that artifact to a sound solver (interpreter, classical planner, constraint solver, MCTS/RL optimizer) or back through the model's own verify-and-revise loop. The recurring innovation is converting the intermediate representation from advisory output into a load-bearing object that something downstream can mechanically check.",
+        "instantiation_in_core_mechanism": "Steps 5–7 serialize the typed ledger L_t, route it to OSQP, record solver status and residuals, and apply a common-seed FastWAM accept/retain verification during action construction; this performs C25's artifact-to-solver-to-verification operation, even though the blocking evidence shows that the interaction-specific contents are not uniquely load-bearing.",
+        "verdict": "applied"
+      },
+      {
+        "gap": "在 arxiv:2608.04653 的 frontier residue 上，整体 action controllability 相同的两个模型仍可能具有完全不同的效应器级因果结构：一个主要依赖单臂边际，另一个只在双臂联合变化时响应；Phase 0 没有给出能区分这两类失败、且在连续动作通道与时序滚动中仍有定义的量 — stakes: 研究者会把整体响应提升误判为可控协作，部署时会对错误的手臂或通道进行纠正，知识层面则无法判断 action-sensitive world model 是否真正学会了协调动力学。",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "Steps 3–5 construct state-, checkpoint-, and seed-matched signed joint action interventions, while Step 8 evaluates prespecified 2×2 restored-state contrasts with RoboTwin's executed task-success predicate as an oracle independent of FastWAM.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "Both signature moves appear explicitly: the first gap routes a typed ledger through OSQP and verification, and the second uses matched factorial interventions plus an executed-simulator oracle. Recipe application does not cure the separate load-bearing-equivalence failure."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "decompose_and_delegate",
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains no heterogeneous_decomposition term and therefore matches none of the three documented reject-favored pairs."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7161203838",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "This paper already presents a training-free inference-time wrapper for chunked-action VLAs with a closed-form corrective operator decomposed into pace and path channels, so FactorLedger cannot claim novelty merely from wrapping a frozen VLA with a decomposed corrective optimization. Its distinct claim still stands or falls on the interaction-specific result: estimating left–right mixed response and showing that it reverses the preferred edit relative to a marginal-only corrector; the retrieved abstract does not report that mechanism or diagnostic.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": null
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the fitted left–right interaction matrix I",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names a restored-state RoboTwin comparison, predicts task-success improvement, identifies I, and permutes right-effector design rows while predicting downstream task success returns toward the marginal-only/frozen baseline. It contains no numeric outcome or cost bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "OBSTACLE HOLE: Step 6 discards the interaction structure as an interaction. It reduces (m,I) to the center gradient",
+      "status": "upheld",
+      "basis": "The quoted Step 6 explicitly consumes only d_g=m_g+Σ_h I_gh, and the shown algebra plus matched four-query numerical run establishes that this is exactly the per-channel central difference at α=1, so an interaction-free baseline yields the identical QP update and the declared false-additivity obstacle remains unconfronted."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0].reject_lessons_evaluated[0].lesson_quoted is triggered: the pipeline chains FastWAM, a fitted head, ridge regression, and OSQP, but its proposed novel interaction artifact is not load-bearing because Step 6 is exactly reproducible from interaction-free central differences. Although recipe_application_check.entries[0].verdict is applied and falsification_structure_check is sound, the upheld blocking finding shows that fixing the declared false-additivity obstacle requires redesigning what the solver consumes rather than a field-level repair. The hard-floor Reject lesson therefore requires abandon; openalex:W7161203838 further removes novelty from the generic frozen-VLA corrective-wrapper surface but is not itself an exact-mechanism overlap.",
+  "revision_targets": []
+}

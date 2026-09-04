@@ -1,7 +1,9 @@
 # VLA/WAM research snapshot
 
 This snapshot contains the current embodied-autoresearch skill, research notes,
-and source code for the policy-relevant imagined-state repair experiment.
+all major historical experiment runs, and source code for the VLA/WAM research
+program. Read `RESEARCH_HANDOFF_FOR_NEXT_GPT.md` first when continuing from a
+different GPT account.
 
 ## Included
 
@@ -14,6 +16,13 @@ and source code for the policy-relevant imagined-state repair experiment.
 - `experiments/policy-relevant-imagined-state-repair/`: portable Python source
   for preparing inputs, running FastWAM inference, evaluating StarVLA
   downstream effects, and aggregating results.
+- `archive/all-experiments/`: complete text/source/JSON snapshot of the major
+  experiment directories, including PointMap, Object-Belief, pi0.5 progress,
+  functional geometry, novelty runs, ideaspark runs, and ISRAC.
+- `archive/project-context/`: top-level briefs, configurations, manifests, and
+  previous account-handoff materials.
+- `RESEARCH_HANDOFF_FOR_NEXT_GPT.md`: experiment-by-experiment status,
+  supported/unsupported claims, navigation guide, and safe reproduction rules.
 
 The one-off remote launcher is intentionally not included because it contains
 machine-specific process IDs, scheduler paths, and deployment details; it is
@@ -25,8 +34,9 @@ The experiment code expects the personal research environment and model/data
 assets to be supplied separately. `run_wam_e1_inference.py` and
 `wam_downstream_e1.py` accept the `VLA_WAM_PERSONAL_ROOT` environment variable
 instead of embedding a machine-specific home path. Dataset files, model
-weights, checkpoints, generated videos/NPZ files, and runtime logs are not
-included in this repository.
+weights, checkpoints, generated videos/NPZ files, Python bytecode, and private
+runtime traces are not included in this repository; textual logs and JSON
+result summaries are kept in the archive for provenance.
 
 ## Privacy and safety
 

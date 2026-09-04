@@ -1,0 +1,46 @@
+# Research Wiki Log
+
+_Append-only timeline._
+- `2026-08-24T03:44:54Z` Wiki initialized
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:intelligence2025_π05_visionlanguageaction_model (arxiv:2504.16054)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:shi2025_memoryvla_perceptualcognitive_memory (arxiv:2508.19236)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:koo2025_hamlet_switch_your (arxiv:2510.00695)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:zeng2026_kemo_eventdriven_keyframe (arxiv:2606.23589)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:xu2026_explicit_language_memory (arxiv:2608.04765)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:liu2026_longhorizon_manipulation_traceconditioned (arxiv:2604.21924)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:liu2026_goal2skill_longhorizon_manipulation (arxiv:2604.13942)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:yan2026_progressvla_progressguided_diffusion (arxiv:2603.27670)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:bhardwaj2026_decoding_task_progress (arxiv:2608.13474)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:bagaria2026_recursive_belief_vision (arxiv:2602.20659)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:cherepanov2026_μvla_recurrent_memory (arxiv:2606.12497)
+- `2026-08-24T03:48:18Z` ingest_paper: ingested paper:kang2024_incorporating_task_progress (arxiv:2410.11013)
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:proof-carrying-retraction-graph [stage=proposed outcome=pending]
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:quarantined-conformal-commit [stage=proposed outcome=pending]
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:history-twin-quotient-state [stage=proposed outcome=pending]
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:belief-value-active-reveal [stage=proposed outcome=pending]
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:reversible-partial-order-progress [stage=proposed outcome=pending]
+- `2026-08-24T03:56:37Z` upsert_idea: added idea:wam-action-effect-forensics [stage=proposed outcome=pending]
+- `2026-08-24T03:56:38Z` upsert_idea: added idea:effect-residual-repair-interface [stage=proposed outcome=pending]
+- `2026-08-24T03:56:38Z` upsert_idea: added idea:recovery-viability-envelope [stage=proposed outcome=pending]
+- `2026-08-24T03:56:38Z` upsert_idea: added idea:bidirectional-action-contracts [stage=proposed outcome=pending]
+- `2026-08-24T03:56:38Z` upsert_idea: added idea:orthogonal-verify-repair-recover [stage=proposed outcome=pending]
+- `2026-08-24T03:56:38Z` upsert_idea: added idea:counterfactual-poison-vaccination [stage=proposed outcome=pending]
+- `2026-08-24T04:20:41Z` upsert_idea: added idea:causal-progress-harm-audit [stage=active outcome=pending]
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:wang2026_when_trust_imagination (arxiv:2605.06222)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:liu2026_world_action_verifier (arxiv:2604.01985)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:liu2026_checkvla_executiontime_verification (arxiv:2607.26789)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:zeng2026_helm_harnessenhanced_longhorizon (arxiv:2604.18791)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:shin2026_back_familiar_future (arxiv:2606.09258)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:li2026_learning_actionable_manipulation (arxiv:2603.13528)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:li2026_failureaware_reliable_offlinetoonline (arxiv:2601.07821)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:liu2025_trivla_triplesystembased_unified (arxiv:2507.01424)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:king2026_echomemory_controlled_study (arxiv:2606.09803)
+- `2026-08-24T06:39:56Z` ingest_paper: ingested paper:lin2025_echovla_robotic_visionlanguageaction (arxiv:2511.18112)
+- `2026-08-24T13:20:27Z` upsert_idea: added idea:wam-error-attribution-gate [stage=proposed outcome=pending]
+- `2026-08-24T13:20:27Z` upsert_idea: added idea:pending-postcondition-memory [stage=proposed outcome=pending]
+- `2026-08-24T13:20:27Z` upsert_idea: added idea:last-correctable-time-hazard [stage=proposed outcome=pending]
+- `2026-08-24T13:20:27Z` upsert_idea: added idea:recoverability-signature [stage=proposed outcome=pending]
+- `2026-08-24T13:20:27Z` upsert_idea: added idea:belief-update-firewall [stage=proposed outcome=pending]
+- `2026-08-24T13:20:28Z` upsert_idea: added idea:memory-semantics-router [stage=proposed outcome=pending]
+- `2026-08-24T13:20:28Z` upsert_idea: added idea:verify-repair-recover-factorial-audit [stage=proposed outcome=pending]
+- `2026-08-24T13:20:28Z` upsert_idea: added idea:policy-wam-exploitation-stress-test [stage=proposed outcome=pending]

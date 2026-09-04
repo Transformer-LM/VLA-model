@@ -1,0 +1,10 @@
+[
+  {
+    "finding": "The multiplicative priority r_{k,i}=c_{k,i}h_{k,i} does not retain a policy-censored failure when its recorded transition is already well modeled: ell_{k,i}=0<ell_{b_i,i} forces h_{k,i}=0 and r_{k,i}=0 for every c_{k,i}. In the load-bearing execution the method is exactly uniform replay, and with any positive-priority competitor it allocates the censored failure strictly less mass than uniform. Therefore it does not confront its own declared obstacle of keeping an unrepaired physical failure active after current visitation removes it.",
+    "severity": "blocking",
+    "why_not_repaired": "This is an obstacle hole. An honest fix must change what the mechanism is, for example by separating WAM-replay and policy-restart priorities, adding a nonzero policy-retention channel independent of h, or changing the product into a different composition. Clamping, abstaining, or skipping h=0 cases would evade the declared obstacle, so the coherence gate cannot patch it.",
+    "verbatim_step_quote": "Re-evaluating the current action-conditioned video WAM on the same fixed successor frames yields ell_{k,i}; the second coordinate h_{k,i}=ell_{k,i}/(ell_{k,i}+ell_{b_i,i}) (defined as zero when both losses are zero) separates evidence disappearance from improvement on an unchanged physical outcome, and the replay priority is r_{k,i}=c_{k,i}h_{k,i}.",
+    "executed_evidence": "Executed stdlib calculation: D_k=[4,0,0], D_b=[0,0,0], tau=4, so c=[0.6321205588,0,0]. With ell_k=[0,1,2] and ell_b=[1,1,1], h=[0,0.5,0.6666666667] and r=[0,0,0]. The candidate's zero-sum fallback produces exactly the fair naive probabilities: global [1/3,1/3,1/3] and task-stratified marginals [0.25,0.25,0.5]. Perturbing only trace 1 to D_k=1 gives tau=2.5, r=[0,0.16483997698,0]; trace 0 then receives 1/6 instead of 1/3 globally and 0.125 instead of 0.25 task-marginally. General arithmetic: ell_k_i=0<ell_b_i implies h_i=0/(ell_b_i)=0, hence r_i=c_i*0=0 for any c_i; if a competitor has r_j>0 and rho>0, p_i contains only the uniform floor and is strictly below uniform replay in that normalization set.",
+    "reading_dependence": "reading_robust"
+  }
+]

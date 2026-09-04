@@ -1,0 +1,472 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "frozen pi0.5 policy",
+          "frozen DreamZero-compatible WAM",
+          "LIBERO/RoboTwin2.0 predicted future latents",
+          "language",
+          "terminal-success labels"
+        ],
+        "produces": [
+          "fixed encoder E",
+          "frozen linear score head g: R^D x language -> R"
+        ],
+        "note": "Verbatim Step 1: 'Freeze pi0.5 and the DreamZero-compatible WAM, choose the fixed encoder E, and train then freeze the linear success head g from existing LIBERO and RoboTwin2.0 terminal labels; inputs are predicted future latents and language, and output is the common baseline score used by every reranking arm.' This is acyclic if the benchmark rollout/prediction table is understood as an input."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "one restored pre-prefix simulator state per group",
+          "previous action chunk b_(t-1)",
+          "named physics/occlusion interventions",
+          "pi0.5 candidate chunks"
+        ],
+        "produces": [
+          "matched post-prefix observations and WAM predictions",
+          "post-prefix rollback snapshots",
+          "intersection-executable candidate set of nominal size K"
+        ],
+        "note": "Verbatim Step 2: 'Generate matched residual-intervention groups by restoring one pre-prefix simulator state, varying named built-in physics/occlusion settings, executing the same b_{t-1}, and retaining K action chunks executable across the group; inputs are simulator states and pi0.5 chunks, and outputs are paired current observations, WAM predictions, and rollback snapshots.' 'Executable' admits controller-valid versus collision-free/task-feasible readings; the later coherence findings do not depend on which is chosen."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "S2 observations, predictions, rollback snapshots, and candidates",
+          "encoder E",
+          "PCA map P_d",
+          "branch horizon H"
+        ],
+        "produces": [
+          "factual residual e_n",
+          "projected factual signature z_n in R^d",
+          "candidate feature phi_nk",
+          "future-latent residual DeltaZ_nk in R^D"
+        ],
+        "note": "Verbatim Step 3: 'Compute e_n, z_n=P_d e_n, each candidate feature phi_{nk}, and each branch future-latent residual DeltaZ_{nk} by executing every retained current chunk from its own post-prefix snapshot; these branch outcomes are training/evaluation data only and are never queried online.' As written, P_d is consumed before any step fits it, and H is used without a default/selection rule. The append revisions below bind both. The operative term phi_nk has two defensible readings: (A) the literal n-indexed frozen-WAM trajectory feature from each intervention-specific current observation, so it changes across a matched pair; (B) an action-only feature deliberately held identical across matched interventions. The text does not choose."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "S3 z_n, phi_nk, DeltaZ_nk",
+          "M",
+          "beta",
+          "duplicate-rollout threshold tau_Delta"
+        ],
+        "produces": [
+          "U in R^(d x M)",
+          "response maps R_m: phi -> R^D",
+          "per-bundle simplex codes lambda_n in Delta^M"
+        ],
+        "note": "Verbatim Step 4: 'Fit U, {R_m}, and per-bundle lambda_n jointly with factual reconstruction, branch reconstruction, and matched residual-intervention contrast losses; the shared-coefficient code path outputs one coupled factual/branch atlas, and the contrast term makes a lambda-ignoring response incur nonzero loss on every retained responsive group.' Under reading A of phi_nk, the executed zero-loss counterexample shows the last guarantee is false; under reading B it can hold when the paired observed contrast is nonzero. The ambiguity itself requires an interface definition, and enforcing B would change the training interface rather than merely clarify prose."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "disjoint validation groups",
+          "candidate grids d={32,64,128}, M={16,32,64}, K={4,8,16}, beta={0.5,1,2}, c_e={1,2,3}"
+        ],
+        "produces": [
+          "selected and frozen P_d, U, R_m, g, VLA, and WAM",
+          "epsilon_e"
+        ],
+        "note": "Verbatim Step 5: 'Select d, M, K, beta, and c_e on disjoint validation groups using factual/branch reconstruction, wrong-dominance, benchmark success, fallback, and latency, then freeze U, {R_m}, P_d, g, the VLA, and WAM.' The grids are bound, but r_e in epsilon_e=median(r_e)+c_e MAD(r_e) is only called a validation reconstruction residual; the revision defines it as the per-sample minimum infinity-norm factual reconstruction residual."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "new factual observation and prediction after the previous chunk",
+          "E, proprio normalization, P_d, U, epsilon_e"
+        ],
+        "produces": [
+          "z_t in R^d",
+          "Lambda_t={lambda in Delta^M: ||U lambda-z_t||_infinity <= epsilon_e}"
+        ],
+        "note": "Verbatim Step 6: 'At deployment after the previous chunk finishes, compute the new real residual z_t and solve the feasibility LP for Lambda_t; its input is only the just-observed factual residual and the frozen factual atoms, and its output is a set of admissible coefficients rather than a point latent-state or physics estimate.' The e_t/z_t constraint is syntactically hard and may make Lambda_t empty, but solving for a feasible set of latent coefficients is still set-membership latent-regime identification, even though no point or physical semantics is asserted."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "current observation",
+          "K current executable pi0.5 suffixes",
+          "frozen WAM",
+          "R_m",
+          "Lambda_t"
+        ],
+        "produces": [
+          "Z_pred_k and phi_k",
+          "affine corrected-future family Z_k(lambda)=Z_pred_k+sum_m lambda_m R_m(phi_k)"
+        ],
+        "note": "Verbatim Step 7: 'Sample K newly executable pi0.5 suffixes from the current observation, run the frozen WAM once per suffix, and evaluate R_m(phi_k) for all atoms; the output is one affine corrected-future family Z_k(lambda) per current candidate, with no replay of the obsolete previous action.' 'Atlas convex-hull support' admits factual-signature support versus candidate-feature support readings. S7 implements no predicate on phi_k under either reading; only z_t is checked in S6."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "S7 corrected-future families",
+          "linear g",
+          "Lambda_t"
+        ],
+        "produces": [
+          "affine q_k(lambda)",
+          "Gamma_t=max_i min_(j!=i) min_(lambda in Lambda_t) [q_i(lambda)-q_j(lambda)]",
+          "selected robust suffix or current-policy fallback"
+        ],
+        "note": "Verbatim Step 8: 'Solve the pairwise robust-dominance LPs analytically from q_k(lambda), compute Gamma_t, and either execute the robustly dominant current suffix or the current uncorrected pi0.5 fallback for one native controller interval; this set optimization directly changes the physical action selected.' The LP is well-defined for nonempty Lambda_t and K>=2. K=0 and K=1 leave max/min over empty index sets undefined; the revision adds a fallback guard. A score tie gives Gamma_t=0 and therefore falls back."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "S6-S8 set and decision quantities",
+          "simulator outcomes and rollback labels"
+        ],
+        "produces": [
+          "Gamma_t, diameter, support/fallback, success, regret, and latent-error logs",
+          "next-cycle replan trigger"
+        ],
+        "note": "Verbatim Step 9: 'Log Gamma_t, completion-set diameter, support/fallback decisions, task success, rollback top-1 regret, and latent error, then replan from the next real observation; the same logs support the residual-signature permutation and oracle-singleton controls without changing the deployed algorithm.' The logging units are well-typed. Candidate support/fallback cannot be logged faithfully because no candidate-support decision exists upstream."
+      },
+      {
+        "step": "ESTIMAND",
+        "consumes": [
+          "deployment z and phi_k on the randomized-simulator, pi0.5-candidate, intersection-support process",
+          "learned U and R_m"
+        ],
+        "produces": [
+          "D_k(z,phi_k)={sum_m lambda_m R_m(phi_k): lambda in Delta^M, ||U lambda-z||_infinity<=epsilon_e}"
+        ],
+        "note": "The algebra in S6-S7 matches the declared set-valued latent-correction estimand when the deployment candidate belongs to the stated intersection-support population. S7 does not enforce or test that conditioning, so the executed procedure silently extrapolates the estimand to unsupported candidates instead of abstaining."
+      }
+    ],
+    "dry_run": {
+      "instance": "M=2, d=1, D=2. For the training bypass, U=(0,1), intervention signatures z=(0,1), endpoint simplex codes, intervention-specific phi=(0,1), and both response atoms equal F(phi)=(2+3phi,1-phi). For deployment, z_t=0.5 and epsilon_e=0.25 give lambda_1 in [0.25,0.75]; K=2, g(Z)=(1,0)^T Z, baseline latents (2,0),(1,0), and response atoms ((-0.1,0),(0.1,0)) versus ((0,0),(0,0)). A second deployment candidate has phi=100 although training phi support is [0,1].",
+      "execution": {
+        "mode": "executed",
+        "script": "from itertools import product\n\ndef dot(a,b): return sum(x*y for x,y in zip(a,b))\ndef add(a,b): return [x+y for x,y in zip(a,b)]\ndef scale(c,a): return [c*x for x in a]\ndef mix(x,a0,a1): return add(scale(1-x,a0),scale(x,a1))\ndef feasible_interval(u0,u1,z,eps):\n    xs=[i/10000 for i in range(10001) if abs((1-i/10000)*u0+(i/10000)*u1-z)<=eps+1e-12]\n    return None if not xs else (min(xs),max(xs))\ndef robust_margin(B,R,w,I):\n    lo,hi=I; q=[[dot(w,add(B[k],mix(x,R[k][0],R[k][1]))) for x in (lo,hi)] for k in range(len(B))]\n    per=[]\n    for i in range(len(q)):\n        cs=[min(q[i][e]-q[j][e] for e in range(2)) for j in range(len(q)) if i!=j]\n        per.append(min(cs) if cs else None)\n    if not per or any(v is None for v in per): return q,per,None,None\n    G=max(per); return q,per,G,per.index(G)\nU=[0.,1.]; z=[0.,1.]; L=[(1.,0.),(0.,1.)]; phis=[0.,1.]\ndef F(phi): return [2+3*phi,1-phi]\ny=[F(p) for p in phis]; pred=[]; swap=[]\nfor p,l in zip(phis,L):\n    a0=a1=F(p); pred.append(add(scale(l[0],a0),scale(l[1],a1))); swap.append(add(scale(l[1],a0),scale(l[0],a1)))\nfact=sum(abs(l[0]*U[0]+l[1]*U[1]-t) for l,t in zip(L,z))\nbranch=sum(sum(abs(a-b) for a,b in zip(p,t)) for p,t in zip(pred,y))\nobsC=[y[1][d]-y[0][d] for d in range(2)]; predC=[pred[1][d]-pred[0][d] for d in range(2)]\ncontrast=sum(abs(a-b) for a,b in zip(obsC,predC)); sens=sum(sum(abs(a-b) for a,b in zip(p,s)) for p,s in zip(pred,swap))\nprint('BYPASS factual_l1=',fact); print('BYPASS branch_l1=',branch); print('BYPASS contrast_l1=',contrast); print('BYPASS lambda_sensitivity_after_swap=',sens)\nI=feasible_interval(0,1,.5,.25); B=[[2.,0.],[1.,0.]]; R=[[[ -.1,0.],[.1,0.]],[[0.,0.],[0.,0.]]]; w=[1.,0.]\nq,per,G,win=robust_margin(B,R,w,I); print('DEPLOY Lambda_interval=',I); print('DEPLOY endpoint_q=',q); print('DEPLOY per_candidate_worst_margin=',per); print('DEPLOY Gamma=',G,'winner=',win,'fallback=',not(G is not None and G>0))\nT=[[dot(w,R[k][m]) for m in range(2)] for k in range(2)]; b=[dot(w,x) for x in B]; qs=[[b[k]+(1-x)*T[k][0]+x*T[k][1] for x in I] for k in range(2)]\ndiff=max(abs(q[k][e]-qs[k][e]) for k,e in product(range(2),range(2))); print('DIRECT_SCORER endpoint_q=',qs); print('DIRECT_SCORER max_q_difference=',diff,'Gamma=',G,'winner=',win)\npo=100.; Bo=[[0.,0.],[1.,0.]]; Ro=[[[.1*po,0.],[.1*po,0.]],[[0.,0.],[0.,0.]]]; qo,pero,Go,wo=robust_margin(Bo,Ro,w,I)\nprint('OUTSIDE_SUPPORT phi=',po,'training_phi_range=',(0.,1.)); print('OUTSIDE_SUPPORT Lambda_nonempty=',I is not None,'endpoint_q=',qo); print('OUTSIDE_SUPPORT Gamma=',Go,'winner=',wo,'fallback=',not(Go is not None and Go>0))\nprint('DEGENERATE empty_Lambda=',feasible_interval(0,1,2,0)); print('DEGENERATE K0_margin=',robust_margin([],[],w,I)[2]); print('DEGENERATE K1_margin=',robust_margin([[1.,0.]],[[[0.,0.],[0.,0.]]],w,I)[2])\ntq,tp,tg,tw=robust_margin([[1.,0.],[1.,0.]],[[[0.,0.],[0.,0.]],[[0.,0.],[0.,0.]]],w,I); print('DEGENERATE ties_q=',tq,'Gamma=',tg,'fallback=',not(tg>0))",
+        "output": "BYPASS factual_l1= 0.0\nBYPASS branch_l1= 0.0\nBYPASS contrast_l1= 0.0\nBYPASS lambda_sensitivity_after_swap= 0.0\nDEPLOY Lambda_interval= (0.25, 0.75)\nDEPLOY endpoint_q= [[1.95, 2.05], [1.0, 1.0]]\nDEPLOY per_candidate_worst_margin= [0.95, -1.0499999999999998]\nDEPLOY Gamma= 0.95 winner= 0 fallback= False\nDIRECT_SCORER endpoint_q= [[1.95, 2.0500000000000003], [1.0, 1.0]]\nDIRECT_SCORER max_q_difference= 4.440892098500626e-16 Gamma= 0.95 winner= 0\nOUTSIDE_SUPPORT phi= 100.0 training_phi_range= (0.0, 1.0)\nOUTSIDE_SUPPORT Lambda_nonempty= True endpoint_q= [[10.0, 10.0], [1.0, 1.0]]\nOUTSIDE_SUPPORT Gamma= 9.0 winner= 0 fallback= False\nDEGENERATE empty_Lambda= None\nDEGENERATE K0_margin= None\nDEGENERATE K1_margin= None\nDEGENERATE ties_q= [[1.0, 1.0], [1.0, 1.0]] Gamma= 0.0 fallback= True"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "shared-code bypass losses",
+          "value": "factual L1=0, branch L1=0, contrast L1=0, lambda-swap sensitivity=0",
+          "arithmetic": "U lambda_A=0=z_A and U lambda_B=1=z_B. Since R_1(phi)=R_2(phi)=F(phi), sum_m lambda_m R_m(phi)=F(phi) for every simplex lambda; it equals each observed DeltaZ and its paired difference, while swapping lambda changes nothing."
+        },
+        {
+          "quantity": "deployment completion set",
+          "value": "lambda_1 in [0.25,0.75]",
+          "arithmetic": "With U=(0,1), z_t=0.5 and epsilon_e=0.25, |lambda_1-0.5|<=0.25."
+        },
+        {
+          "quantity": "robust dominance",
+          "value": "Gamma=0.95, winner=0, fallback=false",
+          "arithmetic": "q_0(lambda_1)=1.9+0.2 lambda_1 has endpoint values 1.95 and 2.05; q_1=1, so min_lambda(q_0-q_1)=0.95. This existence example disproves that the LP must always fall back, but says nothing empirical about fallback frequency."
+        },
+        {
+          "quantity": "direct scalar robust scorer equivalence",
+          "value": "maximum endpoint score difference 4.44e-16; same Gamma=0.95 and same winner",
+          "arithmetic": "For linear g with weight w, define T_m(phi)=w^T R_m(phi) and b_k=w^T Z_pred_k. Then q_k(lambda)=b_k+sum_m lambda_m T_m(phi_k) identically for every lambda; the measured epsilon is floating-point roundoff."
+        },
+        {
+          "quantity": "unsupported candidate behavior",
+          "value": "phi=100 outside training [0,1], Lambda nonempty, Gamma=9, winner=unsupported candidate, fallback=false",
+          "arithmetic": "The written program evaluates R_m(100)=(10,0), obtains q=(10,1), and has no phi-support predicate capable of overriding Gamma=9."
+        },
+        {
+          "quantity": "degenerate branches",
+          "value": "empty Lambda -> None/fallback branch exists; K=0 and K=1 -> undefined margin; exact tie -> Gamma=0/fallback",
+          "arithmetic": "min over an empty competitor set is undefined for K<=1; for two identical scores each worst margin is zero."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "All three stated atlas losses are exactly zero while the branch response has exactly zero sensitivity to lambda (and hence to the factual residual after fitting).",
+          "kind": "structural",
+          "why": "Whenever intervention-indexed phi_nk itself can encode the intervention, setting every R_m equal to a sufficiently expressive F(phi_nk) algebraically removes lambda from the branch path yet preserves both branch reconstruction and matched contrast. The numbers instantiate that general construction."
+        },
+        {
+          "anomaly": "The latent corrected-future controller and a direct scalar completion-set scorer have identical q, Gamma, and action for every input, up to 4.44e-16 floating-point roundoff in the trace.",
+          "kind": "structural",
+          "why": "Linearity of g allows exact projection T_m=g's latent weight applied to R_m before optimization, so the equality holds for all U, Lambda, candidates, and response atoms, not just the chosen instance."
+        },
+        {
+          "anomaly": "An explicitly out-of-training-support candidate is executed with Gamma=9 instead of falling back.",
+          "kind": "structural",
+          "why": "The particular Gamma is instance-contingent, but the counterexample structurally falsifies the universal 'necessarily fallback' guarantee because the algorithm contains no candidate-feature support test at all."
+        },
+        {
+          "anomaly": "K=0 and K=1 leave Gamma undefined.",
+          "kind": "structural",
+          "why": "The competitor minimum is over an empty set for every possible score assignment; this is repaired by an explicit fewer-than-two-candidates fallback."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "Lambda_t empty because z_t is beyond the epsilon-expanded convex image of U",
+        "behavior": "The candidate explicitly takes the current uncorrected pi0.5 fallback for one native controller interval and replans.",
+        "finding": null
+      },
+      {
+        "probe": "K=0 or K=1 executable current suffixes",
+        "behavior": "Gamma_t contains max/min over an empty candidate or competitor set and is undefined.",
+        "finding": "Patchable missing guard; append an explicit fallback when fewer than two suffixes are available."
+      },
+      {
+        "probe": "all candidate scores tied for every lambda",
+        "behavior": "Gamma_t=0, the strict Gamma_t>0 test fails, and the method falls back.",
+        "finding": null
+      },
+      {
+        "probe": "all branch-response atoms identical",
+        "behavior": "The completion set may remain nonempty, but corrected futures become lambda-independent; under intervention-varying phi, all stated training losses can still be zero.",
+        "finding": "This is the executed shared-coefficient obstacle hole."
+      },
+      {
+        "probe": "maximum stated d=128 with maximum M=64",
+        "behavior": "conv(U) has affine dimension at most 63 and epsilon_e thickens it in the infinity norm; Lambda can be nonempty near the hull but is not guaranteed nonempty. The explicit empty-set fallback halts safely.",
+        "finding": null
+      },
+      {
+        "probe": "candidate phi_k outside training/intersection support while z_t remains supported",
+        "behavior": "The response map extrapolates, the LP may certify it, and no support branch forces fallback; the trace executes such a candidate.",
+        "finding": "Reading-robust obstacle hole relative to the selected gap's action-support obligation."
+      },
+      {
+        "probe": "no retained responsive group exceeds tau_Delta",
+        "behavior": "The contrast sum is vacuous and training can still fit factual/branch terms; no written gate forces a broad/empty Lambda or deployment fallback.",
+        "finding": "The anti-bypass statement is scoped to retained responsive groups and thus becomes vacuous; the broader expectation of fallback without recurrence is empirical, not constructed."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "e_t is a hard feasibility constraint on every admissible correction.",
+        "established_by": "S6-S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The shared coefficient and contrast leave no candidate-only correction path around e_t / every lambda-ignoring response has positive contrast loss on responsive groups.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed counterexample: factual=0, branch=0, contrast=0, lambda-swap sensitivity=0."
+      },
+      {
+        "claim": "Lambda_t is a set of admissible coefficients rather than a point physical-parameter estimate.",
+        "established_by": "S6",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "q_k(lambda) is affine and pairwise worst-completion dominance can be solved by linear programs.",
+        "established_by": "S7-S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "g is genuinely affine in the future latent conditional on the fixed language input",
+          "Lambda_t is represented by linear simplex and infinity-norm constraints",
+          "K>=2"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Gamma_t>0 certifies score dominance over every admissible completion, not task success.",
+        "established_by": "S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "LPs are solved exactly or conservatively",
+          "Lambda_t is nonempty",
+          "the same lambda applies jointly to all candidates",
+          "g is the declared decision score"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "Candidates outside atlas convex-hull/action support necessarily take fallback.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed unsupported phi=100 with nonempty Lambda, Gamma=9, fallback=false."
+      },
+      {
+        "claim": "The estimator targets the declared latent correction set on the randomized-simulator, pi0.5-candidate, intersection-support process.",
+        "established_by": "S2-S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "deployment candidate phi_k lies in the training intersection-support population",
+          "the learned finite atlas represents the population residual-response family",
+          "epsilon_e has the intended set-membership coverage"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "There is no learned marginal-residual score and no pairwise-ranking supervision.",
+        "established_by": "S3-S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The set optimization changes the physical current action selected and never replays an obsolete action.",
+        "established_by": "S7-S9",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Without recurrent residual-response structure, the completion set is empty or broad and the method falls back.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Keep the same learned factual atoms U, hard residual set Lambda_t, candidates, and robust LP, but replace every D-dimensional latent response R_m(phi_k) followed by linear g with the scalar atom T_m(phi_k)=w_g^T R_m(phi_k), trained directly from the available scalar labels w_g^T DeltaZ_nk; optimize s_k(lambda)=g(Z_pred_k)+sum_m lambda_m T_m(phi_k).",
+      "naive_fairness": "It uses exactly the same factual residual, matched branch rollouts, candidate bundle, ambiguity set, deployment timing, and LP budget; it is simpler because it predicts one scalar per atom/candidate rather than a future-latent vector and never constructs corrected futures. It does not relax compute, information, support, or deployment restrictions.",
+      "instance_behavior": {
+        "naive": "Endpoint scores [[1.95,2.0500000000000003],[1.0,1.0]], Gamma=0.95, winner=0.",
+        "mechanism": "Endpoint scores [[1.95,2.05],[1.0,1.0]], Gamma=0.95, winner=0.",
+        "divergence": "maximum score difference 4.44e-16 (floating-point roundoff); no decision divergence",
+        "kind": "structural"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "For every instance, linearity gives g(Z_pred+sum lambda_m R_m)=g(Z_pred)+sum lambda_m w_g^T R_m, so all LP objectives and decisions are identical after scalar projection. The candidate's self-declared point decoder is a strawman: an independently constructed set-valued robust scalar scorer preserves every lambda completion and the hard e_t constraint while omitting the claimed latent-future machinery."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The claimed shared-coefficient bottleneck is bypassable: intervention-indexed candidate features can carry the intervention/current-state signal directly, so identical response atoms can fit factual reconstruction, every branch residual, and the matched contrast at zero loss while being exactly insensitive to lambda and z. Enforcing intervention-invariant phi for matched pairs, adversarially removing intervention information, or adding a distinct cross-intervention identification constraint would change the causal interface/training object and is therefore an obstacle-hole redesign, not a wording patch.",
+      "severity": "blocking",
+      "why_not_repaired": "This coincides with the candidate's declared obstacle and companion-pattern promise that there is 'no candidate-only correction path around e_t'. The honest fix must redesign which information R_m receives or add a new identification constraint; abstention or claim softening would evade the obstacle.",
+      "verbatim_step_quote": "structural_prior_encoding forces factual and current-branch residuals to use the same mixture coefficient so robust action selection has no candidate-only correction path around e_t.",
+      "executed_evidence": "Executed stdlib trace with M=2, U=(0,1), z_A=0, z_B=1, lambda_A=(1,0), lambda_B=(0,1), phi_A=0, phi_B=1, and observed DeltaZ_n=F(phi_n)=(2+3phi_n,1-phi_n). Set both atoms R_1(phi)=R_2(phi)=F(phi). Then U lambda_n=z_n gives factual_l1=0; sum_m lambda_nm R_m(phi_n)=F(phi_n)=DeltaZ_n gives branch_l1=0; the predicted matched difference equals the observed difference, giving contrast_l1=0; swapping lambda_A and lambda_B at fixed phi changes no response, giving lambda_sensitivity_after_swap=0. Thus all stated objectives are zero although the branch path ignores lambda/z. This algebra works for any responsive paired targets representable by F whenever phi_n may encode n.",
+      "reading_dependence": "reading_dependent: holds under the literal n-indexed reading in which phi_nk is computed from each intervention-specific post-prefix/current-observation WAM trajectory, which the written S3 and varying occlusion setup permit. It does not hold if the author adds a new requirement that paired interventions receive exactly identical action-only phi_k; that requirement is absent and would alter the interface."
+    },
+    {
+      "finding": "Because g is linear and the only deployment consumer is q_k and robust dominance, a direct scalar completion-set scorer is algebraically equivalent to the entire future-latent correction atlas for every lambda and every candidate. The latent correction object therefore does not confront the declared action-selection obstacle beyond a strictly simpler same-information robust scorer.",
+      "severity": "blocking",
+      "why_not_repaired": "T5 classifies equivalent_to_naive under the candidate's declared branch (i), which the repair contract defines as an obstacle hole. Restoring a load-bearing latent-future contribution would require a nonlinear/latent consumer or an additional decision constraint, changing what the mechanism is.",
+      "verbatim_step_quote": "Point residual dynamics, GP correction, Bayes/dual system identification, importance weighting, robust tube MPC over hand-given disturbances, and a direct outcome scorer were rejected because they regress to occupied lineage nodes or select one transport rather than preserving the non-identified completion set",
+      "executed_evidence": "Let frozen linear g have latent weight w_g and define scalar atoms T_m(phi)=w_g^T R_m(phi), with scalar baseline b_k=g(Z_pred_k,language). For every lambda, q_k(lambda)=g(Z_pred_k+sum_m lambda_m R_m(phi_k),language)=b_k+sum_m lambda_m T_m(phi_k). Therefore every pairwise LP coefficient, Gamma, fallback decision, and winning action is identical. In the executed M=2,K=2 trace the latent endpoint scores were [[1.95,2.05],[1,1]], Gamma=0.95, winner=0; the direct scorer produced [[1.95,2.0500000000000003],[1,1]], Gamma=0.95, winner=0, with max difference 4.44e-16. It uses the same z, U, Lambda, matched DeltaZ labels projected through already-frozen g, candidates, and budget, while predicting fewer dimensions.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "The procedure has no current-candidate/action-support test: Lambda_t constrains only the factual signature z_t, while every sampled phi_k is passed through R_m and can be robustly selected even outside the training/intersection support. Consequently the declared estimand conditioning and the universal outside-support fallback guarantee are not implemented.",
+      "severity": "blocking",
+      "why_not_repaired": "Detecting candidate action/mechanism support is the selected gap itself. Adding a candidate-support estimator and a new feasibility constraint would change the decision set and causal interface; simply downgrading the claim or falling back everywhere would evade the obstacle.",
+      "verbatim_step_quote": "candidates outside the atlas convex-hull support necessarily take the current-action fallback.",
+      "executed_evidence": "The executed trace kept z_t=0.5, U=(0,1), epsilon_e=0.25, hence nonempty Lambda with lambda_1 in [0.25,0.75], but supplied a candidate phi=100 outside the training phi interval [0,1]. Since S7 has no phi-support predicate, R_1(100)=R_2(100)=(10,0) was scored normally; against a candidate of score 1, the unsupported candidate had q=10 for all lambda, Gamma=9, winner=0, fallback=false. The numeric score is an example, while the guarantee failure is structural: no branch in S6-S8 can inspect or reject candidate support. If 'support' instead means only epsilon-expanded factual U-support, the procedure still fails the selected gap's distinct action-support obligation under that reading.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "For each candidate d, fit P_d only on training-group factual residuals before computing any z_n, and define H as the endpoint of the current candidate chunk rather than a tuned horizon; define each validation r_e as min_{lambda in Delta^M} ||U lambda-z||_infinity before computing epsilon_e.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 missing production/order for P_d, binds the otherwise undefined behavioral horizon H, and makes r_e's units and calculation explicit."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "Before Step 3, fit each candidate PCA map P_d on training-group e_n only, and take H to be the endpoint of the current candidate chunk; in Step 5 compute r_e per validation sample as min_{lambda in Delta^M} ||U lambda-z||_infinity. If fewer than two executable current suffixes are available in Step 7, skip Gamma_t, use the current uncorrected pi0.5 fallback for one native controller interval, and use the frozen policy's native deterministic tie-break for fallback ties.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 dataflow/unbound-symbol findings and the T3 K=0/K=1 undefined competitor minimum without changing the atlas mechanism."
+    }
+  ],
+  "final_candidate": {
+    "title": "Completion Atlas: Coupling-Robust Current Actions from One Factual Residual",
+    "hook": "A single factual WAM residual identifies an equivalence class of current-action corrections, not a point update. Completion Atlas executes a newly proposed current suffix only when it wins for every residual-response completion consistent with that residual.",
+    "hook_shape_rationale": "Shape (b), structural reframe: the abstract of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 operationalizes the opposite point-transport assumption by applying one observed-image pseudoinverse correction inside the next flow generation, while Completion Atlas makes the non-identified completion set the controller's primary object. Shape (a) was viable through a predicted reduction in wrong-dominance rate under contact shifts, but rejected because the paper-level contribution is the set-valued estimand and shared-coefficient construction rather than the magnitude of one empirical split.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "main_pattern": "reframe_as_solvable_object",
+        "sub_pattern": "C00 (Reframe as a Solvable Object)",
+        "companion_pattern": "structural_prior_encoding",
+        "how_closed": "C00 reframes cross-action residual transport as a faithful partial-identification measurement over a coupled residual-response dictionary, and structural_prior_encoding forces factual and current-branch residuals to use the same mixture coefficient so robust action selection has no candidate-only correction path around e_t."
+      }
+    ],
+    "core_mechanism": "Freeze an open-weight π0.5 policy and a DreamZero-compatible WAM on LIBERO and RoboTwin2.0, and train one linear terminal-success head g on frozen WAM future latents using those benchmarks' existing success labels; g is then frozen and is also the score used by the ordinary uncorrected WAM-reranking baseline. After executing the previous chunk b_{t-1}, compute the factual residual e_t by concatenating the fixed WAM encoder difference E(o_t)-E(o_pred_t_minus) with proprioceptive error standardized by nonzero training-set coordinate standard deviations, and project it with a training-only PCA map P_d to z_t=P_d e_t, where d=64 by default and is selected from {32,64,128} on held-out factual reconstruction and downstream regret. Training data are matched residual-intervention groups: restore the same pre-prefix LIBERO or RoboTwin2.0 state, execute the same b_{t-1} and the same K current action chunks under different existing simulator mass, friction, contact, and occlusion settings, retain chunks executable in every member of the group, and record both z_n and each branch future-latent residual ΔZ_{nk}=E(o_{n,t+H}^k)-E(o_pred_{n,t+H}^k); K=8 by default and is selected from {4,8,16} on validation success versus latency. Fit a coupled atlas with M=32 atoms, selected from {16,32,64}, where factual signatures are columns u_m of U and each atom has a small candidate-conditioned response map R_m(φ_{nk}) from frozen WAM trajectory features φ_{nk}; every training bundle has one simplex coefficient λ_n and reconstructs both z_n≈Uλ_n and ΔZ_{nk}≈Σ_m λ_{nm}R_m(φ_{nk}). The atlas loss adds a matched-pair contrast term of weight β=1, selected from {0.5,1,2}, requiring the observed difference in branch residuals between two residual interventions to equal the difference produced by their shared coefficients; groups enter this term only when their observed branch difference exceeds τ_Δ, defined as the maximum duplicate-rollout encoder noise on a held-out deterministic duplicate set, so any correction that ignores λ_n has strictly positive contrast loss and cannot be a zero-loss solution on the retained responsive groups. At deployment, no λ point estimate or hidden physical parameter is inferred: the observed residual defines the completion set Λ_t={λ∈Δ_M: ||Uλ-z_t||_∞≤ε_e}, with ε_e=median(r_e)+c_e MAD(r_e) on validation reconstruction residuals, c_e=2 by default and selected from {1,2,3} on validation wrong-dominance versus fallback rate. For every newly sampled executable current candidate a_t^k, each λ∈Λ_t induces a corrected future Z_k(λ)=Z_pred_k+Σ_m λ_mR_m(φ_k) and affine frozen score q_k(λ)=g(Z_k(λ),language); there is no learned marginal-residual score and no pairwise-ranking supervision. Compute the coupling-robust dominance margin Γ_t=max_i min_{j≠i} min_{λ∈Λ_t}[q_i(λ)-q_j(λ)] by linear programs; execute the corresponding current candidate only when Λ_t is nonempty and Γ_t>0, otherwise execute the uncorrected π0.5 current top candidate for the smallest native controller interval and replan, never an action stored from an obsolete state. Conditional on the true branch correction sharing some atlas coefficient in Λ_t and on the frozen linear head being the declared decision score, Γ_t>0 certifies only score dominance over all admissible completions—not task success or real-physics coverage—and candidates outside the atlas convex-hull support necessarily take the current-action fallback. For each candidate d, fit P_d only on training-group factual residuals before computing any z_n, and define H as the endpoint of the current candidate chunk rather than a tuned horizon; define each validation r_e as min_{lambda in Delta^M} ||U lambda-z||_infinity before computing epsilon_e.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES LEDGER\nP1: residual-responsive contact or observation mismatches recur with similar joint factual/branch signatures across randomized LIBERO and RoboTwin2.0 episodes — untested — falsification target; without recurrence the completion set is empty or too broad and the method falls back.\nP2 observation-model: matched groups use the same pre-prefix simulator state, previous chunk, and candidate chunks while varying only named simulator perturbations, then condition the estimand on the intersection of candidates executable in every group member; this is controlled but selection-biased toward intersection support and is not claimed unbiased for unseen real physics.\nP3: a finite convex atlas can approximate the joint residual-response family at the chosen encoder and horizon — untested — falsification target; validation reconstruction and oracle-singleton controls test this approximation rather than assuming it.\nP4: the frozen linear success head g preserves the task ordering relevant to the benchmark proposal distribution — untested — falsification target; all formal dominance language is therefore explicitly about g, while task success is empirical.\nESTIMAND: for a deployment residual z and current candidate features φ_k, the target is the identified set 𝒟_k(z,φ_k)={Σ_m λ_mR_m(φ_k): λ∈Δ_M, ||Uλ-z||_∞≤ε_e} of branch future-latent corrections over the randomized-simulator, π0.5-candidate, intersection-support process, not a conditional mean, physical-parameter posterior, centered candidate residual, or pairwise preference.\nBLOCK 2 — NAIVE-BASELINE AUDIT\nThe runnable naive version predicts one point correction ΔZ_point_k=f(e_t,φ_k) and reranks current candidates once; branch (i) fails because one factual residual generally admits several incompatible cross-action response completions, so a point decoder silently chooses an unidentified coupling. Completion Atlas confronts that failure by retaining every atlas completion consistent with e_t through action selection, and the shared λ plus matched residual-intervention contrast makes ignoring e_t incompatible with zero atlas loss on residual-responsive groups. STANDARD-TOOL FOLLOW-UP: partial identification and robust optimization are textbook objects, but textbook set-membership control assumes a specified state-space disturbance set or parameter class; here the set itself must be learned as a coupled high-dimensional factual/video-residual atlas whose same coefficient is observed on the factual side and missing on VLA-generated current branches, with no physical parameter semantics and a new online candidate set each cycle.\nBLOCK 3 — DESIGN RATIONALE\nThe anchor is kept single because the coupled completion set already supplies its own causal fidelity test and current-action decision rule; a separate ranking-diagnostic leg would repeat the prior composition without changing the mechanism. Point residual dynamics, GP correction, Bayes/dual system identification, importance weighting, robust tube MPC over hand-given disturbances, and a direct outcome scorer were rejected because they regress to occupied lineage nodes or select one transport rather than preserving the non-identified completion set; CarrierLock, Boundary Score, GISS-2x2, ExitReplay, and ScaffoldFracture are also avoided because no persistent carrier, boundary functional, skill graph, censoring replay, or fixed scaffold is constructed. Under the allowed fulltext-degraded evidence, the mechanism-level boundaries are abstract-level: FWM guides a diffusion policy with a feedback world model, FBFM injects one observed-image pseudoinverse into active flow generation, ReDRAW fits point latent-state residual dynamics, Twin Rollouts fixes a shared-noise branch coupling, and ordinary WAM reranking scores one point future, whereas Completion Atlas learns no action correction outside the e_t-constrained completion set and optimizes worst-case current-candidate dominance over that whole set. JMDP constructs coupled transition processes, CF-GPS abducts exogenous noise for counterfactual policy search, CG-World contributes a world-state dataset/protocol, and WorldSample improves a policy from world-model samples; Completion Atlas instead freezes policy/WAM and neither infers a latent physical state nor trains a policy, while its claimed delta from CoCo is specifically retention of every factual-consistent coupling through selection rather than commitment to one constructed coupling—an abstract-level boundary requiring primary-text verification because the allowed CoCo cache exposes no method and therefore is not positive novelty evidence.",
+    "core_mechanism_steps": "1. Freeze π0.5 and the DreamZero-compatible WAM, choose the fixed encoder E, and train then freeze the linear success head g from existing LIBERO and RoboTwin2.0 terminal labels; inputs are predicted future latents and language, and output is the common baseline score used by every reranking arm.\n2. Generate matched residual-intervention groups by restoring one pre-prefix simulator state, varying named built-in physics/occlusion settings, executing the same b_{t-1}, and retaining K action chunks executable across the group; inputs are simulator states and π0.5 chunks, and outputs are paired current observations, WAM predictions, and rollback snapshots.\n3. Compute e_n, z_n=P_d e_n, each candidate feature φ_{nk}, and each branch future-latent residual ΔZ_{nk} by executing every retained current chunk from its own post-prefix snapshot; these branch outcomes are training/evaluation data only and are never queried online.\n4. Fit U, {R_m}, and per-bundle λ_n jointly with factual reconstruction, branch reconstruction, and matched residual-intervention contrast losses; the shared-coefficient code path outputs one coupled factual/branch atlas, and the contrast term makes a λ-ignoring response incur nonzero loss on every retained responsive group.\n5. Select d, M, K, β, and c_e on disjoint validation groups using factual/branch reconstruction, wrong-dominance, benchmark success, fallback, and latency, then freeze U, {R_m}, P_d, g, the VLA, and WAM.\n6. At deployment after the previous chunk finishes, compute the new real residual z_t and solve the feasibility LP for Λ_t; its input is only the just-observed factual residual and the frozen factual atoms, and its output is a set of admissible coefficients rather than a point latent-state or physics estimate.\n7. Sample K newly executable π0.5 suffixes from the current observation, run the frozen WAM once per suffix, and evaluate R_m(φ_k) for all atoms; the output is one affine corrected-future family Z_k(λ) per current candidate, with no replay of the obsolete previous action.\n8. Solve the pairwise robust-dominance LPs analytically from q_k(λ), compute Γ_t, and either execute the robustly dominant current suffix or the current uncorrected π0.5 fallback for one native controller interval; this set optimization directly changes the physical action selected.\n9. Log Γ_t, completion-set diameter, support/fallback decisions, task success, rollback top-1 regret, and latent error, then replan from the next real observation; the same logs support the residual-signature permutation and oracle-singleton controls without changing the deployed algorithm. Before Step 3, fit each candidate PCA map P_d on training-group e_n only, and take H to be the endpoint of the current candidate chunk; in Step 5 compute r_e per validation sample as min_{lambda in Delta^M} ||U lambda-z||_infinity. If fewer than two executable current suffixes are available in Step 7, skip Gamma_t, use the current uncorrected pi0.5 fallback for one native controller interval, and use the frozen policy's native deterministic tie-break for fallback ties.",
+    "falsification_prediction": "Run frozen π0.5 plus the same DreamZero-compatible WAM and linear head on existing LIBERO and RoboTwin2.0 rollback tasks with scripted mass, friction, contact, and occlusion perturbations, comparing uncorrected WAM reranking, FBFM, ReDRAW-style point residual prediction, a point-decoded version of the same atlas, and Completion Atlas on identical current-candidate bundles. If the mechanism works, wrong-dominance rate and rollback top-1 regret decrease while closed-loop task success increases, especially on bundles where multiple atlas coefficients fit the same factual residual. The named load-bearing variable is Γ_t, the worst-completion dominance margin; as a negative control, permute factual signatures u_m across their branch-response atoms before constructing Λ_t while keeping candidates, scores, and atlas capacity fixed, which should drive downstream regret and task success toward the uncorrected baseline rather than merely alter Γ_t. An oracle-singleton control that reveals the training-only branch-compatible λ supplies an upper bound, while failure of the permutation to erase the gain kills the claim that factual-residual coupling—not generic robust reranking—caused the improvement.",
+    "compute_budget": "Approximately 32 A100-40GB GPU-days plus simulator CPU time for matched rollback generation, frozen-WAM feature extraction, atlas training, validation, and three-seed evaluation; with four available A100-40GB GPUs this is roughly eight fully utilized GPU-days and is comfortable within five months. The campaign uses only open weights and existing simulators, so estimated paid API cost is $0.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+        "delta": "[abstract-only inference; fulltext degraded] FBFM applies one realized-image pseudoinverse correction inside the next flow generation, whereas Completion Atlas retains all coupled branch responses consistent with that residual and executes a current suffix only under worst-completion dominance."
+      },
+      {
+        "paper_id": "dblp:journals/corr/abs-2605-06222",
+        "delta": "[abstract-only inference; fulltext degraded] When to Trust Imagination changes how long a committed WAM rollout executes from future-reality agreement, whereas Completion Atlas constructs set-valued corrections for multiple newly proposed current suffixes and never resumes an obsolete chunk."
+      },
+      {
+        "paper_id": "arxiv:2608.13489",
+        "delta": "[abstract-only inference; fulltext degraded] DreamX-Phi encodes arm geometry, depth, masks, and object consistency during WAM training, whereas Completion Atlas leaves the WAM frozen and partially identifies execution-time cross-action residual responses."
+      },
+      {
+        "paper_id": "user_ref:title:Feedback World Model Enables Precise Guidance of Diffusion Policy",
+        "delta": "[abstract-level boundary; fulltext cache failed] FWM supplies point feedback guidance to a diffusion policy, whereas Completion Atlas does not update or guide policy denoising and instead optimizes over an e_t-indexed set of future-latent corrections."
+      },
+      {
+        "paper_id": "user_ref:title:Adapting World Models with Latent-State Dynamics Residuals",
+        "delta": "[abstract-level boundary; fulltext cache failed] ReDRAW-style adaptation learns a point latent dynamics residual, whereas the proposed estimand is the entire branch-response set compatible with one factual residual and no point residual model is deployed."
+      },
+      {
+        "paper_id": "user_ref:title:Twin Rollouts: Noise-Coupled Counterfactual Branching in Interactive Video World Models",
+        "delta": "[abstract-level boundary; fulltext cache failed] Twin Rollouts fixes a noise coupling to compare branches, whereas Completion Atlas treats coupling as non-identified and carries every empirical completion consistent with e_t into the action decision."
+      },
+      {
+        "paper_id": "user_ref:title:Joint MDPs and Reinforcement Learning in Coupled-Dynamics Environments",
+        "delta": "[abstract-level boundary; fulltext cache failed] JMDP represents coupled transition processes for reinforcement learning, whereas Completion Atlas neither builds a joint environment nor trains a policy and uses a residual-response ambiguity set only to choose among current suffixes."
+      },
+      {
+        "paper_id": "user_ref:title:Woulda, Coulda, Shoulda: Counterfactually-Guided Policy Search",
+        "delta": "[abstract-level boundary; fulltext cache failed] CF-GPS abduces exogenous randomness to generate counterfactual trajectories for policy search, whereas Completion Atlas makes no exogenous-noise or hidden-parameter point inference and keeps the VLA frozen."
+      },
+      {
+        "paper_id": "user_ref:title:CG-World: A Large-Scale World-State Dataset and Protocol for World Models",
+        "delta": "[abstract-level boundary; fulltext cache failed] CG-World contributes world-state data and protocol infrastructure, whereas Completion Atlas is a deployable completion-set controller trained from existing rollback simulators."
+      },
+      {
+        "paper_id": "user_ref:title:WorldSample: Closed-loop Real-robot RL with World Modelling",
+        "delta": "[abstract-level boundary; fulltext cache failed] WorldSample uses world-model samples for closed-loop policy learning, whereas Completion Atlas performs no policy optimization and uses branch rollouts only to learn the coupled residual atlas."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+    "what_step_was_missed": "[abstract-only inference; fulltext degraded] FBFM would have needed to replace its point pseudoinverse feedback with a jointly trained factual/branch residual atlas, retain every atlas coefficient consistent with the observed residual, and propagate that identified set through robust selection of newly sampled current suffixes.",
+    "signature_terms": [
+      "residual completion ambiguity atlas",
+      "coupling robust current suffix selection",
+      "factual branch shared coefficient",
+      "partially identified WAM correction"
+    ],
+    "alias_terms": [
+      "set membership robust control",
+      "partial identification treatment choice",
+      "distributionally robust policy selection",
+      "coupled dictionary uncertainty set"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

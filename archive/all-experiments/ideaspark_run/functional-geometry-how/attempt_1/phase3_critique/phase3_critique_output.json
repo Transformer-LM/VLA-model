@@ -1,0 +1,140 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement — stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often by attaching a different conditioning encoder, latent space, or control channel to an existing refinement backbone and presenting the swap itself as the contribution, without isolating it. The recurring structural shortcut is the missing ablation that holds backbone, data, and compute fixed while toggling only the new interface — so reviewers cannot tell whether the gain comes from the redesigned conditioning pathway or from a stronger borrowed encoder, more data, or more compute.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Eliminating two inherited bottlenecks at once is only compelling if the combined system clearly beats systems that removed each in isolation; marginal gains plus a regression in primary quality read as recombination, not a new method.",
+            "candidate_match": "borderline",
+            "reasoning": "The proposed interface jointly changes point-bound token content, variable program topology, and active-token phase injection, while the listed arms do not cleanly isolate those subchanges, although they are presented as one functional interface rather than two unrelated bottleneck fixes."
+          },
+          {
+            "lesson_quoted": "Swapping the conditioning encoder for a more powerful one is not a new model class if the output quality still trails incumbents and the encoder's advantage is never ablated against the prior encoder under matched conditions.",
+            "candidate_match": "no",
+            "reasoning": "The backbone remains pi0.5 and the candidate proposes parameter-matched dense-prefix and terminal-pose baselines plus primary task-quality metrics rather than relying on a borrowed stronger encoder."
+          },
+          {
+            "lesson_quoted": "A controllable pipeline assembled from frozen pretrained modules needs an ablation proving that the new control surface — not the off-the-shelf components — drives the gain, or it collapses into prior synthetic-data and adapter work.",
+            "candidate_match": "borderline",
+            "reasoning": "Dense-prefix, token-permutation, and oracle-program arms intervene on the control surface with the same pi0.5 backbone, but the full FuncGraph arm additionally consumes anchor, phase, and program labels, so representation and supervision are not fully isolated."
+          },
+          {
+            "lesson_quoted": "Claiming a unified or foundation-model reframe obligates you to actually demonstrate the unification (multi-domain pretraining plus transfer); per-setting retraining under a single architecture does not substantiate the claim.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes a scoped interface claim for rigid-object relations and explicitly rejects parameter-efficiency or foundation-model framing as its hook."
+          },
+          {
+            "lesson_quoted": "Importing a representation from a semantically adjacent domain as the conditioning signal fails when that space is orthogonal to the geometry or dynamics that actually determine the output being synthesized.",
+            "candidate_match": "no",
+            "reasoning": "The program is supervised by task contacts, gripper modes, relative frames, and phase boundaries from the same manipulation domain rather than an adjacent-domain representation."
+          }
+        ],
+        "verdict": "borderline"
+      },
+      {
+        "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings — stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions — the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate (using the evaluated models as their own oracle, or hardcoding a contested definition of the target property), so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "no",
+            "reasoning": "The terminal-pose-matched pair split is designed to reveal a currently unmeasured divergence between registration-quality success and functional execution rather than merely replaying a documented benchmark shortcut."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "no",
+            "reasoning": "The diagnostic includes a pre-registered real-robot program condition and 300 real-robot evaluation trials in addition to RoboCasa/MuJoCo."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "Policy-independent contact/program labels construct the matched subset, while full-task success, first-contact correctness, phase-order error, and collisions provide downstream outcomes independent of the evaluated policy's own judgment."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "Neither the evaluated policies nor peer model consensus supply the diagnostic oracle; MuJoCo contacts and pre-registered human labels do."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "no",
+            "reasoning": "The claim is explicitly limited to evaluated rigid-object relations and the controlled split isolates functional interchangeability from terminal-pose matching."
+          }
+        ],
+        "verdict": "clear"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The generative_process_redesign entry is borderline because the first and third C24 Reject lessons expose incomplete attribution among the bundled interface subchanges and extra program supervision. The controlled_diagnostic_design entry is clear because it uses an independent oracle, includes a real-robot transfer check, and scopes its claim."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement — stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "tactical_pattern_quoted": "The shared move is to hold an iterative-refinement generative backbone (diffusion, flow-matching, masked-token, or coarse-to-fine autoregressive prediction) fixed and treat its conditioning interface or operating representation space as the free variable.",
+        "instantiation_in_core_mechanism": "The core mechanism holds OpenPI pi0.5 fixed, replaces static PointMap injection with a relation-conditioned variable-length program, and in Steps 5 and 7 injects the active point-bound token before successive action forward passes; this performs C24's interface-redesign move despite thin robotics exemplars.",
+        "verdict": "applied"
+      },
+      {
+        "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings — stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score.",
+        "instantiation_in_core_mechanism": "Steps 1 and 8 construct and report a terminal-pose-matched held-out-pair subset that holds relation, individual-object exposure, and scripted terminal transform fixed while varying the policy-independent contact/phase program, with MuJoCo or pre-registered human labels as the external oracle.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "Both entries instantiate their cluster-specific moves: C24 changes the conditioning interface of a retained generative backbone, and C02 independently varies one named confound through a matched instance set with an external oracle."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "generative_process_redesign",
+      "structural_prior_encoding",
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "None of the three reject-favored pairs matches because the full composition contains no heterogeneous_decomposition component."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7204187323",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "Pointing-VLA reports a typed hidden-state spatial interface with point, object-functional-grounding heatmap, and visual-trajectory heads, plus an explicit PICK/PLACE stage-aligned execution contract and strong Bridge/WidowX manipulation results. That evidence subsumes any broad claim that typed functional spatial readouts or stage-aligned geometric conditioning alone are new; FuncGraph stands only on the narrower claim that unseen pair geometry compiles a variable-length, ordered, surface-bound program whose topology changes even under a matched terminal transform, which Pointing-VLA's fixed PICK/PLACE contract does not establish.",
+    "addressable_via": "Add a Pointing-VLA-style fixed-stage typed spatial interface as a supervision- and capacity-matched baseline in core_mechanism_steps so the claimed gain is attributable to variable pair-specific program topology rather than typed grounding itself.",
+    "parametric_family_concern": "Neural task graphs and option-discovery hierarchical imitation learning remain an incompletely retrieved ancestor family; a scoop check should query 'neural task graph manipulation' and 'latent option sequence imitation'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the ordered point-bound functional program Z",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names the pi0.5 fine-tuning and matched-composition comparison, gives directions for full-task success and related downstream metrics, and intervenes on Z by permutation while predicting full-task success returns toward the dense-prefix baseline. It contains no numeric outcome or cost bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "S7 compiles point-bound anchors once in the calibrated robot frame, then executes motion and updates the observation",
+      "status": "upheld",
+      "basis": "The quoted procedure compiles robot-frame anchors once and contains no producer for tracking, correspondence, re-projection, or recompilation after an object moves, so the measured nonzero translation error exposes a structural stale-token defect requiring mechanism redesign."
+    },
+    {
+      "finding_ref": "The declared branch-(i) obstacle is not confronted by construction: the terminal-pose-matched split makes terminal pose insufficient",
+      "status": "upheld",
+      "basis": "Both FuncGraph and the dense-prefix baseline receive P_T, P_R, and the relation, and no candidate step removes that information or restricts the dense hypothesis class, so terminal-pose matching does not make dense geometric inference's premise false and repairing the claim requires redesigning the comparison or contribution branch."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "blocking_findings_disposition[0] is upheld because core_mechanism_steps[7] consumes once-compiled robot-frame anchors after motion without any rebinding producer, and blocking_findings_disposition[1] is upheld because the matched split does not prevent the dense PointMap arm from learning the same geometry-to-program map. Both are load-bearing redesigns rather than field-level repairs, so advance is forbidden and Phase 3.3 revision is insufficient; the otherwise applied recipes and sound falsification structure do not rescue the mechanism.",
+  "revision_targets": []
+}

@@ -1,0 +1,67 @@
+# @package _global_
+defaults:
+  - override /data: libero_p027c_personal_v21_split
+  - override /model: fastwam_p027c_libero_ac7
+  - _self_
+
+batch_size: 1
+num_workers: 0
+
+model:
+  mot_checkpoint_mixed_attn: false
+  compile_training_denoise: false
+  loss:
+    lambda_video: 1.0
+    lambda_action: 0.0
+
+lr_scheduler_type: constant
+learning_rate: 1.0e-4
+num_epochs: 1
+max_steps: 500
+log_every: 50
+save_every: 0
+save_final: false
+save_trainable_final: true
+eval_every: 0
+eval_num_inference_steps: 2
+
+action_swap_eval_num_batches: 16
+action_swap_eval_index_stride: 433
+action_swap_eval_index_offset: 97
+action_swap_eval_at_start: true
+action_swap_eval_at_end: true
+
+require_finite_train_step: true
+require_optimizer_step: true
+require_positive_grad_norm: true
+expected_world_size: 4
+expected_distributed_type: DEEPSPEED
+expected_zero_stage: 1
+
+# Only these modules can affect the video-side action-conditioned prediction.
+# The action expert predicts robot actions but video tokens do not attend to its
+# tokens under FastWAM's current MoT mask, so it is excluded from this gate.
+trainable_parameter_prefixes:
+  - video_expert.action_embedding.
+  - proprio_encoder.
+expected_trainable_numel: 61440
+expected_trainable_parameter_names:
+  - video_expert.action_embedding.weight
+  - video_expert.action_embedding.bias
+  - proprio_encoder.weight
+  - proprio_encoder.bias
+
+gradient_accumulation_steps: 1
+mixed_precision: bf16
+max_grad_norm: 1.0
+weight_decay: 1.0e-2
+seed: 2701
+resume: null
+
+wandb:
+  enabled: false
+  workspace: null
+  project: fast-wam
+  name: p027c-libero-videoac-learn500
+  group: null
+  mode: offline

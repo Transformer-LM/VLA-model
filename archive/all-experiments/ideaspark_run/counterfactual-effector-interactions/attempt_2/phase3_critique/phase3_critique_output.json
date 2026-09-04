@@ -1,0 +1,92 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "鍦?semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 鐨?frontier residue 涓婏紝proposal-conditioned future 鑳借鏄庢暣浣撴彁妗堝彲鑳藉け璐ワ紝鍗存病鏈夐棴鍚堚€滃け璐ョ敱鍗曚釜鏁堝簲鍣ㄥ姩浣滀笉瓒炽€侀€氶亾闂村啿绐侊紝杩樻槸鍙湁鑱斿悎鏀瑰彉鎵嶅彲淇鈥濈殑鍐崇瓥姝т箟 鈥?stakes: 绾犻敊鍣ㄥ彲鑳藉弽澶嶄慨鏀规棤鍏冲姩浣滅淮搴︺€侀檷浣庢垚鍔熺巼骞跺鍔犻棴鐜绠楋紝鐞嗚涓婁篃缂哄皯鎶婁笘鐣屾ā鍨嬭瘖鏂噺杩炴帴鍒板姩浣滄洿鏂拌矗浠昏竟鐣岀殑鍘熷垯銆?",
+        "main_pattern": "characterize_limit_then_surpass",
+        "sub_pattern": "C10 (Characterize a Limit, Then Surpass It)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail when the \"limit\" they characterize is not a genuine structural blindspot: it is either trivially implied by the model's own assumptions, already surpassed by a published method, or never formalized at all beyond an informal analogy. A recurring shape is substituting a hand-wavy mechanism for a separation proof, leaving reviewers unable to see why the augmented operator must exceed the baseline.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Resting the central claim on an informal analogy (two operators 'both smooth high frequencies') instead of a separation proof leaves the mechanism underspecified and the empirical gain unconvincing.",
+            "candidate_match": "no",
+            "reasoning": "Steps 5-7 give an explicit mixed finite-difference equation, an axis-equivalence witness, and a deterministic action-selection consequence rather than an informal analogy."
+          },
+          {
+            "lesson_quoted": "Applying existing structural descriptors to a new application domain without formalizing a new limit or constructing a new operator yields a domain study, not a methodological contribution, and reviewers find no transferable novelty.",
+            "candidate_match": "borderline",
+            "reasoning": "The candidate formalizes an axis-information limit and an action operator, but I is the classical 2x2 factorial mixed contrast and the box quadratic is standard response-surface optimization; FastWAM only supplies the scalar Q being optimized."
+          },
+          {
+            "lesson_quoted": "Claiming a 'maximally expressive' construction that a recently published method already strictly subsumes turns the surpass-the-limit claim into redundant work.",
+            "candidate_match": "borderline",
+            "reasoning": "The candidate avoids a maximal-expressivity claim, but the retrieved optimizer-interaction calculus and policy-aware factorial-design papers already occupy interaction identification and intervention selection, leaving only a native-action application delta."
+          },
+          {
+            "lesson_quoted": "A novel formalism that cannot generate predictions or demonstrate concrete advantages over existing definitions reads as abstraction for its own sake.",
+            "candidate_match": "no",
+            "reasoning": "PairLift generates a concrete corrected action and commits to restored-state RoboTwin task success against matched-compute controls."
+          },
+          {
+            "lesson_quoted": "Asserting the 'first efficient implementation' of a long-known algorithm without surveying the landscape invites direct refutation by existing faster implementations and collapses the novelty claim.",
+            "candidate_match": "no",
+            "reasoning": "The candidate does not literally claim the first efficient implementation, although its O(|G_L||G_R|) arithmetic claim does not include the dominant FastWAM rollout cost."
+          },
+          {
+            "lesson_quoted": "Deriving a 'limitation' that is trivially implied by the model's own linearity assumption produces a limit too weak to count as a real blindspot, and the proposed surpass step stays under-validated.",
+            "candidate_match": "yes",
+            "reasoning": "A_axis is defined to observe only axis restrictions, and c*delta_g*delta_h is identically zero on every axis; the claimed indistinguishability therefore follows directly from the imposed observation class rather than exposing a nontrivial limitation of an incumbent VLA/WAM corrector."
+          }
+        ],
+        "verdict": "triggered"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The sole gap_closure entry under characterize_limit_then_surpass triggers the lesson that a limitation trivially implied by the assumed baseline class is too weak. PairLift's separation witness is mathematically correct, but it excludes joint probes by definition and then restores the omitted cross term with a textbook factorial contrast, so it does not establish a genuine VLA/WAM structural blindspot."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "鍦?semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 鐨?frontier residue 涓婏紝proposal-conditioned future 鑳借鏄庢暣浣撴彁妗堝彲鑳藉け璐ワ紝鍗存病鏈夐棴鍚堚€滃け璐ョ敱鍗曚釜鏁堝簲鍣ㄥ姩浣滀笉瓒炽€侀€氶亾闂村啿绐侊紝杩樻槸鍙湁鑱斿悎鏀瑰彉鎵嶅彲淇鈥濈殑鍐崇瓥姝т箟 鈥?stakes: 绾犻敊鍣ㄥ彲鑳藉弽澶嶄慨鏀规棤鍏冲姩浣滅淮搴︺€侀檷浣庢垚鍔熺巼骞跺鍔犻棴鐜绠楋紝鐞嗚涓婁篃缂哄皯鎶婁笘鐣屾ā鍨嬭瘖鏂噺杩炴帴鍒板姩浣滄洿鏂拌矗浠昏竟鐣岀殑鍘熷垯銆?",
+        "sub_pattern": "C10 (Characterize a Limit, Then Surpass It)",
+        "tactical_pattern_quoted": "Formalize the equivalence class induced by a tractability shortcut as a separation criterion on the procedure's native objects, exhibit objects the incumbent conflates, then re-inject the exact discarded structural object into the core update at bounded cost so the augmented operator exceeds the criterion.",
+        "instantiation_in_core_mechanism": "Steps 5-7 instantiate the abstract C10 sequence: Step 6 constructs axis-equivalent responses with different I, Step 5 estimates the discarded cross term with joint probes, and Step 7 places I_gh*x*y inside the bounded support-two optimizer with O(|G_L||G_R|) arithmetic after probing. Under the declared thin-corpus exception, this counts as application of the recipe even though the resulting limit is too weak under the Reject check.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The candidate performs C10's signature equivalence-certificate, re-injection, and bounded-cost operator moves. Recipe application does not rescue the candidate from the card's independent Reject lesson about a limitation that follows trivially from the assumed information restriction."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "characterize_limit_then_surpass",
+      "reframe_as_solvable_object"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The composition contains no heterogeneous_decomposition component, so none of the three documented reject-favored pairs matches."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+    "threat_source": "lit_table",
+    "threat_channel": null,
+    "subsumption_argument": "Causal Optimizer Interaction Calculus already targets hidden optimizer interactions and identifiable interventions for declared response classes. PairLift's 2x2 signed joint probe is the standard mixed factorial contrast, and its support-two box quadratic is ordinary local second-order response-surface optimization; using a frozen WAM-plus-outcome-head as the scalar oracle and executing the selected edit in RoboTwin narrows the delta to application and evaluation unless a specifically VLA/WAM constraint is shown to make the existing interaction calculus or quadratic-control treatment insufficient.",
+    "addressable_via": "core_mechanism and differentiation_from_lit would need to identify a VLA/WAM-specific structural obstacle that classical factorial cross-partials and quadratic/trust-region control cannot express, and the experiment would need a matched full second-order response-surface baseline rather than only A_axis.",
+    "parametric_family_concern": "Local quadratic response-surface methodology and second-order/trust-region control; scoop-check vocabulary: 'factorial mixed finite difference action optimization', 'cross-partial Hessian robot control', and 'derivative-free quadratic trust-region policy correction'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the cross-effector mixed-response matrix I",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph specifies restored-state RoboTwin comparisons, predicts the direction of task-success change, names I as the single load-bearing variable, and uses partner-label permutation to predict downstream task success returns toward the matched baseline. It contains no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0].reject_lessons_evaluated[5] is triggered: the axis-equivalence limit follows definitionally from restricting A_axis to axis responses, so c*delta_g*delta_h is invisible by construction rather than revealing a nontrivial VLA/WAM blindspot. Although recipe_application_check.entries[0].verdict is applied and falsification is sound, paper_pointed_threat.subsumption_argument shows that the operative mixed contrast and box quadratic sit inside existing optimizer-interaction/factorial response-surface machinery while FastWAM merely supplies Q; this requires a new mechanism, not a Phase 3.3 patch.",
+  "revision_targets": []
+}

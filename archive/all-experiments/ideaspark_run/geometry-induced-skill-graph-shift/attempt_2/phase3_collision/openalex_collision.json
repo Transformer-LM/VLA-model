@@ -1,0 +1,1883 @@
+[
+ {
+  "title": "Deep multi-task learning: a review of concepts, methods, and cross-domain applications",
+  "title_norm": "deep multi task learning a review of concepts methods and cross domain applicati",
+  "abstract": "Abstract Multi-task learning (MTL) is a machine learning method that has witnessed exponential traction due to its ability to solve multiple tasks simultaneously. Joining training-related tasks in MTL improves both predictive performance and data efficiency. The shared knowledge across tasks enables MTL models to outperform traditional single-task models. The effectiveness of MTL depends on several factors, including how tasks are chosen, how relationships between them are structured, and the choice of shared and task-specific model components. In literature, several architectures and strategies for multi-task learning have been successfully applied across different fields such as natural language processing, computer vision, healthcare, and others. However, MTL has some challenges, such as task interference, data availability, optimal task selection, and hyperparameter tuning. Recent research has introduced new techniques to address these issues, such as adaptive task balancing and parameter sharing mechanisms, although each approach has its limitations. In this review, we provide a comprehensive examination of the multi-task learning concept, and the strategies used in several different domains. It also explores the key factors influencing the success of MTL and provides a detailed classification of research efforts applying MTL in a wide range of fields, highlighting existing achievements and challenges.",
+  "year": 2025,
+  "venue": "International Journal of Data Science and Analytics",
+  "authors": [
+   "Mahmoud Mohamed Abdelsamie",
+   "Shahira Shaaban Azab",
+   "Hesham A. Hefny"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4417457026",
+  "doi": "10.1007/s41060-025-00892-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s41060-025-00892-y.pdf",
+  "published_iso": "2025-12-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "An Axiomatic Relational–Informational Framework for Emergent Geometry and Effective Spacetime",
+  "title_norm": "an axiomatic relational informational framework for emergent geometry and effect",
+  "abstract": "This work is axiomatic and structural in nature and is not intended as a phenomenological physical theory, but as a framework clarifying minimal informational primitives from which geometric and dynamical descriptions may emerge. We present a background-independent framework in which physical geometry, interaction-like forces, and spacetime arise as effective descriptions of constrained relational information rather than as fundamental entities. The only primitive structure is a network of degrees of freedom linked by admissible informational relations, each subject to quantifiable constraints on accessibility or flow. The motivation is to identify whether a single minimal relational primitive can account jointly for the emergence of geometry, forces, and spacetime, without presupposing a manifold, fields, or fundamental interactions. The framework is formalized using weighted relational graphs in which constraint weights encode limitations on information flow between degrees of freedom. Effective geometry is defined operationally through minimal constraint cost along relational paths, yielding an emergent metric without assuming spatial embedding. Relational evolution is modeled via a minimal configuration-space dynamics defined by local rewrite moves, and a statistical description is introduced through an informational action that governs coarse-grained response rather than serving as a fundamental dynamical law. Curvature-like observables are defined using transport-based comparisons of local accessibility structure. Within this setting, metric structure emerges from constrained relational accessibility, while curvature-like behavior arises from heterogeneity in constraint structure. Effective forces appear as entropic or informational action gradients with respect to coarse-grained control parameters that modulate relational constraints, and are interpreted as emergent responses rather than primitive interactions. A finite worked example explicitly demonstrates the emergence of nontrivial distance, curvature proxies, and an effective force via geodesic switching under constraint variation, without assuming fundamental spacetime, fields, or particles. The results support an interpretation in which geometry, forces, and spacetime are representational features of constrained information flow rather than fundamental elements of physical law. The framework clarifies conceptual distinctions and points of compatibility with existing approaches to emergent spacetime, and it outlines qualitative expectations for regimes in which smooth geometric descriptions are expected to break down. The work delineates the scope and limits of geometric description without proposing a complete phenomenological theory.",
+  "year": 2026,
+  "venue": "Axioms",
+  "authors": [
+   "Călin Gheorghe Buzea",
+   "Florin Nedeff",
+   "Diana Carmen Mirila",
+   "Valentin Nedeff",
+   "Oana Rusu",
+   "Maricel Agop"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7130647935",
+  "doi": "10.3390/axioms15020154",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1680/15/2/154/pdf",
+  "published_iso": "2026-02-20",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Probabilistic Programming with Vectorized Programmable Inference",
+  "title_norm": "probabilistic programming with vectorized programmable inference",
+  "abstract": "We present GenJAX, a new language and compiler for vectorized programmable probabilistic inference. GenJAX integrates the vectorizing map (vmap) operation from array programming frameworks such as JAX into the programmable inference paradigm, enabling compositional vectorization of features such as probabilistic program traces, stochastic branching (for expressing mixture models), and programmable inference interfaces for writing custom probabilistic inference algorithms. We formalize vectorization as a source-to-source program transformation on a core calculus for probabilistic programming ( λ GEN ), and prove that it correctly vectorizes both modeling and inference operations. We have implemented our approach in the GenJAX language and compiler, and have empirically evaluated this implementation on several benchmarks and case studies. Our results show that our implementation supports a wide and expressive set of programmable inference patterns and delivers performance comparable to hand-optimized JAX code.",
+  "year": 2026,
+  "venue": "Proceedings of the ACM on Programming Languages",
+  "authors": [
+   "McCoy Becker",
+   "Mathieu Huot",
+   "George Matheos",
+   "Xiaoyan Wang",
+   "Karen Chung",
+   "Colin Smith"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7119481561",
+  "doi": "10.1145/3776729",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7119481561",
+  "published_iso": "2026-01-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "involutive manipulation scene pairs"
+  ]
+ },
+ {
+  "title": "Effect of Mn substitution on superconductivity in PrFeAs(O,F): Role of magnetic impurities",
+  "title_norm": "effect of mn substitution on superconductivity in prfeas o f role of magnetic im",
+  "abstract": "We investigate Mn substitution at the Fe site in PrFe 1- x Mn x AsO 0.7 F 0.3 (0 ≤ x ≤ 0.1) using structural, Raman, density functional theory (DFT), transport, and magnetic measurements. X-ray diffraction, Raman spectroscopy and energy-dispersive X-ray (EDX) analyses confirm preferential Mn incorporation into the FeAs superconducting planes, accompanied by lattice expansion and suppression of Fe-related vibrational modes. Electrical transport measurements reveal a systematic decrease of the superconducting transition temperature from 48 K ( x = 0) to complete suppression at x = 0.1, together with pronounced low-temperature resistivity upturns evolving toward insulating-like behavior. Magnetization and magnetotransport measurements show progressive degradation of superconducting coherence, critical current density, upper critical field, and vortex activation energy with increasing Mn content. Microstructural investigations further indicate enhanced grain-boundary disorder and secondary MnO-related impurity phases at higher Mn concentrations. The results establish Mn as an efficient magnetic impurity that strongly perturbs the electronic and magnetic environment of the FeAs layers through enhanced magnetic scattering and carrier localization. Comparative analysis with other iron pnictide systems reveals relatively enhanced robustness of superconductivity in the Pr-based system, highlighting the important role of rare-earth-dependent electronic correlations in governing impurity effects in iron-based superconductors.",
+  "year": 2026,
+  "venue": "Journal of Physics and Chemistry of Solids",
+  "authors": [
+   "Priya Singh",
+   "K. Kwatek",
+   "T. Zajarniuk",
+   "Taras Palasyuk",
+   "Cezariusz Jastrzębski",
+   "A. Szewczyk"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7165189827",
+  "doi": "10.1016/j.jpcs.2026.113933",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7165189827",
+  "published_iso": "2026-06-18",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Observer as a Finite Distinction Register: Measurement Capacity, Dynamic Bottlenecks, and Budget-Crossing Signatures",
+  "title_norm": "observer as a finite distinction register measurement capacity dynamic bottlenec",
+  "abstract": "Paper also available at PhilArchive: https://philarchive.org/rec/WUOAAB Official website: distinctiontheory.orgPublic portal for the start guide, papers, claim status, failure registry, prior-art boundary, and citation resources. Canonical GitHub repository:https://github.com/yiningwu-research/Distinction-Theory FDS-O1 develops an operational finite-capacity model of physical observation and measurement. The paper replaces the idealized notion of an observer as a point of access to facts with a finite physical record-bearing system: a finite distinction-register. In this framework, an observer is a system that can register, preserve, update, order, and communicate distinctions only through finite records, finite channels, finite update rates, finite buffers, and finite thermodynamic budgets. The paper formulates measurement as stable record formation under finite capacity. A measurement event is not merely an interaction; it is the stabilization of an accessible record whose distinction class can be retained and used by a finite observer within a specified time window. The model defines measurement capacity through dynamically coupled bottlenecks, including sensor resolution, readout channel, internal memory, record stability, buffering, externalized access, compression, and irreversible update throughput. The central diagnostic condition compares task-relevant rate-distortion demand with accessible measurement capacity. When demand exceeds capacity, full-fidelity measurement is operationally impossible unless the system changes the boundary, increases time, buffers, externalizes records, compresses, erases, relaxes the task, or fails. The predicted budget-crossing signatures include bottleneck switching, latency jumps, buffer overflow, false merging, state merging, externalization bursts, reset cascades, and irreversible housekeeping costs. This version extends the initial O1 model by adding dynamic bottleneck coupling, transient versus sustained budget crossing, reversible-versus-irreversible heat accounting, a two-dimensional sensor-array simulation, an operational interface with decoherence, and a comparison with active inference and robotics. The accompanying replication package includes deterministic synthetic simulations, figures, CSV outputs, LaTeX source, and Python code. The simulations are illustrative model demonstrations, not fits to physical detector data, quantum experiments, biological observers, or human-subject data. Scope and boundary. This paper does not claim that consciousness is required for observation. It does not solve the quantum measurement problem, derive the Born rule, replace decoherence theory, modify unitary quantum mechanics, derive the Bekenstein bound, derive holography, or derive the Einstein equations. Its contribution is narrower: it converts finite-observer distinguishability budgets into a concrete measurement-capacity diagnostic framework with explicit budget-crossing signatures. This record is part of the Distinction Theory / Active Finite Distinction Systems research programme. Related archival materials, including the formal core, general archive, and claim registry, are maintained in the public project repository.",
+  "year": 2026,
+  "venue": "Open MIND",
+  "authors": [
+   "Yining Wu"
+  ],
+  "citations": 16,
+  "source": "openalex",
+  "source_id": "W7161493443",
+  "doi": "10.5281/zenodo.20248792",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7161493443",
+  "published_iso": "2026-05-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "A Forced Geometric Invariant for Discrete–Continuum Compatibility (COSMIC-273: Paper 1)",
+  "title_norm": "a forced geometric invariant for discrete continuum compatibility cosmic 273 pap",
+  "abstract": "This work introduces a geometric solution to the incompatibility between discrete lattice substrates and continuous rotational field theories. A discrete lattice possesses only finite rotational symmetry, while physical fields transform under the continuous group SO(2). Reconciling these two regimes requires a geometric correction that allows a discrete boundary to support continuous curvature without distortion. By analysing the minimal region in which discrete and continuous descriptions must coincide, the paper derives a unique dimensionless stiffness invariant, Λ₀ = 4/π ≈ 1.2732. This value is not assumed or fitted; it is forced by geometric necessity. Λ₀ quantifies the ratio between the minimal orthogonal boundary capable of enclosing a unit interaction and the maximal rotationally invariant bulk region at the same scale. The result establishes Λ₀ as the fundamental modulus governing discrete–continuum compatibility. Once Λ₀ is fixed, it propagates through the geometry of the lattice and generates a natural hierarchy of higher‑order corrections. As an example, the paper applies Λ₀ to the torsion action of a minimal non‑contractible vortex. The resulting stiffness polynomial, S = 100Λ₀ + 6Λ₀², evaluates to S ≈ 137.05, matching the inverse fine‑structure constant α⁻¹ with high precision. This suggests that electromagnetic coupling strengths may emerge from geometric constraints rather than being arbitrary parameters. The work forms the first part of the COSMIC‑273 programme, which develops a geometric field theory built on discrete substrates. Future papers extend the framework to operator structures, spectral hierarchies, and long‑range geometric residues. The central claim is that Λ₀ is not merely a vacuum parameter but the generator of a broader geometric architecture with physical consequences. This paper presents a geometric resolution to the incompatibility between discrete lattice substrates and continuous rotational gauge fields. By analysing the boundary conditions required for a rotationally invariant field to propagate coherently on a hexagonal lattice, we derive a dimensionless stiffness invariant, Λ₀ = 4/π ≈ 1.2732. This invariant is shown to be a forced geometric necessity rather than an adjustable parameter: it quantifies the minimal correction required for discrete–continuum compatibility. Applying Λ₀ to a topological vortex configuration yields a stiffness polynomial whose numerical value reproduces the inverse fine‑structure constant α⁻¹ ≈ 137 with high precision. The result demonstrates that Λ₀ imposes a natural spectral hierarchy on vacuum torsion and suggests that fundamental coupling constants may emerge from geometric constraints of the discrete vacuum.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Josephine France"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7160773979",
+  "doi": "10.5281/zenodo.20112334",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7160773979",
+  "published_iso": "2026-05-10",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Formalisation et implémentation de techniques sûres pour la programmation par passage de destination dans les contextes fonctionnels purs",
+  "title_norm": "formalisation et implémentation de techniques sûres pour la programmation par pa",
+  "abstract": "Destination-passing style programming introduces destinations, which represent the address of a write-once memory cell. These destinations can be passed as function parameters, allowing the caller to control memory management: the callee simply fills the cell instead of allocating space for a return value. While typically used in systems programming, destination passing also has applications in pure functional programming, where it enables programs that were previously unexpressible using usual immutable data structures. In this thesis, we develop a core λ-calculus with destinations, λd. Our new calculus is more expressive than similar existing systems, with destination passing designed to be as flexible as possible. This is achieved through a modal type system combining linear types with a system of ages to manage scopes, in order to make destination-passing safe. Type safety of our core calculus was proved formally with the Coq proof assistant. Then, we see how this core calculus can be adapted into an existing pure functional language, Haskell, whose type system is less powerful than our custom theoretical one. Retaining safety comes at the cost of removing some flexibility in the handling of destinations. We later refine the implementation to recover much of this flexibility, at the cost of increased user complexity. The prototype implementation in Haskell shows encouraging results for adopting destination-passing style programming when traversing or mapping over large data structures such as lists or data trees.",
+  "year": 2025,
+  "venue": "theses.fr (ABES)",
+  "authors": [
+   "Thomas Bagrel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7141776341",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "http://www.theses.fr/2025LORR0273/document",
+  "published_iso": "2025-11-14",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "involutive manipulation scene pairs"
+  ]
+ },
+ {
+  "title": "Animal acoustic communication has a conserved optimal rhythm within the neural delta range",
+  "title_norm": "animal acoustic communication has a conserved optimal rhythm within the neural d",
+  "abstract": "Acoustic communication is crucial for survival across the animal kingdom, with acoustic signals being shaped by the interaction of producer and receiver selective pressures. While spectral features' variation reflects species-specific selection, the evolutionary history of acoustic communication rhythms, i.e., the rhythmic modulations of acoustic signals, remains unknown. Using data from 98 species spanning primarily mammals and birds, with additional representation from amphibians, reptiles, fishes, and insects, we investigate the origins of acoustic communication rhythms, notably whether they are shaped by the producer's anatomical characteristics, environmental constraints, or social complexity. Regression models which controlled for phylogenetic relatedness did not support an influence of these species-specific selective forces; instead, explicit phylogenetic models of trait evolution showed that most species' rhythms are conserved around an evolutionary optimum of 2.7 Hz that falls within the neural delta range (1-4 Hz) and predates mammalian divergence. Given the known conserved brain oscillations across species and delta involvement in active sensing, we propose that, unlike spectral features, acoustic rhythm could be governed by a universal neural mechanism facilitating effective intra and interspecific communication via a shared channel that has persisted through evolutionary times.",
+  "year": 2026,
+  "venue": "PLoS Biology",
+  "authors": [
+   "Théophane Piette",
+   "Chundra Cathcart",
+   "Chiaria Barbieri",
+   "Keesha Martin Ming",
+   "Didier Grandjean",
+   "Balthasar Bickel"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7163996958",
+  "doi": "10.1371/journal.pbio.3003798",
+  "arxiv_id": null,
+  "paper_url": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3003798&type=printable",
+  "published_iso": "2026-06-09",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+  "title_norm": "a systematic literature review of retrieval augmented generation techniques metr",
+  "abstract": "Background: Retrieval-augmented generation (RAG) aims to reduce hallucinations and outdated knowledge by grounding LLM outputs in retrieved evidence, but empirical results are scattered across tasks, systems, and metrics, limiting cumulative insight. Objective: We aimed to synthesise empirical evidence on RAG effectiveness versus parametric-only baselines, map datasets/architectures/evaluation practices, and surface limitations and research gaps. Methods: This systematic review was conducted and reported in accordance with PRISMA 2020. We searched the ACM Digital Library, IEEE Xplore, Scopus, ScienceDirect, and DBLP; all sources were last searched on 13 May 2025. This included studies from January 2020–May 2025 that addressed RAG or similar retrieval-supported systems producing text output, met citation thresholds (≥15 for 2025; ≥30 for 2024 or earlier), and offered original contributions; excluded non-English items, irrelevant works, duplicates, and records without accessible full text. Bias was appraised with a brief checklist; screening used one reviewer with an independent check and discussion. LLM suggestions were advisory only; 2025 citation thresholds were adjusted to limit citation-lag. We used a descriptive approach to synthesise the results, organising studies by themes aligned to RQ1–RQ4 and reporting summary counts/frequencies; no meta-analysis was undertaken due to heterogeneity of designs and metrics. Results: We included 128 studies spanning knowledge-intensive tasks (35/128; 27.3%), open-domain QA (20/128; 15.6%), software engineering (13/128; 10.2%), and medical domains (11/128; 8.6%). Methods have shifted from DPR + seq2seq baselines to modular, policy-driven RAG with hybrid/structure-aware retrieval, uncertainty-triggered loops, memory, and emerging multimodality. Evaluation remains overlap-heavy (EM/F1), with increasing use of retrieval diagnostics (e.g., Recall@k, MRR@k), human judgements, and LLM-as-judge protocols. Efficiency and security (poisoning, leakage, jailbreaks) are growing concerns. Discussion: Evidence supports a shift to modular, policy-driven RAG, combining hybrid/structure-aware retrieval, uncertainty-aware control, memory, and multimodality, to improve grounding and efficiency. To advance from prototypes to dependable systems, we recommend: (i) holistic benchmarks pairing quality with cost/latency and safety, (ii) budget-aware retrieval/tool-use policies, and (iii) provenance-aware pipelines that expose uncertainty and deliver traceable evidence. We note the evidence base may be affected by citation-lag from the inclusion thresholds and by English-only, five-library coverage. Funding: Advanced Research and Engineering Centre. Registration: Not registered.",
+  "year": 2025,
+  "venue": "Big Data and Cognitive Computing",
+  "authors": [
+   "Andrew Brown",
+   "Muhammad Roman",
+   "Barry Devereux"
+  ],
+  "citations": 37,
+  "source": "openalex",
+  "source_id": "W7114889968",
+  "doi": "10.3390/bdcc9120320",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2504-2289/9/12/320/pdf",
+  "published_iso": "2025-12-12",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Supramolecular self-assembly in Traditional Chinese Medicine: molecular mechanisms, material basis of decoction efficacy, compatibility interpretation, and biomedical applications",
+  "title_norm": "supramolecular self assembly in traditional chinese medicine molecular mechanism",
+  "abstract": "Traditional Chinese Medicine (TCM), characterized by multi-component and multi-target pharmacological effects, boasts millennia of clinical application. The complexity of its pharmacological material basis extends beyond individual chemical components to include physical structures formed among constituents. Supramolecular chemistry offers a new perspective for elucidating this basis. This review systematically summarizes recent advances in supramolecular self-assemblies within TCM, focusing on molecular formation mechanisms, key chemical component characteristics driving assembly, their roles in decoctions, and the supramolecular basis for \"efficacy enhancement and toxicity reduction\" in compatibility theory. The biomedical applications of supramolecular self‑assemblies in TCM are also reviewed. Ultimately, this work aims to offer new insights into TCM's material basis, clarify compatibility mechanisms, advance the supramolecular interpretation of TCM theories, and provide perspectives for TCM modernization and drug development.",
+  "year": 2026,
+  "venue": "Chinese Medicine",
+  "authors": [
+   "Yinan Wang",
+   "Qiang Xiao",
+   "Can Liu",
+   "Wenjun He",
+   "Xinning Ren",
+   "Meifeng Xiao"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W7123339022",
+  "doi": "10.1186/s13020-026-01326-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s13020-026-01326-y.pdf",
+  "published_iso": "2026-01-13",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Formalization and Implementation of Safe Destination Passing in Pure Functional Programming Settings",
+  "title_norm": "formalization and implementation of safe destination passing in pure functional ",
+  "abstract": "Destination-passing style programming introduces destinations, which represent the address of a write-once memory cell. These destinations can be passed as function parameters, allowing the caller to control memory management: the callee simply fills the cell instead of allocating space for a return value. While typically used in systems programming, destination passing also has applications in pure functional programming, where it enables programs that were previously unexpressible using usual immutable data structures. In this thesis, we develop a core λ-calculus with destinations, {λ_d}. Our new calculus is more expressive than similar existing systems, with destination passing designed to be as flexible as possible. This is achieved through a modal type system combining linear types with a system of ages to manage scopes, in order to make destination-passing safe. Type safety of our core calculus was proved formally with the Coq proof assistant. Then, we see how this core calculus can be adapted into an existing pure functional language, Haskell, whose type system is less powerful than our custom theoretical one. Retaining safety comes at the cost of removing some flexibility in the handling of destinations. We later refine the implementation to recover much of this flexibility, at the cost of increased user complexity. The prototype implementation in Haskell shows encouraging results for adopting destination-passing style programming when traversing or mapping over large data structures such as lists or data trees.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Thomas Bagrel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7124227391",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2601.08529",
+  "published_iso": "2026-01-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "involutive manipulation scene pairs"
+  ]
+ },
+ {
+  "title": "CLINES: Clinical LLM-based Information Extraction and Structuring Agent",
+  "title_norm": "clines clinical llm based information extraction and structuring agent",
+  "abstract": "Abstract Objective Clinical narratives in electronic health records (EHRs) hold diagnostic, therapeutic, and temporal information often missing from structured fields; manual chart review remains the de facto standard but is slow, costly, and variable. We aimed to develop and evaluate CLINES, a pipeline that extracts and normalizes clinical concepts from free-text notes into ontology-grounded, auditable, schema-ready data without task-specific fine-tuning. Methods and Analysis We developed CLINES, a modular multi-step pipeline: semantic chunking of long notes; extraction by reasoning-capable large language models; attribute assignment (assertion, value+unit); UMLS normalization; explicit and relative date resolution; aggregation into an i2b2-style schema. Evaluation was conducted without task-specific supervised training on de-identified MIMIC-III, 4CE, and CORAL (breast, pancreas) notes. Comparators: rule/lexicon systems, transformer encoders, single-prompt LLM baselines, alongside chain-of-thought LLMs and full-size clinical NER encoders (BERT-base, GatorTron-base). Out-comes were F1 for entity, assertion, value+unit, and date processing, reported with 95% bootstrap CIs and paired-bootstrap FDR-corrected tests; inter-annotator agreement, hallucination taxonomy, cost, and component ablations are in Supplementary Materials. Results Across all datasets and tasks, CLINES ranked first on every task-dataset combination. F1 ranges were 0.69–0.87 (entity), 0.84–0.93 (assertion), 0.77–0.90 (value+unit), and 0.73–0.79 (date, where gold annotations were available); per-dataset values are in Supplementary Materials. Gains over the strongest single-prompt LLM were +0.21–0.38; transformer encoders trailed by +0.28–0.68 F1 on entity extraction. Performance remained stable as notes lengthened, while transformer baselines lost recall. Code-field gains and most assertion/value comparisons were significant at p FDR < 0.05 on paired-bootstrap tests; mention-level inter-annotator F1 on a cross-annotated subset was 0.82 (assertion κ = 0.85); a seven-class taxonomy on 700 stratified false positives found 54% of apparent false positives to be annotation gaps rather than true hallucinations. Conclusion CLINES translates narrative EHR text into ontology-grounded, auditable, schema-ready data, offering a practical route to scale chart-review-like extraction for cohort discovery and real-world evidence. CLINES substantially reduces, but does not eliminate, the need for manual review: the residual hallucination quantified here means human verification remains necessary for safety-critical use. CLINES is model agnostic–open and closed models can be substituted to meet cost, performance, and privacy goals. Summary box What is already known on this topic Free-text clinical notes hold diagnostic, temporal, and quantitative detail absent from structured EHR fields; rule-based systems and fine-tuned transformer encoders detect entities but normalize and attribute them inconsistently, and single-prompt large language models hallucinate and miss instructions on long notes. What this study adds CLINES, a training-free multi-step large-language-model pipeline, produces UMLS-normalized, attributed, time-stamped output that substantially outperforms single-prompt and chain-of-thought LLMs (+0.37 to +0.54 code F1) and full-size clinical encoders; the gains hold across open- and closed-weight backbones and are quantified with confidence intervals, inter-annotator agreement, a hallucination taxonomy, per-note cost, and component ablations. How this study might affect research, practice, or policy CLINES offers an auditable, model-agnostic route to scale chart-review-like extraction for cohort discovery and real-world evidence, while the quantified residual hallucination rate makes explicit that human verification remains necessary before safety-critical use.",
+  "year": 2025,
+  "venue": "medRxiv",
+  "authors": [
+   "Zongxin Yang",
+   "Hongyi Yuan",
+   "Raheel Sayeed",
+   "Amelia Li Min Tan",
+   "Enci Cai",
+   "Michele Moro"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4417152296",
+  "doi": "10.64898/2025.12.01.25341355",
+  "arxiv_id": null,
+  "paper_url": "https://www.medrxiv.org/content/medrxiv/early/2025/12/02/2025.12.01.25341355.full.pdf",
+  "published_iso": "2025-12-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Greenwashing in Sustainability Reporting: A Systematic Literature Review of Strategic Typologies and Content-Analysis-Based Measurement Approaches",
+  "title_norm": "greenwashing in sustainability reporting a systematic literature review of strat",
+  "abstract": "This paper presents a systematic literature review (SLR) of research on strategic positioning of companies and the measurement of greenwashing in sustainability reporting. Its main aim is to synthesize and organize the existing literature, identify key research gaps, and outline directions for future studies. Drawing on a rigorous content analysis of 88 studies, we delineate strategic typologies of greenwashing in sustainability reporting and examine content-analysis-based measurement approaches used to detect it. Our SLR shows that most strategic typologies draw on theories such as legitimacy theory, impression management theory, signaling theory, and stakeholder theory. Several studies adopt a four-quadrant matrix with varying conceptual dimensions, while others classify strategic responses to institutional pressures along a passive–active continuum. However, the evidence suggests that to assume that companies uniformly pursue sustainability reporting strategies is a major oversimplification. The findings also indicate that the literature proposes a variety of innovative, content-analysis-based approaches aimed at capturing divergences between communicative claims and organizational realities—most notably, discrepancies between disclosure and measurable performance, and between symbolic and substantive sustainability actions, as well as the identification of selective or manipulative communication practices that may signal greenwashing. Analytical techniques commonly focus on linguistic and visual cues in sustainability reports, including tone (sentiment and narrative framing), readability (both traditional readability indices and machine learning–based textual complexity measures), and visual content (selective emphasis, imagery framing, and graphic distortions). We also synthesize studies that document empirically verified instances of greenwashing and contrast them with research that, in our view, relies on overly simplified or untested assumptions. Based on this SLR, we identify central theoretical and methodological priorities for advancing the study of greenwashing in sustainability reporting and propose a research agenda to guide future research.",
+  "year": 2025,
+  "venue": "Sustainability",
+  "authors": [
+   "Agnieszka Janik",
+   "Adam Ryszko"
+  ],
+  "citations": 23,
+  "source": "openalex",
+  "source_id": "W4417493793",
+  "doi": "10.3390/su18010017",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2071-1050/18/1/17/pdf?version=1766138529",
+  "published_iso": "2025-12-19",
+  "oa_field": "Business, Management and Accounting",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Deformation-adaptive pressure sensors based on multi-level discrete sensing arrays for morphing electronics and human–machine interaction",
+  "title_norm": "deformation adaptive pressure sensors based on multi level discrete sensing arra",
+  "abstract": "Stretchable pressure sensors are essential for intelligent machine perception and human-machine interactions, yet their accuracy is often compromised by deformation, due to limited strain tolerance of continuous-structure sensing materials. To resolve this issue, we propose a multi-level discrete array strategy to fabricate superior deformation-adaptive sensors. Then, an innovative and eco-friendly approach is developed to fabricate micro-nano hierarchical ZnO arrays through combined plasma-enhanced atomic layer deposition and hydrothermal growth. The micro-scale pattern acts as first-level discrete structure, enabling high stretchability of sensor, while ZnO nanorods function as the secondary structure to dissipate interfacial shear stress. This multi-level design ensures 98.2% strain insensitivity even under 100% strain, and the sensor exhibits a 1 Pa detection limit and dynamic monitoring capability during dynamic deformation, validating its potential in morphing electronics. Notably, this approach can create a sensing array with different sensitivities by adjusting the ZnO area ratios. The resulting E-skin serves as a human–machine interface for controlling robotic hand movements, which requires only a single pair of electrodes and doesn’t need external power source.",
+  "year": 2026,
+  "venue": "npj Flexible Electronics",
+  "authors": [
+   "Changjiang Li",
+   "Jie Zhang",
+   "Haocheng Yu",
+   "Fengwan Zhao",
+   "Zhe Xu",
+   "Xiren Wei"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W7118187332",
+  "doi": "10.1038/s41528-025-00522-4",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41528-025-00522-4_reference.pdf",
+  "published_iso": "2026-01-05",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Estimation and mapping of the missing heritability of human phenotypes",
+  "title_norm": "estimation and mapping of the missing heritability of human phenotypes",
+  "abstract": "Rare coding variants shape inter-individual differences in human phenotypes1. However, the contribution of rare non-coding variants to those differences remains poorly characterized. Here we analyse whole-genome sequence (WGS) data from 347,630 individuals with European ancestry in the UK Biobank2,3 to quantify the relative contribution of 40 million single-nucleotide and short indel variants (with a minor allele frequency (MAF) larger than 0.01%) to the heritability of 34 complex traits and diseases. On average across phenotypes, we find that WGS captures approximately 88% of the pedigree-based narrow sense heritability: that is, 20% from rare variants (MAF < 1%) and 68% from common variants (MAF ≥ 1%). We show that coding and non-coding genetic variants account for 21% and 79% of the rare-variant WGS-based heritability, respectively. We identified 15 traits with no significant difference between WGS-based and pedigree-based heritability estimates, suggesting their heritability is fully accounted for by WGS data. Finally, we performed genome-wide association analyses of all 34 phenotypes and, overall, identified 11,243 common-variant associations and 886 rare-variant associations. Altogether, our study provides high-precision estimates of rare-variant heritability, explains the heritability of many phenotypes and demonstrates for lipid traits that more than 25% of rare-variant heritability can be mapped to specific loci using fewer than 500,000 fully sequenced genomes. WGS data were used from 347,630 individuals with European ancestry in the UK Biobank to obtain high-precision estimates of coding and non-coding rare variant heritability for 34 complex traits and diseases.",
+  "year": 2025,
+  "venue": "Nature",
+  "authors": [
+   "Pierrick Wainschtein",
+   "Yuanxiang Zhang",
+   "Jeremy Schwartzentruber",
+   "Irfahan Kassam",
+   "Julia Sidorenko",
+   "Petko Fiziev"
+  ],
+  "citations": 29,
+  "source": "openalex",
+  "source_id": "W4416202074",
+  "doi": "10.1038/s41586-025-09720-6",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41586-025-09720-6.pdf",
+  "published_iso": "2025-11-12",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Advances and challenges in infrared-visible image fusion: a comprehensive review of techniques and applications",
+  "title_norm": "advances and challenges in infrared visible image fusion a comprehensive review ",
+  "abstract": "Abstract Infrared–visible image fusion (IVIF) integrates complementary thermal and photometric cues for surveillance, remote sensing, and autonomous perception. Existing surveys, while comprehensive, provide limited guidance for design-to-deployment and seldom relate fusion quality to task outcomes or device constraints. This work provides a unified perspective that organizes IVIF methods along an interface-attention-alignment coordinate system covering classical spatial/transform pipelines and contemporary deep paradigms (generative, discriminative, multi-task, hybrid/Transformer, dynamic). Building on literature through 2025, we synthesize fidelity-robustness-efficiency trade-offs and introduce a comparison-to-deployment protocol that couples fusion metrics with task accuracy (AP/mIoU), latency, memory footprint, and condition-performance characterization (misregistration, noise, illumination/weather). We consolidate Transformer/hybrid coverage with practical recipes and focused guidance on temporal consistency, robustness auditing, and physics-grounded interpretability. Compared with previous reviews, our survey concurrently addresses four under-covered dimensions-video temporal consistency, robustness auditing, task-aware evaluation, and deployment reporting-and distills a practical checklist linking architectural choices to operating conditions and hardware budgets, enabling reproducible, task-relevant IVIF practice.",
+  "year": 2025,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Rongchao Wang",
+   "Zhaofa Zhou",
+   "Shuhui Li",
+   "Zhili Zhang"
+  ],
+  "citations": 19,
+  "source": "openalex",
+  "source_id": "W4416384054",
+  "doi": "10.1007/s10462-025-11426-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10462-025-11426-0.pdf",
+  "published_iso": "2025-11-20",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Optimization of End Mill Geometry for Machining 1.2379 Cold-Work Tool Steel Through Hybrid RSM-ANN-GA Coupled FEA Approach",
+  "title_norm": "optimization of end mill geometry for machining 1 2379 cold work tool steel thro",
+  "abstract": "Optimizing end mill geometry is critical for improving performance and reducing costs in the high-volume manufacturing of tools, dies and molds. This study demonstrates a successful optimization framework for solid end mills machining 1.2379 cold-work tool steel, integrating Finite Element Analysis (FEA), Artificial Neural Networks (ANN), and Genetic Algorithms (GA). The optimized tool geometry, derived from four key design parameters, delivered substantial performance gains over an industrial reference (parent) tool. Our ANN-GA model achieved a remarkable predictive accuracy (R = 0.75–0.98) over the RSM model (R = 0.17–0.63) and identified an optimal design that reduced the resultant cutting force by approximately 11% (to 142.8 N) and improved surface roughness by 21% (to 0.1637 µm) compared to experimental baselines. Crucially, the new geometry halved the tool breakage rate from 50% to ~25%. Parameter analysis revealed the width of the land as the most influential geometric factor. This work provides a validated, high-performance tool design and a powerful modeling framework for advancing machining efficiency in tool, mold and die manufacturing.",
+  "year": 2025,
+  "venue": "Machines",
+  "authors": [
+   "Tolga ŞİRİN",
+   "Oğuzhan Der",
+   "H Kuś",
+   "Çağla Gökbulut",
+   "Ş. Yüksel",
+   "Ayhan Etyemez"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W7116662311",
+  "doi": "10.3390/machines14010015",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1702/14/1/15/pdf?version=1766307732",
+  "published_iso": "2025-12-21",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "From chaos to clarity: schema-constrained AI for auditable biomedical evidence extraction from full-text PDFs",
+  "title_norm": "from chaos to clarity schema constrained ai for auditable biomedical evidence ex",
+  "abstract": "BACKGROUND: Biomedical evidence synthesis depends on accurate extraction of methodological, laboratory, and outcome variables from full-text research articles. These variables are predominantly embedded in complex scientific PDFs that interleave multi-column text, tables, figures, and captions, making manual abstraction time-intensive, error-prone, and increasingly impractical at the scale of contemporary systematic reviews. Despite advances in layout-aware and multimodal document models, end-to-end extraction systems suitable for evidence synthesis remain constrained by limited throughput, OCR error propagation, and insufficient auditability. METHODS: We propose a schema-constrained AI extraction system that transforms full-text biomedical PDFs into structured, analysis-ready records by explicitly restricting model inference through typed schemas, controlled vocabularies, and evidence-gated decisions. Documents are ingested using resume-aware hashing, partitioned into page-level and caption-aware chunks, and processed asynchronously under explicit concurrency and rate-limiting controls. A high-accuracy OCR model is guided by multiple domain-specific schemas covering bibliographic metadata, study design, populations, laboratory assays, timing and thresholds, clinical outcomes, and diagnostic performance. Chunk-level outputs are deterministically merged into study-level records using controlled vocabularies, conflict-aware handling of scalar fields, set-based aggregation of list-valued fields, and sentence-level evidence capture to enable traceability and post-hoc audit. RESULTS: Applied to a corpus of 734 biomedical articles on direct oral anticoagulant (DOAC) level measurement, the pipeline processed all documents without manual intervention while maintaining stable throughput. Schema-constrained extraction exhibited strong internal consistency, with sentence-level provenance populated for nearly all supported decisions. Iterative schema and prompt refinement yielded substantial improvements in extraction fidelity, particularly for outcome definitions, assay classification, and global coagulation testing. Outputs included reproducible CSV/Parquet datasets and caption-aware multimodal markdown reconstructions supporting efficient expert review. CONCLUSIONS: Schema-constrained AI extraction enables scalable and auditable extraction of structured evidence from heterogeneous scientific PDFs. By combining deterministic chunking, asynchronous orchestration, controlled vocabularies, sentence-level provenance, and aggregated analytical outputs, the proposed pipeline aligns modern document understanding capabilities with the transparency, reproducibility, and reliability demands of biomedical evidence synthesis.",
+  "year": 2026,
+  "venue": "BMC Medical Research Methodology",
+  "authors": [
+   "Pouria Mortezaagha",
+   "Joseph Shaw",
+   "Bowen Sun",
+   "Arya Rahgozar"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7154043597",
+  "doi": "10.1186/s12874-026-02847-8",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7154043597",
+  "published_iso": "2026-04-14",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Sparseness-optimized feature importance with prior knowledge and reinforcement learning-powered optimization",
+  "title_norm": "sparseness optimized feature importance with prior knowledge and reinforcement l",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Neurocomputing",
+  "authors": [
+   "Gonzalo Nápoles",
+   "Isel Grau",
+   "Yamisleydi Salgueiro"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127067313",
+  "doi": "10.1016/j.neucom.2026.132925",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7127067313",
+  "published_iso": "2026-02-02",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "On Equivalences in Calabi–Yau Geometry from String Theory",
+  "title_norm": "on equivalences in calabi yau geometry from string theory",
+  "abstract": "We investigate several equivalence notions arising in the study of Calabi-Yau manifolds and their interactions with ideas from string theory. The focus is on bimeromorphic equivalence in complex geometry, Morita equivalence in noncommutative geometry, and twisted K-theory as a receptacle for D-brane charges in backgrounds with flux. Using tools from derived categories, Fukaya categories, and operator K-theory, we analyze how these equivalences appear across geometric, categorical, and physical frameworks. Particular attention is given to Fujiki class C manifolds, Hilbert C*-modules, and the role of homological mirror symmetry in relating these structures. Several examples and applications are discussed, illustrating how string-motivated constructions provide a unifying perspective on equivalence phenomena in Calabi-Yau geometry.",
+  "year": 2026,
+  "venue": "Preprints.org",
+  "authors": [
+   "Deep Bhattacharjee"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7128377404",
+  "doi": "10.20944/preprints202602.0462.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/1659a354cb9d38c8490e24adbd9d3d40/download_pub",
+  "published_iso": "2026-02-05",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Mutations and structural variants arising during double-strand break repair",
+  "title_norm": "mutations and structural variants arising during double strand break repair",
+  "abstract": "Double-strand break (DSB) repair is highly mutagenic compared to normal replication. In budding yeast, repair of an HO (homothallism) endonuclease-induced DSB at the mating-type α locus ( MAT α) can be repaired by using an ectopic heterochromatic HMR::Kl-URA3 donor, producing MAT::Kl-URA3 . Among MAT::Kl -Ura3− mutations arising during repair, 50% are base-pair substitutions. 30% are 1-bp indels in short homonucleotide runs, with −1 strongly favored over +1, whereas during replication, spontaneous −1 and +1 events are equal. Microhomology-bounded, repair-associated intragenic deletions (IDs) are recovered 12 times more frequently than tandem duplications (TDs). These data suggest a picture of the structure of the repair replication fork: IDs and TDs occur within the open structure of a migrating D-loop, where the 3’ end of a partly copied new DNA strand can dissociate and anneal with a single-stranded region of microhomology either within ~80 bp ahead or ~40 bp behind the 3’ end. Approximately ~10% of repair-associated mutations are interchromosomal template switches (ICTS), even though the Kluyveromyces lactis URA3 sequence in HMR is only 72% identical (homeologous) with Saccharomyces cerevisiae ura3-52 . ICTS events begin and end at regions of short (~7.5 bp) microhomology; however, ICTS events are constrained to the middle of the copied sequence. Whereas microhomology usage in intragenic deletions is not influenced by adjacent homeology, we show that extensive pairing of adjacent homeology plays a critical role in ICTS. Thus, although by convention, structural variants are characterized by the precise base pairs at their junction, microhomology-mediated template switching actually requires alignment of extensive adjacent homeology.",
+  "year": 2026,
+  "venue": "Proceedings of the National Academy of Sciences",
+  "authors": [
+   "Simona Dalin",
+   "Sophie Webster",
+   "Neal Sugawara",
+   "Qiuqin Wu",
+   "S. Zhang",
+   "Carmen Macias"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7127639852",
+  "doi": "10.1073/pnas.2504584123",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7127639852",
+  "published_iso": "2026-02-04",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "EgoGapBench: Benchmarking Egocentric Action Selection in Multi-Agent Scenes",
+  "title_norm": "egogapbench benchmarking egocentric action selection in multi agent scenes",
+  "abstract": "Existing egocentric benchmarks have primarily constructed the egocentric setting from first-person-view data, which makes it difficult to evaluate egocentric perspective itself in isolation. However, understanding first-person-view input and taking an egocentric perspective are separable abilities, especially when first-person body cues are absent or when other agents are present. To isolate egocentric perspective understanding, we introduce EgoGapBench, a diagnostic benchmark for measuring action selection in multi-agent egocentric scenes. We define the ability measured by this benchmark as Egocentric Action Selection (EAS): selecting an appropriate action from the agent's perspective in the presence of other agents. On EgoGapBench, humans answer reliably, whereas both open-source and proprietary MLLMs perform substantially worse and systematically select actions performed by other visible agents. Fine-tuning on existing egocentric data fails to close this gap and can even be detrimental. In contrast, fine-tuning on EgoGapBench training data improves accuracy but does not reach human performance. These results show that EAS is difficult to acquire from first-person-view data alone, and that MLLMs should be evaluated and trained not only for scene understanding but also for egocentric action selection.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jihyeok Jung",
+   "Jeewu Lee",
+   "Sanghyeop Kim",
+   "Chanhee Han",
+   "Seong Joon Oh"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7167289568",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.00547",
+  "published_iso": "2026-07-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Geometric Origin of Quantum Waves from Finite Action",
+  "title_norm": "geometric origin of quantum waves from finite action",
+  "abstract": "Quantum mechanics introduces wave–particle duality as a postulate, yet the geometric origin of wave behavior has never been derived from first principles. Here we show that a finite quantum of action, ℏgeom, compactifies the classical action manifold into a periodic U(1) phase space. Physical observables then depend only on the modular action S mod 2πℏgeom, making interference a direct geometric necessity rather than an independent assumption. We formalize this as a theorem: any system possessing finite ℏgeom must exhibit wave interference, while the classical limit corresponds to decompactification ℏgeom→0. Chronon Field Theory (ChFT) provides the physical substrate for this geometry—its causal field Φμ carries quantized symplectic flux ∮ω=ℏgeom, thereby establishing Planck’s constant as a geometric invariant of causal alignment. This unified framework links modular action, quantization, and spacetime geometry, revealing the wave nature of matter as a necessary consequence of finite causal curvature. It further predicts quantized phase discontinuities in mesoscopic interferometry, offering a concrete path toward experimental validation.",
+  "year": 2025,
+  "venue": "Preprints.org",
+  "authors": [
+   "Bin Li"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4416971583",
+  "doi": "10.20944/preprints202512.0424.v1",
+  "arxiv_id": null,
+  "paper_url": "https://www.preprints.org/frontend/manuscript/89ef1d9edd13b8039fa2eff3ef2ccddf/download_pub",
+  "published_iso": "2025-12-03",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "FreeChunker: A Cross-Granularity Chunking Framework",
+  "title_norm": "freechunker a cross granularity chunking framework",
+  "abstract": "Chunking strategies significantly impact the effectiveness of Retrieval-Augmented Generation (RAG) systems.Existing methods operate within fixed-granularity paradigms that rely on static boundary identification, limiting their adaptability to diverse query requirements.This paper presents FreeChunker, a Cross-Granularity Encoding Framework that fundamentally transforms the traditional chunking paradigm: the framework treats sentences as atomic units and shifts from static chunk segmentation to flexible retrieval over configurable contiguous multi-granularity candidates.This paradigm shift not only significantly avoids the computational overhead required for semantic boundary detection, but also enhances adaptability to complex queries.Experimental evaluation on LongBench V2 demonstrates that FreeChunker possesses significant advantages in both retrieval performance and time efficiency compared to existing chunking methods.The pre-trained models and codes are available at https://github.com/mazehart/ FreeChunker.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Wenxuan Zhang",
+   "Yuan-Hao Jiang",
+   "Yang Trista Cao",
+   "Yonghe Wu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7166886201",
+  "doi": "10.18653/v1/2026.findings-acl.730",
+  "arxiv_id": null,
+  "paper_url": "https://aclanthology.org/2026.findings-acl.730.pdf",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "SpatialAct: Probing Spatial Reasoning-to-Action Capabilities of VLM Agents in 3D Scenes",
+  "title_norm": "spatialact probing spatial reasoning to action capabilities of vlm agents in 3d ",
+  "abstract": "Humans can effortlessly perceive spatial layouts, form cognitive representations, reason about spatial relations, and translate such reasoning into actions in everyday 3D environments. Although recent vision-language models (VLMs) have shown promising performance on observation-conditioned spatial perception and reasoning tasks, it remains unclear whether they can build coherent spatial understanding, act upon it, and refine their actions through multi-turn feedback. To study this problem, we introduce \\textbf{SpatialAct}, a simulator-grounded benchmark for probing \\textit{action-conditioned spatial reasoning} in 3D scenes. Starting from the most challenging setting, Multi-turn Interactive Refinement, we further design its decomposed counterpart, Single-step Error Detection and Fix, together with five fundamental spatial ability tasks to diagnose the underlying causes of model failures. Experiments reveal a clear reasoning-to-action gap: current VLMs can perform well on isolated spatial reasoning tasks, but struggle to maintain coherent spatial beliefs and produce reliable actions during multi-turn feedback, substantially underperforming humans. These results suggest that current VLM agents still lack robust spatial state tracking under action-induced environment changes, even when low-level control is abstracted away.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Tianhui Liu",
+   "Jie Feng",
+   "Zhiheng Zheng",
+   "Shengyuan Wang",
+   "Yiming Guo",
+   "Yanxin Xi"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7163287802",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.31148",
+  "published_iso": "2026-05-29",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Recognition Geometry",
+  "title_norm": "recognition geometry",
+  "abstract": "We introduce Recognition Geometry (RG), an axiomatic framework in which geometric structure is not assumed a priori but derived. The starting point of the theory is a configuration space together with recognizers that map configurations to observable events. Observational indistinguishability induces an equivalence relation, and the observable space is obtained as a recognition quotient. Locality is introduced through a neighborhood system, without assuming any metric or topological structure. A finite local resolution axiom formalizes the fact that any observer can distinguish only finitely many outcomes within a local region. We prove that the induced observable map R¯:CR→E is injective, establishing that observable states are uniquely determined by measurement outcomes with no hidden structure. The framework connects deeply with existing approaches: C*-algebraic quantum theory, information geometry, categorical physics, causal set theory, noncommutative geometry, and topos-theoretic foundations all share the measurement-first philosophy, yet RG provides a unified axiomatic foundation synthesizing these perspectives. Comparative recognizers allow us to define order-type relations based on operational comparison. Under additional assumptions, quantitative notions of distinguishability can be introduced in the form of recognition distances, defined as pseudometrics. Several examples are provided, including threshold recognizers on Rn, discrete lattice models, quantum spin measurements, and an example motivated by Recognition Science. In the last part, we develop the composition of recognizers, proving that composite recognizers refine quotient structures and increase distinguishing power. We introduce symmetries and gauge equivalence, showing that gauge-equivalent configurations are necessarily observationally indistinguishable, though the converse does not hold in general. A significant part of the axiomatic framework and the main constructions are formalized in the Lean 4 proof assistant, providing an independent verification of logical consistency.",
+  "year": 2026,
+  "venue": "Axioms",
+  "authors": [
+   "Jonathan Washburn",
+   "Milan Zlatanović",
+   "Elshad Allahyarov"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7125806688",
+  "doi": "10.3390/axioms15020090",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1680/15/2/90/pdf?version=1769431772",
+  "published_iso": "2026-01-26",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Beyond Chunk-Then-Embed: A Comprehensive Taxonomy and Evaluation of Document Chunking Strategies for Information Retrieval",
+  "title_norm": "beyond chunk then embed a comprehensive taxonomy and evaluation of document chun",
+  "abstract": "Document chunking is a critical preprocessing step in dense retrieval systems, yet the design space of chunking strategies remains poorly understood. Recent research has proposed several concurrent approaches, including LLM-guided methods (e.g., DenseX and LumberChunker) and contextualized strategies(e.g., Late Chunking), which generate embeddings before segmentation to preserve contextual information. However, these methods emerged independently and were evaluated on benchmarks with minimal overlap, making direct comparisons difficult. This paper reproduces prior studies in document chunking and presents a systematic framework that unifies existing strategies along two key dimensions: (1) segmentation methods, including structure-based methods (fixed-size, sentence-based, and paragraph-based) as well as semantically-informed and LLM-guided methods; and (2) embedding paradigms, which determine the timing of chunking relative to embedding (pre-embedding chunking vs. contextualized chunking). Our reproduction evaluates these approaches in two distinct retrieval settings established in previous work: in-document retrieval (needle-in-a-haystack) and in-corpus retrieval (the standard information retrieval task). Our comprehensive evaluation reveals that optimal chunking strategies are task-dependent: simple structure-based methods outperform LLM-guided alternatives for in-corpus retrieval, while LumberChunker performs best for in-document retrieval. Contextualized chunking improves in-corpus effectiveness but degrades in-document retrieval. We also find that chunk size correlates moderately with in-document but weakly with in-corpus effectiveness, suggesting segmentation method differences are not purely driven by chunk size. Our code and evaluation benchmarks are publicly available at (Anonymoused).",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yongjie Zhou",
+   "Shuai Wang",
+   "Bevan Koopman",
+   "Guido Zuccon"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7130762475",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2602.16974",
+  "published_iso": "2026-02-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Generative AI-driven synthetic media risks in digital health: implications for telemedicine and teledentistry",
+  "title_norm": "generative ai driven synthetic media risks in digital health implications for te",
+  "abstract": "Advances in diffusion-based and neural rendering architectures have enabled the creation of synthetic audiovisual content that closely replicates natural facial dynamics, speech production, and environmental context. These developments pose a growing risk to clinical medicine and dentistry, where authentic audiovisual data support remote clinical assessment, communication, and medico-legal documentation. This study introduces an interpretable multimodal framework for deepfake detection that integrates visual, acoustic, and cross-modal coherence features, with decision thresholds derived exclusively from authentic recordings to ensure transparency and forensic accountability. Using the DeepFake RealWorld dataset comprising 46,371 audiovisual clips, including 77% with audio, we evaluated 47 descriptors across optical, bioacoustic, and synchronization domains. Clinical relevance was evaluated through simulated dental teleconsultations. Cross-modal metrics, particularly lip-speech synchrony (Δp = 0.21-0.22), phoneme-viseme alignment (Δp = 0.21), a widely used audio visual consistency cue in multimodal deepfake detection, identity coherence (Δp = 0.19), and scene-audio semantic consistency (Δp = 0.18) demonstrated the strongest discriminatory performance, with prevalence ratios of up to 2.7. Acoustic markers, including reduced jitter, shimmer, and shortened reverberation time (RT60; 0.12 s in synthetic vs. 0.28 s in real recordings), provided additional robustness. The framework maintained performance degradation below 15% under platform-scale compression and recapture artifacts. Additionally, the proposed framework was benchmarked against a standard open-source texture-oriented baseline detector based on the Xception architecture, with clip-level ROC AUC and balanced accuracy reported on the original clips and under the same platform transformations used in the robustness analysis. Simulated dental teleconsultations revealed that manipulated recordings introduce inconsistencies in mandibular motion, prosody-related facial dynamics, and ambient acoustic plausibility (mean Δp = 0.18; PR = 2.3), confirming the clinical relevance of multimodal coherence analysis. These results position coherence-based detection as a reliable, transparent, and domain-appropriate approach for safeguarding audiovisual integrity in remote dentistry, medicine, and related digital health applications.",
+  "year": 2026,
+  "venue": "Frontiers in Public Health",
+  "authors": [
+   "Karol Jędrasiak",
+   "Julia Bijoch"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7130520088",
+  "doi": "10.3389/fpubh.2026.1781216",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1781216/pdf",
+  "published_iso": "2026-02-19",
+  "oa_field": "Dentistry",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Synaptic Theory of Chunking in Working Memory",
+  "title_norm": "synaptic theory of chunking in working memory",
+  "abstract": "Working memory often appears to exceed its basic span by organizing items into compact representations called chunks. Chunking can be learned over time for familiar inputs; however, it can also arise spontaneously for novel stimuli. Such on-the-fly structuring is crucial for cognition, yet the underlying neural mechanism remains unclear. Here we introduce a synaptic theory of chunking, in which short-term synaptic plasticity enables the formation of chunk representations in working memory. We show that a specialized population of “chunking neurons” selectively controls groups of stimulus-responsive neurons, akin to gating. As a result, the network maintains and retrieves the stimuli in chunks, thereby exceeding the basic capacity. Moreover, we show that our model can dynamically construct hierarchical representations within working memory through hierarchical chunking. A consequence of this proposed mechanism is a new limit on the number of items that can be stored and subsequently retrieved from working memory, depending only on the basic working memory capacity when chunking is not invoked. Predictions from our model were confirmed by analyzing single-unit responses in epileptic patients and memory experiments with verbal material. Our work provides a novel conceptual and analytical framework for understanding how the brain organizes information in real time.",
+  "year": 2026,
+  "venue": "eLife",
+  "authors": [
+   "Weishun Zhong",
+   "Mikhail Katkov",
+   "Misha Tsodyks"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7120122579",
+  "doi": "10.7554/elife.109538",
+  "arxiv_id": null,
+  "paper_url": "https://elifesciences.org/reviewed-preprints/109538.pdf",
+  "published_iso": "2026-01-09",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Secure and Intelligent Low-Altitude Infrastructures: Synergistic Integration of IoT Networks, AI Decision-Making and Blockchain Trust Mechanisms",
+  "title_norm": "secure and intelligent low altitude infrastructures synergistic integration of i",
+  "abstract": "The low-altitude economy (LAE), encompassing urban air mobility, drone logistics and sub 3000 m aerial surveillance, demands secure, intelligent infrastructures to manage increasingly complex, multi-stakeholder operations. This survey evaluates the integration of Internet of Things (IoT) networks, artificial intelligence (AI) decision-making and blockchain trust mechanisms as foundational enablers for next-generation LAE ecosystems. IoT sensor arrays deployed at ground stations, unmanned aerial vehicles (UAVs) and vertiports form a real-time data fabric that records variables from air traffic density to environmental parameters. These continuous data streams empower AI models ranging from predictive analytics and computer vision (CV) to multi-agent reinforcement learning (MARL) and large language model (LLM) reasoning to optimize flight paths, identify anomalies and coordinate swarm behaviors autonomously. In parallel, blockchain architectures furnish immutable audit trails for regulatory compliance, support secure device authentication via decentralized identifiers (DIDs) and automate contractual exchanges for services such as airspace leasing or payload delivery. By examining current research and practical deployments, this review demonstrates how the synergistic application of IoT, AI and blockchain can bolster operational efficiency, resilience and trustworthiness across the LAE landscape.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Yuwen Ye",
+   "Xirun Min",
+   "Xiangwen Liu",
+   "Xiangyi Chen",
+   "Xiangyi Chen",
+   "Kefan Cao"
+  ],
+  "citations": 13,
+  "source": "openalex",
+  "source_id": "W4415931073",
+  "doi": "10.3390/s25216751",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/21/6751/pdf?version=1762329535",
+  "published_iso": "2025-11-04",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Geometric origin of a stable black hole remnant from torsion in G$$_2$$-manifold geometry",
+  "title_norm": "geometric origin of a stable black hole remnant from torsion in g _2 manifold ge",
+  "abstract": "Abstract In this work, we explore the phenomenological consequences of a 7-dimensional Einstein-Cartan theory formulated on a G $$_2$$ 2 -manifold with torsion. We demonstrate that a Kaluza-Klein reduction of this geometry can provide a natural origin for the electroweak scale ( $$\\approx \\thickapprox {246}{GeV}$$ ≈ ≈ 246 GeV ), offering a geometric explanation for the hierarchy problem. A key prediction of this framework is the existence of a repulsive force at Planckian densities, which dynamically halts the final stage of Hawking evaporation. This leads to the formation of a stable remnant with a predicted mass of approximately $$9\\times 10^{-41}\\;\\text {kg}$$ 9 × 10 - 41 kg . The model’s internal consistency is confirmed by non-trivial relations that fix its geometric parameters, leading to falsifiable predictions. Furthermore, the remnant’s structure provides a concrete mechanism for storing information via its quasi-normal mode spectrum, opening a new, testable research program at the intersection of geometry, quantum gravity, and particle physics.",
+  "year": 2026,
+  "venue": "General Relativity and Gravitation",
+  "authors": [
+   "Richard Pinčák",
+   "Alexander Pigazzini",
+   "Michal Pudlák",
+   "Erik Bartoš"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7139098693",
+  "doi": "10.1007/s10714-026-03528-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10714-026-03528-z.pdf",
+  "published_iso": "2026-03-01",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "AI-driven drone technology and computer vision for early detection of crop disease in large agricultural areas",
+  "title_norm": "ai driven drone technology and computer vision for early detection of crop disea",
+  "abstract": "Timely detection of crop diseases in large, heterogeneous agricultural fields is difficult, as aerial imagery is often corrupted by illumination, weather, and crop-stage variations. This paper introduces AgroVisionNet, an AI-powered drone and computer vision approach that synthesises high-resolution drone imagery with in-field IoT/environmental sensor data to enhance early disease detection. The core of the proposed model is a hybrid CNN-Transformer backbone to extract spatial and contextual data from drone images, and an adaptive fusion layer to fuse time-aligned sensor readings and to make a decision, using visual and environmental evidence. Particularly, a multimodal drone–sensor dataset is collected across multiple crops and field conditions. Beyond widely used deep models for plant/crop disease identification, such as VGG16, ResNet50, Inception V3, and DenseNet121, experiments are conducted using the same training and evaluation framework. It is shown that AgroVisionNet achieves higher classification accuracy and F1-score, while inference remains feasible on an NVIDIA Jetson Nano using TensorFlow Lite. Moreover, by generating Grad-CAM plots, the study demonstrates that the proposed approach identifies disease-affected areas and, in this sense, provides interpretable information required by agronomists. These outcomes suggest that AI-based crop health tracking can be robust and field-ready by integrating drone imagery, sensor fusion, and edge computing.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "authors": [
+   "H M Manoj",
+   "D L Shanthi",
+   "B.N. Lakshmi",
+   "K Archana",
+   "E. Jyothi",
+   "K. Archana"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4417430423",
+  "doi": "10.1038/s41598-025-32384-1",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41598-025-32384-1_reference.pdf",
+  "published_iso": "2025-12-17",
+  "oa_field": "Agricultural and Biological Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Soliton surfaces and the geometry of integrable deformations of the $$ {\\mathbbm{CP}}^{N-1} $$ model",
+  "title_norm": "soliton surfaces and the geometry of integrable deformations of the mathbbm cp n",
+  "abstract": "A bstract The $$ {\\mathbbm{CP}}^{N-1} $$ CP N − 1 model is an analytically tractable 2 d quantum field theory which shares several properties with 4 d Yang-Mills theory. By virtue of its classical integrability, this model also admits a family of integrable higher-spin auxiliary field deformations, including the $$ T\\overline{T} $$ T T ¯ deformation as a special case. We study the $$ {\\mathbbm{CP}}^{N-1} $$ CP N − 1 model and its deformations from a geometrical perspective, constructing their soliton surfaces and recasting physical properties of these theories as statements about surface geometry. We examine how the $$ T\\overline{T} $$ T T ¯ flow affects the unit constraint in the $$ {\\mathbbm{CP}}^{N-1} $$ CP N − 1 model and prove that any solution of this theory with vanishing energy-momentum tensor remains a solution under analytic stress tensor deformations — an argument that extends to generic dimensions and instanton-like solutions in stress tensor flows including the non-analytic, 2 d , root- $$ T\\overline{T} $$ T T ¯ case and classes of higher-spin, Smirnov-Zamolodchikov-type, deformations. Finally, we give two geometric interpretations for general $$ T\\overline{T} $$ T T ¯ -like deformations of symmetric space sigma models, showing that such flows can be viewed as coupling the undeformed theory to a unit-determinant field-dependent metric, or using a particular choice of moving frame on the soliton surface.",
+  "year": 2026,
+  "venue": "Journal of High Energy Physics",
+  "authors": [
+   "Christian Ferko",
+   "Michele Galli",
+   "Zejun Huang",
+   "Gabriele Tartaglino-Mazzucchelli"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7138003155",
+  "doi": "10.1007/jhep03(2026)144",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/JHEP03(2026)144.pdf",
+  "published_iso": "2026-03-16",
+  "oa_field": "Mathematics",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Vision Mamba in Remote Sensing: A Comprehensive Survey of Techniques, Applications and Outlook",
+  "title_norm": "vision mamba in remote sensing a comprehensive survey of techniques applications",
+  "abstract": "Deep learning has profoundly transformed remote sensing, yet prevailing architectures like Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) remain constrained by critical trade-offs: CNNs suffer from limited receptive fields, while ViTs grapple with quadratic computational complexity, hindering their scalability for high-resolution remote sensing data. State Space Models (SSMs), particularly the recently proposed Mamba architecture, have emerged as a paradigm-shifting solution, combining linear computational scaling with global context modeling. This survey presents a comprehensive review of Mamba-based methodologies in remote sensing, systematically analyzing about 120 Mamba-based remote sensing studies to construct a holistic taxonomy of innovations and applications. Our contributions are structured across five dimensions: (i) foundational principles of Vision Mamba architectures, (ii) micro-architectural advancements such as adaptive scan strategies and hybrid SSM formulations, (iii) macro-architectural integrations, including CNN–Transformer–Mamba hybrids and frequency-domain adaptations, (iv) rigorous benchmarking against state-of-the-art methods in multiple application tasks, such as object detection, semantic segmentation, change detection, etc. and (v) critical analysis of unresolved challenges with actionable future directions. By bridging the gap between SSM theory and remote sensing practice, this survey establishes Mamba as a transformative framework for remote sensing analysis. To our knowledge, this paper is the first systematic review of Mamba architectures in remote sensing. Our work provides a structured foundation for advancing research in remote sensing systems through SSM-based methods. We curate an open-source GitHub repository to foster community-driven advancements.",
+  "year": 2026,
+  "venue": "Remote Sensing",
+  "authors": [
+   "Muyi Bao",
+   "Shuchang Lyu",
+   "Zhaoyang Xu",
+   "Huiyu Zhou",
+   "Jinchang Ren",
+   "Shiming Xiang"
+  ],
+  "citations": 22,
+  "source": "openalex",
+  "source_id": "W7128909480",
+  "doi": "10.3390/rs18040594",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2072-4292/18/4/594/pdf?version=1771049374",
+  "published_iso": "2026-02-14",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "A Survey on Medical Large Language Models: Technology, Application, Trustworthiness, and Future Directions",
+  "title_norm": "a survey on medical large language models technology application trustworthiness",
+  "abstract": "With the advent of Large Language Models (LLMs), medical artificial intelligence (AI) has experienced substantial technological progress and paradigm shifts, highlighting the potential of LLMs to streamline healthcare delivery and improve patient outcomes. Considering this rapid technical progress, in this survey, we trace the recent advances of Medical Large Language Models (Med-LLMs), including the background, key findings, and mainstream techniques, especially for the evolution from general-purpose models to medical-specialized applications. Firstly, we delve into the foundational technology of Med-LLMs, indicating how general models can be progressively adapted and refined for the complicated medical tasks. Secondly, the wide-ranging applications of Med-LLMs are investigated across various healthcare domains, as well as an up-to-date review of existing Med-LLMs. The transformative impact of these models on daily medical practice is evident through their ability to assist clinicians, educators, and patients. Recognizing the importance of responsible innovation, we discuss the challenges associated with ensuring fairness, accountability, privacy, and robustness. Ethical considerations, rigorous evaluation methodologies, and the establishment of regulatory frameworks are crucial for building trustworthiness in the real-world system. We emphasize the need for ongoing scrutiny and development to maintain high standards of safety and reliability. Finally, we anticipate possible future trajectories for Med-LLMs, identifying key avenues for prudent expansion. By consolidating these insights, our review aims to provide professionals and researchers with a thorough understanding of the strengths and limitations of Med-LLMs, fostering a balanced and ethical approach to their integration into the healthcare ecosystem.",
+  "year": 2026,
+  "venue": "IEEE Transactions on Knowledge and Data Engineering",
+  "authors": [
+   "Lei Liu",
+   "Xiaoyan Yang",
+   "Junchi Lei",
+   "Yue Shen",
+   "Jian Wang",
+   "Peng Wei"
+  ],
+  "citations": 22,
+  "source": "openalex",
+  "source_id": "W4399454054",
+  "doi": "10.1109/tkde.2026.3709941",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4399454054",
+  "published_iso": "2026-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Morphological Discontinuity Under Climate Reclassification: A Compatibility-Based Adaptation Framework for Vernacular Courtyard Houses",
+  "title_norm": "morphological discontinuity under climate reclassification a compatibility based",
+  "abstract": "High-resolution Köppen–Geiger projections indicate that several cold desert (BWk) regions are likely to transition toward hot desert (BWh) regimes during the twenty-first century, challenging the environmental logic of vernacular architecture. Despite extensive simulation-based research on passive cooling in established BWh contexts, limited attention has been given to climate-type transition zones and to the morphological continuity of traditional housing systems. This study investigates the adaptive capacity of Bukhara’s courtyard houses under projected BWk–BWh reclassification. Employing an analytical generalization approach, the research integrates systematic literature mapping, typological morphological analysis, and a threshold-based compatibility matrix. Findings reveal that climate transition produces a form of morphological discontinuity by weakening diurnal discharge assumptions embedded in high thermal mass systems. However, courtyard typologies retain a resilient passive core when recalibrated through microclimatic amplification strategies. The proposed staged adaptation framework contributes a heritage-sensitive decision model that reconciles climatic performance with spatial integrity, offering transferable guidance for cli-mate-intensifying desert regions.",
+  "year": 2026,
+  "venue": "Buildings",
+  "authors": [
+   "Dilek Yaşar",
+   "Gavkhar Uzakova",
+   "Pınar Öktem Erkartal"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7154599976",
+  "doi": "10.3390/buildings16081583",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-5309/16/8/1583/pdf?version=1776349797",
+  "published_iso": "2026-04-16",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Multi-Agent RAG Framework for Entity Resolution: Advancing Beyond Single-LLM Approaches with Specialized Agent Coordination",
+  "title_norm": "multi agent rag framework for entity resolution advancing beyond single llm appr",
+  "abstract": "Entity resolution in real-world datasets remains a persistent challenge, particularly for identifying households and detecting co-residence patterns within noisy and incomplete data. While Large Language Models (LLMs) show promise, monolithic approaches often suffer from limited scalability and interpretability. This study introduces a multi-agent Retrieval-Augmented Generation (RAG) framework that decomposes household entity resolution into coordinated, task-specialized agents implemented using LangGraph. The system includes four agents responsible for direct matching, transitive linkage, household clustering, and residential movement detection, combining rule-based preprocessing with LLM-guided reasoning. Evaluation on synthetic S12PX dataset segments containing 200–300 records demonstrates 94.3% accuracy on name variation matching and a 61% reduction in API calls compared to single-LLM baselines, while maintaining transparent and traceable decision processes. These results indicate that coordinated multi-agent specialization improves efficiency and interpretability, providing a structured and extensible approach for entity resolution in census, healthcare, and other administrative data domains.",
+  "year": 2025,
+  "venue": "Computers",
+  "authors": [
+   "Aatif Muhammad Althaf",
+   "Muzakkiruddin Ahmed Mohammed",
+   "Mariofanna Milanova",
+   "John Talburt",
+   "Mert Can Çakmak"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4416998105",
+  "doi": "10.3390/computers14120525",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-431X/14/12/525/pdf?version=1764635896",
+  "published_iso": "2025-12-01",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation",
+  "title_norm": "oa wam object addressable world action model for robust robot manipulation",
+  "abstract": "World Action Models (WAMs) enhance Vision-Language-Action policies by jointly predicting scene evolution and robot actions, but existing methods usually represent the predicted world as holistic images, video tokens, or global latents. These representations are difficult for an action decoder to address when an instruction refers to a particular object, especially under scene shifts where object identity is entangled with context. We propose OA-WAM, an Object-Addressable World Action Model for robust robot manipulation. OA-WAM decomposes each frame into N+1 slot states, with one robot slot and N object slots. Each slot contains a persistent address vector and a time-varying content vector, and is fused with text, image, proprioception, and past-action tokens in a block-causal sequence. A world head predicts next-frame slot states, while a flow-matching action head decodes a 16-step continuous action chunk in the same forward pass. Addressability is enforced by routing cross-slot attention through address-only keys and resetting the address slice at every transformer layer, separating which object to act on from what that object currently is without adding extra tokens. OA-WAM matches strong VLA and WAM baselines on LIBERO (97.8%) and SimplerEnv (79.3%), reaches state-of-the-art performance on the most relevant LIBERO-Plus geometric axes, and remains competitive on the seven-axis aggregate. A causal slot-intervention test yields a swap-binding cosine of 0.87, versus at most 0.09 for holistic baselines. These results suggest that addressable object states provide an effective interface for robust world-action modeling under scene perturbations.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yushan Liu",
+   "Peibo Sun",
+   "Shoujie Li",
+   "Yifan Xie",
+   "Lingfeng Zhang",
+   "Xintao Chao"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7160726904",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.06481",
+  "published_iso": "2026-05-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Large-Scale Hydrogen Storage in Deep Saline Aquifers: Multiphase Flow, Geochemical–Microbial Interactions, and Economic Feasibility",
+  "title_norm": "large scale hydrogen storage in deep saline aquifers multiphase flow geochemical",
+  "abstract": "The development of large-scale, flexible, and safe hydrogen storage is critical for enabling a low-carbon energy system. Deep saline aquifers (DSAs) offer substantial theoretical capacity and broad geographic distribution, making them attractive options for underground hydrogen storage. However, hydrogen storage in DSAs presents complex technical, geochemical, microbial, geomechanical, and economic challenges that must be addressed to ensure efficiency, safety, and recoverability. This study synthesizes current knowledge on hydrogen behavior in DSAs, focusing on multiphase flow dynamics, capillary trapping, fingering phenomena, geochemical reactions, microbial consumption, cushion gas requirements, and operational constraints. Advanced numerical simulations and experimental observations highlight the role of reservoir heterogeneity, relative permeability hysteresis, buoyancy-driven migration, and redox-driven hydrogen loss in shaping storage performance. Economic analysis emphasizes the significant influence of cushion gas volumes and hydrogen recovery efficiency on the levelized cost of storage, while pilot studies reveal strategies for mitigating operational and geochemical risks. The findings underscore the importance of integrated, coupled-process modeling and comprehensive site characterization to optimize hydrogen storage design and operation. This work provides a roadmap for developing scalable, safe, and economically viable hydrogen storage in DSAs, bridging the gap between laboratory research, pilot demonstration, and commercial deployment.",
+  "year": 2025,
+  "venue": "Materials",
+  "authors": [
+   "Abdullahi M. Baru",
+   "Abdullahi M. Baru",
+   "Stella I. Eyitayo",
+   "Chinedu J. Okere",
+   "Abdurrahman Baru",
+   "Abdurrahman Baru"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4416073031",
+  "doi": "10.3390/ma18225097",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1996-1944/18/22/5097/pdf?version=1762767660",
+  "published_iso": "2025-11-10",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "eLife Assessment: Synaptic Theory of Chunking in Working Memory",
+  "title_norm": "elife assessment synaptic theory of chunking in working memory",
+  "abstract": "Working memory often appears to exceed its basic span by organizing items into compact representations called chunks. Chunking can be learned over time for familiar inputs; however, it can also arise spontaneously for novel stimuli. Such on-the-fly structuring is crucial for cognition, yet the underlying neural mechanism remains unclear. Here we introduce a synaptic theory of chunking, in which short-term synaptic plasticity enables the formation of chunk representations in working memory. We show that a specialized population of “chunking neurons” selectively controls groups of stimulus-responsive neurons, akin to gating. As a result, the network maintains and retrieves the stimuli in chunks, thereby exceeding the basic capacity. Moreover, we show that our model can dynamically construct hierarchical representations within working memory through hierarchical chunking. A consequence of this proposed mechanism is a new limit on the number of items that can be stored and subsequently retrieved from working memory, depending only on the basic working memory capacity when chunking is not invoked. Predictions from our model were confirmed by analyzing single-unit responses in epileptic patients and memory experiments with verbal material. Our work provides a novel conceptual and analytical framework for understanding how the brain organizes information in real time.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Sukbin Lim"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7120231862",
+  "doi": "10.7554/elife.109538.1.sa3",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7120231862",
+  "published_iso": "2026-01-09",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Parameter-Efficient continual fine-tuning: A survey",
+  "title_norm": "parameter efficient continual fine tuning a survey",
+  "abstract": "",
+  "year": 2026,
+  "venue": "Neurocomputing",
+  "authors": [
+   "E N Coleman",
+   "Luigi Quarantiello",
+   "Ziyue Liu",
+   "Qinwen Yang",
+   "Samrat Mukherjee",
+   "Julio Hurtado"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4414374254",
+  "doi": "10.1016/j.neucom.2026.134502",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414374254",
+  "published_iso": "2026-07-15",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Constraint Geometry in Natural Product Biosynthesis",
+  "title_norm": "constraint geometry in natural product biosynthesis",
+  "abstract": "Natural product biosynthesis is often framed through the lenses of enzymatic novelty, pathway diversity, and evolutionary contingency. Yet across systems, a deeper, more profound regularity emerges, biosynthetic space is shaped not only by genetic potential but by the geometric constraints imposed by ecological context, metabolic flux, and structural feasibility. This perspective outlines a minimal conceptual framework for understanding how constraint geometry governs the emergence, stability, and diversification of natural product families. Rather than proposing new theory, it synthesizes existing observations into a coherent lens that highlights why certain scaffolds recur, why others remain rare, and how ecological pressures delimit the accessible chemical landscape. The aim of this paper is to provide a compact, integrative reference point for researchers seeking to understand the deeper architecture underlying biosynthetic outcomes.",
+  "year": 2026,
+  "venue": "Natural Products Analysis",
+  "authors": [
+   "Simon Gibbons"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7166663822",
+  "doi": "10.53941/npa.2026.100011",
+  "arxiv_id": null,
+  "paper_url": "https://media.sciltp.com/articles/2606004391/2606004391.pdf",
+  "published_iso": "2026-06-30",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Lightweight Chunk Selection for Mobile Retrieval-Augmented Generation",
+  "title_norm": "lightweight chunk selection for mobile retrieval augmented generation",
+  "abstract": "RAG improves the factual grounding of LLM by incorporating external knowledge, but deploying RAG on mobile and edge devices remains challenging because retrieved context increases computation and memory. A direct way to reduce this cost is to retain only one retrieved chunk before generation, but the top-ranked retrieved chunk is not always the most evidence-supporting one, since retrieval similarity does not necessarily imply evidential sufficiency. Existing context-reduction methods can improve context quality, but often require additional LLMs or compressors that are costly under a strict mobile budget. In this paper, we study lightweight RAG chunk selection as an evidence-alignment problem. Our selector combines three complementary feature sources: question hidden states that represent LLM-side query intent, MoE routing-derived expert signals that capture the generator's internal routing structure, and retrieved chunk embeddings that preserve candidate-side evidence geometry. A compact multilayer perceptron maps these features to an evidence prototype in the chunk embedding space, and the candidate most aligned with this prototype is selected by cosine similarity. For stricter deployment budgets, we further introduce an optional task-aware feature selection strategy to reduce the selector input dimension. To support supervised evaluation, we construct semantic chunk-correctness labels based on evidence sufficiency rather than answer-string containment. Experiments show that the proposed selector consistently improves rank-1 evidence selection over mobile-applicable baselines by an average of 2.5%. These results suggest that using LLM-side query representations and MoE routing information and aligning them with retrieval-side candidate embedding is an effective and parameter-efficient strategy for mobile-applicable RAG chunk selection.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Sicong Chang",
+   "Yidan Shen",
+   "Wen Yu",
+   "Jiefu Chen",
+   "Xin Fu",
+   "Renjie Hu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7197053363",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.03148",
+  "published_iso": "2026-08-04",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Seeing vs. Believing: Evaluating the Language Bias of Open-Source MLLMs in Counter-Intuitive Scenes",
+  "title_norm": "seeing vs believing evaluating the language bias of open source mllms in counter",
+  "abstract": "Multimodal Large Language Models (MLLMs) have demonstrated remarkable performance in mainstream visual understanding tasks, but their ability to process action scenes that contradict everyday common sense remains undertested. To address this gap, we introduce CAIT, a benchmark comprising 400 high-fidelity synthetic scenes focused on counter-intuitive visual actions, such as ``a rabbit is chasing a tiger'', where visual evidence explicitly contradicts common-sense expectations. We evaluate human, leading proprietary models (e.g., Claude and Gemini), and 14 representative open-source MLLMs. Humans achieve near-perfect performance (around 0.95 accuracy) and proprietary models demonstrate robust understanding (achieving up to 0.88 accuracy), standard open-source instruction-tuned models perform at the chance level. Further analysis demonstrates that this failure is driven by a strong language prior: rather than trusting the visual input, they automatically override the anomalous visual signals with statistically common text descriptions. Although introducing Chain-of-Thought reasoning mechanisms can improve accuracy, it significantly slows down the response and generates a new failure mode: models overthink the scenario and refuse to accept the actual visual content simply because it violates real-world physical laws. Finally, we demonstrate that targeted fine-tuning and structured prompting can effectively mitigate this reliance on language priors, enabling open-source models to accurately ground their reasoning in actual visual evidence.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Chen Ling",
+   "Tongwei Zhang",
+   "Hanqian Li",
+   "Nai Ding"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7124118148",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2601.07737",
+  "published_iso": "2026-01-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Synergistic Interactions Between Bacteria-Derived Metabolites and Emerging Technologies for Meat Preservation",
+  "title_norm": "synergistic interactions between bacteria derived metabolites and emerging techn",
+  "abstract": "Considering the challenges associated with implementing emerging technologies and bacterial-derived antimicrobial metabolites at an industrial scale in the meat industry, this comprehensive review investigates the interactions between lactic acid bacteria-producing antimicrobial metabolites and emerging food preservation technologies applied to meat systems. By integrating evidence from microbiology, food engineering, and molecular physiology, the review characterizes how metabolites-derived compounds exert inhibitory activity through pH modulation, membrane permeabilization, disruption of proton motive force, and interference with cell wall biosynthesis. These biochemical actions are evaluated in parallel with the mechanistic effects of high-pressure processing, pulsed electric fields, cold plasma, irradiation, pulsed light, ultrasound, ohmic heating and nanotechnology. Across the literature, consistent patterns of synergy emerge: many emerging technologies induce structural and metabolic vulnerabilities in microbial cells, thereby amplifying the efficacy of antimicrobial metabolites while enabling reductions in process intensity. The review consolidates these findings to elucidate multi-hurdle strategies capable of improving microbial safety, extending shelf life, and preserving the physicochemical integrity of meat products. Remaining challenges include optimizing combinational parameters, ensuring metabolite stability within complex matrices, and aligning integrated preservation strategies with regulatory and industrial constraints.",
+  "year": 2026,
+  "venue": "Fermentation",
+  "authors": [
+   "Carlos Alberto Guerra",
+   "André Fioravante Guerra",
+   "Marcelo Cristianini"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7122674576",
+  "doi": "10.3390/fermentation12010043",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2311-5637/12/1/43/pdf",
+  "published_iso": "2026-01-10",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "A Systematic Investigation of Document Chunking Strategies and Embedding Sensitivity",
+  "title_norm": "a systematic investigation of document chunking strategies and embedding sensiti",
+  "abstract": "We present the first large-scale, cross-domain evaluation of document chunking strategies for dense retrieval, addressing a critical but underexplored aspect of retrieval-augmented systems. In our study, 36 segmentation methods spanning fixed-size, semantic, structure-aware, hierarchical, adaptive, and LLM-assisted approaches are benchmarked across six diverse knowledge domains using five different embedding models. Retrieval performance is assessed using graded relevance scores from a state-of-the-art LLM evaluator, with Normalised DCG@5 as the primary metric (complemented by Hit@5 and MRR). Our experiments show that content-aware chunking significantly improves retrieval effectiveness over naive fixed-length splitting. The top-performing strategy, Paragraph Group Chunking, achieved the highest overall accuracy (mean nDCG@5~0.459) and substantially better top-rank hit rates (Precision@1~24%, Hit@5~59%). In contrast, simple fixed-size character chunking as baselines performed poorly (nDCG@5 < 0.244, Precision@1~2-3%). We observe pronounced domain-specific differences: dynamic token sizing is strongest in biology, physics and health, while paragraph grouping is strongest in legal and maths. Larger embedding models yield higher absolute scores but remain sensitive to suboptimal segmentation, indicating that better chunking and large embeddings provide complementary benefits. In addition to accuracy gains, we quantify the efficiency trade-offs of advanced chunking. Producing more, smaller chunks can increase index size and latency. Consequently, we identify methods (like dynamic chunking) that approach an optimal balance of effectiveness and efficiency. These findings establish chunking as a vital lever for improving retrieval performance and reliability.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Muhammad Arslan Shaukat",
+   "Muntasir Adnan",
+   "Carlos C. N. Kuhn"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7134861532",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2603.06976",
+  "published_iso": "2026-03-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Is this real? Susceptibility to deepfakes in machines and humans",
+  "title_norm": "is this real susceptibility to deepfakes in machines and humans",
+  "abstract": "Deepfakes are synthetic media created by deep-generative methods to fake a person's audio-visual representation. Growing sophistication of deepfake technology poses significant challenges for both machine learning (ML) algorithms and humans. Here we used real and deepfake static face images (Study 1) and dynamic videos (Study 2) to (i) investigate sources of misclassification errors in machines, (ii) identify psychological mechanisms underlying detection performance in humans, and (iii) compare humans and machines in their classification decision accuracy and confidence. Study 1 found that machines achieved excellent performance in classifying real and deepfake images, with good accuracy in feature classification. Humans, in contrast, experienced challenges in distinguishing between real and deepfake static images. Their classification accuracy was at chance level, and this underperformance relative to machines was accompanied by a truth bias and low confidence for the detection of deepfake images. Using dynamic video stimuli, Study 2 found that performance of machines was near chance level, with poor feature classification. Further, machines showed greater lie bias and reduced decision confidence relative to humans who outperformed machines in the detection of video deepfakes. Finally, Study 2 revealed that higher analytical thinking, lower positive affect, and greater internet skills were associated with better video deepfake detection in humans. Combined, the findings across these two studies advance understanding of factors contributing to deepfake detection in both machines and humans; and can inform intervention toward tackling the growing threat from deepfakes by identifying areas of particular benefit from human-AI collaboration to optimize the detection of deepfakes.",
+  "year": 2026,
+  "venue": "Cognitive Research Principles and Implications",
+  "authors": [
+   "Didem Pehlivanoglu",
+   "Mengdi Zhu",
+   "Jialong Zhen",
+   "Aude Anne Colette Madeleine Gagnon-Roberge",
+   "Rebecca Kern",
+   "Damon Woodard"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7118801515",
+  "doi": "10.1186/s41235-025-00700-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s41235-025-00700-y.pdf",
+  "published_iso": "2026-01-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Dynamics of Train–Track–Subway System Interaction—A Review",
+  "title_norm": "dynamics of train track subway system interaction a review",
+  "abstract": "This study provides a comprehensive review of advancements in the field of train–track–subway system interaction dynamics and suggests future directions for research and development. Mathematical modeling of train–track–subway interaction system is addressed, including wheel–track contact mechanics and wear, train multibody dynamics, train–track system coupling dynamics, track slab subsystem dynamics, subway tunnel–ground interaction models, building vibration excited by ground-borne seismic waves, and noise. Advanced computing and simulation techniques used for numerical studies of the dynamics of train–track–subway system interaction in the past two decades are also addressed, including high-performance computing with efficient algorithms, multi-physics and multi-scale simulation, real-time hardware-in-the-loop simulation, and laboratory and field validation. The study extends the applications of train–track–subway interaction dynamics to subway route planning, structural and material design, subway maintenance, operations safety and reliability, and passenger comfort. Emerging technologies and future perspectives are also reviewed and discussed, including artificial intelligence, smart sensing and real-time monitoring, digital twin technology, and sustainable design integration.",
+  "year": 2025,
+  "venue": "Machines",
+  "authors": [
+   "Lu Sun",
+   "Mohammad Seyedkazemi",
+   "Charles C. Nguyen",
+   "Jaiden Zhang"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4415809600",
+  "doi": "10.3390/machines13111013",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2075-1702/13/11/1013/pdf?version=1762160120",
+  "published_iso": "2025-11-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Reviewer #3 (Public review): Synaptic Theory of Chunking in Working Memory",
+  "title_norm": "reviewer 3 public review synaptic theory of chunking in working memory",
+  "abstract": "Working memory often appears to exceed its basic span by organizing items into compact representations called chunks. Chunking can be learned over time for familiar inputs; however, it can also arise spontaneously for novel stimuli. Such on-the-fly structuring is crucial for cognition, yet the underlying neural mechanism remains unclear. Here we introduce a synaptic theory of chunking, in which short-term synaptic plasticity enables the formation of chunk representations in working memory. We show that a specialized population of “chunking neurons” selectively controls groups of stimulus-responsive neurons, akin to gating. As a result, the network maintains and retrieves the stimuli in chunks, thereby exceeding the basic capacity. Moreover, we show that our model can dynamically construct hierarchical representations within working memory through hierarchical chunking. A consequence of this proposed mechanism is a new limit on the number of items that can be stored and subsequently retrieved from working memory, depending only on the basic working memory capacity when chunking is not invoked. Predictions from our model were confirmed by analyzing single-unit responses in epileptic patients and memory experiments with verbal material. Our work provides a novel conceptual and analytical framework for understanding how the brain organizes information in real time.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Weishun Zhong",
+   "Mikhail Katkov",
+   "Misha Tsodyks"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7119587792",
+  "doi": "10.7554/elife.109538.1.sa0",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7119587792",
+  "published_iso": "2026-01-09",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Do Vision-Language Models Understand 3D Scenes or Just Catalogue Objects?",
+  "title_norm": "do vision language models understand 3d scenes or just catalogue objects",
+  "abstract": "Vision-language models reliably name objects in a scene, but do they represent the 3D layout those objects inhabit? We introduce a 3,034-sample human-curated benchmark targeting three components of spatial understanding: depth-ordered occlusion (probed via three independent counterfactual operationalisations), optical-geometry inference over visible reflections, and volumetric rearrangement planning. Six frontier and open-weight VLMs, scored by trained annotators on 18,204 responses with no LLM-as-judge, reveal a sharp dissociation: models that plan rearrangements over visible layouts at 53--97% accuracy and rarely violate collision constraints fall to 6--45% on occlusion and below 7% on reflections. An embodied-reasoning model reproduces the same profile. White-box analysis on Qwen3-VL-8B-Thinking localises the failure to the visual-token merger: spatial information recoverable throughout the vision encoder becomes inaccessible after token compression and only stabilises again when clean post-merger activations are patched into the language decoder.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Animesh Maheshwari",
+   "Divyansh Sahu",
+   "Nishit Verma"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7162150281",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.20448",
+  "published_iso": "2026-05-19",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Noncovalent interactions for enhancing organic electronic device function",
+  "title_norm": "noncovalent interactions for enhancing organic electronic device function",
+  "abstract": "Organic electronic device performance is increasingly recognized as an emergent property governed by molecular organization. This review highlights how noncovalent interactions enable precise control over molecular packing and nanoscale morphology in organic semiconductors. The key concept is the structure-function relationship, demonstrating that supramolecular chemistry is a crucial factor in achieving programmable, multifunctional and highly efficient devices. As design rules continue to mature and understanding of supramolecular order deepens, these strategies are poised to play a central role in the development of next-generation organic electronic devices with enhanced efficiency, stability, and functional richness.",
+  "year": 2026,
+  "venue": "Chemical Communications",
+  "authors": [
+   "Marina González-Sánchez",
+   "Xinyi Wan",
+   "Kyeong-Im Hong",
+   "Raúl González-Núñez",
+   "Amparo A Ruiz-Carretero"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W7134238317",
+  "doi": "10.1039/d6cc00541a",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2026/cc/d6cc00541a",
+  "published_iso": "2026-01-01",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Reviewer #1 (Public review): Synaptic Theory of Chunking in Working Memory",
+  "title_norm": "reviewer 1 public review synaptic theory of chunking in working memory",
+  "abstract": "Working memory often appears to exceed its basic span by organizing items into compact representations called chunks. Chunking can be learned over time for familiar inputs; however, it can also arise spontaneously for novel stimuli. Such on-the-fly structuring is crucial for cognition, yet the underlying neural mechanism remains unclear. Here we introduce a synaptic theory of chunking, in which short-term synaptic plasticity enables the formation of chunk representations in working memory. We show that a specialized population of “chunking neurons” selectively controls groups of stimulus-responsive neurons, akin to gating. As a result, the network maintains and retrieves the stimuli in chunks, thereby exceeding the basic capacity. Moreover, we show that our model can dynamically construct hierarchical representations within working memory through hierarchical chunking. A consequence of this proposed mechanism is a new limit on the number of items that can be stored and subsequently retrieved from working memory, depending only on the basic working memory capacity when chunking is not invoked. Predictions from our model were confirmed by analyzing single-unit responses in epileptic patients and memory experiments with verbal material. Our work provides a novel conceptual and analytical framework for understanding how the brain organizes information in real time.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Weishun Zhong",
+   "Mikhail Katkov",
+   "Misha Tsodyks"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7120188217",
+  "doi": "10.7554/elife.109538.1.sa2",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7120188217",
+  "published_iso": "2026-01-09",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Artificial Intelligence-Simulated Cognition of a Pedestrian Assessing a Built Environment",
+  "title_norm": "artificial intelligence simulated cognition of a pedestrian assessing a built en",
+  "abstract": "How closely do the subjective perceptions simulated by Artificial Intelligence align with the subjective perceptions of human participants when evaluating an urban environment? This study serves as a pilot investigation to explore how far multimodal Large Language Models can effectively model human responses to visual stimuli based on subjective criteria. The exploratory nature of this research intends to test the feasibility of the methodology rather than provide a definitive standard. By focusing on a small set of detailed audits, a small-scale experiment performs an in-depth, qualitative examination of how machines and human assessments compare to each other in specific situations. To conduct the comparison, ratings of urban scenes were collected from human participants and two multimodal Large Language Models: ChatGPT and Gemini. After showing them an image of a sidewalk, these appraisers used a set of proposed statements to rate three sidewalks on a Likert scale. The investigation focuses on seven statements that subjectively characterize walkability factors, overall friendliness of an area, and the environment’s influence on well-being. Each participant rated each image once for all statements to establish a human baseline. The algorithms’ scores were generated using the exact same prompt, repeated multiple times to account for non-determinism. We then compared the AI’s scores to the humans’ distribution of scores and evaluated their alignment according to different experiential qualities across diverse visual environments.",
+  "year": 2026,
+  "venue": "AI",
+  "authors": [
+   "Rachid Belaroussi",
+   "Nikos Angelos Salingaros"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7135230046",
+  "doi": "10.3390/ai7030110",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2673-2688/7/3/110/pdf?version=1773396390",
+  "published_iso": "2026-03-13",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "The Role of Chitosan-Based Materials in Interactions with Antibiotics: An Overview of In Vitro and In Silico Studies",
+  "title_norm": "the role of chitosan based materials in interactions with antibiotics an overvie",
+  "abstract": "The increasing presence of antibiotics in aquatic environments is a growing concern, causing ecological and public health risks. Even low concentrations of antibiotics may lead to the development of antibiotic-resistant bacteria. The interest in building new materials that can be used as templates for removing pollutants from the environment has been growing year upon year. We review the research involving adsorption processes that occur in chitosan-based materials that are employed to remove antibiotics from water. Since covering all the antibiotics that can be found in the environment would be an overwhelming task, we concentrated our efforts on describing the studies related to the removal of tetracycline, ciprofloxacin, cephalexin, and azithromycin, which are perhaps the most ubiquitous ones. We present the chemical modifications introduced into chitosan and chitosan-based materials commonly used as antibiotic adsorbents, as well as the influence of physical chemistry conditions on these processes. In addition, we also review in silico studies that have been carried out to obtain molecular-level insights into the interactions between chitosan-based adsorbents and the four mentioned antibiotics. Particular emphasis is placed on our recent computational work regarding the adsorption of tetracycline by various chitosan-based materials.",
+  "year": 2025,
+  "venue": "International Journal of Molecular Sciences",
+  "authors": [
+   "Joana F. M. Sousa",
+   "Dina Murtinho",
+   "Artur J. M. Valente",
+   "J. M. C. Marques"
+  ],
+  "citations": 6,
+  "source": "openalex",
+  "source_id": "W4416274287",
+  "doi": "10.3390/ijms262211070",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1422-0067/26/22/11070/pdf?version=1763342940",
+  "published_iso": "2025-11-15",
+  "oa_field": "Environmental Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Reviewer #2 (Public review): Synaptic Theory of Chunking in Working Memory",
+  "title_norm": "reviewer 2 public review synaptic theory of chunking in working memory",
+  "abstract": "Working memory often appears to exceed its basic span by organizing items into compact representations called chunks. Chunking can be learned over time for familiar inputs; however, it can also arise spontaneously for novel stimuli. Such on-the-fly structuring is crucial for cognition, yet the underlying neural mechanism remains unclear. Here we introduce a synaptic theory of chunking, in which short-term synaptic plasticity enables the formation of chunk representations in working memory. We show that a specialized population of “chunking neurons” selectively controls groups of stimulus-responsive neurons, akin to gating. As a result, the network maintains and retrieves the stimuli in chunks, thereby exceeding the basic capacity. Moreover, we show that our model can dynamically construct hierarchical representations within working memory through hierarchical chunking. A consequence of this proposed mechanism is a new limit on the number of items that can be stored and subsequently retrieved from working memory, depending only on the basic working memory capacity when chunking is not invoked. Predictions from our model were confirmed by analyzing single-unit responses in epileptic patients and memory experiments with verbal material. Our work provides a novel conceptual and analytical framework for understanding how the brain organizes information in real time.",
+  "year": 2026,
+  "venue": "",
+  "authors": [
+   "Weishun Zhong",
+   "Mikhail Katkov",
+   "Misha Tsodyks"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7120055408",
+  "doi": "10.7554/elife.109538.1.sa1",
+  "arxiv_id": null,
+  "paper_url": "https://elifesciences.org/reviewed-preprints/109538v1.pdf",
+  "published_iso": "2026-01-09",
+  "oa_field": "",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "EmbodimentSemantic: A Spatial Scene-Graph Dataset and Benchmark for Vision-Language Models on Embodied Manipulation Trajectories",
+  "title_norm": "embodimentsemantic a spatial scene graph dataset and benchmark for vision langua",
+  "abstract": "Spatial grounding remains a key limitation of vision-language-action (VLA) systems for robotic manipulation. While current models can recognize objects and follow language instructions, they often lack an explicit representation of how objects are arranged in space, including support, containment, ordering, occlusion, and depth-sensitive relations. We introduce EmbodimentSemantic, a spatial scene-graph dataset and benchmark for evaluating relational grounding in embodied manipulation. EmbodimentSemantic represents scenes as directed object-relation-object triplets, where each triplet specifies a spatial relation between an ordered pair of objects using a fixed set of relations. This representation enables direct evaluation of object binding, relation prediction, and spatial consistency. The dataset includes real-world manipulation observations collected with the low-cost SO101 robot arm, together with generated scene graphs for studying spatial grounding in practical robotic settings. To provide controlled validation, we also introduce a simulator-grounded LIBERO benchmark with over 60K manipulation frames and more than 120K camera-specific scene graphs across paired third-person and wrist views, where ground-truth relations are derived automatically from MuJoCo geometry, world coordinates, camera projections, and visibility constraints. We further test whether scene graphs improve downstream control by injecting them into existing VLA policy prompts. Experiments across open-source and commercial VLMs show that current models often predict plausible relations but struggle with exact depth-aware and viewpoint-dependent spatial structure. EmbodimentSemantic provides a unified framework for diagnosing spatial grounding in VLM perception and testing its utility for VLA manipulation.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hassan Jaber",
+   "S N Refinath",
+   "Luca Cagliero",
+   "Christopher E. Mower",
+   "Haitham Bou-Ammar"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7167290249",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2607.00020",
+  "published_iso": "2026-06-06",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "A Highly Permeable and Three-Dimensional Integrated Electronic System for Wearable Human–Robot Interaction",
+  "title_norm": "a highly permeable and three dimensional integrated electronic system for wearab",
+  "abstract": "Abstract Permeable electronics promise improved physiological comfort, but remain constrained by limited functional integration and poor mechanical robustness. Here, we report a three-dimensional (3D) permeable electronic system that overcomes these challenges by combining electrospun SEBS nanofiber mats, high-resolution liquid metal conductors patterned via thermal imprinting (50 μm), and a strain isolators (SIL) that protects vertical interconnects (VIAs) from stress concentration. This architecture achieves ultrahigh air permeability (> 5.09 mL cm −2 min −1 ), exceptional stretchability (750% fracture strain), and reliable conductivity maintained through more than 32,500 strain cycles. Leveraging these advances, we have integrated multilayer circuits, strain sensors, and a three-axis accelerometer to achieve a fully integrated, stretchable, permeable wireless real-time gesture recognition glove. The system enables accurate sign language interpretation (98%) and seamless robotic hand control, demonstrating its potential for assistive technologies. By uniting comfort, durability, and high-density integration, this work establishes a versatile platform for next-generation wearable electronics and interactive human–robot interfaces.",
+  "year": 2026,
+  "venue": "Nano-Micro Letters",
+  "authors": [
+   "Wenqiang Wang",
+   "Zebang Luo",
+   "Xingge Yu",
+   "Xiaojia Yin",
+   "Li Xiang",
+   "A. Pan"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W7118084487",
+  "doi": "10.1007/s40820-025-01974-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s40820-025-01974-z.pdf",
+  "published_iso": "2026-01-03",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention",
+  "title_norm": "carve content aware recurrent with value efficiency for chunk parallel linear at",
+  "abstract": "Recurrent delta-rule models keep a fixed-size state matrix S (d_v x d_k) that compresses all past context. The state of the art (GDN-2) gates this update with element-wise matrix erase/write masks. This is powerful but has two defects. First, both gates are computed from the incoming token alone, making the model memory-blind: it decides what to erase without seeing what it has stored. Second, value-axis coupling in the erase gate blocks the WY-form triangular chunk solver that drives efficient training -- the intra-chunk system splits into d_v independent solves, collapsing throughput to serial-recurrence cost. We introduce CARVE (Content-Aware Recurrent with Value Efficiency), which fixes both and, via a single-launch \"megakernel\" scheduling of the same WY-form math, trains faster than the matrix-gated baseline it replaces. The key idea is architectural: restricting all gating to the key axis makes the intra-chunk coupling independent of the value index, restoring one unmodified WY-form solve. Within this constraint, CARVE conditions both gates on a content signal read once per chunk from the chunk-boundary state and folded algebraically into each gate's low-rank projection (by associativity, U(Sq)=(US)q), giving memory-aware gating at negligible extra traffic. At init the content projections are zero, so CARVE is bit-identical to the baseline; we prove the one-chunk staleness perturbs gates by only O(1/sqrt(L)), matching a measured 0.18% deviation flat up to L=128. At 1.3B parameters / 100B FineWeb-Edu tokens on H100 (three seeds), CARVE improves every axis: WikiText perplexity 15.72 vs 15.90 (hybrid 15.41 vs 15.62), +0.63 pp average common-sense accuracy, and state-of-the-art RULER and real-world recall -- while training +1.4% faster at matched depth and +19.3% at iso-quality depth, at +13% peak memory. Backed by six formal guarantees.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Sayak Dutta"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7166399800",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.27229",
+  "published_iso": "2026-06-25",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Multi-Modal Generative AI: Multi-Modal LLMs, Diffusions, and the Unification",
+  "title_norm": "multi modal generative ai multi modal llms diffusions and the unification",
+  "abstract": "Multi-modal generative AI (Artificial Intelligence) has attracted increasing attention from both academia and industry. Particularly, two dominant families of techniques have emerged: i) Multi-modal large language models (LLMs) demonstrate impressive ability formulti-modal understanding; and ii) Diffusion models exhibit remarkable multi-modal powers in terms ofmulti-modal generation. Therefore, this paper provides a comprehensive overview of multi-modal generative AI, including multi-modal LLMs, diffusions, and the unification for understanding and generation. To lay a solid foundation for unified models, we first provide a detailed review of both multi-modal LLMs and diffusion models, respectively, including their probabilistic modeling procedure, multi-modal architecture design, and advanced applications to image/video LLMs as well as text-to-image/video generation. Furthermore, we explore the emerging efforts toward unified models for understanding and generation. To achieve the unification of understanding and generation, we investigate key designs including autoregressive-based and diffusion-based modeling, as well as dense and Mixture-of-Experts (MoE) architectures. We then introduce several strategies for unified models, analyzing their potential advantages and disadvantages. In addition, we summarize the common datasets widely used for multi-modal generative AI pretraining. Last but not least, we present several challenging future research directions that may contribute to the ongoing advancement of multi-modal generative AI.",
+  "year": 2025,
+  "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+  "authors": [
+   "Xin Wang",
+   "Yuwei Zhou",
+   "Bin Huang",
+   "Hong Chen",
+   "Wenwu Zhu"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4403780456",
+  "doi": "10.1109/tcsvt.2025.3635224",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2409.14993",
+  "published_iso": "2025-11-20",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Evaluating interaction design and user experience in augmented reality: a systematic review",
+  "title_norm": "evaluating interaction design and user experience in augmented reality a systema",
+  "abstract": "Background Augmented Reality (AR) technologies are rapidly advancing, offering new opportunities for interactive and immersive user experiences. However, the success of AR applications depends significantly on thoughtful interaction design and robust evaluation of user experience (UX). While conventional WIMP (Windows, Icons, Menus, Pointer) interfaces have dominated interface design, they present notable limitations in spatial, embodied environments like AR. Objectives The main purpose of the current paper is to systematically review the state of AR interaction design and UX evaluation, with particular focus on the use of natural versus WIMP-based interaction paradigms. This review aims to assess how different interaction methods are implemented and evaluated, identify underexplored areas, and offer recommendations to guide future AR research and development. Methods: In this systematic review, Compendex, Web of Science, ScienceDirect, ACM Digital, IEEE, and Springer Computer Science were systematically queried for journal articles in order to explore the relationship between interaction design and user experience in AR. Following PRISMA guidelines, 86 peer-reviewed journal articles published between 2013 and 2024 were included based on predefined inclusion and exclusion criteria. Data were extracted and analyzed in terms of context of use, device types, interaction methods, and UX evaluation strategies. Results The findings show that natural interactions, such as gesture, voice, and gaze, are increasingly favored in AR research due to their alignment with spatial and embodied interaction needs. Hybrid systems combining natural and WIMP elements were the most common, with natural components driving the experiential benefits. UX evaluation in AR remains heavily reliant on self-reported measures, with questionnaires like SUS and NASA-TLX dominating. Objective and physiological assessments were rarely used. Usability and cognitive load were the most frequently evaluated UX aspects, while immersive, social, and emotional dimensions remain significantly underexplored. Head-worn displays (HWDs), particularly HoloLens 2, were the most studied devices, although mobile platforms also played a major role in accessible AR design. Conclusion This review provides insight into how UX is being considered in AR system development and highlights key trends, strengths, and gaps in current research. It underscores the need for more diverse evaluation methods and a broader focus on underrepresented experiential dimensions. By adopting mixed-method approaches and prioritizing user-centered, context-aware interaction paradigms, future AR systems can become more intuitive, inclusive, and effective across a range of application domains.",
+  "year": 2025,
+  "venue": "Frontiers in Virtual Reality",
+  "authors": [
+   "Claire Hughes",
+   "Waldemar Karwowski"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4416936062",
+  "doi": "10.3389/frvir.2025.1710161",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2025.1710161/pdf",
+  "published_iso": "2025-12-03",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Retrieval-Augmented Generation for Curated Thematic Corpora: A Critical Survey, Bibliometric Evidence, and the ThemePath-RAG Framework",
+  "title_norm": "retrieval augmented generation for curated thematic corpora a critical survey bi",
+  "abstract": "Retrieval-Augmented Generation (RAG) grounds large language models in external evidence, but many RAG systems represent knowledge either as flat text chunks or as automatically constructed indexing graphs. This assumption is incomplete for curated thematic corpora, including religious scriptures, legal codes, clinical guidelines, educational taxonomies, policy documents, and library classification systems, where domain experts have already organized knowledge into thematic paths and citeable canonical units. This paper investigates how RAG can exploit such expert-authored structures while pruning evidence to a compact and query-specific set. We conduct a critical survey supported by a bibliometric analysis of 2815 Scopus-indexed RAG-related records exported on 26 May 2026, of which 2809 records were retained after duplicate removal. The bibliometric results indicate rapid growth in RAG research but limited explicit consolidation around curated thematic paths, canonical evidence units, or thematic path-guided evidence pruning. We therefore propose ThemePath-RAG, a retrieval framework that retrieves curated thematic paths as high-recall semantic routes, expands candidate canonical evidence, and applies query-aware scoring and global pruning before generation. To assess operational feasibility, we implement ThemePath-RAG for Qur’anic question answering and compare it with a Vector RAG baseline on 150 paired questions using RAGAS context relevance with gpt-4o-mini as the LLM evaluator. Both methods return approximately three final ayat per question. Vector RAG achieves higher mean context relevance than ThemePath-RAG (0.920 versus 0.798; p<0.001). Thus, the proof of concept establishes the feasibility of thematic-path-guided retrieval and identifies evidence-selection challenges, rather than demonstrating superiority over conventional vector retrieval. The paper clarifies the framework’s relationship to GraphRAG, LightRAG, HippoRAG, PathRAG, ontology-based RAG, and AI-augmented bibliometric systems, and outlines a language-matched, multi-baseline evaluation agenda for future cross-domain validation.",
+  "year": 2026,
+  "venue": "Information",
+  "authors": [
+   "Winda Monika",
+   "Deshinta Arrova Dewi",
+   "Arbi Haza Nasution",
+   "Aytuğ Onan",
+   "Yohei Murakami"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7167709112",
+  "doi": "10.3390/info17070660",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2078-2489/17/7/660/pdf?version=1783434937",
+  "published_iso": "2026-07-07",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "A Watermark for Vision-Language-Action and World Action Models",
+  "title_norm": "a watermark for vision language action and world action models",
+  "abstract": "Vision-language-action (VLA) models and world-action models (WAM) are the generative models now driving general-purpose robot control, turning raw camera input directly into motor commands. They are increasingly deployed as black-box services, where a partner runs the policy through an interface while the owner keeps the weights private. Training such a model takes proprietary data and heavy computational power, making the deployed model itself a valuable intellectual property. To address this, we propose the \\emph{keyed latent-provenance verification} method, which fingerprints the policy through the seed of the Gaussian noise vector that the models draw before generation. At the injection stage, the owner swaps this seed for a keyed one with the same distribution as ordinary noise, so the fingerprinted actions are statistically identical to those of an ordinary run and an adversary watching the output finds no signal to detect or remove. At the verification stage, the owner runs the suspect model under authorized access and records the action channels the robot executes, a partial and possibly post-processed view of the policy's output. From this view, the verifier recovers the seed by gradient-based maximum a posteriori (MAP) optimization, tests it for the secret key to score each rollout, and aggregates these scores into a single decision on whether the suspect model belongs to the owner. We evaluate the method on two representative models across two robot suites. The experiments cover detection of the fingerprint, identification of which of several keys a suspect carries, robustness to a range of attacks, and an analysis of why the design works. Across both models, the fingerprint can be detected reliably with little change to task performance, and it remains detectable under output-side removal attacks and weight-level edits.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Yule Liu",
+   "Shuai Liu",
+   "Jiaheng Wei",
+   "Xinlei He"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7165817932",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.23574",
+  "published_iso": "2026-06-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Synergistic Thermal‐Chemical Modification of Cork for Enhanced Interfacial Compatibility in 3D ‐Printable TPU Composites",
+  "title_norm": "synergistic thermal chemical modification of cork for enhanced interfacial compa",
+  "abstract": "ABSTRACT Cork/thermoplastic polyurethane (TPU) composites are promising sustainable materials for FDM 3D printing, but poor interfacial compatibility limits cork loading to ~3 wt%. To address this, a green strategy was proposed: cork powder was thermally treated at 300°C (modifying surface polarity and porous structure) and further functionalized with hexamethylene diisocyanate (HDI) to enhance compatibility. Melt‐blended composite filaments achieved 10 wt% cork loading: heat treatment alone improved tensile strength by 20% and elongation at break by ~50%, while 6 wt% HDI addition boosted tensile strength by 42% and nearly doubled elongation. This low‐cost, bio‐based approach enables flexible, high‐performance composites, realizing sustainable high‐value utilization of natural materials in additive manufacturing.",
+  "year": 2026,
+  "venue": "Journal of Applied Polymer Science",
+  "authors": [
+   "S. Chen",
+   "Wenxiang Zhai",
+   "Kejiao Ding",
+   "Wei Zhang",
+   "Hao Sun",
+   "Zechun Ren"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7119959021",
+  "doi": "10.1002/app.70364",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/app.70364",
+  "published_iso": "2026-01-10",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Can a Large Language Model Replace Humans at Rating Lexical Semantic Relations Strength?",
+  "title_norm": "can a large language model replace humans at rating lexical semantic relations s",
+  "abstract": "Abstract This article investigates the ability of large language models (LLMs) to evaluate semantic relations between word pairs by examining their alignment with human-generated semantic ratings. Semantic relations represent the degree of connection (e.g., relatedness or similarity) between linguistic elements and are traditionally validated against human-annotated datasets. Due to the challenges of building such datasets and recent progress in LLMs’ capacity to model human-like understanding, we explore whether LLMs can serve as reliable substitutes for traditional human ratings. We conducted experiments using multiple LLMs from OpenAI, Google, Mistral, and Anthropic, evaluating their performance across diverse English and Portuguese semantic relations datasets. We included in the analysis PAP900, a recently published dataset of semantic relations in Portuguese, to examine the influence of prior exposure to the dataset on LLM training. The results show that the LLM predictions correlate strongly with human ratings. The findings reveal the potential of LLMs to supplement or replace traditional semantic measure algorithms and crowd-sourced human annotations in semantic tasks.",
+  "year": 2025,
+  "venue": "Computational Linguistics",
+  "authors": [
+   "André Fernandes dos Santos",
+   "José Paulo Leal"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4417434449",
+  "doi": "10.1162/coli.a.587",
+  "arxiv_id": null,
+  "paper_url": "https://direct.mit.edu/coli/article-pdf/doi/10.1162/COLI.a.587/2571869/coli.a.587.pdf",
+  "published_iso": "2025-12-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Video-MME-Logical: A Controlled Diagnostic Benchmark for Video Temporal-Logical Reasoning",
+  "title_norm": "video mme logical a controlled diagnostic benchmark for video temporal logical r",
+  "abstract": "Recent interest in multimodal large language models (MLLMs) raises a central question: can they reason over dynamic visual evidence rather than merely recognize objects or events in individual frames? This ability, which we refer to as video temporal-logical reasoning, requires models to maintain, update, and compose evidence as visual states evolve across frames. Existing video benchmarks often conflate this capability with scene complexity, static recognition, or uncontrolled temporal variation. To isolate this capability, we introduce Video-MME-Logical, a controlled benchmark organized around five temporal-logical operations: state tracking, sequential counting, temporal ordering, dynamic spatiality, and structural composition. The benchmark contains 25 fine-grained task categories generated with controlled object states, transitions, temporal dependencies, and logical compositions. It enables difficulty-controlled final-answer evaluation by varying temporal horizon and reasoning complexity, and supports intermediate-state diagnostics by verifying whether models recover the required logical reasoning trace before producing the final answer. Experiments with state-of-the-art MLLMs reveal a substantial human-model gap, especially as temporal-logical complexity increases. Supervised fine-tuning on up to 500K generated samples improves performance but remains insufficient to close the reasoning gap, positioning Video-MME-Logical as a scalable testbed for analyzing and improving temporal-logical reasoning in MLLMs.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "H Lee Kwan",
+   "Hongyu Li",
+   "Ray Zhang",
+   "Manyuan Zhang",
+   "Xianghao Kong",
+   "Anyi Rao"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7166901919",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2606.27828",
+  "published_iso": "2026-06-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "A Statistical Shape Modeling Approach for the Derivation of a Data‐Driven Geometry‐Aware Lumped Arterial Stenosis Model",
+  "title_norm": "a statistical shape modeling approach for the derivation of a data driven geomet",
+  "abstract": "Existing lumped arterial stenosis models struggle to accurately capture the pressure and flow relationship of complex lesion morphologies, thereby limiting their ability to accurately evaluate lesions. To overcome these limitations, we introduce a geometry-informed, data-driven lumped stenosis model that incorporates realistic lesion shapes using statistical shape modeling (SSM). By generating a large dataset of synthetic coronary stenoses, hence focusing on epicardial lesions, and evaluating them through high-fidelity 3D computational fluid dynamics (CFD), we derived reference pressure drops across a diverse range of lesion geometries and flow regimes. These CFD-derived pressures and flows, along with their corresponding shape coefficients, were used to train a lumped parameter model capable of rapidly estimating trans-lesional pressure drops. Remarkably, only five shape modes were necessary to effectively describe the geometric variability, underscoring the efficiency of the approach. Compared to a conventional lumped model, our approach significantly improved pressure drop prediction accuracy, especially in the case of irregular stenosis morphologies. Integration of the new data-driven lumped stenosis model within a 1D pulse wave propagation framework was also successful, aligning simulated pressure and flow waveforms much closer with high-fidelity CFD-coupled results. In turn, the estimation of the fractional flow reserve, a clinically validated index of lesion-specific ischemia, also improved by 18% compared to a conventional lumped model. Although only validated using synthetic lesion data, the model's architecture allows easy integration of additional shape features and lesion-specific parameters, paving the way for future validation on patient-derived geometries.",
+  "year": 2026,
+  "venue": "International Journal for Numerical Methods in Biomedical Engineering",
+  "authors": [
+   "P. L. J. Hilhorst",
+   "S. C. F. P. M. Verstraeten",
+   "K. Zając",
+   "Rajarajeswari Ganesan",
+   "M. van ‘t Veer",
+   "F. N. van de Vosse"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7127892751",
+  "doi": "10.1002/cnm.70138",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cnm.70138",
+  "published_iso": "2026-02-01",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Withholding the Completing Chunk: Exact Release-Boundary Equivalence for Production Streaming Guardrails",
+  "title_norm": "withholding the completing chunk exact release boundary equivalence for producti",
+  "abstract": "Streaming language-model output creates an enforcement boundary: a control that detects a prohibited pattern after releasing its completing chunk cannot recall it. We study a production policy in which each ordered family is the conjunction of two regular-language predicates. Incremental matching is classical. The problem is exact composition at release time across arbitrary chunk partitions, including end-of-prefix word boundaries that can change on extension. We define an ASCII-explicit policy grammar, compile each predicate to a persistent nondeterministic finite automaton (NFA), distinguish stable from provisional assertion state, apply document-order family priority, and check the decision before releasing each chunk. We show that the resulting monitor is release-boundary equivalent to an absorbing cumulative oracle for every policy in the declared grammar. Production Python and TypeScript implementations were evaluated on 101,653 partitioned cases; a public surrogate added 100,345 cases. Both campaigns produced zero oracle, cross-runtime, or intended-family mismatches. In a frozen neutral-output profile, the memoized incremental and native-regex cumulative slopes at 64-character chunks were 0.973 and 1.976. At 16,384 characters the incremental median was 30.2 ms versus 96.6 ms for native cumulative scanning at that chunk size. Native regex remained faster at 512-character chunks (12.4 versus 29.4 ms), exposing the constant-factor crossover rather than hiding it. A shared per-stream cache cap and 129-symbol alphabet bound optimization state; the campaign peaked at 364 of 4,096 without bypass. The result is policy conformance for a deterministic backstop, not evidence of semantic safety or policy completeness.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Christopher M. Frost"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202263628",
+  "doi": "10.48550/arxiv.2608.10279",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.10279",
+  "published_iso": "2026-08-10",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "CapProbe: Evaluating Detailed Image Captions via Full-Scene Dense Question Answering",
+  "title_norm": "capprobe evaluating detailed image captions via full scene dense question answer",
+  "abstract": "Evaluating detailed image captions from Vision-Language Models (VLMs) requires going beyond surface-level semantic similarity. Reference-based metrics (e.g., CIDEr and SPICE) and LLM-as-scorer protocols struggle to verify dense factual claims, while existing QA-based alternatives generally offer lower probe density, narrower domain coverage, or no explicit alignment between individual questions and segmented image regions. We introduce CapProbe, a full-scene dense QA benchmark that turns detailed caption evaluation into region-aligned factual checking. Each image is decomposed into coarse semantic regions covering both foreground and background elements; for every retained region, we generate multiple-choice questions spanning 10 semantic categories, forming a dense checklist of probed visual facts. Guided by a two-tier taxonomy of 37 L1 domains and 219 L2 sub-domains, CapProbe comprises 346 images, 1,868 regions, and 25,650 questions, averaging 74 QA pairs per image. A language judge answers from the caption alone; an Uncertain option and Effective Accuracy provide a judge-dependent proxy for distinguishing unanswered probes from incorrectly resolved ones, while density-based metrics penalize verbose yet uninformative captions. The protocol is cost-effective: by converting unconstrained scalar scoring into structured MCQ reading, it reduces open-ended scoring bias while remaining judge-conditioned and yields relatively stable model rankings under a fixed reader. Experiments on 13 VLMs show large Coverage gaps across models, a clear competency-efficiency trade-off, and failure modes that sparse or overlap-based evaluation often misses. The benchmark data, annotations, and evaluation code will be released soon.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Mouxiao Huang",
+   "Qiangyu Yan",
+   "Borui Jiang",
+   "Han Shu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7202273742",
+  "doi": "10.48550/arxiv.2608.11074",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.11074",
+  "published_iso": "2026-08-11",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Cell division sets a universal flow geometry in cell layers",
+  "title_norm": "cell division sets a universal flow geometry in cell layers",
+  "abstract": "Collective flows in epithelial tissues contain a geometric backbone of vortical interfaces whose statistics exhibit hallmarks of critical percolation and conformal invariance. Yet how fundamental cellular processes govern the breakdown of such symmetry-rich flow geometry remains unclear. Here we show that cell division plays a central physical role in regulating this universal flow organization by controlling both the geometric and mechanical flexibility of the cell-cell network. Using pharmacological perturbations, we find that when proliferation is suppressed through two independent interventions, coherent flows persist but neighbor exchanges decline and conformally invariant geometry is lost. Blocking apoptosis does not affect universality, isolating division as the key control. A vertex model with tunable division quantitatively reproduces these effects and restores conformal invariance when division is allowed. We further trace this effect to changes in both the geometric and mechanical organization of the cell layer: Divisions act as intermittent topological renewals that loosen constraints, preserving the network's flexibility and capacity to rearrange across scales. Thus, beyond its canonical role in growth, cell division acts as a structural and mechanical regulator of collective self-organization. These findings establish a direct connection between fundamental biological processes and emergent physical symmetries.",
+  "year": 2026,
+  "venue": "Proceedings of the National Academy of Sciences",
+  "authors": [
+   "Tianxiang Ma",
+   "Lasse Bonn",
+   "Valeriia Grudtsyna",
+   "Nigar Abbasova",
+   "Martin Cramer Pedersen",
+   "N. A. M. Araújo"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7170070907",
+  "doi": "10.1073/pnas.2532420123",
+  "arxiv_id": null,
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13416443/pdf/pnas.202532420.pdf",
+  "published_iso": "2026-07-22",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "LISTENING TO THE ARCHIVES: HO-CHUNK GOVERNANCE, SOVEREIGNTY, AND NATION-BUILDING THROUGH COMMUNITY VOICES",
+  "title_norm": "listening to the archives ho chunk governance sovereignty and nation building th",
+  "abstract": "This thesis reconstructs a community-centered history of the Ho-Chunk Nation during the transformative decades from the 1960s to the 1990s. This period was marked by formal political organization, the pursuit of federal recognition following years of strategic refusal, and economic expansion. These developments reshaped the Nation’s present-day sovereignty and self-determination, which are most clearly articulated within Ho-Chunk produced records. This study centers these materials, particularly those preserved within the Helen Miner Miller archive, alongside oral histories to foreground Ho-Chunk perspectives on governance and political life, acknowledging that not all aspects of this history are intended for public circulation. Thereby, the archive exceeds the role of a neutral repository and functions instead as a site of community knowledge and political expression. In alignment with a methodology of relational responsibility, long-form interviews conducted with Ho-Chunk community members will be donated to the Ho-Chunk Museum and Cultural Center. Selected excerpts and narrative vignettes are used here in ways that protect culturally sensitive information while still conveying intergenerational knowledge and lived experience. This project demonstrates that history functions as an active tool of sovereignty through which the Nation preserves, interprets, and asserts its political existence. The narratives that emerge demonstrate how Ho-Chunk governance in the late twentieth century was shaped through adaptation, negotiation, and persistence, and how these practices continue to inform contemporary political life.",
+  "year": 2026,
+  "venue": "Minds at UW (University of Wisconsin)",
+  "authors": [
+   "Cheyenne Morning Dove Reel"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7164979272",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://minds.wisconsin.edu/bitstream/1793/97664/1/Reel_uwm_0263M_14300.pdf",
+  "published_iso": "2026-05-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "GuardianBench: A Same-Scene Instruction-Contrastive Benchmark for Latent Contextual Risk in Embodied AI",
+  "title_norm": "guardianbench a same scene instruction contrastive benchmark for latent contextu",
+  "abstract": "In embodied AI, safety risk can be latent: a benign instruction and a safe scene become hazardous only when composed. Prior work has advanced embodied safety by varying visual contexts or evaluating execution-time dynamics, but the complementary axis of fixing the scene and varying only the instruction remains underexplored. We introduce GuardianBench, an instruction-contrastive benchmark grounded in international safety standards that isolates this latent contextual risk through 3,024 instruction-scene examples organized as same-scene Safe/Unsafe contrastive pairs across various hazard categories. Benchmarking state-of-the-art vision-language models (VLMs) reveals instruction-insensitive verdicts: models disproportionately approve both instructions under a given scene; across the primary models, average pair accuracy is only 24.1%. Our systematic rationale audit localizes the dominant failure: models fail to bind the instruction-relevant cues that differentiate safe from unsafe compositions. As a post-training case study, Verdict Log-Odds Supervision (VLOS), a lightweight verdict-level objective, substantially improves performance on open-weight backbones. Together, our latent contextual risk task formulation, standards-grounded contrastive benchmark construction, pair-level and rationale-level failure diagnosis, and benchmark-enabled verdict calibration establish GuardianBench as a controlled evaluation suite for exposing and improving safety reasoning over instruction-scene compositions under latent contextual risk.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Zhesheng Zhang",
+   "Jiahao Lu",
+   "Wei Liu",
+   "Cong Pan",
+   "Jianhua Yang",
+   "Yixiang Chen"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7204165071",
+  "doi": "10.48550/arxiv.2608.21928",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2608.21928",
+  "published_iso": "2026-08-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "Spatial Geometry as a Projection of Action Phase Compatibility",
+  "title_norm": "spatial geometry as a projection of action phase compatibility",
+  "abstract": "This work investigates the structural relationship between accumulated action, dynamic phase, and the geometry of trajectories in spacetime. Starting from the definition of the dynamic phase \\[ \\phi=\\frac{S}{\\hbar}, \\] we consider the phase compatibility condition between two admissible evolutions, \\[ \\Delta S = 2\\pi n\\hbar, \\qquad n\\in\\mathbb Z, \\] established in previous works as a criterion of interferential compatibility between dynamical systems. It is shown that this condition cannot be analyzed independently of the geometry of the trajectories, as the accumulated action is a functional of the path in spacetime. In the variational form, \\[ S=\\int L(x,\\dot x,t)\\,dt, \\] the action depends on the trajectory in the configuration space; in the minimal relativistic realization, \\[ S=-mc^2\\tau, \\] the accumulated phase is proportional to the proper time and, therefore, to the geometry of the worldline; and, in the canonical form, \\[ S=\\int (p\\cdot dx-H\\,dt), \\] the action simultaneously incorporates spatial and temporal contributions. From these structures, it is demonstrated that the possibility of phase compatibility between two evolutions depends on the compared geometry of their trajectories. In particular, the relevant geometric structure for the interaction between systems can be interpreted as a projection of the phase compatibility of the accumulated action. It is also shown that the canonical form of the action leads, under the assumption of local differentiability of \\(S(x,t)\\), to the identities \\[ p=\\nabla S, \\qquad H=-\\partial_t S, \\] which constitute the differential structure of the Hamilton--Jacobi equation, thus establishing a direct connection between the global interferential condition on the action and the local form of variational dynamics. The obtained result does not aim to replace general relativity nor to fully derive classical or quantum dynamics. Its objective is more restricted: to identify the minimal structural relationship between accumulated action, dynamic phase, and the geometry of trajectories, showing that the geometrically relevant structure for the interaction between systems can be interpreted as a projection of the phase compatibility of the action.",
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "authors": [
+   "Jonatan P. Camargo"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7138007731",
+  "doi": "10.5281/zenodo.19058171",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7138007731",
+  "published_iso": "2026-03-17",
+  "oa_field": "Physics and Astronomy",
+  "semantic_recall": false,
+  "from_query": [
+   "geometry action compatibility interaction"
+  ]
+ },
+ {
+  "title": "Multi-step retrieval and reasoning improves radiology question answering with large language models",
+  "title_norm": "multi step retrieval and reasoning improves radiology question answering with la",
+  "abstract": "Abstract Large language models (LLMs) show promise for radiology decision support, yet conventional retrieval-augmented generation (RAG) relies on single-step retrieval and struggles with complex reasoning. We introduce radiology Retrieval and Reasoning (RaR), a multi-step retrieval framework that iteratively summarizes clinical questions, retrieves evidence, and synthesizes answers. We evaluated 25 LLMs spanning general-purpose, reasoning-optimized, and clinically fine-tuned models (0.5B → 670B parameters) on 104 expert-curated radiology questions and an independent set of 65 real radiology board-exam questions. RaR significantly improved mean diagnostic accuracy versus zero-shot prompting (75% vs. 67%; P = 1.1 × 10 −7 ) and conventional online RAG (75% vs. 69%; P = 1.9 × 10 −6 ). Gains were largest in mid-sized and small models (e.g., Mistral Large: 72% → 81%), while very large models showed minimal change. RaR reduced hallucinations and provided clinically relevant evidence in 46% of cases, improving factual grounding. These results show that multi-step retrieval enhances diagnostic reliability, especially in deployable mid-sized LLMs. Code, datasets, and RaR are publicly available.",
+  "year": 2025,
+  "venue": "npj Digital Medicine",
+  "authors": [
+   "Sebastian Wind",
+   "Jeta Sopa",
+   "Daniel Truhn",
+   "Mahshad Lotfinia",
+   "Tri-Thien Nguyen",
+   "Keno K. Bressem"
+  ],
+  "citations": 12,
+  "source": "openalex",
+  "source_id": "W4416551904",
+  "doi": "10.1038/s41746-025-02250-5",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41746-025-02250-5_reference.pdf",
+  "published_iso": "2025-12-22",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ },
+ {
+  "title": "Incantation: Natural Language as the Action Interface for Multi-Entity Video World Models",
+  "title_norm": "incantation natural language as the action interface for multi entity video worl",
+  "abstract": "Modern interactive video world models have achieved impressive visual fidelity, yet lack fine-grained multi-entity control and cross-entity, cross-world generalization. We trace this gap to the action interface: standard control protocols (e.g. animation IDs, device inputs, scene-level captions) bind action semantics to specific entities or engines at design time. We propose natural language as the interface to unlock expressiveness that no prior interface can achieve, and we present Incantation, the first interactive video world model with per-latent-frame (0.25 s) natural-language conditioning that supports simultaneous multi-entity control and concept-level cross-entity transfer beyond any fixed rendering pipeline. We pair a pretrained bidirectional video backbone with frame-local text cross-attention, and enable real-time long-horizon streaming through ODE-initialized Self-Forcing distillation with a RoPE-decoupled sliding KV-cache. We surpass the Action-Index baseline on cross-entity transfer (89% vs. 43%) and out-of-vocabulary prompts (90% vs. 0%), and our 2-step student sustains 19.7 FPS at 480p with stable FVD over 2-hour rollouts. We further apply the same architecture and training recipe to The King of Fighters, changing only the per-entity action vocabulary slots. We have released a preview subset of the Incantation dataset at https://huggingface.co/datasets/zhush/incantation-elden-ring-scenes, containing manually collected Elden Ring player-boss combat clips with structured action-oriented metadata. Larger-scale Elden Ring and KOF data will be released with the full project.",
+  "year": 2026,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Shangwen Zhu",
+   "Qianyu Peng",
+   "Zhao Pu",
+   "Zhilei Shu",
+   "Xiangrui Ke",
+   "Zhaohu Xing"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7161915787",
+  "doi": "",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2605.18601",
+  "published_iso": "2026-05-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "cross-scene action swap diagnostic"
+  ]
+ },
+ {
+  "title": "SPACEc: a streamlined, interactive Python workflow for multiplexed image processing and analysis",
+  "title_norm": "spacec a streamlined interactive python workflow for multiplexed image processin",
+  "abstract": "Multiplexed imaging has transformed our ability to study tissue organization by capturing thousands of cells and molecules in their native context. However, these datasets are enormous, often comprising tens of gigabytes per image, and require complex workflows that limit their broader use. Current tools are often fragmented, inefficient, and difficult to adopt across disciplines. Here we show that SPACEc, a scalable Python platform, streamlines spatial imaging analysis from start to finish. The platform integrates image processing, cell segmentation, and data preprocessing into a single workflow, while improving computational performance through parallelization and GPU acceleration. We introduce innovative methods, including patch proximity analysis, to more accurately map local cellular neighborhoods and interactions. SPACEc also simplifies advanced approaches such as deep-learning annotation, making them accessible through an intuitive interface. By combining efficiency, accuracy, and usability, this platform enables researchers from diverse backgrounds to gain deeper insights into tissue architecture and cellular microenvironments.",
+  "year": 2025,
+  "venue": "Nature Communications",
+  "authors": [
+   "Yuqi Tan",
+   "Tim Kempchen",
+   "Martin Becker",
+   "Maximilian Haist",
+   "Dorien Feyaerts",
+   "Jiaqi Liu"
+  ],
+  "citations": 14,
+  "source": "openalex",
+  "source_id": "W4416758549",
+  "doi": "10.1038/s41467-025-65658-3",
+  "arxiv_id": null,
+  "paper_url": "https://www.nature.com/articles/s41467-025-65658-3.pdf",
+  "published_iso": "2025-11-27",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "within-pair chunk substitution"
+  ]
+ }
+]

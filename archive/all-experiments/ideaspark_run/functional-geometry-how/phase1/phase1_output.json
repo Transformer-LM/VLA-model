@@ -1,0 +1,349 @@
+{
+  "intake": {
+    "domain": "Embodied AI and robot manipulation: functional-geometry-conditioned VLA control for unseen target-reference object pairings",
+    "venue": "CoRL/ICLR-level robot-learning venue",
+    "time": "one submission-cycle project (approximately five months)",
+    "data": [
+      "target and reference PointMaps paired with a high-level relation or skill",
+      "pi0.5-compatible manipulation demonstrations or rollouts",
+      "real-robot evaluations spanning unseen target-reference functional-geometry pairings"
+    ],
+    "compute": "4xA100 GPUs and access to a real robot",
+    "expertise": "VLA policy adaptation, 3D point-based perception, and real-robot manipulation experimentation",
+    "preference": "both",
+    "baseline": "a frozen pi0.5 action-chunk policy conditioned on the target PointMap, reference PointMap, and requested relation/skill",
+    "limitation": "For a fixed high-level relation or skill, unseen target-reference functional geometry can require different grasp sites, alignment frames, approach paths, placement constraints, phase order, or an infeasibility decision; generic 3D conditioning or a terminal target pose does not expose all of these changes to a frozen action-chunk policy.",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "data",
+      "expertise",
+      "preference",
+      "contribution_type"
+    ]
+  },
+  "bottleneck_statement": "For the problem class in which one high-level manipulation relation is reused across unseen target-reference geometries, two pairings can share an apparently compatible terminal 6D placement yet require different contact sites, approach and alignment constraints, intermediate phases, phase order, or opposite feasibility labels. The retrieved frontier does not resolve this observational aliasing: MATCH POLICY transfers rigid pick/place key frames by registering targets to stored demonstrations (openalex:W4403786340), SPOT conditions execution on a target-relative SE(3) object-pose trajectory (openalex:W4404350837), TAX-DPD predicts precise object-centric placement distributions (semanticscholar:706c4142607ae62bfcef94593ff02eee65b1814a), and CoA-VLA injects a predefined sequence of object, grasp, spatial, and movement affordances (openalex:W4405956290), but none establishes from the retrieved evidence when unseen pair geometry must change the entire executable skill structure rather than only its coordinates or terminal goal. Consequently, a frozen pi0.5 chunk conditioned on two PointMaps plus a relation can remain unable to distinguish geometrically different cases that demand different early and late actions, so a single learned chunk distribution cannot be correct for all such pairings.",
+  "closest_adjacent": [
+    {
+      "paper_id": "openalex:W4403786340",
+      "is_anchor": true,
+      "summary_and_residue": "MATCH POLICY converts high-precision rigid pick-and-place action inference into registration of pick and place targets against stored demonstration key frames, giving training-free transfer to unseen configurations. Its retrieved evidence does not show how a fixed relation changes grasp choice, intermediate alignment and approach, phase order, or feasibility beyond transferring a rigid key-frame pose sequence. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "openalex:W4405956290",
+      "is_anchor": false,
+      "summary_and_residue": "CoA-VLA exposes object, grasp, spatial, and movement affordances as a sequential visual-textual reasoning interface injected into a VLA policy. Its retrieved evidence does not establish that the affordance chain is induced consistently from an unseen target-reference geometric relation, can change its phase set or order, or can declare the pair infeasible. [residue is abstract-level: fulltext fetch failed]"
+    },
+    {
+      "paper_id": "openalex:W4404350837",
+      "is_anchor": false,
+      "summary_and_residue": "SPOT represents a task as an SE(3) object-pose trajectory relative to a target and conditions a diffusion policy on that object-centric trajectory. Its retrieved evidence leaves the target definition and trajectory available in advance and does not show how unseen functional pair geometry changes grasp, contact mode, phase topology, or feasibility. [residue is abstract-level: fulltext fetch failed]"
+    },
+    {
+      "paper_id": "openalex:W4405785418",
+      "is_anchor": false,
+      "summary_and_residue": "MIMO embeds object shape and spatial relations in a multi-feature implicit field for one- or few-shot task-oriented grasping and rearrangement. Its retrieved evidence does not show compositional transfer of a named relation across unseen target-reference pairs when that relation changes the whole action-phase structure rather than only the reconstructed shape or spatial relation. [residue is abstract-level: fulltext fetch failed]"
+    },
+    {
+      "paper_id": "openalex:W4416447778",
+      "is_anchor": false,
+      "summary_and_residue": "EasyInsert predicts plug-socket relative pose and executes a coarse-to-fine multi-phase insertion policy that generalizes to unseen objects. Its retrieved evidence covers one fixed insertion program and does not establish whether arbitrary functional geometry should alter grasp, phase order, skill structure, or whether execution should be rejected as infeasible. [residue is abstract-level: fulltext fetch failed]"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement — stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+    "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances — stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+    "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required — stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+    "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings — stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability."
+  ],
+  "method_lineage": {
+    "line": "from hand-specified object-relative task geometry to learned relation-conditioned manipulation execution",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "operational-space control with hand-specified geometric task constraints",
+        "move": "Base formulation: express manipulation as desired object or end-effector poses, contact constraints, and feedback control laws.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "A designer must supply the task decomposition, object correspondence, feasible contacts, and goal constraints for each case.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "task-parameterized movement primitives and demonstration-conditioned object-relative trajectories",
+        "move": "Replace manually scripted trajectories with a demonstrated skill expressed relative to task objects or frames so coordinates can adapt to a new scene.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "The demonstration still fixes the relevant objects, phase scaffold, and semantic meaning of the transported trajectory.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "dense visual descriptors and keypoint-correspondence transport for pick-and-place",
+        "move": "Infer object correspondence from images or point clouds and transport demonstrated grasp and placement constraints across instances.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "A spatially good correspondence need not preserve functional contact semantics, motion feasibility, or the demonstrated phase template.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "neural descriptor fields and relational SE(3) pose optimization",
+        "move": "Lift correspondence transport into continuous 3D descriptor fields whose optimization recovers category-level object-relative poses from few demonstrations.",
+        "parent": "n2",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Relational skill transfer remains represented chiefly as a pose or pose set, while grasp, phase structure, and infeasibility are inherited or external.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "diffusion and action-chunk visuomotor policy conditioning",
+        "move": "Model multimodal closed-loop action chunks directly from observations and task conditioning instead of executing an explicit geometric controller alone.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "2-4y",
+        "confidence": "medium",
+        "residual_problem": "The action model is expressive, but its conditioning interface can still alias tasks whose functional geometry demands different phase structure.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "MATCH POLICY registration-to-key-frame manipulation",
+        "move": "Register pick and place targets to a stored demonstration and transfer action inference into point-cloud registration without policy training.",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4403786340",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Unseen rigid configurations are handled, but the retrieved evidence does not establish relation-driven changes to grasp, intermediate phases, phase order, contact recovery, or infeasibility beyond key-frame pose transfer.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "SPOT object-centric SE(3) pose-trajectory diffusion",
+        "move": "Represent planning constraints as an object-pose trajectory relative to the target and condition a diffusion execution policy on it.",
+        "parent": "n1",
+        "provenance": "retrieved:openalex:W4404350837",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The task still depends on a target definition and demonstrated pose-trajectory structure; unseen functional geometry that changes the phase graph or feasibility remains unresolved in the retrieved evidence.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "MIMO multi-feature implicit spatial-relation field",
+        "move": "Encode multiple object-shape and inter-object spatial features in an implicit field for few-shot task-oriented grasping and rearrangement.",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4405785418",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The retrieved evidence does not establish a relation-conditioned change in grasp, action phases, ordering, or feasibility across unseen target-reference pairings.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "CoA-VLA sequential visual-textual chain of affordance",
+        "move": "Expose object, grasp, placement-space, and movement affordances as explicit intermediate reasoning and co-inject them into a VLA policy.",
+        "parent": "n4",
+        "provenance": "retrieved:openalex:W4405956290",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The retrieved evidence does not show that unseen target-reference functional geometry determines, reorders, removes, or invalidates the affordance phases consistently.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n9",
+        "method": "EasyInsert relative-pose regression with coarse-to-fine execution",
+        "move": "Use learned plug-socket delta pose to drive a fixed multi-phase insertion process that scales data collection and transfers to unseen objects.",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4416447778",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The insertion-specific phase program and pose target do not establish general relation-conditioned skill restructuring or infeasibility handling.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n10",
+        "method": "TAX-DPD hierarchical point diffusion for object placement",
+        "move": "Decompose placement into a dense global prior and local object-frame diffusion for precise multimodal terminal placement across geometry variation.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:706c4142607ae62bfcef94593ff02eee65b1814a",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Precise terminal placement does not determine the earlier grasp, approach, contact transitions, phase order, or feasibility of a full relation-conditioned skill.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c0",
+        "method": "kPAM-style keypoint-affordance manipulation",
+        "move": "Attack functional transfer through human-designated semantic keypoints and geometric constraint optimization instead of dense pose registration.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Functional landmarks and constraint templates remain manually prescribed and may not determine a changing phase structure for unseen pairings.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c1",
+        "method": "PDDLStream-style task-and-motion planning",
+        "move": "Attack variable phase order and infeasibility by interleaving symbolic plan search with continuous geometric feasibility samplers.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Predicates, action schemas, object roles, and geometric samplers must be engineered and grounded for the domain.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "image-based visual servoing",
+        "move": "Attack geometric execution error with closed-loop visual feedback rather than one-shot pose or open-loop trajectory transfer.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Feedback can correct tracking error only after task-relevant features and a valid relation-specific goal have been specified.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "force/impedance control for contact-rich assembly",
+        "move": "Attack contact uncertainty through compliant feedback and force-guided correction rather than changing the geometric task representation.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "It adapts execution within a supplied contact task but does not infer which functional contacts, phases, or feasibility constraints an unseen pair requires.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Retrieved nodes define the recent frontier and are the only gap sites; because every full-text fetch failed, their residue statements remain abstract-level hypotheses despite retrieved provenance. Parametric nodes are awareness-only, not citable prior-art claims. The ancestry audit covered the historical families of object-relative demonstration templates, dense correspondence/descriptor transfer, and action-chunk policy conditioning; the collateral recognition audit additionally checked keypoint-affordance constraints, task-and-motion planning, visual servoing, and force/impedance control. These concrete older nodes prevent a downstream cure from being mistaken for new merely because the approximately two-year retrieval window omitted it; no unnamed or uncertain ancestor is used to suppress a gap."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 35,
+    "n_on_topic": 35,
+    "patterns": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 9,
+        "share": 0.26,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 5,
+        "share": 0.14,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 2,
+        "share": 0.06,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 7,
+        "share": 0.2,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 6,
+        "share": 0.17,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 5,
+        "share": 0.14,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 12,
+        "share": 0.34,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 8,
+        "share": 0.23,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 12,
+        "share": 0.34,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 2,
+        "share": 0.06,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 2,
+        "share": 0.06,
+        "saturation_band": "mid_frequency"
+      }
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "Structural-prior encoding and decompose-and-delegate tie as the most-used patterns (12/35 each); their closest-adjacent papers typically preserve a fixed pose, trajectory, affordance, or phase interface even while improving geometry handling or solver allocation."
+  },
+  "fulltext_degraded": true,
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

@@ -1,0 +1,93 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions -- the synthetic-to-real gap is asserted rather than shown. Finally, scope-claim mismatch (a single-task or small-N instrument carrying broad capability claims) and pure engineering assembly (stacking retrieval/knowledge-base/pipeline blocks with no isolating insight) both read as insufficient contribution.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "borderline",
+            "reasoning": "The hook may expose a cycle-level sign reversal not yet measured, but the candidate's own differentiation fields and the lit table already state that VLA-WAM policies can exploit model/reward error and amplify residual error, so the proposed simulator-success comparison risks confirming an accepted limitation."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "no",
+            "reasoning": "The estimand and falsification claim are explicitly scoped to LIBERO and RoboCasa native simulator success rather than asserted as real-robot transfer."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "The target property is the benchmarks' declared binary task-success outcome itself, not a contested latent property whose definition the method claims to validate."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "Candidate and incumbent policies are scored by native environment success predicates, not by the VLA, WAM, or another learned judge."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "yes",
+            "reasoning": "The core mechanism assembles standard randomized paired evaluation, propensity weighting, a confidence-sequence acceptor, and rollback around VLA-WAM training; its domain-specific atomic commit does not supply a new statistical or learning mechanism beyond that engineering composition."
+          }
+        ],
+        "verdict": "triggered"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The sole gap closure, controlled_diagnostic_design on the cycle-sign gap, is borderline confirmatory and directly triggers the Reject lesson against pure engineering assembly. The decisive lesson is the one stating that assembling engineering blocks without an isolating scientific insight reads as application rather than research."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The confounds attacked are recurring and specific -- memorization/contamination, surface style, the generating source's capability, single-modality shortcuts, scoring-function nonlinearity, and task-format exposure -- and the load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "Core-mechanism Steps 2-5 instantiate the abstract C02 move: logged randomized task allocation and matched candidate/incumbent resets block adaptive evidence selection, while native simulator success provides an oracle independent of the co-adapting VLA-WAM. The falsification compares the certificate decision with exhaustive-Q success and the internal-return divergence, so the thin-corpus domain translation is semantically present even though it is not novel.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The C02 move is present in the randomized matched-reset witness set and independent native-success oracle; the failure is not recipe bypass but lack of mechanism novelty and a powerless stated certificate."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "controlled_diagnostic_design",
+      "reframe_as_solvable_object"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "No reject-favored composition in anti-patterns.md is present because the candidate uses neither heterogeneous_decomposition nor architectural_operator_substitution/self_supervised_signal_engineering in the required pairings."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "semanticscholar:8289d4818261220bbf0df1665c99324a52684189",
+    "threat_source": "collision_hits",
+    "threat_channel": "alias",
+    "subsumption_argument": "PACE: Anytime-Valid Acceptance Tests for Self-Evolving Agents already identifies repeated noisy candidate acceptance as adaptive multiple testing, evaluates candidate and incumbent on identical paired instances, accumulates anytime-valid sequential evidence, and commits only after the acceptor has sufficient positive evidence. WitnessCS moves that same acceptor to VLA-WAM co-training, biases task sampling with logged propensities, and commits policy/WAM checkpoints atomically, but randomized A/B allocation plus importance correction and safe-policy-improvement gating are standard wrappers rather than a new mechanism; the central commit claim therefore stands or falls with PACE's already-stated mechanism.",
+    "addressable_via": "unaddressable",
+    "parametric_family_concern": null
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the environment-signed lower certificate L_{k,t}",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names matched-budget LIBERO/RoboCasa co-training, predicts higher final native task success, makes L_{k,t} load-bearing, and label-swaps pairs while predicting final success returns toward the ordinary-training baseline. It contains no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "The load-bearing certificate has zero positive-decision power under the default B_k=128 cap for the admissible",
+      "status": "upheld",
+      "basis": "The one-task q=p=1 instance satisfies the candidate's premises and the arithmetic is correct: at k=1, t=128, alpha=0.05, and epsilon=0.2, the stated radius is about 2.2879, so even mean X=1 gives L approximately -1.2879; epsilon=0.4 still gives radius about 1.144. Restoring power requires replacing the load-bearing bound or materially changing the witness budget, which is a mechanism redesign rather than a tactical or falsification repair."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0].reject_lessons_evaluated[4].lesson_quoted is triggered because WitnessCS is a generic randomized paired A/B, importance-weighted, anytime safe-policy-improvement gate wrapped around VLA-WAM rather than a distinct scientific mechanism. paper_pointed_threat.subsumption_argument identifies PACE as exact central-mechanism overlap, and blocking_findings_disposition[0] upholds that the stated certificate cannot accept even a perfect candidate within B_k=128. A power-restoring bound would replace the load-bearing test and is therefore a redesign, so advance and Phase 3.3 revision are both invalid.",
+  "revision_targets": []
+}

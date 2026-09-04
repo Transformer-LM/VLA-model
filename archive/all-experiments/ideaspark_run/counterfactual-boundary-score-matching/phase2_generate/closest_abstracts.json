@@ -1,0 +1,160 @@
+[
+  {
+    "title": "Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study",
+    "title_norm": "can explicit physical feasibility benefit vla learning an empirical study",
+    "abstract": "Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning. While this paradigm has shown strong performance, prevailing VLA training procedures do not explicitly supervise hard physical constraints such as obstacle avoidance or kinematic feasibility. As a result, the geometric structure underlying physically feasible behavior must be inferred only implicitly from demonstrations. In this paper, we study whether introducing explicit feasibility supervision can provide effective structured guidance for VLA policies. We formulate a simple geometry-grounded feasibility objective and integrate it into the training stage of a diffusion-based VLA policy. To evaluate this idea systematically, we use obstacle-aware manipulation as a controlled probe of geometry-dependent physical feasibility. Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime. These findings indicate that explicit feasibility signals can effectively complement imitation-based VLA learning, highlighting their potential for developing more reliable VLA policies.",
+    "tldr": "Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yubai Wei",
+      "Chen Wu",
+      "Hashem Haghbayan"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+    "paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+    "doi": "10.48550/arXiv.2604.17896",
+    "arxiv_id": "2604.17896",
+    "dblp_key": "journals/corr/abs-2604-17896",
+    "paper_url": "https://www.semanticscholar.org/paper/dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+    "published_iso": "2026-04-20",
+    "from_query": [
+      "VLA action diffusion functional geometry"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar"
+  },
+  {
+    "title": "STARRY: Spatial-Temporal Action-Centric World Modeling for Robotic Manipulation",
+    "title_norm": "starry spatial temporal action centric world modeling for robotic manipulation",
+    "abstract": "Robotic manipulation requires reasoning about future spatial-temporal interactions and geometric constraints, yet existing Vision-Language-Action (VLA) policies often leave predictive representation weakly coupled with action execution, causing failures in tasks requiring precise spatial-temporal coordination. We propose STARRY, a world-model-enhanced action-generation policy that aligns spatial-temporal prediction and action generation by jointly denoising future spatial-temporal latents and actions through a unified diffusion process. To bridge 2D visual tokens and 3D metric control, STARRY introduces Geometry-Aware Selective Attention Modulation (GASAM), which converts predicted depth and end-effector geometry into token-aligned weights for selective action-attention modulation. On RoboTwin 2.0, STARRY achieves 93.82% / 93.30% average success under Clean and Randomized settings across 50 bimanual tasks. Real-world experiments show that STARRY improves average success from 42.5% to 70.8% compared with $\\pi_{0.5}$. These results demonstrate the effectiveness of action-centric spatial-temporal world modeling for spatially and temporally demanding robotic manipulation.",
+    "tldr": "STARRY is a world-model-enhanced action-generation policy that aligns spatial-temporal prediction and action generation by jointly denoising future spatial-temporal latents and actions through a unified diffusion process and introduces Geometry-Aware Selective Attention Modulation (GASAM), which converts predicted depth and end-effector geometry into token-aligned weights for selective action-attention modulation.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yu Tian",
+      "Yurun Jin",
+      "Bin Yu",
+      "Yukun Shi",
+      "Hao Wu",
+      "Chi Harold Liu"
+    ],
+    "citations": 7,
+    "source": "semanticscholar",
+    "source_id": "f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+    "paper_id": "semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+    "doi": "10.48550/arXiv.2604.26848",
+    "arxiv_id": "2604.26848",
+    "dblp_key": "journals/corr/abs-2604-26848",
+    "paper_url": "https://www.semanticscholar.org/paper/f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+    "published_iso": "2026-04-29",
+    "from_query": [
+      "VLA action diffusion functional geometry"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar"
+  },
+  {
+    "title": "Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation",
+    "title_norm": "learning action manifold with multi view latent priors for robotic manipulation",
+    "abstract": "This paper tackles spatial perception and manipulation challenges in Vision-Language-Action (VLA) models. To address depth ambiguity from monocular input, we leverage a pre-trained multi-view diffusion model to synthesize latent novel views and propose a Geometry-Guided Gated Transformer (G3T) that aligns multi-view features under 3D geometric guidance while adaptively filtering occlusion noise. To improve action learning efficiency, we introduce Action Manifold Learning (AML), which directly predicts actions on the valid action manifold, bypassing inefficient regression of unstructured targets like noise or velocity. Experiments on LIBERO, RoboTwin 2.0, and real-robot tasks show our method achieves superior success rate and robustness over SOTA baselines. Project page: https://junjxiao.github.io/Multi-view-VLA.github.io/.",
+    "tldr": "A pre-trained multi-view diffusion model is leverage to synthesize latent novel views and a Geometry-Guided Gated Transformer (G3T) that aligns multi-view features under 3D geometric guidance while adaptively filtering occlusion noise is proposed.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Junjin Xiao",
+      "Dongyang Li",
+      "Yandan Yang",
+      "Shuang Zeng",
+      "Tongxi Lin",
+      "Xinyuan Chang"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "8cb14cd9dafae88163a7685336a02ac6c41ed646",
+    "paper_id": "semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+    "doi": "10.48550/arXiv.2605.11832",
+    "arxiv_id": "2605.11832",
+    "dblp_key": "journals/corr/abs-2605-11832",
+    "paper_url": "https://www.semanticscholar.org/paper/8cb14cd9dafae88163a7685336a02ac6c41ed646",
+    "published_iso": "2026-05-12",
+    "from_query": [
+      "VLA action diffusion functional geometry"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar"
+  },
+  {
+    "title": "Geometry Guided Self-Consistency for Physical AI",
+    "title_norm": "geometry guided self consistency for physical ai",
+    "abstract": "State-of-the-art physical AI models generate a chunk of actions per inference through diffusion or flow matching, iteratively refining an initial noise sample into an action trajectory. Because this inference process is inherently stochastic, committing to a single trajectory per round is brittle, and this brittleness compounds across the many sequential rounds that comprise a complete episode. We introduce KeyStone, an inference-time self-consistency method for diffusion-based action generation that draws $K$ candidate action chunks in parallel from a shared model context, clusters them in continuous action space, and returns the medoid of the largest cluster -- no additional model required. Two properties make this practical. First, the compact nature of action trajectories makes diffusion inference memory-bandwidth bound, leaving spare compute capacity to run $K$ chains in parallel with no additional wall-clock latency. Second, unlike token or pixel spaces where distance carries no semantic meaning and selection requires a learned judge, action chunks are geometrically structured such that Euclidean distance directly reflects physical similarity, making selection principled and judge-free. Across diverse vision-language-action models (VLAs) and world-action models (WAMs), KeyStone improves task success rates by up to \\textbf{13.3\\%} over single-trajectory sampling with negligible latency overhead, while having on par accuracy with model-based selectors at no training cost. We open source KeyStone at https://github.com/dywsjtu/keystone.",
+    "tldr": "KeyStone is introduced, an inference-time self-consistency method for diffusion-based action generation that draws candidate action chunks in parallel from a shared model context, clusters them in continuous action space, and returns the medoid of the largest cluster -- no additional model required.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yinwei Dai",
+      "Zhuofu Chen",
+      "Lijie Yang",
+      "Ravi Netravali"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+    "paper_id": "semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+    "doi": "10.48550/arXiv.2605.08638",
+    "arxiv_id": "2605.08638",
+    "dblp_key": "journals/corr/abs-2605-08638",
+    "paper_url": "https://www.semanticscholar.org/paper/4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+    "published_iso": "2026-05-09",
+    "from_query": [
+      "VLA action diffusion functional geometry"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar"
+  },
+  {
+    "title": "GEAR-VLA: Learning Geometry-Aware Action Representations for Generalizable Robotic Manipulation",
+    "title_norm": "gear vla learning geometry aware action representations for generalizable roboti",
+    "abstract": "Vision-Language-Action (VLA) models achieve strong benchmark performance but still struggle in real-world deployment with unseen objects, background shifts, and different robot embodiments. We argue that this stems from the lack of a unified geometry-aware manipulation representation, leaving existing VLAs vulnerable to low-level trajectory supervision, misaligned 3D features, and embodiment differences. To address this, we propose GEAR-VLA, a VLA framework for learning unified geometry-aware action representations for generalizable robotic manipulation. GEAR-VLA adopts coarse-to-fine action learning, where multi-source embodied pretraining equips the VLM with embodied reasoning and discrete action understanding before latent action tokens connect action semantics to a gradient-decoupled DiT continuous action expert. It further performs semantic-aligned 3D integration by aligning a trainable 3D spatial backbone with the VLA representation while freezing the original VLM-aligned visual pathway. To share this representation across robots, GEAR-VLA uses embodiment canonicalization, where embodiment-aware states and embodiment-invariant actions confine robot differences to the low-level interface. Extensive simulation and real-world experiments demonstrate strong generalization: GEAR-VLA achieves state-of-the-art performance on LIBERO, zero-shot LIBERO-Plus, and RoboTwin 2.0, reaches 85.9% success on AgileX and 81.0% on the pretraining-unseen LDT-01 embodiment, and obtains 90.1% success on a 6,360-trial universal grasping benchmark with 212 unseen objects. Code and models will be released at https://github.com/babynabeauty/GEAR-VLA.",
+    "tldr": "GEAR-VLA is proposed, a VLA framework for learning unified geometry-aware action representations for generalizable robotic manipulation and performs semantic-aligned 3D integration by aligning a trainable 3D spatial backbone with the VLA representation while freezing the original VLM-aligned visual pathway.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yuan Zhang",
+      "Shiqi Zhang",
+      "Yedong Shen",
+      "Shuai Dong",
+      "Jiajun Deng",
+      "Xin Zhang"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "e5ed331a44faf2ff0041b9dfab32fdc62d21c1a8",
+    "paper_id": "dblp:journals/corr/abs-2606-08530",
+    "doi": "10.48550/arXiv.2606.08530",
+    "arxiv_id": "2606.08530",
+    "dblp_key": "journals/corr/abs-2606-08530",
+    "paper_url": "https://www.semanticscholar.org/paper/e5ed331a44faf2ff0041b9dfab32fdc62d21c1a8",
+    "published_iso": "2026-06-07",
+    "retrieved_via": "host_web",
+    "host_why": "以语义对齐的 3D 表征、粗到细动作学习和跨本体规范化直接强化几何—动作映射，是检验功能几何反事实配对是否优于显式几何表征学习的关键 VLA 基线。",
+    "relevance": "core"
+  }
+]

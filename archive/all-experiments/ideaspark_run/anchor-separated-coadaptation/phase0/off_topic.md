@@ -1,0 +1,86 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **DROID-ANCHOR: Odometry-Anchored Recurrent Metric Depth Estimation** (`semanticscholar:d4a6b33c8fe9ebf0f31c2db4111a46f9beb2cdf3`)
+  - The anchor is for metric-depth odometry and has no policy learning, world-action modeling, or co-adaptation loop.
+- **The Open Ant: A Robot Platform for Reinforcement Learning Research** (`semanticscholar:6eb687aa873e864c52408d3244afbce1c1847594`)
+  - This is a reinforcement-learning hardware platform, not a VLA/world-model training or feedback method.
+- **Non-alignment revisited: Nigeria’s foreign policy between global power blocs** (`semanticscholar:72a4ae9454419457678500e08c0903b1b9f42407`)
+  - The paper concerns Nigerian foreign policy and is unrelated to robot policies or learned world models.
+- **Foundation Models as Decision Priors in Robotics: World-Model vs Policy Prior** (`semanticscholar:0ea3456fd82597a54220fbf880f2b210e32f42da`)
+  - This is a broad survey of foundation models as robot decision priors rather than a concrete co-training or anchoring method.
+- **"Robots should not be used for household chores because that would make us lazy": How Scaffolding Sh** (`semanticscholar:c2718cef70f74ba031a0e63e108c653666440b47`)
+  - The study concerns children's views of educational robots and has no robot-learning mechanism.
+- **Innovative Risk Control Measures for Future Health Threats Among Tourism Destinations in the Provinc** (`semanticscholar:ddcf4f449fbeac442899d4da86de6bf9d0bdbd62`)
+  - The paper is about tourism health-risk management and is unrelated to robot learning.
+- **Re-imagining knowledge canons in South African education: An inquest into mother tongue-based biling** (`semanticscholar:0f0dd5317a60c397114e8911f93f4cd27b39718c`)
+  - The paper concerns bilingual education and is unrelated to embodied learning.
+- **SoK: Agentic Skills - Beyond Tool Use in LLM Agents** (`semanticscholar:ae06bb0819ec521d45909b2cbf599ff36ea025e2`)
+  - This is a survey of agentic skills in LLM agents and supplies no relevant embodied co-training mechanism.
+- **Understanding professional development: Insights from Foundation Phase Teachers in Gauteng West, Sou** (`semanticscholar:c5c184c70c385e905cb2eb4f522ea6d9ebbef47e`)
+  - The paper studies teacher professional development and is unrelated to robotics or world models.
+- **Identifying the IT Emerging Trends in Four- and Five-Star Hotels in Nairobi County, Kenya** (`semanticscholar:47f583e5c6f9c612298c7f2e9aac8a0191c2bb8e`)
+  - The paper studies hotel information-technology adoption and is unrelated to robot learning.
+- **A ROBÓTICA EDUCACIONAL COMO FERRAMENTA DE ESTÍMULO COGNITIVO E INCLUSÃO DE ALUNOS COM TDAH E TRANSTO** (`semanticscholar:67712ed95d571970a4a72caa3a447777b1cdfc29`)
+  - This is an educational-robotics classroom study, not a robot-policy or world-model learning method.
+- **Change-Resilient Localization Estimation** (`semanticscholar:8a0dfcc1646cb466206f413b0813ee791ff048d5`)
+  - The work updates a geometric localization map and has no learned policy or world-action model.
+- **Coupled Learning–Adoption Modeling with Cost Floor Constraints for Realistic Cost Projections of Flo** (`semanticscholar:a57a43c5c0fec53cbc21621494b349fc31aa5fe3`)
+  - The coupled feedback system models flow-battery cost and adoption, not learned agents or robot world models.
+- **From Static Risk to Dynamic Trajectories: Toward World-Model-Inspired Clinical Prediction** (`semanticscholar:3c2f414fdaf20420cc411aafd8d9c251781831a8`)
+  - This is a clinical world-model review rather than a concrete learning method, and the rubric excludes pure reviews.
+- **Information Governance Framework for AI-Generated Synthetic Patient Data in Healthcare Research: Bal** (`semanticscholar:0666d830c3506e464c73ae5b435ad2d14de60594`)
+  - This is a healthcare data-governance framework, not a policy/world-model learning or anchoring mechanism.
+- **Multi-agent simulation and optimization of complex network diffusion models for policy implementatio** (`semanticscholar:a40f6326ad72eddd9afb841b79fcd652e781d1fa`)
+  - The multi-agent simulation optimizes public-administration feedback networks and is unrelated to learned robot policy-world-model loops.
+- **Synthetic Interventions: Extending Synthetic Controls to Multiple Treatments** (`semanticscholar:c1a98506a02492cd0e4b3edc6428c160b813407d`)
+  - Synthetic interventions is a causal policy-evaluation method for multiple treatments, not synthetic agent rollouts or co-training.
+- **Foundation models in robotics: Applications, challenges, and the future** (`openalex:W4402890475`)
+  - This is a broad survey of foundation models in robotics, and pure surveys are excluded by the rubric.
+- **Can Open Large Language Models Catch Vulnerabilities?** (`openalex:W4406779522`)
+  - The work evaluates code-vulnerability classification by LLMs and has no relevant embodied or model-based learning loop.
+- **Wearable and Implantable Soft Robots** (`openalex:W4403332501`)
+  - This is a review of wearable and implantable soft-robot hardware, not a policy/world-model co-training method.
+- **AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges** (`openalex:W4412505619`)
+  - This is a conceptual review of AI agents and agentic AI, not a concrete embodied co-training method.
+- **Embodied AI: From LLMs to World Models** (`openalex:W4414857074`)
+  - This is a broad review of embodied AI, LLMs, and world models rather than a concrete coupled-training mechanism.
+- **The Taxation of Artificial Intelligence between New Taxes and Additional Incentives** (`openalex:W4405711354`)
+  - The essay concerns taxation of AI and robots and has no technical learning mechanism.
+- **The Importance of AI Data Governance in Large Language Models** (`openalex:W4410823183`)
+  - This is a broad LLM data-governance review, not a concrete self-training or robot-learning method.
+- **Foundation models and intelligent decision-making: Progress, challenges, and perspectives** (`openalex:W4410291923`)
+  - This is a general survey of foundation-model decision making, and pure surveys are excluded.
+- **Reinforcement learning as a robotics-inspired framework for insect navigation: from spatial represen** (`openalex:W4402380956`)
+  - The paper reviews insect and robot navigation representations rather than proposing a policy-world-model co-training mechanism.
+- **Reducing misdiagnosis in AI-driven medical diagnostics: a multidimensional framework for technical, ** (`openalex:W4415721091`)
+  - This medical-diagnostics review and policy framework is unrelated to embodied policy-world-model learning.
+- **Bridging the Construction Productivity Gap—A Hierarchical Framework for the Age of Automation, Robot** (`openalex:W4413372762`)
+  - The construction-productivity framework only uses robotics as an application context and has no robot-learning loop.
+- **A Multiagent-Driven Robotic AI Chemist Enabling Autonomous Chemical Research On Demand** (`openalex:W4408247476`)
+  - The robotic chemistry system orchestrates LLM agents and lab automation but does not learn a VLA or world model.
+- **OECD Regulatory Policy Outlook 2025** (`openalex:W4408621655`)
+  - This is an OECD government-regulation outlook and is unrelated to machine-learning policies or world models.
+- **Extended reality in clinical neurology: From interdisciplinary innovations to clinical practice** (`openalex:W7141269931`)
+  - This is a clinical-neurology extended-reality review and contains no relevant agent-learning mechanism.
+- **Exploring adoption of humanoid robots in education: UTAUT-2 and TOE models for science teachers** (`openalex:W4406414065`)
+  - The study concerns teachers' adoption of humanoid robots, not robot policy learning.
+- **Towards Societally Beneficial Personalized Realities: A Conceptual Foundation for Responsible Ubiqui** (`openalex:W4412035404`)
+  - The conceptual model concerns responsible personalization systems, not embodied policy-world-model learning.
+- **A Policy Model Based Efficient and Accurate Scene Recognition Method for Service Robot** (`openalex:W4414603187`)
+  - The policy only chooses viewpoints for service-robot scene recognition and has no VLA-WAM learning loop.
+- **World Model for Robot Learning: A Comprehensive Survey** (`semanticscholar:ddfe191f758ed8d74ceaf769392af5c5c9546e52`)
+  - This is explicitly a comprehensive survey of robot world models, and the rubric assigns pure surveys off topic.
+- **Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications** (`openalex:W4414198610`)
+  - This is explicitly a review of VLA models rather than a concrete co-training method.
+- **Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods** (`openalex:W4393763811`)
+  - This is explicitly a survey of LLM-enhanced reinforcement learning rather than a primary mechanism study.
+- **A review of embodied intelligence systems: a three-layer framework integrating multimodal perception** (`openalex:W4415947022`)
+  - This is explicitly a review of embodied intelligence and world modeling rather than a concrete co-training method.
+- **Machine Learning-Based Modeling for Structural Engineering: A Comprehensive Survey and Applications ** (`openalex:W4404045225`)
+  - This is a structural-engineering machine-learning survey and is unrelated to robot policy-world-model learning.
+- **Multimodal fusion and vision–language models: A survey for robot vision** (`openalex:W4413788337`)
+  - This is a robot-vision multimodal-fusion survey and provides no concrete VLA-WAM training mechanism.
+- **A Review of Multi-Sensor Fusion in Autonomous Driving** (`openalex:W4414704765`)
+  - This is an autonomous-driving sensor-fusion review and not a policy-world-model co-training study.

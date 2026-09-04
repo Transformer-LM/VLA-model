@@ -1,0 +1,12 @@
+{
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the mean held-out boundary margin M_B",
+    "negative_control_target": "outcome_metric",
+    "verdict": "sound",
+    "reasoning": "The paragraph specifies a concrete post-training comparison and directional downstream metrics. It names M_B as the load-bearing variable, while mask and pair-identity permutations are required to collapse edited-scene success and mode-coverage advantages rather than merely alter M_B."
+  },
+  "verdict": "advance",
+  "verdict_rationale": "All required falsification elements are explicit, and the negative controls target downstream task outcomes instead of a tautological change in the boundary margin."
+}

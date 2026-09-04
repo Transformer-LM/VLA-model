@@ -1,0 +1,53 @@
+{
+  "action_conditioning": {
+    "action_swap_margin": -218.00409454107285,
+    "action_swapped_normalized_one_step_mse": 47525387.59619998,
+    "matched_normalized_one_step_mse": 47525605.60029452,
+    "permutation_fixed_point_count": 2,
+    "positive_margin": false,
+    "prediction_shift_mean": 0.5132070181892017,
+    "transition_count": 3402
+  },
+  "arguments": {
+    "batch_size": 256,
+    "checkpoint": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LOSO_6A79_WAM_E0.pt",
+    "depth": 3,
+    "device": "cuda",
+    "epochs": 20,
+    "eval_source_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+    "learning_rate": 0.0003,
+    "manifest": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_MANIFEST_V1.json",
+    "output": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LOSO_6A79_WAM_E0.json",
+    "residual_decay": 0.8,
+    "residual_window": 8,
+    "seed": 0,
+    "width": 256
+  },
+  "checkpoint_written": false,
+  "claim_limit": "The held-out action-conditioning gate failed. No residual-harm evaluation or checkpoint is authorized.",
+  "created_at_utc": "2026-09-01T17:33:26.995599+00:00",
+  "decision": {
+    "action_conditioning_gate_passed": false
+  },
+  "eval_source_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+  "kind": "p027c_latent_wam_action_conditioning_gate_failure_e0",
+  "manifest_path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_MANIFEST_V1.json",
+  "manifest_sha256": "ea1662ea21fb46661e0ae3909d378c9aeef5c6e005e52346a47a7807cdf3bed2",
+  "records_sha256": "0a8d5ee142a403a5eea7494ffac13f0a4bb8299b691046c6372c4caf490d4542",
+  "run_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LOSO_6A79_WAM_E0_RUN_LOCK.json",
+    "sha256": "fbd99c3606e7374e4d8ebff7c6064964792907bb0b0f53cc436eca7754b5dd7b"
+  },
+  "train": {
+    "action_dim": 7,
+    "epochs": 20,
+    "final_loss": 0.1862436072791324,
+    "initial_loss": 0.7746996613109813,
+    "parameter_count": 174159,
+    "raw_trace_count": 1884,
+    "state_dim": 79,
+    "train_source_count": 6,
+    "unique_transition_count": 21593
+  },
+  "train_eval_source_disjoint": true
+}

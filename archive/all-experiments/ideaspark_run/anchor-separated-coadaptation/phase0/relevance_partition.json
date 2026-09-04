@@ -1,0 +1,662 @@
+[
+  {
+    "paper_id": "semanticscholar:ed8708bf8473d8889ce271a37a15e4aa883e4712",
+    "relevance": "adjacent",
+    "reason": "Uses a world model to guide VLA test-time decisions, but does not iteratively co-train policy and world model or separate their feedback."
+  },
+  {
+    "paper_id": "semanticscholar:64604f8fe171472d66bb7c7fb29ad42414c5925a",
+    "relevance": "core",
+    "reason": "Self-improves a robot policy from compositional-world-model rollouts, directly exposing the synthetic-feedback loop whose errors require an independent anchor."
+  },
+  {
+    "paper_id": "semanticscholar:f2d6863717cdae5ef1105f920e4d4cf81df4bf4d",
+    "relevance": "adjacent",
+    "reason": "Joint future-video supervision and action decoding are relevant shared components, but there is no reciprocal policy-distribution update of the world model."
+  },
+  {
+    "paper_id": "semanticscholar:d4a6b33c8fe9ebf0f31c2db4111a46f9beb2cdf3",
+    "relevance": "off_topic",
+    "reason": "The anchor is for metric-depth odometry and has no policy learning, world-action modeling, or co-adaptation loop."
+  },
+  {
+    "paper_id": "semanticscholar:86ac34a981377baf2d3cdfebdf1e49322359b20d",
+    "relevance": "adjacent",
+    "reason": "Pretrains a world model in simulation and adapts it with real data, providing a reality-alignment baseline without bidirectional policy-world-model training."
+  },
+  {
+    "paper_id": "semanticscholar:110242c142e1b95cb3e0a6053326ef49c5b3e5e5",
+    "relevance": "adjacent",
+    "reason": "External human feedback anchors online robot-policy adaptation, but no world model or imagined-policy feedback loop is involved."
+  },
+  {
+    "paper_id": "semanticscholar:d1e486e778d1e8bb44cc35ad5f6752ef5c893e55",
+    "relevance": "adjacent",
+    "reason": "Integrates world-model representations into robust policy learning, but does not study iterative policy-world-model co-adaptation."
+  },
+  {
+    "paper_id": "semanticscholar:f87f6ca879b9034977983aaed345a000419612fa",
+    "relevance": "core",
+    "reason": "Simulated futures and a task-aligned critic post-train a robot policy, making it a close mechanism for controlling errors in imagination-derived updates."
+  },
+  {
+    "paper_id": "semanticscholar:cf68e4e281f878f4a7433599bd80eab811cedc75",
+    "relevance": "adjacent",
+    "reason": "Real-user corrections support iterative robot-policy improvement, but the loop is DAgger-like and contains no learned world model."
+  },
+  {
+    "paper_id": "semanticscholar:b4723e3b265f39fb6a8806591e403a399fc5307c",
+    "relevance": "core",
+    "reason": "Explicitly co-trains a policy and world model, albeit for language agents, and is a direct cross-domain collision for the coupled-training mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:fd501ac675af05836fcdb0a524c8013d45b106ab",
+    "relevance": "adjacent",
+    "reason": "Grounded online reinforcement adaptation supplies a real-interaction baseline, but it does not use or update a world model."
+  },
+  {
+    "paper_id": "semanticscholar:3a6c881a21674a9428ad140584321339147ed79c",
+    "relevance": "core",
+    "reason": "Human corrections inside closed-loop imagined rollouts post-train a robot policy, providing an independent-reality-feedback mechanism close to the target."
+  },
+  {
+    "paper_id": "semanticscholar:6eb687aa873e864c52408d3244afbce1c1847594",
+    "relevance": "off_topic",
+    "reason": "This is a reinforcement-learning hardware platform, not a VLA/world-model training or feedback method."
+  },
+  {
+    "paper_id": "semanticscholar:bd6e2ea7e39d44736ed7000de8033d08e243f8ee",
+    "relevance": "core",
+    "reason": "A learned interactive world simulator generates policy-training trajectories and is checked against real executions, directly covering the synthetic-to-policy side of the loop."
+  },
+  {
+    "paper_id": "semanticscholar:72a4ae9454419457678500e08c0903b1b9f42407",
+    "relevance": "off_topic",
+    "reason": "The paper concerns Nigerian foreign policy and is unrelated to robot policies or learned world models."
+  },
+  {
+    "paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+    "relevance": "core",
+    "reason": "Iteratively improves a VLA from world-model rollouts and updates the world model from policy executions, matching the proposed closed-loop co-training setting."
+  },
+  {
+    "paper_id": "semanticscholar:e66959dafec249adf5b2b802b931f884151a877a",
+    "relevance": "adjacent",
+    "reason": "Human-in-the-loop reward and policy evolution offers an external-feedback baseline, but contains no WAM or reciprocal model-policy loop."
+  },
+  {
+    "paper_id": "semanticscholar:c2ca49b08fe8afe4a2902e0b74ec780c11f5b081",
+    "relevance": "core",
+    "reason": "Mechanistically analyzes sim-and-real co-training and the role of real data in generative robot policies, directly informing separated reality anchoring."
+  },
+  {
+    "paper_id": "semanticscholar:1a8776d12f233047d9ba67e41d09bce90420926f",
+    "relevance": "adjacent",
+    "reason": "Maintains and refreshes an action-decoder scene belief, but does not co-train a policy with a rollout-generating world model."
+  },
+  {
+    "paper_id": "semanticscholar:088211a917be33e10ffe9f9060fede92d83066e8",
+    "relevance": "adjacent",
+    "reason": "Systematically studies robot-policy co-training across data modalities, useful as a mixing baseline but without a policy-updated WAM."
+  },
+  {
+    "paper_id": "semanticscholar:53a6167456717e51cb76c342894d6a9e369dada7",
+    "relevance": "adjacent",
+    "reason": "Dual real-to-sim proxies and real observations provide an alignment mechanism, but the target being refined is not a VLA-WAM co-training loop."
+  },
+  {
+    "paper_id": "semanticscholar:41ccdbee7928baedb0fd6f0c051d1a4fca3065f1",
+    "relevance": "adjacent",
+    "reason": "Cross-domain co-training with discrepancy-aware weighting is a useful stabilization analogue, but it does not couple a policy and world model."
+  },
+  {
+    "paper_id": "semanticscholar:0d850465fa89b679e286f53311a24d7ea0fd9b84",
+    "relevance": "adjacent",
+    "reason": "Anchor-centric real-data adaptation addresses distribution diversity in manipulation, but not imagination-driven reciprocal updates."
+  },
+  {
+    "paper_id": "semanticscholar:0ea3456fd82597a54220fbf880f2b210e32f42da",
+    "relevance": "off_topic",
+    "reason": "This is a broad survey of foundation models as robot decision priors rather than a concrete co-training or anchoring method."
+  },
+  {
+    "paper_id": "semanticscholar:c2718cef70f74ba031a0e63e108c653666440b47",
+    "relevance": "off_topic",
+    "reason": "The study concerns children's views of educational robots and has no robot-learning mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:3859de96b3c95d8c814a6c850df29f1b97d0644d",
+    "relevance": "core",
+    "reason": "Trains robot policies through reinforcement learning inside a world model and discusses iterative model-policy improvement, directly occupying the imagined-update loop."
+  },
+  {
+    "paper_id": "semanticscholar:ddcf4f449fbeac442899d4da86de6bf9d0bdbd62",
+    "relevance": "off_topic",
+    "reason": "The paper is about tourism health-risk management and is unrelated to robot learning."
+  },
+  {
+    "paper_id": "semanticscholar:317ebd73c3f3b3e7e41035527272339536ad6a1d",
+    "relevance": "core",
+    "reason": "Feeds real next-state feedback back into world-model predictions before guiding a diffusion policy, a close reality-anchored safeguard against model error."
+  },
+  {
+    "paper_id": "semanticscholar:2f8c44d9dbc81542292abbc4c7b35bc29d37305f",
+    "relevance": "adjacent",
+    "reason": "Corrects policy and dynamics distribution shifts in continual RL, relevant to feedback-induced drift but not a VLA-WAM co-training method."
+  },
+  {
+    "paper_id": "semanticscholar:1dd6d0797b832aba30a9e8fbee924fd6a6d5f2d4",
+    "relevance": "core",
+    "reason": "Iterates real failures, world-model imagined corrections, and VLA post-training; tactile input is disallowed for the target but the feedback mechanism is a close collision."
+  },
+  {
+    "paper_id": "semanticscholar:b5230cd0444a896f40da4bb9e5b7832e71c5b7c2",
+    "relevance": "adjacent",
+    "reason": "Reference-anchored alignment of a few-step generator is a useful optimization analogue, but it is neither robotics nor policy-world-model co-training."
+  },
+  {
+    "paper_id": "semanticscholar:d56701934ce6e796e8646d0178ddc2534508c365",
+    "relevance": "core",
+    "reason": "Transfers learned world-model dynamics into latent-action VLA post-training through a shared interface, directly covering the imagination-to-policy update pathway."
+  },
+  {
+    "paper_id": "semanticscholar:14663b2595a425dcd137979aaa585760112f9105",
+    "relevance": "adjacent",
+    "reason": "Goal-anchored visual navigation is relevant only as a policy baseline and has no learned world-model feedback loop."
+  },
+  {
+    "paper_id": "semanticscholar:d94517592a5005977d80fc07cb6d21bfab2584fc",
+    "relevance": "adjacent",
+    "reason": "Offline-to-online self-supervised action ranking adapts a robot policy without a rollout world model."
+  },
+  {
+    "paper_id": "semanticscholar:a40d292321afa7b948e24bc2f9e381f8176e9e10",
+    "relevance": "core",
+    "reason": "Jointly optimizes a shared world-model/policy representation while regularizing real-versus-imagined discrepancy, directly addressing coupled shared error."
+  },
+  {
+    "paper_id": "semanticscholar:37d09b6ae92622c1cfbbec9bbecb7966f77e2cc2",
+    "relevance": "core",
+    "reason": "Alternates real-rollout world-model adaptation with policy training on imagined trajectories and keeps fixed components as anchors, closely matching the loop."
+  },
+  {
+    "paper_id": "semanticscholar:197e2a4a8140683a7a4765bc31a77ce953b5396b",
+    "relevance": "adjacent",
+    "reason": "Unifies geometric world and action representations for robot policies, but does not perform iterative co-training from imagined and real feedback."
+  },
+  {
+    "paper_id": "semanticscholar:0f0dd5317a60c397114e8911f93f4cd27b39718c",
+    "relevance": "off_topic",
+    "reason": "The paper concerns bilingual education and is unrelated to embodied learning."
+  },
+  {
+    "paper_id": "semanticscholar:af3d5e7a387f5b445b0d33edc3e11cf876733f68",
+    "relevance": "core",
+    "reason": "Combines simulation RL with a supervised real-data objective during VLA co-training, an exact near-neighbor for reality-anchored policy updates."
+  },
+  {
+    "paper_id": "semanticscholar:06204c71c1ee1e6334be62011b206e569d2b5dd0",
+    "relevance": "adjacent",
+    "reason": "Generates interactive code scenes for simulation and data collection, but does not co-adapt a VLA and WAM."
+  },
+  {
+    "paper_id": "semanticscholar:ce0d7cd9a42579745bd7d6aea83c10830b844dc4",
+    "relevance": "adjacent",
+    "reason": "Co-trains manipulation policies on simulated and human data, providing a data-anchor baseline without a learned world model."
+  },
+  {
+    "paper_id": "semanticscholar:552b6cf205fe88b752e041991514e113055ab5a1",
+    "relevance": "adjacent",
+    "reason": "Trust-region optimization stabilizes nonstationary policy updates, but it has no WAM, imagined rollouts, or independent reality interface."
+  },
+  {
+    "paper_id": "semanticscholar:ca524f499028275f21776ea4b1fd41fd2ff7844b",
+    "relevance": "adjacent",
+    "reason": "Provides a large robot world-model backbone and evaluation substrate, but no reciprocal policy-world-model training loop."
+  },
+  {
+    "paper_id": "semanticscholar:ae06bb0819ec521d45909b2cbf599ff36ea025e2",
+    "relevance": "off_topic",
+    "reason": "This is a survey of agentic skills in LLM agents and supplies no relevant embodied co-training mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:527e3e584c566c2d314d89707f8d645e0ed08701",
+    "relevance": "adjacent",
+    "reason": "An action-conditioned multi-embodiment robot world model is a relevant backbone, but the record gives no evidence of policy co-adaptation."
+  },
+  {
+    "paper_id": "semanticscholar:b93ce7c528273157160b0cf19a2f3de97dd700a6",
+    "relevance": "adjacent",
+    "reason": "Uses semantic anchors to transfer fabric manipulation points, but does not learn a VLA, WAM, or reciprocal feedback loop."
+  },
+  {
+    "paper_id": "semanticscholar:ff84a80adb726c69a7e40e6b9c6da708f7cc0e2b",
+    "relevance": "core",
+    "reason": "Pairs world-model policy evaluation with matched real robot rollouts and studies long-horizon fidelity, directly supporting an independent reality anchor for the loop."
+  },
+  {
+    "paper_id": "semanticscholar:c5c184c70c385e905cb2eb4f522ea6d9ebbef47e",
+    "relevance": "off_topic",
+    "reason": "The paper studies teacher professional development and is unrelated to robotics or world models."
+  },
+  {
+    "paper_id": "semanticscholar:f872bf4801cf0de5576885ce2a23ebaff5107a5a",
+    "relevance": "adjacent",
+    "reason": "Unifies video prediction, action generation, and candidate evaluation in one backbone, but training is not an iterative policy-distribution/world-model loop."
+  },
+  {
+    "paper_id": "semanticscholar:47f583e5c6f9c612298c7f2e9aac8a0191c2bb8e",
+    "relevance": "off_topic",
+    "reason": "The paper studies hotel information-technology adoption and is unrelated to robot learning."
+  },
+  {
+    "paper_id": "semanticscholar:534713e7678da3acd12217d55a36a5e3cdc80e0c",
+    "relevance": "core",
+    "reason": "Alternates VLA inference with world-model prediction in a closed evaluation loop and calibrates against matched real executions, directly relevant to detecting shared rollout error."
+  },
+  {
+    "paper_id": "semanticscholar:67712ed95d571970a4a72caa3a447777b1cdfc29",
+    "relevance": "off_topic",
+    "reason": "This is an educational-robotics classroom study, not a robot-policy or world-model learning method."
+  },
+  {
+    "paper_id": "semanticscholar:93c4892c910c32d359747ce93795ff613b9a3fc7",
+    "relevance": "adjacent",
+    "reason": "Improves action-conditioned visual rollout geometry in a robot world model, but does not update a policy from those rollouts or close the training loop."
+  },
+  {
+    "paper_id": "semanticscholar:8a0dfcc1646cb466206f413b0813ee791ff048d5",
+    "relevance": "off_topic",
+    "reason": "The work updates a geometric localization map and has no learned policy or world-action model."
+  },
+  {
+    "paper_id": "semanticscholar:0863b06eb5870a1508aaf638e5239157844ce828",
+    "relevance": "core",
+    "reason": "Trains a world model on its own autoregressive predictions to address self-induced distribution shift, a direct component of preventing self-confirming rollout error."
+  },
+  {
+    "paper_id": "semanticscholar:17fcc2b1136f19af317101e8a22dbd1a5fec9f57",
+    "relevance": "adjacent",
+    "reason": "Completion-state gating and visual goal anchors reduce VLA inference cost, but this is an early-exit-style execution method rather than co-training."
+  },
+  {
+    "paper_id": "semanticscholar:302c4834f55d00dd12ba1c73a090a83baf895f6f",
+    "relevance": "adjacent",
+    "reason": "Online RL steers a frozen robot policy through a latent bottleneck, offering an interface baseline without a WAM or imagined-data feedback."
+  },
+  {
+    "paper_id": "semanticscholar:a57a43c5c0fec53cbc21621494b349fc31aa5fe3",
+    "relevance": "off_topic",
+    "reason": "The coupled feedback system models flow-battery cost and adoption, not learned agents or robot world models."
+  },
+  {
+    "paper_id": "semanticscholar:1ee5738035b3894d3f725f6420e4e521d454c1db",
+    "relevance": "adjacent",
+    "reason": "Trains locomotion policies entirely in a morphology-conditioned world model, relevant to imagination bias but without reciprocal model updates or VLA grounding."
+  },
+  {
+    "paper_id": "semanticscholar:791c57631617aaffaf368ac0ab5e6ebbdfaa43e8",
+    "relevance": "core",
+    "reason": "Benchmarks policy learning from mixtures of real and imaginary rollouts and exposes their performance gap, directly testing the need for a reality anchor."
+  },
+  {
+    "paper_id": "semanticscholar:9d08702ee19ba106680edb40f2e4c0e6047cfe56",
+    "relevance": "adjacent",
+    "reason": "Uses latent world-model imagination for airship control and safety, but not VLA-WAM reciprocal co-training."
+  },
+  {
+    "paper_id": "semanticscholar:f091395e5e218258bcc56c5d6375d062c7a1557a",
+    "relevance": "adjacent",
+    "reason": "Alternates real simulator feedback and imagined policy improvement in another domain, a methodological analogue rather than embodied VLA work."
+  },
+  {
+    "paper_id": "semanticscholar:9a9a04d8d7fd1f0ff2d8ea8b0d10d51c3551bf20",
+    "relevance": "adjacent",
+    "reason": "Compares human and model annotations on real versus synthetic data and reveals synthetic agreement bias, conceptually relevant to shared-error validation."
+  },
+  {
+    "paper_id": "semanticscholar:6741581905dbedb481e06ed9bfc1e5ab4ad1f80c",
+    "relevance": "core",
+    "reason": "A learned world model synthesizes trajectories that refine an agent policy, directly covering imagination-driven self-improvement even though the domain is web interaction."
+  },
+  {
+    "paper_id": "semanticscholar:3c2f414fdaf20420cc411aafd8d9c251781831a8",
+    "relevance": "off_topic",
+    "reason": "This is a clinical world-model review rather than a concrete learning method, and the rubric excludes pure reviews."
+  },
+  {
+    "paper_id": "semanticscholar:afaf9a790d47fc0549dd517c1500c8bac32a2602",
+    "relevance": "adjacent",
+    "reason": "Uses environment trajectories as separated evidence for policy revision and identifies salience-induced regressions, but does not learn a world model."
+  },
+  {
+    "paper_id": "semanticscholar:e93307c72940db3ca2f2926f1d36a3daa078c702",
+    "relevance": "core",
+    "reason": "Explicitly separates rollout horizons to trade off on-policy shift, compounding model bias, and unstable policy gradients, directly targeting imagined-policy feedback error."
+  },
+  {
+    "paper_id": "semanticscholar:76b478ea6a993e5286a1ec02497dfc175fe2ab39",
+    "relevance": "core",
+    "reason": "Studies bias amplification in iterative self-consuming, performative retraining loops and proposes rejection control, an exact cross-domain analogue of self-confirmation."
+  },
+  {
+    "paper_id": "semanticscholar:c099f982a63a92d4891703f94fb5fd0ec6b64b1f",
+    "relevance": "adjacent",
+    "reason": "Iteratively improves a multimodal agent from real exploration and external feedback, providing a reality-grounded loop baseline without a WAM."
+  },
+  {
+    "paper_id": "semanticscholar:fc82a18c8c6855c883d2f4253ad1bfcb4e624c7f",
+    "relevance": "adjacent",
+    "reason": "Trains vision-language policies in synthetic worlds and measures real transfer, but does not update the simulator from the deployed policy distribution."
+  },
+  {
+    "paper_id": "semanticscholar:cb2fb0784f0019bf51a7d41036713c6d9167611f",
+    "relevance": "adjacent",
+    "reason": "Shows bias in LLM-generated synthetic data relative to real survey distributions, offering conceptual evidence on synthetic drift but no agent loop."
+  },
+  {
+    "paper_id": "semanticscholar:0666d830c3506e464c73ae5b435ad2d14de60594",
+    "relevance": "off_topic",
+    "reason": "This is a healthcare data-governance framework, not a policy/world-model learning or anchoring mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:1952d4f011fcf5f7ed2540f0b0296255d8f665eb",
+    "relevance": "adjacent",
+    "reason": "Injects teacher demonstrations only on policy failures and anneals that anchor, a useful separated-anchor analogue outside robotics and WAMs."
+  },
+  {
+    "paper_id": "semanticscholar:afc552135b929838db086b56fb564aee1bcb0e10",
+    "relevance": "adjacent",
+    "reason": "Adapts a recommender from implicit real-user feedback, weakly relevant to performative policy updates but lacking imagination or a world model."
+  },
+  {
+    "paper_id": "semanticscholar:fb0cbd0b48027f85b6da4b67aa75ed189bbb7bc5",
+    "relevance": "adjacent",
+    "reason": "Uses counterfactual invariance to prevent biased reward feedback in multimodal RL, a possible safeguard analogue without a WAM."
+  },
+  {
+    "paper_id": "semanticscholar:a40f6326ad72eddd9afb841b79fcd652e781d1fa",
+    "relevance": "off_topic",
+    "reason": "The multi-agent simulation optimizes public-administration feedback networks and is unrelated to learned robot policy-world-model loops."
+  },
+  {
+    "paper_id": "semanticscholar:c1a98506a02492cd0e4b3edc6428c160b813407d",
+    "relevance": "off_topic",
+    "reason": "Synthetic interventions is a causal policy-evaluation method for multiple treatments, not synthetic agent rollouts or co-training."
+  },
+  {
+    "paper_id": "semanticscholar:91fb21898301e80633d47d39b425d1feaa98f6ed",
+    "relevance": "core",
+    "reason": "Generates policy-guided synthetic trajectories while explicitly controlling target-policy shift and model error, directly addressing feedback between policy distribution and imagined data."
+  },
+  {
+    "paper_id": "semanticscholar:72e500a504f204afdf581ce33d488a9bc58e7b29",
+    "relevance": "adjacent",
+    "reason": "Fine-tunes an LLM from social engagement rewards, providing only a generic real-feedback analogue with no world model."
+  },
+  {
+    "paper_id": "semanticscholar:60d573f277d4e77326a0628f7d6abb176be66e17",
+    "relevance": "adjacent",
+    "reason": "Calibrates policy evaluation under model misspecification and policy shift, useful for an independent audit but explicitly short of the proposed co-training mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:9d42ff6febb72d0d28733c3bb2b49e76eeb17a08",
+    "relevance": "core",
+    "reason": "Anchors continual updates to logged prior-policy actions and propensity-corrects policy-shaped feedback, an exact cross-domain mechanism against performative self-confirmation."
+  },
+  {
+    "paper_id": "semanticscholar:8402e446158252992b6ddf1ff1b0658c39d7604e",
+    "relevance": "adjacent",
+    "reason": "Iterative outcome-driven tool-use RL begins from synthetic traces, but neither a learned environment model nor independent reality anchoring is studied."
+  },
+  {
+    "paper_id": "semanticscholar:97e53fd052572391d2cf6c630caa1e04f849fe4d",
+    "relevance": "core",
+    "reason": "Uses a frozen teacher as a separated target on student-generated trajectories, directly exemplifying cross-model anchoring against on-policy compounding error."
+  },
+  {
+    "paper_id": "semanticscholar:f4fb4529b482c531d74f846e46cd2db27aa8bc6a",
+    "relevance": "core",
+    "reason": "Trains an agent in a learned world model while interleaving fixed real expert trajectories for stability, a direct anchor-separated imagination-training mechanism."
+  },
+  {
+    "paper_id": "semanticscholar:44dcaa20f5eb5c5fd5b773ef9a41629cbebe452f",
+    "relevance": "adjacent",
+    "reason": "Counterfactual causal reward modeling mitigates spurious optimization feedback, relevant as a safeguard but outside VLA-WAM co-training."
+  },
+  {
+    "paper_id": "semanticscholar:1b8e680f2600bd44295578cf1f9a0fa8a30d2370",
+    "relevance": "adjacent",
+    "reason": "Confidence-weights synthetic world-model transitions to reduce compounding bias, but this is the excluded generic uncertainty-filtering family."
+  },
+  {
+    "paper_id": "semanticscholar:c9fcace09fb64a167a2d50f5997ac46014767efc",
+    "relevance": "core",
+    "reason": "Co-trains a VLA on simulated and real trajectories with a supervised real-data anchor during simulation RL; tactile input is excluded, but the mechanism is directly relevant."
+  },
+  {
+    "paper_id": "openalex:W4402890475",
+    "relevance": "off_topic",
+    "reason": "This is a broad survey of foundation models in robotics, and pure surveys are excluded by the rubric."
+  },
+  {
+    "paper_id": "openalex:W4406779522",
+    "relevance": "off_topic",
+    "reason": "The work evaluates code-vulnerability classification by LLMs and has no relevant embodied or model-based learning loop."
+  },
+  {
+    "paper_id": "openalex:W4409778113",
+    "relevance": "adjacent",
+    "reason": "Provides human-robot feedback authoring interfaces that could collect independent corrections, but it does not train a VLA or world model."
+  },
+  {
+    "paper_id": "openalex:W4403332501",
+    "relevance": "off_topic",
+    "reason": "This is a review of wearable and implantable soft-robot hardware, not a policy/world-model co-training method."
+  },
+  {
+    "paper_id": "openalex:W4406961529",
+    "relevance": "adjacent",
+    "reason": "Compares SFT and outcome-RL post-training generalization in multimodal tasks, useful for policy-update design but without a WAM."
+  },
+  {
+    "paper_id": "openalex:W4412505619",
+    "relevance": "off_topic",
+    "reason": "This is a conceptual review of AI agents and agentic AI, not a concrete embodied co-training method."
+  },
+  {
+    "paper_id": "openalex:W4409283601",
+    "relevance": "adjacent",
+    "reason": "Uses self-play simulation and automated feedback for model training plus external clinical evaluation, a distant synthetic-feedback analogue outside robotics."
+  },
+  {
+    "paper_id": "openalex:W4414857074",
+    "relevance": "off_topic",
+    "reason": "This is a broad review of embodied AI, LLMs, and world models rather than a concrete coupled-training mechanism."
+  },
+  {
+    "paper_id": "openalex:W4405711354",
+    "relevance": "off_topic",
+    "reason": "The essay concerns taxation of AI and robots and has no technical learning mechanism."
+  },
+  {
+    "paper_id": "openalex:W4402827264",
+    "relevance": "adjacent",
+    "reason": "Human-in-the-loop robot optimization could supply an independent reality signal, but the record lacks evidence of VLA-WAM co-training."
+  },
+  {
+    "paper_id": "openalex:W4410823183",
+    "relevance": "off_topic",
+    "reason": "This is a broad LLM data-governance review, not a concrete self-training or robot-learning method."
+  },
+  {
+    "paper_id": "openalex:W4410291923",
+    "relevance": "off_topic",
+    "reason": "This is a general survey of foundation-model decision making, and pure surveys are excluded."
+  },
+  {
+    "paper_id": "openalex:W4402380956",
+    "relevance": "off_topic",
+    "reason": "The paper reviews insect and robot navigation representations rather than proposing a policy-world-model co-training mechanism."
+  },
+  {
+    "paper_id": "openalex:W4408555470",
+    "relevance": "adjacent",
+    "reason": "Uses visual and force feedback for long-horizon robot adaptation, relevant to external grounding but lacking VLA-WAM co-training and relying partly on force."
+  },
+  {
+    "paper_id": "openalex:W4415721091",
+    "relevance": "off_topic",
+    "reason": "This medical-diagnostics review and policy framework is unrelated to embodied policy-world-model learning."
+  },
+  {
+    "paper_id": "openalex:W4413372762",
+    "relevance": "off_topic",
+    "reason": "The construction-productivity framework only uses robotics as an application context and has no robot-learning loop."
+  },
+  {
+    "paper_id": "openalex:W4408247476",
+    "relevance": "off_topic",
+    "reason": "The robotic chemistry system orchestrates LLM agents and lab automation but does not learn a VLA or world model."
+  },
+  {
+    "paper_id": "openalex:W4413144615",
+    "relevance": "adjacent",
+    "reason": "Combines generated digital-twin data with limited real fine-tuning, providing a sim-real anchoring baseline without reciprocal WAM updates."
+  },
+  {
+    "paper_id": "openalex:W4408621655",
+    "relevance": "off_topic",
+    "reason": "This is an OECD government-regulation outlook and is unrelated to machine-learning policies or world models."
+  },
+  {
+    "paper_id": "openalex:W7141269931",
+    "relevance": "off_topic",
+    "reason": "This is a clinical-neurology extended-reality review and contains no relevant agent-learning mechanism."
+  },
+  {
+    "paper_id": "openalex:W4406414065",
+    "relevance": "off_topic",
+    "reason": "The study concerns teachers' adoption of humanoid robots, not robot policy learning."
+  },
+  {
+    "paper_id": "openalex:W4404054802",
+    "relevance": "core",
+    "reason": "Concurrently trains hierarchical world models and agents and directly diagnoses policy exploitation of abstract model error, matching the shared-error failure concern."
+  },
+  {
+    "paper_id": "openalex:W4412035404",
+    "relevance": "off_topic",
+    "reason": "The conceptual model concerns responsible personalization systems, not embodied policy-world-model learning."
+  },
+  {
+    "paper_id": "openalex:W4414051096",
+    "relevance": "core",
+    "reason": "Systematically co-trains robot policies on simulation and real data, making it a direct reality-anchor baseline even without a learned WAM."
+  },
+  {
+    "paper_id": "openalex:W4404955232",
+    "relevance": "adjacent",
+    "reason": "Combines LLM reasoning and memory for robot action generation, but has no learned rollout model or iterative co-training."
+  },
+  {
+    "paper_id": "openalex:W4414050443",
+    "relevance": "core",
+    "reason": "Jointly learns video dynamics and robot actions in one model from heterogeneous real data, directly relevant to shared-interface error even without iterative deployment updates."
+  },
+  {
+    "paper_id": "openalex:W4414603187",
+    "relevance": "off_topic",
+    "reason": "The policy only chooses viewpoints for service-robot scene recognition and has no VLA-WAM learning loop."
+  },
+  {
+    "paper_id": "openalex:W4406604158",
+    "relevance": "core",
+    "reason": "Optimizes robot policies in imagined world-model environments while addressing accumulated prediction error and real deployment, directly covering the central synthetic-update pathway."
+  },
+  {
+    "paper_id": "openalex:W4417246865",
+    "relevance": "adjacent",
+    "reason": "Mitigates interference among world-model prediction tasks, useful for shared-model stability but not policy-world-model co-adaptation."
+  },
+  {
+    "paper_id": "openalex:W4410217666",
+    "relevance": "adjacent",
+    "reason": "The title indicates model-based RL for robot manipulation, but absent abstract evidence prevents assigning the specific closed co-training mechanism."
+  },
+  {
+    "paper_id": "openalex:W4410428050",
+    "relevance": "adjacent",
+    "reason": "Studies bias mitigation in human-feedback policy tuning, a generic feedback-control analogue without a robot world model."
+  },
+  {
+    "paper_id": "openalex:W7090894886",
+    "relevance": "adjacent",
+    "reason": "Compares policy updates to detect when feedback harms performance, useful as an audit but explicitly only generic validation."
+  },
+  {
+    "paper_id": "openalex:W7108210330",
+    "relevance": "core",
+    "reason": "Formalizes repeated synthetic-data retraining drift from held-out real data and tests real/synthetic mixtures, an exact conceptual match to self-confirming shared error."
+  },
+  {
+    "paper_id": "openalex:W6922512839",
+    "relevance": "adjacent",
+    "reason": "The title concerns human-bias transmission into learning agents, conceptually related to feedback contamination but lacks enough detail for core relevance."
+  },
+  {
+    "paper_id": "openalex:W4412944612",
+    "relevance": "adjacent",
+    "reason": "Calibrates reward-model prompt bias before policy fine-tuning, a safeguard against shared optimization error outside robotics."
+  },
+  {
+    "paper_id": "openalex:W4417222514",
+    "relevance": "core",
+    "reason": "Jointly learns reasoning, actions, and imagined outcomes in an end-to-end embodied policy with self-correction, directly relevant to coupled shared representations."
+  },
+  {
+    "paper_id": "openalex:W4402742688",
+    "relevance": "adjacent",
+    "reason": "Uses learned imagination inside hierarchical driving policies, but does not reciprocally update the model from the evolving policy distribution."
+  },
+  {
+    "paper_id": "openalex:W4414711700",
+    "relevance": "adjacent",
+    "reason": "Synthesizes missing robot camera views to improve policy inference, an imagination component without co-training or model-policy feedback."
+  },
+  {
+    "paper_id": "semanticscholar:ddfe191f758ed8d74ceaf769392af5c5c9546e52",
+    "relevance": "off_topic",
+    "reason": "This is explicitly a comprehensive survey of robot world models, and the rubric assigns pure surveys off topic."
+  },
+  {
+    "paper_id": "openalex:W4414198610",
+    "relevance": "off_topic",
+    "reason": "This is explicitly a review of VLA models rather than a concrete co-training method."
+  },
+  {
+    "paper_id": "openalex:W4393763811",
+    "relevance": "off_topic",
+    "reason": "This is explicitly a survey of LLM-enhanced reinforcement learning rather than a primary mechanism study."
+  },
+  {
+    "paper_id": "openalex:W4415947022",
+    "relevance": "off_topic",
+    "reason": "This is explicitly a review of embodied intelligence and world modeling rather than a concrete co-training method."
+  },
+  {
+    "paper_id": "openalex:W4404045225",
+    "relevance": "off_topic",
+    "reason": "This is a structural-engineering machine-learning survey and is unrelated to robot policy-world-model learning."
+  },
+  {
+    "paper_id": "openalex:W4413788337",
+    "relevance": "off_topic",
+    "reason": "This is a robot-vision multimodal-fusion survey and provides no concrete VLA-WAM training mechanism."
+  },
+  {
+    "paper_id": "openalex:W4414704765",
+    "relevance": "off_topic",
+    "reason": "This is an autonomous-driving sensor-fusion review and not a policy-world-model co-training study."
+  }
+]

@@ -1,0 +1,1489 @@
+[
+ {
+  "title": "Incremental value of radiomics with machine learning to the existing prognostic models for predicting outcome in renal cell carcinoma",
+  "title_norm": "incremental value of radiomics with machine learning to the existing prognostic ",
+  "abstract": "Purpose To systematically evaluate the potential of radiomics coupled with machine-learning algorithms to improve the predictive power for overall survival (OS) of renal cell carcinoma (RCC). Methods A total of 689 RCC patients (281 in the training cohort, 225 in the validation cohort 1 and 183 in the validation cohort 2) who underwent preoperative contrast-enhanced CT and surgical treatment were recruited from three independent databases and one institution. 851 radiomics features were screened using machine-learning algorithm, including Random Forest and Lasso-COX Regression, to establish radiomics signature. The clinical and radiomics nomogram were built by multivariate COX regression. The models were further assessed by Time-dependent receiver operator characteristic, concordance index, calibration curve, clinical impact curve and decision curve analysis. Result The radiomics signature comprised 11 prognosis-related features and was significantly correlated with OS in the training and two validation cohorts (Hazard Ratios: 2.718 (2.246,3.291)). Based on radiomics signature, WHOISUP, SSIGN, TNM Stage and clinical score, the radiomics nomogram has been developed. Compared with the existing prognostic models, the AUCs of 5 years OS prediction of the radiomics nomogram were superior to the TNM, WHOISUP and SSIGN model in the training cohort (0.841 vs 0.734, 0.707, 0.644) and validation cohort2 (0.917 vs 0.707, 0.773, 0.771). Stratification analysis suggested that the sensitivity of some drugs and pathways in cancer were observed different for RCC patients with high-and low-radiomics scores. Conclusion This study showed the application of contrast-enhanced CT-based radiomics in RCC patients, creating novel radiomics nomogram that could be used to predict OS. Radiomics provided incremental prognostic value to the existing models and significantly improved the predictive power. The radiomics nomogram might be helpful for clinicians to evaluate the benefit of surgery or adjuvant therapy and make individualized therapeutic regimens for patients with renal cell carcinoma.",
+  "tldr": "The application of contrast-enhanced CT-based radiomics in RCC patients was shown, creating novel radiomics nomogram that could be used to predict OS and provided incremental prognostic value to the existing models and significantly improved the predictive power.",
+  "year": 2023,
+  "venue": "Frontiers in Oncology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "J. Xing",
+   "Yiyang Liu",
+   "Zhongyuan Wang",
+   "A. Xu",
+   "S. Su",
+   "S. Shen"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "6f71b718d77953622c1623ed9567ff5fae900a65",
+  "paper_id": "doi:10.3389/fonc.2023.1036734",
+  "doi": "10.3389/fonc.2023.1036734",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.frontiersin.org/articles/10.3389/fonc.2023.1036734/pdf?isPublishedV2=False",
+  "published_iso": "2023-04-28",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Conformal Convolution and Monte Carlo Meta-learners for Predictive Inference of Individual Treatment Effects",
+  "title_norm": "conformal convolution and monte carlo meta learners for predictive inference of ",
+  "abstract": "Generating probabilistic forecasts of potential outcomes and individual treatment effects (ITE) is essential for risk-aware decision-making in domains such as healthcare, policy, marketing, and finance. We propose two novel methods: the conformal convolution T-learner (CCT) and the conformal Monte Carlo (CMC) meta-learner, that generate full predictive distributions of both potential outcomes and ITEs. Our approaches combine weighted conformal predictive systems with either analytic convolution of potential outcome distributions or Monte Carlo sampling, addressing covariate shift through propensity score weighting. In contrast to other approaches that allow the generation of potential outcome predictive distributions, our approaches are model agnostic, universal, and come with finite-sample guarantees of probabilistic calibration under knowledge of the propensity score. Regarding estimating the ITE distribution, we formally characterize how assumptions about potential outcomes'noise dependency impact distribution validity and establish universal consistency under independence noise assumptions. Experiments on synthetic and semi-synthetic datasets demonstrate that the proposed methods achieve probabilistically calibrated predictive distributions while maintaining narrow prediction intervals and having performant continuous ranked probability scores. Besides probabilistic forecasting performance, we observe significant efficiency gains for the CCT- and CMC meta-learners compared to other conformal approaches that produce prediction intervals for ITE with coverage guarantees.",
+  "tldr": "Two novel methods are proposed: the conformal convolution T-learner and the conformal Monte Carlo meta-learner, that generate full predictive distributions of both potential outcomes and ITEs that are model agnostic, universal, and come with finite-sample guarantees of probabilistic calibration under knowledge of the propensity score.",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Jef Jonkers",
+   "Jarne Verhaeghe",
+   "G. V. Wallendael",
+   "Luc Duchateau",
+   "S. V. Hoecke"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "6e77a4ad77b622f7ba7466b4a6eb8569ceb8dcd9",
+  "paper_id": "arxiv:2402.04906",
+  "doi": "",
+  "arxiv_id": "2402.04906",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6e77a4ad77b622f7ba7466b4a6eb8569ceb8dcd9",
+  "published_iso": "2024-02-07",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "A Multimodal Foundation Model for EHR Time Series and Clinical Notes with Outcome Calibration",
+  "title_norm": "a multimodal foundation model for ehr time series and clinical notes with outcom",
+  "abstract": "The digitization of healthcare has resulted in the proliferation of Electronic Health Records (EHRs), which contain a rich yet heterogeneous mix of data modalities, primarily structured time-series data and unstructured clinical notes. While deep learning has demonstrated remarkable potential in predictive healthcare, existing approaches often process these modalities in isolation or rely on naive fusion mechanisms that fail to capture the complex, asynchronous interplay between physiological measurements and clinical narratives. Furthermore, modern neural networks, particularly large foundation models, suffer from significant miscalibration, frequently yielding overconfident predictions that are detrimental to clinical decision-making. In this paper, we introduce MedCali-FM, a novel multimodal foundation model designed to integrate sparse, irregular EHR time series with clinical text through a calibrated cross-attention mechanism. We propose a joint pre-training objective that combines masked forecasting, masked language modeling, and a novel contrastive alignment loss to learn unified patient representations. Crucially, we integrate a differentiable calibration objective directly into the fine-tuning phase, ensuring that the model's confidence scores align with true empirical probabilities. Our extensive experiments on the MIMIC-IV dataset demonstrate that MedCali-FM not only achieves state-of-the-art performance in mortality prediction and phenotype classification but also significantly reduces Expected Calibration Error (ECE) compared to existing ensemble and deep fusion methods.",
+  "tldr": "This paper introduces MedCali-FM, a novel multimodal foundation model designed to integrate sparse, irregular EHR time series with clinical text through a calibrated cross-attention mechanism that achieves state-of-the-art performance in mortality prediction and phenotype classification but also significantly reduces Expected Calibration Error (ECE) compared to existing ensemble and deep fusion methods.",
+  "year": 2025,
+  "venue": "Multidisciplinary Research in Computing Information Systems",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tao Sun"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "51db9c634e1c015995e719fd033d183dc1d5aaf9",
+  "paper_id": "doi:10.71465/mrcis172",
+  "doi": "10.71465/mrcis172",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://mrcis.org/index.php/journal/article/download/172/288",
+  "published_iso": "2025-12-30",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "The influence of potential outcome on entrepreneurs' decisions to participate in Crowdfunding in Pakistan (Karachi)",
+  "title_norm": "the influence of potential outcome on entrepreneurs decisions to participate in ",
+  "abstract": "Crowdfunding is one of the best financial technology segments and has emerged as one of the leading platforms for startups to acquire funding. This paper identifies numerous benefits of Crowdfunding and investigates the influence of various factors, i.e., economic benefit, convenience and transaction process, social media, and social support, with the mediating effects of Motivation with gender moderation on an entrepreneur's perceived benefit of having the Intention to use the crowdfunding platform. The adapted questionnaire with a sample size of 240 is used in this study to survey the entrepreneurs of Pakistan by using a convenience sampling technique. Linear regression analysis tests the hypotheses with Smart Pls 3.0 software. The findings of this study confirmed that all direct relationships have a significant relationship with the Intention to use Crowdfunding. In contrast, the moderation of effects of gender was found to have an insignificant relationship with the Intention to use a crowdfunding platform. However, the contribution and significance of the study have also been discussed.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "International Journal of Social Science &amp; Entrepreneurship",
+  "publication_types": [
+   "Review"
+  ],
+  "authors": [
+   "Sobia Jamil",
+   "F. Shah",
+   "S. Khan",
+   "I. Imran"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "1c6f74ba085a69d90018058cd9a1fa1cbee76923",
+  "paper_id": "doi:10.58661/ijsse.v3i1.56",
+  "doi": "10.58661/ijsse.v3i1.56",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://ijsse.salmaedusociety.com/index.php/ijsse/article/download/56/61",
+  "published_iso": "2023-01-30",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Contrast-enhanced ultrasonography–CT/MRI fusion guidance for percutaneous ablation of inconspicuous, small liver tumors: improving feasibility and therapeutic outcome",
+  "title_norm": "contrast enhanced ultrasonography ct mri fusion guidance for percutaneous ablati",
+  "abstract": "Background Percutaneous radiofrequency ablation (RFA) is pivotal for treating small malignant liver tumors, but tumors often remain inconspicuous on B-mode ultrasound (US). This study evaluates the potential of CEUS-CT/MRI fusion imaging (FI) to improve tumor visibility and the associated RFA outcomes for small (≤ 3 cm) malignant liver tumors that were inconspicuous on US. Methods Between January 2019 and April 2021, a prospective study enrolled 248 patients with liver malignancies (≤ 3 cm) that were poorly visible on B-mode US. Tumor visibility and ablation feasibility were assessed using B-mode US, US-CT/MRI FI, and CEUS-CT/MRI FI, and graded on a 4-point scale. CEUS was employed post-registration of US and CT/MRI images, utilizing either SonoVue or Sonazoid. Comparisons between US-based and CEUS-based fusion visibility and feasibility scores were undertaken using the Friedman test. Moreover, rates of technical success, technique efficacy, local tumor progression (LTP), and major complications were assessed. Results The cohort included 223 hepatocellular carcinomas (HCCs) (89.9%) and 23 metastases (9.3%), with an average tumor size of 1.6 cm. CEUS-CT/MRI FI demonstrated a significant advantage in tumor visibility (3.4 ± 0.7 vs. 1.9 ± 0.6, P < 0.001) and technical feasibility (3.6 ± 0.6 vs. 2.9 ± 0.8, P < 0.001) compared to US-FI. In 85.5% of patients, CEUS addition to US-FI ameliorated tumor visibility. Technical success was achieved in 99.6% of cases. No severe complications were reported. One and two-year post CEUS-CT/MRI FI-guided RFA estimates for LTP were 9.3% and 10.9%, respectively. Conclusions CEUS-CT/MRI FI significantly improves the visualization of tumors not discernible on B-mode US, thus augmenting percutaneous RFA success and delivering improved therapeutic outcomes. Trial registration ClinicalTrials.gov, NCT05445973. Registered 17 June 2022 – Retrospectively registered, http://clinicaltrials.gov/study/NCT05445973?id=NCT05445973&rank=1 .",
+  "tldr": "CEUS-CT/MRI FI significantly improves the visualization of tumors not discernible on B-mode US, thus augmenting percutaneous RFA success and delivering improved therapeutic outcomes.",
+  "year": 2024,
+  "venue": "Cancer Imaging",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yuna Lee",
+   "Jeong-Hee Yoon",
+   "Seungchul Han",
+   "I. Joo",
+   "Jeong-Min Lee"
+  ],
+  "citations": 19,
+  "source": "semanticscholar",
+  "source_id": "ebc43faba3a2541a21e6eac62cf11594b9cc0dd4",
+  "paper_id": "doi:10.1186/s40644-023-00650-y",
+  "doi": "10.1186/s40644-023-00650-y",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://cancerimagingjournal.biomedcentral.com/counter/pdf/10.1186/s40644-023-00650-y",
+  "published_iso": "2024-01-03",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Debiased high-dimensional regression calibration for errors-in-variables log-contrast models.",
+  "title_norm": "debiased high dimensional regression calibration for errors in variables log con",
+  "abstract": "Motivated by the challenges in analyzing gut microbiome and metagenomic data, this work aims to tackle the issue of measurement errors in high-dimensional regression models that involve compositional covariates. This paper marks a pioneering effort in conducting statistical inference on high-dimensional compositional data affected by mismeasured or contaminated data. We introduce a calibration approach tailored for the linear log-contrast model. Under relatively lenient conditions regarding the sparsity level of the parameter, we have established the asymptotic normality of the estimator for inference. Numerical experiments and an application in microbiome study have demonstrated the efficacy of our high-dimensional calibration strategy in minimizing bias and achieving the expected coverage rates for confidence intervals. Moreover, the potential application of our proposed methodology extends well beyond compositional data, suggesting its adaptability for a wide range of research contexts.",
+  "tldr": "The proposed calibration approach tailored for the linear log-contrast model establishes the asymptotic normality of the estimator for inference and extends well beyond compositional data, suggesting its adaptability for a wide range of research contexts.",
+  "year": 2024,
+  "venue": "Biometrics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Huali Zhao",
+   "Tianying Wang"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "4dc5424f1675d5244e6eebcab2b0d56768b35844",
+  "paper_id": "arxiv:2409.07568",
+  "doi": "10.1093/biomtc/ujae153",
+  "arxiv_id": "2409.07568",
+  "dblp_key": "",
+  "paper_url": "https://academic.oup.com/biometrics/article-pdf/80/4/ujae153/61199698/ujae153.pdf",
+  "published_iso": "2024-09-11",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Exploring the potential of history matching for land surface model calibration",
+  "title_norm": "exploring the potential of history matching for land surface model calibration",
+  "abstract": "Abstract. With the growing complexity of land surface models used to represent the terrestrial part of wider Earth system models, the need for sophisticated and robust parameter optimisation techniques is paramount. Quantifying parameter uncertainty is essential for both model development and more accurate projections. In this study, we assess the power of history matching by comparing results to the variational data assimilation approach commonly used in land surface models for parameter estimation. Although both approaches have different setups and goals, we can extract posterior parameter distributions from both methods and test the model–data fit of ensembles sampled from these distributions. Using a twin experiment, we test whether we can recover known parameter values. Through variational data assimilation, we closely match the observations. However, the known parameter values are not always contained in the posterior parameter distribution, highlighting the equifinality of the parameter space. In contrast, while more conservative, history matching still gives a reasonably good fit and provides more information about the model structure by allowing for non-Gaussian parameter distributions. Furthermore, the true parameters are contained in the posterior distributions. We then consider history matching's ability to ingest different metrics targeting different physical parts of the model, thus helping to reduce the parameter space further and improve the model–data fit. We find the best results when history matching is used with multiple metrics; not only is the model–data fit improved, but we also gain a deeper understanding of the model and how the different parameters constrain different parts of the seasonal cycle. We conclude by discussing the potential of history matching in future studies.\n",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Geoscientific Model Development",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "N. Raoult",
+   "Simon Beylat",
+   "James M. Salter",
+   "F. Hourdin",
+   "V. Bastrikov",
+   "C. Ottlé"
+  ],
+  "citations": 14,
+  "source": "semanticscholar",
+  "source_id": "59a88094a974f3460cecd1f4bd9795f8ddd79170",
+  "paper_id": "doi:10.5194/gmd-17-5779-2024",
+  "doi": "10.5194/gmd-17-5779-2024",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.5194/gmd-17-5779-2024",
+  "published_iso": "2024-08-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Calibration of Computed Tomography System and Contrast Media Volume Tailoring for Optimal Hounsfield Units: A Theoretical and Experimental Study",
+  "title_norm": "calibration of computed tomography system and contrast media volume tailoring fo",
+  "abstract": "Purpose: This study aimed to evaluate the impact of Contrast-Enhanced Computed Tomography (CECT) on treatment planning for rectal cancer using Helical Tomotherapy (HT). \nMaterials and Methods: A total of patients with known rectal tumors were included, and both CECT and non-CECT images were obtained. Patients adhered to a low-fat diet and received oral and intravenous iodine-based contrast agents. Target volumes, including Gross Tumor Volume (GTV), Clinical Target Volume (CTV), and Planning Target Volume (PTV), were delineated by a radiation oncologist using DICOM images. Intensity-Modulated Radiation Therapy (IMRT) techniques with Simultaneous Integrated Boost (SIB) methods were employed to optimize dose delivery while minimizing exposure to Organs at Risks (OARs). \nResults: The analysis revealed that the use of CECT significantly increased. Hounsfield Unit (HU) values across all structures, enhancing visibility and accuracy in target volume delineation. Dosimetric evaluations indicated minimal differences in dose distributions between CECT and non-CECT plans. However, certain indices such as Dmax, Dmin, Dmean, Homogeneity Index (HI), and Conformity Index (CI) showed significant changes that could influence clinical outcomes. \nConclusion: The incorporation of CECT in radiation therapy planning for rectal cancer improves the delineation of critical structures, potentially leading to better treatment outcomes. The findings underscore the importance of using contrast media in enhancing imaging quality, which is crucial for effective target volume definition and OAR contouring. Future research should explore the long-term clinical implications of these findings on patient outcomes and quality of life post-treatment.",
+  "tldr": "The incorporation of CECT in radiation therapy planning for rectal cancer improves the delineation of critical structures, potentially leading to better treatment outcomes.",
+  "year": 2025,
+  "venue": "Frontiers in biomedical technologies",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. Jafari",
+   "F. Zarei",
+   "Hamidreza Masjedi",
+   "Samira Moshiri",
+   "V. Akondy",
+   "S. Chatterjee"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "b494fb6c066440267c9e144e3c7558688b51264b",
+  "paper_id": "doi:10.18502/fbt.v12i2.18277",
+  "doi": "10.18502/fbt.v12i2.18277",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.18502/fbt.v12i2.18277",
+  "published_iso": "2025-03-18",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "A critical review of microplastics toxicity and potential Adverse Outcome Pathway in human gastrointestinal tract following oral exposure.",
+  "title_norm": "a critical review of microplastics toxicity and potential adverse outcome pathwa",
+  "abstract": "Microplastics (MPs) are typically produced via environmental degradation of larger plastics, where they enter the human food chain. MPs are complex materials containing chemical and physical characteristics that can potentially affect their hazard and exposure. These physical properties can be altered by environmental exposure potentially altering any risk assessment conducted on the primary material. We conducted a literature review using an Adverse Outcome Pathway (AOP)-based approach from Molecular Initiating Event (MIE) to cell effect event to identify multiple knowledge gaps that affect MPs hazard assessment. There is some convergence of key biological events but could relate to most lying along well-established biological effector pathways such as apoptosis which can respond to many MIEs. In contrast, chemicals MIEs will be via protein interaction MIEs. As MPs may occur in the lumen of the alimentary canal for example to the mucus, therefore, not requiring translocation of MPs across the epithelial membrane. At the other end of the AOP, currently it is not possible to identify a single adverse outcome at the organ level. This work did establish a clear need to understand both external and internal exposure (resulting from translocation) and develop hazard data at both levels to inform on risk assessments.",
+  "tldr": "A literature review using an Adverse Outcome Pathway (AOP) based approach from Molecular Initiating Event (MIE) to cell effect event to identify multiple knowledge gaps that affect MPs hazard assessment established a clear need to understand both external and internal exposure (resulting from translocation) and develop hazard data at both levels to inform on risk assessments.",
+  "year": 2023,
+  "venue": "Toxicology Letters",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "L. Jones",
+   "Stephanie Wright",
+   "T. Gant"
+  ],
+  "citations": 33,
+  "source": "semanticscholar",
+  "source_id": "ffeed663ffe7d017df84a587df9391d1991163a7",
+  "paper_id": "doi:10.1016/j.toxlet.2023.08.011",
+  "doi": "10.1016/j.toxlet.2023.08.011",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.toxlet.2023.08.011",
+  "published_iso": "2023-08-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "CATE Estimation With Potential Outcome Imputation From Local Regression",
+  "title_norm": "cate estimation with potential outcome imputation from local regression",
+  "abstract": "One of the most significant challenges in Conditional Average Treatment Effect (CATE) estimation is the statistical discrepancy between distinct treatment groups. To address this issue, we propose a model-agnostic data augmentation method for CATE estimation. First, we derive regret bounds for general data augmentation methods suggesting that a small imputation error may be necessary for accurate CATE estimation. Inspired by this idea, we propose a contrastive learning approach that reliably imputes missing potential outcomes for a selected subset of individuals formed using a similarity measure. We augment the original dataset with these reliable imputations to reduce the discrepancy between different treatment groups while inducing minimal imputation error. The augmented dataset can subsequently be employed to train standard CATE estimation models. We provide both theoretical guarantees and extensive numerical studies demonstrating the effectiveness of our approach in improving the accuracy and robustness of numerous CATE estimation models.",
+  "tldr": "This work derives regret bounds for general data augmentation methods suggesting that a small imputation error may be necessary for accurate CATE estimation and proposes a contrastive learning approach that reliably imputes missing potential outcomes for a selected subset of individuals formed using a similarity measure.",
+  "year": 2023,
+  "venue": "Conference on Uncertainty in Artificial Intelligence",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Ahmed Aloui",
+   "Juncheng Dong",
+   "Cat P. Le",
+   "Vahid Tarokh"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "e645c345003240c74aa0d7cc1237ecd23d520b5d",
+  "paper_id": "dblp:conf/uai/AlouiDLT25",
+  "doi": "",
+  "arxiv_id": "2311.03630",
+  "dblp_key": "conf/uai/AlouiDLT25",
+  "paper_url": "https://www.semanticscholar.org/paper/e645c345003240c74aa0d7cc1237ecd23d520b5d",
+  "published_iso": "2023-11-07",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Distributional Diagnosis and Calibration with Negative Controls for Outcome-wide Real-world Evidence",
+  "title_norm": "distributional diagnosis and calibration with negative controls for outcome wide",
+  "abstract": "Glucagon-like peptide-1 receptor agonists (GLP-1RAs) have been linked to heterogeneous, potentially pleiotropic effects across organ systems, motivating outcome-wide comparative risk profiling in real-world data. A central challenge in such analyses is emph{residual bias} that remains after adjustment for observed confounders, which can distort effect estimates and mis-calibrate uncertainty. We present distributional diagnosis and calibration (DC), which uses panels of negative control outcomes (NCOs) to diagnose residual bias and calibrate uncertainty. DC evaluates null behavior via $p$-value uniformity and empirical coverage across NCOs, and uses the empirical distribution of NCO effect estimates to calibrate confidence intervals for prespecified primary outcomes. DC is modular: it can wrap around commonly used causal inference methods and operates directly on summary statistics, supporting collaborative research under data-sharing constraints. Using electronic health records from a large U.S. clinical research network (152.7 million patients), we compared GLP-1RAs with sodium--glucose cotransporter~2 inhibitors across 15 prespecified outcomes spanning cardiovascular, mental health, and genitourinary domains using four causal estimators. Across outcomes and methods, DC diagnostics revealed substantial and method-dependent residual systematic error. DC calibration attenuated systematic error signals observed in negative controls and yielded more stable, better-calibrated estimates for clinical outcomes, supporting DC as a practical strategy to strengthen the credibility of real-world comparative effectiveness research.",
+  "tldr": null,
+  "year": 2026,
+  "venue": "medRxiv",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Huiyuan Wang",
+   "Bingyu Zhang",
+   "Yuqing Lei",
+   "Yiwen Lu",
+   "Dazheng Zhang",
+   "Xinyao Jian"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "33a78a55508466d5c3a1c1d495210c217821e08c",
+  "paper_id": "doi:10.64898/2026.07.08.26357550",
+  "doi": "10.64898/2026.07.08.26357550",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13409211/",
+  "published_iso": "2026-07-13",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "High contrast imaging at the photon noise limit with WFS-based PSF calibration",
+  "title_norm": "high contrast imaging at the photon noise limit with wfs based psf calibration",
+  "abstract": "Speckle Noise is the dominant source of error in high contrast imaging with adaptive optics system. We discuss the potential for wavefront sensing telemetry to calibrate speckle noise with sufficient precision and accuracy so that it can be removed in post-processing of science images acquired by high contrast imaging instruments. In such a self-calibrating system, exoplanet detection would be limited by photon noise and be significantly more robust and efficient than in current systems. We show initial laboratory and on-sky tests, demonstrating over short timescale that residual speckle noise is indeed calibrated to an accuracy exceeding readout and photon noise in the high contrast region. We discuss immplications for the design of space and ground high-contrast imaging systems.",
+  "tldr": "",
+  "year": 2022,
+  "venue": "Astronomical Telescopes + Instrumentation",
+  "publication_types": [],
+  "authors": [
+   "O. Guyon",
+   "B. Norris",
+   "M. Martinod",
+   "K. Ahn",
+   "V. Deo",
+   "N. Skaf"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "bba0eec4f5d99820d9351926458154e2381cc2a2",
+  "paper_id": "arxiv:2208.01806",
+  "doi": "10.1117/12.2630503",
+  "arxiv_id": "2208.01806",
+  "dblp_key": "",
+  "paper_url": "https://arxiv.org/pdf/2208.01806",
+  "published_iso": "2022-08-03",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Physical Model for the Simulation of an Air Handling Unit Employed in an Automotive Production Process: Calibration Procedure and Potential Energy Saving",
+  "title_norm": "physical model for the simulation of an air handling unit employed in an automot",
+  "abstract": "A meticulous thermo-hygrometric control is essential for various industrial production processes, particularly those involving the painting phases of body-in-white, in which the air temperature and relative humidity in production boots must be limited in strict intervals to ensure the high quality of the final product. However, traditional proportional integrative derivative (PID) controllers may result in non-optimal control strategies, leading to energy wastage due to response delays and unnecessary superheatings. In this regard, predictive models designed for control can significantly aid in achieving all the targets set by the European Union. This paper focuses on the development of a predictive model for the energy consumption of an air handling unit (AHU) used in the paint-shop area of an automotive production process. The model, developed in MATLAB 2024b, is based on mass and energy balances within each component, and phenomenological equations for heat exchangers. It enables the evaluation of thermal powers and water mass flow rates required to process an inlet air flow rate to achieve a target condition for the temperature and relative humidity. The model was calibrated and validated using experimental data of a real case study of an automotive production process, obtaining mean errors of 16% and 31% for the hot and cold heat exchangers, respectively, in predicting the water mass flow rate. Additionally, a control logic based on six regulation thermo-hygrometric zones was developed, which depended on the external conditions of temperature and relative humidity. Finally, as the main outcome, several examples are provided to demonstrate both the applicability of the developed model and its potential in optimizing energy consumption, achieving energy savings of up to 46% compared to the actual baseline control strategy, and external boundary conditions, identifying an optimal trade-off between energy saving and operation feasibility.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Energies",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "L. Viscito",
+   "F. Pelella",
+   "A. Rega",
+   "Federico Magnea",
+   "G. Mauro",
+   "Alessandro Zanella"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "a9f7a0cc105f8a97814fa1705015c94fdc0aeca3",
+  "paper_id": "doi:10.3390/en18071842",
+  "doi": "10.3390/en18071842",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/1996-1073/18/7/1842/pdf?version=1743850226",
+  "published_iso": "2025-04-05",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Comparing the performance potential of speckle contrast optical spectroscopy and diffuse correlation spectroscopy for cerebral blood flow monitoring using Monte Carlo simulations in realistic head geometries",
+  "title_norm": "comparing the performance potential of speckle contrast optical spectroscopy and",
+  "abstract": "Abstract. Significance The non-invasive measurement of cerebral blood flow based on diffuse optical techniques has seen increased interest as a research tool for cerebral perfusion monitoring in critical care and functional brain imaging. Diffuse correlation spectroscopy (DCS) and speckle contrast optical spectroscopy (SCOS) are two such techniques that measure complementary aspects of the fluctuating intensity signal, with DCS quantifying the temporal fluctuations of the signal and SCOS quantifying the spatial blurring of a speckle pattern. With the increasing interest in the use of these techniques, a thorough comparison would inform new adopters of the benefits of each technique. Aim We systematically evaluate the performance of DCS and SCOS for the measurement of cerebral blood flow. Approach Monte Carlo simulations of dynamic light scattering in an MRI-derived head model were performed. For both DCS and SCOS, estimates of sensitivity to cerebral blood flow changes, coefficient of variation of the measured blood flow, and the contrast-to-noise ratio of the measurement to the cerebral perfusion signal were calculated. By varying complementary aspects of data collection between the two methods, we investigated the performance benefits of different measurement strategies, including altering the number of modes per optical detector, the integration time/fitting time of the speckle measurement, and the laser source delivery strategy. Results Through comparison across these metrics with simulated detectors having realistic noise properties, we determine several guiding principles for the optimization of these techniques and report the performance comparison between the two over a range of measurement properties and tissue geometries. We find that SCOS outperforms DCS in terms of contrast-to-noise ratio for the cerebral blood flow signal in the ideal case simulated here but note that SCOS requires careful experimental calibrations to ensure accurate measurements of cerebral blood flow. Conclusion We provide design principles by which to evaluate the development of DCS and SCOS systems for their use in the measurement of cerebral blood flow.",
+  "tldr": "It is found that SCOS outperforms DCS in terms of contrast-to-noise ratio for the cerebral blood flow signal in the ideal case simulated here but note that SCOS requires careful experimental calibrations to ensure accurate measurements of cerebral blood flow.",
+  "year": 2024,
+  "venue": "Neurophotonics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mitchell B. Robinson",
+   "Tom Y. Cheng",
+   "Marco Renna",
+   "Melissa M. Wu",
+   "Byungchan Kim",
+   "Xiaojun Cheng"
+  ],
+  "citations": 27,
+  "source": "semanticscholar",
+  "source_id": "3268480f457917d3d74aa9f944c58de55a88849c",
+  "paper_id": "doi:10.1117/1.NPh.11.1.015004",
+  "doi": "10.1117/1.NPh.11.1.015004",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.spiedigitallibrary.org/journals/neurophotonics/volume-11/issue-1/015004/Comparing-the-performance-potential-of-speckle-contrast-optical-spectroscopy-and/10.1117/1.NPh.11.1.015004.pdf",
+  "published_iso": "2024-01-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Revising Common Approaches for Calibration: Insights From a 1‐D Tracer‐Aided Hydrological Model With High‐Dimensional Parameters and Objectives",
+  "title_norm": "revising common approaches for calibration insights from a 1 d tracer aided hydr",
+  "abstract": "The dimensionality of parameters and objectives has been increasing due to the accelerating development of models and monitoring network, which brings potential challenges for calibration. In this study, two common philosophies for multi‐objective optimisation in hydrology (the use of aggregated scalar criterion or vector functions) were revisited with different sampling strategies: (a) random sampling, (b) DiffeRential Evolution Adaptive Metropolis (DREAM as an example of an aggregated scalar function), and (c) Non‐Dominated Sorting Genetic Algorithm II (NSGA‐II as Pareto‐based multi‐objective optimisation). By testing the ability of algorithms to simultaneously capture soil moisture and soil water isotopes at three depths under four vegetation covers, we found random sampling performed poorly in matching observations due to its inability to explore high‐dimensional parameter space. DREAM, in contrast, could provide efficient parameter convergence with informal likelihood functions, but the choice of formal likelihood function is difficult due to the lack of knowledge about model residuals, leading to poor performance. NSGA‐II is effective and efficient after aggregating objectives to ≤4, but failed when calibrating against all 24 objectives. Overall, both philosophies and all three approaches are challenged by increasing dimensionality, and it generally requires a degree of trial‐and‐error before achieving a successful calibration. This suggests the potential to explore a more flexible way to describe model residuals (e.g., by defining limits of acceptability). Alternatively, improvements could be made by using an ensemble of models to represent the system (instead of “best” model) given the average of a calibrated ensemble usually performed better than any individual model.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Water Resources Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Songjun Wu",
+   "D. Tetzlaff",
+   "C. Soulsby"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "541a038509b8f195c5bda547ad2788cbd50277ae",
+  "paper_id": "doi:10.1029/2024WR037656",
+  "doi": "10.1029/2024WR037656",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1029/2024wr037656",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Radiomic features at contrast-enhanced CT predict proliferative hepatocellular carcinoma and its prognosis after transarterial chemoembolization",
+  "title_norm": "radiomic features at contrast enhanced ct predict proliferative hepatocellular c",
+  "abstract": "Proliferative hepatocellular carcinoma (HCC) is an aggressive phenotype associated with unfavorable clinical outcomes. Predicting the preoperative subtype of HCC can aid in the development of individualized treatment. We retrospectively recruited 180 HCC patients who underwent hepatic resection and established a CT-based radiomics model for predicting proliferative HCCs. The evaluation of tumor response to transarterial chemoembolization therapy and progression-free survival (PFS) according to the radiomics model was further performed in internal (n = 54) and external (n = 80) outcome cohorts. In our study, 98 of 180 (54%) patients were confirmed to have proliferative HCCs. The radiomics model comprising 9 radiomic features and exhibited good performance for predicting proliferative HCCs. The nomogram integrated radiomics and serum α-fetoprotein level showed good calibration and discrimination in both the training cohort (AUC = 0.848) and the validation cohort (AUC = 0.825). Predicted proliferative HCCs (high radiomics scores) were associated with lower response rate (P < 0.05) and worse PFS (P < 0.05) compared to predicted non-proliferative HCCs in outcomes cohorts. We linked radiomics model to gene expression, unveiling that activated/immature B cells and tertiary lymphoid structures were downregulated in the high radiomics group. The proposed CT radiomics model exhibited good performance for identifying proliferative HCCs, which may facilitate clinical decision-making. Our findings suggest a potential correlation between proliferative HCC and immunosuppressive tumor microenvironment.",
+  "tldr": "The proposed CT radiomics model exhibited good performance for identifying proliferative HCCs, which may facilitate clinical decision-making, and suggest a potential correlation between proliferative HCC and immunosuppressive tumor microenvironment.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Haifeng He",
+   "Zhichao Feng",
+   "Junhong Duan",
+   "Wenzhi Deng",
+   "Zuowei Wu",
+   "Yizi He"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "8e45c01b4e2341fe4a4f74d77f1edae6cc51feeb",
+  "paper_id": "doi:10.1038/s41598-025-94684-w",
+  "doi": "10.1038/s41598-025-94684-w",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1038/s41598-025-94684-w",
+  "published_iso": "2025-03-27",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Effects of Novel Antidiabetic Agents on Contrast-Associated Acute Kidney Injury in Diabetic Patients Undergoing Percutaneous Coronary Intervention.",
+  "title_norm": "effects of novel antidiabetic agents on contrast associated acute kidney injury ",
+  "abstract": "Contrast-associated acute kidney injury (CA-AKI) remains a serious complication after percutaneous coronary revascularization (PCI), with limited effective preventive strategies especially for diabetic patients. This study aimed to assess the effects of novel antidiabetic agents (NAD), i.e., glucagon-like peptide-1 receptor agonists (GLP-1RAs), sodium-glucose transporter-2 inhibitors (SGLT2i), and dipeptidyl peptidase-4 inhibitors (DPP4i), on the occurrence of this outcome in diabetic patients undergoing PCI. We enrolled 293 consecutive diabetic patients receiving NAD at the time of PCI (NAD group) and paired them with 293 diabetic individuals undergoing revascularization who were not on NAD (no-NAD group), matched according to age and sex. CA-AKI was defined as an increase in serum creatinine (SCr) ≥0.3 mg/dl or >50% from baseline within 48-72 hours after contrast exposure. A propensity score-adjusted logistic regression analysis was performed to account for potential selection bias. NAD treatment was associated with a significantly reduced incidence of CA-AKI than standard glucose-lowering therapies (4.1 vs. 8.5%, p=0.023). Furthermore, patients using SGLT2i and GLP-1RAs exhibited a lower incidence of CA-AKI compared to those taking DPP4i. Both multivariate and propensity-score-adjusted regression analyses identified NAD therapy as an independent predictor of CA-AKI (OR 0.45, 95% CI 0.22-0.98, p=0.040 and OR 0.48, 95% CI 0.23-0.98, p=0.045). In conclusion, this study is the first to explore the potential benefit of all three NAD classes on CA-AKI incidence. The use of these agents is associated with a lower incidence of renal damage in diabetic patients undergoing PCI, with the greatest benefit observed with SGLT2i and GLP-1RAs use.",
+  "tldr": "The use of these agents is associated with a lower incidence of renal damage in diabetic patients undergoing PCI, with the greatest benefit observed with SGLT2i and GLP-1RAs use.",
+  "year": 2025,
+  "venue": "American Journal of Cardiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "A. Nusca",
+   "M. D. Di Bitonto",
+   "Agostino Spanò",
+   "Bernardini Federico",
+   "F. Mangiacapra",
+   "E. Ricottini"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "536bfc891074312feb1181045ca41f9f63172f86",
+  "paper_id": "doi:10.1016/j.amjcard.2025.01.007",
+  "doi": "10.1016/j.amjcard.2025.01.007",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/536bfc891074312feb1181045ca41f9f63172f86",
+  "published_iso": "2025-01-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Predicting progression-free survival using dynamic contrast-enhanced imaging-based radiomics in advanced nasopharyngeal carcinoma patients treated with nimotuzumab",
+  "title_norm": "predicting progression free survival using dynamic contrast enhanced imaging bas",
+  "abstract": "",
+  "tldr": "A combined clinical and radiomic model using dynamic contrast-enhanced magnetic resonance imaging showed improved predictive performance for progression-free survival in patients treated with nimotuzumab, providing objective evidence for personalized treatment adjustments.",
+  "year": 2025,
+  "venue": "European Radiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xin Jin",
+   "Wenzhu Li",
+   "Y. Guo",
+   "Gang Wu",
+   "Wei-Yuan Huang",
+   "Feng Chen"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "f851e86e6f9c78402c2e1105ecbce1d83ba01ddb",
+  "paper_id": "doi:10.1007/s00330-025-11433-3",
+  "doi": "10.1007/s00330-025-11433-3",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/f851e86e6f9c78402c2e1105ecbce1d83ba01ddb",
+  "published_iso": "2025-02-14",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Synchronous Remote Calibration for Electricity Meters: Application and Optimization",
+  "title_norm": "synchronous remote calibration for electricity meters application and optimizati",
+  "abstract": "Remote calibration is an advanced methodology that leverages electricity meters, intelligent detection, and computing technologies to enhance calibration efficiency and precision significantly. However, current research predominantly focuses on isolated calibration architectures tailored to single-laboratory environments. In contrast, distributed remote calibration systems that integrate multiple nodes remain in their early developmental stages, despite their considerable potential for improving scalability and operational efficiency. The purpose of this paper is to propose a multi-point collaborative distributed remote calibration model that improves scalability and operational efficiency for remote sensing devices. It addresses the challenge of resource allocation for synchronous calibration across distributed nodes by introducing a hybrid genetic algorithm that optimises scheduling and resource management. Experimental results reveal that the proposed algorithm surpasses other comparable methods in its category, highlighting its capability to improve resource efficiency in distributed remote calibration systems. Additionally, the hybrid genetic algorithm offers profound insights and effective solutions to the intricate challenges of task scheduling in dual-container synchronisation, enhancing both scheduling performance and system dependability.",
+  "tldr": "A multi-point collaborative distributed remote calibration model that improves scalability and operational efficiency for remote sensing devices is proposed by introducing a hybrid genetic algorithm that optimises scheduling and resource management.",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhiyong Zha",
+   "Hanfang Ge",
+   "Chengcheng Zou",
+   "Fei Long",
+   "Xingfeng He",
+   "Geng Wu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "6834df1af2a5f003f1a2014f7504473535230c56",
+  "paper_id": "doi:10.3390/app15031259",
+  "doi": "10.3390/app15031259",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-3417/15/3/1259/pdf?version=1737882702",
+  "published_iso": "2025-01-26",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Systemic inflammation and insulin resistance-related indicator predicts poor outcome in patients with cancer cachexia",
+  "title_norm": "systemic inflammation and insulin resistance related indicator predicts poor out",
+  "abstract": "Background The C-reactive protein (CRP)-triglyceride-glucose (TyG) index (CTI), which is a measure representing the level of inflammation and insulin resistance (IR), is related to poor cancer prognosis; however, the CTI has not been validated in patients with cancer cachexia. Thus, this study aimed to explore the potential clinical value of the CTI in patients with cancer cachexia. Methods In this study, our prospective multicenter cohort included 1411 patients with cancer cachexia (mean age 59.45 ± 11.38, 63.3% male), which was a combined analysis of multiple cancer types. We randomly selected 30% of the patients for the internal test cohort (mean age 58.90 ± 11.22% 61.4% male). Additionally, we included 307 patients with cancer cachexia in the external validation cohort (mean age 61.16 ± 11, 58.5% male). Receiver operating characteristic (ROC) and calibration curves were performed to investigate the prognostic value of CTI. The prognostic value of the CTI was also investigated performing univariate and multivariate survival analyses. Results The survival curve indicated that the CTI showed a significant prognostic value in the total, internal, and external validation cohorts. Prognostic ROC curves and calibration curves revealed that the CTI showed good consistency in predicting the survival of patients with cancer cachexia. Multivariate survival analysis showed that an elevated CTI increased the risk of death by 22% (total cohort, 95% confidence interval [CI] = 1.13–1.33), 34% (internal test cohort, 95%CI = 1.11–1.62), and 35% (external validation cohort, 95%CI = 1.14–1.59) for each increase in the standard deviation of CTI. High CTI reliably predicted shorter survival (total cohort, hazard ratio [HR] = 1.45, 95%CI = 1.22–1.71; internal test cohort, HR = 1.62, 95%CI = 1.12–2.36; external validation cohort, HR = 1.61, 95%CI = 1.15–2.26). High CTI significantly predicted shorter survival in different tumor subgroups, such as esophageal [HR = 2.11, 95%CI = 1.05–4.21] and colorectal cancer [HR = 2.29, 95%CI = 1.42–3.71]. The mediating effects analysis found that the mediating proportions of PGSGA, ECOG PS, and EORTC QLQ-C30 on the direct effects of CTI were 21.72%, 19.63%, and 11.61%, respectively We found that there was a significant positive correlation between the CTI and 90-day [HR = 2.48, 95%CI = 1.52–4.14] and 180-day mortality [HR = 1.77,95%CI = 1.24–2.55] in patients with cancer cachexia. Conclusion The CTI can predict the short- and long-term survival of patients with cancer cachexia and provide a useful prognostic tool for clinical practice.",
+  "tldr": "The CTI can predict the short- and long-term survival of patients with cancer cachexia and provide a useful prognostic tool for clinical practice.",
+  "year": 2024,
+  "venue": "Cancer & Metabolism",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "G. Ruan",
+   "Li Deng",
+   "Hailun Xie",
+   "Jinyu Shi",
+   "Xiaoyue Liu",
+   "Xin Zheng"
+  ],
+  "citations": 35,
+  "source": "semanticscholar",
+  "source_id": "456f844eb607a69f4203177b784522260f46c068",
+  "paper_id": "doi:10.1186/s40170-024-00332-8",
+  "doi": "10.1186/s40170-024-00332-8",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://cancerandmetabolism.biomedcentral.com/counter/pdf/10.1186/s40170-024-00332-8",
+  "published_iso": "2024-01-25",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Online, Target-Free LiDAR-Camera Extrinsic Calibration via Cross-Modal Mask Matching",
+  "title_norm": "online target free lidar camera extrinsic calibration via cross modal mask match",
+  "abstract": "LiDAR-camera extrinsic calibration (LCEC) is crucial for data fusion in intelligent vehicles. Offline, target-based approaches have long been the preferred choice in this field. However, they often demonstrate poor adaptability to real-world environments. This is largely because extrinsic parameters may change significantly due to moderate shocks or during extended operations in environments with vibrations. In contrast, online, target-free approaches provide greater adaptability yet typically lack robustness, primarily due to the challenges in cross-modal feature matching. Therefore, in this article, we unleash the full potential of large vision models (LVMs), which are emerging as a significant trend in the fields of computer vision and robotics, especially for embodied artificial intelligence, to achieve robust and accurate online, target-free LCEC across a variety of challenging scenarios. Our main contributions are threefold: we introduce a novel framework known as MIAS-LCEC, provide an open-source versatile calibration toolbox with an interactive visualization interface, and publish three real-world datasets captured from various indoor and outdoor environments. The cornerstone of our framework and toolbox is the cross-modal mask matching (C3M) algorithm, developed based on a state-of-the-art (SoTA) LVM and capable of generating sufficient and reliable matches. Extensive experiments conducted on these real-world datasets demonstrate the robustness of our approach and its superior performance compared to SoTA methods, particularly for the solid-state LiDARs with super-wide fields of view. Our toolbox and datasets are publicly available at https://mias.group/MIAS-LCEC.",
+  "tldr": "The full potential of large vision models (LVMs) is unleashed to achieve robust and accurate online, target-free LCEC across a variety of challenging scenarios, with a novel framework known as MIAS-LCEC and an open-source versatile calibration toolbox with an interactive visualization interface.",
+  "year": 2024,
+  "venue": "IEEE Transactions on Intelligent Vehicles",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhiwei Huang",
+   "Yikang Zhang",
+   "Qijun Chen",
+   "Rui Fan"
+  ],
+  "citations": 28,
+  "source": "semanticscholar",
+  "source_id": "b7c6d1481773c9c5b8e5d494dbb3817e7a769e86",
+  "paper_id": "dblp:journals/corr/abs-2404-18083",
+  "doi": "10.1109/TIV.2024.3456299",
+  "arxiv_id": "2404.18083",
+  "dblp_key": "journals/corr/abs-2404-18083",
+  "paper_url": "http://arxiv.org/pdf/2404.18083",
+  "published_iso": "2024-04-28",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Incremental value of serum neurofilament light chain and glial fibrillary acidic protein as blood-based biomarkers for predicting functional outcome in severe acute ischemic stroke",
+  "title_norm": "incremental value of serum neurofilament light chain and glial fibrillary acidic",
+  "abstract": "Introduction: Blood-based biomarkers may improve prediction of functional outcome in patients with acute ischemic stroke. The role of neurofilament light chain (NfL) and glial fibrillary acidic (GFAP) as potential biomarkers especially in severe stroke patients is unknown. Patients and Methods: Prospective, monocenter, cohort study including consecutive patients with severe ischemic stroke in the anterior circulation on admission (NIHSS score ⩾ 6 points or indication for mechanical thrombectomy). Outcome was assessed 3 months after the index stroke by the modified Rankin Scale (mRS). Serum biomarkers levels of NfL and GFAP were determined by ultrasensitive ELISA. Univariate and multivariate logistic regression models were performed to determine the association of biomarker levels and functional disability. Discrimination, calibration, and overall performance were analyzed in different models via AUROC, calibration plots (with Emax and Eavg), Brier-score and R2 using variables, identified as important covariates for functional outcome in previous studies. Results: Between 06/2020 and 08/2021, 213 patients were included [47% female, mean age 76 (SD ± 12) years, median NIHSS score 13 (interquartile range, IQR 9; 17)]. Biomarker serum levels were measured at a median of 1 [IQR, 1; 2] day after admission. Compared to patients with mRS 0–2 at 3 months, patients with mRS 3–6 had higher serum levels of NfL (median: 136 pg/ml vs 41 pg/ml; p < 0.0001) and GFAP (700 ng/ml vs 9.6 ng/ml; p < 0.0001). Both biomarkers were significantly associated with functional outcome [adjusted logistic regression, odds ratio (95% CI) for NfL: 2.63 (1.62; 4.56), GFAP: 2.16 (1.58; 3.09)]. In all models the addition of serum NfL led to a significant improvement in the AUROC, as did the addition of serum GFAP. Calibration plots showed high agreement between the predicted and observed outcomes and after addition of the two blood-based biomarkers there was an improvement of the overall performance. Conclusion: Prediction of functional outcome after severe acute ischemic stroke was improved by the blood-based biomarkers serum NfL and GFAP, measured in the acute phase of stroke. These findings have to be replicated in independent external cohorts. Study registration: DRKS00022064 Graphical abstract",
+  "tldr": null,
+  "year": 2024,
+  "venue": "European Stroke Journal",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "C. Vollmuth",
+   "C. Fiessler",
+   "F. Montellano",
+   "Alexander M. Kollikowski",
+   "Fabian Essig",
+   "P. Oeckl"
+  ],
+  "citations": 24,
+  "source": "semanticscholar",
+  "source_id": "ab89194a74dec852778a0f17fa377d7d1546ddde",
+  "paper_id": "doi:10.1177/23969873241234436",
+  "doi": "10.1177/23969873241234436",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/23969873241234436",
+  "published_iso": "2024-02-24",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Improving RCT-Based CATE Estimation Under Covariate Mismatch via Double Calibration",
+  "title_norm": "improving rct based cate estimation under covariate mismatch via double calibrat",
+  "abstract": "We develop estimators that improve precision of heterogeneous treatment effect estimates that allow borrowing information from observational studies when the available covariates in each data source do not perfectly match. Standard data-borrowing methods often assume perfectly matched covariates. We propose MR-OSCAR, an RCT-calibrated, two-stage estimation approach that first predicts the trial-missing variables using the observational data via imputation and then calibrates observational outcome predictions to the randomized trial, preserving the causal contrast, unlike the results for generalization, where imputation does not improve performance. Our theory gives finite-sample guarantees with a transparent error decomposition including an imputation error that shrinks as the observational mapping becomes more predictable. Simulations show that imputation almost always outperforms naively using only the shared covariates and clarifies when borrowing helps (strong predictability of the missing block, moderate trial size) and when it does not (poor predictability or dominant trial-only moderators). We motivate the approach with the Greenlight Plus trial on early childhood obesity and outline a forthcoming EHR analysis at Vanderbilt, highlighting the use of our method in common scenarios where data do not perfectly align.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Samhita Pal",
+   "J. D. Huling",
+   "Amir Asiaee"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "42f288ccc2f978d2e1468ecf407d81cccab4825c",
+  "paper_id": "arxiv:2603.17066",
+  "doi": "",
+  "arxiv_id": "2603.17066",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/42f288ccc2f978d2e1468ecf407d81cccab4825c",
+  "published_iso": "2026-03-17",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "An interpretable machine learning model based on contrast-enhanced CT parameters for predicting treatment response to conventional transarterial chemoembolization in patients with hepatocellular carcinoma",
+  "title_norm": "an interpretable machine learning model based on contrast enhanced ct parameters",
+  "abstract": "",
+  "tldr": "The Random Forest model (hereafter, RF-combined model) integrating CT parameters and clinical variables demonstrated the highest performance on external validation dataset and illustrated the optimal clinical benefits of RF-combined model.",
+  "year": 2024,
+  "venue": "La radiologia medica",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lu Zhang",
+   "Zhe Jin",
+   "Chen Li",
+   "Zicong He",
+   "Bin Zhang",
+   "Qiuying Chen"
+  ],
+  "citations": 17,
+  "source": "semanticscholar",
+  "source_id": "45f9ca80b5fdd3d39ea81d4af297d3f6d5ebb7d3",
+  "paper_id": "doi:10.1007/s11547-024-01785-z",
+  "doi": "10.1007/s11547-024-01785-z",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/45f9ca80b5fdd3d39ea81d4af297d3f6d5ebb7d3",
+  "published_iso": "2024-02-14",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "SurvRNC: Learning Ordered Representations for Survival Prediction using Rank-N-Contrast",
+  "title_norm": "survrnc learning ordered representations for survival prediction using rank n co",
+  "abstract": "Predicting the likelihood of survival is of paramount importance for individuals diagnosed with cancer as it provides invaluable information regarding prognosis at an early stage. This knowledge enables the formulation of effective treatment plans that lead to improved patient outcomes. In the past few years, deep learning models have provided a feasible solution for assessing medical images, electronic health records, and genomic data to estimate cancer risk scores. However, these models often fall short of their potential because they struggle to learn regression-aware feature representations. In this study, we propose Survival Rank-N Contrast (SurvRNC) method, which introduces a loss function as a regularizer to obtain an ordered representation based on the survival times. This function can handle censored data and can be incorporated into any survival model to ensure that the learned representation is ordinal. The model was extensively evaluated on a HEad \\&NeCK TumOR (HECKTOR) segmentation and the outcome-prediction task dataset. We demonstrate that using the SurvRNC method for training can achieve higher performance on different deep survival models. Additionally, it outperforms state-of-the-art methods by 3.6% on the concordance index. The code is publicly available on https://github.com/numanai/SurvRNC",
+  "tldr": "This study proposes Survival Rank-N Contrast (SurvRNC) method, which introduces a loss function as a regularizer to obtain an ordered representation based on the survival times, and demonstrates that using the SurvRNC method for training can achieve higher performance on different deep survival models.",
+  "year": 2024,
+  "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Numan Saeed",
+   "Muhammad Ridzuan",
+   "F. Maani",
+   "Hussain Alasmawi",
+   "K. Nandakumar",
+   "Mohammad Yaqub"
+  ],
+  "citations": 13,
+  "source": "semanticscholar",
+  "source_id": "2ad055ed3113bd413437102a12d97407512203ad",
+  "paper_id": "dblp:journals/corr/abs-2403-10603",
+  "doi": "10.48550/arXiv.2403.10603",
+  "arxiv_id": "2403.10603",
+  "dblp_key": "journals/corr/abs-2403-10603",
+  "paper_url": "https://www.semanticscholar.org/paper/2ad055ed3113bd413437102a12d97407512203ad",
+  "published_iso": "2024-03-15",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Live-donor kidney transplant outcome prediction (L-TOP) using artificial intelligence.",
+  "title_norm": "live donor kidney transplant outcome prediction l top using artificial intellige",
+  "abstract": "Outcome prediction for live-donor kidney transplantation improves clinical and patient decisions and donor selection. However, the concurrently used models are of limited discriminative or calibration power and there is a critical need to improve the selection process. We aimed to assess the value of various artificial intelligence (AI) algorithms to improve the risk stratification index. We evaluated pre-transplant variables among 66 914 live-donor kidney transplants (performed between 01/12/2007-01/06/2021) from the United Network of Organ Sharing database, randomized into training (80%) and test (20%) sets. The primary outcome measure was death-censored graft survival. We tested four machine learning models for discrimination (time-dependent concordance index, CTD, and area under the ROC curve) and calibration (integrated Brier score, IBS). We used decision curve analysis to assess the potential clinical utility. Among the models, the deep Cox mixture model showed the best discriminative performance (AUC = 0.70, 0.68, and 0.68 at 5, 10, and 13 years post-transplant, respectively). CTD reached 0.70, 0.67, and 0.66 at 5, 10, and 13 years post-transplant. The IBS score was 0.09, indicating good calibration. In comparison, applying the Living Kidney Donor Profile Index (LKDPI) on the same cohort produced a CTD of 0.56 and an AUC of 0.55-0.58 only. Decision curve analysis showed an additional net benefit compared to the LKDPI, 'Treat all' and 'Treat None' approaches. Our AI-based deep Cox mixture model, termed Live-Donor Kidney Transplant Outcome Prediction outperforms existing prediction models, including the LKDPI, with the potential to improve decisions for optimum live donor selection by ranking potential transplant pairs based on graft survival. This model could be adopted to improve the outcomes of paired exchange programs.",
+  "tldr": "An AI-based deep Cox mixture model, termed Live-Donor Kidney Transplant Outcome Prediction outperforms existing prediction models, including the Living Kidney Donor Profile Index, with the potential to improve decisions for optimum live donor selection by ranking potential transplant pairs based on graft survival.",
+  "year": 2024,
+  "venue": "Nephrology, Dialysis and Transplantation",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hatem Ali",
+   "Mahmoud Mohammed",
+   "M. Z. Molnar",
+   "Tibor Fülöp",
+   "Bernard Burke",
+   "Sunil Shroff"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "949a323f40686542c9fa0789ebc6b02eb3389290",
+  "paper_id": "doi:10.1093/ndt/gfae088",
+  "doi": "10.1093/ndt/gfae088",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://pureportal.coventry.ac.uk/en/publications/9dff8b6d-7a6f-4d77-a9b4-91e83423b34d",
+  "published_iso": "2024-04-29",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Evaluation of Spectrophotometric Methods for Assessing Antioxidant Potential in Plant Food Samples—A Critical Approach",
+  "title_norm": "evaluation of spectrophotometric methods for assessing antioxidant potential in ",
+  "abstract": "Spectrophotometric antioxidant assays can generally be divided into two fundamental categories: single electron transfer (SET)-based assays and hydrogen atom transfer (HAT)-based methods. In SET-based assays, the progression of the electron exchange reaction is determined by the redox potential of the substrates. In contrast, HAT-based methods assess the antioxidant’s ability to transfer a hydrogen atom to a radical, thereby stabilizing it. The objective of this article is to provide a critical evaluation of antioxidant spectrophotometric assays. Assessing the antioxidant potential of food should involve multiple assays to ensure accuracy and reliability. A positive correlation among different methods enhances the validity of the results. Moreover, antioxidants may interact with other food components, such as amino acids, potentially leading to inaccurate outcomes—as observed in the Folin–Ciocalteu assay. Among the various techniques, CUPRAC and ORAC exhibit greater repeatability and reagent stability compared to other assays. Furthermore, these methods are considered superior due to their closer resemblance to in vivo conditions. In contrast, approaches such as ABTS+, DPPH, FRAP, and Folin–Ciocalteu are often criticized for their non-physiological environments. There is a pressing need to establish a standardized method that, to the greatest extent possible, reflects in vivo conditions and can serve as a reference standard for other assays.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Applied Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Eliza Knez",
+   "Kornelia Kadac-Czapska",
+   "M. Grembecka"
+  ],
+  "citations": 70,
+  "source": "semanticscholar",
+  "source_id": "273d8020ae70f44acf1fe22f37f2a1920bbe0a51",
+  "paper_id": "doi:10.3390/app15115925",
+  "doi": "10.3390/app15115925",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2076-3417/15/11/5925/pdf?version=1748078697",
+  "published_iso": "2025-05-24",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "MRCNet: Multiresolution LiDAR-Camera Calibration Using Optical Center Distance Loss Network",
+  "title_norm": "mrcnet multiresolution lidar camera calibration using optical center distance lo",
+  "abstract": "The integration of cameras and LiDAR sensors has emerged as a promising approach to enhance environmental perception and 3-D reconstruction capabilities in autonomous vehicles and robotic systems. Precise extrinsic calibration is of paramount importance to achieve effective multisensor fusion applications. Traditional calibration methods often rely on manual procedures and specific calibration targets, which can be time-consuming and prone to errors. In contrast, convolutional neural networks (CNNs) have shown potential in devising end-to-end calibration systems, leveraging their ability to extract robust features automatically. In this article, MRCNet, an online end-to-end LiDAR-camera calibration network that overcomes the limitations of traditional methods and previous CNN-based approaches, is proposed. This article introduces a multiresolution feature extraction module, enabling the extraction of comprehensive and informative features from red, green and blue (RGB) images and depth images derived from point clouds. Additionally, the optical center distance loss, a novel concept that accounts for the camera’s optical imaging characteristics, facilitating more effective feature extraction is incorporated. MRCNet is the first online calibration network that considers the influence of camera imaging properties. This article employs an iterative refinement process to progressively estimate the calibration error, allowing online extrinsic estimation. Evaluation tests on the KITTI odometry dataset demonstrate the superior performance of MRCNet compared to existing learning-based methods, achieving a mean absolute calibration error of 0.350 cm in translation and 0.033° in rotation. Furthermore, ablation studies validate the effectiveness of the modules of MRCNet. The code for MRCNet will be made publicly available at https://github.com/AlexWang0214/MRCNet.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "IEEE Sensors Journal",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Hao Wang",
+   "Zhangyu Wang",
+   "Guizhen Yu",
+   "Songyue Yang",
+   "Yang Yang"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "48546b7cafee5bb9b5adb3f5cce9e27d94e57004",
+  "paper_id": "doi:10.1109/JSEN.2023.3328267",
+  "doi": "10.1109/JSEN.2023.3328267",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/48546b7cafee5bb9b5adb3f5cce9e27d94e57004",
+  "published_iso": "2024-06-15",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Machine Learning Calibration of Low-Cost Sensor PM2.5 data",
+  "title_norm": "machine learning calibration of low cost sensor pm2 5 data",
+  "abstract": "Recent Advancements in low-cost air quality sensors have significantly expanded their potential applications in local air quality and environment monitoring. In contrast to regulatory PM2.5 monitors, these low-cost sensors are more affordable, portable, and easier to maintain. This enables ambient air quality monitoring with higher spatio-temporal resolution. However, the accuracy and reliability of low-cost sensors are generally inferior to those of regulatory monitors, and their performance varies across different environments and sensor technologies. Therefore, calibrating data from low-cost sensors is crucial to mitigate systematic biases and errors, thereby making it usable for informed policy-making decisions. This study builds and evaluates the performance of various machine-learning models to calibrate PM2.5 data from Purple Air(PA) sensors. The calibration models are developed using the PM2.5 concentration, temperature (T), and relative humidity (RH) of the PA, with PM2.5 concentration measurements from Federal Monitors. We have evaluated the performance of various models including Linear Regression (LR), Random Forest (RF), Gradient Boosting (GB), k-nearest Neighbors (KNN), and Neural Networks (NN) using several metrics, including the coefficient of determination (R2), root mean square error (RMSE), and mean absolute error (MAE). Spatial validation of the model is conducted using leave-one-location-out (LOLO) and Leave-Multiple-Locations-Out (LMLO) methods. Furthermore, we utilized k-fold cross-validation methods to ensure robust evaluation of the model performance across different locations and times. The Neural Network outperforms all the remaining models with an R2 of 0.88, a root mean squared error (RMSE) of 1.75 (µg/m3), and a mean absolute error (MAE) of 3.13 (µg/m3). In comparison, the Random Forest model achieved an R2 of 0.87, an RMSE of 1.84 (µg/m3), and a mean squared error (MSE) of 3.39 (µg/m3). Gradient Boosting showed an R2 of 0.86, an RMSE of 1.89 (µg/m3), and an MSE of 3.60 (µg/m3). The K-Nearest Neighbors (KNN) model resulted in an R2 of 0.83, an RMSE of 2.12 (µg/m3), and an MSE of 4.49 (µg/m3). Lastly, the Linear Regression model achieved an R2 of 0.83, an RMSE of 2.13 (µg/m3), and an MSE of 4.57 (µg/m3).",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Information Security Solutions Europe",
+  "publication_types": [],
+  "authors": [
+   "Irfan Yaqoob",
+   "Vijay Kumar",
+   "S. Chaudhry"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "bb7f5cb527753fb70821c6195027a1a82255c875",
+  "paper_id": "doi:10.1109/ISSE63315.2024.10741149",
+  "doi": "10.1109/ISSE63315.2024.10741149",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/bb7f5cb527753fb70821c6195027a1a82255c875",
+  "published_iso": "2024-10-16",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Exploring the Effect of Context-Awareness and Popularity Calibration on Popularity Bias in POI Recommendations",
+  "title_norm": "exploring the effect of context awareness and popularity calibration on populari",
+  "abstract": "Point-of-interest (POI) recommender systems help users discover relevant locations, but their effectiveness is often compromised by popularity bias, which disadvantages less popular, yet potentially meaningful places. This paper addresses this challenge by evaluating the effectiveness of context-aware models and calibrated popularity techniques as strategies for mitigating popularity bias. Using four real-world POI datasets (Brightkite, Foursquare, Gowalla, and Yelp), we analyze the individual and combined effects of these approaches on recommendation accuracy and popularity bias. Our results reveal that context-aware models cannot be considered a uniform solution, as the models studied exhibit divergent impacts on accuracy and bias. In contrast, calibration techniques can effectively align recommendation popularity with user preferences, provided there is a careful balance between accuracy and bias mitigation. Notably, the combination of calibration and context-awareness yields recommendations that balance accuracy and close alignment with the users’ popularity profiles, i.e., popularity calibration.",
+  "tldr": "This paper evaluating the effectiveness of context-aware models and calibrated popularity techniques as strategies for mitigating popularity bias reveals that context-aware models cannot be considered a uniform solution, as the models studied exhibit divergent impacts on accuracy and bias.",
+  "year": 2025,
+  "venue": "ACM Conference on Recommender Systems",
+  "publication_types": [
+   "JournalArticle",
+   "Book"
+  ],
+  "authors": [
+   "Andrea Forster",
+   "Simone Kopeinik",
+   "Denis Helic",
+   "Stefan Thalmann",
+   "Dominik Kowald"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "5e3e3680c8b7cb1ed2c7209994ffa696c3efc56b",
+  "paper_id": "dblp:journals/corr/abs-2507-03503",
+  "doi": "10.1145/3705328.3748017",
+  "arxiv_id": "2507.03503",
+  "dblp_key": "journals/corr/abs-2507-03503",
+  "paper_url": "https://doi.org/10.1145/3705328.3748017",
+  "published_iso": "2025-07-04",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Calibrating Reliance on Automated Advice: Transparency and Trust Calibration Feedback",
+  "title_norm": "calibrating reliance on automated advice transparency and trust calibration feed",
+  "abstract": "Abstract Inappropriate reliance on automated advice can result in humans accepting incorrect or rejecting correct advice. Increased automation transparency and trust calibration feedback are principles purported to promote accurate automation use. We examined the effects of automation transparency, trust calibration feedback, and their potential interacting effect on automation use accuracy and other outcomes. Participants completed uninhabited vehicle management missions by agreeing/disagreeing with automated advice. Transparency was manipulated within-subjects (low, high) and trust calibration feedback between-subjects (absent, present). If trust was inappropriate, trust calibration feedback instructed participants to take their time and carefully check display information. Higher transparency benefited automation use accuracy, decision time, perceived workload, trust, and usability. Trust calibration feedback had no benefit on automation use accuracy and subsequently did not amplify the benefits of increased transparency. These findings have potential implications to inform the design of automated decision aids to support human understanding of, and calibration to, automation capabilities.",
+  "tldr": "Higher transparency benefited automation use accuracy, decision time, perceived workload, trust, and usability, and trust calibration feedback had no benefit on automation use accuracy and subsequently did not amplify the benefits of increased transparency.",
+  "year": 2025,
+  "venue": "International journal of human computer interactions",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Monica Tatasciore",
+   "Shayne Loft"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "32778867c2ec8672c327b2d6d5b19eaab8c6f0f5",
+  "paper_id": "dblp:journals/ijhci/TatascioreL25",
+  "doi": "10.1080/10447318.2025.2487861",
+  "arxiv_id": "",
+  "dblp_key": "journals/ijhci/TatascioreL25",
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/10447318.2025.2487861?needAccess=true",
+  "published_iso": "2025-04-16",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Identification of HER2-positive breast cancer molecular subtypes with potential clinical implications in the ALTTO clinical trial",
+  "title_norm": "identification of her2 positive breast cancer molecular subtypes with potential ",
+  "abstract": "In HER2-positive breast cancer, clinical outcome and sensitivity to HER2-targeted therapies are influenced by both tumor and microenvironment features. However, we are currently unable to depict the molecular heterogeneity of this disease with sufficient granularity. Here, by performing gene expression profiling in HER2-positive breast cancers from patients receiving adjuvant trastuzumab in the ALTTO clinical trial (NCT00490139), we identify and characterize five molecular subtypes associated with the risk of distant recurrence: immune-enriched, proliferative/metabolic-enriched, mesenchymal/stroma-enriched, luminal, and ERBB2-dependent. Additionally, we validate the biological profiles of the subtypes and explore their prognostic/predictive value in external cohorts, namely the NeoALTTO trial (NCT00553358), SCAN-B (NCT02306096), I-SPY2 (NCT01042379), METABRIC and TCGA. Immune-enriched tumors present better survival outcomes, in contrast to mesenchymal/stroma-enriched and proliferative/metabolic-enriched tumors, while luminal and ERBB2-dependent tumors are characterized by low and high rates of pathological complete response, respectively. Of note, these molecular subtypes provide the rationale for treatment approaches leveraging the heterogeneous biology of HER2-positive breast cancer. The clinical implications of molecular heterogeneity in HER2-positive breast cancer remain to be explored. Here, the authors investigate the transcriptomic landscape of HER2-positive breast cancer patients receiving adjuvant trastuzumab in the ALTTO clinical trial and identify five distinct molecular subtypes.",
+  "tldr": "These molecular subtypes identify and characterize five molecular subtypes associated with the risk of distant recurrence in HER2-positive breast cancers and provide the rationale for treatment approaches leveraging the heterogeneous biology of HER2-positive breast cancer.",
+  "year": 2024,
+  "venue": "Nature Communications",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mattia Rediti",
+   "D. Venet",
+   "A. Joaquin Garcia",
+   "M. Maetens",
+   "D. Vincent",
+   "S. Majjaj"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "7c9201c4151c56b5079ac4c48b026bbb359ca640",
+  "paper_id": "doi:10.1038/s41467-024-54621-3",
+  "doi": "10.1038/s41467-024-54621-3",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41467-024-54621-3.pdf",
+  "published_iso": "2024-11-29",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Purity-based self-calibration in ptychography.",
+  "title_norm": "purity based self calibration in ptychography",
+  "abstract": "Calibration of ptychographic setup properties, such as the sample-detector axial distance, is crucial for quantitative and high-resolution reconstructions. This study proposes a calibration scheme based on the degree of coherence (i.e., purity) of the probe in mixed-state ptychography. Compared to established sharpness metric-based methods, it is significantly more robust and applicable to arbitrary samples. A numerical study and validations with various experimental datasets have been conducted to verify the performance of the proposed method, including the application to high-contrast samples and weakly-scattering biological samples. This calibration scheme can significantly enhance the image quality, the precision of wavefront sensing, and the reliability of quantitative analysis for ptychography. Potentially, we believe this optimization method can find further applications in other areas of computational imaging.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Optics Letters",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chang Liu",
+   "W. Eschen",
+   "D. P. Penagos Molina",
+   "Leona Licht",
+   "M. Abdelaal",
+   "Jan Rothhardt"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "0bf780574bfe09e7cda91d12a8098631f374b813",
+  "paper_id": "doi:10.1364/ol.543865",
+  "doi": "10.1364/ol.543865",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1364/ol.543865",
+  "published_iso": "2025-01-02",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Attention-Based Synthetic Data Generation for Calibration-Enhanced Survival Analysis: A Case Study for Chronic Kidney Disease Using Electronic Health Records",
+  "title_norm": "attention based synthetic data generation for calibration enhanced survival anal",
+  "abstract": "OBJECTIVES\nAccess to real-world healthcare data is constrained by privacy regulations and data imbalances, hindering the development of fair and reliable clinical prediction models. Synthetic data offers a potential solution, yet existing methods often fail to maintain calibration or enable subgroup-specific augmentation. This study introduces Masked Clinical Modelling (MCM), an attention-based synthetic data generation framework designed to enhance survival model calibration in both global and stratified analyses.\n\n\nMETHODS\nMCM uses masked feature reconstruction to learn feature dependencies without explicitly training on survival objectives. It supports both standalone dataset synthesis and conditional data augmentation, enabling the generation of targeted synthetic subcohorts without retraining. Evaluated on a chronic kidney disease (CKD) electronic health record (EHR) dataset, MCM was benchmarked against eight baseline methods, including variational autoencoders, GANs, SMOTE variants, and a recent risk-aware distillation model. Model performance was assessed via calibration loss, Cox model consistency, and Kaplan-Meier fidelity.\n\n\nRESULTS\nMCM-generated data closely replicated statistical properties of the real dataset, pre- served hazard ratios, and matched time-to-event curves with high fidelity. Cox models trained on MCM-augmented data demonstrated improved calibration, reducing overall calibration loss by 15% and subgroup meta-calibration loss by 9% compared to unaugmented data. These improvements held across multiple high-risk subgroups including those with diabetes, renal dys- function, and advanced age. Unlike competing methods, MCM achieved this without retraining or outcome-specific tuning.\n\n\nCONCLUSIONS\nMCM offers a practical and flexible framework for generating synthetic survival data that improves risk model calibration. By supporting both reproducible dataset synthesis and conditional subgroup augmentation, MCM bridges privacy-preserving data access with calibration-aware learning. This work highlights the role of synthetic data not just as a privacy tool, but as a vehicle for improving equity and reliability in clinical modelling.",
+  "tldr": "Masked Clinical Modelling (MCM), an attention-based synthetic data generation framework designed to enhance survival model calibration in both global and stratified analyses, and offers a practical and flexible framework for generating synthetic survival data that improves risk model calibration.",
+  "year": 2025,
+  "venue": "Journal of Biomedical Informatics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Nicholas I-Hsien Kuo",
+   "Blanca Gallego",
+   "Louisa Jorm"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "f05a4657a873e4d2ec80a16976f90b1b6e762c7a",
+  "paper_id": "dblp:journals/jbi/KuoGJ25",
+  "doi": "10.48550/arXiv.2503.06096",
+  "arxiv_id": "2503.06096",
+  "dblp_key": "journals/jbi/KuoGJ25",
+  "paper_url": "https://www.semanticscholar.org/paper/f05a4657a873e4d2ec80a16976f90b1b6e762c7a",
+  "published_iso": "2025-03-08",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Contrast Sensitivity and Stereopsis Outcomes Following LASIK Presbyopia Correction Based on the Corneal Aberration Modulation or Corneal Multifocality Induction Methods: A Systematic Review",
+  "title_norm": "contrast sensitivity and stereopsis outcomes following lasik presbyopia correcti",
+  "abstract": "Background. Modern laser vision correction for presbyopia treatment involves non-linear aspheric corneal ablation with the controlled induction of spherical aberration modulation to extend the depth of focus or corneal multifocality induction methods with or without micro-monovision in the non-dominant eye to provide continuous clear vision across distances. Anisometropia and the new higher-order aberrations pattern may be potential risk factors for postoperative stereopsis and contrast sensitivity (CS) deterioration. Purpose. The objective of this systematic review was to assess articles published until 2023 in which CS and/or stereopsis were reported following LASIK presbyopia treatment. Methods. We searched the PubMed, Scopus and Web of Science databases in accordance with the PRISMA 2020 flow diagram. The inclusion criteria specified original papers evaluating the outcomes of laser presbyopia correction as well as the pre- and postoperative assessment of stereopsis and/or CS. The Quality Assessment Tool was applied to assess the risk of bias. Results. We identified 13 studies, including 856 presbyopes (1712 eyes), with preoperative refractive errors from −11.13 D to +5.75 D, with the follow-up range between 3 and 30 months. Either contrast sensitivity improvement or no change following Presbyond® Laser Blended Vision and PresbyMAX® Hybrid was found in the reviewed articles. Some authors reported a significant CS reduction after symmetrical PresbyLASIK, wavefront-guided LASIK and aspheric monovision LASIK. Several studies assessing the effect of Presbyond® LBV on stereopsis showed conflicting results, with the near stereopsis being reduced, unchanged or increased. A significant decrease in stereopsis was reported after aspheric monovision LASIK. Conclusions. The Presbyond® Laser Blended Vision is a safe procedure in terms of the preservation of contrast sensitivity for presbyopia treatment. More studies are needed to elucidate the impact of aspheric corneal ablation methods or other methods inducing corneal multifocality with or without micro-monovision on stereopsis and contrast sensitivity.",
+  "tldr": "The Presbyond® Laser Blended Vision is a safe procedure in terms of the preservation of contrast sensitivity for presbyopia treatment and several studies assessing the effect of Presbyond® LBV on stereopsis showed conflicting results, with the near stereopsis being reduced, unchanged or increased.",
+  "year": 2025,
+  "venue": "Journal of Clinical Medicine",
+  "publication_types": [
+   "Review",
+   "JournalArticle"
+  ],
+  "authors": [
+   "J. Wierzbowska",
+   "Z. Pniakowska",
+   "A. Roszkowska"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "3ad7f5aaa4c494be491ee752a814a86848518cbc",
+  "paper_id": "doi:10.3390/jcm14030871",
+  "doi": "10.3390/jcm14030871",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/jcm14030871",
+  "published_iso": "2025-01-28",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Empowering Quantum Error Traceability with MoE for Automatic Calibration",
+  "title_norm": "empowering quantum error traceability with moe for automatic calibration",
+  "abstract": "Quantum computing offers the potential for exponential speedups over classical computing in tackling complex tasks, such as large-number factorization and chemical molecular simulation. However, quantum noise remains a significant challenge, hindering the reliability and scalability of quantum systems. Therefore, effective characterization and calibration of quantum noise are critical to advancing these systems. Quantum calibration is a process that heavily relies on expert knowledge, and there currently is a range of research focused on automatic calibration. However, traditional calibration methods often need an effective error traceback mechanism, leading to repeated calibration attempts without identifying root causes. To address the issue of error traceback in calibration failures, this paper proposes an automatic calibration error traceback algorithm facilitated by a Mixture of Experts (MoE) system inspired by the current large language model technologies. Our approach enables traceability of quantum calibration errors, allowing for the rapid identification and correction of deviations from the calibration state. Extensive experimental results demonstrate that the MoE-based automatic calibration method significantly outperforms traditional error traceability and calibration efficiency techniques. Notably, our approach improved the average visibility of 77 qubits by 25.5%, surpassing the outcomes of fixed calibration processes. This work presents a promising path toward more reliable and scalable quantum computing systems.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Design, Automation and Test in Europe",
+  "publication_types": [
+   "JournalArticle",
+   "Conference"
+  ],
+  "authors": [
+   "Tingting Li",
+   "Ziming Zhao",
+   "Liqiang Lu",
+   "Siwei Tan",
+   "Jianwei Yin"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "8231152f371561762b5dddcbcd34dcc2549447dc",
+  "paper_id": "dblp:conf/date/Li0LTY25",
+  "doi": "10.23919/DATE64628.2025.10993074",
+  "arxiv_id": "",
+  "dblp_key": "conf/date/Li0LTY25",
+  "paper_url": "https://www.semanticscholar.org/paper/8231152f371561762b5dddcbcd34dcc2549447dc",
+  "published_iso": "2025-03-31",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Current laboratory performance of starlight suppression systems, and potential pathways to desired Habitable Worlds Observatory exoplanet science capabilities",
+  "title_norm": "current laboratory performance of starlight suppression systems and potential pa",
+  "abstract": "We summarize the current best polychromatic (10 to 20 % bandwidth) contrast performance demonstrated in the laboratory by different starlight suppression approaches and systems designed to directly characterize exoplanets around nearby stars. We present results obtained by internal coronagraph and external starshade experimental testbeds using entrance apertures equivalent to off-axis or on-axis telescopes, either monolithic or segmented. For a given angular separation and spectral bandwidth, the performance of each starlight suppression system is characterized by the values of raw contrast (before image processing), off-axis (exoplanet) core throughput, and post-calibration contrast (the final 1 sigma detection limit of off-axis point sources, after image processing). To place the current laboratory results in the perspective of the future Habitable Worlds Observatory (HWO) mission, we simulate visible observations of a fiducial Earth/Sun twin system at 12 pc, assuming a 6m (inscribed diameter) collecting aperture and a realistic end-to-end optical throughput. The exposure times required for broadband exoearth detection (20% bandwidth around a wavelength of 0.55 microns) and visible spectroscopic observations (R=70) are then computed assuming various levels of starlight suppression performance, including the values currently demonstrated in the laboratory. Using spectroscopic exposure time as a simple metric, our results point to key starlight suppression system design performance improvements and trades to be conducted in support of HWO exoplanet science capabilities. These trades may be explored via numerical studies, lab experiments, as well as high contrast space-based observations and demonstrations.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Bertrand Mennesson",
+   "R. Belikov",
+   "E. Por",
+   "E. Serabyn",
+   "G. Ruane",
+   "A. Riggs"
+  ],
+  "citations": 15,
+  "source": "semanticscholar",
+  "source_id": "780647bdb2954e3c0a7069c55b0fb8b27b6e9822",
+  "paper_id": "arxiv:2404.18036",
+  "doi": "",
+  "arxiv_id": "2404.18036",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/780647bdb2954e3c0a7069c55b0fb8b27b6e9822",
+  "published_iso": "2024-04-28",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Rapid calibration of atrial electrophysiology models using Gaussian process emulators in the ensemble Kalman filter",
+  "title_norm": "rapid calibration of atrial electrophysiology models using gaussian process emul",
+  "abstract": "Atrial fibrillation (AF) is a common cardiac arrhythmia characterised by disordered electrical activity in the atria. The standard treatment is catheter ablation, which is invasive and irreversible. Recent advances in computational electrophysiology offer the potential for patient-specific models that can be used to guide clinical decisions. To be of practical value, we must be able to rapidly calibrate physics-based models using routine clinical measurements. We pose this calibration task as a static inverse problem, where the goal is to infer spatially homogenous tissue-level electrophysiological parameters from the available observations. To make this tractable, we replace the expensive forward model with Gaussian process emulators (GPEs), and propose a novel adaptation of the ensemble Kalman filter (EnKF) for static non-linear inverse problems. The approach yields parameter samples that can be interpreted as coming from the best Gaussian approximation of the posterior distribution. We compare our results with those obtained using Markov chain Monte Carlo (MCMC) sampling and demonstrate the potential of the approach to enable near-real-time patient-specific calibration, a key step towards predicting outcomes of AF treatment within clinical timescales. The approach is readily applicable to a wide range of static inverse problems in science and engineering.",
+  "tldr": "The replace the expensive forward model with Gaussian process emulators (GPEs), and propose a novel adaptation of the ensemble Kalman filter (EnKF) for static non-linear inverse problems, which yields parameter samples that can be interpreted as coming from the best Gaussian approximation of the posterior distribution.",
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mariya Mamajiwala",
+   "C. Corrado",
+   "Christopher W. Lanyon",
+   "S. Niederer",
+   "Richard D. Wilkinson",
+   "Richard H. Clayton"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "eab13586edcb208408a96589e34e1f31484db47c",
+  "paper_id": "arxiv:2510.06191",
+  "doi": "10.1038/s41598-026-39948-9",
+  "arxiv_id": "2510.06191",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41598-026-39948-9_reference.pdf",
+  "published_iso": "2025-10-07",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Neuron-specific enolase at admission as a predictor for stroke volume, severity and outcome in ischemic stroke patients: a prognostic biomarker review",
+  "title_norm": "neuron specific enolase at admission as a predictor for stroke volume severity a",
+  "abstract": "An ideal blood biomarker for stroke should provide reliable results, enable fast diagnosis, and be readily accessible for practical use. Neuron-specific enolase (NSE), an enzyme released after neuronal damage, has been studied as a marker for brain injury, including cerebral infarction. However, different methodologies and limited sample sizes have restricted the applicability of any potential findings. This work aims to determine whether NSE levels at Emergency Department (ED) admission correlate with stroke severity, infarcted brain volume, functional outcome, and/or death rates. A systematic literature review was performed using PubMed, Embase, and Scopus databases. Each reviewer independently assessed all published studies identified as potentially relevant. All relevant original observational studies (cohort, case–control, and cross-sectional studies) were included. Eleven studies (1398 patients) met the inclusion criteria. Among these, six studies reported a significant correlation between NSE levels and stroke severity, while only one found no association. Four studies indicated a positive relationship between infarcted brain volume assessed by imaging and NSE levels, in contrast to the findings of only one study. Four studies identified an association related to functional outcome and death rates, while three others did not reach statistical significance in their findings. These data highlight that NSE levels at ED admissions proved to be a promising tool for predicting the outcome of ischemic stroke patients in most studies. However, they presented high discrepancies and low robustness. Therefore, further research is necessary to establish and define the role of NSE in clinical practice.",
+  "tldr": "It is highlighted that NSE levels at ED admissions proved to be a promising tool for predicting the outcome of ischemic stroke patients in most studies, however, they presented high discrepancies and low robustness, so further research is necessary to establish and define the role of NSE in clinical practice.",
+  "year": 2024,
+  "venue": "Scientific Reports",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "M. Mochetti",
+   "Estêvão Garcia Porello Silva",
+   "Adriana Aparecida Feltrin Correa",
+   "Marcela Rocha Cabette",
+   "I. Perissinotti",
+   "L. E. e Silva"
+  ],
+  "citations": 25,
+  "source": "semanticscholar",
+  "source_id": "ed18dd6fd87bfac7f99bdc80b20dd1a50a8a77b1",
+  "paper_id": "doi:10.1038/s41598-024-53080-6",
+  "doi": "10.1038/s41598-024-53080-6",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.nature.com/articles/s41598-024-53080-6.pdf",
+  "published_iso": "2024-02-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Closing the Reflection Gap: A Free Calibration Bonus for Agentic RL",
+  "title_norm": "closing the reflection gap a free calibration bonus for agentic rl",
+  "abstract": "LLMs are increasingly deployed as agents that interact with external environments and observe feedback such as execution results, error messages, and tool outputs. A well-functioning agent should be able to leverage this feedback to accurately assess its own performance. Yet we find a persistent reflection gap: LLM agents tend to mis-assess their own outputs after observing concrete environment feedback -- even for questions they correctly answered -- and standard RL barely helps due to a credit-assignment mismatch. To close this gap, we propose RefGRPO, a simple yet effective fix that augments standard RL algorithms with two key ingredients: a free calibration bonus computed by contrasting the agent's own reflection with the actual outcome (requiring no additional reward model, LLM judge, or external annotation), and a dynamic schedule on its coefficient. Compared to standard RL baselines, our method simultaneously improves reflection calibration (e.g., reduces underconfidence rate $44.4\\% \\to 7.7\\%$) and task accuracy (e.g., $75.1\\% \\to 76.5\\%$) on text-to-SQL across five benchmarks. The resulting calibrated reflection turns the agent into its own verifier grounded in environment feedback, which further enables (i) better self-improvement that uses reflections as pseudo-rewards without outcome supervision, and (ii) more effective test-time selective prediction by committing only to rollouts flagged as correct.",
+  "tldr": "RefGRPO is proposed, a simple yet effective fix that augments standard RL algorithms with two key ingredients: a free calibration bonus computed by contrasting the agent's own reflection with the actual outcome (requiring no additional reward model, LLM judge, or external annotation), and a dynamic schedule on its coefficient.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yinglun Zhu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "98f5ae7d5aca41a1a03067bb1f8a03b1dc597084",
+  "paper_id": "dblp:journals/corr/abs-2606-14211",
+  "doi": "10.48550/arXiv.2606.14211",
+  "arxiv_id": "2606.14211",
+  "dblp_key": "journals/corr/abs-2606-14211",
+  "paper_url": "https://www.semanticscholar.org/paper/98f5ae7d5aca41a1a03067bb1f8a03b1dc597084",
+  "published_iso": "2026-06-12",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Kinematic Calibration and Compensation of Industrial Robots Based on Extended Joint Space",
+  "title_norm": "kinematic calibration and compensation of industrial robots based on extended jo",
+  "abstract": "The application of robots in high-precision automated machining is constrained by their limited multi-directional repeatability. In contrast, robots demonstrate superior levels of unidirectional repeatability, implying the potential for enhancing their precision. To further improve the positioning accuracy of robots, backlash error induced by rotating direction is considered, the concept of robot joint extended space is proposed, and the robot kinematic model is used to analyze the spatial similarity of robot error in the extended joint space. The dynamic Kriging method based on the optimization of basis functions is proposed to avoid overfitting of the surrogate model, and a model for estimating the robot’s positioning error in the joint extended space is constructed. Based on the estimated positioning error, the proposed calibration method is finally experimentally validated by error feedforward compensation. The results indicate that after Kriging interpolation in the robot joint space and feedforward compensation, the maximum/average positioning error of the robot is improved from 1.5157 mm and 0.8562 mm before compensation to 0.3471 mm and 0.1856 mm after compensation, and then further improved to 0.1848 mm and 0.1197 mm after adopting joint expansion space and dynamic Kriging interpolation, which decreases by 46.7% and 33.5%, respectively. This method effectively compensates the multi-directional repeatability error introduced by the joint backlash and improves the robot’s positioning accuracy.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "IEEE Access",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Wei He",
+   "Pin Zhang",
+   "Kai Guo",
+   "Jie Sun",
+   "V. Sivalingam",
+   "Xiaoming Huang"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "f5adc2e533767e099b6075202c35415643e624f5",
+  "paper_id": "dblp:journals/access/HeZGSSH23",
+  "doi": "10.1109/ACCESS.2023.3322569",
+  "arxiv_id": "",
+  "dblp_key": "journals/access/HeZGSSH23",
+  "paper_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10273402.pdf",
+  "published_iso": null,
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Contrast-Associated Acute Kidney Injury After Thrombectomy for Ischemic Stroke",
+  "title_norm": "contrast associated acute kidney injury after thrombectomy for ischemic stroke",
+  "abstract": "Background and Objectives Contrast-associated acute kidney injury (CA-AKI) is a potentially preventable complication after exposure to iodinated contrast media. In patients undergoing endovascular thrombectomy (EVT) for acute ischemic stroke (AIS), the incidence and clinical impact are poorly characterized, and no validated prediction tool is currently available. The aim of this study was to assess the incidence and prognostic significance of CA-AKI in EVT-treated patients with AIS and to develop and validate a predictive score. Methods A retrospective, multicenter cohort study was conducted involving EVT-treated patients across 73 centers in 16 countries (January–December 2023). Inclusion criteria were age ≥18 years, absence of dialysis, availability of preprocedural and 48-hour postprocedural creatinine levels, and available 90-day follow-up (modified Rankin Scale [mRS] score). The primary outcome was CA-AKI, defined by KDIGO (Kidney Disease: Improving Global Outcomes criteria;creatinine increase ≥0.3 mg/dL or ≥1.5 times baseline, within 48 hours). Secondary outcomes were (1) in-hospital mortality, (2) 90-day mRS score, and (3) 90-day severe disability or death (mRS score >3). Logistic models assessing associations with outcomes accounted for within-center clustering by applying robust standard errors. CA-AKI prediction models were developed across imputed data sets using univariable selection (p < 0.20), backward elimination (p < 0.05), and coefficient-based scoring after categorization of continuous predictors, with internal validation by bootstrap to obtain optimism-adjusted estimates. Results Among 6,638 patients (median age 74 years; 48.7% male), CA-AKI occurred in 326 (4.9%) and was independently associated with in-hospital mortality (adjusted odds ratio [aOR] 2.269; 95% CI 1.615–3.190), higher 90-day mRS scores (adjusted common odds ratio 1.584; 95% CI 1.110–2.258), and 90-day severe disability or death (aOR 1.530; 95% CI 1.057–2.216). A preprocedural risk model including 12 routine clinical variables—sex, ethnicity, arterial hypertension, dyslipidemia, chronic kidney disease, antiplatelet therapy, NIH Stroke Scale score at admission, serum glucose, estimated glomerular filtration rate, hemoglobin, mean arterial pressure, and IV thrombolysis—demonstrated acceptable discrimination (area under the receiver operating characteristic curve 0.710 [95% CI 0.682–0.738]; precision-recall area under the curve 0.13 [95% CI 0.10–0.16]), good calibration (slope 0.870 [95% CI 0.759–0.928]), good overall performance (Brier score 0.045 [95% CI 0.042–0.049]). A second model that included EVT-related variables (e.g., contrast volume) showed similar performances. Discussion In this large, international cohort, CA-AKI occurred in approximately 1 in 20 EVT-treated patients with AIS and was independently associated with poor outcomes. A simple preprocedural risk score enables early identification of high-risk individuals and may support preventive strategies.",
+  "tldr": "In this large, international cohort, CA-AKI occurred in approximately 1 in 20 EVT-treated patients with AIS and was independently associated with poor outcomes and was independently associated with poor outcomes.",
+  "year": 2026,
+  "venue": "Neurology",
+  "publication_types": [
+   "Study",
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ghil Schwarz",
+   "Angelo Cascio Rizzo",
+   "Gareth Ambler",
+   "P. Wrona",
+   "Agnieszka M Slowik",
+   "Szymonn Kotas"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "3d24e19d02372a0ce041fe69896747f7e32face2",
+  "paper_id": "doi:10.1212/WNL.0000000000214655",
+  "doi": "10.1212/WNL.0000000000214655",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1212/wnl.0000000000214655",
+  "published_iso": "2026-02-19",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Unleashing the Potential of Self-Supervised RF Learning With Group Shuffle",
+  "title_norm": "unleashing the potential of self supervised rf learning with group shuffle",
+  "abstract": "Self-supervised learning (SSL) is a powerful approach that learns general semantic representations from large-scale unlabeled data to make downstream tasks solve easier, offering significant potential in enhancing downstream performance and alleviating the appetite for large-scale annotated data. However, existing SSL techniques, predominantly designed for natural images, may be prone to shortcuts when applied to RF signals. This study presents surprising empirical findings showing that SSL can indeed learn meaningful RF representations by employing simple group shuffle (GS) and asymmetry augmentation techniques. The GS augmentation is inspired by blind calibration tasks in Time-Interleaved Analog-to-Digital Converters (TIADC). By treating the original RF signal as a composite output from sub-ADCs, GS augmentation enriches RF signals while preserving their global semantics. We also provide a theoretical validation of the GS augmentation’s singular value consistency. Notably, we observe that the shortcut is essentially a domain gap between the pre-trained and the downstream task models. This issue can be mitigated by an asymmetry augmentation technique, which maximizes the similarity between an original RF signal and its augmented version, rather than between two augmentations of the same RF signal. By integrating group shuffle and asymmetry augmentation (GSAA) into an existing contrastive learning framework, we develop an effective contrastive learning approach for RF signals. Our evaluations, spanning seven downstream RF sensing tasks across two general RF devices (WiFi and radar), strongly demonstrate that GSAA plays a significant role in advancing SSL-based solutions in RF sensing.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "IEEE Transactions on Mobile Computing",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Ruiyuan Song",
+   "Zhi Lu",
+   "Dongheng Zhang",
+   "Liang Fang",
+   "Zhi Wu",
+   "Yang Hu"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "93dc92e1af50d7fb20db545d06ecf9db7d91b664",
+  "paper_id": "dblp:journals/tmc/SongLZFWHSC25",
+  "doi": "10.1109/TMC.2024.3497972",
+  "arxiv_id": "",
+  "dblp_key": "journals/tmc/SongLZFWHSC25",
+  "paper_url": "https://www.semanticscholar.org/paper/93dc92e1af50d7fb20db545d06ecf9db7d91b664",
+  "published_iso": "2025-04-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Establishment and Calibration of a Digital Twin to Replicate the Friction Behaviour of a Pin-on-Disk Tribometer",
+  "title_norm": "establishment and calibration of a digital twin to replicate the friction behavi",
+  "abstract": "While the modification of surface contacts offers significant potential for friction reduction, obtaining an underlying consistent friction behaviour of real-life experiments and virtual simulations is still an ongoing challenge. In particular, most works in the literature only consider idealised geometries that can be parametrised with simple analytical functions. In contrast to this approach, the current work describes the establishment of a digital twin of a pin-on-disk tribometer whose virtual geometry is completely replicated from real-life post-test topography measurements and fed into a two-scale mixed lubrication solver. Subsequently, several calibration steps are performed to identify the sensitivities of the friction behaviour towards certain geometry features and enable the digital twin to robustly represent the Stribeck curve of the physical experiments. Furthermore, a derivation of the Hersey number is used to generalise the obtained friction behaviour for different dynamic viscosities and allow the validation of the presented method.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "Lubricants",
+  "publication_types": [],
+  "authors": [
+   "E. Hansen",
+   "G. Vaitkūnaitė",
+   "J. Schneider",
+   "P. Gumbsch",
+   "B. Frohnapfel"
+  ],
+  "citations": 11,
+  "source": "semanticscholar",
+  "source_id": "36b0e3d23d84534c82003256e1e0fcd981b3cc43",
+  "paper_id": "doi:10.3390/lubricants11020075",
+  "doi": "10.3390/lubricants11020075",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2075-4442/11/2/75/pdf?version=1677044287",
+  "published_iso": "2023-02-10",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Difference of mean Hounsfield units (dHU) between follow-up and initial noncontrast CT scan predicts 90-day poor outcome in spontaneous supratentorial acute intracerebral hemorrhage with deep convolutional neural networks",
+  "title_norm": "difference of mean hounsfield units dhu between follow up and initial noncontras",
+  "abstract": "Highlights: • The dHU, which represented the difference in mean Hounsfield unit values of hematomas between follow-up and the initial non-contrast CT scan (NCCT), was proposed as a novel imaging predictor for predicting 90-day poor functional outcomes in acute supratentorial spontaneous intracerebral hemorrhage(sICH) for the first time.• The dHU of hematoma based on serial NCCT scans is independently associated with poor outcomes after adjustment for potential predictors (including follow-up imaging data) in sICH, both in the derivation and external validation cohorts.• The dHU >2.5 can be regarded as a potential predictor for poor outcome, which may be used as supportive tool to augment conventional methods and to improve prognostic decision for clinicians to achieve precision medicine in sICH patients.",
+  "tldr": "The dHU of hematoma based on serial NCCT scans is independently associated with poor outcomes after adjustment for potential predictors (including follow-up imaging data) in sICH, both in the derivation and external validation cohorts.",
+  "year": 2023,
+  "venue": "NeuroImage: Clinical",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaona Xia",
+   "Xiaoqian Zhang",
+   "J. Cui",
+   "Q. Jiang",
+   "Shuai Guan",
+   "Kongming Liang"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "4d20543e681f54c94dd7e26b399ce4bf4970e520",
+  "paper_id": "doi:10.1016/j.nicl.2023.103378",
+  "doi": "10.1016/j.nicl.2023.103378",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.nicl.2023.103378",
+  "published_iso": "2023-03-14",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Exploring the potential of the combined diagnostic model of ADC value and bp-MRI VI-RADS in the evaluation of muscle invasion in bladder Cancer",
+  "title_norm": "exploring the potential of the combined diagnostic model of adc value and bp mri",
+  "abstract": "",
+  "tldr": "The contrast-free bp-MRI VI-RADS demonstrates commendable diagnostic efficacy for diagnosing muscular infiltration in bladder cancer, and ADC values can complement bp-MRI VI-RADS, enhancing diagnostic performance.",
+  "year": 2025,
+  "venue": "Abdominal Radiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhichao Zhang",
+   "Weixiong Xiao",
+   "Yiqian Wang",
+   "Wei Zhang",
+   "Min Luo"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "b6fa3eb36313f04436432c592348ae279d5cc843",
+  "paper_id": "doi:10.1007/s00261-024-04788-6",
+  "doi": "10.1007/s00261-024-04788-6",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/b6fa3eb36313f04436432c592348ae279d5cc843",
+  "published_iso": "2025-01-02",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Modeling foot rockers via functional calibration for use in clinical gait analysis.",
+  "title_norm": "modeling foot rockers via functional calibration for use in clinical gait analys",
+  "abstract": "BACKGROUND\nGoal of this work is a quantitative description of Jacquelin Perry's rocker concept by locating the position of the heel rocker and the forefoot rocker within segments of the foot via functional calibration.\n\n\nMETHODS\nTwo functional calibration tasks with the foot in ground contact were performed by ten typical developed adults and foot marker motion was captured. After applying a least-square method for constructing foot segments, their motion relative to the floor was analyzed via a functional algorithm. Resulting reference positions - namely the heel rotation center and the metatarsal rotation axis - were calculated. Further, the repeatability of the method and variability of outcome within the cohort was tested.\n\n\nRESULTS\nThe heel rotation center is located substantially posterior (25 mm) and slightly more inferior (5 mm). to the midpoint of the two markers placed medially and laterally on the calcaneus. Repeated measures reveal a variation of this location around 5 mm. The forefoot center is slightly more medial to the \"toe marker\" (DMT2) and substantially more inferior (19 mm). The metatarsal rotation axis is slightly tilted in the frontal and transverse plane against the metatarsal line given between markers on MT1 and MT5 with small variation in repeated measures (1-2°).\n\n\nSIGNIFICANCE\nThe determination of heel rotation center and the metatarsal rotation axis relative to foot segments can be determined with good repeatability and their location meet the intuitive expectation. Since they have a direct biomechanical meaning in the foot roll-over process in gait, they may be used for a more functionally oriented definition of foot segments potentially improving the calculation of foot kinematics and kinetics in future work.",
+  "tldr": "The determination of heel rotation center and the metatarsal rotation axis relative to foot segments can be determined with good repeatability and their location meet the intuitive expectation.",
+  "year": 2024,
+  "venue": "Gait & Posture",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "F. Salami",
+   "S. Campos",
+   "A. R. Musagara",
+   "S. Wolf"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "28729292d770d33a658afe4f43743a1551eb4ca3",
+  "paper_id": "doi:10.1016/j.gaitpost.2024.04.022",
+  "doi": "10.1016/j.gaitpost.2024.04.022",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.gaitpost.2024.04.022",
+  "published_iso": "2024-04-01",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Cost-Aware Calibration of Classifiers",
+  "title_norm": "cost aware calibration of classifiers",
+  "abstract": "Most classification techniques in machine learning are able to produce probability predictions in addition to class predictions. However, these predicted probabilities are often not well calibrated in that they deviate from the actual outcome rates (i.e., the proportion of data instances that actually belong to a certain class). A lack of calibration can jeopardize downstream decision tasks that rely on accurate probability predictions. Although several post hoc calibration methods have been proposed, they generally do not consider the potentially asymmetric costs associated with overprediction versus underprediction. In this research, we formally define the problem of cost-aware calibration and propose a metric to quantify the cost of miscalibration for a given classifier. Next, we propose three approaches to achieve cost-aware calibration, two of which are cost-aware adaptations of existing calibration algorithms; the third one (named MetaCal) is a Bayes optimal learning algorithm inspired by prior work on cost-aware classification. We carry out systematic empirical evaluations on multiple public data sets to demonstrate the effectiveness of the proposed approaches in reducing the cost of miscalibration. Finally, we generalize the definition and metric as well as solution algorithms of cost-aware calibration to account for nonlinear cost structures that may arise in real-world decision tasks. Data Ethics & Reproducibility Note: There are no data ethics considerations. The code capsule is available on Code Ocean at https://doi.org/10.24433/CO.8552538.v1 and in the e-Companion to this article (available at https://doi.org/10.1287/ijds.2024.0038 ).",
+  "tldr": "This research formally defines the problem of cost-aware calibration and proposes a metric to quantify the cost of miscalibration for a given classifier, and proposes three approaches to achieve cost-aware calibration that are cost-aware adaptations of existing calibration algorithms and a Bayes optimal learning algorithm inspired by prior work on cost-aware classification.",
+  "year": 2024,
+  "venue": "Social Science Research Network",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Mochen Yang",
+   "Xuan Bi"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "136deea81f993fad9dce4de85582ea3f8bb4d364",
+  "paper_id": "doi:10.2139/ssrn.4270586",
+  "doi": "10.2139/ssrn.4270586",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.2139/ssrn.4270586",
+  "published_iso": "2024-12-09",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Assessing the impact of Earth Observation data-driven calibration of the melting coefficient on the LISFLOOD snow module",
+  "title_norm": "assessing the impact of earth observation data driven calibration of the melting",
+  "abstract": "Abstract. LISFLOOD is a continental, operational hydrological model widely used in Europe. Among various hydrological processes, it simulates snowmelt using a degree-day approach, where the snowmelt coefficient is typically calibrated against discharge data. This study evaluates LISFLOOD’s current snow module and investigates the effects of a post-replacement of the snowmelt coefficient across nine European basins with varying snow influence. The parameter is calibrated using Earth Observation (EO) snow cover fraction (SCF). The outcomes illustrate the extent to which a parsimonious calibration of a single model component, intended to improve a specific module, affects hydrological model performance. To this purpose, we integrate Sentinel-2 and MODIS data to address issues related to gaps and misclassifications in snow detection over complex terrain and obtain an improved reference snow cover. Using EO SCF, we estimate a spatially distributed snowmelt coefficient, in contrast to the uniform values currently used in LISFLOOD. The coefficients are optimized by matching modelled and observed SCF, and their hydrological impacts are assessed while keeping all other model parameters unchanged. This enables us to test whether modifying only the snowmelt coefficient affects discharge performance, and whether the standard calibration adequately represents both snow dynamics and streamflow. Compared with EO SCF, the standard calibration showed biases from −1 % to 22 % and RMSE values from 20 % to 55 %. The EO-based proposed approach improved both bias and RMSE by up to 8 %. In general, the optimized coefficients did not significantly change the simulated discharge at the basin level in terms of KGE, but their application led to noticeable divergences in discharge within smaller upstream catchments. Moreover, the improved representation of snow cover led in some cases to shifts in the timing and magnitude of snowmelt and total runoff. These findings highlight the potential of integrating EO data to calibrate the snowmelt coefficient without changing other calibration parameters. This approach may offer practical advantages in situations that require accurate snow cover representation without the need for a complete re-calibration, which may be overly onerous. Nevertheless, our results indicate that standard calibration procedures already provide an acceptable representation of snow dynamics.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Hydrology and Earth System Sciences",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Valentina Premier",
+   "F. Moschini",
+   "Jesús Casado-Rodríguez",
+   "D. Bavera",
+   "Carlo Marin",
+   "A. Pistocchi"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "607219b211935e83b8274ee14e958f454d39cda3",
+  "paper_id": "doi:10.5194/hess-30-1189-2026",
+  "doi": "10.5194/hess-30-1189-2026",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://hess.copernicus.org/articles/30/1189/2026/hess-30-1189-2026.pdf",
+  "published_iso": "2026-03-03",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ },
+ {
+  "title": "Nomogram for predicting malignancy in subpleural pulmonary lesions using clinical and contrast-enhanced ultrasound parameters.",
+  "title_norm": "nomogram for predicting malignancy in subpleural pulmonary lesions using clinica",
+  "abstract": "AIM\nTo develop and validate an individualized nomogram for differentiating benign from malignant SPLs based on contrast-enhanced ultrasound (CEUS) imaging features and clinical data.\n\n\nMATERIALS AND METHODS\nA total of 407 patients with SPLs from our hospital (201 benign, 206 malignant) were randomly divided into development (n=284) and internal validation (n=123) cohorts using a 7:3 ratio. Candidate variables were selected using Boruta analysis and multivariable logistic regression. Model performance was evaluated with respect to discrimination, calibration, and clinical utility. To further assess generalizability, external validation cohort was performed in 106 patients (51 benign, 55 malignant) from an independent hospital.\n\n\nRESULTS\nThe nomogram, incorporating six variables-age, maximum diameter, homogeneity, vascular sign, AT difference ratio, and visceral pleural invasion-demonstrated high discriminatory performance with area under the curve (AUC) values of 0.949 in the development cohort, 0.908 in the internal validation cohort, and 0.941 in the external validation cohort. Calibration curves indicated good agreement between predicted and observed outcomes. Decision curve analysis (DCA), clinical impact curves (CIC), and net reduction curves (NRC) supported the model's clinical utility.\n\n\nCONCLUSION\nThe validated nomogram shows strong potential as a practical tool for aiding clinical decision-making in differentiating malignant SPLs.",
+  "tldr": "The validated nomogram shows strong potential as a practical tool for aiding clinical decision-making in differentiating malignant SPLs and decision curve analysis, clinical impact curves, and net reduction curves supported the model's clinical utility.",
+  "year": 2026,
+  "venue": "Medical ultrasonography",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Lei Hao",
+   "Lijing Zhu",
+   "Zhu Qi",
+   "Bojuan Wang",
+   "Jingzhu Xu",
+   "Xin Zhao"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "5d7cc1736bfcaac8d7f11da7f252492303cabc03",
+  "paper_id": "doi:10.11152/mu-4612",
+  "doi": "10.11152/mu-4612",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.11152/mu-4612",
+  "published_iso": "2026-04-30",
+  "from_query": [
+   "potential outcome contrast calibration"
+  ]
+ }
+]

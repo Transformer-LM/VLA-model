@@ -1,0 +1,80 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.55cm]{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[CJKmath=true]{xeCJK}
+% CJK main font is resolved at COMPILE time on the actual machine, not baked in at
+% generation time, so a .tex generated on one OS still renders on another (the older
+% Python-side probe hardcoded one OS's font name into the file and broke when moved).
+% Walk a cross-platform priority list and use the first font that exists; AutoFakeBold
+% + AutoFakeSlant give bold/italic CJK even on faces that ship no bold/italic cut.
+\newcommand{\setCJKto}[1]{\setCJKmainfont{#1}[AutoFakeBold=true,AutoFakeSlant=0.2]}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKto{Noto Sans CJK SC}}{%        % Linux (fonts-noto-cjk); cross-platform if installed
+ \IfFontExistsTF{Source Han Sans SC}{\setCJKto{Source Han Sans SC}}{%   % Adobe 思源黑体; cross-platform
+  \IfFontExistsTF{PingFang SC}{\setCJKto{PingFang SC}}{%               % macOS 10.11+
+   \IfFontExistsTF{Hiragino Sans GB}{\setCJKto{Hiragino Sans GB}}{%    % older macOS
+    \IfFontExistsTF{Microsoft YaHei}{\setCJKto{Microsoft YaHei}}{%     % Windows
+     \IfFontExistsTF{WenQuanYi Micro Hei}{\setCJKto{WenQuanYi Micro Hei}}{% % older Linux
+      \setCJKto{Songti SC}}}}}}}                                       % macOS bottom fallback
+\definecolor{cblue}{HTML}{4C72B0}
+\setlength{\parskip}{3pt}\setlength{\parindent}{0pt}
+\setlist[enumerate]{topsep=2pt,itemsep=2pt,parsep=1pt,partopsep=0pt}
+\setlist[itemize]{topsep=2pt,itemsep=2pt,parsep=1pt,partopsep=0pt}
+% Let prose-embedded inline math break across lines and absorb small overflows, so simple
+% formulas inserted mid-sentence stop running past the right margin.
+\tolerance=1200
+\emergencystretch=2.5em
+\relpenalty=20
+\binoppenalty=40
+\hfuzz=1pt
+\begin{document}
+
+\section*{GISS-2x2：面向冻结机器人策略的匹配状态几何---动作兼容性诊断}
+\textbf{方法名称：} Matched-State Geometry-Action Crossover (GISS-2x2)
+\section*{研究动机}
+一个冻结的 VLA（vision-language-action，视觉---语言---动作）策略在几何变化下表现稳健，可能有几种不同原因：它确实利用可见的功能几何来选择当前动作；它只是执行一个碰巧有效的开环默认动作；或者它先犯错、再依靠后续闭环反馈恢复。只看总体成功率无法区分这些解释，因为几何变化通常也会改变实际状态轨迹、接触动力学和推理历史。因此，关键问题是在决策状态保持不变、所有比较都使用同一个原生成功标准的条件下，测量当前动作是否与特定几何相兼容。RoboTwin 2.0 和 GemBench 让这个问题可以被观察，但普通 rollout 比较没有提供所需的四个反事实单元，因而无法同时检验：几何 A 诱发的动作块是否在 A 中优于由终点等价几何 B 诱发的动作块，以及反向关系是否也成立。GISS-2x2 为冻结策略补上这个范围明确的匹配状态诊断。
+
+现在可以实际完成这项诊断，是因为 RoboTwin 2.0 提供了广泛、可编辑的功能几何和可复现的任务族，而 GemBench 与 Any3D-VLA 已把 3D 泛化变成当前的评测目标。OpenPI pi0.5 和 CLOVER 等本地开放冻结策略还可以在不训练、也不使用付费 API 的情况下被重复查询。结合模拟器状态序列化、碰撞网格编辑和确定性推理控制，就能以仍允许人工核验几何配对的规模，构造四单元检查点交叉实验。
+
+已有工作由于各自的分析结构而没有做到这一步。RoboTwin 2.0 以数据集或 rollout 表现为分析单位，没有同一状态下的当前动作兼容性反事实估计；GemBench 通过数据划分改变待解决条件，没有构造可抵消接收几何难度的交叉单元；CoA-VLA 把显式 affordance 结构放进策略内部，而不是测量未经修改的冻结策略；Any3D-VLA 评估表示和端到端行为，却没有提供匹配检查点、动作交换和受控接收几何对比；CLOVER 研究反应式恢复，其中错误检测、重新规划和后续反馈仍与原始动作选择纠缠在一起。
+
+补上这一缺口后，可以得到一个与具体策略实现无关的诊断，用来区分由几何条件决定的当前动作、开环默认动作和后续恢复。结论仍限定在符合资格的任务族内，而不是被汇总成一个宽泛能力分数；它还能指出原生任务成功具体在何处依赖与几何兼容的第一个动作块。
+\section*{方法}
+\subsection*{M0\_background}
+\emph{预注册研究范围，构造受控几何工具，并在运行交叉实验前建立经过恢复测试的匹配决策状态。}
+\begin{enumerate}[leftmargin=*,start=1]
+  \item 在生成任何交叉结果前，为匹配状态几何---动作交叉法(Matched-State Geometry-Action Crossover, GISS-2x2)建立带版本号的 JavaScript Object Notation（JSON）注册文件。文件头记录冻结策略检查点指纹、模拟器版本、允许的任务族和注册时间；每个决策事件记录唯一标识、任务族、指令与终止判定的指纹、可执行事件检测器、允许的动作前阶段、固定排除代码、以控制器时钟步计的动作块长度、基线成功次数及总次数、最低支持度和基线分层边界。现有方法没有给出这些具体值和规则。【作者需决定：在生成结果前预注册合格任务族、终止与事件规则、排除条件、动作块长度、基线支持度阈值和分层边界。】事件检测器在每个回合最多输出一条记录，其中包含事件标识、回合种子、模拟器时钟步和保存检查点的请求。用 JSON Schema 校验文件，冻结其加密指纹，并输出注册文件和机器可读的决策事件语法。
+\par\emph{为什么：} 这里的主张有意限定在该诊断工具的范围内。固定资格规则可以避免把一个小型诊断扩大成对 VLA 整体能力的宽泛主张。
+  \item 针对每个已注册任务及终点等价分层建立一条不可变的配对记录。记录内容包括配对标识、任务族、A/B 资产标识、视觉材质描述、碰撞网格指纹、质量、惯量、摩擦、关节与执行器参数，以及指令、物体身份、初始状态和终止判定的指纹；另附一份等价证书，逐项列出要比较的终点字段及容差。功能配对必须在已声明的碰撞几何字段上不同；仅外观控制配对的碰撞和物理指纹必须完全相同，只能在已声明的视觉字段上不同。现有方法尚未规定允许哪些几何变化及终点容差。【作者需决定：为每个任务族定义允许的功能变换、终点字段与容差，以及会使配对失效的接触或动力学变化。】用自动校验器拒绝任何未声明差异、重复成员、无效初始构型或未通过的等价证书，并为每个合格配对保存逐字段比较报告。
+\par\emph{为什么：} 功能配对提供源侧干预，仅外观配对则检验结果是否只是由渲染敏感性造成。
+  \item 当注册的决策事件触发时，把检查点 z 保存为带类型的状态快照。快照包含机器人关节位置与速度、物体位姿与速度、控制器累积状态、任务状态机、模拟器时钟与积分器状态、传感器状态以及全部随机数生成器状态；可切换的 A/B 几何句柄单独保存，不计入共享状态。按固定顺序序列化全部非几何字段，并要求 A 与 B 的非几何状态指纹、指令指纹和终止判定指纹完全相同。分别装载 A 与 B 后立即再次保存 z，并要求非几何状态指纹仍一致。若出现差异，则记录字段路径、期望值、实际值和 第1步（在生成任何交叉结果前） 的排除代码，不把该检查点判为合格。输出索引包含检查点位置、快照格式版本、加密指纹、配对与事件标识、几何选择键和完整不变量审计。
+\par\emph{为什么：} 固定决策状态，可以阻止开环状态差异或动力学差异被误计为几何条件下的动作兼容性。
+\end{enumerate}
+\subsection*{M1\_matched\_state\_crossover}
+\emph{从同一检查点查询由几何条件决定的动作块，执行全部四个源---接收单元，并估计控制接收几何后的兼容性交互量。}
+\begin{enumerate}[leftmargin=*,start=4]
+  \item 对每个源 \(s\in {A,B}\)，恢复 z，选择几何 \(G_{s}\)，并构造完全相同的全新历史模板 \(h_{0}\)。模板包含已注册指令、当前共享本体感知和当前渲染观测；更早的观测、动作、循环状态以及键值缓存(Key-Value Cache, KV Cache)字段必须显式为空。以评估模式加载同一冻结策略，采用相同预处理和解码种子 \(\xi \)，把 \(u_{s}\) 输出为带类型的原生动作数组，同时记录数组形状、控制模式、坐标系、单位、控制器频率、有效时钟步掩码和指纹。现有描述没有给出可执行的解码与重复性检验。【作者需决定：预注册各策略使用的采样器或解码器、重复次数、共享种子规则、等形动作数组之间的距离 d、各动作维度的归一化方法及容差 \(\epsilon _{det}\)。】在完全相同的配置下重复查询每幅不变渲染，计算所有两两距离；只有最大距离不超过 \(\epsilon _{det}\) 时才接收该源。保存配置、种子、动作块指纹与距离，然后销毁策略实例及全部循环状态、词元缓存和 KV Cache，再进行下一次查询。
+\noindent\emph{在同一检查点 z、同一份全新历史模板 \(h_{0}\) 与解码种子 \(\xi \) 下查询冻结策略，唯一变化是源几何 \(G_{s}\) 的渲染。}
+\par\noindent{\small\ttfamily [eq~1, raw LaTeX, not typeset] u\_s = \textbackslash\{\}pi\_\textbackslash\{\}theta\textbackslash\{\}!\textbackslash\{\}left(o(z,G\_s),h\_0;\textbackslash\{\}xi\textbackslash\{\}right),\textbackslash\{\}qquad s\textbackslash\{\}in\textbackslash\{\}\{A,B\textbackslash\{\}\}}
+\noindent\emph{同一渲染的重复查询必须使动作块差异低于预注册的确定性阈值，否则该配对不进入分析。}
+\par\noindent{\small\ttfamily [eq~2, raw LaTeX, not typeset] \textbackslash\{\}max\_\{k,k'\} d\textbackslash\{\}!\textbackslash\{\}left(u\_s\textasciicircum{}\{(k)\},u\_s\textasciicircum{}\{(k')\}\textbackslash\{\}right) \textbackslash\{\}le \textbackslash\{\}varepsilon\_\{\textbackslash\{\}mathrm\{det\}\}}
+\par\emph{为什么：} 动作块的变化应只由可见源几何引起。共享历史、受控解码、重复查询和清除 cache 可以防止隐藏推理状态或采样变化成为实际干预。
+  \item 针对每个配对、策略和重置种子建立恰好四条执行记录：每个接收几何 \(r\in {A,B}\) 都分别接收来自 \(s\in {A,B}\) 的动作块。对一条记录，恢复同一检查点和随机数生成器状态，选择接收几何 \(G_{r}\)，再按已注册的控制器频率与动作块长度，把 \(u_{s}\) 中每个有效指令原样交给策略的原生控制器；不得额外进行针对几何的坐标变换，仅当注册的原生终止判定触发时才能提前停止注入。动作块执行完后创建新的冻结策略实例，只允许用真实的接收侧轨迹初始化，不得使用源查询缓存。现有方法没有定义有状态策略需要的具体历史。【作者需决定：为每个策略规定哪些真实接收侧观测和已执行动作填入各历史槽、缺失槽如何补齐，以及哪些循环状态或缓存字段必须重置。】从真实动作后观测继续运行，直到原生成功、原生失败或已注册的回合上限。保存 \(Y_{r\leftarrow s}\)，并记录全部标识、检查点与动作块指纹、动作前后观测指纹、已执行动作、终止原因与时钟步、二元成功值和缓存已清空断言。
+\noindent\emph{\(Y_{r\leftarrow s}\) 表示把源几何 s 产生的动作块放入接收几何 r 执行，并从真实动作后观测继续闭环后是否完成原生任务。}
+\par\noindent{\small\ttfamily [eq~3, raw LaTeX, not typeset] Y\_\{r\textbackslash\{\}leftarrow s\}=\textbackslash\{\}mathbf\{1\}\textbackslash\{\}!\textbackslash\{\}left\textbackslash\{\}\{\textbackslash\{\}mathcal\{R\}\textbackslash\{\}!\textbackslash\{\}left(z,G\_r,u\_s,\textbackslash\{\}pi\_\textbackslash\{\}theta\textasciicircum{}\{\textbackslash\{\}mathrm\{fresh\}\}\textbackslash\{\}right)\textbackslash\{\}models\textbackslash\{\}tau\textbackslash\{\}right\textbackslash\{\}\},\textbackslash\{\}qquad r,s\textbackslash\{\}in\textbackslash\{\}\{A,B\textbackslash\{\}\}}
+\par\emph{为什么：} 在每个接收几何内部，交叉单元只改变第一个动作块来自哪个源。使用真实动作后观测继续执行，可以避开重放前缀和旧 cache 造成的伪差异。
+  \item 对每个配对、策略、重置种子和已注册分层建立一个完整四单元组；只有四个合格的 \(Y_{r\leftarrow s}\) 都存在时才纳入。先在每个接收几何内部计算同源成功减异源成功，再对两项差值取平均，得到该组的匹配状态交互量 \(I_{MS}\)。在每个任务族、策略和终点等价基线分层内，先对同一几何配对的重置种子取平均，再让各几何配对等权，避免重置种子较多的配对占据更大权重。计算配对不确定性时，枚举该分层内配对标识的全部有放回重采样，同时始终把一个配对的全部种子和四个单元一起保留；报告常规双侧 95\% 百分位区间，因为这种区间不要求二元差值服从高斯分布。逐分层报告点估计、区间、注册配对数、完整单元组数和合格覆盖率；覆盖率是通过重复性门槛的完整单元组数除以全部注册单元组数，并按原因代码统计排除项。不得把各分层合并成未注册的总体效应。
+\noindent\emph{匹配状态交互量对两个接收几何各自的同源优势取平均，从而抵消某个接收几何本身更容易造成的偏差。}
+\par\noindent{\small\ttfamily [eq~4, raw LaTeX, not typeset] I\_\{\textbackslash\{\}mathrm\{MS\}\}=\textbackslash\{\}tfrac\{1\}\{2\}\textbackslash\{\}left[\textbackslash\{\}left(Y\_\{A\textbackslash\{\}leftarrow A\}-Y\_\{A\textbackslash\{\}leftarrow B\}\textbackslash\{\}right)+\textbackslash\{\}left(Y\_\{B\textbackslash\{\}leftarrow B\}-Y\_\{B\textbackslash\{\}leftarrow A\}\textbackslash\{\}right)\textbackslash\{\}right]}
+\par\emph{为什么：} 这个对称交互量抵消了某个接收几何本身更容易的影响，测量的是对源几何的选择性兼容，而不是原始成功率或原始动作差异。
+\end{enumerate}
+\subsection*{M2\_validation}
+\emph{用仅外观控制、匹配状态扰动和确定性查询失败来检验该交互量。}
+\begin{enumerate}[leftmargin=*,start=7]
+  \item 把 第6步（对每个配对） 的估计过程原样用于仅外观记录；再复制每个功能检查点，在 A 与 B 中施加完全相同的已注册状态扰动且保持全部配对不变量，然后再次使用该估计过程。每条扰动记录包含状态字段路径、坐标系、带符号方向、幅度、接收侧共享施加规则、有效性检查和结果检查点指纹。现有方法没有定义扰动和两项统计门控规则。【作者需决定：预注册受扰动字段、坐标系、方向集合、最小非零幅度、不变量检查，以及在各分层内判定外观结果系统性为正和扰动后符号反转的不确定性规则。】针对每个任务族、策略和终点等价分层建立门控表，列出功能、外观和扰动后的 \(I_{MS}\) 估计及区间、重复性审计状态、各注册规则的结果、按原因代码统计的排除项和最终通过或失败值。当已注册的外观规则为真、扰动反转规则为真，或任一必需的相同渲染重复性审计失败时，输出失败；否则只对该表覆盖的合格记录输出通过。
+\par\emph{为什么：} 这些检查可以把功能几何兼容性与纹理偏好、只在单一检查点成立的脆弱巧合以及隐藏的随机推理状态区分开。
+\end{enumerate}
+\end{document}

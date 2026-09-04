@@ -1,0 +1,74 @@
+{
+  "episodes": 12000,
+  "num_objects": 3,
+  "max_detection_permutation_bias": 0.05955143078112912,
+  "max_abs_property_position_correlation": 0.041784628239947615,
+  "duplicate_property_episode_fraction": 0.35275645498953245,
+  "permutation_equivariance_error": 0.0,
+  "pusher_contact_rate": 1.0,
+  "context_pusher_contact_rate": 1.0,
+  "hard_id_test_count": 286,
+  "settle_displacement_q99": 7.387745708520302e-09,
+  "settle_displacement_max": 8.234323445321934e-09,
+  "sampled_layout_min_pairwise_distance": 0.10000097751617432,
+  "groups": {
+    "split0_regime0": {
+      "episodes": 6286,
+      "permutation_bias": 0.01580231201612048,
+      "permutation_tolerance": 0.04,
+      "max_abs_property_position_correlation": 0.007494907573476793,
+      "correlation_tolerance": 0.05,
+      "correlation_is_identity_gate": true
+    },
+    "split0_regime1": {
+      "episodes": 2114,
+      "permutation_bias": 0.018133081046988353,
+      "permutation_tolerance": 0.041011083461391006,
+      "max_abs_property_position_correlation": 0.012237944576090468,
+      "correlation_tolerance": 0.05022811413955104,
+      "correlation_is_identity_gate": false
+    },
+    "split1_regime0": {
+      "episodes": 1369,
+      "permutation_bias": 0.01509617725833945,
+      "permutation_tolerance": 0.05096265089632775,
+      "max_abs_property_position_correlation": 0.00842288417868232,
+      "correlation_tolerance": 0.062416245317797374,
+      "correlation_is_identity_gate": true
+    },
+    "split1_regime1": {
+      "episodes": 431,
+      "permutation_bias": 0.05955143078112912,
+      "permutation_tolerance": 0.09082702710535621,
+      "max_abs_property_position_correlation": 0.041127568697151305,
+      "correlation_tolerance": 0.11123993563102988,
+      "correlation_is_identity_gate": false
+    },
+    "split2_regime0": {
+      "episodes": 943,
+      "permutation_bias": 0.02403676210675154,
+      "permutation_tolerance": 0.06140417320780054,
+      "max_abs_property_position_correlation": 0.01584316338319877,
+      "correlation_tolerance": 0.07520444621829453,
+      "correlation_is_identity_gate": true
+    },
+    "split2_regime1": {
+      "episodes": 345,
+      "permutation_bias": 0.040579710144927505,
+      "permutation_tolerance": 0.10151826501691746,
+      "max_abs_property_position_correlation": 0.0230694418377125,
+      "correlation_tolerance": 0.12433397443204185,
+      "correlation_is_identity_gate": false
+    },
+    "split2_regime2": {
+      "episodes": 512,
+      "permutation_bias": 0.031901041666666685,
+      "permutation_tolerance": 0.08333333333333334,
+      "max_abs_property_position_correlation": 0.041784628239947615,
+      "correlation_tolerance": 0.10206207261596577,
+      "correlation_is_identity_gate": true
+    }
+  },
+  "group_failures": [],
+  "pass": true
+}

@@ -1,0 +1,8 @@
+[
+  {
+    "paper_id": "arxiv:2608.24885",
+    "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+    "retrieved_via": "host_web",
+    "why": "Newest diagnostic of the exact off-expert regime where imagined-policy optimization is vulnerable: it shows action-conditioned world models can ignore commanded actions or generate invalid rollouts and proposes intervention-effect alignment, a crucial competing explanation and baseline."
+  }
+]

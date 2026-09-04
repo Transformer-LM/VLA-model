@@ -1,0 +1,18 @@
+[
+  {
+    "finding": "S7 compiles point-bound anchors once in the calibrated robot frame, then executes motion and updates the observation without producing a transform that rebinds later tokens to the moved surfaces; literal robot-frame tokens become stale, while an object-local reading consumes an unproduced current pose/correspondence.",
+    "severity": "blocking",
+    "why_not_repaired": "Repair requires adding object tracking/correspondence and a token re-projection or recompilation path, which changes what the mechanism is and how it is trained. An abstain/clamp would only avoid the declared multi-phase geometry obstacle.",
+    "verbatim_step_quote": "7. At inference, compile Z once from the observed pair and relation, inject z_h before every pi0.5 action forward pass, execute the resulting chunk, update the observation, and advance or retain h using the transition head; output a closed-loop trajectory whose grasp, approach, alignment, and phase count can change with the pair.",
+    "executed_evidence": "Stdlib excerpt: target_t0=[0.0,0.1,0.2]; a2=[0.0,0.0,1.0]; stored=sum(p*w)=0.200. After the legal first-chunk translation +0.4, target_t1=[0.4,0.5,0.6] and current=sum(p*w)=0.600. Stdout: second_anchor_stored=0.200; second_anchor_current=0.600; stale_anchor_error=-0.400. Algebraically the error is -delta for every nonzero rigid translation delta, so the defect is structural rather than a claim about this magnitude.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "The declared branch-(i) obstacle is not confronted by construction: the terminal-pose-matched split makes terminal pose insufficient but does not make dense PointMap conditioning unable to infer role binding or phase topology from the same geometry, and a fair simpler rule is behaviorally identical on the executed instance.",
+    "severity": "blocking",
+    "why_not_repaired": "T5 equivalent_to_naive is an obstacle hole by contract. Recasting the contribution as branch (ii), withholding geometry from the baseline, or forcing a hypothesis-class restriction would change the claimed contribution or redesign the comparison rather than repair prose.",
+    "verbatim_step_quote": "NAIVE-BASELINE AUDIT — branch (i). The runnable naive version concatenates dense target and reference PointMap tokens plus the relation into pi0.5 through a generic prefix/adapter and trains the same LoRA parameters; it silently assumes end-to-end attention will preserve target/reference role binding and infer phase topology when object identities are recombined, a premise made false by the matched composition construction because identical terminal targets coexist with different required contact programs. FuncGraph confronts that failure head-on through point-bound ordered tokens, program-swap identification, and active-token advancement, rather than adding a larger encoder to the naive adapter.",
+    "executed_evidence": "Stdlib excerpt: stored_target_anchors=[anchor([0.0,0.1,0.2],a) for a in [[1,0,0],[0,0,1]]]; naive_initial_anchors=[min([0.0,0.1,0.2]),max([0.0,0.1,0.2])]. Stdout: stored_target_anchors=[0.0, 0.2]; naive_initial_anchors=[0.0, 0.2]; initial_program_vs_naive_max_abs_diff=0.000. The numeric equality is instance-contingent, but the blocking basis is structural: both arms receive P_T,P_R,r, and no S1-S7 operation removes that information or proves the dense hypothesis class cannot implement the same map; matching terminal pose rules out only a terminal-pose-only naive.",
+    "reading_dependence": "reading_robust"
+  }
+]

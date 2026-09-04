@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "embodied-vla-wam",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "面向长时 VLA 执行的 source-aware VLA×WAM verification：区分机器人执行失败、WAM 自身失配与观测含混，并用 counterfactual paired interventions 验证不同来源是否应触发 repair、reobserve 或 distrust/update WAM；禁止依赖触觉或力觉传感器",
+    "exploration_level": "direction",
+    "selected_macro_direction": "X8+X14 source-aware VLA-WAM verification and counterfactual causal evaluation",
+    "macro_direction_count": 1,
+    "embodiment": "open during field discovery; prioritize manipulation systems compatible with existing pi0.5 assets",
+    "task_family": "open during field discovery",
+    "observation_modalities": [
+      "RGB",
+      "RGB-D",
+      "PointMap or learned 3D geometry",
+      "proprioception",
+      "end-effector and joint execution traces",
+      "language"
+    ],
+    "action_representation": "open until evidence-based route selection",
+    "seed_topics": [
+      "VLA representation, memory, action heads, generalization, and test-time adaptation",
+      "video-generative and latent World Action Models",
+      "structured object, geometry, contact-proxy, relation, and uncertainty world states",
+      "world-model planning, verification, recovery, evaluation, data, and policy improvement",
+      "functional-geometry and compositional skill adaptation",
+      "cross-embodiment action effects and deployment-time identification",
+      "directions absent from the previous sixteen-direction map"
+    ],
+    "exploration_axes": [
+      "VLA-only, WAM-only, or VLA-WAM intersection",
+      "world-model representation",
+      "world-model role in the VLA lifecycle",
+      "policy-world-model coupling",
+      "learning and data regime",
+      "embodiment and task family",
+      "evaluation evidence and failure modes",
+      "non-tactile sensing feasibility",
+      "nearest-work density and reviewer-defensible novelty"
+    ],
+    "benchmark_priority": [
+      "LIBERO",
+      "RoboTwin",
+      "RoboCasa",
+      "ManiSkill",
+      "available offline robot data"
+    ],
+    "target_venues": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "ICLR",
+      "NeurIPS"
+    ],
+    "simulation_first": false,
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2024,
+    "literature_year_end": 2026
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": false,
+    "auto_select_idea": true,
+    "max_idea_cycles": 5,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "max_pilot_gpu_hours": 96.0,
+    "max_total_gpu_hours": 384.0,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": 0
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": false,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": true
+  },
+  "framework_preferences": [
+    "openpi",
+    "openvla-oft",
+    "cosmos-policy"
+  ]
+}

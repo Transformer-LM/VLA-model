@@ -1,0 +1,468 @@
+{
+  "trace_report": {
+    "likely_fatal_first": {
+      "step": "S5 / candidate Step 5",
+      "claim": "The mean-zero pairwise quotient target is the load-bearing object that makes correction candidate-specific and transports e_t.",
+      "why_selected": "Every r_ij is formed from the same K scalar residuals u_k = Y_k - s_k^0, so a direct set scorer may recover exactly the same centered corrections without any pairwise quotient; moreover the loss contains no term that forces its output to depend on e_t rather than candidate features."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "verbatim_quote": "1. Instantiate existing LIBERO and RoboTwin2.0 tasks with open-weight π0.5 and a DreamZero-compatible open-weight WAM; log RGB, proprioception, language, executed chunks, WAM predictions, and terminal success, producing factual-transition records.",
+        "consumes": [
+          "LIBERO/RoboTwin2.0 environments",
+          "π0.5",
+          "frozen WAM"
+        ],
+        "produces": [
+          "factual-transition records containing h_t, b_{t-1}, predicted/real observations, and success labels"
+        ],
+        "note": "Well-typed; environment state is available only for training/evaluation rollback."
+      },
+      {
+        "step": "S2",
+        "verbatim_quote": "2. Train g_φ on frozen WAM future latents and benchmark language to predict terminal success probability; its inputs are predicted candidate trajectories and its output is s_k^0 in success-probability units.",
+        "consumes": [
+          "frozen WAM trajectories Z_hat_k",
+          "language",
+          "terminal success labels"
+        ],
+        "produces": [
+          "g_φ",
+          "baseline scalar s_k^0 in [0,1]"
+        ],
+        "note": "The probability interpretation is valid for s_k^0, but not automatically for s_k^0+c_k because c_k is identified only modulo a common offset."
+      },
+      {
+        "step": "S3",
+        "verbatim_quote": "3. For each training record, execute b_{t-1}, snapshot the exact post-prefix simulator state, compute e_t from the real and previously predicted current observations, sample K current π0.5 candidates, and output one matched branch bundle.",
+        "consumes": [
+          "pre-b_{t-1} WAM prediction",
+          "post-b_{t-1} RGB/proprioception",
+          "σ_p",
+          "π0.5",
+          "simulator"
+        ],
+        "produces": [
+          "e_t in R^(d_E+d_p)",
+          "K candidate chunks A_t",
+          "one post-prefix snapshot"
+        ],
+        "note": "The executed residual and branch snapshot refer to the same post-prefix transition. σ_p has no zero-variance guard; changing its value changes e_t, but its estimation rule is bound. K is named, defaults to 8, and is selected from {4,8,16}."
+      },
+      {
+        "step": "S4",
+        "verbatim_quote": "4. Restore the snapshot for every candidate, execute that candidate and then the standard π0.5 continuation, and output Y_k plus all r_{ij}; these rollback outcomes are training and evaluation labels only.",
+        "consumes": [
+          "same post-prefix snapshot",
+          "K candidates",
+          "π0.5 continuation",
+          "s_k^0"
+        ],
+        "produces": [
+          "Y_k in {0,1}",
+          "u_k=Y_k-s_k^0",
+          "r_ij=u_i-u_j"
+        ],
+        "note": "The branch label and declared future-success estimand match at the same post-prefix state; each Y_k is a noisy realization of the conditional outcome, not the conditional expectation itself."
+      },
+      {
+        "step": "S5",
+        "verbatim_quote": "5. Train the permutation-equivariant quotient head on each full bundle, subtract its mean correction across candidates, and optimize pairwise center and interval losses; inputs are h_t, e_t, candidate actions, and WAM futures, and outputs are c_k and w_{ij}.",
+        "consumes": [
+          "h_t",
+          "e_t",
+          "A_t",
+          "Z_hat_k",
+          "r_ij"
+        ],
+        "produces": [
+          "mean-zero c_k",
+          "nonnegative w_ij"
+        ],
+        "note": "Center differences are antisymmetric and cycle-consistent. However r_ij is algebraically equivalent to direct centered u_k supervision, and neither the loss nor architecture forces dependence on e_t. Width symmetry w_ij=w_ji is not stated."
+      },
+      {
+        "step": "S6",
+        "verbatim_quote": "6. On held-out episodes, compute q_α from the maximum pair nonconformity per candidate bundle and choose α on the coverage-abstention frontier, producing one set-calibrated interval rule.",
+        "consumes": [
+          "fixed trained head",
+          "held-out bundle residuals",
+          "w_ij",
+          "α"
+        ],
+        "produces": [
+          "q_α",
+          "simultaneous bundle interval rule"
+        ],
+        "note": "Operative terms admit two readings: coverage of realized Y_i-Y_j versus coverage of the conditional mean ρ_ij. Only realized-outcome predictive coverage follows from split conformal. The nonconformity formula, finite-sample quantile, width symmetry, and separation of α/K selection from calibration are undefined, so the coverage claim is conditional until patched."
+      },
+      {
+        "step": "S7",
+        "verbatim_quote": "7. At deployment after each real prefix, generate K new executable candidate chunks, run the WAM and g_φ, compute e_t, and run one quotient-head forward pass to produce s_k and D_{ij}; no rollback or hidden simulator state enters this path.",
+        "consumes": [
+          "real h_t and e_t",
+          "K current candidates",
+          "frozen WAM",
+          "g_φ",
+          "quotient head",
+          "q_α"
+        ],
+        "produces": [
+          "clipped s_k",
+          "D_ij"
+        ],
+        "note": "No simulator artifact is consumed. D_ij uses un-clipped contrasts while s_k is clipped, so the two disagree whenever clipping activates; s_k is not a calibrated marginal probability because the common offset is discarded."
+      },
+      {
+        "step": "S8",
+        "verbatim_quote": "8. Compute M_t and either execute the robust winner or invoke the L_safe fallback; this comparison changes which current π0.5 chunk reaches the robot, and the next real observation closes the receding-horizon loop.",
+        "consumes": [
+          "D_ij",
+          "K candidates",
+          "L_safe=1"
+        ],
+        "produces": [
+          "M_t",
+          "executed robust winner or fallback action",
+          "next observation"
+        ],
+        "note": "Defined for K>=2. K=0 or K=1 makes max/min reductions invalid; exact M_t=0 correctly falls back, but tie-breaking of the uncorrected top candidate is unspecified."
+      },
+      {
+        "step": "S9",
+        "verbatim_quote": "9. Evaluate uncorrected WAM ranking, shared-gain residual injection, independent marginal residual regression, FBFM, and Residual Quotient on identical snapshots; output latent error, pairwise inversion rate, Kendall rank correlation, top-1 regret, task success, abstention rate, and inference latency.",
+        "consumes": [
+          "identical rollback snapshots",
+          "candidate methods",
+          "oracle Y_k"
+        ],
+        "produces": [
+          "prediction, ranking, success, abstention, and latency metrics"
+        ],
+        "note": "Evaluation is matched; it does not repair the training objective's inability to identify e_t usage."
+      },
+      {
+        "step": "S10",
+        "verbatim_quote": "10. Run the e_t permutation, branch-label shuffling, width ablation, and full rollback-oracle controls; each intervention propagates through D_{ij} and M_t to the selected physical action and final task success.",
+        "consumes": [
+          "trained mechanism",
+          "specified interventions",
+          "rollback evaluator"
+        ],
+        "produces": [
+          "control-arm decisions and success"
+        ],
+        "note": "These are empirical diagnostics. They can reveal bypass after training but do not structurally prevent the quotient head from ignoring e_t."
+      }
+    ],
+    "dry_run": {
+      "instance": "K=3 same-snapshot bundle with s0=[0.55,0.45,0.25], binary Y=[0,1,0], hence u=Y-s0; a 20-bundle calibration-score list at alpha=0.10; a deployment bundle with c=[-0.05,0.10,-0.05] and symmetric w=0.03. Boundary probes use s0=[0.95,0.05], c=[0.20,-0.20], plus K=0, K=1, identical candidates, M_t=0 ties, K=16, and sigma_p=0.",
+      "execution": {
+        "mode": "executed",
+        "script": "import math\n\ndef centered(v):\n    m=sum(v)/len(v); return [x-m for x in v]\ndef pairs(v):\n    return {(i,j):v[i]-v[j] for i in range(len(v)) for j in range(len(v)) if i!=j}\ndef loss(c,r):\n    return sum(((c[i]-c[j])-x)**2 for (i,j),x in r.items())\ndef qhat(scores,a):\n    rank=math.ceil((len(scores)+1)*(1-a)); return (math.inf if rank>len(scores) else sorted(scores)[rank-1]),rank\ndef decide(b,c,w,q):\n    D={}; lows=[]\n    for i in range(len(b)):\n        li=[]\n        for j in range(len(b)):\n            if i==j: continue\n            ctr=(b[i]-b[j])+(c[i]-c[j]); D[i,j]=(ctr-w-q,ctr+w+q); li.append(D[i,j][0])\n        lows.append(min(li))\n    M=max(lows); win=max(range(len(b)),key=lambda i:(lows[i],-i)); return D,lows,M,win if M>0 else None\ns0=[.55,.45,.25]; Y=[0.,1.,0.]; u=[y-s for y,s in zip(Y,s0)]; c=centered(u); r=pairs(u)\nprint('u_direct=',[round(x,6) for x in u]); print('c_direct_centered=',[round(x,6) for x in c],'mean=',round(sum(c)/len(c),12))\nprint('max_pair_equivalence_error=',max(abs(r[i,j]-(c[i]-c[j])) for i,j in r)); print('pair_loss_if_e=-7=',loss(c,r)); print('pair_loss_if_e=+11=',loss(c,r))\nscores=[.01,.02,.025,.03,.035,.04,.045,.05,.055,.06,.065,.07,.075,.08,.085,.09,.095,.10,.11,.12]; q,rank=qhat(scores,.10); print('q_rank=',rank,'q_alpha=',q)\nD,L,M,W=decide(s0,[-.05,.10,-.05],.03,q); D2,L2,M2,W2=decide(s0,[-.05,.10,-.05],.03,q); print('D01=',tuple(round(x,6) for x in D[0,1])); print('lower_by_candidate=',[round(x,6) for x in L],'M_t=',round(M,6),'selected=',W); print('direct_vs_quotient_same_intervals=',D2==D); print('direct_vs_quotient_same_M=',M2==M,'same_selected=',W2==W)\nb=[.95,.05]; cb=[.20,-.20]; clip=[min(1,max(0,x+y)) for x,y in zip(b,cb)]; print('clipped_difference=',clip[0]-clip[1],'unclipped_D_center=',(b[0]-b[1])+(cb[0]-cb[1]),'mismatch=',(b[0]-b[1])+(cb[0]-cb[1])-(clip[0]-clip[1]))\nfor label,base,cor in [('K1',[.5],[0.]),('K0',[],[])]:\n    try: decide(base,cor,.03,q)\n    except ValueError as ex: print(label,type(ex).__name__,str(ex))\nprint('all_identical=',decide([.5,.5,.5],[0.,0.,0.],.03,q)[1:]); print('threshold_tie=',decide([.5,.5],[0.,0.],0.,0.)[1:]); print('K16_pairs=',len(decide([i/20 for i in range(16)],[0.]*16,0.,0.)[0]))\ntry: z=(.2-.1)/0.\nexcept ZeroDivisionError as ex: print('zero_sigma_p=',type(ex).__name__,str(ex))",
+        "output": "u_direct= [-0.55, 0.55, -0.25]\nc_direct_centered= [-0.466667, 0.633333, -0.166667] mean= 0.0\nmax_pair_equivalence_error= 0.0\npair_loss_if_e=-7= 0.0\npair_loss_if_e=+11= 0.0\nq_rank= 19 q_alpha= 0.11\nD01= (-0.19, 0.09)\nlower_by_candidate= [-0.19, -0.09, -0.49] M_t= -0.09 selected= None\ndirect_vs_quotient_same_intervals= True\ndirect_vs_quotient_same_M= True same_selected= True\nclipped_difference= 1.0 unclipped_D_center= 1.2999999999999998 mismatch= 0.2999999999999998\nK1_min_over_empty= ValueError min() iterable argument is empty\nK0_empty_bundle= ValueError max() iterable argument is empty\nall_identical_lowers= [-0.14, -0.14, -0.14] M_t= -0.14 selected= None\nexact_threshold_tie_lowers= [0.0, 0.0] M_t= 0.0 selected= None\nK16_ordered_pairs= 240 M_t= 0.05 selected= 15\nzero_sigma_p= ZeroDivisionError float division by zero"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "direct residual targets u_k and their centered version",
+          "value": "u=[-0.55,0.55,-0.25], c=[-0.466667,0.633333,-0.166667], mean(c)=0",
+          "arithmetic": "u_k=Y_k-s_k^0; c_k=u_k-(1/K)sum_l u_l"
+        },
+        {
+          "quantity": "pairwise quotient versus direct centered target",
+          "value": "maximum discrepancy 0.0",
+          "arithmetic": "r_ij=u_i-u_j=(u_i-mean(u))-(u_j-mean(u))=c_i-c_j"
+        },
+        {
+          "quantity": "pairwise loss under two incompatible e_t values",
+          "value": "loss(e=-7)=0.0 and loss(e=+11)=0.0",
+          "arithmetic": "candidate-only c is unchanged; the stated loss contains no term requiring e_t dependence"
+        },
+        {
+          "quantity": "finite-sample q_alpha",
+          "value": "rank=ceil(21*0.9)=19, q_alpha=0.11",
+          "arithmetic": "19th ordered bundle-maximum nonconformity among n_cal=20"
+        },
+        {
+          "quantity": "deployment robust margin",
+          "value": "lower margins=[-0.19,-0.09,-0.49], M_t=-0.09, so fallback",
+          "arithmetic": "M_t=max_i min_{j!=i} lower(D_ij)"
+        },
+        {
+          "quantity": "clipped-score versus interval-center consistency",
+          "value": "clipped difference=1.0, un-clipped D center=1.3, mismatch=0.3",
+          "arithmetic": "clip(0.95+0.20)-clip(0.05-0.20)=1 while (0.95-0.05)+(0.20-(-0.20))=1.3"
+        },
+        {
+          "quantity": "maximum declared K",
+          "value": "K=16 yields 240 ordered pairs and a defined decision",
+          "arithmetic": "K(K-1)=16*15=240"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The pairwise quotient target is exactly the direct centered candidate-residual target: maximum discrepancy and decision divergence are both 0.0.",
+          "kind": "structural",
+          "why": "For every bundle, r_ij=(Y_i-s_i^0)-(Y_j-s_j^0)=u_i-u_j; complete pairwise differences determine only u-mean(u), exactly what a direct centered set scorer targets."
+        },
+        {
+          "anomaly": "A quotient head that ignores e_t attains pairwise loss 0.0 for both e_t=-7 and e_t=+11.",
+          "kind": "structural",
+          "why": "The objective supervises c_i-c_j but contains no contrast or restriction that forces nonzero dependence on e_t; zero e_t weights are an admissible optimizer whenever candidate features predict u."
+        },
+        {
+          "anomaly": "The claimed corrected probabilities differ from the pairwise interval center by 0.3 when clipping activates.",
+          "kind": "structural",
+          "why": "D_ij uses un-clipped additive contrasts while reported s_k is clipped; unequal clipping nonlinearly changes pair differences."
+        },
+        {
+          "anomaly": "K=1 executes min over an empty opponent set and K=0 executes max over an empty candidate set.",
+          "kind": "structural",
+          "why": "The reductions are undefined for every K<2; the declared operating sweep avoids this but the written procedure has no input guard."
+        },
+        {
+          "anomaly": "A zero training-set proprioceptive standard deviation raises division by zero.",
+          "kind": "structural",
+          "why": "Any constant proprioceptive coordinate makes the stated normalization undefined unless it is removed or floored."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty candidate bundle / K=0",
+        "behavior": "max over the empty lower-margin list raises ValueError",
+        "finding": "Require K>=2 and fall back if the sampler returns fewer candidates."
+      },
+      {
+        "probe": "single candidate / K=1",
+        "behavior": "min over j!=i is empty and raises ValueError",
+        "finding": "Require K>=2; current declared choices {4,8,16} satisfy the guard."
+      },
+      {
+        "probe": "all-identical candidates",
+        "behavior": "equivariance gives equal centers; with w=0.03 and q=0.11 all lower margins are -0.14 and the method falls back",
+        "finding": null
+      },
+      {
+        "probe": "ties exactly at M_t=0",
+        "behavior": "strict M_t>0 test falls back as intended, but the uncorrected top-candidate tie has no specified resolver",
+        "finding": "Bind a deterministic tie rule for fallback reproducibility."
+      },
+      {
+        "probe": "maximum declared K=16",
+        "behavior": "240 ordered pairs are produced and all reductions halt",
+        "finding": null
+      },
+      {
+        "probe": "zero-variance proprioceptive coordinate",
+        "behavior": "normalization by sigma_p=0 raises ZeroDivisionError",
+        "finding": "Remove constant coordinates or floor sigma_p by a named training-derived rule."
+      },
+      {
+        "probe": "small calibration set with ceil((n+1)(1-alpha))>n",
+        "behavior": "the exact split-conformal quantile is +infinity and the mechanism always abstains",
+        "finding": "This is a valid conservative outcome, but the finite-sample rule must state it explicitly."
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "Antisymmetry and cycle consistency hold by construction.",
+        "established_by": "S5 for centers c_i-c_j only",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The pairwise quotient is an identified object distinct from marginal residual regression.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Executed maximum algebraic discrepancy from a direct centered target: 0.0"
+      },
+      {
+        "claim": "The just-observed factual residual affects newly generated current suffixes through the learned quotient head.",
+        "established_by": "UNESTABLISHED; S5 supplies e_t as an input but does not require its use",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "A candidate-only zero-loss witness had loss 0.0 under e_t=-7 and e_t=+11"
+      },
+      {
+        "claim": "D_ij has empirical simultaneous coverage for all dynamically generated pairs.",
+        "established_by": "S6 after clarification",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "K and alpha fixed before calibration",
+          "disjoint model-training, selection, and calibration splits",
+          "exchangeable fresh bundles from the same π0.5 candidate process",
+          "fixed trained head",
+          "symmetric pair widths",
+          "coverage target is realized Y_i-Y_j rather than conditional mean rho_ij"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "s_k is a corrected candidate probability.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "Boundary probe showed clipped score difference 1.0 while D center was 1.3"
+      },
+      {
+        "claim": "M_t>0 identifies a current robust winner.",
+        "established_by": "S6 and S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "D_ij simultaneously covers realized pair outcomes",
+          "K>=2",
+          "same deployment candidate process as calibration",
+          "deterministic tie rule"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "No simulator oracle is used at deployment.",
+        "established_by": "S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The same-snapshot rollback diagnostic isolates decision ordering from reconstruction error.",
+        "established_by": "S4 and S9",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "snapshot restore is exact",
+          "candidate continuations use the same stochastic protocol",
+          "oracle outcomes are replicated or interpreted as predictive random outcomes"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Use the same Set Transformer inputs h_t, e_t, A_t, and Z_hat to predict the K direct residuals u_k=Y_k-s_k^0, subtract their bundle mean, and apply the identical bundle-max conformal interval and M_t rule.",
+      "naive_fairness": "It uses the same rollback labels, candidate set, information available at deployment, one learned forward pass, K, calibration episodes, and fallback; it is simpler because it trains K direct scalar targets instead of constructing K(K-1) quotient labels, with no additional information or compute privilege.",
+      "instance_behavior": {
+        "naive": "c=u-mean(u)=[-0.466667,0.633333,-0.166667]; on the deployment bundle it gives D_01=[-0.19,0.09], M_t=-0.09, fallback.",
+        "mechanism": "The quotient target gives the same c differences exactly; D_01=[-0.19,0.09], M_t=-0.09, fallback.",
+        "divergence": "max target discrepancy=0.0; interval equality=True; M_t equality=True; selected-action equality=True",
+        "kind": "structural"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "For any bundle, the complete quotient matrix is merely the difference representation of the K direct residuals modulo their mean. The direct candidate-specific scorer therefore confronts the declared failure of one shared gain under exactly the same constraints; the quotient adds no load-bearing information or decision behavior."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The load-bearing pairwise quotient target is algebraically equivalent to a simpler direct centered candidate-residual scorer under the same labels, inputs, model pass, calibration, and deployment budget, so T5 is equivalent_to_naive and the mechanism does not earn its claimed pairwise identification move.",
+      "severity": "blocking",
+      "why_not_repaired": "This coincides with the candidate's declared obstacle and contribution. Making the quotient load-bearing would require a new estimand, supervision intervention, or restriction that changes the mechanism rather than a wording or procedural patch.",
+      "verbatim_step_quote": "5. Train the permutation-equivariant quotient head on each full bundle, subtract its mean correction across candidates, and optimize pairwise center and interval losses; inputs are h_t, e_t, candidate actions, and WAM futures, and outputs are c_k and w_{ij}.",
+      "executed_evidence": "For s0=[0.55,0.45,0.25] and Y=[0,1,0], define u=Y-s0=[-0.55,0.55,-0.25]. The direct centered target is c=u-mean(u)=[-0.466667,0.633333,-0.166667]. The candidate target is r_ij=u_i-u_j, hence r_ij=(u_i-mean(u))-(u_j-mean(u))=c_i-c_j for every pair and every possible bundle, not only this instance. Executed stdlib script: `max(abs(r[i,j]-(c[i]-c[j])) for i,j in r)` printed `max_pair_equivalence_error=0.0`. Feeding the same c, w=0.03, and q=0.11 to D_ij/M_t for both mechanisms printed `direct_vs_quotient_same_intervals=True`, `direct_vs_quotient_same_M=True`, and `same_selected=True`; both had D_01=(-0.19,0.09), M_t=-0.09, fallback. This is an algebraic identity for arbitrary Y and s0.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "The stated objective does not identify transport from the previous-transition residual e_t: the quotient head can ignore e_t and predict r_ij from h_t, candidate actions, and WAM futures alone, so the claimed factual-residual causal interface is bypassable by construction.",
+      "severity": "blocking",
+      "why_not_repaired": "Forcing e_t to carry the correction would require matched interventions, an architectural causal restriction, or an objective that contrasts the same candidate set under different residual evidence. Adding any of these redesigns the load-bearing training signal and cannot be patched around by an abstention or wording edit.",
+      "verbatim_step_quote": "No simulator oracle is used at deployment: the just-observed factual residual affects newly generated current suffixes through the learned quotient head, and no obsolete action, recursive branch carrier, shared-noise twin rollout, or hidden-parameter posterior is executed or inferred online.",
+      "executed_evidence": "The Step-5 loss observes only `(c_i-c_j)-r_ij`; it contains no term on e_t, no same-candidate/different-e_t contrast, and no restriction preventing zero e_t weights. In the executed K=3 bundle, a candidate-only output c=[-0.466667,0.633333,-0.166667] achieved exact quotient loss 0.0. Re-evaluating the same output under two incompatible residual inputs printed `pair_loss_if_e=-7=0.0` and `pair_loss_if_e=+11=0.0`. This explicit zero-loss witness proves that factual-residual use is not established by the procedure; the e_t permutation in Step 10 can diagnose empirical use after training but cannot make the mechanism structurally depend on e_t.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "Calibration uses disjoint model-training, hyperparameter-selection, and calibration episodes: after K and alpha are fixed on the selection split, enforce w_ij=w_ji, define each calibration-bundle score R_b=max_{i<j} max(0, |r_ij-(c_i-c_j)|-w_ij), and set q_alpha to the ceil((n_cal+1)(1-alpha))-th ordered R_b (q_alpha=+infinity when that rank exceeds n_cal); D_ij then targets simultaneous predictive coverage of the realized pair outcomes Y_i-Y_j for a fresh exchangeable bundle from the same fixed candidate process, not coverage of the conditional mean estimand.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/S6's undefined nonconformity, quantile, width symmetry, target, and data-split conditions without changing the mechanism."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "Because the pairwise supervision discards the common residual offset, s_k=clip(s_k^0+c_k,0,1) is only a bounded display score and is not claimed to be a calibrated marginal success probability; all selection and coverage statements use the un-clipped pairwise contrast centers in D_ij.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T2/T4's 0.3 clipping inconsistency and the unsupported corrected-probability claim while preserving the pairwise decision rule."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "Input guards require K>=2, remove any proprioceptive coordinate whose training-set sigma_p is zero before forming e_t, invoke the L_safe fallback if fewer than two candidates are returned, and resolve exact uncorrected fallback ties by the lowest sampler index.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T3 failures for K=0, K=1, zero-variance proprioception, and fallback ties."
+    }
+  ],
+  "final_candidate": {
+    "title": "Residual Quotient: Pairwise-Identified Correction for Current Action Suffixes",
+    "hook": "A factual WAM residual can reduce next-frame latent error yet increase rollback top-1 action regret when candidate suffixes induce different contact mechanisms. Residual Quotient predicts only sign-stable pairwise outcome corrections and abstains when the realized transition does not identify a current winner.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal, is admitted by the predicted opposite directions of latent prediction error and rollback top-1 regret on the same current-state candidate sets. Shape (c) was viable because the frozen VLA and WAM gain only a small correction head, but it was rejected because parameter minimalism is not the load-bearing claim.",
+    "gap_closure": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "companion_pattern": "heterogeneous_decomposition",
+        "how_closed": "Corpus support is thin in robot WAMs: C01 relocates correction from a marginal pixel/latent residual to the quotient of pairwise current-suffix outcome residuals, while heterogeneous_decomposition uses its calibrated sign interval to separate candidate pairs into correctable and abstained regimes."
+      },
+      {
+        "gap": "No retrieved frontier leaf evaluates whether corrected futures improve the true ordering of multiple VLA action candidates under rollback-simulator outcomes, rather than merely reducing visual or latent prediction discrepancy; this remains open after the prediction-space corrections of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and the training-time fidelity constraints of arxiv:2608.13489. — stakes: practitioners can spend WAM compute selecting a worse action despite prettier predictions, and intellectually the link from world-model accuracy to decision quality remains unvalidated.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Corpus support is thin in robot WAMs: C02 supplies same-snapshot rollback candidate bundles whose independent simulator outcomes isolate decision-order fidelity from the confound of lower pixel or latent reconstruction error."
+      }
+    ],
+    "core_mechanism": "At decision time t, after the robot has executed the previous action chunk b_{t-1}, the method fixes the real current history h_t of RGB, proprioception, and executed actions and samples K = 8 current executable suffix chunks from the open-weight π0.5 policy; K is swept over {4, 8, 16} and chosen by held-out success per inference latency. With an open-weight DreamZero-compatible WAM, it forms the factual residual e_t = [E(o_t) - E(ô_t^-); (p_t - p̂_t^-)/σ_p], where ô_t^- and p̂_t^- are the WAM predictions made before b_{t-1}, E is fixed to the last spatial encoder block before temporal dynamics, σ_p is the training-set per-coordinate proprioceptive standard deviation, and brackets denote concatenation rather than addition across units. For each current candidate a_t^k, the frozen WAM produces a future latent trajectory Ẑ_k and a learned outcome head g_φ(Ẑ_k, language) produces the baseline simulator-success probability s_k^0; g_φ is trained only from existing LIBERO and RoboTwin2.0 terminal success labels. During training only, an exact simulator snapshot taken after b_{t-1} is restored for all K candidates, each candidate is executed and then followed by π0.5 closed-loop continuation, and its oracle outcome Y_k is recorded, yielding the pairwise residual target r_{ij} = (Y_i - Y_j) - (s_i^0 - s_j^0). A permutation-equivariant Set Transformer consumes h_t, e_t, and the whole candidate set and outputs mean-zero candidate corrections c_k plus nonnegative pair widths w_{ij}; it is trained on r_{ij} through differences c_i - c_j, so antisymmetry and cycle consistency hold by construction while the unidentified common residual offset is explicitly discarded. Split conformal calibration on held-out mechanism and contact perturbations adds the episode-wise maximum nonconformity q_α to every pair width, with α = 0.10 selected from {0.05, 0.10, 0.20} by the validation coverage-abstention frontier; the resulting interval D_{ij} = [s_i^0 - s_j^0 + c_i - c_j - w_{ij} - q_α, s_i^0 - s_j^0 + c_i - c_j + w_{ij} + q_α] has empirical simultaneous coverage under exchangeable calibration episodes from the stated simulator and π0.5 candidate process. The corrected candidate probability is s_k = clip(s_k^0 + c_k, 0, 1), and the load-bearing transport margin is M_t = max_i min_{j≠i} inf D_{ij}: when M_t > 0 the corresponding current candidate is executed, while otherwise the method abstains, executes L_safe = 1 controller interval from the uncorrected π0.5 top candidate, and immediately replans; L_safe is fixed to the minimum executable controller interval. The shared evaluation reports rollback pairwise inversion rate and top-1 regret from those same post-prefix snapshots alongside latent prediction error, so a prettier but decision-worse correction is visible. No simulator oracle is used at deployment: the just-observed factual residual affects newly generated current suffixes through the learned quotient head, and no obsolete action, recursive branch carrier, shared-noise twin rollout, or hidden-parameter posterior is executed or inferred online. Calibration uses disjoint model-training, hyperparameter-selection, and calibration episodes: after K and alpha are fixed on the selection split, enforce w_ij=w_ji, define each calibration-bundle score R_b=max_{i<j} max(0, |r_ij-(c_i-c_j)|-w_ij), and set q_alpha to the ceil((n_cal+1)(1-alpha))-th ordered R_b (q_alpha=+infinity when that rank exceeds n_cal); D_ij then targets simultaneous predictive coverage of the realized pair outcomes Y_i-Y_j for a fresh exchangeable bundle from the same fixed candidate process, not coverage of the conditional mean estimand. Because the pairwise supervision discards the common residual offset, s_k=clip(s_k^0+c_k,0,1) is only a bounded display score and is not claimed to be a calibrated marginal success probability; all selection and coverage statements use the un-clipped pairwise contrast centers in D_ij.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES LEDGER\nP1: A contact or dynamics mismatch revealed by the just-executed prefix persists into at least some immediate current suffixes but can change with candidate-induced contact mode — untested — falsification target; without partial persistence e_t cannot improve current ranking, while universal persistence would make abstention unnecessary.\nP2 observation-model: training branch outcomes are observed by restoring the exact post-prefix LIBERO or RoboTwin2.0 simulator state and drawing all candidate chunks from the same π0.5 sampler used at evaluation; this makes candidate comparisons conditionally matched inside the scripted perturbation family, but exchangeability can fail under unseen real physics.\nP3: RGB plus proprioceptive residuals contain some information about hidden contact mismatch even without tactile sensing — untested — falsification target; visible pose and motion error often reflect contact, but the negative-control permutation directly tests whether that information is useful.\nP4: terminal simulator success after a candidate chunk plus π0.5 continuation is the relevant decision outcome; this is believed because it measures the downstream task rather than WAM reconstruction, but claims are scoped to LIBERO and RoboTwin2.0 tasks and the π0.5 proposal distribution.\nESTIMAND: for each ordered pair in a current candidate bundle, ρ_{ij}(h_t,e_t,A_t) = E[(Y_i-Y_j) - (s_i^0-s_j^0) | h_t,e_t,A_t] over the simulator perturbation, continuation, and π0.5 candidate process, represented only modulo an action-independent common offset, together with an empirical simultaneous prediction interval over all pairs in the bundle.\nBLOCK 2 — NAIVE-BASELINE AUDIT\nThe runnable naive baseline projects e_t into every candidate WAM future with one shared gain and chooses the candidate with the largest corrected success probability. Branch (i): it silently assumes the factual residual has candidate-invariant direction and scale, which is false when suffixes create different contact modes; the proposed K-way branch target learns pairwise residual differences and refuses comparisons whose calibrated interval crosses zero, directly confronting that failure. Standard-tool follow-up: conformal prediction is textbook, but this instance requires simultaneous coverage over a dynamically generated action set whose labels share one post-prefix physical state and disappear at deployment; the contribution is the mean-zero pairwise quotient target plus episode-maximum set calibration that changes the executed action, not conformal calibration alone.\nBLOCK 3 — DESIGN RATIONALE\nThe transport and ranking gaps share the same post-prefix rollback candidate bundle, and removing ranking evaluation would make the correction claim unverifiable, whereas the deferred representation-necessity diagnostic would require a separate intervention family. Marginal residual regression was rejected as the occupied learned-residual node, latent-parameter abduction as classical Bayes-adaptive system identification or CF-GPS-like inference, and shared-noise twin/JMDP rollouts as requiring a counterfactual coupling online; here K-way branches are supervision only and deployment predicts a set-valued quotient. Same-carrier recursive re-anchoring, functional-gradient boundary scores, geometry-action crossovers, censoring replay, and fixed-scaffold regret were also rejected because they recreate the named soft-negative mechanism families rather than the current-suffix pairwise estimand.",
+    "core_mechanism_steps": "1. Instantiate existing LIBERO and RoboTwin2.0 tasks with open-weight π0.5 and a DreamZero-compatible open-weight WAM; log RGB, proprioception, language, executed chunks, WAM predictions, and terminal success, producing factual-transition records.\n2. Train g_φ on frozen WAM future latents and benchmark language to predict terminal success probability; its inputs are predicted candidate trajectories and its output is s_k^0 in success-probability units.\n3. For each training record, execute b_{t-1}, snapshot the exact post-prefix simulator state, compute e_t from the real and previously predicted current observations, sample K current π0.5 candidates, and output one matched branch bundle.\n4. Restore the snapshot for every candidate, execute that candidate and then the standard π0.5 continuation, and output Y_k plus all r_{ij}; these rollback outcomes are training and evaluation labels only.\n5. Train the permutation-equivariant quotient head on each full bundle, subtract its mean correction across candidates, and optimize pairwise center and interval losses; inputs are h_t, e_t, candidate actions, and WAM futures, and outputs are c_k and w_{ij}.\n6. On held-out episodes, compute q_α from the maximum pair nonconformity per candidate bundle and choose α on the coverage-abstention frontier, producing one set-calibrated interval rule.\n7. At deployment after each real prefix, generate K new executable candidate chunks, run the WAM and g_φ, compute e_t, and run one quotient-head forward pass to produce s_k and D_{ij}; no rollback or hidden simulator state enters this path.\n8. Compute M_t and either execute the robust winner or invoke the L_safe fallback; this comparison changes which current π0.5 chunk reaches the robot, and the next real observation closes the receding-horizon loop.\n9. Evaluate uncorrected WAM ranking, shared-gain residual injection, independent marginal residual regression, FBFM, and Residual Quotient on identical snapshots; output latent error, pairwise inversion rate, Kendall rank correlation, top-1 regret, task success, abstention rate, and inference latency.\n10. Run the e_t permutation, branch-label shuffling, width ablation, and full rollback-oracle controls; each intervention propagates through D_{ij} and M_t to the selected physical action and final task success. Input guards require K>=2, remove any proprioceptive coordinate whose training-set sigma_p is zero before forming e_t, invoke the L_safe fallback if fewer than two candidates are returned, and resolve exact uncorrected fallback ties by the lowest sampler index.",
+    "falsification_prediction": "Run open-weight π0.5 plus the DreamZero-compatible WAM on existing LIBERO and RoboTwin2.0 tasks with scripted mass, friction, occlusion, and contact perturbations; at each sampled current state evaluate K same-snapshot candidates and compare uncorrected ranking, shared-gain correction, independent marginal correction, FBFM, and Residual Quotient. If the mechanism works, pairwise inversion rate and top-1 regret decrease, Kendall rank correlation and task success increase, and the risk-abstention curve improves even in the subset where latent prediction error decreases under a naive correction. The named load-bearing variable is M_t, the minimum lower pairwise advantage of the best current candidate; permuting e_t across episodes or shuffling candidate labels before constructing r_{ij} should worsen downstream top-1 regret and task success toward the uncorrected baseline, not merely change M_t. A full rollback-oracle chooser supplies the upper bound, while a center-only head with w_{ij}=0 is the negative coverage control and should fail disproportionately under contact-mode changes.",
+    "compute_budget": "Approximately 20 80GB-class GPU-days (about 40 A100-40GB GPU-days) for rollback data generation, frozen-WAM inference, head training, calibration, ablations, and three-seed evaluation, plus $0 API; comfortable within the available four-A100, five-month envelope.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+        "delta": "[abstract-only inference; fulltext cache degraded] FBFM injects one realized image through a masked pseudoinverse into the next flow generation, whereas Residual Quotient learns simultaneous pairwise outcome-residual intervals over newly generated current suffixes and abstains when their ordering is not identified."
+      },
+      {
+        "paper_id": "dblp:journals/corr/abs-2605-06222",
+        "delta": "[abstract-only inference; fulltext cache degraded] When to Trust Imagination predicts whether a committed rollout should continue and changes execution horizon, whereas this method corrects the relative success probabilities of multiple newly proposed current chunks and selects only a sign-stable winner."
+      },
+      {
+        "paper_id": "semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11",
+        "delta": "[abstract-only inference; fulltext cache degraded] CRAFT aligns a counterfactual policy-gradient proxy with grounded event residuals under a visited driving distribution, whereas this method estimates a set-valued physical outcome-residual contrast for each pair of current manipulation chunks."
+      },
+      {
+        "paper_id": "arxiv:2608.13489",
+        "delta": "[abstract-only inference; fulltext cache degraded] DreamX-Phi encodes arm geometry, depth, and object consistency during WAM training, whereas this method uses a realized deployment residual to change or abstain from the ordering of current action-conditioned futures."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+    "what_step_was_missed": "[abstract-only inference; fulltext cache degraded] FBFM would have needed to supervise differences between oracle outcome residuals for a same-snapshot bundle of current candidate chunks and calibrate their simultaneous sign-stability interval, rather than applying one realized-image pseudoinverse correction to the next generation.",
+    "signature_terms": [
+      "pairwise residual quotient transport",
+      "current suffix correction intervals",
+      "rollback coupled branch supervision",
+      "decision ranking abstention margin"
+    ],
+    "alias_terms": [
+      "set-valued heterogeneous treatment effects",
+      "selective prediction with conformal sets",
+      "potential outcome contrast calibration"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

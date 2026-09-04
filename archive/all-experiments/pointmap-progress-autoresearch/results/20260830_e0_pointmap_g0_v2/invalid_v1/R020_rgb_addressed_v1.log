@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/train_representation_pilot.py", line 551, in <module>
+    main()
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/train_representation_pilot.py", line 482, in main
+    result, predictions = train_one(
+                          ^^^^^^^^^^
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/train_representation_pilot.py", line 327, in train_one
+    loss.backward()
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/lib/python3.11/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/lib/python3.11/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/lib/python3.11/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: adaptive_avg_pool2d_backward_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.

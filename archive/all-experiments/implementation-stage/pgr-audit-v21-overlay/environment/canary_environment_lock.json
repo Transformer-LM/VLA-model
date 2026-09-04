@@ -1,0 +1,19 @@
+{
+  "cuda_runtime": "12.4",
+  "executable": "<PERSONAL_RESEARCH_ROOT>/conda/envs/cf-dynalign/bin/python3.11",
+  "executable_sha256": "a37d0aed7955c5162cf6431a2e9af131ee9abe0e525a5b129e09919d147edbf8",
+  "packages": {
+    "accelerate": "1.5.2",
+    "numpy": "1.26.4",
+    "omegaconf": "2.3.1",
+    "peft": "0.19.1",
+    "pillow": "12.2.0",
+    "scipy": "1.17.1",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "4.57.0"
+  },
+  "pip_freeze_all_sorted_sha256": "5f932b5552373f8da62612c73179b278bb1ba3f6bf52e8c29e9765fe2e3272ad",
+  "python": "3.11.15",
+  "schema": "pgr-canary-environment-lock-v1"
+}

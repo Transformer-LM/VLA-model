@@ -1,0 +1,88 @@
+{
+  "fulltext_degraded": true,
+  "evidence_warning": "All method-level differentiation against the lit_table remains abstract-only because the supplied full-text evidence is degraded. Collision evidence was judged only at the supplied title/abstract level; no unfetched method details are inferred.",
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption 閳?stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions 鈥?the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate, so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "no",
+            "reasoning": "The four-cell matched-state response contrast makes current-chunk geometry compatibility measurable when equal endpoint outcomes previously hid it; the claimed reveal is narrower than merely restating that geometry matters."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "borderline",
+            "reasoning": "All evidence is confined to RoboTwin 2.0 and no physical transfer is proposed; explicit simulator/family scoping prevents a direct trigger, but ecological validity remains unestablished."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "The candidate no longer equates I_MS with strategy identity or necessity: it defines a directly intervened native-success response contrast and uses simulator task success independently of policy self-judgment."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "Neither policy supplies labels or judgments; checkpoint eligibility is established before policy inference and outcomes use the native RoboTwin predicate."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "borderline",
+            "reasoning": "Four task families and 64 paired states are narrow and the state-restore tooling is engineering-heavy, but the candidate repeatedly scopes inference to eligible pair-state-policy-reset tuples and makes the matched-state interaction, not the tooling, the contribution."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The endpoint-sufficiency gap under controlled_diagnostic_design avoids circular strategy definitions and broad transfer claims, but the quoted synthetic-only and small-sample lessons remain honest borderlines. They do not trigger rejection because the candidate expressly limits the estimand to eligible RoboTwin tuples and reports coverage rather than extrapolating to real deployment."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption 閳?stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "Steps 1-6 produce the C02 artifact directly: preregistered A/B scenes, separately replayed common-prefix checkpoints with complete non-geometry state equality, fresh identical policy histories and decode tapes, one base-frame action convention, and all four source-chunk/recipient-scene cells followed by source-cache-free recipient continuation. Step 7 reports I_MS and coverage using the native success oracle, while Steps 8-9 supply appearance, decoder, and state-jitter controls.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The candidate performs C02's distinctive controlled-instance and independent-oracle operation rather than merely invoking a generic diagnostic label. Its matched-state producer blocks post-treatment state mismatch before the intervention and the four-cell divergence is the headline object."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The single-pattern composition contains no heterogeneous_decomposition pairing and therefore matches none of the three documented reject-favored compositions."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7172173298",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "The supplied abstract for Stage-Replay Divergence Follows the KV Cache is the most mechanism-specific threat because it shows that apparently matched replay prefixes can diverge solely through retained versus reconstructed inference state, and it uses a fixed-prefix 2x2 plus cache controls. It does not subsume the robot contribution on the available abstract: GISS-2x2 explicitly clones one fresh inference/history template, resets decode noise for both source queries, rejects nondeterministic identical-render repeats, discards every source-query cache before continuation, and restarts the recipient from its actual post-chunk observation. The collision therefore sharpens a necessary validity condition already present rather than establishing the same geometry-action assay.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": "Metamorphic testing and paired crossover testing for cyber-physical controllers; scoop-check vocabulary: 'metamorphic robot policy testing' and 'paired simulator action crossover'."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "G_src, the source geometry rendered at the identical z to produce the current action chunk",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph fixes the RoboTwin pair-policy experiment, predicts positive downstream native-success I_MS, and replaces functional G_src with appearance-only pairs whose collision mesh and physics are shared. Collapse of native-success I_MS, rather than a change in G_src itself, is the non-tautological control outcome; no unsourced numeric outcome bar is asserted."
+  },
+  "blocking_findings_disposition": [],
+  "verdict": "advance",
+  "verdict_layer": "soft_judgment",
+  "verdict_rationale": "recipe_application_check.entries[0].verdict is applied: the candidate now binds exact A/B non-geometry state, fresh cache/history, one action frame, and source-cache-free recipient continuation before measuring the four-cell native-success interaction. gap_closure_reject_check retains the quoted synthetic-only and small-sample lessons as borderlines, but the estimand explicitly retreats to current-chunk compatibility on eligible RoboTwin tuples, reports N_eligible/N_attempted, and does not claim strategy identity, global necessity, or real transfer. The closest collision threat concerns cache-sensitive replay and is already directly controlled; fulltext_degraded therefore remains a novelty warning, not evidence of exact overlap.",
+  "revision_targets": []
+}

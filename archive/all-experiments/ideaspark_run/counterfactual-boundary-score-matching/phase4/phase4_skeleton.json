@@ -1,0 +1,1613 @@
+{
+  "title": "Boundary Score Matching for Functional-Geometry Counterfactuals",
+  "title_zh": "<TODO[title_zh]: Chinese translation; keep proper nouns and method acronyms in English>",
+  "method_name": "<TODO[method_name]: short handle for the proposed method, e.g. 'Persistent Baseline GRPO (PB-GRPO)'>",
+  "hook": "On minimal geometry flips, whole-chunk feasibility tuning can reduce invalid rollouts while lowering alternative-positive coverage; boundary-local shaping should improve edited-scene success without that coverage loss. The surprising result is the sign split between physical reliability and per-mode retention, not another average-success gain.",
+  "abstract_draft": "<TODO[abstract_draft]: 150-250 words. Order: problem → bottleneck (cite ≥ 1 Phase 0 paper) → contribution (one sentence) → falsification prediction → expected outcome.>",
+  "motivation": {
+    "problem_framing": "<TODO[motivation.problem_framing]: 2-3 paragraphs framing the user's problem. Reference the bottleneck_statement from Phase 1 and the closest_adjacent papers. NOT a category label.>",
+    "why_now": "<TODO[motivation.why_now]: one paragraph on what makes this gap timely. Cite the most recent Phase 0 papers (within last 4-12 months) that get close but stop short.>",
+    "why_prior_stopped": [
+      {
+        "paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+        "venue_year": "arXiv 2026-04",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[0].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[0].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[0].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+        "venue_year": "arXiv 2026-05",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[1].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[1].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[1].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+        "venue_year": "arXiv 2026-05",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[2].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[2].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[2].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "dblp:journals/corr/abs-2606-08530",
+        "venue_year": "arXiv 2026",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[3].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[3].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[3].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+        "venue_year": "arXiv 2026-04",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[4].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[4].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[4].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      }
+    ],
+    "what_changes_when_gap_closes": "<TODO[motivation.what_changes_when_gap_closes]: 2-3 sentences naming downstream consequences. NOT \"better numbers\" — name the specific capability or theoretical statement that becomes available>"
+  },
+  "core_claim": "<TODO[core_claim]: one sentence; should mirror the candidate's hook stripped to its load-bearing assertion>",
+  "sub_claims": "<TODO[sub_claims]: list of {id, statement, supports_which_aspect}; 2-4 entries>",
+  "key_equations": "<TODO[key_equations]: optional 3-6 equations; each {id, linked_step_id, latex, description, description_zh}. Emit [] (literal empty list) for a pure-prose candidate.>",
+  "method_flow": {
+    "high_level_pipeline": "<TODO[method_flow.high_level_pipeline]: 3-5 sentences narrating the method end-to-end as a story: input → key transformation → output>",
+    "steps": "<TODO[method_flow.steps]: derive from candidate.core_mechanism_steps; emit a list where each entry is {step_id, title, what_changes, why_this_step, linked_component, linked_falsification, input, output}. Each step_id MUST be S1, S2, ... in reading order. linked_component ∈ {theory, engineering, both}; linked_falsification ∈ {metric_specification, mechanism_distinguisher, both}.>",
+    "design_reasoning_echo": "<TODO[method_flow.design_reasoning_echo]: one paragraph echoing or condensing candidate.core_mechanism_reasoning>"
+  },
+  "plain_motivation_en": "<TODO[plain_motivation_en]: plain-language English rendering of motivation for a reader outside this subfield. Simplify LANGUAGE only — never drop the load-bearing mechanism. Spell out every abbreviation on first use.>",
+  "plain_motivation_zh": "<TODO[plain_motivation_zh]: Chinese 普通版 counterpart. Same content; keep identifiers/symbols/acronyms in English.>",
+  "plain_method_steps_en": "<TODO[plain_method_steps_en]: list of {step_id, what_to_do, why_this_makes_sense}; SAME step_ids and SAME order as method_flow.steps.>",
+  "plain_method_steps_zh": "<TODO[plain_method_steps_zh]: Chinese 普通版 counterpart; English for identifiers/symbols/acronyms.>",
+  "plain_method_modules_en": "<TODO[plain_method_modules_en]: group the CONTRIBUTION steps into named modules; list of {module_id, purpose_oneline, step_ids}.>",
+  "plain_method_modules_zh": "<TODO[plain_method_modules_zh]: Chinese 普通版 counterpart.>",
+  "falsification_prediction": "Post-train the same continuous-action π0.5 initialization on BoundaryFlip-RoboTwin pairs and compare ordinary imitation, global feasibility supervision, whole-chunk preference tuning, and the proposed objective on held-out task and geometry families. If the mechanism works, edited-scene success rises and invalid-mode execution falls relative to ordinary imitation, while alternative-positive coverage and worst-mode success remain higher and complement score drift remains lower than under global and whole-chunk shaping. The load-bearing variable is the mean held-out boundary margin M_B = E[d_θ]; permuting violation masks or positive/invalid pair identities while holding data volume and all loss weights fixed should collapse the edited-scene success and mode-coverage advantage, not merely change M_B. If those permutations preserve the downstream advantage, or if L_alt removal leaves worst-mode success unchanged while coverage is already high, boundary-local credit and alternative-positive preservation are not the operative causes. As mandatory pre-training gates, report eligibility among all compiler-attempted pairs, the complete mask-length and roster-size distributions, and each excluded pair's exclusion reason plus frozen-policy edited-scene success and invalid-mode execution; no downstream mechanism claim is eligible unless these gates show that proper boundary runs and alternative-mode rosters occur beyond a negligible selected subset.",
+  "compute_budget": "Approximately 56 A100-80GB GPU-days for simulator-conditioned post-training, four baselines, mask/preservation ablations, and repeated held-out evaluations; on the available 4xA100 allocation this is about 14 wall-days and is comfortable within one paper cycle. No paid APIs are used; simulator pair generation is a modest scripted RoboTwin 2.0 resource and runs separately on CPU workers.",
+  "almost_prior_paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+  "almost_prior_venue_year": "arXiv 2026-04",
+  "what_step_was_missed": "It would have needed to pair the identical successful action across a minimum feasibility-flipping geometry edit, extract the first causal violation mask, and use that mask in a reference-adjusted score preference while independently anchoring every feasible alternative mode; its available abstract establishes only a simple geometry-grounded feasibility objective.",
+  "feasibility_validation": {
+    "compute": {
+      "verdict": "infeasible",
+      "rationale": "GPU line ≈ 56 vs 4 GPU-day (1400%) → infeasible. Overall (worse line) → infeasible."
+    },
+    "data": {
+      "verdict": "<TODO[feasibility_validation.data.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.data.rationale]: one sentence: required data sources accessible; if any closed/private, name a public substitute>"
+    },
+    "theoretical": {
+      "verdict": "<TODO[feasibility_validation.theoretical.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no theoretical contribution)>",
+      "rationale": "<TODO[feasibility_validation.theoretical.rationale]: one sentence; if tight, name the missing prerequisite>"
+    },
+    "engineering": {
+      "verdict": "<TODO[feasibility_validation.engineering.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no engineering contribution)>",
+      "rationale": "<TODO[feasibility_validation.engineering.rationale]: one sentence; if tight, name the binding implementation cost>"
+    },
+    "falsification": {
+      "verdict": "<TODO[feasibility_validation.falsification.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.falsification.rationale]: one sentence: the falsification_prediction experiment is concrete enough to run with available tooling>"
+    },
+    "overall": "<TODO[feasibility_validation.overall]: feasible | tight | infeasible>"
+  },
+  "differentiation_from_lit": [
+    {
+      "paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+      "venue_year": "arXiv 2026-04",
+      "delta": "Where the abstract reports a simple geometry-grounded feasibility objective, this candidate constructs same-action minimal geometry flips, assigns preference credit only to the first simulator-certified violation segment, and separately protects every compiler-enumerated positive mode (abstract-only inference because full text was unavailable)."
+    },
+    {
+      "paper_id": "semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+      "venue_year": "arXiv 2026-04",
+      "delta": "Where STARRY jointly denoises future spatial-temporal latents and actions with depth-conditioned attention, this candidate measures a reference-adjusted local score margin from counterfactual validity flips and constrains score drift outside the causal segment (abstract-only inference because full text was unavailable)."
+    },
+    {
+      "paper_id": "semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+      "venue_year": "arXiv 2026-05",
+      "delta": "Where Action Manifold Learning predicts on a geometry-guided valid manifold, this candidate explicitly audits and optimizes worst-mode retention when one previously valid action becomes invalid under a minimal geometry edit (abstract-only inference because full text was unavailable)."
+    },
+    {
+      "paper_id": "semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+      "venue_year": "arXiv 2026-05",
+      "delta": "Where KeyStone executes the medoid of the largest sampled action cluster, this candidate post-trains a boundary-local conditional score while treating minority feasible modes as protected positives rather than candidates to discard (abstract-only inference because full text was unavailable)."
+    },
+    {
+      "paper_id": "dblp:journals/corr/abs-2606-08530",
+      "venue_year": "arXiv 2026",
+      "delta": "Where GEAR-VLA integrates aligned 3D features and a canonicalized continuous-action expert, this candidate constructs a temporal counterfactual credit signal and a matched mode-retention diagnostic without adding an oracle geometry channel at inference (abstract-only inference because full text was unavailable)."
+    }
+  ],
+  "reviewer_concerns_and_responses": [
+    {
+      "attack": "Paper-pointed threat: Can Explicit Physical Feasibility Benefit VLA Learning? (lit_table). From the available abstract, this work can subsume the broad claim that explicit geometry feasibility should suppress invalid robot actions. The present candidate is only distinguishable by first-violation localization, complement retention, and compiler-relative worst-mode preservation; the available record is insufficient to verify that those mechanisms are absent from the full paper.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[0].response]: 2-3 sentences: explain where in the candidate (which field) the defense is anchored; reference the Phase 3.2 verdict_rationale when relevant>",
+      "fields_changed_to_address": [
+        "core_mechanism",
+        "core_mechanism_steps",
+        "falsification_prediction",
+        "core_mechanism_reasoning"
+      ]
+    },
+    {
+      "attack": "Un-retrieved mechanism family flagged by the audit (parametric knowledge, not in the retrieved pool): Novelty coverage is materially degraded: arXiv collision retrieval returned 0, only 2 of 25 literature records have full text, and 6 host references remain unresolved. The many lexical collision hits do not contain an identified exact mechanism, but they cannot compensate for the missing primary evidence; a nearby feasibility-weighting or local-credit family remains unexcluded. — novelty vs this family is UNVERIFIED; run a targeted scoop-check on that vocabulary before investing.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[1].response]: 1-2 sentences: state what a scoop-check on the named family must establish for the candidate's delta to survive (do NOT claim the check already passed)>",
+      "fields_changed_to_address": [
+        "core_mechanism",
+        "core_mechanism_steps",
+        "falsification_prediction",
+        "core_mechanism_reasoning"
+      ]
+    },
+    {
+      "attack": "Gap-closure reject-check borderline on gap 1 (C04): Presenting a sensitivity or redundancy proxy as the novelty invites the verdict that it rediscovers known mixed-precision or low-rank results unless it is sharply differentiated from the obvious prior; Skipping any analysis of why the heterogeneity exists - the data or value distribution that drives the partition - makes the technical novelty and the potential impact impossible to assess.; Bolting together established components (distillation plus pruning plus calibration) without an error bound or artifact specific to the new setting reads as incremental even when the target applicatio",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[2].response]: 2-3 sentences: anchor the defense in a specific candidate field>",
+      "fields_changed_to_address": [
+        "core_mechanism",
+        "core_mechanism_steps",
+        "falsification_prediction",
+        "core_mechanism_reasoning"
+      ]
+    },
+    {
+      "attack": "Gap-closure reject-check borderline on gap 2 (C02): A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.; Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and; Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[3].response]: 2-3 sentences: anchor the defense in a specific candidate field>",
+      "fields_changed_to_address": [
+        "core_mechanism",
+        "core_mechanism_steps",
+        "falsification_prediction",
+        "core_mechanism_reasoning"
+      ]
+    },
+    {
+      "attack": "Anti-pattern matched: audit_decomp_supervisor. Required mitigation: The decomposition criterion must be derivable from observed structure or task-level supervision (not just intuition), AND the manufactured signal must be the unique signal the decomposition implies. An ablation that holds the decomposition fixed and varies the signal (or vice versa) must show the two are not conflated.",
+      "severity": "blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[4].response]: 2-3 sentences: name how the candidate's core_mechanism delivers the mitigation>",
+      "fields_changed_to_address": [
+        "core_mechanism",
+        "core_mechanism_steps",
+        "falsification_prediction",
+        "core_mechanism_reasoning"
+      ]
+    }
+  ],
+  "domain_landscape": {
+    "n_papers": 18,
+    "pattern_distribution": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 7,
+        "share": 0.39,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 3,
+        "share": 0.17,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 6,
+        "share": 0.33,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 4,
+        "share": 0.22,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 2,
+        "share": 0.11,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 9,
+        "share": 0.5,
+        "saturation_band": "saturated"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 9,
+        "share": 0.5,
+        "saturation_band": "saturated"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 3,
+        "share": 0.17,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 2,
+        "share": 0.11,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      }
+    ],
+    "candidate_uses": [
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "role": "closes Gap 1",
+        "sub_pattern_id": "C04 (Decompose for Differentiated Treatment)",
+        "saturation_in_domain": "saturated"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "role": "closes Gap 2",
+        "sub_pattern_id": "C02 (Design a Confound-Isolating Diagnostic)",
+        "saturation_in_domain": "untested"
+      }
+    ],
+    "position_note": "<TODO[domain_landscape.position_note]: one sentence describing how the candidate's chosen patterns sit relative to the area's pattern usage; descriptive, not prescriptive>"
+  },
+  "literature_breakdown": {
+    "summary": {
+      "n_phase0_total": 62,
+      "n_phase0_on_topic": 37,
+      "n_phase0_outside_taxonomy": 25,
+      "n_phase3_collision": 174
+    },
+    "phase0_by_pattern": [
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "pattern_name": "Adapt by Conditioning, Not Retraining",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:ff54d4f113ca3ef58b8cad2da072a7a7ffb84bdb",
+            "title": "Contrastive Conceptor Activation Steering (COAST): Unlocking Vision-Language-Action Models through Hidden States",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Action experts fail to decode latent task knowledge"
+          },
+          {
+            "paper_id": "openalex:W7124237390",
+            "title": "Exploration and refinement of language models for applications in the food industry",
+            "venue_year": "RepositóriUM (Universidade do Minho) 2024",
+            "bottleneck_targeted": "Food-industry decisions need grounded regulatory and scientific answers"
+          }
+        ]
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "pattern_name": "Prove Equivalence to Unify",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:8de3190c9ccb997d1efc8f0a1b8c516284bad3a8",
+            "title": "Geometric Foundations of Stochastic and Quantum Dynamics",
+            "venue_year": "arXiv 2026-03",
+            "bottleneck_targeted": "Stochastic and quantum dynamics lack one geometric formulation"
+          }
+        ]
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "pattern_name": "Substitute the Operator or Representation",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:aaef4e8a3bd4a3a4f6673b2d4bce0a3237783cb9",
+            "title": "Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation",
+            "venue_year": "arXiv 2026-08",
+            "bottleneck_targeted": "Brittle text-serialized spatial grounding for robot execution"
+          },
+          {
+            "paper_id": "semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646",
+            "title": "Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Monocular depth ambiguity and inefficient action regression"
+          },
+          {
+            "paper_id": "semanticscholar:2f554d4f6d67c4c976890ff586fa2fb9df2e1ef4",
+            "title": "WAM-Flow: Parallel Coarse-to-Fine Motion Planning via Discrete Flow Matching for Autonomous Driving",
+            "venue_year": "arXiv 2025-12",
+            "bottleneck_targeted": "Autoregressive driving planning limits parallel refinement and efficiency"
+          }
+        ]
+      },
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "pattern_name": "Audit and Pivot an Assumption",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:6009a40c4b14cf0fcc68308d9ff0436d14e194df",
+            "title": "Global Convergence of Wasserstein Policy Gradient for Entropy-Regularized Reinforcement Learning",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Static convex Langevin analyses fail for Bellman-coupled policies"
+          },
+          {
+            "paper_id": "openalex:W4414079252",
+            "title": "Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping",
+            "venue_year": "arXiv 2025-06",
+            "bottleneck_targeted": "Fixed-batch policy comparison wastes scarce evaluation trials"
+          }
+        ]
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "pattern_name": "Design a Confound-Isolating Diagnostic",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+            "title": "Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "Imitation learning lacks explicit physical-feasibility supervision"
+          },
+          {
+            "paper_id": "semanticscholar:32bf6ef68aa5e8ce1ac92408884bbfa1da0ae010",
+            "title": "Structure-Function Relationship of the Ryanodine Receptor Cluster Network in Sinoatrial Node Cells",
+            "venue_year": "bioRxiv 2024",
+            "bottleneck_targeted": "CRU-network heterogeneity effects on pacemaking are unresolved"
+          },
+          {
+            "paper_id": "openalex:W4415555135",
+            "title": "Reproducible Human Neural Circuits Printed with Single-Cell Precision Reveal the Functional Roles of Ephaptic Coupling",
+            "venue_year": "ACS Nano 2025",
+            "bottleneck_targeted": "Random neural circuits obscure ephaptic-coupling mechanisms"
+          }
+        ]
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "pattern_name": "Decompose and Delegate to Solvers",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:362f28a1607124c789927343acdc3b6bf4f1e277",
+            "title": "HSC-VLA: Hierarchical Scene-Clearing for Robust Bimanual Manipulation in Dense Clutter",
+            "venue_year": "arXiv 2026-03",
+            "bottleneck_targeted": "Visual clutter corrupts long-horizon grounding and control"
+          },
+          {
+            "paper_id": "semanticscholar:da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+            "title": "Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "End-to-end policies lack memory, decomposition, and recovery"
+          },
+          {
+            "paper_id": "openalex:W4403247871",
+            "title": "Efficient 3D robotic mapping and navigation method in complex construction environments",
+            "venue_year": "Computer-Aided Civil and Infrastructure Engineering 2024",
+            "bottleneck_targeted": "Construction robots need safe mapping and dynamic navigation"
+          },
+          {
+            "paper_id": "openalex:W4409282048",
+            "title": "Obstacle Avoidance Technique for Mobile Robots at Autonomous Human-Robot Collaborative Warehouse Environments",
+            "venue_year": "Sensors 2025",
+            "bottleneck_targeted": "Dynamic warehouse navigation needs safe real-time obstacle avoidance"
+          }
+        ]
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "pattern_name": "Liberate a Fixed Generative Component",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:bead4e40b0071bc673fb84a4e5674da3825fae35",
+            "title": "Generative Control as Optimization: Time Unconditional Flow Matching for Adaptive and Robust Robotic Control",
+            "venue_year": "arXiv 2026-03",
+            "bottleneck_targeted": "Fixed integration schedules waste compute across state difficulty"
+          },
+          {
+            "paper_id": "semanticscholar:af2d4fec7861da27a07787e6373b4330af2e7d2e",
+            "title": "FORGE-Tree: Diffusion-Forcing Tree Search for Long-Horizon Robot Manipulation",
+            "venue_year": "arXiv 2025-10",
+            "bottleneck_targeted": "Fixed whole-trajectory denoising compounds long-horizon geometry errors"
+          }
+        ]
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "pattern_name": "Decompose for Differentiated Treatment",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:e53d86ef632de55eb728b048871f264442331248",
+            "title": "GuidedVLA: Specifying Task-Relevant Factors via Plug-and-Play Action Attention Specialization",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Monolithic action decoders learn spurious visual correlations"
+          },
+          {
+            "paper_id": "semanticscholar:ba93bc4608fa8ef5a94db1a920ba4ebf72955434",
+            "title": "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
+            "venue_year": "arXiv 2026-02",
+            "bottleneck_targeted": "No single visual backbone dominates accuracy and cost"
+          },
+          {
+            "paper_id": "semanticscholar:310b6b4048e36d5948de19fd26e112cbf05fa754",
+            "title": "EfficientVLA: Training-Free Acceleration and Compression for Vision-Language-Action Models",
+            "venue_year": "Neural Information Processing Systems 2025",
+            "bottleneck_targeted": "Redundancy across VLA modules blocks efficient deployment"
+          },
+          {
+            "paper_id": "openalex:W7158431367",
+            "title": "Closed-loop metrics-based dataset optimization toward deep learning models",
+            "venue_year": "Portuguese National Funding Agency for Science, Research and Technology (RCAAP Project by FCT) 2026",
+            "bottleneck_targeted": "Dataset splits and augmentation ignore intrinsic data structure"
+          }
+        ]
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "pattern_name": "Reframe as a Solvable Object",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+            "title": "Geometry Guided Self-Consistency for Physical AI",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Single stochastic action samples are brittle across episodes"
+          },
+          {
+            "paper_id": "semanticscholar:1b7964b018b34b568f4cf1f95796ca94972ea497",
+            "title": "Flows on Measure Spaces and Applications in Machine Learning",
+            "venue_year": "Oberwolfach Reports 2026",
+            "bottleneck_targeted": "Existing theory inadequately covers learning flows on measure spaces"
+          },
+          {
+            "paper_id": "openalex:W4403029182",
+            "title": "Intelligent mobile robot navigation in unknown and complex environment using reinforcement learning technique",
+            "venue_year": "Scientific Reports 2024",
+            "bottleneck_targeted": "Mobile robots need adaptive collision-free unknown-environment navigation"
+          }
+        ]
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "pattern_name": "Manufacture the Supervisory Signal",
+        "papers": [
+          {
+            "paper_id": "openalex:W4406755630",
+            "title": "Learning segmentation from point trajectories",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Video segmentation lacks long-term motion supervision"
+          }
+        ]
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "pattern_name": "Design a Property-Targeting Pretext Objective",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:a1d10dd3d0eb9d4f6c143976a13c4249dd59528e",
+            "title": "FLARE: Robot Learning with Implicit World Modeling",
+            "venue_year": "arXiv 2025-05",
+            "bottleneck_targeted": "Policies lack future consequence modeling and action-free video use"
+          }
+        ]
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "pattern_name": "Unify Heterogeneous Inputs into One Space",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:c6c0f17d789e690ca4d152a7329b8fb7829132e3",
+            "title": "X-DiffVLA: X-Embodied Diffusion Action Heads for Vision-Language-Action Models",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Embodiment-specific action heads impede cross-robot transfer"
+          },
+          {
+            "paper_id": "semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+            "title": "STARRY: Spatial-Temporal Action-Centric World Modeling for Robotic Manipulation",
+            "venue_year": "arXiv 2026-04",
+            "bottleneck_targeted": "Future prediction is weakly coupled to action execution"
+          },
+          {
+            "paper_id": "semanticscholar:d2c4fc3915649b76e92ebe0dd5eb594df222816d",
+            "title": "FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation",
+            "venue_year": "arXiv 2026-02",
+            "bottleneck_targeted": "Robot actions omit transferable hand-object interaction structure"
+          },
+          {
+            "paper_id": "semanticscholar:74257100ad8c273b90dbaaba190e1f699ec9df0a",
+            "title": "WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN",
+            "venue_year": "arXiv 2026-08",
+            "bottleneck_targeted": "World-action generation lacks persistent 3D scene context"
+          },
+          {
+            "paper_id": "semanticscholar:c6be5e959e325398885bd7bdeb20044e38908a5d",
+            "title": "Training, learning and inference: unified dynamics of neural systems",
+            "venue_year": "arXiv 2026-08",
+            "bottleneck_targeted": "Training, learning, and inference lack shared causal coordinates"
+          },
+          {
+            "paper_id": "semanticscholar:fd713056f07fd05b0412b268082a20ca962b2886",
+            "title": "Semantic-Contact Fields for Category-Level Generalizable Tactile Tool Manipulation",
+            "venue_year": "arXiv 2026-02",
+            "bottleneck_targeted": "Semantic transfer and physical contact grounding remain disconnected"
+          },
+          {
+            "paper_id": "semanticscholar:7d69bdbb2aca8443527e11b4c8008557b2fa8559",
+            "title": "A Multi-Scale Physics-Guided Dynamic Animation Generation Framework for Digital Media Characters based on Coupled Simulation and Optimization Theory",
+            "venue_year": "International Congress on Information and Communication Technology 2026",
+            "bottleneck_targeted": "Character animation lacks coupled cross-scale physical consistency"
+          },
+          {
+            "paper_id": "semanticscholar:e1f898f28c08f7548f0d617d0062be575a193fb8",
+            "title": "Compose Your Policies! Improving Diffusion-based or Flow-based Robot Policies via Test-time Distribution-level Composition",
+            "venue_year": "arXiv 2025-10",
+            "bottleneck_targeted": "Policy improvement otherwise requires new interaction data"
+          },
+          {
+            "paper_id": "openalex:W7128096114",
+            "title": "Interfaze: The Future of AI is built on Task-Specific Small Models",
+            "venue_year": "arXiv (Cornell University) 2026",
+            "bottleneck_targeted": "Generalist models inefficiently handle deterministic specialist tasks"
+          },
+          {
+            "paper_id": "openalex:W4414902199",
+            "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Separate fast and slow robot models limit knowledge sharing"
+          },
+          {
+            "paper_id": "dblp:journals/corr/abs-2606-08530",
+            "title": "GEAR-VLA: Learning Geometry-Aware Action Representations for Generalizable Robotic Manipulation",
+            "venue_year": "arXiv 2026",
+            "bottleneck_targeted": "Low-level trajectory supervision, misaligned 3D features, and embodiment-specific action spaces impede VLA generalization"
+          }
+        ]
+      }
+    ],
+    "phase0_outside_taxonomy": [
+      {
+        "paper_id": "semanticscholar:6331362f4ef1ca18bc2ec7cb065ccfa3860525d3",
+        "title": "Synthesis, structural elucidation, DFT, and antimicrobial evaluation of novel Cu(II)-hydrazone Schiff base complexes",
+        "venue_year": "Bulletin of the Chemical Society of Ethiopia 2026",
+        "bottleneck_targeted": "Antimicrobial characterization of synthesized copper complexes"
+      },
+      {
+        "paper_id": "semanticscholar:47b7b74b8140ecbd7d11569b3472e5487cbf8c0e",
+        "title": "Exploration of Dithiocarbamate鈥怢inked Kojic Acid鈥揚iperazine Hybrids: Synthesis, Characterization, and Biological Screening",
+        "venue_year": "ChemistrySelect 2025",
+        "bottleneck_targeted": "Drug resistance motivates hybrid antimicrobial compounds"
+      },
+      {
+        "paper_id": "semanticscholar:1912e6ef035d88bdcf602447ab714eee19d15f39",
+        "title": "ScanBot: Towards Intelligent Surface Scanning in Embodied Robotic Systems",
+        "venue_year": "arXiv 2025",
+        "bottleneck_targeted": "Abstract unavailable"
+      },
+      {
+        "paper_id": "semanticscholar:f2b5c144bb32fcd0a69bc5b2caa09a9fa6239421",
+        "title": "Molecular recognition-assisted targeting and controlled drug release mechanisms",
+        "venue_year": "International journal of zoology and applied biosciences 2025",
+        "bottleneck_targeted": "Targeted drug delivery requires selective molecular recognition"
+      },
+      {
+        "paper_id": "semanticscholar:0fa7e0ed38fb45a82f0c6ef6acbb001bed286944",
+        "title": "Journal of Physics: Conference Series: Preface",
+        "venue_year": "Journal of Physics, Conference Series 2024",
+        "bottleneck_targeted": "Conference-issue preface summarizes Jahn-Teller research"
+      },
+      {
+        "paper_id": "openalex:W4402890475",
+        "title": "Foundation models in robotics: Applications, challenges, and the future",
+        "venue_year": "The International Journal of Robotics Research 2024",
+        "bottleneck_targeted": "Foundation-model robotics landscape is fragmented"
+      },
+      {
+        "paper_id": "openalex:W4415452041",
+        "title": "A Scoping Review of AI-Based Approaches for Detecting Autism Traits Using Voice and Behavioral Data",
+        "venue_year": "Bioengineering 2025",
+        "bottleneck_targeted": "AI autism diagnostics lack clinical generalizability"
+      },
+      {
+        "paper_id": "openalex:W4416541426",
+        "title": "Towards Forceful Robotic Foundation Models: a Literature Survey",
+        "venue_year": "arXiv (Cornell University) 2025",
+        "bottleneck_targeted": "Force integration in generalist manipulation lacks clear guidance"
+      },
+      {
+        "paper_id": "openalex:W4404900050",
+        "title": "Integrating collaborative robots in manufacturing, logistics, and agriculture: Expert perspectives on technical, safety, and human factors",
+        "venue_year": "Frontiers in Robotics and AI 2024",
+        "bottleneck_targeted": "Cobot adoption faces sector-specific technical and safety barriers"
+      },
+      {
+        "paper_id": "openalex:W4414248298",
+        "title": "Injectable Deep Eutectic Solvent鈥怋ased Ionic Gel With Rapid Gelation and Broad Hemostatic Functionality",
+        "venue_year": "Advanced Healthcare Materials 2025",
+        "bottleneck_targeted": "Rapid injectable hemostasis needs adhesion and biocompatibility"
+      },
+      {
+        "paper_id": "openalex:W4408387073",
+        "title": "Overcoming Biological Barriers in Cancer Therapy: Cell Membrane-Based Nanocarrier Strategies for Precision Delivery",
+        "venue_year": "International Journal of Nanomedicine 2025",
+        "bottleneck_targeted": "Cancer nanocarriers face sequential biological delivery barriers"
+      },
+      {
+        "paper_id": "openalex:W4414857074",
+        "title": "Embodied AI: From LLMs to World Models",
+        "venue_year": "arXiv 2025-10",
+        "bottleneck_targeted": "Embodied-AI literature spans disconnected LLM and world-model lines"
+      },
+      {
+        "paper_id": "openalex:W7152948315",
+        "title": "David B. Smith Chats with Monday 1.0",
+        "venue_year": "CUNY Academic Works (City University of New York) 2025",
+        "bottleneck_targeted": "Archival continuity for extended human-AI conversations"
+      },
+      {
+        "paper_id": "openalex:W4402684925",
+        "title": "Last鈥怣ile Delivery: A Process View, Framework, and Research Agenda",
+        "venue_year": "Journal of Business Logistics 2024",
+        "bottleneck_targeted": "Last-mile-delivery research lacks an updated process-level synthesis"
+      },
+      {
+        "paper_id": "openalex:W4414198610",
+        "title": "Vision-Language-Action Models for Robotics: A Review Towards Real-World Applications",
+        "venue_year": "IEEE Access 2025",
+        "bottleneck_targeted": "VLA research lacks a full-stack deployment synthesis"
+      },
+      {
+        "paper_id": "openalex:W4417112759",
+        "title": "How AI-based computer vision algorithms are impacting the sports industry: a survey",
+        "venue_year": "Discover Artificial Intelligence 2025",
+        "bottleneck_targeted": "Sports computer-vision applications lack consolidated coverage"
+      },
+      {
+        "paper_id": "openalex:W4414704765",
+        "title": "A Review of Multi-Sensor Fusion in Autonomous Driving",
+        "venue_year": "Sensors 2025",
+        "bottleneck_targeted": "Autonomous-driving sensor fusion lacks a consolidated taxonomy"
+      },
+      {
+        "paper_id": "openalex:W4404703236",
+        "title": "A survey on deep 3D human pose estimation",
+        "venue_year": "Artificial Intelligence Review 2024",
+        "bottleneck_targeted": "Deep 3D pose-estimation methods lack consolidated comparison"
+      },
+      {
+        "paper_id": "openalex:W4403074774",
+        "title": "A Survey of Robot Intelligence with Large Language Models",
+        "venue_year": "Applied Sciences 2024",
+        "bottleneck_targeted": "LLM-based robot intelligence literature lacks organized synthesis"
+      },
+      {
+        "paper_id": "openalex:W4417174623",
+        "title": "A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation",
+        "venue_year": "arXiv 2025-12",
+        "bottleneck_targeted": "RL-VLA approaches lack lifecycle-wide organization"
+      },
+      {
+        "paper_id": "openalex:W4404521028",
+        "title": "Sensor-Enabled Safety Systems for Human鈥揜obot Collaboration: A Review",
+        "venue_year": "IEEE Sensors Journal 2024",
+        "bottleneck_targeted": "Sensor-enabled cobot safety evidence is fragmented"
+      },
+      {
+        "paper_id": "openalex:W7118215373",
+        "title": "A Comprehensive Review of Human-Robot Collaborative Manufacturing Systems: Technologies, Applications, and Future Trends",
+        "venue_year": "Sustainability 2026",
+        "bottleneck_targeted": "Human-robot manufacturing literature lacks comprehensive synthesis"
+      },
+      {
+        "paper_id": "openalex:W4407173922",
+        "title": "A Survey of Deep Learning-Based Pedestrian Trajectory Prediction: Challenges and Solutions",
+        "venue_year": "Sensors 2025",
+        "bottleneck_targeted": "Pedestrian-trajectory prediction challenges lack organized synthesis"
+      },
+      {
+        "paper_id": "openalex:W4413303109",
+        "title": "A review of visual perception technology for intelligent fruit harvesting robots",
+        "venue_year": "Frontiers in Plant Science 2025",
+        "bottleneck_targeted": "Fruit-harvesting visual perception evidence is fragmented"
+      },
+      {
+        "paper_id": "openalex:W7122835568",
+        "title": "Intelligent hybrid optimization algorithms for multi-agent aerial robots path planning: review of the recent emerging trends and open research directions",
+        "venue_year": "Artificial Intelligence Review 2026",
+        "bottleneck_targeted": "Multi-UAV path-planning methods lack structured recent synthesis"
+      }
+    ],
+    "phase3_collision": [
+      {
+        "paper_id": "openalex:W7128491913",
+        "title": "Explainable AI-driven customer churn prediction: a multi-model ensemble approach with SHAP-based feature analysis",
+        "venue_year": "Frontiers in Artificial Intelligence 2026"
+      },
+      {
+        "paper_id": "openalex:W7119219516",
+        "title": "Unlocking yield potential through credit access: insights from smallholder tomato farmers in Nigeria",
+        "venue_year": "BMC Agriculture 2026"
+      },
+      {
+        "paper_id": "openalex:W7119195128",
+        "title": "HR-Mamba: Building Footprint Segmentation with Geometry-Driven Boundary Regularization",
+        "venue_year": "Sensors 2026"
+      },
+      {
+        "paper_id": "semanticscholar:11d362399b0174f94bccc2bd5071c207a69d29ba",
+        "title": "Mode of action-specific and cause-specific retention of biologic and targeted synthetic disease-modifying antirheumatic drugs in anti-SS-A antibody-positive rheumatoid arthritis: The ANSWER cohort study",
+        "venue_year": "PLoS ONE 2026"
+      },
+      {
+        "paper_id": "semanticscholar:e8a6bfc5992e9a3a4109d5ae5f5dc36e3f547ca3",
+        "title": "The practical application of \"Team-b ased learning\" mode in fundamentalmedical courses: Medical Immunology as the example.",
+        "venue_year": "JPMA. The Journal of the Pakistan Medical Association 2026"
+      },
+      {
+        "paper_id": "semanticscholar:c9fbdae36733f1696a7ee2ff887e9b4988853d90",
+        "title": "OmniJudge or OmniBias? Diagnosing Multimodal Judges through Balanced, Decoupled Lenses",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "semanticscholar:aaa5510c13deae87803c5d2fedb13638073ad3ad",
+        "title": "Performance Evaluation of a Palm Oil Factory Using the Balanced Scorecard",
+        "venue_year": "JOURNAL OF APPLIED BUSINESS ADMINISTRATION 2025"
+      },
+      {
+        "paper_id": "openalex:W4417162425",
+        "title": "Accuracy, precision, recall, f1-score, or MCC? empirical evidence from advanced statistics, ML, and XAI for evaluating business predictive models",
+        "venue_year": "Journal Of Big Data 2025"
+      },
+      {
+        "paper_id": "openalex:W4417455223",
+        "title": "Exploring the Role of Augmented Reality in STEAM Learning Environments: Evidence from Geometry Education",
+        "venue_year": "Information 2025"
+      },
+      {
+        "paper_id": "openalex:W4417229139",
+        "title": "Autonomous agentic AI with policy adaptation for physics-informed spectral learning in Structural Health Monitoring",
+        "venue_year": "Advanced Engineering Informatics 2025"
+      },
+      {
+        "paper_id": "openalex:W7134823688",
+        "title": "Predictive Modelling of Credit Default Risk Using Machine Learning and Ensemble Techniques",
+        "venue_year": "Mathematical and Computational Applications 2026"
+      },
+      {
+        "paper_id": "openalex:W4417151342",
+        "title": "Robotic Bricklaying Adoption in Post-Pandemic Jordan: A Resilience Framework for Construction Automation",
+        "venue_year": "Buildings 2025"
+      },
+      {
+        "paper_id": "openalex:W7127907618",
+        "title": "Edge-Ready Romanian Language Models: Training, Quantization, and Deployment",
+        "venue_year": "AI 2026"
+      },
+      {
+        "paper_id": "semanticscholar:09a204dcec26362c74800a3161164910aa9ecf66",
+        "title": "The Heartbeat of Engagement: Exploring Young Children's Interactions with a Reading Pen, Robot, and Human through Physiological Signals",
+        "venue_year": "IEEE/ACM International Conference on Human-Robot Interaction 2025"
+      },
+      {
+        "paper_id": "semanticscholar:fd5e41508bc160ee14f1073f60a14c2e125c2786",
+        "title": "Mode: Loss Function for Deep Steganalysis at Low False Positive Rate",
+        "venue_year": "European Signal Processing Conference 2025"
+      },
+      {
+        "paper_id": "semanticscholar:9e3259244c9167af08fe0e54da9a7d9ef70a7799",
+        "title": "A Changepoint Rule for Determining Bicluster Retention Cutoffs in Cheating Detection.",
+        "venue_year": "Educational and Psychological Measurement 2026"
+      },
+      {
+        "paper_id": "semanticscholar:61f9fe0cb1f4159a678f44afc4d19761f0e25840",
+        "title": "Impact of positive parenting campaigns on the Maltese population",
+        "venue_year": "Global Health Promotion 2025"
+      },
+      {
+        "paper_id": "semanticscholar:7787eceecb231fcad80475b36d88b13578d19b08",
+        "title": "Synergistic mode of action of a ceftazidime-hexa-arginine conjugate with resistance-overcoming properties",
+        "venue_year": "Microbiology spectrum 2026"
+      },
+      {
+        "paper_id": "openalex:W4398796510",
+        "title": "A Survey on Vision--Language--Action Models for Embodied AI",
+        "venue_year": "IEEE Transactions on Neural Networks and Learning Systems 2026"
+      },
+      {
+        "paper_id": "openalex:W7128500769",
+        "title": "Women Leading the Future: Flipped STEM Learning for Equity, Sustainability and Innovation",
+        "venue_year": "IntechOpen eBooks 2026"
+      },
+      {
+        "paper_id": "openalex:W7110038274",
+        "title": "Integrating ethnomathematics into digital learning materials to enhance junior high school students’ geometry problem solving skills",
+        "venue_year": "Multidisciplinary Science Journal 2025"
+      },
+      {
+        "paper_id": "openalex:W7124718871",
+        "title": "Artificial Intelligence in Local Energy Systems: A Perspective on Emerging Trends and Sustainable Innovation",
+        "venue_year": "Energies 2026"
+      },
+      {
+        "paper_id": "openalex:W4415872076",
+        "title": "A Van der Waals Optoelectronic Synapse with Tunable Positive and Negative Post‐Synaptic Current for Highly Accurate Spiking Neural Networks",
+        "venue_year": "Advanced Functional Materials 2025"
+      },
+      {
+        "paper_id": "openalex:W7126110874",
+        "title": "Redesigning the Value Chain: A Net‐Zero Circular Economy Approach to Resource Retention",
+        "venue_year": "Business Strategy and the Environment 2026"
+      },
+      {
+        "paper_id": "openalex:W7117478257",
+        "title": "A histogram transformer approach using attention-based 3D residual network for human action recognition",
+        "venue_year": "PLoS ONE 2025"
+      },
+      {
+        "paper_id": "openalex:W7131075075",
+        "title": "The role of digital teaching methods in supporting practical skills training in the academic training of health professions – a scoping review",
+        "venue_year": "BMC Medical Education 2026"
+      },
+      {
+        "paper_id": "openalex:W4417056610",
+        "title": "Overlapping Coalition Formation for Resource Allocation in Post-Disaster Rescue UAV Swarms",
+        "venue_year": "Drones 2025"
+      },
+      {
+        "paper_id": "openalex:W7124321086",
+        "title": "Validating GenAI feedback in suicide prevention training: a mixed-methods study of QPR skill assessment",
+        "venue_year": "Frontiers in Medicine 2026"
+      },
+      {
+        "paper_id": "openalex:W7118891287",
+        "title": "ChatGPT-4o as an automated scoring tool for writing assessment: Strengths and weaknesses",
+        "venue_year": "International Journal of Assessment Tools in Education 2026"
+      },
+      {
+        "paper_id": "openalex:W7138950199",
+        "title": "An Interpretable Credit Default Risk Prediction Framework Integrating Causal Feature Selection and Double Machine Learning",
+        "venue_year": "Systems 2026"
+      },
+      {
+        "paper_id": "openalex:W7119479467",
+        "title": "Temporal Adversarial Attacks on Time Series and Reinforcement Learning Systems: A Systematic Survey, Taxonomy, and Benchmarking Roadmap",
+        "venue_year": "Preprints.org 2026"
+      },
+      {
+        "paper_id": "openalex:W7141850804",
+        "title": "Feasibility and diagnostic accuracy of paramedic-performed prehospital point-of-care ultrasound: a retrospective observational study",
+        "venue_year": "Scandinavian Journal of Trauma Resuscitation and Emergency Medicine 2026"
+      },
+      {
+        "paper_id": "openalex:W7131662022",
+        "title": "Predictive Analytics of Accounts Receivable to Strengthen Cash Flow Forecasting via Credit Risk Evaluation",
+        "venue_year": "International Journal of Emerging Research in Engineering and Technology 2026"
+      },
+      {
+        "paper_id": "openalex:W4416003721",
+        "title": "Sustainable Land Management by Agrivoltaics in Colombia’s Post-Conflict Regions: An Integrated Approach from the Water–Energy–Food Nexus",
+        "venue_year": "World 2025"
+      },
+      {
+        "paper_id": "semanticscholar:f01db4ff6996125fd1d5518e00089cb90aa6a6dd",
+        "title": "68Ga/161Tb-Labeled CXCR4-Targeted Probe with Enhanced Positive Charge: Improved Affinity and Longer Tumor Retention without Survival Benefit in Mice Models.",
+        "venue_year": "Journal of Medicinal Chemistry 2026"
+      },
+      {
+        "paper_id": "semanticscholar:b4e60cca2da54f39eed92510f617b7f41773b242",
+        "title": "Post-Mortem Analysis of NMC/Graphite Pouch Cells with Exceptional Capacity Retention After up to 8 Years of Cycling",
+        "venue_year": "Journal of the Electrochemical Society 2026"
+      },
+      {
+        "paper_id": "semanticscholar:f8ae48e6c4c29085fa8ea782cd4b202539448759",
+        "title": "Decoding Gen Z Retention: The Interplay Between Authentic Leadership, Work-Life Balance, and Digital Nomadism Tendencies",
+        "venue_year": "Jurnal Manajemen Bisnis 2026"
+      },
+      {
+        "paper_id": "semanticscholar:451aa941ee8ded1df93b2765bd0051d32ed60f86",
+        "title": "Job Satisfaction, Leadership Style, Work-Life Balance, and Career Development Opportunities: A Structural Model on Faculty Retention",
+        "venue_year": "Psychology and Education: A Multidisciplinary Journal 2026"
+      },
+      {
+        "paper_id": "semanticscholar:2d8fb0abf4a408dd4762bb4ae77d932d0ec42172",
+        "title": "Employee Retention Aligns with Training Culture and Work Life Balance",
+        "venue_year": "Indonesian Journal of Law and Economics Review 2026"
+      },
+      {
+        "paper_id": "semanticscholar:2013f8436a861d89282aa0eef60393fe08974c8b",
+        "title": "Polarity-dependent dual-mode AlN-embedded RRAM with improved stochastic switching and synaptic modulation for neuromorphic computing.",
+        "venue_year": "Journal of Chemical Physics 2025"
+      },
+      {
+        "paper_id": "semanticscholar:03d90e4d4a9823003200030325bc5f6a1e0be75d",
+        "title": "A Novel Sliding Mode Control Strategy of the Grid‐Connected Inverter Under Unbalanced Grid Voltage",
+        "venue_year": "IET Smart Grid 2025"
+      },
+      {
+        "paper_id": "semanticscholar:7bf2907561007fa0aef72cbde64e936dbecd8ed5",
+        "title": "Five-Step Plan for Proposing a Balanced HPLC Method via Fishbone Diagram: Untangling the Synergy of Efficiency and Sustainability, Application on the Analysis of Isoniazid, Pyrazinamide, and Rifampicin in a Fixed Dose Combination.",
+        "venue_year": "Journal of Separation Science 2025"
+      },
+      {
+        "paper_id": "semanticscholar:4b6d38ad328c7de7f8e0233eef5532f8ab44890c",
+        "title": "Moisture-Balanced Antibacterial Dressings Promote Wound Healing by Maintaining a Modulating Microenvironment.",
+        "venue_year": "ACS Applied Bio Materials 2026"
+      },
+      {
+        "paper_id": "semanticscholar:175fe6abc693139b144672aeb209f994cde83ddc",
+        "title": "Correlation between Pre Pregnancy BMI and 6 weeks’ Weight Retention",
+        "venue_year": "Public Health of Indonesia 2026"
+      },
+      {
+        "paper_id": "semanticscholar:a34ee13916504ce2fde7a5a424dc3f960ae055cb",
+        "title": "A Buck-Boost Five-Level Common-Positive-Type Inverter for Solar Photovoltaics Applications",
+        "venue_year": "2025 IEEE 5th International Conference on Sustainable Energy and Future Electric Transportation (SEFET) 2025"
+      },
+      {
+        "paper_id": "semanticscholar:476debd406019f3374d8fbcabe15a11240d21c2e",
+        "title": "Co-Designed Multi-Objective Fault Detection Filtering for Networked Switched Positive Systems",
+        "venue_year": "IEEE Transactions on Automation Science and Engineering 2026"
+      },
+      {
+        "paper_id": "openalex:W7127454821",
+        "title": "Performance, Fairness, and Explainability in AI-Based Credit Scoring: A Systematic Literature Review",
+        "venue_year": "Journal of risk and financial management 2026"
+      },
+      {
+        "paper_id": "openalex:W4415966627",
+        "title": "Cracking the math code: the impact of flipped classroom on problem-solving, digital fluency and self-directed learning",
+        "venue_year": "Cogent Education 2025"
+      },
+      {
+        "paper_id": "openalex:W7128303164",
+        "title": "Cross ionization mode chemical similarity prediction between tandem mass spectra in metabolomics",
+        "venue_year": "Nature Communications 2026"
+      },
+      {
+        "paper_id": "openalex:W4362515116",
+        "title": "A Survey of Large Language Models",
+        "venue_year": "Frontiers of Computer Science 2026"
+      },
+      {
+        "paper_id": "openalex:W4416020672",
+        "title": "A Lightweight 3D-CNN for Event-Based Human Action Recognition With Privacy-Preserving Potential",
+        "venue_year": "IEEE Access 2026"
+      },
+      {
+        "paper_id": "openalex:W7152921486",
+        "title": "Defect Monitoring of Complex Geometries Through Machine Learning in LPBF Metal Additive Manufacturing",
+        "venue_year": "Journal of Manufacturing and Materials Processing 2026"
+      },
+      {
+        "paper_id": "openalex:W7119048106",
+        "title": "Dimensionality‐Aware Credit Scoring With Hybrid Feature Selection and Simplified Graph Convolutional Networks",
+        "venue_year": "Journal of Forecasting 2026"
+      },
+      {
+        "paper_id": "openalex:W4416608265",
+        "title": "Empowerment or burden? The impact of empowering leadership on Generation Z knowledge workers retention willingness",
+        "venue_year": "Frontiers in Psychology 2025"
+      },
+      {
+        "paper_id": "openalex:W7160046011",
+        "title": "Deep Reinforcement Learning for Cryptocurrency Portfolio Management: A Free-Energy Framework with Geometry-Based Transaction Costs and Efficiency Bounds",
+        "venue_year": "Risks 2026"
+      },
+      {
+        "paper_id": "openalex:W4416953495",
+        "title": "Assessing Climate Sensitivity of LEED Credit Performance in U.S. Hotel Buildings: A Hierarchical Regression and Machine Learning Verification Approach",
+        "venue_year": "Buildings 2025"
+      },
+      {
+        "paper_id": "openalex:W4416908489",
+        "title": "HMOA-GNN: adaptive adversarial GraphSAGE with hierarchical hybrid sampling and metric-optimized graph construction for credit card fraud detection",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "openalex:W7126085412",
+        "title": "From violation to stigma: a literature review of athletes' lived experiences following anti-doping sanctions",
+        "venue_year": "Frontiers in Sports and Active Living 2026"
+      },
+      {
+        "paper_id": "openalex:W7125178871",
+        "title": "COLREGs-compliant ship collision avoidance strategy based on proximal policy optimization algorithm",
+        "venue_year": "Frontiers in Marine Science 2026"
+      },
+      {
+        "paper_id": "openalex:W7130404652",
+        "title": "Both ends of artificial intelligence impacting privacy: a review of violation and protection",
+        "venue_year": "Frontiers in Artificial Intelligence 2026"
+      },
+      {
+        "paper_id": "openalex:W7128367091",
+        "title": "From Formal to Operational: A Triangulated Analysis of Policy, Practice, and Perception Regarding Digital Competence Development in Mathematics and IT Teacher Education",
+        "venue_year": "Education Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4416301132",
+        "title": "Technology adoption and contractual arrangements under credit constraints: evidence from apple growers in rural China",
+        "venue_year": "Frontiers in Sustainable Food Systems 2025"
+      },
+      {
+        "paper_id": "openalex:W4416321917",
+        "title": "A Proposed Post-Fire Planning Approach Based on DEMATEL in Vesuvius National Park",
+        "venue_year": "Sustainability 2025"
+      },
+      {
+        "paper_id": "openalex:W7118247160",
+        "title": "Development and Optimization of a Sensitive LC–MS/MS Method for the Quantification of N‐Nitroso Bisoprolol in Pharmaceutical Formulations",
+        "venue_year": "Separation Science Plus 2026"
+      },
+      {
+        "paper_id": "openalex:W7136224888",
+        "title": "A transdiagnostic conflict-square algorithm: a four-node computational framework for psychotherapy and functional diagnosis",
+        "venue_year": "Frontiers in Psychiatry 2026"
+      },
+      {
+        "paper_id": "openalex:W7131220280",
+        "title": "Sports Betting Across Borders: Spatial Spillovers, Credit Distress, and Fiscal Externalities",
+        "venue_year": "Staff reports 2026"
+      },
+      {
+        "paper_id": "openalex:W4416389770",
+        "title": "Machine learning and bifurcation analysis in a discrete predator-prey model with neem-induced mortality",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "openalex:W7131634368",
+        "title": "A pilot study of a mobile application for postural analysis and training support in Shotokan Karate",
+        "venue_year": "Scientific Reports 2026"
+      },
+      {
+        "paper_id": "openalex:W7124984225",
+        "title": "Organic Amendments for Sustainable Agriculture: Effects on Soil Function, Crop Productivity and Carbon Sequestration Under Variable Contexts",
+        "venue_year": "C – Journal of Carbon Research 2026"
+      },
+      {
+        "paper_id": "openalex:W7127636537",
+        "title": "BPFLH: Byzantine-Robust Privacy-Preserving Federated Learning for Heterogeneous Data",
+        "venue_year": "IEEE Transactions on Dependable and Secure Computing 2026"
+      },
+      {
+        "paper_id": "openalex:W4415982871",
+        "title": "Addressing student use of generative AI in schools and universities through academic integrity reporting",
+        "venue_year": "Frontiers in Education 2025"
+      },
+      {
+        "paper_id": "openalex:W7125933805",
+        "title": "Enabling AI-Controlled additive manufacturing with real-time multiphysics digital twins",
+        "venue_year": "Virtual and Physical Prototyping 2026"
+      },
+      {
+        "paper_id": "openalex:W7117134704",
+        "title": "A High-fidelity Multimodal Synthetic Dataset Generation Framework for Off-road Unstructured Terrain Navigation Training of Autonomous Robots",
+        "venue_year": "Journal of Intelligent & Robotic Systems 2025"
+      },
+      {
+        "paper_id": "semanticscholar:242ea2eafe804ca7a0d7ea60006755beb449a46c",
+        "title": "A photodetector for red and green with balanced negative and positive photocurrent for imaging is realized",
+        "venue_year": "Scientific Reports 2025"
+      },
+      {
+        "paper_id": "semanticscholar:b3883768fb741d2afb26d3e175ea588c031f86f3",
+        "title": "Reconfigurable Floating‐Gate Devices with Ambipolar ReSe2 Channel: Dual‐Mode Storage, NMOS‐PMOS Transformation, Logic Functions, Synapse Simulations, Positive and Negative Photoconductive Effects",
+        "venue_year": "Advanced Functional Materials 2025"
+      },
+      {
+        "paper_id": "semanticscholar:80b9faca73518d59a52797f61b9088bba6ff7d41",
+        "title": "Retention of Positive and Negative Memories of School from the COVID-19 Pandemic for High School Juniors",
+        "venue_year": "American Journal of Student Research 2026"
+      },
+      {
+        "paper_id": "semanticscholar:42b85450e207c56af21917ff808f4c8861248a94",
+        "title": "Positive effects of species mixing on soil carbon sequestration and water retention in global forest plantations",
+        "venue_year": "Journal of Ecology 2026"
+      },
+      {
+        "paper_id": "semanticscholar:4086f37cea7c39e3e68bf3ffe89429dfba144898",
+        "title": "Optimizing ultrasound-assisted forward osmosis for concentrating blueberry juice: Effects on process efficiency, membrane performance, and polyphenol retention.",
+        "venue_year": "Food Chemistry 2025"
+      },
+      {
+        "paper_id": "semanticscholar:496bc62e16d9964100cb9bf500de66ee971c1ca3",
+        "title": "Fairness audited lead allocation for destination marketing: Methods, metrics, and retention effects",
+        "venue_year": "World Journal of Advanced Research and Reviews 2025"
+      },
+      {
+        "paper_id": "semanticscholar:30965989aec1f8289126b198f325d21c4cc00d5b",
+        "title": "Co-Modified MnWO4 Nanorods Coupled with H2O2-Treated Carbon Nanotubes for a Charge-Balanced Aqueous Hybrid Supercapacitor",
+        "venue_year": "Micromachines 2026"
+      },
+      {
+        "paper_id": "semanticscholar:fe42aa133a22d7261b1e7129a3d4535c95b5e97d",
+        "title": "Employee Retention in the Indian IT Sector: An Empirical Analysis of Respect, Remuneration, and Recognition",
+        "venue_year": "Applied Science, Engineering and Management Bulletin [ASEMB] 2026"
+      },
+      {
+        "paper_id": "semanticscholar:86523336caa507182821c24817803c636c140055",
+        "title": "The Effect Of Perception Of Organizational Support, Work Life Balance And Employee Retention On Turnover Intention At CV Jodion Unggul Perkasa In Prambanan, Sleman Regency",
+        "venue_year": "Jurnal Manajemen Motivasi 2026"
+      },
+      {
+        "paper_id": "semanticscholar:ba862d3409e2ec5b6f61e17ff170fafa60a3b0c8",
+        "title": "Impact of Lithium Salt Blends on Capacity Retention and Mn Dissolution of LiMn\n 0.8\n Fe\n 0.2\n PO\n 4\n /Graphite Li-ion Cells",
+        "venue_year": "Journal of the Electrochemical Society 2026"
+      },
+      {
+        "paper_id": "semanticscholar:b52823904ed4f1b18bd4100eab8def70685c3b02",
+        "title": "Vaginal Seeding: Is There Any Positive Effect in Canine C-Sections?",
+        "venue_year": "Animals 2025"
+      },
+      {
+        "paper_id": "semanticscholar:b42422af9d17d23d6299a229f848b116264c25b8",
+        "title": "CHROMATOGRAPHY-MASS SPECTROMETRY OF TRINITROTOLUENE ISOMERS IN THE NEGATIVE IONIZATION MODE UNDER RESONANCE ELECTRON CAPTURE",
+        "venue_year": "Журнал аналитической химии / Journal of Analytical Chemistry 2025"
+      },
+      {
+        "paper_id": "semanticscholar:1cdc1bc54804b2fc42e8a5980aa21e403634237d",
+        "title": "Dual‐Mode Switching of Photodetection and Neuromorphic Photoelectric Memory in VS‐ReS2/WSe2 Heterostructure via Vacancy and Electric Field Synergetic Regulation",
+        "venue_year": "Advanced Functional Materials 2025"
+      },
+      {
+        "paper_id": "semanticscholar:621d222f99a458cf7ce5c3569b1c6532b8f9f137",
+        "title": "Positive influence of chicken manure mixed with former food products and vegetable waste on black soldier fly larval performance, frass maturity and environmental emissions",
+        "venue_year": "Chemical and Biological Technologies in Agriculture 2026"
+      },
+      {
+        "paper_id": "semanticscholar:15a7ed6570c6d1d37288fe03302b8f8356f78c6b",
+        "title": "Analyzing Differences in Student Understanding and Retention When Taught by AI Versus Human Instructors",
+        "venue_year": "The Critical Review of Social Sciences Studies 2025"
+      },
+      {
+        "paper_id": "semanticscholar:83c275f9fd471cee48c06594871188e7ab92cf86",
+        "title": "Virtual Positive-Sequence Power Compensation for Enhancing the Transient Stability of VSG Under Symmetrical and Asymmetrical Low-Voltage Fault",
+        "venue_year": "IEEE transactions on power electronics 2026"
+      },
+      {
+        "paper_id": "semanticscholar:f97c6093ca8cffaba3a3580c264b3083e1a498c9",
+        "title": "Mechanistic insight and demonstration of antiferroelectric-gated enhancement-mode GaN HEMTs",
+        "venue_year": "Applied Physics Letters 2026"
+      },
+      {
+        "paper_id": "semanticscholar:9c653789e091a7e37f45894e0ee8d73cf9eead8e",
+        "title": "Evaluating the Impact of Email Marketing on Customer Engagement and Customer Retention in E-commerce Businesses",
+        "venue_year": "Psychology and Education: A Multidisciplinary Journal 2026"
+      },
+      {
+        "paper_id": "semanticscholar:075242def1e2829cc6330179506f5348682a1ada",
+        "title": "Departmental heads’ perceptions of novice teachers’ positive and negative characteristics",
+        "venue_year": "International Journal of Educational Management &amp; Development Studies 2025"
+      },
+      {
+        "paper_id": "semanticscholar:8e31ac9a68b8d5cdb0f767d3431724f2d8d10439",
+        "title": "Boosting Aqueous Zn‐Ion Battery Performances with Mg‐Vanadate Positive and Cu‐MOF Negative Electrodes in Inorganic Gel Electrolyte",
+        "venue_year": "ChemNanoMat 2025"
+      },
+      {
+        "paper_id": "semanticscholar:af0a927dcc973243698f7c40fa14497c6d29f404",
+        "title": "Zwitterion-Modified PMMA Interlayers for Reliable Dual-Mode Organic Neuromorphic Devices.",
+        "venue_year": "ACS Applied Materials and Interfaces 2026"
+      },
+      {
+        "paper_id": "semanticscholar:d802a720c8c52c77f4d08a7b13d81ae2c27162ee",
+        "title": "A Portable Dual-Mode Aptasensor for Rapid Detection of Influenza A Hemagglutinin.",
+        "venue_year": "ACS Sensors 2026"
+      },
+      {
+        "paper_id": "semanticscholar:4fc14db16db1261741695cc77dd6e0590897be39",
+        "title": "A Selective Positive Ternary Inverter Using the Mirror Symmetry of a MOSFET With a Gate--Body Diode",
+        "venue_year": "IEEE Transactions on Electron Devices 2026"
+      },
+      {
+        "paper_id": "semanticscholar:b9d29cd735a1d91b600b287bbfb65b0209ada1b5",
+        "title": "The Influence of Mesoscale Particle Structure on the Electrode Degradation and Resultant Electrochemistry of Lithium Ion Cells With Nickel Rich Lithium Nickel Manganese Cobalt Oxide Positive Electrodes",
+        "venue_year": "Advanced Materials & Technologies 2026"
+      },
+      {
+        "paper_id": "semanticscholar:7e373743e6c9b750c466db3cb8bcd5a9dc468163",
+        "title": "Enhanced Identifications and Quantification Through Retention Time Down-Sampling in Fast-Cycling Diagonal-PASEF Methods",
+        "venue_year": "bioRxiv 2025"
+      },
+      {
+        "paper_id": "openalex:W7117540091",
+        "title": "Low-Carbon Economic Dispatch in Integrated Energy Systems: A Set-Based Interval Optimization with Decision Support Under Uncertainties",
+        "venue_year": "Protection and Control of Modern Power Systems 2025"
+      },
+      {
+        "paper_id": "openalex:W4414588300",
+        "title": "Fine-grained List-wise Alignment for Generative Medication Recommendation",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "openalex:W4378771755",
+        "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+        "venue_year": "arXiv (Cornell University) 2023"
+      },
+      {
+        "paper_id": "openalex:W4367692219",
+        "title": "Causal Reasoning and Large Language Models: Opening a New Frontier for Causality",
+        "venue_year": "arXiv (Cornell University) 2023"
+      },
+      {
+        "paper_id": "openalex:W4394787046",
+        "title": "Artificial Protozoa Optimizer (APO): A novel bio-inspired metaheuristic algorithm for engineering optimization",
+        "venue_year": "Knowledge-Based Systems 2024"
+      },
+      {
+        "paper_id": "openalex:W4392552172",
+        "title": "GPAW: An open Python package for electronic structure calculations",
+        "venue_year": "The Journal of Chemical Physics 2024"
+      },
+      {
+        "paper_id": "openalex:W4404573518",
+        "title": "DESI 2024 VII: cosmological constraints from the full-shape modeling of clustering measurements",
+        "venue_year": "Journal of Cosmology and Astroparticle Physics 2025"
+      },
+      {
+        "paper_id": "openalex:W4384264789",
+        "title": "Transformers in Reinforcement Learning: A Survey",
+        "venue_year": "arXiv (Cornell University) 2023"
+      },
+      {
+        "paper_id": "openalex:W4414189375",
+        "title": "Causal Uplift for Rewards Aggregators: Doubly-Robust Heterogeneous Treatment-Effect Modeling with SQL/Python Pipelines and Real-Time Inference",
+        "venue_year": "International Journal of Scientific Research and Modern Technology. 2024"
+      },
+      {
+        "paper_id": "openalex:W4407755305",
+        "title": "Advanced Cellulose‐Derived Hard Carbon as Anode for Sodium‐Ion Batteries: Mechanisms, Optimization, and Challenges",
+        "venue_year": "Advanced Energy Materials 2025"
+      },
+      {
+        "paper_id": "openalex:W4404782689",
+        "title": "ORPO: Monolithic Preference Optimization without Reference Model",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4401547143",
+        "title": "Causal Inference Meets Deep Learning: A Comprehensive Survey",
+        "venue_year": "Research 2024"
+      },
+      {
+        "paper_id": "openalex:W4387159219",
+        "title": "Can language models be used for real-world urban-delivery route optimization?",
+        "venue_year": "The Innovation 2023"
+      },
+      {
+        "paper_id": "openalex:W4392761407",
+        "title": "Review: Insights on Hard Carbon Materials for Sodium‐Ion Batteries (SIBs): Synthesis – Properties – Performance Relationships",
+        "venue_year": "Advanced Energy Materials 2024"
+      },
+      {
+        "paper_id": "openalex:W4404039960",
+        "title": "Evolving Transparent Credit Risk Models: A Symbolic Regression Approach Using Genetic Programming",
+        "venue_year": "Electronics 2024"
+      },
+      {
+        "paper_id": "openalex:W4385727101",
+        "title": "High density lithium niobate photonic integrated circuits",
+        "venue_year": "Nature Communications 2023"
+      },
+      {
+        "paper_id": "openalex:W4362475580",
+        "title": "The Progress of Hard Carbon as an Anode Material in Sodium-Ion Batteries",
+        "venue_year": "Molecules 2023"
+      },
+      {
+        "paper_id": "openalex:W7126169177",
+        "title": "Responsible AI In Financial Decision Systems: Fairness And Explainability In Credit Scoring Models",
+        "venue_year": "Journal of International Crisis and Risk Communication Research 2025"
+      },
+      {
+        "paper_id": "openalex:W4413967053",
+        "title": "EDGE360: Edge-Enabled Multi-Agent DRL for Region-Aware Rate Adaptation Solution to Enhance Quality of 360° Video Streaming",
+        "venue_year": "IEEE Transactions on Mobile Computing 2025"
+      },
+      {
+        "paper_id": "openalex:W4400725913",
+        "title": "Anonymization: The imperfect science of using data while preserving privacy",
+        "venue_year": "Science Advances 2024"
+      },
+      {
+        "paper_id": "openalex:W4386071185",
+        "title": "Paired microbiome and metabolome analyses associate bile acid changes with colorectal cancer progression",
+        "venue_year": "Cell Reports 2023"
+      },
+      {
+        "paper_id": "openalex:W4310153685",
+        "title": "Polypyrrole Nanomaterials: Structure, Preparation and Application",
+        "venue_year": "Polymers 2022"
+      },
+      {
+        "paper_id": "openalex:W4390496356",
+        "title": "Spatial structure, chemotaxis and quorum sensing shape bacterial biomass accumulation in complex porous media",
+        "venue_year": "Nature Communications 2024"
+      },
+      {
+        "paper_id": "openalex:W4320483279",
+        "title": "Alpha oscillatory activity is causally linked to working memory retention",
+        "venue_year": "PLoS Biology 2023"
+      },
+      {
+        "paper_id": "openalex:W4406602486",
+        "title": "Can AI support human grading? Examining machine attention and confidence in short answer scoring",
+        "venue_year": "Computers & Education 2025"
+      },
+      {
+        "paper_id": "openalex:W4386952017",
+        "title": "En-MinWhale: An Ensemble Approach Based on MRMR and Whale Optimization for Cancer Diagnosis",
+        "venue_year": "IEEE Access 2023"
+      },
+      {
+        "paper_id": "openalex:W4399767496",
+        "title": "Default mode network electrophysiological dynamics and causal role in creative thinking",
+        "venue_year": "Brain 2024"
+      },
+      {
+        "paper_id": "openalex:W7114889968",
+        "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+        "venue_year": "Big Data and Cognitive Computing 2025"
+      },
+      {
+        "paper_id": "openalex:W4400448985",
+        "title": "Automating psychological hypothesis generation with AI: when large language models meet causal graph",
+        "venue_year": "Humanities and Social Sciences Communications 2024"
+      },
+      {
+        "paper_id": "openalex:W4362602778",
+        "title": "Privacy-preserving artificial intelligence in healthcare: Techniques and applications",
+        "venue_year": "Computers in Biology and Medicine 2023"
+      },
+      {
+        "paper_id": "openalex:W4394596330",
+        "title": "Recent Development on Transition Metal Oxides‐Based Core–Shell Structures for Boosted Energy Density Supercapacitors",
+        "venue_year": "Small 2024"
+      },
+      {
+        "paper_id": "openalex:W4387525738",
+        "title": "Revealing the Sodium Storage Mechanisms in Hard Carbon Pores",
+        "venue_year": "Advanced Energy Materials 2023"
+      },
+      {
+        "paper_id": "openalex:W4386409722",
+        "title": "Counterfactual explanations for machine learning models on heterogeneous data",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "openalex:W4391754737",
+        "title": "Electrospinning: Processes, Structures, and Materials",
+        "venue_year": "Macromol—A Journal of Macromolecular Research 2024"
+      },
+      {
+        "paper_id": "openalex:W4393552888",
+        "title": "Opportunities and challenges in design and optimization of protein function",
+        "venue_year": "Nature Reviews Molecular Cell Biology 2024"
+      },
+      {
+        "paper_id": "openalex:W4395663188",
+        "title": "The development of human causal learning and reasoning",
+        "venue_year": "Nature Reviews Psychology 2024"
+      },
+      {
+        "paper_id": "openalex:W3136016591",
+        "title": "The Shape of Learning Curves: A Review",
+        "venue_year": "IEEE Transactions on Pattern Analysis and Machine Intelligence 2022"
+      },
+      {
+        "paper_id": "openalex:W4403048643",
+        "title": "Recent Applications of Explainable AI (XAI): A Systematic Literature Review",
+        "venue_year": "Applied Sciences 2024"
+      },
+      {
+        "paper_id": "openalex:W4394608809",
+        "title": "Three million images and morphological profiles of cells treated with matched chemical and genetic perturbations",
+        "venue_year": "Nature Methods 2024"
+      },
+      {
+        "paper_id": "openalex:W4365130560",
+        "title": "Economic Model Predictive Control for Microgrid Optimization: A Review",
+        "venue_year": "IEEE Transactions on Smart Grid 2023"
+      },
+      {
+        "paper_id": "openalex:W4372338130",
+        "title": "CausalRCA: Causal inference based precise fine-grained root cause localization for microservice applications",
+        "venue_year": "Journal of Systems and Software 2023"
+      },
+      {
+        "paper_id": "openalex:W4388473546",
+        "title": "Discovering causal relations and equations from data",
+        "venue_year": "Physics Reports 2023"
+      },
+      {
+        "paper_id": "openalex:W4390075359",
+        "title": "Speak, Read and Prompt: High-Fidelity Text-to-Speech with Minimal Supervision",
+        "venue_year": "Transactions of the Association for Computational Linguistics 2023"
+      },
+      {
+        "paper_id": "openalex:W4391808432",
+        "title": "Coupling remote sensing and eDNA to monitor environmental impact: A pilot to quantify the environmental benefits of sustainable agriculture in the Brazilian Amazon",
+        "venue_year": "PLoS ONE 2024"
+      },
+      {
+        "paper_id": "openalex:W4362693892",
+        "title": "A guide to formulating fairness in an optimization model",
+        "venue_year": "Annals of Operations Research 2023"
+      },
+      {
+        "paper_id": "openalex:W4396515179",
+        "title": "Incretin-Based Weight Loss Pharmacotherapy: Can Resistance Exercise Optimize Changes in Body Composition?",
+        "venue_year": "Diabetes Care 2024"
+      },
+      {
+        "paper_id": "openalex:W4400824990",
+        "title": "A First Course in Causal Inference",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4378528083",
+        "title": "Survey of Optimization Algorithms in Modern Neural Networks",
+        "venue_year": "Mathematics 2023"
+      },
+      {
+        "paper_id": "openalex:W4308455108",
+        "title": "Causal Reasoning Meets Visual Representation Learning: A Prospective Study",
+        "venue_year": "Machine Intelligence Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4317357967",
+        "title": "Dynamic failure of 3D printed negative-stiffness meta-sandwich structures under repeated impact loadings",
+        "venue_year": "Composites Science and Technology 2023"
+      },
+      {
+        "paper_id": "openalex:W4287887621",
+        "title": "The Cost of Intermediary Market Power for Distressed Borrowers",
+        "venue_year": "National Bureau of Economic Research 2026"
+      },
+      {
+        "paper_id": "openalex:W4297985047",
+        "title": "Demand side management of electric vehicles in smart grids: A survey on strategies, challenges, modeling, and optimization",
+        "venue_year": "Energy Reports 2022"
+      },
+      {
+        "paper_id": "openalex:W4307984318",
+        "title": "Shared genetic risk factors and causal association between psoriasis and coronary artery disease",
+        "venue_year": "Nature Communications 2022"
+      },
+      {
+        "paper_id": "openalex:W4391620979",
+        "title": "Challenges and Opportunities in Green Hydrogen Adoption for Decarbonizing Hard-to-Abate Industries: A Comprehensive Review",
+        "venue_year": "IEEE Access 2024"
+      },
+      {
+        "paper_id": "openalex:W4389101129",
+        "title": "Harnessing the power of clinical decision support systems: challenges and opportunities",
+        "venue_year": "Open Heart 2023"
+      },
+      {
+        "paper_id": "openalex:W4362723650",
+        "title": "The impact of prior knowledge on causal structure learning",
+        "venue_year": "Knowledge and Information Systems 2023"
+      },
+      {
+        "paper_id": "openalex:W4408780372",
+        "title": "Long-chain alkanes preserved in a Martian mudstone",
+        "venue_year": "Proceedings of the National Academy of Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W4401888878",
+        "title": "Fine-mapping across diverse ancestries drives the discovery of putative causal variants underlying human complex traits and diseases",
+        "venue_year": "Nature Genetics 2024"
+      },
+      {
+        "paper_id": "openalex:W4396238295",
+        "title": "Survey: federated learning data security and privacy-preserving in edge-Internet of Things",
+        "venue_year": "Artificial Intelligence Review 2024"
+      },
+      {
+        "paper_id": "openalex:W4387311045",
+        "title": "How High-Arousal Language Shapes Micro- Versus Macro-Influencers’ Impact",
+        "venue_year": "Journal of Marketing 2023"
+      },
+      {
+        "paper_id": "openalex:W4386443196",
+        "title": "Multi-Objective Hyperparameter Optimization in Machine Learning—An Overview",
+        "venue_year": "ACM Transactions on Evolutionary Learning and Optimization 2023"
+      },
+      {
+        "paper_id": "openalex:W4360612215",
+        "title": "Employees Adhere More to Unethical Instructions from Human Than AI Supervisors: Complementing Experimental Evidence with Machine Learning",
+        "venue_year": "Journal of Business Ethics 2023"
+      },
+      {
+        "paper_id": "openalex:W4377292708",
+        "title": "Shape memory performance assessment of FDM 3D printed PLA-TPU composites by Box-Behnken response surface methodology",
+        "venue_year": "The International Journal of Advanced Manufacturing Technology 2023"
+      },
+      {
+        "paper_id": "openalex:W4378191996",
+        "title": "The 2023 International Society for Heart and Lung Transplantation Guidelines for Mechanical Circulatory Support: A 10- Year Update",
+        "venue_year": "The Journal of Heart and Lung Transplantation 2023"
+      },
+      {
+        "paper_id": "openalex:W4399070176",
+        "title": "Human control of AI systems: from supervision to teaming",
+        "venue_year": "AI and Ethics 2024"
+      },
+      {
+        "paper_id": "openalex:W4308963766",
+        "title": "Shaping bacterial gene expression by physiological and proteome allocation constraints",
+        "venue_year": "Nature Reviews Microbiology 2022"
+      },
+      {
+        "paper_id": "openalex:W4393901252",
+        "title": "Absenteeism, Productivity, and Relational Contracts Inside the Firm",
+        "venue_year": "Journal of the European Economic Association 2024"
+      },
+      {
+        "paper_id": "openalex:W4400770247",
+        "title": "Diversity and scale: Genetic architecture of 2068 traits in the VA Million Veteran Program",
+        "venue_year": "Science 2024"
+      },
+      {
+        "paper_id": "openalex:W4310059885",
+        "title": "Effect of current density on the solid electrolyte interphase formation at the lithium∣Li6PS5Cl interface",
+        "venue_year": "Nature Communications 2022"
+      },
+      {
+        "paper_id": "openalex:W4405670661",
+        "title": "MEGA12: Molecular Evolutionary Genetic Analysis Version 12 for Adaptive and Green Computing",
+        "venue_year": "Molecular Biology and Evolution 2024"
+      },
+      {
+        "paper_id": "openalex:W4313460860",
+        "title": "Adverse drug event detection using natural language processing: A scoping review of supervised learning methods",
+        "venue_year": "PLoS ONE 2023"
+      },
+      {
+        "paper_id": "openalex:W4303423370",
+        "title": "A low-density high-entropy dual-phase alloy with hierarchical structure and exceptional specific yield strength",
+        "venue_year": "Science China Materials 2022"
+      },
+      {
+        "paper_id": "openalex:W4411015483",
+        "title": "TSProto: Fusing deep feature extraction with interpretable glass-box surrogate model for explainable time-series classification",
+        "venue_year": "Information Fusion 2025"
+      },
+      {
+        "paper_id": "openalex:W4407323998",
+        "title": "Hybrid Renewable Energy Systems—A Review of Optimization Approaches and Future Challenges",
+        "venue_year": "Applied Sciences 2025"
+      },
+      {
+        "paper_id": "openalex:W4307952887",
+        "title": "Loss of E-cadherin is causal to pathologic changes in chronic lung disease",
+        "venue_year": "Communications Biology 2022"
+      },
+      {
+        "paper_id": "openalex:W4394981859",
+        "title": "Privacy-preserving in Blockchain-based Federated Learning systems",
+        "venue_year": "Computer Communications 2024"
+      }
+    ]
+  }
+}

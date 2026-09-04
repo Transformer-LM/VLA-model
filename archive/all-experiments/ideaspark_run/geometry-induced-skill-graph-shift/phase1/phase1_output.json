@@ -1,0 +1,274 @@
+{
+  "fulltext_degraded": true,
+  "intake": {
+    "domain": "Non-tactile language-conditioned robotic manipulation and World Action Models under functional-geometry interventions",
+    "venue": "ICLR/NeurIPS/CoRL-level embodied-AI venue",
+    "time": "one paper cycle (approximately five months)",
+    "data": [
+      "executable manipulation simulation with paired target/reference-geometry interventions",
+      "fixed language instruction, start distribution, and terminal object relation or goal pose",
+      "geometry substitutions that alter the feasible intermediate relation-event sequence, path homotopy, grasp, reorientation, approach, or insertion strategy"
+    ],
+    "compute": "4×NVIDIA A100 GPUs available for up to 30 elapsed days (120 A100 GPU-days total capacity); no fixed GPU-hour cap",
+    "expertise": "embodied-AI experimentation with VLA/WAM baselines and simulator evaluation",
+    "preference": "empirical",
+    "baseline": "frozen π0.5 and an open World Action Model, with endpoint-pose, 3D-VLA, stage/primitive, long-horizon, and geometry-transfer comparators",
+    "limitation": "no tactile sensing; first establish simulator-grounded causal diagnostic headroom, and consider minimal geometry-conditioned adaptation only if headroom exists",
+    "contribution_type": "empirical_reveal",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "data",
+      "expertise",
+      "preference",
+      "contribution_type"
+    ]
+  },
+  "bottleneck_statement": "For any manipulation family in which a geometry intervention preserves the instruction, start distribution, and terminal relation or goal pose but changes the feasible strategy topology, endpoint success is causally non-identifying: the same score can arise from geometry-conditioned selection of a new relation-event sequence or from replaying an unchanged strategy that happens to survive the test. Current retrieved lines broaden object/placement/long-horizon evaluation (openalex:W4403116255; dblp:journals/corr/abs-2506-18088), inject 3D spatial information (openalex:W7127541930; openalex:W4416223716), or expose fixed affordance stages (openalex:W4405956290), but the available evidence does not isolate matched interventions where geometry alone makes the original intermediate strategy infeasible; consequently neither a VLA nor a WAM can be diagnosed as representing functional geometry rather than category, endpoint pose, depth robustness, or generic replanning.",
+  "closest_adjacent": [
+    {
+      "paper_id": "dblp:journals/corr/abs-2506-18088",
+      "is_anchor": true,
+      "summary_and_residue": "The abstract presents RoboTwin 2.0 as a simulator data generator and benchmark with structured randomization over clutter, lighting, background, tabletop height, and language across bimanual tasks. It does not establish a matched fixed-instruction/fixed-start/fixed-terminal-goal intervention in which target or reference geometry forces a different intermediate strategy family. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "openalex:W4403116255",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract introduces GemBench with action primitives and generalization levels spanning placements, objects, and long-horizon tasks, plus an LLM/VLM-guided 3D policy. Those axes do not establish whether geometry alone changes the necessary relation-event sequence while instruction and terminal goal remain fixed. [residue is abstract-level: fulltext unavailable]"
+    },
+    {
+      "paper_id": "openalex:W4405956290",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract describes a fixed chain of object, grasp, spatial, and movement affordances supplied to a VLA. It does not test whether the number, order, or identity of required intermediate relations must change under a controlled geometry intervention rather than being supplied by a fixed scaffold. [residue is abstract-level: fulltext unavailable]"
+    },
+    {
+      "paper_id": "openalex:W7127541930",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract reports fusing diverse point-cloud sources with 2D observations to improve spatial robustness across simulator and real domains. Improved 3D representation does not by itself identify whether the policy changes strategy when geometry changes feasibility but leaves the endpoint goal invariant. [residue is abstract-level: fulltext unavailable]"
+    },
+    {
+      "paper_id": "openalex:W4403808753",
+      "is_anchor": false,
+      "summary_and_residue": "The abstract uses generated visual plans, embedding error, action refinement, and replanning for closed-loop long-horizon control. It does not separate correction of rollout error from a geometry-caused change in the required plan topology under matched endpoints. [residue is abstract-level: fulltext unavailable]"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "No retrieved frontier leaf establishes causal identifiability for geometry-sensitive strategy generalization: under matched instruction, start distribution, and terminal goal, it remains unresolved whether policy behavior changes specifically because the original relation-event sequence or path class becomes infeasible — stakes: practitioners cannot tell whether a model will select a valid grasp, reorientation, approach, or insertion strategy on a geometry-altered deployment, and the field may attribute endpoint robustness to functional-geometric reasoning that was never isolated.",
+    "No retrieved frontier leaf localizes the first strategy-level divergence induced by geometry, so an aggregate success or trajectory score cannot distinguish correct early selection of a new homotopy or relation transition from late low-level recovery after committing to the old strategy — stakes: debugging and adaptation can target the wrong component, wasting simulation and GPU budget while leaving the actual planning failure untouched.",
+    "No retrieved frontier leaf tests whether endpoint task success under broad new-object, spatial, or long-horizon splits is sufficient evidence of functional-geometry generalization rather than an inherited evaluation assumption — stakes: published conclusions across benchmark, 3D-representation, scaffolded-stage, and replanning lineages may not transfer to cases where equal endpoints conceal different feasible strategy graphs.",
+    "No retrieved frontier leaf determines whether world-model prediction quality remains informative when geometry preserves the desired terminal frame but changes the intervention-dependent sequence of contacts and relations needed to reach it — stakes: a WAM can score well on terminal appearance while recommending an infeasible interaction sequence, blocking principled decisions about whether prediction or policy adaptation is needed."
+  ],
+  "method_lineage": {
+    "line": "Evaluation and modeling of geometry-sensitive strategy generalization in language-conditioned robotic manipulation",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Goal-conditioned visuomotor policy evaluated by terminal task success",
+        "move": "Treat successful arrival at the instructed goal as the principal evidence of manipulation competence.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Terminal success alone leaves representation, planning, recovery, and transfer failures entangled; later branches add structure, hierarchy, prediction, and randomization.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "Held-out instance, pose, and task-split generalization benchmarks",
+        "move": "Extend endpoint evaluation from training tasks to novel objects, placements, and composed horizons.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Broad split labels do not isolate which physical factor changed the feasible strategy.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Explicit 3D spatial representations for manipulation",
+        "move": "Add point, depth, or spatial features so policies can represent geometry more directly than RGB-only control.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Representing geometry does not establish that the controller changes strategy when geometry changes feasibility.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "Skill, primitive, and affordance decomposition",
+        "move": "Expose intermediate subgoals or stages instead of learning only an undifferentiated action mapping.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "A fixed decomposition can describe nominal execution without testing geometry-induced changes to the stage graph itself.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "Predictive visual planning and closed-loop replanning",
+        "move": "Use predicted future observations or errors to revise actions during long-horizon execution.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Replanning can recover from drift without revealing whether geometry required a different strategy from the outset.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "Simulation domain randomization and synthetic demonstration generation",
+        "move": "Vary environments and objects to broaden policy robustness and sim-to-real transfer.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Unmatched randomization confounds geometry-caused strategy change with appearance, language, layout, and execution variation.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f1",
+        "method": "GemBench and 3D-LOTUS++",
+        "move": "Evaluate placements, object novelty, primitives, and long horizons while combining 3D motion policy with LLM/VLM planning.",
+        "parent": "n1",
+        "provenance": "retrieved:openalex:W4403116255",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Its abstract-level generalization axes do not identify matched geometry interventions that force a different strategy with the same endpoint.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f2",
+        "method": "Any3D-VLA",
+        "move": "Fuse diverse simulator, sensor, and estimated point clouds with 2D observations for domain-agnostic spatial robustness.",
+        "parent": "n2",
+        "provenance": "retrieved:openalex:W7127541930",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Representation robustness does not reveal whether geometry changes the selected grasp, path class, reorientation, or insertion strategy.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f3",
+        "method": "SpatialActor",
+        "move": "Disentangle semantics and geometry and fuse noisy depth with spatial priors for precise manipulation.",
+        "parent": "n2",
+        "provenance": "retrieved:openalex:W4416223716",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Spatial perturbation success remains non-identifying when equal endpoints admit or forbid different intermediate strategies.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f4",
+        "method": "CoA-VLA",
+        "move": "Condition action prediction on explicit object, grasp, spatial, and movement affordance reasoning.",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4405956290",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The abstract-level fixed affordance chain does not test geometry-induced changes in the required stage topology.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f5",
+        "method": "CLOVER generative-expectation control",
+        "move": "Generate visual plans, quantify embedding error, refine actions, and replan in closed loop.",
+        "parent": "n4",
+        "provenance": "retrieved:openalex:W4403808753",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Prediction-error recovery is not separated from a geometry-caused change in the required plan or relation-event topology.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f6",
+        "method": "RoboTwin 2.0",
+        "move": "Scale simulator task/data generation and structured environment randomization for robust bimanual manipulation.",
+        "parent": "n5",
+        "provenance": "retrieved:dblp:journals/corr/abs-2506-18088",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The available abstract does not isolate target/reference geometry while holding instruction, start distribution, and terminal goal fixed.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "f7",
+        "method": "Geometry-Enhanced Model for conveyor manipulation",
+        "move": "Shape optimization to prioritize geometric information over simulated appearance variation.",
+        "parent": "n5",
+        "provenance": "retrieved:openalex:W4415014283",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Cross-geometry success does not identify whether the policy changed strategy or retained a geometry-tolerant nominal trajectory.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c1",
+        "method": "Sampling-based motion planning (PRM/RRT family)",
+        "move": "Search collision-free path homotopies directly in configuration space from explicit geometry.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "This family can change path class under geometry but does not diagnose whether a learned VLA/WAM has acquired that capability.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "Task and Motion Planning (TAMP)",
+        "move": "Jointly search discrete manipulation modes and continuous motions under geometric constraints.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "TAMP explicitly changes grasps and action sequences, but its symbolic/geometric model does not establish strategy generalization inside learned policies or world models.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Retrieved nodes are grounded only to the supplied title/abstract records; all 11 cached full-text entries, including the ten exact user-reference IDs, have source_used=failed, so no method-level novelty claim is inferred from their absence or failed retrieval. Parametric nodes are awareness-only and prevent regressions to generic point/depth injection, fixed primitive scaffolds, motion planning/TAMP, visual replanning, or domain randomization. The historical mechanism families checked were explicit 3D representation, skill/affordance decomposition, predictive replanning/MPC, simulation randomization, sampling-based motion planning, and TAMP; only concrete representatives known with confidence are included."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 17,
+    "n_on_topic": 17,
+    "patterns": [
+      {"pattern_id": "assumption_audit_and_pivot", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "architectural_operator_substitution", "count": 1, "share": 0.06, "saturation_band": "untested"},
+      {"pattern_id": "generative_process_redesign", "count": 3, "share": 0.18, "saturation_band": "mid_frequency"},
+      {"pattern_id": "controlled_diagnostic_design", "count": 2, "share": 0.12, "saturation_band": "mid_frequency"},
+      {"pattern_id": "unify_into_shared_representation", "count": 6, "share": 0.35, "saturation_band": "mid_frequency"},
+      {"pattern_id": "reframe_as_solvable_object", "count": 1, "share": 0.06, "saturation_band": "untested"},
+      {"pattern_id": "self_supervised_signal_engineering", "count": 2, "share": 0.12, "saturation_band": "mid_frequency"},
+      {"pattern_id": "structural_prior_encoding", "count": 8, "share": 0.47, "saturation_band": "mid_frequency"},
+      {"pattern_id": "algebraic_equivalence_unification", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "heterogeneous_decomposition", "count": 7, "share": 0.41, "saturation_band": "mid_frequency"},
+      {"pattern_id": "decompose_and_delegate", "count": 5, "share": 0.29, "saturation_band": "mid_frequency"},
+      {"pattern_id": "relax_discrete_search_to_continuous", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "adapt_via_conditioning", "count": 3, "share": 0.18, "saturation_band": "mid_frequency"},
+      {"pattern_id": "characterize_limit_then_surpass", "count": 0, "share": 0.0, "saturation_band": "untested"},
+      {"pattern_id": "targeted_self_supervised_objective", "count": 2, "share": 0.12, "saturation_band": "mid_frequency"}
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "Structural-prior encoding is the most-used pattern (8/17), while the closest manipulation papers still report broad success or robustness without isolating geometry-induced changes in feasible strategy topology."
+  },
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

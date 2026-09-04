@@ -1,0 +1,1090 @@
+[
+  {
+    "title": "Diffusion-Driven Point Cloud Adaption for Depth-Only 6D Pose Estimation in Cluttered Robotics Bin-Picking",
+    "title_norm": "diffusion driven point cloud adaption for depth only 6d pose estimation in clutt",
+    "abstract": "D pose estimation in densely-packed, industrial environments remains a challenging perception problem due to severe occlusions, sensor noise, and the fragmentary nature of reconstructed 3D observations. To this end, we present a generative module for holistic, depth-only 6D pose estimation in cluttered bin-picking that integrates a conditioned Denoising Diffusion Probabilistic Model (DDPM) as a learned data-centric inference adaptor for point cloud segments. Building on a holistic staged-heatmap fusion backbone that produces focused, memoryefficient point cloud fragments around candidate objects, we show that sharpening and completing these fragments with a diffusion-based point cloud autoencoder substantially improves downstream per-point voting pose estimation. Our method integrates a velocity-targeted DDPM, implemented via a Point Transformer V3 (PTv3) backbone, to reconstruct sharper and more complete object-level geometry from imperfect scene fragments. The denoiser is trained to explicitly align geometric completion with the 6D pose objective. At inference we apply a lightweight sampling schedule to produce a single sharpened segment per object candidate, preserving time-efficiency for robotics bin-picking. With pilot experiments on the IPD dataset, we demonstrate that diffusion-based completion reduces pose error and increases robustness to occlusion, sensor noise, and severe fragmentation, while retaining the holistic advantages of scene-level reasoning. We argue that diffusion models are a promising direction for scene denoising and completion in 6D pose estimation and provide a practical integration strategy for robotic perception systems.",
+    "tldr": "",
+    "year": 2026,
+    "venue": "2026 6th International Conference on Electrical, Computer and Energy Technologies (ICECET)",
+    "publication_types": [
+      "Conference"
+    ],
+    "authors": [
+      "Samed Dogan",
+      "Nico Leuze",
+      "Nicolas Rodriguez-Pena",
+      "Nikolas Ivakko",
+      "Alfred Schöttl"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+    "paper_id": "semanticscholar:0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+    "doi": "10.1109/ICECET65726.2026.11632335",
+    "arxiv_id": "",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+    "published_iso": "2026-07-01",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Multiway Point Cloud Mosaicking with Diffusion and Global Optimization",
+    "title_norm": "multiway point cloud mosaicking with diffusion and global optimization",
+    "abstract": "We introduce a novel framework for multiway point cloud mosaicking (named Wednesday), designed to co-align sets of partially overlapping point clouds - typically obtained from 3D scanners or moving RGB-D cameras - into a unified coordinate system. At the core of our approach is ODIN, a learned pairwise registration algorithm that iteratively identifies overlaps and refines attention scores, employing a diffusion-based process for denoising pairwise correlation matrices to enhance matching accuracy. Further steps include constructing a pose graph from all point clouds, performing rotation averaging, a novel robust algorithm for re-estimating translations optimally in terms of consensus maximization and translation optimization. Finally, the point cloud rotations and positions are optimized jointly by a diffusion-based approach. Tested on four diverse, large-scale datasets, our method achieves state-of-the-art pairwise and multiway registration results by a large margin on all benchmarks. Our code and models are available at https://github.com/jinsz/Multiway-Point-Cloud-Mosaicking-with-Diffusion-and-Global-Optimization.",
+    "tldr": "This work introduces a novel framework for multiway point cloud mosaicking, designed to co-align sets of partially overlapping point clouds into a unified coordinate system using ODIN, a learned pairwise registration algorithm that iteratively identifies overlaps and refines attention scores, employing a diffusion-based process for denoising pairwise correlation matrices.",
+    "year": 2024,
+    "venue": "Computer Vision and Pattern Recognition",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Shengze Jin",
+      "Iro Armeni",
+      "M. Pollefeys",
+      "Dániel Baráth"
+    ],
+    "citations": 17,
+    "source": "semanticscholar",
+    "source_id": "15f9d096790b0eeacb8cd6227e85394613136473",
+    "paper_id": "semanticscholar:15f9d096790b0eeacb8cd6227e85394613136473",
+    "doi": "10.1109/CVPR52733.2024.01969",
+    "arxiv_id": "2404.00429",
+    "dblp_key": "conf/cvpr/JinAPB24",
+    "paper_url": "https://arxiv.org/pdf/2404.00429",
+    "published_iso": "2024-03-30",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-03",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "6D Assembly Pose Estimation by Point Cloud Registration for Robotic Manipulation",
+    "title_norm": "6d assembly pose estimation by point cloud registration for robotic manipulation",
+    "abstract": "The demands on robotic manipulation skills to perform challenging tasks have drastically increased in recent times. To perform these tasks with dexterity, robots require perception tools to understand the scene and extract useful information that transforms to robot control inputs. To this end, recent research has introduced various object pose estimation and grasp pose detection methods that yield precise results. Assembly pose estimation is a secondary yet highly desirable skill in robotic assembling as it requires more detailed information on object placement as compared to bin picking and pick-and-place tasks. However, it has been often overlooked in research due to the complexity of integration in an agile framework. To address this issue, we propose an assembly pose estimation method with RGB-D input and 3D CAD models of the associated objects. The framework consists of semantic segmentation of the scene and registering point clouds of local surfaces against target point clouds derived from CAD models to estimate 6D poses. We show that our method can deliver sufficient accuracy for assembling object assemblies using evaluation metrics and demonstrations. The source code and dataset for the work can be found at: https://github.com/KulunuOS/6DAPose",
+    "tldr": "",
+    "year": 2024,
+    "venue": "2024 IEEE 20th International Conference on Automation Science and Engineering (CASE)",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Kulunu Samarawickrama",
+      "Gaurang Sharma",
+      "Alexandre Angleraud",
+      "Roel Pieters"
+    ],
+    "citations": 8,
+    "source": "semanticscholar",
+    "source_id": "2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+    "paper_id": "semanticscholar:2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+    "doi": "10.1109/CASE59546.2024.10711374",
+    "arxiv_id": "",
+    "dblp_key": "conf/case/SamarawickramaS24",
+    "paper_url": "https://www.semanticscholar.org/paper/2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+    "published_iso": "2024-08-28",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-08",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Disentangled Point Diffusion for Precise Object Placement",
+    "title_norm": "disentangled point diffusion for precise object placement",
+    "abstract": "Recent advances in robotic manipulation have highlighted the effectiveness of learning from demonstration. However, while end-to-end policies excel in expressivity and flexibility, they struggle both in generalizing to novel object geometries and in attaining a high degree of precision. An alternative, object-centric approach frames the task as predicting the placement pose of the target object, providing a modular decomposition of the problem. Building on this goal-prediction paradigm, we propose TAX-DPD, a hierarchical, disentangled point diffusion framework that achieves state-of-the-art performance in placement precision, multi-modal coverage, and generalization to variations in object geometries and scene configurations. We model global scene-level placements through a novel feed-forward Dense Gaussian Mixture Model (GMM) that yields a spatially dense prior over global placements; we then model the local object-level configuration through a novel disentangled point cloud diffusion module that separately diffuses the object geometry and the placement frame, enabling precise local geometric reasoning. Interestingly, we demonstrate that our point cloud diffusion achieves substantially higher accuracy than a prior approach based on SE(3)-diffusion, even in the context of rigid object placement. We validate our approach across a suite of challenging tasks in simulation and in the real-world on high-precision industrial insertion tasks. Furthermore, we present results on a cloth-hanging task in simulation, indicating that our framework can further relax assumptions on object rigidity.",
+    "tldr": "TAX-DPD is proposed, a hierarchical, disentangled point diffusion framework that achieves state-of-the-art performance in placement precision, multi-modal coverage, and generalization to variations in object geometries and scene configurations and is validated across a suite of challenging tasks in simulation and in the real-world.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Lyuxing He",
+      "Eric Cai",
+      "Shobhit Aggarwal",
+      "Jianjun Wang",
+      "David Held"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "706c4142607ae62bfcef94593ff02eee65b1814a",
+    "paper_id": "semanticscholar:706c4142607ae62bfcef94593ff02eee65b1814a",
+    "doi": "10.48550/arXiv.2604.11793",
+    "arxiv_id": "2604.11793",
+    "dblp_key": "journals/corr/abs-2604-11793",
+    "paper_url": "https://www.semanticscholar.org/paper/706c4142607ae62bfcef94593ff02eee65b1814a",
+    "published_iso": "2026-04-13",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2026-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Particle-based 6D Object Pose Estimation from Point Clouds using Diffusion Models",
+    "title_norm": "particle based 6d object pose estimation from point clouds using diffusion model",
+    "abstract": "Object pose estimation from a single view remains a challenging problem. In particular, partial observability, occlusions, and object symmetries eventually result in pose ambiguity. To account for this multimodality, this work proposes training a diffusion-based generative model for 6D object pose estimation. During inference, the trained generative model allows for sampling multiple particles, i.e., pose hypotheses. To distill this information into a single pose estimate, we propose two novel and effective pose selection strategies that do not require any additional training or computationally intensive operations. Moreover, while many existing methods for pose estimation primarily focus on the image domain and only incorporate depth information for final pose refinement, our model solely operates on point cloud data. The model thereby leverages recent advancements in point cloud processing and operates upon an SE(3)-equivariant latent space that forms the basis for the particle selection strategies and allows for improved inference times. Our thorough experimental results demonstrate the competitive performance of our approach on the Linemod dataset and showcase the effectiveness of our design choices. Code is available at https://github.com/zitronian/6DPoseDiffusion .",
+    "tldr": "This work proposes training a diffusion-based generative model that leverages recent advancements in point cloud processing and operates upon an SE(3)-equivariant latent space that forms the basis for the particle selection strategies and allows for improved inference times.",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Christian Möller",
+      "Niklas Funk",
+      "Jan Peters"
+    ],
+    "citations": 3,
+    "source": "semanticscholar",
+    "source_id": "b862d054a39920b85b763157c9c3f41d9c3ea53f",
+    "paper_id": "semanticscholar:b862d054a39920b85b763157c9c3f41d9c3ea53f",
+    "doi": "10.48550/arXiv.2412.00835",
+    "arxiv_id": "2412.00835",
+    "dblp_key": "journals/corr/abs-2412-00835",
+    "paper_url": "https://www.semanticscholar.org/paper/b862d054a39920b85b763157c9c3f41d9c3ea53f",
+    "published_iso": "2024-12-01",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-12",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "MonoDiff9D: Monocular Category-Level 9D Object Pose Estimation via Diffusion Model",
+    "title_norm": "monodiff9d monocular category level 9d object pose estimation via diffusion mode",
+    "abstract": "Object pose estimation is a core means for robots to understand and interact with their environment. For this task, monocular category-level methods are attractive as they require only a single RGB camera. However, current methods rely on shape priors or CAD models of the intra-class known objects. We propose a diffusion-based monocular category-level 9D object pose generation method, MonoDiff9D. Our motivation is to leverage the probabilistic nature of diffusion models to alleviate the need for shape priors, CAD models, or depth sensors for intra-class unknown object pose estimation. We first estimate coarse depth via DINOv2 from the monocular image in a zero-shot manner and convert it into a point cloud. We then fuse the global features of the point cloud with the input image and use the fused features along with the encoded time step to condition MonoDiff9D. Finally, we design a transformer-based denoiser to recover the object pose from Gaussian noise. Extensive experiments on two popular benchmark datasets show that MonoDiff9D achieves state-of-the-art monocular category-level 9D object pose estimation accuracy without the need for shape priors or CAD models at any stage. Our code will be made public at https://github.com/CNJianLiu/MonoDiff9D.",
+    "tldr": "A diffusion-based monocular category-level 9D object pose generation method that achieves state-of-the-art monocular category-level 9D object pose estimation accuracy without the need for shape priors or CAD models at any stage.",
+    "year": 2025,
+    "venue": "IEEE International Conference on Robotics and Automation",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Jian Liu",
+      "Wei Sun",
+      "Hui Yang",
+      "Jin Zheng",
+      "Zichen Geng",
+      "Hossein Rahmani"
+    ],
+    "citations": 7,
+    "source": "semanticscholar",
+    "source_id": "9b4bb4a466c03bceb09701ae7397b438b338eba2",
+    "paper_id": "semanticscholar:9b4bb4a466c03bceb09701ae7397b438b338eba2",
+    "doi": "10.1109/ICRA55743.2025.11127837",
+    "arxiv_id": "2504.10433",
+    "dblp_key": "journals/corr/abs-2504-10433",
+    "paper_url": "https://eprints.lancs.ac.uk/id/eprint/235611/1/2504.10433v1.pdf",
+    "published_iso": "2025-04-14",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2025-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Diff-Art: Category-level Articulation Pose Estimation via Conditional Diffusion",
+    "title_norm": "diff art category level articulation pose estimation via conditional diffusion",
+    "abstract": "Articulated objects are prevalent in people’s daily lives, yet their diverse motion structures pose significant challenges for category-level pose estimation. To address this, in this work, we introduce Diff-Art, a method tailored for category-level articulation pose estimation using conditional diffusion. Given a partial point cloud as input, Diff-Art predicts the per-part 6D pose of the articulated object. Our approach incorporates a novel modeling strategy that exploits the unique kinematic constraints of articulated objects, effectively handling self-occlusion scenarios. Furthermore, we propose a re-scoring strategy to enhance the accuracy of 6D pose estimation within the conditional diffusion framework. Extensive experiments validate the effectiveness of Diff-Art, demonstrating its strong performance on both synthetic datasets and its ability to generalize to real-world scenarios. We believe this work holds significant potential for applications in embodied AI and robotics.",
+    "tldr": "",
+    "year": 2025,
+    "venue": "IEEE International Conference on Multimedia and Expo",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Yukang Huo",
+      "Xianhui Meng",
+      "Li Zhang",
+      "Haonan Jiang",
+      "Yan Zhong",
+      "Mingyuan Yao"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+    "paper_id": "semanticscholar:b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+    "doi": "10.1109/ICME59968.2025.11209596",
+    "arxiv_id": "",
+    "dblp_key": "conf/icmcs/HuoMZJZYW25",
+    "paper_url": "https://www.semanticscholar.org/paper/b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+    "published_iso": "2025-06-30",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2025-06",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Reverse2Complete: Unpaired Multimodal Point Cloud Completion via Guided Diffusion",
+    "title_norm": "reverse2complete unpaired multimodal point cloud completion via guided diffusion",
+    "abstract": "Unpaired point cloud completion involves filling in missing parts of a point cloud without requiring partial-complete correspondence. Meanwhile, since point cloud completion is an ill-posed problem, there are multiple ways to generate the missing parts. Existing unpaired completion methods usually leverage generative adversarial training by transforming partial shape encoding into a complete one in the low-dimensional latent feature space. However, \"mode collapse\" often occurs, where only a subset of the shapes is represented in the low-dimensional space, reducing the diversity of the generated shapes. In this paper, we propose a novel unpaired multimodal shape completion approach that directly operates on point coordinate space. We achieve unpaired completion via a single diffusion model trained on complete data by \"hijacking\" the generative process. We further augment the diffusion model by introducing two guidance mechanisms to facilitate mapping the partial point cloud to the complete one while preserving its original structure. We conduct extensive evaluations of our approach, which show that our method generates shapes that are more diverse and better preserve the original structures compared to alternative methods.",
+    "tldr": "This paper achieves unpaired completion via a single diffusion model trained on complete data by \"hijacking\" the generative process by introducing two guidance mechanisms to facilitate mapping the partial point cloud to the complete one while preserving its original structure.",
+    "year": 2024,
+    "venue": "ACM Multimedia",
+    "publication_types": [
+      "JournalArticle",
+      "Book"
+    ],
+    "authors": [
+      "Wenxiao Zhang",
+      "Hossein Rahmani",
+      "Xun Yang",
+      "Jun Liu"
+    ],
+    "citations": 7,
+    "source": "semanticscholar",
+    "source_id": "953c91cbbfc226454d4ddb2991aac41b42645304",
+    "paper_id": "semanticscholar:953c91cbbfc226454d4ddb2991aac41b42645304",
+    "doi": "10.1145/3664647.3680590",
+    "arxiv_id": "",
+    "dblp_key": "conf/mm/Zhang0Y024",
+    "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3664647.3680590?download=true",
+    "published_iso": "2024-10-28",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-10",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "PCCDiff: Point Cloud Completion with Conditional Denoising Diffusion Probabilistic Models",
+    "title_norm": "pccdiff point cloud completion with conditional denoising diffusion probabilisti",
+    "abstract": "Point clouds obtained from laser scanners or other devices often exhibit incompleteness, which poses a challenge for subsequent point cloud processing. Therefore, accurately predicting the complete shape from partial observations has paramount significance. In this paper, we introduce PCCDiff, a probabilistic model inspired by Denoising Diffusion Probabilistic Models (DDPMs), designed for point cloud completion tasks. Our model aims to predict missing parts in incomplete 3D shapes by learning the reverse diffusion process, transforming a 3D Gaussian noise distribution into the desired shape distribution without any structural assumption (e.g., geometric symmetry). Firstly, we design a conditional point cloud completion network that integrates Missing-Transformer and TreeGCN, facilitating the prediction of complete point cloud features. Subsequently, at each step of the diffusion process, the obtained point cloud features serve as condition inputs for the symmetric Diffusion ResUNet. By incorporating these condition features and incomplete point clouds into the diffusion process, PCCDiff demonstrates superior generation performance compared to other methods. Finally, extensive experiments are conducted to demonstrate the effectiveness of our proposed generative model for completing point clouds.",
+    "tldr": "PCCDiff, a probabilistic model inspired by Denoising Diffusion Probabilistic Models (DDPMs), designed for point cloud completion tasks, aims to predict missing parts in incomplete 3D shapes by learning the reverse diffusion process, transforming a 3D Gaussian noise distribution into the desired shape distribution without any structural assumption.",
+    "year": 2024,
+    "venue": "Symmetry",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Yang Li",
+      "Fanchen Peng",
+      "Feng Dou",
+      "Yao Xiao",
+      "Yi Li"
+    ],
+    "citations": 4,
+    "source": "semanticscholar",
+    "source_id": "60c11dae96dff3dda704508029d326a218603a1b",
+    "paper_id": "semanticscholar:60c11dae96dff3dda704508029d326a218603a1b",
+    "doi": "10.3390/sym16121680",
+    "arxiv_id": "",
+    "dblp_key": "journals/symmetry/LiPDXL24",
+    "paper_url": "https://doi.org/10.3390/sym16121680",
+    "published_iso": "2024-12-19",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-12",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Category Level 6D Object Pose Estimation from a Single RGB Image using Diffusion",
+    "title_norm": "category level 6d object pose estimation from a single rgb image using diffusion",
+    "abstract": "Estimating the 6D pose and 3D size of an object from an image is a fundamental task in computer vision. Most current approaches are restricted to specific instances with known models or require ground truth depth information or point cloud captures from LIDAR. We tackle the harder problem of pose estimation for category-level objects from a single RGB image. We propose a novel solution that eliminates the need for specific object models or depth information. Our method utilises score-based diffusion models to generate object pose hypotheses to model the distribution of possible poses for the object. Unlike previous methods that rely on costly trained likelihood estimators to remove outliers before pose aggregation using mean pooling, we introduce a simpler approach using Mean Shift to estimate the mode of the distribution as the final pose estimate. Our approach outperforms the current state-of-the-art on the REAL275 dataset by a significant margin.",
+    "tldr": "This work proposes a novel solution that eliminates the need for specific object models or depth information and introduces a simpler approach using Mean Shift to estimate the mode of the distribution as the final pose estimate.",
+    "year": 2024,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Adam Bethell",
+      "Ravi Garg",
+      "Ian Reid"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "d4ac435924eb494803a9335e39f2438b9621de4c",
+    "paper_id": "semanticscholar:d4ac435924eb494803a9335e39f2438b9621de4c",
+    "doi": "10.48550/arXiv.2412.11420",
+    "arxiv_id": "2412.11420",
+    "dblp_key": "journals/corr/abs-2412-11420",
+    "paper_url": "https://www.semanticscholar.org/paper/d4ac435924eb494803a9335e39f2438b9621de4c",
+    "published_iso": "2024-12-16",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2024-12",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "On the Effect of Domain-Adversarial Supervision Placement for Cross-Sensor 6-D Pose Estimation",
+    "title_norm": "on the effect of domain adversarial supervision placement for cross sensor 6 d p",
+    "abstract": "Domain-adversarial training is a common approach to mitigate domain shift in deep learning, yet architectural design choices such as the placement of adversarial supervision are often treated heuristically. We present a systematic empirical assessment of gradient reversal-based domain-adversarial training applied to cross-sensor 6D pose estimation, focusing on the placement of domain classification heads within a multi-modal red, green, and blue(RGB)–point cloud fusion network. Using a simplified bidirectional RGB–point cloud fusion network, we evaluate domain head placement at multiple depths, including modality-specific encoders and intermediate fusion stages, under a strict multi-source training protocol with no access to target-domain data. Experiments are conducted on controlled synthetic datasets with multiple runs per configuration and complemented by real-world cross-sensor RGB-D evaluations. Across all settings, performance differences between domain head placements are dominated by run-to-run variability, with no statistically significant advantage for any particular placement. Real-world experiments exhibit similarly small differences and qualitatively align with synthetic results. These findings indicate that, for the studied architecture, gradient reversal-based domain-adversarial training is largely insensitive to the precise placement of the domain head, suggesting that both early and late integration constitute viable design choices. This robustness provides practical flexibility in network design, supports reproducible evaluation across placements, and motivates future work on complementary adaptation mechanisms that can be combined with adversarial supervision.",
+    "tldr": "A systematic empirical assessment of gradient reversal-based domain-adversarial training applied to cross-sensor 6D pose estimation indicates that robustness provides practical flexibility in network design, supports reproducible evaluation across placements, and motivates future work on complementary adaptation mechanisms that can be combined with adversarial supervision.",
+    "year": 2026,
+    "venue": "IEEE Access",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Tobias Niedermaier",
+      "Sarah Weiß",
+      "Mahmoud Salem",
+      "Christopher M. A. Bonenberger",
+      "Maik Knof",
+      "Stefan Elser"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "8a7f25e962c14eb7f2fcb7ace472a1f24c1851d0",
+    "paper_id": "semanticscholar:8a7f25e962c14eb7f2fcb7ace472a1f24c1851d0",
+    "doi": "10.1109/ACCESS.2026.3681126",
+    "arxiv_id": "",
+    "dblp_key": "journals/access/NiedermaierWSBKER26",
+    "paper_url": "https://doi.org/10.1109/access.2026.3681126",
+    "published_iso": null,
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2026",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Digging into Intrinsic Contextual Information for High-fidelity 3D Point Cloud Completion",
+    "title_norm": "digging into intrinsic contextual information for high fidelity 3d point cloud c",
+    "abstract": "The common occurrence of occlusion-induced incompleteness in point clouds has made point cloud completion (PCC) a highly-concerned task in the field of geometric processing. \nExisting PCC methods typically produce complete point clouds from partial point clouds in a coarse-to-fine paradigm, with the coarse stage generating entire shapes and the fine stage improving texture details. Though diffusion models have demonstrated effectiveness in the coarse stage, the fine stage still faces challenges in producing high-fidelity results due to the ill-posed nature of PCC. The intrinsic contextual information for texture details in partial point clouds is the key to solving the challenge.\nIn this paper, we propose a high-fidelity PCC method that digs into both short and long-range contextual information from the partial point cloud in the fine stage.\nSpecifically, after generating the coarse point cloud via a diffusion-based coarse generator, a mixed sampling module introduces short-range contextual information from partial point clouds into the fine stage. A surface freezing module safeguards points from noise-free partial point clouds against disruption.\nAs for the long-range contextual information, we design a similarity modeling module to derive similarity with rigid transformation invariance between points, conducting effective matching of geometric manifold features globally.\nIn this way, the high-quality components present in the partial point cloud serve as valuable references to refine the coarse point cloud with high fidelity.\nExtensive experiments have demonstrated the superiority of the proposed method over SOTA competitors.",
+    "tldr": "This paper proposes a high-fidelity PCC method that digs into both short and long-range contextual information from the partial point cloud in the fine stage, and designs a similarity modeling module to derive similarity with rigid transformation invariance between points, conducting effective matching of geometric manifold features globally.",
+    "year": 2025,
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "publication_types": [
+      "JournalArticle",
+      "Conference"
+    ],
+    "authors": [
+      "Jisheng Chu",
+      "Wenrui Li",
+      "Xingtao Wang",
+      "Kanglin Ning",
+      "Yidan Lu",
+      "Xiaopeng Fan"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "6c3c852ebccef3ef8cca9ec760d6a4a27d9e8abd",
+    "paper_id": "semanticscholar:6c3c852ebccef3ef8cca9ec760d6a4a27d9e8abd",
+    "doi": "10.1609/aaai.v39i3.32260",
+    "arxiv_id": "",
+    "dblp_key": "conf/aaai/ChuLWNLF25",
+    "paper_url": "https://doi.org/10.1609/aaai.v39i3.32260",
+    "published_iso": "2025-04-11",
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "year_month": "2025-04",
+    "retrieved_via": "semanticscholar",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning",
+    "title_norm": "demogen synthetic demonstration generation for data efficient visuomotor policy ",
+    "abstract": "100x Synthetic Demos \"One-Shot\" Imitation Versatile Skills & Platforms Extended O.O.D. CapabilitiesFig. 1: DemoGen is a fully synthetic approach for automatic demonstration generation.DemoGen promotes the spatial generalization ability of visuomotor policies and can facilitate one-shot imitation by adapting one human-collected demonstration into novel object configurations.DemoGen applies to various manipulation tasks and platforms and can be extended to enable additional out-of-distribution capabilities.Abstract-Visuomotor policies have shown great promise in robotic manipulation but often require substantial humancollected data for effective performance.A key factor driving the high data demands is their limited spatial generalization capability, which necessitates extensive data collection across different object configurations.In this work, we present DemoGen, a low-cost, fully synthetic approach for automatic demonstration generation.Using only one human-collected demonstration per task, DemoGen generates spatially augmented demonstrations by adapting the demonstrated action trajectory to novel object configurations.Visual observations are synthesized by leveraging 3D point clouds as the modality and rearranging the subjects in the scene via 3D editing.Empirically, DemoGen significantly enhances policy performance across a diverse range of real-world manipulation tasks, showing its applicability even in challenging scenarios involving deformable objects, dexterous hand endeffectors, and bimanual platforms.Furthermore, DemoGen can be extended to enable additional out-of-distribution capabilities, including disturbance resistance and obstacle avoidance.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Zhengrong Xue",
+      "Shuying Deng",
+      "Zhenyang Chen",
+      "Yixuan Wang",
+      "Zhecheng Yuan",
+      "Huazhe Xu"
+    ],
+    "citations": 19,
+    "source": "openalex",
+    "source_id": "W4414079207",
+    "doi": "10.15607/rss.2025.xxi.157",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.157",
+    "published_iso": "2025-06-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4414079207",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "ARCH: Hierarchical Hybrid Learning for Long-Horizon Contact-Rich Robotic Assembly",
+    "title_norm": "arch hierarchical hybrid learning for long horizon contact rich robotic assembly",
+    "abstract": "Generalizable long-horizon robotic assembly requires reasoning at multiple levels of abstraction. While end-to-end imitation learning (IL) is a promising approach, it typically requires large amounts of expert demonstration data and often struggles to achieve the high precision demanded by assembly tasks. Reinforcement learning (RL) approaches, on the other hand, have shown some success in high-precision assembly, but suffer from sample inefficiency, which limits their effectiveness in long-horizon tasks. To address these challenges, we propose a hierarchical modular approach, named Adaptive Robotic Compositional Hierarchy (ARCH), which enables long-horizon, high-precision robotic assembly in contact-rich settings. ARCH employs a hierarchical planning framework, including a low-level primitive library of parameterized skills and a high-level policy. The low-level primitive library includes essential skills for assembly tasks, such as grasping and inserting. These primitives consist of both RL and model-based policies. The high-level policy, learned via IL from a handful of demonstrations, without the need for teleoperation, selects the appropriate primitive skills and instantiates them with input parameters. We extensively evaluate our approach in simulation and on a real robotic manipulation platform. We show that ARCH generalizes well to unseen objects and outperforms baseline methods in terms of success rate and data efficiency. More details are available at: https://long-horizon-assembly.github.io.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Jiankai Sun",
+      "Aidan Curtis",
+      "Yang You",
+      "Yan Xu",
+      "Michael S. Koehle",
+      "Chen, Qianzhong"
+    ],
+    "citations": 2,
+    "source": "openalex",
+    "source_id": "W4403789165",
+    "doi": "10.48550/arxiv.2409.16451",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2409.16451",
+    "published_iso": "2024-09-24",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "unseen receptacle insertion keypose trajectory generalization"
+    ],
+    "paper_id": "openalex:W4403789165",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Robust Visuomotor Control for Humanoid Loco-Manipulation Using Hybrid Reinforcement Learning",
+    "title_norm": "robust visuomotor control for humanoid loco manipulation using hybrid reinforcem",
+    "abstract": "Loco-manipulation tasks using humanoid robots have great practical value in various scenarios. While reinforcement learning (RL) has become a powerful tool for versatile and robust whole-body humanoid control, visuomotor control in loco-manipulation tasks with RL remains a great challenge due to their high dimensionality and long-horizon exploration issues. In this paper, we propose a loco-manipulation control framework for humanoid robots that utilizes model-free RL upon model-based control in the robot's tasks space. It implements a visuomotor policy with depth-image input, and uses mid-way initialization and prioritized experience sampling to accelerate policy convergence. The proposed method is validated on typical loco-manipulation tasks of load carrying and door opening resulting in an overall success rate of 83%, where our framework automatically adjusts the robot motion in reaction to changes in the environment.",
+    "year": 2025,
+    "venue": "Biomimetics",
+    "authors": [
+      "Chenzheng Wang",
+      "Qiang Huang",
+      "Xuechao Chen",
+      "Zeyu Zhang",
+      "Jing Shi"
+    ],
+    "citations": 4,
+    "source": "openalex",
+    "source_id": "W4412654327",
+    "doi": "10.3390/biomimetics10070469",
+    "arxiv_id": null,
+    "paper_url": "https://www.mdpi.com/2313-7673/10/7/469/pdf?version=1752745182",
+    "published_iso": "2025-07-17",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4412654327",
+    "year_month": "2025-07",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Twin-DP3: View-Invariant 3D Diffusion Policy With Digital Twin",
+    "title_norm": "twin dp3 view invariant 3d diffusion policy with digital twin",
+    "abstract": "Learning visuomotor policies with imitation learning from 3D observations is a primary research direction in robotic manipulation, as 3D data inherently captures spatial features critical for action. While many existing methods rely on multiview point cloud fusion, recent studies like 3D Diffusion Policy have shown that using a single-view observation setting with a lightweight point cloud encoder can achieve robust 3D policy learning. This design yields a simpler and more efficient pipeline. However, we observe that such a setting suffers from performance degradation under significant viewpoint changes. To overcome this limitation without requiring extensive multi-view data acquisition, we propose a digital twin-based real-time point cloud augmentation method named Twin-DP3. Our approach leverages a 6-DoF pose estimation algorithm to track the manipulated object and uses a robot model to generate robot component point clouds in real time. We validate the effectiveness of this method through comprehensive experiments in both simulation and realworld environments, demonstrating notable improvements in policy robustness under novel viewpoints.",
+    "year": 2026,
+    "venue": "IEEE Robotics and Automation Letters",
+    "authors": [
+      "Xinyu Liu",
+      "Feng Han",
+      "Jingzhi Cui",
+      "Jiabin Lou",
+      "Rong Ding",
+      "Jianwei Niu"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W7124843230",
+    "doi": "10.1109/lra.2026.3655308",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W7124843230",
+    "published_iso": "2026-01-19",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W7124843230",
+    "year_month": "2026-01",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "FlowPolicy: Enabling Fast and Robust 3D Flow-Based Policy via Consistency Flow Matching for Robot Manipulation",
+    "title_norm": "flowpolicy enabling fast and robust 3d flow based policy via consistency flow ma",
+    "abstract": "Robots can acquire complex manipulation skills by learning policies from expert demonstrations, which is often known as vision-based imitation learning. Generating policies based on diffusion and flow matching models has been shown to be effective, particularly in robotic manipulation tasks. However, recursion-based approaches are inference inefficient in working from noise distributions to policy distributions, posing a challenging trade-off between efficiency and quality. This motivates us to propose FlowPolicy, a novel framework for fast policy generation based on consistency flow matching and 3D vision. Our approach refines the flow dynamics by normalizing the self-consistency of the velocity field, enabling the model to derive task execution policies in a single inference step. Specifically, FlowPolicy conditions on the observed 3D point cloud, where consistency flow matching directly defines straight-line flows from different time states to the same action space, while simultaneously constraining their velocity values, that is, we approximate the trajectories from noise to robot actions by normalizing the self-consistency of the velocity field within the action space, thus improving the inference efficiency. We validate the effectiveness of FlowPolicy in Adroit and Metaworld, demonstrating a 7× increase in inference speed while maintaining competitive average success rates compared to state-of-the-art methods.",
+    "year": 2025,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "authors": [
+      "Qinglun Zhang",
+      "Zhen Liu",
+      "Haoqiang Fan",
+      "Guanghui Liu",
+      "Bing Zeng",
+      "Shuaicheng Liu"
+    ],
+    "citations": 15,
+    "source": "openalex",
+    "source_id": "W4409365031",
+    "doi": "10.1609/aaai.v39i14.33617",
+    "arxiv_id": null,
+    "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/download/33617/35772",
+    "published_iso": "2025-04-11",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4409365031",
+    "year_month": "2025-04",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "SPOT: SE(3) Pose Trajectory Diffusion for Object-Centric Manipulation",
+    "title_norm": "spot se 3 pose trajectory diffusion for object centric manipulation",
+    "abstract": "We introduce SPOT, an object-centric imitation learning framework. The key idea is to capture each task by an object-centric representation, specifically the SE(3) object pose trajectory relative to the target. This approach decouples embodiment actions from sensory inputs, facilitating learning from various demonstration types, including both action-based and action-less human hand demonstrations, as well as cross-embodiment generalization. Additionally, object pose trajectories inherently capture planning constraints from demonstrations without the need for manually-crafted rules. To guide the robot in executing the task, the object trajectory is used to condition a diffusion policy. We systematically evaluate our method on simulation and real-world tasks. In real-world evaluation, using only eight demonstrations shot on an iPhone, our approach completed all tasks while fully complying with task constraints. Project page: https://nvlabs.github.io/object_centric_diffusion",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Cheng-Chun Hsu",
+      "Bowen Wen",
+      "Jie Xu",
+      "Yashraj Narang",
+      "Xiaolong Wang",
+      "Yuke Zhu"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4404350837",
+    "doi": "10.48550/arxiv.2411.00965",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2411.00965",
+    "published_iso": "2024-11-01",
+    "oa_field": "Engineering",
+    "semantic_recall": false,
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "paper_id": "openalex:W4404350837",
+    "year_month": "2024-11",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "MATCH POLICY: A Simple Pipeline from Point Cloud Registration to Manipulation Policies",
+    "title_norm": "match policy a simple pipeline from point cloud registration to manipulation pol",
+    "abstract": "Many manipulation tasks require the robot to rearrange objects relative to one another. Such tasks can be described as a sequence of relative poses between parts of a set of rigid bodies. In this work, we propose MATCH POLICY, a simple but novel pipeline for solving high-precision pick and place tasks. Instead of predicting actions directly, our method registers the pick and place targets to the stored demonstrations. This transfers action inference into a point cloud registration task and enables us to realize nontrivial manipulation policies without any training. MATCH POLICY is designed to solve high-precision tasks with a key-frame setting. By leveraging the geometric interaction and the symmetries of the task, it achieves extremely high sample efficiency and generalizability to unseen configurations. We demonstrate its state-of-the-art performance across various tasks on RLBench benchmark compared with several strong baselines and test it on a real robot with six tasks.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Haojie Huang",
+      "Jianchun Li",
+      "Dian Wang",
+      "Robin Walters",
+      "Robert Platt"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4403786340",
+    "doi": "10.48550/arxiv.2409.15517",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2409.15517",
+    "published_iso": "2024-09-23",
+    "oa_field": "Earth and Planetary Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy",
+      "relational pose diffusion point cloud placement"
+    ],
+    "paper_id": "openalex:W4403786340",
+    "year_month": "2024-09",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "IMLE Policy: Fast and Sample Efficient Visuomotor Policy Learning via Implicit Maximum Likelihood Estimation",
+    "title_norm": "imle policy fast and sample efficient visuomotor policy learning via implicit ma",
+    "abstract": "Diffusion Policy, while outperforming single-step Flow Matching.We validate our approach across diverse manipulation tasks in simulated and real-world environments, showcasing its ability to capture complex behaviours under data constraints.Videos and code are provided on our project page: imle-policy.github.io/.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Krishan Rana",
+      "Robert Lee",
+      "David Pershouse",
+      "Niko Suenderhauf"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4414050683",
+    "doi": "10.15607/rss.2025.xxi.158",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.158",
+    "published_iso": "2025-06-21",
+    "oa_field": "Medicine",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4414050683",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CodeDiffuser: Attention-Enhanced Diffusion Policy via VLM-Generated Code for Instruction Ambiguity",
+    "title_norm": "codediffuser attention enhanced diffusion policy via vlm generated code for inst",
+    "abstract": "",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Guang Yin",
+      "Yitong Li",
+      "Yixuan Wang",
+      "Dale Mcconachie",
+      "Paarth Shah",
+      "Kunimatsu Hashimoto"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4414050437",
+    "doi": "10.15607/rss.2025.xxi.072",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.072",
+    "published_iso": "2025-06-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "relational pose diffusion point cloud placement"
+    ],
+    "paper_id": "openalex:W4414050437",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Towards Generalizable Vision-Language Robotic Manipulation: A Benchmark and LLM-Guided 3D Policy",
+    "title_norm": "towards generalizable vision language robotic manipulation a benchmark and llm g",
+    "abstract": "Generalizing language-conditioned robotic policies to new tasks remains a significant challenge, hampered by the lack of suitable simulation benchmarks. In this paper, we address this gap by introducing GemBench, a novel benchmark to assess generalization capabilities of vision-language robotic manipulation policies. GemBench incorporates seven general action primitives and four levels of generalization, spanning novel placements, rigid and articulated objects, and complex long-horizon tasks. We evaluate state-of-the-art approaches on GemBench and also introduce a new method. Our approach 3D- LOTUS leverages rich 3D information for action prediction conditioned on language. While 3D-LOTUS excels in both efficiency and performance on seen tasks, it struggles with novel tasks. To address this, we present 3D-LOTUS++, a framework that integrates 3D-LOTUS's motion planning capabilities with the task planning capabilities of LLMs and the object grounding accuracy of VLMs. 3D-LOTUS++ achieves state-of-the-art per-formance on novel tasks of GemBench, setting a new standard for generalization in robotic manipulation. Code, dataset, real robot videos and trained models are available at https://www.di.ens.fr/willow/research/gembench/.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Ricardo Garcı́a",
+      "Shizhe Chen",
+      "Cordelia Schmid"
+    ],
+    "citations": 11,
+    "source": "openalex",
+    "source_id": "W4403116255",
+    "doi": "10.1109/icra55743.2025.11127315",
+    "arxiv_id": null,
+    "paper_url": "https://hal.science/hal-04721101v1/file/ICRA25_Ricardo_GemBench_arxiv.pdf",
+    "published_iso": "2025-05-19",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4403116255",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CLIP-RT: Learning Language-Conditioned Robotic Policies from Natural Language Supervision",
+    "title_norm": "clip rt learning language conditioned robotic policies from natural language sup",
+    "abstract": "Teaching robots desired skills in real-world environments remains challenging, especially for non-experts.A key bottleneck is that collecting robotic data often requires expertise or specialized hardware, limiting accessibility and scalability.We posit that natural language offers an intuitive and accessible interface for robot learning.To this end, we study two aspects:(1) enabling non-experts to collect robotic data through natural language supervision (e.g., \"move the arm to the right\") and ( 2) training robot policies directly from this supervision.Specifically, we introduce a data collection framework that collects robot demonstrations based on natural language supervision and further augments these demonstrations.We then present CLIP-RT, a new vision-language-action (VLA) model that learns language-conditioned visuomotor policies from this supervision.CLIP-RT adapts the pretrained CLIP model and learns to predict language-based motion primitives via contrastive imitation learning.We train CLIP-RT on the Open X-Embodiment dataset and finetune it on in-domain data collected by our framework.In realworld evaluations, CLIP-RT demonstrates strong capabilities in learning novel manipulation skills, outperforming OpenVLA (7B parameters) by 24% in average success rates, while using 7x fewer parameters (1B).We further assess CLIP-RT's capabilities in few-shot generalization and collaborative scenarios involving large pretrained models or humans.In simulated environments, CLIP-RT also yields strong performance, achieving a 92.8% average success rate on the LIBERO benchmark with an inference throughput of 163 Hz.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Gi-Cheon Kang",
+      "Jung-Hyun Kim",
+      "Kyuhwan Shim",
+      "Jun Hyuk Lee",
+      "Byoung‐Tak Zhang"
+    ],
+    "citations": 4,
+    "source": "openalex",
+    "source_id": "W4414079235",
+    "doi": "10.15607/rss.2025.xxi.016",
+    "arxiv_id": null,
+    "paper_url": "https://doi.org/10.15607/rss.2025.xxi.016",
+    "published_iso": "2025-06-21",
+    "oa_field": "Computer Science",
+    "semantic_recall": false,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4414079235",
+    "year_month": "2025-06",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance",
+    "title_norm": "coa vla improving vision language action models via visual textual chain of affo",
+    "abstract": "Robot foundation models, particularly Vision-Language-Action (VLA) models, have garnered significant attention for their ability to enhance robot policy learning, greatly improving robot's generalization and robustness. OpenAI's recent model, O1, showcased impressive capabilities in solving complex problems by utilizing extensive reasoning chains. This prompts an important question: can robot models achieve better performance in multi-task , complex environments by reviewing prior observations and then providing task-specific reasoning to guide action prediction? In this paper, we introduce Chain-of-Affordance (CoA-VLA) , a novel approach to scaling robot models by incorporating reasoning in the format of sequential robot affordances to facilitate task completion. Specifically, we prompt the model to consider the following four types of affordances before taking action: (1) object affordance - what object to manipulate and where it is ; (2) grasp affordance - the specific object part to grasp ; (3) spatial affordance - the optimal space to place the object ; and (4) movement affordance-the collision - free path for movement. We further transform each affordance into two prompting formats: visual affordance and textual affordance. We introduce a novel vision-language co-injection module that integrates this knowledge into the policy network. This allows the robot to leverage essential contextual information during action inference, resulting in improved precision and robustness. Our experiments demonstrate that CoA-VLA outperforms state-of-the-art robot foundation models, including OpenVLA and Octo, on a variety of tasks. Furthermore, CoA-VLA exhibits strong generalization capabilities, including recognizing unseen object poses, identifying free space, and avoiding obstacles in novel environments.",
+    "year": 2024,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Jinming Li",
+      "Yichen Zhu",
+      "Zhibin Tang",
+      "Junjie Wen",
+      "Minjie Zhu",
+      "Xiaoyu Liu"
+    ],
+    "citations": 1,
+    "source": "openalex",
+    "source_id": "W4405956290",
+    "doi": "10.48550/arxiv.2412.20451",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2412.20451",
+    "published_iso": "2024-12-29",
+    "oa_field": "Decision Sciences",
+    "semantic_recall": false,
+    "from_query": [
+      "object pair geometry action chunk adaptation"
+    ],
+    "paper_id": "openalex:W4405956290",
+    "year_month": "2024-12",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Diffusion policy: Visuomotor policy learning via action diffusion",
+    "title_norm": "diffusion policy visuomotor policy learning via action diffusion",
+    "abstract": "This paper introduces Diffusion Policy, a new way of generating robot behavior by representing a robot’s visuomotor policy as a conditional denoising diffusion process. We benchmark Diffusion Policy across 15 different tasks from 4 different robot manipulation benchmarks and find that it consistently outperforms existing state-of-the-art robot learning methods with an average improvement of 46.9%. Diffusion Policy learns the gradient of the action-distribution score function and iteratively optimizes with respect to this gradient field during inference via a series of stochastic Langevin dynamics steps. We find that the diffusion formulation yields powerful advantages when used for robot policies, including gracefully handling multimodal action distributions, being suitable for high-dimensional action spaces, and exhibiting impressive training stability. To fully unlock the potential of diffusion models for visuomotor policy learning on physical robots, this paper presents a set of key technical contributions including the incorporation of receding horizon control, visual conditioning, and the time-series diffusion transformer. We hope this work will help motivate a new generation of policy learning techniques that are able to leverage the powerful generative modeling capabilities of diffusion models. Code, data, and training details are available (diffusion-policy.cs.columbia.edu).",
+    "year": 2024,
+    "venue": "The International Journal of Robotics Research",
+    "authors": [
+      "Cheng Chi",
+      "Zhenjia Xu",
+      "Siyuan Feng",
+      "Eric Cousineau",
+      "Yilun Du",
+      "Benjamin Burchfiel"
+    ],
+    "citations": 478,
+    "source": "openalex",
+    "source_id": "W4403337227",
+    "doi": "10.1177/02783649241273668",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4403337227",
+    "published_iso": "2024-10-11",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4403337227",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "3D Equivariant Visuomotor Policy Learning via Spherical Projection",
+    "title_norm": "3d equivariant visuomotor policy learning via spherical projection",
+    "abstract": "Equivariant models have recently been shown to improve the data efficiency of diffusion policy by a significant margin. However, prior work that explored this direction focused primarily on point cloud inputs generated by multiple cameras fixed in the workspace. This type of point cloud input is not compatible with the now-common setting where the primary input modality is an eye-in-hand RGB camera like a GoPro. This paper closes this gap by incorporating into the diffusion policy model a process that projects features from the 2D RGB camera image onto a sphere. This enables us to reason about symmetries in $\\mathrm{SO}(3)$ without explicitly reconstructing a point cloud. We perform extensive experiments in both simulation and the real world that demonstrate that our method consistently outperforms strong baselines in terms of both performance and sample efficiency. Our work, Image-to-Sphere Policy ($\\textbf{ISP}$), is the first $\\mathrm{SO}(3)$-equivariant policy learning framework for robotic manipulation that works using only monocular RGB inputs.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Hu, Boce",
+      "Wang, Dian",
+      "Klee, David",
+      "Tian, Heng",
+      "Zhu, Xupeng",
+      "Huang, Haojie"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W6979332900",
+    "doi": "",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2505.16969",
+    "published_iso": "2025-05-22",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W6979332900",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Reducing Sim-to-Real Domain Gaps of Visual Sensors for Learning Environment-Constrained Visuomotor Policy",
+    "title_norm": "reducing sim to real domain gaps of visual sensors for learning environment cons",
+    "abstract": "Simulation engines enable safe training of robotic skills, but domain gaps between simulated and real sensors hinder deployment. However, existing pixel-level adaptation methods focus on the visual realism of generating images over task-specific learning, causing texture leakage and elimination. In this article, we introduce a learnable correlation-attentive and task-related generative adversarial network (LCTGAN), a novel unsupervised domain transfer network, with a correlative attention mechanism and a mask-level Q value mapping (MQM) consistency to enhance task awareness and bridge the domain gap of visual sensors in pixel-level perceptual manipulations. We also propose a Q-learning-based visuomotor policy to handle cluttered scenarios where objects may lack directly graspable configurations, which learns the synergies of three actions while considering environmental constraints. We further integrate LCTGAN into the learned policy to facilitate zero-shot sim-to-real policy transfer. Extensive experimental results validate the zero-shot sim-to-real generalization of our proposed visuomotor policy when deployed on a real robot. The supplementary video is available athttps://youtu.be/B6nODKkhzSw.",
+    "year": 2024,
+    "venue": "IEEE Sensors Journal",
+    "authors": [
+      "Xingshuo Jing",
+      "Kun Qian",
+      "Boyi Duan"
+    ],
+    "citations": 3,
+    "source": "openalex",
+    "source_id": "W4405933855",
+    "doi": "10.1109/jsen.2024.3522245",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405933855",
+    "published_iso": "2024-12-31",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4405933855",
+    "year_month": "2024-12",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "P3-PO: Prescriptive Point Priors for Visuo-Spatial Generalization of Robot Policies",
+    "title_norm": "p3 po prescriptive point priors for visuo spatial generalization of robot polici",
+    "abstract": "Developing generalizable robot policies that can robustly handle varied environmental conditions and object instances remains a fundamental challenge in robot learning. While considerable efforts have focused on collecting large robot datasets and developing policy architectures to learn from such data, naïvely learning from visual inputs often results in brittle policies that fail to transfer beyond the training data. This work presents Prescriptive Point Priors for Policies or P3-PO, a novel framework that constructs a unique state representation of the environment leveraging recent advances in computer vision and robot learning to achieve improved out-of-distribution generalization for robot manipulation. This representation is obtained through two steps. First, a human annotator prescribes a set of semantically meaningful points on a single demonstration frame. These points are then propagated through the dataset using off-the-shelf vision models. The derived points serve as an input to state-of-the-art policy architectures for policy learning. Our experiments across four real-world tasks demonstrate an overall 43% absolute improvement over prior methods when evaluated in identical settings as training. Further, P3-PO exhibits 58% and 80% gains across tasks for new object instances and more cluttered environments respectively. Videos illustrating the robot's performance are best viewed at point-priors.github.io.",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Mara Levy",
+      "Siddhant Haldar",
+      "Lerrel Pinto",
+      "Abhinav Shirivastava"
+    ],
+    "citations": 3,
+    "source": "openalex",
+    "source_id": "W4413925490",
+    "doi": "10.1109/icra55743.2025.11128755",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4413925490",
+    "published_iso": "2025-05-19",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4413925490",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "CEI: A Unified Interface for Cross-Embodiment Visuomotor Policy Learning in 3D Space",
+    "title_norm": "cei a unified interface for cross embodiment visuomotor policy learning in 3d sp",
+    "abstract": "Robotic foundation models trained on large-scale manipulation datasets have shown promise in learning generalist policies, but they often overfit to specific viewpoints, robot arms, and especially parallel-jaw grippers due to dataset biases. To address this limitation, we propose Cross-Embodiment Interface (CEI), a framework for cross-embodiment learning that enables the transfer of demonstrations across different robot arm and end-effector morphologies.CEIintroduces the concept offunctional similarity, which is quantified using Directional Chamfer Distance. Then it aligns robot trajectories through gradient-based optimization, followed by synthesizing observations and actions for unseen robot arms and end-effectors. In experiments,CEItransfers data and policies from a Franka Panda robot to16different embodiments across3tasks in simulation, and supports bidirectional transfer between a UR5+AG95 gripper robot and a UR5+Xhand robot across6real-world tasks, achieving an average transfer ratio of 82.4%. Finally, we demonstrate thatCEIcan also be extended with spatial generalization and multimodal motion generation capabilities using our proposed techniques. Project website:https://cross-embodiment-interface.github.io/.",
+    "year": 2026,
+    "venue": "IEEE Robotics and Automation Letters",
+    "authors": [
+      "Tong Wu",
+      "Shoujie Li",
+      "Junhao Gong",
+      "Changqing Guo",
+      "X. J. Li",
+      "Shilong Mu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W7125603112",
+    "doi": "10.1109/lra.2026.3656802",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W7125603112",
+    "published_iso": "2026-01-23",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W7125603112",
+    "year_month": "2026-01",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Fast Policy: Accelerating Visuomotor Policies without Re-training",
+    "title_norm": "fast policy accelerating visuomotor policies without re training",
+    "abstract": "Diffusion models are increasingly employed in visuomotor policies to achieve promising performance of behavior cloning. However, the slow inference caused by iterative denoising is a notorious disadvantage, which greatly limits its application in resource-limited and real-time interactive robot systems. The prevailing strategy to this problem is distillation, but it still requires considerable resources to retrain a student model. To this end, we take another training-free view to develop a novel Fast Policy (termed FP), which can be regarded as a powerful and accelerated alternative to Diffusion Policy for learning visuomotor robot control. Specifically, our comprehensive study of UNet encoder shows that its features change little during inference, prompting us to reuse encoder features in non-critical denoising steps. In addition, we design strategies based on Fourier energy to screen critical and non-critical steps dynamically according to different tasks. Importantly, to mitigate performance degradation caused by the repeated use of non-critical steps, we further introduce a noise correction strategy. Our FP is evaluated on multiple simulation benchmarks and the comparison results with existing speed-up methods demonstrate our effectiveness and superiority with state-of-the-art success rates in visuomotor inference speed. The code is available at https://github.com/xwccchong/Fast-Policy",
+    "year": 2025,
+    "venue": "",
+    "authors": [
+      "Tongshu Wu",
+      "Zheng Wang"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416749600",
+    "doi": "10.1109/iros60139.2025.11246259",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4416749600",
+    "published_iso": "2025-10-19",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "point cloud visuomotor policy"
+    ],
+    "paper_id": "openalex:W4416749600",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "DragAPart: Learning a Part-Level Motion Prior for Articulated Objects",
+    "title_norm": "dragapart learning a part level motion prior for articulated objects",
+    "abstract": "",
+    "year": 2024,
+    "venue": "Lecture notes in computer science",
+    "authors": [
+      "Ruining Li",
+      "Chuanxia Zheng",
+      "Christian Rupprecht",
+      "Andrea Vedaldi"
+    ],
+    "citations": 6,
+    "source": "openalex",
+    "source_id": "W4403562353",
+    "doi": "10.1007/978-3-031-72627-9_10",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4403562353",
+    "published_iso": "2024-10-19",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "object pair geometry action chunk adaptation"
+    ],
+    "paper_id": "openalex:W4403562353",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Hierarchical Action Chunking Transformer: Learning Temporal Multimodality from Demonstrations with Fast Imitation Behavior",
+    "title_norm": "hierarchical action chunking transformer learning temporal multimodality from de",
+    "abstract": "Behavioral cloning from human demonstrations has succeeded in programming a robot to generate fine-grained motion, but it is still challenging to learn multimodal trajectories such as with various speeds. This restricts the use of a robot dataset collected by multiusers because the different proficiency of robot operators makes the dataset have diverse distributions of speed. To tackle this issue, we develop Hierarchical Action Chunking Transformer with Vector-quantization (HACT-Vq) to efficiently learn temporal multimodality in addition to fine-grained motion. The proposed hierarchical model consists of a high-level policy to make planning for a latent subgoal and style, and a low-level policy to predict an action chunk conditioned with the latent subgoal and style. The latent subgoal and style are trained as discrete representations so that high-level policy can efficiently learn multimodal distributions of demonstrations and retrieve the mode of fast behavior. In experiments, we set up bimanual robots in both simulation and real-world environments, and collected demonstrations with various speeds. The proposed model with the quantized subgoal and style showed the highest success rates with fast imitation behavior. Our code is available at https://github.com/SamsungLabs/hierarchical-act.",
+    "year": 2024,
+    "venue": "",
+    "authors": [
+      "J. Hyeon Park",
+      "Wonhyuk Choi",
+      "Sunpyo Hong",
+      "Hoseong Seo",
+      "Joonmo Ahn",
+      "Changsu Ha"
+    ],
+    "citations": 3,
+    "source": "openalex",
+    "source_id": "W4405785334",
+    "doi": "10.1109/iros58592.2024.10802845",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405785334",
+    "published_iso": "2024-10-14",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "object pair geometry action chunk adaptation"
+    ],
+    "paper_id": "openalex:W4405785334",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "Action matters for object representation learning from sequences",
+    "title_norm": "action matters for object representation learning from sequences",
+    "abstract": "International audience",
+    "year": 2025,
+    "venue": "HAL (Le Centre pour la Communication Scientifique Directe)",
+    "authors": [
+      "Sene, Mohamed, Massamba",
+      "Quinton, Jean-Charles",
+      "Armetta, Frédéric",
+      "Lefort, Mathieu"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W7094977485",
+    "doi": "",
+    "arxiv_id": null,
+    "paper_url": "https://hal.science/hal-05324845v1/document",
+    "published_iso": "2025-10-25",
+    "oa_field": "Computer Science",
+    "semantic_recall": true,
+    "from_query": [
+      "object pair geometry action chunk adaptation"
+    ],
+    "paper_id": "openalex:W7094977485",
+    "year_month": "2025-10",
+    "retrieved_via": "openalex",
+    "relevance": "adjacent"
+  },
+  {
+    "title": "EasyInsert: A Data-Efficient and Generalizable Insertion Policy",
+    "title_norm": "easyinsert a data efficient and generalizable insertion policy",
+    "abstract": "Robotic insertion is a highly challenging task that requires exceptional precision in cluttered environments. Existing methods often have poor generalization capabilities. They typically function in restricted and structured environments, and frequently fail when the plug and socket are far apart, when the scene is densely cluttered, or when handling novel objects. They also rely on strong assumptions such as access to CAD models or a digital twin in simulation. To address these limitations, we propose EasyInsert. Inspired by human intuition, it formulates insertion as a delta-pose regression problem, which unlocks an efficient, highly scalable data collection pipeline with minimal human labor to train an end-to-end visual policy. During execution, the visual policy predicts the relative pose between plug and socket to drive a multi-phase, coarse-to-fine insertion process. EasyInsert demonstrates strong zero-shot generalization capability for unseen objects in cluttered environments, robustly handling cases with significant initial pose deviations. In real-world experiments, by leveraging just 1 hour of human teleoperation data to bootstrap a large-scale automated data collection process, EasyInsert achieves an over 90% success rate in zero-shot insertion for 13 out of 15 unseen novel objects, including challenging objects like Type-C cables, HDMI cables, and Ethernet cables. Furthermore, requiring only a single manual reset, EasyInsert allows for fast adaptation to novel test objects through automated data collection and fine-tuning, achieving an over 90% success rate across all 15 objects.",
+    "year": 2025,
+    "venue": "arXiv (Cornell University)",
+    "authors": [
+      "Guanghe Li",
+      "Junming Zhao",
+      "Shengjie Wang",
+      "Yang Gao"
+    ],
+    "citations": 0,
+    "source": "openalex",
+    "source_id": "W4416447778",
+    "doi": "10.48550/arxiv.2505.16187",
+    "arxiv_id": null,
+    "paper_url": "https://arxiv.org/pdf/2505.16187",
+    "published_iso": "2025-05-22",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "unseen receptacle insertion keypose trajectory generalization"
+    ],
+    "paper_id": "openalex:W4416447778",
+    "year_month": "2025-05",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  },
+  {
+    "title": "Visual Imitation Learning of Task-Oriented Object Grasping and Rearrangement",
+    "title_norm": "visual imitation learning of task oriented object grasping and rearrangement",
+    "abstract": "Task-oriented object grasping and rearrangement are key skills for robots, which have to perform versatile real-world manipulation tasks. However, they remain challenging due to partial observations of the objects and shape variations in categorical objects. In this paper, we present the Multi-feature Implicit Model (MIMO), a novel object representation that encodes multiple spatial features between a point and an object in an implicit neural field. Training such a model on multiple features ensures that it embeds the object shapes consistently in different aspects, thus improving its performance in object shape reconstruction from partial observation, shape similarity measure, and modeling spatial relations between objects. Based on MIMO, we propose a framework to learn task-oriented object grasping and rearrangement from single or multiple human demonstration videos. The evaluations in simulation show that our approach outperforms the state-of-the-art methods for multi- and single-view observations. Real-world experiments demonstrate the efficacy of our approach in one- and few-shot imitation learning of manipulation tasks.",
+    "year": 2024,
+    "venue": "",
+    "authors": [
+      "Yichen Cai",
+      "Jianfeng Gao",
+      "Christoph Pohl",
+      "Tamim Asfour"
+    ],
+    "citations": 7,
+    "source": "openalex",
+    "source_id": "W4405785418",
+    "doi": "10.1109/iros58592.2024.10801466",
+    "arxiv_id": null,
+    "paper_url": "https://openalex.org/W4405785418",
+    "published_iso": "2024-10-14",
+    "oa_field": "Engineering",
+    "semantic_recall": true,
+    "from_query": [
+      "unseen receptacle insertion keypose trajectory generalization"
+    ],
+    "paper_id": "openalex:W4405785418",
+    "year_month": "2024-10",
+    "retrieved_via": "openalex",
+    "relevance": "core"
+  }
+]

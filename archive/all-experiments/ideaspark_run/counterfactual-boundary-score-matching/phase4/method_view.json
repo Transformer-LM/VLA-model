@@ -1,0 +1,202 @@
+{
+  "title": "Boundary Score Matching for Functional-Geometry Counterfactuals",
+  "method_name": "Boundary-Local Score Matching (BLSM)",
+  "abstract_draft": "Continuous-action vision-language-action policies can execute an action successfully in one scene yet fail after a small geometry edit that leaves the task and most of the trajectory unchanged. Recent work adds explicit feasibility supervision [semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2], geometry-guided action manifolds [semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646], or geometry-aware representations [dblp:journals/corr/abs-2606-08530], but their aggregate objectives do not identify where feasibility first flips or whether suppressing the invalid action erases other valid modes. We propose Boundary-Local Score Matching (BLSM): compile same-action minimal geometry flips, certify the first contiguous violation segment, apply a reference-adjusted feasible-versus-invalid score preference only on that segment, anchor scores on its complement, and preserve every compiler-enumerated feasible alternative independently. The proposal is falsified if violation-mask or pair-identity permutations retain the edited-scene and mode-coverage gains, or if removing alternative-positive preservation leaves worst-mode success unchanged when coverage is already high. Conditional on non-negligible pair eligibility and mode-roster support, BLSM should increase edited-scene success and reduce invalid execution without the alternative-positive coverage loss induced by global or whole-chunk feasibility shaping. The intended contribution is therefore a mechanism-level sign split between physical reliability and per-mode retention, rather than another average-success improvement.",
+  "core_claim": "On same-action minimal geometry flips, first-violation-local reference-adjusted score shaping with complement and alternative-mode anchoring can suppress invalid execution without the feasible-mode coverage loss caused by global or whole-chunk shaping.",
+  "sub_claims": [
+    {
+      "id": "c1",
+      "statement": "A minimum feasibility-flipping scene edit holding task and action identity fixed isolates a functional-geometry boundary rather than a generic scene-distribution shift.",
+      "supports_which_aspect": "Identifiability of the geometry-induced feasibility bottleneck"
+    },
+    {
+      "id": "c2",
+      "statement": "A simulator-certified first-violation mask assigns the feasible-versus-invalid score preference only where the edited geometry first changes execution validity, while complement anchoring limits unrelated score drift.",
+      "supports_which_aspect": "Boundary-local credit assignment"
+    },
+    {
+      "id": "c3",
+      "statement": "Mode-wise anchoring of every compiler-enumerated feasible alternative prevents the local negative signal from collapsing minority valid modes.",
+      "supports_which_aspect": "Alternative-positive coverage and worst-mode retention"
+    },
+    {
+      "id": "c4",
+      "statement": "Pair-eligibility gates and mask, identity, and preservation interventions distinguish the proposed boundary mechanism from generic extra supervision or selected-subset effects.",
+      "supports_which_aspect": "Confound-isolating falsifiability of the mechanism"
+    }
+  ],
+  "key_equations": [
+    {
+      "id": "e1",
+      "linked_step_id": "S1",
+      "latex": "\\Delta g^*=\\arg\\min_{\\Delta g} C(\\Delta g)\\quad\\text{s.t.}\\quad F(x,a^-)=1,\\;F(x\\oplus\\Delta g,a^-)=0",
+      "description": "The compiler chooses the lowest-cost geometry edit that flips the identical action chunk from feasible to infeasible.",
+      "description_zh": "编译器寻找代价最小的几何改动，使同一动作片段从可行变为不可行。"
+    },
+    {
+      "id": "e2",
+      "linked_step_id": "S2",
+      "latex": "\\tau=\\min\\{t:v_t(x\\oplus\\Delta g^*,a^-_{1:t})=1\\},\\qquad m_t=\\mathbf{1}\\!\\left[t\\in\\mathcal{R}(\\tau)\\right]",
+      "description": "The mask is the first contiguous simulator-certified violation run beginning at the earliest violating time τ.",
+      "description_zh": "掩码取从最早违规时刻 τ 开始、由模拟器确认的首个连续违规区间。"
+    },
+    {
+      "id": "e3",
+      "linked_step_id": "S4",
+      "latex": "\\Delta_\\theta(a_t\\mid x')=s_\\theta(a_t\\mid x')-s_{\\mathrm{ref}}(a_t\\mid x')",
+      "description": "Every action score is expressed as a change from the frozen reference policy, preventing raw score scale from defining the preference.",
+      "description_zh": "动作得分以相对冻结参考策略的变化量表示，避免原始得分尺度主导偏好。"
+    },
+    {
+      "id": "e4",
+      "linked_step_id": "S4",
+      "latex": "d_\\theta^{(k)}=\\frac{\\sum_t m_t[\\Delta_\\theta(a^+_{k,t}\\mid x')-\\Delta_\\theta(a^-_t\\mid x')]}{\\sum_t m_t},\\quad \\mathcal{L}_B=\\frac{1}{K}\\sum_{k=1}^{K}\\log(1+e^{-d_\\theta^{(k)}}),\\quad M_B=\\mathbb{E}[d_\\theta]",
+      "description": "The boundary loss increases the masked reference-adjusted margin of each feasible alternative over the invalid action; M_B is the held-out mean margin.",
+      "description_zh": "边界损失提升每个可行替代动作相对无效动作的掩码参考校正间隔；M_B 是留出数据上的平均间隔。"
+    },
+    {
+      "id": "e5",
+      "linked_step_id": "S5",
+      "latex": "\\mathcal{L}_{\\mathrm{comp}}=\\frac{1}{K+1}\\sum_{z\\in\\{a^-,a_1^+,\\ldots,a_K^+\\}}\\frac{\\sum_t(1-m_t)\\Delta_\\theta(z_t\\mid x')^2}{\\sum_t(1-m_t)},\\quad \\mathcal{L}_{\\mathrm{alt}}=\\frac{1}{K}\\sum_{k=1}^{K}\\frac{1}{T}\\sum_t\\Delta_\\theta(a^+_{k,t}\\mid x')^2",
+      "description": "Complement anchoring limits off-boundary drift, while the equally weighted alternative loss anchors every feasible mode rather than only the dominant one.",
+      "description_zh": "补集锚定限制边界外漂移；等权替代项逐一保护所有可行模式，而非只保护主导模式。"
+    },
+    {
+      "id": "e6",
+      "linked_step_id": "S6",
+      "latex": "\\mathcal{L}=\\mathcal{L}_{\\mathrm{imit}}+\\lambda_B\\mathcal{L}_B+\\lambda_C\\mathcal{L}_{\\mathrm{comp}}+\\lambda_A\\mathcal{L}_{\\mathrm{alt}}",
+      "description": "BLSM adds boundary preference, complement stability, and mode preservation to the ordinary imitation objective; the three weights are selected once on validation pairs and then frozen.",
+      "description_zh": "BLSM 在常规模仿目标上加入边界偏好、补集稳定与模式保护；三个权重在验证对上一次选定后固定。"
+    }
+  ],
+  "method_flow": {
+    "high_level_pipeline": "BLSM starts from successful RoboTwin action chunks and compiles the smallest scene-geometry edits that make the identical chunk invalid while preserving the task. Simulator replay identifies the first contiguous violation segment and enumerates the feasible alternative-action roster in the edited scene. A frozen reference policy converts candidate scores into score changes; training then prefers each feasible alternative over the invalid chunk only inside the violation mask, anchors the mask complement, and separately anchors every feasible mode. The resulting post-trained policy is characterized by its held-out boundary margin, edited-scene validity, complement drift, alternative-positive coverage, and worst-mode retention.",
+    "steps": [
+      {
+        "step_id": "S1",
+        "title": "Compile minimal feasibility flips",
+        "what_changes": "For each frozen-policy action chunk that succeeds in an original RoboTwin 2.0 scene, search the scene compiler over task-preserving geometry edits and retain the minimum-cost edit that makes the identical chunk fail; record every attempted pair and its inclusion or exclusion reason.",
+        "why_this_step": "Holding task and action identity fixed makes geometry-induced feasibility the only intended difference and exposes whether eligible boundary pairs occupy more than a selected corner of the data.",
+        "linked_component": "engineering",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "Original RoboTwin 2.0 scenes, task instructions, frozen-policy action chunks, and simulator feasibility checks",
+        "output": "Accepted original/edited BoundaryFlip pairs plus a complete eligibility ledger"
+      },
+      {
+        "step_id": "S2",
+        "title": "Certify the first violation run",
+        "what_changes": "Replay the identical chunk in both scenes, compute the simulator violation indicator at each action time, and set m to the first contiguous violating run in the edited scene rather than labeling the full chunk.",
+        "why_this_step": "The decomposition is derived from observed simulator structure and yields the unique temporal region on which the geometry edit first changes functional validity.",
+        "linked_component": "both",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "An accepted BoundaryFlip pair and synchronized simulator traces",
+        "output": "A nonempty first-violation mask m and its complement"
+      },
+      {
+        "step_id": "S3",
+        "title": "Enumerate feasible alternative modes",
+        "what_changes": "Run the same task compiler in the edited scene to enumerate feasible action chunks, partition them by the compiler's action-mode identity, and retain one scored roster entry for every supported mode rather than only the largest cluster.",
+        "why_this_step": "A mode-indexed roster makes positive coverage and worst-mode retention observable and prevents dominant-mode aggregation from hiding feasible alternatives.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "Edited scene, task specification, and compiler-generated feasible solutions",
+        "output": "Alternative-positive roster A+ with mode identities and roster-size metadata"
+      },
+      {
+        "step_id": "S4",
+        "title": "Match boundary-local score changes",
+        "what_changes": "Evaluate the trainable and frozen-reference action scores for the invalid chunk and each feasible alternative under the edited observation, form their reference-adjusted difference, and apply a feasible-over-invalid soft preference only at times selected by m.",
+        "why_this_step": "Reference adjustment isolates post-training movement, while mask-local preference directs feasibility credit to the segment implicated by the counterfactual rather than the whole action chunk.",
+        "linked_component": "theory",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "Violation mask, invalid action chunk, alternative-positive roster, edited observation, and frozen reference policy",
+        "output": "Boundary preference loss L_B and per-mode margins d_theta"
+      },
+      {
+        "step_id": "S5",
+        "title": "Anchor the complement and every positive",
+        "what_changes": "Penalize reference-adjusted score drift outside m for all rostered chunks and add an equal-per-mode score anchor for every feasible alternative, without pooling alternatives by frequency.",
+        "why_this_step": "The complement term prevents temporal credit leakage, and the alternative term makes suppression of minority feasible modes costly even when average validity improves.",
+        "linked_component": "theory",
+        "linked_falsification": "mechanism_distinguisher",
+        "input": "Reference-adjusted scores, mask complement, and the full alternative-positive roster",
+        "output": "Complement loss L_comp and alternative-preservation loss L_alt"
+      },
+      {
+        "step_id": "S6",
+        "title": "Optimize and expose the boundary diagnostics",
+        "what_changes": "Add L_B, L_comp, and L_alt to ordinary imitation, select their symbolic weights on validation pairs by first preventing complement and worst-mode degradation and then improving boundary separation, freeze the selected weights, and report M_B together with eligibility, mask-length, roster-size, drift, coverage, and worst-mode summaries.",
+        "why_this_step": "A constrained selection rule prevents an arbitrary loss-weight trade-off from masquerading as the mechanism, while the exposed diagnostics connect score movement to downstream reliability and retention.",
+        "linked_component": "engineering",
+        "linked_falsification": "metric_specification",
+        "input": "Imitation batches and the three BLSM loss terms",
+        "output": "A post-trained continuous-action VLA and boundary-mechanism diagnostics"
+      }
+    ],
+    "design_reasoning_echo": "The design assumes that the simulator's feasibility predicate is correct for the task, the compiler's accepted edit is sufficiently minimal to isolate functional geometry, the first contiguous violation run captures the earliest operative failure, and the enumerated roster represents the feasible alternatives; each premise is exposed through eligibility, mask-length, roster-size, and exclusion reports rather than hidden in preprocessing. The observation model is conditional on compiler-attempted simulator pairs, so the estimand is the held-out reference-adjusted feasible-versus-invalid score margin at an accepted geometry boundary, not an unrestricted real-world causal effect. A naive global feasibility loss can suppress the invalid chunk but cannot say where the score should change and can lower nearby valid modes. BLSM therefore couples the decomposition-derived boundary preference with the two invariances implied by that decomposition: little score movement off the boundary and no mode-wise loss on feasible alternatives. Mask and identity permutations, plus removal of the alternative anchor, directly test whether these components—not generic extra supervision—produce the downstream sign split."
+  },
+  "plain_method_steps_en": [
+    {
+      "step_id": "S1",
+      "what_to_do": "For each frozen-policy action chunk that succeeds in an original RoboTwin 2.0 scene, search task-preserving geometry edits and keep the minimum-cost edit that makes the identical chunk fail. Record every attempted pair and why it is included or excluded. The input is the original scenes, task instructions, frozen-policy chunks, and simulator feasibility checks; the output is accepted original/edited BoundaryFlip pairs and a complete eligibility ledger.",
+      "why_this_makes_sense": "Keeping the task and action identity fixed makes the geometry change the intended difference and shows whether eligible boundary pairs are broader than a selected corner of the data."
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "Replay the identical chunk in both scenes, compute the simulator violation indicator at each action time, and set m to the first contiguous violating run in the edited scene instead of labeling the full chunk. The input is an accepted BoundaryFlip pair and synchronized simulator traces; the output is a nonempty first-violation mask m and its complement.",
+      "why_this_makes_sense": "The mask follows observed simulator structure and identifies the temporal region where the geometry edit first changes functional validity."
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "Run the task compiler in the edited scene to enumerate feasible action chunks, partition them by compiler action-mode identity, and retain one scored roster entry for every supported mode rather than only the largest cluster. The input is the edited scene, task specification, and compiler-generated feasible solutions; the output is an alternative-positive roster A+ with mode identities and roster-size metadata.",
+      "why_this_makes_sense": "A mode-indexed roster makes positive coverage and worst-mode retention visible and prevents dominant-mode aggregation from hiding feasible alternatives."
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "Under the edited observation, evaluate trainable and frozen-reference action scores for the invalid chunk and each feasible alternative, form their reference-adjusted difference, and apply a soft feasible-over-invalid preference only at times selected by m. The input is the violation mask, invalid chunk, alternative-positive roster, edited observation, and frozen reference policy; the output is boundary preference loss L_B and per-mode margins d_theta.",
+      "why_this_makes_sense": "Reference adjustment isolates post-training movement, while the mask directs feasibility credit to the counterfactual’s implicated segment rather than the whole chunk."
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "Penalize reference-adjusted score drift outside m for all rostered chunks and add an equal-per-mode score anchor for every feasible alternative, without pooling alternatives by frequency. The input is reference-adjusted scores, the mask complement, and the full alternative-positive roster; the output is complement loss L_comp and alternative-preservation loss L_alt.",
+      "why_this_makes_sense": "The complement term prevents temporal credit leakage, and the alternative term makes suppressing minority feasible modes costly even when average validity improves."
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "Add L_B, L_comp, and L_alt to ordinary imitation. Select their symbolic weights on validation pairs by first preventing complement and worst-mode degradation and then improving boundary separation; freeze the selected weights. Report M_B with eligibility, mask-length, roster-size, drift, coverage, and worst-mode summaries. The input is imitation batches and the three BLSM loss terms; the output is a post-trained continuous-action VLA and boundary-mechanism diagnostics.",
+      "why_this_makes_sense": "The selection rule prevents an arbitrary loss-weight trade-off from standing in for the mechanism, while the diagnostics connect score movement to reliability and retention."
+    }
+  ],
+  "plain_method_steps_zh": [
+    {
+      "step_id": "S1",
+      "what_to_do": "对原始 RoboTwin 2.0 场景中由冻结策略成功执行的每个动作片段，搜索保持任务不变的几何编辑，并保留使同一片段失败的最低成本编辑。记录每个尝试过的成对样本及纳入或排除原因。输入是原始场景、任务指令、冻结策略动作片段和模拟器可行性检查；输出是接受的原始/编辑 BoundaryFlip 对及完整的资格记录。",
+      "why_this_makes_sense": "固定任务和动作身份后，几何变化就是预期差异，也能显示合格边界对是否超出数据中的某个被挑选角落。"
+    },
+    {
+      "step_id": "S2",
+      "what_to_do": "在两个场景中重放同一动作片段，计算每个动作时刻的模拟器违规指示，并将 m 设为编辑场景中的第一个连续违规区间，而不是标记整个片段。输入是接受的 BoundaryFlip 对和同步模拟器轨迹；输出是非空的首次违规掩码 m 及其补集。",
+      "why_this_makes_sense": "该掩码来自观测到的模拟器结构，确定几何编辑首次改变功能有效性的时间区域。"
+    },
+    {
+      "step_id": "S3",
+      "what_to_do": "在编辑场景中运行任务编译器，枚举可行动作片段，按编译器的动作模式身份划分，并为每个受支持模式保留一个有得分的名册条目，而不只保留最大簇。输入是编辑场景、任务规格和编译器生成的可行解；输出是带模式身份和名册大小元数据的替代正例名册 A+。",
+      "why_this_makes_sense": "按模式编制名册使正例覆盖率和最差模式保留率可见，并防止主导模式聚合隐藏可行替代方案。"
+    },
+    {
+      "step_id": "S4",
+      "what_to_do": "在编辑后观测下，计算无效片段及每个可行替代方案的可训练策略和冻结参考策略动作得分，形成参考调整后的差值，并只在 m 选出的时刻施加可行优于无效的软偏好。输入是违规掩码、无效动作片段、替代正例名册、编辑后观测和冻结参考策略；输出是边界偏好损失 L_B 及逐模式间隔 d_theta。",
+      "why_this_makes_sense": "参考调整隔离训练后的移动，而掩码将可行性得分归因指向反事实涉及的片段，而非整个动作片段。"
+    },
+    {
+      "step_id": "S5",
+      "what_to_do": "对所有名册片段在 m 之外的参考调整得分漂移进行惩罚，并为每个可行替代方案加入等模式权重的得分锚定，不按频率合并替代方案。输入是参考调整后的得分、掩码补集和完整替代正例名册；输出是补集损失 L_comp 和替代保留损失 L_alt。",
+      "why_this_makes_sense": "补集项防止时间信用泄漏，替代项使压制少数可行模式变得有代价，即使平均有效性提高。"
+    },
+    {
+      "step_id": "S6",
+      "what_to_do": "将 L_B、L_comp 和 L_alt 加入普通模仿目标。在验证对上先防止补集和最差模式退化，再改善边界分离，以此选择符号权重并冻结选定权重。报告 M_B，以及资格、掩码长度、名册大小、漂移、覆盖率和最差模式摘要。输入是模仿批次和三个 BLSM 损失项；输出是训练后的连续动作 VLA 和边界机制诊断。",
+      "why_this_makes_sense": "该选择规则避免任意损失权衡冒充机制，而公开的诊断把得分移动与下游可靠性和保留率联系起来。"
+    }
+  ]
+}

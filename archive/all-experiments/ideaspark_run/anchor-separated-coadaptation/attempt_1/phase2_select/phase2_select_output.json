@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+      "chosen_pattern_id": "heterogeneous_decomposition",
+      "anchor_alternates": [],
+      "companion_pattern": "structural_prior_encoding",
+      "companion_rationale": "Decomposing the reciprocal update yields a signed co-error response basis O whose modes separate task-supported motion from shared-error amplification; encoding a contraction constraint on O in the joint update geometry turns that diagnosis into a runnable anti-amplification optimizer.",
+      "selection_rationale": "This is the most load-bearing method-shaped gap because it targets the exact interface through which a locally accurate WAM can still corrupt VLA improvement. Decompose the coupled policy/WAM response by the sign and gain of each co-error mode, then treat the amplifying modes differently inside the update rather than filtering trajectories or merely reporting average error."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method -- anchor gap -> heterogeneous_decomposition exposes signed shared-error modes, and companion structural_prior_encoding ships the runnable contraction-constrained joint update",
+  "composition_note": "",
+  "pattern_saturation": {
+    "heterogeneous_decomposition": {
+      "share": 0.34,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "structural_prior_encoding": {
+      "share": 0.22,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+      "reason": "fails removal test -- the anchor's local shared-error-amplification intervention remains runnable without claiming global cycle-level sign identification"
+    },
+    {
+      "gap": "No retrieved frontier leaf tests whether it is valid for the policy that selects which states become observed and the world model that supplies unobserved consequences to be judged through the same adaptively changing evidence stream at every co-training cycle -- stakes: an unexamined shared assumption can invalidate reported co-improvement gains across VLA-WAM systems and blocks a principled account of when reciprocal training is statistically trustworthy.",
+      "reason": "fails removal test -- a general validity audit would broaden the paper beyond the anchor's concrete update intervention"
+    },
+    {
+      "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+      "reason": "fails removal test -- solving adaptive censoring requires a separate visitation-identification mechanism, while the anchor can be falsified on the current-policy support"
+    }
+  ]
+}

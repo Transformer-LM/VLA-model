@@ -1,0 +1,108 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "main_pattern": "reframe_as_solvable_object",
+        "sub_pattern": "C00 (Reframe as a Solvable Object)",
+        "tactical_failure_mode_quoted": "The signature failure is treating the reframing as a mechanical wrapper: taking an established attribution, decomposition, or estimation tool and pointing it at a new input granularity, a new architecture, or a new domain without re-deriving why the resulting scores are faithful to the model. These papers supply the computation but not the justification — no causal validation that the identified components actually drive behavior (only correlation), no axiomatic or soundness argument for why the proposed definition is the 'real' importance, and no confound control, so a reviewer can point to a methodological artifact (a computation-granularity difference, a degenerate zero baseline, an off-manifold perturbation) that explains the result instead.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Pointing an off-the-shelf decomposition at a coarser input granularity without showing the coarser units preserve the signal reads as a wrapper, not a contribution.",
+            "candidate_match": "borderline",
+            "reasoning": "core_mechanism compresses factual residuals with PCA and a finite atom dictionary and selects them empirically, but does not establish that this granularity preserves the residual-to-dominance quantity rather than only reconstruction and validation performance."
+          },
+          {
+            "lesson_quoted": "Porting a known attribution technique to a new architecture or domain while ignoring that technique's documented failure modes — and omitting comparisons to alternatives — leaves reviewers unable to see any unique benefit.",
+            "candidate_match": "no",
+            "reasoning": "The candidate is not an attribution port and explicitly compares FBFM, ReDRAW-style point prediction, a point-decoded atlas, and uncorrected reranking."
+          },
+          {
+            "lesson_quoted": "Proposing a new attribution definition without an axiomatic or causal argument for why it should count as ground-truth collapses the moment a reviewer asks why this is the real importance.",
+            "candidate_match": "no",
+            "reasoning": "The target is a formally stated identified set of branch corrections rather than an attribution claimed as ground truth, and its dominance claim is explicitly conditional on atlas inclusion and the frozen score."
+          },
+          {
+            "lesson_quoted": "Conflating a methodological artifact — a computation-granularity difference, a degenerate zero baseline — with genuine signal undermines the entire premise once the confound is identified.",
+            "candidate_match": "yes",
+            "reasoning": "core_mechanism treats zero matched-contrast loss as proof that λ and the factual residual are load-bearing, but the executed φ-indexing construction attains zero factual, branch, and contrast losses while the branch response is exactly insensitive to λ and z."
+          },
+          {
+            "lesson_quoted": "Building a suppression or privacy method without formalizing the threat model leaves the central guarantee unverifiable regardless of strong empirical numbers.",
+            "candidate_match": "no",
+            "reasoning": "The candidate is neither a suppression nor a privacy method, and its conditional score-dominance object is explicitly defined."
+          },
+          {
+            "lesson_quoted": "Surveying or recombining fragmented methods without a unifying axis or a decisive controlled experiment yields a contribution reviewers dismiss as anecdotal.",
+            "candidate_match": "no",
+            "reasoning": "The completion-set estimand is a unifying axis and the rollback experiment includes point-decoded, permutation, and oracle-singleton controls."
+          }
+        ],
+        "verdict": "triggered"
+      }
+    ],
+    "verdict": "triggered",
+    "reasoning": "The sole gap_closure entry, the cross-action residual-transport gap under reframe_as_solvable_object, drives the aggregate. The decisive lesson is 'Conflating a methodological artifact — a computation-granularity difference, a degenerate zero baseline — with genuine signal undermines the entire premise once the confound is identified': intervention-indexed φ can explain every branch residual with zero contrast loss while bypassing λ and z."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+        "sub_pattern": "C00 (Reframe as a Solvable Object)",
+        "tactical_pattern_quoted": "This cluster recasts an opaque transparency question about an already-trained model or dataset — which feature/datum/internal component is responsible, how uncertain a prediction is, what a hidden representation encodes — as a concrete measurement over a well-studied object: a manifold-constrained counterfactual optimization, a submodular subset selection, an expectation/estimator over marginal statistics, an additive decomposition into a (often sparse) basis, or an influence/Shapley score accumulated along the optimization trajectory. The decisive move is choosing the right unit of analysis and the right faithfulness constraint so the resulting scores reflect the model's actual computation rather than an off-distribution or post-hoc artifact — e.g., searching counterfactuals only on the learned data manifold, decomposing into monosemantic sparse directions before causal tracing, or embedding the explanatory predictors as the primary decision representation.",
+        "instantiation_in_core_mechanism": "Steps 4–8 learn a residual-response ambiguity set and optimize a robust control decision, but they never produce C00's distinctive per-unit responsibility or uncertainty measurement about a fixed model or dataset; the mechanism performs the parent's generic reframe-to-an-optimization move, not this cluster's transparency-measurement move.",
+        "verdict": "bypassed"
+      }
+    ],
+    "verdict": "bypassed",
+    "reasoning": "The only entry drives the aggregate: Completion Atlas defines a set-valued controller, whereas C00 specifically requires a faithful attribution/uncertainty measurement over units of an already-trained artifact."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "reframe_as_solvable_object",
+      "structural_prior_encoding"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "No reject-favored composition matches because the candidate uses no heterogeneous_decomposition component."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W4403224799",
+    "threat_source": "collision_hits",
+    "threat_channel": "alias",
+    "subsumption_argument": "Adaptive learning-based model predictive control for uncertain interconnected systems already learns an uncertainty set for unknown coupling strength with set-membership identification and then adapts a robust MPC controller to that learned set, with recursive-feasibility and stability analysis. It does not exactly instantiate a factual/branch WAM residual atlas or current-suffix selection, but it makes Completion Atlas's claimed distinction from textbook set-membership control—especially that the uncertainty set itself must be learned—stand or fall on a sharper, domain-specific coupling-identification delta rather than the generic learned-set-plus-robust-decision recipe.",
+    "addressable_via": "core_mechanism_reasoning and differentiation_from_lit must replace the claim that prior set-membership control assumes a hand-specified set with the precise residual/branch coupling object and identification condition not provided by openalex:W4403224799.",
+    "parametric_family_concern": null
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "Γ_t, the worst-completion dominance margin",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The rollback experiment names comparisons and downstream wrong-dominance, regret, and task-success directions, while Γ_t is the single load-bearing variable. Permuting factual signatures across branch-response atoms predicts regret and task success return toward the uncorrected baseline, so the control targets downstream outcomes rather than Γ_t itself."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "The claimed shared-coefficient bottleneck is bypassable: intervention-indexed candidate features can carry the intervention/current-state signal directly",
+      "status": "upheld",
+      "basis": "The literal procedure computes φ_nk from each intervention-specific post-prefix trajectory and states no invariance restriction, so identical response atoms can use φ_nk to fit all three objectives while remaining insensitive to λ; this invalidates the promised no-bypass coupling and requires redesigning the response-map input or identification constraint."
+    },
+    {
+      "finding_ref": "Because g is linear and the only deployment consumer is q_k and robust dominance, a direct scalar",
+      "status": "upheld",
+      "basis": "Linearity gives T_m(φ)=w_g^T R_m(φ) and preserves every q_k(λ), pairwise LP, Γ_t, and action exactly, so the future-latent atlas is not load-bearing relative to a strictly simpler scalar completion-set scorer."
+    },
+    {
+      "finding_ref": "The procedure has no current-candidate/action-support test: Λ_t constrains only the factual signature z_t, while every sampled",
+      "status": "upheld",
+      "basis": "Steps 6–8 contain no predicate or constraint on φ_k support, so a candidate outside the training action/mechanism support is still scored and can win whenever factual Λ_t is nonempty; the claimed necessary fallback and the selected action-support obligation are therefore unimplemented and require a new support estimator and feasibility constraint."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0].reject_lessons_evaluated[3].lesson_quoted is triggered: the λ-ignoring φ construction shows that a methodological confound is being treated as genuine residual coupling, firing the hard floor. Independently, recipe_application_check.entries[0].verdict is bypassed, and all three executed blocking findings are upheld: the claimed coupling is bypassable, the latent atlas collapses exactly to a scalar completion-set scorer under linear g, and no current-candidate support test implements the selected gap.",
+  "revision_targets": []
+}

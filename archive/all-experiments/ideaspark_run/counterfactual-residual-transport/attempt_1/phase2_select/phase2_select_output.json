@@ -1,0 +1,41 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+      "chosen_pattern_id": "assumption_audit_and_pivot",
+      "anchor_alternates": [],
+      "companion_pattern": "heterogeneous_decomposition",
+      "companion_rationale": "The assumption audit yields a transport-admissibility object O for candidate suffixes that share the already-executed prefix; heterogeneous decomposition consumes O to partition current executable candidates into separately corrected and abstained regimes, producing the runnable method deliverable.",
+      "selection_rationale": "This is the load-bearing method gap because action selection fails exactly when a factual residual is transported across current candidate suffixes without identified support or mechanism persistence, and the naturality constraint rules out retrospective correction of obsolete actions. Auditing the cross-action invariance assumption exposes the conditions the companion partition must enforce while explicitly avoiding a generic running residual, kernel-local regressor, importance weighting, or parametric system-identification cure already occupied in the lineage."
+    },
+    {
+      "gap": "No retrieved frontier leaf evaluates whether corrected futures improve the true ordering of multiple VLA action candidates under rollback-simulator outcomes, rather than merely reducing visual or latent prediction discrepancy; this remains open after the prediction-space corrections of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and the training-time fidelity constraints of arxiv:2608.13489. — stakes: practitioners can spend WAM compute selecting a worse action despite prettier predictions, and intellectually the link from world-model accuracy to decision quality remains unvalidated.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "This sibling shares the rollback action-ranking evaluation with the anchor, and removing it would leave the anchor's claimed control benefit unverifiable because lower future-prediction error need not preserve candidate ordering. Controlled matched rollouts from the same current state isolate ranking fidelity from visual or latent reconstruction quality without adding a separate model module."
+    }
+  ],
+  "coherence_thread_type": "shared_evaluation",
+  "deliverable_coverage": "method — anchor assumption_audit_and_pivot supplies the load-bearing transport-validity inversion, while companion heterogeneous_decomposition ships the runnable current-suffix correction/abstention partition.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "assumption_audit_and_pivot": {
+      "share": 0.08,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.12,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "The retrieved visual/WAM frontier inherits the assumption that prediction-observation disagreement is the control-relevant error signal, but no frontier leaf tests whether agreement in its chosen pixel, feature, or latent space is necessary for preserving action-outcome ordering. — stakes: a negative result would invalidate a shared justification behind correction, verification, and action-guidance claims, while a positive result is needed for principled deployment metrics instead of proxy chasing.",
+      "reason": "fails removal test — anchor stands without it; testing representation-space necessity is a separable diagnostic rather than required machinery for current-suffix transport and rollback ranking."
+    }
+  ]
+}

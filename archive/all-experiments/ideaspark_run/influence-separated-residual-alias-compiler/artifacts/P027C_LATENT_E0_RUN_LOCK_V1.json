@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "checkpoint": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_E0_LOCKED_V1.pt",
+    "result": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_E0_LOCKED_V1.json"
+  },
+  "config": {
+    "batch_size": 256,
+    "depth": 3,
+    "device": "cuda",
+    "epochs": 20,
+    "learning_rate": 0.0003,
+    "residual_decay": 0.8,
+    "residual_window": 8,
+    "seed": 0,
+    "width": 256
+  },
+  "created_at_utc": "2026-09-01T16:36:00.582680+00:00",
+  "eval_source_selection_rule": "task4/episode1/candidate1 selected by the earlier P027-A plan before the latent WAM was trained or evaluated",
+  "eval_source_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+  "failure_recovery": "A checkpoint without the committed result JSON is an incomplete orphan; it must never be reused or interpreted as a completed run.",
+  "frozen": true,
+  "frozen_before_target_wam_load": true,
+  "kind": "p027c_latent_wam_run_lock_v1",
+  "manifest": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P027C_LATENT_MANIFEST_V1.json",
+    "sha256": "ea1662ea21fb46661e0ae3909d378c9aeef5c6e005e52346a47a7807cdf3bed2"
+  },
+  "runner": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/run_p027c_latent_harm.py",
+    "sha256": "c0f5cceb76128d970fa401f286b2aba7e47a4a47afcb07a346e688e245bbd5b3"
+  },
+  "selection_uses_downstream_wam": false
+}

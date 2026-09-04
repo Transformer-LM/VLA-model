@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "timestamp": "2026-08-30T15:30:00+08:00",
+  "claim_supported": "yes",
+  "claim_scope": "controlled_simulator_mask_pointmap_headroom_only",
+  "integrity_status": "warn",
+  "routing_action": "confirm_then_advance_conditionally_to_e1_b2",
+  "confidence": "high",
+  "allow_e1_b2": true,
+  "main_realized_kinematic_novelty_tested": false,
+  "supported": [
+    "The repaired 38-D PointMap representation passes all five frozen E0/G0 point-estimate gates on 360 controlled LIBERO simulator samples.",
+    "Learned and deterministic Oracle sanity checks pass.",
+    "PointMap head input is much smaller than complete Depth and its macro-F1 paired task-family bootstrap interval is positive."
+  ],
+  "not_supported": [
+    "realized action or kinematic trace conditional value",
+    "action-conditioned WAM necessity or novelty",
+    "VLA improvement, recovery, or closed-loop success",
+    "learned masks, real-robot behavior, sim-to-real, or universal PointMap superiority"
+  ],
+  "integrity_warnings": [
+    "R011 does not bind the repaired geometry dependency; R025 is the exact 38-D projection evidence.",
+    "The unselected no-retract sentinel is NumPy scalar-promotion sensitive, without changing accepted thresholds or gate.",
+    "An unregistered global min_epochs=20 floor changes a small subset of RGB/Depth checkpoints, without changing PointMap/Oracle checkpoints or G0."
+  ],
+  "mandatory_before_e1": [
+    "implement and test a dtype-stable true no-retract sentinel",
+    "freeze one explicit E1 training and early-stopping protocol",
+    "retain all E0 warnings in provenance",
+    "separate the E0 38-D two-frame diagnostic from the E1 54-D pre-action transition input"
+  ]
+}

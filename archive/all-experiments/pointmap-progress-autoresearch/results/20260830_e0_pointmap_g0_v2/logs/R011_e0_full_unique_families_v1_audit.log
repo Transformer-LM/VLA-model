@@ -1,0 +1,314 @@
+{
+  "auditor_sha256": "562aac3111ff5f08156fb10a807dcdcfd2fc5d8ff512ff686ab581876fc369cc",
+  "checks": {
+    "accepted_grid_count": 360,
+    "association_mismatches": 0,
+    "dataset_sha256": "ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+    "decision_counts": {
+      "0": 240,
+      "1": 60,
+      "2": 60
+    },
+    "duplicate_grid_cells": 0,
+    "event_counts": {
+      "camera_shift": 60,
+      "comotion": 60,
+      "invalidated": 60,
+      "preserved": 60,
+      "unobservable": 60,
+      "wrong_object": 60
+    },
+    "feature_nonfinite_or_wrong_shape": 0,
+    "invalid_nan_samples": 0,
+    "invalid_occlusion_samples": 0,
+    "label_mismatches": 0,
+    "per_task_decisions": {
+      "0": {
+        "0": 48,
+        "1": 12,
+        "2": 12
+      },
+      "1": {
+        "0": 48,
+        "1": 12,
+        "2": 12
+      },
+      "2": {
+        "0": 48,
+        "1": 12,
+        "2": 12
+      },
+      "3": {
+        "0": 48,
+        "1": 12,
+        "2": 12
+      },
+      "4": {
+        "0": 48,
+        "1": 12,
+        "2": 12
+      }
+    },
+    "pointmap_projection_strata": {
+      "camera_shift_reference": {
+        "camera_coverage": 2,
+        "covered_task_camera_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "median_rigid_cloud_error_m": 0.0024133357261814396,
+        "records": 113,
+        "task_camera_pair_coverage": 10,
+        "task_coverage": 5
+      },
+      "camera_shift_target": {
+        "camera_coverage": 2,
+        "covered_task_camera_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "median_rigid_cloud_error_m": 0.0029133163583066374,
+        "records": 82,
+        "task_camera_pair_coverage": 8,
+        "task_coverage": 5
+      },
+      "comotion_reference": {
+        "camera_coverage": 2,
+        "covered_task_camera_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "median_rigid_cloud_error_m": 0.0036700727257103242,
+        "records": 110,
+        "task_camera_pair_coverage": 10,
+        "task_coverage": 5
+      },
+      "comotion_target": {
+        "camera_coverage": 2,
+        "covered_task_camera_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "median_rigid_cloud_error_m": 0.0031984065686088865,
+        "records": 82,
+        "task_camera_pair_coverage": 8,
+        "task_coverage": 5
+      },
+      "invalidated_target": {
+        "camera_coverage": 2,
+        "covered_task_camera_pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "median_rigid_cloud_error_m": 0.004898118442875667,
+        "records": 61,
+        "task_camera_pair_coverage": 8,
+        "task_coverage": 5
+      }
+    },
+    "prestate_mismatches": 0,
+    "rejected_attempts": 0,
+    "relation_mismatches": 0,
+    "requested_grid_count": 360,
+    "same_prestate_group_count": 60,
+    "sample_count": 360,
+    "task_counts": {
+      "0": 72,
+      "1": 72,
+      "2": 72,
+      "3": 72,
+      "4": 72
+    },
+    "task_family_count": 5,
+    "task_family_counts": {
+      "0": 72,
+      "1": 72,
+      "2": 72,
+      "3": 72,
+      "4": 72
+    },
+    "task_family_ids": [
+      "packaged_food_in_basket",
+      "condiment_in_tray",
+      "mug_on_plate",
+      "bowl_on_bowl_stack",
+      "bowl_on_plate"
+    ]
+  },
+  "claim_limit": "This audit validates controlled representation data only, not VLA-action or WAM causality.",
+  "complete": true,
+  "dataset": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz",
+  "dataset_sha256": "ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+  "failures": [],
+  "kind": "e0_controlled_dataset_audit",
+  "manifest": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.manifest.json",
+  "manifest_sha256": "3fffc93c264e47122a8b5069e45efbaccf90d3e206940a90339295cb68657191",
+  "pass": true,
+  "schema_version": 1
+}

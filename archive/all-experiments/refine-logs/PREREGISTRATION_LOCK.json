@@ -1,0 +1,141 @@
+{
+  "schema_version": "2.0",
+  "lock_id": "pgr-audit-prereg-v2.1-all-libero10",
+  "created_at": "2026-08-07T11:19:46+08:00",
+  "status": "repaired-candidate-lock-pending-renewed-execution-jury",
+  "assurance": "same-family-provisional",
+  "paper_writing": false,
+  "remote_mutation": false,
+  "scientific_gpu_jobs": 0,
+  "gpu_hours": 0.0,
+  "locked_files": [
+    {
+      "path": "refine-logs/PGR_AUDIT_PROTOCOL.json",
+      "sha256": "a5de33299f74db4118e075f8db05cc9196f0816a014121a3b8d807b959662752"
+    },
+    {
+      "path": "AUTORESEARCH_CONFIG_HYBRID_EXPANDED.json",
+      "sha256": "c70f5361352f449800ba4e5af9dc408eb1d706c0f26549b393cbfe4fe788008c"
+    },
+    {
+      "path": "refine-logs/INPUT_MANIFEST.json",
+      "sha256": "03a90ce95b29eb70fbbb73c59f7e795f0d5336663c7f0d5c012d71940953e510"
+    },
+    {
+      "path": "refine-logs/FINAL_PROPOSAL.md",
+      "sha256": "d429c9fcc95b8e8c67e07b8388e7a3e70b6f0e317a66037428b6253edb04d9f7"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN.md",
+      "sha256": "06b1118f3c02270955580eddf1cccf657675e8ccab862205a5351e5d5152bc38"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER.md",
+      "sha256": "91536e2152f414421e91ecb6c9feb4c7740bb8544c8e76e7c62e7327b56c0847"
+    },
+    {
+      "path": "idea-stage/docs/research_contract.md",
+      "sha256": "f43c47c7da1984a91ac09ea24b070d6ffd2eb93f9f60301c4d0d3e201e9bf935"
+    }
+  ],
+  "provenance": {
+    "protocol_audit_verdict": "PASS-CANDIDATE",
+    "protocol_audit_scope": "read-only protocol and active-config audit before the execution jury",
+    "protocol_audit_assurance": "fresh same-family provisional",
+    "v2_execution_jury": {
+      "verdict": "CONDITIONAL-GO",
+      "response_path": ".aris/traces/method-plan/2026-08-07_run01/008-experiment-plan-v2-jury.response.md",
+      "response_sha256": "7ea5a1c062e68214cf39a902bb5cb8dd9ac7d6d36a327a7c80c9427469c20910",
+      "status": "three smallest repairs applied; C and D remain blocked until this repaired bundle passes a renewed hash-bound jury",
+      "authorized_without_scientific_outcomes": [
+        "isolated personal-root implementation",
+        "engineering canary only after implementation review and runtime provenance verification",
+        "offline real-robot contract preparation with zero connectivity or motion"
+      ]
+    },
+    "prior_v1_jury": {
+      "verdict": "NO-GO",
+      "response_path": ".aris/traces/method-plan/2026-08-07_run01/007-experiment-plan-jury.response.md",
+      "response_sha256": "7c101c3f0867045c7d5ba457722ef7df9519c62c5a99dd7949945d80e62ab6f8",
+      "status": "superseded, not passed",
+      "reason": "the user explicitly removed the old simulation/offline-first requirement and the 2/7.2/8 GPU-hour caps; every v1 blocking defect was repaired in the new all-LIBERO-10 v2 protocol, which requires a fresh hash-bound jury"
+    }
+  },
+  "frozen_scientific_decisions": {
+    "method": "PGR-Audit v2: Predictive Gradient Routing at a frozen VLA action interface",
+    "host_policy": "StarVLA clean commit 3422b9f2387b6f682cf02802904a77b23ab13afd",
+    "simulation_suite": "LIBERO-10",
+    "simulation_tasks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "primary_cohort": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "replication_cohort": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "adaptive_seed_count": false,
+    "screen_seed": 7,
+    "head_seed": 1701,
+    "checkpoint_candidates": [1000, 5000, 10000],
+    "screen_tasks": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "screen_states_per_task": [0, 1, 2, 3, 4],
+    "screen_rollouts": 150,
+    "stage1_rollouts": 6000,
+    "conditional_stage2_rollouts": 4000,
+    "stage2_condition": "run only under the exact protocol-defined C2 eligibility conjunction",
+    "simulation_and_real_robot_lanes": "independent; no simulation-first dependency",
+    "real_robot_live_actions": false,
+    "real_robot_unlock": "requires a separately frozen exact endpoint, robot identity, interface, domain, task, data, workspace/action limit, operator, emergency-stop, and scientific contract plus a separate jury"
+  },
+  "frozen_execution_decisions": {
+    "compute_budget": "no preset GPU-hour cap; actual usage is telemetry only",
+    "gpu_preference": [2, 3, 0, 1],
+    "gpu_0_or_1_rule": "each may be used independently whenever a fresh per-launch check shows that candidate GPU idle; all four need not be idle",
+    "never_preempt_or_share": true,
+    "fresh_gpu_check_required_before_every_launch": true,
+    "remote_user": "liu_meng",
+    "logical_personal_root": "<PERSONAL_RESEARCH_ROOT>",
+    "canonical_personal_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+    "team_or_shared_io": "forbidden",
+    "internet_egress": false,
+    "isolated_workspace": "<PERSONAL_RESEARCH_ROOT>/workspace/h1-predictive-aux-starvla",
+    "dirty_cf_dynalign_runtime_reuse": false
+  },
+  "future_state_outputs": {
+    "selected_checkpoint": {
+      "status": "unselected-by-design",
+      "may_be_created_only_after": "all 150 treatment-blind sealed screen records exist and validate",
+      "selection_source": "only the frozen automatic selector in PGR_AUDIT_PROTOCOL.json"
+    },
+    "selected_task_set": {
+      "status": "unselected-by-design",
+      "may_be_created_only_after": "all 150 sealed screen records validate and the automatic selector fixes checkpoint and task eligibility, before detail reveal and before any cache or C0 access",
+      "selection_source": "only the protocol-defined per-task gate; no manual task dropping"
+    },
+    "seed_count": {
+      "status": "fixed",
+      "value": 20,
+      "cohorts": "primary 0-9 and replication 10-19"
+    }
+  },
+  "next_gate": {
+    "name": "renewed-hash-bound-experiment-plan-v2-jury",
+    "required_verdict": "GO or an explicit condition-by-condition CONDITIONAL-GO for each named scope",
+    "scopes_to_judge": [
+      "isolated personal-root implementation",
+      "engineering-only CUDA/model-load/parity/sealing canary",
+      "all-LIBERO-10 treatment-blind checkpoint screen",
+      "full simulation lane Stage 1 and conditional Stage 2",
+      "real-robot contract preparation without robot connectivity or motion"
+    ],
+    "always_prohibited_at_this_gate": [
+      "live robot connectivity or commands",
+      "write outside the personal root",
+      "team or shared artifact use",
+      "preempting or sharing an occupied GPU",
+      "paper writing"
+    ],
+    "prohibited_before_pass": [
+      "remote filesystem mutation",
+      "isolated clone creation",
+      "model load",
+      "GPU launch",
+      "scientific outcome generation"
+    ]
+  }
+}

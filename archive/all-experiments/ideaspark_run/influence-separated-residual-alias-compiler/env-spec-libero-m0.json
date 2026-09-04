@@ -1,0 +1,21 @@
+{
+  "base": "existing personal Python 3.10 venv on direct SSH host",
+  "system_pkgs": [],
+  "pip_phases": [
+    ["numpy==1.26.4"],
+    ["torch==2.6.0+cpu", "robosuite==1.4.0", "libero==0.1.0"]
+  ],
+  "env": {
+    "LIBERO_CONFIG_PATH": "<PERSONAL_RESEARCH_ROOT>/config/libero",
+    "MUJOCO_GL": "osmesa",
+    "PYOPENGL_PLATFORM": "osmesa",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "run_commands": [],
+  "weight_dirs": {},
+  "smoke": {
+    "import_names": ["numpy", "robosuite", "libero"],
+    "gpu_tests": [],
+    "cli_checks": []
+  }
+}

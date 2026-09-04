@@ -1,0 +1,1125 @@
+[
+ {
+  "title": "Longitudinal multi-omic evaluation of biomarkers of health and ageing over smoking cessation intervention",
+  "title_norm": "longitudinal multi omic evaluation of biomarkers of health and ageing over smoki",
+  "abstract": "Abstract Smoking is one of the single most important preventable risk factors for cancer and other adverse health outcomes 1,2 . Smoking cessation represents a key public health intervention with the potential to reduce its negative health outcomes 2–4 . While epidemiological, cross-sectional, and individual longitudinal ‘omic’ or biomarker studies have evaluated the impact of smoking cessation, no study to date has systematically profiled molecular and clinical changes in several organ systems or tissues longitudinally over the course of smoking cessation that could allow for more detailed assessment of response biomarkers and the identification of interindividual differences in the recovery of physiological functions. Here, we report the first human longitudinal multi-omic study of smoking cessation, evaluating 2,501 unique single or composite features from 1,094 longitudinal samples. Our comprehensive analysis, leveraging over half a million longitudinal data points, revealed a profound effect of smoking cessation on epigenetic biomarkers and microbiome features across multiple organ systems within 6 months of smoking cessation, alongside shifts in the immune and blood oxygenation system. Moreover, our multi-omic analysis provided unprecedented granularity that allows for identification of new cross-ome associations for mechanistic discovery. We anticipate that data and an interactive app from the Tyrol Lifestyle Atlas ( eutops.github.io/lifestyle-atlas ), comprising the current study and a parallel study arm evaluating the impact of diet on biomarkers of health and disease, will provide the basis for future discovery, biomarker benchmarking in their responsiveness to health-promoting interventions, and study of individualised response group, representing a major advance for personalised health monitoring using biomarkers.",
+  "year": 2025,
+  "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+  "authors": [
+   "Chiara Herzog",
+   "Charlotte D. Vavourakis",
+   "Bente Theeuwes",
+   "Elisa Redl",
+   "Christina Watschinger",
+   "Gabriel Knoll"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4414012272",
+  "doi": "10.1101/2025.08.29.673135",
+  "arxiv_id": null,
+  "paper_url": "https://www.biorxiv.org/content/biorxiv/early/2025/09/05/2025.08.29.673135.full.pdf",
+  "published_iso": "2025-09-04",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "VM-BHINet:Vision Mamba Bimanual Hand Interaction Network for 3D Interacting Hand Mesh Recovery From a Single RGB Image",
+  "title_norm": "vm bhinet vision mamba bimanual hand interaction network for 3d interacting hand",
+  "abstract": "Understanding bimanual hand interactions is essential for realistic 3D pose and shape reconstruction. However, existing methods struggle with occlusions, ambiguous appearances, and computational inefficiencies. To address these challenges, we propose Vision Mamba Bimanual Hand Interaction Network (VM-BHINet), introducing state space models (SSMs) into hand reconstruction to enhance interaction modeling while improving computational efficiency. The core component, Vision Mamba Interaction Feature Extraction Block (VM-IFEBlock), combines SSMs with local and global feature operations, enabling deep understanding of hand interactions. Experiments on the InterHand2.6M dataset show that VM-BHINet reduces Mean per-joint position error (MPJPE) and Mean per-vertex position error (MPVPE) by 2-3 \\(\\%\\) , significantly surpassing state-of-the-art methods.",
+  "year": 2025,
+  "venue": "Proceedings of the ACM on Computer Graphics and Interactive Techniques",
+  "authors": [
+   "Han Bi",
+   "Ge Yu",
+   "Yu He",
+   "Wenzhuo Liu",
+   "Zijie Zheng"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4410617744",
+  "doi": "10.1145/3728308",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3728308",
+  "published_iso": "2025-05-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Educational robotics as a strategy for social inclusion and pedagogical intervention in vulnerable youth communities",
+  "title_norm": "educational robotics as a strategy for social inclusion and pedagogical interven",
+  "abstract": "Introduction: In mining regions of Latin America, thousands of children and adolescents are deprived of formal education because of their participation in labor-intensive economic activities. This study addresses how educational robotics can serve as a strategy for both social inclusion and pedagogical intervention in communities with disrupted or nonexistent schooling. Methods: A multi-site intervention was implemented, directly benefiting 2,500 out-of-school or at-risk youth and 250 teachers in rural mining regions. The initiative encompasses the design and construction of educational robots and learning materials by university engineering students. Activities were conducted via project-based learning sessions and teacher training workshops. A mixed-methods approach was employed, integrating surveys, interviews, and participant observation to assess the impact on motivation, re-engagement with schooling, and pedagogical practices. Results: The findings indicated increased student engagement, enhanced collaborative learning, and a measurable rise in school re-enrollment within the participating communities. Educators reported enhanced confidence in utilizing technological tools and heightened motivation among students. The robots acted as mediating artifacts, facilitating dialogical, hands-on learning experiences and bridging gaps between formal education and local realities. Discussion: The results underscore the potential of educational robotics to serve not just as a pedagogical instrument but also as a transformative vehicle for fostering inclusion, motivation, and equity in marginalized environments. The initiative also demonstrates the significance of university-community collaboration in addressing educational inequality through innovation. Challenges include maintaining long-term impact and scaling the model to other contexts with similar vulnerabilities.",
+  "year": 2025,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Gustavo Alonso Acosta Amaya",
+   "Juan A. Peña-Palacio",
+   "Jovani Alberto Jiménez Builes"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4416841167",
+  "doi": "10.3389/frobt.2025.1662945",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1662945/pdf",
+  "published_iso": "2025-12-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Flexible Multitask Learning With Factorized Diffusion Policy",
+  "title_norm": "flexible multitask learning with factorized diffusion policy",
+  "abstract": "Multitask learning poses significant challenges due to the highly multimodal and diverse nature of robot action distributions. However, effectively fitting policies to these complex task distributions is often difficult, and existing monolithic models often underfit the action distribution and lack the flexibility required for efficient adaptation. We introduce a novel modular diffusion policy framework that factorizes complex action distributions into a composition of specialized diffusion models, each capturing a distinct sub-mode of the behavior space for a more effective overall policy. In addition, this modular structure enables flexible policy adaptation to new tasks by adding or fine-tuning components, which inherently mitigates catastrophic forgetting. Empirically, across both simulation and real-world robotic manipulation settings, we illustrate how our method consistently outperforms strong modular and monolithic baselines. Website: factorized-diffusion-policy.github.io.",
+  "year": 2026,
+  "venue": "IEEE Robotics and Automation Letters",
+  "authors": [
+   "Chaoqi Liu",
+   "Huichao Chen",
+   "Sigmund H. Høeg",
+   "Shaoxiong Yao",
+   "Yunzhu Li",
+   "Kris Hauser"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7128796393",
+  "doi": "10.1109/lra.2026.3664611",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7128796393",
+  "published_iso": "2026-02-13",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Structured Generative Models for Scene Understanding",
+  "title_norm": "structured generative models for scene understanding",
+  "abstract": "Abstract This position paper argues for the use of structured generative models (SGMs) for the understanding of static scenes. This requires the reconstruction of a 3D scene from an input image (or a set of multi-view images), whereby the contents of the image(s) are causally explained in terms of models of instantiated objects, each with their own type, shape, appearance and pose, along with global variables like scene lighting and camera parameters. This approach also requires scene models which account for the co-occurrences and inter-relationships of objects in a scene. The SGM approach has the merits that it is compositional and generative, which lead to interpretability and editability. To pursue the SGM agenda, we need models for objects and scenes, and approaches to carry out inference. We first review models for objects, which include “things” (object categories that have a well defined shape), and “stuff” (categories which have amorphous spatial extent). We then move on to review scene models which describe the inter-relationships of objects. Perhaps the most challenging problem for SGMs is inference of the objects, lighting and camera parameters, and scene inter-relationships from input consisting of a single or multiple images. We conclude with a discussion of issues that need addressing to advance the SGM agenda.",
+  "year": 2024,
+  "venue": "International Journal of Computer Vision",
+  "authors": [
+   "Christopher K. I. Williams"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405323352",
+  "doi": "10.1007/s11263-024-02316-z",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s11263-024-02316-z.pdf",
+  "published_iso": "2024-12-12",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Unified Video Action Model",
+  "title_norm": "unified video action model",
+  "abstract": "",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Shuang Li",
+   "Yihuai Gao",
+   "Dorsa Sadigh",
+   "Shuran Song"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4414050712",
+  "doi": "10.15607/rss.2025.xxi.074",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.074",
+  "published_iso": "2025-06-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Adaptive VR intervention on social-cognitive skills in children with ASD: a feasibility study",
+  "title_norm": "adaptive vr intervention on social cognitive skills in children with asd a feasi",
+  "abstract": "This study introduces and evaluates a novel virtual reality (VR) adaptive system that advances the state of the art by tailoring social-cognitive training to individual performance, addressing gaps in traditional interventions for children with Autism Spectrum Disorder (ASD). A sample of 23 children (aged 6-8 years) diagnosed with Level 1 ASD participated in a four-session program integrating traditional Theory of Mind tasks with gamified, adaptive VR environments. The online adaptive engine provides real-time support with hints (question repetition), feedback, and reinforcement strategies, while the offline engine adjusts difficulty levels between sessions based on performance. Pre- and post-test assessments using the Theory of Mind Test Battery (ToMTB) and Social Responsiveness Scale evaluated participants' progress. Statistical analyses, including generalized linear mixed models and the Aligned Rank Transform, were used to examine behavioral and biosignal metrics such as motor movement and electrodermal activity (EDA). Results revealed significant improvements in ToMTB post-test scores, suggesting that the adaptive system positively influenced ToM abilities, while no significant changes were observed in the SRS-2 scores. Behavioral analysis indicated progressive accuracy gains and reduced reliance on hints across sessions. Kinematic analysis revealed that whole-body acceleration and displacement increased across sessions, while EDA indicated a significant rise in tonic mean, tonic variance, and phasic variance levels. These findings demonstrate the feasibility and potential efficacy of using adaptive training VR systems to address social-cognitive challenges in individuals with ASD. Future research should expand sample sizes and explore follow-up effects to optimize VR-based interventions.",
+  "year": 2026,
+  "venue": "International Journal of Clinical and Health Psychology",
+  "authors": [
+   "Luna Maddalon",
+   "Alberto Altozano",
+   "Maria Eleonora Minissi",
+   "Javier Marín-Morales",
+   "Gary Lovaton Romero",
+   "Thomas Parsons"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7141349026",
+  "doi": "10.1016/j.ijchp.2026.100675",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7141349026",
+  "published_iso": "2026-01-01",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Quantifying the diverse contributions of hierarchical muscle interactions to motor function",
+  "title_norm": "quantifying the diverse contributions of hierarchical muscle interactions to mot",
+  "abstract": "\" toward common task goals. This study offers a nuanced computational perspective to muscle synergies, where muscles interacting across multiple scales have functionally similar, complementary, and independent roles. Making this viewpoint implicit to a methodological approach applying Partial Information Decomposition to large-scale muscle activations, we unveiled nested networks of functionally diverse inter- and intramuscular interactions with distinct functional consequences on task performance. The effectiveness of this approach is demonstrated using simulations and by extracting generalizable muscle networks from benchmark datasets of muscle activity. Specific network components are shown to correlate with (1) balance performance and (2) differences in motor variability between young and older adults. By aligning muscle synergy analysis with leading theoretical insights on movement modularity, the mechanistic insights presented here suggest the proposed methodology offers enhanced research opportunities toward health and engineering applications.",
+  "year": 2024,
+  "venue": "iScience",
+  "authors": [
+   "David Ó’Reilly",
+   "William J. Shaw",
+   "Pauline M. Hilt",
+   "Rafael Castro Aguiar",
+   "Sarah Astill",
+   "Ioannis Delis"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4405433706",
+  "doi": "10.1016/j.isci.2024.111613",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405433706",
+  "published_iso": "2024-12-16",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Selecting the Most Effective Nudge: Evidence From a Large‐Scale Experiment on Immunization",
+  "title_norm": "selecting the most effective nudge evidence from a large scale experiment on imm",
+  "abstract": "Policymakers often choose a policy bundle that is a combination of different interventions in different dosages. We develop a new technique— treatment variant aggregation (TVA)—to select a policy from a large factorial design. TVA pools together policy variants that are not meaningfully different and prunes those deemed ineffective. This allows us to restrict attention to aggregated policy variants, consistently estimate their effects on the outcome, and estimate the best policy effect adjusting for the winner's curse. We apply TVA to a large randomized controlled trial that tests interventions to stimulate demand for immunization in Haryana, India. The policies under consideration include reminders, incentives, and local ambassadors for community mobilization. Cross‐randomizing these interventions, with different dosages or types of each intervention, yields 75 combinations. The policy with the largest impact (which combines incentives, ambassadors who are information hubs, and reminders) increases the number of immunizations by 44% relative to the status quo. The most cost‐effective policy (information hubs, ambassadors, and SMS reminders, but no incentives) increases the number of immunizations per dollar by 9.1% relative to the status quo.",
+  "year": 2025,
+  "venue": "Econometrica",
+  "authors": [
+   "Abhijit Banerjee",
+   "Arun G. Chandrasekhar",
+   "Suresh Dalpath",
+   "Esther Duflo",
+   "John Floretta",
+   "Matthew O. Jackson"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W3170338703",
+  "doi": "10.3982/ecta19739",
+  "arxiv_id": null,
+  "paper_url": "http://arxiv.org/pdf/2104.09645",
+  "published_iso": "2025-01-01",
+  "oa_field": "Social Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Muscle synergies in upper limb stroke rehabilitation: a scoping review",
+  "title_norm": "muscle synergies in upper limb stroke rehabilitation a scoping review",
+  "abstract": "INTRODUCTION: Upper limb impairment is a common consequence of stroke, significantly affecting the quality of life and independence of survivors. This scoping review assesses the emerging field of muscle synergy analysis in enhancing upper limb rehabilitation, focusing on the comparison of various methodologies and their outcomes. It aims to standardize these approaches to improve the effectiveness of rehabilitation interventions and drive future research in the domain. EVIDENCE ACQUISITION: Studies included in this scoping review focused on the analysis of muscle synergies during longitudinal rehabilitation of stroke survivors' upper limbs. A systematic literature search was conducted using PubMed, Scopus, and Web of Science databases, until September 2023, and was guided by the PRISMA for scoping review framework. EVIDENCE SYNTHESIS: Fourteen studies involving a total of 247 stroke patients were reviewed, featuring varied patient populations and rehabilitative interventions. Protocols differed among studies, with some utilizing robotic assistance and others relying on traditional therapy methods. Muscle synergy extraction was predominantly conducted using Non-Negative Matrix Factorization from electromyography data, focusing on key upper limb muscles essential for shoulder, elbow, and wrist rehabilitation. A notable observation across the studies was the heterogeneity in findings, particularly in the changes observed in the number, weightings, and temporal coefficients of muscle synergies. The studies indicated varied and complex relationships between muscle synergy variations and clinical outcomes. This diversity underscored the complexity involved in interpreting muscle coordination in the stroke population. The variability in results was also influenced by differing methodologies in muscle synergy analysis, highlighting a need for more standardized approaches to improve future research comparability and consistency. CONCLUSIONS: The synthesis of evidence presented in this scoping review highlights the promising role of muscle synergy analysis as an indicator of motor control recovery in stroke rehabilitation. By offering a comprehensive overview of the current state of research and advocating for harmonized methodological practices in future longitudinal studies, this scoping review aspires to advance the field of upper limb rehabilitation, ensuring that post-stroke interventions are both scientifically grounded and optimally beneficial for patients.",
+  "year": 2024,
+  "venue": "European Journal of Physical and Rehabilitation Medicine",
+  "authors": [
+   "Salvatore Facciorusso",
+   "Eleonora Guanziroli",
+   "Cristina Brambilla",
+   "Stefania Spina",
+   "Manuela Giraud",
+   "Lorenzo Molinari Tosatti"
+  ],
+  "citations": 26,
+  "source": "openalex",
+  "source_id": "W4402361414",
+  "doi": "10.23736/s1973-9087.24.08438-7",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4402361414",
+  "published_iso": "2024-09-09",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Audiovisual Affective Design of Humanoid Robot Appearance and Voice Based on Kansei Engineering",
+  "title_norm": "audiovisual affective design of humanoid robot appearance and voice based on kan",
+  "abstract": "",
+  "year": 2025,
+  "venue": "International Journal of Social Robotics",
+  "authors": [
+   "Mingming Li",
+   "Jia Zhang",
+   "Fu Guo",
+   "Yanyan Liao",
+   "Xiaolei Hu",
+   "Jaap Ham"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4406801287",
+  "doi": "10.1007/s12369-024-01202-5",
+  "arxiv_id": null,
+  "paper_url": "https://pure.tue.nl/ws/files/354222045/s12369-024-01202-5.pdf",
+  "published_iso": "2025-01-01",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
+  "title_norm": "understanding world or predicting future a comprehensive survey of world models",
+  "abstract": "The concept of world models has garnered significant attention due to advancements in multimodal large language models such as GPT-4 and video generation models such as Sora, which are central to the pursuit of artificial general intelligence. This survey offers a comprehensive review of the literature on world models. Generally, world models are regarded as tools for either understanding the present state of the world or predicting its future dynamics. This review presents a systematic categorization of world models, emphasizing two primary functions: (1) constructing internal representations to understand the mechanisms of the world, and (2) predicting future states to simulate and guide decision-making. Initially, we examine the current progress in these two categories. We then explore the application of world models in key domains, including autonomous driving, robotics, and social simulacra, with a focus on how each domain utilizes these aspects. Finally, we outline key challenges and provide insights into potential future research directions. We summarize the representative articles along with their code repositories in https://github.com/tsinghua-fib-lab/World-Model .",
+  "year": 2025,
+  "venue": "ACM Computing Surveys",
+  "authors": [
+   "Jingtao Ding",
+   "Yunke Zhang",
+   "Yu Shang",
+   "Y. Zhang",
+   "Zefang Zong",
+   "Jie Feng"
+  ],
+  "citations": 42,
+  "source": "openalex",
+  "source_id": "W4411735734",
+  "doi": "10.1145/3746449",
+  "arxiv_id": null,
+  "paper_url": "https://dl.acm.org/doi/pdf/10.1145/3746449",
+  "published_iso": "2025-06-27",
+  "oa_field": "Decision Sciences",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Enhancing digital competence through STEM-integrated universal design for learning: a pedagogical framework for computer science education in Ukrainian secondary schools",
+  "title_norm": "enhancing digital competence through stem integrated universal design for learni",
+  "abstract": "This study investigates how integrating STEM content in computer science education enhances the implementation of Universal Design for Learning (UDL) principles and its impact on digital competence development in Ukrainian secondary schools. The digital transformation of education demands innovative pedagogical approaches that accommodate diverse learning needs while developing essential competencies. Through a mixed-methods quasi-experimental design involving 28 computer science teachers (14 specialists, 12 first-category, 12 higher-category) and 200 students from secondary schools in western Ukraine, this study examines whether STEM-oriented content enables more effective UDL implementation compared to traditional computer science content. Both experimental and control groups received UDL-based instruction; however, the experimental group engaged with STEM-integrated content, including robotics and physical computing, while the control group followed traditional computer science topics. Results reveal that STEM integration significantly enhances UDL effectiveness, with the experimental group demonstrating up to 24% greater improvement in digital competencies than the control group. The most pronounced differences appeared in programming competencies (12% vs. 3% increase at expert level) and netiquette (18% vs. 8% increase at advanced level). Integrating STEM content transforms computer science from abstract modelling to physical interaction, fully implementing UDL’s three core principles through multiple representations (physical and digital), diverse means of action and expression (building and coding), and enhanced engagement through real-world connections. The study identifies key implementation factors, including teacher preparedness, infrastructure requirements, and content-specific adaptations. These findings provide a pedagogical framework demonstrating that STEM content catalyses more effective UDL implementation, with implications for curriculum design and teacher professional development in countries undergoing educational reform under challenging circumstances.",
+  "year": 2025,
+  "venue": "Discover Education",
+  "authors": [
+   "Ольга Василівна Барна",
+   "Olena Kuzminska",
+   "Сергій Олексійович Семеріков"
+  ],
+  "citations": 21,
+  "source": "openalex",
+  "source_id": "W4414531044",
+  "doi": "10.1007/s44217-025-00821-y",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s44217-025-00821-y.pdf",
+  "published_iso": "2025-09-26",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "A survey on deep 3D human pose estimation",
+  "title_norm": "a survey on deep 3d human pose estimation",
+  "abstract": "3D Human Pose Estimation (3D-HPE) is a highly active and evolving research area in computer vision with numerous applications such as extended reality, action recognition, and video surveillance. The field has significantly advanced with deep learning, public datasets, and enhanced computational power, addressing challenges like depth ambiguity, occlusion, and data scarcity. Researchers confront scenario-specific issues such as ill-posed problems in monocular setups, cross-view aggregation with camera synchronizations in multi-view systems, and inter-person occlusion in multi-person scenarios. This survey comprehensively reviews contemporary strategies covering a technological spectrum including Convolutional Neural Networks, Graph Convolutional Networks, Transformers, and their combinations employed to address these challenges. It includes scenarios such as monocular and multi-view setups, single and multi-person cases, as well as image and video inputs. The survey explores various solution paradigms, including single-stage vs 2D-to-3D lifting, absolute vs relative keypoints, pixel vs voxel vs Neural Radiance Field spaces, and deterministic, probabilistic, or diffusion-based strategies, along with top-down vs bottom-up approaches. It examines advanced learning techniques beyond supervised methods and data augmentation for diverse pose datasets. It analyzes the performance of recent methods on benchmark datasets for different scenarios. Challenges are categorized into common and scenario-specific issues, and future research directions are proposed to foster further advancements in the field. Additionally, key sections are summarized in tables or visual formats for quick understanding. This survey is a valuable resource and a solid reference for researchers in the dynamic landscape of 3D human pose estimation.",
+  "year": 2024,
+  "venue": "Artificial Intelligence Review",
+  "authors": [
+   "Rama Bastola Neupane",
+   "Kan Li",
+   "Tesfaye Fenta Boka"
+  ],
+  "citations": 55,
+  "source": "openalex",
+  "source_id": "W4404703236",
+  "doi": "10.1007/s10462-024-11019-3",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10462-024-11019-3.pdf",
+  "published_iso": "2024-11-25",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Cross-disciplinary perspectives on the potential for artificial intelligence across chemistry",
+  "title_norm": "cross disciplinary perspectives on the potential for artificial intelligence acr",
+  "abstract": "We offer ten diverse perspectives exploring the transformative potential of artificial intelligence (AI) in chemistry, highlighting many of the challenges we face, and offering potential strategies to address them.",
+  "year": 2025,
+  "venue": "Chemical Society Reviews",
+  "authors": [
+   "Austin M. Mroz",
+   "Annabel R. Basford",
+   "Friedrich Hastedt",
+   "Isuru Shavindra Jayasekera",
+   "Irea Mosquera‐Lois",
+   "Ruby Sedgwick"
+  ],
+  "citations": 48,
+  "source": "openalex",
+  "source_id": "W4409801681",
+  "doi": "10.1039/d5cs00146c",
+  "arxiv_id": null,
+  "paper_url": "https://pubs.rsc.org/en/content/articlepdf/2025/cs/d5cs00146c",
+  "published_iso": "2025-01-01",
+  "oa_field": "Materials Science",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Assessing brain-muscle networks during motor imagery to detect covert command-following",
+  "title_norm": "assessing brain muscle networks during motor imagery to detect covert command fo",
+  "abstract": "BACKGROUND: In this study, we evaluated the potential of a network approach to electromyography and electroencephalography recordings to detect covert command-following in healthy participants. The motivation underlying this study was the development of a diagnostic tool that can be applied in common clinical settings to detect awareness in patients that are unable to convey explicit motor or verbal responses, such as patients that suffer from disorders of consciousness (DoC). METHODS: We examined the brain and muscle response during movement and imagined movement of simple motor tasks, as well as during resting state. Brain-muscle networks were obtained using non-negative matrix factorization (NMF) of the coherence spectra for all the channel pairs. For the 15/38 participants who showed motor imagery, as indexed by common spatial filters and linear discriminant analysis, we contrasted the configuration of the networks during imagined movement and resting state at the group level, and subject-level classifiers were implemented using as features the weights of the NMF together with trial-wise power modulations and heart response to classify resting state from motor imagery. RESULTS: Kinesthetic motor imagery produced decreases in the mu-beta band compared to resting state, and a small correlation was found between mu-beta power and the kinesthetic imagery scores of the Movement Imagery Questionnaire-Revised Second version. The full-feature classifiers successfully distinguished between motor imagery and resting state for all participants, and brain-muscle functional networks did not contribute to the overall classification. Nevertheless, heart activity and cortical power were crucial to detect when a participant was mentally rehearsing a movement. CONCLUSIONS: Our work highlights the importance of combining EEG and peripheral measurements to detect command-following, which could be important for improving the detection of covert responses consistent with volition in unresponsive patients.",
+  "year": 2025,
+  "venue": "BMC Medicine",
+  "authors": [
+   "Emilia Fló",
+   "Daniel Fraiman",
+   "Jacobo Sitt"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4407193991",
+  "doi": "10.1186/s12916-025-03846-0",
+  "arxiv_id": null,
+  "paper_url": "https://link.springer.com/content/pdf/10.1186/s12916-025-03846-0.pdf",
+  "published_iso": "2025-02-06",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Through Massage to the Brain—Neuronal and Neuroplastic Mechanisms of Massage Based on Various Neuroimaging Techniques (EEG, fMRI, and fNIRS)",
+  "title_norm": "through massage to the brain neuronal and neuroplastic mechanisms of massage bas",
+  "abstract": "Introduction: Massage therapy delivers structured mechanosensory input that can influence brain function, yet the central mechanisms and potential for neuroplastic change have not been synthesized across neuroimaging modalities. This mechanistic review integrates evidence from electroencephalography (EEG), functional MRI (fMRI), and functional near-infrared spectroscopy (fNIRS) to map how massage alters human brain activity acutely and over time and to identify signals of longitudinal adaptation. Materials and Methods: We conducted a scoping, mechanistic review informed by PRISMA/PRISMA-ScR principles. PubMed/MEDLINE, Cochrane Library, Google Scholar, and ResearchGate were queried for English-language human trials (January 1990–July 2025) that (1) delivered a practitioner-applied manual massage (e.g., Swedish, Thai, shiatsu, tuina, reflexology, myofascial techniques) and (2) measured brain activity with EEG, fMRI, or fNIRS pre/post or between groups. Non-manual stimulation, structural-only imaging, protocols, and non-English reports were excluded. Two reviewers independently screened and extracted study, intervention, and neuroimaging details; heterogeneity precluded meta-analysis, so results were narratively synthesized by modality and linked to putative mechanisms and longitudinal effects. Results: Forty-seven studies met the criteria: 30 EEG, 12 fMRI, and 5 fNIRS. Results: Regarding EEG, massage commonly increased alpha across single sessions with reductions in beta/gamma, alongside pressure-dependent autonomic shifts; moderate pressure favored a parasympathetic/relaxation profile. Connectivity effects were state- and modality-specific (e.g., reduced inter-occipital alpha coherence after facial massage, preserved or reorganized coupling with hands-on vs. mechanical delivery). Frontal alpha asymmetry frequently shifted leftward (approach/positive affect). Pain cohorts showed decreased cortical entropy and a shift toward slower rhythms, which tracked analgesia. Somatotopy emerged during unilateral treatments (contralateral central beta suppression). Adjuncts (e.g., binaural beats) enhanced anti-fatigue indices. Longitudinally, repeated programs showed attenuation of acute EEG/cortisol responses yet improvements in stress and performance; in one program, BDNF increased across weeks. In preterm infants, twice-daily massage accelerated EEG maturation (higher alpha/beta, lower delta) in a dose-responsive fashion; the EEG background was more continuous. In fMRI studies, in-scanner touch and reflexology engaged the insula, anterior cingulate, striatum, and periaqueductal gray; somatotopic specificity was observed for mapped foot areas. Resting-state studies in chronic pain reported normalization of regional homogeneity and/or connectivity within default-mode and salience/interoceptive networks after multi-session tuina or osteopathic interventions, paralleling symptom improvement; some task-based effects persisted at delayed follow-up. fNIRS studies generally showed increased prefrontal oxygenation during/after massage; in motor-impaired cohorts, acupressure/massage enhanced lateralized sensorimotor activation, consistent with use-dependent plasticity. Some reports paired hemodynamic changes with oxytocin and autonomic markers. Conclusions: Across modalities, massage reliably modulates central activity acutely and shows convergent signals of neuroplastic adaptation with repeated dosing and in developmental windows. Evidence supports (i) rapid induction of relaxed/analgesic states (alpha increases, network rebalancing) and (ii) longer-horizon changes—network normalization in chronic pain, EEG maturation in preterm infants, and neurotrophic up-shifts—consistent with trait-level recalibration of stress, interoception, and pain circuits. These findings justify integrating massage into rehabilitation, pain management, mental health, and neonatal care and motivate larger, standardized, multimodal longitudinal trials to define dose–response relationships, durability, and mechanistic mediators (e.g., connectivity targets, neuropeptides).",
+  "year": 2026,
+  "venue": "Journal of Clinical Medicine",
+  "authors": [
+   "James Chmiel",
+   "Donata Kurpas"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W7125829598",
+  "doi": "10.3390/jcm15020909",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2077-0383/15/2/909/pdf?version=1769429235",
+  "published_iso": "2026-01-22",
+  "oa_field": "Medicine",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "A Review of Embodied Grasping",
+  "title_norm": "a review of embodied grasping",
+  "abstract": "Pre-trained models trained with internet-scale data have achieved significant improvements in perception, interaction, and reasoning. Using them as the basis of embodied grasping methods has greatly promoted the development of robotics applications. In this paper, we provide a comprehensive review of the latest developments in this field. First, we summarize the embodied foundations, including cutting-edge embodied robots, simulation platforms, publicly available datasets, and data acquisition methods, to fully understand the research focus. Then, the embodied algorithms are introduced, starting from pre-trained models, with three main research goals: (1) embodied perception, using data captured by visual sensors to perform point cloud extraction or 3D reconstruction, combined with pre-trained models, to understand the target object and external environment and directly predict the execution of actions; (2) embodied strategy: In imitation learning, the pre-trained model is used to enhance data or as a feature extractor to enhance the generalization ability of the model. In reinforcement learning, the pre-trained model is used to obtain the optimal reward function, which improves the learning efficiency and ability of reinforcement learning; (3) embodied agent: The pre-trained model adopts hierarchical or holistic execution to achieve end-to-end robot control. Finally, the challenges of the current research are summarized, and a perspective on feasible technical routes is provided.",
+  "year": 2025,
+  "venue": "Sensors",
+  "authors": [
+   "Jianghao Sun",
+   "Pengjun Mao",
+   "Lingju Kong",
+   "Jun Wang"
+  ],
+  "citations": 8,
+  "source": "openalex",
+  "source_id": "W4406984533",
+  "doi": "10.3390/s25030852",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/1424-8220/25/3/852/pdf?version=1738254202",
+  "published_iso": "2025-01-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Towards Photocrosslinkable Lyotropic Blends of Organosolv Lignin and Hydroxypropyl Cellulose for 3D Printing by Direct Ink Writing",
+  "title_norm": "towards photocrosslinkable lyotropic blends of organosolv lignin and hydroxyprop",
+  "abstract": "Polymer blends containing up to 70% organosolv lignin content and lyotropic cellulose derivatives have been established as \"lignin inks\" for direct ink writing of fully biobased 3D parts. However, a fast-crosslinking mechanism is needed to improve throughput and design space. In this paper, UV-photocrosslinkable organosolv lignin/hydroxypropyl cellulose inks are formulated through doping with common photocrosslinkers. The most potent photocrosslinkers for neat hydroxypropyl cellulose, lignin and their blends are determined through a series of DOEs. Hydroxypropyl cellulose is significantly more amenable to photocrosslinking than organosolv lignin. The optimal photocrosslinkable ink formulations are printable and exhibit up to 70% gel content, although thermal post-curing remains essential. Chemical, thermal, and mechanical investigations of the photocrosslinked 3D parts evidence efficient crosslinking of HPC through its hydroxyl groups, while lignin appears internally plasticized and/or degraded during inefficient photocrosslinking. Despite this, photocrosslinkable inks exhibit improved tensile properties, shape flexibility, and fidelity. The heterogeneous crosslinking and residual creep highlight the need to further activate lignin for homogeneous photocrosslinking in order to fully exploit the potential of lignin inks in DIW.",
+  "year": 2024,
+  "venue": "Polymers",
+  "authors": [
+   "Mehmet-Talha Yapa",
+   "Jacques Lalevée",
+   "Marie‐Pierre Laborie"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4403298079",
+  "doi": "10.3390/polym16202869",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2073-4360/16/20/2869/pdf?version=1728572820",
+  "published_iso": "2024-10-10",
+  "oa_field": "Chemistry",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Addressing Inconsistency in Functional Neuroimaging: A Replicable Data-Driven Multi-Scale Functional Atlas for Canonical Brain Networks",
+  "title_norm": "addressing inconsistency in functional neuroimaging a replicable data driven mul",
+  "abstract": "The advent of multiple neuroimaging methodologies has greatly aided in the conceptualization of large-scale functional brain networks in the field of cognitive neuroscience. However, there is inconsistency across studies in both nomenclature and the functional entities being described. There is a need for a unifying framework that standardizes terminology across studies while also bringing analyses and results into the same reference space. Here we present a whole-brain atlas of canonical functional brain networks derived from more than 100,000 resting-state fMRI datasets. These data-driven functional networks are highly replicable across datasets and capture information from multiple spatial scales. We have organized, labeled, and described the networks with terms familiar to the fields of cognitive and affective neuroscience in order to optimize their utility in future neuroimaging analyses and enhance the accessibility of new findings. The benefits of this atlas are not limited to future template-based or reference-guided analyses, but also extend to other data-driven neuroimaging approaches across modalities, such as those using blind independent component analysis (ICA). Future studies utilizing this atlas will contribute to greater harmonization and standardization in functional neuroimaging research.",
+  "year": 2024,
+  "venue": "bioRxiv (Cold Spring Harbor Laboratory)",
+  "authors": [
+   "Kyle M. Jensen",
+   "Jessica A. Turner",
+   "Lucina Q. Uddin",
+   "Vince D. Calhoun",
+   "Armin Iraji"
+  ],
+  "citations": 27,
+  "source": "openalex",
+  "source_id": "W4402391275",
+  "doi": "10.1101/2024.09.09.612129",
+  "arxiv_id": null,
+  "paper_url": "https://www.biorxiv.org/content/biorxiv/early/2024/12/03/2024.09.09.612129.full.pdf",
+  "published_iso": "2024-09-10",
+  "oa_field": "Neuroscience",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Chinese ethnic dance therapy: cultural anthropology and health science perspectives on Tujia ethnic dances",
+  "title_norm": "chinese ethnic dance therapy cultural anthropology and health science perspectiv",
+  "abstract": "Introduction: Archaeological findings witness the anthropological roots of dance, while psychological, medical, cultural and aesthetic studies shed light on health promoting capacities and curative factors inhering in symbolic and expressive body movement. Since dance therapy became a multifaceted discipline in the middle of the 20th century, increasing evidence of beneficial effects has advocated the use of dance therapy in a broad spectrum of clinical and public health areas such as psychiatry, oncology, neurology, cardiology and geriatrics. Psychological and neurophysiological studies elucidated key mechanisms underlying dance therapeutic dynamics, and ethnological studies highlighted the wealth of indigenous dances alongside their impact on holistic well-being, hence the term 'ethno-dance therapy', which also relates to dance traditions of ethnic groups in China. Methods: Narrative/descriptive ethnological research provided detailed insights into dance traditions of the 55 officially recognized ethnic groups in China such as the Uyghur, Miao and Wa. Considering dance ontological perspectives, a triad of Tujia dances was chosen for this article. On this basis as well as own field studies, cultural-anthropological, psychological, physiological and neurophysiological knowledge was used to construct hypotheses about health-relevant features and factors. In terms of meta-methodology, such inferential reasoning brings about multi-disciplinary meta-syntheses, which differ considerably from the conventional understanding of this genre. Results: Our analysis of Tujia dances suggests nine distinct therapeutic principles and benefits regarding (i) cardiovascular health, (ii) musculoskeletal health, (iii) neuroplasticity and network connectivity, (iv) self-exploration and self-expression, (v) self-actualization and ontological anchoring, (vi) hypnotherapeutic dynamics and altered states of consciousness, (vii) symbolic interaction and ritualized social roles, (viii) therapeutically advantageous changes of attitudes, (ix) aesthetic immersion and the dance-self. Discussion: The broad spectrum of beneficial effects of Tujia dances may improve dance therapy in various medical areas and enhance culturally sensitive public health systems. Further research should focus on underlying mechanisms, involve dances from further ethnic groups, explore cross-cultural transferability to more precisely differentiate archetypal/anthropological and culture-dependent factors, and to clearly identify dance therapeutic functions within complex medical and psychological treatment plans.",
+  "year": 2025,
+  "venue": "Frontiers in Psychology",
+  "authors": [
+   "Qi Mao",
+   "Wolfgang Mastnak",
+   "Ruiyuan Guan"
+  ],
+  "citations": 3,
+  "source": "openalex",
+  "source_id": "W4411086483",
+  "doi": "10.3389/fpsyg.2025.1561150",
+  "arxiv_id": null,
+  "paper_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1561150/pdf",
+  "published_iso": "2025-06-06",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "AnyPos: Automated Task-Agnostic Actions for Bimanual Manipulation",
+  "title_norm": "anypos automated task agnostic actions for bimanual manipulation",
+  "abstract": "Learning generalizable manipulation policies hinges on data, yet robot manipulation data is scarce and often entangled with specific embodiments, making both cross-task and cross-platform transfer difficult. We tackle this challenge with task-agnostic embodiment modeling, which learns embodiment dynamics directly from task-agnostic action data and decouples them from high-level policy learning. By focusing on exploring all feasible actions of the embodiment to capture what is physically feasible and consistent, task-agnostic data takes the form of independent image-action pairs with the potential to cover the entire embodiment workspace, unlike task-specific data, which is sequential and tied to concrete tasks. This data-driven perspective bypasses the limitations of traditional dynamics-based modeling and enables scalable reuse of action data across different tasks. Building on this principle, we introduce AnyPos, a unified pipeline that integrates large-scale automated task-agnostic exploration with robust embodiment modeling through inverse dynamics learning. AnyPos generates diverse yet safe trajectories at scale, then learns embodiment representations by decoupling arm and end-effector motions and employing a direction-aware decoder to stabilize predictions under distribution shift, which can be seamlessly coupled with diverse high-level policy models. In comparison to the standard baseline, AnyPos achieves a 51% improvement in test accuracy. On manipulation tasks such as operating a microwave, toasting bread, folding clothes, watering plants, and scrubbing plates, AnyPos raises success rates by 30-40% over strong baselines. These results highlight data-driven embodiment modeling as a practical route to overcoming data scarcity and achieving generalization across tasks and platforms in visuomotor control. Project page: https://embodiedfoundation.github.io/vidar_anypos.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Hengkai Tan",
+   "Feng Yao",
+   "Xinyi Mao",
+   "Huang, Shuhe",
+   "Guodong Liu",
+   "Zhongkai Hao"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4415309754",
+  "doi": "10.48550/arxiv.2507.12768",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2507.12768",
+  "published_iso": "2025-07-17",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Industrial Robotics and Adaptive Control Systems in STEM Education: Systematic Review of Technology Transfer from Industry to Classroom and Competency Development Framework",
+  "title_norm": "industrial robotics and adaptive control systems in stem education systematic re",
+  "abstract": "The Fourth Industrial Revolution reshapes manufacturing and workforce demands, yet a persistent gap remains between industry needs and engineering education. While proficiency in industrial robotics, adaptive control, and automation becomes critical, traditional education struggles to bridge the theory–practice divide. This systematic review examines technology transfer from factory to classroom to develop authentic Industry 4.0 competencies. Following PRISMA 2020 guidelines, we synthesized 52 empirical studies (2019–2025) focusing on technology complexity, pedagogical approaches, and learning outcomes. Random-effects meta-analysis of 12 representative studies reveals large positive effects: Hedges’ g of 0.786 (95% CI: 0.726–0.846, p < 0.001) with homogeneous effects (I2 = 0.00%, p = 0.464), indicating robust generalizability. However, critical gaps emerged: only 7.7% employ actual industrial manipulators versus educational kits, adaptive control pedagogy remains limited, and fault-tolerant systems teaching receives minimal attention. Technology complexity analysis reveals clear progression from educational kits through semi-industrial platforms to industrial systems, with significant differential effects on transferable skills (r = 0.68, p < 0.001). This study proposes the ARC Framework integrating technology taxonomy, competency progression, pedagogical strategies, and assessment rubrics. Cost–effectiveness analysis demonstrates remote labs optimize impact-per-investment ratios ($45 vs. $280 per student), providing an evidence-based framework for technology transfer in engineering education.",
+  "year": 2026,
+  "venue": "Applied Sciences",
+  "authors": [
+   "Claudio Urrea"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7130349638",
+  "doi": "10.3390/app16042026",
+  "arxiv_id": null,
+  "paper_url": "https://www.mdpi.com/2076-3417/16/4/2026/pdf?version=1771427468",
+  "published_iso": "2026-02-18",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Interactive imitation learning for dexterous robotic manipulation: challenges and perspectives—a survey",
+  "title_norm": "interactive imitation learning for dexterous robotic manipulation challenges and",
+  "abstract": "Dexterous manipulation is a crucial yet highly complex challenge in humanoid robotics, demanding precise, adaptable, and sample-efficient learning methods. As humanoid robots are usually designed to operate in human-centric environments and interact with everyday objects, mastering dexterous manipulation is critical for real-world deployment. Traditional approaches, such as reinforcement learning and imitation learning, have made significant strides, but they often struggle due to the unique challenges of real-world dexterous manipulation, including high-dimensional control, limited training data, and covariate shift. This survey provides a comprehensive overview of these challenges and reviews existing learning-based methods for real-world dexterous manipulation, spanning imitation learning, reinforcement learning, and hybrid approaches. A promising yet underexplored direction is interactive imitation learning, where human feedback actively refines a robot's behavior during training. While interactive imitation learning has shown success in various robotic tasks, its application to dexterous manipulation remains limited. To address this gap, we examine current interactive imitation learning techniques applied to other robotic tasks and discuss how these methods can be adapted to enhance dexterous manipulation. By synthesizing state-of-the-art research, this paper highlights key challenges, identifies gaps in current methodologies, and outlines potential directions for leveraging interactive imitation learning to improve dexterous robotic skills.",
+  "year": 2025,
+  "venue": "Frontiers in Robotics and AI",
+  "authors": [
+   "Edgar Welte",
+   "Rania Rayyes"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4417483688",
+  "doi": "10.3389/frobt.2025.1682437",
+  "arxiv_id": null,
+  "paper_url": "https://public-pages-files-2025.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1682437/pdf",
+  "published_iso": "2025-12-19",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Shaping Future Success: Evidence from an Early Childhood Human Capital Formation Intervention",
+  "title_norm": "shaping future success evidence from an early childhood human capital formation ",
+  "abstract": "",
+  "year": 2025,
+  "venue": "SSRN Electronic Journal",
+  "authors": [
+   "Deepak Saraswat",
+   "Shwetlena Sabarwal",
+   "Lindsey Lacey",
+   "Natasha Jha",
+   "Nishith Prakash",
+   "Rachel Cohen"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414768864",
+  "doi": "10.2139/ssrn.5556658",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4414768864",
+  "published_iso": "2025-01-01",
+  "oa_field": "Psychology",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Human activity recognition: A review of deep learning‐based methods",
+  "title_norm": "human activity recognition a review of deep learning based methods",
+  "abstract": "Abstract Human Activity Recognition (HAR) covers methods for automatically identifying human activities from a stream of data. End‐users of HAR methods cover a range of sectors, including health, self‐care, amusement, safety and monitoring. In this survey, the authors provide a thorough overview of deep learning based and detailed analysis of work that was performed between 2018 and 2023 in a variety of fields related to HAR with a focus on device‐free solutions. It also presents the categorisation and taxonomy of the covered publication and an overview of publicly available datasets. To complete this review, the limitations of existing approaches and potential future research directions are discussed.",
+  "year": 2025,
+  "venue": "IET Computer Vision",
+  "authors": [
+   "Sanjay Jyoti Dutta",
+   "Tossapon Boongoen",
+   "Reyer Zwiggelaar"
+  ],
+  "citations": 18,
+  "source": "openalex",
+  "source_id": "W4407062904",
+  "doi": "10.1049/cvi2.70003",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1049/cvi2.70003",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Quality-centric digital twins in additive manufacturing: a review of the state-of-the-art, challenges, and future directions",
+  "title_norm": "quality centric digital twins in additive manufacturing a review of the state of",
+  "abstract": "Additive Manufacturing (AM) transformed the production landscape, yet quality-related challenges continue to hinder its full potential. To address these issues, various approaches have been explored, including Design of Experiments (DOE), numerical simulations, data-driven methods, and the emerging technology of Digital Twin (DT) – a virtual replica of a physical entity enabling bi-directional data exchange and real-time interaction. It stands out by offering integrated monitoring, control, and predictive capabilities. Despite recent advancements, DTs in AM remain underdeveloped, especially in addressing quality concerns. This systematic review comprehensively focuses on DTs specifically designed to enhance AM part quality – an area overlooked in previous reviews. We examine critical DT development stages, including design, implementation, data processing and intelligence, and verification and validation. Our analysis reveals two key findings. First, only 16 studies from the literature meet the strict criteria for quality-centric, bi-directional DTs, highlighting the field’s immaturity and fragmentation. Second, most implementations are process-specific, with limited multitasking capabilities and over-reliance on sensor data, inadequately addressing critical quality attributes. Based on these findings, we propose six future research directions, namely establishing a comprehensive quality-focused DT framework, integrating multiscale modelling, enabling smarter DTs, creating a unified platform for diverse AM processes, improving data synchronisation, and enhancing data security.",
+  "year": 2026,
+  "venue": "Digital Twin",
+  "authors": [
+   "Mohammad Vahid Ehteshamfar",
+   "Xun Xu",
+   "Sheng Yang"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W7124296674",
+  "doi": "10.1080/27525783.2026.2613469",
+  "arxiv_id": null,
+  "paper_url": "https://www.tandfonline.com/doi/pdf/10.1080/27525783.2026.2613469?needAccess=true",
+  "published_iso": "2026-01-15",
+  "oa_field": "Engineering",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Survey on Hand Gesture Recognition from Visual Input",
+  "title_norm": "survey on hand gesture recognition from visual input",
+  "abstract": "Hand gesture recognition has become an important research area, driven by the growing demand for human-computer interaction in fields such as sign language recognition, virtual and augmented reality, and robotics. Despite the rapid growth of the field, there are few surveys that comprehensively cover recent research developments, available solutions, and benchmark datasets. This survey addresses this gap by examining the latest advancements in hand gesture and 3D hand pose recognition from various types of camera input data including RGB images, depth images, and videos from monocular or multiview cameras, examining the differing methodological requirements of each approach. Furthermore, an overview of widely used datasets is provided, detailing their main characteristics and application domains. Finally, open challenges such as achieving robust recognition in real-world environments, handling occlusions, ensuring generalization across diverse users, and addressing computational efficiency for real-time applications are highlighted to guide future research directions. By synthesizing the objectives, methodologies, and applications of recent studies, this survey offers valuable insights into current trends, challenges, and opportunities for future research in human hand gesture recognition.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Manousos Linardakis",
+   "Iraklis Varlamis",
+   "Georgios Th. Papadopoulos"
+  ],
+  "citations": 4,
+  "source": "openalex",
+  "source_id": "W4406745524",
+  "doi": "10.48550/arxiv.2501.11992",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2501.11992",
+  "published_iso": "2025-01-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "2024 Annual Meeting Abstracts – General Poster Discussion",
+  "title_norm": "2024 annual meeting abstracts general poster discussion",
+  "abstract": "Purpose: The application of artificial intelligence (AI) for an efficient IMRT quality assurance (QA) -which uses AI to identify IMRT plans for selective measurement -has demonstrated promising results in properly triaging plans for QA and potentially reducing the workload for measurement-based QA.Yet its clinical implementation requires a comprehensive risk assessment to ensure patient safety.This work evaluated our AI-assisted hybrid quality assurance (AIHQA) workflow using failure mode and effect analysis (FMEA).Methods: The process maps and associated risks of the measurement based IMRT QA (MBQA) and AIHQA workflows were analyzed and compared.We used our institution's IMRTQA-related event reports and related expertise as a guide to identify and score each workflow's failure mode.The TG-100 recommendation is followed in ranking the failure modes' severity, occurrence, and detectability on a 1-10 scale.More analysis was done on the high-risk failure modes to create AIHQA mitigation strategies.Results: The average ± standard deviation and maximum risk priority numbers (RPN) for MBQA and AIHQA were 54.13±74.84and 315 and 381.4±436.56 and 900, respectively.The AIHQA exhibited five unique failure modes, which were attributed to automation bias, AI-model prediction accuracy, and operator errors.Four of five failure modes exceeded the action threshold of RPN=125, necessitating the implementation of mitigation strategies.Before the clinical integration of AIHQA, comprehensive onboarding and continuous training materials should be developed.These materials should cover the appropriate utilization and interpretation of AI prediction results, the risks associated with excessive reliance on predictions, and the limitations of the AI model.Conclusion: FMEA was performed on AIHQA to assess the potential risks associated with this new AI-assisted workflow and develop strategies to mitigate them.This proactive analysis provides a foundation for the safe introduction of the AIHQA, followed by continuous evaluation and development of mitigation solutions after its clinical implementation.",
+  "year": 2024,
+  "venue": "Medical Physics",
+  "authors": [],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4403430901",
+  "doi": "10.1002/mp.17457",
+  "arxiv_id": null,
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mp.17457",
+  "published_iso": "2024-10-01",
+  "oa_field": "Biochemistry, Genetics and Molecular Biology",
+  "semantic_recall": false,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Robot Data Curation with Mutual Information Estimators",
+  "title_norm": "robot data curation with mutual information estimators",
+  "abstract": "The performance of imitation learning policies often hinges on the datasets with which they are trained.Consequently, investment in data collection for robotics has grown across both industrial and academic labs.However, despite the marked increase in the quantity of demonstrations collected, little work has sought to assess the quality of said data despite mounting evidence of its importance in other areas such as vision and language.In this work, we take a critical step towards addressing the data quality in robotics.Given a dataset of demonstrations, we aim to estimate the relative quality of individual demonstrations in terms of both action diversity and predictability.To do so, we estimate the average contribution of a trajectory towards the mutual information between states and actions in the entire dataset, which captures both the entropy of the marginal action distribution and the state-conditioned action entropy.Though commonly used mutual information estimators require vast amounts of data often beyond the scale available in robotics, we introduce a novel technique based on k-nearest neighbor estimates of mutual information on top of simple VAE embeddings of states and actions.Empirically, we demonstrate that our approach is able to partition demonstration datasets by quality according to human expert scores across a diverse set of benchmarks spanning simulation and real world environments.Moreover, training policies based on data filtered by our method leads to a 5-10% improvement in RoboMimic and better performance on real ALOHA and Franka setups.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Joey Hejna",
+   "Suvir Mirchandani",
+   "Ashwin Balakrishna",
+   "Annie Xie",
+   "Ayzaan Wahid",
+   "Jonathan Tompson"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4414050476",
+  "doi": "10.15607/rss.2025.xxi.023",
+  "arxiv_id": null,
+  "paper_url": "https://doi.org/10.15607/rss.2025.xxi.023",
+  "published_iso": "2025-06-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": false,
+  "from_query": [
+   "bimanual action interaction dynamics factorization"
+  ]
+ },
+ {
+  "title": "Large Language Models for Orchestrating Bimanual Robots",
+  "title_norm": "large language models for orchestrating bimanual robots",
+  "abstract": "Although there has been rapid progress in endowing robots with the ability to solve complex manipulation tasks, generating control policies for bimanual robots to solve tasks involving two hands is still challenging because of the difficulties in effective temporal and spatial coordination. With emergent abilities in terms of step-by-step reasoning and in-context learning, Large Language Models (LLMs) have demonstrated promising potential in a variety of robotic tasks. However, the nature of language communication via a single sequence of discrete symbols makes LLM-based coordination in continuous space a particular challenge for bimanual tasks. To tackle this challenge, we present LAnguage-model-based Bimanual ORchestration (LABOR), an agent utilizing an LLM to analyze task configurations and devise coordination control policies for addressing long-horizon bimanual tasks. We evaluate our method through simulated experiments involving two classes of long-horizon tasks using the NICOL humanoid robot. Our results demonstrate that our method outperforms the baseline in terms of success rate. Additionally, we thoroughly analyze failure cases, offering insights into LLM-based approaches in bimanual robotic control and revealing future research trends. The project website can be found at http://labor-agent. github.io.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Kun Chu",
+   "Xufeng Zhao",
+   "Cornelius Weber",
+   "Mengdi Li",
+   "Wenhao Lu",
+   "Stefan Wermter"
+  ],
+  "citations": 11,
+  "source": "openalex",
+  "source_id": "W4404953341",
+  "doi": "10.1109/humanoids58906.2024.10769891",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4404953341",
+  "published_iso": "2024-11-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "ManiGaussian++: General Robotic Bimanual Manipulation with Hierarchical Gaussian World Model",
+  "title_norm": "manigaussian general robotic bimanual manipulation with hierarchical gaussian wo",
+  "abstract": "Multi-task robotic bimanual manipulation is becoming increasingly popular as it enables sophisticated tasks that require diverse dual-arm collaboration patterns. Compared to unimanual manipulation, bimanual tasks pose challenges to understanding the multi-body spatiotemporal dynamics. An existing method ManiGaussian [30] pioneers encoding the spatiotemporal dynamics into the visual representation via Gaussian world model for single-arm settings, which ignores the interaction of multiple embodiments for dual-arm systems with significant performance drop. In this paper, we propose ManiGaussian++, an extension of ManiGaussian framework that improves multi-task bimanual manipulation by digesting multi-body scene dynamics through a hierarchical Gaussian world model. To be specific, we first generate task-oriented Gaussian Splatting from intermediate visual features, which aims to differentiate acting and stabilizing arms for multi-body spatiotemporal dynamics modeling. We then build a hierarchical Gaussian world model with the leader-follower architecture, where the multi-body spatiotemporal dynamics is mined for intermediate visual representation via future scene prediction. The leader predicts Gaussian Splatting deformation caused by motions of the stabilizing arm, through which the follower generates the physical consequences resulted from the movement of the acting arm. As a result, our method significantly outperforms the current state-of-the-art bimanual manipulation techniques by an improvement of 20.2% in 10 simulated tasks, and achieves 60% success rate on average in 9 challenging real-world tasks. Our code is available at https://github.com/April-Yz/ManiGaussian_Bimanual.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Tengbo Yu",
+   "Guanxing Lu",
+   "Zaijia Yang",
+   "Haoyuan Deng",
+   "Season S. Chen",
+   "Jiwen Lu"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4416749037",
+  "doi": "10.1109/iros60139.2025.11246564",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416749037",
+  "published_iso": "2025-10-19",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "Active Vision Might Be All You Need: Exploring Active Vision in Bimanual Robotic Manipulation",
+  "title_norm": "active vision might be all you need exploring active vision in bimanual robotic ",
+  "abstract": "Imitation learning has demonstrated significant potential in performing high-precision manipulation tasks using visual feedback. However, it is common practice in imitation learning for cameras to be fixed in place, resulting in issues like occlusion and limited field of view. Furthermore, cameras are often placed in broad, general locations, without an effective viewpoint specific to the robot's task. In this work, we investigate the utility of active vision (AV) for imitation learning and manipulation, in which, in addition to the manipulation policy, the robot learns an AV policy from human demonstrations to dynamically change the robot's camera viewpoint to obtain better information about its environment and the given task. We introduce AV-ALOHA, a new bimanual teleoperation robot system with AV, an extension of the ALOHA 2 robot system, incorporating an additional 7-DoF robot arm that only carries a stereo camera and is solely tasked with finding the best viewpoint. This camera streams stereo video to an operator wearing a virtual reality (VR) headset, allowing the operator to control the camera pose using head and body movements. The system provides an immersive teleoperation experience, with bimanual first-person control, enabling the operator to dynamically explore and search the scene and simultaneously interact with the environment. We conduct imitation learning experiments of our system both in real-world and in simulation, across a variety of tasks that emphasize viewpoint planning. Our results demonstrate the effectiveness of human-guided AV for imitation learning, showing significant improvements over fixed cameras in tasks with limited visibility. Project website: https://soltanilara.github.io/av-alohal",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Ian Chuang",
+   "Andrew Lee",
+   "Dechen Gao",
+   "M-Mahdi Naddaf-Sh",
+   "Iman Soltani"
+  ],
+  "citations": 7,
+  "source": "openalex",
+  "source_id": "W4413925993",
+  "doi": "10.1109/icra55743.2025.11128253",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413925993",
+  "published_iso": "2025-05-19",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "ARMOR: Egocentric Perception for Bimanual Robot Collision Avoidance and Motion Planning",
+  "title_norm": "armor egocentric perception for bimanual robot collision avoidance and motion pl",
+  "abstract": "Robotic arms have significant gaps in their sensing and perception, making it hard to perform motion planning in dense environments. To address this, we introduce ARMOR, a novel egocentric perception system that integrates both hardware and software, specifically incorporating wearable-like depth sensors for bimanual robotic platforms with arms. Our distributed perception approach enhances the robot’s spatial awareness, and facilitates more agile motion planning. We also train a transformer-based imitation learning (IL) policy in simulation to perform dynamic collision avoidance, by leveraging around 86 hours worth of human realistic motions from the AMASS dataset. We show that our ARMOR perception is superior against a setup with multiple dense head-mounted, and externally mounted depth cameras, with a 63.7% reduction in collisions, and 78.7% improvement on success rate. We also compare our IL policy against a sampling-based motion planning expert cuRobo, showing 31.6% less collisions, 16.9% higher success rate, and 26× reduction in computational latency. Lastly, we deploy our ARMOR perception on our real- world GR1 humanoid robot from Fourier Intelligence. The simulation environment, HW description, and 3D CAD files are available at https://daehwakim.com/armor.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Daehwa Kim",
+   "Mario Srouji",
+   "Chen Chen",
+   "Jian Zhang"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W7084130772",
+  "doi": "10.1109/case58245.2025.11164065",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7084130772",
+  "published_iso": "2025-08-17",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "Spatial-Temporal Graph Diffusion Policy with Kinematic Modeling for Bimanual Robotic Manipulation",
+  "title_norm": "spatial temporal graph diffusion policy with kinematic modeling for bimanual rob",
+  "abstract": "Despite the significant success of imitation learning in robotic manipulation, its application to bimanual tasks remains highly challenging. Existing approaches mainly learn a policy to predict a distant next-best end-effector pose (NBP) and then compute the corresponding joint rotation angles for motion using inverse kinematics. However, they suffer from two important issues: (1) rarely considering the physical robotic structure, which may cause self-collisions or interferences, and (2) overlooking the kinematics constraint, which may result in the predicted poses not conforming to the actual limitations of the robot joints. In this paper, we propose Kinematics enhanced Spatial-TemporAl gRaph Diffuser (KStar Diffuser). Specifically, (1) to incorporate the physical robot structure information into action prediction, KStar Diffuser maintains a dynamic spatial-temporal graph according to the physical bimanual joint motions at continuous timesteps. This dynamic graph serves as the robot-structure condition for denoising the actions; (2) to make the NBP learning objective consistent with kinematics, we introduce the differentiable kinematics to provide the reference for optimizing KStar Diffuser. This module regularizes the policy to predict more reliable and kinematics-aware next end-effector poses. Experimental results show that our method effectively leverages the physical structural information and generates kinematics-aware actions in both simulation and real-world.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Qi Lv",
+   "Hao Li",
+   "Xiang Deng",
+   "Rui Shao",
+   "Yinchuan Li",
+   "Jianye Hao"
+  ],
+  "citations": 5,
+  "source": "openalex",
+  "source_id": "W4413146181",
+  "doi": "10.1109/cvpr52734.2025.01621",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413146181",
+  "published_iso": "2025-06-10",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "RynnVLA-002: A Unified Vision-Language-Action and World Model",
+  "title_norm": "rynnvla 002 a unified vision language action and world model",
+  "abstract": "We introduce RynnVLA-002, a unified Vision-Language-Action (VLA) and world model. The world model leverages action and visual inputs to predict future image states, learning the underlying physics of the environment to refine action generation. Conversely, the VLA model produces subsequent actions from image observations, enhancing visual understanding and supporting the world model's image generation. The unified framework of RynnVLA-002 enables joint learning of environmental dynamics and action planning. Our experiments show that RynnVLA-002 surpasses individual VLA and world models, demonstrating their mutual enhancement. We evaluate RynnVLA-002 in both simulation and real-world robot tasks. RynnVLA-002 achieves 97.4% success rate on the LIBERO simulation benchmark without pretraining, while in real-world LeRobot experiments, its integrated world model boosts the overall success rate by 50%.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Jun Cen",
+   "Siteng Huang",
+   "Yuqian Yuan",
+   "Kehan Li",
+   "Yuan, Hangjie",
+   "Chaohui Yu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4416716729",
+  "doi": "10.48550/arxiv.2511.17502",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2511.17502",
+  "published_iso": "2025-11-21",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "bimanual robot action conditioned world models"
+  ]
+ },
+ {
+  "title": "Assessing heterogeneous causal effects across clusters in partially nested designs.",
+  "title_norm": "assessing heterogeneous causal effects across clusters in partially nested desig",
+  "abstract": "Intervention studies in psychology often have a partially nested design (PND): after individuals are assigned to study arms, individuals in a treatment arm are subsequently assigned to clusters (e.g., therapists/therapy groups) to receive treatment, whereas individuals in a control arm are unclustered. Given the presence of clustering in the treatment arm, it can be of interest to examine the heterogeneity of treatment effects across the clusters; but this is challenging in PNDs. First, in defining a causal effect of treatment for a specific cluster, it is unclear how the treatment and control outcomes should be compared, as the clustering is absent in the control arm. Although it may be tempting to compare outcomes between a specific cluster and the entire control arm, this crude comparison may not represent a causal effect even in PNDs with randomized treatment assignments, as the cluster assignment may be nonrandomized (elaborated in this study). In this study, we develop methods to define, identify, and estimate the causal effects of treatment across specific clusters in a PND where the treatment and/or cluster assignment may be nonrandomized. Using the principal stratification approach and potential outcomes framework, we define causal estimands for the cluster-specific treatment effects in two scenarios: (a) no-interference and (b) within-cluster interference. We identify the effects under the principal ignorability assumption. For estimation, we provide a multiply-robust method that can protect against misspecification in a nuisance model and can incorporate machine learning methods in the nuisance model estimation. We evaluate the estimators' performance through simulations and illustrate the application using an empirical PND example. (PsycInfo Database Record (c) 2025 APA, all rights reserved).",
+  "year": 2024,
+  "venue": "Psychological Methods",
+  "authors": [
+   "Xiao Liu"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4405906467",
+  "doi": "10.1037/met0000723",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4405906467",
+  "published_iso": "2024-12-30",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "P47 - Using causal trees to explore the heterogeneity of effects",
+  "title_norm": "p47 using causal trees to explore the heterogeneity of effects",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Journal of Epidemiology and Population Health",
+  "authors": [
+   "A. Brouquet",
+   "Andres Schmidt",
+   "E. Herquelot"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4410278655",
+  "doi": "10.1016/j.jeph.2025.203078",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4410278655",
+  "published_iso": "2025-05-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Causal machine learning for high-dimensional mediation analysis using interventional effects mapped to a target trial",
+  "title_norm": "causal machine learning for high dimensional mediation analysis using interventi",
+  "abstract": "Causal mediation analysis examines causal pathways linking exposures to disease. The estimation of interventional effects, which are mediation estimands that overcome certain identifiability problems of natural effects, has been advanced through causal machine learning methods, particularly for high-dimensional mediators. Recently, it has been proposed interventional effects can be defined in each study by mapping to a target trial assessing specific hypothetical mediator interventions. This provides an appealing framework to directly address real-world research questions about the extent to which such interventions might mitigate an increased disease risk in the exposed. However, existing estimators for interventional effects mapped to a target trial rely on singly-robust parametric approaches, limiting their applicability in high-dimensional settings. Building upon recent developments in causal machine learning for interventional effects, we address this gap by developing causal machine learning estimators for three interventional effect estimands, defined by target trials assessing hypothetical interventions inducing distinct shifts in joint mediator distributions. These estimands are motivated by a case study within the Longitudinal Study of Australian Children, used for illustration, which assessed how intervening on high inflammatory burden and other non-inflammatory adverse metabolomic markers might mitigate the adverse causal effect of overweight or obesity on high blood pressure in adolescence. We develop one-step and (partial) targeted minimum loss-based estimators based on efficient influence functions of those estimands, demonstrating they are root-n consistent, efficient, and multiply robust under certain conditions.",
+  "year": 2025,
+  "venue": "arXiv (Cornell University)",
+  "authors": [
+   "Tong Chen",
+   "Stijn Vansteelandt",
+   "David Burgner",
+   "Toby Mansell",
+   "Margarita Moreno‐Betancur"
+  ],
+  "citations": 1,
+  "source": "openalex",
+  "source_id": "W4414633370",
+  "doi": "10.48550/arxiv.2504.15834",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2504.15834",
+  "published_iso": "2025-04-22",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Characterization and Learning of Causal Graphs from Hard Interventions",
+  "title_norm": "characterization and learning of causal graphs from hard interventions",
+  "abstract": "A fundamental challenge in the empirical sciences involves uncovering causal structure through observation and experimentation. Causal discovery entails linking the conditional independence (CI) invariances in observational data to their corresponding graphical constraints via d-separation. In this paper, we consider a general setting where we have access to data from multiple experimental distributions resulting from hard interventions, as well as potentially from an observational distribution. By comparing different interventional distributions, we propose a set of graphical constraints that are fundamentally linked to Pearl's do-calculus within the framework of hard interventions. These graphical constraints associate each graphical structure with a set of interventional distributions that are consistent with the rules of do-calculus. We characterize the interventional equivalence class of causal graphs with latent variables and introduce a graphical representation that can be used to determine whether two causal graphs are interventionally equivalent, i.e., whether they are associated with the same family of hard interventional distributions, where the elements of the family are indistinguishable using the invariances from do-calculus. We also propose a learning algorithm to integrate multiple datasets from hard interventions, introducing new orientation rules. The learning objective is a tuple of augmented graphs which entails a set of causal graphs. We also prove the soundness of the proposed algorithm.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Zihan Zhou",
+   "Muhammad Qasim Elahi",
+   "Murat Kocaoglu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4414769916",
+  "doi": "10.52202/085713-2603",
+  "arxiv_id": null,
+  "paper_url": "https://arxiv.org/pdf/2505.01037",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "CFC-ATE: Causal Feature Construction via Average Treatment Effect",
+  "title_norm": "cfc ate causal feature construction via average treatment effect",
+  "abstract": "Dimensionality reduction is a crucial step in data preprocessing, particularly for high-dimensional datasets, where the excessive number of features increases the risk of overfitting in machine learning models. Traditional dimensionality reduction methods rely on statistical associations or the relative position of the feature embeddings in the hyper-space to map original features to a compact subspace that preserves the most relevant information of the data. However, these methods fail to capture the causal relationships among variables during the transfor-mation process, leading to a loss of structural coherence of the data in low-dimensional spaces. By employing causal discovery and causal inference, it is possible to simplify these problems, effectively merging critical features while reducing both complex-ity and dimensionality. Our paper introduces a novel approach, Causal Feature Construction via Average Treatment Effect (CFC-ATE), which leverages causal discovery and inference to create more interpretable and reliable features for predictive modeling. Our methodology consists of the following phases: i) leveraging the causal structure of data through the inference of the causal graph. ii) transforming features through the use of the average treatment effect conditioned on the causal structure of the data. The experiments on diverse real-world datasets and synthetic datasets demonstrate the effectiveness of CFC-ATE in improving model performance by comparing it with three methods of feature selection and three benchmark dimensionality reduction techniques.",
+  "year": 2024,
+  "venue": "",
+  "authors": [
+   "Asmae Lamsaf",
+   "Hugo Proença",
+   "João C. Neves"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4408146799",
+  "doi": "10.1109/icmla61862.2024.00144",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4408146799",
+  "published_iso": "2024-12-18",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Null effects of armed condition on perceived state and trait emotions of friend after the removal of model 3.",
+  "title_norm": "null effects of armed condition on perceived state and trait emotions of friend ",
+  "abstract": "Results from linear regressions predicting state and trait emotional ratings and formidability of the friend based on presence/absence of the target wielding a knife, excluding Model 3. (PDF)",
+  "year": 2025,
+  "venue": "Figshare",
+  "authors": [
+   "Cody Moser (22453834)",
+   "Richard Ellk (22453837)",
+   "Ayonna Jones (22453840)",
+   "Colin Holbrook (326699)"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7111355914",
+  "doi": "10.1371/journal.pone.0326446.s003",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7111355914",
+  "published_iso": "2025-10-17",
+  "oa_field": "Psychology",
+  "semantic_recall": true,
+  "from_query": [
+   "factorial arm intervention object effect decomposition"
+  ]
+ },
+ {
+  "title": "Multi-Agent Causal Dynamics Learning for Temporally Extended Tasks with Reward Machine Inference",
+  "title_norm": "multi agent causal dynamics learning for temporally extended tasks with reward m",
+  "abstract": "We introduce an approach called Multi-Agent State Abstraction with Causal dynamics and Reward Machine Learning (Multi-SACReM), designed to enhance the efficiency of reinforcement learning (RL) in multi-agent environments. By integrating causal information through state abstraction, MultiSACReM enables agents to learn more effectively in complex, dynamic settings. In our framework, each agent employs a reward machine, to optimize its behavior. Multi-SACReM identifies and eliminates redundant causal relationships, allowing agents to focus on essential interactions and optimize policies accordingly. Our approach works in both decentralized settings, where agents learn independently using local observations, and centralized RL environments. In centralized RL, a controller coordinates agents using global information to optimize collective behavior. We evaluate Multi-SACReM through case studies comparing decentralized versus centralized approaches. Results show Multi-SACReM effectively learns causal models with reward machines, comparing decentralized versus centralized approaches in multi-agent settings.",
+  "year": 2025,
+  "venue": "",
+  "authors": [
+   "Hadi Partovi Aria",
+   "Zhe Xu"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W4413392964",
+  "doi": "10.23919/acc63710.2025.11107696",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4413392964",
+  "published_iso": "2025-07-08",
+  "oa_field": "Engineering",
+  "semantic_recall": true,
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "INSTRUMENTS FOR MANAGING A BANK'S CREDIT PORTFOLIO AS MEANS OF ITS SUSTAINABLE GROWTH",
+  "title_norm": "instruments for managing a bank s credit portfolio as means of its sustainable g",
+  "abstract": "The article formulates and analyzes instruments for managing a bank's credit portfolio, which are aimed at increasing the size and volume of the credit portfolio, both through direct and indirect actions, by influencing the behavior of borrowers, both existing and potential, through the optimization, restructuring, and improvement of the lending process. It highlights how credit management and the current credit portfolio contribute to increased bank profitability, and how the proposed instruments can be applied in practice, with a focus on identifying positive factors and potential difficulties or threats arising from the implementation or use of such tools. Introduction: The purpose of the study was to create a possible toolkit for credit management, in order to demonstrate practical means of increasing bank profitability as a result of credit portfolio growth. Methods: The study utilized methods of analysis and synthesis of information within a systemic approach, ensuring the systematization of the proposed bank credit portfolio management instruments by reflecting the interconnectedness between them and how some elements influence others. Additionally, methods of induction and deduction were employed to form an understanding of the practical use of the instruments, moving from general facts to micro-consequences, and in the reverse direction, from small impacts with a global result in the context of credit management. Research Results: The research results represent a generation of information, based on which the main theses regarding the complex of credit management instruments are presented. When using these instruments, the primary goal is seen as increasing the volume of the bank's credit portfolio and, as a consequence, its profitability, through direct or indirect influence on the lending process during its management. Key Conclusions: The key conclusions are presented by statements that emphasize the importance of creating such a set of management tools and demonstrate how the proposed toolkit operates in use, highlighting its practical utility for banking institutions.",
+  "year": 2025,
+  "venue": "Business Navigator",
+  "authors": [
+   "Oleksandr Oleksiuk"
+  ],
+  "citations": 0,
+  "source": "openalex",
+  "source_id": "W7077049566",
+  "doi": "10.32782/business-navigator.81-63",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W7077049566",
+  "published_iso": "2025-01-01",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ },
+ {
+  "title": "Causal-GNN for ethical AI in financial services: ensuring fairness, compliance, and transparency in automated decision-making",
+  "title_norm": "causal gnn for ethical ai in financial services ensuring fairness compliance and",
+  "abstract": "",
+  "year": 2025,
+  "venue": "Artificial Intelligence and Law",
+  "authors": [
+   "Diego Vallarino"
+  ],
+  "citations": 2,
+  "source": "openalex",
+  "source_id": "W4416024634",
+  "doi": "10.1007/s10506-025-09485-3",
+  "arxiv_id": null,
+  "paper_url": "https://openalex.org/W4416024634",
+  "published_iso": "2025-11-08",
+  "oa_field": "Computer Science",
+  "semantic_recall": true,
+  "from_query": [
+   "multi effector causal credit manipulation policy"
+  ]
+ }
+]

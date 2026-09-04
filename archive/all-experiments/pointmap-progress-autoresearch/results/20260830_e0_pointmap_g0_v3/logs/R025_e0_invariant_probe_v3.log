@@ -1,0 +1,2508 @@
+{
+  "audit_sha256": "39f7bf51a664f809b8f9e11250b6997b5142f5b33fcd28b7359b8a5f752a2b2b",
+  "claim_limit": "Pipeline and information-sufficiency diagnostic only; not a learned model or action-conditioned result.",
+  "complete": true,
+  "dataset": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz",
+  "dataset_sha256": "ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+  "failures": [
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.25294578075408936,
+      "pointmap_prediction": 2,
+      "sample_index": 3,
+      "target_visibility": [
+        [
+          29,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 0
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.24946992099285126,
+      "pointmap_prediction": 2,
+      "sample_index": 21,
+      "target_visibility": [
+        [
+          36,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 0
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.1904052495956421,
+      "pointmap_prediction": 2,
+      "sample_index": 57,
+      "target_visibility": [
+        [
+          30,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 0
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.20005378127098083,
+      "pointmap_prediction": 2,
+      "sample_index": 75,
+      "target_visibility": [
+        [
+          104,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 1
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.2713656723499298,
+      "pointmap_prediction": 2,
+      "sample_index": 87,
+      "target_visibility": [
+        [
+          104,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 1
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.20263035595417023,
+      "pointmap_prediction": 2,
+      "sample_index": 99,
+      "target_visibility": [
+        [
+          106,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 1
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.2115112990140915,
+      "pointmap_prediction": 2,
+      "sample_index": 105,
+      "target_visibility": [
+        [
+          104,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 1
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.23709064722061157,
+      "pointmap_prediction": 2,
+      "sample_index": 153,
+      "target_visibility": [
+        [
+          178,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 2
+    },
+    {
+      "event_id": 2,
+      "label": 0,
+      "oracle_prediction": 2,
+      "oracle_relative_change_m": 0.0,
+      "pointmap_prediction": 2,
+      "sample_index": 170,
+      "target_visibility": [
+        [
+          217,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 2
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.25716033577919006,
+      "pointmap_prediction": 2,
+      "sample_index": 171,
+      "target_visibility": [
+        [
+          217,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 2
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.27245718240737915,
+      "pointmap_prediction": 2,
+      "sample_index": 189,
+      "target_visibility": [
+        [
+          286,
+          46
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 2
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.20612657070159912,
+      "pointmap_prediction": 2,
+      "sample_index": 291,
+      "target_visibility": [
+        [
+          114,
+          152
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 4
+    },
+    {
+      "event_id": 3,
+      "label": 1,
+      "oracle_prediction": 1,
+      "oracle_relative_change_m": 0.23499096930027008,
+      "pointmap_prediction": 2,
+      "sample_index": 327,
+      "target_visibility": [
+        [
+          110,
+          84
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "task_family_index": 4
+    }
+  ],
+  "geometry_scale_m": 0.3,
+  "geometry_sha256": "dbf8b6ba42025aa2df9b2df8e2603d78e8694a2e586472bb39ff3841a9dda81a",
+  "invalidation_threshold_m": 0.09,
+  "kind": "e0_invariant_deterministic_probe",
+  "manifest_sha256": "3fffc93c264e47122a8b5069e45efbaccf90d3e206940a90339295cb68657191",
+  "oracle": {
+    "accuracy": 0.9972222222222222,
+    "confusion_matrix": [
+      [
+        239,
+        0,
+        1
+      ],
+      [
+        0,
+        60,
+        0
+      ],
+      [
+        0,
+        0,
+        60
+      ]
+    ],
+    "errors": 1,
+    "false_retraction_rate": 0.0,
+    "invalidation_miss_rate": 0.0,
+    "invalidation_recall": 1.0,
+    "macro_f1": 0.9965492848392831
+  },
+  "oracle_gate": {
+    "accuracy_ge_0_99": true,
+    "macro_f1_ge_0_98": true,
+    "pass": true
+  },
+  "pointmap": {
+    "accuracy": 0.9638888888888889,
+    "confusion_matrix": [
+      [
+        239,
+        0,
+        1
+      ],
+      [
+        0,
+        48,
+        12
+      ],
+      [
+        0,
+        0,
+        60
+      ]
+    ],
+    "errors": 13,
+    "false_retraction_rate": 0.0,
+    "invalidation_miss_rate": 0.2,
+    "invalidation_recall": 0.8,
+    "macro_f1": 0.9296856151047997
+  },
+  "pointmap_feature_shape": [
+    360,
+    38
+  ],
+  "predictions": [
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 0
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 1
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 2
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 3
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 4
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 5
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 6
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 7
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 8
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 9
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 10
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 11
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 12
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 13
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 14
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 15
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 16
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 17
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 18
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 19
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 20
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 21
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 22
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 23
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 24
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 25
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 26
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 27
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 28
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 29
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 30
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 31
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 32
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 33
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 34
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 35
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 36
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 37
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 38
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 39
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 40
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 41
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 42
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 43
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 44
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 45
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 46
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 47
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 48
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 49
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 50
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 51
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 52
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 53
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 54
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 55
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 56
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 57
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 58
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 59
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 60
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 61
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 62
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 63
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 64
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 65
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 66
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 67
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 68
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 69
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 70
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 71
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 72
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 73
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 74
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 75
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 76
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 77
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 78
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 79
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 80
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 81
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 82
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 83
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 84
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 85
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 86
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 87
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 88
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 89
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 90
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 91
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 92
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 93
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 94
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 95
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 96
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 97
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 98
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 99
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 100
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 101
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 102
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 103
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 104
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 105
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 106
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 107
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 108
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 109
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 110
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 111
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 112
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 113
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 114
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 115
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 116
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 117
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 118
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 119
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 120
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 121
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 122
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 123
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 124
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 125
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 126
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 127
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 128
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 129
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 130
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 131
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 132
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 133
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 134
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 135
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 136
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 137
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 138
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 139
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 140
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 141
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 142
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 143
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 144
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 145
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 146
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 147
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 148
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 149
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 150
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 151
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 152
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 153
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 154
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 155
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 156
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 157
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 158
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 159
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 160
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 161
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 162
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 163
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 164
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 165
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 166
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 167
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 168
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 169
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 170
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 171
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 172
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 173
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 174
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 175
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 176
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 177
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 178
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 179
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 180
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 181
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 182
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 183
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 184
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 185
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 186
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 187
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 188
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 189
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 190
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 191
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 192
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 193
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 194
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 195
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 196
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 197
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 198
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 199
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 200
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 201
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 202
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 203
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 204
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 205
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 206
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 207
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 208
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 209
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 210
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 211
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 212
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 213
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 214
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 215
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 216
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 217
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 218
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 219
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 220
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 221
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 222
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 223
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 224
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 225
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 226
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 227
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 228
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 229
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 230
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 231
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 232
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 233
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 234
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 235
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 236
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 237
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 238
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 239
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 240
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 241
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 242
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 243
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 244
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 245
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 246
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 247
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 248
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 249
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 250
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 251
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 252
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 253
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 254
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 255
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 256
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 257
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 258
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 259
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 260
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 261
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 262
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 263
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 264
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 265
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 266
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 267
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 268
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 269
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 270
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 271
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 272
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 273
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 274
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 275
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 276
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 277
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 278
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 279
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 280
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 281
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 282
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 283
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 284
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 285
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 286
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 287
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 288
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 289
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 290
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 291
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 292
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 293
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 294
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 295
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 296
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 297
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 298
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 299
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 300
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 301
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 302
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 303
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 304
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 305
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 306
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 307
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 308
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 309
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 310
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 311
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 312
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 313
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 314
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 315
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 316
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 317
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 318
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 319
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 320
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 321
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 322
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 323
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 324
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 325
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 326
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 2,
+      "sample_index": 327
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 328
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 329
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 330
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 331
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 332
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 333
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 334
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 335
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 336
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 337
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 338
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 339
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 340
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 341
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 342
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 343
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 344
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 345
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 346
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 347
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 348
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 349
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 350
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 351
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 352
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 353
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 354
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 355
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 356
+    },
+    {
+      "label": 1,
+      "oracle_prediction": 1,
+      "pointmap_prediction": 1,
+      "sample_index": 357
+    },
+    {
+      "label": 2,
+      "oracle_prediction": 2,
+      "pointmap_prediction": 2,
+      "sample_index": 358
+    },
+    {
+      "label": 0,
+      "oracle_prediction": 0,
+      "pointmap_prediction": 0,
+      "sample_index": 359
+    }
+  ],
+  "probe_sha256": "88caae6ae885dfa33ee3fd5e3f6e961f26af0bab2c6bbdd1069964a3d4f9d542",
+  "schema_version": 1,
+  "threshold_source": "fixed before implementation at half the generator minimum invalidation translation, 0.18m / 2"
+}
+        Command being timed: "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/bin/python <PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/probe_e0_invariant.py --dataset <PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz --manifest <PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.manifest.json --audit <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R011_e0_full_unique_families_v1_audit.json --output <PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R025_e0_invariant_probe_v3.json"
+        User time (seconds): 2.21
+        System time (seconds): 5.36
+        Percent of CPU this job got: 684%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.10
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 164508
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 0
+        Minor (reclaiming a frame) page faults: 9452
+        Voluntary context switches: 86
+        Involuntary context switches: 77
+        Swaps: 0
+        File system inputs: 64
+        File system outputs: 104
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0

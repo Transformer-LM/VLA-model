@@ -1,0 +1,50 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf demonstrates segment-level causal credit for the first clearance or contact violation when earlier actions in the same diffusion chunk remain valid, rather than assigning one whole-chunk loss or selection outcome (semanticscholar:f134eaaeb2cf6d4ac3526993199033b7f858a35b; semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383) — stakes: post-training can distort temporally correct behavior, increase sample complexity, and leave researchers unable to tell whether gains come from boundary learning or broad trajectory suppression.",
+      "chosen_pattern_id": "heterogeneous_decomposition",
+      "anchor_alternates": [],
+      "companion_pattern": "self_supervised_signal_engineering",
+      "companion_rationale": "heterogeneous_decomposition partitions each paired chunk into the shared-valid prefix, first simulator-certified violation segment, and post-violation remainder, yielding a temporal treatment mask O; self_supervised_signal_engineering consumes O together with generated-and-simulator-filtered geometry pairs to produce the boundary-local positive/negative score targets that make the decomposition a trainable method.",
+      "selection_rationale": "This is the most load-bearing construction gap because solving it prevents a geometry-specific failure from being miscredited to the whole action chunk, which is the bottleneck's direct cause of prefix corruption. heterogeneous_decomposition closes it by giving the physically different temporal regions tailored update rules, while explicitly avoiding the lineage's occupied artifacts of global collision costs, whole-chunk feasibility losses, safety projection, and unstructured contrastive negatives."
+    },
+    {
+      "gap": "No retrieved frontier leaf shows that rejecting a geometry-invalid action mode can coexist with preserving all geometry-specific alternative-positive modes, especially feasible minority modes outside the dominant action cluster or nominal manifold (semanticscholar:8cb14cd9dafae88163a7685336a02ac6c41ed646; semanticscholar:4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383) — stakes: a robot may become safer on one edited object while losing legitimate grasps, approaches, or reorientation strategies elsewhere, and apparent reliability gains may actually be mode collapse.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "Under a shared_evaluation thread, this sibling uses the same minimal geometry pairs and action-mode sets to test whether local invalid-mode suppression is purchased by collapsing feasible minority modes; removing it opens the decisive reviewer objection that apparent safety is just loss of diversity. controlled_diagnostic_design closes the gap by holding task semantics and positive-mode inventory fixed while separately measuring invalid-mode mass, each alternative mode's retained mass, and execution success."
+    }
+  ],
+  "coherence_thread_type": "shared_evaluation",
+  "deliverable_coverage": "method — anchor gap → heterogeneous_decomposition supplies the boundary-specific treatment object and companion self_supervised_signal_engineering turns simulator-filtered counterfactual pairs into the runnable local score-shaping objective",
+  "composition_note": "",
+  "pattern_saturation": {
+    "heterogeneous_decomposition": {
+      "share": 0.5,
+      "saturation_band": "saturated",
+      "selection_note": "saturated lane — differentiation_from_lit must substantively defend the choice"
+    },
+    "self_supervised_signal_engineering": {
+      "share": 0.11,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "controlled_diagnostic_design": {
+      "share": 0.06,
+      "saturation_band": "untested",
+      "selection_note": "untested lane — differentiation_from_lit must substantively defend the choice"
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "Within the severely degraded evidence, no retrieved frontier leaf establishes whether a chunk that is successful in one scene but fails after a minimal functional-geometry edit should be treated as globally incorrect or only conditionally invalid beyond the first changed clearance/contact boundary; the available feasibility and geometry-aware methods leave that attribution unresolved (semanticscholar:dd324415c99589f1f7f9b63eaa3a64a7ae042df2; dblp:journals/corr/abs-2606-08530) — stakes: practitioners can over-correct valid motion prefixes and waste scarce positive demonstrations, while the field can mistake generic feasibility regularization for learned functional-geometry discrimination.",
+      "reason": "fails removal test — the anchor's boundary-local construction directly operationalizes this global-versus-conditional distinction without a separate paper leg"
+    },
+    {
+      "gap": "The retrieved leaves inherit whole-chunk conditional density fitting, global auxiliary feasibility, or outcome-level selection from the imitation/diffusion lineage, but none tests whether geometry-conditioned feasibility learning must score the complete action chunk as one unit rather than admit different validity along its temporal support — stakes: deployment teams lack a principled granularity for corrective data, and published post-training conclusions may depend on an unexamined supervision unit that does not transfer to delayed contact failures.",
+      "reason": "fails removal test — the anchor's whole-chunk versus boundary-local ablation tests this assumption using the same mechanism and adds no independent leg"
+    }
+  ]
+}

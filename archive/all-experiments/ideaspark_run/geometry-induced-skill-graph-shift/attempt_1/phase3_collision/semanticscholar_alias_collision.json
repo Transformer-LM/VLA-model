@@ -1,0 +1,1420 @@
+[
+ {
+  "title": "Principal quantile treatment effect estimation using principal scores",
+  "title_norm": "principal quantile treatment effect estimation using principal scores",
+  "abstract": "Intercurrent events and estimands play a key role in defining the treatment effects of interest precisely. Sometimes the median or other quantiles of outcomes in a principal stratum according to potential occurrence of intercurrent events are of interest in randomized clinical trials. Naïve analyses such as those based on the observed occurrence of the intercurrent events lead to biased results. Therefore, we propose principal quantile treatment effect estimators that can nonparametrically estimate the distribution of potential outcomes by principal score weighting without relying on the exclusion restriction assumption. Our simulation studies show that the proposed method works in situations where the median or quantiles may be regarded as the preferred population‐level summary over the mean. We illustrate our proposed method by using data from a randomized controlled trial conducted on patients with nonerosive reflux disease.",
+  "tldr": "Simulation studies show that the proposed principal quantile treatment effect estimators that can nonparametrically estimate the distribution of potential outcomes by principal score weighting without relying on the exclusion restriction assumption works in situations where the median or quantiles may be regarded as the preferred population‐level summary over the mean.",
+  "year": 2024,
+  "venue": "Statistics in Medicine",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kotaro Mizuma",
+   "T. Hashimoto",
+   "Sho Sakui",
+   "Shingo Kuroda"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "f9f635ddb1a5b8e74bbfab3b957fdb286aca6bbb",
+  "paper_id": "doi:10.1002/sim.10178",
+  "doi": "10.1002/sim.10178",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/sim.10178",
+  "published_iso": "2024-08-19",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Applying the Principal Stratum Strategy in Equivalence Trials: A Case Study",
+  "title_norm": "applying the principal stratum strategy in equivalence trials a case study",
+  "abstract": "The estimand framework, introduced in the ICH E9 (R1) Addendum, provides a structured approach for defining precise research questions in randomised clinical trials. It suggests five strategies for addressing intercurrent events (ICE). This case study examines the principal stratum strategy, highlighting its potential for estimating causal treatment effects in specific subpopulations and the challenges involved. The occurrence of anti‐drug antibodies (ADAs) and their potential clinical impact are important factors in evaluating biosimilars. Typically, analyses focus on subgroups of patients who develop ADAs during the study. However, conducting subgroup analyses based on post‐randomisation variables, such as immunogenicity, can introduce substantial bias into treatment effect estimates and is therefore methodologically not optimal. The principal stratum strategy provides a statistical pathway for estimating treatment effects in subpopulations that cannot be anticipated at baseline. By leveraging counterfactuals to assess treatment outcomes, with and without the incidence of intercurrent events (ICEs), this approach can be implemented through a missing data perspective. We demonstrate the implementation of the principal stratum strategy in a phase 3 equivalence trial of a biosimilar for the treatment of rheumatoid arthritis. Using a multiple imputation approach, we leverage longitudinal measurements to create analysis datasets for subpopulations who develop ADAs as ICE. Our results highlight the principal stratum strategy's potential and challenges, emphasising its reliance on unobserved ICE states and the need for complex and rigorous modelling. This study contributes to a nuanced understanding and practical implementation of the principal stratum strategy within the ICH E9 (R1) framework.",
+  "tldr": "The implementation of the principal stratum strategy is demonstrated in a phase 3 equivalence trial of a biosimilar for the treatment of rheumatoid arthritis using a multiple imputation approach and longitudinal measurements to create analysis datasets for subpopulations who develop ADAs as ICE.",
+  "year": 2025,
+  "venue": "Pharmaceutical statistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jerome Sepin",
+   "Thomas P A Debray",
+   "Wei Wei",
+   "Hans C. Ebbers",
+   "Cristina Fernandez-Mendivil",
+   "M. Mitroiu"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "7d5487e16a0d6699a9926363551f8f0bcb956458",
+  "paper_id": "doi:10.1002/pst.70008",
+  "doi": "10.1002/pst.70008",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7d5487e16a0d6699a9926363551f8f0bcb956458",
+  "published_iso": "2025-05-01",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Using modified intention-to-treat as a principal stratum estimator for failure to initiate treatment",
+  "title_norm": "using modified intention to treat as a principal stratum estimator for failure t",
+  "abstract": "Background: A common intercurrent event affecting many trials is when some participants do not begin their assigned treatment. For example, in a double-blind drug trial, some participants may not receive any dose of study medication. Many trials use a ‘modified intention-to-treat’ approach, whereby participants who do not initiate treatment are excluded from the analysis. However, it is not clear (a) the estimand being targeted by such an approach and (b) the assumptions necessary for such an approach to be unbiased. Methods: Using potential outcome notation, we demonstrate that a modified intention-to-treat analysis which excludes participants who do not begin treatment is estimating a principal stratum estimand (i.e. the treatment effect in the subpopulation of participants who would begin treatment, regardless of which arm they were assigned to). The modified intention-to-treat estimator is unbiased for the principal stratum estimand under the assumption that the intercurrent event is not affected by the assigned treatment arm, that is, participants who initiate treatment in one arm would also do so in the other arm (i.e. if someone began the intervention, they would also have begun the control, and vice versa). Results: We identify two key criteria in determining whether the modified intention-to-treat estimator is likely to be unbiased: first, we must be able to measure the participants in each treatment arm who experience the intercurrent event, and second, the assumption that treatment allocation will not affect whether the participant begins treatment must be reasonable. Most double-blind trials will satisfy these criteria, as the decision to start treatment cannot be influenced by the allocation, and we provide an example of an open-label trial where these criteria are likely to be satisfied as well, implying that a modified intention-to-treat analysis which excludes participants who do not begin treatment is an unbiased estimator for the principal stratum effect in these settings. We also give two examples where these criteria will not be satisfied (one comparing an active intervention vs usual care, where we cannot identify which usual care participants would have initiated the active intervention, and another comparing two active interventions in an unblinded manner, where knowledge of the assigned treatment arm may affect the participant’s choice to begin or not), implying that a modified intention-to-treat estimator will be biased in these settings. Conclusion: A modified intention-to-treat analysis which excludes participants who do not begin treatment can be an unbiased estimator for the principal stratum estimand. Our framework can help identify when the assumptions for unbiasedness are likely to hold, and thus whether modified intention-to-treat is appropriate or not.",
+  "tldr": "A modified intention-to-treat analysis which excludes participants who do not begin treatment can be an unbiased estimator for the principal stratum estimand under the assumption that the intercurrent event is not affected by the assigned treatment arm.",
+  "year": 2022,
+  "venue": "Clinical Trials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. Kahan",
+   "Ian R. White",
+   "Mark Edwards",
+   "M. Harhay"
+  ],
+  "citations": 43,
+  "source": "semanticscholar",
+  "source_id": "55b455132484029b0f07eee7e1d860df0b3ab26a",
+  "paper_id": "arxiv:2206.10453",
+  "doi": "10.1177/17407745231160074",
+  "arxiv_id": "2206.10453",
+  "dblp_key": "",
+  "paper_url": "https://journals.sagepub.com/doi/pdf/10.1177/17407745231160074",
+  "published_iso": "2022-06-08",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A simple principal stratum estimator for failure to initiate treatment",
+  "title_norm": "a simple principal stratum estimator for failure to initiate treatment",
+  "abstract": "",
+  "tldr": "It is shown that a simple principal stratum estimator based on a “modified intention-to-treat” population, where participants who experience the intercurrent event are excluded, is unbiased for the principalstratum estimand under certain assumptions that are likely to be plausible in many trials.",
+  "year": 2022,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "B. Kahan",
+   "Ian R. White",
+   "Mark Edwards",
+   "M. Harhay"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "bd70b38aa1ce7fd40f1d2b6b1ac94726d1f5134e",
+  "paper_id": "semanticscholar:bd70b38aa1ce7fd40f1d2b6b1ac94726d1f5134e",
+  "doi": "",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/bd70b38aa1ce7fd40f1d2b6b1ac94726d1f5134e",
+  "published_iso": null,
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Bayesian inference for a principal stratum estimand on recurrent events truncated by death",
+  "title_norm": "bayesian inference for a principal stratum estimand on recurrent events truncate",
+  "abstract": "Recurrent events are often important endpoints in randomized clinical trials. For example, the number of recurrent disease‐related hospitalizations may be considered as a clinically meaningful endpoint in cardiovascular studies. In some settings, the recurrent event process may be terminated by an event such as death, which makes it more challenging to define and estimate a causal treatment effect on recurrent event endpoints. In this paper, we focus on the principal stratum estimand, where the treatment effect of interest on recurrent events is defined among subjects who would be alive regardless of the assigned treatment. For the estimation of the principal stratum effect in randomized clinical trials, we propose a Bayesian approach based on a joint model of the recurrent event and death processes with a frailty term accounting for within‐subject correlation. We also present Bayesian posterior predictive check procedures for assessing the model fit. The proposed approaches are demonstrated in the randomized Phase III chronic heart failure trial PARAGON‐HF (NCT01920711).",
+  "tldr": "A Bayesian approach based on a joint model of the recurrent event and death processes with a frailty term accounting for within‐subject correlation is proposed and demonstrated in the randomized Phase III chronic heart failure trial PARAGON‐HF.",
+  "year": 2023,
+  "venue": "Biometrics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tianmeng Lyu",
+   "B. Bornkamp",
+   "G. Mueller‐Velten",
+   "H. Schmidli"
+  ],
+  "citations": 12,
+  "source": "semanticscholar",
+  "source_id": "5151e8047c810f32462cd954c9a44dc8fd8d839e",
+  "paper_id": "doi:10.1111/biom.13831",
+  "doi": "10.1111/biom.13831",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/5151e8047c810f32462cd954c9a44dc8fd8d839e",
+  "published_iso": "2023-01-17",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Uncovering treatment effect heterogeneity in pragmatic gerontology trials",
+  "title_norm": "uncovering treatment effect heterogeneity in pragmatic gerontology trials",
+  "abstract": "Detecting heterogeneity in treatment response enriches the interpretation of gerontologic trials. In aging research, estimating the intervention’s effect on clinically meaningful outcomes poses analytical challenges when outcomes are truncated by death. For example, in the Whole Systems Demonstrator trial, a large cluster-randomized study evaluating telecare among older adults, the overall effect of the intervention on quality of life was found to be null. However, this marginal intervention estimate obscures potential heterogeneity of individuals responding to the intervention, particularly among those who survive to the end of follow-up. To explore this heterogeneity, we adopt a causal framework grounded in principal stratification, targeting the Survivor Average Causal Effect (SACE)—the treatment effect among “always-survivors,” or those who would survive regardless of treatment assignment. We extend this framework using Bayesian Additive Regression Trees (BART), a nonparametric machine learning method, to flexibly model both latent principal strata and stratum-specific potential outcomes. This enables the estimation of the Conditional SACE (CSACE), allowing us to uncover variation in treatment effects across subgroups defined by baseline characteristics. Our analysis reveals that despite the null average effect, some subgroups experience distinct quality of life benefits (or lack thereof) from telecare, highlighting opportunities for more personalized intervention strategies. This study demonstrates how embedding machine learning methods, such as BART, within a principled causal inference framework can offer deeper insights into trial data with complex features including truncation by death and clustering—key considerations in analyzing pragmatic gerontology trials.",
+  "tldr": "This study demonstrates how embedding machine learning methods, such as BART, within a principled causal inference framework can offer deeper insights into trial data with complex features including truncation by death and clustering—key considerations in analyzing pragmatic gerontology trials.",
+  "year": 2025,
+  "venue": "Experimental Gerontology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Changjun Li",
+   "Heather Allore",
+   "Michael O Harhay",
+   "Fan Li",
+   "Guangyu Tong"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6c8517e6c0de20f4d9d9710ae122ba66850df5ac",
+  "paper_id": "arxiv:2511.14893",
+  "doi": "10.1016/j.exger.2026.113055",
+  "arxiv_id": "2511.14893",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.exger.2026.113055",
+  "published_iso": "2025-11-18",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Regression‐based multiple treatment effect estimation under covariate‐adaptive randomization",
+  "title_norm": "regression based multiple treatment effect estimation under covariate adaptive r",
+  "abstract": "Covariate‐adaptive randomization methods are widely used in clinical trials to balance baseline covariates. Recent studies have shown the validity of using regression‐based estimators for treatment effects without imposing functional form requirements on the true data generation model. These studies have had limitations in certain scenarios; for example, in the case of multiple treatment groups, these studies did not consider additional covariates or assumed that the allocation ratios were the same across strata. To address these limitations, we develop a stratum‐common estimator and a stratum‐specific estimator under multiple treatments. We derive the asymptotic behaviors of these estimators and propose consistent nonparametric estimators for asymptotic variances. To determine their efficiency, we compare the estimators with the stratified difference‐in‐means estimator as the benchmark. We find that the stratum‐specific estimator guarantees efficiency gains, regardless of whether the allocation ratios across strata are the same or different. Our conclusions were also validated by simulation studies and a real clinical trial example.",
+  "tldr": "It is found that the stratum-specific estimator guarantees efficiency gains, regardless of whether the allocation ratios across strata are the same or different, and the asymptotic behaviors of these estimators are derived.",
+  "year": 2023,
+  "venue": "Biometrics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yujia Gu",
+   "Hanzhong Liu",
+   "Wei Ma"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "30b0882a51bdb2792ba1c746ccdf8e786e415d37",
+  "paper_id": "doi:10.1111/biom.13925",
+  "doi": "10.1111/biom.13925",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/30b0882a51bdb2792ba1c746ccdf8e786e415d37",
+  "published_iso": "2023-09-12",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Inference for Treatment Effects Conditional on Generalized Principal Strata using Instrumental Variables",
+  "title_norm": "inference for treatment effects conditional on generalized principal strata usin",
+  "abstract": "We propose a general approach for inference for a broad class of treatment effect parameters in a setting of a discrete valued treatment and instrument with a general outcome variable. The class of parameters considered are those that can be expressed as the expectation of a function of the response type conditional on a generalized principal stratum. Here, the response type refers to the vector of potential outcomes and potential treatments, and a generalized principal stratum is a set of possible values for the response type. In addition to instrument exogeneity, the main substantive restriction imposed rules out certain values for the response types in the sense that they are assumed to occur with probability zero. It is shown through a series of examples that this framework includes a wide variety of parameters and assumptions that have been considered in the previous literature. A key result in our analysis is a characterization of the identified set for such parameters under these assumptions in terms of existence of a non-negative solution to linear systems of equations with a special structure. We propose methods for inference exploiting this special structure and recent results in Fang et al. (2023).",
+  "tldr": "",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yuehao Bai",
+   "Shunzhuang Huang",
+   "Sarah Moon",
+   "Andres Santos",
+   "Azeem M. Shaikh",
+   "E. Vytlacil"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "1cee2313e19d487ab97ba17528b39ba957ba608f",
+  "paper_id": "arxiv:2411.05220",
+  "doi": "",
+  "arxiv_id": "2411.05220",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/1cee2313e19d487ab97ba17528b39ba957ba608f",
+  "published_iso": "2024-11-07",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Empirical stratification for predictive treatment effect heterogeneity with post-treatment variables",
+  "title_norm": "empirical stratification for predictive treatment effect heterogeneity with post",
+  "abstract": "Post-treatment variables (PVs), such as intercurrent events, treatment noncompliance, and behavioral responses to treatment, provide information about individuals'post-treatment responses and may help characterize heterogeneity in treatment effects on the primary outcome. This paper develops an empirical stratification framework to study the treatment effect heterogeneity across baseline-predicted PV response profiles. Specifically, we construct empirical scores from baseline-covariate predictions of potential PV responses and use these scores to define empirically accessible subgroups for treatment effect evaluation. The resulting empirical-stratum treatment effects (ETEs) quantify treatment effects across these baseline-predicted PV response profiles, and are identifiable under a standard set of assumptions in causal inference. We further introduce projected ETE curves and develop efficient-influence-function-based estimators that allow flexible nuisance estimation. We clarify the distinction and connection of our framework to principal stratification analysis, which address two inferential questions. We evaluate the proposed framework through simulation studies and illustrate its use in two real-world applications.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Chao Cheng",
+   "Rui Wang",
+   "Yichi Zhang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9eb3d205e3091dc780a33e8d919c6b0b3686b875",
+  "paper_id": "arxiv:2606.11013",
+  "doi": "",
+  "arxiv_id": "2606.11013",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9eb3d205e3091dc780a33e8d919c6b0b3686b875",
+  "published_iso": "2026-06-09",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Estimating treatment effects on duration with disease: a principal stratification framework",
+  "title_norm": "estimating treatment effects on duration with disease a principal stratification",
+  "abstract": "In clinical research, estimating the average treatment effect is a common goal. However, when treatment effects vary substantially across individuals, it is often more informative to evaluate the treatment effect within subgroups. This paper focuses on causal inference for a duration outcome in a principal stratum—defined as the subgroup of individuals who would experience a positive duration under one treatment. Motivated by the Danish Vulva Cancer Recurrence Study (DaVulvaRec), which compares intensive versus standard follow-up in women treated for vulvar cancer, we examine the effect of intensive follow-up on the time with a cancer recurrence diagnosis. The principal stratum is in this example women who would be diagnosed with cancer recurrence under the intensive follow-up. We present a framework for identifying and estimating the average treatment effect in the principal stratum under a monotonicity assumption and introduce a sensitivity parameter to evaluate the impact of potential violations of this assumption. Using a multi-state model with pseudo-observations, we account for censoring and demonstrate that this approach offers greater statistical power than conventional comparisons between treatment groups. We illustrate the methodology to sample size calculation, the final analysis of the DaVulvaRec study using a simulated data set and an application to data from a randomized study on colon cancer.",
+  "tldr": "This paper presents a framework for identifying and estimating the average treatment effect in the principal stratum under a monotonicity assumption and introduces a sensitivity parameter to evaluate the impact of potential violations of this assumption.",
+  "year": 2026,
+  "venue": "Lifetime Data Analysis",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "E. Parner"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "384b0e672b5fe96d7ea87d586688cda8f1aef190",
+  "paper_id": "doi:10.1007/s10985-025-09681-y",
+  "doi": "10.1007/s10985-025-09681-y",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://link.springer.com/content/pdf/10.1007/s10985-025-09681-y.pdf",
+  "published_iso": "2026-02-17",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Doubly cross-fit debiased machine learning of heterogeneous treatment effects under principal stratification",
+  "title_norm": "doubly cross fit debiased machine learning of heterogeneous treatment effects un",
+  "abstract": "Principal stratification provides a foundational framework for causal inference with intermediate outcomes by defining causal effects within subpopulations, yet existing work has largely focused on average effects across strata rather than treatment effect heterogeneity within strata. Such within-stratum heterogeneity informs individualized treatment decisions but the associated methods are sparse. We address this gap by studying the identification and estimation of the conditional principal causal effects under principal ignorability combined with an odds ratio sensitivity parameterization, which relaxes the monotonicity assumption. To efficiently learn these estimands, we propose a novel doubly cross-fit doubly robust machine learner that resolves the nested nuisance structure inherent to principal stratification. Leveraging sequential orthogonal debiased machine learning with regularized least-squares sieves, we derive $\\mathcal{L}^2$ and uniform limit theory, establish oracle efficiency, and construct uniform confidence bands for the proposed estimator. We use simulations to demonstrate the finite-sample performance of our estimator, and provide an empirical analysis of a randomized trial in acute lung injury, revealing informative patterns of treatment effect heterogeneity within the always-survivor subpopulation.",
+  "tldr": "This work proposes a novel doubly cross-fit doubly robust machine learner that resolves the nested nuisance structure inherent to principal stratification and derives $\\mathcal{L}^2$ and uniform limit theory, establish oracle efficiency, and construct uniform confidence bands for the proposed estimator.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Jiaqi Tong",
+   "Fan Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "9238fdd1eb5bcd26b187dff504eacfbdbf31e93a",
+  "paper_id": "arxiv:2606.29076",
+  "doi": "",
+  "arxiv_id": "2606.29076",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/9238fdd1eb5bcd26b187dff504eacfbdbf31e93a",
+  "published_iso": "2026-06-27",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Contrasting principal stratum and hypothetical strategy estimands in multi‐period crossover trials with incomplete data",
+  "title_norm": "contrasting principal stratum and hypothetical strategy estimands in multi perio",
+  "abstract": "Complete case analyses of complete crossover designs provide an opportunity to make comparisons based on patients who can tolerate all treatments. It is argued that this provides a means of estimating a principal stratum strategy estimand, something which is difficult to do in parallel group trials. While some trial users will consider this a relevant aim, others may be interested in hypothetical strategy estimands, that is, the effect that would be found if all patients completed the trial. Whether these estimands differ importantly is a question of interest to the different users of the trial results. This paper derives the difference between principal stratum strategy and hypothetical strategy estimands, where the former is estimated by a complete‐case analysis of the crossover design, and a model for the dropout process is assumed. Complete crossover designs, that is, those where all treatments appear in all sequences, and which compare t treatments over p periods with respect to a continuous outcome are considered. Numerical results are presented for Williams designs with four and six periods. Results from a trial of obstructive sleep apnoea‐hypopnoea (TOMADO) are also used for illustration. The results demonstrate that the percentage difference between the estimands is modest, exceeding 5% only when the trial has been severely affected by dropouts or if the within‐subject correlation is low.",
+  "tldr": "This paper derives the difference between principal stratum strategy and hypothetical strategy estimands, where the former is estimated by a complete‐case analysis of the crossover design, and a model for the dropout process is assumed.",
+  "year": 2022,
+  "venue": "Biometrics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "J.N.S. Matthews",
+   "Sofia Bazakou",
+   "R. Henderson",
+   "L. Sharples"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1456f01c06e747cbea04ced5574f77bd8b9bd242",
+  "paper_id": "doi:10.1111/biom.13777",
+  "doi": "10.1111/biom.13777",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/biom.13777",
+  "published_iso": "2022-10-29",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Bayesian Nonparametrics for Principal Stratification with Continuous Post-Treatment Variables",
+  "title_norm": "bayesian nonparametrics for principal stratification with continuous post treatm",
+  "abstract": "Principal stratification provides a causal inference framework for investigating treatment effects in the presence of a post-treatment variable. Principal strata play a key role in characterizing the treatment effect by identifying groups of units with the same or similar values for the potential post-treatment variable at all treatment levels. The literature has focused mainly on binary post-treatment variables. Few papers considered continuous post-treatment variables. In the presence of a continuous post-treatment, a challenge is how to identify and characterize meaningful coarsening of the latent principal strata that lead to interpretable principal causal effects. This paper introduces the Confounders-Aware SHared atoms BAyesian mixture (CASBAH), a novel approach for principal stratification with binary treatment and continuous post-treatment variables. CASBAH leverages Bayesian nonparametric priors with an innovative hierarchical structure for the potential post-treatment outcomes that overcomes some of the limitations of previous works. Specifically, the novel features of our method allow for (i) identifying coarsened principal strata through a data-adaptive approach and (ii) providing a comprehensive quantification of the uncertainty surrounding stratum membership. Through Monte Carlo simulations, we show that the proposed methodology performs better than existing methods in characterizing the principal strata and estimating principal effects of the treatment. Finally, CASBAH is applied to a case study in which we estimate the causal effects of US national air quality regulations on pollution levels and health outcomes.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Dafne Zorzetto",
+   "Antonio Canale",
+   "F. Mealli",
+   "Francesca Dominici",
+   "Falco J. Bargagli-Stoffi"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "291ed6fcaa484f1647562d21ef02b76ab2eb4bd8",
+  "paper_id": "arxiv:2405.17669",
+  "doi": "",
+  "arxiv_id": "2405.17669",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/291ed6fcaa484f1647562d21ef02b76ab2eb4bd8",
+  "published_iso": "2024-05-27",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Causal Inference for First Non‐Fatal Events With the Competing Risk of Death: A Principal Stratification Approach",
+  "title_norm": "causal inference for first non fatal events with the competing risk of death a p",
+  "abstract": "In clinical trials involving both mortality and morbidity, an active treatment can influence the observed risk of the first nonfatal event either directly, through its effect on the underlying nonfatal event process, or indirectly, through its effect on the death process, or both. Discerning the direct effect of treatment on the underlying first nonfatal event process holds clinical interest. However, with the competing risk of death, the Cox proportional hazards model that treats death as non‐informative censoring and evaluates treatment effects on time to the first nonfatal event provides an estimate of the cause‐specific hazard ratio, which may not correspond to the direct effect. To obtain the direct effect on the underlying first nonfatal event process, within the principal stratification framework, we define the principal stratum hazard and introduce the proportional principal stratum hazards model. This model estimates the principal stratum hazard ratio, which reflects the direct effect on the underlying first nonfatal event process in the presence of death and simplifies to the hazard ratio in the absence of death. The principal stratum membership is identified probabilistically using the shared frailty model, which assumes independence between the first nonfatal event process and the potential death processes, conditional on per‐subject random frailty. Simulation studies are conducted to verify the reliability of our estimators. We illustrate the method using the Carvedilol Prospective Randomized Cumulative Survival trial, which involves heart‐failure events.",
+  "tldr": "This work defines the principal stratum hazard and introduces the proportional principal stratum hazards model, which reflects the direct effect on the underlying first nonfatal event process in the presence of death and simplifies to the hazard ratio in the absence of death.",
+  "year": 2025,
+  "venue": "Statistics in Medicine",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Jiren Sun",
+   "Thomas Cook"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "dcb5b3ac933c2bbc72678276b1c89203dcb6118a",
+  "paper_id": "arxiv:2503.10481",
+  "doi": "10.1002/sim.70311",
+  "arxiv_id": "2503.10481",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/sim.70311",
+  "published_iso": "2025-03-13",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Bayesian nonparametric trees for principal causal effects.",
+  "title_norm": "bayesian nonparametric trees for principal causal effects",
+  "abstract": "Principal stratification analysis evaluates how causal effects of a treatment on a primary outcome vary across strata of units defined by their treatment effect on some intermediate quantity. This endeavor is substantially challenged when the intermediate variable is continuously scaled and there are infinitely many basic principal strata. We employ a Bayesian nonparametric approach to flexibly evaluate treatment effects across flexibly modeled principal strata. The approach uses Bayesian Causal Forests (BCF) to simultaneously specify 2 Bayesian Additive Regression Tree models; one for the principal stratum membership and one for the outcome, conditional on principal strata. We show how the capability of BCF for capturing treatment effect heterogeneity is particularly relevant for assessing how treatment effects vary across the surface defined by continuously scaled principal strata, in addition to other benefits relating to targeted selection and regularization-induced confounding. The capabilities of the proposed approach are illustrated with a simulation study, and the methodology is deployed to investigate how causal effects of power plant emissions control technologies on ambient particulate pollution vary as a function of the technologies' impact on sulfur dioxide emissions.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Biometrics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chanmin Kim",
+   "Corwin M. Zigler"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "c7023c065a40cf5ddc992376ed4d05906498d692",
+  "paper_id": "arxiv:2403.13256",
+  "doi": "10.1093/biomtc/ujaf024",
+  "arxiv_id": "2403.13256",
+  "dblp_key": "",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11911721/pdf/ujaf024.pdf",
+  "published_iso": "2024-03-20",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Multiply robust estimation of principal causal effects with noncompliance and survival outcomes",
+  "title_norm": "multiply robust estimation of principal causal effects with noncompliance and su",
+  "abstract": "Treatment noncompliance and censoring are two common complications in clinical trials. Motivated by the ADAPTABLE pragmatic clinical trial, we develop methods for assessing treatment effects in the presence of treatment noncompliance with a right-censored survival outcome. We classify the participants into principal strata, defined by their joint potential compliance status under treatment and control. We propose a multiply robust estimator for the causal effects on the survival probability scale within each principal stratum. This estimator is consistent even if one, sometimes two, of the four working models—on the treatment assignment, the principal strata, censoring, and the outcome—is misspecified. A sensitivity analysis strategy is developed to address violations of key identification assumptions, the principal ignorability and monotonicity. We apply the proposed approach to the ADAPTABLE trial to study the causal effect of taking low- versus high-dosage aspirin on all-cause mortality and hospitalization from cardiovascular diseases.",
+  "tldr": "Methods for assessing treatment effects in the presence of treatment noncompliance with a right-censored survival outcome are developed and a multiply robust estimator for the causal effects on the survival probability scale within each principal stratum is proposed.",
+  "year": 2024,
+  "venue": "Clinical Trials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Chao Cheng",
+   "Yueqin Guo",
+   "Bo Liu",
+   "Lisa Wruck",
+   "Fan Li",
+   "Fan Li"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "6bcc23c44575d5e61483174ac82b19a92ddbeae8",
+  "paper_id": "doi:10.1177/17407745241251773",
+  "doi": "10.1177/17407745241251773",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/6bcc23c44575d5e61483174ac82b19a92ddbeae8",
+  "published_iso": "2024-05-30",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Principal stratification with U-statistics under principal ignorability",
+  "title_norm": "principal stratification with u statistics under principal ignorability",
+  "abstract": "Principal stratification is a popular framework for causal inference in the presence of an intermediate outcome. While the principal average treatment effects are the standard target of inference, they may be insufficient when interest lies in the relative ordering of potential outcomes within a principal stratum. We introduce the principal generalized causal effect estimands to accommodate nonlinear contrast functions, providing robust, probability-scale summaries suitable for ordinal outcomes and win–loss comparisons with composite endpoints. Under principal ignorability, we expand the theoretical results in Jiang et al. (J R Stat Soc Series B., 2022, 84(4), 1423–1445) to a broader class of causal estimands in the presence of a binary intermediate variable. We develop nonparametric identification results and derive efficient influence functions for the generalized causal estimands in principal stratification analyses. These efficient influence functions motivate multiply robust estimators and lay the ground for obtaining efficient debiased machine learning estimators via cross-fitting based on U-statistics. The proposed methods are illustrated through simulations and the analysis of a data example.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Journal of The Royal Statistical Society Series B-statistical Methodology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xinyuan Chen",
+   "Fan Li"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "778c9163a1e88f83c16da73fff6cc8b442e379e9",
+  "paper_id": "arxiv:2403.08927",
+  "doi": "10.1093/jrsssb/qkag044",
+  "arxiv_id": "2403.08927",
+  "dblp_key": "",
+  "paper_url": "https://arxiv.org/pdf/2403.08927",
+  "published_iso": "2024-03-13",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Effect modification in settings with \"truncation by death\".",
+  "title_norm": "effect modification in settings with truncation by death",
+  "abstract": "Epidemiologic studies recruiting individuals with higher-than-population-average mortality can be affected by \"truncation by death\", whereby the outcome of interest (e.g. quality of life) is considered not to be defined for individuals who die before the end of follow-up. Here, we use the potential outcomes framework and principal stratification to derive conditions under which the survivor average causal effect, an estimand defined for the \"always-survivors\" stratum, is modified by a variable that represents a possible common cause of survival and the outcome of interest, and by a variable that only affects survival. Further, we show that this principal effect can be expressed as a weighted average of this treatment effect for individuals with each level of these variables, and that these weights depend not only on the relative frequencies of the levels in the total population, but also in the \"always-survivors\" principal stratum. We also discuss the implications of this work for the transportability of the survivor average causal effect.",
+  "tldr": "The potential outcomes framework and principal stratification are used to derive conditions under which the survivor average causal effect, an estimand defined for the \"always-survivors\" stratum, is modified by a variable that represents a possible common cause of survival and the outcome of interest.",
+  "year": 2025,
+  "venue": "Epidemiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. Gonçalves",
+   "Etsuji Suzuki"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "fe19fff8402785b4d3b22038629cbbf6fcc0ce3f",
+  "paper_id": "doi:10.1097/EDE.0000000000001834",
+  "doi": "10.1097/EDE.0000000000001834",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/fe19fff8402785b4d3b22038629cbbf6fcc0ce3f",
+  "published_iso": "2025-01-24",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Sensitivity analyses for the principal ignorability assumption using multiple imputation",
+  "title_norm": "sensitivity analyses for the principal ignorability assumption using multiple im",
+  "abstract": "In the context of clinical trials, there is interest in the treatment effect for subpopulations of patients defined by intercurrent events, namely disease‐related events occurring after treatment initiation that affect either the interpretation or the existence of endpoints. With the principal stratum strategy, the ICH E9(R1) guideline introduces a formal framework in drug development for defining treatment effects in such subpopulations. Statistical estimation of the treatment effect can be performed based on the principal ignorability assumption using multiple imputation approaches. Principal ignorability is a conditional independence assumption that cannot be directly verified; therefore, it is crucial to evaluate the robustness of results to deviations from this assumption. As a sensitivity analysis, we propose a joint model that multiply imputes the principal stratum membership and the outcome variable while allowing different levels of violation of the principal ignorability assumption. We illustrate with a simulation study that the joint imputation model‐based approaches are superior to naive subpopulation analyses. Motivated by an oncology clinical trial, we implement the sensitivity analysis on a time‐to‐event outcome to assess the treatment effect in the subpopulation of patients who discontinued due to adverse events using a synthetic dataset. Finally, we explore the potential usage and provide interpretation of such analyses in clinical settings, as well as possible extension of such models in more general cases.",
+  "tldr": "A joint model is proposed that multiply imputes the principal stratum membership and the outcome variable while allowing different levels of violation of the principal ignorability assumption, and illustrated with a simulation study that the joint imputation model‐based approaches are superior to naive subpopulation analyses.",
+  "year": 2022,
+  "venue": "Pharmaceutical statistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Craig Wang",
+   "Yufen Zhang",
+   "F. Mealli",
+   "B. Bornkamp"
+  ],
+  "citations": 10,
+  "source": "semanticscholar",
+  "source_id": "de5439c55b3658bed18c919016a4d63804f05eef",
+  "paper_id": "doi:10.1002/pst.2260",
+  "doi": "10.1002/pst.2260",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/de5439c55b3658bed18c919016a4d63804f05eef",
+  "published_iso": "2022-08-23",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Estimating treatment effects in trials with outcome data truncated by death: A case study on aligning estimators with estimands",
+  "title_norm": "estimating treatment effects in trials with outcome data truncated by death a ca",
+  "abstract": "Background/Aims: Randomised clinical trials assessing treatment effects on health outcomes (e.g. quality of life) can be affected by data truncation by death, where some patients die before their outcome measure is assessed and their data become undefined after death. The ICH E9(R1) addendum on estimands discusses four strategies for handling such terminal intercurrent events: hypothetical, composite, while-alive, and principal stratum. While the addendum emphasises the importance of aligning statistical methods of analysis (i.e. estimators) with estimands, it does not provide specific guidance and consideration on the choice of estimators in practice. We aim to (1) demonstrate how some statistical methods commonly used in trials can be used to estimate different intercurrent event strategies for handling data truncation by death; and (2) describe how missing outcome data (e.g. due to missed assessments or loss to follow-up) can be handled for each estimator. Method: We use data from SCORAD, a non-inferiority randomised trial comparing single-fraction versus multifraction radiotherapy on ambulatory status at 8 weeks (primary outcome) among patients with spinal canal compression from metastatic cancer. Here, we estimate the effect of radiotherapy on quality of life (secondary outcome), quantified by the difference in mean global health status between the two groups at 8 weeks. We outline the strategies for handling death and describe a selection of commonly used estimators corresponding to each strategy. The handling of missing data is considered and demonstrated as part of the estimation process. Results: The hypothetical strategy, targeting a treatment effect assuming patients had not died, can be estimated using linear mixed models (a likelihood approach) or multiple imputation (a method commonly used for handling missing data). The composite and while-alive strategies relate to the ‘outcome’ attribute of the estimand; the former incorporates death into the definition of the primary outcome, the latter only uses outcome data before death. These can be estimated by re-defining the outcome, for example, assigning a value reflecting poor global health status post-death, or using the last global health status observed before death. The principal stratum strategy, targeting a treatment effect among patients who would not die under either treatment, can be estimated by an analysis of survivors under specific assumptions. Missing data can be handled with linear mixed models or multiple imputation. Conclusions: Regarding death as an intercurrent event in the process of defining the estimand for the trial will help clarify the choice of suitable estimators. When choosing the estimators, it is important to consider the assumptions required by the estimators as well as their plausibility given the setting of the trial.",
+  "tldr": "How some statistical methods commonly used in trials can be used to estimate different intercurrent event strategies for handling data truncation by death and a selection of commonly used estimators corresponding to each strategy are demonstrated.",
+  "year": 2025,
+  "venue": "Clinical Trials",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "T. Pham",
+   "B. C. Kahan",
+   "Andre Lopes",
+   "Memuna Rashid",
+   "Peter J Hoskin",
+   "Ian R White"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "ac2f58700f5c91f9de3f462810d808a57db2490f",
+  "paper_id": "doi:10.1177/17407745251360645",
+  "doi": "10.1177/17407745251360645",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ac2f58700f5c91f9de3f462810d808a57db2490f",
+  "published_iso": "2025-10-04",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Robust evaluation of treatment effects in longitudinal studies with truncation by death or other intercurrent events",
+  "title_norm": "robust evaluation of treatment effects in longitudinal studies with truncation b",
+  "abstract": "Intercurrent events, such as treatment switching, rescue medication, dropout, or truncation by death, frequently complicate intention-to-treat analyses in randomized clinical trials. Existing causal inference frameworks typically target hypothetical or principal stratum estimands (e.g., survivor average causal effects), which rely on unverifiable assumptions and can be sensitive to unmeasured confounders or positivity violations. We propose a novel approach that mitigates this sensitivity by using only information measured prior to the intercurrent event. Our key idea is to compare treated and untreated individuals, matched on baseline covariates, at the most recent time point before either experiences an intercurrent event. We call these contrasts Pairwise Last Observation Time (PLOT) estimands. PLOT estimands are identified in randomized trials without structural assumptions, even under severe positivity violations. Although PLOT-based tests may theoretically be susceptible to residual selection bias, we show this bias vanishes under standard conditions and remains negligible in extensive simulations. We develop asymptotically efficient, model-free tests and treatment effect estimators using data-adaptive nuisance parameter estimation. We evaluate performance via simulation and apply the method to re-analyze the DEVOTE trial, affected by truncation by death. PLOT offers a robust, data-driven alternative for evaluating treatment efficacy in the presence of complex intercurrent events.",
+  "tldr": "The key idea is to compare treated and untreated individuals, matched on baseline covariates, at the most recent time point before either experiences an intercurrent event, and develop asymptotically efficient, model-free tests and treatment effect estimators using data-adaptive nuisance parameter estimation.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Georgi Baklicharov",
+   "Kelly Van Lancker",
+   "S. Vansteelandt"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "825eacb366ec71541666eab67d324d58b1be9892",
+  "paper_id": "arxiv:2509.10067",
+  "doi": "",
+  "arxiv_id": "2509.10067",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/825eacb366ec71541666eab67d324d58b1be9892",
+  "published_iso": "2025-09-12",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "In defense of MAR over latent ignorability (or latent MAR) for outcome missingness in studying principal causal effects: a causal graph view",
+  "title_norm": "in defense of mar over latent ignorability or latent mar for outcome missingness",
+  "abstract": "This paper concerns outcome missingness in principal stratification analysis. We revisit a common assumption known as latent ignorability or latent missing-at-random (LMAR), often considered a relaxation of missing-at-random (MAR). LMAR posits that the outcome is independent of its missingness if one conditions on principal stratum (which is partially unobservable) in addition to observed variables. The literature has focused on methods assuming LMAR (usually supplemented with a more specific assumption about the missingness), without considering the theoretical plausibility and necessity of LMAR. In this paper, we devise a way to represent principal stratum in causal graphs, and use causal graphs to examine this assumption. We find that LMAR is harder to satisfy than MAR, and for the purpose of breaking the dependence between the outcome and its missingness, no benefit is gained from conditioning on principal stratum on top of conditioning on observed variables. This finding has an important implication: MAR should be preferred over LMAR. This is convenient because MAR is easier to handle and (unlike LMAR) if MAR is assumed no additional assumption is needed. We thus turn to focus on the plausibility of MAR and its implications, with a view to facilitate appropriate use of this assumption. We clarify conditions on the causal structure and on auxiliary variables (if available) that need to hold for MAR to hold, and we use MAR to recover effect identification under two dominant identification assumptions (exclusion restriction and principal ignorability). We briefly comment on cases where MAR does not hold. In terms of broader connections, most of the MAR findings are also relevant to classic instrumental variable analysis that targets the local average treatment effect; and the LMAR finding suggests general caution with assumptions that condition on principal stratum.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "T. Q. Nguyen"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "4e8ac93b68195ab52c4bd37427f8f11d3c1a93ca",
+  "paper_id": "arxiv:2407.13904",
+  "doi": "",
+  "arxiv_id": "2407.13904",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4e8ac93b68195ab52c4bd37427f8f11d3c1a93ca",
+  "published_iso": "2024-07-18",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Effect of Shading Ratio on Japanese Sea Bass (Lateolabrax japonicus) and Asian Sea Bass (Lates calcarifer) Aquaculture",
+  "title_norm": "effect of shading ratio on japanese sea bass lateolabrax japonicus and asian sea",
+  "abstract": "Floating photovoltaic arrays on ponds may alter thermal and optical conditions that are relevant to aquaculture performance. This study compared 0% and 40% surface shading in two outdoor earthen-pond trials, one with Asian sea bass (Lates calcarifer) and one with Japanese sea bass (Lateolabrax japonicus). Temperature was logged hourly and summarized as daily means; water quality was sampled biweekly; fish were measured repeatedly, with endpoint growth compared within species. The result shows that shading lowered pond temperature and the diurnal temperature range and reduced the number of days above species benchmark temperatures. Indicators associated with phytoplankton, including suspended solids and chlorophyll a, were lower under shading, whereas dissolved inorganic nutrients were higher. In the Japanese sea bass trial, dissolved oxygen was higher without shading. Final body weight did not differ between treatments within either trial, but survival was higher with 40% shading. Principal component analysis and permutational multivariate analysis of variance indicated a treatment signal in multivariate water quality. Because the trials occurred in different years with one pond per treatment, inference was restricted to contrasts within each species. Overall, moderate surface shading cooled ponds and altered water quality without reducing growth.",
+  "tldr": "",
+  "year": 2025,
+  "venue": "Fishes",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yao-Chen Lee",
+   "I-Pei Kuo",
+   "Yung-Ting Chung",
+   "Shuenn-Der Yang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "530d6ca7f6203e1a93dd75b28a2fd3142ebff0cd",
+  "paper_id": "doi:10.3390/fishes10100490",
+  "doi": "10.3390/fishes10100490",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/fishes10100490",
+  "published_iso": "2025-10-01",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Estimands: what they are and why we should use them.",
+  "title_norm": "estimands what they are and why we should use them",
+  "abstract": "In clinical trials, post-randomisation events, such as treatment discontinuation or the use of rescue medication, can complicate the interpretation of results. An estimand is a precise description of the treatment effect that investigators wish to estimate. Estimands facilitate more straightforward interpretation of trial results by explicitly defining how post-randomisation \"intercurrent\" events are incorporated into the research question. This article introduces the five key attributes of estimands (population, treatment conditions, endpoint, summary measure, and strategies for intercurrent events) and explains the five main strategies for managing intercurrent events (treatment policy, composite, while on treatment, hypothetical, and principal stratum). Using a practical example of a trial comparing cognitive behavioural therapy versus medication for mild anxiety, we demonstrate how different estimand choices lead to varying study designs, analyses, and interpretations. Understanding estimands helps researchers design better trials and enables stakeholders to determine if the results are relevant to their situation. We also explain how sensitivity analyses can be used to check the reliability of results by assessing how results change under different statistical assumptions.",
+  "tldr": "The five key attributes of estimands are introduced and the five main strategies for managing intercurrent events (treatment policy, composite, while on treatment, hypothetical, and principal stratum) are explained.",
+  "year": 2025,
+  "venue": "Journal of Clinical Epidemiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "B. C. Kahan",
+   "D. Devane"
+  ],
+  "citations": 8,
+  "source": "semanticscholar",
+  "source_id": "5aabc7e2fe7c43a283ac5f9539a0ae68e304c515",
+  "paper_id": "doi:10.1016/j.jclinepi.2025.112054",
+  "doi": "10.1016/j.jclinepi.2025.112054",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.jclinepi.2025.112054",
+  "published_iso": "2025-11-01",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A Bayesian Approach for Estimating the Survivor Average Causal Effect When Outcomes Are Truncated by Death in Cluster-Randomized Trials",
+  "title_norm": "a bayesian approach for estimating the survivor average causal effect when outco",
+  "abstract": "Abstract Many studies encounter clustering due to multicenter enrollment and nonmortality outcomes, such as quality of life, that are truncated due to death—that is, missing not at random and nonignorable. Traditional missing-data methods and target causal estimands are suboptimal for statistical inference in the presence of these combined issues, which are especially common in multicenter studies and cluster-randomized trials (CRTs) carried out among the elderly or seriously ill. Using principal stratification, we developed a Bayesian estimator that jointly identifies the always-survivor principal stratum in a clustered/hierarchical data setting and estimates the average treatment effect among them (i.e., the survivor average causal effect (SACE)). In simulations, we observed low bias and good coverage with our method. In a motivating CRT, the SACE and the estimate from complete-case analysis differed in magnitude, but both were small, and neither was incompatible with a null effect. However, the SACE estimate has a clear causal interpretation. The option to assess the rigorously defined SACE estimand in studies with informative truncation and clustering can provide additional insight into an important subset of study participants. Based on the simulation study and CRT reanalysis, we provide practical recommendations for using the SACE in CRTs and software code to support future research.",
+  "tldr": "A Bayesian estimator is developed that jointly identifies the always-survivor principal stratum in a clustered/hierarchical data setting and estimates the average treatment effect among them, i.e., the survivor average causal effect (SACE).",
+  "year": 2023,
+  "venue": "American Journal of Epidemiology",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Guangyu Tong",
+   "Fan Li",
+   "Xinyuan Chen",
+   "S. Hirani",
+   "Stanton P Newman",
+   "Wen Wang"
+  ],
+  "citations": 9,
+  "source": "semanticscholar",
+  "source_id": "bd0e1f8c3d1b090ed7672ffedbbd4ec97daa4709",
+  "paper_id": "doi:10.1093/aje/kwad038",
+  "doi": "10.1093/aje/kwad038",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://academic.oup.com/aje/advance-article-pdf/doi/10.1093/aje/kwad038/49241511/kwad038.pdf",
+  "published_iso": "2023-02-17",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Identification and efficient estimation of compliance and network causal effects in cluster-randomized trials",
+  "title_norm": "identification and efficient estimation of compliance and network causal effects",
+  "abstract": "Treatment noncompliance is pervasive in infectious disease cluster-randomized trials. Although all individuals within a cluster are assigned the same treatment condition, the treatment uptake status may vary across individuals due to noncompliance. We propose a semiparametric framework to evaluate the individual compliance effect and network assignment effect within principal stratum exhibiting different patterns of noncompliance. The individual compliance effect captures the portion of the treatment effect attributable to changes in treatment receipt, while the network assignment effect reflects the pure impact of treatment assignment and spillover among individuals within the same cluster. Unlike prior efforts which either empirically identify or interval identify these estimands, we characterize new structural assumptions for nonparametric point identification. We then develop semiparametrically efficient estimators that combine data-adaptive machine learning methods with efficient influence functions to enable more robust inference. Additionally, we introduce sensitivity analysis methods to study the impact under assumption violations, and apply the proposed methods to reanalyze a cluster-randomized trial in Kenya that evaluated the impact of school-based mass deworming on disease transmission.",
+  "tldr": "A semiparametric framework to evaluate the individual compliance effect and network assignment effect within principal stratum exhibiting different patterns of noncompliance is proposed and semiparametrically efficient estimators that combine data-adaptive machine learning methods with efficient influence functions to enable more robust inference are developed.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Chao Cheng",
+   "Georgia Papadogeorgou",
+   "Fan Li"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "4786dac06ce23dae01f119ff0f5c14864d87dc65",
+  "paper_id": "arxiv:2512.16857",
+  "doi": "",
+  "arxiv_id": "2512.16857",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/4786dac06ce23dae01f119ff0f5c14864d87dc65",
+  "published_iso": "2025-12-18",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "An Example to Illustrate Randomized Trial Estimands and Estimators",
+  "title_norm": "an example to illustrate randomized trial estimands and estimators",
+  "abstract": "Abstract Recently, the International Conference on Harmonisation finalized an estimand framework for randomized trials that was adopted by regulatory bodies worldwide. The framework introduced five strategies for handling post-randomization events; namely the treatment policy, composite variable, while on treatment, hypothetical and principal stratum estimands. We describe an illustrative example to elucidate the difference between these five strategies for handling intercurrent events and provide an estimation technique for each. Specifically, we consider the intercurrent event of treatment discontinuation and introduce potential outcome notation to describe five estimands and corresponding estimators: (1) an intention-to-treat estimator of the total effect of a treatment policy; (2) an intention-to-treat estimator of a composite of the outcome and remaining on treatment; (3) a per-protocol estimator of the outcome in individuals observed to remain on treatment; (4) a g-computation estimator of a hypothetical scenario that all individuals remain on treatment; and (5) a principal stratum estimator of the treatment effect in individuals who would remain on treatment under the experimental condition. Additional insight is provided by defining situations where certain estimands are equal, and by studying the while on treatment strategy under repeated outcome measures. We highlight relevant causal inference literature to enable adoption in practice.",
+  "tldr": "This work considers the intercurrent event of treatment discontinuation and introduces potential outcome notation to describe five estimands and corresponding estimators and highlights relevant causal inference literature to enable adoption in practice.",
+  "year": 2025,
+  "venue": "American Statistician",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Linda J. Harrison",
+   "S. Brummel"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "d0f98cc918409c2cdefaad6c5492115856f46d11",
+  "paper_id": "doi:10.1080/00031305.2025.2468399",
+  "doi": "10.1080/00031305.2025.2468399",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://figshare.com/articles/journal_contribution/An_Example_to_Illustrate_Randomized_Trial_Estimands_and_Estimators/28454481",
+  "published_iso": "2025-02-20",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Evaluating Causal Effects on Time‐to‐Event Outcomes in an RCT in Oncology With Treatment Discontinuation",
+  "title_norm": "evaluating causal effects on time to event outcomes in an rct in oncology with t",
+  "abstract": "In clinical trials, patients may discontinue treatments prematurely, breaking the initial randomization. In our motivating study, a randomized controlled trial in oncology, patients assigned the investigational treatment may discontinue it due to adverse events. The ICH E9(R1) Addendum provides guidelines for handling such “intercurrent events.” The right strategy to adopt depends on the questions of interest. We propose adopting a principal stratum strategy and decomposing the overall intention‐to‐treat effect into principal causal effects for groups of patients defined by their potential discontinuation behaviour. We first show how to implement a principal stratum strategy to assess causal effects on a survival outcome in the presence of continuous‐time treatment discontinuation, its advantages, and the conclusions that can be drawn. Our strategy allows us to properly handle the time‐to‐event intermediate variable, which is not defined for patients who would not discontinue, and to account for the fact that the discontinuation time and the primary endpoint are subject to censoring. We employ a flexible model‐based Bayesian approach to tackle these complexities, providing easily interpretable results. We apply this Bayesian principal stratification framework to analyze synthetic data of the motivating oncology trial. Supported by a simulation study, we shed light on the role of covariates in this framework. Beyond making structural and parametric assumptions more credible, they lead to more precise inference. Also, they can be used to characterize patients' discontinuation behavior, which could help inform clinical practice and future protocols.",
+  "tldr": "This work proposes adopting a principal stratum strategy and decomposing the overall intention‐to‐treat effect into principal causal effects for groups of patients defined by their potential discontinuation behaviour, and applies this Bayesian principal stratification framework to analyze synthetic data of the motivating oncology trial.",
+  "year": 2023,
+  "venue": "Biometrical journal. Biometrische Zeitschrift",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Veronica Ballerini",
+   "B. Bornkamp",
+   "F. Mealli",
+   "Craig Wang",
+   "Yufen Zhang",
+   "Alessandra Mattei"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "369e90f9743c393eadb738c8ef9d8efdca643d53",
+  "paper_id": "arxiv:2310.06653",
+  "doi": "10.1002/bimj.70092",
+  "arxiv_id": "2310.06653",
+  "dblp_key": "",
+  "paper_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/bimj.70092",
+  "published_iso": "2023-10-10",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Chasing Shadows: How Implausible Assumptions Skew Our Understanding of Causal Estimands",
+  "title_norm": "chasing shadows how implausible assumptions skew our understanding of causal est",
+  "abstract": "Abstract The ICH E9 (R1) addendum on estimands, coupled with recent advancements in causal inference, has prompted a shift toward using model-free treatment effect estimands that are more closely aligned with the underlying scientific question. This represents a departure from traditional, model-dependent approaches where the statistical model often overshadows the inquiry itself. While this shift is a positive development, it has unintentionally led to the prioritization of an estimand’s ability to perfectly answer the key scientific question over its practical learnability from data under plausible assumptions. We illustrate this by scrutinizing assumptions in the recent clinical trials literature on principal stratum estimands, demonstrating that some popular assumptions are not only implausible but often inevitably violated. We advocate for a more balanced approach to estimand formulation, one that carefully considers both the scientific relevance and the practical feasibility of estimation under realistic conditions.",
+  "tldr": "",
+  "year": 2024,
+  "venue": "Statistics in Biopharmaceutical Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. Vansteelandt",
+   "K. Van Lancker"
+  ],
+  "citations": 16,
+  "source": "semanticscholar",
+  "source_id": "50f6023ce7d6d5e0649ed5939f4640d7213bb7f0",
+  "paper_id": "arxiv:2409.11162",
+  "doi": "10.1080/19466315.2024.2421753",
+  "arxiv_id": "2409.11162",
+  "dblp_key": "",
+  "paper_url": "https://biblio.ugent.be/publication/01JN4G6B1SDY3PPW4XYYQ804GX/file/01JN4GSJZX00J4Z92Z7TXD7QQ0.pdf",
+  "published_iso": "2024-09-17",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A Bayesian Approach to Causal Cure Models",
+  "title_norm": "a bayesian approach to causal cure models",
+  "abstract": "Time-to-event data often include individuals who will never experience the failure event, and are therefore considered cured. In such settings, frequently encountered in clinical research, a substantial proportion of patients may remain event-free throughout the observation period, leading to the appearance of a survival plateau that is commonly interpreted as evidence of a cured fraction. Analysing such data requires inference on the cure fraction and on the survival function for the uncured subpopulation, tasks which are traditionally achieved with mixture cure models. However, assessing the causal effect of a treatment on these quantities is non-trivial. We consider principal stratification causal estimands, which have been proposed to evaluate effects on the cure fraction and on the survival for an always-uncured stratum. We additionally introduce a novel estimand, which considers the causal effect on the survival for a non-always-cured union of strata. We frame the problem from a Bayesian model-based perspective, which provides a flexible and unified estimation strategy while maintaining a direct link with classical mixture cure model quantities. The reliability of the proposed approach is validated through simulations, demonstrating competitive and robust performance relative to existing methods. Finally, we illustrate its practical usefulness through an application to a randomized trial comparing non-invasive ventilation with standard oxygen therapy in patients with hypoxemic respiratory failure following abdominal surgery.",
+  "tldr": "Principal stratification causal estimands are considered, which have been proposed to evaluate effects on the cure fraction and on the survival for an always-uncured stratum, and a novel estimand is introduced, which considers the causal effect on the survival for a non-always-cured union of strata.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Emma Torrini",
+   "Maïlis Amico",
+   "N. Molinari",
+   "Cl'ement Berenfeld"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "2736aea2991a6ad7a28de21996fde78ce9e43f6a",
+  "paper_id": "arxiv:2607.19050",
+  "doi": "",
+  "arxiv_id": "2607.19050",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/2736aea2991a6ad7a28de21996fde78ce9e43f6a",
+  "published_iso": "2026-07-21",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Causal Effects on Nonterminal Event Time With Application to Antibiotic Usage and Future Resistance",
+  "title_norm": "causal effects on nonterminal event time with application to antibiotic usage an",
+  "abstract": "Comparing future antibiotic resistance levels resulting from different antibiotic treatments is challenging because some patients may survive only under one of the antibiotic treatments. We embed this problem within a semi‐competing risks approach to study the causal effect on resistant infection, treated as a nonterminal event time. We argue that existing principal stratification estimands for such problems exclude patients for whom a causal effect is well‐defined and is of clinical interest. Therefore, we present a new principal stratum, the infected‐or‐survivors ( ios$$ ios $$ ). The ios$$ ios $$ is the subpopulation of patients who would have survived or been infected under both antibiotic treatments. This subpopulation is more inclusive than previously defined subpopulations. We target the causal effect among these patients, which we term the feasible‐infection causal effect (FICE). We develop large‐sample bounds under novel assumptions, and discuss the plausibility of these assumptions in our application. As an alternative, we derive FICE identification using two illness‐death models with a bivariate frailty random variable. These two models are connected by a cross‐world correlation parameter. Estimation is performed by an expectation‐maximization algorithm followed by a Monte Carlo procedure. We apply our methods to detailed clinical data obtained from a hospital setting.",
+  "tldr": "It is argued that existing principal stratification estimands for such problems exclude patients for whom a causal effect is well‐defined and is of clinical interest, and a new principal stratum is presented, the infected‐or‐survivors, which is more inclusive than previously defined subpopulations.",
+  "year": 2025,
+  "venue": "Statistics in Medicine",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Tamir Zehavi",
+   "Uri Obolski",
+   "M. Chowers",
+   "Daniel Nevo"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "98b0e8d3aafcd0f036092b32e56b90b4fb9ea430",
+  "paper_id": "arxiv:2506.09624",
+  "doi": "10.1002/sim.70650",
+  "arxiv_id": "2506.09624",
+  "dblp_key": "",
+  "paper_url": "https://arxiv.org/pdf/2506.09624",
+  "published_iso": "2025-06-11",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Model Risk in Machine-Learning Distributional IV Estimation",
+  "title_norm": "model risk in machine learning distributional iv estimation",
+  "abstract": "We study model risk in machine-learning estimation of the Distributional Instrumental Variable Local Average Treatment Effect (D-IV-LATE), the distributional IV effect for the subpopulation induced into treatment by the instrument. The contribution is not a new neural causal estimand. We implement a reduced-form orthogonal level-score DML estimator for the covariate-adjusted D-IV-LATE target and use it to ask how much the nuisance learner matters for distributional IV conclusions. In simulations with explicit monotone principal strata and known complier truth, Kolmogorov-Arnold Networks (KANs) are faster than Random Forests in every scenario examined, but Random Forests usually produce more accurate D-IV-LATE curves. A targeted KAN ablation selects a width-64 KAN as the best KAN variant among those tested, but this is a speed/accuracy tradeoff rather than evidence of KAN dominance. In a 401(k) application, RF and KAN estimates differ materially, with frequent sign reversals along the estimated curve. The KAN instrument-propensity estimates also concentrate near the boundaries, so the KAN empirical curve is best read as sensitivity evidence. In inference validation, KAN pointwise intervals undercover badly under both asymptotic and bootstrap constructions, while RF asymptotic intervals are better calibrated in the validation designs. The main lesson is cautionary and constructive: speed and architectural flexibility are not enough for causal inference. Applied researchers using ML-based distributional IV estimators would be advised to benchmark nuisance learners, report overlap and calibration diagnostics, and validate inference directly.",
+  "tldr": "The main lesson is cautionary and constructive: speed and architectural flexibility are not enough for causal inference, so applied researchers using ML-based distributional IV estimators would be advised to benchmark nuisance learners, report overlap and calibration diagnostics, and validate inference directly.",
+  "year": 2025,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Charles Shaw"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "0061181190c6e14995c3c1a083d2fe7d6ade5cac",
+  "paper_id": "arxiv:2506.12765",
+  "doi": "",
+  "arxiv_id": "2506.12765",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/0061181190c6e14995c3c1a083d2fe7d6ade5cac",
+  "published_iso": "2025-06-15",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Interpreting the Estimand Framework From a Causal Inference Perspective",
+  "title_norm": "interpreting the estimand framework from a causal inference perspective",
+  "abstract": "Abstract The International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use published the estimand framework in 2019. The estimand framework aims to clearly define a treatment effect for a clinical question through construction of estimands, and it has been widely applied in clinical trials in the pharmaceutical industry. The estimand framework proposes 5 attributes for an estimand: treatments, variables, target populations, population-level summaries, and intercurrent events. It also proposes the treatment policy strategy, the hypothetical strategy, the composite variable strategy, the while on treatment strategy, and the principal stratum strategy to handle intercurrent events. When people give clear definitions for these 5 attributes, they clearly define an estimand that represents a treatment effect. From a statistical perspective, a genuine or causal treatment effect is defined through a causal inference framework. This article aims to interpret the estimand framework using a causal inference framework and help researchers understand the differences between estimands and causal treatment effects. From a causal inference framework based on potential outcomes, an individual treatment effect (ITE) is defined by comparison of individual potential outcomes with experimental or control treatments, and the average treatment effect (ATE) of the experimental treatment versus the control treatment is defined as an average of all ITEs. The statistical presentation of the ATE is not equivalent to an estimand. It has the same treatments, variables, target populations, and population-level summaries as an estimand, but intercurrent events are not part of it. Intercurrent events modify the statistical presentation of the ATE through treatments, variables, and target populations, whose impact can be controlled by intercurrent event strategies. I propose that the estimand attributes can be mapped onto the statistical presentation of the ATE, and that intercurrent events act as mediation mechanisms in the attribute mapping process, which provides a novel way to incorporate the causal inference framework into the estimand framework. If the estimand framework is combined with a causal inference framework, it will gain a stronger theoretical foundation. The interpretation of the estimand framework from a causal inference perspective is useful for both industrial and academic clinical trials. Observational studies may also find useful information on causal inference theories in this article.",
+  "tldr": "It is proposed that the estimand attributes can be mapped onto the statistical presentation of the ATE, and that intercurrent events act as mediation mechanisms in the attribute mapping process, which provides a novel way to incorporate the causal inference framework into the estimand framework.",
+  "year": 2024,
+  "venue": "JMIRx Med",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "J. Zeng"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "d22ed01975259151bcbd38e4b110ad90fa477eea",
+  "paper_id": "arxiv:2407.00292",
+  "doi": "10.2196/88813",
+  "arxiv_id": "2407.00292",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.2196/88813",
+  "published_iso": "2024-06-29",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Confinement Reweights Protein Orientational Phase Space in Crystallization: A PDB-Anchored Hamiltonian Comparison of Hanging-Drop and Langmuir–Blodgett Nanotemplates",
+  "title_norm": "confinement reweights protein orientational phase space in crystallization a pdb",
+  "abstract": "This study quantifies how confinement changes the orientational phase space of proteins by comparing hanging-drop (HD) with Langmuir–Blodgett (LB) conditions within a unified probabilistic framework grounded in structural data from the Protein Data Bank (PDB). For each protein, principal moments of inertia are computed from atomic coordinates, trace-normalized, and used to define a geometry-based benchmark for the probability of occupying a predefined productive-orientation set. In parallel, a Hamiltonian-weighted probability is obtained within a classical statistical–mechanical treatment by reconstructing the orientational distribution over the polar–azimuthal domain under a fixed global confinement protocol. The analysis is carried out on a ten-protein panel spanning diverse sizes and anisotropies, and the HD→LB contrast is characterized through probability gains, distributional distances, and an energy-basin decomposition that distinguishes basin depth from basin measure. Under identical parameterization, LB globally produces higher productive-orientation probabilities than HD across all proteins, establishing a uniform direction of the confinement effect while preserving protein-dependent magnitudes. The inertia-based benchmark exhibits broader dispersion in LB/HD amplification, whereas the Hamiltonian construction yields a more regular cross-protein gain, consistent with LB acting as a global reweighting of orientational phase space rather than a protein-specific re-tuning. By integrating PDB-derived structural descriptors with a statistical–mechanical operator, the framework provides a transparent bridge between molecular geometry and confinement-driven ordering and offers a compact basis for comparing crystallization-relevant confinement protocols across structurally heterogeneous proteins.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Crystals",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "E. Pechkova",
+   "Fabio Massimo Speranza",
+   "Paola Ghisellini",
+   "C. Rando",
+   "K. Barbaro",
+   "Ginevra Ciurli"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8e1bb0d850617f448b767a0ed070a3bead685273",
+  "paper_id": "doi:10.3390/cryst16040269",
+  "doi": "10.3390/cryst16040269",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.mdpi.com/2073-4352/16/4/269/pdf?version=1776339305",
+  "published_iso": "2026-04-16",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Outcomes Truncated by Death in RCTs: A Simulation Study on the Survivor Average Causal Effect",
+  "title_norm": "outcomes truncated by death in rcts a simulation study on the survivor average c",
+  "abstract": "Continuous outcome measurements truncated by death present a challenge for the estimation of unbiased treatment effects in randomized controlled trials (RCTs). One way to deal with such situations is to estimate the survivor average causal effect (SACE), but this requires making nontestable assumptions. Motivated by an ongoing RCT in very preterm infants with intraventricular hemorrhage, we performed a simulation study to compare an SACE estimator with complete case analysis (CCA) and analysis after multiple imputation of missing outcomes. We set up nine scenarios combining positive, negative, and no treatment effect on the outcome (cognitive development) and on survival at 2 years of age. Treatment effect estimates from all methods were compared in terms of bias, mean squared error, and coverage with regard to two true treatment effects: the treatment effect on the outcome used in the simulation and the SACE, which was derived by simulation of both potential outcomes per patient. Despite targeting different estimands (principal stratum estimand, hypothetical estimand), the SACE‐estimator and multiple imputation gave similar estimates of the treatment effect and efficiently reduced the bias compared to CCA. Also, both methods were relatively robust to omission of one covariate in the analysis, and thus violation of relevant assumptions. Although the SACE is not without controversy, we find it useful if mortality is inherent to the study population. Some degree of violation of the required assumptions is almost certain, but may be acceptable in practice.",
+  "tldr": "A simulation study is performed to compare an SACE estimator with complete case analysis (CCA) and analysis after multiple imputation of missing outcomes and found both methods were relatively robust to omission of one covariate in the analysis, and thus violation of relevant assumptions.",
+  "year": 2023,
+  "venue": "Biometrical journal. Biometrische Zeitschrift",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "S. von Felten",
+   "Chiara Vanetta",
+   "C. Rüegger",
+   "Sven Wellmann",
+   "Leonhard Held"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "ab915c8bfbee697d2282a31cf5b5b262674fb558",
+  "paper_id": "arxiv:2312.11991",
+  "doi": "10.1002/bimj.70061",
+  "arxiv_id": "2312.11991",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/ab915c8bfbee697d2282a31cf5b5b262674fb558",
+  "published_iso": "2023-12-19",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Does mental health coaching improve efficacy of transcranial magnetic stimulation for major depression? A pilot randomized controlled trial and benchmarking study",
+  "title_norm": "does mental health coaching improve efficacy of transcranial magnetic stimulatio",
+  "abstract": "Major Depressive Disorder (MDD) is common and burdensome. Repetitive Transcranial Magnetic Stimulation (rTMS) is recommended for individuals who do not respond to first-line treatments. Coach-supported digital mental health programs are scalable strategies for delivering therapeutic content. This randomized controlled trial tested whether digital mental health programs bolster rTMS for MDD. N = 36 depressed adults completed a six-week course of rTMS. Of this group, n = 18 were randomized to digital cognitive behavioral therapy (iCBT with Coaching), and n = 18 were randomized to digital narrative stories of hope (iNarratives with Coaching). Multilevel models tested group differences in treatment outcomes over time. Principal outcomes focused on the Hamilton Rating Scale for Depression. Exploratory analyses compared outcomes versus a Benchmarking Sample of N = 29 patients who received rTMS without coaching. There was a main effect of time (p < .001), indicating an overall reduction in depression symptoms during the trial. Contrary to hypotheses, there was no Group × Time interaction (p = .662), and groups did not differ on clinical response rates (p = .654). Secondary analyses found that the iNarratives group showed greater improvement in positive emotion and functional impairment, whereas the iCBT group showed less dropout from the coaching intervention. Exploratory analyses found a Group × Time interaction (p = .039), potentially suggesting that participants in iCBT or iNarratives showed steeper symptom reduction versus the Benchmarking Sample. The coach-supported iCBT and iNarratives approaches are comparable as adjuncts to rTMS for depression and may yield lower depression scores versus rTMS alone. iNarratives effects appeared specific to increases in positive emotions and decreases in functional impairment.",
+  "tldr": "The coach-supported iCBT and iNarratives approaches are comparable as adjuncts to rTMS for depression and may yield lower depression scores versus rTMS alone.",
+  "year": 2026,
+  "venue": "Journal of Affective Disorders",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Benjamin M Rosenberg",
+   "Nora M. Barnes-Horowitz",
+   "D. Ngo",
+   "Jung-Won Park",
+   "Ossanna H. Amran",
+   "Aleeza West"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8d799a17a4a5bdeac8bbacc5da5d1c4cdc7145de",
+  "paper_id": "doi:10.1016/j.jad.2026.121366",
+  "doi": "10.1016/j.jad.2026.121366",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1016/j.jad.2026.121366",
+  "published_iso": "2026-02-01",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A framework for longitudinal latent factor modelling of treatment response in clinical trials with applications to Psoriatic Arthritis and Rheumatoid Arthritis",
+  "title_norm": "a framework for longitudinal latent factor modelling of treatment response in cl",
+  "abstract": "OBJECTIVE\nClinical trials involve the collection of a wealth of data, comprising multiple diverse measurements performed at baseline and follow-up visits over the course of a trial. The most common primary analysis is restricted to a single, potentially composite endpoint at one time point. While such an analytical focus promotes simple and replicable conclusions, it does not necessarily fully capture the multi-faceted effects of a drug in a complex disease setting. Therefore, to complement existing approaches, we set out here to design a longitudinal multivariate analytical framework that accepts as input an entire clinical trial database, comprising all measurements, patients, and time points across multiple trials.\n\n\nMETHODS\nOur framework composes probabilistic principal component analysis with a longitudinal linear mixed effects model, thereby enabling clinical interpretation of multivariate results, while handling data missing at random, and incorporating covariates and covariance structure in a computationally efficient and principled way.\n\n\nRESULTS\nWe illustrate our approach by applying it to four phase III clinical trials of secukinumab in Psoriatic Arthritis (PsA) and Rheumatoid Arthritis (RA). We identify three clinically plausible latent factors that collectively explain 74.5% of empirical variation in the longitudinal patient database. We estimate longitudinal trajectories of these factors, thereby enabling joint characterisation of disease progression and drug effect. We perform benchmarking experiments demonstrating our method's competitive performance at estimating average treatment effects compared to existing statistical and machine learning methods, and showing that our modular approach leads to relatively computationally efficient model fitting.\n\n\nCONCLUSION\nOur multivariate longitudinal framework has the potential to illuminate the properties of existing composite endpoint methods, and to enable the development of novel clinical endpoints that provide enhanced and complementary perspectives on treatment response.",
+  "tldr": "A longitudinal multivariate longitudinal framework has the potential to illuminate the properties of existing composite endpoint methods, and to enable the development of novel clinical endpoints that provide enhanced and complementary perspectives on treatment response.",
+  "year": 2024,
+  "venue": "Journal of Biomedical Informatics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Fabian Falck",
+   "Xuan Zhu",
+   "Sahra Ghalebikesabi",
+   "Matthias Kormaksson",
+   "M. Vandemeulebroecke",
+   "Cong Zhang"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "72d552e013dca0e5b6255da9e44db6ef597f2ab3",
+  "paper_id": "dblp:journals/jbi/FalckZGKVZMGKWSTPRLGNMKON24",
+  "doi": "10.1016/j.jbi.2024.104641",
+  "arxiv_id": "",
+  "dblp_key": "journals/jbi/FalckZGKVZMGKWSTPRLGNMKON24",
+  "paper_url": "https://doi.org/10.1016/j.jbi.2024.104641",
+  "published_iso": "2024-04-01",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "When exposure affects subgroup membership: Framing relevant causal questions in perinatal epidemiology and beyond",
+  "title_norm": "when exposure affects subgroup membership framing relevant causal questions in p",
+  "abstract": "Perinatal epidemiology often aims to evaluate exposures on infant outcomes. When the exposure affects the composition of people who give birth to live infants (e.g., by affecting fertility, behavior, or birth outcomes), this\"live birth process\"mediates the exposure effect on infant outcomes. Causal estimands previously proposed for this setting include the total exposure effect on composite birth and infant outcomes, controlled direct effects (e.g., enforcing birth), and principal stratum direct effects. Using perinatal HIV transmission in the SEARCH Study as a motivating example, we present two alternative causal estimands: 1) conditional total effects; and 2) conditional stochastic direct effects, formulated under a hypothetical intervention to draw mediator values from some distribution (possibly conditional on covariates). The proposed conditional total effect includes impacts of an intervention that operate by changing the types of people who have a live birth and the timing of births. The proposed conditional stochastic direct effects isolate the effect of an exposure on infant outcomes excluding any impacts through this live birth process. In SEARCH, this approach quantifies the impact of a universal testing and treatment intervention on infant HIV-free survival absent any effect of the intervention on the live birth process, within a clearly defined target population of women of reproductive age with HIV at study baseline. Our approach has implications for the evaluation of intervention effects in perinatal epidemiology broadly, and whenever causal effects within a subgroup are of interest and exposure affects membership in the subgroup.",
+  "tldr": "The proposed conditional stochastic direct effects isolate the effect of an exposure on infant outcomes excluding any impacts through this live birth process, and has implications for the evaluation of intervention effects in perinatal epidemiology broadly, and whenever causal effects within a subgroup are of interest and exposure affects membership in the subgroup.",
+  "year": 2024,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Shalika Gupta",
+   "L. Balzer",
+   "M. Kamya",
+   "D. Havlir",
+   "Maya L Petersen"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "3c2fca15af05126cca4d6659ae2207e4938c5618",
+  "paper_id": "arxiv:2401.11368",
+  "doi": "",
+  "arxiv_id": "2401.11368",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3c2fca15af05126cca4d6659ae2207e4938c5618",
+  "published_iso": "2024-01-21",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Assessing treatment benefit in the presence of placebo response using the sequential parallel comparison design",
+  "title_norm": "assessing treatment benefit in the presence of placebo response using the sequen",
+  "abstract": "In clinical trials, placebo response is considered a beneficial effect arising from multiple factors, including the patient's expectations for the treatment. Its presence makes the classical parallel study design suboptimal and can bias the inference. The sequential parallel comparison design (SPCD), a two‐stage design where the first stage is a classical parallel study design, followed by another parallel design among placebo subjects from the first stage, was proposed to address the shortcomings of the classical design. In SPCD, in lieu of treatment effect, a weighted average of the mean treatment difference in Stage I among all randomized subjects and the mean treatment difference in Stage II among placebo non‐responders was proposed as the efficacy measure. However, by linking two possibly different populations, this weighted average lacks interpretability, and the choice of weight remains controversial. In this work, under the principal stratification framework, we propose a causal estimand for the treatment effect under each of three clinically important principal strata: Always Responders, Never Responders, and Drug‐only Responders. To make the stratum treatment effect identifiable, we introduce a set of assumptions and two sensitivity parameters. By further considering the strata as latent characteristics, the sensitivity parameters can be estimated. An extensive simulation study is conducted to evaluate the operating characteristics of the proposed method. Finally, we apply our method on the ADAPT‐A study data to assess the benefit of low‐dose aripiprazole adjunctive to antidepressant therapy treatment.",
+  "tldr": "Under the principal stratification framework, a causal estimand is proposed for the treatment effect under each of three clinically important principal strata: Always Responders, Never Responder, and Drug‐only Responders to assess the benefit of low‐dose aripiprazole adjunctive to antidepressant therapy treatment.",
+  "year": 2022,
+  "venue": "Statistics in Medicine",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaoyan Liu",
+   "Chanmin Kim",
+   "Zifei Han",
+   "P. Lim",
+   "Satrajit Roychoudhury",
+   "M. Fava"
+  ],
+  "citations": 3,
+  "source": "semanticscholar",
+  "source_id": "fec63a071d5ab7308cf827778ced4356ea1da758",
+  "paper_id": "doi:10.1002/sim.9349",
+  "doi": "10.1002/sim.9349",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://hdl.handle.net/2144/46919",
+  "published_iso": "2022-02-20",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "E-CADHERIN EXPRESSION IN KIDNEY TISSUE IN DIFFERENT TYPES OF ALIMENTARY MICROELEMENTOSIS",
+  "title_norm": "e cadherin expression in kidney tissue in different types of alimentary microele",
+  "abstract": "Alimentary microelementosis — a condition arising from dietary deficiency of essential trace elements — is prevalent worldwide and has been associated with impaired cellular adhesion, compromised structural integrity of renal tissue, and progressive nephropathy. E-cadherin, the principal adhesion glycoprotein encoded by CDH1, plays a pivotal role in preserving the integrity of the renal tubular epithelium. \nObjective. To evaluate changes in E-cadherin expression in renal tissue of rats with various forms of dietary trace element deficiency (magnesium, iron, zinc, selenium, and their combination) using immunohistochemistry \nMaterials and methods. Ninety male outbred white rats (age 12–24 weeks; body weight 120 ± 11.3 to 215 ± 8.4 g) were divided into six groups: a control group maintained on a standard diet and five experimental groups fed ALTROMIN (Germany) diets with defined single or combined deficiencies of magnesium, iron, zinc, and selenium for 12 weeks. Immunohistochemical analysis was performed using a Ventana Benchmark XT system (Roche) with an anti-E-cadherin antibody, and expression was quantified using QuPath 0.5.1 software (H-score, percentage of positive cells). All experiments were conducted in accordance with the International Guidelines for Biomedical Research Involving Animals (EEC, Strasbourg, 1985), the European Convention for the Protection of Vertebrate Animals (ETS No. 123, Strasbourg, 1986), the Guide for the Care and Use of Laboratory Animals (ILAR, DELS), and Directive 2010/63/EU. Statistical analysis was performed using Microsoft Excel and IBM SPSS Statistics v.23, employing both parametric and non-parametric methods. Statistical analysis was performed using Microsoft Excel and IBM SPSS Statistics v.23, employing both parametric and non-parametric methods. Between-group comparisons were conducted using the Mann–Whitney U test and Student's t-test. Statistical significance was defined as p < 0.05. This study was conducted as part of the institutional research plan of Bukhara State Medical Institute entitled \"Development of new approaches to early diagnosis, treatment, and prevention of pathological conditions affecting the health of the population of the Bukhara region after COVID-19 (2022–2026).\" \nResults. In the control group, renal tubular epithelial cells exhibited stable, high-level E-cadherin expression. Each form of trace element deficiency resulted in significantly decreased E-cadherin expression, epithelial disorganization, and weakened intercellular adhesion. The most pronounced reduction was observed in the combined deficiency group, where the percentage of E-cadherin–positive cells decreased from 28.1% in the control group to 14.6% in the combined deficiency group. \nConclusions. Alimentary microelementosis induces quantifiable alterations in E-cadherin expression in rat kidney tissue, exhibiting a cumulative detrimental effect in combined deficiency. These alterations represent early immunomorphological markers of nephron epithelial instability and may hold diagnostic and preventive significance for nutrition-associated renal diseases.",
+  "tldr": "Alimentary microelementosis induces quantifiable alterations in E-cadherin expression in rat kidney tissue, exhibiting a cumulative detrimental effect in combined deficiency, which represent early immunomorphological markers of nephron epithelial instability and may hold diagnostic and preventive significance for nutrition-associated renal diseases.",
+  "year": 2026,
+  "venue": "Neonatology surgery and perinatal medicine",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "R. Baymuradov",
+   "Shuxrat Teshayev"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "4adc8d018696d735b47ae598086aab7ab6b9502b",
+  "paper_id": "doi:10.24061/2413-4260.xvi.2.60.2026.25",
+  "doi": "10.24061/2413-4260.xvi.2.60.2026.25",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://neonatology.bsmu.edu.ua/article/download/365701/351150",
+  "published_iso": "2026-06-29",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "A BAYESIAN MACHINE LEARNING APPROACH FOR ESTIMATING HETEROGENEOUS SURVIVOR CAUSAL EFFECTS: APPLICATIONS TO A CRITICAL CARE TRIAL",
+  "title_norm": "a bayesian machine learning approach for estimating heterogeneous survivor causa",
+  "abstract": "Assessing heterogeneity in the effects of treatments has become increasingly popular in the field of causal inference and carries important implications for clinical decision-making. While extensive literature exists for studying treatment effect heterogeneity when outcomes are fully observed, there has been limited development in tools for estimating heterogeneous causal effects when patient-centered outcomes are truncated by a terminal event, such as death. Due to mortality occurring during study follow-up, the outcomes of interest are unobservable, undefined, or not fully observed for many participants in which case principal stratification is an appealing framework to draw valid causal conclusions. Motivated by the Acute Respiratory Distress Syndrome Network (ARDSNetwork) ARDS respiratory management (ARMA) trial, we developed a flexible Bayesian machine learning approach to estimate the average causal effect and heterogeneous causal effects among the always-survivors stratum when clinical outcomes are subject to truncation. We adopted Bayesian additive regression trees (BART) to flexibly specify separate mean models for the potential outcomes and latent stratum membership. In the analysis of the ARMA trial, we found that the low tidal volume treatment had an overall benefit for participants sustaining acute lung injuries on the outcome of time to returning home but substantial heterogeneity in treatment effects among the always-survivors, driven most strongly by biologic sex and the alveolar-arterial oxygen gradient at baseline (a physiologic measure of lung function and degree of hypoxemia). These findings illustrate how the proposed methodology could guide the prognostic enrichment of future trials in the field.",
+  "tldr": "It is found that the low tidal volume treatment had an overall benefit for participants sustaining acute lung injuries on the outcome of time to returning home but substantial heterogeneity in treatment effects among the always-survivors, driven most strongly by biologic sex and the alveolar-arterial oxygen gradient at baseline.",
+  "year": 2022,
+  "venue": "Annals of Applied Statistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xinyuan Chen",
+   "M. Harhay",
+   "Guangyu Tong",
+   "Fan Li"
+  ],
+  "citations": 21,
+  "source": "semanticscholar",
+  "source_id": "15cd4e37978fe63cc5d79112071be68db51abe02",
+  "paper_id": "arxiv:2204.06657",
+  "doi": "10.1214/23-AOAS1792",
+  "arxiv_id": "2204.06657",
+  "dblp_key": "",
+  "paper_url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-18/issue-1/A-Bayesian-machine-learning-approach-for-estimating-heterogeneous-survivor-causal/10.1214/23-AOAS1792.pdf",
+  "published_iso": "2022-04-13",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Sensitivity of estimands in clinical trials with imperfect compliance",
+  "title_norm": "sensitivity of estimands in clinical trials with imperfect compliance",
+  "abstract": "Abstract In clinical trials that are subject to noncompliance, the commonly used intention-to-treat estimand is valid as a causal effect of treatment assignment but is sensitive to the level of compliance. An alternative estimand, the complier average causal effect (CACE), measures the average effect of treatment received in the latent subset of subjects who would comply with either assigned treatment. Because the principal stratum of compliers can vary with the circumstances of the trial, CACE too depends on the compliance fraction. We propose a model in which an underlying latent proto-compliance interacts with trial characteristics to determine a subject’s compliance behavior. When the latent compliance is independent of the individual treatment effect, the average causal effect is constant across compliance classes, and CACE is robust across trials and equal to the population average causal effect. We demonstrate the potential degree of sensitivity of CACE in a simulation study, an analysis of data from a trial of vitamin A supplementation in children, and a meta-analysis of trials of epidural analgesia in labor.",
+  "tldr": "This work proposes a model in which an underlying latent proto-compliance interacts with trial characteristics to determine a subject’s compliance behavior and demonstrates the potential degree of sensitivity of CACE in a simulation study, an analysis of data from a trial of vitamin A supplementation in children, and a meta-analysis of trials of epidural analgesia in labor.",
+  "year": 2023,
+  "venue": "The International Journal of Biostatistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Heng Chen",
+   "D. Heitjan"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "c648689411aadd7643f1e07299dae1e7ec0c20ab",
+  "paper_id": "doi:10.1515/ijb-2022-0105",
+  "doi": "10.1515/ijb-2022-0105",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c648689411aadd7643f1e07299dae1e7ec0c20ab",
+  "published_iso": "2023-06-28",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Large Language Model Embeddings of Surgical Procedural Names for Confounding Adjustment in Perioperative Observational Studies",
+  "title_norm": "large language model embeddings of surgical procedural names for confounding adj",
+  "abstract": "",
+  "tldr": "Free-text surgical-name embeddings provide a scalable method for representing surgical context in perioperative observational studies and improved concordance with randomized trial benchmarks while preserving expected treatment effects, supporting its use as an additional layer of confounding adjustment in large perioperative datasets.",
+  "year": 2026,
+  "venue": "medRxiv",
+  "publication_types": [],
+  "authors": [
+   "L. Han",
+   "M. Ghanem",
+   "M. Simhambhatla",
+   "P. Chung",
+   "N. Aghaeepour"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "fd41b0c155821f393e5e3c018f795c8968cea175",
+  "paper_id": "doi:10.64898/2026.08.22.26361065",
+  "doi": "10.64898/2026.08.22.26361065",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/fd41b0c155821f393e5e3c018f795c8968cea175",
+  "published_iso": "2026-08-25",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Identification of complier and noncomplier average causal effects in the presence of latent missing-at-random (LMAR) outcomes: a unifying view and choices of assumptions.",
+  "title_norm": "identification of complier and noncomplier average causal effects in the presenc",
+  "abstract": "The study of treatment effects is often complicated by noncompliance and missing data. In the one-sided noncompliance setting where of interest are the complier and noncomplier average causal effects, we address outcome missingness of the latent missing at random type (LMAR, also known as latent ignorability). That is, conditional on covariates and treatment assigned, the missingness may depend on compliance type. Within the instrumental variable (IV) approach to noncompliance, methods have been proposed for handling LMAR outcome that additionally invoke an exclusion restriction-type assumption on missingness, but no solution has been proposed for when a non-IV approach is used. This article focuses on effect identification in the presence of LMAR outcomes, with a view to flexibly accommodate different principal identification approaches. We show that under treatment assignment ignorability and LMAR only, effect nonidentifiability boils down to a set of two connected mixture equations involving unidentified stratum-specific response probabilities and outcome means. This clarifies that (except for a special case) effect identification generally requires two additional assumptions: a specific missingness mechanism assumption and a principal identification assumption. This provides a template for identifying effects based on separate choices of these assumptions. We consider a range of specific missingness assumptions, including those that have appeared in the literature and some new ones. Incidentally, we find an issue in the existing assumptions, and propose a modification of the assumptions to avoid the issue. Results under different assumptions are illustrated using data from the Baltimore Experience Corps Trial.",
+  "tldr": "",
+  "year": 2023,
+  "venue": "Biostatistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "T. Nguyen",
+   "Michelle C Carlson",
+   "Elizabeth A. Stuart"
+  ],
+  "citations": 4,
+  "source": "semanticscholar",
+  "source_id": "63b6f3fb7f8e8987040e8cbe3fdf4907d744b764",
+  "paper_id": "arxiv:2312.11136",
+  "doi": "10.1093/biostatistics/kxae011",
+  "arxiv_id": "2312.11136",
+  "dblp_key": "",
+  "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11471963/pdf/kxae011.pdf",
+  "published_iso": "2023-12-18",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Surveillance of the Genetic Signature in Circulating Tumor DNA for Guiding Adjuvant Chemotherapy in Urothelial Carcinoma: Protocol for a Pilot Randomized Controlled Trial",
+  "title_norm": "surveillance of the genetic signature in circulating tumor dna for guiding adjuv",
+  "abstract": "Background Urothelial carcinoma is one of the most commonly diagnosed cancers worldwide, with a poor 5-year survival rate. As genomics is the backbone of the precision medicine paradigm, the genetic signature in circulating tumor DNA (ctDNA) is emerging as a pivotal biomarker for detecting early-stage cancer and molecular residual disease (MRD). Objective We aim to evaluate the feasibility and preliminary effects of a ctDNA-based sequencing approach for detecting MRD and guiding adjuvant chemotherapy in postoperative urothelial carcinomas. Methods We will perform a stratified 2-arm pilot randomized controlled trial in 2 tertiary hospitals in Hong Kong, involving patients with urothelial carcinomas (pT2-4a N0-2 M0) undergoing radical resection. We plan to recruit 20 patients and determine stratification according to their MRD status before randomization. Patients in each stratum (MRD-positive and MRD-negative groups) will be randomly allocated to either a 4-cycle gemcitabine plus cisplatin chemotherapy arm or a standard management arm in a 1:1 ratio. ctDNA MRD will be tested using a personalized next-generation sequencing panel, which is designed based on the individual’s whole exome sequencing results from the operation specimen. The primary outcome is the feasibility of this trial (ie, recruitment, retention, adherence, and completeness). The secondary outcome is treatment-related adverse events. Exploratory outcomes include radiographic disease-free survival, cancer-specific survival, overall survival, ctDNA clearance in patients with ctDNA MRD-positive status, quality of life, fear of cancer recurrence, and cost-effectiveness. Benchmarks for feasibility evaluation are set as (1) ≥20% recruitment response rate, (2) ≤20% loss to follow-up or withdrawal, (3) ≥80% intervention adherence, and (4) ≤20% missing value rate. Each benchmark will be assigned one score, and a total score of 4, 2 to 3, and 0 to 1 will be deemed high, medium, and low feasibility, respectively. Safety evaluations will be presented as numbers and proportions of the adverse events. ANOVA and the Kruskal-Wallis test will be used for continuous outcome variables, whereas the chi-square test and the Fisher exact test will be used for categorical outcome variables. Hazard ratios will be calculated to compare the preliminary treatment effect of the gemcitabine plus cisplatin arm against the standard management arm on survival within each MRD group. Results This project was funded in February 2024. Patient recruitment started on May 2, 2024. Recruitment and data collection for the trial are ongoing. Data analysis will be performed in mid-2025 and the results of this study are expected to be published in late 2025. Conclusions Genetic signature in ctDNA is informative for personalized management of postoperative urothelial carcinomas, including personalized treatment and early detection of disease progression. Trial Registration ClinicalTrials.gov NCT06257017; https://clinicaltrials.gov/study/NCT06257017 International Registered Report Identifier (IRRID) DERR1-10.2196/72597",
+  "tldr": "Genetic signature in ctDNA is informative for personalized management of postoperative urothelial carcinomas, including personalized treatment and early detection of disease progression.",
+  "year": 2025,
+  "venue": "JMIR Research Protocols",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yongle Zhan",
+   "Xiaohao Ruan",
+   "Yishuo Wu",
+   "T. Chun",
+   "Chi Yao",
+   "Ruofan Shi"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "c2fdf8689c0d318561d6cd9dbbecb6afadc0c530",
+  "paper_id": "doi:10.2196/72597",
+  "doi": "10.2196/72597",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.researchprotocols.org/2025/1/e72597/PDF",
+  "published_iso": "2025-08-26",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "User engagement in clinical trials of digital mental health interventions: a systematic review",
+  "title_norm": "user engagement in clinical trials of digital mental health interventions a syst",
+  "abstract": "Digital mental health interventions (DMHIs) overcome traditional barriers enabling wider access to mental health support and allowing individuals to manage their treatment. How individuals engage with DMHIs impacts the intervention effect. This review determined whether the impact of user engagement was assessed in the intervention effect in Randomised Controlled Trials (RCTs) evaluating DMHIs targeting common mental disorders (CMDs). This systematic review was registered on Prospero (CRD42021249503). RCTs published between 01/01/2016 and 17/09/2021 were included if evaluated DMHIs were delivered by app or website; targeted patients with a CMD without non-CMD comorbidities (e.g., diabetes); and were self-guided. Databases searched: Medline; PsycInfo; Embase; and CENTRAL. All data was double extracted. A meta-analysis compared intervention effect estimates when accounting for engagement and when engagement was ignored. We identified 184 articles randomising 43,529 participants. Interventions were delivered predominantly via websites (145, 78.8%) and 140 (76.1%) articles reported engagement data. All primary analyses adopted treatment policy strategies, ignoring engagement levels. Only 19 (10.3%) articles provided additional intervention effect estimates accounting for user engagement: 2 (10.5%) conducted a complier-average-causal effect (CACE) analysis (principal stratum strategy) and 17 (89.5%) used a less-preferred per-protocol (PP) population excluding individuals failing to meet engagement criteria (estimand strategies unclear). Meta-analysis for PP estimates, when accounting for user engagement, changed the standardised effect to -0.18 95% CI (-0.32, -0.04) from − 0.14 95% CI (-0.24, -0.03) and sample sizes reduced by 33% decreasing precision, whereas meta-analysis for CACE estimates were − 0.19 95% CI (-0.42, 0.03) from − 0.16 95% CI (-0.38, 0.06) with no sample size decrease and less impact on precision. Many articles report user engagement metrics but few assessed the impact on the intervention effect missing opportunities to answer important patient centred questions for how well DMHIs work for engaged users. Defining engagement in this area is complex, more research is needed to obtain ways to categorise this into groups. However, the majority that considered engagement in analysis used approaches most likely to induce bias.",
+  "tldr": "Defining engagement in this area is complex, more research is needed to obtain ways to categorise this into groups and the majority that considered engagement in analysis used approaches most likely to induce bias.",
+  "year": 2024,
+  "venue": "BMC Medical Research Methodology",
+  "publication_types": [
+   "JournalArticle",
+   "Review"
+  ],
+  "authors": [
+   "J. Elkes",
+   "S. Cro",
+   "R. Batchelor",
+   "Siobhán O’Connor",
+   "L. Yu",
+   "Lauren Bell"
+  ],
+  "citations": 23,
+  "source": "semanticscholar",
+  "source_id": "f41fe7aff44b7d4c8cc84092e136f7886a11081f",
+  "paper_id": "doi:10.1186/s12874-024-02308-0",
+  "doi": "10.1186/s12874-024-02308-0",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://bmcmedresmethodol.biomedcentral.com/counter/pdf/10.1186/s12874-024-02308-0",
+  "published_iso": "2024-08-24",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Emerging insights and commentaries – MMRM vs LOCF",
+  "title_norm": "emerging insights and commentaries mmrm vs locf",
+  "abstract": "ICH E9 (R1) lists five strategies to address estimand (ICH HARMONISED GUIDELINE 2017) – treatment policy, composite, hypothetical, principal stratum, and while on treatment strategies. Among these five, composite strategy applies to time-to-event, or combined variables, principal stratum strategy is pertaining to subgroups, and may not serve as the primary endpoint. In longitudinal clinical trials with repeated measures comparing a test drug group against a control group, the strategies treatment policy, while on treatment, and hypothetical are applicable. Traditionally, the implementation of treatment policy and while on treatment strategies is last observation carried forward (LOCF). The implementation of hypothetical strategy is mixed model with repeated measures (MMRM). The objective of this note is to compare and contrast MMRM and LOCF. In fact, the last observation analysis simply takes the last observed value of the efficacy endpoint subtract the corresponding baseline value. There is no “carry forward”. The term LOCF is misleading. This analysis should be denoted as last observation (LO) analysis, not LOCF. For the rest of this manuscript, the comparison will be MMRM vs LO, not LOCF. The scientific foundation of modern clinical trials for drug development is randomization and statistical hypothesis testing. Randomization allocates treatment to each patient, not to visits. Therefore, the experiment unit in a clinical trial is patient, not visit. LO treats each patient equally in terms of their contributions to the understanding of treatment effect. MMRM pays more attention to patients with observations at the primary visit. For those patients who does not have data at that visit, their contributions to fixed effect of treatment comparison are less than those with data. The major differences in understanding the treatment effect between these two methods are that LO focuses on patients – one patient, one vote; while the emphasis of MMRM is about the visit. In a four week clinical trial designed with four weekly visits, if the primary time point is the week 4 visit, then MMRM compares patient responses at this visit. For those patients without week 4 visit information, their contributions to MMRM estimate are only limited to the covariance matrix estimation. Before the introduction of MMRM, the primary analysis of longitudinal data in clinical trials tend to be LO, with a completer analysis to provide supportive evidence. A completer analysis includes only those patients whose efficacy measure is not missing at the primary time point. In other words, the patients missed the primary visit do not contribute to the completer analysis. The completer analysis does not follow the ITT principle of “reporting data from all participated subjects” and hence is considered a biased analysis. LO has been the main method for drug development and drug approval over four decades between 1962 and 2008. These approved drugs have extended human life expectancy and improved patients’ quality of life successfully. In those years, the primary analysis was based on LO, and completer analysis was used as supportive analysis. MMRM was introduced in 2008, and soon became a popular method for analysis of longitudinal clinical data. However, a few years after MMRM served as the mainstream of new drug submissions, the problems of MMRM became more apparent – it is not clear what MMRM is estimating. This is one of the main reasons that there is a need to draft the ICH E9 (R1) guidance – clinical trial teams need to understand what they are estimating. Again, the scientific",
+  "tldr": "The objective of this note is to compare and contrast MMRM and LOCF, the main method for drug development and drug approval over four decades, and the major differences in understanding the treatment effect between these two methods.",
+  "year": 2023,
+  "venue": "Journal of Biopharmaceutical Statistics",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Naitee Ting"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "3d0b805d2bb4bc3d2696fe79b003e74182d1bfd3",
+  "paper_id": "doi:10.1080/10543406.2023.2184828",
+  "doi": "10.1080/10543406.2023.2184828",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/3d0b805d2bb4bc3d2696fe79b003e74182d1bfd3",
+  "published_iso": "2023-02-27",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Abstract 4229: AI based explainable survival modeling for advanced non small cell lung cancer",
+  "title_norm": "abstract 4229 ai based explainable survival modeling for advanced non small cell",
+  "abstract": "\n \n \n Accurate individualized prognostication in advanced non-small cell lung cancer (NSCLC) is hindered by nonlinear interactions among clinical and biological variables. Integrating interpretable artificial intelligence (AI) with classical survival modeling may enhance predictive precision while preserving transparency.\n \n \n \n A real-world cohort of 62 608 advanced NSCLC patients with 52782 observed death events was analyzed. Prognostic variables significantly associated with overall survival (OS) were identified using univariate Cox proportional-hazards regression (p < 0.05). Feature refinement was achieved through LASSO-regularized Cox modeling with 5-fold cross-validation (λ = 0.00176) and stability selection (≥ 0.7), producing a 20-feature prognostic signature. These variables were then used to train and benchmark 18 regression and ensemble machine-learning algorithms for continuous OS prediction. Model performance was evaluated using R2, RMSE, MAE, calibration plots, and decision-curve analysis (DCA). Feature interpretability was assessed with SHAP (Shapley Additive Explanations) to quantify the direction and magnitude of each predictor’s effect.\n \n \n \n All 20 variables remained significant in multivariate Cox analysis. Chemotherapy, systemic therapy, and surgery were independent protective factors, whereas age, tumor size, metastatic burden, liver/bone metastasis, regional nodal involvement, and N stage predicted worse outcomes. Ensemble gradient-boosting models outperformed linear baselines (R2 ≈ 0.15 vs. 0.10; RMSE ≈ 18 months). LightGBM achieved the highest accuracy (R2 = 0.155; MAE = 11.9 months) with excellent calibration and the greatest net benefit on DCA. SHAP analysis identified chemotherapy, diagnosis year, organ metastatic number, and age as dominant determinants of predicted survival, with strong reproducibility across folds (Spearman ρ > 0.9).\n \n \n \n A transparent Cox-LASSO-LightGBM-SHAP framework established a robust, biologically consistent 20-factor prognostic signature for advanced NSCLC. The model achieved high predictive accuracy, clinical calibration, and interpretability, revealing treatment modality, metastatic extent, and temporal therapeutic progress as principal survival drivers. This interpretable AI framework enables credible, individualized survival prediction and bridges data-driven modeling with clinical oncology.\n \n \n \n Kang Qin, An Qin, John V. Heymach. AI based explainable survival modeling for advanced non small cell lung cancer [abstract]. In: Proceedings of the American Association for Cancer Research Annual Meeting 2026; Part 1 (Regular Abstracts); 2026 Apr 17-22; San Diego, CA. Philadelphia (PA): AACR; Cancer Res 2026;86(7 Suppl):Abstract nr 4229.\n",
+  "tldr": "A transparent Cox-LASSO-LightGBM-SHAP framework established a robust, biologically consistent 20-factor prognostic signature for advanced NSCLC, which enables credible, individualized survival prediction and bridges data-driven modeling with clinical oncology.",
+  "year": 2026,
+  "venue": "Cancer Research",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Kang Qin",
+   "Angel Qin",
+   "J. Heymach"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "e18389bfae3b0461588809fd45339102d345f90f",
+  "paper_id": "doi:10.1158/1538-7445.am2026-4229",
+  "doi": "10.1158/1538-7445.am2026-4229",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/e18389bfae3b0461588809fd45339102d345f90f",
+  "published_iso": "2026-04-03",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "Long-Term Multivariate Screening of a Recirculating Landfill Leachate Circuit: Pollutant Dynamics, Statistical Structure and Associated Risk to Biota",
+  "title_norm": "long term multivariate screening of a recirculating landfill leachate circuit po",
+  "abstract": "Landfill leachate circuits that operate without discharge, by recirculating aerated leachate onto the waste mass, are widespread in South-East Europe, yet their long-term behaviour is rarely documented with sample-level data. This study reports a six-year (2020–2025) seasonal monitoring campaign at a sanitary landfill in northern Serbia (alluvial aquifer of the Sava River, transboundary Danube basin) and re-examines it with a transparent multivariate protocol. Seventy-two leachate samples (collection well, aeration lagoon, sedimentation lagoon; n = 24 each, 30 parameters), 28 realised surface-water campaigns, and six years of groundwater summaries were evaluated by principal component analysis/factor analysis (PCA/FA, Varimax normalized), hierarchical cluster analysis, PERMANOVA, non-parametric paired tests and, for benchmarking, supervised machine learning. The pooled leachate model (n = 72; 21 variables; KMO = 0.700; Bartlett χ2 = 956, p < 0.001) retained four factors by parallel analysis, explaining 61.6% of total variance; after rotation the factors accounted for 27.7%, 14.3%, 10.4%, and 9.3%. Factor 1 grouped organic load with particle-reactive metals (COD, BOD5, Fe, Ni, Cr, As, Zn), Factor 2 a reduced sulfur–fluoride–BTEX signature, Factor 3 temperature-driven nitritation, and Factor 4 a nitrate–manganese redox contrast. Crucially, paired campaign-by-campaign comparison showed no removal of the dominant pollutants along the circuit. Median COD, BOD5 and NH4-N were not lower in the sedimentation lagoon than in the collection well, while pH rose from 8.08 to 8.75 (p < 0.001); only Cu, Pb, NO3-N, and NO2-N decreased significantly. The circuit therefore homogenises and concentrates dissolved load rather than removing it. Downstream surface water was significantly enriched in electrical conductivity (+110 µS/cm), total dissolved solids, NH4-N, and NO2-N relative to upstream (Wilcoxon, p < 0.05), and groundwater showed episodic conductivity up to 12,760 µS/cm and NH4-N up to 102 mg/L. Cytotoxicity (MTT) confirmed biological relevance, with MRC-5 viability falling to 37% after 24 h exposure to 50 vol.% groundwater (Pw3) versus 60% in A549 cells. A random-forest classifier separated circuit units far better than PCA-based discrimination (76.4% versus 54.2% cross-validated accuracy) and distinguished the 2020–2021 pandemic period from 2022–2025 with 94.2% accuracy, a period effect also confirmed by PERMANOVA (R2 = 7.2%, p < 0.001). The results indicate that closed-loop recirculation without an engineered discharge barrier transfers, rather than eliminates, contaminant load, and that after-care of such systems requires mass-balance monitoring and polishing treatment.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "Processes",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "N. Grba",
+   "V. Mihajlović",
+   "Goran Benedeković",
+   "Vesna Kojić",
+   "D. Jakimov",
+   "Miloš Dubovina"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "93b3fa47dae551b295255ab0596b3b7352833262",
+  "paper_id": "doi:10.3390/pr14172691",
+  "doi": "10.3390/pr14172691",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.3390/pr14172691",
+  "published_iso": "2026-08-24",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ },
+ {
+  "title": "The multi‐factorial modes of action of urease in the pathogenesis of incontinence associated dermatitis",
+  "title_norm": "the multi factorial modes of action of urease in the pathogenesis of incontinenc",
+  "abstract": "Abstract Background Incontinence Associated Dermatitis (IAD) is a type of skin inflammation caused by chronic exposure to urine and/or faeces. Current treatment strategies involve creating a barrier between the skin and urine/faeces rather than targeting specific irritants. Urease expressing pathogens catalyse the conversion of urea, present in urine, into ammonia. The accumulation of ammonia causes an elevation in skin pH which is believed to activate faecal enzymes which damage skin, and opportunistic pathogens, which lead to secondary infections. Objectives To develop a better, multi‐factorial model of IAD pathogenesis, including the effect of urease‐expressing bacteria on skin, mechanism of damage of urease and urease‐triggered activity of faecal enzymes and secondary pathogens. To study the effect of urease inhibition on preventing IAD skin damage. Methods Five separate studies were made using ex vivo porcine skin and in vivo human skin models. Measurements of the change in skin barrier function were made using skin impedance, trans‐epidermal water loss (TEWL), stratum corneum moisture and pH. Skin was exposed to artificial urine, inoculated with various microbes, enzymes and chemicals to examine the influence of: 1) urease‐positive Proteus mirabilis 2) ammonia, 3) combination of P. mirabilis and a faecal enzyme, trypsin, 4) combination of P. mirabilis and opportunistic pathogens, Candida albicans and Staphylococcus aureus, 5) inhibition of urease using acetohydroxamic acid (AHA) on barrier function. Results The urease‐mediated production of ammonia had two principal effects: it elevated skin pH and caused inflammation, leading to significant breakdown in skin (stratum corneum) barrier function. Urease was found to further increase the activity of faecal enzymes and opportunistic pathogens, due to elevated skin pH. The urease inhibitor, AHA, was shown to have significantly reduced damage to skin barrier function, measured as its electrical resistance. Conclusions Targeted therapeutic strategies should be developed to prevent the manifestation of IAD, rather than creating a generic barrier between skin and urine/faeces. Urease has been identified as a crucial component in the manifestation of IAD, due to its role in the production of ammonia. Urease inhibition provides a promising therapeutic target to halt the progression of IAD.",
+  "tldr": "Targeted therapeutic strategies should be developed to prevent the manifestation of IAD, rather than creating a generic barrier between skin and urine/faeces, due to elevated skin pH.",
+  "year": 2024,
+  "venue": "Skin Health and Disease",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Emily J Owen",
+   "R. Heylen",
+   "Kyle Stewart",
+   "Paul G. Winyard",
+   "A. T. A. Jenkins"
+  ],
+  "citations": 6,
+  "source": "semanticscholar",
+  "source_id": "264ec0ccdc6e08d9505251f7728c8c5b3aa3009b",
+  "paper_id": "doi:10.1002/ski2.349",
+  "doi": "10.1002/ski2.349",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://doi.org/10.1002/ski2.349",
+  "published_iso": "2024-03-02",
+  "from_query": [
+   "principal-stratum treatment effect benchmark"
+  ]
+ }
+]

@@ -1,0 +1,37 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+      "chosen_pattern_id": "generative_process_redesign",
+      "anchor_alternates": [],
+      "companion_pattern": "structural_prior_encoding",
+      "companion_rationale": "The generative-process redesign produces the named intermediate object O, a candidate-conditioned residual-response velocity field inside the frozen WAM refinement chain; structural_prior_encoding consumes O by restricting it to a zero-intercept operator that is linear in e_t, so candidate features may modulate transport but cannot manufacture a correction when e_t is removed.",
+      "selection_rationale": "This is the load-bearing method gap because execution-time correction is unsafe until the procedure both tests candidate support explicitly and makes the observed residual, rather than a candidate-only scorer or learned artifact, causally necessary for every corrected future. Redesigning the flow-conditioning operator closes the gap at trajectory level, while the zero-intercept e_t-linear restriction and an independently calibrated support predicate directly impose the upheld retry obligations without returning to residual tokens, set-membership MPC, centered scoring, or classical residual regression."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method — the anchor generative_process_redesign ships the runnable residual-response flow operator, and companion structural_prior_encoding makes e_t non-bypassable by construction while the explicit support predicate controls when the operator is admissible.",
+  "composition_note": "",
+  "pattern_saturation": {
+    "generative_process_redesign": {
+      "share": 0.25,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    },
+    "structural_prior_encoding": {
+      "share": 0.25,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf evaluates whether corrected futures improve the true ordering of multiple VLA action candidates under rollback-simulator outcomes, rather than merely reducing visual or latent prediction discrepancy; this remains open after the prediction-space corrections of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and the training-time fidelity constraints of arxiv:2608.13489. — stakes: practitioners can spend WAM compute selecting a worse action despite prettier predictions, and intellectually the link from world-model accuracy to decision quality remains unvalidated.",
+      "reason": "fails removal test — rollback ranking is the anchor mechanism's falsification outcome, so promoting it to a second gap would add an evaluation leg rather than necessary machinery."
+    },
+    {
+      "gap": "The retrieved visual/WAM frontier inherits the assumption that prediction-observation disagreement is the control-relevant error signal, but no frontier leaf tests whether agreement in its chosen pixel, feature, or latent space is necessary for preserving action-outcome ordering. — stakes: a negative result would invalidate a shared justification behind correction, verification, and action-guidance claims, while a positive result is needed for principled deployment metrics instead of proxy chasing.",
+      "reason": "fails removal test — representation-space necessity is a separable scientific diagnostic; the anchor remains complete by declaring e_t as the observed input signal, separating it from support and routing computations, and testing its downstream causal effect directly."
+    }
+  ]
+}

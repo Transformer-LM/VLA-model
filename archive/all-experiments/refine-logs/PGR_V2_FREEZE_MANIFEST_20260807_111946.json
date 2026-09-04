@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.1",
+  "bundle_id": "pgr-audit-v2.1-freeze-20260807-111946",
+  "created_at": "2026-08-07T11:19:46+08:00",
+  "purpose": "Repaired hash-bound input bundle for the renewed PGR-Audit v2 execution jury",
+  "assurance": "candidate freeze; renewed jury verdict is still required for scientific execution",
+  "repair_basis": {
+    "jury_response_path": ".aris/traces/method-plan/2026-08-07_run01/008-experiment-plan-v2-jury.response.md",
+    "jury_response_sha256": "7ea5a1c062e68214cf39a902bb5cb8dd9ac7d6d36a327a7c80c9427469c20910",
+    "repairs": [
+      "primary task set now freezes from the sealed treatment-blind screen before detail reveal and C0",
+      "terminal incomplete sealed records permanently fail the affected claim gate and cannot be waived",
+      "real-robot force/torque or controller torque/force-estimate telemetry is mandatory before motion"
+    ]
+  },
+  "files": [
+    {
+      "path": "refine-logs/PGR_AUDIT_PROTOCOL.json",
+      "sha256": "a5de33299f74db4118e075f8db05cc9196f0816a014121a3b8d807b959662752"
+    },
+    {
+      "path": "AUTORESEARCH_CONFIG_HYBRID_EXPANDED.json",
+      "sha256": "c70f5361352f449800ba4e5af9dc408eb1d706c0f26549b393cbfe4fe788008c"
+    },
+    {
+      "path": "refine-logs/INPUT_MANIFEST.json",
+      "sha256": "03a90ce95b29eb70fbbb73c59f7e795f0d5336663c7f0d5c012d71940953e510"
+    },
+    {
+      "path": "refine-logs/FINAL_PROPOSAL.md",
+      "sha256": "d429c9fcc95b8e8c67e07b8388e7a3e70b6f0e317a66037428b6253edb04d9f7"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN.md",
+      "sha256": "06b1118f3c02270955580eddf1cccf657675e8ccab862205a5351e5d5152bc38"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER.md",
+      "sha256": "91536e2152f414421e91ecb6c9feb4c7740bb8544c8e76e7c62e7327b56c0847"
+    },
+    {
+      "path": "idea-stage/docs/research_contract.md",
+      "sha256": "f43c47c7da1984a91ac09ea24b070d6ffd2eb93f9f60301c4d0d3e201e9bf935"
+    },
+    {
+      "path": "refine-logs/PREREGISTRATION_LOCK.json",
+      "sha256": "77ff495b74a9102bd2948d22c0b202b1311b96ade26d4b8f623ad91657ec09d8"
+    }
+  ],
+  "canonical_hash_rule": "SHA256 over raw file bytes",
+  "mutation_rule": "Any byte change to a listed scientific input invalidates the jury verdict and requires a new manifest and renewed review"
+}

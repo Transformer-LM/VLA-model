@@ -1,0 +1,530 @@
+{
+  "trace_report": {
+    "likely_fatal_step": {
+      "step": "S1/S3 scaffold construction and phase-transition execution",
+      "why_picked_first": "The proposal claims to compare schedules with different phase membership/order while also saying that only phase text changes at the same predicate transitions. The demonstration predicates do not themselves produce phase text, and variable-length or reordered schedules have no declared total mapping to the common transition automaton or to pi0.5 action-chunk interruption. If this contract is undefined, every downstream outcome tensor measures an unspecified intervention."
+    },
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "D: N successful RoboCasa demonstrations",
+          "P_d: T_d x K binary task/contact predicate traces"
+        ],
+        "produces": [
+          "S: finite ordered scaffold library",
+          "ord_S: deterministic total order"
+        ],
+        "note": "Verbatim: 'Extract ordered phase-prompt schedules from successful RoboCasa demonstration logs using the existing binary task/contact predicates'. Predicate traces can produce event/segment sequences, but no producer is specified for prompt strings, prompt canonicalization, deduplication equivalence, or each phase's outgoing transition."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "RoboCasa MJCF asset template",
+          "g: chosen local geometry variable",
+          "terminal relation/6D-transform constraints"
+        ],
+        "produces": [
+          "C: finite matched composition set",
+          "C_null: unchanged-g controls",
+          "x_c: nominal reset specification per composition"
+        ],
+        "note": "Verbatim: 'editing one local geometry variable g ... while freezing the relation, terminal transform, initial robot state, camera, texture, and seed'. The edit level/range is not bound in the written procedure."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "frozen pi0.5 checkpoint E",
+          "observation o_t",
+          "s in S",
+          "phase-transition automaton"
+        ],
+        "produces": [
+          "action chunks a_t:t+h",
+          "rollout state",
+          "current scaffold phase"
+        ],
+        "note": "Verbatim: 'replacing only the phase text at the same preregistered RoboCasa predicate transitions'. Reading A uses one common transition list and indexes every schedule by it; schedules shorter than that list are undefined and reordered prompts can deadlock. Reading B gives each schedule its own transition rule, making execution total but changing more than phase text. Neither reading says whether an in-flight pi0.5 chunk is discarded when text changes."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "c in C",
+          "s in S",
+          "omega_j: common perturbation/executor seed",
+          "fresh simulator clone"
+        ],
+        "produces": [
+          "Y_cal[c,s,j] in {0,1}",
+          "collision/safety events",
+          "reset hash"
+        ],
+        "note": "All |C| x |S| x M_cal arms are observed. 'Execute E to termination' lacks a horizon/failure stop in the original text, so a schedule that never reaches its next predicate can run forever."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "Y_cal",
+          "ord_S"
+        ],
+        "produces": [
+          "r_cal[c,s]",
+          "s_star[c]=argmin_s r_cal[c,s]",
+          "s_fix=argmin_s mean_c r_cal[c,s]"
+        ],
+        "note": "Both selectors access the same complete calibration tensor, but have different hypothesis classes: s_star is composition-indexed and s_fix is constant. This is same-data, not same decision information."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "disjoint evaluation seeds",
+          "s_star[c]",
+          "s_fix",
+          "fresh clones"
+        ],
+        "produces": [
+          "r_eval[c,s_star[c]]",
+          "r_eval[c,s_fix]",
+          "G_E=|C|^-1 sum_c(r_eval[c,s_fix]-r_eval[c,s_star[c]))",
+          "paired CI"
+        ],
+        "note": "This is held out over perturbation seeds for the same calibrated compositions. It does not define s_star for a composition with no composition-specific calibration row."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "S",
+          "paired action traces and outcomes"
+        ],
+        "produces": [
+          "non-identifying flag",
+          "G_E=0 for singleton or genuinely action/outcome-equivalent arms"
+        ],
+        "note": "'Identical action traces' is ambiguous between byte equality, tolerance equality, one seed, or all enumerated common seeds; the original text also does not say whether executor sampling is coupled."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "s_star map",
+          "relation x terminal-transform strata",
+          "held-out common seeds"
+        ],
+        "produces": [
+          "permuted-assignment full-task outcomes"
+        ],
+        "note": "Within-stratum permutation is the identity when every exact transform stratum is singleton or when every assignment is equal, so it is then non-identifying rather than a valid pair-binding control."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "physical fixtures",
+          "Franka/RealSense",
+          "physical reset protocol",
+          "frozen E"
+        ],
+        "produces": [
+          "separate physical fixed-versus-pair-specific contrast"
+        ],
+        "note": "Fiducial equality observes only part of the physical state. Exact clone equivalence is unavailable; arm order/randomized blocks and separate reporting are required to make a distributional comparison."
+      }
+    ],
+    "dual_readings": [
+      {
+        "operative_term": "'same preregistered RoboCasa predicate transitions'",
+        "reading_A": "One task-level predicate automaton is common to every scaffold and phase text is indexed by transition slot.",
+        "reading_B": "Each extracted schedule carries the transition associated with its current phase, so transitions vary with the schedule.",
+        "result": "Reading A is not total for unconstrained variable-length schedules and can deadlock reordered schedules; Reading B changes the scheduler as well as text and therefore contradicts the stated controlled intervention. The wording and procedural defect is reading_robust."
+      },
+      {
+        "operative_term": "'x' and 'held-out'",
+        "reading_A": "x is an exact initial reset state.",
+        "reading_B": "x is a stable fixture composition/reset stratum and omega is the per-rollout perturbation.",
+        "result": "Under A, s_star(x) cannot be reused on disjoint perturbed states without defining identity; under B, the estimator is coherent but transductive across compositions. The applied wording patch selects B and explicitly limits the claim to held-out seeds."
+      },
+      {
+        "operative_term": "'same-information baseline'",
+        "reading_A": "Both selectors receive the same complete calibration tensor.",
+        "reading_B": "Both selectors have the same per-decision covariates/hypothesis class.",
+        "result": "A is true and B is false. The applied patch says same-calibration-tensor, constant-policy baseline."
+      },
+      {
+        "operative_term": "'identical action traces'",
+        "reading_A": "Byte-identical actions under every common enumerated seed.",
+        "reading_B": "Approximately equal actions or equality on only observed unpaired runs.",
+        "result": "Only A justifies forcing the empirical contrast to zero; the patch binds action equivalence to common seeds, exact actions, and identical outcomes."
+      }
+    ],
+    "unbound_parameters": [
+      {
+        "parameter": "H_max",
+        "original_use": "'execute E to termination'",
+        "finding": "No failure horizon/default/selection rule; a transition deadlock does not halt."
+      },
+      {
+        "parameter": "tau_reset",
+        "original_use": "'preregistered fiducial tolerances'",
+        "finding": "The reset acceptance threshold is behavior-changing but unnamed and unbound."
+      },
+      {
+        "parameter": "B_boot and CI resampling unit",
+        "original_use": "'paired bootstrap half-width' and 'confidence intervals'",
+        "finding": "Bootstrap replicate count/stopping stability and whether pairs or seeds are resampled are unspecified."
+      },
+      {
+        "parameter": "L_g",
+        "original_use": "'changing one preregistered local geometry variable g'",
+        "finding": "The intervention levels/range that create benchmark cases are unnamed; changing them changes which geometries the algorithm evaluates."
+      }
+    ],
+    "estimand_match": {
+      "declared": "Expected failure reduction over the preregistered matched-pair and perturbation process from a calibration-oracle pair-specific scaffold versus a global fixed scaffold.",
+      "constructed": "A finite-composition, calibration-conditional contrast evaluated on new perturbation seeds for those same compositions.",
+      "judgment": "Mismatch under a population/out-of-composition reading; match after the applied scope patch fixes C and the calibration fold and makes no held-out-composition claim. Evaluation labels are not leaked into selection if folds are genuinely disjoint."
+    },
+    "dry_run": {
+      "instance": "Two compositions A/B, two scaffolds s0/s1, 20 calibration and 20 evaluation outcomes per arm. A has failures (s0=0/20,s1=20/20), B reverses them; a flat-null tensor gives both schedules 10/20 failures. A tiny two-predicate executor also runs reference, reversed, short, and extra-length prompt schedules under both transition readings.",
+      "execution": {
+        "mode": "executed",
+        "script": "from collections import defaultdict\nimport random\nT=('held','aligned')\ndef act(p,q):\n q=dict(q)\n if p=='grasp': q['held']=True\n if p=='align' and q['held']: q['aligned']=True\n return q\ndef common(s,H=4):\n q={'held':False,'aligned':False}; i=0\n for _ in range(H):\n  if i>=len(s): return 'UNDEFINED_NO_PHASE_TEXT'\n  q=act(s[i],q)\n  if i<len(T) and q[T[i]]: i+=1\n  if q['held'] and q['aligned']: return 'SUCCESS'\n return 'TIMEOUT'\ndef specific(s):\n q={'held':False,'aligned':False}\n for p in s: q=act(p,q)\n return 'SUCCESS' if q['held'] and q['aligned'] else 'FAIL'\ndef rate(v): return sum(v)/len(v)\ndef score(cal,ev,order):\n xs=sorted(cal); star={x:min(order,key=lambda s:(rate(cal[x][s]),order.index(s))) for x in xs}; fix=min(order,key=lambda s:(sum(rate(cal[x][s]) for x in xs),order.index(s))); terms=[rate(ev[x][fix])-rate(ev[x][star[x]]) for x in xs]; return star,fix,sum(terms)/len(terms)\nfor n,s in {'ref':('grasp','align'),'rev':('align','grasp'),'short':('grasp',),'extra':('grasp','align','verify')}.items(): print('schedule',n,'common=',common(s),'schedule_specific=',specific(s))\ncal={'A':{'s0':[0]*20,'s1':[1]*20},'B':{'s0':[1]*20,'s1':[0]*20}}; ev=cal\nstar,fix,G=score(cal,ev,['s0','s1']); print('reversal','star=',star,'fix=',fix,'G_E=',G)\nflat={x:{s:[0,1]*10 for s in ('s0','s1')} for x in ('A','B')}; print('flat-null','star/fix/G_E=',score(flat,flat,['s0','s1']))\nsingle={x:{'s0':[0,1]*10} for x in ('A','B')}; print('singleton','star/fix/G_E=',score(single,single,['s0']))\ntry: cal['C']\nexcept KeyError: print('heldout-C','s_star(C)=UNDEFINED without C-specific calibration')\ndef perm(star,tr):\n g=defaultdict(list)\n for x,t in tr.items(): g[t].append(x)\n out=dict(star)\n for xs in g.values():\n  vals=[star[x] for x in xs]\n  for x,v in zip(xs,vals[1:]+vals[:1]): out[x]=v\n return out\nprint('permute-unique',perm(star,{'A':'T_A','B':'T_B'})); print('permute-shared',perm(star,{'A':'T','B':'T'})); print('physical-reset','same fiducial hash; hidden histories [0,1]; outcomes [1,0]')\nrng=random.Random(2305); gs=[]\nfor _ in range(10000):\n c={}; e={}\n for x in range(6):\n  c[x]={}; e[x]={}\n  for s in ('s0','s1'): c[x][s]=[rng.random()<.5 for _ in range(20)]; e[x][s]=[rng.random()<.5 for _ in range(20)]\n gs.append(score(c,e,['s0','s1'])[2])\nprint('null-MC-instance-contingent','mean_G_E=',round(sum(gs)/len(gs),6))",
+        "output": "schedule ref common= SUCCESS schedule_specific= SUCCESS\nschedule rev common= TIMEOUT schedule_specific= FAIL\nschedule short common= UNDEFINED_NO_PHASE_TEXT schedule_specific= FAIL\nschedule extra common= SUCCESS schedule_specific= SUCCESS\nreversal star= {'A': 's0', 'B': 's1'} fix= s0 G_E= 0.5\nflat-null star/fix/G_E= ({'A': 's0', 'B': 's0'}, 's0', 0.0)\nsingleton star/fix/G_E= ({'A': 's0', 'B': 's0'}, 's0', 0.0)\nheldout-C s_star(C)=UNDEFINED without C-specific calibration\npermute-unique {'A': 's0', 'B': 's1'}\npermute-shared {'A': 's1', 'B': 's0'}\nphysical-reset same fiducial hash; hidden histories [0,1]; outcomes [1,0]\nnull-MC-instance-contingent mean_G_E= -0.000498"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "r_cal and r_eval on A",
+          "value": "s0=0.0, s1=1.0",
+          "arithmetic": "0/20=0.0; 20/20=1.0"
+        },
+        {
+          "quantity": "r_cal and r_eval on B",
+          "value": "s0=1.0, s1=0.0",
+          "arithmetic": "20/20=1.0; 0/20=0.0"
+        },
+        {
+          "quantity": "s_star, s_fix, G_E on reversal tensor",
+          "value": "s_star(A)=s0, s_star(B)=s1, s_fix=s0, G_E=0.5",
+          "arithmetic": "mean calibration failures of s0 and s1 are both 0.5, so fixed ordering chooses s0; G_E=[(0-0)+(1-0)]/2=0.5"
+        },
+        {
+          "quantity": "flat-null and singleton",
+          "value": "G_E=0.0 in both",
+          "arithmetic": "Every compared rate is 10/20=0.5, or the only schedule is compared with itself."
+        },
+        {
+          "quantity": "null Monte Carlo sanity check",
+          "value": "mean G_E=-0.000498 over 10,000 repetitions",
+          "arithmetic": "Executed with independent Bernoulli(0.5) calibration/evaluation outcomes; this is distribution-contingent and is not used to prove unbiasedness."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "Under the common-transition reading, the one-phase schedule reaches phase index 1 after grasp and then returns UNDEFINED_NO_PHASE_TEXT; the reversed schedule repeats 'align' for all H=4 ticks and times out.",
+          "kind": "structural",
+          "why": "Without a length/mapping contract, indexing a shorter sequence has no value for the next common transition for any executor; without a horizon, a never-satisfied common predicate has no terminating failure branch."
+        },
+        {
+          "anomaly": "Under schedule-specific advancement, the same reversed schedule is executable and returns FAIL, but advancement occurs after one action chunk instead of the common RoboCasa predicate.",
+          "kind": "structural",
+          "why": "The second reading changes the transition mechanism, so it cannot simultaneously satisfy the claim that only phase text changes at common transitions."
+        },
+        {
+          "anomaly": "s_star(C) raises a missing-row condition for held-out composition C.",
+          "kind": "structural",
+          "why": "By definition argmin_s r_cal(C,s) requires C-specific calibration outcomes; disjoint seeds do not make C composition-held-out."
+        },
+        {
+          "anomaly": "Within-transform permutation is exactly unchanged when A and B occupy singleton transform strata.",
+          "kind": "structural",
+          "why": "A permutation group of size one has only the identity permutation."
+        },
+        {
+          "anomaly": "The constructed reversal gives G_E=0.5 whereas the flat null gives G_E=0.0.",
+          "kind": "instance_contingent",
+          "why": "The values depend on the invented outcome tensors; they only show that the estimator can represent reversal and correctly collapses on this null."
+        },
+        {
+          "anomaly": "Two resets with the same observed fiducial hash but hidden controller histories [0,1] produce outcomes [1,0].",
+          "kind": "structural",
+          "why": "This is a counterexample to the logical implication from equality of measured reset coordinates to equality of the full physical state; it does not claim that such drift occurs in the proposed experiment."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty demonstration set or no successful extracted schedules (|S|=0, k=0)",
+        "behavior": "argmin over S and the rollout tensor are undefined",
+        "finding": "The original guard covers one exposed schedule, not zero; patched to halt as an invalid/non-identifying benchmark without reporting G_E."
+      },
+      {
+        "probe": "singleton S",
+        "behavior": "executed s_star=s_fix=s0 and G_E=0.0",
+        "finding": null
+      },
+      {
+        "probe": "all outcome/action-equivalent arms",
+        "behavior": "fixed tie ordering selects the same scaffold and G_E=0.0 when equality is defined on paired common seeds",
+        "finding": "Original 'identical' test was ambiguous; patched to exact paired action-and-outcome equivalence."
+      },
+      {
+        "probe": "ties at every argmin",
+        "behavior": "the declared deterministic scaffold ordering resolves both s_star and s_fix",
+        "finding": null
+      },
+      {
+        "probe": "schedule shorter than the common transition sequence",
+        "behavior": "executed UNDEFINED_NO_PHASE_TEXT after the first transition",
+        "finding": "Blocking: the schedule/transition contract is not total."
+      },
+      {
+        "probe": "schedule never satisfies the next transition",
+        "behavior": "executed TIMEOUT at H=4; the original procedure has no H_max",
+        "finding": "Patched the missing timeout, but the underlying schedule semantics remain blocking."
+      },
+      {
+        "probe": "all exact terminal-transform strata are singletons",
+        "behavior": "executed permutation is the identity {'A':'s0','B':'s1'}",
+        "finding": "Patched construction/interpretation to require non-singleton strata for the pair-binding control."
+      },
+      {
+        "probe": "held-out composition with no calibration row",
+        "behavior": "s_star is undefined",
+        "finding": "Patched claims to held-out seeds on calibrated compositions; true held-out-composition selection would require a new selector or outer protocol."
+      },
+      {
+        "probe": "maximum declared sizes",
+        "behavior": "All tensors remain finite, but runtime is |C||S|(M_cal+M_eval) rollouts plus controls; no algebraic overflow appears.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "The frozen executor is held fixed and only phase text changes at the same transitions.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The outcome is executor-external rather than pi0.5 confidence.",
+        "established_by": "S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "No rollout changes the simulator state evaluated by a later arm.",
+        "established_by": "S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Physical fixture resets preserve the pre-intervention state distribution across arms.",
+        "established_by": "S9",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "randomized/block-balanced arm order",
+          "reset observables are sufficient balance covariates",
+          "no carryover outside the reset checklist"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "G_E is held-out scaffold regret.",
+        "established_by": "S5/S6",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "held-out means disjoint perturbation seeds, not unseen compositions",
+          "evaluation folds are never inspected during selection",
+          "the finite composition set and calibration fold are conditioned upon"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "s_fix is a same-information baseline.",
+        "established_by": "S5",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "same-information means access to the same calibration tensor; the selector classes intentionally differ"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The diagnostic identifies whether a fixed scaffold is necessary under unseen geometry.",
+        "established_by": "S5/S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Singleton/action-equivalent libraries carry zero identifying signal.",
+        "established_by": "S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "action equivalence is checked under common seeds for every enumerated arm and includes identical terminal outcomes"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Permuting s_star tests pair binding rather than a generally stronger schedule.",
+        "established_by": "S8",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "non-singleton exchangeable relation x terminal-transform strata",
+          "the assignment permutation and analysis are preregistered",
+          "the control is labeled non-identifying when assignments are constant"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The benchmark estimates the declared population/process expectation.",
+        "established_by": "S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "guarantee_attacks": [
+      {
+        "guarantee": "'every arm starts from an independent simulator clone ... so no rollout changes the state evaluated by a later arm'",
+        "counterexample_attempt": "Reused one mutable state object across arms; the declared clone operation prevents it in simulation.",
+        "result": "established for simulator clones, conditional rather than established for physical resets"
+      },
+      {
+        "guarantee": "'s_star equals s_fix by definition' for singleton/action-equivalent cases",
+        "counterexample_attempt": "Ran singleton and flat equal tensors; both returned the same deterministic scaffold and G_E=0.0. Approximate/unpaired trace equality can violate the premise, hence the wording patch.",
+        "result": "established only under the patched exact paired equivalence definition"
+      },
+      {
+        "guarantee": "'only the phase text' changes at common transitions",
+        "counterexample_attempt": "Ran a shorter and reordered scaffold under common and schedule-specific transition readings.",
+        "result": "violated/undefined; blocking"
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Choose one constant schedule by empirical risk minimization over the complete calibration tensor, then run that schedule for every composition.",
+      "naive_fairness": "It uses the same finite S, frozen executor, complete calibration outcomes, rollout budget, disjoint evaluation seeds, reset protocol, and deployment restrictions; it is simpler because it stores one schedule and has no composition-indexed lookup.",
+      "instance_behavior": {
+        "naive": "s_fix=s0; evaluation failure=(0.0+1.0)/2=0.5",
+        "mechanism": "s_star(A)=s0 and s_star(B)=s1; evaluation failure=(0.0+0.0)/2=0.0",
+        "divergence": "G_E=0.5 failure-probability points on the reversal tensor; G_E=0.0 on the flat null",
+        "kind": "instance_contingent"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "The selection layer can expose cancellation of opposite per-composition preferences while the same-data constant baseline cannot. This confirms only that the estimator represents the declared obstacle on this invented tensor; it does not repair the missing executable scaffold/transition contract or establish that real pi0.5 outcomes reverse."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The scaffold intervention is not executable/comparable as written: successful predicate traces do not produce the phase-prompt strings or deduplication/transition automata in S, and schedules that vary membership/order cannot both change only text at one common transition sequence and remain a total interface to frozen pi0.5. Restricting S to common slots would sidestep the declared phase-membership/order obstacle; giving each schedule its own transitions changes the controlled intervention. This requires redesign or a fully specified scaffold automaton, not a wording patch.",
+      "severity": "blocking",
+      "why_not_repaired": "The honest fix changes what the benchmark arm is: either it narrows the claim to prompt substitutions on a fixed automaton or it evaluates prompt-plus-transition automata. Both alter the load-bearing intervention that the candidate says diagnoses fixed scaffold necessity.",
+      "verbatim_step_quote": "1. Extract ordered phase-prompt schedules from successful RoboCasa demonstration logs using the existing binary task/contact predicates; input: demonstrations and predicate traces; output: the deduplicated, preregistered library S with a deterministic ordering. 3. Freeze the OpenPI pi0.5 weights and define executor E to receive the original observation plus the current phase text from s, advancing only at the same preregistered RoboCasa predicate transitions; input: x and s; output: a fully specified action-chunk rollout interface with no learned adapter.",
+      "executed_evidence": "Stdlib trace used one common predicate sequence T=(held,aligned) and a frozen prompt-to-action executor. Under the common-transition reading: schedule ('grasp','align')->SUCCESS; reordered ('align','grasp')->TIMEOUT after H=4 because 'held' never becomes true; short ('grasp',)->UNDEFINED_NO_PHASE_TEXT after transition 1 because no next prompt exists. Under a schedule-specific one-chunk transition reading, the reordered schedule becomes executable and returns FAIL, but the transition rule itself changed. Exact output: 'schedule ref common= SUCCESS schedule_specific= SUCCESS; schedule rev common= TIMEOUT schedule_specific= FAIL; schedule short common= UNDEFINED_NO_PHASE_TEXT schedule_specific= FAIL'. The missing text producer is visible before execution: binary predicate traces provide segment/event labels but no rule in S1 constructs natural-language phase strings, canonicalizes equivalent strings, attaches outgoing predicates, or specifies whether an in-flight pi0.5 action chunk is discarded when the phase changes.",
+      "reading_dependence": "reading_robust: with common transitions the library is not total for unconstrained membership/length and reordered schedules may deadlock; with schedule-specific transitions the benchmark changes more than phase text and loses its stated controlled comparison."
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "hook",
+      "value": "Here held-out means disjoint perturbation seeds for the same preregistered fixture compositions; ScaffoldFracture does not claim to select a scaffold for a composition with no composition-specific calibration outcomes.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 estimand and T2 held-out-C finding by downgrading the scope from unseen-composition generalization to same-composition held-out-seed diagnosis."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "For these definitions, x indexes a preregistered fixture composition together with its nominal reset specification, while omega indexes per-rollout perturbation and executor randomness; same-information means that s_star and s_fix are fit from the same complete calibration tensor, although s_star is composition-indexed and s_fix is restricted to a constant schedule.",
+      "outcome": "applied",
+      "delta_summary": "Selects the coherent reading of x and disambiguates the T1 same-information finding without changing the selector."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_reasoning",
+      "value": "SCOPE AND BINDINGS. G_E is a finite-benchmark contrast conditional on the preregistered composition set and calibration fold, evaluated on disjoint perturbation seeds; it is not an out-of-composition generalization estimand. Use common omega seeds across scaffold arms. Set H_max to the unchanged RoboCasa task episode horizon before outcomes and score failure at H_max; set tau_reset=2 mm translation/2 degrees rotation by default and replace that default only from a preregistered no-intervention sensor-repeatability pilot; set B_boot=10000 paired hierarchical bootstrap replicates over compositions then common seeds and double B_boot until both CI endpoints change by less than 0.005; choose M_cal/M_eval from a worst-case Bernoulli p=0.5 precision calculation or a separately preregistered pilot before scaffold labels/evaluation outcomes are revealed; and define L_g as two default intervention levels (reference plus the largest collision-free CAD edit that preserves the terminal predicate), fixed before rollouts. Physical conclusions additionally assume randomized block order and that the logged reset covariates adequately control carryover.",
+      "outcome": "applied",
+      "delta_summary": "Binds the T1 method parameters, makes the actual G_E estimand match S5-S6, prevents timeout and CI ambiguity, and states the T4 physical-reset assumptions."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "10. Treat |S|=0 as an invalid benchmark and halt without G_E; define action-equivalence only when scaffold arms produce byte-identical action chunks and identical external outcomes under every paired common seed, otherwise retain the measured G_E. 11. Build at least two compositions in every relation-by-terminal-transform stratum used by the permutation control and label the control non-identifying when a stratum or the assignment vector is constant. 12. In physical trials, randomize scaffold arm order within reset blocks, enforce tau_reset on the logged reset checklist, preserve common perturbation blocks where possible, and report the physical contrast separately from exact-clone simulation.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T3 zero-library, action-equivalence, singleton permutation, and non-equivalent physical-reset edge cases without altering the core selector."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "gap_closure[0].how_closed",
+      "value": "The reported adaptation value is conditional on compositions that each have a calibration row and is evaluated only on disjoint perturbation seeds; no held-out-composition policy claim is made.",
+      "outcome": "applied",
+      "delta_summary": "Aligns the gap-closure narrative with the T1 estimand check and avoids laundering s_star over calibrated x into unseen-composition evidence."
+    }
+  ],
+  "final_candidate": {
+    "title": "ScaffoldFracture: An Executor-Conditional Test of Fixed Skill Scaffolds",
+    "hook": "On matched target-reference pairs, a frozen executor can reverse which ordered phase scaffold succeeds even when the relation and terminal transform are unchanged. ScaffoldFracture measures that reversal as held-out executor-conditional scaffold regret before any online intervention. Here held-out means disjoint perturbation seeds for the same preregistered fixture compositions; ScaffoldFracture does not claim to select a scaffold for a composition with no composition-specific calibration outcomes.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal, is supported by the predicted direction of held-out scaffold regret and full-task success on geometry-fracture pairs under the same frozen OpenPI pi0.5 executor. Shape (c) was viable because the artifact adds no policy parameters, but it was rejected because the contribution is an isolating measurement rather than a claim that a smaller controller wins.",
+    "gap_closure": [
+      {
+        "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required — stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "companion_pattern": null,
+        "how_closed": "Closed by a matched-pair, reset-clone outcome tensor that holds the frozen executor and terminal relation fixed, varies one preregistered local functional-geometry feature, and measures on disjoint rollout seeds whether a per-pair scaffold selected by direct downstream outcomes beats the same-information globally fixed scaffold; corpus support is thin in functional-geometry VLA control, so the C02 recipe is instantiated as an executor-conditional robotics diagnostic. The reported adaptation value is conditional on compositions that each have a calibration row and is evaluated only on disjoint perturbation seeds; no held-out-composition policy claim is made."
+      }
+    ],
+    "core_mechanism": "ScaffoldFracture is a diagnostic benchmark, not a controller: it uses the existing RoboCasa/MuJoCo stack, RoboCasa demonstration logs and task predicates, and a frozen OpenPI pi0.5 executor E. A modest self-built ScaffoldFracture-Pairs resource contains matched target-reference fixture pairs generated from the same RoboCasa asset template by changing one preregistered local geometry variable g, such as approach-side clearance or rim orientation, while holding the named relation, terminal 6D transform, initial robot pose, camera, texture, and perturbation seed fixed; a small set of corresponding 3D-printed Franka Panda fixtures tests transfer. The finite scaffold library S is the deduplicated set of ordered phase-prompt schedules observed in successful RoboCasa demonstrations for that relation, and each schedule drives the unchanged executor E by replacing only the phase text at the same preregistered RoboCasa predicate transitions. For an initial reset state x, scaffold s, and perturbation seed omega, the external oracle label Y_E(x,s,omega) is one exactly when E completes the existing RoboCasa relation-success predicate without a MuJoCo collision event or a Franka safety-controller violation; it is explicitly not a label of geometry-only feasibility or of another executor's risk. Every arm starts from an independent simulator clone of x, or a physical fixture reset on the robot, so no evidence is accumulated across interventions and no rollout changes the state evaluated by a later arm. Split the preregistered seeds into calibration and evaluation folds, define r_cal(x,s) and r_eval(x,s) as empirical failure frequencies, choose the pairwise oracle scaffold s_star(x)=argmin_s r_cal(x,s), and choose the simple same-information baseline s_fix=argmin_s mean_x r_cal(x,s), with ties broken by a fixed scaffold ordering. The central reported object is held-out scaffold regret G_E=mean_x[r_eval(x,s_fix)-r_eval(x,s_star(x))], accompanied by the full paired outcome tensor, confidence intervals, and the geometry-null split in which g is unchanged. If S has one member, if all members produce identical action traces, or if the scaffold-evaluation budget exposes only one member, s_star equals s_fix by definition, G_E is reported as zero, and no pair-adaptation claim is permitted. For these definitions, x indexes a preregistered fixture composition together with its nominal reset specification, while omega indexes per-rollout perturbation and executor randomness; same-information means that s_star and s_fix are fit from the same complete calibration tensor, although s_star is composition-indexed and s_fix is restricted to a constant schedule.",
+    "core_mechanism_reasoning": "BLOCK 1 - PREMISES ledger:\nP1. Existing RoboCasa relation-success predicates plus MuJoCo contact events and the Franka safety controller score downstream execution independently of pi0.5's own confidence; this supports an evaluator-independent oracle for the named executor.\nP2. Some relations admit at least two demonstrably successful phase schedules whose relative downstream risk changes with local pair geometry - untested - falsification target; if the deduplicated library S is singleton or action-equivalent, the benchmark must report zero identifying signal.\nP3. Reset-cloned simulator states and physical fixture resets preserve the pre-intervention state distribution across scaffold arms; this is checked by state-hash equality in simulation and preregistered fiducial tolerances on the Franka setup.\nOBSERVATION-MODEL premise. Calibration and evaluation seeds are sampled independently from the preregistered RoboCasa perturbation distribution, and every x-by-s arm is observed rather than selectively logged, so estimates are complete for that finite executor/library/distribution but make no claim about arbitrary real-world states.\nESTIMAND. G_E is the expected reduction in downstream failure probability, over the preregistered matched-pair and perturbation process, obtained by the calibration-oracle pair-specific scaffold instead of the globally best fixed scaffold for the same frozen executor E and finite library S; it is neither general geometric feasibility nor online selective risk.\nParameters. M_cal=20 and M_eval=20 rollout seeds are defaults and are increased before unblinding until the paired bootstrap half-width is below epsilon_CI; epsilon_CI=0.10 is the default precision target and is tightened only when the preregistered robot-trial budget permits. The safety bound F_safe is taken unchanged from the deployed Franka safety-controller configuration rather than tuned on outcomes.\nBLOCK 2 - NAIVE-BASELINE AUDIT, branch (i). The runnable naive diagnostic uses the exact same calibration outcome tensor to select s_fix and reports its aggregate full-task failure on the matched test pairs. It silently assumes that an aggregate best scaffold can reveal pairwise scaffold adequacy, which is false when geometry-induced reversals cancel in the aggregate; ScaffoldFracture confronts that failure with reset-cloned within-pair counterfactuals and held-out seeds, while retaining s_fix as the same-information simple baseline and explicitly collapsing to it for singleton S. Matched counterfactual evaluation is a standard tool, so the contribution is honestly benchmark-grade; the domain-specific structure is that sequential robot programs have mutually exclusive state-changing outcomes that require simulator cloning or physical resets and executor-specific downstream scoring.\nBLOCK 3 - design rationale. The anchor stands alone because adding a learned selector or controller would confound the question of whether a fixed scaffold is necessary with the quality of a new model. Online probing was rejected because probe-induced state changes would invalidate a fixed pre-probe estimand unless a dynamic state model were added, and persistent spatial anchors were rejected because the diagnostic needs no state carried across motion. SCOPE AND BINDINGS. G_E is a finite-benchmark contrast conditional on the preregistered composition set and calibration fold, evaluated on disjoint perturbation seeds; it is not an out-of-composition generalization estimand. Use common omega seeds across scaffold arms. Set H_max to the unchanged RoboCasa task episode horizon before outcomes and score failure at H_max; set tau_reset=2 mm translation/2 degrees rotation by default and replace that default only from a preregistered no-intervention sensor-repeatability pilot; set B_boot=10000 paired hierarchical bootstrap replicates over compositions then common seeds and double B_boot until both CI endpoints change by less than 0.005; choose M_cal/M_eval from a worst-case Bernoulli p=0.5 precision calculation or a separately preregistered pilot before scaffold labels/evaluation outcomes are revealed; and define L_g as two default intervention levels (reference plus the largest collision-free CAD edit that preserves the terminal predicate), fixed before rollouts. Physical conclusions additionally assume randomized block order and that the logged reset covariates adequately control carryover.",
+    "core_mechanism_steps": "1. Extract ordered phase-prompt schedules from successful RoboCasa demonstration logs using the existing binary task/contact predicates; input: demonstrations and predicate traces; output: the deduplicated, preregistered library S with a deterministic ordering.\n2. Build ScaffoldFracture-Pairs by editing one local geometry variable g in a RoboCasa MJCF asset template while freezing the relation, terminal transform, initial robot state, camera, texture, and seed; input: existing RoboCasa assets; output: matched geometry-fracture pairs and an unchanged-g null split.\n3. Freeze the OpenPI pi0.5 weights and define executor E to receive the original observation plus the current phase text from s, advancing only at the same preregistered RoboCasa predicate transitions; input: x and s; output: a fully specified action-chunk rollout interface with no learned adapter.\n4. For every calibration tuple (x,s,omega), restore an independent MuJoCo clone, execute E to termination, and record the external relation-success and safety events; input: clone, scaffold, seed; output: Y_E and a state-reset hash, with no result fed into any later rollout.\n5. Compute r_cal, s_star(x), and s_fix from the complete calibration tensor using the fixed tie rule; input: calibration outcomes; output: the pairwise oracle schedule and same-information fixed-scaffold baseline.\n6. On disjoint evaluation seeds, rerun both s_star(x) and s_fix from fresh clones and compute G_E plus paired confidence intervals; input: held-out clones and the two schedules; output: non-tautological held-out downstream scaffold regret.\n7. Run the singleton and action-equivalence probes before interpretation; input: S and recorded action traces; output: an automatic non-identifying flag and G_E=0 whenever only one distinct executable scaffold is exposed.\n8. Permute s_star assignments within relation- and terminal-transform-matched pairs and rerun the held-out arms; input: the oracle schedule map; output: the negative-control full-task success used to test whether pair binding, rather than a generally stronger schedule, carries the effect.\n9. Reproduce the fixed-versus-pairwise comparison on reset 3D-printed fixtures with a Franka Panda, Intel RealSense observations, the same frozen OpenPI pi0.5 executor, and the deployed safety controller; input: preregistered physical pairs; output: a narrowly scoped ecological-validity check. 10. Treat |S|=0 as an invalid benchmark and halt without G_E; define action-equivalence only when scaffold arms produce byte-identical action chunks and identical external outcomes under every paired common seed, otherwise retain the measured G_E. 11. Build at least two compositions in every relation-by-terminal-transform stratum used by the permutation control and label the control non-identifying when a stratum or the assignment vector is constant. 12. In physical trials, randomize scaffold arm order within reset blocks, enforce tau_reset on the logged reset checklist, preserve common perturbation blocks where possible, and report the physical contrast separately from exact-clone simulation.",
+    "falsification_prediction": "Run frozen OpenPI pi0.5 on ScaffoldFracture-Pairs in RoboCasa/MuJoCo, then on the reset Franka Panda fixtures, comparing the calibration-selected pairwise scaffold with s_fix on disjoint perturbation trials. If fixed scaffolds are genuinely inadequate, held-out G_E and full-task success will increase on the geometry-fracture split relative to the unchanged-g null split, without changing model weights. The single load-bearing variable is the pair-bound oracle schedule s_star(x); as a negative control, permuting s_star across relation- and terminal-transform-matched pairs should drive downstream full-task success back toward s_fix and raise relation-failure or safety-event frequency. The claim is falsified if the held-out gain vanishes, survives permutation, appears only in simulation, or if S is singleton/action-equivalent.",
+    "compute_budget": "Approximately 10 A100 GPU-days for frozen OpenPI pi0.5 rollout inference and repeated RoboCasa evaluation, $0 paid-API cost, plus approximately 4 Franka Panda robot-days and a modest 3D-printed fixture set; this is comfortable within the stated 4xA100 and real-robot envelope.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "openalex:W4403786340",
+        "delta": "Abstract-only inference: MATCH POLICY transports a stored key-frame pose sequence by registration, whereas ScaffoldFracture constructs reset-cloned matched pairs and directly measures held-out downstream regret between the globally fixed and executor-conditional phase schedules."
+      },
+      {
+        "paper_id": "openalex:W4404350837",
+        "delta": "Abstract-only inference: SPOT conditions execution on a supplied object-centric pose trajectory, whereas ScaffoldFracture tests whether one ordered scaffold remains adequate by scoring alternative schedules for the same frozen executor from identical initial-state clones."
+      },
+      {
+        "paper_id": "openalex:W4405956290",
+        "delta": "Abstract-only inference: CoA-VLA injects a predefined four-stage affordance chain, whereas ScaffoldFracture produces an executor-specific paired outcome tensor that can reveal when phase membership or order must change with functional geometry."
+      }
+    ],
+    "almost_prior_paper_id": "openalex:W4403786340",
+    "what_step_was_missed": "MATCH POLICY would have needed to execute every candidate scaffold from reset clones of terminal-transform-matched pair geometries, select pairwise and globally fixed schedules on one perturbation fold, and compare their downstream outcomes on a disjoint fold.",
+    "signature_terms": [
+      "executor conditional scaffold regret",
+      "matched functional geometry pairs",
+      "fixed phase scaffold diagnostic",
+      "reset cloned rollout oracle",
+      "pair specific phase necessity"
+    ],
+    "alias_terms": [
+      "policy conditioned treatment effect",
+      "behavioral program invariance test",
+      "counterfactual plan adequacy audit",
+      "finite option regret decomposition"
+    ],
+    "composition_note": "A single controlled-diagnostic move is deep and complete here because the scientific deliverable is the independently scored paired-outcome tensor that identifies whether a fixed scaffold is necessary for a named executor; adding a controller, learned selector, intervention loop, or representation change would introduce a second claim and destroy the diagnostic's clean attribution."
+  },
+  "falsification_rewritten": false
+}

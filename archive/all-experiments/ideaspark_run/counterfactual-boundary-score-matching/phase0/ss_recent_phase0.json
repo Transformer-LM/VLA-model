@@ -1,0 +1,615 @@
+[
+ {
+  "title": "Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation",
+  "title_norm": "pointing vla typed spatial grounding interfaces for vision language action manip",
+  "abstract": "Vision-language-action (VLA) models often expose spatial grounding through autoregressive text coordinates or opaque action tokens, creating brittle interfaces between multimodal reasoning and robot execution. We present Pointing-VLA, a typed hidden-state spatial readout built on Embodied-R1. Geometry-specific heads predict normalized points, object-functional grounding (OFG) heatmaps, and visual trajectories without serializing geometry as text. For the evaluated Bridge/WidowX and physical pick-place deployments, an explicit execution contract assigns PICK to source-conditioned OFG and PLACE to Pointing, providing direct stage-aligned spatial targets. Pointing-VLA achieves SOTA performance on Bridge/WidowX, averaging 72.9\\% across the evaluated four-task set without Bridge-specific finetuning under collision-enabled CuRobo execution. Pointing and OFG show complementary strengths across native and cross-dataset evaluations. The OFG/contact readout transfers to NORA-1.5, preserving or improving success while reducing recorded controller time by more than 20$\\times$; typed heads are also 6.68--6.90$\\times$ faster than Embodied-R1 text decoding on a shared external suite. When integrated as spatial guidance for a $\\pi_{0.5}$ action policy, Pointing-VLA raises autonomous real-robot success from 52.7\\% to 80.7\\% across three visual contexts. These results establish typed spatial readouts as an efficient, inspectable interface between embodied reasoning and robot execution.",
+  "tldr": "The results establish typed spatial readouts as an efficient, inspectable interface between embodied reasoning and robot execution as an efficient, inspectable interface between embodied reasoning and robot execution.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Xiwen Chen",
+   "Zelin Li",
+   "Zhiruo Zhou",
+   "Huiming Chen",
+   "Chenwei Wang",
+   "Xiaojun Zhu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "aaef4e8a3bd4a3a4f6673b2d4bce0a3237783cb9",
+  "paper_id": "arxiv:2608.23138",
+  "doi": "",
+  "arxiv_id": "2608.23138",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/aaef4e8a3bd4a3a4f6673b2d4bce0a3237783cb9",
+  "published_iso": "2026-08-24",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "X-DiffVLA: X-Embodied Diffusion Action Heads for Vision-Language-Action Models",
+  "title_norm": "x diffvla x embodied diffusion action heads for vision language action models",
+  "abstract": "Learning universal policies from cross-embodied data remains a fundamental challenge in robotics. Although Vision-Language-Action (VLA) models are pre-trained on large and diverse datasets, they typically rely on embodiment-specific fine-tuning to achieve strong performance in downstream tasks. This requirement severely limits their generalization capability and restricts knowledge transfer across embodiments performing similar tasks. To overcome these limitations, we focus on cross-embodied settings with shared robotic bases and heterogeneous end-effectors, and propose X-DiffVLA, a diffusion-based VLA model featuring a unified cross-embodied action head. X-DiffVLA can leverage the generative strengths of diffusion models to capture both the diversity and latent correlations in cross-embodied datasets. Specifically, we introduce Embodiment Forcing, a classifier-free guidance technique to implicitly steer action generation toward embodiment-specific functional components, capturing fine-grained structural nuances without explicit supervision. In addition, a Morphological Tree Diffusion approach is designed to strengthen behavioral correlations across diverse end-effectors, maximizing the transferability of heterogeneous demonstrations. Experimental results across RoboCasa and Isaac Gym, covering different embodiments from grippers to dexterous hands, show that X-DiffVLA achieves state-of-the-art performance, with improvements of 15.3% and 12.5%, respectively. Real-world evaluations further validate the robustness of the proposed framework and its effectiveness in scalable cross-embodied policy learning.",
+  "tldr": "X-DiffVLA, a diffusion-based VLA model featuring a unified cross-embodied action head, is proposed, and Embodiment Forcing is introduced, a classifier-free guidance technique to implicitly steer action generation toward embodiment-specific functional components, capturing fine-grained structural nuances without explicit supervision.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Boyu Li",
+   "Chaoyi Xu",
+   "Haoqi Yuan",
+   "Xinrun Xu",
+   "Börje F. Karlsson",
+   "Dongbin Zhao"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "c6c0f17d789e690ca4d152a7329b8fb7829132e3",
+  "paper_id": "dblp:journals/corr/abs-2605-25044",
+  "doi": "10.48550/arXiv.2605.25044",
+  "arxiv_id": "2605.25044",
+  "dblp_key": "journals/corr/abs-2605-25044",
+  "paper_url": "https://www.semanticscholar.org/paper/c6c0f17d789e690ca4d152a7329b8fb7829132e3",
+  "published_iso": "2026-05-24",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "HSC-VLA: Hierarchical Scene-Clearing for Robust Bimanual Manipulation in Dense Clutter",
+  "title_norm": "hsc vla hierarchical scene clearing for robust bimanual manipulation in dense cl",
+  "abstract": "Modern Vision--Language--Action models often suffer from critical instruction-following failures in high-density manipulation environments, where task-irrelevant visual clutter dilutes attention, corrupts grounding, and substantially degrades performance in complex long-horizon scenarios. To overcome the representation bottleneck of monolithic end-to-end architectures, we propose HSC-VLA, a hierarchical framework that decouples high-level visual-semantic reasoning from low-level, high-frequency sensorimotor execution through an explicit scene-clearing abstraction. HSC-VLA employs a high-level Brain to decompose long-horizon tasks and to generate task-specific scene masks that preserve task-relevant geometry while suppressing distractors. The filtered observations are then passed to a low-level Cerebellum, a diffusion-based policy that performs bimanual manipulation using only mask-filtered vision and proprioception. Extensive experiments in densely cluttered supermarket shelves demonstrate that HSC-VLA achieves 86.7\\% aggregate success under high-density clutter, surpassing the best monolithic baseline ($\\pi_0$-Full FT at 34.3\\%) by 52.4\\%. HSC-VLA also exhibits strong long-horizon performance, reaching 72\\% on clutter sorting and 66\\% on restocking, demonstrating strong robustness and effective failure recovery in complex cluttered manipulation.",
+  "tldr": "HSC-VLA is proposed, a hierarchical framework that decouples high-level visual-semantic reasoning from low-level, high-frequency sensorimotor execution through an explicit scene-clearing abstraction and exhibits strong robustness and effective failure recovery in complex cluttered manipulation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhen Liu",
+   "Xinyu Ning",
+   "Zhe Hu",
+   "Xinxin Xie",
+   "Yitong Liu",
+   "Zhongzhu Pu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "362f28a1607124c789927343acdc3b6bf4f1e277",
+  "paper_id": "dblp:journals/corr/abs-2603-07484",
+  "doi": "10.48550/arXiv.2603.07484",
+  "arxiv_id": "2603.07484",
+  "dblp_key": "journals/corr/abs-2603-07484",
+  "paper_url": "https://www.semanticscholar.org/paper/362f28a1607124c789927343acdc3b6bf4f1e277",
+  "published_iso": "2026-03-08",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study",
+  "title_norm": "can explicit physical feasibility benefit vla learning an empirical study",
+  "abstract": "Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning. While this paradigm has shown strong performance, prevailing VLA training procedures do not explicitly supervise hard physical constraints such as obstacle avoidance or kinematic feasibility. As a result, the geometric structure underlying physically feasible behavior must be inferred only implicitly from demonstrations. In this paper, we study whether introducing explicit feasibility supervision can provide effective structured guidance for VLA policies. We formulate a simple geometry-grounded feasibility objective and integrate it into the training stage of a diffusion-based VLA policy. To evaluate this idea systematically, we use obstacle-aware manipulation as a controlled probe of geometry-dependent physical feasibility. Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime. These findings indicate that explicit feasibility signals can effectively complement imitation-based VLA learning, highlighting their potential for developing more reliable VLA policies.",
+  "tldr": "Empirical results show that augmenting VLA training with feasibility supervision improves both physical reliability and overall task performance, while also enhancing learning efficiency in the low-data regime.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yubai Wei",
+   "Chen Wu",
+   "Hashem Haghbayan"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+  "paper_id": "dblp:journals/corr/abs-2604-17896",
+  "doi": "10.48550/arXiv.2604.17896",
+  "arxiv_id": "2604.17896",
+  "dblp_key": "journals/corr/abs-2604-17896",
+  "paper_url": "https://www.semanticscholar.org/paper/dd324415c99589f1f7f9b63eaa3a64a7ae042df2",
+  "published_iso": "2026-04-20",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "STARRY: Spatial-Temporal Action-Centric World Modeling for Robotic Manipulation",
+  "title_norm": "starry spatial temporal action centric world modeling for robotic manipulation",
+  "abstract": "Robotic manipulation requires reasoning about future spatial-temporal interactions and geometric constraints, yet existing Vision-Language-Action (VLA) policies often leave predictive representation weakly coupled with action execution, causing failures in tasks requiring precise spatial-temporal coordination. We propose STARRY, a world-model-enhanced action-generation policy that aligns spatial-temporal prediction and action generation by jointly denoising future spatial-temporal latents and actions through a unified diffusion process. To bridge 2D visual tokens and 3D metric control, STARRY introduces Geometry-Aware Selective Attention Modulation (GASAM), which converts predicted depth and end-effector geometry into token-aligned weights for selective action-attention modulation. On RoboTwin 2.0, STARRY achieves 93.82% / 93.30% average success under Clean and Randomized settings across 50 bimanual tasks. Real-world experiments show that STARRY improves average success from 42.5% to 70.8% compared with $\\pi_{0.5}$. These results demonstrate the effectiveness of action-centric spatial-temporal world modeling for spatially and temporally demanding robotic manipulation.",
+  "tldr": "STARRY is a world-model-enhanced action-generation policy that aligns spatial-temporal prediction and action generation by jointly denoising future spatial-temporal latents and actions through a unified diffusion process and introduces Geometry-Aware Selective Attention Modulation (GASAM), which converts predicted depth and end-effector geometry into token-aligned weights for selective action-attention modulation.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yu Tian",
+   "Yurun Jin",
+   "Bin Yu",
+   "Yukun Shi",
+   "Hao Wu",
+   "Chi Harold Liu"
+  ],
+  "citations": 7,
+  "source": "semanticscholar",
+  "source_id": "f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+  "paper_id": "dblp:journals/corr/abs-2604-26848",
+  "doi": "10.48550/arXiv.2604.26848",
+  "arxiv_id": "2604.26848",
+  "dblp_key": "journals/corr/abs-2604-26848",
+  "paper_url": "https://www.semanticscholar.org/paper/f134eaaeb2cf6d4ac3526993199033b7f858a35b",
+  "published_iso": "2026-04-29",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "GuidedVLA: Specifying Task-Relevant Factors via Plug-and-Play Action Attention Specialization",
+  "title_norm": "guidedvla specifying task relevant factors via plug and play action attention sp",
+  "abstract": "Vision-Language-Action (VLA) models aim for general robot learning by aligning action as a modality within powerful Vision-Language Models (VLMs). Existing VLAs rely on end-to-end supervision to implicitly enable the action decoding process to learn task-relevant features. However, without explicit guidance, these models often overfit to spurious correlations, such as visual shortcuts or environmental noise, limiting their generalization. In this paper, we introduce GuidedVLA, a framework designed to manually guide the action generation to focus on task-relevant factors. Our core insight is to treat the action decoder not as a monolithic learner, but as an assembly of functional components. Individual attention heads are supervised by manually defined auxiliary signals to capture distinct factors. As an initial study, we instantiate this paradigm with three specialized heads: object grounding, spatial geometry, and temporal skill logic. Across simulation and real-robot experiments, GuidedVLA improves success rates in both in-domain and out-of-domain settings compared to strong VLA baselines. Finally, we show that the quality of these specialized factors correlates positively with task performance and that our mechanism yields decoupled, high-quality features. Our results suggest that explicitly guiding action-decoder learning is a promising direction for building more robust and general VLA models.",
+  "tldr": "GuidedVLA is introduced, a framework designed to manually guide the action generation to focus on task-relevant factors and suggest that explicitly guiding action-decoder learning is a promising direction for building more robust and general VLA models.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Xiaosong Jia",
+   "Bowen Yang",
+   "Zuhao Ge",
+   "X. Nie",
+   "Yuchen Zhou",
+   "Cunxin Fan"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "e53d86ef632de55eb728b048871f264442331248",
+  "paper_id": "dblp:journals/corr/abs-2605-12369",
+  "doi": "10.48550/arXiv.2605.12369",
+  "arxiv_id": "2605.12369",
+  "dblp_key": "journals/corr/abs-2605-12369",
+  "paper_url": "https://www.semanticscholar.org/paper/e53d86ef632de55eb728b048871f264442331248",
+  "published_iso": "2026-05-12",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Contrastive Conceptor Activation Steering (COAST): Unlocking Vision-Language-Action Models through Hidden States",
+  "title_norm": "contrastive conceptor activation steering coast unlocking vision language action",
+  "abstract": "Vision-Language-Action (VLA) models leverage powerful perceptual priors from web-scale Vision-Language Model (VLM) pre-training, yet they remain surprisingly brittle in practice, frequently failing at simple robotic tasks. To mitigate this, we propose Contrastive Conceptor Activation Steering (COAST). COAST builds on the notion of a\"conceptor\", a linear operator that soft-projects data into the principal components of a target distribution. COAST uses conceptors to identify success-critical subspaces for a target robotic task from a few examples of success and failure rollouts. At inference time, it steers VLA latents into these identified success subspaces to improve task outcomes. Across three architecturally distinct neural policies (flow-matching VLA, autoregressive VLA, and Diffusion Policy), COAST improves absolute mean simulation and real-robot task success rate by over 20 and 40% respectively. The activation subspace geometry reveals that failure modes share substantial structure across tasks while success representations remain largely task-specific. When tasks share similar failure modes, this structure enables previously fitted conceptors to improve performance on new tasks without refitting. Ultimately, our results suggest that current VLAs retain substantial task-relevant knowledge in their latent representations, and that the action expert's decoding bottleneck could be mitigated by steering its residual stream toward task-relevant subspaces. COAST provides a lightweight, training-free path to unlocking these latent capabilities by steering the model towards its own\"success\"distributions.",
+  "tldr": "The results suggest that current VLAs retain substantial task-relevant knowledge in their latent representations, and that the action expert's decoding bottleneck could be mitigated by steering its residual stream toward task-relevant subspaces.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Miranda Muqing Miao",
+   "Subin Kim",
+   "Brandon Yang",
+   "Lyle Ungar"
+  ],
+  "citations": 2,
+  "source": "semanticscholar",
+  "source_id": "ff54d4f113ca3ef58b8cad2da072a7a7ffb84bdb",
+  "paper_id": "dblp:journals/corr/abs-2605-17144",
+  "doi": "10.48550/arXiv.2605.17144",
+  "arxiv_id": "2605.17144",
+  "dblp_key": "journals/corr/abs-2605-17144",
+  "paper_url": "https://www.semanticscholar.org/paper/ff54d4f113ca3ef58b8cad2da072a7a7ffb84bdb",
+  "published_iso": "2026-05-16",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation",
+  "title_norm": "learning action manifold with multi view latent priors for robotic manipulation",
+  "abstract": "This paper tackles spatial perception and manipulation challenges in Vision-Language-Action (VLA) models. To address depth ambiguity from monocular input, we leverage a pre-trained multi-view diffusion model to synthesize latent novel views and propose a Geometry-Guided Gated Transformer (G3T) that aligns multi-view features under 3D geometric guidance while adaptively filtering occlusion noise. To improve action learning efficiency, we introduce Action Manifold Learning (AML), which directly predicts actions on the valid action manifold, bypassing inefficient regression of unstructured targets like noise or velocity. Experiments on LIBERO, RoboTwin 2.0, and real-robot tasks show our method achieves superior success rate and robustness over SOTA baselines. Project page: https://junjxiao.github.io/Multi-view-VLA.github.io/.",
+  "tldr": "A pre-trained multi-view diffusion model is leverage to synthesize latent novel views and a Geometry-Guided Gated Transformer (G3T) that aligns multi-view features under 3D geometric guidance while adaptively filtering occlusion noise is proposed.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Junjin Xiao",
+   "Dongyang Li",
+   "Yandan Yang",
+   "Shuang Zeng",
+   "Tongxi Lin",
+   "Xinyuan Chang"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "8cb14cd9dafae88163a7685336a02ac6c41ed646",
+  "paper_id": "dblp:journals/corr/abs-2605-11832",
+  "doi": "10.48550/arXiv.2605.11832",
+  "arxiv_id": "2605.11832",
+  "dblp_key": "journals/corr/abs-2605-11832",
+  "paper_url": "https://www.semanticscholar.org/paper/8cb14cd9dafae88163a7685336a02ac6c41ed646",
+  "published_iso": "2026-05-12",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Geometry Guided Self-Consistency for Physical AI",
+  "title_norm": "geometry guided self consistency for physical ai",
+  "abstract": "State-of-the-art physical AI models generate a chunk of actions per inference through diffusion or flow matching, iteratively refining an initial noise sample into an action trajectory. Because this inference process is inherently stochastic, committing to a single trajectory per round is brittle, and this brittleness compounds across the many sequential rounds that comprise a complete episode. We introduce KeyStone, an inference-time self-consistency method for diffusion-based action generation that draws $K$ candidate action chunks in parallel from a shared model context, clusters them in continuous action space, and returns the medoid of the largest cluster -- no additional model required. Two properties make this practical. First, the compact nature of action trajectories makes diffusion inference memory-bandwidth bound, leaving spare compute capacity to run $K$ chains in parallel with no additional wall-clock latency. Second, unlike token or pixel spaces where distance carries no semantic meaning and selection requires a learned judge, action chunks are geometrically structured such that Euclidean distance directly reflects physical similarity, making selection principled and judge-free. Across diverse vision-language-action models (VLAs) and world-action models (WAMs), KeyStone improves task success rates by up to \\textbf{13.3\\%} over single-trajectory sampling with negligible latency overhead, while having on par accuracy with model-based selectors at no training cost. We open source KeyStone at https://github.com/dywsjtu/keystone.",
+  "tldr": "KeyStone is introduced, an inference-time self-consistency method for diffusion-based action generation that draws candidate action chunks in parallel from a shared model context, clusters them in continuous action space, and returns the medoid of the largest cluster -- no additional model required.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Yinwei Dai",
+   "Zhuofu Chen",
+   "Lijie Yang",
+   "Ravi Netravali"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+  "paper_id": "dblp:journals/corr/abs-2605-08638",
+  "doi": "10.48550/arXiv.2605.08638",
+  "arxiv_id": "2605.08638",
+  "dblp_key": "journals/corr/abs-2605-08638",
+  "paper_url": "https://www.semanticscholar.org/paper/4a71dc5d2b6b4ea2a6477ec4515d8294e3c75383",
+  "published_iso": "2026-05-09",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving",
+  "title_norm": "from representational complementarity to dual systems synergizing vlm and vision",
+  "abstract": "Vision-Language-Action (VLA) driving augments end-to-end (E2E) planning with language-enabled visual backbones, yet it remains unclear how vision-language models (VLMs) differ from standard vision-only encoders and whether these differences survive policy learning. We study this question under a unified VLM-hidden + diffusion-policy paradigm, comparing multiple VLM families/scales (e.g., InternVL3 and Qwen3VL) with vision-only encoders (e.g., ResNet, ViT, and EVA-CLIP). We ask three questions: how similar are their representations, do residual differences induce meaningful behavioral differences, and how can they improve accuracy-cost trade-offs? We find that VLM and vision-only policies share a substantial common subspace after policy learning, yet both retain non-transferable residual subspaces. Using a Shared-Unique SAE, we show that these residual factors are behaviorally relevant: vision-only encoders are stronger in simple, geometry-dominant scenarios, whereas VLMs are stronger in long-tail, semantically complex, and interaction-heavy cases. The two policy families also exhibit distinct driving styles, with vision-only models being more conservative on average and VLMs more assertive. Exploiting the complementarity between a VLM branch and a ViT branch yields an oracle upper bound of 93.58 PDMS on NAVSIM. We introduce HybridDriveVLA, which runs both branches and uses a learned trajectory scorer for selection, improving PDMS to 92.10 (+1.30 over the VLM baseline), and DualDriveVLA, a fast-slow variant that invokes the VLM in only 15% of scenarios, achieving 91.00 PDMS (+0.20) with about a 1.9x latency speedup over the VLM baseline. Code will be released.",
+  "tldr": "It is found that VLM and vision-only policies share a substantial common subspace after policy learning, yet both retain non-transferable residual subspaces, and residual factors are behaviorally relevant: vision-only encoders are stronger in simple, geometry-dominant scenarios, whereas VLMs are stronger in long-tail, semantically complex, and interaction-heavy cases.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Sining Ang",
+   "Yuguang Yang",
+   "Chenxu Dang",
+   "Canyu Chen",
+   "Cheng Chi",
+   "Haiyan Liu"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "ba93bc4608fa8ef5a94db1a920ba4ebf72955434",
+  "paper_id": "dblp:journals/corr/abs-2602-10719",
+  "doi": "10.48550/arXiv.2602.10719",
+  "arxiv_id": "2602.10719",
+  "dblp_key": "journals/corr/abs-2602-10719",
+  "paper_url": "https://www.semanticscholar.org/paper/ba93bc4608fa8ef5a94db1a920ba4ebf72955434",
+  "published_iso": "2026-02-11",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Global Convergence of Wasserstein Policy Gradient for Entropy-Regularized Reinforcement Learning",
+  "title_norm": "global convergence of wasserstein policy gradient for entropy regularized reinfo",
+  "abstract": "Wasserstein policy gradient (WPG) is a policy optimization method for reinforcement learning (RL) that exploits the optimal-transport geometry of action distributions. For the entropy-regularized RL objective, WPG evolves each state-conditional policy by transporting it along the action gradient of the soft Q-function together with a Langevin-type diffusion. Despite its appeal for continuous-control problems, its global convergence properties remain poorly understood. Standard Langevin analyses do not directly apply, because the RL objective depends on the policy through the Bellman recursion rather than through a static convex functional, and the Langevin drift is determined by the soft Q-function, whose regularity must be controlled along the policy iterates. In this paper, we develop a global convergence theory for WPG by exploiting the Bellman structure of entropy-regularized RL. We show that the role usually played by convexity can be replaced by a Bellman-based argument: the soft Bellman residual admits a statewise KL representation with respect to a Gibbs policy; Bellman contraction relates this residual to the global optimality gap; and a Bellman resolvent identity connects value improvement to relative Fisher information. Combined with a uniform log-Sobolev inequality (LSI) for the evolving Gibbs family, these ingredients yield a distributional Polyak--\\L{}ojasiewicz condition. We further establish the regularity and uniform bounds needed to control the discretization error, thereby obtaining geometric contraction up to a discretization bias. Conceptually, our analysis shows that although entropy-regularized RL is not convex in the usual flat sense, the Bellman recursion induces a favorable Polyak--Lojasiewicz-type (PL) geometry that supports global convergence of WPG.",
+  "tldr": "A global convergence theory for WPG is developed by exploiting the Bellman structure of entropy-regularized RL, which shows that although entropy-regularized RL is not convex in the usual flat sense, the Bellman recursion induces a favorable Polyak--Lojasiewicz-type (PL) geometry that supports global convergence of WPG.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhao Zhu",
+   "Rui Gao",
+   "Shuang Li"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "6009a40c4b14cf0fcc68308d9ff0436d14e194df",
+  "paper_id": "dblp:journals/corr/abs-2605-26078",
+  "doi": "10.48550/arXiv.2605.26078",
+  "arxiv_id": "2605.26078",
+  "dblp_key": "journals/corr/abs-2605-26078",
+  "paper_url": "https://www.semanticscholar.org/paper/6009a40c4b14cf0fcc68308d9ff0436d14e194df",
+  "published_iso": "2026-05-25",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation",
+  "title_norm": "flowhoi flow based semantics grounded generation of hand object interactions for",
+  "abstract": "Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. An embodiment-agnostic interaction representation that captures this structure would make manipulation behaviors easier to validate and transfer across robots. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and employing a motion-text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7$\\times$ higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40$\\times$ inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.",
+  "tldr": "FlowHOI is proposed, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Huajian Zeng",
+   "Lingyun Chen",
+   "Jiaqi Yang",
+   "Yuan Zhang",
+   "Fan Shi",
+   "Peidong Liu"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "d2c4fc3915649b76e92ebe0dd5eb594df222816d",
+  "paper_id": "dblp:journals/corr/abs-2602-13444",
+  "doi": "10.48550/arXiv.2602.13444",
+  "arxiv_id": "2602.13444",
+  "dblp_key": "journals/corr/abs-2602-13444",
+  "paper_url": "https://www.semanticscholar.org/paper/d2c4fc3915649b76e92ebe0dd5eb594df222816d",
+  "published_iso": "2026-02-13",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Goal2Skill: Long-Horizon Manipulation with Adaptive Planning and Reflection",
+  "title_norm": "goal2skill long horizon manipulation with adaptive planning and reflection",
+  "abstract": "Recent vision-language-action (VLA) systems have demonstrated strong capabilities in embodied manipulation. However, most existing VLA policies rely on limited observation windows and end-to-end action prediction, which makes them brittle in long-horizon, memory-dependent tasks with partial observability, occlusions, and multi-stage dependencies. Such tasks require not only precise visuomotor control, but also persistent memory, adaptive task decomposition, and explicit recovery from execution failures. To address these limitations, we propose a dual-system framework for long-horizon embodied manipulation. Our framework explicitly separates high-level semantic reasoning from low-level motor execution. A high-level planner, implemented as a VLM-based agentic module, maintains structured task memory and performs goal decomposition, outcome verification, and error-driven correction. A low-level executor, instantiated as a VLA-based visuomotor controller, carries out each sub-task through diffusion-based action generation conditioned on geometry-preserving filtered observations. Together, the two systems form a closed loop between planning and execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery. Experiments on representative RMBench tasks show that the proposed framework substantially outperforms representative baselines, achieving a 32.4% average success rate compared with 9.8% for the strongest baseline. Ablation studies further confirm the importance of structured memory and closed-loop recovery for long-horizon manipulation.",
+  "tldr": "This work proposes a dual-system framework for long-horizon embodied manipulation that explicitly separates high-level semantic reasoning from low-level motor execution, enabling memory-aware reasoning, adaptive replanning, and robust online recovery.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zhen Liu",
+   "Xinyu Ning",
+   "Zhengyu Hu",
+   "Xinxin Xie",
+   "Weize Li",
+   "Zhipeng Tang"
+  ],
+  "citations": 5,
+  "source": "semanticscholar",
+  "source_id": "da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+  "paper_id": "dblp:journals/corr/abs-2604-13942",
+  "doi": "10.48550/arXiv.2604.13942",
+  "arxiv_id": "2604.13942",
+  "dblp_key": "journals/corr/abs-2604-13942",
+  "paper_url": "https://www.semanticscholar.org/paper/da853cd33f24b4c02a8bf45b17e6fb544b0411ec",
+  "published_iso": "2026-04-15",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN",
+  "title_norm": "wnm 3d a world navigation model with 3d scene conditioning for closed loop vln",
+  "abstract": "Recent vision-language navigation (VLN) systems increasingly adapt pretrained vision-language models (VLMs) into vision-language-action (VLA) policies that map egocentric observations and language instructions directly to navigation actions. Although semantically capable, such action-centric training does not explicitly model how the agent's visual observations should evolve under its predicted motion. Generative world-action models (WAMs) jointly predict future observations and actions, yet existing WAMs for continuous VLN do not condition joint future-view and action generation on geometry-aware representations inferred from the observed history. We present WNM-3D, a generative World Navigation Model with 3D scene conditioning for continuous VLN. To consolidate past observations into persistent scene context, a frozen feed-forward geometry encoder extracts geometry-aware representations from the monocular egocentric RGB history, and a trainable 3D Scene-to-Token Adapter converts them into a fixed-length prefix in the token space of the world-action Diffusion Transformer. Through block-causal attention, this prefix conditions every future video-action block, providing a shared geometric context for both future-view and action generation. We train WNM-3D through supervised world-action fine-tuning on A*-generated demonstrations, DAgger-style adaptation on policy-visited states, and Counterfactual DanceGRPO refinement for closed-loop execution. Experiments on GN-Bench show that WNM-3D outperforms strong VLM-based navigation policies and its 2D-conditioned counterpart in closed-loop navigation. Stage-wise ablations further show that DAgger-SFT provides the larger success-rate gain, while Counterfactual DanceGRPO subsequently improves both navigation success and path efficiency.",
+  "tldr": "WNM-3D, a generative World Navigation Model with 3D scene conditioning for continuous VLN, is presented, showing that WNM-3D outperforms strong VLM-based navigation policies and its 2D-conditioned counterpart in closed-loop navigation.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Yuehao Huang",
+   "Yunzi Wu",
+   "Xiaotao Zhang",
+   "Xinhai Li",
+   "Jian Dong",
+   "Jiajun Lv"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "74257100ad8c273b90dbaaba190e1f699ec9df0a",
+  "paper_id": "arxiv:2608.07267",
+  "doi": "",
+  "arxiv_id": "2608.07267",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/74257100ad8c273b90dbaaba190e1f699ec9df0a",
+  "published_iso": "2026-08-07",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Generative Control as Optimization: Time Unconditional Flow Matching for Adaptive and Robust Robotic Control",
+  "title_norm": "generative control as optimization time unconditional flow matching for adaptive",
+  "abstract": "Diffusion models and flow matching have become a cornerstone of robotic imitation learning, yet they suffer from a structural inefficiency where inference is often bound to a fixed integration schedule that is agnostic to state complexity. This paradigm forces the policy to expend the same computational budget on trivial motions as it does on complex tasks. We introduce Generative Control as Optimization (GeCO), a time-unconditional framework that transforms action synthesis from trajectory integration into iterative optimization. GeCO learns a stationary velocity field in the action-sequence space where expert behaviors form stable attractors. Consequently, test-time inference becomes an adaptive process that allocates computation based on convergence--exiting early for simple states while refining longer for difficult ones. Furthermore, this stationary geometry yields an intrinsic, training-free safety signal, as the field norm at the optimized action serves as a robust out-of-distribution (OOD) detector, remaining low for in-distribution states while significantly increasing for anomalies. We validate GeCO on standard simulation benchmarks and demonstrate seamless scaling to pi0-series Vision-Language-Action (VLA) models. As a plug-and-play replacement for standard flow-matching heads, GeCO improves success rates and efficiency with an optimization-native mechanism for safe deployment. Video and code can be found at https://hrh6666.github.io/GeCO/",
+  "tldr": "Generative Control as Optimization (GeCO), a time-unconditional framework that transforms action synthesis from trajectory integration into iterative optimization, is introduced, a time-unconditional framework that transforms action synthesis from trajectory integration into iterative optimization.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Zunzhe Zhang",
+   "Runhan Huang",
+   "Yicheng Liu",
+   "Shaoting Zhu",
+   "Linzhan Mou",
+   "Hang Zhao"
+  ],
+  "citations": 1,
+  "source": "semanticscholar",
+  "source_id": "bead4e40b0071bc673fb84a4e5674da3825fae35",
+  "paper_id": "dblp:journals/corr/abs-2603-17834",
+  "doi": "10.48550/arXiv.2603.17834",
+  "arxiv_id": "2603.17834",
+  "dblp_key": "journals/corr/abs-2603-17834",
+  "paper_url": "https://www.semanticscholar.org/paper/bead4e40b0071bc673fb84a4e5674da3825fae35",
+  "published_iso": "2026-03-18",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Flows on Measure Spaces and Applications in Machine Learning",
+  "title_norm": "flows on measure spaces and applications in machine learning",
+  "abstract": "Flows on measure spaces have long been examined in stochastic analysis and have recently attracted significant interest in machine learning, leading to intriguing research questions that often fall outside the scope of existing theory. Normalizing flows, score-based diffusion, and flow matching models are among the most powerful generative neural methods and rely on the geometry of measure spaces. In particular, the Wasserstein metric and optimal transport techniques have advanced the field in recent years. However, involving different Riemannian-like metrics on measure spaces, e.g., by the framework of right-invariant metrics on the group of diffeomorphisms and their action on objects, e.g., densities, and designing transport inference functionals with advanced properties like equivariance led to new neural models. Generative models can be conditioned on (degraded) data, which leads to new developments in the solution of Bayesian inverse problems. Viewing transformers as interacting particle systems introduced a new mathematical perspective on these complex systems and shed light on their clustering behavior. Finally, learning neural models comes with new challenges in (stochastic) optimization, such as accelerated optimization, operator splitting, and mirror descent on measure spaces, ensemble filtering methods, the treatment of high dimensions via slicing or Fourier random features, as well as scalability questions and related lifting to infinite-dimensional spaces. The workshop will bring together scientists interested in different aspects of flows on measure spaces to further understand and develop their analysis, in particular to address questions in deep generative learning and to develop improved optimization methods for measure spaces.",
+  "tldr": "This workshop will bring together scientists interested in different aspects of flows on measure spaces to further understand and develop their analysis, in particular to address questions in deep generative learning and to develop improved optimization methods for measure spaces.",
+  "year": 2026,
+  "venue": "Oberwolfach Reports",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "P. Rigollet",
+   "Giuseppe Savaré",
+   "Gabriele Steidl",
+   "François-Xavier Vialard"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "1b7964b018b34b568f4cf1f95796ca94972ea497",
+  "paper_id": "doi:10.4171/owr/2026/13",
+  "doi": "10.4171/owr/2026/13",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://ems.press/content/serial-article-files/53606",
+  "published_iso": "2026-07-21",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Geometric Foundations of Stochastic and Quantum Dynamics",
+  "title_norm": "geometric foundations of stochastic and quantum dynamics",
+  "abstract": "We develop a geometric formulation of stochastic dynamics in which noise, diffusion, path probabilities, fluctuation theorems, and entropy production arise from the intrinsic geometry of an evolving manifold rather than from externally imposed randomness. Within the theory of moving manifolds, we establish a curvature-noise correspondence: fluctuations are governed by the inverse curvature tensor, while entropy production is controlled by curvature deformation. The invariant continuity law on a moving hypersurface yields a geometric Fokker-Planck equation, and curvature-velocity coupling generates a quadratic Onsager-Machlup functional determining path weights. The resulting entropy functional satisfies a curvature-driven monotonicity law, providing a geometric derivation of the Second Law. In two dimensions, the curvature invariant reduces to Gaussian curvature and encodes topology, so topological transitions produce discrete entropy jumps. When the ambient space carries a Minkowskian signature, the same curvature-kinetic quadratic form that generates dissipative thermal weights produces oscillatory phase weights, and the Laplace-Beltrami operator governing entropy evolution acquires a Schr\\\"odinger-type structure. This provides a geometric resolution of the apparent distinction between classical stochastic behaviour and quantum dynamics. These results show that stochastic behaviour, thermodynamic irreversibility, and quantum transition amplitudes are unified within the moving manifold framework. Geometry does not merely accommodate stochasticity; stochastic behaviour arises as a consequence of deterministic geometric evolution. The theory predicts curvature-controlled anisotropic diffusion, entropy jumps at topology-changing events, and a geometric thermal-quantum crossover in which classical stochastic weights and quantum amplitudes are generated by the same curvature-kinetic action.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "David V. Svintradze"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "8de3190c9ccb997d1efc8f0a1b8c516284bad3a8",
+  "paper_id": "arxiv:2603.28292",
+  "doi": "",
+  "arxiv_id": "2603.28292",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/8de3190c9ccb997d1efc8f0a1b8c516284bad3a8",
+  "published_iso": "2026-03-30",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Training, learning and inference: unified dynamics of neural systems",
+  "title_norm": "training learning and inference unified dynamics of neural systems",
+  "abstract": "We define an atomic generation fact f=(u,tau,omega,z;rho), recording the origin, realized transformation, concrete occurrence, generated result and relation role. Compiled into a Generation-Fact Graph (GFG), these facts provide an AI-native, compilable scientific fact substrate preserving generation histories. We establish a GFG-based recursive scientific process in which analysis, intervention, replay and validation form facts for later cycles. Using nanoGPT, we establish unified training-learning dynamics. Training is the evolution of a parameter-optimizer system with state and memory: each actual training action enters the receiving state and produces a finite-amplitude nonlinear functional response conditioned by that state and target-specific update geometry. Learning is the persistent reorganization of distributed functional support by these responses; capability formation, maintenance, decline or recovery becomes observable when target-specific states are evaluated against their readout boundaries. Three primary coordinates - target-boundary state, target-specific update geometry and parameter-Adam receiving state - yield a second-order predictor operating before post-update outputs are read. On held-out runs, it achieved 91.43% accuracy and 91.49% macro-averaged recall across four transitions. We further establish inference as a frozen projection of training-learning dynamics. Component gating and rollback show causal recruitment and non-additive combination of query-conditioned support formed during training, deriving organizational conditions realized by Attention. Controlled feedback indicates possible double-edged reinforcement effects. ResNet/CIFAR-100 and diffusion/CIFAR-10 experiments confirm receiving-state-conditioned responses, persistent support reorganization and frozen inference projection beyond nanoGPT.",
+  "tldr": "A GFG-based recursive scientific process in which analysis, intervention, replay and validation form facts for later cycles are established, establishing unified training-learning dynamics and inference as a frozen projection of training-learning dynamics.",
+  "year": 2026,
+  "venue": "",
+  "publication_types": [],
+  "authors": [
+   "Mian Wang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "c6be5e959e325398885bd7bdeb20044e38908a5d",
+  "paper_id": "arxiv:2608.20965",
+  "doi": "",
+  "arxiv_id": "2608.20965",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/c6be5e959e325398885bd7bdeb20044e38908a5d",
+  "published_iso": "2026-08-21",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Semantic-Contact Fields for Category-Level Generalizable Tactile Tool Manipulation",
+  "title_norm": "semantic contact fields for category level generalizable tactile tool manipulati",
+  "abstract": "Generalizing tool manipulation requires both semantic planning and precise physical control. Modern generalist robot policies, such as Vision-Language-Action (VLA) models, often lack the physical grounding required for contact-rich tool manipulation. Conversely, existing contact-aware policies that leverage tactile or haptic sensing are typically instance-specific and fail to generalize across diverse tool geometries. Bridging this gap requires learning representations that are both semantically transferable and physically grounded, yet a fundamental barrier remains: diverse real-world tactile data are prohibitive to collect at scale, while direct zero-shot sim-to-real transfer is challenging due to the complex nonlinear deformation of soft tactile sensors. To address this, we propose Semantic-Contact Fields (SCFields), a unified 3D representation that fuses visual semantics with dense extrinsic contact estimates, including contact probability and force. SCFields is learned through a two-stage Sim-to-Real Contact Learning Pipeline: we first pre-train on large-scale simulation to learn geometry-aware contact priors, then fine-tune on a small set of real data pseudo-labeled via geometric heuristics and force optimization to align real tactile signals. The resulting force-aware representation serves as the dense observation input to a diffusion policy, enabling physical generalization to unseen tool instances. Experiments on scraping, crayon drawing, and peeling demonstrate robust category-level generalization, significantly outperforming vision-only and raw-tactile baselines. Project page: https://kevinskwk.github.io/SCFields/.",
+  "tldr": "Semantic-Contact Fields (SCFields), a unified 3D representation that fuses visual semantics with dense extrinsic contact estimates, including contact probability and force, is proposed, enabling physical generalization to unseen tool instances.",
+  "year": 2026,
+  "venue": "arXiv.org",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "K. Ma",
+   "Heng Zhang",
+   "Weisi Lin",
+   "M. Shou",
+   "Yan Wu"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "fd713056f07fd05b0412b268082a20ca962b2886",
+  "paper_id": "dblp:journals/corr/abs-2602-13833",
+  "doi": "10.48550/arXiv.2602.13833",
+  "arxiv_id": "2602.13833",
+  "dblp_key": "journals/corr/abs-2602-13833",
+  "paper_url": "https://www.semanticscholar.org/paper/fd713056f07fd05b0412b268082a20ca962b2886",
+  "published_iso": "2026-02-14",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "Synthesis, structural elucidation, DFT, and antimicrobial evaluation of novel Cu(II)-hydrazone Schiff base complexes",
+  "title_norm": "synthesis structural elucidation dft and antimicrobial evaluation of novel cu ii",
+  "abstract": "Herein, we report the synthesis, characterization, antimicrobial evaluation, and density functional theory (DFT) analysis of two hydrazone Schiff bases (L1 and L2) and their homoleptic and heteroleptic copper(II) complexes (Cu(L1)2, Cu(L2)2, and CuL1L2). The compounds were successfully characterized via Fourier transform infrared (FTIR), ultraviolet-visible (UV-Vis), and nuclear magnetic resonance (NMR) spectroscopies, as well as melting point determination, conductivity and magnetic susceptibility measurements, mass spectrometry, thermogravimetry, and X-ray crystallography. Antimicrobial activity was evaluated against some bacteria and fungi using the agar diffusion method. DFT analysis was performed with a hybrid functional, B3LYP, and Def2TZVP basis set. NMR and FTIR spectra confirmed ligand formation and coordination of the metal through imine and carbonyl groups. A single crystal was obtained only for L1 after several attempts. Conductivity data, UV-visible spectra, and magnetic moment values of the complexes were all in favor of the square planar geometry. All the synthesized compounds displayed satisfactory antimicrobial potency, with L2 and CuL1L2 showing superior activity against Pseudomonas flurescens and Candida albican, compared to the standard drug (Chloramphenicol). The DFT results not only corroborated the experimental findings but also provided valuable insights into the mechanism of action of the synthesized compounds. \nKEY WORDS: Antimicrobial resistance, DFT, Homoleptic and heteroleptic copper(II) complexes, Hydrazone Schiff base, p-toluic acid hydrazide \nBull. Chem. Soc. Ethiop. 2026, 40(10), 2097-2114.                                  \nDOI:  https://dx.doi.org/10.4314/bcse.v40i10.4                                                                ",
+  "tldr": "The synthesized compounds displayed satisfactory antimicrobial potency, with L2 and CuL1L2 showing superior activity against Pseudomonas flurescens and Candida albican, compared to the standard drug (Chloramphenicol), and the DFT results provided valuable insights into the mechanism of action of the synthesized compounds.",
+  "year": 2026,
+  "venue": "Bulletin of the Chemical Society of Ethiopia",
+  "publication_types": [
+   "JournalArticle"
+  ],
+  "authors": [
+   "Emmanuel Olusola Adeyemi",
+   "Olaide Olalekan Wahab",
+   "Olatubosun Akele",
+   "Afamefuna Elvis Okoronkwo"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "6331362f4ef1ca18bc2ec7cb065ccfa3860525d3",
+  "paper_id": "doi:10.4314/bcse.v40i10.4",
+  "doi": "10.4314/bcse.v40i10.4",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.ajol.info/index.php/bcse/article/download/331300/311457",
+  "published_iso": null,
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ },
+ {
+  "title": "A Multi-Scale Physics-Guided Dynamic Animation Generation Framework for Digital Media Characters based on Coupled Simulation and Optimization Theory",
+  "title_norm": "a multi scale physics guided dynamic animation generation framework for digital ",
+  "abstract": "This study proposes a multi-scale physics-guided dynamic animation generation framework based on coupled simulation and optimization theory. At the theoretical level, this framework constructs a unified variational energy functional. This functional incorporates the geometric displacement field, posture representation field, and lighting texture field into the same optimization system. Simultaneously, at the theoretical level, multi-field coupling convergence is achieved through the collaborative solution of the partial differential physical field and the probability diffusion field. At the model level, this model introduces a multi-scale physics-guided audio coding mechanism (MS-DEAM-P), combining a convolutional-attention multi-scale fusion structure with spectral-physical coupling variational constraints. A mapping relationship between acoustic actuation and dynamic states is also established. For posture modeling, a continuous spatiotemporal convolutional integral encoder (PAAE-V) is constructed to achieve curvature-continuous posture evolution. At the geometric detail level, this study proposes a sub-pixel continuous grayscale field model (FSEE-S). Furthermore, this model constructs a diffusion-physical coupling loss function to form a unified training objective. The experiments were conducted using a self-constructed DM-PhysChar dataset. This dataset contains 48 characters, 3120 sequences, 60fps, 23,468 facial vertices, and 78 skeletal nodes. Results show that, in terms of physical consistency error, the proposed model reduces the average error by 32.4% and 18.7% compared to the Diff-Anim and MS-Only models, respectively. Simultaneously, in the continuous pose temporal variation metric, the peak fluctuation amplitude in high-frequency action intervals is reduced by approximately 41%. In sub-pixel geometry evaluation, the average vertex error decreased from 0.84 mm to 0.49 mm, and the normal deviation angle decreased from 2.37° to 1.18°. Furthermore, under high-noise driving conditions with an SNR of 5 dB, the diffusion convergence stability rate improved to 94.6%, a 21.3 percentage point improvement over the pure diffusion model. Cross-scale response ratio analysis indicates that the model can adaptively adjust scale weights according to action category. Numerically, the scale response ratio reaches 1.48 ± 0.29 in micro-expression scenes.",
+  "tldr": "",
+  "year": 2026,
+  "venue": "International Congress on Information and Communication Technology",
+  "publication_types": [
+   "Conference"
+  ],
+  "authors": [
+   "Xiaoyu Zhang"
+  ],
+  "citations": 0,
+  "source": "semanticscholar",
+  "source_id": "7d69bdbb2aca8443527e11b4c8008557b2fa8559",
+  "paper_id": "doi:10.1109/ICICT68280.2026.11511071",
+  "doi": "10.1109/ICICT68280.2026.11511071",
+  "arxiv_id": "",
+  "dblp_key": "",
+  "paper_url": "https://www.semanticscholar.org/paper/7d69bdbb2aca8443527e11b4c8008557b2fa8559",
+  "published_iso": "2026-04-15",
+  "from_query": [
+   "VLA action diffusion functional geometry"
+  ]
+ }
+]

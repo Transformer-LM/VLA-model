@@ -1,0 +1,9 @@
+AVAILABLE_GPUS 2 3 0 1
+LAUNCH run=R101 variant=shared seed=11 physical_gpu=2
+LAUNCH run=R111 variant=oracle seed=11 physical_gpu=3
+LAUNCH run=R102 variant=shared seed=22 physical_gpu=0
+LAUNCH run=R112 variant=oracle seed=22 physical_gpu=1
+AVAILABLE_GPUS 2 3 0 1
+LAUNCH run=R103 variant=shared seed=33 physical_gpu=2
+LAUNCH run=R113 variant=oracle seed=33 physical_gpu=3
+M1A_GATE kill

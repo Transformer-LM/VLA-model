@@ -1,0 +1,3 @@
+# Latest geometry verifier scoop check
+
+See [GEOMETRY_VERIFIER_SCOOP_CHECK_20260829.md](GEOMETRY_VERIFIER_SCOOP_CHECK_20260829.md).

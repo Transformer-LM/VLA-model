@@ -1,0 +1,67 @@
+# @package _global_
+defaults:
+  - override /data: libero_p027c_personal_v21
+  - override /model: fastwam_p027c_libero_ac7
+  - _self_
+
+batch_size: 1
+num_workers: 2
+
+model:
+  mot_checkpoint_mixed_attn: false
+  compile_training_denoise: false
+
+lr_scheduler_type: cosine
+learning_rate: 1.0e-5
+num_epochs: 1
+max_steps: 1
+log_every: 1
+save_every: 0
+save_final: false
+eval_every: 0
+eval_num_inference_steps: 2
+
+# E0 must fail closed: it is valid only when the intended four-rank
+# DeepSpeed/ZeRO-1 job completes a finite, non-skipped optimizer update.
+require_finite_train_step: true
+require_optimizer_step: true
+require_positive_grad_norm: true
+expected_world_size: 4
+expected_distributed_type: DEEPSPEED
+expected_zero_stage: 1
+
+# Parameter-efficient gate: only the random 7D action interfaces and the
+# 8D proprio projection are optimized; the pretrained 6B MoT backbones stay
+# frozen. Exact names/count prevent an accidental full-model run.
+trainable_parameter_prefixes:
+  # FastWAM registers video_expert/action_expert before their MoT aliases;
+  # named_parameters(remove_duplicate=True) therefore exposes these names.
+  - video_expert.action_embedding.
+  - action_expert.action_encoder.
+  - action_expert.head.
+  - proprio_encoder.
+expected_trainable_numel: 76807
+expected_trainable_parameter_names:
+  - video_expert.action_embedding.weight
+  - video_expert.action_embedding.bias
+  - action_expert.action_encoder.weight
+  - action_expert.action_encoder.bias
+  - action_expert.head.weight
+  - action_expert.head.bias
+  - proprio_encoder.weight
+  - proprio_encoder.bias
+
+gradient_accumulation_steps: 1
+mixed_precision: bf16
+max_grad_norm: 1.0
+weight_decay: 1.0e-2
+seed: 2701
+resume: null
+
+wandb:
+  enabled: false
+  workspace: null
+  project: fast-wam
+  name: p027c-libero-ac7-e0
+  group: null
+  mode: offline

@@ -1,0 +1,18 @@
+[
+  {
+    "finding": "The load-bearing pairwise quotient target is algebraically equivalent to a simpler direct centered candidate-residual scorer under the same labels, inputs, model pass, calibration, and deployment budget, so T5 is equivalent_to_naive and the mechanism does not earn its claimed pairwise identification move.",
+    "severity": "blocking",
+    "why_not_repaired": "This coincides with the candidate's declared obstacle and contribution. Making the quotient load-bearing would require a new estimand, supervision intervention, or restriction that changes the mechanism rather than a wording or procedural patch.",
+    "verbatim_step_quote": "5. Train the permutation-equivariant quotient head on each full bundle, subtract its mean correction across candidates, and optimize pairwise center and interval losses; inputs are h_t, e_t, candidate actions, and WAM futures, and outputs are c_k and w_{ij}.",
+    "executed_evidence": "For s0=[0.55,0.45,0.25] and Y=[0,1,0], define u=Y-s0=[-0.55,0.55,-0.25]. The direct centered target is c=u-mean(u)=[-0.466667,0.633333,-0.166667]. The candidate target is r_ij=u_i-u_j, hence r_ij=(u_i-mean(u))-(u_j-mean(u))=c_i-c_j for every pair and every possible bundle, not only this instance. Executed stdlib script: `max(abs(r[i,j]-(c[i]-c[j])) for i,j in r)` printed `max_pair_equivalence_error=0.0`. Feeding the same c, w=0.03, and q=0.11 to D_ij/M_t for both mechanisms printed `direct_vs_quotient_same_intervals=True`, `direct_vs_quotient_same_M=True`, and `same_selected=True`; both had D_01=(-0.19,0.09), M_t=-0.09, fallback. This is an algebraic identity for arbitrary Y and s0.",
+    "reading_dependence": "reading_robust"
+  },
+  {
+    "finding": "The stated objective does not identify transport from the previous-transition residual e_t: the quotient head can ignore e_t and predict r_ij from h_t, candidate actions, and WAM futures alone, so the claimed factual-residual causal interface is bypassable by construction.",
+    "severity": "blocking",
+    "why_not_repaired": "Forcing e_t to carry the correction would require matched interventions, an architectural causal restriction, or an objective that contrasts the same candidate set under different residual evidence. Adding any of these redesigns the load-bearing training signal and cannot be patched around by an abstention or wording edit.",
+    "verbatim_step_quote": "No simulator oracle is used at deployment: the just-observed factual residual affects newly generated current suffixes through the learned quotient head, and no obsolete action, recursive branch carrier, shared-noise twin rollout, or hidden-parameter posterior is executed or inferred online.",
+    "executed_evidence": "The Step-5 loss observes only `(c_i-c_j)-r_ij`; it contains no term on e_t, no same-candidate/different-e_t contrast, and no restriction preventing zero e_t weights. In the executed K=3 bundle, a candidate-only output c=[-0.466667,0.633333,-0.166667] achieved exact quotient loss 0.0. Re-evaluating the same output under two incompatible residual inputs printed `pair_loss_if_e=-7=0.0` and `pair_loss_if_e=+11=0.0`. This explicit zero-loss witness proves that factual-residual use is not established by the procedure; the e_t permutation in Step 10 can diagnose empirical use after training but cannot make the mechanism structurally depend on e_t.",
+    "reading_dependence": "reading_robust"
+  }
+]

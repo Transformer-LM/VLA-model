@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "pgr-audit-v2-freeze-20260807-111127",
+  "created_at": "2026-08-07T11:11:27+08:00",
+  "purpose": "Hash-bound input bundle for the renewed PGR-Audit v2 execution jury",
+  "assurance": "candidate freeze; jury verdict is still required",
+  "files": [
+    {
+      "path": "refine-logs/PGR_AUDIT_PROTOCOL.json",
+      "sha256": "a5de33299f74db4118e075f8db05cc9196f0816a014121a3b8d807b959662752"
+    },
+    {
+      "path": "AUTORESEARCH_CONFIG_HYBRID_EXPANDED.json",
+      "sha256": "c70f5361352f449800ba4e5af9dc408eb1d706c0f26549b393cbfe4fe788008c"
+    },
+    {
+      "path": "refine-logs/INPUT_MANIFEST.json",
+      "sha256": "03a90ce95b29eb70fbbb73c59f7e795f0d5336663c7f0d5c012d71940953e510"
+    },
+    {
+      "path": "refine-logs/FINAL_PROPOSAL.md",
+      "sha256": "d429c9fcc95b8e8c67e07b8388e7a3e70b6f0e317a66037428b6253edb04d9f7"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN.md",
+      "sha256": "bdfab405a8ef69352830d061545b832e90870425bbfa9bfd50ba2db6d157fb87"
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER.md",
+      "sha256": "91536e2152f414421e91ecb6c9feb4c7740bb8544c8e76e7c62e7327b56c0847"
+    },
+    {
+      "path": "idea-stage/docs/research_contract.md",
+      "sha256": "045b46f24897e62e63e920ab754b7c58d4bd7a667568f358097e260af9fe4b1d"
+    },
+    {
+      "path": "refine-logs/PREREGISTRATION_LOCK.json",
+      "sha256": "ceaeac2f514eae9645301b016ad5973e1627ce6b9a61f427b14a9aa1c5073750"
+    }
+  ],
+  "canonical_hash_rule": "SHA256 over raw file bytes",
+  "mutation_rule": "Any byte change to a listed scientific input invalidates the jury verdict and requires a new manifest and renewed review"
+}

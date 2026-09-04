@@ -1,0 +1,1380 @@
+{
+  "title": "GISS-2x2: Matched-State Geometry-Action Compatibility for Frozen Robot Policies",
+  "title_zh": "<TODO[title_zh]: Chinese translation; keep proper nouns and method acronyms in English>",
+  "method_name": "<TODO[method_name]: short handle for the proposed method, e.g. 'Persistent Baseline GRPO (PB-GRPO)'>",
+  "hook": "Endpoint-equivalent geometry pairs can reveal whether a frozen VLA's current action chunk is specifically compatible with the geometry it saw. The reveal is a positive matched-state own-versus-cross native-success interaction, not a claim that the model recovered a globally necessary strategy graph.",
+  "abstract_draft": "<TODO[abstract_draft]: 150-250 words. Order: problem → bottleneck (cite ≥ 1 Phase 0 paper) → contribution (one sentence) → falsification prediction → expected outcome.>",
+  "motivation": {
+    "problem_framing": "<TODO[motivation.problem_framing]: 2-3 paragraphs framing the user's problem. Reference the bottleneck_statement from Phase 1 and the closest_adjacent papers. NOT a category label.>",
+    "why_now": "<TODO[motivation.why_now]: one paragraph on what makes this gap timely. Cite the most recent Phase 0 papers (within last 4-12 months) that get close but stop short.>",
+    "why_prior_stopped": [
+      {
+        "paper_id": "dblp:journals/corr/abs-2506-18088",
+        "venue_year": "arXiv 2025",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[0].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[0].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[0].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "openalex:W4403116255",
+        "venue_year": "arXiv 2025-05",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[1].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[1].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[1].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "openalex:W4405956290",
+        "venue_year": "arXiv (Cornell University) 2024",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[2].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[2].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[2].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "openalex:W7127541930",
+        "venue_year": "arXiv (Cornell University) 2026",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[3].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[3].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[3].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      },
+      {
+        "paper_id": "openalex:W4403808753",
+        "venue_year": "arXiv (Cornell University) 2024",
+        "what_they_did": "<TODO[motivation.why_prior_stopped[4].what_they_did]: one sentence>",
+        "what_they_did_not_do": "<TODO[motivation.why_prior_stopped[4].what_they_did_not_do]: one sentence — the specific limit being lifted by the candidate>",
+        "structural_reason_they_stopped": "<TODO[motivation.why_prior_stopped[4].structural_reason_they_stopped]: one sentence — missing tool / missing assumption-relaxation / missing mechanism / missing measurement>"
+      }
+    ],
+    "what_changes_when_gap_closes": "<TODO[motivation.what_changes_when_gap_closes]: 2-3 sentences naming downstream consequences. NOT \"better numbers\" — name the specific capability or theoretical statement that becomes available>"
+  },
+  "core_claim": "<TODO[core_claim]: one sentence; should mirror the candidate's hook stripped to its load-bearing assertion>",
+  "sub_claims": "<TODO[sub_claims]: list of {id, statement, supports_which_aspect}; 2-4 entries>",
+  "key_equations": "<TODO[key_equations]: optional 3-6 equations; each {id, linked_step_id, latex, description, description_zh}. Emit [] (literal empty list) for a pure-prose candidate.>",
+  "method_flow": {
+    "high_level_pipeline": "<TODO[method_flow.high_level_pipeline]: 3-5 sentences narrating the method end-to-end as a story: input → key transformation → output>",
+    "steps": "<TODO[method_flow.steps]: derive from candidate.core_mechanism_steps; emit a list where each entry is {step_id, title, what_changes, why_this_step, linked_component, linked_falsification, input, output}. Each step_id MUST be S1, S2, ... in reading order. linked_component ∈ {theory, engineering, both}; linked_falsification ∈ {metric_specification, mechanism_distinguisher, both}.>",
+    "design_reasoning_echo": "<TODO[method_flow.design_reasoning_echo]: one paragraph echoing or condensing candidate.core_mechanism_reasoning>"
+  },
+  "plain_motivation_en": "<TODO[plain_motivation_en]: plain-language English rendering of motivation for a reader outside this subfield. Simplify LANGUAGE only — never drop the load-bearing mechanism. Spell out every abbreviation on first use.>",
+  "plain_motivation_zh": "<TODO[plain_motivation_zh]: Chinese 普通版 counterpart. Same content; keep identifiers/symbols/acronyms in English.>",
+  "plain_method_steps_en": "<TODO[plain_method_steps_en]: list of {step_id, what_to_do, why_this_makes_sense}; SAME step_ids and SAME order as method_flow.steps.>",
+  "plain_method_steps_zh": "<TODO[plain_method_steps_zh]: Chinese 普通版 counterpart; English for identifiers/symbols/acronyms.>",
+  "plain_method_modules_en": "<TODO[plain_method_modules_en]: group the CONTRIBUTION steps into named modules; list of {module_id, purpose_oneline, step_ids}.>",
+  "plain_method_modules_zh": "<TODO[plain_method_modules_zh]: Chinese 普通版 counterpart.>",
+  "falsification_prediction": "On preregistered eligible RoboTwin 2.0 pairs, run the frozen OpenPI pi0.5 and CLOVER four-cell checkpoint experiment and measure native task success plus I_MS; if visible geometry conditions useful current actions, I_MS should be positive even among endpoint-equal baseline strata. The one load-bearing variable is G_src, the source geometry rendered at the identical z to produce the current action chunk. As a non-tautological negative control, replace G_src's functional collision-geometry producer with appearance-only texture/render pairs that share one collision mesh and physics: the downstream native-success I_MS should return to its no-systematic-own-advantage baseline, while reversal or collapse under the smallest preregistered matched state jitter falsifies the claimed compatibility signal.",
+  "compute_budget": "12 A100 GPU-days for 64 paired states across four RoboTwin 2.0 task families, five paired reset seeds, two frozen policies, four crossover cells, controls, and reruns on the available 4xA100 system; approximately one engineer-week for the modest GISS manifest and state-restore tooling. $0 paid API cost because all policy, simulator, planner, and scoring components are local/open.",
+  "almost_prior_paper_id": "dblp:journals/corr/abs-2506-18088",
+  "almost_prior_venue_year": "arXiv 2025",
+  "what_step_was_missed": "The abstract does not construct a simulator checkpoint that is identical across paired functional geometries, query both frozen-policy chunks there, and execute each chunk in both recipient geometries before closed-loop resumption to estimate a within-recipient compatibility interaction; this is an abstract-only inference because full text was unavailable.",
+  "feasibility_validation": {
+    "compute": {
+      "verdict": "tight",
+      "rationale": "GPU line ≈ 100 vs 100 GPU-day (100%) → tight; API line ≈ $0 vs $10000 (0%) → feasible. Overall (worse line) → tight."
+    },
+    "data": {
+      "verdict": "<TODO[feasibility_validation.data.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.data.rationale]: one sentence: required data sources accessible; if any closed/private, name a public substitute>"
+    },
+    "theoretical": {
+      "verdict": "<TODO[feasibility_validation.theoretical.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no theoretical contribution)>",
+      "rationale": "<TODO[feasibility_validation.theoretical.rationale]: one sentence; if tight, name the missing prerequisite>"
+    },
+    "engineering": {
+      "verdict": "<TODO[feasibility_validation.engineering.verdict]: feasible | tight | infeasible | n/a (only when the candidate has no engineering contribution)>",
+      "rationale": "<TODO[feasibility_validation.engineering.rationale]: one sentence; if tight, name the binding implementation cost>"
+    },
+    "falsification": {
+      "verdict": "<TODO[feasibility_validation.falsification.verdict]: feasible | tight | infeasible>",
+      "rationale": "<TODO[feasibility_validation.falsification.rationale]: one sentence: the falsification_prediction experiment is concrete enough to run with available tooling>"
+    },
+    "overall": "<TODO[feasibility_validation.overall]: feasible | tight | infeasible>"
+  },
+  "differentiation_from_lit": [
+    {
+      "paper_id": "dblp:journals/corr/abs-2506-18088",
+      "venue_year": "arXiv 2025",
+      "delta": "Abstract-only inference under fulltext_degraded evidence: RoboTwin 2.0 supplies scalable tasks and broad randomization, whereas GISS constructs byte-matched decision checkpoints and crosses one frozen-policy action chunk across paired functional collision geometries before recipient-scene closed-loop continuation."
+    },
+    {
+      "paper_id": "openalex:W4403116255",
+      "venue_year": "arXiv 2025-05",
+      "delta": "Abstract-only inference: GemBench evaluates placements, objects, primitives, and long horizons, while GISS estimates a within-recipient matched-state geometry-action compatibility interaction at fixed instruction and terminal predicate."
+    },
+    {
+      "paper_id": "openalex:W4405956290",
+      "venue_year": "arXiv (Cornell University) 2024",
+      "delta": "Abstract-only inference: CoA-VLA supplies a fixed object/grasp/spatial/movement affordance chain to the policy, while GISS gives ordinary policies no phase scaffold and intervenes only on the visible geometry that produces the current chunk."
+    },
+    {
+      "paper_id": "openalex:W4403808753",
+      "venue_year": "arXiv (Cornell University) 2024",
+      "delta": "Abstract-only inference: CLOVER uses prediction error for closed-loop refinement and replanning, while GISS restores an identical pre-action state and estimates one-chunk source-geometry compatibility through a four-cell recipient-scene response contrast."
+    }
+  ],
+  "reviewer_concerns_and_responses": [
+    {
+      "attack": "Paper-pointed threat: openalex:W7172173298 (collision_hits). The supplied abstract for Stage-Replay Divergence Follows the KV Cache is the most mechanism-specific threat because it shows that apparently matched replay prefixes can diverge solely through retained versus reconstructed inference state, and it uses a fixed-prefix 2x2 plus cache controls. It does not subsume the robot contribution on the available abstract: GISS-2x2 explicitly clones one fresh inference/history template, resets decode noise for both source queries, rejects nondeterministic identical-render repeats, discards every source-query cache before continuation, and restarts the recipient from its actual post-chunk observation. The collision therefore sharpens a necessary validity condition already present rather than establishing the same geometry-action assay.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[0].response]: 2-3 sentences: explain where in the candidate (which field) the defense is anchored; reference the Phase 3.2 verdict_rationale when relevant>",
+      "fields_changed_to_address": []
+    },
+    {
+      "attack": "Un-retrieved mechanism family flagged by the audit (parametric knowledge, not in the retrieved pool): Metamorphic testing and paired crossover testing for cyber-physical controllers; scoop-check vocabulary: 'metamorphic robot policy testing' and 'paired simulator action crossover'. — novelty vs this family is UNVERIFIED; run a targeted scoop-check on that vocabulary before investing.",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[1].response]: 1-2 sentences: state what a scoop-check on the named family must establish for the candidate's delta to survive (do NOT claim the check already passed)>",
+      "fields_changed_to_address": []
+    },
+    {
+      "attack": "Gap-closure reject-check borderline on gap 1 (C02 (Design a Confound-Isolating Diagnostic)): Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and; Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insigh",
+      "severity": "non_blocking",
+      "response": "<TODO[reviewer_concerns_and_responses[2].response]: 2-3 sentences: anchor the defense in a specific candidate field>",
+      "fields_changed_to_address": []
+    }
+  ],
+  "domain_landscape": {
+    "n_papers": 17,
+    "pattern_distribution": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 3,
+        "share": 0.18,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 6,
+        "share": 0.35,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 1,
+        "share": 0.06,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 8,
+        "share": 0.47,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 7,
+        "share": 0.41,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 5,
+        "share": 0.29,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 3,
+        "share": 0.18,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 2,
+        "share": 0.12,
+        "saturation_band": "mid_frequency"
+      }
+    ],
+    "candidate_uses": [
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "role": "closes Gap 1",
+        "sub_pattern_id": "C02 (Design a Confound-Isolating Diagnostic)",
+        "saturation_in_domain": "mid_frequency"
+      }
+    ],
+    "position_note": "<TODO[domain_landscape.position_note]: one sentence describing how the candidate's chosen patterns sit relative to the area's pattern usage; descriptive, not prescriptive>"
+  },
+  "literature_breakdown": {
+    "summary": {
+      "n_phase0_total": 17,
+      "n_phase0_on_topic": 17,
+      "n_phase0_outside_taxonomy": 0,
+      "n_phase3_collision": 196
+    },
+    "phase0_by_pattern": [
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "pattern_name": "Substitute the Operator or Representation",
+        "papers": [
+          {
+            "paper_id": "openalex:W4417097990",
+            "title": "NoTVLA: Semantics-Preserving Robot Adaptation via Narrative Action Interfaces",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Dense action-trajectory fine-tuning is compute-intensive and causes cross-task catastrophic forgetting"
+          }
+        ]
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "pattern_name": "Design a Confound-Isolating Diagnostic",
+        "papers": [
+          {
+            "paper_id": "openalex:W4403116255",
+            "title": "Towards Generalizable Vision-Language Robotic Manipulation: A Benchmark and LLM-Guided 3D Policy",
+            "venue_year": "arXiv 2025-05",
+            "bottleneck_targeted": "Existing benchmarks and policies inadequately measure and solve manipulation generalization across placements, objects, and long-horizon tasks"
+          },
+          {
+            "paper_id": "openalex:W4412944525",
+            "title": "Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation",
+            "venue_year": "arXiv 2025-01",
+            "bottleneck_targeted": "Aggregate evaluation does not isolate the atomic capabilities needed to establish whether VLMs contain usable internal world models"
+          }
+        ]
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "pattern_name": "Decompose and Delegate to Solvers",
+        "papers": [
+          {
+            "paper_id": "openalex:W4412750609",
+            "title": "Human–Robot Interaction and Tracking System Based on Mixed Reality Disassembly Tasks",
+            "venue_year": "Robotics 2025",
+            "bottleneck_targeted": "Rigid sequential disassembly planning cannot accommodate unforeseen changes or direct multimodal operator control"
+          },
+          {
+            "paper_id": "openalex:W4415557874",
+            "title": "Hierarchical Language Models for Semantic Navigation and Manipulation in an Aerial–Ground Robotic System",
+            "venue_year": "Advanced Intelligent Systems 2025",
+            "bottleneck_targeted": "Static task-specific models do not coordinate high-level reasoning, perception, navigation, and manipulation across heterogeneous robots"
+          }
+        ]
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "pattern_name": "Liberate a Fixed Generative Component",
+        "papers": [
+          {
+            "paper_id": "openalex:W4415014283",
+            "title": "Sim-to-Real Dynamic Object Manipulation on Conveyor Systems via Optimization Path Shaping",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Simulated demonstrations suffer an appearance gap that can overwhelm transferable geometric structure"
+          },
+          {
+            "paper_id": "dblp:journals/corr/abs-2506-18088",
+            "title": "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation",
+            "venue_year": "arXiv 2025",
+            "bottleneck_targeted": "Existing bimanual datasets lack scalable task generation and realistic, diverse simulation; RoboTwin 2.0 frees data/task generation through MLLM-authored execut"
+          }
+        ]
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "pattern_name": "Decompose for Differentiated Treatment",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:09923ab80f59b9dbec32d1693b2863aa62fce365",
+            "title": "ScriptHOI: Learning Scripted State Transitions for Open-Vocabulary Human-Object Interaction Detection",
+            "venue_year": "arXiv 2026-05",
+            "bottleneck_targeted": "Open-vocabulary HOI predictions exploit object affordance and phrase co-occurrence without verifying contact, geometry, motion, and state evidence"
+          },
+          {
+            "paper_id": "openalex:W4416223716",
+            "title": "SpatialActor: Exploring Disentangled Spatial Representations for Robust Robotic Manipulation",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Entangled semantics and noisy depth obscure the low-level spatial cues needed for precise manipulation"
+          }
+        ]
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "pattern_name": "Manufacture the Supervisory Signal",
+        "papers": [
+          {
+            "paper_id": "openalex:W4416967312",
+            "title": "Transport Discrepancy as a Reliability Signal for Vision-Language-Action Models",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Flow-matching VLA policies lack an internal reliability signal under representation drift and long-horizon rollout"
+          }
+        ]
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "pattern_name": "Encode Structure by Construction",
+        "papers": [
+          {
+            "paper_id": "semanticscholar:db2574be341621c2f004ef1a3124947c35d07e6d",
+            "title": "Rethinking Embodied Navigation via Relational Inductive Bias",
+            "venue_year": "arXiv 2026",
+            "bottleneck_targeted": "Navigation search underuses relational structure in online observations and failed-access events"
+          },
+          {
+            "paper_id": "openalex:W4405956290",
+            "title": "CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance",
+            "venue_year": "arXiv (Cornell University) 2024",
+            "bottleneck_targeted": "End-to-end VLA policies lack explicit object, grasp, placement, and motion affordance reasoning for complex manipulation"
+          },
+          {
+            "paper_id": "openalex:W4403808753",
+            "title": "Closed-Loop Visuomotor Control with Generative Expectation for Robotic Manipulation",
+            "venue_year": "arXiv (Cornell University) 2024",
+            "bottleneck_targeted": "Open-loop robot policies accumulate error because they lack measurable visual feedback and online replanning"
+          }
+        ]
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "pattern_name": "Unify Heterogeneous Inputs into One Space",
+        "papers": [
+          {
+            "paper_id": "openalex:W4414902199",
+            "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Separate slow-reasoning and fast-control models limit knowledge sharing and execution efficiency"
+          },
+          {
+            "paper_id": "openalex:W4415037842",
+            "title": "ForceVLA: Enhancing VLA Models with a Force-aware MoE for Contact-rich Manipulation",
+            "venue_year": "arXiv 2025-01",
+            "bottleneck_targeted": "Vision-language policies lack force feedback needed for fine contact control under occlusion and dynamic uncertainty"
+          },
+          {
+            "paper_id": "openalex:W4417537399",
+            "title": "ViTacFormer: Learning Cross-Modal Representation for Visuo-Tactile Dexterous Manipulation",
+            "venue_year": "arXiv (Cornell University) 2025",
+            "bottleneck_targeted": "Vision-only manipulation misses contact information, while vision and touch are difficult to fuse into a robust control representation"
+          },
+          {
+            "paper_id": "openalex:W7127541930",
+            "title": "Any3D-VLA: Enhancing VLA Robustness via Diverse Point Clouds",
+            "venue_year": "arXiv (Cornell University) 2026",
+            "bottleneck_targeted": "VLA policies lack robust 3D understanding because 3D data are scarce and point-cloud sources have domain and scale gaps"
+          }
+        ]
+      }
+    ],
+    "phase0_outside_taxonomy": [],
+    "phase3_collision": [
+      {
+        "paper_id": "openalex:W7157664678",
+        "title": "Exhaustive Investigation into the Primorial Compile Algebra, Wheel Harmonic Frontiers, and the Universal Ontology of Continuous Prefix Compilation",
+        "venue_year": "Zenodo (CERN European Organization for Nuclear Research) 2026"
+      },
+      {
+        "paper_id": "openalex:W7164614280",
+        "title": "VLGA: Vision-Language-Geometry-Action Models for Autonomous Driving",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7131128685",
+        "title": "Force Sensing Control for Physical Human–Robot Interaction: A Transformer-Based Action Chunking Approach",
+        "venue_year": "Machines 2026"
+      },
+      {
+        "paper_id": "openalex:W7170111432",
+        "title": "GeoWorldAD: Geometry World Action Model for Autonomous Driving",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7172173298",
+        "title": "Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4417329376",
+        "title": "Adaptive Token Boundaries: Towards Integrating Human Chunking Mechanisms into Multimodal LLMs",
+        "venue_year": "Information 2025"
+      },
+      {
+        "paper_id": "openalex:W7129004006",
+        "title": "Refinement Geometry: Branching Structure from Stability and Prefix Order",
+        "venue_year": "PhilPapers (PhilPapers Foundation) 2026"
+      },
+      {
+        "paper_id": "openalex:W7155654857",
+        "title": "Neuro-Symbolic Manipulation Understanding with Enriched Semantic Event Chains",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7161090974",
+        "title": "Geometry Guided Self-Consistency for Physical AI",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7203640516",
+        "title": "Marionette: Predicting World States, Rendering Geometry, Painting Appearance",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7203916848",
+        "title": "DevGRU: Depth-guided Visual Navigation using a Collision-aware Recurrent Model",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7202005812",
+        "title": "MASS: Multiplayer World Models with Authoritative Shared State",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7162045360",
+        "title": "Beyond Isotropy in JEPAs: Hamiltonian Geometry and Symplectic Prediction",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416209962",
+        "title": "Predictive Risk-Aware Reinforcement Learning for Autonomous Vehicles Using Safety Potential",
+        "venue_year": "Electronics 2025"
+      },
+      {
+        "paper_id": "openalex:W4416237556",
+        "title": "Geometry induced chiral transport and entanglement in AdS2 background",
+        "venue_year": "Journal of High Energy Physics 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914968",
+        "title": "Right Reset: Chunking by Prefix Removal",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7125933805",
+        "title": "Enabling AI-Controlled additive manufacturing with real-time multiphysics digital twins",
+        "venue_year": "Virtual and Physical Prototyping 2026"
+      },
+      {
+        "paper_id": "openalex:W7125692645",
+        "title": "Modeling Road User Interactions with Dynamic Graph Attention Networks for Traffic Crash Prediction",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4396652686",
+        "title": "Large deviations of current for the symmetric simple exclusion process on a semi-infinite line and on an infinite line with a slow bond",
+        "venue_year": "Physical review. E 2026"
+      },
+      {
+        "paper_id": "openalex:W7130405307",
+        "title": "Benefits of Categorizing Noncovalent Bonds Based on Hydrogen, Halogen, Chalcogen, and Pnictogen Bonds",
+        "venue_year": "Angewandte Chemie International Edition 2026"
+      },
+      {
+        "paper_id": "openalex:W7163196370",
+        "title": "Research on the Integration Path of Red Family Letters into the Cultivation of College Students’ National Sentiment",
+        "venue_year": "Journal of Humanities and Social Sciences Studies 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914845",
+        "title": "Predict, Then Retrieve: Cross-Instance Future-State Retrieval from Video Prefixes",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416434667",
+        "title": "Superlinear Hall angle and carrier mobility from non-Boltzmann magnetotransport in the spatially disordered Yukawa-Sachdev-Ye-Kitaev model on a square lattice",
+        "venue_year": "Physical Review Research 2026"
+      },
+      {
+        "paper_id": "openalex:W4417491059",
+        "title": "Multi-Affection Prompt Learning for Sentiment, Emotion, and Sarcasm Joint Detection in Conversations",
+        "venue_year": "Tsinghua Science & Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W7169688753",
+        "title": "From Product-Centred Retrieval to Experience-Led Commerce:Twelve Candidate Design Principles for Fashion E-Commerce User Experience",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7152934005",
+        "title": "Beyond the Beep: Scalable Collision Anticipation and Real-Time Explainability with BADAS-2.0",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416921973",
+        "title": "Multi-view diffusion geometry using intertwined diffusion trajectories",
+        "venue_year": "arXiv (Cornell University) 2025"
+      },
+      {
+        "paper_id": "openalex:W7169473927",
+        "title": "From Geometric Recovery to Causal Validation: A Reproducible Audit of Sparse Autoencoder Features, from Superposition Geometry to Causal Inertness",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7128097581",
+        "title": "Codified Finite-state Machines for Role-playing",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7162219378",
+        "title": "AnyMo: Geometry-Aware Setup-Agnostic Modeling of Human Motion in the Wild",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7201914938",
+        "title": "HyPASE: Hyperbolic Geometry for Parameter-Efficient Speech Emotion Fine-Tuning Framework for Large Audio-Language Models",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7204092070",
+        "title": "Pair size versus coherence length and quantum geometry in the spin-orbit coupled BCS-BEC crossover",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416916988",
+        "title": "Evolutionary Strategies in Nanocomposite Proton Exchange Membranes: A Physical Chemistry Applied Materials (PCAM) LAB Review on Material Design, High-Temperature Performance, and Durability",
+        "venue_year": "Polymers 2025"
+      },
+      {
+        "paper_id": "openalex:W7165746952",
+        "title": "21st CENTURY ORGANIZATION From the theatre metaphor to the performance metaphor",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7126384300",
+        "title": "Research on the Construction of Tourism Scenarios and the Reshaping of Relationships in Intelligent Media Environments— A Case Study of Short Videos",
+        "venue_year": "Journal of Global Trends in Social Science 2026"
+      },
+      {
+        "paper_id": "openalex:W4415844431",
+        "title": "Bispecific immunotherapy based on antibodies, T-cell receptors, and aptamers: mechanisms of action, adverse effects, and future perspectives",
+        "venue_year": "Frontiers in Immunology 2025"
+      },
+      {
+        "paper_id": "openalex:W7161914902",
+        "title": "Multi-LLM Systems Exhibit Robust Semantic Collapse",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4415248125",
+        "title": "Identifying Instabilities with Quantum Geometry in Flat-Band Systems",
+        "venue_year": "Physical Review Letters 2026"
+      },
+      {
+        "paper_id": "openalex:W7160311750",
+        "title": "Epilogue – Living with insecurity",
+        "venue_year": "Manchester University Press eBooks 2026"
+      },
+      {
+        "paper_id": "openalex:W7147721130",
+        "title": "Reconstructing the Literary Curriculum System Centred on 'Literary Imagination'",
+        "venue_year": "Curriculum and Teaching Methodology 2026"
+      },
+      {
+        "paper_id": "openalex:W7164134070",
+        "title": "The Brussels Bubble",
+        "venue_year": "Cambridge University Press eBooks 2026"
+      },
+      {
+        "paper_id": "openalex:W7135042669",
+        "title": "ChromSMF: integrated profiling of histone modifications, protein-DNA interactions and DNA methylation on multi-kilobase DNA molecules",
+        "venue_year": "bioRxiv (Cold Spring Harbor Laboratory) 2026"
+      },
+      {
+        "paper_id": "openalex:W4400668362",
+        "title": "Understanding the approach to thermalization from the eigenspectrum of non-Abelian gauge theories",
+        "venue_year": "Nuclear Physics B 2026"
+      },
+      {
+        "paper_id": "openalex:W7155175084",
+        "title": "A Multi-UAV Cooperative Decision-Making Method in Dynamic Aerial Interaction Environments Based on GA-GAT-PPO",
+        "venue_year": "Drones 2026"
+      },
+      {
+        "paper_id": "openalex:W7198950070",
+        "title": "Two more days : co-directing The tempest with the Baltic sea as artistic research",
+        "venue_year": "Taju (University of the Arts Helsinki) 2026"
+      },
+      {
+        "paper_id": "openalex:W4410459027",
+        "title": "DNA cross-over motifs-based, programmable supramolecular hydrogels for the mechanoregulatory effects of cellular behaviour and cytoskeleton reorganization",
+        "venue_year": "npj Biomedical Innovations. 2026"
+      },
+      {
+        "paper_id": "openalex:W4416758549",
+        "title": "SPACEc: a streamlined, interactive Python workflow for multiplexed image processing and analysis",
+        "venue_year": "Nature Communications 2025"
+      },
+      {
+        "paper_id": "openalex:W4416759095",
+        "title": "Consequences of symmetry fractionalization without 1-form global symmetries",
+        "venue_year": "Journal of High Energy Physics 2025"
+      },
+      {
+        "paper_id": "openalex:W4415848278",
+        "title": "A Photo‐ and Cobalt‐Catalyzed Enantioselective Hydroamination of Unactivated Alkenes with Amines",
+        "venue_year": "Angewandte Chemie International Edition 2025"
+      },
+      {
+        "paper_id": "openalex:W4386794225",
+        "title": "All you need is spin: SU(2) equivariant variational quantum circuits based on spin networks",
+        "venue_year": "Quantum Science and Technology 2026"
+      },
+      {
+        "paper_id": "openalex:W7172497808",
+        "title": "Channel-Aware Residual BiLSTM for Ship Trajectory Prediction and Collision Risk Assessment in Restricted Waters",
+        "venue_year": "Journal of Marine Science and Engineering 2026"
+      },
+      {
+        "paper_id": "openalex:W7148703437",
+        "title": "All-optical polarization control in time-varying low-index films via plasma symmetry breaking",
+        "venue_year": "Nature Photonics 2026"
+      },
+      {
+        "paper_id": "openalex:W7172321172",
+        "title": "Clustering Smoothed Particle Hydrodynamics Debris into N -body Fragments: A Collisional Code for Planet Formation",
+        "venue_year": "The Astronomical Journal 2026"
+      },
+      {
+        "paper_id": "openalex:W7202345208",
+        "title": "ScaleVid: Geometry-Aware Video Object Scaling with Mesh-Free Inference",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416068844",
+        "title": "Mneme: A Parallel Preprocessing Framework for Large Tabular Datasets",
+        "venue_year": "International Journal of Parallel Programming 2026"
+      },
+      {
+        "paper_id": "openalex:W7125416309",
+        "title": "Mathematical formalism of Ze",
+        "venue_year": "Longevity Horizon 2026"
+      },
+      {
+        "paper_id": "openalex:W7154427739",
+        "title": "Crossover Equation of State Constrained by Astronomical Observations and pQCD",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4416026015",
+        "title": "Temporal Action Selection for Action Chunking",
+        "venue_year": "arXiv (Cornell University) 2025"
+      },
+      {
+        "paper_id": "openalex:W7123353165",
+        "title": "Asymptotics on the dynamics of the hanging chain pendulum",
+        "venue_year": "Meccanica 2026"
+      },
+      {
+        "paper_id": "openalex:W7166796650",
+        "title": "Gated Tree Cross-Attention for Checkpoint-Compatible Syntax Injection in Decoder-Only LLMs",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7135026173",
+        "title": "Digitized counterdiabatic quantum critical dynamics",
+        "venue_year": "npj Quantum Information 2026"
+      },
+      {
+        "paper_id": "openalex:W7164446578",
+        "title": "Geometry-Aware Reinforcement Learning for 2D Irregular Nesting",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W4389714342",
+        "title": "The Parameterized Complexity of Coordinated Motion Planning",
+        "venue_year": "Discrete & Computational Geometry 2026"
+      },
+      {
+        "paper_id": "openalex:W7124179978",
+        "title": "Exposure to Nitrogen Dioxide (NO2) Emitted from Traffic-Related Sources: Review",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W7163777941",
+        "title": "Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7128586581",
+        "title": "Tunable Cellular Structures with Damping for Industry-Ready Dynamic Load Management in Bus Applications",
+        "venue_year": "Applied Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4416306296",
+        "title": "The Matter of Intellectual Property: Studying the Economic, Political and Cultural Nodes of the Contemporary Media Industries. 15th Media Mutations International Conference",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "openalex:W7116662311",
+        "title": "Optimization of End Mill Geometry for Machining 1.2379 Cold-Work Tool Steel Through Hybrid RSM-ANN-GA Coupled FEA Approach",
+        "venue_year": "Machines 2025"
+      },
+      {
+        "paper_id": "openalex:W7117491041",
+        "title": "A Comprehensive Review of Path-Planning Algorithms for Multi-UAV Swarms",
+        "venue_year": "Drones 2025"
+      },
+      {
+        "paper_id": "openalex:W7125587372",
+        "title": "Minimizing the total weighted earliness-tardiness about a non-restrictive common due date with optional job rejection on single and multiple machines",
+        "venue_year": "Computational and Applied Mathematics 2026"
+      },
+      {
+        "paper_id": "openalex:W7171620428",
+        "title": "Architecting Student Agency: A Revolutionary Framework for Post-Pandemic Educational Excellence — Transforming Learners from Passive Recipients to Empowered Change Agents",
+        "venue_year": "SSRN Electronic Journal 2026"
+      },
+      {
+        "paper_id": "openalex:W4416340555",
+        "title": "A multi-stage optimization strategy for multi-UAV path planning in complex urban 3D environments with obstacle avoidance",
+        "venue_year": "Complex & Intelligent Systems 2025"
+      },
+      {
+        "paper_id": "openalex:W4414812773",
+        "title": "Beyond Chunking: Discourse-Aware Hierarchical Retrieval for Long Document Question Answering",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W4417319149",
+        "title": "Modeling multiphase plasma in the corona: prominences and rain",
+        "venue_year": "Living Reviews in Solar Physics 2025"
+      },
+      {
+        "paper_id": "openalex:W4416936251",
+        "title": "Piezoelectric truss metamaterials: data-driven design and additive manufacturing",
+        "venue_year": "npj Metamaterials 2025"
+      },
+      {
+        "paper_id": "openalex:W4403786606",
+        "title": "Federated Large Language Models: Current Progress and Future Directions",
+        "venue_year": "Lecture notes in computer science 2026"
+      },
+      {
+        "paper_id": "openalex:W7170070907",
+        "title": "Cell division sets a universal flow geometry in cell layers",
+        "venue_year": "Proceedings of the National Academy of Sciences 2026"
+      },
+      {
+        "paper_id": "openalex:W4405468223",
+        "title": "Pretrained event classification model for high energy physics analysis",
+        "venue_year": "Journal of Instrumentation 2026"
+      },
+      {
+        "paper_id": "openalex:W4415872180",
+        "title": "Current Trends in Synthesis and Characterization of Biomass-Based Materials for CO2 Capture",
+        "venue_year": "Biomass 2025"
+      },
+      {
+        "paper_id": "openalex:W4416385805",
+        "title": "Roadmap on quantum thermodynamics",
+        "venue_year": "Quantum Science and Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W7125768176",
+        "title": "Mitigating Hallucinations in Discipline Inspection QA: A Two-Stage RAG Framework with Late Interaction and Reranking",
+        "venue_year": "Electronics 2026"
+      },
+      {
+        "paper_id": "openalex:W7118171104",
+        "title": "The Role of Ceramides in Metabolic and Cardiovascular Diseases",
+        "venue_year": "Journal of Cardiovascular Development and Disease 2026"
+      },
+      {
+        "paper_id": "openalex:W7131246916",
+        "title": "Exploring cortical excitability modulation to promote cognitive resilience in aging: an rTMS study protocol",
+        "venue_year": "Frontiers in Human Neuroscience 2026"
+      },
+      {
+        "paper_id": "openalex:W7154685956",
+        "title": "On-Orbit Space AI: Federated, Multi-Agent, and Collaborative Algorithms for Satellite Constellations",
+        "venue_year": "Algorithms 2026"
+      },
+      {
+        "paper_id": "openalex:W4416249188",
+        "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
+        "venue_year": "ACM Transactions on Storage 2025"
+      },
+      {
+        "paper_id": "openalex:W7167749340",
+        "title": "Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W1579825287",
+        "title": "The role of online discussion forums in supporting learning in higher education",
+        "venue_year": "2026"
+      },
+      {
+        "paper_id": "openalex:W7123485256",
+        "title": "A Real-Time Mobile Robotic System for Crack Detection in Construction Using Two-Stage Deep Learning",
+        "venue_year": "Sensors 2026"
+      },
+      {
+        "paper_id": "openalex:W4415854760",
+        "title": "TapNav: Adaptive Spatiotactile Screen Readers for Tactually Guided Touchscreen Interactions for Blind and Low Vision People",
+        "venue_year": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies 2025"
+      },
+      {
+        "paper_id": "openalex:W4417042937",
+        "title": "An ontology-driven bi-directional workflow for integrating project management data into the IFC standard",
+        "venue_year": "Journal of Information Technology in Construction 2025"
+      },
+      {
+        "paper_id": "openalex:W4392822638",
+        "title": "Grammar as a behavioral biometric: using cognitively motivated grammar models for authorship verification",
+        "venue_year": "Humanities and Social Sciences Communications 2026"
+      },
+      {
+        "paper_id": "openalex:W4401306278",
+        "title": "Modular RAG: Transforming RAG Systems into LEGO-like Reconfigurable Frameworks",
+        "venue_year": "ACM Transactions on Information Systems 2026"
+      },
+      {
+        "paper_id": "openalex:W7167762831",
+        "title": "The Geometry of Language Model Hallucination",
+        "venue_year": "Digital Access to Scholarship at Harvard (DASH) (Harvard University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7160456608",
+        "title": "Shadow-Loom: Causal Reasoning over Graphical World Models of Narratives",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7140605112",
+        "title": "Corrosion Behavior and Discharge Performance of Germanium and Lanthanum Co-Doped AZ61 Alloy Anodes for Mg–Air Batteries",
+        "venue_year": "Materials 2026"
+      },
+      {
+        "paper_id": "openalex:W7160380685",
+        "title": "Probing into the Reshaping of Value Ranking in Palliative Care by Technological Rationality: An Analysis Based on the Application of AI Technology in the ICU",
+        "venue_year": "Communications in Humanities Research 2026"
+      },
+      {
+        "paper_id": "openalex:W7130504046",
+        "title": "The large scale geometry of inverse semigroups and their maximal group images",
+        "venue_year": "Geometriae Dedicata 2026"
+      },
+      {
+        "paper_id": "openalex:W4405967085",
+        "title": "From text to translation: using language models to prioritize variants for clinical review",
+        "venue_year": "Genome Medicine 2026"
+      },
+      {
+        "paper_id": "openalex:W7139922469",
+        "title": "The Third Path: The Fiction of Sytze Backer",
+        "venue_year": "Open MIND 2026"
+      },
+      {
+        "paper_id": "openalex:W7108622315",
+        "title": "Evaluating the quality of GenAI applications in software engineering: a multi-case study",
+        "venue_year": "Empirical Software Engineering 2025"
+      },
+      {
+        "paper_id": "openalex:W7170224621",
+        "title": "D$e^+e^-$ffusion: Capturing the Beam-Beam Physics of $e^+e^-$ Collisions with Diffusion Models",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7151672880",
+        "title": "Valence-Arousal Subspace in LLMs: Circular Emotion Geometry and Multi-Behavioral Control",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7155784765",
+        "title": "Optimization of carbonation parameters for recycled fine aggregate utilizing the Taguchi method and absorbent-assisted treatment",
+        "venue_year": "Scientific Reports 2026"
+      },
+      {
+        "paper_id": "openalex:W7204180000",
+        "title": "Recovering Weighted Tangent Geometry from a Single-Scale Score Field",
+        "venue_year": "arXiv (Cornell University) 2026"
+      },
+      {
+        "paper_id": "openalex:W7172347516",
+        "title": "A Behaviour-Based Authentication and Encrypted Chunking Framework for Resilient Cloud Security",
+        "venue_year": "International Journal of Computer Information Systems and Industrial Management Applications 2026"
+      },
+      {
+        "paper_id": "openalex:W4389524350",
+        "title": "On the Potential and Limitations of Few-Shot In-Context Learning to Generate Metamorphic Specifications for Tax Preparation Software",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "openalex:W4394874164",
+        "title": "Prediction Under Interventions: Evaluation of Counterfactual Performance Using Longitudinal Observational Data",
+        "venue_year": "Epidemiology 2024"
+      },
+      {
+        "paper_id": "openalex:W4386765496",
+        "title": "Treatment‐resistant depression: definition, prevalence, detection, management, and investigational interventions",
+        "venue_year": "World Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4396946025",
+        "title": "Global burden and strength of evidence for 88 risk factors in 204 countries and 811 subnational locations, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021",
+        "venue_year": "The Lancet 2024"
+      },
+      {
+        "paper_id": "openalex:W4387393037",
+        "title": "Natural language processing for mental health interventions: a systematic review and research framework",
+        "venue_year": "Translational Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4400956092",
+        "title": "Mechanisms of action and therapeutic applications of GLP-1 and dual GIP/GLP-1 receptor agonists",
+        "venue_year": "Frontiers in Endocrinology 2024"
+      },
+      {
+        "paper_id": "openalex:W4310713220",
+        "title": "Scaling Agricultural Policy Interventions",
+        "venue_year": "National Bureau of Economic Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4380680803",
+        "title": "Microglia in Alzheimer’s disease: pathogenesis, mechanisms, and therapeutic potentials",
+        "venue_year": "Frontiers in Aging Neuroscience 2023"
+      },
+      {
+        "paper_id": "openalex:W4318923555",
+        "title": "AASLD Practice Guidance on the clinical assessment and management of nonalcoholic fatty liver disease",
+        "venue_year": "Hepatology 2023"
+      },
+      {
+        "paper_id": "openalex:W4411449683",
+        "title": "VLATest: Testing and Evaluating Vision-Language-Action Models for Robotic Manipulation",
+        "venue_year": "Proceedings of the ACM on software engineering. 2025"
+      },
+      {
+        "paper_id": "openalex:W4311772359",
+        "title": "Towards an integrated framework for evaluating transformative innovation policy",
+        "venue_year": "Research Policy 2022"
+      },
+      {
+        "paper_id": "openalex:W4401497204",
+        "title": "Current advance of nanotechnology in diagnosis and treatment for malignant tumors",
+        "venue_year": "Signal Transduction and Targeted Therapy 2024"
+      },
+      {
+        "paper_id": "openalex:W4318948367",
+        "title": "Synthesizing explainable counterfactual policies for algorithmic recourse with program synthesis",
+        "venue_year": "Machine Learning 2023"
+      },
+      {
+        "paper_id": "openalex:W4319067061",
+        "title": "Review of counterfactual land change modeling for causal inference in land system science",
+        "venue_year": "Journal of Land Use Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4395483265",
+        "title": "Graph Neural Networks for Vulnerability Detection: A Counterfactual Explanation",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4415271604",
+        "title": "Perspectives for High-Purity Quartz from European Resources",
+        "venue_year": "Minerals 2025"
+      },
+      {
+        "paper_id": "openalex:W4384925410",
+        "title": "The global economic burden of chronic obstructive pulmonary disease for 204 countries and territories in 2020–50: a health-augmented macroeconomic modelling study",
+        "venue_year": "The Lancet Global Health 2023"
+      },
+      {
+        "paper_id": "openalex:W4387242094",
+        "title": "Accuracy and Reliability of Chatbot Responses to Physician Questions",
+        "venue_year": "JAMA Network Open 2023"
+      },
+      {
+        "paper_id": "openalex:W4320498213",
+        "title": "Speculative Histories, Just Futures: From Counterfactual Artifacts to Counterfactual Actions",
+        "venue_year": "ACM Transactions on Computer-Human Interaction 2023"
+      },
+      {
+        "paper_id": "openalex:W4391323272",
+        "title": "Counterfactual Explanation for Fairness in Recommendation",
+        "venue_year": "ACM Transactions on Information Systems 2024"
+      },
+      {
+        "paper_id": "openalex:W4385999933",
+        "title": "Reactive oxygen species, toxicity, oxidative stress, and antioxidants: chronic diseases and aging",
+        "venue_year": "Archives of Toxicology 2023"
+      },
+      {
+        "paper_id": "openalex:W4411433345",
+        "title": "Selecting among counterfactual methods to evaluate conservation interventions",
+        "venue_year": "Conservation Science and Practice 2025"
+      },
+      {
+        "paper_id": "openalex:W4323971780",
+        "title": "Extracellular matrix remodeling in tumor progression and immune escape: from mechanisms to treatments",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4400929582",
+        "title": "Response of Broiler Chickens to Three Different Energy Source Feedstuffs",
+        "venue_year": "International Journal of Innovative Science and Research Technology (IJISRT) 2024"
+      },
+      {
+        "paper_id": "openalex:W4405460058",
+        "title": "Therapeutic Potential of Cinnamon Oil: Chemical Composition, Pharmacological Actions, and Applications",
+        "venue_year": "Pharmaceuticals 2024"
+      },
+      {
+        "paper_id": "openalex:W4389732744",
+        "title": "Wastewater-based surveillance as a tool for public health action: SARS-CoV-2 and beyond",
+        "venue_year": "Clinical Microbiology Reviews 2023"
+      },
+      {
+        "paper_id": "openalex:W4386162581",
+        "title": "Environmentally Responsible Lightweight Passenger Vehicle Design and Manufacturing",
+        "venue_year": "Automotive Innovation 2023"
+      },
+      {
+        "paper_id": "openalex:W4376131634",
+        "title": "GAA-FGF14 ataxia (SCA27B): phenotypic profile, natural history progression and 4-aminopyridine treatment response",
+        "venue_year": "Brain 2023"
+      },
+      {
+        "paper_id": "openalex:W4407229447",
+        "title": "Artificial intelligence in mental health care: a systematic review of diagnosis, monitoring, and intervention applications",
+        "venue_year": "Psychological Medicine 2025"
+      },
+      {
+        "paper_id": "openalex:W4317390903",
+        "title": "Mesolimbic dopamine adapts the rate of learning from action",
+        "venue_year": "Nature 2023"
+      },
+      {
+        "paper_id": "openalex:W4406121395",
+        "title": "Mucosal immune response in biology, disease prevention and treatment",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W4360950006",
+        "title": "The function and mechanisms of action of circular RNAs in Urologic Cancer",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4308721998",
+        "title": "Spectrophotometric Methods for Measurement of Antioxidant Activity in Food and Pharmaceuticals",
+        "venue_year": "Antioxidants 2022"
+      },
+      {
+        "paper_id": "openalex:W4391897126",
+        "title": "Redefining Counterfactual Explanations for Reinforcement Learning: Overview, Challenges and Opportunities",
+        "venue_year": "ACM Computing Surveys 2024"
+      },
+      {
+        "paper_id": "openalex:W4405920650",
+        "title": "Pathways to Greener Primary Lithium Extraction for a Really Sustainable Energy Transition: Environmental Challenges and Pioneering Innovations",
+        "venue_year": "Sustainability 2024"
+      },
+      {
+        "paper_id": "openalex:W4401977912",
+        "title": "Digital Platforms as a Fertile Ground for the Economic Sustainability of Startups: Assaying Scenarios, Actions, Plans, and Players",
+        "venue_year": "Sustainability 2024"
+      },
+      {
+        "paper_id": "openalex:W4366000520",
+        "title": "The scars of supply shocks: Implications for monetary policy",
+        "venue_year": "Journal of Monetary Economics 2023"
+      },
+      {
+        "paper_id": "openalex:W4353109589",
+        "title": "Gut microbiota and its metabolites in depression: from pathogenesis to treatment",
+        "venue_year": "EBioMedicine 2023"
+      },
+      {
+        "paper_id": "openalex:W4319159815",
+        "title": "Optimization of the Hemolysis Assay for the Assessment of Cytotoxicity",
+        "venue_year": "International Journal of Molecular Sciences 2023"
+      },
+      {
+        "paper_id": "openalex:W4402557213",
+        "title": "Global burden of bacterial antimicrobial resistance 1990–2021: a systematic analysis with forecasts to 2050",
+        "venue_year": "The Lancet 2024"
+      },
+      {
+        "paper_id": "openalex:W4367319708",
+        "title": "CIRS: Bursting Filter Bubbles by Counterfactual Interactive Recommender System",
+        "venue_year": "ACM Transactions on Information Systems 2023"
+      },
+      {
+        "paper_id": "openalex:W4388863091",
+        "title": "Upadacitinib: Mechanism of action, clinical, and translational science",
+        "venue_year": "Clinical and Translational Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4311744984",
+        "title": "Aging and aging-related diseases: from molecular mechanisms to interventions and treatments",
+        "venue_year": "Signal Transduction and Targeted Therapy 2022"
+      },
+      {
+        "paper_id": "openalex:W4362704027",
+        "title": "Review of Antimicrobial Nanocoatings in Medicine and Dentistry: Mechanisms of Action, Biocompatibility Performance, Safety, and Benefits Compared to Antibiotics",
+        "venue_year": "ACS Nano 2023"
+      },
+      {
+        "paper_id": "openalex:W4389337793",
+        "title": "Causality-driven Testing of Autonomous Driving Systems",
+        "venue_year": "ACM Transactions on Software Engineering and Methodology 2023"
+      },
+      {
+        "paper_id": "openalex:W4387951757",
+        "title": "Safety Testing of Automated Driving Systems: A Literature Review",
+        "venue_year": "IEEE Access 2023"
+      },
+      {
+        "paper_id": "openalex:W4388468385",
+        "title": "Global warming in the pipeline",
+        "venue_year": "Oxford Open Climate Change 2023"
+      },
+      {
+        "paper_id": "openalex:W4379209901",
+        "title": "Appropriateness and Readability of ChatGPT-4-Generated Responses for Surgical Treatment of Retinal Diseases",
+        "venue_year": "Ophthalmology Retina 2023"
+      },
+      {
+        "paper_id": "openalex:W4318595487",
+        "title": "Small Molecule EGFR Inhibitors as Anti-Cancer Agents: Discovery, Mechanisms of Action, and Opportunities",
+        "venue_year": "International Journal of Molecular Sciences 2023"
+      },
+      {
+        "paper_id": "openalex:W4412170483",
+        "title": "Pattern recognition receptors: function, regulation and therapeutic potential",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W3143382951",
+        "title": "Do Family Policies Reduce Gender Inequality? Evidence from 60 Years of Policy Experimentation",
+        "venue_year": "American Economic Journal Economic Policy 2024"
+      },
+      {
+        "paper_id": "openalex:W4382011097",
+        "title": "Introduction to the Use of Linear and Nonlinear Regression Analysis in Quantitative Biological Assays",
+        "venue_year": "Current Protocols 2023"
+      },
+      {
+        "paper_id": "openalex:W4391170278",
+        "title": "Exploring the Potential of Bioactive Peptides: From Natural Sources to Therapeutics",
+        "venue_year": "International Journal of Molecular Sciences 2024"
+      },
+      {
+        "paper_id": "openalex:W4387452756",
+        "title": "Progressing nanotechnology to improve targeted cancer treatment: overcoming hurdles in its clinical implementation",
+        "venue_year": "Molecular Cancer 2023"
+      },
+      {
+        "paper_id": "openalex:W4391744412",
+        "title": "Advances in diagnosis and treatment of bladder cancer",
+        "venue_year": "BMJ 2024"
+      },
+      {
+        "paper_id": "openalex:W4308150896",
+        "title": "Bioinspired metal/metal oxide nanoparticles: A road map to potential applications",
+        "venue_year": "Materials Today Advances 2022"
+      },
+      {
+        "paper_id": "openalex:W4319303006",
+        "title": "What Can Time-Series Regressions Tell Us About Policy Counterfactuals?",
+        "venue_year": "2023"
+      },
+      {
+        "paper_id": "openalex:W4404768371",
+        "title": "Deep learning adversarial attacks and defenses in autonomous vehicles: a systematic literature review from a safety perspective",
+        "venue_year": "Artificial Intelligence Review 2024"
+      },
+      {
+        "paper_id": "openalex:W4304695118",
+        "title": "Molecular targeted therapy for anticancer treatment",
+        "venue_year": "Experimental & Molecular Medicine 2022"
+      },
+      {
+        "paper_id": "openalex:W4300862852",
+        "title": "Colon cancer and colorectal cancer: Prevention and treatment by potential natural products",
+        "venue_year": "Chemico-Biological Interactions 2022"
+      },
+      {
+        "paper_id": "openalex:W4403520169",
+        "title": "In-Simulation Testing of Deep Learning Vision Models in Autonomous Robotic Manipulators",
+        "venue_year": "2024"
+      },
+      {
+        "paper_id": "openalex:W4362672788",
+        "title": "Understanding bacterial biofilms: From definition to treatment strategies",
+        "venue_year": "Frontiers in Cellular and Infection Microbiology 2023"
+      },
+      {
+        "paper_id": "openalex:W4401834263",
+        "title": "Opportunities and Challenges of Geothermal Energy: A Comparative Analysis of Three European Cases—Belgium, Iceland, and Italy",
+        "venue_year": "Energies 2024"
+      },
+      {
+        "paper_id": "openalex:W4309503005",
+        "title": "Global mortality associated with 33 bacterial pathogens in 2019: a systematic analysis for the Global Burden of Disease Study 2019",
+        "venue_year": "The Lancet 2022"
+      },
+      {
+        "paper_id": "openalex:W4385620138",
+        "title": "Controlled release fertilizer delivery system derived from rice straw cellulose nanofibres: a circular economy based solution for sustainable development",
+        "venue_year": "Bioengineered 2023"
+      },
+      {
+        "paper_id": "openalex:W4309438426",
+        "title": "The Landscape of Potential Small and Drug Substance Related Nitrosamines in Pharmaceuticals",
+        "venue_year": "Journal of Pharmaceutical Sciences 2022"
+      },
+      {
+        "paper_id": "openalex:W4362671719",
+        "title": "Addressing uncertainty in the safety assurance of machine-learning",
+        "venue_year": "Frontiers in Computer Science 2023"
+      },
+      {
+        "paper_id": "openalex:W4388486766",
+        "title": "Beyond the 5-HT2AReceptor: Classic and Nonclassic Targets in Psychedelic Drug Action",
+        "venue_year": "Journal of Neuroscience 2023"
+      },
+      {
+        "paper_id": "openalex:W4412199650",
+        "title": "A Cross-Disciplinary Review of Rare Earth Elements: Deposit Types, Mineralogy, Machine Learning, Environmental Impact, and Recycling",
+        "venue_year": "Minerals 2025"
+      },
+      {
+        "paper_id": "openalex:W4389265359",
+        "title": "Assessing the importance of H2O content in the tectono‐metamorphic evolution of shear zones: A case study from the Dora‐Maira Massif (Western Alps)",
+        "venue_year": "Journal of Metamorphic Geology 2023"
+      },
+      {
+        "paper_id": "openalex:W4377011124",
+        "title": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+        "venue_year": "Hepatology 2023"
+      },
+      {
+        "paper_id": "openalex:W4367693670",
+        "title": "Model vs system level testing of autonomous driving systems: a replication and extension study",
+        "venue_year": "Empirical Software Engineering 2023"
+      },
+      {
+        "paper_id": "openalex:W4307401860",
+        "title": "Metastatic colorectal cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+        "venue_year": "Annals of Oncology 2022"
+      },
+      {
+        "paper_id": "openalex:W4407681133",
+        "title": "Breast cancer: pathogenesis and treatments",
+        "venue_year": "Signal Transduction and Targeted Therapy 2025"
+      },
+      {
+        "paper_id": "openalex:W4381570295",
+        "title": "Navigating the Ethical Challenges of Artificial Intelligence in Higher Education: An Analysis of Seven Global AI Ethics Policies",
+        "venue_year": "TEM Journal 2023"
+      },
+      {
+        "paper_id": "openalex:W4412703857",
+        "title": "NeuroStrata: Harnessing Neuro-Symbolic Paradigms for Improved Testability and Verifiability of Autonomous CPS",
+        "venue_year": "2025"
+      },
+      {
+        "paper_id": "openalex:W4317811195",
+        "title": "Cognitive impairment in schizophrenia: aetiology, pathophysiology, and treatment",
+        "venue_year": "Molecular Psychiatry 2023"
+      },
+      {
+        "paper_id": "openalex:W4309008621",
+        "title": "Alzheimer’s Disease: Treatment Strategies and Their Limitations",
+        "venue_year": "International Journal of Molecular Sciences 2022"
+      },
+      {
+        "paper_id": "openalex:W7115915065",
+        "title": "Development, challenges and potentials of underground energy storage systems",
+        "venue_year": "Tunnelling and Underground Space Technology 2025"
+      },
+      {
+        "paper_id": "openalex:W4389781439",
+        "title": "Lights, fiber, action! A primer on in vivo fiber photometry",
+        "venue_year": "Neuron 2023"
+      },
+      {
+        "paper_id": "openalex:W4386390750",
+        "title": "A Survey on Graph Counterfactual Explanations: Definitions, Methods, Evaluation, and Research Challenges",
+        "venue_year": "ACM Computing Surveys 2023"
+      },
+      {
+        "paper_id": "openalex:W4387439311",
+        "title": "Cardiovascular-Kidney-Metabolic Health: A Presidential Advisory From the American Heart Association",
+        "venue_year": "Circulation 2023"
+      },
+      {
+        "paper_id": "openalex:W4313680674",
+        "title": "RNA editing: Expanding the potential of RNA therapeutics",
+        "venue_year": "Molecular Therapy 2023"
+      },
+      {
+        "paper_id": "openalex:W4381430247",
+        "title": "Microbial Biofilm: A Review on Formation, Infection, Antibiotic Resistance, Control Measures, and Innovative Treatment",
+        "venue_year": "Microorganisms 2023"
+      },
+      {
+        "paper_id": "openalex:W4366684343",
+        "title": "Obesity and type 2 diabetes mellitus: connections in epidemiology, pathogenesis, and treatments",
+        "venue_year": "Frontiers in Endocrinology 2023"
+      },
+      {
+        "paper_id": "openalex:W4399721741",
+        "title": "Cancer treatments: Past, present, and future",
+        "venue_year": "Cancer Genetics 2024"
+      },
+      {
+        "paper_id": "openalex:W4411918916",
+        "title": "Evaluating the impact of two decades of USAID interventions and projecting the effects of defunding on mortality up to 2030: a retrospective impact evaluation and forecasting analysis",
+        "venue_year": "The Lancet 2025"
+      },
+      {
+        "paper_id": "openalex:W4323865263",
+        "title": "From patterns to patients: Advances in clinical machine learning for cancer diagnosis, prognosis, and treatment",
+        "venue_year": "Cell 2023"
+      },
+      {
+        "paper_id": "openalex:W4314446173",
+        "title": "The effect of the policy mix of green credit and government subsidy on environmental innovation",
+        "venue_year": "Energy Economics 2023"
+      },
+      {
+        "paper_id": "openalex:W4312014271",
+        "title": "Techno-Economic Assessment of Geothermal Resources in the Variscan Basement of the Northern Upper Rhine Graben",
+        "venue_year": "Natural Resources Research 2022"
+      },
+      {
+        "paper_id": "openalex:W4376602770",
+        "title": "Synaptic oligomeric tau in Alzheimer’s disease — A potential culprit in the spread of tau pathology through the brain",
+        "venue_year": "Neuron 2023"
+      }
+    ]
+  }
+}

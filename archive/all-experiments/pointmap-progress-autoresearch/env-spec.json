@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "environment_id": "zt-a100-01-liu-meng-pointmap-e0",
+  "backend": "ssh",
+  "host": "<PRIVATE_SERVER>",
+  "hostname": "zt-a100-01",
+  "user": "liu_meng",
+  "canonical_personal_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>",
+  "code_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief",
+  "data_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief",
+  "log_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>/logs/pointmap-progress-belief",
+  "result_root": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief",
+  "renderer": {
+    "backend": "osmesa",
+    "root": "<PERSONAL_RESEARCH_ROOT_ALIAS>/renderer-runtime/osmesa",
+    "python": "<PERSONAL_RESEARCH_ROOT_ALIAS>/venvs/libero-eval-py310/bin/python",
+    "python_version": "3.10.12"
+  },
+  "training": {
+    "python": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/openpi/.venv/bin/python",
+    "python_version": "3.11.15",
+    "torch": "2.7.1+cu126",
+    "torch_cuda": "12.6",
+    "numpy": "1.26.4"
+  },
+  "starvla": {
+    "source_commit": "3422b9f2387b6f682cf02802904a77b23ab13afd",
+    "checkpoint": "<PERSONAL_RESEARCH_ROOT_ALIAS>/checkpoints/cf-dynalign/cf_dynalign_baseline_libero_all_20260727_185501/final_model/pytorch_model.pt",
+    "checkpoint_size_bytes": 9785052178,
+    "checkpoint_sha256": null,
+    "checkpoint_hash_note": "Not needed for E0; a direct SHA-256 read exceeded the 120-second SSH preflight timeout and will be recomputed before any VLA-dependent run."
+  },
+  "gpus": [
+    {"physical_index": 0, "uuid": "GPU-417b37b2-bb07-cc79-ca59-2e43af96d3ea", "name": "NVIDIA A100-PCIE-40GB", "memory_mib": 40960},
+    {"physical_index": 1, "uuid": "GPU-708fad71-ac97-0c67-85fc-15e9534b2f59", "name": "NVIDIA A100-PCIE-40GB", "memory_mib": 40960},
+    {"physical_index": 2, "uuid": "GPU-c034ca59-aa0c-4629-ce5d-a0b5d92e2747", "name": "NVIDIA A100-PCIE-40GB", "memory_mib": 40960},
+    {"physical_index": 3, "uuid": "GPU-aa863a6c-8482-fd6c-e957-424e559e9df4", "name": "NVIDIA A100-PCIE-40GB", "memory_mib": 40960}
+  ],
+  "gpu_policy": {
+    "preferred": [2, 3],
+    "conditional": [0, 1],
+    "idle_memory_mib_max": 500,
+    "idle_utilization_percent_max": 5,
+    "require_no_compute_process": true,
+    "recheck_before_every_launch": true,
+    "sharing_or_preemption": false
+  },
+  "network": "no remote downloads",
+  "real_robot_trials": 0
+}

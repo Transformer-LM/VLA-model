@@ -1,0 +1,388 @@
+{
+  "aggregator_sha256": "bd940ad38898ce566884bb76a23d49ef16be90ab76d04b8157658a5d891032ef",
+  "audit_sha256": "39f7bf51a664f809b8f9e11250b6997b5142f5b33fcd28b7359b8a5f752a2b2b",
+  "claim_limit": "Even a pass establishes only simulator-depth/instance-mask PointMap headroom, not action-conditioned WAM value.",
+  "common_config_sha256": "f3b3a826ddf1a940d22fbdbd4e0baa7fcc4f579013d9724cb37ae5edea018657",
+  "complete": true,
+  "dataset": "<PERSONAL_RESEARCH_ROOT_ALIAS>/data/pointmap-progress-belief/e0_full_unique_families_v1.npz",
+  "dataset_sha256": "ea15283b03bec58092c08f98bc284c22c7a75f48ad572b71ee4eca716fad9655",
+  "efficiency_scope": "Head input tensor and head forward only; excludes RGB-D sensing, instance association, and PointMap projection.",
+  "gate": {
+    "conditions": {
+      "oracle_frr_le_0_05": false,
+      "oracle_macro_f1_ge_0_75": false,
+      "pointmap_imr_within_depth_plus_0_05": false,
+      "pointmap_input_at_least_10x_smaller": true,
+      "pointmap_macro_f1_within_depth_minus_0_03": false
+    },
+    "interpretation": "PIPELINE_OR_TASK_DESIGN_FAILURE",
+    "pass": false
+  },
+  "geometry_sha256": "2e67bd77f4a40491420b60f2d4eeb6770eac88c49f460c81e7fd0c1aa1688f58",
+  "kind": "e0_representation_gate",
+  "manifest_sha256": "3fffc93c264e47122a8b5069e45efbaccf90d3e206940a90339295cb68657191",
+  "schema_version": 1,
+  "source_result_sha256": {
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R020_rgb_addressed_v2.json": "898f4b2d87a232d74326535197e55a57a4ea6d0c3eff46f5a8a282bfd49d5c92",
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R021_depth_addressed_v2.json": "6b0ae3c165c5580b3a247906ff2b943514fadb0afb4dcd6c4349abbcc6bda638",
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R022_pointmap_v2.json": "3c8d5b3ff424cc4b31decbf863a6aac216abb4e0f5404ee4d594891ff079b397",
+    "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/pointmap-progress-belief/R023_oracle_pose_v2.json": "20d54853d616bce912024dcaa4ddb3bad8f5dcdc6f70bfe778c132798d00f444"
+  },
+  "summaries": {
+    "depth_addressed": {
+      "achieved_false_retraction_rate_ci95": 0.33186816225129123,
+      "achieved_false_retraction_rate_mean": 0.19777777777777777,
+      "brier_ci95": 0.2930058990156571,
+      "brier_mean": 0.44674865802129105,
+      "decision_error_ci95": 0.17020821026686594,
+      "decision_error_mean": 0.30092592592592593,
+      "ece_ci95": 0.15985462815306486,
+      "ece_mean": 0.18900560300659255,
+      "fold_values": {
+        "achieved_false_retraction_rate": [
+          0.016666666666666666,
+          0.5666666666666667,
+          0.0,
+          0.4000000000000001,
+          0.005555555555555556
+        ],
+        "brier": [
+          0.5939305226008097,
+          0.3814810911814372,
+          0.263751079638799,
+          0.7786222149928411,
+          0.21595838169256845
+        ],
+        "decision_error": [
+          0.3888888888888889,
+          0.25,
+          0.22685185185185186,
+          0.49074074074074076,
+          0.14814814814814814
+        ],
+        "ece": [
+          0.23117192117152394,
+          0.09433602348521904,
+          0.16268335351789442,
+          0.3893214664249509,
+          0.06751525043337432
+        ],
+        "head_forward_latency_ms_per_sample": [
+          0.7408076447124282,
+          0.7485306542366743,
+          0.753375943750143,
+          0.8435854113971194,
+          0.7383602842067679
+        ],
+        "invalidation_miss_rate_at_frr5": [
+          1.0,
+          0.0,
+          0.6944444444444445,
+          0.08333333333333333,
+          0.055555555555555546
+        ],
+        "invalidation_recall_at_frr5": [
+          0.0,
+          1.0,
+          0.3055555555555555,
+          0.9166666666666666,
+          0.9444444444444445
+        ],
+        "macro_f1": [
+          0.34993372421533336,
+          0.4674463098483761,
+          0.5344639642087324,
+          0.4859940021014959,
+          0.684917043740573
+        ]
+      },
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "head_forward_latency_ms_per_sample_ci95": 0.05509134893166489,
+      "head_forward_latency_ms_per_sample_mean": 0.7649319876606266,
+      "invalidation_miss_rate_at_frr5_ci95": 0.5621183153872743,
+      "invalidation_miss_rate_at_frr5_mean": 0.3666666666666667,
+      "invalidation_recall_at_frr5_ci95": 0.5621183153872743,
+      "invalidation_recall_at_frr5_mean": 0.6333333333333334,
+      "macro_f1_ci95": 0.15084478163807702,
+      "macro_f1_mean": 0.5045510088229022,
+      "parameters": 133571,
+      "runs": 15
+    },
+    "oracle_pose": {
+      "achieved_false_retraction_rate_ci95": 0.3529769007515895,
+      "achieved_false_retraction_rate_mean": 0.2733333333333333,
+      "brier_ci95": 0.15642717721016497,
+      "brier_mean": 0.5217125376065572,
+      "decision_error_ci95": 0.04055976030967886,
+      "decision_error_mean": 0.312037037037037,
+      "ece_ci95": 0.052915842759822716,
+      "ece_mean": 0.2664076705497723,
+      "fold_values": {
+        "achieved_false_retraction_rate": [
+          0.6888888888888888,
+          0.3333333333333333,
+          0.011111111111111112,
+          0.3333333333333333,
+          0.0
+        ],
+        "brier": [
+          0.5758828123410543,
+          0.6158977945645651,
+          0.31367921829223633,
+          0.6091806093851725,
+          0.4939222534497579
+        ],
+        "decision_error": [
+          0.3333333333333333,
+          0.3333333333333333,
+          0.25925925925925924,
+          0.3333333333333333,
+          0.3009259259259259
+        ],
+        "ece": [
+          0.23313609317496967,
+          0.27632139126459754,
+          0.22153428017541213,
+          0.27119352668523783,
+          0.3298530614486446
+        ],
+        "head_forward_latency_ms_per_sample": [
+          0.36980834634353715,
+          0.39985196354488534,
+          0.40762824316819507,
+          0.3642594659080108,
+          0.36920424085110426
+        ],
+        "invalidation_miss_rate_at_frr5": [
+          0.13888888888888887,
+          0.6666666666666666,
+          0.2222222222222222,
+          0.5555555555555556,
+          0.6944444444444443
+        ],
+        "invalidation_recall_at_frr5": [
+          0.8611111111111112,
+          0.3333333333333333,
+          0.7777777777777778,
+          0.4444444444444444,
+          0.3055555555555556
+        ],
+        "macro_f1": [
+          0.26666666666666666,
+          0.26666666666666666,
+          0.45335008901306706,
+          0.26666666666666666,
+          0.3540444030430057
+        ]
+      },
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "head_forward_latency_ms_per_sample_ci95": 0.024848539445277974,
+      "head_forward_latency_ms_per_sample_mean": 0.3821504519631465,
+      "invalidation_miss_rate_at_frr5_ci95": 0.3203593152449254,
+      "invalidation_miss_rate_at_frr5_mean": 0.45555555555555555,
+      "invalidation_recall_at_frr5_ci95": 0.32035931524492545,
+      "invalidation_recall_at_frr5_mean": 0.5444444444444445,
+      "macro_f1_ci95": 0.10286880917334941,
+      "macro_f1_mean": 0.3214788984112146,
+      "parameters": 34883,
+      "runs": 15
+    },
+    "pointmap": {
+      "achieved_false_retraction_rate_ci95": 0.48938771852384616,
+      "achieved_false_retraction_rate_mean": 0.43,
+      "brier_ci95": 0.25636151944415586,
+      "brier_mean": 0.5760285288095475,
+      "decision_error_ci95": 0.22265995603598743,
+      "decision_error_mean": 0.4370370370370371,
+      "ece_ci95": 0.13634726305667877,
+      "ece_mean": 0.2853522593500437,
+      "fold_values": {
+        "achieved_false_retraction_rate": [
+          0.3,
+          0.9888888888888889,
+          0.18333333333333335,
+          0.6666666666666666,
+          0.011111111111111112
+        ],
+        "brier": [
+          0.6211145917574564,
+          0.8411306937535604,
+          0.5406692624092102,
+          0.6107186873753866,
+          0.26650940875212353
+        ],
+        "decision_error": [
+          0.48611111111111116,
+          0.6435185185185185,
+          0.38425925925925924,
+          0.5092592592592592,
+          0.16203703703703703
+        ],
+        "ece": [
+          0.25433486686260603,
+          0.47420955559721695,
+          0.24737894562659438,
+          0.2641060581361806,
+          0.18673187052762072
+        ],
+        "head_forward_latency_ms_per_sample": [
+          0.37448352047552663,
+          0.40086403644333285,
+          0.4385437925035755,
+          0.3909094166010618,
+          0.398417169538637
+        ],
+        "invalidation_miss_rate_at_frr5": [
+          0.5555555555555555,
+          0.0,
+          0.6666666666666666,
+          0.38888888888888884,
+          0.6944444444444443
+        ],
+        "invalidation_recall_at_frr5": [
+          0.4444444444444445,
+          1.0,
+          0.3333333333333333,
+          0.6111111111111112,
+          0.3055555555555556
+        ],
+        "macro_f1": [
+          0.47741451021369885,
+          0.22567676226212816,
+          0.3864605986037662,
+          0.2048780487804878,
+          0.6276314880088466
+        ]
+      },
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "head_forward_latency_ms_per_sample_ci95": 0.0292504938854855,
+      "head_forward_latency_ms_per_sample_mean": 0.40064358711242676,
+      "invalidation_miss_rate_at_frr5_ci95": 0.35303080269902926,
+      "invalidation_miss_rate_at_frr5_mean": 0.4611111111111111,
+      "invalidation_recall_at_frr5_ci95": 0.3530308026990293,
+      "invalidation_recall_at_frr5_mean": 0.538888888888889,
+      "macro_f1_ci95": 0.2196715106119962,
+      "macro_f1_mean": 0.38441228157378554,
+      "parameters": 47171,
+      "runs": 15
+    },
+    "rgb_addressed": {
+      "achieved_false_retraction_rate_ci95": 0.20386521163155877,
+      "achieved_false_retraction_rate_mean": 0.2544444444444444,
+      "brier_ci95": 0.2033934419348922,
+      "brier_mean": 0.38187008400758105,
+      "decision_error_ci95": 0.21793648802362425,
+      "decision_error_mean": 0.28055555555555556,
+      "ece_ci95": 0.10544555339335232,
+      "ece_mean": 0.16567108868448824,
+      "fold_values": {
+        "achieved_false_retraction_rate": [
+          0.13888888888888887,
+          0.09444444444444444,
+          0.25555555555555554,
+          0.5166666666666667,
+          0.26666666666666666
+        ],
+        "brier": [
+          0.654735287030538,
+          0.3101212481657664,
+          0.2809505760669708,
+          0.41101111968358356,
+          0.25253218909104663
+        ],
+        "decision_error": [
+          0.5925925925925926,
+          0.1851851851851852,
+          0.19444444444444442,
+          0.23611111111111113,
+          0.19444444444444445
+        ],
+        "ece": [
+          0.20008452071083915,
+          0.08747331867063486,
+          0.0729936835942445,
+          0.2766663285869139,
+          0.1911375918598087
+        ],
+        "head_forward_latency_ms_per_sample": [
+          0.7491187968601783,
+          0.7392282333845893,
+          0.757692481080691,
+          0.7515728908280531,
+          0.7567500462755561
+        ],
+        "invalidation_miss_rate_at_frr5": [
+          0.6944444444444445,
+          0.5,
+          0.16666666666666666,
+          0.13888888888888887,
+          0.5
+        ],
+        "invalidation_recall_at_frr5": [
+          0.3055555555555555,
+          0.5,
+          0.8333333333333334,
+          0.8611111111111112,
+          0.5
+        ],
+        "macro_f1": [
+          0.24546782855998575,
+          0.6368146399453251,
+          0.6101719627104619,
+          0.5430837513080504,
+          0.6097399407744236
+        ]
+      },
+      "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "head_forward_latency_ms_per_sample_ci95": 0.009211399212726307,
+      "head_forward_latency_ms_per_sample_mean": 0.7508724896858135,
+      "invalidation_miss_rate_at_frr5_ci95": 0.297253081679402,
+      "invalidation_miss_rate_at_frr5_mean": 0.4,
+      "invalidation_recall_at_frr5_ci95": 0.297253081679402,
+      "invalidation_recall_at_frr5_mean": 0.6,
+      "macro_f1_ci95": 0.20144719814972958,
+      "macro_f1_mean": 0.5290556246596494,
+      "parameters": 139971,
+      "runs": 15
+    }
+  },
+  "task_cluster_unit": true,
+  "task_family_ids": [
+    "packaged_food_in_basket",
+    "condiment_in_tray",
+    "mug_on_plate",
+    "bowl_on_bowl_stack",
+    "bowl_on_plate"
+  ],
+  "trainer_sha256": "c2992f68f9485a168254a42def40bf5847388b772dadb777d54b4bf687c6cfe8",
+  "verifier_tensor_bytes_float32": {
+    "depth_addressed": 442368,
+    "oracle_pose": 192,
+    "pointmap": 448,
+    "rgb_addressed": 737280
+  }
+}

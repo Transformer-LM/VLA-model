@@ -1,0 +1,149 @@
+{
+  "attack_count": 20,
+  "attacks": [
+    {
+      "mutation": "source_admission_hash",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": " \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 190, in validate_record\n    validate_evidence_reference(record[key], allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 86, in validate_evidence_reference\n    raise ValueError(f\"evidence hash mismatch: {path}\")\nValueError: evidence hash mismatch: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "compiler_lock_hash",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "in\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 190, in validate_record\n    validate_evidence_reference(record[key], allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 86, in validate_evidence_reference\n    raise ValueError(f\"evidence hash mismatch: {path}\")\nValueError: evidence hash mismatch: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_COMPILER_LOCK_V2.json\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "matrix_lock_hash",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "  validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 190, in validate_record\n    validate_evidence_reference(record[key], allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 86, in validate_evidence_reference\n    raise ValueError(f\"evidence hash mismatch: {path}\")\nValueError: evidence hash mismatch: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_SANITY_MATRIX_LOCK_V2.json\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "matrix_lock_path",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 190, in validate_record\n    validate_evidence_reference(record[key], allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 83, in validate_evidence_reference\n    raise ValueError(f\"missing evidence: {path}\")\nValueError: missing evidence: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_TAMPER_AUDIT_V2_02/fake-matrix-lock.json\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "matrix_job_output",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": " allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 910, in verify_matrix_run_lock\n    confined_file(output_path, allowed_root, \"locked matrix artifact\")\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 76, in confined_file\n    raise ValueError(f\"missing {label}: {path}\")\nValueError: missing locked matrix artifact: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_TAMPER_AUDIT_V2_02/wrong-artifact.json\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "matrix_job_selector",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ine 1504, in main\n    verified = verify_manifest_record(manifest, root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1448, in verify_manifest_record\n    verify_matrix_run_lock(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 927, in verify_matrix_run_lock\n    raise ValueError(f\"P026 matrix-run job binding mismatch: {key}\")\nValueError: P026 matrix-run job binding mismatch: selector\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "nominal_hash",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ation/analyze_p025_fixed_budget.py\", line 190, in validate_record\n    validate_evidence_reference(record[key], allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 86, in validate_evidence_reference\n    raise ValueError(f\"evidence hash mismatch: {path}\")\nValueError: evidence hash mismatch: <PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.json.evidence/nominal_unedited.npz\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "duplicate_nominal_repeat",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "fest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1198, in verify_saved_boundary_fidelity\n    verified = verify_p026_nominal_gate(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1077, in verify_p026_nominal_gate\n    raise ValueError(\"P026 nominal and repeat evidence are not distinct artifacts\")\nValueError: P026 nominal and repeat evidence are not distinct artifacts\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "swap_nominal_kinds",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "anifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1198, in verify_saved_boundary_fidelity\n    verified = verify_p026_nominal_gate(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1084, in verify_p026_nominal_gate\n    raise ValueError(f\"P026 nominal evidence kind mismatch: {expected_kind}\")\nValueError: P026 nominal evidence kind mismatch: nominal_unedited_evidence\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "remove_compiler_lock",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "e/israc/implementation/verify_p025_manifest.py\", line 1514, in <module>\n    raise SystemExit(main())\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1501, in main\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 188, in validate_record\n    raise ValueError(f\"P026 required evidence reference is missing: {key}\")\nValueError: P026 required evidence reference is missing: compiler_lock\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "flip_boundary_eligibility",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ta/workspace/israc/implementation/verify_p025_manifest.py\", line 1514, in <module>\n    raise SystemExit(main())\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1501, in main\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 314, in validate_record\n    raise ValueError(\"invalid boundary entered the compiler witness set\")\nValueError: invalid boundary entered the compiler witness set\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "inflate_replay_tolerance",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ary_fidelity(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1198, in verify_saved_boundary_fidelity\n    verified = verify_p026_nominal_gate(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1127, in verify_p026_nominal_gate\n    raise ValueError(f\"P026 nominal gate scalar mismatch: {key}\")\nValueError: P026 nominal gate scalar mismatch: replay_endpoint_tolerance\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "change_charged_budget",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ll last):\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1514, in <module>\n    raise SystemExit(main())\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1501, in main\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 303, in validate_record\n    raise ValueError(\"fixed step accounting mismatch\")\nValueError: fixed step accounting mismatch\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "change_compiler_argument",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": ", in main\n    verified = verify_manifest_record(manifest, root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1444, in verify_manifest_record\n    verify_compiler_lock(manifest, allowed_root)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 885, in verify_compiler_lock\n    raise ValueError(\"P026 compiler argument does not match embedded lock\")\nValueError: P026 compiler argument does not match embedded lock\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "witness_key_fields",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "lementation/verify_p025_manifest.py\", line 1514, in <module>\n    raise SystemExit(main())\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1501, in main\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 221, in validate_record\n    raise ValueError(\"witness_key_fields differ from authenticated manifest fields\")\nValueError: witness_key_fields differ from authenticated manifest fields\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "witness_key_sha",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "orkspace/israc/implementation/verify_p025_manifest.py\", line 1514, in <module>\n    raise SystemExit(main())\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1501, in main\n    validate_record(\n  File \"<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py\", line 228, in validate_record\n    raise ValueError(\"witness_key is not the canonical hash of its fields\")\nValueError: witness_key is not the canonical hash of its fields\n",
+      "stdout_tail": ""
+    },
+    {
+      "mutation": "delete_first_selected_block_and_reconcile",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "_reconstruction(manifest)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1061, in verify_selector_block_reconstruction\n    validate_selected_block_rows(record, selected, len(pool))\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1007, in validate_selected_block_rows\n    raise ValueError(\"selected block count differs from raw reconstruction\")\nValueError: selected block count differs from raw reconstruction\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "delete_all_selected_blocks_and_reconcile",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "_reconstruction(manifest)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1061, in verify_selector_block_reconstruction\n    validate_selected_block_rows(record, selected, len(pool))\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1007, in validate_selected_block_rows\n    raise ValueError(\"selected block count differs from raw reconstruction\")\nValueError: selected block count differs from raw reconstruction\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "reorder_selected_blocks",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1061, in verify_selector_block_reconstruction\n    validate_selected_block_rows(record, selected, len(pool))\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1029, in validate_selected_block_rows\n    raise ValueError(\"manifest block list/order differs from raw selector reconstruction\")\nValueError: manifest block list/order differs from raw selector reconstruction\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    },
+    {
+      "mutation": "contact_topology",
+      "rejected": true,
+      "returncode": 1,
+      "stderr_tail": "ify_selector_block_reconstruction(manifest)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 1033, in verify_selector_block_reconstruction\n    model = authenticated_contact_topology(record)\n  File \"<PERSONAL_RESEARCH_ROOT>/workspace/israc/implementation/verify_p025_manifest.py\", line 995, in authenticated_contact_topology\n    raise ValueError(\"P026 contact topology/model schema hash mismatch\")\nValueError: P026 contact topology/model schema hash mismatch\n",
+      "stdout_tail": "[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+    }
+  ],
+  "kind": "p026_manifest_tamper_audit",
+  "passed": true,
+  "rejected_count": 20,
+  "source_manifest": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CODELOCK_SANITY_V2/P026_CODELOCK_SANITY_V2_t3_e1_c07_candidate_seed0.json"
+}

@@ -1,0 +1,441 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "released OpenPI π0.5 checkpoint",
+          "released FastWAM checkpoint",
+          "RoboTwin observation and OpenPI schema metadata"
+        ],
+        "produces": [
+          "frozen policy handle",
+          "frozen transition handle T_ψ: R^{d_z}×R^D×seed→R^{d_z}",
+          "left/right group sets G_L,G_R",
+          "typed hold-action vector h∈R^D"
+        ],
+        "note": "Verbatim: ‘1. Freeze the existing OpenPI π0.5 policy and FastWAM checkpoints, identify FastWAM's native pre-decoder rollout latent, parse the OpenPI action schema into left/right channel trajectories, and implement a schema-valid hold action for absolute, delta/velocity, and gripper channels.’ The step is dimensionally sound only if the named pre-decoder latent is also a valid input state of T_ψ; the candidate declares this interface but does not establish its causal sufficiency."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "observation o_t=(RGB,proprioception,language)",
+          "frozen OpenPI",
+          "frozen FastWAM"
+        ],
+        "produces": [
+          "proposal a^0∈R^{H×D}",
+          "cached policy features p",
+          "nominal carrier sequence z̄_0:H∈R^{(H+1)×d_z}"
+        ],
+        "note": "Verbatim: ‘2. On each existing RoboTwin demonstration or frozen-policy state, run OpenPI once to obtain a^0 and cache its policy hidden states; roll FastWAM only on a^0 to produce the nominal carrier z̄_0:H.’"
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "each z̄_k∈R^{d_z}",
+          "proposal and hold actions",
+          "pair set G_L×G_R",
+          "K_ξ coupled seeds"
+        ],
+        "produces": [
+          "four-cell tensor Z∈R^{H×|G_L||G_R|×4×K_ξ×d_z}"
+        ],
+        "note": "LIKELY-FATAL FIRST ATTACK. Verbatim: ‘3. For every k and (g,h) in G_L×G_R, batch the four one-step FastWAM calls from the identical z̄_k with non-target channels fixed at a^0 and with K_ξ coupled seeds.’ Reading A passes the full H-step channel trajectories a_g,a_h into a one-step T_ψ and is dimensionally undefined; reading B passes the kth action vector a^0_k and is sound. This is a reading-dependent wording finding repaired below. Under both readings, resetting all cells to z̄_k changes the target from a recursively mediated total effect to a controlled one-step direct effect; the resulting blocker is reading-robust."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "four-cell tensor Z"
+        ],
+        "produces": [
+          "marginal tensors",
+          "c∈R^{H×|G_L||G_R|×d_z}",
+          "recursive-branch baseline record"
+        ],
+        "note": "Verbatim: ‘4. Average each cell over seeds and compute the marginal latent innovations plus c_{kgh}; also compute the recursively rolled four-branch residual only as a logged baseline, never as an adapter input.’ The K_ξ mean matches the declared conditional model-internal estimand exactly; it does not establish that c is coordinate-invariant or a total action-chunk interaction."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "c tensor",
+          "additive recomposition controls"
+        ],
+        "produces": [
+          "tokens u∈R^{H×|G_L||G_R|×d_u}",
+          "decoder reconstruction",
+          "null-loss value"
+        ],
+        "note": "Verbatim: ‘5. Train E_η and its decoder with the reconstruction and additive-null objectives, using synthetic additive recomposition z^{10}+z^{01}-z^{00} as the zero-interaction control. Inputs: carrier-locked tensors; outputs: time- and pair-indexed u tokens for which a zero defect produces zero paired correction by construction.’ A finite auxiliary loss does not create the claimed exact zero; the hard zero-preserving parameterization is supplied as a coherence patch."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "cached policy features p",
+          "marginal tokens",
+          "u tokens",
+          "rank r_a and temperature τ"
+        ],
+        "produces": [
+          "refined chunk a^1∈R^{H×D}",
+          "pair weights",
+          "paired residuals"
+        ],
+        "note": "Verbatim: ‘6. Insert the rank-r_a adapter into a second OpenPI action pass: own-effector marginal streams may write only to their corresponding action channels, while each u_{kgh} cross-attends to the cached policy features and emits residuals jointly to channels g and h; softmax pair weights combine overlapping proposals.’ Cross-attention also consumes policy features, so u is not structurally the sole producer unless it hard-gates the output; the patch makes that dependency exact."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "RoboTwin demonstrations",
+          "cached probes",
+          "native flow-matching loss",
+          "reconstruction and null losses"
+        ],
+        "produces": [
+          "trained E_η, decoder, and adapter",
+          "matched ablation checkpoints"
+        ],
+        "note": "Verbatim: ‘7. Optimize only E_η, its decoder, and the adapter on existing RoboTwin demonstrations with the native flow-matching action loss plus the two named auxiliary losses; keep OpenPI and FastWAM weights, data splits, and total adapter parameter budget fixed across interface ablations.’"
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "held-out likelihood and seed-variance records",
+          "declared grids for K_ξ,r_a,τ,λ_rec,λ_null"
+        ],
+        "produces": [
+          "frozen deployment hyperparameters"
+        ],
+        "note": "Verbatim: ‘8. Select K_ξ, r_a, τ, λ_rec, and λ_null only on the held-out RoboTwin calibration split by their stated rules, then freeze them before E0.’ All behavior-changing numbers are named, defaulted, and supplied a selection rule; no unbound method parameter was found."
+      },
+      {
+        "step": "S9",
+        "consumes": [
+          "live observation",
+          "frozen models and parameters"
+        ],
+        "produces": [
+          "clipped executable action chunk",
+          "logged c, weights, and correction"
+        ],
+        "note": "Verbatim: ‘9. At inference, execute the proposal, carrier, batched one-step probes, and second-pass refinement sequence; clip the refined chunk to the native action box and send it to RoboTwin exactly as an ordinary OpenPI action chunk.’ No simulator oracle or success label is consumed at deployment. The transition-call count is 1+4K_ξH|G_L||G_R| before the second policy pass, so latency feasibility remains empirical rather than internally undefined."
+      },
+      {
+        "step": "S10",
+        "consumes": [
+          "restored RoboTwin states",
+          "six frozen comparison arms"
+        ],
+        "produces": [
+          "paired task-success, action-deviation, latency, and sign-disagreement records"
+        ],
+        "note": "Verbatim: ‘10. In rollback-first RoboTwin E0, restore identical simulator states and seeds for frozen OpenPI, a matched-parameter monolithic-future adapter, a matched-call recursive-branch adapter, a marginal-only adapter, CarrierLock, and the token-permutation negative control; record task success, action deviation, correction latency, and whether recursive and carrier-locked residual signs disagree.’"
+      }
+    ],
+    "dry_run": {
+      "instance": "Scalar state x with left action l=1, right action r=2, holds 0, start x_0=1, H=2, one cross-effector pair, and K_ξ=4. Case A uses action-additive but state-nonlinear dynamics x'=x^2+l+r; Case B uses physically additive x'=x+l+r observed through latent z=x^2; Case C adds a genuine one-step term 0.5lr. A compatible ungated paired adapter uses u=0, policy feature 3, and bias 0.2.",
+      "execution": {
+        "mode": "executed",
+        "script": "def mobius(c): return c['11']-c['10']-c['01']+c['00']\nz0=1.0; A={'11':(1.,2.),'10':(1.,0.),'01':(0.,2.),'00':(0.,0.)}\nf=lambda z,l,r:z*z+l+r\nh1={k:f(z0,*a) for k,a in A.items()}\nh2={k:f(h1[k],*a) for k,a in A.items()}\ncarrier=h1['11']; same={k:f(carrier,*a) for k,a in A.items()}\nphysical={k:z0+a[0]+a[1] for k,a in A.items()}\nlatent={k:v*v for k,v in physical.items()}\ngenuine={k:z0+a[0]+a[1]+0.5*a[0]*a[1] for k,a in A.items()}\nprint(h1,mobius(h1)); print(h2,mobius(h2)); print(same,mobius(same)); print(physical,mobius(physical)); print(latent,mobius(latent)); print(genuine,mobius(genuine)); print(3.0+0.2,0.0*(3.0+0.2)); print(1+4*4*2*1,1+4*4*16*49)",
+        "output": "recursive_h1 {'11': 4.0, '10': 2.0, '01': 3.0, '00': 1.0} mobius 0.0\nrecursive_h2 {'11': 19.0, '10': 5.0, '01': 11.0, '00': 1.0} mobius 4.0\ncommon_carrier_h2 {'11': 19.0, '10': 17.0, '01': 18.0, '00': 16.0} mobius 0.0\nphysical_additive_cells {'11': 4.0, '10': 2.0, '01': 3.0, '00': 1.0} mobius 0.0\nnonlinear_latent_cells {'11': 16.0, '10': 4.0, '01': 9.0, '00': 1.0} mobius 4.0\ngenuine_one_step_cells {'11': 5.0, '10': 2.0, '01': 3.0, '00': 1.0} mobius 1.0\nzero_token_ungated 3.2 zero_token_hard_gated 0.0\nminimal_transition_calls 33\nillustrative_transition_calls 12545"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "recursive mixed contrast after one step",
+          "value": "0",
+          "arithmetic": "4-2-3+1=0"
+        },
+        {
+          "quantity": "recursive mixed contrast after two steps",
+          "value": "4",
+          "arithmetic": "19-5-11+1=4"
+        },
+        {
+          "quantity": "same-carrier contrast at the second carrier",
+          "value": "0",
+          "arithmetic": "19-17-18+16=0"
+        },
+        {
+          "quantity": "physically additive one-step contrast",
+          "value": "0",
+          "arithmetic": "4-2-3+1=0"
+        },
+        {
+          "quantity": "the same physical cells after latent map z=x^2",
+          "value": "4",
+          "arithmetic": "16-4-9+1=4"
+        },
+        {
+          "quantity": "genuine instantaneous 0.5lr interaction retained by re-anchoring",
+          "value": "1",
+          "arithmetic": "5-2-3+1=1"
+        },
+        {
+          "quantity": "zero-token paired output before versus after a hard gate",
+          "value": "3.2 versus 0",
+          "arithmetic": "3+0.2=3.2; 0×(3+0.2)=0"
+        },
+        {
+          "quantity": "one-pair minimal deployment transition calls",
+          "value": "33",
+          "arithmetic": "1+4×K_ξ×H×P=1+4×4×2×1=33"
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The recursively rolled contrast is 4 while the same-carrier contrast is 0 under x'=x^2+l+r. Relative to the declared one-step direct estimand the 4 is branch drift, but relative to the H-step potential outcome it is the genuine state-mediated joint effect; the procedure erases it.",
+          "kind": "structural",
+          "why": "For nonlinear G, the mixed difference of G evaluated on intervention-shifted states need not vanish even when actions enter every one-step transition additively; resetting the mediator to the nominal carrier removes this entire path by construction."
+        },
+        {
+          "anomaly": "A physically additive transition has contrast 0 in x but contrast 4 in the equally valid nonlinear latent z=x^2, even with a shared carrier.",
+          "kind": "structural",
+          "why": "Vector Möbius addition is not invariant to nonlinear latent reparameterization, so common coordinates do not make a pre-decoder latent defect a causal effector interaction."
+        },
+        {
+          "anomaly": "The advertised c=0 result for an additive T is algebraically forced by the candidate's additive formula and therefore cannot validate the carrier latent or distinguish spurious from mediated interaction.",
+          "kind": "structural",
+          "why": "The four-cell cancellation restates the defining assumption; it could not have produced a nonzero value under that construction."
+        },
+        {
+          "anomaly": "A compatible cross-attention adapter can emit 3.2 at u=0 because policy features and adapter bias remain inputs; a finite null penalty does not force exact zero.",
+          "kind": "structural",
+          "why": "The written architecture has no multiplicative zero gate, so there exists a parameter setting allowed by the procedure that violates the by-construction claim."
+        },
+        {
+          "anomaly": "The call formula yields 33 transitions in the minimal trace and 12545 for the illustrative H=16,P=49 case before the second policy pass.",
+          "kind": "instance_contingent",
+          "why": "Actual H, channel grouping, batching throughput, and latency come from the released checkpoint and hardware; the scaling is exact but these chosen sizes are not evidence that deployment is too slow."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "G_L×G_R is empty",
+        "behavior": "The pair softmax and paired residual aggregation have no element and no fallback is specified.",
+        "finding": "Patchable empty-pair control-flow hole: define zero paired residual and fall back to marginal-only refinement or a^0."
+      },
+      {
+        "probe": "H=1 with one pair",
+        "behavior": "The four cells are defined and recursive and same-carrier contrasts coincide at the first step.",
+        "finding": null
+      },
+      {
+        "probe": "all four cells identical, hence c=0",
+        "behavior": "The encoder can map zero to zero if all nonlinearities are zero-preserving, but the paired cross-attention can still emit a residual from cached policy features under the written finite null-loss construction.",
+        "finding": "Patchable hard-gating hole; executed compatible output was 3.2 instead of 0."
+      },
+      {
+        "probe": "all pair logits tied",
+        "behavior": "Softmax produces uniform weights and the procedure halts, although overlap resolution becomes an empirical averaging choice.",
+        "finding": null
+      },
+      {
+        "probe": "K_ξ at its minimum candidate",
+        "behavior": "K_ξ=1 is defined, the mean exists, and coupling is vacuous but harmless.",
+        "finding": null
+      },
+      {
+        "probe": "maximum schema-provided H and all cross-effector pairs",
+        "behavior": "The method remains finite with exact transition-call complexity 1+4K_ξH|G_L||G_R|, but no latency guarantee is stated; batched deployment feasibility is empirical.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "Recursive branches can yield nonzero later-horizon residuals even when every same-state one-step transition is action-additive.",
+        "established_by": "S3-S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Such a recursive residual is false interaction rather than a genuine multi-step mediated interaction.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "If T(z,l,r)=G(z)+U_L(l)+U_R(r), the common-carrier c is exactly zero.",
+        "established_by": "S3-S4",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The native pre-decoder latent c is a causally valid effector interaction for counterfactual one-step transitions.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "z̄_k is a Markov-sufficient and interventionally admissible carrier state",
+          "the chosen latent chart is affine or otherwise preserves mixed-effect zero/nonzero structure",
+          "held-action cells remain on the FastWAM transition support"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "Re-anchoring preserves genuine interactions while removing branch drift.",
+        "established_by": "S3-S4",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "A zero defect produces zero paired correction by construction.",
+        "established_by": "S5-S6 before patch; S5-S6 plus hard gate after patch",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The interaction token is load-bearing and cannot be replaced by an interaction-free central gradient.",
+        "established_by": "S6 after hard-gating patch",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "paired residuals are hard-gated by u rather than merely regularized",
+          "marginal streams have no write path into the partner channel"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Deployment uses no simulator oracle or success label.",
+        "established_by": "S9",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "CarrierLock increases paired RoboTwin task success.",
+        "established_by": "S10 is the planned test, not an establishing construction",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "With the same frozen FastWAM, seeds, horizon, and four calls per pair-step, recursively advance the joint, left-held, right-held, and both-held branches and feed their same-index mixed residual directly to a matched paired adapter.",
+      "naive_fairness": "It respects the same WAM information, K_ξ, H, cross-effector pairs, call budget, frozen-backbone restriction, and no-oracle deployment; it is simpler because it omits nominal-carrier resets, the reconstruction encoder, and the common-carrier bookkeeping.",
+      "instance_behavior": {
+        "naive": "At horizon 2, recursive cells (19,5,11,1) produce residual 4.",
+        "mechanism": "At the nominal carrier z̄_1=4, cells (19,17,18,16) produce c=0.",
+        "divergence": "4",
+        "kind": "structural"
+      },
+      "verdict": "confronts_obstacle",
+      "reasoning": "Relative to the declared conditional one-step estimand, the independently constructed recursive baseline mixes different states and CarrierLock removes that mismatch. The same computed divergence also exposes the unrepaired scope hole: relative to the H-step total action effect, the recursive value 4 is genuine mediation that CarrierLock deletes."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "OBSTACLE HOLE: same-carrier re-anchoring deletes genuine state-mediated multi-step interaction, not only false branch drift. Under an action-additive one-step transition with nonlinear state evolution, the recursive H-step contrast is the actual mixed potential-outcome effect, while CarrierLock forces every one-step c to zero; the method therefore cannot decide that such a joint chunk correction is necessary.",
+      "severity": "blocking",
+      "why_not_repaired": "An honest repair must represent path-mediated interaction while separating it from representation or rollout artifacts—for example with a path-specific estimand and consistent counterfactual carriers. That changes the central estimand, probes, and token rather than clarifying the written procedure.",
+      "verbatim_step_quote": "3. For every k and (g,h) in G_L×G_R, batch the four one-step FastWAM calls from the identical z̄_k with non-target channels fixed at a^0 and with K_ξ coupled seeds. Inputs: carrier state, proposed/hold channel actions, frozen FastWAM; outputs: z^{11}, z^{10}, z^{01}, z^{00} tables with no recursively advanced counterfactual branch. 4. Average each cell over seeds and compute the marginal latent innovations plus c_{kgh}; also compute the recursively rolled four-branch residual only as a logged baseline, never as an adapter input.",
+      "executed_evidence": "Executed stdlib trace with x_0=1, l=1, r=2, holds 0, H=2, and one-step dynamics x'=x^2+l+r, which is additive in the two actions at every fixed state. Step 1 recursive cells are (4,2,3,1), mixed contrast 4-2-3+1=0. Step 2 recursive cells are (19,5,11,1), mixed contrast 19-5-11+1=4: this is exactly the H-step potential-outcome interaction generated through nonlinear state mediation. CarrierLock re-anchors Step 2 at nominal z̄_1=4, producing (19,17,18,16) and c=19-17-18+16=0. The deletion is algebraic for the declared common-carrier construction, not a synthetic performance estimate.",
+      "reading_dependence": "reading_robust"
+    },
+    {
+      "finding": "OBSTACLE HOLE: a four-cell linear contrast in FastWAM's native pre-decoder latent is not a causally valid effector interaction merely because all cells share a carrier. A nonlinear but invertible latent coordinate change can manufacture nonzero c under physically additive dynamics, so the token can drive paired action correction from representation curvature alone.",
+      "severity": "blocking",
+      "why_not_repaired": "Fixing this requires an interaction-preserving latent constraint or moving the contrast to a causally interpretable observable/transition object and reworking the encoder and adapter inputs. Wording the token as model-internal does not solve the anchor's need to distinguish real joint-action responsibility.",
+      "verbatim_step_quote": "Their seed-averaged vector Möbius defect c_{kgh}=E_ξ[z^{11}_{kgh}-z^{10}_{kgh}-z^{01}_{kgh}+z^{00}_{kgh}] is the central object. 3. For every k and (g,h) in G_L×G_R, batch the four one-step FastWAM calls from the identical z̄_k with non-target channels fixed at a^0 and with K_ξ coupled seeds. 4. Average each cell over seeds and compute the marginal latent innovations plus c_{kgh}.",
+      "executed_evidence": "Executed stdlib trace with physically additive dynamics x'=x+l+r, x=1, l=1, r=2, and holds 0. Physical four cells are (4,2,3,1), so the true mixed contrast is 4-2-3+1=0. Represent the same states by the valid nonlinear latent z=x^2: the same-carrier latent cells become (16,4,9,1), and CarrierLock computes c_z=16-4-9+1=4. Thus re-anchoring does not remove interaction created solely by latent coordinates. By contrast, adding a genuine instantaneous term 0.5lr gives physical cells (5,2,3,1) and contrast 1, showing re-anchoring retains immediate interactions but cannot distinguish them from nonlinear representation effects without extra structure.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "At carrier index k, every one-step T_ψ call consumes only the kth native action vector a^0_k, with g and h denoting coordinates of that vector; no H-step channel trajectory is passed as a one-step action.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 dual-reading dimension ambiguity between channel trajectories and kth action slices."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism",
+      "value": "E_η uses only bias-free linear maps and zero-preserving nonlinearities, and each paired residual is parameterized as Δa_pair,kgh=(W_kgh u_kgh)⊙A_kgh(u_kgh,p_k) with bias-free W_kgh, so c=0 implies u=0 and exactly zero paired correction for every cached policy feature; λ_null regularizes nearby nonzero inputs rather than supplying this guarantee.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T2/T4 result that a finite null loss and ordinary cross-attention allowed a 3.2 paired correction at u=0, making the interaction token non-load-bearing."
+    },
+    {
+      "scope": "coherence",
+      "op": "append_sentence",
+      "field": "core_mechanism_steps",
+      "value": "11. If G_L×G_R is empty, skip the paired softmax and set every paired residual to zero; if every c is zero, the hard gate in core_mechanism likewise yields zero paired residual and inference falls back to marginal-only refinement or a^0.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T3 empty-pair and all-zero control-flow cases without changing the claimed mechanism."
+    }
+  ],
+  "final_candidate": {
+    "title": "CarrierLock: Re-Anchored Interaction Tokens for Closed-Loop VLA Refinement",
+    "hook": "A recursively rolled world model can report a nonzero left–right interaction even when every one-step transition is additive, because its counterfactual branches have already drifted to different latent states. CarrierLock predicts higher RoboTwin task success by re-anchoring those branches before their interaction token is allowed to alter the action chunk.",
+    "hook_shape_rationale": "Shape (a), surprising empirical reveal: the named downstream metric is paired RoboTwin task success, and the predicted regime split is that CarrierLock helps most where recursively rolled interaction residuals are large but common-carrier residuals are small or differently signed. Shape (b) was viable around the monolithic proposal-future interface in semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c, but rejected because calling that interface an unnamed assumption would be weaker than the executable branch-drift counterexample and task-success prediction.",
+    "gap_closure": [
+      {
+        "gap": "在 semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c 的 frontier residue 上，proposal-conditioned future 能说明整体提案可能失败，却没有闭合“失败由单个效应器动作不足、通道间冲突，还是只有联合改变才可修复”的决策歧义 — stakes: 纠错器可能反复修改无关动作维度、降低成功率并增加闭环计算，理论上也缺少把世界模型诊断量连接到动作更新责任边界的原则。",
+        "main_pattern": "generative_process_redesign",
+        "sub_pattern": "C24 (Liberate a Fixed Generative Component)",
+        "companion_pattern": "targeted_self_supervised_objective",
+        "how_closed": "C24 replaces the fixed monolithic proposal-conditioned future with a common-carrier bundle of per-effector one-step counterfactual transitions, while targeted_self_supervised_objective turns only their non-additive vector defect into a token whose dedicated paired branch changes both effector trajectories in the second-pass action refiner."
+      }
+    ],
+    "core_mechanism": "A frozen OpenPI π0.5 checkpoint first proposes its native H-step chunk a^0=(a^L,a^R), and a frozen FastWAM one-step transition T_ψ(z,a;ξ) supplies the native rollout latent immediately before its decoder; H comes from the checkpoint schema, ξ is a coupled rollout seed, and each schema-specific hold action h_g is the no-op in that channel's native units. FastWAM rolls a^0 once to produce the nominal carrier sequence z̄_0:H, but counterfactual branches never recursively roll their own states: for every horizon k and cross-effector channel pair (g,h), all four cells T_ψ(z̄_k,a_g,a_h,a_{-gh};ξ), T_ψ(z̄_k,a_g,h_h,a_{-gh};ξ), T_ψ(z̄_k,h_g,a_h,a_{-gh};ξ), and T_ψ(z̄_k,h_g,h_h,a_{-gh};ξ) start from the same z̄_k, keep non-target channels a_{-gh} at the proposal, and share ξ. Their seed-averaged vector Möbius defect c_{kgh}=E_ξ[z^{11}_{kgh}-z^{10}_{kgh}-z^{01}_{kgh}+z^{00}_{kgh}] is the central object; K_ξ=4 seeds by default and is selected as the smallest element of {1,2,4,8} within one standard error of the minimum held-out seed variance of c. This re-anchoring addresses a recurrent WAM failure rather than an artificially restricted baseline: if the one-step transition is action-additive, T(z,a^L,a^R)=G(z)+U_L(a^L)+U_R(a^R), then c_{kgh}=0 at every carrier state, whereas subtracting independently rolled branches can be nonzero at later horizons solely because nonlinear G is evaluated at four different states. A bias-free encoder E_η maps each c_{kgh} to an interaction token u_{kgh}; a companion property-targeting loss reconstructs c from u and enforces E_η(0)=0 plus zero paired correction when the joint cell is replaced by its additive recomposition z^{10}+z^{01}-z^{00}. OpenPI's backbone remains frozen, and only a second-pass rank-r_a cross-effector adapter is trained: r_a=16 by default, selected from {8,16,32} on held-out RoboTwin action negative log-likelihood, and its softmax pair weights use temperature τ=1 selected from {0.5,1,2} by the same criterion. Marginal tokens z^{10}-z^{00} and z^{01}-z^{00} can modify only their own effector stream, while u_{kgh} is the sole input to the paired adapter that emits coupled residuals to both g and h; therefore the interaction object is load-bearing inside action generation and cannot be replaced by an interaction-free central gradient. The adapter is trained on existing RoboTwin demonstrations with the native OpenPI flow-matching action loss plus λ_rec||D(u)-c||² and λ_null||Δa_pair(E(0))||², where λ_rec=λ_null=1 by default and each is selected from {0.3,1,3} on held-out action likelihood before any E0 execution. At deployment, one proposal pass, one nominal carrier rollout, batched common-carrier one-step probes, and one adapter refinement pass produce the corrected chunk; no simulator success label, scalar Q head, COMA baseline, Shapley allocation, preset coordination graph, or recursively branched counterfactual state is consumed. At carrier index k, every one-step T_ψ call consumes only the kth native action vector a^0_k, with g and h denoting coordinates of that vector; no H-step channel trajectory is passed as a one-step action. E_η uses only bias-free linear maps and zero-preserving nonlinearities, and each paired residual is parameterized as Δa_pair,kgh=(W_kgh u_kgh)⊙A_kgh(u_kgh,p_k) with bias-free W_kgh, so c=0 implies u=0 and exactly zero paired correction for every cached policy feature; λ_null regularizes nearby nonzero inputs rather than supplying this guarantee.",
+    "core_mechanism_reasoning": "BLOCK 1 — PREMISES ledger:\nP1. FastWAM's native pre-decoder rollout latent retains the contact-relevant transition information needed to distinguish additive from coupled effector consequences; this is plausible because FastWAM is trained for action-conditioned rollouts, but it is untested — falsification target through the carrier-locked interaction token c.\nP2. Latents produced by the same frozen FastWAM layer at the same carrier state share one coordinate system, so their four-cell linear contrast is meaningful inside that model; the claim is model-internal and is not promoted to a coordinate-free physical interaction.\nP3. A small second-pass adapter can use time- and pair-local interaction tokens without degrading the frozen policy's marginal action competence; the frozen-backbone matched ablation tests this and it is untested — falsification target.\nOBSERVATION-MODEL premise. Training states and demonstrations come from the existing RoboTwin data and frozen π0.5 rollouts, so they sample successful demonstrations plus the frozen policy's occupancy rather than all reachable robot states; common seeds remove rollout-noise imbalance across the four cells but do not remove FastWAM model error, off-support action interventions, or demonstration selection bias.\nESTIMAND. For fixed (o_t,a^0), carrier z̄_k, channel pair (g,h), and non-target proposal actions a_{-gh}, c_{kgh} is the expectation over the declared FastWAM seed process of the four-cell one-step latent transition contrast at that same z̄_k; the K_ξ-seed mean estimates this conditional model-internal transition interaction, not a global causal effect or a scalar success interaction.\nBLOCK 2 — NAIVE-BASELINE AUDIT. The runnable naive mechanism rolls the joint, left-held, right-held, and both-held action branches recursively for H steps, differences their same-index latent states, and feeds that residual to a refiner. Branch (i): it silently assumes that equal horizon indices imply a common state, which is false once the first intervention makes the four recurrent branches diverge; even an action-additive one-step transition with nonlinear state evolution then yields a spurious later-horizon interaction. CarrierLock confronts that failure head-on by restarting every four-cell query from the same nominal carrier state and by making the resulting vector token—not a scalar response or center gradient—the only producer of paired action corrections. Common-state contrasts resemble textbook factorial contrasts or sequential g-computation, but the domain-specific structure is a temporally chunked VLA proposal whose carrier is itself a WAM-predicted latent, whose channel interventions must be batched at each horizon without recursively changing their conditioning state, and whose output must enter a frozen flow-policy refinement interface; the contribution is this recurrent re-anchoring plus action-native token pathway, not generic factorial optimization.\nBLOCK 3 — Design rationale. The anchor stands without a sibling gap because the same common-carrier bundle both removes branch drift and supplies the action-changing token; a role audit or field-wide identifiability claim would require separate machinery. A scalar success head plus quadratic response surface was rejected because it reduces the WAM to Q and re-enters classical optimizer-interaction machinery, while COMA, Shapley, fixed leader–follower roles, and full recursively rolled branch subtraction return to occupied lineage nodes or preserve the confound. The redesigned conditioning interface is isolated under a frozen OpenPI/FastWAM backbone, and the companion objective earns its seat by forcing the interface to encode the one property the downstream paired branch is allowed to use.",
+    "core_mechanism_steps": "1. Freeze the existing OpenPI π0.5 policy and FastWAM checkpoints, identify FastWAM's native pre-decoder rollout latent, parse the OpenPI action schema into left/right channel trajectories, and implement a schema-valid hold action for absolute, delta/velocity, and gripper channels. Inputs: released checkpoints, RoboTwin observations, schema metadata; outputs: frozen model handles, channel groups, and typed no-op actions.\n2. On each existing RoboTwin demonstration or frozen-policy state, run OpenPI once to obtain a^0 and cache its policy hidden states; roll FastWAM only on a^0 to produce the nominal carrier z̄_0:H. Inputs: RGB, proprioception, language goal; outputs: proposal chunk, policy features, and one carrier latent sequence.\n3. For every k and (g,h) in G_L×G_R, batch the four one-step FastWAM calls from the identical z̄_k with non-target channels fixed at a^0 and with K_ξ coupled seeds. Inputs: carrier state, proposed/hold channel actions, frozen FastWAM; outputs: z^{11}, z^{10}, z^{01}, z^{00} tables with no recursively advanced counterfactual branch.\n4. Average each cell over seeds and compute the marginal latent innovations plus c_{kgh}; also compute the recursively rolled four-branch residual only as a logged baseline, never as an adapter input. Inputs: four-cell table; outputs: carrier-locked marginal and interaction tensors plus a branch-drift comparison record.\n5. Train E_η and its decoder with the reconstruction and additive-null objectives, using synthetic additive recomposition z^{10}+z^{01}-z^{00} as the zero-interaction control. Inputs: carrier-locked tensors; outputs: time- and pair-indexed u tokens for which a zero defect produces zero paired correction by construction.\n6. Insert the rank-r_a adapter into a second OpenPI action pass: own-effector marginal streams may write only to their corresponding action channels, while each u_{kgh} cross-attends to the cached policy features and emits residuals jointly to channels g and h; softmax pair weights combine overlapping proposals. Inputs: cached policy features, marginal tokens, u; output: a refined native action chunk whose paired component has u as its only producer.\n7. Optimize only E_η, its decoder, and the adapter on existing RoboTwin demonstrations with the native flow-matching action loss plus the two named auxiliary losses; keep OpenPI and FastWAM weights, data splits, and total adapter parameter budget fixed across interface ablations. Inputs: demonstrations and cached probe tensors; outputs: trained CarrierLock interface and matched monolithic-future, recursive-branch, marginal-only, and zero-token ablations.\n8. Select K_ξ, r_a, τ, λ_rec, and λ_null only on the held-out RoboTwin calibration split by their stated rules, then freeze them before E0. Inputs: held-out action likelihood and seed-variance records; outputs: one immutable deployment configuration with provenance.\n9. At inference, execute the proposal, carrier, batched one-step probes, and second-pass refinement sequence; clip the refined chunk to the native action box and send it to RoboTwin exactly as an ordinary OpenPI action chunk. Inputs: live observation and frozen configuration; output: executed chunk plus logged c, pair weights, and paired correction.\n10. In rollback-first RoboTwin E0, restore identical simulator states and seeds for frozen OpenPI, a matched-parameter monolithic-future adapter, a matched-call recursive-branch adapter, a marginal-only adapter, CarrierLock, and the token-permutation negative control; record task success, action deviation, correction latency, and whether recursive and carrier-locked residual signs disagree. Inputs: saved states and six frozen arms; outputs: paired downstream evidence for the branch-drift and action-changing claims. 11. If G_L×G_R is empty, skip the paired softmax and set every paired residual to zero; if every c is zero, the hard gate in core_mechanism likewise yields zero paired residual and inference falls back to marginal-only refinement or a^0.",
+    "falsification_prediction": "On existing RoboTwin bimanual contact tasks with one frozen OpenPI π0.5 checkpoint and one frozen FastWAM checkpoint, restore identical states and seeds and compare frozen OpenPI, matched-parameter monolithic-future and recursive-branch refiners, a same-call marginal-only refiner, and CarrierLock while measuring RoboTwin task success and correction latency. If the mechanism works, CarrierLock task success increases relative to those controls specifically on states where recursively rolled and common-carrier interaction residuals disagree, without a corresponding loss of success on low-interaction states. The single load-bearing variable is the carrier-locked interaction token c: as a negative control, permute its horizon and right-channel partner labels across matched states while keeping marginal tokens, adapter weights, FastWAM calls, seeds, and action clipping unchanged. This preserves token norms and compute but breaks the state-local interaction-to-action binding, and the prediction is that downstream RoboTwin task success returns toward the marginal-only or monolithic-future baseline rather than merely making c small.",
+    "compute_budget": "30 A100-40GB GPU-days (approximately 15 80GB-class GPU-days) for cached common-carrier FastWAM probes, adapter training, parameter selection, and paired RoboTwin E0; $0 paid API for the full campaign. The frozen-backbone, cache-first design is comfortable within the stated four-A100 rollback-first envelope, and expansion beyond E0 is gated on the token-permutation downstream-success test.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+        "delta": "Abstract-only inference: ω-EVA conditions a tri-branch refiner on one proposal-conditioned latent future, whereas CarrierLock replaces that indivisible future with same-carrier marginal and interaction transition tokens and restricts the cross-effector action path to the interaction token."
+      },
+      {
+        "paper_id": "arxiv:2608.04653",
+        "delta": "Abstract-only inference: CoCo constrains and measures whole-action counterfactual responsiveness across rollouts, whereas CarrierLock identifies and removes recurrent branch drift before estimating a time-resolved effector interaction that directly conditions the next action chunk."
+      },
+      {
+        "paper_id": "semanticscholar:99df6a53598c86fa7466995a093133fc8c5145d7",
+        "delta": "Abstract-only inference: the optimizer interaction calculus identifies factorial effects for declared optimizer response classes, whereas CarrierLock defines a common-carrier vector transition estimand for recurrent WAMs and makes its interaction residual the exclusive input to a paired VLA refinement branch rather than optimizing a scalar response surface."
+      },
+      {
+        "paper_id": "semanticscholar:84780eaf221baf924bf0c894a4bb41d07b6ca5ba",
+        "delta": "Abstract-only inference: policy-aware factorial design uses low-rank scalar outcome tensors to select intervention bundles, whereas CarrierLock batches four one-step latent transitions at each shared carrier state to prevent state-path drift and trains a vector-token action interface."
+      },
+      {
+        "paper_id": "openalex:W4416749037",
+        "delta": "Abstract-only inference: ManiGaussian++ fixes acting and stabilizing roles in a leader–follower rollout, whereas CarrierLock forms state-local channel-pair tokens without permanent roles and allows the paired correction support to change across horizon steps."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:5f36a7aa0f042be743e19ad70fbdb1f3bf9ef97c",
+    "what_step_was_missed": "ω-EVA would have needed to replace its single recursively produced proposal future with four one-step effector intervention cells re-anchored at every nominal carrier latent, isolate their vector non-additivity from branch drift, and reserve a paired action-refinement pathway whose only input is that interaction token.",
+    "signature_terms": [
+      "carrier-locked effector interaction tokens",
+      "re-anchored world-model counterfactuals",
+      "branch-drift-free VLA refinement",
+      "paired latent action correction"
+    ],
+    "alias_terms": [
+      "sequential g-computation state contrasts",
+      "path-specific transition interaction residuals",
+      "recurrent counterfactual branch alignment",
+      "common-state nonlinear impulse coupling"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

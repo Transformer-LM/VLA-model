@@ -1,0 +1,98 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+        "main_pattern": "heterogeneous_decomposition",
+        "sub_pattern": "C04 (Decompose for Differentiated Treatment)",
+        "tactical_failure_mode_quoted": "The recurring failure is treating the partition criterion itself as the contribution while leaving its value unproven. Papers propose a sensitivity or redundancy discriminator — roundtrip distortion, weight magnitude, activation overlap, double-rounding, subspace projection — and reviewers immediately map it onto an established technique (PCA/SVD on activations, a layer-norm-equivalent rescaling, structured dropout, classical feature distillation), so the differentiated treatment reads as a relabeling rather than a new mechanism.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "Presenting a sensitivity or redundancy proxy as the novelty invites the verdict that it rediscovers known mixed-precision or low-rank results unless it is sharply differentiated from the obvious prior criterion.",
+            "candidate_match": "no",
+            "reasoning": "The claimed novelty is the signed bidirectional WAM→policy→environment response plus a coupled update constraint, not SVD or the residual-mode discriminator alone."
+          },
+          {
+            "lesson_quoted": "Omitting comparison against both the strongest uniform baseline and the obvious cheap alternative (SVD/PCA, structured dropout, a natively trained smaller model) leaves reviewers unable to tell whether the partition buys anything at all.",
+            "candidate_match": "borderline",
+            "reasoning": "The candidate includes unchanged alternating training, norm-matched policy-only shrinkage, and scalar-error gating, but it does not include a norm-matched uniform joint treatment of all residual modes that isolates the value of differentiated mode surgery."
+          },
+          {
+            "lesson_quoted": "Validating a storage or throughput claim only on toy-scale models — where the compression bottleneck does not actually bite — undermines the entire motivation no matter how clean the method is.",
+            "candidate_match": "no",
+            "reasoning": "The candidate makes no storage or throughput claim and proposes task-success evaluation on existing LIBERO and RoboCasa co-training setups."
+          },
+          {
+            "lesson_quoted": "A clever partition with no measured real-world deployment metric (no inference latency or memory speedup) reads as a proxy-only contribution and stalls at borderline.",
+            "candidate_match": "no",
+            "reasoning": "For this thin-corpus robotics transfer, the downstream deployment metric is simulator task success rather than a compression proxy, and it is measured after each joint update."
+          },
+          {
+            "lesson_quoted": "Skipping any analysis of why the heterogeneity exists — the data or value distribution that drives the partition — makes the technical novelty and the potential impact impossible to assess.",
+            "candidate_match": "no",
+            "reasoning": "Steps 2–3 explicitly estimate and report the residual-mode energy distribution, while the falsification commits to measuring whether a harmful upper-tail minority exists."
+          },
+          {
+            "lesson_quoted": "Bolting together established components (distillation plus pruning plus calibration) without an error bound or artifact specific to the new setting reads as incremental even when the target application is timely and important.",
+            "candidate_match": "no",
+            "reasoning": "The candidate names a setting-specific reciprocal loop-gain artifact and a first-order projection-distance bound, although the separate blocking finding shows that its stated sensitivity producer is not executable."
+          }
+        ],
+        "verdict": "borderline"
+      }
+    ],
+    "verdict": "borderline",
+    "reasoning": "The sole gap, under heterogeneous_decomposition, avoids presenting SVD as the contribution and supplies a downstream task metric. It remains borderline on the quoted comparison lesson because policy-only shrinkage is not a uniform joint all-mode treatment that cleanly isolates differentiated mode selection."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+        "sub_pattern": "C04 (Decompose for Differentiated Treatment)",
+        "tactical_pattern_quoted": "This cluster compresses an over-provisioned trained artifact — model weights, intermediate activations, the KV/state buffer, the sampling trajectory, or a dataset — by exploiting heterogeneity in its components rather than applying one uniform lossy operation. The concrete move: discriminate components by a magnitude-, sensitivity-, influence-, or redundancy-based criterion into a high-impact minority and a near-redundant bulk, then preserve, migrate, residually correct, or retain-at-full-precision the minority while aggressively quantizing, pruning, factorizing, or distilling the bulk.",
+        "instantiation_in_core_mechanism": "Under the thin-corpus exception, Steps 2–6 instantiate the abstract C04 move by deriving residual modes, separating sign-stable positive-gain modes A from the remaining bulk S, and Step 7 assigns only A a constrained treatment while S retains the ordinary tentative update; the core mechanism also states a projection-distance fidelity bound.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The sole entry performs C04's distinctive high-impact-minority versus bulk decomposition and differentiated treatment rather than merely invoking the parent pattern generically."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "heterogeneous_decomposition",
+      "structural_prior_encoding"
+    ],
+    "matched_pattern_id": "audit_decomp_prior",
+    "required_mitigation_quoted": "An ablation that turns off either the decomposition or the prior in isolation must show a clear differential effect (not just a smaller combined number). Theoretically, the prior must encode a property the decomposition does not already imply — otherwise the two are doing the same job.",
+    "mitigation_substantively_delivered": false,
+    "reasoning": "The constraint targets a property not implied by the diagnostic partition, but the candidate specifies neither a decomposition-only arm nor a prior-only arm, so the required independently identifiable differential-effect artifact is absent."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "no_threat_found",
+    "threat_source": "n/a",
+    "threat_channel": null,
+    "subsumption_argument": null,
+    "addressable_via": null,
+    "parametric_family_concern": "Bilevel hypergradient methods for coupled learners were not surfaced; a scoop-check should query ‘implicit differentiation co-training stability’ and ‘hypergradient coupled model policy optimization’."
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the matched per-mode reciprocal loop gain gj",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph specifies the benchmark arms, simulator task-success direction, one named gj variable, and a pairing-permutation control whose predicted effect is task success returning toward the ordinary baseline. Its numeric content is experiment-design scale, not an outcome bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "Step 7 has no valid producer for c_j. The written g_j is measured at the current",
+      "status": "upheld",
+      "basis": "Step 6 computes gj from current-parameter SVD modes, a discrete sign partition, and black-box simulator responses without any proposed-update input, so literal differentiation with respect to the tentative update yields cj=0 and leaves every gj>0 constraint infeasible; the candidate supplies no alternative finite-difference or differentiable-surrogate graph, making this a mechanism redesign rather than a field-level repair."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "The upheld blocking finding shows that Step 7's load-bearing sensitivity row has no executable producer, so the projected joint update cannot be formed without adding a new estimator and changing the mechanism. Independently, anti_pattern_check.mitigation_substantively_delivered is false because the matched heterogeneous_decomposition + structural_prior_encoding composition lacks the required isolated-leg ablations; C04's recipe is applied and its reject check is only borderline, but neither offsets the executed infeasibility.",
+  "revision_targets": []
+}

@@ -1,0 +1,71 @@
+# @package _global_
+defaults:
+  - override /data: libero_p027c_personal_v21_split
+  - override /model: fastwam_p027c_libero_ac7
+  - _self_
+
+batch_size: 1
+num_workers: 0
+
+model:
+  mot_checkpoint_mixed_attn: false
+  compile_training_denoise: false
+
+lr_scheduler_type: constant
+learning_rate: 1.0e-4
+num_epochs: 1
+max_steps: 1
+log_every: 1
+save_every: 0
+save_final: false
+save_trainable_final: false
+eval_every: 0
+eval_num_inference_steps: 2
+
+eval_only: true
+eval_only_trainable_checkpoint: <PERSONAL_RESEARCH_ROOT>/workspace/FastWAM/runs/p027c_libero_ac7_learn50/P027C_LEARN50_NW0_20260901_233857/checkpoints/weights/step_000050_trainable_only.pt
+expected_eval_checkpoint_step: 50
+expected_eval_checkpoint_sha256: b15dc9c0f4734da20f339cde10e4ae9a7aaeb536e398bdcbf89286c5f9cb56bb
+action_swap_eval_num_batches: 16
+action_swap_eval_index_stride: 433
+action_swap_eval_index_offset: 97
+action_swap_eval_at_start: false
+action_swap_eval_at_end: false
+
+require_finite_train_step: true
+require_optimizer_step: true
+require_positive_grad_norm: true
+expected_world_size: 4
+expected_distributed_type: DEEPSPEED
+expected_zero_stage: 1
+
+trainable_parameter_prefixes:
+  - video_expert.action_embedding.
+  - action_expert.action_encoder.
+  - action_expert.head.
+  - proprio_encoder.
+expected_trainable_numel: 76807
+expected_trainable_parameter_names:
+  - video_expert.action_embedding.weight
+  - video_expert.action_embedding.bias
+  - action_expert.action_encoder.weight
+  - action_expert.action_encoder.bias
+  - action_expert.head.weight
+  - action_expert.head.bias
+  - proprio_encoder.weight
+  - proprio_encoder.bias
+
+gradient_accumulation_steps: 1
+mixed_precision: bf16
+max_grad_norm: 1.0
+weight_decay: 1.0e-2
+seed: 2701
+resume: null
+
+wandb:
+  enabled: false
+  workspace: null
+  project: fast-wam
+  name: p027c-libero-ac7-eval-spread
+  group: null
+  mode: offline

@@ -1,0 +1,157 @@
+{
+  "method_name": "Matched-State Geometry-Action Crossover (GISS-2x2)",
+  "abstract_draft": "Frozen robot policies can complete geometrically varied tasks without revealing whether the action issued at a decision point is actually conditioned on the visible functional geometry. Existing benchmarks vary scenes and measure aggregate generalization, as in GemBench (openalex:W4403116255), while scalable generators such as RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) still leave state, dynamics, and policy-history changes entangled with geometry. We introduce GISS-2x2, a matched-state crossover diagnostic that restores one decision checkpoint under an endpoint-equivalent geometry pair, queries two frozen-policy action chunks from a shared fresh inference template, and executes each chunk in both recipient geometries before native closed-loop continuation. Its estimand is the within-recipient own-versus-cross success interaction, which asks whether each geometry preferentially benefits from the chunk it elicited while canceling recipient difficulty. The claim is falsified if this interaction is absent, reverses under the smallest preregistered state jitter, or remains positive for appearance-only pairs that share collision geometry and physics. With deterministic-query gates and cache-clean continuation, we expect a positive interaction only for eligible functional pairs, localized by task family and baseline-success stratum. The result would be a scoped, executable assay of current action compatibility—not evidence that a policy recovered a globally necessary strategy graph or broad co-adaptation competence.",
+  "motivation.problem_framing": "A frozen robot policy can appear robust across geometric variations for several incompatible reasons: it may use visible functional geometry to select the current action, exploit an open-loop default that happens to work, or recover later through closed-loop feedback. Aggregate success cannot separate these explanations because geometry changes usually also change the realized state trajectory, contact dynamics, and inference history. The structural bottleneck is therefore an identification problem: measuring geometry-conditioned action compatibility while holding the decision state fixed and allowing the same native downstream success criterion for every comparison.\n\nThis issue is concrete in scalable manipulation suites such as RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) and in systematic geometry generalization benchmarks such as GemBench (openalex:W4403116255). Their task diversity makes the phenomenon observable, but their ordinary rollout comparisons do not provide the counterfactual cells needed to ask whether the action chunk elicited by geometry A is specifically better in A than the chunk elicited by endpoint-equivalent geometry B, and symmetrically for B. GISS-2x2 turns that missing comparison into a narrow matched-state diagnostic for frozen policies.",
+  "motivation.why_now": "The gap is now practical to close because recent simulators expose broad, editable functional geometry and reproducible task families—RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088)—while GemBench (openalex:W4403116255) and Any3D-VLA (openalex:W7127541930) make 3D generalization a current evaluation target rather than an incidental stress test. At the same time, local open frozen policies such as OpenPI pi0.5 and CLOVER can be queried repeatedly without training or paid APIs. State serialization, collision-mesh editing, and deterministic inference controls therefore make a four-cell checkpoint crossover possible at a scale that remains small enough for manual pair validation.",
+  "motivation.why_prior_stopped[0].what_they_did": "RoboTwin 2.0 (dblp:journals/corr/abs-2506-18088) provides scalable robot data and task variations for evaluating manipulation policies.",
+  "motivation.why_prior_stopped[0].what_they_did_not_do": "It did not restore one decision checkpoint across an endpoint-equivalent functional geometry pair and cross the two resulting action chunks through both recipient geometries.",
+  "motivation.why_prior_stopped[0].structural_reason_they_stopped": "Its unit of analysis is dataset or rollout performance, so the benchmark lacks a within-state counterfactual estimator for current action compatibility.",
+  "motivation.why_prior_stopped[1].what_they_did": "GemBench (openalex:W4403116255) systematizes 3D manipulation generalization across controlled geometric variations.",
+  "motivation.why_prior_stopped[1].what_they_did_not_do": "It did not query two source-geometry chunks from an identical checkpoint and execute both chunks in each recipient geometry under one terminal predicate.",
+  "motivation.why_prior_stopped[1].structural_reason_they_stopped": "Its split-based evaluation changes the condition being solved rather than constructing the crossed counterfactual cells needed to cancel recipient difficulty.",
+  "motivation.why_prior_stopped[2].what_they_did": "CoA-VLA (openalex:W4405956290) conditions robot action generation on an explicit chain of action-relevant affordance structure.",
+  "motivation.why_prior_stopped[2].what_they_did_not_do": "It did not test whether an unmodified frozen policy's current native action chunk is selectively compatible with the functional geometry that elicited it.",
+  "motivation.why_prior_stopped[2].structural_reason_they_stopped": "Its mechanism places a structured affordance scaffold inside the policy, whereas the missing measurement requires geometry to be the only source-side intervention.",
+  "motivation.why_prior_stopped[3].what_they_did": "Any3D-VLA (openalex:W7127541930) targets stronger use of 3D scene information for vision-language-action behavior.",
+  "motivation.why_prior_stopped[3].what_they_did_not_do": "It did not isolate a same-state own-versus-cross action advantage under paired functional geometries and native task success.",
+  "motivation.why_prior_stopped[3].structural_reason_they_stopped": "Representation and end-to-end policy evaluation do not by themselves supply the matched checkpoint, action swap, and recipient-controlled contrast required for identification.",
+  "motivation.why_prior_stopped[4].what_they_did": "CLOVER (openalex:W4403808753) detects visual prediction error and replans online to improve manipulation robustness.",
+  "motivation.why_prior_stopped[4].what_they_did_not_do": "It did not compare own and crossed first action chunks from a byte-matched pre-action state before restarting each recipient rollout from the actual post-chunk observation.",
+  "motivation.why_prior_stopped[4].structural_reason_they_stopped": "Reactive recovery entangles error detection, replanning, and downstream feedback, so it cannot identify compatibility of the current action at the original decision point.",
+  "motivation.what_changes_when_gap_closes": "Closing the gap yields a policy-agnostic assay that can distinguish geometry-conditioned current actions from open-loop defaults and later recovery, localized to eligible task families rather than averaged into one capability score. It can complement the generalization claims studied by GemBench (openalex:W4403116255), Any3D-VLA (openalex:W7127541930), and the recovery behavior studied by CLOVER (openalex:W4403808753) by identifying exactly where native success depends on a geometry-compatible first chunk.",
+  "core_claim": "For preregistered endpoint-equivalent geometry pairs, a frozen policy visibly using functional geometry should exhibit a positive matched-state own-versus-cross native-success interaction after inference-state-clean four-cell execution.",
+  "sub_claims": [
+    {
+      "id": "c1",
+      "statement": "Restoring the same serialized decision checkpoint and crossing both source-generated chunks through both recipient geometries removes recipient difficulty from the compatibility contrast.",
+      "supports_which_aspect": "identification of geometry-conditioned action compatibility at a fixed decision state"
+    },
+    {
+      "id": "c2",
+      "statement": "Fresh inference templates, deterministic repeated-query gates, and cache-clean continuation prevent hidden policy state from masquerading as a source-geometry effect.",
+      "supports_which_aspect": "control of inference-history and stochastic-decoding confounds"
+    },
+    {
+      "id": "c3",
+      "statement": "Appearance-only matched pairs and preregistered state jitter distinguish functional geometry compatibility from rendering sensitivity and brittle checkpoint coincidence.",
+      "supports_which_aspect": "non-tautological falsification of the proposed mechanism"
+    }
+  ],
+  "key_equations": [
+    {
+      "id": "E1",
+      "linked_step_id": "S4",
+      "latex": "u_s = \\pi_\\theta\\!\\left(o(z,G_s),h_0;\\xi\\right),\\qquad s\\in\\{A,B\\}",
+      "description": "Query the frozen policy at the same checkpoint z with a shared fresh history template h₀ and decode seed ξ; only the rendered source geometry G_s changes.",
+      "description_zh": "在同一检查点 z、同一份全新历史模板 h₀ 与解码种子 ξ 下查询冻结策略，唯一变化是源几何 G_s 的渲染。"
+    },
+    {
+      "id": "E2",
+      "linked_step_id": "S4",
+      "latex": "\\max_{k,k'} d\\!\\left(u_s^{(k)},u_s^{(k')}\\right) \\le \\varepsilon_{\\mathrm{det}}",
+      "description": "An identical-render repeat must keep chunk variation below the preregistered determinism tolerance before the pair is eligible.",
+      "description_zh": "同一渲染的重复查询必须使动作块差异低于预注册的确定性阈值，否则该配对不进入分析。"
+    },
+    {
+      "id": "E3",
+      "linked_step_id": "S5",
+      "latex": "Y_{r\\leftarrow s}=\\mathbf{1}\\!\\left\\{\\mathcal{R}\\!\\left(z,G_r,u_s,\\pi_\\theta^{\\mathrm{fresh}}\\right)\\models\\tau\\right\\},\\qquad r,s\\in\\{A,B\\}",
+      "description": "Cell Y_{r←s} is native task success when chunk u_s is executed in recipient geometry r and the frozen policy then resumes from the actual post-chunk observation.",
+      "description_zh": "Y_{r←s} 表示把源几何 s 产生的动作块放入接收几何 r 执行，并从真实动作后观测继续闭环后是否完成原生任务。"
+    },
+    {
+      "id": "E4",
+      "linked_step_id": "S6",
+      "latex": "I_{\\mathrm{MS}}=\\tfrac{1}{2}\\left[\\left(Y_{A\\leftarrow A}-Y_{A\\leftarrow B}\\right)+\\left(Y_{B\\leftarrow B}-Y_{B\\leftarrow A}\\right)\\right]",
+      "description": "The matched-state interaction averages each recipient's own-source advantage, canceling a recipient geometry that is simply easier.",
+      "description_zh": "匹配状态交互量对两个接收几何各自的同源优势取平均，从而抵消某个接收几何本身更容易造成的偏差。"
+    }
+  ],
+  "method_flow.high_level_pipeline": "GISS-2x2 first compiles endpoint-equivalent functional geometry pairs and a corresponding appearance-only control while freezing the instruction, terminal predicate, and all non-geometry state. At a validated decision checkpoint, it queries one action chunk per source geometry from the same fresh inference template, then restores the checkpoint to execute both chunks in both recipient geometries. Native closed-loop success produces a matched-state interaction, and determinism, appearance, and state-jitter gates determine whether that interaction can be attributed to functional geometry compatibility within the registered scope.",
+  "method_flow.steps": [
+    {
+      "step_id": "S1",
+      "title": "Register eligible task families",
+      "what_changes": "Define the task-family scope, terminal predicate, decision-event rule, pair-exclusion criteria, action-chunk horizon, and minimum baseline-success support before observing crossover outcomes.",
+      "why_this_step": "The claim is intentionally instrument-scoped; a fixed eligibility rule prevents a tiny diagnostic from expanding into a broad VLA competence claim.",
+      "linked_component": "engineering",
+      "linked_falsification": "metric_specification",
+      "input": "RoboTwin 2.0 task families, frozen policy interfaces, and simulator event logs",
+      "output": "A preregistered GISS manifest and eligible decision-event grammar"
+    },
+    {
+      "step_id": "S2",
+      "title": "Compile geometry-pair instruments",
+      "what_changes": "Construct endpoint-equivalent functional collision-geometry pairs A/B and appearance-only pairs that share one collision mesh and physics, keeping instruction, object identities, initial state, and success predicate fixed.",
+      "why_this_step": "Functional pairs instantiate the source intervention, while appearance-only pairs provide a non-tautological control for rendering sensitivity.",
+      "linked_component": "engineering",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "The registered task manifest and editable simulator assets",
+      "output": "Validated functional and appearance-control pair manifests"
+    },
+    {
+      "step_id": "S3",
+      "title": "Capture a matched decision checkpoint",
+      "what_changes": "Serialize one pre-action simulator checkpoint z per pair and verify equality of every non-geometry state field, instruction, controller state, and terminal predicate across A and B.",
+      "why_this_step": "Fixing the decision state blocks open-loop state or dynamics mismatch from being counted as geometry-conditioned action compatibility.",
+      "linked_component": "engineering",
+      "linked_falsification": "metric_specification",
+      "input": "A validated geometry pair and its registered decision event",
+      "output": "A restore-tested matched checkpoint with an invariant audit record"
+    },
+    {
+      "step_id": "S4",
+      "title": "Query source-conditioned chunks",
+      "what_changes": "Clone one fresh inference/history template, render z under G_A and G_B, query the frozen policy for u_A and u_B with controlled decoding, repeat identical renders for a determinism gate, and discard all source-query cache state.",
+      "why_this_step": "Only the visible source geometry may produce the chunk; shared history and repeatability checks prevent cache or sampling state from becoming the effective intervention.",
+      "linked_component": "both",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "The matched checkpoint, two source renders, and one frozen policy",
+      "output": "Two eligible action chunks plus a deterministic-query audit"
+    },
+    {
+      "step_id": "S5",
+      "title": "Execute the four crossover cells",
+      "what_changes": "For each recipient r in {A,B}, restore z, inject u_A or u_B for the fixed chunk horizon, then restart a cache-clean frozen-policy continuation from the actual post-chunk observation in recipient r until the native terminal predicate fires.",
+      "why_this_step": "The crossed cells hold the recipient fixed while changing only the source of the first chunk, and actual-observation continuation avoids replay-prefix or stale-cache artifacts.",
+      "linked_component": "engineering",
+      "linked_falsification": "both",
+      "input": "The restore-tested checkpoint and eligible chunks u_A and u_B",
+      "output": "Four native-success outcomes Y_{r←s} with execution traces"
+    },
+    {
+      "step_id": "S6",
+      "title": "Estimate the matched-state interaction",
+      "what_changes": "Compute I_MS as the mean of the two within-recipient own-minus-cross success contrasts and aggregate only within preregistered task-family, policy, and endpoint-equal baseline strata with paired uncertainty.",
+      "why_this_step": "The symmetric interaction cancels recipient difficulty and targets selective own-geometry compatibility rather than raw success or action difference.",
+      "linked_component": "both",
+      "linked_falsification": "metric_specification",
+      "input": "Four-cell native-success outcomes across registered pairs and reset seeds",
+      "output": "A scoped I_MS estimate, uncertainty interval, and eligibility coverage"
+    },
+    {
+      "step_id": "S7",
+      "title": "Apply mechanism validity gates",
+      "what_changes": "Recompute the same interaction for appearance-only pairs and after the smallest preregistered matched-state jitter; mark the mechanism unsupported if the control stays systematically positive, the sign reverses, or identical-render determinism fails.",
+      "why_this_step": "These gates distinguish functional geometry compatibility from texture preference, checkpoint brittleness, and hidden stochastic inference state.",
+      "linked_component": "both",
+      "linked_falsification": "mechanism_distinguisher",
+      "input": "The crossover estimator, control-pair manifest, jitter rule, and determinism audits",
+      "output": "A pass/fail compatibility finding bounded to eligible pairs and policies"
+    }
+  ],
+  "method_flow.design_reasoning_echo": "The design uses a four-cell crossover because neither action-chunk difference nor ordinary two-geometry success can identify compatibility: both can be driven by recipient difficulty, state mismatch, or later feedback. Holding one checkpoint fixed, comparing own and crossed chunks within each recipient, and then averaging the two contrasts isolates the source-geometry interaction without differentiating through the simulator or imposing a strategy scaffold. Native task success keeps the readout behaviorally meaningful, while cache-clean continuation, appearance-only controls, and matched-state jitter make the narrow attribution falsifiable rather than turning every geometry-sensitive action into evidence for the claim.",
+  "feasibility_validation.data.verdict": "feasible",
+  "feasibility_validation.data.rationale": "RoboTwin 2.0 tasks, local frozen OpenPI pi0.5 and CLOVER policies, simulator states, and native success signals are accessible without private data or paid services.",
+  "feasibility_validation.theoretical.verdict": "n/a",
+  "feasibility_validation.theoretical.rationale": "The contribution is a controlled diagnostic estimand and protocol, not a theorem or formal guarantee about policy strategy recovery.",
+  "feasibility_validation.engineering.verdict": "tight",
+  "feasibility_validation.engineering.rationale": "The binding cost is implementing restore-exact simulator checkpoints, controlled action injection, and verifiable fresh inference state across two policy stacks without altering their native continuation behavior.",
+  "feasibility_validation.falsification.verdict": "feasible",
+  "feasibility_validation.falsification.rationale": "Functional and appearance-only geometry edits, identical-render repeats, and small matched-state jitters are concrete simulator interventions whose outcomes use the existing native success predicate.",
+  "feasibility_validation.overall": "tight",
+  "reviewer_concerns_and_responses[0].response": "The defense is explicit in method_flow steps S3–S5: source queries clone one fresh history template, identical-render repeats reject nondeterminism, source-query caches are discarded, and each recipient continuation restarts from its actual post-chunk observation. The Phase 3.2 concern usefully establishes that matched simulator state alone is insufficient; these controls address that inference-state confound, while the cited replay-divergence work still does not implement the functional-geometry own-versus-cross native-success assay.",
+  "reviewer_concerns_and_responses[1].response": "The novelty claim is deliberately conditional rather than declared settled: it is anchored in core_claim and the precise S3–S6 combination of a byte-matched checkpoint, two source-geometry queries, four recipient/source cells, and a native-success interaction. A targeted prior-art check for metamorphic robot-policy testing and paired simulator action crossover must find no earlier work combining all four elements before novelty is claimed.",
+  "reviewer_concerns_and_responses[2].response": "The candidate is explicitly simulator- and task-family-scoped in S1 and reports eligibility coverage and matched-stratum effects in S6 rather than extrapolating to broad VLA safety or real-world competence. Held-out rendering and multiple task families can test whether the instrument is more than a single-scene artifact, but ecological validity remains a limitation and no real-world claim follows without a hardware replication.",
+  "domain_landscape.position_note": "GISS-2x2 occupies the relatively uncommon controlled-diagnostic-design lane in this literature, contrasting with the field's more frequent structural-prior, heterogeneous-decomposition, and unified-model patterns."
+}

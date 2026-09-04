@@ -1,0 +1,92 @@
+{
+  "gap_closure_reject_check": {
+    "entries": [
+      {
+        "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required — stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+        "main_pattern": "controlled_diagnostic_design",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_failure_mode_quoted": "Papers attempting this tactic fail most often when the constructed instrument isolates the confound only inside an artificial regime and never demonstrates that the isolated signal transfers to real deployment conditions — the synthetic-to-real gap is asserted rather than shown. A second recurring shape is circularity: the diagnostic is validated against the same definition, assumption, or system population it was built to interrogate (using the evaluated models as their own oracle, or hardcoding a contested definition of the target property), so it cannot independently confirm what it claims.",
+        "reject_lessons_evaluated": [
+          {
+            "lesson_quoted": "A diagnostic that only re-confirms a shortcut already known in advance, surfacing no previously unmeasurable failure, is read as confirmatory rather than as a contribution.",
+            "candidate_match": "no",
+            "reasoning": "The candidate targets an unmeasured executor-conditional reversal in scaffold adequacy and makes held-out scaffold regret, rather than a restatement of fixed-scaffold limitations, the primary result."
+          },
+          {
+            "lesson_quoted": "Validating a synthetic-ground-truth instrument only on synthetic data, without demonstrating that the controlled finding transfers to real-world instances, leaves ecological validity unestablished and undermines the central claim.",
+            "candidate_match": "no",
+            "reasoning": "The method includes a separately reported reproduction on reset 3D-printed Franka Panda fixtures with the same frozen executor and safety controller."
+          },
+          {
+            "lesson_quoted": "Building the instrument around one contested definition of the target property means it cannot independently confirm that the definition is correct, and reviewers flag the resulting circularity.",
+            "candidate_match": "no",
+            "reasoning": "The oracle is explicitly executor-conditional and combines an existing external RoboCasa relation-success predicate with collision and hardware safety events rather than asking pi0.5 to judge itself."
+          },
+          {
+            "lesson_quoted": "Resting an unsupervised evaluation on the unverified premise that the systems under test can reliably judge one another stakes the entire method on an assumption that collapses under scrutiny.",
+            "candidate_match": "no",
+            "reasoning": "No system-under-test consensus or peer judging is used; every arm is scored by external task and safety signals."
+          },
+          {
+            "lesson_quoted": "Pairing a single-task or small-sample instrument with broad capability claims triggers a scope-mismatch rejection, and assembling retrieval or engineering blocks without an isolating scientific insight reads as application rather than research.",
+            "candidate_match": "no",
+            "reasoning": "The hook and estimand are narrowly limited to a preregistered composition set, finite scaffold library, and named frozen executor, while the isolating insight is the fixed-versus-pair-specific reversal under a one-variable geometry intervention."
+          }
+        ],
+        "verdict": "clear"
+      }
+    ],
+    "verdict": "clear",
+    "reasoning": "The sole gap_closure entry, controlled_diagnostic_design for fixed-scaffold necessity, avoids every C02 Reject lesson: it specifies an independent oracle, a real-robot transfer check, a narrow executor-conditional scope, and a previously unmeasurable held-out reversal. The executed scaffold-interface defect is serious but is not itself one of C02's documented Reject lessons."
+  },
+  "recipe_application_check": {
+    "entries": [
+      {
+        "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required — stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+        "sub_pattern": "C02 (Design a Confound-Isolating Diagnostic)",
+        "tactical_pattern_quoted": "The shared move is to construct a controlled set of evaluation instances in which exactly one named confound is either structurally blocked or independently varied, then report the divergence between apparent and de-confounded performance as the primary result rather than an aggregate leaderboard score. The load-bearing artifact is always the controlled instance set paired with an oracle independent of the system under test.",
+        "instantiation_in_core_mechanism": "Steps 2, 4, 5, and 6 instantiate the C02 move: Step 2 builds matched pairs by varying one preregistered local geometry variable while freezing the relation and other axes; Step 4 evaluates every scaffold arm from reset clones with external success/safety labels; Steps 5-6 compare the same-information fixed scaffold against pair-specific selection on disjoint seeds and report held-out G_E as the headline divergence.",
+        "verdict": "applied"
+      }
+    ],
+    "verdict": "applied",
+    "reasoning": "The candidate performs C02's distinctive confound-isolation move through matched geometry interventions, reset-cloned arms, an external oracle, and the G_E divergence; it does not merely invoke generic benchmark language."
+  },
+  "anti_pattern_check": {
+    "composition_set": [
+      "controlled_diagnostic_design"
+    ],
+    "matched_pattern_id": null,
+    "required_mitigation_quoted": null,
+    "mitigation_substantively_delivered": "n/a",
+    "reasoning": "The single controlled_diagnostic_design composition contains no heterogeneous_decomposition pairing and therefore matches none of the three documented reject-favored compositions."
+  },
+  "paper_pointed_threat": {
+    "threat_paper_id": "openalex:W7168328772",
+    "threat_source": "collision_hits",
+    "threat_channel": "signature",
+    "subsumption_argument": "Implicit-Behavior Coordination from Unlabeled Sub-Task Demonstrations for Rearrangement Tasks directly competes with the motivating premise by reporting long-horizon rearrangement coordination without predefined skills, skill labels or boundaries, or task-specific switching logic, using value-guided action selection instead. That result would defeat any broad claim that explicit geometry-conditioned phase scaffolds are generally necessary, but it does not subsume ScaffoldFracture's narrower diagnostic claim: the hit does not compare a globally fixed versus pair-specific finite phase library for the same frozen executor on reset-cloned matched geometries and disjoint perturbation seeds.",
+    "addressable_via": "not_needed",
+    "parametric_family_concern": null
+  },
+  "falsification_structure_check": {
+    "minimal_experiment_named": "yes",
+    "outcome_metric_named": "yes",
+    "load_bearing_variable": "the pair-bound oracle schedule s_star(x)",
+    "negative_control_target": "outcome_metric",
+    "numeric_bar_provenance": "none",
+    "verdict": "sound",
+    "reasoning": "The paragraph names the RoboCasa/MuJoCo plus Franka comparison, predicts positive held-out G_E and full-task success, identifies s_star(x) as the one load-bearing variable, and predicts that matched-pair permutation returns downstream success toward s_fix. It contains no numeric outcome bar."
+  },
+  "blocking_findings_disposition": [
+    {
+      "finding_ref": "The scaffold intervention is not executable/comparable as written: successful predicate traces do not produce the phase-prompt strings",
+      "status": "upheld",
+      "basis": "The quoted Steps 1 and 3 never define a producer for natural-language phase strings or a total scaffold automaton: under common transitions, reordered or shorter schedules deadlock or lack phase text, while schedule-specific transitions alter more than phase text. The shown arithmetic has no error, both readings satisfy the candidate's ambiguous wording, and repairing the issue requires redefining the benchmark arm rather than editing a field-level description."
+    }
+  ],
+  "verdict": "abandon",
+  "verdict_layer": "hard_floor",
+  "verdict_rationale": "gap_closure_reject_check.entries[0] is clear, recipe_application_check.entries[0].verdict is applied, and falsification_structure_check is sound; paper_pointed_threat is competing but not exact-mechanism overlap. However, blocking_findings_disposition[0] is upheld by a reading-robust execution trace: the scaffold arm is neither total under common transitions nor a text-only intervention under schedule-specific transitions. Because fixing that defect changes what the benchmark intervention is, the blocking-obstacle rule requires abandon rather than Phase 3.3 revision.",
+  "revision_targets": []
+}

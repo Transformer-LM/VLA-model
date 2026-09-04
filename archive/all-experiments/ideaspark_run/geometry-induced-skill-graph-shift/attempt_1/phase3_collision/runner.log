@@ -1,0 +1,62 @@
+python-utf8.cmd :   [skip] openreview: missing env vars: OPENREVIEW_USER, OPENREVIEW_PASS
+所在位置 行:1 字符: 1
++ & '<LOCAL_PROJECT_ROOT>\.agents\runtime\research-skills\python-utf8.cm ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  [skip] openre...OPENREVIEW_PASS:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  鈿狅笍  Phase 3.1 collision: CONNECTORS DEGRADED 鈥?ran 3/4.
+       used:    arxiv, openalex, semanticscholar
+       SKIPPED: openreview
+       Retrieval/collision coverage is WEAKER than a full run.
+       Common cause: the connector package is not importable in THIS
+       process (e.g. a background/non-login shell that dropped the
+       pip --user site-packages). Re-run `check_connectors` in the SAME
+       shell you launch phases from, or install into the active env.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  arxiv 'matched geometry strategy-switch pairs' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurre
+d in violation of protocol (_ssl.c:1010)>
+    arxiv 'simulator-certified relation event topology' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF 
+occurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'same-goal path-class intervention' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred i
+n violation of protocol (_ssl.c:1010)>
+    arxiv 'functional geometry VLA diagnostic' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred 
+in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_collision.json with
+ 0 unique papers
+  openalex: 100 BM25 hits across 4 queries -> 99 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_collision.json w
+ith 99 unique papers
+  semanticscholar 'matched geometry strategy-switch pairs' failed: HTTP Error 429: 
+    semanticscholar 'simulator-certified relation event topology' failed: HTTP Error 429: 
+    semanticscholar 'same-goal path-class intervention' failed: HTTP Error 429: 
+    semanticscholar 'functional geometry VLA diagnostic' failed: HTTP Error 429: 
+    semanticscholar: 0 hits across 4 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_collision
+.json with 0 unique papers
+  arxiv 'principal-stratum treatment effect benchmark' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF o
+ccurred in violation of protocol (_ssl.c:1010)>
+    arxiv 'mode-switching policy stress test' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred i
+n violation of protocol (_ssl.c:1010)>
+    arxiv 'counterfactual feasibility-pair evaluation' failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF o
+ccurred in violation of protocol (_ssl.c:1010)>
+    arxiv: 0 in-window across 3 queries -> 0 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\arxiv_alias_collision.jso
+n with 0 unique papers
+  openalex: 75 BM25 hits across 3 queries -> 75 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\openalex_alias_collision.
+json with 75 unique papers
+  semanticscholar 'mode-switching policy stress test' failed: HTTP Error 429: 
+    semanticscholar 'counterfactual feasibility-pair evaluation' failed: HTTP Error 429: 
+    semanticscholar: 50 hits across 3 queries -> 50 kept (round-robin)
+  wrote <LOCAL_PROJECT_ROOT>\ideaspark_run\geometry-induced-skill-graph-shift\phase3_collision\semanticscholar_alias_col
+lision.json with 50 unique papers
+  channels: signature=99 hits (10mo), alias=+125 unique hits (48mo)
+  truncation[signature]: kept 82/99 (dropped 17 zero-relevance + 0 below adaptive floor + 0 over cap 120; min kept scor
+e 1)
+  truncation[alias]: kept 79/125 (dropped 3 zero-relevance + 43 below adaptive floor + 0 over cap 120; min kept score 3
+)
+鉁?Phase 3.1 collision retrieval complete. collision_hits.json has 161 hits. retrieved at: 2026-08-30T17:12:59.156184+00:00

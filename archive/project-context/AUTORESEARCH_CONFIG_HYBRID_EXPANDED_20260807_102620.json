@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "project": {
+    "language": "zh-CN",
+    "domain": "embodied-vla-wam-expanded-intersection",
+    "research_only": true,
+    "paper_writing": false
+  },
+  "research": {
+    "direction": "VLA × WAM 强交叉母领域扩展制图：系统拆分世界模型在 VLA 表征、推理、训练、评估、安全、数据、跨具身与持续适应中的作用；不预设具体任务、形态、表征、模型或基准",
+    "exploration_level": "direction",
+    "selected_macro_direction": "H1 — 预测式 world objective 塑造 VLA 表征",
+    "macro_direction_count": 16,
+    "direction_partition": {
+      "representation_and_world_grounding": 4,
+      "inference_decision_and_assurance": 6,
+      "training_data_and_closed_loop_learning": 3,
+      "joint_architecture_transfer_and_adaptation": 3
+    },
+    "embodiment": "open during field discovery",
+    "task_family": "open during field discovery",
+    "observation_modalities": [],
+    "action_representation": "open until macro direction selection",
+    "seed_topics": [
+      "predictive representation learning for vision-language-action policies",
+      "latent actions and action-effect learning from human and robot video",
+      "3D object contact tactile and belief-state world models for VLA",
+      "visual subgoals video plans counterfactual rollouts MPC and action reranking",
+      "world-model critics policy evaluation uncertainty safety and recovery",
+      "world-generated data imagined reinforcement learning and VLA post-training",
+      "active data acquisition curriculum and policy-world-model co-evolution",
+      "joint world-language-action models cross-embodiment transfer and online adaptation"
+    ],
+    "exploration_axes": [
+      "world-model representation R1 decoded video R2 video latent R3 task latent R4 explicit state",
+      "world-model use U1 representation U2 proposal U3 candidate evaluation U4 planning U5 imagined optimization U6 joint model",
+      "VLA consumption point pretraining inference evaluation safety post-training or deployment adaptation",
+      "coupling topology auxiliary cascade tool-use joint alternating or co-evolution",
+      "action interface conditioned joint inverse-dynamics latent-action or embodiment-normalized effect",
+      "update regime frozen alternating joint continual or test-time",
+      "observability memory uncertainty calibration and distribution shift",
+      "model policy and environment evidence",
+      "data compute latency interaction and real-robot requirements"
+    ],
+    "benchmark_priority": [],
+    "target_venues": [
+      "CoRL",
+      "RSS",
+      "ICRA",
+      "IROS",
+      "ICLR",
+      "NeurIPS",
+      "ICML",
+      "CVPR"
+    ],
+    "simulation_first": false,
+    "validation_domains": [
+      "simulation",
+      "offline robot data",
+      "real robot"
+    ],
+    "validation_domain_order": "parallel or evidence-driven; no simulation-first requirement",
+    "real_robot_available": true,
+    "literature_year_start": 2018,
+    "literature_recent_emphasis_year_start": 2023,
+    "literature_year_end": null
+  },
+  "automation": {
+    "mode": "execute",
+    "require_direction_checkpoint": true,
+    "auto_select_idea": true,
+    "max_idea_cycles": 3,
+    "max_repair_attempts": 3,
+    "reviewer_difficulty": "hard",
+    "max_review_rounds": 4,
+    "compact_logs": true
+  },
+  "compute": {
+    "backend": "remote",
+    "remote_host": "<REMOTE_USER>@<PRIVATE_SERVER>",
+    "remote_ssh_executable": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+    "remote_identity_file": "C:\\Users\\admin\\.ssh\\<SSH_KEY_NAME>",
+    "remote_workdir": "<PERSONAL_RESEARCH_ROOT>",
+    "remote_network_mode": "offline",
+    "gpu_policy": {
+      "default_physical_gpu_ids": [2, 3],
+      "conditionally_available_gpu_ids": [0, 1],
+      "allow_conditionally_available_gpu_when_that_gpu_is_idle_at_job_launch": true,
+      "all_four_simultaneously_idle_not_required": true,
+      "never_preempt_or_share_with_other_experiments": true,
+      "recheck_before_every_job": true
+    },
+    "compute_budget_mode": "no preset GPU-hour cap; track actual use for audit",
+    "max_pilot_gpu_hours": null,
+    "max_total_gpu_hours": null,
+    "max_parallel_jobs": 4,
+    "paid_compute_allowed": false,
+    "max_paid_cost_usd": 0.0,
+    "max_real_robot_trials": null
+  },
+  "acceptance": {
+    "minimum_main_seeds": 3,
+    "require_confidence_intervals": true,
+    "require_matched_budget_baseline": false,
+    "require_matched_algorithmic_exposure_baseline": true,
+    "require_model_policy_environment_evidence": true,
+    "integrity_warn_blocks_completion": true,
+    "same_family_review_is_provisional": true
+  },
+  "safety": {
+    "allow_real_robot": true,
+    "allow_private_data_upload": false,
+    "require_approval_for_dataset_license": true,
+    "require_approval_for_external_spend": true,
+    "require_approval_over_compute_budget": false,
+    "real_robot_execution": {
+      "requires_documented_endpoint_and_robot_identity": true,
+      "requires_user_defined_workspace_and_action_limits": true,
+      "requires_emergency_stop_owner": true,
+      "requires_no_motion_connectivity_check_before_live_actions": true,
+      "requires_low_speed_bounded_first_trial": true,
+      "never_disable_hardware_or_software_interlocks": true,
+      "never_issue_live_actions_without_robot_connection_contract": true
+    },
+    "remote_filesystem": {
+      "authorized_user": "liu_meng",
+      "authorized_root": "<PERSONAL_RESEARCH_ROOT>",
+      "read_roots": [
+        "<PERSONAL_RESEARCH_ROOT>"
+      ],
+      "write_roots": [
+        "<PERSONAL_RESEARCH_ROOT>"
+      ],
+      "allow_shared_storage_read": false,
+      "allow_shared_storage_write": false,
+      "allow_team_artifact_publish": false,
+      "require_personal_paths_for_code_data_models_cache_logs_tmp_checkpoints_and_artifacts": true,
+      "forbid_shell_profile_changes": true,
+      "forbid_privilege_escalation": true,
+      "forbid_global_conda_system_cuda_and_system_package_changes": true
+    }
+  },
+  "framework_preferences": [
+    "openpi",
+    "openvla-oft",
+    "cosmos-policy"
+  ]
+}

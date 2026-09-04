@@ -1,0 +1,406 @@
+{
+  "boundaries": [
+    {
+      "candidate_boundary_step": 56,
+      "candidate_index": 7,
+      "environment_seed": 47,
+      "episode_index": 1,
+      "selection_digest": "00a3d11cf1c7e030f983b418c6488a8f62368e6e9e8846c9c231a369a70ae529",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json",
+      "source_admission_sha256": "72e8e5071ccc8ffd5f8d45804a3f9a37e0b7990c87376496b6550a639c07455d",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.json",
+      "source_rollout_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+      "task_id": 3
+    },
+    {
+      "candidate_boundary_step": 48,
+      "candidate_index": 6,
+      "environment_seed": 47,
+      "episode_index": 1,
+      "selection_digest": "013a11c5c39fc6af30245eb33fd6f1ec65f5add3aadc2fbaf6fdbb2c86138518",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json",
+      "source_admission_sha256": "72e8e5071ccc8ffd5f8d45804a3f9a37e0b7990c87376496b6550a639c07455d",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.json",
+      "source_rollout_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+      "task_id": 3
+    },
+    {
+      "candidate_boundary_step": 160,
+      "candidate_index": 20,
+      "environment_seed": 47,
+      "episode_index": 1,
+      "selection_digest": "0298f1b6f32344e8148ab399c33c18f26ecbfe31a9eb8ca4838d5e7af6146348",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json",
+      "source_admission_sha256": "72e8e5071ccc8ffd5f8d45804a3f9a37e0b7990c87376496b6550a639c07455d",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.json",
+      "source_rollout_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+      "task_id": 3
+    },
+    {
+      "candidate_boundary_step": 8,
+      "candidate_index": 1,
+      "environment_seed": 53,
+      "episode_index": 1,
+      "selection_digest": "003574af504dd1aa7cab407d40916fee5ce4b54ee57140f119311e8ec0ecb84c",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task4_ep1_seed53.json",
+      "source_admission_sha256": "68f5017bc6724b9f18bbfa014283dc2d24538393e8533d6fea59646b5431a24b",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task4_ep1_seed53.json",
+      "source_rollout_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+      "task_id": 4
+    },
+    {
+      "candidate_boundary_step": 16,
+      "candidate_index": 2,
+      "environment_seed": 53,
+      "episode_index": 1,
+      "selection_digest": "198f1bab7c006d7291c7de516bdf45c99bc3b6cb9a9a0f37597f672b97f5c0dd",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task4_ep1_seed53.json",
+      "source_admission_sha256": "68f5017bc6724b9f18bbfa014283dc2d24538393e8533d6fea59646b5431a24b",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task4_ep1_seed53.json",
+      "source_rollout_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+      "task_id": 4
+    },
+    {
+      "candidate_boundary_step": 72,
+      "candidate_index": 9,
+      "environment_seed": 53,
+      "episode_index": 1,
+      "selection_digest": "3d4c566beb95ebfce871229f3645a58b6f95591b1e6f19833cd9807fb9a05e8b",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task4_ep1_seed53.json",
+      "source_admission_sha256": "68f5017bc6724b9f18bbfa014283dc2d24538393e8533d6fea59646b5431a24b",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task4_ep1_seed53.json",
+      "source_rollout_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+      "task_id": 4
+    },
+    {
+      "candidate_boundary_step": 24,
+      "candidate_index": 3,
+      "environment_seed": 59,
+      "episode_index": 1,
+      "selection_digest": "2b0a621b731cebc2fb6c3b7b951b75110c226fb96023329c73a289b03cfe19e5",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task5_ep1_seed59.json",
+      "source_admission_sha256": "f9b355c974dc6d26a7e3c8dc00362e668cba1f2818c358d804cea65297df7d88",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task5_ep1_seed59.json",
+      "source_rollout_sha256": "8d3d0f0d3b4912e0d0881e48620c899d8530e6adf2d19fc3a2c319d2710c41cc",
+      "task_id": 5
+    },
+    {
+      "candidate_boundary_step": 56,
+      "candidate_index": 7,
+      "environment_seed": 59,
+      "episode_index": 1,
+      "selection_digest": "3e76a3dbeed30dcc0d92f3fcf41fe74cac5d5d755e2d41208f81413ddbfeb158",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task5_ep1_seed59.json",
+      "source_admission_sha256": "f9b355c974dc6d26a7e3c8dc00362e668cba1f2818c358d804cea65297df7d88",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task5_ep1_seed59.json",
+      "source_rollout_sha256": "8d3d0f0d3b4912e0d0881e48620c899d8530e6adf2d19fc3a2c319d2710c41cc",
+      "task_id": 5
+    },
+    {
+      "candidate_boundary_step": 112,
+      "candidate_index": 14,
+      "environment_seed": 59,
+      "episode_index": 1,
+      "selection_digest": "4f54c9a6299ee24e5862b53ad8a699b5bec78e6ca036c9ee67c8eb25c46c9409",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task5_ep1_seed59.json",
+      "source_admission_sha256": "f9b355c974dc6d26a7e3c8dc00362e668cba1f2818c358d804cea65297df7d88",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task5_ep1_seed59.json",
+      "source_rollout_sha256": "8d3d0f0d3b4912e0d0881e48620c899d8530e6adf2d19fc3a2c319d2710c41cc",
+      "task_id": 5
+    },
+    {
+      "candidate_boundary_step": 32,
+      "candidate_index": 4,
+      "environment_seed": 61,
+      "episode_index": 1,
+      "selection_digest": "0b8b6c0c1d4861f70829c977cf6c6a273a35a7411022ead0e1f40e4db6e59d5c",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task6_ep1_seed61.json",
+      "source_admission_sha256": "8a918f27617df2a4bb5eaa08f1269509817c0e1b4372f89866fd07e8455c5e65",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task6_ep1_seed61.json",
+      "source_rollout_sha256": "c5f486d76c0a67f8be97121654d394804808e3cb0f22a9fecf0cff6a17953c7e",
+      "task_id": 6
+    },
+    {
+      "candidate_boundary_step": 80,
+      "candidate_index": 10,
+      "environment_seed": 61,
+      "episode_index": 1,
+      "selection_digest": "48a667a6f51196867f37025f78e671fde9da53abb8d80a8b4b4970e45da632ce",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task6_ep1_seed61.json",
+      "source_admission_sha256": "8a918f27617df2a4bb5eaa08f1269509817c0e1b4372f89866fd07e8455c5e65",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task6_ep1_seed61.json",
+      "source_rollout_sha256": "c5f486d76c0a67f8be97121654d394804808e3cb0f22a9fecf0cff6a17953c7e",
+      "task_id": 6
+    },
+    {
+      "candidate_boundary_step": 88,
+      "candidate_index": 11,
+      "environment_seed": 61,
+      "episode_index": 1,
+      "selection_digest": "58ec4aa77cf30ae6e36d8a0fd609576c0a6cc82755da2a46624df84f1be7cf6f",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task6_ep1_seed61.json",
+      "source_admission_sha256": "8a918f27617df2a4bb5eaa08f1269509817c0e1b4372f89866fd07e8455c5e65",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task6_ep1_seed61.json",
+      "source_rollout_sha256": "c5f486d76c0a67f8be97121654d394804808e3cb0f22a9fecf0cff6a17953c7e",
+      "task_id": 6
+    },
+    {
+      "candidate_boundary_step": 56,
+      "candidate_index": 7,
+      "environment_seed": 67,
+      "episode_index": 1,
+      "selection_digest": "0d717770ccc63c6a1b9202258685364b84bc9199436fa83239b44b238896ceeb",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task7_ep1_seed67.json",
+      "source_admission_sha256": "3a1cbfdfcbf3118e18229ea0ecc3ad93c1068eddbe753767d66d0f7f8337cffc",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task7_ep1_seed67.json",
+      "source_rollout_sha256": "a9d9793473ad16248dd3e26b4485d11517e3d3d588d7865f3c025bf620e30f1e",
+      "task_id": 7
+    },
+    {
+      "candidate_boundary_step": 72,
+      "candidate_index": 9,
+      "environment_seed": 67,
+      "episode_index": 1,
+      "selection_digest": "14d3515d704a296aa52b664615c0daf475bb15bc4524c1558f599d085bd6a5b0",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task7_ep1_seed67.json",
+      "source_admission_sha256": "3a1cbfdfcbf3118e18229ea0ecc3ad93c1068eddbe753767d66d0f7f8337cffc",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task7_ep1_seed67.json",
+      "source_rollout_sha256": "a9d9793473ad16248dd3e26b4485d11517e3d3d588d7865f3c025bf620e30f1e",
+      "task_id": 7
+    },
+    {
+      "candidate_boundary_step": 40,
+      "candidate_index": 5,
+      "environment_seed": 67,
+      "episode_index": 1,
+      "selection_digest": "58b8a0ab10df40850d6c857e37e8b448fa3b0c59a6484eb54e6703ad32d19d1e",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task7_ep1_seed67.json",
+      "source_admission_sha256": "3a1cbfdfcbf3118e18229ea0ecc3ad93c1068eddbe753767d66d0f7f8337cffc",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task7_ep1_seed67.json",
+      "source_rollout_sha256": "a9d9793473ad16248dd3e26b4485d11517e3d3d588d7865f3c025bf620e30f1e",
+      "task_id": 7
+    },
+    {
+      "candidate_boundary_step": 8,
+      "candidate_index": 1,
+      "environment_seed": 71,
+      "episode_index": 1,
+      "selection_digest": "0d05b230e109b17cd04bf8d4de28b45c68a726eb39dbe7308d015fcc8c6698df",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task8_ep1_seed71.json",
+      "source_admission_sha256": "88bd48bdfdad5003d80b4ccd7df2f2577c01082bac450933466afbc838780030",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task8_ep1_seed71.json",
+      "source_rollout_sha256": "8c85661705f07a95e546222dbd0832aade435b9b8d1ad03e43db9ef3a5feaa38",
+      "task_id": 8
+    },
+    {
+      "candidate_boundary_step": 48,
+      "candidate_index": 6,
+      "environment_seed": 71,
+      "episode_index": 1,
+      "selection_digest": "3fb32b68c229a34821454c59516a3ba6f4de7f11bde9fd68128758ab856fa74d",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task8_ep1_seed71.json",
+      "source_admission_sha256": "88bd48bdfdad5003d80b4ccd7df2f2577c01082bac450933466afbc838780030",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task8_ep1_seed71.json",
+      "source_rollout_sha256": "8c85661705f07a95e546222dbd0832aade435b9b8d1ad03e43db9ef3a5feaa38",
+      "task_id": 8
+    },
+    {
+      "candidate_boundary_step": 56,
+      "candidate_index": 7,
+      "environment_seed": 71,
+      "episode_index": 1,
+      "selection_digest": "4c985abee555b477d23d6403c650f76d76ceb5fb62e90c8d93c83121d27b8356",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task8_ep1_seed71.json",
+      "source_admission_sha256": "88bd48bdfdad5003d80b4ccd7df2f2577c01082bac450933466afbc838780030",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task8_ep1_seed71.json",
+      "source_rollout_sha256": "8c85661705f07a95e546222dbd0832aade435b9b8d1ad03e43db9ef3a5feaa38",
+      "task_id": 8
+    },
+    {
+      "candidate_boundary_step": 64,
+      "candidate_index": 8,
+      "environment_seed": 73,
+      "episode_index": 1,
+      "selection_digest": "0a3ea8fdefb54af2e605224f9311f0b4326df2890c5fb6aa9fd965f122816d12",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task9_ep1_seed73.json",
+      "source_admission_sha256": "ddee610373957cfc2da6318231302fb86ba53be22e10756cb15882063f331bb5",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task9_ep1_seed73.json",
+      "source_rollout_sha256": "7d82afa93cc1520b7af6bac7f96993d74601441d623485a351fa6eab50a14c37",
+      "task_id": 9
+    },
+    {
+      "candidate_boundary_step": 40,
+      "candidate_index": 5,
+      "environment_seed": 73,
+      "episode_index": 1,
+      "selection_digest": "0e69e2e545efe7d70e931b38391f4142b370cb1090f9309d3fd78bcc70fe0d64",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task9_ep1_seed73.json",
+      "source_admission_sha256": "ddee610373957cfc2da6318231302fb86ba53be22e10756cb15882063f331bb5",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task9_ep1_seed73.json",
+      "source_rollout_sha256": "7d82afa93cc1520b7af6bac7f96993d74601441d623485a351fa6eab50a14c37",
+      "task_id": 9
+    },
+    {
+      "candidate_boundary_step": 104,
+      "candidate_index": 13,
+      "environment_seed": 73,
+      "episode_index": 1,
+      "selection_digest": "1040b18015910b56f2ca149da383babfe7aba0d032590881f8c0635e956872fe",
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task9_ep1_seed73.json",
+      "source_admission_sha256": "ddee610373957cfc2da6318231302fb86ba53be22e10756cb15882063f331bb5",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task9_ep1_seed73.json",
+      "source_rollout_sha256": "7d82afa93cc1520b7af6bac7f96993d74601441d623485a351fa6eab50a14c37",
+      "task_id": 9
+    }
+  ],
+  "boundary_count": 21,
+  "candidate_chunks": 4,
+  "created_at_utc": "2026-08-31T18:52:37.165512+00:00",
+  "frozen_before_compiler_execution": true,
+  "invalid_boundary_treatment": "zero_witness_full_cap_charge",
+  "kind": "p026_outcome_blind_boundary_plan",
+  "max_selected_blocks": 3,
+  "physical_family": "compliance",
+  "policy_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_POLICY_LOCK.json",
+    "sha256": "1d75f96cacf01e327819c2e8d2a6521a552c2f8b2a7e9542cb0d6b35cd0d132d"
+  },
+  "preregistration": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/prereg/P026_HELDOUT_PREREGISTRATION.md",
+    "sha256": "ece858b9f3b2e261513e82cc6f0be0b559f8d1bb626d173a919a9e4100b5ae0a"
+  },
+  "protocol_version": "P026-v1",
+  "selection_rule": "lowest_3_sha256(source_manifest_sha256|candidate_index), indices 1..N-1",
+  "selector_seeds": [
+    0,
+    1,
+    2
+  ],
+  "selectors": [
+    "israc-contact-subtraction",
+    "candidate-contact",
+    "random-scene"
+  ],
+  "source_count": 7,
+  "sources": [
+    {
+      "chunk_count": 23,
+      "environment_seed": 47,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        7,
+        6,
+        20
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task3_ep1_seed47.json",
+      "source_admission_sha256": "72e8e5071ccc8ffd5f8d45804a3f9a37e0b7990c87376496b6550a639c07455d",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.npz",
+      "source_arrays_sha256": "5ac765bb13251253145aa7b10bc418bb5a968d4c8befbb8e33645c420c460256",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task3_ep1_seed47.json",
+      "source_rollout_sha256": "6a790164045e8b5038033fc5475153d7938164c9e3cc53ac45832bf5a8892d34",
+      "task_id": 3
+    },
+    {
+      "chunk_count": 11,
+      "environment_seed": 53,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        1,
+        2,
+        9
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task4_ep1_seed53.json",
+      "source_admission_sha256": "68f5017bc6724b9f18bbfa014283dc2d24538393e8533d6fea59646b5431a24b",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task4_ep1_seed53.npz",
+      "source_arrays_sha256": "1f59990893e788ef54fc4ff6cff6be426b00356f901efe85d434485f3c0d2e75",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task4_ep1_seed53.json",
+      "source_rollout_sha256": "a32402480b78442cdcf4b519cc87c99c683333c4211396e478bff3d9ffb2b610",
+      "task_id": 4
+    },
+    {
+      "chunk_count": 17,
+      "environment_seed": 59,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        3,
+        7,
+        14
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task5_ep1_seed59.json",
+      "source_admission_sha256": "f9b355c974dc6d26a7e3c8dc00362e668cba1f2818c358d804cea65297df7d88",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task5_ep1_seed59.npz",
+      "source_arrays_sha256": "3f8d59938fbac926740944d7fb97120fd42739f1e74b26520940f568c277df31",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task5_ep1_seed59.json",
+      "source_rollout_sha256": "8d3d0f0d3b4912e0d0881e48620c899d8530e6adf2d19fc3a2c319d2710c41cc",
+      "task_id": 5
+    },
+    {
+      "chunk_count": 12,
+      "environment_seed": 61,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        4,
+        10,
+        11
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task6_ep1_seed61.json",
+      "source_admission_sha256": "8a918f27617df2a4bb5eaa08f1269509817c0e1b4372f89866fd07e8455c5e65",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task6_ep1_seed61.npz",
+      "source_arrays_sha256": "d9a43673b692b7595a763c63054b19f8e2f002aa02ddd310e1bca8730dcb6778",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task6_ep1_seed61.json",
+      "source_rollout_sha256": "c5f486d76c0a67f8be97121654d394804808e3cb0f22a9fecf0cff6a17953c7e",
+      "task_id": 6
+    },
+    {
+      "chunk_count": 10,
+      "environment_seed": 67,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        7,
+        9,
+        5
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task7_ep1_seed67.json",
+      "source_admission_sha256": "3a1cbfdfcbf3118e18229ea0ecc3ad93c1068eddbe753767d66d0f7f8337cffc",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task7_ep1_seed67.npz",
+      "source_arrays_sha256": "9c15d19e082df761e93371a7a9dbaff9fe80fe71a349cce45917ba3a277e8a6a",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task7_ep1_seed67.json",
+      "source_rollout_sha256": "a9d9793473ad16248dd3e26b4485d11517e3d3d588d7865f3c025bf620e30f1e",
+      "task_id": 7
+    },
+    {
+      "chunk_count": 10,
+      "environment_seed": 71,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        1,
+        6,
+        7
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task8_ep1_seed71.json",
+      "source_admission_sha256": "88bd48bdfdad5003d80b4ccd7df2f2577c01082bac450933466afbc838780030",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task8_ep1_seed71.npz",
+      "source_arrays_sha256": "eb230bd9859154a788c2611cf015330bbe05aca02f440b0cd5f8840c03e5348d",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task8_ep1_seed71.json",
+      "source_rollout_sha256": "8c85661705f07a95e546222dbd0832aade435b9b8d1ad03e43db9ef3a5feaa38",
+      "task_id": 8
+    },
+    {
+      "chunk_count": 17,
+      "environment_seed": 73,
+      "episode_index": 1,
+      "selected_candidate_indices": [
+        8,
+        5,
+        13
+      ],
+      "source_admission": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_ADMISSION_libero_goal_task9_ep1_seed73.json",
+      "source_admission_sha256": "ddee610373957cfc2da6318231302fb86ba53be22e10756cb15882063f331bb5",
+      "source_arrays": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task9_ep1_seed73.npz",
+      "source_arrays_sha256": "85787e0cc2ae2ae2680f08c3b8f8565c8aa783e2948c9d3e495bcf535cf32d45",
+      "source_rollout": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_CONFIRM_SOURCE_libero_goal_task9_ep1_seed73.json",
+      "source_rollout_sha256": "7d82afa93cc1520b7af6bac7f96993d74601441d623485a351fa6eab50a14c37",
+      "task_id": 9
+    }
+  ]
+}

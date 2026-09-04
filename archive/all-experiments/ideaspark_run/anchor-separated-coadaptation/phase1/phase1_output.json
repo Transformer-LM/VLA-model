@@ -1,0 +1,374 @@
+{
+  "intake": {
+    "domain": "Embodied robot learning: closed-loop co-adaptation of vision-language-action policies and action-conditioned video world/action models",
+    "venue": "Top-tier machine-learning or robot-learning venue (ICLR, ICML, NeurIPS, or CoRL); exact target not stated",
+    "time": "Establish novelty above 7/10 before any GPU experiment; calendar deadline not stated",
+    "data": [
+      "Existing LIBERO and RoboCasa simulation trajectories and benchmarks",
+      "Action-conditioned video rollouts from existing VLA/WAM checkpoints",
+      "Held-out real-robot or otherwise reality-observed trajectories where available",
+      "No tactile data"
+    ],
+    "compute": "80GB-class GPUs (A100/H100), up to 8 concurrent (one node), <=50 GPU-days over 5 months, plus ~$10k inference/API budget for the full falsification campaign",
+    "expertise": "Embodied AI, VLA/WAM post-training, model-based reinforcement learning, and GPU experimentation",
+    "preference": "both",
+    "baseline": "VLAW-style iterative policy/world-model improvement, World-Gymnast/RISE imagined policy optimization, WorldSync/WorldEcho action-faithfulness alignment, Feedback World Model correction, and the user-verified World-VLA-Loop, WoVR, Imperfect World Models are Exploitable, and Cross-fitted Proximal Learning for MBRL neighbors",
+    "limitation": "Prevent self-confirming shared errors in reciprocal VLA-WAM post-training without treating ordinary co-evolution, real/imagined mixing, feedback correction, action-faithfulness alignment, conservative or short-horizon MBRL, uncertainty filtering, DAgger, naive alternating training, or generic cross-fitting as novel",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "data",
+      "compute",
+      "expertise",
+      "preference",
+      "baseline",
+      "contribution_type"
+    ]
+  },
+  "bottleneck_statement": "Reciprocal co-training of a policy and a learned world model creates an adaptive measurement failure: once each learner changes the state-action distribution that supplies or scores the other's next update, a shared miss can make imagined return, world-model fit, and policy agreement improve together while task success under physical dynamics worsens. VLAW explicitly alternates real-policy rollouts, world-model refinement, and synthetic policy improvement but leaves residual-error amplification open (semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d); World-Gymnast and RISE optimize policies inside learned dynamics and therefore expose the policy to exploitable video-model, reward-model, or value-model errors (semanticscholar:3859de96b3c95d8c814a6c850df29f1b97d0644d; semanticscholar:64604f8fe171472d66bb7c7fb29ad42414c5925a); and recursive synthetic retraining can drift away from held-out reality even while self-consistency rises (openalex:W7108210330). Action-faithfulness alignment improves whether commanded actions appear in generated futures (arxiv:2608.24885), but it does not make cycle-to-cycle improvement identifiable when the same adaptive loop determines what is observed, imagined, and rewarded. The unresolved structural bottleneck is therefore that the loop's internal evidence cannot distinguish genuine improvement under the environment from mutually reinforced policy-model error after the policy distribution moves.",
+  "closest_adjacent": [
+    {
+      "paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+      "is_anchor": true,
+      "summary_and_residue": "VLAW uses real policy rollouts to refine an action-conditioned video model, then uses synthetic rollouts from that model to improve the VLA policy in an iterative loop. Its reported loop does not establish how to distinguish genuine environment improvement from a residual error that the updated policy and updated world model increasingly agree on across cycles. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "semanticscholar:3859de96b3c95d8c814a6c850df29f1b97d0644d",
+      "is_anchor": false,
+      "summary_and_residue": "World-Gymnast performs RL fine-tuning of a VLA policy inside an action-conditioned video world model with a VLM reward and also reports online iterative policy/world-model improvement. At abstract level, it leaves the dynamics model and learned reward as mutually compatible error sources, so higher imagined reward need not identify higher real success."
+    },
+    {
+      "paper_id": "semanticscholar:64604f8fe171472d66bb7c7fb29ad42414c5925a",
+      "is_anchor": false,
+      "summary_and_residue": "RISE composes a controllable future predictor and a progress-value model to generate imagined advantages for closed-loop VLA improvement. At abstract level, it does not separate a true policy advantage from an advantage jointly induced by correlated dynamics and value errors on policy-selected imagined states."
+    },
+    {
+      "paper_id": "arxiv:2608.24885",
+      "is_anchor": false,
+      "summary_and_residue": "WorldEcho diagnoses off-expert action following and WorldSync improves it through broader consequence coverage, action-grounded representations, and intervention-effect alignment. At abstract level, action-faithful generation still does not reveal whether the residual prediction error is aligned with the next policy update and therefore amplified by reciprocal retraining."
+    },
+    {
+      "paper_id": "semanticscholar:317ebd73c3f3b3e7e41035527272339536ad6a1d",
+      "is_anchor": false,
+      "summary_and_residue": "Feedback World Model uses each observed next state to update a latent feedback state and correct future predictions at inference time without parameter updates. At abstract level, it does not address the different failure in which both policy and world-model parameters adapt from evidence selected by their coupled, changing behavior."
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "Across the VLAW, World-Gymnast, and RISE frontier leaves, the sign of cycle-to-cycle change under physical dynamics is not identifiable from internal training traces once policy-selected observations, learned futures, and learned outcome scores move together; a jointly improving internal objective can therefore coexist with declining real success -- stakes: robot teams can spend scarce rollouts and GPU time strengthening a policy that fails more often, while scientific conclusions about self-improvement rest on a metric whose sign may reverse outside the coupled loop.",
+    "No retrieved frontier leaf tests whether it is valid for the policy that selects which states become observed and the world model that supplies unobserved consequences to be judged through the same adaptively changing evidence stream at every co-training cycle -- stakes: an unexamined shared assumption can invalidate reported co-improvement gains across VLA-WAM systems and blocks a principled account of when reciprocal training is statistically trustworthy.",
+    "Even after the WorldSync action-faithfulness and Feedback World Model correction moves, no retrieved leaf establishes whether the residual world-model error is aligned with the policy's improvement direction across successive updates; small average prediction error can still be concentrated exactly where the policy finds high imagined advantage -- stakes: apparently faithful rollouts can drive unsafe or ineffective actions at deployment, and the field cannot infer policy-learning validity from world-model accuracy alone.",
+    "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently."
+  ],
+  "method_lineage": {
+    "line": "learned-world-model policy improvement under policy-induced distribution shift and reciprocal model-policy adaptation",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Dyna-style integrated learning, planning, and acting",
+        "move": "Use a learned environment model to generate simulated experience alongside real interaction for policy or value improvement.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Classical tabular or compact-state planning did not make learned-model policy improvement work at high-dimensional, partially observed perception scale; later probabilistic and neural world models addressed this.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "PILCO-style probabilistic model-based policy search",
+        "move": "Propagate learned dynamics uncertainty through policy evaluation to obtain data-efficient real-system policy search.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Gaussian-process dynamics and analytic propagation did not scale naturally to raw visual observations and broad task distributions; neural latent world models addressed that scale barrier.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Neural latent world models",
+        "move": "Learn compact recurrent latent dynamics from pixels so imagined trajectories can support control without decoding every physical state variable.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Early latent models did not yet provide stable, scalable actor-critic learning entirely through imagination; Dreamer-style methods addressed that optimization interface.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "Dreamer-style actor-critic learning in latent imagination",
+        "move": "Backpropagate or estimate policy and value improvements over compact imagined latent rollouts produced by a learned dynamics model.",
+        "parent": "n2",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Latent imagination did not directly provide language-conditioned, action-faithful video futures or a reliable interface for post-training generalist robot policies; recent VLA-WAM leaves address those capabilities.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "c0",
+        "method": "DAgger and learner-distribution data aggregation",
+        "move": "Collect corrective labels on states visited by the current learner rather than training only on a fixed expert distribution.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Coverage of learner-induced states does not by itself identify shared errors when the consequence model or evaluator supplying training evidence is also adaptive.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c1",
+        "method": "MBPO-style short branched model rollouts",
+        "move": "Limit synthetic rollout horizon and branch from real replay states to trade model bias against additional imagined data.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "A safe horizon limits accumulated prediction error but does not determine whether the remaining error is aligned with an adaptively changing policy update.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c2",
+        "method": "MOPO/COMBO-style conservative model-based offline RL",
+        "move": "Penalize uncertain or out-of-support model rollouts so policy optimization remains near trusted data.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Conservatism and uncertainty filtering can be jointly miscalibrated with the learned model and do not identify mutually confirmed error in a reciprocal update loop.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c3",
+        "method": "Cross-fitting and double/debiased machine learning",
+        "move": "Estimate nuisance components on disjoint folds from the observations used to evaluate the target moment, reducing same-sample overfitting bias.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Generic fold separation does not by itself define a stable target quantity when policies adaptively change which robot states are observed across co-training rounds.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "c4",
+        "method": "Target networks and double-estimator decoupling",
+        "move": "Lag bootstrap targets or separate action selection from evaluation to reduce feedback-induced estimation bias.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Temporal lag or estimator decoupling reduces one feedback path but supplies no evidence about whether both learners have drifted away from physical dynamics.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "n4",
+        "method": "VLAW iterative VLA-world-model co-improvement",
+        "move": "Use real policy rollouts to update an action-conditioned video model and its synthetic rollouts to update the VLA policy over repeated cycles.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Cycle-internal gains are not identifiable as physical improvement rather than mutually reinforced policy-world-model error.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "World-Gymnast world-model reinforcement learning",
+        "move": "Fine-tune a VLA policy on action-conditioned video rollouts scored by a vision-language reward and extend this to iterative online improvement.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:3859de96b3c95d8c814a6c850df29f1b97d0644d",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The policy can exploit correlated errors of the video dynamics and learned reward while imagined return rises.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "RISE compositional imagined policy improvement",
+        "move": "Separate controllable future prediction from progress-value estimation and use their imagined advantages for policy updates.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:64604f8fe171472d66bb7c7fb29ad42414c5925a",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Correlated dynamics and value errors can still create a false high-advantage direction for the policy.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "PiL-World policy-in-the-loop evaluation",
+        "move": "Alternate VLA action-chunk inference with generated multi-view observations so policy evaluation is closed loop rather than open loop.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:534713e7678da3acd12217d55a36a5e3cdc80e0c",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Closed-loop evaluation error can compound under policies and horizons outside the tested tasks, and evaluation agreement alone does not validate reciprocal retraining.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "WorldEcho diagnosis and WorldSync action alignment",
+        "move": "Measure off-expert action following and align generated intervention effects through broader coverage, grounded dynamics features, and action interventions.",
+        "parent": "n2",
+        "provenance": "retrieved:arxiv:2608.24885",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Action-faithful prediction does not establish that residual errors are harmless to the update direction of a co-adapting policy.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n9",
+        "method": "Feedback World Model latent observer correction",
+        "move": "Use observed post-action states at inference time to update a latent feedback state that corrects future predictions without parameter retraining.",
+        "parent": "n2",
+        "provenance": "retrieved:semanticscholar:317ebd73c3f3b3e7e41035527272339536ad6a1d",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Inference-time correction does not resolve evidence endogeneity when both policy and world-model parameters change across training cycles.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n10",
+        "method": "AR Forcing on self-generated context",
+        "move": "Train a diffusion world model autoregressively on its own predicted context to reduce the parallel-training versus rollout-inference mismatch.",
+        "parent": "n2",
+        "provenance": "retrieved:semanticscholar:0863b06eb5870a1508aaf638e5239157844ce828",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Exposure to self-generated contexts can still compound coherent visual and trajectory errors and supplies no independent evidence of real task improvement.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n11",
+        "method": "Diagnostic analysis of hierarchical world-model exploitation",
+        "move": "Expose policy exploitation of learned dynamics at abstract temporal levels through controlled hierarchical MBRL experiments.",
+        "parent": "n3",
+        "provenance": "retrieved:openalex:W4404054802",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "The diagnosis does not separate or prevent exploitation that co-evolves with both a high-dimensional robot policy and its action-conditioned video model.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      }
+    ],
+    "notes": "Retrieved nodes are grounded and citable; parametric nodes are awareness-only and prevent regression, with no hard novelty claim. The ancestry is intentionally shallow where the VLA-WAM branch is young. Collateral nodes are not legal gap sites and are not shared ancestors. The intake also supplies direct primary-page negative anchors not all admitted to lit_table: World-VLA-Loop (2602.06508), WoVR (2602.13977), Imperfect World Models are Exploitable (2605.15960), and Cross-fitted Proximal Learning for MBRL (2604.05185). Consequently, ordinary co-evolution, real/imagined mixing, feedback correction, action faithfulness, conservative or short-horizon MBRL, uncertainty filtering, DAgger, and generic cross-fitting are treated as occupied moves rather than novelty claims."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 92,
+    "n_on_topic": 92,
+    "patterns": [
+      {
+        "pattern_id": "assumption_audit_and_pivot",
+        "count": 21,
+        "share": 0.23,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "architectural_operator_substitution",
+        "count": 9,
+        "share": 0.1,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "generative_process_redesign",
+        "count": 5,
+        "share": 0.05,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "controlled_diagnostic_design",
+        "count": 24,
+        "share": 0.26,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "unify_into_shared_representation",
+        "count": 8,
+        "share": 0.09,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "reframe_as_solvable_object",
+        "count": 16,
+        "share": 0.17,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "self_supervised_signal_engineering",
+        "count": 23,
+        "share": 0.25,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "structural_prior_encoding",
+        "count": 20,
+        "share": 0.22,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "algebraic_equivalence_unification",
+        "count": 1,
+        "share": 0.01,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "heterogeneous_decomposition",
+        "count": 31,
+        "share": 0.34,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "decompose_and_delegate",
+        "count": 19,
+        "share": 0.21,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "relax_discrete_search_to_continuous",
+        "count": 0,
+        "share": 0.0,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "adapt_via_conditioning",
+        "count": 12,
+        "share": 0.13,
+        "saturation_band": "mid_frequency"
+      },
+      {
+        "pattern_id": "characterize_limit_then_surpass",
+        "count": 1,
+        "share": 0.01,
+        "saturation_band": "untested"
+      },
+      {
+        "pattern_id": "targeted_self_supervised_objective",
+        "count": 1,
+        "share": 0.01,
+        "saturation_band": "untested"
+      }
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "heterogeneous_decomposition is the most-used pattern (31/92, 0.34); its closest co-training leaves separate dynamics, value, reward, or policy roles but still leave correlated residual errors inside the same adaptive evidence loop."
+  },
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

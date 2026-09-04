@@ -1,0 +1,293 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "incumbent checkpoint pair (pi_k, M_k)",
+          "existing LIBERO/RoboCasa trajectories"
+        ],
+        "produces": [
+          "frozen incumbent snapshots (pi_k, M_k)",
+          "frozen tentative snapshots (pi_k^+, M_k^+)"
+        ],
+        "note": "Verbatim: '1. Instantiate a VLAW-style co-training reproduction with weight-accessible VLA policy pi_k and action-conditioned video model M_k on existing LIBERO and RoboCasa trajectories; input is the incumbent checkpoint pair and output is a tentative updated pair (pi_k^+, M_k^+) plus the unchanged incumbent snapshots.' Types are checkpoint pairs."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "benchmark task/reset sampler Q over finite task IDs h",
+          "offline observations grouped by h",
+          "pi_k and pi_k^+ action-vector forward passes"
+        ],
+        "produces": [
+          "task masses q_h with sum_h q_h=1",
+          "one scalar normalized mean-square action divergence d_{k,h} per task"
+        ],
+        "note": "Verbatim: '2. Build Q directly from the benchmarks' task/reset samplers and cache existing offline reset observations by task ID; input is benchmark metadata and stored observations, and output is q_h and normalized action-divergence scores d_{k,h} from forward passes of pi_k and pi_k^+.'"
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "q_h and d_{k,h}",
+          "beta (default 1; sweep [0.5,2])",
+          "epsilon (default 0.2; sweep [0.1,0.4])",
+          "benchmark reset and simulator-seed samplers"
+        ],
+        "produces": [
+          "a_k(h)=q_h exp(beta d_{k,h})/sum_j q_j exp(beta d_{k,j})",
+          "p_k(h)=(1-epsilon)a_k(h)+epsilon q_h",
+          "logged witness request (h,q_h,p_k(h),reset seed,simulator seed,hashes,order)"
+        ],
+        "note": "Verbatim: '3. Compute a_k and the randomized mixture p_k with the declared beta and epsilon, sample a task and reset, and log h, q_h, p_k(h), reset seed, simulator seed, checkpoint hashes, and rollout order; input is the divergence table and output is a reproducible witness request.'"
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "one logged witness request",
+          "frozen pi_k and pi_k^+",
+          "native binary success oracle Y"
+        ],
+        "produces": [
+          "Y^+_{k,t} and Y^0_{k,t} in {0,1}",
+          "paired difference D_{k,t}=Y^+_{k,t}-Y^0_{k,t} in {-1,0,1}"
+        ],
+        "note": "Verbatim: '4. Query LIBERO or RoboCasa twice as a black box from that matched request, once with each frozen policy in randomized order, and read the native task-success predicates; input is the witness request and output is the paired outcome D_{k,t}, which changes downstream behavior only through the later joint commit decision.'"
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "D_{k,t}",
+          "q_h/p_k(h)",
+          "prior witnesses in cycle k",
+          "k,t,alpha=0.05,epsilon"
+        ],
+        "produces": [
+          "X_{k,t}=q_h D_{k,t}/p_k(h)",
+          "L_{k,t}=mean_{s<=t} X_{k,s}-epsilon^{-1} sqrt(2 log(k(k+1)t(t+1)/alpha)/t)",
+          "persisted audit row"
+        ],
+        "note": "LIKELY-FATAL STEP SELECTED BEFORE THE TRACE: S5's certificate combined with S6's B_k=128 cap, because the global worst-case epsilon^{-1} radius can exceed the entire attainable success-difference range even when realized propensities equal the target. Verbatim: '5. Append X_{k,t}=q_h D_{k,t}/p_k(h), recompute L_{k,t}, and persist the audit row; input is the paired outcome plus logged propensity and output is the load-bearing certificate, with no simulator differentiation or learned outcome judge.'"
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "L_{k,t}",
+          "m_min (default 0)",
+          "B_k (default 128)",
+          "frozen tentative and incumbent hashes"
+        ],
+        "produces": [
+          "atomic promotion of both tentative checkpoints if L_{k,t}>m_min",
+          "another witness request if t<B_k and the threshold is not crossed",
+          "atomic rollback to both incumbent hashes at the cap"
+        ],
+        "note": "Verbatim: '6. If L_{k,t}>m_min, atomically promote both tentative checkpoints so pi_k^+ generates the next real/simulated actions and M_k^+ generates the next imagined futures; otherwise request another witness until B_k, then restore both incumbent hashes so the failed update cannot affect later rollouts or training data.'"
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "last committed checkpoint pair",
+          "prior audit log and next one-based cycle index"
+        ],
+        "produces": [
+          "repeated tentative-pair decisions under the global alpha allocation",
+          "final committed policy/world-model pair"
+        ],
+        "note": "Verbatim: '7. Repeat Steps 1-6 for later co-training cycles while retaining the global alpha schedule; input is the last committed pair and prior audit log, and output is a final policy checkpoint whose complete update ancestry is environment-signed.'"
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "identical initial checkpoints and seeds",
+          "matched simulator-rollout budget",
+          "ordinary, unweighted-targeted, label-permuted, and exhaustive-Q control rules"
+        ],
+        "produces": [
+          "final native task-success measurements",
+          "commit/rollback traces"
+        ],
+        "note": "Verbatim: '8. Run matched-budget ordinary VLAW-style training, unweighted targeted-witness gating, label-permuted-certificate gating, and an exhaustive-Q oracle gate; input is identical initial checkpoints and seeds, and output is final native task success plus commit/rollback traces for mechanism falsification.' The estimator targets the declared Delta_k because summing p_k(h)[q_h/p_k(h)]E[D|h] over h yields sum_h q_h E[D|h]. No operative term has a second defensible mathematical reading material to the blocker; 'until B_k' is read as t<=B_k, and either inclusive/exclusive endpoint convention only makes the available evidence no larger than 128."
+      }
+    ],
+    "dry_run": {
+      "instance": "Cycle k=1; one benchmark task h with q_h=1; any finite offline cache with d_{1,h}=0; beta=1; epsilon=0.2; alpha=0.05; m_min=0; B_1=128. The tentative policy succeeds and the incumbent fails on every paired reset, so D_{1,t}=1 for all t=1,...,128 and the true cycle estimand is Delta_1=1.",
+      "execution": {
+        "mode": "unexecuted",
+        "script": "",
+        "output": "No script was run, per the task's explicit do-not-run-scripts constraint. The closed-form arithmetic is shown below."
+      },
+      "computed_quantities": [
+        {
+          "quantity": "proposal and logged propensity",
+          "value": "a_1(h)=p_1(h)=1=q_h",
+          "arithmetic": "a_1(h)=1*exp(1*0)/(1*exp(1*0))=1; p_1(h)=0.8*1+0.2*1=1."
+        },
+        {
+          "quantity": "each witness and its mean at the cap",
+          "value": "X_{1,t}=1 and mean_{t<=128} X_{1,t}=1",
+          "arithmetic": "X=q_h D/p=1*1/1=1; the mean of 128 ones is 1."
+        },
+        {
+          "quantity": "logarithm argument at k=1,t=128",
+          "value": "660480",
+          "arithmetic": "1*(1+1)*128*(128+1)/0.05 = 2*128*129/0.05 = 660480."
+        },
+        {
+          "quantity": "certificate penalty at the cap",
+          "value": "approximately 2.288",
+          "arithmetic": "epsilon^{-1} sqrt(2 ln(660480)/128) = 5*sqrt(2*13.4007/128) = 5*sqrt(0.209386) approximately 2.2879."
+        },
+        {
+          "quantity": "best possible certificate at the cap",
+          "value": "L_{1,128} approximately -1.288",
+          "arithmetic": "L=1-2.2879=-1.2879, which is not greater than m_min=0."
+        },
+        {
+          "quantity": "decision despite perfect true improvement",
+          "value": "rollback",
+          "arithmetic": "The true difference is Delta_1=1, but the strict commit condition L>0 is false at t=128, so S6 restores the incumbent."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "At the default cap the largest attainable sample mean in the p=q regime is 1, but the stated penalty is approximately 2.288, so even the perfect stream has L_{1,128} approximately -1.288 and cannot commit.",
+          "kind": "structural",
+          "why": "This is fixed by the stated algebra, binary outcome range, epsilon, alpha, and cap, not by a chosen empirical distribution. For p=q, every X equals D and hence mean X<=1. The radius log(C t(t+1))/t decreases over t=1,...,128 (its derivative numerator is at most 2-ln(80)<0), so t=128 is the most favorable stopping time; failure there implies failure at every earlier optional stopping time."
+        },
+        {
+          "anomaly": "Across the entire prespecified epsilon sweep [0.1,0.4], the most favorable radius at k=1,t=128 is attained at epsilon=0.4 and is still approximately 1.144>1, so no swept epsilon repairs the zero-power p=q case.",
+          "kind": "structural",
+          "why": "At fixed k,t the radius scales exactly as epsilon^{-1}; its minimum over the declared sweep is 2.5*sqrt(2 ln(660480)/128) approximately 1.144."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "Empty task support for Q",
+        "behavior": "The normalization sum_j q_j exp(beta d_{k,j}) is zero and no task can be sampled.",
+        "finding": null
+      },
+      {
+        "probe": "One task, or all tasks tied in d_{k,h}",
+        "behavior": "a_k=q and therefore p_k=q. With perfect D=1, the default certificate remains below zero through B_k=128.",
+        "finding": "This admissible degeneration triggers the structural zero-power blocker."
+      },
+      {
+        "probe": "All paired outcomes identical at D=0",
+        "behavior": "Every X is zero, L is negative, and S6 rolls back at the cap.",
+        "finding": null
+      },
+      {
+        "probe": "Tie exactly at the decision threshold L=m_min",
+        "behavior": "The strict inequality L>m_min is false, so the mechanism continues or rolls back at the cap.",
+        "finding": null
+      },
+      {
+        "probe": "Maximum specified witness count B_k=128 with epsilon in [0.1,0.4]",
+        "behavior": "Even at epsilon=0.4 and perfect p=q outcomes, the radius is approximately 1.144, larger than the maximum mean difference 1.",
+        "finding": "The full declared epsilon sweep has zero positive-decision power in the p=q regime under the cap."
+      },
+      {
+        "probe": "Cycle index k=0",
+        "behavior": "The logarithm receives a zero argument; the alpha-allocation formula therefore requires cycles to be indexed from k=1.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "X_{k,t} has conditional mean Delta_k.",
+        "established_by": "S2-S5",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the logged p_k(h) is the actual task-sampling probability",
+          "resets are drawn from Q conditional on h",
+          "the candidate and incumbent are fixed during the witness stream",
+          "outcomes are observed for both policies without informative missingness"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The importance-weighted witness has magnitude at most 1/epsilon.",
+        "established_by": "S3-S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "L_{k,t} is a simultaneous lower confidence bound under optional stopping and repeated cycles.",
+        "established_by": "S5-S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "a valid bounded martingale-difference construction for each frozen candidate",
+          "one-based cycle and time indices",
+          "the stated alpha allocation and no unlogged reuse of witnesses across candidates"
+        ],
+        "arbitration": "proof-obligations",
+        "measured": null
+      },
+      {
+        "claim": "The certificate produces an executable accept-or-rollback decision for beneficial joint updates under the declared cap.",
+        "established_by": "S5-S6",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": "For the admissible p=q, Delta=1 stream, L_{1,128} approximately -1.288 and the only possible outcome is rollback."
+      },
+      {
+        "claim": "No derivative, surrogate gradient, or learned outcome judge from the black-box simulator is required.",
+        "established_by": "S3-S5",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Atomic commit prevents a failed tentative pair from affecting later rollouts or training data.",
+        "established_by": "S6-S7",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "the implementation truly isolates tentative checkpoints and their generated data until promotion",
+          "rollback restores both hashes and all associated optimizer/data state"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Environment-signed commits improve the final committed policy path.",
+        "established_by": "UNESTABLISHED",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Uniformly draw matched resets from Q, observe paired native-success differences D, and use the ordinary bounded-D anytime lower bound with radius sqrt(2 log(k(k+1)t(t+1)/alpha)/t), committing when it is positive.",
+      "naive_fairness": "It uses the same Q, paired black-box outcomes, alpha schedule, deployment access, and B_k=128 rollout cap, while being simpler because it has no divergence score, targeted proposal, mixture, logging weight, or epsilon^{-1} envelope.",
+      "instance_behavior": {
+        "naive": "At t=128, mean D=1 and the radius is approximately 0.4576, so its lower bound is approximately 0.5424 and it commits.",
+        "mechanism": "At t=128, mean X=1 but the epsilon^{-1} radius is approximately 2.2879, so L is approximately -1.2879 and it rolls back.",
+        "divergence": "The lower bounds differ by approximately 1.8303 and the decisions are commit versus rollback.",
+        "kind": "structural"
+      },
+      "verdict": "n_a",
+      "reasoning": "The dry-run regime deliberately collapses adaptive task selection (p=q), so it cannot honestly adjudicate the candidate's declared selection-bias comparison as confronts_obstacle or equivalent_to_naive. It does establish the separate load-bearing fact that the stated worst-case envelope destroys the accept branch even where the simpler same-budget randomized sequential test has positive power."
+    }
+  },
+  "verdict": "pass",
+  "unrepaired": [
+    {
+      "finding": "The load-bearing certificate has zero positive-decision power under the default B_k=128 cap for the admissible p_k=q regime: even a perfect candidate with Delta_k=1 and D_{k,t}=1 at every witness cannot make L_{k,t}>0. The entire declared epsilon sweep [0.1,0.4] remains powerless in this regime.",
+      "severity": "blocking",
+      "why_not_repaired": "A valid repair must replace the stated global epsilon^{-1} confidence radius with a tighter sound sequential construction (for example one exploiting the actual propensity envelope or variance) or materially increase/reallocate the witness budget. The candidate supplies neither correction, and inventing one here would redesign the load-bearing sequential test rather than patch wording or dataflow.",
+      "verbatim_step_quote": "5. Append X_{k,t}=q_h D_{k,t}/p_k(h), recompute L_{k,t}, and persist the audit row; input is the paired outcome plus logged propensity and output is the load-bearing certificate, with no simulator differentiation or learned outcome judge. 6. If L_{k,t}>m_min, atomically promote both tentative checkpoints so pi_k^+ generates the next real/simulated actions and M_k^+ generates the next imagined futures; otherwise request another witness until B_k, then restore both incumbent hashes so the failed update cannot affect later rollouts or training data.",
+      "executed_evidence": "Unexecuted closed-form evidence (scripts were explicitly forbidden): set k=1, t=B_1=128, alpha=0.05, epsilon=0.2, one task with q=p=1, and perfect D_s=1 for all s. Then X_s=1 and mean X=1. The penalty is 5*sqrt(2*ln(1*2*128*129/0.05)/128)=5*sqrt(2*ln(660480)/128) approximately 2.2879, so L_{1,128}=1-2.2879 approximately -1.2879<0 although Delta_1=1. The radius decreases over t<=128, so no earlier t can cross. Even at the sweep's largest epsilon=0.4 the radius is 2.5*sqrt(2*ln(660480)/128) approximately 1.144>1. Thus the strict L>m_min condition cannot fire for m_min>=0 anywhere in the declared sweep before the cap.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": []
+}

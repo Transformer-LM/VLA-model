@@ -1,0 +1,270 @@
+{
+  "intake": {
+    "domain": "Execution-time prediction-error correction for action-conditioned video or latent world-action models used with VLA robot manipulation, using RGB and proprioception without tactile sensing",
+    "venue": "Top-tier machine learning or robot-learning venue (ICLR, ICML, NeurIPS, CoRL, or RSS level)",
+    "time": "Single-paper research cycle of approximately five months",
+    "data": [
+      "RGB observations and proprioception from a rollback-capable robot manipulation simulator",
+      "executed and counterfactual action rollouts from pi0.5 or another VLA",
+      "action-conditioned video or latent WAM predictions"
+    ],
+    "compute": "4 × NVIDIA A100 40GB GPUs; no artificial small-compute cap",
+    "expertise": "Advanced robot learning, VLA inference, world-model training, and simulator evaluation",
+    "preference": "both",
+    "baseline": "pi0.5 or another VLA with an action-conditioned video or latent WAM; must distinguish the contribution from Feedback World Model, ReDRAW, CheckVLA, When to Trust Imagination, DreamX-Phi, tau0-WM, Twin Rollouts, CoCo, JMDP coupling, CF-GPS, CG-World, WorldSample, and FBFM",
+    "limitation": "RGB/proprioception only, no tactile sensing; simulator-falsifiable with rollback ground truth; strict novelty must exceed 7.0 before experiments",
+    "contribution_type": "method",
+    "_inferred_fields": [
+      "venue",
+      "time",
+      "expertise",
+      "preference",
+      "contribution_type"
+    ]
+  },
+  "fulltext_degraded": true,
+  "bottleneck_statement": "For any execution-time corrector that observes only one realized transition, the residual after the executed action identifies factual error at that state-action pair but, under nonlinear contact dynamics and partial observability, does not identify whether the error persists, vanishes, or changes sign for unexecuted candidate actions; consequently, a correction can lower prediction loss yet reverse the action ordering that matters for control. The retrieved frontier either injects the realized observation into later WAM generation without establishing cross-action validity (semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428), converts future-reality disagreement into a trust/replan decision rather than corrected counterfactuals (dblp:journals/corr/abs-2605-06222), imposes action/geometry consistency during training without an execution-time transport test (arxiv:2608.13489), or grounds a counterfactual proxy through interaction residuals at the policy-advantage level in driving (semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11). The structural bottleneck is therefore that current machinery cannot determine, from one executed residual, which unexecuted action futures remain validly correctable and which are unsupported or generated under a changed mechanism, so it cannot guarantee improvement in rollback-oracle candidate ranking or closed-loop manipulation success.",
+  "closest_adjacent": [
+    {
+      "paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+      "is_anchor": true,
+      "summary_and_residue": "FBFM uses a masked pseudoinverse to inject the image observed after one chunk into flow-matching generation of the next frame and chunk. At abstract level, it does not establish whether that realized discrepancy is valid for alternative unexecuted action conditions, or when support or mechanism change should suppress correction. [residue is abstract-level: anchor fulltext unfetchable]"
+    },
+    {
+      "paper_id": "dblp:journals/corr/abs-2605-06222",
+      "is_anchor": false,
+      "summary_and_residue": "When to Trust Imagination compares predicted futures with real observations to adapt WAM execution horizon and trigger replanning. At abstract level, it verifies whether a committed rollout remains trustworthy but does not turn the residual into action-specific corrected futures or test counterfactual ranking against an oracle. [abstract-level residue; fulltext cache degraded]"
+    },
+    {
+      "paper_id": "semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11",
+      "is_anchor": false,
+      "summary_and_residue": "CRAFT combines dense counterfactual advantage proxies with grounded residual correction from interaction-critical driving events under the same visited-state distribution. At abstract level, its residual corrects policy-gradient proxies rather than action-conditioned physical futures, leaving unsupported candidate actions and manipulation-specific ranking untested. [abstract-level residue; fulltext cache degraded]"
+    },
+    {
+      "paper_id": "semanticscholar:f4f5e64895c20806d99265d8bea67a6960202e9d",
+      "is_anchor": false,
+      "summary_and_residue": "Adaptive Dynamics Orchestration replays the executed control across a fixed model library and updates terrain-conditioned estimates of each model's predictive discrepancy. At abstract level, the observation selects among fidelity models but does not infer how a residual should vary across unexecuted actions or improve candidate-action ranking. [abstract-level residue; fulltext cache degraded]"
+    },
+    {
+      "paper_id": "arxiv:2608.13489",
+      "is_anchor": false,
+      "summary_and_residue": "DreamX-Phi constrains action-conditioned video prediction with per-arm rigid-motion encoding, depth supervision, object masks, and a frozen visual teacher. At abstract level, these training-time priors improve faithfulness but do not use an executed residual to correct alternative action futures or detect an online mechanism change. [abstract-level residue; fulltext cache degraded]"
+    }
+  ],
+  "what_phase_0_did_not_address": [
+    "No retrieved frontier leaf establishes when the residual observed after one action retains its direction and scale for a different candidate action, versus when the candidate lies outside action support or invokes a different contact mechanism and must not inherit that residual; this is the unresolved residue of execution-time re-grounding in semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and trust-based execution in dblp:journals/corr/abs-2605-06222. — stakes: manipulation users can receive confidently worsened actions after perturbations, while the field lacks conditions under which online WAM correction is causally interpretable rather than accidental.",
+    "No retrieved frontier leaf evaluates whether corrected futures improve the true ordering of multiple VLA action candidates under rollback-simulator outcomes, rather than merely reducing visual or latent prediction discrepancy; this remains open after the prediction-space corrections of semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428 and the training-time fidelity constraints of arxiv:2608.13489. — stakes: practitioners can spend WAM compute selecting a worse action despite prettier predictions, and intellectually the link from world-model accuracy to decision quality remains unvalidated.",
+    "The retrieved visual/WAM frontier inherits the assumption that prediction-observation disagreement is the control-relevant error signal, but no frontier leaf tests whether agreement in its chosen pixel, feature, or latent space is necessary for preserving action-outcome ordering. — stakes: a negative result would invalidate a shared justification behind correction, verification, and action-guidance claims, while a positive result is needed for principled deployment metrics instead of proxy chasing."
+  ],
+  "method_lineage": {
+    "line": "Using executed action-conditioned prediction error to improve future robot decisions",
+    "nodes": [
+      {
+        "node_id": "n0",
+        "method": "Nominal action-conditioned forward models for predictive control",
+        "move": "Predict the next state under proposed controls and choose actions by their modeled consequences.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Deployment-time model bias can corrupt counterfactual action evaluation.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n1",
+        "method": "Disturbance observers and one-step residual feedback",
+        "move": "Use realized one-step prediction error to update the nominal prediction or controller online.",
+        "parent": "n0",
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "An error measured under one control input is not generally identified under a different input.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n2",
+        "method": "Learned nonlinear residual dynamics atop a nominal model",
+        "move": "Replace a shared disturbance with a state-action-conditioned residual function learned from transition data.",
+        "parent": "n1",
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Residual extrapolation remains unreliable outside covered state-action regions and after mechanism changes.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n3",
+        "method": "Probabilistic ensemble dynamics with uncertainty-limited imagination (PETS/MBPO family)",
+        "move": "Represent epistemic uncertainty and limit imagined-model use where compounded error is high.",
+        "parent": "n2",
+        "provenance": "parametric",
+        "age_band": "4-8y",
+        "confidence": "high",
+        "residual_problem": "Uncertainty can limit model use but does not identify how a factual residual changes relative counterfactual action values.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n4",
+        "method": "Latent action-conditioned visual world models for robot planning (DINO-WM family)",
+        "move": "Move action-conditioned dynamics and planning into pretrained visual feature spaces suitable for manipulation.",
+        "parent": "n3",
+        "provenance": "parametric",
+        "age_band": "2-4y",
+        "confidence": "medium",
+        "residual_problem": "Visual-feature prediction error is not automatically action-specific or calibrated to decision ranking.",
+        "is_frontier_leaf": false,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n5",
+        "method": "CLOVER generative-expectation feedback control",
+        "move": "Generate visual plans, quantify embedding error, and use feedback to refine actions or replan.",
+        "parent": "n4",
+        "provenance": "retrieved:openalex:W4403808753",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Embedding disagreement may not track task-relevant physical error or preserve candidate-action ordering.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n6",
+        "method": "FBFM asynchronous within-generation re-grounding",
+        "move": "Apply masked-pseudoinverse observation feedback inside flow matching so one chunk's outcome shapes the next generation.",
+        "parent": "n4",
+        "provenance": "retrieved:semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Cross-action validity and abstention under action-support or mechanism shift are not established.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n7",
+        "method": "When to Trust Imagination future-reality verification",
+        "move": "Use joint predicted-action, predicted-future, real-observation, and language evidence to adapt execution horizon and replan.",
+        "parent": "n4",
+        "provenance": "retrieved:dblp:journals/corr/abs-2605-06222",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Verification decides whether to continue but does not produce or validate corrected counterfactual action ordering.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n8",
+        "method": "DreamX-Phi action- and geometry-faithful video world modeling",
+        "move": "Inject arm-specific rigid-motion structure, depth, masks, and visual-teacher consistency into action-conditioned video prediction.",
+        "parent": "n4",
+        "provenance": "retrieved:arxiv:2608.13489",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Training-time faithfulness does not establish how one online residual changes unexecuted action futures under shift.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n9",
+        "method": "CRAFT proxy-residual closed-loop fine-tuning",
+        "move": "Align dense counterfactual advantage proxies with grounded residuals from interaction-critical events.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Grounded advantage residuals under one visited distribution do not identify physical future corrections for unsupported manipulation actions.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n10",
+        "method": "Adaptive Dynamics Orchestration",
+        "move": "Replay executed controls across a fidelity-model library and update terrain-conditioned online model selection.",
+        "parent": "n3",
+        "provenance": "retrieved:semanticscholar:f4f5e64895c20806d99265d8bea67a6960202e9d",
+        "age_band": "0-2y",
+        "confidence": "high",
+        "residual_problem": "Model-library selection does not determine residual transport across candidate controls or manipulation contacts.",
+        "is_frontier_leaf": true,
+        "is_collateral": false
+      },
+      {
+        "node_id": "n11",
+        "method": "Robust and tube model-predictive control under bounded model error",
+        "move": "Optimize against bounded disturbance sets instead of trusting a point residual correction.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Worst-case bounds become overly conservative for high-dimensional visual manipulation.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "n12",
+        "method": "Online system identification and dual control",
+        "move": "Infer latent physical parameters from executed transitions and choose informative controls when dynamics are uncertain.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": ">16y",
+        "confidence": "high",
+        "residual_problem": "Parametric model classes and active excitation are difficult to justify for semantic visual manipulation.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "n13",
+        "method": "Gaussian-process local dynamics correction",
+        "move": "Place a posterior over local state-action residuals so transfer and uncertainty depend on kernel support.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Kernel-local correction scales poorly to long-horizon pixel or latent WAMs.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      },
+      {
+        "node_id": "n14",
+        "method": "Importance-weighted off-policy correction under support overlap",
+        "move": "Correct distribution mismatch only where behavior and target action distributions overlap.",
+        "parent": null,
+        "provenance": "parametric",
+        "age_band": "8-16y",
+        "confidence": "high",
+        "residual_problem": "Importance ratios diagnose support statistically but do not supply physical future corrections and can have extreme variance.",
+        "is_frontier_leaf": false,
+        "is_collateral": true
+      }
+    ],
+    "notes": "Retrieved nodes are citable recent frontier evidence; parametric nodes are awareness-only lineage reconstruction. The ancestry exposes a shared progression from nominal forward prediction through residual feedback, uncertainty-limited model use, and latent visual dynamics. Collateral families checked against the same residual are robust/tube MPC, online system identification and dual control, Gaussian-process local correction, and support-aware off-policy correction; they prevent regression to classical cures but are not gap sites. The 2-4y DINO-WM-family node is medium-confidence because it lies just outside the retrieval window, while deeper control and model-based-RL families are high-confidence established ancestry."
+  },
+  "domain_pattern_distribution": {
+    "n_total": 49,
+    "n_on_topic": 48,
+    "patterns": [
+      {"pattern_id": "adapt_via_conditioning", "count": 7, "share": 0.15, "saturation_band": "mid_frequency"},
+      {"pattern_id": "algebraic_equivalence_unification", "count": 1, "share": 0.02, "saturation_band": "untested"},
+      {"pattern_id": "architectural_operator_substitution", "count": 10, "share": 0.21, "saturation_band": "mid_frequency"},
+      {"pattern_id": "assumption_audit_and_pivot", "count": 4, "share": 0.08, "saturation_band": "mid_frequency"},
+      {"pattern_id": "controlled_diagnostic_design", "count": 6, "share": 0.12, "saturation_band": "mid_frequency"},
+      {"pattern_id": "decompose_and_delegate", "count": 16, "share": 0.33, "saturation_band": "mid_frequency"},
+      {"pattern_id": "generative_process_redesign", "count": 12, "share": 0.25, "saturation_band": "mid_frequency"},
+      {"pattern_id": "heterogeneous_decomposition", "count": 18, "share": 0.38, "saturation_band": "mid_frequency"},
+      {"pattern_id": "reframe_as_solvable_object", "count": 9, "share": 0.19, "saturation_band": "mid_frequency"},
+      {"pattern_id": "self_supervised_signal_engineering", "count": 9, "share": 0.19, "saturation_band": "mid_frequency"},
+      {"pattern_id": "structural_prior_encoding", "count": 12, "share": 0.25, "saturation_band": "mid_frequency"},
+      {"pattern_id": "targeted_self_supervised_objective", "count": 2, "share": 0.04, "saturation_band": "mid_frequency"},
+      {"pattern_id": "unify_into_shared_representation", "count": 10, "share": 0.21, "saturation_band": "mid_frequency"}
+    ],
+    "saturation_threshold_saturated": 0.5,
+    "saturation_threshold_untested_count": 1,
+    "notes": "heterogeneous_decomposition is the most-used pattern (18/48, 0.38); closest adjacent papers using decomposition tend to separate feedback, fidelity, or modality roles but still leave the validity of cross-action residual transfer untested."
+  },
+  "state": "proceed",
+  "ood_reasons": [],
+  "remedial_steps": []
+}

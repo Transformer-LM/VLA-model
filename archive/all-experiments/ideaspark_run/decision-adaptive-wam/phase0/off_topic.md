@@ -1,0 +1,64 @@
+# Off-topic papers removed from the gap corpus (Phase 0.4 host partition)
+
+These were retrieved by a connector but the host judged them outside the research direction (cross-domain "memory-augmented" false positives, surveys, unrelated fields). They are archived here for transparency but do NOT feed Phase 1 or the deep-read pool.
+
+- **RobotDancing: Residual-Action Reinforcement Learning Enables Robust Long-Horizon Humanoid Motion Tra** (`semanticscholar:1e7eaef5ed82f2552251e13464de99286a937007`)
+  - Humanoid residual-action motion tracking has no VLA, world model, imagination, or adaptive inference-computation component.
+- **Adaptive walking speed motion control of Kuavo humanoid robot based on inverse reinforcement learnin** (`semanticscholar:6f4034c14c422c8e9c5bb4977c4408bd5b13decd`)
+  - Velocity-conditioned inverse-reinforcement-learning control for humanoid walking is unrelated to VLA-WAM imagination or inference allocation.
+- **Understanding World or Predicting Future? A Comprehensive Survey of World Models** (`openalex:W4411735734`)
+  - Pure comprehensive survey of world models rather than a primary mechanism paper.
+- **Foundation models in robotics: Applications, challenges, and the future** (`openalex:W4402890475`)
+  - Pure survey of foundation models in robotics with no specific decision-adaptive world-model mechanism.
+- **Sampling representational plasticity of simple imagined movements across days enables long-term neur** (`openalex:W4408185406`)
+  - Neuroprosthetic BCI study of neural representational drift, unrelated to VLA-WAM robot decision computation.
+- **Invertible liquid neural network-based learning of inverse kinematics and dynamics for robotic manip** (`openalex:W4416764606`)
+  - Learns inverse kinematics and dynamics for robot arms; WAM here is a manipulator name, not a world-action model.
+- **Exploring Challenges and Opportunities in Manufacturing and Intelligence for Future Robotics** (`openalex:W4413765256`)
+  - Broad perspective on robot manufacturing and intelligence, not a primary adaptive world-model computation method.
+- **Ethical implications in using robots among older adults living with dementia** (`openalex:W4402849693`)
+  - Ethics review of social robots for dementia care is unrelated to VLA-WAM computation.
+- **Enhancing Student Performance Prediction in ELearning Environments: Advanced EnsembleTechniques and ** (`openalex:W4409109811`)
+  - E-learning student-performance prediction is a cross-domain retrieval false positive.
+- **Bayesian Optimization over Multiple Experimental Fidelities Accelerates Automated Discovery of Drug ** (`openalex:W4407170749`)
+  - Multi-fidelity Bayesian optimization for drug discovery is a cross-domain computation-allocation analogy, not robotics or VLA-WAM.
+- **The Worst Constitutional Decision of All Time** (`openalex:W848767175`)
+  - Constitutional-law article is an unambiguous cross-domain false positive.
+- **Time-to-Fault Prediction Framework for Automated Manufacturing in Humanoid Robotics Using Deep Learn** (`openalex:W4406667547`)
+  - Manufacturing equipment time-to-fault prediction is predictive maintenance, not VLA-WAM manipulation or imagination allocation.
+- **A decision-space model explains context-specific decision-making** (`openalex:W4413139301`)
+  - Computational neuroscience model of striatal decision spaces is outside robotics and world-model inference.
+- **Upcoming multi-visceral robotic surgery systems: a SAGES review** (`openalex:W4404349900`)
+  - Review of commercial robotic-surgery platforms is unrelated to adaptive model computation.
+- **Random Forests: The Wisdom of Crowds in Action** (`openalex:W4417144284`)
+  - Generic overview of random forests has no robotics, VLA, world-model, or adaptive imagination content.
+- **High-speed odor sensing using miniaturized electronic nose** (`openalex:W4404090762`)
+  - Electronic-nose hardware for odor sensing is unrelated to VLA-WAM computation.
+- **The affective gradient hypothesis: an affect-centered account of motivated behavior** (`openalex:W4402768293`)
+  - Affective-neuroscience account of motivated behavior is outside robotics and world-model planning.
+- **Vision-Based Navigation and Perception for Autonomous Robots: Sensors, SLAM, Control Strategies, and** (`openalex:W4412093083`)
+  - Pure review of robot vision, SLAM, navigation, and sensors rather than a primary adaptive-computation mechanism.
+- **Shaping collective action in financial markets through popular expertise: An analysis of Due Diligen** (`openalex:W4408044364`)
+  - Sociological study of WallStreetBets collective action is a cross-domain false positive.
+- **Horizon-stability control for wheel-legged robot driving over unknow, rough terrain** (`openalex:W4405388058`)
+  - Wheel-legged rough-terrain stability control has no VLA, WAM, or adaptive imagination mechanism.
+- **Distributed Optimal Containment Control of Wheeled Mobile Robots via Adaptive Dynamic Programming** (`openalex:W4411408298`)
+  - Adaptive-dynamic-programming containment control for mobile robots is unrelated to VLA-WAM imagination.
+- **Predictive Control With Indirect Adaptive Laws for Payload Transportation by Quadrupedal Robots** (`openalex:W4403094416`)
+  - Adaptive MPC for quadrupedal payload transport is a classical control method outside VLA-WAM decision computation.
+- **Revisiting Reward Design and Evaluation for Robust Humanoid Standing and Walking** (`openalex:W4405785864`)
+  - Humanoid standing and walking reward-design benchmark is unrelated to VLA-WAM compute allocation.
+- **Continual Learning Through Human-Robot Interaction: Human Perceptions of a Continual Learning Robot ** (`openalex:W4407175372`)
+  - Human-perception study of continual-learning social robots contains no relevant world-model or adaptive-inference mechanism.
+- **A review of learning-based dynamics models for robotic manipulation** (`openalex:W4414285669`)
+  - Pure review of learned dynamics models for manipulation rather than a primary adaptive-computation method.
+- **Survey on Large Language Model-Enhanced Reinforcement Learning: Concept, Taxonomy, and Methods** (`openalex:W4393763811`)
+  - Pure survey of LLM-enhanced reinforcement learning, not a primary VLA-WAM allocation mechanism.
+- **Causality, Machine Learning, and Feature Selection: A Survey** (`openalex:W4409303224`)
+  - Pure survey of causality and feature selection with no specific robot world-model mechanism.
+- **Multimodal fusion and vision–language models: A survey for robot vision** (`openalex:W4413788337`)
+  - Pure survey of multimodal fusion and vision-language models for robot vision.
+- **A survey on autonomous navigation for mobile robots: From traditional techniques to deep learning an** (`openalex:W4413397855`)
+  - Pure survey of mobile-robot navigation spanning classical and language-model methods.
+- **Social robot navigation: a review and benchmarking of learning-based methods** (`openalex:W4417229657`)
+  - Review and benchmark of social robot navigation, not a primary VLA-WAM computation-allocation paper.

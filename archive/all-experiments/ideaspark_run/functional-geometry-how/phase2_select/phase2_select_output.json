@@ -1,0 +1,36 @@
+{
+  "selected_gaps": [
+    {
+      "gap": "All retrieved leaves on this lineage inherit a task scaffold in which the meaningful objects, phases, and their ordering are fixed by a demonstration, task template, target trajectory, or prompted affordance list; none tests whether that fixed scaffold is necessary when only the high-level relation is held constant and unseen geometry changes which phases are required \u2014 stakes: practitioners must author a new scaffold for every geometry regime, and intellectually the field cannot tell whether current generalization results test relational skill reuse or only coordinate transfer inside an unchanged program.",
+      "chosen_pattern_id": "controlled_diagnostic_design",
+      "anchor_alternates": [],
+      "companion_pattern": null,
+      "companion_rationale": "",
+      "selection_rationale": "This is the most load-bearing diagnosable method gap because the field cannot justify a more elaborate geometry-conditioned controller until it knows whether unseen pair geometry actually fractures the fixed phase scaffold under a specified executor. A confound-isolating diagnostic can hold relation, terminal transform, executor, reset state, and rollout perturbations fixed while varying only a local functional-geometry feature, then use direct executor outcomes to measure fixed-scaffold regret; every counterfactual is evaluated from a fresh pre-intervention clone, and singleton scaffold sets are declared uninformative rather than credited as adaptivity."
+    }
+  ],
+  "coherence_thread_type": "n_a",
+  "deliverable_coverage": "method 鈥?the anchor gap's controlled_diagnostic_design yields a runnable executor-conditional oracle benchmark and fixed-scaffold-regret estimator, not a new online policy or a geometry-feasibility proxy.",
+  "composition_note": "A single controlled-diagnostic move is deep and complete here because the scientific deliverable is the independently scored paired-outcome tensor that identifies whether a fixed scaffold is necessary for a named executor; adding a controller, learned selector, intervention loop, or representation change would introduce a second claim and destroy the diagnostic's clean attribution.",
+  "pattern_saturation": {
+    "controlled_diagnostic_design": {
+      "share": 0.06,
+      "saturation_band": "mid_frequency",
+      "selection_note": ""
+    }
+  },
+  "deferred_gaps": [
+    {
+      "gap": "No retrieved frontier leaf demonstrates that the same named manipulation relation remains correct on unseen target-reference pairs when pair geometry changes both the initial grasp/contact choice and later alignment, approach, placement, or phase order; the anchor setting is MATCH POLICY's rigid key-frame transfer, while SPOT, MIMO, CoA-VLA, and EasyInsert expose adjacent pose-trajectory, relation-field, affordance-chain, and fixed multi-phase instances without closing this class-level requirement \u2014 stakes: a robot can choose an unrecoverable grasp or collision-prone approach even when its final pose estimate is accurate, while reported pose or scene generalization can be mistaken for functional compositional generalization and fail to transfer.",
+      "reason": "fails removal test 鈥?the fixed-scaffold-necessity diagnostic is runnable and falsifiable without also constructing the pair-conditioned controller that would solve the broader execution problem"
+    },
+    {
+      "gap": "No retrieved frontier leaf establishes behavior on geometrically incompatible target-reference pairs for which the requested relation cannot be executed, rather than always returning a pose, trajectory, affordance chain, or action chunk; this is a class property whenever relation feasibility depends on contact geometry, with rigid registration and insertion as primary instances \u2014 stakes: forced execution can damage hardware or waste real-robot trials, and excluding infeasible pairs makes success metrics and learned generalization claims systematically optimistic.",
+      "reason": "out of scope 鈥?the diagnostic estimates executor-and-scaffold-specific outcomes on preregistered pairs and makes no general geometric infeasibility or online abstention claim"
+    },
+    {
+      "gap": "The correspondence and relative-pose leaves inherit the assumption that transporting a demonstrated object-relative geometric target preserves the functional validity of the demonstrated grasp and motion template; none tests whether that invariance is necessary across functionally different but spatially registrable pairings \u2014 stakes: registration can be numerically excellent yet transfer the wrong contact semantics, and published gains attributed to 3D geometric generalization may rest on an unexamined equivalence between spatial match and functional interchangeability.",
+      "reason": "fails removal test 鈥?correspondence invariance is a separate causal question, whereas the anchor only asks whether one ordered phase scaffold remains adequate under matched pair interventions"
+    }
+  ]
+}

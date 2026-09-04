@@ -1,0 +1,372 @@
+{
+  "trace_report": {
+    "formalized_procedure": [
+      {
+        "step": "S1",
+        "consumes": [
+          "OpenVLA-OFT-style current policy checkpoint P_k",
+          "action-conditioned video WAM checkpoint M_k",
+          "LIBERO/RoboCasa simulator and native success/failure predicate",
+          "baseline imagined-rollout horizon and update objectives"
+        ],
+        "produces": [
+          "configured alternating VLA-WAM loop with unchanged interaction budget"
+        ],
+        "note": "VERBATIM: \"1. Instantiate the existing alternating loop with an OpenVLA-OFT-style open-weight policy, an action-conditioned video WAM in the VLAW or World-Gymnast setup, and the existing LIBERO and RoboCasa simulators; retain each benchmark's native task-success predicate and the baseline's original imagined-rollout horizon.\" Types and dimensions are inherited from the named baseline; no candidate-specific tensor is produced yet."
+      },
+      {
+        "step": "S2",
+        "consumes": [
+          "real rollout tuples (o_t, a_t, o_{t+1})",
+          "terminal native failure label",
+          "source checkpoints P_b and M_b",
+          "benchmark demonstrations"
+        ],
+        "produces": [
+          "append-only ledger L of N failure traces",
+          "per-trace source loss ell_b_i",
+          "per-action-coordinate scale vector s"
+        ],
+        "note": "VERBATIM: \"2. Instrument every real rollout to append each terminal-failure trace, task id, source policy/WAM checkpoint ids, source policy action chunks on its observations, source WAM teacher-forced loss on recorded successor frames, and per-dimension demonstration action scale s to an append-only ledger.\" Two readings of 'failure prefix' are defensible: all matched decision tuples through the failure-producing action, or a strict prefix ending before that action. Both were executed in T2. The unpatched IQR definition permits s_d=0 and therefore a division-by-zero in S3."
+      },
+      {
+        "step": "S3",
+        "consumes": [
+          "ledger L",
+          "frozen P_k and each frozen P_b_i",
+          "scale s in R^d"
+        ],
+        "produces": [
+          "D_k_i and D_b_i scalars",
+          "positive divergence deltas",
+          "tau_c scalar",
+          "c_k_i in [0,1]"
+        ],
+        "note": "VERBATIM: \"3. At the start of co-training cycle k, run the frozen current policy and each trace's frozen source policy on the stored observations, compute D_{k,i}, D_{b_i,i}, tau_c, and c_{k,i}, and detach these quantities before any optimizer step.\" 'Task-balanced ledger' does not define whether tau_c is a global median, weighted median, or median of per-task medians; this is a reading-dependent wording/dataflow finding."
+      },
+      {
+        "step": "S4",
+        "consumes": [
+          "c_k_i",
+          "M_k",
+          "stored transitions and ell_b_i",
+          "rho"
+        ],
+        "produces": [
+          "ell_k_i, h_k_i, r_k_i",
+          "sampling distribution p_k_i"
+        ],
+        "note": "LIKELY-FATAL PICK, ATTACKED FIRST. VERBATIM: \"4. Run the current WAM's normal teacher-forced loss on each stored action/successor sequence, compute h_{k,i} and r_{k,i}, and materialize the task-stratified sampling probabilities p_{k,i}; if a task has no failed trace or all priorities are zero, use its ordinary uniform replay branch.\" I picked S4 because multiplying c by h can erase the entire prioritized component exactly when a failure has disappeared from the policy stream but its physical transition is perfectly modeled. The primary execution makes this happen. Also, the displayed p formula is global while this step says task-stratified; both readings were run. Finally, declared estimand coordinate m is not produced by any written step, and rho's held-out selector has no produced holdout or update protocol."
+      },
+      {
+        "step": "S5",
+        "consumes": [
+          "current-cycle real data",
+          "ledger sample drawn from p",
+          "baseline WAM objective"
+        ],
+        "produces": [
+          "updated WAM parameters M_{k+1}"
+        ],
+        "note": "VERBATIM: \"5. Form each WAM minibatch from the baseline current-cycle data plus a rho-controlled ledger sample and apply the unchanged VLAW-style real-transition objective; the sampled old successors are actual simulator observations, not WAM-generated labels.\" Tensor compatibility follows from using the baseline transition format; no extra real episode is requested."
+      },
+      {
+        "step": "S6",
+        "consumes": [
+          "sampled pre-failure observation history",
+          "current policy",
+          "action-conditioned video WAM",
+          "baseline imagined-advantage objective"
+        ],
+        "produces": [
+          "imagined continuations and updated policy P_{k+1}"
+        ],
+        "note": "VERBATIM: \"6. For the policy update, initialize the baseline World-Gymnast/RISE-style action-conditioned video rollout from the stored observation history immediately before each sampled failure, generate alternative action continuations with the current policy, and apply the baseline imagined-advantage objective without adding a new learned judge.\" This consumes the same sampled ledger identity as S5, so the claimed dual use is procedurally mapped."
+      },
+      {
+        "step": "S7",
+        "consumes": [
+          "updated P_{k+1}, M_{k+1}",
+          "new real failures"
+        ],
+        "produces": [
+          "extended ledger and next-cycle coordinates"
+        ],
+        "note": "VERBATIM: \"7. Continue all joint updates without accept, reject, rollback, or abstention; after the cycle, append new real failures and recompute the ledger from forward passes, so a policy that routes around an old failure raises its c coordinate instead of deleting the evidence.\" The final causal wording is an overclaim: routing around a failure raises c only when it changes the deterministic action on stored observations relative to the source policy and the scale is defined."
+      },
+      {
+        "step": "S8",
+        "consumes": [
+          "native task outcomes",
+          "c and WAM loss diagnostics",
+          "sampled-prefix identities",
+          "future reset rollouts"
+        ],
+        "produces": [
+          "analysis logs"
+        ],
+        "note": "VERBATIM: \"8. Log native task success, task-balanced mean c, fixed-prefix WAM loss, and the fraction of sampled prefixes that later reappear under benchmark resets; use these only for the scoped LIBERO/RoboCasa analysis and the registered controls.\" No equality or similarity rule produces 'reappear', so that fraction is undefined as written. It is non-load-bearing and is removed by the patch rather than assigned a magic matching threshold."
+      }
+    ],
+    "dry_run": {
+      "instance": "Three two-action failure traces with one-dimensional action scale s=1. Tasks are [A,A,B]. Logged and source actions are all [0,0]. Current-policy actions are [2,2] for trace 0 and [0,0] for traces 1 and 2, so D_k=[4,0,0], D_b=[0,0,0]. Source losses are [1,1,1] and current losses are [0,1,2]. rho=0.5. Trace 0 is the load-bearing case: its current action has left the source prefix while the WAM predicts the recorded physical successor perfectly. Both full-through-failure and strict-preterminal prefix readings yield the same values because both action positions have the same divergence. Tasks are evaluated under both the displayed global formula and the stated task-stratified reading.",
+      "execution": {
+        "mode": "executed",
+        "script": "from math import exp\nfrom statistics import median\nrho=0.5; tasks=['A','A','B']; Db=[0.,0.,0.]; ell_k=[0.,1.,2.]; ell_b=[1.,1.,1.]\ndef coords(Dk):\n d=[max(0.,x-y) for x,y in zip(Dk,Db)]; pos=[x for x in d if x>0]; tau=median(pos) if pos else None\n c=[0. if tau is None else 1-exp(-x/tau) for x in d]; h=[0. if x==y==0 else x/(x+y) for x,y in zip(ell_k,ell_b)]\n m=[0. if x==y==0 else (y-x)/(y+x) for x,y in zip(ell_k,ell_b)]; r=[x*y for x,y in zip(c,h)]; return d,tau,c,h,m,r\ndef gp(r): return [1/len(r)]*len(r) if sum(r)==0 else [(1-rho)/len(r)+rho*x/sum(r) for x in r]\ndef sp(r):\n out=[0.]*len(r); ts=sorted(set(tasks))\n for t in ts:\n  ids=[i for i,v in enumerate(tasks) if v==t]; z=sum(r[i] for i in ids); q=[1/len(ids)]*len(ids) if z==0 else [(1-rho)/len(ids)+rho*r[i]/z for i in ids]\n  for i,v in zip(ids,q): out[i]=v/len(ts)\n return out\nbase=coords([4.,0.,0.]); print('base=',base); print('mechanism=',gp(base[-1]),sp(base[-1])); print('naive=',[1/3]*3,[.25,.25,.5])\npert=coords([4.,1.,0.]); print('perturbed r=',pert[-1]); print('perturbed=',gp(pert[-1]),sp(pert[-1])); print('trace0 deltas=',gp(pert[-1])[0]-1/3,sp(pert[-1])[0]-.25)\nprint('all-identical c=',coords([0.,0.,0.])[2]); print('single=',gp([0.]))\ntry: print(0./0.)\nexcept ZeroDivisionError as e: print('zero-IQR=',type(e).__name__)",
+        "output": "base= ([4.0, 0.0, 0.0], 4.0, [0.6321205588285577, 0.0, 0.0], [0.0, 0.5, 0.6666666666666666], [1.0, 0.0, -0.3333333333333333], [0.0, 0.0, 0.0])\nmechanism= [0.3333333333333333, 0.3333333333333333, 0.3333333333333333] [0.25, 0.25, 0.5]\nnaive= [0.3333333333333333, 0.3333333333333333, 0.3333333333333333] [0.25, 0.25, 0.5]\nperturbed r= [0.0, 0.16483997698218034, 0.0]\nperturbed= [0.16666666666666666, 0.6666666666666666, 0.16666666666666666] [0.125, 0.375, 0.5]\ntrace0 deltas= -0.16666666666666666 -0.125\nall-identical c= [0.0, 0.0, 0.0]\nsingle= [1.0]\nzero-IQR= ZeroDivisionError"
+      },
+      "computed_quantities": [
+        {
+          "quantity": "D_k, D_b, positive deltas, tau_c",
+          "value": "[4,0,0], [0,0,0], [4,0,0], 4",
+          "arithmetic": "For trace 0, mean(((2-0)/1)^2,((2-0)/1)^2)=4; source mean is 0; the only positive delta is 4, hence its median is 4."
+        },
+        {
+          "quantity": "c, h, m, r",
+          "value": "c=[0.6321205588,0,0], h=[0,0.5,0.6666666667], m=[1,0,-0.3333333333], r=[0,0,0]",
+          "arithmetic": "c_0=1-exp(-4/4)=0.6321205588; h_0=0/(0+1)=0; therefore r_0=c_0*h_0=0 even though c_0>0."
+        },
+        {
+          "quantity": "primary replay probabilities versus fair naive",
+          "value": "global mechanism=naive=[1/3,1/3,1/3]; task-stratified marginal mechanism=naive=[0.25,0.25,0.5]",
+          "arithmetic": "All r values are zero, so the candidate's fallback is exactly uniform under either defensible sampling reading."
+        },
+        {
+          "quantity": "positive-priority perturbation",
+          "value": "r=[0,0.16483997698,0]; trace-0 p becomes 1/6 globally and 0.125 task-marginally",
+          "arithmetic": "With trace 1 changed to D_k=1, tau=median(4,1)=2.5, c_1=1-exp(-1/2.5)=0.32967995396 and r_1=0.16483997698. Thus trace 0 loses 0.1666666667 global mass or 0.125 task-marginal mass relative to uniform."
+        }
+      ],
+      "anomalies": [
+        {
+          "anomaly": "The most action-diverged failure has c_0=0.6321205588 but h_0=0, hence r_0=0 and the primary execution is forced to the exact uniform-replay fallback.",
+          "kind": "structural",
+          "why": "For every instance with ell_k_i=0<ell_b_i, h_i=0 and therefore c_i*h_i=0 regardless of c_i. The equality is forced by construction, not positive evidence."
+        },
+        {
+          "anomaly": "Adding one same-task trace with positive r lowers the disappearing trace from 1/3 to 1/6 globally and from 0.25 to 0.125 under task stratification.",
+          "kind": "structural",
+          "why": "The displayed magnitudes belong to this instance, but the sign is algebraic: whenever r_i=0 and a competitor in the relevant normalization set has r_j>0 with rho>0, i receives only the uniform floor and strictly less mass than uniform replay."
+        },
+        {
+          "anomaly": "A legal action coordinate with demonstration IQR s_d=0 raises ZeroDivisionError before D can be computed.",
+          "kind": "structural",
+          "why": "The norm divides by s_d for every trace; no value of the actions removes division by zero when that coordinate is included."
+        },
+        {
+          "anomaly": "Global and task-stratified readings produce different marginals ([1/3,1/3,1/3] versus [0.25,0.25,0.5] in the primary instance).",
+          "kind": "instance_contingent",
+          "why": "The numerical gap depends on task counts, but the ambiguity is textual: the core formula normalizes over N while Step 4 calls p task-stratified and provides no task-selection law."
+        }
+      ]
+    },
+    "degenerate_probes": [
+      {
+        "probe": "empty ledger / k=0 with no historical failure",
+        "behavior": "The displayed p formula has N=0 and is undefined; Step 4's ordinary baseline branch can halt safely only if it is explicitly taken before evaluating p.",
+        "finding": "Patch the branch order and define that an empty scheduled task uses baseline current-cycle data without constructing p."
+      },
+      {
+        "probe": "all policies identical on every stored observation",
+        "behavior": "All deltas and c values are zero, sum r is zero, and replay falls back to uniform.",
+        "finding": null
+      },
+      {
+        "probe": "tie at D_k_i-D_b_i=0",
+        "behavior": "max(0,0)=0 gives c=0 deterministically.",
+        "finding": null
+      },
+      {
+        "probe": "single ledger trace",
+        "behavior": "Both the positive-priority formula and zero-sum fallback give p=[1].",
+        "finding": null
+      },
+      {
+        "probe": "zero-IQR action dimension",
+        "behavior": "Executed division by s_d=0 raises ZeroDivisionError.",
+        "finding": "Use an explicit legal-range fallback and omit only a coordinate whose IQR and legal range are both zero."
+      },
+      {
+        "probe": "maximum allowed ledger",
+        "behavior": "No maximum is declared; arithmetic remains defined for finite N, but S3-S4 process every stored trace each cycle.",
+        "finding": null
+      }
+    ],
+    "claim_step_map": [
+      {
+        "claim": "ExitReplay adds no real episodes and keeps the interaction budget fixed.",
+        "established_by": "S2, S5, S6",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The checkpoint-relative prefix score exposes how strongly the current policy is making a failure disappear.",
+        "established_by": "S3",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "h separates evidence disappearance from improvement on an unchanged physical outcome.",
+        "established_by": "S4",
+        "strength_grade": "conditional",
+        "assumptions_missing": [
+          "teacher-forced losses across checkpoints use identical normalization and are comparable",
+          "lower fixed-transition WAM loss means the transition is better modeled but does not mean the policy failure is repaired"
+        ],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "A policy that routes around an old failure raises c instead of deleting the evidence.",
+        "established_by": "S3, S7",
+        "strength_grade": "overclaim",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Every sampled prefix jointly supplies the WAM real-loss anchor and the imagined policy restart.",
+        "established_by": "S5, S6",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "The loop uses no accept, reject, rollback, abstention, simulator derivative, or new learned judge.",
+        "established_by": "S3, S6, S7",
+        "strength_grade": "established",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      },
+      {
+        "claim": "Checkpoint-relative failure retention can reduce policy-induced evidence attrition.",
+        "established_by": "S3-S7",
+        "strength_grade": "empirical",
+        "assumptions_missing": [],
+        "arbitration": "argument",
+        "measured": null
+      }
+    ],
+    "naive_comparison": {
+      "declared_branch": "(i) false-premise",
+      "naive_version": "Use the same baseline task schedule and fixed replay quota, but sample historical failed traces uniformly within the scheduled task for both the unchanged WAM replay loss and imagined policy starts.",
+      "naive_fairness": "It uses exactly the same logged transitions, task schedule, replay count, real/imagined budgets, model access, rollout starts, and objectives; it is simpler because it has no current/source checkpoint divergence, WAM-loss gate, or priority normalization.",
+      "instance_behavior": {
+        "naive": "Global [1/3,1/3,1/3]; task-stratified marginal [0.25,0.25,0.5].",
+        "mechanism": "Global [1/3,1/3,1/3]; task-stratified marginal [0.25,0.25,0.5] because all r values are zero.",
+        "divergence": "none in the primary load-bearing instance; after a positive-priority perturbation, the target disappearing trace is lower than naive by 0.1666666667 globally or 0.125 task-marginally",
+        "kind": "structural"
+      },
+      "verdict": "equivalent_to_naive",
+      "reasoning": "For a failure whose current action has left the logged prefix but whose fixed physical successor is perfectly modeled, h=0 removes all prioritized mass and the mechanism collapses exactly to uniform replay. This is the candidate's own disappearance-without-physical-repair obstacle; a same-task positive-r competitor makes the behavior worse than the naive rather than repairing it."
+    }
+  },
+  "verdict": "patched",
+  "unrepaired": [
+    {
+      "finding": "The multiplicative priority r_{k,i}=c_{k,i}h_{k,i} does not retain a policy-censored failure when its recorded transition is already well modeled: ell_{k,i}=0<ell_{b_i,i} forces h_{k,i}=0 and r_{k,i}=0 for every c_{k,i}. In the load-bearing execution the method is exactly uniform replay, and with any positive-priority competitor it allocates the censored failure strictly less mass than uniform. Therefore it does not confront its own declared obstacle of keeping an unrepaired physical failure active after current visitation removes it.",
+      "severity": "blocking",
+      "why_not_repaired": "This is an obstacle hole. An honest fix must change what the mechanism is, for example by separating WAM-replay and policy-restart priorities, adding a nonzero policy-retention channel independent of h, or changing the product into a different composition. Clamping, abstaining, or skipping h=0 cases would evade the declared obstacle, so the coherence gate cannot patch it.",
+      "verbatim_step_quote": "Re-evaluating the current action-conditioned video WAM on the same fixed successor frames yields ell_{k,i}; the second coordinate h_{k,i}=ell_{k,i}/(ell_{k,i}+ell_{b_i,i}) (defined as zero when both losses are zero) separates evidence disappearance from improvement on an unchanged physical outcome, and the replay priority is r_{k,i}=c_{k,i}h_{k,i}.",
+      "executed_evidence": "Executed stdlib calculation: D_k=[4,0,0], D_b=[0,0,0], tau=4, so c=[0.6321205588,0,0]. With ell_k=[0,1,2] and ell_b=[1,1,1], h=[0,0.5,0.6666666667] and r=[0,0,0]. The candidate's zero-sum fallback produces exactly the fair naive probabilities: global [1/3,1/3,1/3] and task-stratified marginals [0.25,0.25,0.5]. Perturbing only trace 1 to D_k=1 gives tau=2.5, r=[0,0.16483997698,0]; trace 0 then receives 1/6 instead of 1/3 globally and 0.125 instead of 0.25 task-marginally. General arithmetic: ell_k_i=0<ell_b_i implies h_i=0/(ell_b_i)=0, hence r_i=c_i*0=0 for any c_i; if a competitor has r_j>0 and rho>0, p_i contains only the uniform floor and is strictly below uniform replay in that normalization set.",
+      "reading_dependence": "reading_robust"
+    }
+  ],
+  "applied_revisions": [
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism",
+      "value": "ExitReplay moves the co-training evidence locus from the current policy's visited-state stream to a ledger of previously observed failure prefixes. A stored failure prefix is exactly the matched sequence of (o_{i,t},a_{i,t},o_{i,t+1}) tuples through the action whose successor receives the native terminal-failure label. For every failed real LIBERO or RoboCasa trace i, the ledger stores that sequence, the native simulator failure label, source policy checkpoint b_i, source world-model checkpoint, and source teacher-forced world-model loss ell_{b_i,i} on the recorded successor frames. Let f_k(o) be the deterministic action chunk emitted by the current open-weight VLA checkpoint. For each action dimension d, let s_d be its interquartile range in the existing benchmark demonstrations when that range is positive, otherwise its documented legal action range; omit d from the norm only when both values are zero. Define D_{k,i} as the mean over the matched prefix tuples of ||(f_k(o_{i,t})-a_{i,t})/s||_2^2, with D_{b_i,i} computed from the stored source checkpoint. For every task with a positive checkpoint-relative divergence, compute that task's median positive D_{k,i}-D_{b_i,i}; tau_c is the median of those per-task medians. The bounded censoring coordinate is c_{k,i}=1-exp(-max(0,D_{k,i}-D_{b_i,i})/tau_c), and c_{k,i}=0 for all entries when no task has a positive divergence. Re-evaluating the current action-conditioned video WAM on the same fixed successor frames yields ell_{k,i}; the second coordinate h_{k,i}=ell_{k,i}/(ell_{k,i}+ell_{b_i,i}) (defined as zero when both losses are zero), and the replay priority is r_{k,i}=c_{k,i}h_{k,i}. For the declared diagnostic estimand also compute m_{k,i}=(ell_{b_i,i}-ell_{k,i})/(ell_{b_i,i}+ell_{k,i}), assigning zero when both losses are zero. The baseline task schedule first selects the task. Within a scheduled task q containing N_q failed traces, use p_{k,i|q}=(1-rho)/N_q+rho*r_{k,i}/sum_{j in q}r_{k,j}, falling back to uniform within q when the sum is zero; if q has no failed trace, use only the baseline current-cycle branch and do not construct p. rho is fixed by preregistration to 0.5 for the registered main run, while {0.25,0.75} are sensitivity arms rather than outcome-selected settings. Every sampled prefix is consumed twice: its recorded transitions enter the ordinary teacher-forced WAM loss, and its last pre-failure observation history seeds the baseline World-Gymnast/RISE-style imagined policy rollout so the policy still trains where its own new visitation would have removed evidence. The ledger and sampling weights are stop-gradient bookkeeping computed only from policy forward passes and WAM losses, with no simulator derivative, SVD, sign-mode partition, matched-reset oracle, or sequential candidate-acceptance certificate. The defensible claim is therefore narrow: within existing LIBERO and RoboCasa alternating VLA-WAM loops, this checkpoint-relative action-divergence proxy can be tested as a failure-retention intervention under a fixed interaction budget; it is not a visitation-probability estimator or a general co-adaptation safety guarantee.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T1/T3 zero-IQR division, prefix/tau/task-normalization ambiguity, the missing m producer, the undefined empty-task branch, the circular held-out rho selector, and T4's visitation-probability overclaim without changing the blocking c*h mechanism."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "core_mechanism_steps",
+      "value": "1. Instantiate the existing alternating loop with an OpenVLA-OFT-style open-weight policy, an action-conditioned video WAM in the VLAW or World-Gymnast setup, and the existing LIBERO and RoboCasa simulators; retain each benchmark's native task-success predicate, task schedule, and original imagined-rollout horizon.\n2. Instrument every real rollout to append each terminal-failure trace as matched (observation, executed action chunk, successor observation) tuples through the failure-producing action, together with task id, source policy/WAM checkpoint ids, source WAM teacher-forced loss, and the action scale s defined by the positive-IQR/legal-range rule.\n3. At the start of co-training cycle k, run the frozen current policy and each trace's frozen source policy on the stored observations, compute D_{k,i}, D_{b_i,i}, the median-of-per-task-positive-medians tau_c, and c_{k,i}, using the all-zero branch before division when no positive divergence exists; detach these quantities before any optimizer step.\n4. Run the current WAM's normal teacher-forced loss on each stored action/successor sequence and compute h_{k,i}, r_{k,i}, and diagnostic m_{k,i}. For the task selected by the baseline task schedule, construct the within-task probabilities p_{k,i|q}; use uniform failed-trace replay when its priorities sum to zero and use only baseline current-cycle data when it has no failed trace. Keep preregistered rho=0.5 fixed in the main run.\n5. Form each WAM minibatch from the baseline current-cycle data plus the rho-controlled ledger sample and apply the unchanged VLAW-style real-transition objective; the sampled old successors are actual simulator observations, not WAM-generated labels.\n6. For the policy update, initialize the baseline World-Gymnast/RISE-style action-conditioned video rollout from the stored observation history immediately before each sampled failure, generate alternative action continuations with the current policy, and apply the baseline imagined-advantage objective without adding a new learned judge.\n7. Continue all joint updates without accept, reject, rollback, or abstention; after the cycle, append new real failures and recompute the ledger from forward passes. A trace receives positive c only when the current deterministic action chunks diverge from its source chunks under the defined scale; c is not asserted to be a visitation probability.\n8. Log native task success, task-balanced mean c, the empirical joint distribution of (c,m), and fixed-prefix WAM loss for the scoped LIBERO/RoboCasa analysis and registered controls.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T1 missing producers and ambiguous branches in Steps 2-4, removes Step 8's undefined 'reappear' matcher, and downgrades Step 7's unsupported routing guarantee while preserving the original update flow."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "hook",
+      "value": "VLAW-style loops can add fresh real rollouts yet erase a physical failure from training simply because the new policy no longer reproduces its prefix. ExitReplay adds no real episodes and no accept-or-rollback test: it reallocates the existing replay budget using a joint score of checkpoint-relative action divergence and residual WAM loss on the same recorded physical successors.",
+      "outcome": "applied",
+      "delta_summary": "Repairs T4's overclaim that the score directly measures how strongly a policy makes a prefix disappear; the written quantity is an action-divergence proxy multiplied by residual WAM loss."
+    },
+    {
+      "scope": "coherence",
+      "op": "replace",
+      "field": "gap_closure[0].how_closed",
+      "value": "C01 relocates the evidence locus from states visited by the current policy to historical, environment-observed failure prefixes and uses checkpoint-relative action divergence as an explicit proxy for possible prefix departure; the companion redesigns the fixed replay/start-state generator around that ledger so selected historical failures can remain training evidence. Corpus support is thin in co-adaptive robotics; C01's closest exemplars are empirical security and safety locus shifts, so the claim is scoped to LIBERO and RoboCasa loops rather than broad robot safety.",
+      "outcome": "applied",
+      "delta_summary": "Repairs the T4 unsupported claim that D exposes policy-induced disappearance itself; the procedure constructs only a scoped proxy."
+    }
+  ],
+  "final_candidate": {
+    "title": "ExitReplay: Censoring-Aware Failure Retention for VLA-World-Model Co-Training",
+    "hook": "VLAW-style loops can add fresh real rollouts yet erase a physical failure from training simply because the new policy no longer reproduces its prefix. ExitReplay adds no real episodes and no accept-or-rollback test: it reallocates the existing replay budget using a joint score of checkpoint-relative action divergence and residual WAM loss on the same recorded physical successors.",
+    "hook_shape_rationale": "This is counter-intuitive minimalism: relative to VLAW-style co-improvement, the real-episode and model-count axes are no larger, because the method uses the same logged episodes and adds only a replay score. A structural-reframe hook was also viable because current-rollout training operationalizes visited-state sufficiency, but it was rejected because the stricter no-extra-real-data comparison makes the testable contribution boundary clearer.",
+    "gap_closure": [
+      {
+        "gap": "The VLAW and policy-in-the-loop leaves do not determine how much of an observed correction is caused by the environment rather than by the current policy's adaptive censoring of states it no longer visits, so failure evidence can disappear from later cycles without the underlying failure being repaired -- stakes: regressions in avoided or rare contact states can survive until deployment, while repeated-cycle results fail to transfer to policies whose visitation distribution changes differently.",
+        "main_pattern": "assumption_audit_and_pivot",
+        "sub_pattern": "C01 (Audit and Pivot an Assumption)",
+        "companion_pattern": "generative_process_redesign",
+        "how_closed": "C01 relocates the evidence locus from states visited by the current policy to historical, environment-observed failure prefixes and uses checkpoint-relative action divergence as an explicit proxy for possible prefix departure; the companion redesigns the fixed replay/start-state generator around that ledger so selected historical failures can remain training evidence. Corpus support is thin in co-adaptive robotics; C01's closest exemplars are empirical security and safety locus shifts, so the claim is scoped to LIBERO and RoboCasa loops rather than broad robot safety."
+      }
+    ],
+    "core_mechanism": "ExitReplay moves the co-training evidence locus from the current policy's visited-state stream to a ledger of previously observed failure prefixes. A stored failure prefix is exactly the matched sequence of (o_{i,t},a_{i,t},o_{i,t+1}) tuples through the action whose successor receives the native terminal-failure label. For every failed real LIBERO or RoboCasa trace i, the ledger stores that sequence, the native simulator failure label, source policy checkpoint b_i, source world-model checkpoint, and source teacher-forced world-model loss ell_{b_i,i} on the recorded successor frames. Let f_k(o) be the deterministic action chunk emitted by the current open-weight VLA checkpoint. For each action dimension d, let s_d be its interquartile range in the existing benchmark demonstrations when that range is positive, otherwise its documented legal action range; omit d from the norm only when both values are zero. Define D_{k,i} as the mean over the matched prefix tuples of ||(f_k(o_{i,t})-a_{i,t})/s||_2^2, with D_{b_i,i} computed from the stored source checkpoint. For every task with a positive checkpoint-relative divergence, compute that task's median positive D_{k,i}-D_{b_i,i}; tau_c is the median of those per-task medians. The bounded censoring coordinate is c_{k,i}=1-exp(-max(0,D_{k,i}-D_{b_i,i})/tau_c), and c_{k,i}=0 for all entries when no task has a positive divergence. Re-evaluating the current action-conditioned video WAM on the same fixed successor frames yields ell_{k,i}; the second coordinate h_{k,i}=ell_{k,i}/(ell_{k,i}+ell_{b_i,i}) (defined as zero when both losses are zero), and the replay priority is r_{k,i}=c_{k,i}h_{k,i}. For the declared diagnostic estimand also compute m_{k,i}=(ell_{b_i,i}-ell_{k,i})/(ell_{b_i,i}+ell_{k,i}), assigning zero when both losses are zero. The baseline task schedule first selects the task. Within a scheduled task q containing N_q failed traces, use p_{k,i|q}=(1-rho)/N_q+rho*r_{k,i}/sum_{j in q}r_{k,j}, falling back to uniform within q when the sum is zero; if q has no failed trace, use only the baseline current-cycle branch and do not construct p. rho is fixed by preregistration to 0.5 for the registered main run, while {0.25,0.75} are sensitivity arms rather than outcome-selected settings. Every sampled prefix is consumed twice: its recorded transitions enter the ordinary teacher-forced WAM loss, and its last pre-failure observation history seeds the baseline World-Gymnast/RISE-style imagined policy rollout so the policy still trains where its own new visitation would have removed evidence. The ledger and sampling weights are stop-gradient bookkeeping computed only from policy forward passes and WAM losses, with no simulator derivative, SVD, sign-mode partition, matched-reset oracle, or sequential candidate-acceptance certificate. The defensible claim is therefore narrow: within existing LIBERO and RoboCasa alternating VLA-WAM loops, this checkpoint-relative action-divergence proxy can be tested as a failure-retention intervention under a fixed interaction budget; it is not a visitation-probability estimator or a general co-adaptation safety guarantee.",
+    "core_mechanism_reasoning": "BLOCK 1 - PREMISES LEDGER\nP1. A historical failure prefix becomes less likely to reappear when the current policy's action chunks diverge cumulatively from the actions that generated that prefix; this follows from the sequential dependence of later observations on earlier robot actions, but the adequacy of D_{k,i} as the useful ordering is untested - falsification target.\nP2. Teacher-forced WAM loss on fixed environment-recorded successor frames is a comparable within-trace indicator of whether that particular physical transition has become better modeled; it uses the identical pixels and actions across checkpoints and makes no claim that pixel loss is a complete task metric.\nP3. Rehearsing a failure prefix in both the real WAM loss and the imagined policy start-state distribution can affect later native task success, rather than only improve bookkeeping loss; untested - falsification target.\nOBSERVATION-MODEL. Failure traces are sampled on-policy under historical checkpoints and are therefore selected and incomplete for the current policy; ExitReplay does not treat them as an unbiased sample of all physical states, and estimates only attrition inside the finite accumulated log.\nESTIMAND. At cycle k the diagnostic target is the task-balanced empirical joint distribution of (c_{k,i}, m_{k,i}) over environment-observed failed prefixes in the accumulated log, where m_{k,i}=(ell_{b_i,i}-ell_{k,i})/(ell_{b_i,i}+ell_{k,i}) is the fixed-outcome WAM-repair coordinate, with zero assigned when both losses are zero; no population-level causal effect is claimed.\nBLOCK 2 - NAIVE-BASELINE AUDIT\nThe runnable naive version is uniform reservoir replay of all historical failures alongside each cycle's current-policy rollouts. Branch (i): it silently assumes a fixed replay budget keeps rare historical failure prefixes represented as the log grows and the new policy stops resupplying them, which is false by construction; ExitReplay confronts that failure by making checkpoint-relative prefix disappearance, not age, TD error, uncertainty, or current visitation, the replay priority. STANDARD-TOOL FOLLOW-UP: prioritized replay is a textbook tool, so replay itself is not claimed as novel; the domain-specific structure is the full visual-language-action prefix comparison across stored VLA checkpoints and the requirement that one environment-observed trace jointly supplies the WAM real-loss anchor and the imagined policy restart. This is distinct from DAgger's current-policy state aggregation, generic cross-fitting, conservative/short-horizon MBRL, uncertainty filtering, target networks, and ordinary real/imagined mixing, all of which are occupied lineage nodes.\nBLOCK 3 - DESIGN RATIONALE\nThe anchor is kept single-gap because residual-direction alignment and global cycle-sign certification need separate estimands, whereas both ledger coordinates and both training uses share the same historical failure prefix. Density-ratio off-policy evaluation was rejected because high-dimensional action-chunk likelihoods are not reliably available for deterministic or diffusion VLA heads; simulator hypergradients and residual-mode SVD surgery were rejected because the physical simulator is black-box; matched reset-pair or sequential commit tests were rejected because they change the mechanism into an evaluation gate and consume the scarce interaction budget. The chosen forward-pass prefix score is weaker than a visitation-probability estimate but executable for OpenVLA-OFT-style open checkpoints, and its sufficiency is exposed as the falsification target rather than assumed.",
+    "core_mechanism_steps": "1. Instantiate the existing alternating loop with an OpenVLA-OFT-style open-weight policy, an action-conditioned video WAM in the VLAW or World-Gymnast setup, and the existing LIBERO and RoboCasa simulators; retain each benchmark's native task-success predicate, task schedule, and original imagined-rollout horizon.\n2. Instrument every real rollout to append each terminal-failure trace as matched (observation, executed action chunk, successor observation) tuples through the failure-producing action, together with task id, source policy/WAM checkpoint ids, source WAM teacher-forced loss, and the action scale s defined by the positive-IQR/legal-range rule.\n3. At the start of co-training cycle k, run the frozen current policy and each trace's frozen source policy on the stored observations, compute D_{k,i}, D_{b_i,i}, the median-of-per-task-positive-medians tau_c, and c_{k,i}, using the all-zero branch before division when no positive divergence exists; detach these quantities before any optimizer step.\n4. Run the current WAM's normal teacher-forced loss on each stored action/successor sequence and compute h_{k,i}, r_{k,i}, and diagnostic m_{k,i}. For the task selected by the baseline task schedule, construct the within-task probabilities p_{k,i|q}; use uniform failed-trace replay when its priorities sum to zero and use only baseline current-cycle data when it has no failed trace. Keep preregistered rho=0.5 fixed in the main run.\n5. Form each WAM minibatch from the baseline current-cycle data plus the rho-controlled ledger sample and apply the unchanged VLAW-style real-transition objective; the sampled old successors are actual simulator observations, not WAM-generated labels.\n6. For the policy update, initialize the baseline World-Gymnast/RISE-style action-conditioned video rollout from the stored observation history immediately before each sampled failure, generate alternative action continuations with the current policy, and apply the baseline imagined-advantage objective without adding a new learned judge.\n7. Continue all joint updates without accept, reject, rollback, or abstention; after the cycle, append new real failures and recompute the ledger from forward passes. A trace receives positive c only when the current deterministic action chunks diverge from its source chunks under the defined scale; c is not asserted to be a visitation probability.\n8. Log native task success, task-balanced mean c, the empirical joint distribution of (c,m), and fixed-prefix WAM loss for the scoped LIBERO/RoboCasa analysis and registered controls.",
+    "falsification_prediction": "On the existing LIBERO and RoboCasa simulators, run three matched seeds of an OpenVLA-OFT plus action-conditioned-video-WAM alternating loop with equal real and imagined trajectory budgets for uniform replay, ExitReplay, and a task-and-cycle-stratified score-permutation control. If ExitReplay works, final native simulator task success increases relative to uniform replay while WAM loss on logged failure prefixes that later reappear decreases. The one load-bearing variable is the checkpoint-relative censoring coordinate c_{k,i}; permuting c_{k,i} among failure prefixes within task and cycle while preserving every transition, replay count, rho, and optimizer step should make final native task success return toward the uniform-replay baseline. As an adaptive stress test, add a policy update that deliberately reduces source-prefix action agreement before resuming the same co-training budget; if ExitReplay loses its downstream task-success advantage when this intervention raises c_{k,i}, the relocated-locus mechanism is falsified.",
+    "compute_budget": "48 GPU-days on 80GB-class GPUs, at most 8 concurrent, for three seeds of the two benchmarks, registered controls, and the prefix-avoidance stress arm; tight but feasible inside the stated <=50 GPU-day envelope. $0 paid API: policies and WAMs are open-weight and outcomes use native LIBERO/RoboCasa success predicates.",
+    "differentiation_from_lit": [
+      {
+        "paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+        "delta": "VLAW refreshes the WAM with the current policy's real rollouts and then improves the policy with synthetic rollouts, whereas ExitReplay constructs a checkpoint-relative prefix-attrition coordinate over historical physical failures and uses it to keep no-longer-visited evidence in both updates."
+      },
+      {
+        "paper_id": "semanticscholar:3859de96b3c95d8c814a6c850df29f1b97d0644d",
+        "delta": "World-Gymnast optimizes a VLA inside an action-conditioned video model, including an iterative online variant, but does not condition real replay or imagined rollout starts on which environment-observed failure prefixes the changing policy has censored."
+      },
+      {
+        "paper_id": "semanticscholar:64604f8fe171472d66bb7c7fb29ad42414c5925a",
+        "delta": "RISE separates future prediction from progress-value estimation to produce imagined advantages, while ExitReplay instead preserves historical physical failures through a cross-checkpoint prefix score coupled to WAM loss on the same fixed successor frames."
+      },
+      {
+        "paper_id": "semanticscholar:317ebd73c3f3b3e7e41035527272339536ad6a1d",
+        "delta": "Feedback World Model corrects future predictions from the current observed next state at inference, whereas ExitReplay retains outcomes from failure prefixes the current policy has stopped reaching and changes the training start-state generator across cycles."
+      },
+      {
+        "paper_id": "arxiv:2608.24885",
+        "delta": "WorldSync aligns predicted intervention effects over broader action coverage, whereas ExitReplay measures cross-checkpoint disappearance of already environment-observed failure prefixes and rehearses them without claiming new action-faithfulness alignment."
+      }
+    ],
+    "almost_prior_paper_id": "semanticscholar:affb9be3dedba7952dfad2fb44a3ccdae909c60d",
+    "what_step_was_missed": "VLAW would have needed to retain every failed real trajectory with its source policy checkpoint, recompute current-versus-source action divergence over the full logged prefix, pair that disappearance coordinate with current WAM loss on the same fixed physical successors, and use the joint score to generate both WAM replay and policy imagination starts.",
+    "signature_terms": [
+      "checkpoint-relative prefix attrition ledger",
+      "censoring-aware failure retention",
+      "leaving-support failure rehearsal",
+      "fixed-outcome co-training replay"
+    ],
+    "alias_terms": [
+      "informative missingness correction",
+      "performative data attrition control",
+      "historical occupancy preservation",
+      "selective forgetting intervention"
+    ],
+    "composition_note": ""
+  },
+  "falsification_rewritten": false
+}

@@ -1,0 +1,58 @@
+# Research Wiki Log
+
+_Append-only timeline._
+- `2026-08-06T07:40:39Z` Wiki initialized
+- `2026-08-06T07:52:47Z` ingest_paper: ingested paper:du2023_learning_universal_policies (arxiv:2302.00111)
+- `2026-08-06T07:52:48Z` ingest_paper: ingested paper:hansen2023_tdmpc2_scalable_robust (arxiv:2310.16828)
+- `2026-08-06T07:52:48Z` ingest_paper: ingested paper:hafner2023_mastering_diverse_domains (arxiv:2301.04104)
+- `2026-08-06T07:52:49Z` ingest_paper: ingested paper:wu2022_daydreamer_world_models (arxiv:2206.14176)
+- `2026-08-06T07:52:50Z` ingest_paper: ingested paper:ye2024_latent_action_pretraining (arxiv:2410.11758)
+- `2026-08-06T07:52:51Z` ingest_paper: ingested paper:assran2025_vjepa_selfsupervised_video (arxiv:2506.09985)
+- `2026-08-06T07:52:52Z` ingest_paper: ingested paper:li2025_worldeval_world_model (arxiv:2505.19017)
+- `2026-08-06T07:52:53Z` ingest_paper: ingested paper:shang2026_worldarena_unified_benchmark (arxiv:2602.08971)
+- `2026-08-06T07:52:53Z` ingest_paper: ingested paper:wu2023_unleashing_largescale_video (arxiv:2312.13139)
+- `2026-08-06T07:52:54Z` ingest_paper: ingested paper:cheang2024_gr2_generative_videolanguageaction (arxiv:2410.06158)
+- `2026-08-06T07:52:55Z` ingest_paper: ingested paper:ye2026_world_action_models (arxiv:2602.15922)
+- `2026-08-06T07:52:56Z` ingest_paper: ingested paper:kim2026_cosmos_policy_finetuning (arxiv:2601.16163)
+- `2026-08-06T08:35:23Z` ingest_paper: ingested paper:zheng2026_memworld_memoryaugmented_actionconditioned (arxiv:2606.18960)
+- `2026-08-06T08:35:24Z` ingest_paper: ingested paper:wang2026_incontext_world_modeling (arxiv:2606.26025)
+- `2026-08-06T08:35:25Z` ingest_paper: ingested paper:jeong2025_objectcentric_world_model (arxiv:2503.06170)
+- `2026-08-06T08:35:27Z` ingest_paper: ingested paper:he2025_scaling_crossembodiment_world (arxiv:2511.01177)
+- `2026-08-06T08:35:28Z` ingest_paper: ingested paper:wang2025_latent_policy_steering (arxiv:2507.13340)
+- `2026-08-06T08:35:29Z` ingest_paper: ingested paper:higuera2026_visuotactile_world_models (arxiv:2602.06001)
+- `2026-08-06T09:21:11Z` ingest_paper: ingested paper:brohan2022_rt1_robotics_transformer (arxiv:2212.06817)
+- `2026-08-06T09:21:12Z` ingest_paper: ingested paper:brohan2023_rt2_visionlanguageaction_models (arxiv:2307.15818)
+- `2026-08-06T09:21:13Z` ingest_paper: ingested paper:collaboration2023_open_xembodiment_robotic (arxiv:2310.08864)
+- `2026-08-06T09:21:14Z` ingest_paper: ingested paper:team2024_octo_opensource_generalist (arxiv:2405.12213)
+- `2026-08-06T09:21:14Z` ingest_paper: ingested paper:kim2024_openvla_opensource_visionlanguageaction (arxiv:2406.09246)
+- `2026-08-06T09:21:15Z` ingest_paper: ingested paper:black2024_visionlanguageaction_flow_model (arxiv:2410.24164)
+- `2026-08-06T09:21:15Z` ingest_paper: ingested paper:intelligence2025_π05_visionlanguageaction_model (arxiv:2504.16054)
+- `2026-08-06T09:21:16Z` ingest_paper: ingested paper:liu2024_rdt1b_diffusion_foundation (arxiv:2410.07864)
+- `2026-08-06T09:21:17Z` ingest_paper: ingested paper:pertsch2025_fast_efficient_action (arxiv:2501.09747)
+- `2026-08-06T09:21:17Z` ingest_paper: ingested paper:kim2025_finetuning_visionlanguageaction_models (arxiv:2502.19645)
+- `2026-08-06T09:21:18Z` ingest_paper: ingested paper:qu2025_spatialvla_exploring_spatial (arxiv:2501.15830)
+- `2026-08-06T09:21:18Z` ingest_paper: ingested paper:belkhale2024_rth_action_hierarchies (arxiv:2403.01823)
+- `2026-08-06T09:32:20Z` field-map: added VLA-specific gaps G16–G22 and switched the active brief to the symmetric VLA/WAM/intersection map
+- `2026-08-06T13:10:36Z` ingest_paper: ingested paper:bu2025_univla_learning_act (arxiv:2505.06111)
+- `2026-08-06T13:10:37Z` ingest_paper: ingested paper:bagaria2026_recursive_belief_vision (arxiv:2602.20659)
+- `2026-08-06T13:10:38Z` ingest_paper: ingested paper:chen2026_lawam_latent_world (arxiv:2606.15768)
+- `2026-08-06T13:10:40Z` ingest_paper: ingested paper:yin2025_womap_world_models (arxiv:2506.01600)
+- `2026-08-06T13:10:42Z` ingest_paper: ingested paper:liu2026_checkvla_executiontime_verification (arxiv:2607.26789)
+- `2026-08-06T13:10:43Z` ingest_paper: ingested paper:team2026_gigaworld1_roadmap_build (arxiv:2607.02642)
+- `2026-08-06T13:10:44Z` ingest_paper: ingested paper:xiao2025_worldenv_leveraging_world (arxiv:2509.24948)
+- `2026-08-06T13:10:45Z` ingest_paper: ingested paper:liu2026_worldvlaloop_closedloop_learning (arxiv:2602.06508)
+- `2026-08-06T13:10:48Z` ingest_paper: ingested paper:yang2026_worldlanguageaction_model_unified (arxiv:2606.05979)
+- `2026-08-06T13:10:50Z` ingest_paper: ingested paper:wu2026_tactilewam_touchaware_world (arxiv:2606.26663)
+- `2026-08-30T21:11:06Z` upsert_idea: added idea:active-causal-discrepancy-experiments [stage=proposed outcome=pending]
+- `2026-08-30T21:11:07Z` upsert_idea: added idea:witness-carrying-progress-actions [stage=proposed outcome=pending]
+- `2026-08-30T21:11:07Z` upsert_idea: added idea:task-equivalent-recovery [stage=proposed outcome=pending]
+- `2026-08-30T21:24:53Z` upsert_idea: added idea:controllability-phase-progress-certificates [stage=proposed outcome=pending]
+- `2026-08-30T21:24:53Z` upsert_idea: added idea:policy-conditional-correction-slack [stage=proposed outcome=pending]
+- `2026-08-30T21:24:54Z` upsert_idea: added idea:endogenous-suffix-witnesses [stage=proposed outcome=pending]
+- `2026-08-31T15:19:01Z` ingest_paper: ingested paper:bhamidipaty2026_imperfect_world_models (arxiv:2605.15960)
+- `2026-08-31T15:19:34Z` ingest_paper: ingested paper:metadata2026_feedback_world_model (arxiv:)
+- `2026-08-31T15:19:34Z` ingest_paper: ingested paper:wang2026_when_trust_imagination (arxiv:)
+- `2026-08-31T15:19:34Z` ingest_paper: ingested paper:liu2026_world_action_verifier (arxiv:)
+- `2026-08-31T15:19:34Z` ingest_paper: ingested paper:segura2018_metamorphic_testing_testing (arxiv:)
+- `2026-08-31T15:19:34Z` ingest_paper: ingested paper:ghosh2018_verifying_controllers_against (arxiv:)
+- `2026-08-31T15:19:50Z` upsert_idea: added idea:israc [stage=active outcome=pending]

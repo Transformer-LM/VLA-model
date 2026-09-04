@@ -1,0 +1,160 @@
+[
+  {
+    "title": "FBFM: A Training-Free Asynchronous Feedback Mechanism for Flow-Matching in World-Action Models Execution",
+    "title_norm": "fbfm a training free asynchronous feedback mechanism for flow matching in world ",
+    "abstract": "Although world-action models (WAMs) enhance long-horizon robot control by predicting visual evolution before acting, long-horizon reliability demands repeated re-grounding in real observations--not recursive rollout. Existing WAMs address this by refreshing history or KV cache with ground-truth data between chunks. However, such chunk-wise feedback operates at a coarse temporal granularity and thus fails to correct prediction errors at the individual time-step level. To address this, we propose Feedback Flow Matching (FBFM), a training-free inference mechanism that pushes re-grounding inside the actively generated chunk. During flow matching, FBFM applies a masked pseudoinverse correction to the conditional velocity field: it leverages the preceding action chunk to guide generation of the next action chunk, and uses the image observed after executing that preceding chunk to guide the next frame prediction. This cross-chunk pairing--where feedback from one chunk arrives in time to shape the next--creates an asynchronous loop that corrects errors without waiting for chunk boundaries. Being training-free, the mechanism improves responsiveness to unexpected events and suppresses drift in long-horizon tasks. We evaluate FBFM on both a joint-generation WAM (DreamZero) and a stage-wise WAM (LingBot-VA). On selected LIBERO and RoboTwin2.0 tasks, it improves success rates by over 5% in favorable settings, and real-world robot observation-prediction diagnostics show notably better tracking. We argue that FBFM offers a new paradigm for fine-grained online correction, bridging open-loop flow generation with closed-loop real-world dynamics.",
+    "tldr": "It is argued that FBFM offers a new paradigm for fine-grained online correction, bridging open-loop flow generation with closed-loop real-world dynamics.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Peize Li",
+      "Ruimeng Zhang",
+      "Ru Zhang",
+      "Cong Huang",
+      "Kai Chen",
+      "Shanghang Zhang"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "a77ce57cc8614da8e469228797af4c69274a1428",
+    "paper_id": "semanticscholar:a77ce57cc8614da8e469228797af4c69274a1428",
+    "doi": "",
+    "arxiv_id": "2607.29235",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/a77ce57cc8614da8e469228797af4c69274a1428",
+    "published_iso": "2026-07-31",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-07",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "CRAFT: Counterfactual-to-Interactive Reinforcement Fine-Tuning for Driving Policies",
+    "title_norm": "craft counterfactual to interactive reinforcement fine tuning for driving polici",
+    "abstract": "Open-loop imitation learning has advanced modern autonomous driving policy architectures, but closed-loop deployment remains vulnerable to policy-induced distribution shift. Existing post-training paradigms exhibit fundamental trade-offs: closed-loop RL fine-tuning provides grounded feedback from executed actions but is constrained by the sparsity of informative events, whereas counterfactual fine-tuning provides dense supervision over candidate futures but inherits bias from imperfect future estimates. We introduce Counterfactual-to-Interactive Reinforcement Fine-Tuning (CRAFT), an on-policy framework that formulates closed-loop post-training as proxy-residual optimization. CRAFT uses group-normalized counterfactual advantages as a dense proxy for real closed-loop advantages and aligns this proxy with the closed-loop world through grounded residual correction from interaction-critical events. To stabilize adaptation, CRAFT regularizes the online policy toward an EMA teacher via asymmetric KL self-distillation. Theoretically, CRAFT decomposes the real closed-loop policy gradient into proxy and residual terms under the same visited-state distribution, reducing residual variance with an aligned proxy while mitigating proxy bias through grounded residual approximation. Empirically, CRAFT achieves the strongest closed-loop gains on Bench2Drive across hierarchical planning, vision-language-action, and vocabulary-scoring architectures. Ablations, scaling behavior, stability analyses, and transfer results further validate the complementary roles of dense counterfactual proxy and grounded residual correction. Project page: https://currychen77.github.io/CRAFT.",
+    "tldr": "Counterfactual-to-Interactive Reinforcement Fine-Tuning (CRAFT), an on-policy framework that formulates closed-loop post-training as proxy-residual optimization, achieves the strongest closed-loop gains on Bench2Drive across hierarchical planning, vision-language-action, and vocabulary-scoring architectures.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Keyu Chen",
+      "Nanfei Ye",
+      "Yida Wang",
+      "Wenchao Sun",
+      "Dan Zhao",
+      "Hao Cheng"
+    ],
+    "citations": 1,
+    "source": "semanticscholar",
+    "source_id": "4d8621982122520882f7210f2ef57c16c55b1d11",
+    "paper_id": "semanticscholar:4d8621982122520882f7210f2ef57c16c55b1d11",
+    "doi": "10.48550/arXiv.2605.04470",
+    "arxiv_id": "2605.04470",
+    "dblp_key": "journals/corr/abs-2605-04470",
+    "paper_url": "https://www.semanticscholar.org/paper/4d8621982122520882f7210f2ef57c16c55b1d11",
+    "published_iso": "2026-05-06",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "Balancing Accuracy and Efficiency: Adaptive Dynamics Orchestration for Model Predictive Control",
+    "title_norm": "balancing accuracy and efficiency adaptive dynamics orchestration for model pred",
+    "abstract": "Model Predictive Control (MPC) for autonomous navigation faces a fundamental trade-off between model accuracy and real-time efficiency. High-fidelity dynamics models can accurately predict complex vehicle-terrain interactions during trajectory rollouts, but incur significant computational cost, increasing inference latency and reducing control frequency. Conversely, lightweight models enable fast updates and dense sampling, yet may produce erroneous predictions under safety-critical conditions, potentially leading to catastrophic failures such as vehicle rollover. To address this trade-off, we propose Adaptive Dynamics Orchestration (ADO), a framework that dynamically selects the most appropriate dynamics model for the current navigation context. ADO maintains a library of models spanning diverse accuracy-efficiency profiles and continuously refines terrain-conditioned performance estimates using residual errors from online counterfactual rollouts, where executed control actions are replayed across the model library to assess predictive discrepancy. These estimates guide model selection in real time, balancing computational efficiency and predictive accuracy. Real-world experiments on an off-road ground robot demonstrate that ADO significantly reduces modeling error compared to a fixed low-latency baseline, while approaching the accuracy of the highest-fidelity model without incurring its computational cost, resulting in more reliable and effective navigation in challenging terrain.",
+    "tldr": "Adaptive Dynamics Orchestration (ADO) is proposed, a framework that dynamically selects the most appropriate dynamics model for the current navigation context using residual errors from online counterfactual rollouts, to approach the accuracy of the highest-fidelity model without incurring its computational cost.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Francesco Cancelliere",
+      "A. Datar",
+      "Giovanni Muscato",
+      "Xuesu Xiao"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "paper_id": "semanticscholar:f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "doi": "10.48550/arXiv.2606.00085",
+    "arxiv_id": "2606.00085",
+    "dblp_key": "journals/corr/abs-2606-00085",
+    "paper_url": "https://www.semanticscholar.org/paper/f4f5e64895c20806d99265d8bea67a6960202e9d",
+    "published_iso": "2026-05-22",
+    "from_query": [
+      "executed action residual unexecuted rollout correction"
+    ],
+    "year_month": "2026-05",
+    "retrieved_via": "semanticscholar",
+    "relevance": "core"
+  },
+  {
+    "title": "When to Trust Imagination: Adaptive Action Execution for World Action Models",
+    "title_norm": "when to trust imagination adaptive action execution for world action models",
+    "abstract": "World Action Models (WAMs) have recently emerged as a promising paradigm for robotic manipulation by jointly predicting future visual observations and future actions. However, current WAMs typically execute a fixed number of predicted actions after each model inference, leaving the robot blind to whether the imagined future remains consistent with the actual physical rollout. In this work, we formulate adaptive WAM execution as a future-reality verification problem: the robot should execute longer when the WAM-predicted future remains reliable, and replan earlier when reality deviates from imagination. To this end, we propose Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted. FFDC enables adaptive action chunk sizes as an emergent consequence of prediction-observation consistency, preserving the efficiency of long-horizon execution while restoring responsiveness in contact-rich or difficult phases. We further introduce Mixture-of-Horizon Training to improve long-horizon trajectory coverage for adaptive execution. Experiments on the RoboTwin benchmark and in the real world demonstrate that our method achieves a strong robustness-efficiency trade-off: on RoboTwin, it reduces WAM forward passes by 69.10% and execution time by 34.02%, while improving success rate by 2.54% over the short-chunk baseline; in real-world experiments, it improves success rate by 35%.",
+    "tldr": "Future Forward Dynamics Causal Attention (FFDC), a lightweight verifier that jointly reasons over predicted future actions, predicted visual dynamics, real observations, and language instructions to estimate whether the remaining action rollout can still be trusted, is proposed.",
+    "year": 2026,
+    "venue": "arXiv.org",
+    "publication_types": [
+      "JournalArticle"
+    ],
+    "authors": [
+      "Rui Wang",
+      "Yue Zhang",
+      "Jiehong Lin",
+      "Kuncheng Luo",
+      "Jianan Wang",
+      "Zhongrui Wang"
+    ],
+    "citations": 12,
+    "source": "semanticscholar",
+    "source_id": "c77a28b7b601d656325599b768a821c1151918e2",
+    "paper_id": "dblp:journals/corr/abs-2605-06222",
+    "doi": "10.48550/arXiv.2605.06222",
+    "arxiv_id": "2605.06222",
+    "dblp_key": "journals/corr/abs-2605-06222",
+    "paper_url": "https://www.semanticscholar.org/paper/c77a28b7b601d656325599b768a821c1151918e2",
+    "published_iso": "2026-05-07",
+    "retrieved_via": "host_web",
+    "host_why": "Direct abstention and replanning anchor that tests future-reality consistency to decide how long a WAM action chunk remains trustworthy.",
+    "relevance": "core"
+  },
+  {
+    "title": "DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation",
+    "title_norm": "dreamx phi 1 0 action conditioned video world model for robotic manipulation",
+    "abstract": "We present \\textbf{DreamX-Phi 1.0}, an action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations. Yet realism alone does not guarantee faithfulness: a convincing rollout can still move the wrong arm or lose the manipulated object. To ensure the prediction respects each arm's commanded path, we inject per-arm $\\mathrm{SE}(3)$ transformations into attention via \\textbf{PRoPE-style geometric encoding}, preserving arm identity and rigid-motion structure. Action control alone does not fully constrain scene geometry or the evolution of small manipulated objects. We therefore add a lightweight \\textbf{depth branch} for scene-level geometry and use \\textbf{SAM3 masks} with a frozen \\textbf{V-JEPA teacher} to maintain object consistency throughout grasping. We further distill the multi-step generator into a few-step student via distribution-matching distillation for efficient deployment. At the time of writing, \\model{} achieves first place on Track~1 and second place on Track~2 of the WorldArena~2.0 Challenge. Our model and code will be publicly available.",
+    "tldr": "An action-conditioned video world model for robotic manipulation that, given an observed frame, a language instruction, and a prescribed action sequence comprising end-effector poses and gripper states, predicts the resulting future observations is presented.",
+    "year": 2026,
+    "venue": "",
+    "publication_types": [],
+    "authors": [
+      "Dream Team",
+      "Rui Chen",
+      "Xiangxiang Chu",
+      "Ge Li",
+      "Jifa Li",
+      "Qingfeng Shi"
+    ],
+    "citations": 0,
+    "source": "semanticscholar",
+    "source_id": "3d0e38c7462472925b1c31cfd694be44227c365c",
+    "paper_id": "arxiv:2608.13489",
+    "doi": "",
+    "arxiv_id": "2608.13489",
+    "dblp_key": "",
+    "paper_url": "https://www.semanticscholar.org/paper/3d0e38c7462472925b1c31cfd694be44227c365c",
+    "published_iso": "2026-08-13",
+    "retrieved_via": "host_web",
+    "host_why": "Recent action-conditioned video-WM backbone whose geometry, arm-identity, and object-consistency constraints define a strong training-time alternative to online residual correction.",
+    "relevance": "core"
+  }
+]

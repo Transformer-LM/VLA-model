@@ -1,0 +1,10 @@
+[
+  {
+    "finding": "The load-bearing certificate has zero positive-decision power under the default B_k=128 cap for the admissible p_k=q regime: even a perfect candidate with Delta_k=1 and D_{k,t}=1 at every witness cannot make L_{k,t}>0. The entire declared epsilon sweep [0.1,0.4] remains powerless in this regime.",
+    "severity": "blocking",
+    "why_not_repaired": "A valid repair must replace the stated global epsilon^{-1} confidence radius with a tighter sound sequential construction (for example one exploiting the actual propensity envelope or variance) or materially increase/reallocate the witness budget. The candidate supplies neither correction, and inventing one here would redesign the load-bearing sequential test rather than patch wording or dataflow.",
+    "verbatim_step_quote": "5. Append X_{k,t}=q_h D_{k,t}/p_k(h), recompute L_{k,t}, and persist the audit row; input is the paired outcome plus logged propensity and output is the load-bearing certificate, with no simulator differentiation or learned outcome judge. 6. If L_{k,t}>m_min, atomically promote both tentative checkpoints so pi_k^+ generates the next real/simulated actions and M_k^+ generates the next imagined futures; otherwise request another witness until B_k, then restore both incumbent hashes so the failed update cannot affect later rollouts or training data.",
+    "executed_evidence": "Unexecuted closed-form evidence (scripts were explicitly forbidden): set k=1, t=B_1=128, alpha=0.05, epsilon=0.2, one task with q=p=1, and perfect D_s=1 for all s. Then X_s=1 and mean X=1. The penalty is 5*sqrt(2*ln(1*2*128*129/0.05)/128)=5*sqrt(2*ln(660480)/128) approximately 2.2879, so L_{1,128}=1-2.2879 approximately -1.2879<0 although Delta_1=1. The radius decreases over t<=128, so no earlier t can cross. Even at the sweep's largest epsilon=0.4 the radius is 2.5*sqrt(2*ln(660480)/128) approximately 1.144>1. Thus the strict L>m_min condition cannot fire for m_min>=0 anywhere in the declared sweep before the cap.",
+    "reading_dependence": "reading_robust"
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "boundary_plan": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_BOUNDARY_PLAN.json",
+    "sha256": "11ae175df05e7b8c1bec50f518732def512352ec9cd4de1efdabb79acff33f03"
+  },
+  "created_at_utc": "2026-08-31T20:40:38.245489+00:00",
+  "files": [
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/certify_continuous_contact_support.py",
+      "role": "compiler",
+      "sha256": "406d545fa2639ebef227d5495bb65e4ef46cbc4aa49a3f169a9eba729c02d7dc"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/verify_p025_manifest.py",
+      "role": "manifest_verifier",
+      "sha256": "2212a6c8508f4e8da6227ab055d11acfff5853d07c61dd03e9ba16b67c7d79f0"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p025_fixed_budget.py",
+      "role": "p025_schema_validator",
+      "sha256": "c8d83c873e1227cbd88afe2053c5ed9bc6448d97da9243a3e565a9e98ee5f237"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/analyze_p026_confirmatory.py",
+      "role": "p026_analyzer",
+      "sha256": "4c495ae4cb247713164e68a9db2cc32fa6d80537018ba021b07a8007ef7c3977"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/run_p026_compiler_matrix.py",
+      "role": "matrix_runner",
+      "sha256": "b7325fa29155cae6f5b44f7798e793f407db6e92cb86663ce5a4447cb8635043"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/freeze_p026_matrix_run.py",
+      "role": "matrix_lock_builder",
+      "sha256": "9e29b081b1109bc01fa8167ac1c6b7ffe6ad6a558b0847bbc746bf197c57514a"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/freeze_p026_launch_record.py",
+      "role": "launch_record_builder",
+      "sha256": "b2c555d1060cd011dc0011475c78de1b6f2a117fa01e099828826e23df117126"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/certify_policy_boundary_alias.py",
+      "role": "selector_support",
+      "sha256": "873aa3a2a9d4c0e9dcde4799af91f401ce94b45d3772b774787463b726524e54"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/israc/certificate.py",
+      "role": "certificate_core",
+      "sha256": "45ccaf33f28eea1f98a0ebabda884bdf590e031298eefdbf378f52d86cd28806"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/implementation/libero_m0_alias.py",
+      "role": "repeat_envelope",
+      "sha256": "81601ed089109b968cdf4ed9498b5407a3998d8489f49bf911732df0e287c8ce"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/pointmap-progress-belief/implementation/collect_e1_paired_rollouts.py",
+      "role": "observation_support",
+      "sha256": "f9dab5ce1b0d9fc70442933c5862e7f60d0581c5b4f36ec08038c37044b9d1db"
+    }
+  ],
+  "frozen": true,
+  "kind": "p026_compiler_code_lock",
+  "policy_lock": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/results/israc/P026_POLICY_LOCK.json",
+    "sha256": "1d75f96cacf01e327819c2e8d2a6521a552c2f8b2a7e9542cb0d6b35cd0d132d"
+  },
+  "preregistration": {
+    "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/prereg/P026_HELDOUT_PREREGISTRATION.md",
+    "sha256": "ece858b9f3b2e261513e82cc6f0be0b559f8d1bb626d173a919a9e4100b5ae0a"
+  },
+  "protocol_amendments": [
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/prereg/P026_PROTOCOL_AMENDMENT.md",
+      "sha256": "fbfa5f55e2b70067468dad178d886e1f6a59154ba7675acf9be00f545ddabcbb",
+      "version": "v1"
+    },
+    {
+      "path": "<PERSONAL_RESEARCH_ROOT_ALIAS>/workspace/israc/prereg/P026_PROTOCOL_AMENDMENT_V2.md",
+      "predecessor_sha256": "fbfa5f55e2b70067468dad178d886e1f6a59154ba7675acf9be00f545ddabcbb",
+      "sha256": "235e76876cb3990828d92500c978d56e274fb27562912eab92b2ab76cc51bab9",
+      "version": "v2"
+    }
+  ],
+  "python_entrypoint": "<PERSONAL_RESEARCH_ROOT>/venvs/libero-eval-py310/bin/python"
+}

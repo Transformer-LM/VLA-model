@@ -1,0 +1,65 @@
+{
+  "user_ref:title:OA-WAM: Object-Addressable World Action Model for Robust Robot Manipulation": {
+    "tier": "U",
+    "intro": "",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4404350837": {
+    "tier": "T2",
+    "intro": "We introduce SPOT, an object-centric imitation learning framework. The key idea is to capture each task by an object-centric representation, specifically the SE(3) object pose trajectory relative to the target. This approach decouples embodiment actions from sensory inputs, facilitating learning from various demonstration types, including both action-based and action-less human hand demonstrations, as well as cross-embodiment generalization. Additionally, object pose trajectories inherently capture planning constraints from demonstrations without the need for manually-crafted rules. To guide the robot in executing the task, the object trajectory is used to condition a diffusion policy. We systematically evaluate our method on simulation and real-world tasks. In real-world evaluation, using only eight demonstrations shot on an iPhone, our approach completed all tasks while fully complying with task constraints. Project page: https://nvlabs.github.io/object_centric_diffusion",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4403789165": {
+    "tier": "T2",
+    "intro": "Generalizable long-horizon robotic assembly requires reasoning at multiple levels of abstraction. While end-to-end imitation learning (IL) is a promising approach, it typically requires large amounts of expert demonstration data and often struggles to achieve the high precision demanded by assembly tasks. Reinforcement learning (RL) approaches, on the other hand, have shown some success in high-precision assembly, but suffer from sample inefficiency, which limits their effectiveness in long-horizon tasks. To address these challenges, we propose a hierarchical modular approach, named Adaptive Robotic Compositional Hierarchy (ARCH), which enables long-horizon, high-precision robotic assembly in contact-rich settings. ARCH employs a hierarchical planning framework, including a low-level primitive library of parameterized skills and a high-level policy. The low-level primitive library includes essential skills for assembly tasks, such as grasping and inserting. These primitives consist of both RL and model-based policies. The high-level policy, learned via IL from a handful of demonstrations, without the need for teleoperation, selects the appropriate primitive skills and instantiates them with input parameters. We extensively evaluate our approach in simulation and on a real robotic manipulation platform. We show that ARCH generalizes well to unseen objects and outperforms baseline methods in terms of success rate and data efficiency. More details are available at: https://long-horizon-assembly.github.io.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4416447778": {
+    "tier": "T2",
+    "intro": "Robotic insertion is a highly challenging task that requires exceptional precision in cluttered environments. Existing methods often have poor generalization capabilities. They typically function in restricted and structured environments, and frequently fail when the plug and socket are far apart, when the scene is densely cluttered, or when handling novel objects. They also rely on strong assumptions such as access to CAD models or a digital twin in simulation. To address these limitations, we propose EasyInsert. Inspired by human intuition, it formulates insertion as a delta-pose regression problem, which unlocks an efficient, highly scalable data collection pipeline with minimal human labor to train an end-to-end visual policy. During execution, the visual policy predicts the relative pose between plug and socket to drive a multi-phase, coarse-to-fine insertion process. EasyInsert demonstrates strong zero-shot generalization capability for unseen objects in cluttered environments, robustly handling cases with significant initial pose deviations. In real-world experiments, by leveraging just 1 hour of human teleoperation data to bootstrap a large-scale automated data collection process, EasyInsert achieves an over 90% success rate in zero-shot insertion for 13 out of 15 unseen novel objects, including challenging objects like Type-C cables, HDMI cables, and Ethernet cables. Furthermore, requiring only a single manual reset, EasyInsert allows for fast adaptation to novel test objects through automated data collection and fine-tuning, achieving an over 90% success rate across all 15 objects.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4403786340": {
+    "tier": "A",
+    "intro": "Many manipulation tasks require the robot to rearrange objects relative to one another. Such tasks can be described as a sequence of relative poses between parts of a set of rigid bodies. In this work, we propose MATCH POLICY, a simple but novel pipeline for solving high-precision pick and place tasks. Instead of predicting actions directly, our method registers the pick and place targets to the stored demonstrations. This transfers action inference into a point cloud registration task and enables us to realize nontrivial manipulation policies without any training. MATCH POLICY is designed to solve high-precision tasks with a key-frame setting. By leveraging the geometric interaction and the symmetries of the task, it achieves extremely high sample efficiency and generalizability to unseen configurations. We demonstrate its state-of-the-art performance across various tasks on RLBench benchmark compared with several strong baselines and test it on a real robot with six tasks.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4405956290": {
+    "tier": "T2",
+    "intro": "Robot foundation models, particularly Vision-Language-Action (VLA) models, have garnered significant attention for their ability to enhance robot policy learning, greatly improving robot's generalization and robustness. OpenAI's recent model, O1, showcased impressive capabilities in solving complex problems by utilizing extensive reasoning chains. This prompts an important question: can robot models achieve better performance in multi-task , complex environments by reviewing prior observations and then providing task-specific reasoning to guide action prediction? In this paper, we introduce Chain-of-Affordance (CoA-VLA) , a novel approach to scaling robot models by incorporating reasoning in the format of sequential robot affordances to facilitate task completion. Specifically, we prompt the model to consider the following four types of affordances before taking action: (1) object affordance - what object to manipulate and where it is ; (2) grasp affordance - the specific object part to grasp ; (3) spatial affordance - the optimal space to place the object ; and (4) movement affordance-the collision - free path for movement. We further transform each affordance into two prompting formats: visual affordance and textual affordance. We introduce a novel vision-language co-injection module that integrates this knowledge into the policy network. This allows the robot to leverage essential contextual information during action inference, resulting in improved precision and robustness. Our experiments demonstrate that CoA-VLA outperforms state-of-the-art robot foundation models, including OpenVLA and Octo, on a variety of tasks. Furthermore, CoA-VLA exhibits strong generalization capabilities, including recognizing unseen object poses, identifying free space, and avoiding obstacles in novel environments.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W7125603112": {
+    "tier": "T2",
+    "intro": "Robotic foundation models trained on large-scale manipulation datasets have shown promise in learning generalist policies, but they often overfit to specific viewpoints, robot arms, and especially parallel-jaw grippers due to dataset biases. To address this limitation, we propose Cross-Embodiment Interface (CEI), a framework for cross-embodiment learning that enables the transfer of demonstrations across different robot arm and end-effector morphologies.CEIintroduces the concept offunctional similarity, which is quantified using Directional Chamfer Distance. Then it aligns robot trajectories through gradient-based optimization, followed by synthesizing observations and actions for unseen robot arms and end-effectors. In experiments,CEItransfers data and policies from a Franka Panda robot to16different embodiments across3tasks in simulation, and supports bidirectional transfer between a UR5+AG95 gripper robot and a UR5+Xhand robot across6real-world tasks, achieving an average transfer ratio of 82.4%. Finally, we demonstrate thatCEIcan also be extended with spatial generalization and multimodal motion generation capabilities using our proposed techniques. Project website:https://cross-embodiment-interface.github.io/.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4405785418": {
+    "tier": "T2",
+    "intro": "Task-oriented object grasping and rearrangement are key skills for robots, which have to perform versatile real-world manipulation tasks. However, they remain challenging due to partial observations of the objects and shape variations in categorical objects. In this paper, we present the Multi-feature Implicit Model (MIMO), a novel object representation that encodes multiple spatial features between a point and an object in an implicit neural field. Training such a model on multiple features ensures that it embeds the object shapes consistently in different aspects, thus improving its performance in object shape reconstruction from partial observation, shape similarity measure, and modeling spatial relations between objects. Based on MIMO, we propose a framework to learn task-oriented object grasping and rearrangement from single or multiple human demonstration videos. The evaluations in simulation show that our approach outperforms the state-of-the-art methods for multi- and single-view observations. Real-world experiments demonstrate the efficacy of our approach in one- and few-shot imitation learning of manipulation tasks.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  },
+  "openalex:W4414079207": {
+    "tier": "T2",
+    "intro": "100x Synthetic Demos \"One-Shot\" Imitation Versatile Skills & Platforms Extended O.O.D. CapabilitiesFig. 1: DemoGen is a fully synthetic approach for automatic demonstration generation.DemoGen promotes the spatial generalization ability of visuomotor policies and can facilitate one-shot imitation by adapting one human-collected demonstration into novel object configurations.DemoGen applies to various manipulation tasks and platforms and can be extended to enable additional out-of-distribution capabilities.Abstract-Visuomotor policies have shown great promise in robotic manipulation but often require substantial humancollected data for effective performance.A key factor driving the high data demands is their limited spatial generalization capability, which necessitates extensive data collection across different object configurations.In this work, we present DemoGen, a low-cost, fully synthetic approach for automatic demonstration generation.Using only one human-collected demonstration per task, DemoGen generates spatially augmented demonstrations by adapting the demonstrated action trajectory to novel object configurations.Visual observations are synthesized by leveraging 3D point clouds as the modality and rearranging the subjects in the scene via 3D editing.Empirically, DemoGen significantly enhances policy performance across a diverse range of real-world manipulation tasks, showing its applicability even in challenging scenarios involving deformable objects, dexterous hand endeffectors, and bimanual platforms.Furthermore, DemoGen can be extended to enable additional out-of-distribution capabilities, including disturbance resistance and obstacle avoidance.",
+    "method": "",
+    "source_used": "failed",
+    "warning": "fetch failed across all paths; intro filled with abstract; method empty"
+  }
+}

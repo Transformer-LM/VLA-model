@@ -1,0 +1,377 @@
+[
+  {
+    "paper_id": "semanticscholar:e2021ca292b14ff91eca52d4c4bab227233bf949",
+    "relevance": "off_topic",
+    "reason": "Human hand keypoint estimation from image-point clouds; no robot manipulation relation, policy, or functional-geometry transfer."
+  },
+  {
+    "paper_id": "semanticscholar:c27e6a65c63fd2ab7a67e20130f9b1aafb4693f7",
+    "relevance": "off_topic",
+    "reason": "Camera trajectory estimation for multi-object image sets; unrelated to manipulation-policy adaptation or relational skill execution."
+  },
+  {
+    "paper_id": "semanticscholar:4a5cd65ddca85c587c2efb66dc3afc5c82df490f",
+    "relevance": "off_topic",
+    "reason": "mmWave human point-cloud densification for interfaces; cross-domain point-cloud generation with no robotic manipulation."
+  },
+  {
+    "paper_id": "semanticscholar:a583f6dcdc85c8039d487e6b60c68aac896bba90",
+    "relevance": "off_topic",
+    "reason": "Industrial fiber-placement inspection and point-cloud stitching; measures manufactured parts rather than controlling manipulation skills."
+  },
+  {
+    "paper_id": "semanticscholar:0660bbb1b28f916e6bb5d8bab6bc46a5059bb51c",
+    "relevance": "adjacent",
+    "reason": "Robotic bin-picking 6D-pose perception from incomplete point clouds; useful geometry backbone but not relation-conditioned HOW adaptation."
+  },
+  {
+    "paper_id": "semanticscholar:15f9d096790b0eeacb8cd6227e85394613136473",
+    "relevance": "adjacent",
+    "reason": "Generic point-cloud registration and global alignment could support PointMap correspondence, but it produces no manipulation policy or skill correction."
+  },
+  {
+    "paper_id": "semanticscholar:8a618109b3b8e4c7fa03781853288ad99bdcf896",
+    "relevance": "off_topic",
+    "reason": "Outdoor LiDAR registration for driving scenes; different domain and no object manipulation relation."
+  },
+  {
+    "paper_id": "semanticscholar:6cdac52fbe0fe6ef43686be0c2d6793db51e0766",
+    "relevance": "off_topic",
+    "reason": "Generates clothed human avatars as point clouds; unrelated to robot manipulation or relational geometry."
+  },
+  {
+    "paper_id": "semanticscholar:2a55925bdea306e29c0235e0612002dbb2cc4ee1",
+    "relevance": "adjacent",
+    "reason": "Estimates a terminal assembly pose via CAD registration; relevant baseline, but does not alter grasp, path, phases, or feasibility."
+  },
+  {
+    "paper_id": "semanticscholar:706c4142607ae62bfcef94593ff02eee65b1814a",
+    "relevance": "adjacent",
+    "reason": "Generalizes point-cloud placement-pose prediction to new geometry and insertion/hanging, but outputs a goal pose rather than internal HOW."
+  },
+  {
+    "paper_id": "semanticscholar:2387572e8e18f3024b1299f28b8ac0db402db6f6",
+    "relevance": "off_topic",
+    "reason": "Aerial-image reconstruction of building point clouds; cross-domain 3D generation with no manipulation."
+  },
+  {
+    "paper_id": "semanticscholar:b862d054a39920b85b763157c9c3f41d9c3ea53f",
+    "relevance": "adjacent",
+    "reason": "Point-cloud 6D object-pose perception can support manipulation, but predicts observed object pose rather than relational execution corrections."
+  },
+  {
+    "paper_id": "semanticscholar:9b4bb4a466c03bceb09701ae7397b438b338eba2",
+    "relevance": "adjacent",
+    "reason": "Category-level 9D object-pose estimation for unknown objects; useful perception baseline, not relation-conditioned action adaptation."
+  },
+  {
+    "paper_id": "semanticscholar:b239c312e94014e9ef9ab30c8e87452de3dbeb61",
+    "relevance": "adjacent",
+    "reason": "Articulated-object part-pose estimation captures kinematic geometry, but does not plan or correct a manipulation skill."
+  },
+  {
+    "paper_id": "semanticscholar:c938f6c70b14726241d7cfde52dc1e708c692a32",
+    "relevance": "off_topic",
+    "reason": "Sketch-conditioned point-cloud reconstruction; no robotic manipulation setting or target-reference relation."
+  },
+  {
+    "paper_id": "semanticscholar:ea868e9a8896eb9909e58e11d077e3a03dc16c37",
+    "relevance": "off_topic",
+    "reason": "Human hand gesture pose estimation under point-cloud corruption; not robot manipulation policy learning."
+  },
+  {
+    "paper_id": "semanticscholar:a3ed46adc22b9a7eea9cb98e7f2d28b08736b42b",
+    "relevance": "off_topic",
+    "reason": "Automotive radar point-cloud generation for object detection; unrelated sensing domain."
+  },
+  {
+    "paper_id": "semanticscholar:6dc5f0ea531532793f54f7512a138952ee4c3082",
+    "relevance": "off_topic",
+    "reason": "Object-centric camera trajectory estimation across video sub-scenes; no robot action or manipulation relation."
+  },
+  {
+    "paper_id": "semanticscholar:27569d9543230b6ce764a6c8b1eb6f31c4036033",
+    "relevance": "off_topic",
+    "reason": "Cultural-heritage point-cloud registration; clear application-domain false positive with no manipulation policy."
+  },
+  {
+    "paper_id": "semanticscholar:953c91cbbfc226454d4ddb2991aac41b42645304",
+    "relevance": "adjacent",
+    "reason": "Unpaired point-cloud completion could provide geometry under occlusion, but has no relational manipulation or action output."
+  },
+  {
+    "paper_id": "semanticscholar:60c11dae96dff3dda704508029d326a218603a1b",
+    "relevance": "adjacent",
+    "reason": "Generic partial-to-complete point-cloud backbone may aid functional geometry recovery, but does not address manipulation HOW."
+  },
+  {
+    "paper_id": "semanticscholar:0312f2f64d46cea722d15a51bf64cc4a21cc5733",
+    "relevance": "off_topic",
+    "reason": "Structure-aware 3D shape generation from part and symmetry priors; no robotic task, relation, or action execution."
+  },
+  {
+    "paper_id": "semanticscholar:3f8df332fcd51aea0954834095c24c6e892c7a3f",
+    "relevance": "off_topic",
+    "reason": "Title-only human hand-pose estimation record; clearly outside robot manipulation-policy generalization."
+  },
+  {
+    "paper_id": "semanticscholar:d4ac435924eb494803a9335e39f2438b9621de4c",
+    "relevance": "adjacent",
+    "reason": "Category-level object-pose estimator is a relevant perception module, but not a target-reference relation or action correction method."
+  },
+  {
+    "paper_id": "semanticscholar:8a7f25e962c14eb7f2fcb7ace472a1f24c1851d0",
+    "relevance": "adjacent",
+    "reason": "Cross-sensor adaptation for RGB-point-cloud 6D pose is a perception baseline, not transfer of manipulation HOW."
+  },
+  {
+    "paper_id": "semanticscholar:7fe82922dbdc8a3a2c6c4afc574bc0476d770968",
+    "relevance": "off_topic",
+    "reason": "Pose-aligned 3D asset generation and scene reconstruction; no robot policy or manipulation execution."
+  },
+  {
+    "paper_id": "semanticscholar:276f2307543e412400023a69172fc1ecd9ebabbc",
+    "relevance": "off_topic",
+    "reason": "Adversarial attacks on autonomous-driving point-cloud segmentation; unrelated task and domain."
+  },
+  {
+    "paper_id": "semanticscholar:586c3fc72259ec4f4397b67adcc376a5646844ca",
+    "relevance": "off_topic",
+    "reason": "Outdoor LiDAR registration refinement for localization and mapping; no object manipulation relation."
+  },
+  {
+    "paper_id": "semanticscholar:4f2dfed56e1b92052bf09727abd3079a71389ebb",
+    "relevance": "off_topic",
+    "reason": "Point-cloud backdoor defense through reconstruction; security objective is unrelated to manipulation generalization."
+  },
+  {
+    "paper_id": "semanticscholar:6c3c852ebccef3ef8cca9ec760d6a4a27d9e8abd",
+    "relevance": "adjacent",
+    "reason": "High-fidelity completion under occlusion can support geometric observation, but supplies neither relation reasoning nor action correction."
+  },
+  {
+    "paper_id": "openalex:W4414079207",
+    "relevance": "core",
+    "reason": "Adapts a demonstrated manipulation trajectory to novel object configurations using edited 3D point clouds, a close HOW-transfer mechanism."
+  },
+  {
+    "paper_id": "openalex:W4403789165",
+    "relevance": "core",
+    "reason": "Generalizes grasp-and-insert assembly to unseen objects via parameterized primitives and hierarchical phase selection; close to geometry-dependent HOW."
+  },
+  {
+    "paper_id": "openalex:W4412654327",
+    "relevance": "adjacent",
+    "reason": "Generic humanoid loco-manipulation control reacts to environment changes, but does not study target-reference functional pairings."
+  },
+  {
+    "paper_id": "openalex:W4404190818",
+    "relevance": "off_topic",
+    "reason": "Human neuroscience study of predictive representational geometry; cross-domain keyword false positive."
+  },
+  {
+    "paper_id": "openalex:W4409367427",
+    "relevance": "off_topic",
+    "reason": "Text-to-location retrieval in outdoor point clouds; localization rather than robot object manipulation."
+  },
+  {
+    "paper_id": "openalex:W7124843230",
+    "relevance": "adjacent",
+    "reason": "View-invariant 3D diffusion policy is a useful point-cloud-policy baseline, but only addresses camera viewpoint shift."
+  },
+  {
+    "paper_id": "openalex:W4406779522",
+    "relevance": "off_topic",
+    "reason": "Software-vulnerability classification by language models; unrelated field."
+  },
+  {
+    "paper_id": "openalex:W4409365031",
+    "relevance": "adjacent",
+    "reason": "Generic 3D point-cloud action policy and efficiency baseline; no explicit functional relation or phase-structured correction."
+  },
+  {
+    "paper_id": "openalex:W4402731419",
+    "relevance": "off_topic",
+    "reason": "Chemistry education study using augmented reality and molecular geometry; unrelated domain."
+  },
+  {
+    "paper_id": "openalex:W4404350837",
+    "relevance": "core",
+    "reason": "Transfers task constraints through target-relative SE(3) object-pose trajectories that condition low-level actions, directly modeling manipulation HOW."
+  },
+  {
+    "paper_id": "openalex:W4403786340",
+    "relevance": "core",
+    "reason": "Registers object parts to demonstrations and transfers sequences of relative keyframe poses to unseen configurations, a direct geometric HOW baseline."
+  },
+  {
+    "paper_id": "openalex:W4406951686",
+    "relevance": "off_topic",
+    "reason": "Pure review of AI and electromagnetic metamaterials; unrelated field and survey."
+  },
+  {
+    "paper_id": "openalex:W4414050683",
+    "relevance": "adjacent",
+    "reason": "Generic sample-efficient visuomotor policy learning; useful policy baseline but no geometry-conditioned relational adaptation."
+  },
+  {
+    "paper_id": "openalex:W4414050437",
+    "relevance": "adjacent",
+    "reason": "Title indicates a diffusion manipulation policy using VLM-generated code for ambiguous instructions; relevant VLA baseline, no evidenced geometry mechanism."
+  },
+  {
+    "paper_id": "openalex:W4403116255",
+    "relevance": "adjacent",
+    "reason": "Benchmark and 3D language-conditioned policy for novel placements and objects; relevant evaluation baseline, not internal functional-geometry correction."
+  },
+  {
+    "paper_id": "openalex:W7110420710",
+    "relevance": "off_topic",
+    "reason": "Theoretical one-counter MDP strategy synthesis; no embodied manipulation or geometry."
+  },
+  {
+    "paper_id": "openalex:W4402890475",
+    "relevance": "off_topic",
+    "reason": "Pure survey of foundation models across robotics; rubric excludes surveys despite field overlap."
+  },
+  {
+    "paper_id": "openalex:W4403371192",
+    "relevance": "off_topic",
+    "reason": "Scoping review of generative AI for urban digital twins; unrelated domain and survey."
+  },
+  {
+    "paper_id": "openalex:W4414079235",
+    "relevance": "adjacent",
+    "reason": "Language-conditioned VLA and few-shot skill baseline; predicts motion primitives without explicit target-reference functional geometry."
+  },
+  {
+    "paper_id": "openalex:W4404652934",
+    "relevance": "off_topic",
+    "reason": "Systematic review of cybersecurity anomaly detection; cross-domain and survey."
+  },
+  {
+    "paper_id": "openalex:W4405956290",
+    "relevance": "core",
+    "reason": "VLA explicitly reasons over grasp part, placement space, and collision-free path as a sequential affordance chain, close to phase-structured HOW."
+  },
+  {
+    "paper_id": "openalex:W4408847715",
+    "relevance": "off_topic",
+    "reason": "Virtual-machine rescheduling in data centers; cross-domain relational-optimization false positive."
+  },
+  {
+    "paper_id": "openalex:W4403337227",
+    "relevance": "adjacent",
+    "reason": "Foundational action-diffusion visuomotor policy; backbone for action chunks but no relational functional-geometry generalization."
+  },
+  {
+    "paper_id": "openalex:W6979332900",
+    "relevance": "adjacent",
+    "reason": "SO(3)-equivariant manipulation policy improves geometric sample efficiency, but does not adapt skill structure across object pairings."
+  },
+  {
+    "paper_id": "openalex:W4405933855",
+    "relevance": "adjacent",
+    "reason": "Sim-to-real visual adaptation and constrained grasp policy; useful robustness baseline, not functional-relation transfer."
+  },
+  {
+    "paper_id": "openalex:W4413925490",
+    "relevance": "adjacent",
+    "reason": "Semantic point-prior state representation improves new-instance manipulation, but it is a generic policy input rather than phase correction."
+  },
+  {
+    "paper_id": "openalex:W7125603112",
+    "relevance": "core",
+    "reason": "Uses functional geometry similarity to align and synthesize action trajectories for unseen embodiments, a near-neighbor geometric HOW-transfer mechanism."
+  },
+  {
+    "paper_id": "openalex:W4416749600",
+    "relevance": "adjacent",
+    "reason": "Training-free diffusion-policy acceleration; relevant execution backbone but no geometric generalization mechanism."
+  },
+  {
+    "paper_id": "openalex:W4402813010",
+    "relevance": "off_topic",
+    "reason": "Few-shot human action recognition; no robotic manipulation policy."
+  },
+  {
+    "paper_id": "openalex:W4403562353",
+    "relevance": "adjacent",
+    "reason": "Part-level motion prior for articulated objects is useful object-centric dynamics background, but not relation-conditioned action correction."
+  },
+  {
+    "paper_id": "openalex:W4405785334",
+    "relevance": "adjacent",
+    "reason": "Hierarchical action chunks and latent subgoals provide a phase-structured policy backbone, but geometry transfer is not studied."
+  },
+  {
+    "paper_id": "openalex:W4405755225",
+    "relevance": "off_topic",
+    "reason": "Skeleton-based human action recognition; unrelated to robot manipulation."
+  },
+  {
+    "paper_id": "openalex:W7094977485",
+    "relevance": "adjacent",
+    "reason": "Title suggests action-conditioned object representation learning from sequences; potentially relevant object-centric backbone, but no manipulation evidence in abstract."
+  },
+  {
+    "paper_id": "openalex:W4403823838",
+    "relevance": "off_topic",
+    "reason": "Human-object interaction detection and action recognition; no robot control or relational skill transfer."
+  },
+  {
+    "paper_id": "openalex:W4416447778",
+    "relevance": "core",
+    "reason": "Zero-shot insertion for unseen plug-socket geometries uses relative pose to drive a multi-phase coarse-to-fine policy; very close problem setting."
+  },
+  {
+    "paper_id": "openalex:W4405785418",
+    "relevance": "core",
+    "reason": "Learns task-oriented grasping and spatial rearrangement across object-shape variation using implicit geometry and demonstrations; directly relevant."
+  },
+  {
+    "paper_id": "openalex:W7117970886",
+    "relevance": "off_topic",
+    "reason": "Human pose and action understanding data generation; no robotic manipulation."
+  },
+  {
+    "paper_id": "openalex:W4414198610",
+    "relevance": "off_topic",
+    "reason": "Comprehensive VLA review rather than a mechanism paper; pure surveys are excluded by the rubric."
+  },
+  {
+    "paper_id": "openalex:W4409356896",
+    "relevance": "off_topic",
+    "reason": "Survey of privacy and security in distributed cloud computing; unrelated domain."
+  },
+  {
+    "paper_id": "openalex:W4408567138",
+    "relevance": "off_topic",
+    "reason": "Survey of network digital twins for edge-cloud systems; unrelated domain."
+  },
+  {
+    "paper_id": "openalex:W4403601500",
+    "relevance": "off_topic",
+    "reason": "Survey of perceptual video quality assessment; unrelated field and pure survey."
+  },
+  {
+    "paper_id": "openalex:W4415048600",
+    "relevance": "off_topic",
+    "reason": "Survey of deploying LLMs on edge devices; unrelated to robot manipulation geometry."
+  },
+  {
+    "paper_id": "openalex:W4406113259",
+    "relevance": "off_topic",
+    "reason": "Survey of deep learning for fossil-image analysis; unrelated domain and survey."
+  },
+  {
+    "paper_id": "openalex:W4403134377",
+    "relevance": "off_topic",
+    "reason": "Review of wearable sensors and AI for pregnancy monitoring; unrelated domain."
+  },
+  {
+    "paper_id": "openalex:W4409160955",
+    "relevance": "off_topic",
+    "reason": "Pure survey of diffusion policies for manipulation; rubric excludes surveys even when topically broad."
+  }
+]
