@@ -355,3 +355,15 @@ Then read the output and summarize per the rules above.
   "Inputs" section). Run the search immediately on the first turn.
 - **Surface errors verbatim.** If a source fails, report the stderr message
   to the user rather than hiding it or retrying blindly.
+
+## Evidence handoff to research workflows
+
+Persist per-connector query, time window, timestamp, success/error status and hit
+count. Distinguish an empty successful query from rate limiting, timeout or missing
+credentials. Model knowledge is an unverified retrieval lead until an identifier
+and primary source are resolved; do not merge it into verified evidence merely
+because its title looks plausible. Retain failed-source coverage in the handoff.
+In field discovery, surveys are useful coverage maps even when ranked below
+primary studies. In a persistent workflow save the full result set and return
+paths plus a short coverage summary; this overrides the standalone full-list
+presentation rule and avoids repeating the corpus in the parent context.

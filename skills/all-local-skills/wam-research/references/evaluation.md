@@ -74,15 +74,33 @@ Evaluate the world model on:
 
 A model accurate only on the behavior-policy distribution is insufficient evidence for imagination-based policy optimization.
 
-## Claim ladder
+## Claim-specific evidence
 
-Use the strongest claim supported by all lower levels:
+Select required evidence for the actual claim; prediction, policy and transfer
+are not a mandatory monotonic ladder. Better task control can coexist with worse
+pixel reconstruction. Report that tradeoff explicitly.
 
-1. improves predictive metric;
-2. improves action-conditioned or task-state prediction;
-3. improves candidate ranking or planning in model;
-4. improves policy in held-out simulator tasks;
-5. improves robustness under distribution shift;
-6. improves real-robot performance.
+| Claim | Required evidence |
+|---|---|
+| Better prediction | held-out target-specific, horizon-specific prediction evaluation |
+| Better action conditioning | action interventions, independent targets and controls |
+| Better closed-loop control | environment success/return, uncertainty, matched budgets |
+| Gain caused by mechanism M | intervention/ablation of M and confound controls |
+| Better robustness | declared shifts with held-out evaluation |
+| Better real transfer | corresponding real-robot evidence and comparison |
 
-Do not jump levels. State the missing evidence needed for the next level.
+Scope every claim to the tasks, embodiments and budgets actually tested.
+
+## Statistical decision contract
+
+Before a confirmatory run specify estimand, population, independent training unit,
+evaluation unit, pairing keys, task weighting, minimum meaningful effect,
+checkpoint selection, interval method and stopping rule. Episodes nested in one
+trained policy are not independent training replicates. Use paired task/start
+comparisons where possible and an analysis respecting run/task clustering.
+The number of seeds is a resource/design choice, not proof of adequate power.
+
+Distinguish supported, refuted (including ruled-out meaningful benefit), and
+inconclusive. A wide interval is not proof of no effect. Label exploratory changes
+and confirm them separately; do not tune on final held-out outcomes. Budget stops
+may yield an honest incomplete/inconclusive dossier.

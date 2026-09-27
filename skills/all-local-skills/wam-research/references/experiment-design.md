@@ -86,7 +86,7 @@ Stop or revise when:
 
 - the interface or overfit sanity test fails;
 - the model ignores or incorrectly responds to actions;
-- the pilot misses the declared minimum effect;
+- an adequately precise pilot rules out the declared meaningful effect; a wide interval is inconclusive;
 - gains disappear under matched data/compute;
 - imagined improvement has no environment correlation;
 - the policy exploits model errors faster than reliability controls correct them;

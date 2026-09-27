@@ -19,6 +19,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from evidence_contract import (ContractError, check_fingerprints, check_protocol, digest,
+    fingerprints, finite_nonnegative, read_object, validate_completion, validate_experiment)
+
 
 SCHEMA_VERSION = 1
 PHASES = (
@@ -31,7 +35,7 @@ PHASES = (
     "review-improvement",
     "research-synthesis",
 )
-TERMINAL_GATES = {"pass", "warn"}
+TERMINAL_GATES = {"pass"}
 ACCEPTANCE = {"deterministic", "provisional", "independent", "human"}
 JUDGMENT_PHASES = {
     "idea-discovery",
@@ -149,6 +153,11 @@ def load_state(path: Path) -> dict[str, Any]:
     if not isinstance(phases, dict) or tuple(phases.keys()) != PHASES:
         raise StateError("state phase order does not match this skill version")
     state.setdefault("overall_assurance", "none")
+    state.setdefault("jobs", {})
+    state.setdefault("experiments", {})
+    for record in phases.values():
+        record.setdefault("revision", 1)
+        record.setdefault("revisions", [])
     return state
 
 
@@ -161,6 +170,10 @@ def append_history(state: dict[str, Any], event: str, **details: Any) -> None:
 
 def refresh_overall(state: dict[str, Any]) -> None:
     phases = state["phases"]
+    if state.get("usage", {}).get("budget_exceeded"):
+        state["overall_status"] = "blocked"
+        state["overall_assurance"] = "none"
+        return
     if all(
         phases[name]["status"] == "completed" and phases[name]["gate"] in TERMINAL_GATES
         for name in PHASES
@@ -232,6 +245,8 @@ def normalize_artifacts(root: Path, values: list[str]) -> list[str]:
 
 
 def next_action(state: dict[str, Any]) -> dict[str, Any]:
+    if state.get("usage", {}).get("budget_exceeded"):
+        return {"next_phase": None, "reason": "resource ceiling exceeded; reconcile or explicitly revise budget"}
     for name in PHASES:
         record = state["phases"][name]
         if record["status"] == "blocked":
@@ -241,6 +256,142 @@ def next_action(state: dict[str, Any]) -> dict[str, Any]:
         if record["status"] in {"pending", "running"}:
             return {"next_phase": name, "status": record["status"]}
     return {"next_phase": None, "complete": state.get("overall_status") == "completed"}
+
+
+def invalidate_from(state: dict, phase: str, reason: str) -> None:
+    """Conservatively invalidate the linear phase suffix; preserve earlier revisions."""
+    for name in PHASES[PHASES.index(phase):]:
+        record = state["phases"][name]
+        if record["status"] == "pending" and not record.get("artifacts"):
+            continue
+        archived = {k: v for k, v in record.items() if k != "revisions"}
+        record["revisions"].append(archived)
+        record.update(status="pending", gate="pending", acceptance="none",
+                      revision=record["revision"] + 1, completed_at=None,
+                      artifacts=[], artifact_hashes={}, note=reason)
+    state["current_phase"] = None
+    state["overall_assurance"] = "none"
+    append_history(state, "phases-invalidated", phase=phase, reason=reason)
+
+
+def refresh_freshness(root: Path, state: dict) -> bool:
+    invalid = []
+    changed = False
+    for name in PHASES:
+        record = state["phases"][name]
+        if record["status"] != "completed":
+            continue
+        try:
+            check_fingerprints(root, record.get("artifact_hashes"))
+        except ContractError as exc:
+            invalid.append((PHASES.index(name), str(exc)))
+    for exp in state.get("experiments", {}).values():
+        try:
+            check_fingerprints(root, exp["artifact_hashes"])
+            check_fingerprints(root, {exp["manifest"]: exp["manifest_sha256"]})
+            if exp.pop("stale", False):
+                changed = True
+        except ContractError as exc:
+            if not exp.get("stale"):
+                exp["stale"] = True
+                invalid.append((PHASES.index("implementation-experiments"), str(exc)))
+    if invalid:
+        index, reason = min(invalid)
+        invalidate_from(state, PHASES[index], reason)
+        changed = True
+    return changed
+
+
+def check_resources(state: dict, config: dict, extra: dict | None = None) -> None:
+    compute = config.get("compute", {})
+    limits = {"gpu_hours": "max_total_gpu_hours", "paid_cost_usd": "max_paid_cost_usd",
+              "real_robot_trials": "max_real_robot_trials"}
+    reserved = [j for j in state["jobs"].values() if j["status"] == "reserved"]
+    for key, limit_key in limits.items():
+        total = state["usage"][key] + sum(j["reservation"][key] for j in reserved)
+        total += (extra or {}).get(key, 0)
+        limit = finite_nonnegative(compute.get(limit_key, 0), limit_key)
+        if total > limit:
+            raise StateError(f"{key} budget exceeded: committed {total}, limit {limit}")
+    if extra is not None and len(reserved) >= compute.get("max_parallel_jobs", 1):
+        raise StateError("maximum concurrent reserved jobs reached")
+
+
+def command_job(args, root: Path, path: Path, state: dict) -> int:
+    if not RUN_ID_RE.fullmatch(args.job_id):
+        raise StateError("invalid job_id")
+    config = load_json(root / state["config"])
+    amounts = {"gpu_hours": finite_nonnegative(args.gpu_hours, "gpu_hours"),
+               "paid_cost_usd": finite_nonnegative(args.paid_cost_usd, "paid_cost_usd"),
+               "real_robot_trials": finite_nonnegative(args.real_robot_trials, "real_robot_trials")}
+    existing = state["jobs"].get(args.job_id)
+    if args.command == "reserve-job":
+        if existing:
+            if existing["status"] == "reserved" and existing["reservation"] == amounts:
+                print(args.job_id)
+                return 0
+            raise StateError("job_id already used; use a new ID for a retry")
+        if state["phases"]["implementation-experiments"]["status"] != "running":
+            raise StateError("begin implementation-experiments before reserving a job")
+        if config.get("automation", {}).get("mode") != "execute":
+            raise StateError("execution is not enabled")
+        if amounts["real_robot_trials"]:
+            raise StateError("real robot jobs require a separately implemented authorization adapter")
+        if amounts["paid_cost_usd"] and not config["compute"].get("paid_compute_allowed"):
+            raise StateError("paid compute is not authorized in configuration")
+        check_resources(state, config, amounts)
+        protocol = read_object(root, "refine-logs/EXPERIMENT_PROTOCOL.json")
+        check_protocol(root, protocol)
+        state["jobs"][args.job_id] = {"status": "reserved", "reservation": amounts,
+            "protocol_sha256": digest(root / "refine-logs/EXPERIMENT_PROTOCOL.json"),
+            "created_at": utc_now()}
+    else:
+        if not existing:
+            raise StateError("cannot reconcile an unreserved job")
+        if existing["status"] == "settled":
+            if existing["actual"] != amounts or existing["outcome"] != args.outcome:
+                raise StateError("conflicting settlement; do not overwrite actual usage")
+            print(args.job_id)
+            return 0
+        for key, value in amounts.items():
+            state["usage"][key] += value
+        state["usage"]["jobs_completed"] += int(args.outcome == "completed")
+        existing.update(status="settled", actual=amounts, outcome=args.outcome, settled_at=utc_now())
+        try:
+            check_resources(state, config)
+            state["usage"]["budget_exceeded"] = False
+        except StateError:
+            state["usage"]["budget_exceeded"] = True
+    append_history(state, args.command, job_id=args.job_id, amounts=amounts)
+    save_state(root, path, state)
+    print(args.job_id)
+    return 0
+
+
+def command_record_experiment(args, root: Path, path: Path, state: dict) -> int:
+    if state["phases"]["implementation-experiments"]["status"] != "running":
+        raise StateError("experiment phase must be running")
+    item = read_object(root, args.manifest)
+    hashes = validate_experiment(root, state, item)
+    job = state["jobs"][item["job_id"]]
+    if job["outcome"] != item["execution_status"]:
+        raise StateError("manifest status differs from job outcome")
+    if job["protocol_sha256"] != digest(root / "refine-logs/EXPERIMENT_PROTOCOL.json"):
+        raise StateError("protocol changed since job reservation")
+    manifest = normalize_artifacts(root, [args.manifest])[0]
+    payload = {**item, "manifest": manifest, "manifest_sha256": digest(root / manifest),
+               "artifact_hashes": hashes}
+    existing = state["experiments"].get(item["experiment_id"])
+    if existing and existing != payload:
+        raise StateError("experiment ID is immutable; register a new revision ID")
+    if any(e["job_id"] == item["job_id"] and k != item["experiment_id"]
+           for k, e in state["experiments"].items()):
+        raise StateError("job already bound to a different experiment")
+    state["experiments"][item["experiment_id"]] = payload
+    append_history(state, "experiment-recorded", experiment_id=item["experiment_id"])
+    save_state(root, path, state)
+    print(item["experiment_id"])
+    return 0
 
 
 def command_init(args: argparse.Namespace, root: Path) -> int:
@@ -284,6 +435,8 @@ def command_init(args: argparse.Namespace, root: Path) -> int:
                 "completed_at": None,
                 "artifacts": [],
                 "note": "",
+                "revision": 1,
+                "revisions": [],
             }
             for name in PHASES
         },
@@ -295,6 +448,8 @@ def command_init(args: argparse.Namespace, root: Path) -> int:
             "budget_exceeded": False,
         },
         "history": [{"time": now, "event": "run-initialized", "direction": args.direction}],
+        "jobs": {},
+        "experiments": {},
     }
     with state_lock(path):
         save_state(root, path, state)
@@ -354,6 +509,11 @@ def command_update_direction(
 
 def command_begin(args: argparse.Namespace, root: Path, path: Path, state: dict[str, Any]) -> int:
     phase = ensure_phase(args.phase)
+    config = load_json(root / state["config"])
+    check_resources(state, config)
+    if phase == "idea-discovery" and config.get("research", {}).get("exploration_level") == "field":
+        if not config["research"].get("selected_macro_direction"):
+            raise StateError("awaiting human macro-direction selection")
     ensure_prior_phases_complete(state, phase)
     running = [name for name in PHASES if state["phases"][name]["status"] == "running" and name != phase]
     if running:
@@ -388,22 +548,33 @@ def command_complete(args: argparse.Namespace, root: Path, path: Path, state: di
         raise StateError(f"invalid completion gate: {args.gate}")
     if args.acceptance not in ACCEPTANCE:
         raise StateError(f"invalid acceptance source: {args.acceptance}")
+    if phase in {"evidence-audit", "review-improvement"} and args.command != "adjudicate":
+        raise StateError("verdict-bearing phases require adjudicate")
+    if args.acceptance == "independent" and phase in {"evidence-audit", "review-improvement"}:
+        report_path = ("refine-logs/EXPERIMENT_AUDIT.json" if phase == "evidence-audit"
+                       else "review-stage/REVIEW_STATE.json")
+        provenance = read_object(root, report_path)
+        reviewer_family = provenance.get("reviewer_model_family")
+        executor_family = provenance.get("executor_model_family")
+        if not reviewer_family or not executor_family or reviewer_family == executor_family:
+            raise StateError("independent review requires recorded, distinct model families")
+    config = load_json(root / state["config"])
+    check_resources(state, config)
+    if args.gate == "warn":
+        raise StateError("warn is not a completion gate; record limitations and meet phase requirements")
     if phase in JUDGMENT_PHASES and args.acceptance == "deterministic":
         raise StateError(f"{phase} contains scientific judgment and cannot be deterministically accepted")
-    if phase == "research-synthesis" and args.gate == "warn":
-        config = load_json(root / state["config"])
-        acceptance_config = config.get("acceptance", {})
-        if acceptance_config.get("integrity_warn_blocks_completion") is True:
-            raise StateError("research synthesis cannot complete with warn while integrity_warn_blocks_completion=true")
-    if not args.artifact:
-        raise StateError("at least one non-empty project artifact is required for completion")
-    artifacts = normalize_artifacts(root, args.artifact)
+    required = validate_completion(root, state, phase, config)
+    if any(e.get("stale") for e in state["experiments"].values()):
+        raise StateError("registered evidence changed; restore immutable artifacts before completion")
+    artifacts = normalize_artifacts(root, required + args.artifact)
     record.update(
         status="completed",
         gate=args.gate,
         acceptance=args.acceptance,
         completed_at=utc_now(),
         artifacts=artifacts,
+        artifact_hashes=fingerprints(root, artifacts),
         note=args.note or "",
     )
     state["current_phase"] = None
@@ -460,30 +631,7 @@ def command_resume(args: argparse.Namespace, root: Path, path: Path, state: dict
 
 
 def command_record_usage(args: argparse.Namespace, root: Path, path: Path, state: dict[str, Any]) -> int:
-    increments = {
-        "gpu_hours": args.gpu_hours,
-        "paid_cost_usd": args.paid_cost_usd,
-        "real_robot_trials": args.real_robot_trials,
-        "jobs_completed": args.jobs_completed,
-    }
-    if any(value < 0 for value in increments.values()):
-        raise StateError("usage increments cannot be negative")
-    usage = state["usage"]
-    for key, value in increments.items():
-        usage[key] += value
-    config = load_json(root / state["config"])
-    compute = config.get("compute", {})
-    limits = {
-        "gpu_hours": float(compute.get("max_total_gpu_hours", 0.0)),
-        "paid_cost_usd": float(compute.get("max_paid_cost_usd", 0.0)),
-        "real_robot_trials": int(compute.get("max_real_robot_trials", 0)),
-    }
-    exceeded = [key for key, limit in limits.items() if usage[key] > limit]
-    usage["budget_exceeded"] = bool(exceeded)
-    append_history(state, "usage-recorded", increments=increments, exceeded=exceeded, note=args.note or "")
-    save_state(root, path, state)
-    print(json.dumps(usage, ensure_ascii=False))
-    return 0
+    raise StateError("record-usage retired: use reserve-job/reconcile-job for idempotent accounting")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -521,6 +669,26 @@ def build_parser() -> argparse.ArgumentParser:
     complete.add_argument("--artifact", action="append", default=[])
     complete.add_argument("--note", default="")
 
+    adjudicate = sub.add_parser("adjudicate", help="validate an integrity/claim or review report")
+    adjudicate.add_argument("phase", choices=("evidence-audit", "review-improvement"))
+    adjudicate.add_argument("--gate", choices=("pass",), default="pass")
+    adjudicate.add_argument("--acceptance", choices=("provisional", "independent", "human"), required=True)
+    adjudicate.add_argument("--artifact", action="append", default=[])
+    adjudicate.add_argument("--note", default="")
+    reopen = sub.add_parser("reopen", help="archive and invalidate a phase and its downstream phases")
+    reopen.add_argument("phase", choices=PHASES)
+    reopen.add_argument("--reason", required=True)
+    experiment = sub.add_parser("record-experiment")
+    experiment.add_argument("--manifest", required=True)
+    for operation in ("reserve-job", "reconcile-job"):
+        job = sub.add_parser(operation)
+        job.add_argument("job_id")
+        job.add_argument("--gpu-hours", type=float, required=True)
+        job.add_argument("--paid-cost-usd", type=float, default=0)
+        job.add_argument("--real-robot-trials", type=int, default=0)
+        if operation == "reconcile-job":
+            job.add_argument("--outcome", choices=("completed", "failed", "cancelled"), required=True)
+
     for name in ("block", "fail"):
         command = sub.add_parser(name, help=f"mark a phase {name}ed")
         command.add_argument("phase")
@@ -530,7 +698,7 @@ def build_parser() -> argparse.ArgumentParser:
     resume.add_argument("phase")
     resume.add_argument("--note", default="")
 
-    usage = sub.add_parser("record-usage", help="add actual resource usage")
+    usage = sub.add_parser("record-usage", help="retired; use reserve-job/reconcile-job")
     usage.add_argument("--gpu-hours", type=float, default=0.0)
     usage.add_argument("--paid-cost-usd", type=float, default=0.0)
     usage.add_argument("--real-robot-trials", type=int, default=0)
@@ -549,6 +717,18 @@ def main() -> int:
         path = resolve_state_path(root, args.state)
         with state_lock(path):
             state = load_state(path)
+            if refresh_freshness(root, state):
+                save_state(root, path, state)
+            if args.command == "reopen":
+                if any(j["status"] == "reserved" for j in state["jobs"].values()):
+                    raise StateError("reconcile active jobs before reopening phases")
+                invalidate_from(state, args.phase, args.reason)
+                save_state(root, path, state)
+                return 0
+            if args.command in {"reserve-job", "reconcile-job"}:
+                return command_job(args, root, path, state)
+            if args.command == "record-experiment":
+                return command_record_experiment(args, root, path, state)
             if args.command == "status":
                 return command_status(args, root, path, state)
             if args.command == "next":
@@ -558,7 +738,7 @@ def main() -> int:
                 return command_update_direction(args, root, path, state)
             if args.command == "begin":
                 return command_begin(args, root, path, state)
-            if args.command == "complete":
+            if args.command in {"complete", "adjudicate"}:
                 return command_complete(args, root, path, state)
             if args.command == "block":
                 return command_interrupt(args, root, path, state, "blocked")
@@ -569,7 +749,7 @@ def main() -> int:
             if args.command == "record-usage":
                 return command_record_usage(args, root, path, state)
         raise StateError(f"unsupported command: {args.command}")
-    except StateError as exc:
+    except (StateError, ContractError, OSError, KeyError, TypeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 

@@ -74,8 +74,7 @@ run.
   comparisons.
 - `require_model_policy_environment_evidence`: require all three evidence levels
   when the claim spans them; mark a level not applicable only with justification.
-- `integrity_warn_blocks_completion`: require integrity `pass`; when false, a
-  `warn` may advance only with an explicit limitation.
+- `integrity_warn_blocks_completion`: legacy compatibility field; structured claim adjudication always requires integrity `pass`. Warnings stay visible as limitations.
 - `same_family_review_is_provisional`: keep true unless a genuinely independent
   reviewer backend is configured.
 
@@ -89,3 +88,19 @@ robot execution, paper writing, or a larger resource ceiling.
 When no phase has started, the Agent may correct an over-specified active
 direction with `research_state.py update-direction`. Once work has begun, record
 a deliberate pivot or initialize a new run instead of rewriting history.
+
+## Skill resolution and ideation
+
+`skill_roots` lists explicit installation directories, resolved relative to the
+project (absolute user paths are also allowed). Default order is `.agents/skills`,
+`skills/all-local-skills`, then `skills`. Archive backups are never auto-installed.
+`ideation.provider` selects `idea-spark` or `idea-discovery-robot`. Pass the actual
+compute configuration into that provider; standalone defaults cannot expand it.
+Stage-specific preflight checks only the current phase's required capabilities.
+A missing optional wiki/monitor adapter can use local artifacts with a recorded
+limitation. A missing required reviewer blocks review, not literature discovery.
+
+Resource reservations are maximum GPU-count ? walltime allocations. The ledger
+does not launch or kill jobs: the runner must enforce the timeout. Paid-compute
+configuration records existing user authorization; it is not permission by itself.
+Real-robot execution still requires a separate explicit authorization adapter.

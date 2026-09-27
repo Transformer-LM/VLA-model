@@ -97,16 +97,16 @@ Score: <1-10>                 # routing heuristic, not acceptance
 Verdict: ready | almost | not ready
 Assurance: provisional | independent
 Integrity: pass | warn | fail | blocked
-Claim: yes | partial | no | unadjudicated
+Claim: supported | partial | refuted | inconclusive | unadjudicated
 
 Critical weaknesses:
-1. <weakness> 鈥?evidence path 鈥?minimum discriminating fix
+1. <weakness> — evidence path — minimum discriminating fix
 
 Unsupported or overbroad claims:
-- <claim> 鈥?why unsupported 鈥?defensible narrower wording
+- <claim> — why unsupported — defensible narrower wording
 
 Required next evidence:
-- <experiment/analysis> 鈥?expected decision change 鈥?estimated cost
+- <experiment/analysis> — expected decision change — estimated cost
 
 WAM failure-mode audit:
 - <each applicable failure mode and finding>
@@ -115,3 +115,7 @@ WAM failure-mode audit:
 A positive score cannot override an integrity failure, missing raw evidence, or
 an unadjudicated claim.
 
+
+Persist structured verdicts with current run/revision and input hashes as specified
+in [execution-contracts.md](execution-contracts.md). Do not reuse earlier scores
+as evidence. Diagnose implementation errors separately from refuted hypotheses.

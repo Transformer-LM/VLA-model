@@ -80,5 +80,14 @@
     "openpi",
     "openvla-oft",
     "cosmos-policy"
-  ]
+  ],
+  "skill_roots": [
+    ".agents/skills",
+    "skills/all-local-skills",
+    "skills"
+  ],
+  "ideation": {
+    "provider": "idea-spark",
+    "resource_source": "AUTORESEARCH_CONFIG.json"
+  }
 }

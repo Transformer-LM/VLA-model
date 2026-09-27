@@ -46,8 +46,7 @@ describes who or what established the gate.
 
 Rules:
 
-- A phase advances only when `status=completed` and `gate` is `pass` or an
-  explicitly permitted `warn`.
+- A phase advances only when `status=completed` and `gate=pass`; warnings remain report limitations.
 - Same-family reviewer output uses `acceptance=provisional`.
 - File existence, job exit status, schema checks, and evidence-path verification
   may use `deterministic`.
@@ -133,7 +132,7 @@ Rules:
 - Actions: statistical analysis, integrity audit, result-to-claim adjudication.
 - Required artifacts: analysis report, experiment audit, and claim verdict.
 - Gate: no phantom evidence or integrity failure; every reported number resolves
-  to raw evidence; the working claim is `yes` or honestly narrowed `partial`.
+  to raw evidence; each claim is honestly adjudicated as supported, partial, refuted, or inconclusive.
 - A `no` verdict is a valid research result but does not pass the positive claim
   gate. Route to a structural pivot or synthesize it explicitly as a negative
   result when the research question is itself answered by the null result.
@@ -151,7 +150,7 @@ Rules:
 ### research-synthesis
 
 - Inputs: accepted or provisional research evidence.
-- Actions: targeted ablations and final dossier.
+- Actions: verify audited ablations and write the final dossier; new runs reopen execution.
 - Required artifacts: `research-stage/RESEARCH_DOSSIER.md` and
   `AUTORESEARCH_STATUS.md`.
 - Gate: every supported claim links to evidence; unsupported claims and negative
@@ -182,8 +181,22 @@ make a later summary cleaner.
 - Do not resume `blocked` until its recorded external condition changed.
 - A retry must cite new evidence or a concrete change. Three equivalent attempts
   are the maximum.
-- Two consecutive no-signal iterations require a structural pivot: change the
+- Two adequately informative negative iterations may require a structural pivot: change the
   objective, data, representation, benchmark, world-model role, or policy/world-
   model coupling. Hyperparameter-only changes do not count.
 - Re-run novelty after an idea pivot and re-run integrity/claim gates after code
   or evidence changes.
+
+## Executable completion contract
+
+Read [execution-contracts.md](execution-contracts.md) for required structured
+artifacts, exact commands and migration. In addition to the paths above, idea
+selection requires `idea-stage/NOVELTY_REPORT.json`; method planning requires
+`refine-logs/EXPERIMENT_PROTOCOL.json`. Evidence-audit requires
+`refine-logs/ANALYSIS_REPORT.md`, `refine-logs/EXPERIMENT_AUDIT.json`, and
+`refine-logs/CLAIM_VERDICT.json`. Review requires `review-stage/REVIEW_STATE.json`.
+
+The state helper archives and invalidates downstream revisions on changed file
+hashes. A changed evaluator creates a new protocol/run. Verdict-bearing phases
+use `adjudicate`. Refuted or inconclusive claims may complete an honest dossier;
+this never promotes them into supported claims. Raw evidence remains immutable.

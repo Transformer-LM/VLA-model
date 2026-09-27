@@ -32,6 +32,9 @@ running or resuming the pipeline. Read
 before the evidence audit and review phases. Read
 [references/configuration.md](references/configuration.md) only when creating or
 changing configuration.
+Read [references/execution-contracts.md](references/execution-contracts.md) before
+experiments, adjudication, or resuming an existing run. It defines the executable
+artifact, resource, revision, and experiment-manifest contracts.
 
 ## Broad-field discovery mode
 
@@ -80,23 +83,31 @@ In this mode:
    the reason into state and stop.
 5. If an active run exists, run `scripts/research_state.py --root <project>
    status --json`, inspect its artifacts, and resume the first nonterminal
-   phase. Do not redo a phase whose gate already passed.
+   phase. `status` invalidates stale downstream gates; reuse unchanged verified
+   artifacts and never automatically rerun old GPU jobs during migration.
 
 Use the state helper before and after every phase:
 
 ```text
 research_state.py --root <project> begin <phase>
 research_state.py --root <project> complete <phase> --gate pass \
-  --acceptance deterministic --artifact <path>
+  --acceptance provisional --artifact <path>
 ```
 
 On a genuine external blocker, use `block`; on a recoverable execution error,
 use `fail`. Use `resume <phase>` only after the recorded condition changed.
+For completed work needing revision, use `reopen <phase> --reason <reason>`.
+Use `adjudicate` instead of `complete` for evidence-audit and review-improvement.
+Artifact checks are deterministic; scientific assessment remains separately labeled.
 
 ## Execute the phases
 
-Before executing a named dependency, read its complete
-`.agents/skills/<name>/SKILL.md`, announce why it is being used, and follow it.
+Before each phase, run `validate_project.py --stage <phase> --json`. Resolve
+dependencies from configured `skill_roots`, read the selected `SKILL.md`, and
+announce why it is being used. Missing future-stage dependencies do not block
+the current stage. `research-lit`, `research-wiki`, queues and monitoring are
+optional adapters: if unavailable, preserve the same evidence locally and record
+the limitation. Missing required reviewers block the relevant review stage.
 Do not launch two orchestrators for the same phase.
 
 ### 1. Contract
@@ -134,9 +145,14 @@ Do not launch two orchestrators for the same phase.
 
 - In broad-field discovery mode, require a persisted selected macro direction;
   never infer one from the ranking in `DIRECTION_LANDSCAPE.md`.
-- Run `idea-discovery-robot` with the selected direction, applicable route card,
+- Run the configured `ideation.provider` (`idea-spark` or `idea-discovery-robot`)
+  with the selected direction, applicable route card,
   evidence map, simulation-first constraint, and only those embodiment or
   benchmark choices justified by the selected direction.
+- Pass the project's pilot and total budget explicitly; never inherit an ideation
+  skill's larger factory compute allowance. Save `idea-stage/NOVELTY_REPORT.json`
+  with search_status, novelty_status, verified_prior_work and a concrete delta.
+  Unresolved search coverage and invalid idea cards cannot be promoted to experiments.
 - Reclassify every shortlisted idea with `wam-research` and persist the result in
   `idea-stage/WAM_ROUTE_CARDS.md`.
 - Run `novelty-check`; use `scoop-check` for the final concrete novelty claim.
@@ -155,6 +171,9 @@ Do not launch two orchestrators for the same phase.
 - Ensure the plan contains model-, policy-, and environment-level endpoints;
   matched data/compute/interaction budgets; negative controls; oracle bounds
   where available; failure criteria; seeds; uncertainty; and staged run order.
+- Bind evidence requirements to the actual claim; mark non-applicable endpoints
+  with a reason. Save `refine-logs/EXPERIMENT_PROTOCOL.json` with protected evaluator
+  hashes, editable scope, selection and statistical rules before the first run.
 - Write `refine-logs/PREFLIGHT_REPORT.md` identifying the chosen framework only
   after the evidence contract is fixed. Use `openpi`, `openvla-oft`, or
   `cosmos-policy` only when its assumptions match the selected route.
@@ -171,7 +190,14 @@ Do not launch two orchestrators for the same phase.
   local configs, stdout/stderr, checkpoints, and raw metric files.
 - Never promote a sanity run, two-scene pilot, imagined rollout, or incomplete
   job to a main result.
-- Account usage with `research_state.py record-usage` after every completed job.
+- Reserve each job's maximum GPU-hours before dispatch, enforce a runner/scheduler
+  timeout, reconcile actual usage for every outcome, and register an immutable
+  experiment manifest with parent/hypothesis IDs. Use `reserve-job`,
+  `reconcile-job`, and `record-experiment` from the executable contracts.
+- Run the required mechanism controls and ablations before the final evidence audit.
+- Use `diagnose_run.py` for execution deficiencies. For robot behavior, inspect
+  videos alongside state/action logs; visual hypotheses never replace environment
+  success metrics. Retrieve scoped lessons before choosing the next experiment.
 
 ### 6. Evidence audit and claim gate
 
@@ -183,6 +209,8 @@ Do not launch two orchestrators for the same phase.
 - For `partial`, narrow the claim and record the missing evidence. For `no`,
   pivot or preserve the negative finding; do not polish it into a positive
   result.
+- Preserve `inconclusive` when precision is insufficient. Write structured audit
+  and claim JSON with current revision and input hashes, then use `adjudicate`.
 
 ### 7. Review and improvement
 
@@ -199,8 +227,9 @@ Do not launch two orchestrators for the same phase.
 
 ### 8. Synthesis
 
-- Run `ablation-planner` when the claim is `yes` or defensible `partial`, then
-  execute only the ablations required by the evidence contract and budget.
+- Check that required ablations already passed the evidence audit. If additional
+  experiments are needed, reopen implementation-experiments and refresh downstream
+  gates before synthesis. A negative or inconclusive dossier may complete honestly.
 - Write `research-stage/RESEARCH_DOSSIER.md` containing the route card, literature
   map, chosen and rejected ideas, hypothesis ledger, exact method, reproducible
   run manifest, raw-result pointers, statistics, integrity verdict, supported
@@ -215,7 +244,9 @@ Do not launch two orchestrators for the same phase.
 
 - Retry the same implementation failure at most three times and only when the
   next attempt changes something justified by logs.
-- After two no-signal idea or experiment iterations, change a structural choice
+- Before treating no signal as evidence against a mechanism, distinguish execution
+  failure, insufficient precision, and a genuinely discriminating negative result.
+  After two adequately informative negative iterations, change a structural choice
   such as objective, data, representation, benchmark, or control usage鈥攏ot just
   a learning rate.
 - Stop on exhausted budget, unresolved integrity failure, missing authority,

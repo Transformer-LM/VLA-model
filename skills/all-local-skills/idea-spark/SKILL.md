@@ -10,7 +10,7 @@ description: >-
 
 # Idea Spark Skill
 
-Convert an under-specified research direction into ONE reviewer-defensible Oral-level research proposal — grounded in 1947 ICLR/ICML/NeurIPS papers (2021-2025) — via a 5-phase workflow: retrieve recent literature, diagnose the bottleneck, select + generate a candidate using corpus-derived ideation pattern cards, run it through a quality gauntlet, expand into an idea card.
+Convert an under-specified research direction into ONE evidence-grounded, resource-feasible research proposal — grounded in 1947 ICLR/ICML/NeurIPS papers (2021-2025) — via a 5-phase workflow: retrieve recent literature, diagnose the bottleneck, select + generate a candidate using corpus-derived ideation pattern cards, run it through a quality gauntlet, expand into an idea card.
 
 This file is the operational runbook. Design rationale (the 7 design principles, why each contract is shaped this way, removed-check history) lives in [references/design-notes.md](references/design-notes.md) — read it only when modifying or evaluating the skill, never needed to run it. When MODIFYING the skill, also replay the cross-shape regression set in [references/regression-directions.md](references/regression-directions.md) (deterministic subset: `python3 "$SKILL_DIR/scripts/regression_check.py" <run_dir>`; routing/merger branch fixtures — including every guard/retry branch that real runs rarely exercise: `python3 "$SKILL_DIR/scripts/selftest_routing.py"`; unit fixtures for the helpers every phase sits on — the multi-query round-robin and the tolerant LLM-JSON loader: `python3 "$SKILL_DIR/scripts/selftest_units.py"`). First-time installation lives in [references/setup.md](references/setup.md).
 
@@ -25,6 +25,23 @@ This file is the operational runbook. Design rationale (the 7 design principles,
 - Code review, debugging, refactoring. Summarizing one paper. Cross-decade survey writing.
 - Free-association brainstorming with no research context. Engineering integration tasks ("ship this feature in our system").
 - Pure benchmark / dataset construction work — the 15-pattern vocabulary handles benchmark *audit* (controlled_diagnostic_design) but not benchmark *construction*.
+
+## Integration with an active research workflow
+
+When called by embodied-autoresearch, read its AUTORESEARCH_CONFIG.json and pass
+pilot and total resource limits explicitly into intake.compute before candidate
+generation. The project resource contract overrides standalone factory estimates.
+If resources are unknown, mark feasibility unresolved; do not assume an 80GB GPU
+campaign. Report pilot cost and full-validation cost separately in GPU-hours and
+state assumed GPU type. Do not change the parent workflow's selected direction.
+
+Export a candidate with candidate_id, hypothesis, mechanism, nearest_work,
+falsification_test, pilot_budget, full_validation_budget, validation_status
+(valid/incomplete/invalid), and execution_eligible. If a hard validator remains
+failed, a rendered card may be returned for inspection but must be marked invalid
+and execution_eligible=false. Persist the parent IDEA_REPORT and route-card outputs;
+let scoop-check own the final NOVELTY_REPORT.json. Do not launch a second parent
+orchestrator or automatically spend compute from an ideation feasibility estimate.
 
 ## Setup (first use only)
 

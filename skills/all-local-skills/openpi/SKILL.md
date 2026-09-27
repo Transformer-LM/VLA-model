@@ -479,3 +479,18 @@ Avoid stacking cluster Python modules when using uv-managed environments. Typica
 - OpenPI client package: https://github.com/Physical-Intelligence/openpi/tree/main/packages/openpi-client
 - pi0 paper: https://www.physicalintelligence.company/blog/pi0
 - LeRobot dataset format: https://huggingface.co/docs/lerobot
+
+## Embodied research handoff
+
+When invoked by embodied-autoresearch, read its frozen experiment protocol and
+use its experiment_id/job_id. Record the actual framework commit, environment and
+dataset versions, checkpoint identifier/hash, normalization statistics, observation
+and action schemas, camera order, action horizon and control frequency where
+applicable. Run interface sanity checks before scaling; preserve the protocol's
+evaluator, splits, success definition and initial states.
+
+Return config, raw log, metrics JSON, source snapshot and optional checkpoint/video
+paths for the immutable experiment manifest. W&B is a tracking backend: keep the
+local raw evidence and use exact artifact versions, not mutable latest aliases,
+for audited comparisons. Reserve resources before dispatch and reconcile failed
+jobs too. No score, generated summary, or successful upload proves a hypothesis.

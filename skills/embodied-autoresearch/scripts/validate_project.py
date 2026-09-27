@@ -15,25 +15,31 @@ from typing import Any
 DISCOVERY_SKILLS = (
     "wam-research",
     "paper-search",
-    "research-lit",
-    "research-wiki",
-    "idea-discovery-robot",
-    "novelty-check",
-    "scoop-check",
-    "research-refine-pipeline",
 )
-EXPERIMENT_SKILLS = DISCOVERY_SKILLS + (
+EXPERIMENT_SKILLS = (
     "experiment-bridge",
     "run-experiment",
-    "experiment-queue",
-    "monitor-experiment",
-    "training-check",
-    "analyze-results",
-    "experiment-audit",
-    "result-to-claim",
-    "auto-review-loop",
-    "ablation-planner",
 )
+PHASE_SKILLS = {
+    "contract": ("wam-research",),
+    "evidence-map": ("paper-search",),
+    "idea-discovery": ("wam-research", "scoop-check"),
+    "method-plan": ("research-refine-pipeline",),
+    "implementation-experiments": EXPERIMENT_SKILLS,
+    "evidence-audit": ("analyze-results", "experiment-audit", "result-to-claim"),
+    "review-improvement": ("auto-review-loop",),
+    "research-synthesis": (),
+}
+
+
+def resolve_skill(root: Path, name: str, config: dict) -> Path | None:
+    # Explicit project installation roots take precedence; no archive discovery.
+    roots = config.get("skill_roots", [".agents/skills", "skills/all-local-skills", "skills"])
+    for value in roots:
+        candidate = (root / value / name / "SKILL.md").resolve()
+        if candidate.is_file():
+            return candidate
+    return None
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -95,7 +101,7 @@ def local_gpu_status() -> tuple[bool, str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", default=".")
-    parser.add_argument("--stage", choices=("discovery", "experiments"), default="discovery")
+    parser.add_argument("--stage", choices=("discovery", "experiments", *PHASE_SKILLS), default="discovery")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
@@ -177,15 +183,22 @@ def main() -> int:
         if not isinstance(acceptance.get("minimum_main_seeds"), int) or acceptance.get("minimum_main_seeds", 0) < 1:
             blockers.append("acceptance.minimum_main_seeds must be a positive integer")
 
-        required_skills = EXPERIMENT_SKILLS if args.stage == "experiments" else DISCOVERY_SKILLS
+        required_skills = list(PHASE_SKILLS.get(args.stage, EXPERIMENT_SKILLS if args.stage == "experiments" else DISCOVERY_SKILLS))
+        if args.stage == "idea-discovery":
+            provider = config.get("ideation", {}).get("provider", "idea-discovery-robot")
+            if provider not in {"idea-spark", "idea-discovery-robot"}:
+                blockers.append("unsupported ideation.provider")
+            else:
+                required_skills.append(provider)
         missing_skills = [
-            name for name in required_skills if not (root / ".agents" / "skills" / name / "SKILL.md").is_file()
+            name for name in required_skills if resolve_skill(root, name, config) is None
         ]
-        checks.append({"name": "required_skills", "ok": not missing_skills, "missing": missing_skills})
+        checks.append({"name": "required_skills", "ok": not missing_skills, "missing": missing_skills,
+                       "resolved": {name: str(resolve_skill(root, name, config)) for name in required_skills if name not in missing_skills}})
         if missing_skills:
             blockers.append(f"missing required skills: {', '.join(missing_skills)}")
 
-        if args.stage == "experiments":
+        if args.stage in {"experiments", "implementation-experiments"}:
             if exploration_level == "field" and not selected_macro_direction:
                 blockers.append(
                     "select and persist research.selected_macro_direction before experiments"
@@ -243,10 +256,10 @@ def main() -> int:
     environment = {
         name: shutil.which(name) for name in ("codex", "python", "git", "ssh", "nvidia-smi")
     }
+    # An already-running host needs no second CLI; this script proves Python exists.
     if not environment["codex"]:
-        blockers.append("Codex CLI is not available")
-    if not environment["python"]:
-        blockers.append("Python is not available")
+        warnings.append("Codex CLI unavailable; external unattended supervisor cannot start")
+    environment["active_python"] = sys.executable
 
     report = {
         "stage": args.stage,

@@ -138,8 +138,12 @@ When persistence is requested, use the same headings in project Markdown files a
 - Use `weights-and-biases` for run lineage and matched comparisons.
 - Use Isaac Lab skills only when Isaac Lab is part of the chosen experimental environment.
 
-Do not launch two research orchestrators for the same stage. Keep ARIS as the workflow owner and use this skill as the WAM domain authority.
+Do not launch two research orchestrators for the same stage. The active top-level workflow owns state and resources; this skill supplies WAM domain decisions without launching another orchestrator.
 
 ## Sources and framework routing
 
 Read [references/sources.md](references/sources.md) before recommending a current implementation. Verify mutable capabilities against primary repositories or official documentation at task time.
+
+## Failure diagnosis and experiment feedback
+
+Read [references/failure-diagnosis.md](references/failure-diagnosis.md) when interpreting failed training or rollouts. Return expected outcome, observed evidence, ruled-out explanations, remaining uncertainty, and the next discriminating experiment. Preserve inconclusive outcomes. Select required evidence per claim using the evaluation reference; justify non-applicable endpoints.
