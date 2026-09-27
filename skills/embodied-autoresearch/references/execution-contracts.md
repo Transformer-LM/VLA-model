@@ -115,7 +115,15 @@ Write `refine-logs/ANALYSIS_REPORT.md`, `EXPERIMENT_AUDIT.json`, and
 `revision` from state, and `input_hashes` mapping actual project files to SHA256.
 The integrity report requires `integrity: "pass"` and binds every registered experiment
 manifest and artifact, including failed runs. The verdict binds the current integrity
-report and each metric source. Example claim entry:
+report and each metric source.
+
+When the audit comes from ARIS, preserve its unmodified report, set `aris_source`,
+and follow [aris-integration.md](aris-integration.md). The checker verifies the
+upstream verdict, original evidence coverage, hashes and model-family mapping.
+Independent acceptance requires distinct recorded model families in both the
+integrity audit and the scientific claim verdict.
+
+Example claim entry:
 
 ```json
 {

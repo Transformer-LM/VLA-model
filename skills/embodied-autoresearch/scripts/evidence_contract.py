@@ -101,6 +101,35 @@ def check_report(root: Path, state: dict, phase: str, report: dict) -> None:
     check_fingerprints(root, report.get("input_hashes"))
 
 
+def check_aris_audit(root: Path, audit: dict, required_inputs: set[str]) -> None:
+    """Check a declared ARIS audit handoff against its unmodified source report."""
+    source = audit.get("aris_source")
+    if source is None:
+        return  # Native reviewers use the native report contract.
+    original = read_object(root, source)
+    if source not in audit["input_hashes"]:
+        raise ContractError("ARIS source report must be bound by input_hashes")
+    if (original.get("audit_skill") != "experiment-audit" or
+            original.get("verdict") != "PASS" or original.get("integrity_status") != "pass"):
+        raise ContractError("ARIS audit must pass; do not upgrade WARN, FAIL or missing verdicts")
+    hashes = original.get("audited_input_hashes")
+    if not isinstance(hashes, dict) or not hashes:
+        raise ContractError("ARIS audit needs audited_input_hashes")
+    normalized = {}
+    for path, value in hashes.items():
+        if not isinstance(value, str):
+            raise ContractError("ARIS input hash must be a string")
+        relative = project_file(root, path).relative_to(root.resolve()).as_posix()
+        normalized[relative] = value.removeprefix("sha256:")
+    check_fingerprints(root, normalized)
+    if not required_inputs.issubset(normalized):
+        raise ContractError("ARIS reviewer did not bind all registered experimental evidence")
+    for native, upstream in (("executor_model_family", "executor_family"),
+                             ("reviewer_model_family", "reviewer_family")):
+        if not original.get(upstream) or audit.get(native) != original[upstream]:
+            raise ContractError("ARIS reviewer provenance must match the source report")
+
+
 def check_claim_metrics(root: Path, claims: list) -> None:
     """Resolve metrics by JSON key path, never by finding the same number elsewhere."""
     if not isinstance(claims, list) or not claims:
@@ -178,6 +207,7 @@ def validate_completion(root: Path, state: dict, phase: str, config: dict) -> li
         required_inputs |= {p for e in state["experiments"].values() for p in e["artifact_hashes"]}
         if not required_inputs.issubset(audit["input_hashes"]):
             raise ContractError("audit must bind all registered manifests and raw evidence")
+        check_aris_audit(root, audit, required_inputs)
         if paths[1] not in verdict["input_hashes"]:
             raise ContractError("claim verdict must bind the current integrity report")
         check_claim_metrics(root, verdict.get("claims"))

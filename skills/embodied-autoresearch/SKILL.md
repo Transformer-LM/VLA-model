@@ -35,6 +35,9 @@ changing configuration.
 Read [references/execution-contracts.md](references/execution-contracts.md) before
 experiments, adjudication, or resuming an existing run. It defines the executable
 artifact, resource, revision, and experiment-manifest contracts.
+When using or updating ARIS dependencies, read
+[references/aris-integration.md](references/aris-integration.md) for package layout,
+reviewer routing, and the audit handoff. Upstream reports need explicit adaptation.
 
 ## Broad-field discovery mode
 
@@ -127,9 +130,11 @@ Do not launch two orchestrators for the same phase.
 
 ### 2. Evidence map
 
-- Initialize `research-wiki` if it is not already initialized.
-- Use `paper-search` for broad, current discovery and `research-lit` for deep
-  synthesis. Prefer primary papers and official repositories.
+- Initialize `research-wiki` when installed; otherwise keep the local evidence map.
+- Use `paper-search` for broad, current discovery. Use `research-lit` for deep
+  synthesis when its required sources are available. If unavailable, document
+  the coverage gap in the local map; do not label it a completed `research-lit`
+  review. Prefer primary papers and official repositories.
 - Persist queries, dates, identifiers, source URLs, inclusion decisions, and
   unresolved collisions in `research-stage/LITERATURE_MAP.md`.
 - In broad-field discovery mode, also write
@@ -204,6 +209,9 @@ Do not launch two orchestrators for the same phase.
 - Run `analyze-results` on raw outputs with paired evaluation and uncertainty
   where applicable.
 - Run `experiment-audit` before interpreting the results.
+- When that auditor is ARIS, preserve its original JSON separately and include
+  `aris_source` in the normalized audit. Validate original input coverage and
+  provenance; never change WARN/FAIL to PASS while translating the schema.
 - Run `result-to-claim` only after the integrity artifact exists. An integrity
   `FAIL`, missing raw evidence, or phantom result blocks the claim gate.
 - For `partial`, narrow the claim and record the missing evidence. For `no`,
@@ -254,6 +262,9 @@ Do not launch two orchestrators for the same phase.
   and the smallest user decision needed to resume.
 - Never use wall-clock repetition to rerun a verdict. Wait for new evidence,
   then invoke the verdict-bearing skill once.
+- Choose follow-up work by whether it can change the scientific decision within
+  the remaining budget. Apply the WAM rubric only to relevant claims; do not
+  demand every endpoint or add new gates solely to make an audit longer.
 
 ## External unattended launcher
 

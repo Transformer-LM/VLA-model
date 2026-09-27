@@ -551,13 +551,14 @@ def command_complete(args: argparse.Namespace, root: Path, path: Path, state: di
     if phase in {"evidence-audit", "review-improvement"} and args.command != "adjudicate":
         raise StateError("verdict-bearing phases require adjudicate")
     if args.acceptance == "independent" and phase in {"evidence-audit", "review-improvement"}:
-        report_path = ("refine-logs/EXPERIMENT_AUDIT.json" if phase == "evidence-audit"
-                       else "review-stage/REVIEW_STATE.json")
-        provenance = read_object(root, report_path)
-        reviewer_family = provenance.get("reviewer_model_family")
-        executor_family = provenance.get("executor_model_family")
-        if not reviewer_family or not executor_family or reviewer_family == executor_family:
-            raise StateError("independent review requires recorded, distinct model families")
+        report_paths = (["refine-logs/EXPERIMENT_AUDIT.json", "refine-logs/CLAIM_VERDICT.json"]
+                        if phase == "evidence-audit" else ["review-stage/REVIEW_STATE.json"])
+        for report_path in report_paths:
+            provenance = read_object(root, report_path)
+            reviewer_family = provenance.get("reviewer_model_family")
+            executor_family = provenance.get("executor_model_family")
+            if not reviewer_family or not executor_family or reviewer_family == executor_family:
+                raise StateError("independent review requires recorded, distinct model families in every verdict")
     config = load_json(root / state["config"])
     check_resources(state, config)
     if args.gate == "warn":

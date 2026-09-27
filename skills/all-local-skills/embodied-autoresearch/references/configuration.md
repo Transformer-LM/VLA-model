@@ -67,16 +67,17 @@ run.
 
 ## Acceptance settings
 
-- `minimum_main_seeds`: floor for a main quantitative claim unless a paired or
-  deterministic protocol justifies another design.
+- `minimum_main_seeds`: enforced floor of distinct training seeds per condition
+  for a main quantitative claim. The current runtime does not implement an
+  episode-only or paired-design exemption; see the execution contract limits.
 - `require_confidence_intervals`: require uncertainty, not only means.
 - `require_matched_budget_baseline`: block conclusions from unequal-resource
   comparisons.
 - `require_model_policy_environment_evidence`: require all three evidence levels
   when the claim spans them; mark a level not applicable only with justification.
 - `integrity_warn_blocks_completion`: legacy compatibility field; structured claim adjudication always requires integrity `pass`. Warnings stay visible as limitations.
-- `same_family_review_is_provisional`: keep true unless a genuinely independent
-  reviewer backend is configured.
+- `same_family_review_is_provisional`: keep true. An independent backend records
+  its own provenance on each verdict; it never makes same-family review independent.
 
 ## Safe edits
 
@@ -92,15 +93,17 @@ a deliberate pivot or initialize a new run instead of rewriting history.
 ## Skill resolution and ideation
 
 `skill_roots` lists explicit installation directories, resolved relative to the
-project (absolute user paths are also allowed). Default order is `.agents/skills`,
+project (absolute user paths and `~` are also allowed). Default order is `.agents/skills`,
 `skills/all-local-skills`, then `skills`. Archive backups are never auto-installed.
 `ideation.provider` selects `idea-spark` or `idea-discovery-robot`. Pass the actual
 compute configuration into that provider; standalone defaults cannot expand it.
 Stage-specific preflight checks only the current phase's required capabilities.
+The resolver checks skill files; model/tool availability is checked before invocation.
+For ARIS installs and report mapping, read [aris-integration.md](aris-integration.md).
 A missing optional wiki/monitor adapter can use local artifacts with a recorded
 limitation. A missing required reviewer blocks review, not literature discovery.
 
-Resource reservations are maximum GPU-count ? walltime allocations. The ledger
+Resource reservations are maximum GPU-count times walltime-in-hours allocations. The ledger
 does not launch or kill jobs: the runner must enforce the timeout. Paid-compute
 configuration records existing user authorization; it is not permission by itself.
 Real-robot execution still requires a separate explicit authorization adapter.

@@ -1,10 +1,12 @@
 """Behavioral regression tests using temporary projects, no models or GPUs."""
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 SKILL = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SKILL / "scripts"))
@@ -217,6 +219,67 @@ class WorkflowTests(unittest.TestCase):
         self.audit(finish=False)
         self.cli("adjudicate", "evidence-audit", "--acceptance", "independent", ok=False)
 
+    def aris_handoff(self):
+        self.audit(finish=False)
+        self.audit_path = "refine-logs/EXPERIMENT_AUDIT.json"
+        self.aris_path = "refine-logs/aris/EXPERIMENT_AUDIT.original.json"
+        self.native_audit = json.loads((self.root / self.audit_path).read_text())
+        self.original_audit = {
+            "audit_skill": "experiment-audit", "verdict": "PASS", "integrity_status": "pass",
+            "executor_family": "openai", "reviewer_family": "openai",
+            "audited_input_hashes": {p: "sha256:" + h for p, h in self.native_audit["input_hashes"].items()}}
+        self.native_audit.update(aris_source=self.aris_path, executor_model_family="openai",
+                                 reviewer_model_family="openai")
+        self.save_aris_handoff()
+
+    def save_aris_handoff(self):
+        self.write(self.aris_path, self.original_audit)
+        self.native_audit["input_hashes"].update(fingerprints(self.root, [self.aris_path]))
+        self.write(self.audit_path, self.native_audit)
+        self.verdict["input_hashes"].update(fingerprints(self.root, [self.audit_path]))
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+
+    def test_aris_pass_handoff(self):
+        self.aris_handoff()
+        self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional")
+
+    def test_aris_nonpassing_verdict_cannot_be_upgraded(self):
+        self.aris_handoff()
+        for verdict in ("WARN", "FAIL", "BLOCKED", "ERROR", "NOT_APPLICABLE", None):
+            with self.subTest(verdict=verdict):
+                self.original_audit["verdict"] = verdict
+                self.save_aris_handoff()
+                result = self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
+                self.assertIn("ARIS audit must pass", result.stderr)
+
+    def test_aris_incomplete_evidence_cannot_be_extended_by_executor(self):
+        self.aris_handoff()
+        del self.original_audit["audited_input_hashes"]["runs/E1/metrics.json"]
+        self.save_aris_handoff()
+        result = self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
+        self.assertIn("all registered experimental evidence", result.stderr)
+
+    def test_aris_family_cannot_be_relabeled(self):
+        self.aris_handoff()
+        self.native_audit["reviewer_model_family"] = "anthropic"
+        self.save_aris_handoff()
+        result = self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
+        self.assertIn("provenance must match", result.stderr)
+
+    def test_independent_integrity_does_not_accept_same_family_claim(self):
+        self.audit(finish=False)
+        path = "refine-logs/EXPERIMENT_AUDIT.json"
+        audit = json.loads((self.root / path).read_text())
+        audit.update(executor_model_family="openai", reviewer_model_family="anthropic")
+        self.write(path, audit)
+        self.verdict["input_hashes"].update(fingerprints(self.root, [path]))
+        self.verdict.update(executor_model_family="openai", reviewer_model_family="openai")
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+        self.cli("adjudicate", "evidence-audit", "--acceptance", "independent", ok=False)
+        self.verdict["reviewer_model_family"] = "anthropic"
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+        self.cli("adjudicate", "evidence-audit", "--acceptance", "independent")
+
     def test_single_seed_cannot_promote_main_claim(self):
         self.audit(finish=False)
         self.verdict["claims"][0].update(scope="main", status="supported")
@@ -305,6 +368,33 @@ class WorkflowTests(unittest.TestCase):
         self.write("skills/all-local-skills/paper-search/SKILL.md")
         self.assertIsNotNone(resolve_skill(self.root, "paper-search", self.config))
         self.assertNotIn("auto-review-loop", PHASE_SKILLS["evidence-map"])
+
+    def test_skill_resolution_supports_home_installation(self):
+        self.write(".codex/skills/novelty-check/SKILL.md")
+        with patch.dict(os.environ, {"USERPROFILE": str(self.root), "HOME": str(self.root)}):
+            found = resolve_skill(self.root / "project", "novelty-check", {"skill_roots": ["~/.codex/skills"]})
+        self.assertEqual(found, self.root / ".codex/skills/novelty-check/SKILL.md")
+
+    def test_malformed_skill_roots_report_blocker(self):
+        self.config["skill_roots"] = "skills"
+        self.write("AUTORESEARCH_CONFIG.json", self.config)
+        result = subprocess.run([sys.executable, str(SKILL / "scripts/validate_project.py"),
+                                 "--root", str(self.root), "--stage", "contract", "--json"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2, result.stderr)
+        self.assertIn("skill_roots must", " ".join(json.loads(result.stdout)["blockers"]))
+
+    def test_idea_preflight_reports_missing_novelty_skill(self):
+        for name in ("wam-research", "scoop-check", "idea-spark"):
+            self.write(f"skills/all-local-skills/{name}/SKILL.md")
+        self.write("RESEARCH_BRIEF.md", "ready-for-discovery")
+        result = subprocess.run([sys.executable, str(SKILL / "scripts/validate_project.py"),
+                                 "--root", str(self.root), "--stage", "idea-discovery", "--json"],
+                                capture_output=True, text=True)
+        report = json.loads(result.stdout)
+        self.assertFalse(report["ready"])
+        check = next(c for c in report["checks"] if c["name"] == "required_skills")
+        self.assertEqual(check["missing"], ["novelty-check"])
 
 
 if __name__ == "__main__":

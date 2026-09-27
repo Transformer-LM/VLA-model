@@ -23,7 +23,7 @@ EXPERIMENT_SKILLS = (
 PHASE_SKILLS = {
     "contract": ("wam-research",),
     "evidence-map": ("paper-search",),
-    "idea-discovery": ("wam-research", "scoop-check"),
+    "idea-discovery": ("wam-research", "novelty-check", "scoop-check"),
     "method-plan": ("research-refine-pipeline",),
     "implementation-experiments": EXPERIMENT_SKILLS,
     "evidence-audit": ("analyze-results", "experiment-audit", "result-to-claim"),
@@ -35,8 +35,12 @@ PHASE_SKILLS = {
 def resolve_skill(root: Path, name: str, config: dict) -> Path | None:
     # Explicit project installation roots take precedence; no archive discovery.
     roots = config.get("skill_roots", [".agents/skills", "skills/all-local-skills", "skills"])
+    if not isinstance(roots, list) or not roots or any(
+        not isinstance(value, str) or not value.strip() for value in roots
+    ):
+        raise ValueError("skill_roots must be a nonempty list of directory paths")
     for value in roots:
-        candidate = (root / value / name / "SKILL.md").resolve()
+        candidate = (root / Path(value).expanduser() / name / "SKILL.md").resolve()
         if candidate.is_file():
             return candidate
     return None
@@ -190,11 +194,14 @@ def main() -> int:
                 blockers.append("unsupported ideation.provider")
             else:
                 required_skills.append(provider)
-        missing_skills = [
-            name for name in required_skills if resolve_skill(root, name, config) is None
-        ]
+        try:
+            resolved_skills = {name: resolve_skill(root, name, config) for name in required_skills}
+        except ValueError as exc:
+            blockers.append(str(exc))
+            resolved_skills = {name: None for name in required_skills}
+        missing_skills = [name for name, value in resolved_skills.items() if value is None]
         checks.append({"name": "required_skills", "ok": not missing_skills, "missing": missing_skills,
-                       "resolved": {name: str(resolve_skill(root, name, config)) for name in required_skills if name not in missing_skills}})
+                       "resolved": {name: str(value) for name, value in resolved_skills.items() if value is not None}})
         if missing_skills:
             blockers.append(f"missing required skills: {', '.join(missing_skills)}")
 
