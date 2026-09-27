@@ -159,6 +159,9 @@ def validate_completion(root: Path, state: dict, phase: str, config: dict) -> li
             raise ContractError("record-experiment must register actual runs")
         if any(j["status"] == "reserved" for j in state.get("jobs", {}).values()):
             raise ContractError("reconcile active jobs before completing experiments")
+        registered_jobs = {e["job_id"] for e in state["experiments"].values()}
+        if set(state.get("jobs", {})) != registered_jobs:
+            raise ContractError("register every settled job, including failures and cancellations")
         if not any(e["execution_status"] == "completed" for e in state["experiments"].values()):
             raise ContractError("no completed experiment")
         paths += [e["manifest"] for e in state["experiments"].values()]
@@ -184,6 +187,11 @@ def validate_completion(root: Path, state: dict, phase: str, config: dict) -> li
             ids = claim.get("experiment_ids")
             if not isinstance(ids, list) or not ids or any(i not in state["experiments"] for i in ids):
                 raise ContractError("claim must identify registered experiments")
+            metric_sources = {
+                e["artifacts"]["metrics"] for i in ids
+                if (e := state["experiments"][i])["execution_status"] == "completed"
+                and "metrics" in e["artifacts"]
+            }
             if claim["scope"] == "main":
                 conditions = {}
                 for exp_id in ids:
@@ -198,6 +206,16 @@ def validate_completion(root: Path, state: dict, phase: str, config: dict) -> li
                 if not conditions or any(len(seeds) < minimum for seeds in conditions.values()):
                     raise ContractError("insufficient independent training seeds for main claim; scope as pilot")
             for metric in claim["metrics"]:
+                if metric["source"] not in metric_sources:
+                    derived = verdict.get("derived_metrics", {}).get(metric["source"], {})
+                    contributing = derived.get("experiment_ids")
+                    script = derived.get("analysis_script")
+                    if (not isinstance(contributing, list) or not contributing or
+                            not set(contributing).issubset(ids) or
+                            any(state["experiments"][i]["execution_status"] != "completed"
+                                for i in contributing) or
+                            not isinstance(script, str) or script not in audit["input_hashes"]):
+                        raise ContractError("claim metric must belong to a cited completed experiment or declared derivation")
                 if metric["source"] not in verdict["input_hashes"]:
                     raise ContractError("claim metric source missing from input_hashes")
                 if metric["source"] not in audit["input_hashes"]:

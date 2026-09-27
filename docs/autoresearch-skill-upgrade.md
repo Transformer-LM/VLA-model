@@ -29,11 +29,23 @@ Run on Python 3.12 with no GPU, API key or model calls:
 python -X utf8 skills/embodied-autoresearch/tests/test_contracts.py
 ```
 
-20 behavioral regression tests cover a complete negative-result dossier, bogus
+24 behavioral regression tests cover a complete negative-result dossier, bogus
 artifacts, failed literature coverage, changed evaluator/raw results, stale revisions,
 metric-key mismatch, insufficient main seeds, reservations, duplicate settlements,
 overruns, nonfinite usage, reopening, legacy states and phase-local skill resolution.
 Skill frontmatter is checked with skill-creator's quick_validate.py in UTF-8 mode.
+
+### Follow-up audit (2026-09-27)
+
+- Fixed omission of settled failed/cancelled jobs from experiment registration.
+- Bound direct claim metrics to cited completed experiments. Separate aggregates
+  now declare contributors and a versioned, hash-bound analysis script.
+- Recompute budget status after configuration changes while retaining actual usage
+  and active reservations; this does not grant permission to raise compute limits.
+- Added four regression cases including rejection and recovery paths for these fixes.
+- Confirmed origin is `Transformer-LM/VLA-model`, based on `research-sync-20260904`.
+  GitHub connector identity is `qsgg686-coder`, with `push: false` at this audit;
+  local commits must not be described as uploaded.
 
 ## Operational limits
 
@@ -43,6 +55,9 @@ Skill frontmatter is checked with skill-creator's quick_validate.py in UTF-8 mod
 - Hashes and JSON linkage prove consistency, not scientific truth or that an external
   process honestly generated the data. Reviewers still inspect raw execution evidence.
 - Model-family provenance is recorded metadata, not an attestation service.
+- Aggregate lineage is declared metadata; the checker does not rerun statistics.
+- Main-claim seed gating currently targets training studies; frozen-policy episode
+  replication needs a separately reviewed acceptance design.
 - Real-robot execution still requires a separate explicitly authorized adapter.
 - Some ARIS dependencies are not bundled in this sanitized snapshot. Preflight reports
   their absence at the phase that needs them; it does not silently install archives.

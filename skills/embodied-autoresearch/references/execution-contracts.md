@@ -96,6 +96,10 @@ Manifest example (paths must exist and metrics must be a JSON object):
 
 Operations: `baseline`, `debug`, `improve`, `mechanism_test`, `ablation`, `replicate`.
 Failed/cancelled execution must use `not_evaluated`, never a scientific rejection.
+Every settled job must have a registered manifest before execution can complete,
+including failed and cancelled jobs. Budget status is recomputed from actual usage
+plus reservations against current configuration; changing limits never resets usage.
+Increase limits only under the user's existing compute authorization.
 Keep branches serial under small budgets. Parentage records conceptual dependence,
 not permission to share mutable checkpoints or result paths.
 
@@ -130,7 +134,17 @@ Each claim identifies registered experiments and pilot/main scope. Main claims
 require the configured minimum independent training seeds per represented condition;
 meeting that count is not a substitute for statistical power or fair comparisons.
 Aggregate metrics require saved raw episode data and a versioned analysis script in
-the audit inputs. The checker verifies linkage, not whether the analysis is correct.
+the audit inputs. Direct metrics must belong to a cited completed experiment.
+For a separate aggregate file, declare a top-level `derived_metrics` entry in the
+claim verdict, keyed by its metric source path, with `experiment_ids` and
+`analysis_script`. Contributors must be completed experiments cited by that claim;
+the script and aggregate file must be bound by the audit's hashes. For example:
+`"derived_metrics": {"analysis/summary.json": {"experiment_ids": ["E001"], "analysis_script": "analysis/summarize.py"}}`.
+The checker verifies declared linkage, not whether the script was executed or its
+statistics are correct; the reviewer must inspect and reproduce the aggregation.
+The current main-claim gate is designed for training-seed replication. Frozen-policy
+evaluation with only episode replication needs a separately reviewed acceptance
+design; do not invent training seeds to satisfy this gate.
 
 `review-stage/REVIEW_STATE.json` contains `run_id`, current review phase `revision`,
 `reviewer`, `model`, `input_hashes`, and `unresolved_critical: []`. Its inputs bind both

@@ -717,7 +717,18 @@ def main() -> int:
         path = resolve_state_path(root, args.state)
         with state_lock(path):
             state = load_state(path)
-            if refresh_freshness(root, state):
+            changed = refresh_freshness(root, state)
+            config = load_json(root / state["config"])
+            try:
+                check_resources(state, config)
+                exceeded = False
+            except StateError:
+                exceeded = True
+            if state["usage"].get("budget_exceeded") != exceeded:
+                state["usage"]["budget_exceeded"] = exceeded
+                append_history(state, "budget-status", exceeded=exceeded)
+                changed = True
+            if changed:
                 save_state(root, path, state)
             if args.command == "reopen":
                 if any(j["status"] == "reserved" for j in state["jobs"].values()):

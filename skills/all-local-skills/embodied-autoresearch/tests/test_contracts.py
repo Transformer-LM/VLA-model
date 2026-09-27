@@ -163,6 +163,56 @@ class WorkflowTests(unittest.TestCase):
         self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
         self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
 
+    def test_audited_but_uncited_metric_rejected(self):
+        self.audit(finish=False)
+        source = self.write("runs/other/metrics.json", {"success": 0.99})
+        path = "refine-logs/EXPERIMENT_AUDIT.json"
+        audit = json.loads((self.root / path).read_text())
+        audit["input_hashes"].update(fingerprints(self.root, [source]))
+        self.write(path, audit)
+        self.verdict["input_hashes"] = fingerprints(self.root, [path, source])
+        self.verdict["claims"][0]["metrics"] = [
+            {"source": source, "key_path": ["success"], "value": 0.99}]
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+        result = self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
+        self.assertIn("cited completed experiment", result.stderr)
+
+    def test_failed_job_cannot_be_omitted(self):
+        self.experiment()
+        self.cli("reopen", "implementation-experiments", "--reason", "retry")
+        self.cli("begin", "implementation-experiments")
+        self.cli("reserve-job", "job2", "--gpu-hours", "0.1")
+        self.cli("reconcile-job", "job2", "--gpu-hours", "0.1", "--outcome", "failed")
+        result = self.cli("complete", "implementation-experiments", "--gate", "pass",
+                          "--acceptance", "provisional", ok=False)
+        self.assertIn("every settled job", result.stderr)
+        failed = dict(self.manifest, experiment_id="E2", job_id="job2", parent_id="E1",
+                      operation="debug", execution_status="failed", scientific_outcome="not_evaluated")
+        failed["artifacts"] = {k: v for k, v in self.manifest["artifacts"].items() if k != "metrics"}
+        self.write("runs/E2/manifest.json", failed)
+        self.cli("record-experiment", "--manifest", "runs/E2/manifest.json")
+        self.cli("complete", "implementation-experiments", "--gate", "pass", "--acceptance", "provisional")
+
+    def test_declared_aggregate_requires_audited_analysis_script(self):
+        self.audit(finish=False)
+        source = self.write("analysis/aggregate.json", {"success": 0.4})
+        script = self.write("analysis/aggregate.py", "# versioned analysis fixture")
+        audit_path = "refine-logs/EXPERIMENT_AUDIT.json"
+        audit = json.loads((self.root / audit_path).read_text())
+        audit["input_hashes"].update(fingerprints(self.root, [source]))
+        self.write(audit_path, audit)
+        self.verdict["derived_metrics"] = {
+            source: {"experiment_ids": ["E1"], "analysis_script": script}}
+        self.verdict["claims"][0]["metrics"][0]["source"] = source
+        self.verdict["input_hashes"] = fingerprints(self.root, [audit_path, source])
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+        self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional", ok=False)
+        audit["input_hashes"].update(fingerprints(self.root, [script]))
+        self.write(audit_path, audit)
+        self.verdict["input_hashes"] = fingerprints(self.root, [audit_path, source])
+        self.write("refine-logs/CLAIM_VERDICT.json", self.verdict)
+        self.cli("adjudicate", "evidence-audit", "--acceptance", "provisional")
+
     def test_unproven_independent_review_rejected(self):
         self.audit(finish=False)
         self.cli("adjudicate", "evidence-audit", "--acceptance", "independent", ok=False)
@@ -214,6 +264,22 @@ class WorkflowTests(unittest.TestCase):
         self.prepare_execution()
         self.cli("reserve-job", "job1", "--gpu-hours", "nan", ok=False)
         self.assertEqual(self.state()["jobs"], {})
+
+    def test_budget_status_tracks_config_without_resetting_usage(self):
+        self.prepare_execution()
+        self.cli("reserve-job", "job1", "--gpu-hours", "1")
+        self.cli("reconcile-job", "job1", "--gpu-hours", "3", "--outcome", "failed")
+        self.assertTrue(self.state()["usage"]["budget_exceeded"])
+        self.config["compute"]["max_total_gpu_hours"] = 4
+        self.write("AUTORESEARCH_CONFIG.json", self.config)
+        state = self.state()
+        self.assertFalse(state["usage"]["budget_exceeded"])
+        self.assertEqual(state["usage"]["gpu_hours"], 3)
+        self.cli("reserve-job", "job2", "--gpu-hours", "0.5")
+        self.config["compute"]["max_total_gpu_hours"] = 3
+        self.write("AUTORESEARCH_CONFIG.json", self.config)
+        self.assertTrue(self.state()["usage"]["budget_exceeded"])
+        self.cli("reserve-job", "job3", "--gpu-hours", "0.1", ok=False)
 
     def test_reopen_archives_downstream(self):
         self.audit()
